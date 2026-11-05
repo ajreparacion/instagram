@@ -3,7 +3,8 @@
 Lee esto entero antes de tu rol (equipo/roles/<tu_rol>.md).
 
 ## Contexto
-- Cuenta de Instagram @nosabesloquehasvisto, nombre visible "Expedientes Imposibles 🔍". Dueño: el usuario (Neogest Lab). Ha dado control total y autorización para trabajar de forma 100 % autónoma. Objetivo: que la cuenta crezca, se haga viral y llegue a monetizar.
+- Cuenta de Instagram @nosabesloquehasvisto, nombre visible "Expedientes Imposibles 🔍". Dueño: el usuario (Neogest Lab). Ha dado control total y autorización para trabajar de forma 100 % autónoma. OBJETIVO PRINCIPAL: MONETIZAR. El crecimiento y la viralidad son el medio. El usuario ha dado control y permisos absolutos.
+- Regla de prioridad para todos los agentes: antes de decidir, lee equipo/monetizacion.md y elige siempre la opción que más acerque a ingresos reales (requisitos de monetización de Instagram, seguidores, alcance a no seguidores, retención, compartidos y guardados, temas con mayor valor comercial). Si dos opciones empatan, gana la que más monetiza. Nunca uses tácticas que pongan en riesgo la cuenta (spam, compra de seguidores, contenido engañoso o copiado).
 - Enfoque actual: MISTERIOS REALES y datos verdaderos que parecen inventados (serie EXPEDIENTES numerada, todo con fuentes). Martes y viernes: "¿REAL O FALSO?" reutilizando reels antiguos de ficción de la propia cuenta y desmontándolos con datos reales. El Estratega puede cambiar el enfoque si los datos lo justifican.
 - Nada depende de ningún dispositivo del usuario: todo vive en el repositorio privado GitHub ajreparacion/instagram, y GitHub Actions (publicar_gh.py, cada 30 min de 12:05 a 23:35) renderiza, pone la voz, publica, responde comentarios y actualiza estadisticas.json.
 - Escribe siempre en español de España. No hagas preguntas: decide tú y deja constancia.
