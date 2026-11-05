@@ -151,7 +151,8 @@ def gh(*args, check=True):
 # ---------------------------------------------------------------- voz (Piper)
 def ajustes_voz():
     base = {"modelo": "es/es_ES/davefx/medium/es_ES-davefx-medium", "lentitud": 1.08, "volumen_voz": 1.25,
-            "umbral_duck": 0.02, "ratio_duck": 8, "limite": 0.7, "variacion": 0.667, "ruido": 0.8}
+            "umbral_duck": 0.02, "ratio_duck": 8, "limite": 0.7, "variacion": 0.667, "ruido": 0.8,
+            "cadena_voz": ""}
     base.update(leer_json(AJUSTES_VOZ, {}) or {})
     return base
 
@@ -207,16 +208,33 @@ def anadir_voz(video, locucion, trabajo):
     if not tramos:
         return
     aj = ajustes_voz()
-    entradas, filtros, etiquetas = ["-i", video], [], []
+    wavs = []
     for i, t in enumerate(tramos):
         wav = os.path.join(trabajo, f"voz{i}.wav")
         sintetizar(t["texto"], wav)
-        d = duracion_wav(wav)
+        wavs.append((wav, duracion_wav(wav)))
+    cadena = (aj.get("cadena_voz") or "").strip().strip(",")
+    try:
+        _mezclar_voz(video, tramos, wavs, aj, cadena, trabajo)
+    except ErrorAPI as e:
+        if not cadena:
+            raise
+        # Si la cadena de voz de equipo/voz.json da problemas, se mezcla sin ella en vez de no publicar.
+        log(f"Cadena de voz descartada en este render ({str(e)[-160:]}); se mezcla sin procesar la voz")
+        _mezclar_voz(video, tramos, wavs, aj, "", trabajo)
+
+
+def _mezclar_voz(video, tramos, wavs, aj, cadena, trabajo):
+    # cadena (equipo/voz.json "cadena_voz"): filtros ffmpeg sobre cada frase de la voz, p. ej.
+    # paso alto + EQ de presencia + compresor + de-esser. Vacía = voz de Piper sin procesar.
+    entradas, filtros, etiquetas = ["-i", video], [], []
+    for i, (t, (wav, d)) in enumerate(zip(tramos, wavs)):
         hueco = max(float(t.get("duracion", d)) - 0.15, 0.5)
         tempo = min(max(d / hueco, 1.0), 1.35)
         entradas += ["-i", wav]
         ms = int(float(t["inicio"]) * 1000 + 120)
-        filtros.append(f"[{i + 1}:a]aresample=44100,atempo={tempo:.3f},adelay={ms}|{ms},volume={aj['volumen_voz']}[v{i}]")
+        proc = f"{cadena}," if cadena else ""
+        filtros.append(f"[{i + 1}:a]aresample=44100,{proc}atempo={tempo:.3f},adelay={ms}|{ms},volume={aj['volumen_voz']}[v{i}]")
         etiquetas.append(f"[v{i}]")
     filtros.append(f"{''.join(etiquetas)}amix=inputs={len(etiquetas)}:normalize=0,pan=stereo|c0=c0|c1=c0,apad,asplit=2[vox][key]")
     filtros.append(f"[0:a][key]sidechaincompress=threshold={aj['umbral_duck']}:ratio={aj['ratio_duck']}:attack=15:release=350[fondo]")
