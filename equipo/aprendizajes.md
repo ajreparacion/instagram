@@ -1,7 +1,16 @@
 # Aprendizajes de @nosabesloquehasvisto
 
 ## ALERTAS
-- Ninguna (5/11/2026 22:25): sin errores en registro.log ni en errores/. Ojo: cola/ está vacía tras publicar el 001; si nadie produce, mañana no se publica.
+- Ninguna de publicación ni de token (5/11/2026 22:45): registro.log y errores/ están limpios.
+- Avisos para el Estratega: cola/ está vacía. plan.json sigue con ideas de ficción de antes del cambio de enfoque (calcetines, fechas inventadas) y no tiene programada la "Parte 2" que el 001 promete a quien comente BAILE.
+
+## Histórico completo (5/11/2026): ver equipo/analisis_historico.md y equipo/historico.json
+- Pico de la cuenta: "Podcast Empírico" de humor con Mr. Tartaria y Mr. Empírico (21/1-11/3/2024, unos 73 reels). Reproducciones: 1.216-1.786 de mediana frente a 196-250 del resto. Visualización: 17-19 s. Viral del 31/1/2024: 128.286 reproducciones, 1.617 likes, 666 comentarios, 477 guardados, 41,8 s. Confianza: alta.
+- La visualización media predice las reproducciones (200 reels). Menos de 8 s: 226 de mediana. 8-12 s: 293. 12-18 s: 849. 18 s o más: 1.665. Meta del equipo: 15 s o más. Confianza: alta.
+- Personajes fijos y episodios con partes rinden unas 6 veces más que el bestiario, "Equipo A" o "¿Y si...?". Con el cambio a Sara Empírica la mediana cayó a 413. Confianza: alta.
+- Hora: 22:00-00:00 rindió más que las 20:00 (sin el viral: 22 h, 761 de mediana; 23 h, 681; 00 h, 946; 20 h, 399). Confianza: media.
+- Ritmo: el pico coincidió con 15-19 reels por semana; desde abril de 2024 hubo 22 reels en 31 meses, y hoy la cuenta alcanza 36 cuentas en 30 días. Confianza: alta en la caída; media en que la causa sea el ritmo.
+- Audiencia: España 32 %, México 14 %, Chile 14 %, Argentina 12 %. Edad: 25-54 años, el 85 %. Sexo: 73 % hombres. Usar español neutro y entendible en Latinoamérica. Confianza: alta.
 
 Archivo compartido del equipo. Lo actualiza el Analista cada noche. Lo leen el Estratega, el Creador y el Remasterizador antes de trabajar.
 Regla: cada aprendizaje lleva evidencia y confianza (alta/media/baja). Sin evidencia es "hipótesis".
@@ -11,7 +20,7 @@ Regla: cada aprendizaje lleva evidencia y confianza (alta/media/baja). Sin evide
 - Desde el 5/11/2026 21:30 hay métricas completas (alcance, reproducciones, guardados, compartidos, tiempo medio de visualización en ms). Ejemplo real: reel del koala (25/10/2026) alcance 30, 41 reproducciones, 2 compartidos, 11,5 s de visualización media; reel del 26/09/2025 alcance 209 pero solo 2,6 s de media (el gancho no retenía). Confianza: alta.
 - Contenido histórico mezclado: podcast "Sara Empírica" (2024), "Sal Gurú" (2024), bestiario de criaturas inventadas y koalas (2025), sketches. Nicho poco definido. Confianza: alta.
 - Publicación irregular: huecos de meses entre reels (sep 2025 → oct 2025 → nov 2026). Confianza: alta.
-- Hipótesis: las series numeradas rinden algo mejor (la serie "Sara Empírica" de marzo-abril 2024 tuvo 8-18 likes, por encima de la media). Confianza: baja.
+- (Corregido con el histórico completo) Las series con personajes rinden mucho más, pero la mejor no fue Sara Empírica (413 de mediana), sino Mr. Tartaria y Mr. Empírico (más de 1.200). Confianza: alta.
 - Aprendizaje: el gancho "¿Y si...?" funcionó mejor que la media. Evidencia: 3 reels (aire 8/6/25, oxígeno 6/6/25, streamers 8/6/25) con alcance 182/158/211 (media 184 frente a mediana de 130 de los 30 últimos) y 3 de los 6 comentarios totales de los 30 últimos posts. Confianza: media.
 
 ## Referencias de los 30 últimos posts (estadisticas.json, 5/11/2026)
@@ -43,3 +52,4 @@ Regla: cada aprendizaje lleva evidencia y confianza (alta/media/baja). Sin evide
 ## Registro diario
 (El Analista añade aquí una línea por día: fecha, qué se publicó, resultado a 24-48 h, conclusión.)
 - 5/11/2026 · 001 Epidemia de baile 1518 (reel nuevo, 21:46, CTA "BAILE"). A los 32-40 min: alcance 1-2, 6 reproducciones, 0 likes/guardados/compartidos/comentarios; visualización media 38,7 s (Actions) / 26,1 s (Buzzfy, provisional), unas 3 veces la mediana de la cuenta; salto 40 % (mediana 65 %). Seguidores 1.605. Conclusión: demasiado pronto para juzgar el alcance; la retención inicial es buena señal para el formato de misterio real. Reevaluar a 24-48 h.
+- 5/11/2026 (22:45, ejecución manual) · Análisis completo de 813 publicaciones. 001 BAILE a 1 h: 6 reproducciones, alcance 5, visualización 18 s (dato provisional). Sin cambios en seguidores (1.605).
