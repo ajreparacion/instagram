@@ -33,6 +33,9 @@ Regla: cada aprendizaje lleva evidencia y confianza (alta/media/baja). Sin evide
 
 - 5/11/2026 COMENTARIOS: todo post.json (nuevo o remaster) incluye además "palabra_clave" (la palabra del CTA, p. ej. "BAILE") y "respuesta" (texto corto y amable, máx. 200 caracteres, sin enlaces) que GitHub Actions enviará automáticamente como respuesta a cada comentario que contenga esa palabra, durante 7 días. Cuando se publique la Parte 2, la respuesta puede avisar de que ya está publicada.
 
+- 5/11/2026 MONETIZACIÓN: la cuenta pierde seguidores (neto -27 en 90 días) y no cumple ningún umbral de pago (suscripciones ~10.000, no verificado en oficial). Prioridad: alcance a no seguidores, compartidos y seguidores netos; contenido 100 % original (música propia, sin vídeo ajeno) para no perder la recomendación (norma de Instagram del 30/4/2026). Detalle en equipo/monetizacion.md.
+- 5/11/2026 MONETIZACIÓN: vía más cercana = afiliados de libros/documentales de las fuentes (Amazon.es) con aviso de afiliado; requiere alta del usuario y página de enlaces en la bio.
+
 ## Registro diario
 (El Analista añade aquí una línea por día: fecha, qué se publicó, resultado a 24-48 h, conclusión.)
 - 5/11/2026 · 001 Epidemia de baile 1518 (reel nuevo, 21:46, CTA "BAILE"). A los 32-40 min: alcance 1-2, 6 reproducciones, 0 likes/guardados/compartidos/comentarios; visualización media 38,7 s (Actions) / 26,1 s (Buzzfy, provisional), unas 3 veces la mediana de la cuenta; salto 40 % (mediana 65 %). Seguidores 1.605. Conclusión: demasiado pronto para juzgar el alcance; la retención inicial es buena señal para el formato de misterio real. Reevaluar a 24-48 h.
