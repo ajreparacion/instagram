@@ -1,72 +1,141 @@
 {
-  "semana": "2026-11-06 a 2026-11-12",
-  "creado_por": "configuración inicial",
-  "objetivo": "Fijar el nicho y el ritmo diario; lanzar la serie 'Expedientes' y medir qué temas generan comentarios.",
-  "serie_principal": "EXPEDIENTES: cada reel es un expediente numerado sobre algo cotidiano que 'no es lo que parece'.",
-  "experimento": "Comparar gancho de pregunta '¿Y si...?' (días pares) frente a gancho de dato con fecha inventada (días impares). Medir likes + comentarios a las 24 h.",
+  "semana": "2026-11-06 a 2026-11-16",
+  "creado_por": "Estratega, 5/11/2026 (primera ejecución; plan puente de viernes a lunes de la semana siguiente porque el plan inicial era de ficción y contradecía el enfoque actual). El Estratega del lunes 9/11 puede ajustar del 10/11 en adelante con más datos.",
+  "objetivo": "Consolidar la serie EXPEDIENTES de misterios REALES con fuentes (1 al día) y el formato ¿REAL O FALSO? (martes y viernes), aprovechando aniversarios reales de este mes. Prioridad de métricas: compartidos por mensaje y retención, por encima de los likes.",
+  "serie_principal": "EXPEDIENTES NNN: un caso real, documentado y sorprendente (historia, ciencia, naturaleza, España y Latinoamérica). Siempre verificado con 2+ fuentes y línea Fuentes:. Martes y viernes: ¿REAL O FALSO? desmontando reels antiguos de ficción de la propia cuenta.",
+  "situacion_de_partida": "1.605 seguidores. Solo 1 reel del enfoque nuevo publicado (001 baile 1518, 5/11 21:46): a las 0,5 h tenía 6 reproducciones y 38,7 s de visualización media; sin datos de alcance reales todavía. Mejor referencia histórica: Koala Coyote (5/6/2025) alcance 1.013 y 16,2 s de media; koala 25/10/2026 alcance 30, 2 compartidos, 11,5 s. Los reels con menos de 5 s de media (mimocultor 2,6 s, cabra invertida 2,8 s) no retuvieron.",
+  "experimento": {
+    "nombre": "Duración corta frente a larga",
+    "hipotesis": "Con voz y texto animado, un reel corto (20-25 s, 5 escenas) consigue más % de visualización y más alcance que uno largo (36-42 s, 7 escenas).",
+    "como": "Cada entrada 'nuevo' lleva el campo duracion_objetivo: 'corto' = 20-25 s y 5 escenas; 'largo' = 36-42 s y 7 escenas. El Creador lo respeta. Los remasters no cuentan.",
+    "metrica": "Retención = ig_reels_avg_watch_time / duración del vídeo (%), y alcance + compartidos a las 48 h. Se compara la mediana de cada grupo (5 cortos frente a 5 largos).",
+    "regla_de_decision": "Si un grupo supera al otro en retención en 20 % o más sin perder alcance, se adopta como duración por defecto. Si la diferencia es menor, se mantiene 25-35 s y se prueba otra variable (tipo de gancho)."
+  },
+  "hora_por_defecto": "20:40 (sin datos suficientes para cambiarla; los reels históricos con más alcance (top 8 por alcance) salieron entre las 20:20 y las 00:30 hora española; el más alto, a las 23:08)",
   "dias": [
     {
       "fecha": "2026-11-06",
       "tipo": "remaster",
       "hora": "13:40",
-      "idea": "Remasterizar el reel del oxígeno inventado (1872) o el que más likes tenga entre los descargados",
-      "gancho": "dato_con_fecha"
+      "original_id": "17870021775289986",
+      "idea": "¿REAL O FALSO? el 'Koala Coyote' de Sierra Morena (reel con más alcance de la cuenta, 1.013). Era FALSO. Lo real: los koalas solo viven en Australia, y sí existió un 'lobo marsupial': el tilacino, cuyo último ejemplar conocido murió en el zoo de Hobart en 1936."
     },
     {
       "fecha": "2026-11-06",
       "tipo": "nuevo",
       "hora": "20:40",
-      "idea": "Expediente 002: las palomas no duermen nunca (¿dónde están de noche?)",
-      "gancho": "dato_con_fecha"
+      "duracion_objetivo": "corto",
+      "idea": "Expediente 002: La Gran Guerra del Emú. En noviembre de 1932 (primera operación el 2 de noviembre) el ejército australiano salió con ametralladoras contra los emús de Australia Occidental… y no ganó. Mayor G. P. W. Meredith. Verificar cifras de munición y aves con 2 fuentes.",
+      "gancho": "dato_con_fecha",
+      "palabra_clave_sugerida": "EMU"
     },
     {
       "fecha": "2026-11-07",
       "tipo": "nuevo",
       "hora": "20:40",
-      "idea": "Expediente 003: el wifi de casa va peor cuando hablas de él",
-      "gancho": "pregunta"
+      "duracion_objetivo": "largo",
+      "idea": "Expediente 003: Mary Celeste. Zarpó de Nueva York un 7 de noviembre de 1872 (aniversario el mismo día de publicación) y la encontraron el 4 de diciembre a la deriva, intacta, con comida y sin nadie a bordo. Plantear el misterio; las teorías, para la Parte 2.",
+      "gancho": "dato_con_fecha",
+      "palabra_clave_sugerida": "BARCO"
     },
     {
       "fecha": "2026-11-08",
       "tipo": "nuevo",
       "hora": "20:40",
-      "idea": "Parte 2 de los calcetines SI el reel 001 recibió algún comentario 'IMPAR'; si no, Expediente 004: los semáforos te miran",
-      "gancho": "dato_con_fecha"
+      "duracion_objetivo": "corto",
+      "idea": "PARTE 2 del Expediente 001 (epidemia de baile de 1518): cómo acabó (los afectados llevados al santuario de San Vito, en Saverne, y fin hacia septiembre, según las fuentes). Se prometió en el 001: hay que cumplirlo. La 'respuesta' automática del 001 puede avisar de que ya está publicada.",
+      "gancho": "pregunta",
+      "palabra_clave_sugerida": "BAILE"
     },
     {
       "fecha": "2026-11-09",
       "tipo": "nuevo",
       "hora": "20:40",
-      "idea": "Expediente 005: el koala que llegó antes que los humanos a Australia (vuelve el universo koala)",
-      "gancho": "pregunta"
+      "duracion_objetivo": "largo",
+      "idea": "Expediente 004: La bombilla que lleva encendida desde 1901 (parque de bomberos de Livermore, California; récord Guinness). Dato real que parece inventado.",
+      "gancho": "pregunta",
+      "palabra_clave_sugerida": "LUZ"
     },
     {
       "fecha": "2026-11-10",
       "tipo": "remaster",
       "hora": "13:40",
-      "idea": "Remasterizar el reel antiguo con más likes que esté descargado en originales/",
-      "gancho": "pregunta"
+      "original_id": "18031629332425415",
+      "idea": "¿REAL O FALSO? 'En 1872 un científico descubrió que el oxígeno no era natural' (8 likes y 1 comentario, de los mejores de 2025). Era FALSO. Lo real: el oxígeno lo aislaron Scheele (hacia 1771-1772) y Priestley (1774) y lo bautizó Lavoisier; y casi todo el oxígeno del aire lo producen organismos fotosintéticos (gran parte, el fitoplancton)."
     },
     {
       "fecha": "2026-11-10",
       "tipo": "nuevo",
       "hora": "20:40",
-      "idea": "Expediente 006: los lunes fueron inventados en 1891",
-      "gancho": "dato_con_fecha"
+      "duracion_objetivo": "corto",
+      "idea": "PARTE 2 de lo que mejor funcione entre el 002 (Emú) y el 003 (Mary Celeste): el que tenga más compartidos + comentarios en estadisticas.json. Mary Celeste → las teorías y la más aceptada hoy (sin afirmar como seguro lo que no lo es). Emú → la segunda ofensiva y qué pasó después. Si empatan, Mary Celeste.",
+      "gancho": "pregunta"
     },
     {
       "fecha": "2026-11-11",
       "tipo": "nuevo",
       "hora": "20:40",
-      "idea": "Expediente 007: las escaleras mecánicas cuentan a la gente",
-      "gancho": "pregunta"
+      "duracion_objetivo": "largo",
+      "idea": "Expediente 005: El caso Manises. La noche del 11 al 12 de noviembre de 1979 un avión de pasajeros con destino a Canarias tuvo que aterrizar de emergencia en Valencia tras ver unas luces; después despegó un caza Mirage F1. Expediente desclasificado por Defensa. Contar los hechos y la explicación oficial con honestidad; nada de afirmar que eran naves.",
+      "gancho": "dato_con_fecha",
+      "palabra_clave_sugerida": "MANISES"
     },
     {
       "fecha": "2026-11-12",
       "tipo": "nuevo",
       "hora": "20:40",
-      "idea": "Expediente 008: el eco de las montañas responde con retraso a propósito",
-      "gancho": "dato_con_fecha"
+      "duracion_objetivo": "corto",
+      "idea": "Expediente 006: La lluvia de carne de Kentucky (Bath County, 1876): cayeron trozos de carne del cielo y la prensa científica de la época lo analizó. Verificar fecha y explicación más aceptada con 2 fuentes.",
+      "gancho": "dato_con_fecha",
+      "palabra_clave_sugerida": "CIELO"
+    },
+    {
+      "fecha": "2026-11-13",
+      "tipo": "remaster",
+      "hora": "13:40",
+      "original_id": "18074579041723896",
+      "idea": "¿REAL O FALSO? '¿Son los pájaros drones del gobierno?' (14,1 s de media y 3 compartidos, de los mejores en retención). Era FALSO. Lo real: 'Birds Aren't Real' fue un movimiento satírico creado en 2017 en EE. UU. para parodiar las teorías de la conspiración; su creador lo reconoció en 2021."
+    },
+    {
+      "fecha": "2026-11-13",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "duracion_objetivo": "largo",
+      "idea": "Expediente 007 (viernes 13): Por qué en España el día de mala suerte es el MARTES 13 y en casi todo el mundo es el viernes. Orígenes documentados frente a mitos (avisar cuando un origen popular no está probado). Muy compartible en España y Latinoamérica.",
+      "gancho": "pregunta",
+      "palabra_clave_sugerida": "TRECE"
+    },
+    {
+      "fecha": "2026-11-14",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "duracion_objetivo": "corto",
+      "idea": "PARTE 2 del expediente con más compartidos + comentarios entre el 004 (bombilla), el 005 (Manises) y el 006 (lluvia de carne). Por defecto, Manises: qué dicen los documentos desclasificados y las explicaciones propuestas.",
+      "gancho": "pregunta"
+    },
+    {
+      "fecha": "2026-11-15",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "duracion_objetivo": "largo",
+      "idea": "Expediente 008: El hombre de Somerton (Adelaida, 1948) y el papel 'Tamám Shud' escondido en su bolsillo; en 2022 un equipo afirmó identificarlo por ADN. Contarlo con matices (identificación no confirmada oficialmente si las fuentes lo dicen así).",
+      "gancho": "dato_con_fecha",
+      "palabra_clave_sugerida": "CODIGO"
+    },
+    {
+      "fecha": "2026-11-16",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "duracion_objetivo": "corto",
+      "idea": "Expediente 009: Los tres fareros desaparecidos de las islas Flannan (Escocia, diciembre de 1900): la comida en la mesa, un impermeable en su sitio y nadie. Hechos documentados y la explicación más aceptada.",
+      "gancho": "dato_con_fecha",
+      "palabra_clave_sugerida": "FARO"
     }
+  ],
+  "notas_para_el_equipo": [
+    "Los números de expediente son orientativos: el Creador usa el siguiente libre según cola/ y publicados/.",
+    "Si una idea no se puede verificar con 2 fuentes fiables, el Creador la cambia por otro caso real del mismo estilo y lo anota en post.json.",
+    "Remasters: edición material obligatoria (gancho, rótulos, cierre con datos reales y voz nueva) para no caer en la penalización por contenido resubido.",
+    "Cada Parte 2 empieza recordando la Parte 1 en 1 frase y la respuesta automática de la Parte 1 se actualiza para avisar de que ya está publicada."
   ]
 }
