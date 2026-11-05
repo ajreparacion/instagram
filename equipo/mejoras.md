@@ -51,3 +51,10 @@ Comparación de retención de la ejecución anterior: **todavía sin datos**. Ni
 - Cierre de 15 s fijo en cola/003: ya lo resolvió el Remasterizador con `cierre.partes` mientras yo trabajaba. Mi cambio de nivel está combinado con el suyo y probado con su nuevo remaster.json.
 - Petición del Estratega (seguidores por reel en estadisticas.json): toca la parte de métricas de publicar_gh.py, que no es de Mejora (mi rol solo puede tocar la parte de voz y mezcla). Queda para el rol de Monetización o el Analista.
 - Detalle menor: en los remasters, el reloj del HUD vuelve a empezar en la tarjeta de cierre (03:17:54 → 03:17:46). Lo corregiré en otra ejecución si no hay nada más prioritario.
+
+## 5/11/2026 · Primera prueba con la voz REAL de Piper (ciclo de GitHub Actions lanzado a mano)
+- El usuario escuchó el reel de prueba y solo oía «a, a, a». Era la voz simulada de las pruebas en la nube, no la real. Lancé el ciclo de Actions para renderizar 002 y 003 con Piper. La cadena de voz funcionó: no aparece en registro.log el aviso de mezclar sin ella.
+- 002: −12,3 LUFS, pico −1,8 dBFS. 003: −13,1 LUFS, pico −0,44 dBFS. Ese pico es una sola muestra en el gancho, un rebote al codificar en AAC, pero se pasa de la regla de −1 dBFS.
+- Cambio: `limite` 0,84 → 0,78 (−2,2 dBFS) en voz.json para tener margen frente al AAC. Afecta a los renders a partir de ahora. 002 y 003 ya estaban renderizados y no se rehacen.
+- Las pruebas en la nube con voz simulada sirven para medir niveles, no para escuchar. Para oír cómo queda, usar el render real de Actions (release «cola»).
+- Revertir: `limite` 0.84.
