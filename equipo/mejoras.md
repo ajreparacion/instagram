@@ -58,3 +58,33 @@ Comparación de retención de la ejecución anterior: **todavía sin datos**. Ni
 - Cambio: `limite` 0,84 → 0,78 (−2,2 dBFS) en voz.json para tener margen frente al AAC. Afecta a los renders a partir de ahora. 002 y 003 ya estaban renderizados y no se rehacen.
 - Las pruebas en la nube con voz simulada sirven para medir niveles, no para escuchar. Para oír cómo queda, usar el render real de Actions (release «cola»).
 - Revertir: `limite` 0.84.
+
+## 5/11/2026 (3.ª ejecución, programada) · Voz Kyutai Pocket TTS ACTIVADA
+
+Comparación de retención de cambios anteriores: todavía sin datos (001 publicado hace 1 h con el sistema antiguo; 002 y 003 aún sin publicar).
+
+### Licencia (comprobada 5/11/2026)
+- Pesos: kyutai/pocket-tts-without-voice-cloning → «License: cc-by-4.0» (no requiere cuenta). kyutai/pocket-tts (con clonación) también CC BY 4.0, pero está restringido; no se usa. Código: MIT.
+- Voz española: solo existe «lola» (voz por defecto de `spanish`). Se carga como estado precalculado de kyutai/pocket-tts-without-voice-cloning (CC BY 4.0), hecho a partir de `common_voice_es_19762977` = Mozilla Common Voice, que se publica como CC0. No es Expresso ni EARS (NC). No se clona a nadie.
+- Atribución: «Voz: Kyutai Pocket TTS (CC BY 4.0)» se añade sola al final del texto del post (publicar_gh.py `con_atribucion`, solo si `post.json` tiene `"motor_voz": "pocket"`, que escribe el render) y está en README.md. **Calidad: no hace falta ponerla a mano en post.json.**
+
+### Integración
+- herramientas/voz_pocket.py: carga el modelo una vez y genera todas las frases.
+- publicar_gh.py `generar_locucion`: si `"motor": "pocket"` usa Pocket; si falla o tarda más de `pocket.max_s` (600 s), TODA la locución se hace con Piper (no se mezclan voces) y queda en registro.log. Guarda `motor_voz` en post.json.
+- ciclo.yml: instala `pocket-tts` (torch CPU) solo si el motor es pocket y hay algún reel sin renderizar; caché de ~/.cache/huggingface, ~/.cache/pocket_tts y ~/.cache/pip; `continue-on-error` (si falla, Piper).
+- Nuevo workflow manual .github/workflows/prueba_voz.yml + herramientas/prueba_voz.py: compara motores con la voz REAL en GitHub Actions (no simulada) y sube los vídeos a la release «pruebas».
+
+### Prueba real (ejemplo_guion.json, runner de GitHub, CPU) → equipo/pruebas/prueba_voz.json
+| | Piper davefx | Pocket spanish/lola | Pocket spanish_24l |
+|---|---|---|---|
+| Naturalidad estimada (UTMOS, 1-5) | 2,66 | **3,87** | 3,79 |
+| Inteligibilidad (Whisper, voz sola; casi todo el error es que escribe «50 y 400» en cifras) | 12,9 % | 8,2 % | 10,6 % |
+| Tiempo de síntesis de 6 frases | 4,9 s | 18,9 s | 46,9 s |
+| Duración de la voz | 30,9 s | 36,6 s (habla más pausado) | 37,5 s |
+| Mezcla final | −12,2 LUFS, pico −1,7 | −14,9 LUFS, pico −1,8 (archivo: −1,94 dBFS) | −14,9 LUFS |
+- Decisión: **Pocket `spanish` activado** (`"motor": "pocket"` en voz.json). Suena claramente más natural (+1,2 puntos UTMOS en todas las frases, la peor de Pocket 3,53 > la mejor de Piper 2,79), pronuncia igual de bien y tarda ~20 s por reel (+~40 s de instalación): muy por debajo de 5 min. El modelo 24l es más lento y no mejora.
+- Ojo: la voz pasa de masculina (davefx) a femenina (lola). Pocket habla algo más lento: dos frases se aceleran con atempo 1,14-1,19 para caber en su escena (sin cortes). Si se nota acelerada, el Creador puede alargar 0,5-1 s esas escenas.
+- 002 y 003 ya se habían renderizado con Piper: les quité `renderizado`/`asset` para que el siguiente ciclo los rehaga con Pocket (aún no tenían calidad.json). 004 se renderiza ya con Pocket.
+- UTMOS es un predictor entrenado sobre todo en inglés: es orientativo. Fuentes: ficha HF de kyutai/pocket-tts-without-voice-cloning y kyutai/pocket-tts, README de github.com/kyutai-labs/pocket-tts (voces y `utils.py`), Mozilla Common Voice (CC0).
+- Revertir: en equipo/voz.json poner `"motor": "piper"` (todo lo demás queda inactivo). Código anterior: herramientas/versiones/publicar_gh.py_2026-11-05b y ciclo.yml_2026-11-05.
+- Próxima ejecución: comparar ig_reels_avg_watch_time y alcance de 002/003/004 (Pocket) frente a 001 (Piper) y revisar en registro.log que no aparezca «Pocket TTS no disponible».

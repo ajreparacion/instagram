@@ -21,3 +21,8 @@ Sistema automático de la cuenta de Instagram. Funciona sin ningún dispositivo 
 `PAGE_TOKEN` en *Settings → Secrets and variables → Actions*: token de página de Facebook vinculado a la cuenta (no caduca salvo cambio de contraseña).
 
 Para lanzar un ciclo a mano: pestaña *Actions → Ciclo Instagram → Run workflow*.
+
+## Voz
+- Motor de voz en `equipo/voz.json` (`"motor"`): `pocket` (Kyutai Pocket TTS, español, voz «lola») o `piper` (respaldo automático si Pocket falla).
+- Atribución obligatoria (licencia CC BY 4.0 de los pesos): **Voz: Kyutai Pocket TTS (CC BY 4.0)** — se añade sola al final del texto de cada post que lleva esta voz. Código de Pocket TTS: MIT (github.com/kyutai-labs/pocket-tts). La voz «lola» procede de un clip de Mozilla Common Voice (CC0).
+- Prueba comparativa a mano: *Actions → Prueba de voz → Run workflow* (resultado en `equipo/pruebas/prueba_voz.json`, vídeos en la release `pruebas`).
