@@ -3,7 +3,7 @@
 
 Lo ejecuta .github/workflows/ciclo.yml varias veces al día. En cada pasada:
   1. Renderiza los reels nuevos de cola/ (guion.json -> hacer_reel.py, remaster.json -> remaster.py),
-     les pone la voz (Piper) y guarda el vídeo como archivo de la release "cola" (no en el historial de git).
+     les pone la voz (Piper o Kyutai Pocket TTS, según equipo/voz.json "motor") y guarda el vídeo como archivo de la release "cola" (no en el historial de git).
   2. Publica en Instagram los que ya tienen su hora y el visto bueno de Calidad (calidad.json).
   3. Responde a los comentarios con la palabra clave de cada reel.
   4. Actualiza estadisticas.json y originales/*.json.
@@ -15,7 +15,7 @@ Formato de una carpeta de cola/<NNN_tema>/:
   calidad.json {"aprobado": true, ...}   (lo escribe el agente de Calidad)
 
 Secretos/variables del repositorio: PAGE_TOKEN (secreto). El resto está en equipo/config_publico.json.
-Solo usa la librería estándar, Pillow/numpy (para los generadores), ffmpeg, gh y Piper.
+Solo usa la librería estándar, Pillow/numpy (para los generadores), ffmpeg, gh, Piper y (opcional) pocket-tts.
 """
 import glob
 import json
@@ -51,6 +51,8 @@ PIPER_URLS = [
     "https://github.com/rhasspy/piper/releases/download/v1.2.0/piper_amd64.tar.gz",
 ]
 VOZ_RAIZ = "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/"
+VOZ_POCKET = os.path.join(BASE, "herramientas", "voz_pocket.py")
+ATRIBUCION_POCKET = "Voz: Kyutai Pocket TTS (CC BY 4.0)"
 MAX_RENDERS = 2
 GRACIA_SIN_CALIDAD = timedelta(hours=3)
 
@@ -148,11 +150,12 @@ def gh(*args, check=True):
     return r
 
 
-# ---------------------------------------------------------------- voz (Piper)
+# ---------------------------------------------------------------- voz (Piper / Pocket TTS)
 def ajustes_voz():
-    base = {"modelo": "es/es_ES/davefx/medium/es_ES-davefx-medium", "lentitud": 1.08, "volumen_voz": 1.25,
-            "umbral_duck": 0.02, "ratio_duck": 8, "limite": 0.7, "variacion": 0.667, "ruido": 0.8,
-            "cadena_voz": ""}
+    base = {"motor": "piper", "modelo": "es/es_ES/davefx/medium/es_ES-davefx-medium", "lentitud": 1.08,
+            "volumen_voz": 1.25, "umbral_duck": 0.02, "ratio_duck": 8, "limite": 0.7, "variacion": 0.667,
+            "ruido": 0.8, "cadena_voz": "",
+            "pocket": {"idioma": "spanish", "voz": "lola", "temperatura": None, "ganancia": 1.0, "max_s": 600}}
     base.update(leer_json(AJUSTES_VOZ, {}) or {})
     return base
 
@@ -198,6 +201,50 @@ def sintetizar(texto, salida):
         raise ErrorAPI(f"Piper falló: {r.stderr.decode(errors='replace')[-300:]}")
 
 
+def sintetizar_pocket(textos, salidas, trabajo, aj):
+    """Todas las frases en un solo proceso (el modelo se carga una vez). Lanza ErrorAPI si algo falla."""
+    pk = dict(aj.get("pocket") or {})
+    lote = os.path.join(trabajo, "lote_pocket.json")
+    escribir_json(lote, {"idioma": pk.get("idioma", "spanish"), "voz": pk.get("voz", "lola"),
+                         "temperatura": pk.get("temperatura"), "ganancia": pk.get("ganancia", 1.0),
+                         "frases": [{"texto": t, "salida": s} for t, s in zip(textos, salidas)]})
+    t0 = time.time()
+    try:
+        r = subprocess.run([sys.executable, VOZ_POCKET, lote], capture_output=True, text=True,
+                           timeout=float(pk.get("max_s", 600)))
+    except subprocess.TimeoutExpired:
+        raise ErrorAPI(f"Pocket TTS tardó más de {pk.get('max_s', 600)} s")
+    if r.returncode != 0 or not all(os.path.exists(s) and os.path.getsize(s) > 1000 for s in salidas):
+        raise ErrorAPI(f"Pocket TTS falló: {(r.stderr or r.stdout)[-300:]}")
+    log(f"Voz con Pocket TTS ({pk.get('idioma', 'spanish')}/{pk.get('voz', 'lola')}): "
+        f"{len(textos)} frases en {time.time() - t0:.0f} s")
+
+
+def generar_locucion(textos, trabajo, aj=None):
+    """Devuelve (lista de wav, motor usado). Si Pocket falla, toda la locución se hace con Piper (no se mezclan voces)."""
+    aj = aj or ajustes_voz()
+    salidas = [os.path.join(trabajo, f"voz{i}.wav") for i in range(len(textos))]
+    if str(aj.get("motor", "piper")).lower() == "pocket":
+        try:
+            sintetizar_pocket(textos, salidas, trabajo, aj)
+            return salidas, "pocket"
+        except Exception as e:
+            log(f"Pocket TTS no disponible en este render ({str(e)[-200:]}); se usa Piper")
+            for s in salidas:
+                if os.path.exists(s):
+                    os.remove(s)
+    for t, s in zip(textos, salidas):
+        sintetizar(t, s)
+    return salidas, "piper"
+
+
+def con_atribucion(texto, motor):
+    """Pocket TTS (CC BY 4.0) exige atribución: se añade al final del texto del post."""
+    if motor != "pocket" or ATRIBUCION_POCKET in (texto or ""):
+        return texto
+    return (texto or "").rstrip() + "\n\n" + ATRIBUCION_POCKET
+
+
 def duracion_wav(ruta):
     with wave.open(ruta) as w:
         return w.getnframes() / float(w.getframerate())
@@ -208,11 +255,8 @@ def anadir_voz(video, locucion, trabajo):
     if not tramos:
         return
     aj = ajustes_voz()
-    wavs = []
-    for i, t in enumerate(tramos):
-        wav = os.path.join(trabajo, f"voz{i}.wav")
-        sintetizar(t["texto"], wav)
-        wavs.append((wav, duracion_wav(wav)))
+    rutas, motor = generar_locucion([t["texto"] for t in tramos], trabajo, aj)
+    wavs = [(w, duracion_wav(w)) for w in rutas]
     cadena = (aj.get("cadena_voz") or "").strip().strip(",")
     try:
         _mezclar_voz(video, tramos, wavs, aj, cadena, trabajo)
@@ -222,6 +266,7 @@ def anadir_voz(video, locucion, trabajo):
         # Si la cadena de voz de equipo/voz.json da problemas, se mezcla sin ella en vez de no publicar.
         log(f"Cadena de voz descartada en este render ({str(e)[-160:]}); se mezcla sin procesar la voz")
         _mezclar_voz(video, tramos, wavs, aj, "", trabajo)
+    return motor
 
 
 def _mezclar_voz(video, tramos, wavs, aj, cadena, trabajo):
@@ -300,7 +345,9 @@ def renderizar(cfg, carpeta, post):
     locucion = os.path.join(trabajo, "video.locucion.json")
     if os.path.exists(locucion):
         shutil.copy(locucion, os.path.join(carpeta, "locucion.json"))
-        anadir_voz(video, locucion, trabajo)
+        motor = anadir_voz(video, locucion, trabajo)
+        if motor:
+            post["motor_voz"] = motor
     asset = os.path.join(trabajo, f"{nombre}.mp4")
     os.replace(video, asset)
     asegurar_release()
@@ -356,7 +403,8 @@ def esperar_contenedor(cfg, cid, max_seg=900):
 
 
 def publicar_reel(cfg, video, post):
-    params = {"media_type": "REELS", "upload_type": "resumable", "caption": post.get("texto", ""),
+    params = {"media_type": "REELS", "upload_type": "resumable",
+              "caption": con_atribucion(post.get("texto", ""), post.get("motor_voz")),
               "share_to_feed": "true" if post.get("compartir_en_feed", True) else "false"}
     if post.get("portada_ms") is not None:
         params["thumb_offset"] = str(int(post["portada_ms"]))

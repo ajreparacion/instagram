@@ -32,6 +32,10 @@ jobs:
         run: |
           # Evita gastar minutos: solo instala herramientas si hay algo en cola/
           if ls cola/*/post.json >/dev/null 2>&1; then echo "cola=si" >> "$GITHUB_OUTPUT"; else echo "cola=no" >> "$GITHUB_OUTPUT"; fi
+          # Pocket TTS (equipo/voz.json "motor": "pocket") solo se instala si hay algún reel sin renderizar
+          pendiente=no
+          for f in cola/*/post.json; do [ -f "$f" ] && ! grep -q '"renderizado"' "$f" && pendiente=si; done
+          if [ "$pendiente" = si ] && grep -Eq '"motor"[[:space:]]*:[[:space:]]*"pocket"' equipo/voz.json; then echo "pocket=si" >> "$GITHUB_OUTPUT"; else echo "pocket=no" >> "$GITHUB_OUTPUT"; fi
 
       - name: Herramientas de vídeo
         if: steps.trabajo.outputs.cola == 'si'
@@ -47,6 +51,23 @@ jobs:
           path: ~/.cache/expedientes
           key: piper-${{ hashFiles('equipo/voz.json') }}
           restore-keys: piper-
+
+      - name: Caché de la voz (Pocket TTS)
+        if: steps.trabajo.outputs.pocket == 'si'
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            ~/.cache/pocket_tts
+            ~/.cache/pip
+          key: pocket-v1-${{ hashFiles('equipo/voz.json') }}
+          restore-keys: pocket-v1-
+
+      - name: Voz Pocket TTS (CPU)
+        if: steps.trabajo.outputs.pocket == 'si'
+        # Si falla la instalación, publicar_gh.py usa Piper automáticamente.
+        continue-on-error: true
+        run: pip install --quiet pocket-tts --extra-index-url https://download.pytorch.org/whl/cpu
 
       - name: Ciclo
         env:

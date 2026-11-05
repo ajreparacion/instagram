@@ -1,0 +1,70 @@
+name: Ciclo Instagram
+
+# Cada 30 minutos de 12:05 a 23:35 (hora de España en invierno) y una vez por la mañana.
+# GitHub puede retrasar unos minutos las tareas programadas.
+on:
+  schedule:
+    - cron: "5,35 11-22 * * *"
+    - cron: "5 7 * * *"
+  workflow_dispatch:
+    inputs:
+      forzar_estadisticas:
+        description: "Actualizar estadísticas ahora"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ciclo-instagram
+  cancel-in-progress: false
+
+jobs:
+  ciclo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ¿Hay trabajo?
+        id: trabajo
+        run: |
+          # Evita gastar minutos: solo instala herramientas si hay algo en cola/
+          if ls cola/*/post.json >/dev/null 2>&1; then echo "cola=si" >> "$GITHUB_OUTPUT"; else echo "cola=no" >> "$GITHUB_OUTPUT"; fi
+
+      - name: Herramientas de vídeo
+        if: steps.trabajo.outputs.cola == 'si'
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core > /dev/null
+          pip install --quiet pillow numpy
+
+      - name: Caché de la voz (Piper)
+        if: steps.trabajo.outputs.cola == 'si'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/expedientes
+          key: piper-${{ hashFiles('equipo/voz.json') }}
+          restore-keys: piper-
+
+      - name: Ciclo
+        env:
+          PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+          FORZAR_ESTADISTICAS: ${{ inputs.forzar_estadisticas && '1' || '' }}
+          TZ: Europe/Madrid
+        run: python3 publicar_gh.py ciclo
+
+      - name: Guardar cambios
+        run: |
+          git config user.name "expedientes-bot"
+          git config user.email "expedientes-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "Sin cambios"; exit 0; fi
+          git commit -q -m "Ciclo automático $(date -u +%FT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase -q && git push -q && exit 0
+            sleep 5
+          done
+          exit 1

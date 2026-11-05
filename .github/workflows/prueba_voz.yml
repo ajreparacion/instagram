@@ -1,0 +1,68 @@
+name: Prueba de voz (Piper vs Pocket TTS)
+
+# Solo a mano (Actions → Prueba de voz → Run workflow). No publica nada en Instagram.
+# Renderiza herramientas/ejemplo_guion.json con cada motor de voz, mide tiempo, sonoridad,
+# inteligibilidad (Whisper) y naturalidad estimada (UTMOS), guarda equipo/pruebas/prueba_voz.json
+# y sube los vídeos a la release "pruebas" (nunca al historial de git).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prueba-voz
+  cancel-in-progress: true
+
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Herramientas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core > /dev/null
+          pip install --quiet pillow numpy
+
+      - name: Caché de modelos
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/expedientes
+            ~/.cache/huggingface
+            ~/.cache/pocket_tts
+            ~/.cache/torch
+            ~/.cache/pip
+          key: prueba-voz-v1-${{ hashFiles('equipo/voz.json') }}
+          restore-keys: prueba-voz-v1-
+
+      - name: Pocket TTS, Whisper y UTMOS (CPU)
+        run: |
+          pip install --quiet pocket-tts torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet faster-whisper
+          python3 -c "import pocket_tts, torch; print('pocket-tts OK, torch', torch.__version__)"
+
+      - name: Prueba
+        env:
+          TZ: Europe/Madrid
+        run: python3 herramientas/prueba_voz.py
+
+      - name: Subir vídeos a la release "pruebas"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view pruebas >/dev/null 2>&1 || gh release create pruebas --title "Pruebas de producción" --notes "Vídeos de prueba de Mejora (no se publican)."
+          gh release upload pruebas /tmp/prueba_voz/salida/*.mp4 --clobber
+
+      - name: Guardar informe
+        run: |
+          git config user.name "expedientes-bot"
+          git config user.email "expedientes-bot@users.noreply.github.com"
+          git add equipo/pruebas/prueba_voz.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -q -m "Prueba de voz automática $(date -u +%FT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 5; done
+          exit 1
