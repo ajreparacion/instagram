@@ -1,0 +1,37 @@
+[
+ {
+  "inicio": 0.0,
+  "duracion": 4.467,
+  "texto": "Un barco intacto, con comida, y sin nadie a bordo."
+ },
+ {
+  "inicio": 4.467,
+  "duracion": 6.0,
+  "texto": "Hoy hace ciento cincuenta y cuatro años, el Mary Celeste zarpa de Nueva York."
+ },
+ {
+  "inicio": 10.467,
+  "duracion": 4.833,
+  "texto": "Diez a bordo, con la mujer y la hija del capitán."
+ },
+ {
+  "inicio": 15.3,
+  "duracion": 6.0,
+  "texto": "Un mes después, otro barco lo encuentra a la deriva cerca de las Azores."
+ },
+ {
+  "inicio": 21.3,
+  "duracion": 6.0,
+  "texto": "Navegable. Comida y agua para seis meses. Sus cosas, en su sitio."
+ },
+ {
+  "inicio": 27.3,
+  "duracion": 3.5,
+  "texto": "Solo faltaba una cosa: el bote salvavidas."
+ },
+ {
+  "inicio": 30.8,
+  "duracion": 7.0,
+  "texto": "Nunca volvió a saberse de ninguno. ¿Qué pasó? Comenta barco y te cuento las teorías."
+ }
+]
