@@ -1,13 +1,51 @@
 {
  "semilla": 1936,
- "gancho": {"texto": "¿REAL O FALSO? El Koala Coyote de Sierra Morena", "voz": "¿Real o falso? Un koala coyote en Sierra Morena.", "duracion": 2.5},
- "recorte": {"inicio": 0.0, "fin": 12.0},
+ "gancho": {
+  "texto": "¿REAL O FALSO? El Koala Coyote de Sierra Morena",
+  "voz": "¿Real o falso? Un koala coyote en Sierra Morena.",
+  "duracion": 2.5
+ },
+ "recorte": {
+  "inicio": 0.0,
+  "fin": 12.0
+ },
  "rotulos": [
-  {"inicio": 0.2, "fin": 4.0, "texto": "«Avistado en Sierra Morena»"},
-  {"inicio": 4.0, "fin": 8.0, "texto": "¿Mitad koala, mitad coyote?"},
-  {"inicio": 8.0, "fin": 11.9, "texto": "Fíjate bien… ¿te lo crees?"}
+  {
+   "inicio": 0.2,
+   "fin": 4.0,
+   "texto": "«Avistado en Sierra Morena»"
+  },
+  {
+   "inicio": 4.0,
+   "fin": 8.0,
+   "texto": "¿Mitad koala, mitad coyote?"
+  },
+  {
+   "inicio": 8.0,
+   "fin": 11.9,
+   "texto": "Fíjate bien… ¿te lo crees?"
+  }
  ],
- "cierre": {"texto": "Era FALSO. Lo real: el «lobo marsupial» existió… hasta 1936", "voz": "Era falso. El koala coyote nunca existió. Lo real: los koalas salvajes solo viven en Australia. Pero sí existió un lobo marsupial: el tilacino. El último conocido murió en cautividad, en Tasmania, en mil novecientos treinta y seis.", "duracion": 6.0},
+ "cierre": {
+  "partes": [
+   {
+    "texto": "Era FALSO. El Koala Coyote nunca existió",
+    "voz": "Era falso. El koala coyote nunca existió."
+   },
+   {
+    "texto": "Lo real: los koalas salvajes solo viven en Australia",
+    "voz": "Lo real: los koalas salvajes solo viven en Australia."
+   },
+   {
+    "texto": "Pero sí existió un «lobo marsupial»: el tilacino",
+    "voz": "Pero sí existió un lobo marsupial: el tilacino."
+   },
+   {
+    "texto": "El último conocido murió en 1936",
+    "voz": "El último conocido murió en Tasmania, en mil novecientos treinta y seis. Envíaselo a quien se lo creyó."
+   }
+  ]
+ },
  "musica": true,
  "volumen_original": 0.8
 }

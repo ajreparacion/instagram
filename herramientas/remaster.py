@@ -68,6 +68,22 @@ def render_card(path, style, texto, nframes, seed, idx, date_s):
     p.stdin.close()
     if p.wait() != 0: sys.exit("ffmpeg fallo al renderizar tarjeta")
 
+def render_cards(path, specs, seed, idx0, date_s):
+    """Varias tarjetas seguidas en un solo mp4. specs: [(estilo, texto, nframes), ...]"""
+    scenes, start = [], 0
+    for k, (style, texto, nf) in enumerate(specs):
+        scenes.append(hr.Scene(idx0 + k, {"estilo": style, "texto": texto, "visual": ""}, seed, "", nf, start))
+        start += nf
+    noise = hr.build_noise(seed + idx0); rg = random.Random(seed + 99 + idx0)
+    cmd = [FFMPEG, "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", "%dx%d" % (W, H),
+           "-r", str(FPS), "-i", "-", "-c:v", "libx264", "-preset", "ultrafast", "-crf", "10",
+           "-pix_fmt", "yuv420p", "-r", str(FPS), "-frames:v", str(start), path]
+    p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+    for fi in range(start):
+        p.stdin.write(hr.render_frame(fi, scenes, noise, date_s, "", rg).tobytes())
+    p.stdin.close()
+    if p.wait() != 0: sys.exit("ffmpeg fallo al renderizar tarjetas del cierre")
+
 # ---------------------------------------------------------------- overlays (HUD + rotulos)
 class _Dummy: style = "cierre"
 
@@ -166,7 +182,7 @@ def original_audio(path, inicio, dur, has_a, nsamp, vol):
         out[:e] *= np.linspace(0, 1, e)[:, None]; out[-e:] *= np.linspace(1, 0, e)[:, None]
     return out
 
-def build_audio(path_out, orig, inicio, mid_dur, has_a, vol, musica, seed, nh, nm, nc):
+def build_audio(path_out, orig, inicio, mid_dur, has_a, vol, musica, seed, nh, nm, nc, extra_hits=()):
     total = (nh + nm + nc) / FPS
     n = int(round(total * SR)); t = np.arange(n) / SR
     th, tm = nh / FPS, (nh + nm) / FPS
@@ -184,7 +200,7 @@ def build_audio(path_out, orig, inicio, mid_dur, has_a, vol, musica, seed, nh, n
         env = np.interp(t, [0, th - ramp, th + ramp, tm - ramp, tm + ramp, total + 1],
                         [1, 1, 10 ** (-6 / 20), 10 ** (-6 / 20), 1, 1])
         st += mus * env[:, None]
-    st += hits_track(n, [0.0, th, tm], seed)
+    st += hits_track(n, [0.0, th, tm] + list(extra_hits), seed)
     fade = np.minimum(1, np.minimum(t / 0.3, (total - t) / 0.9))
     st *= fade[:, None]
     with open(path_out, "wb") as fh: fh.write(st.astype("<f4").tobytes())
@@ -193,7 +209,9 @@ def build_audio(path_out, orig, inicio, mid_dur, has_a, vol, musica, seed, nh, n
 # ---------------------------------------------------------------- principal
 def main():
     """remaster.json: semilla, gancho{texto,voz,duracion}, recorte{inicio,fin}, rotulos[{inicio,fin,texto}],
-    cierre{texto,voz,duracion}, musica(bool), volumen_original(float)."""
+    cierre{texto,voz,duracion} o cierre{partes:[{texto,voz,estilo?,duracion?}, ...]} (varias tarjetas
+    seguidas, cada una con su voz: cambio visual cada pocos segundos), musica(bool), volumen_original(float).
+    Estilos por defecto de las partes: la primera "giro", las intermedias "evidencia", la ultima "cierre"."""
     if len(sys.argv) < 4:
         print("Uso: python3 remaster.py original.mp4 remaster.json salida.mp4"); sys.exit(1)
     t_start = time.time()
@@ -211,7 +229,16 @@ def main():
         voz = (d.get("voz") or "").strip()
         if voz: base = max(base, n_words(voz) / 2.6 + 0.4)
         return int(math.ceil(base * FPS - 1e-6))
-    nh = card_dur(g, 2.5); nc = card_dur(c, 3.0)
+    nh = card_dur(g, 2.5)
+    partes = [p for p in (c.get("partes") or []) if (p.get("texto") or p.get("voz") or "").strip()]
+    if partes:
+        cspecs = []
+        for k, p in enumerate(partes):
+            est = p.get("estilo") or ("cierre" if k == len(partes) - 1 else ("giro" if k == 0 else "evidencia"))
+            cspecs.append((est, p.get("texto", ""), card_dur(p, 2.5), (p.get("voz") or "").strip()))
+    else:
+        cspecs = [("cierre", c.get("texto", ""), card_dur(c, 3.0), (c.get("voz") or "").strip())]
+    nc = sum(s[2] for s in cspecs)
     inicio = max(0.0, float(rec.get("inicio") or 0.0))
     fin = rec.get("fin"); fin = dur if fin is None else min(float(fin), dur)
     mid_dur = min(fin - inicio, MAX_TRAMO, MAX_TOTAL - (nh + nc) / FPS)
@@ -230,8 +257,11 @@ def main():
     loc = []
     if (g.get("voz") or "").strip():
         loc.append({"inicio": 0.0, "duracion": round(nh / FPS, 3), "texto": g["voz"].strip()})
-    if (c.get("voz") or "").strip():
-        loc.append({"inicio": round((nh + nm) / FPS, 3), "duracion": round(nc / FPS, 3), "texto": c["voz"].strip()})
+    f0, cut_times = nh + nm, []
+    for k, (_, _, nf, voz) in enumerate(cspecs):
+        if k: cut_times.append(f0 / FPS)
+        if voz: loc.append({"inicio": round(f0 / FPS, 3), "duracion": round(nf / FPS, 3), "texto": voz})
+        f0 += nf
     with open(os.path.splitext(out)[0] + ".locucion.json", "w", encoding="utf-8") as fh:
         json.dump(loc, fh, ensure_ascii=False, indent=1)
 
@@ -240,13 +270,13 @@ def main():
         t0 = time.time()
         hook_mp4, close_mp4 = os.path.join(tmp, "h.mp4"), os.path.join(tmp, "c.mp4")
         render_card(hook_mp4, "gancho", g.get("texto", ""), nh, seed, 0, date_s)
-        render_card(close_mp4, "cierre", c.get("texto", ""), nc, seed, 1, date_s)
+        render_cards(close_mp4, [(s[0], s[1], s[2]) for s in cspecs], seed, 1, date_s)
         t_cards = time.time() - t0
         sp = os.path.join(tmp, "static.png"); static_overlay(sp)
         lst = build_overlay_list(tmp, mid_dur, nm, nh / FPS, date_s, rotulos)
         wav = os.path.join(tmp, "a.f32")
         ta = time.time()
-        total, info = build_audio(wav, src, inicio, mid_dur, has_a, vol, musica, seed, nh, nm, nc)
+        total, info = build_audio(wav, src, inicio, mid_dur, has_a, vol, musica, seed, nh, nm, nc, cut_times)
         t_audio = time.time() - ta
 
         # --- filtro del tramo original
