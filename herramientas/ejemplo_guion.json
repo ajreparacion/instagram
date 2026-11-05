@@ -1,0 +1,20 @@
+{
+  "titulo": "Expediente 001: la epidemia de baile",
+  "semilla": 1518,
+  "musica": true,
+  "portada_texto": "La ciudad que no podía dejar de bailar",
+  "escenas": [
+    {"texto": "En 1518, una ciudad entera no podía parar de bailar", "duracion": 3.5, "estilo": "gancho",
+     "voz": "En mil quinientos dieciocho, una ciudad entera no podía dejar de bailar."},
+    {"texto": "Estrasburgo, julio de 1518", "duracion": 4.0, "estilo": "archivo",
+     "voz": "Estrasburgo, julio. Una mujer, Frau Troffea, sale a la calle y empieza a bailar. Y no para."},
+    {"texto": "En días, decenas se unen. En agosto, cientos.", "duracion": 4.5, "estilo": "evidencia",
+     "voz": "En pocos días se le unen decenas de vecinos. En agosto, según las crónicas, eran entre cincuenta y cuatrocientos."},
+    {"texto": "La 'cura' de los médicos: más música", "duracion": 4.5, "estilo": "evidencia",
+     "voz": "Los médicos dijeron que era sangre caliente. La solución: más baile. Contrataron músicos y montaron un escenario."},
+    {"texto": "Y fue peor.", "duracion": 3.0, "estilo": "giro",
+     "voz": "Y fue peor. Cada día bailaba más gente."},
+    {"texto": "Comenta 'BAILE' y te cuento cómo acabó", "duracion": 4.0, "estilo": "cierre",
+     "voz": "¿Cómo terminó? Comenta baile y te lo cuento en la segunda parte."}
+  ]
+}
