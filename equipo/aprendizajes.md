@@ -1,8 +1,9 @@
 # Aprendizajes de @nosabesloquehasvisto
 
 ## ALERTAS
-- Ninguna de publicación ni de token (5/11/2026 22:45): registro.log y errores/ están limpios.
-- Avisos para el Estratega: cola/ está vacía. plan.json sigue con ideas de ficción de antes del cambio de enfoque (calcetines, fechas inventadas) y no tiene programada la "Parte 2" que el 001 promete a quien comente BAILE.
+- Ninguna de publicación ni de token (5/11/2026 23:23): registro.log y errores/ están limpios; los renders de 002 y 003 con la voz nueva (Pocket TTS, lola) salieron bien a las 23:08-23:09.
+- Resuelto: cola/ ya tiene 002 Emú (6/11 20:40), 003 ¿REAL O FALSO? (6/11 13:40) y 004 Mary Celeste (7/11 20:40); plan.json ya incluye la Parte 2 de BAILE. Ninguno tiene aún calidad.json (Calidad revisa a las 12:31, antes de la primera hora de publicación).
+- Aviso de datos: publicados/001_baile_1518/ no guarda guion.json, así que no se puede medir la retención frente a la duración. Conviene que el flujo de publicación conserve guion.json/remaster.json al mover a publicados/.
 
 ## Histórico completo (5/11/2026): ver equipo/analisis_historico.md y equipo/historico.json
 - Pico de la cuenta: "Podcast Empírico" de humor con Mr. Tartaria y Mr. Empírico (21/1-11/3/2024, unos 73 reels). Reproducciones: 1.216-1.786 de mediana frente a 196-250 del resto. Visualización: 17-19 s. Viral del 31/1/2024: 128.286 reproducciones, 1.617 likes, 666 comentarios, 477 guardados, 41,8 s. Confianza: alta.
@@ -53,3 +54,4 @@ Regla: cada aprendizaje lleva evidencia y confianza (alta/media/baja). Sin evide
 (El Analista añade aquí una línea por día: fecha, qué se publicó, resultado a 24-48 h, conclusión.)
 - 5/11/2026 · 001 Epidemia de baile 1518 (reel nuevo, 21:46, CTA "BAILE"). A los 32-40 min: alcance 1-2, 6 reproducciones, 0 likes/guardados/compartidos/comentarios; visualización media 38,7 s (Actions) / 26,1 s (Buzzfy, provisional), unas 3 veces la mediana de la cuenta; salto 40 % (mediana 65 %). Seguidores 1.605. Conclusión: demasiado pronto para juzgar el alcance; la retención inicial es buena señal para el formato de misterio real. Reevaluar a 24-48 h.
 - 5/11/2026 (22:45, ejecución manual) · Análisis completo de 813 publicaciones. 001 BAILE a 1 h: 6 reproducciones, alcance 5, visualización 18 s (dato provisional). Sin cambios en seguidores (1.605).
+- 5/11/2026 (23:23, Analista) · 001 BAILE a 1,6 h (Buzzfy, provisional): alcance 5, 6 reproducciones (1,2 por cuenta), 0 likes/comentarios/guardados/compartidos, 0 comentarios con BAILE; visualización media 18 s (2,1 veces la mediana de 8,4 s); salto 80 % (antes 40 %; mediana 65 %). estadisticas.json sigue con la foto de las 21:18 UTC (alcance 1, 38,7 s). Seguidores 1.605 (sin cambios). Conclusión: la retención de quien lo ve es alta, pero Instagram aún no lo ha distribuido (alcance 0,03 veces la mediana); sin base para nuevos aprendizajes con un solo reel. Reevaluar a 24-48 h y comparar con 002 y 003.
