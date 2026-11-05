@@ -1,13 +1,34 @@
 {
-  "actualizado": "2026-11-05T21:30:43",
+  "actualizado": "2026-11-05T21:18:54+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1605,
     "follows_count": 176,
-    "media_count": 808,
+    "media_count": 809,
     "username": "nosabesloquehasvisto"
   },
   "posts": [
+    {
+      "id": "17996499894053316",
+      "caption": "En 1518, una ciudad entera no podía dejar de bailar.\n\nEstrasburgo, julio de 1518. Una mujer, Frau Troffea, empieza a bailar en la calle y no para.\nEn días se le unen decenas de vecinos. En agosto, según las crónicas, eran entre 50 y 400.\nLos médicos lo atribuyeron a la \"sangre caliente\" y recetaron… más baile: músicos y un escenario.\nFue peor.\n\nHoy se estudia como un caso de enfermedad psicógena colectiva (historiador John Waller).\n\nComenta \"BAILE\" y te cuento cómo acabó en la Parte 2.\n📩 Envíaselo a quien no se lo vaya a creer.\n\nFuentes: crónicas de Estrasburgo de 1518; John Waller, \"A Time to Dance, a Time to Die\" (2008).\n#misterio #historia #curiosidades #datoscuriosos #epidemiadebaile",
+      "comments_count": 0,
+      "like_count": 0,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfX69HFiU6w/",
+      "timestamp": "2026-11-05T20:46:00+0000",
+      "metricas": {
+        "reach": 1,
+        "views": 6,
+        "saved": 0,
+        "shares": 0,
+        "comments": 0,
+        "likes": 0,
+        "total_interactions": 0,
+        "ig_reels_avg_watch_time": 38705,
+        "ig_reels_video_view_total_time": 77411
+      }
+    },
     {
       "id": "18119472877980749",
       "caption": "Hay un vídeo oculto.\nUn koala en la noche.\nNo actuaba como animal.\nSe sentó en el suelo.\nTrazó líneas exactas.\nUn patrón geométrico.\nCon sus propias garras.\nLuego miró al cielo.\nLos ojos en blanco.\nY empezó a mecerse.\nComo si rezara.\nBiólogos en shock.\nNadie lo explica.\n¿Instinto o consciencia?\nEl misterio asusta.\n#Misterio #Viral\n#Koala #Terror \n#Enigma",
@@ -616,27 +637,12 @@
         "ig_reels_avg_watch_time": 14576,
         "ig_reels_video_view_total_time": 4547959
       }
-    },
+    }
+  ],
+  "historial_cuenta": [
     {
-      "id": "18023872808053271",
-      "caption": "🎙️🔍 ¡Sara Empírica presenta: Tensiones y Sospechas en el Podcast, con Carles y Enrique Discutiendo el Proyecto CUPULATION SYSTEM BLACK y la Nueva Promoción de Mercadona, Ele Casei Inmunitais! 💼🌌\n\n¡Prepárate para un episodio lleno de intriga y sorpresas inesperadas! En esta entrega especial del podcast, Sara Empírica lidera la conversación mientras discutimos el proyecto CUPULATION SYSTEM BLACK con Carles y Enrique. Sin embargo, las sospechas sobre el posible vínculo de Sara con la élite comienzan a aflorar, generando un ambiente tenso e incómodo.\n\nA medida que la entrevista avanza, las preguntas se vuelven más intensas y las respuestas más ambiguas. ¿Es Sara realmente quien dice ser, o hay más de lo que parece? ¿Cómo afectarán estas sospechas al futuro del proyecto y a la relación entre los presentadores?\n\nPero eso no es todo, durante la entrevista, un pequeño incidente involucrando a Enrique y la CUPULATION SYSTEM BLACK añade aún más tensión a la situación. ¿Qué pasó exactamente? ¿Cómo afectará este incidente al curso del proyecto y a la dinámica del equipo?\n\nAdemás, no podemos ignorar la emocionante nueva promoción de Mercadona: ¡Ele Casei Inmunitais! ¿Podría haber alguna conexión entre este nuevo producto y los misterios que estamos explorando?\n\nNo te pierdas este emocionante episodio del podcast, donde la verdad se convierte en un juego peligroso y las lealtades se ponen a prueba. ¡Prepárate para una experiencia que te mantendrá en vilo hasta el final! 🎙️🔍💼🌌#deisputnik #misterio #tartarianempire #mickeymouseempirico #conspiraciones #gigantes #humor #sketch #🤣",
-      "comments_count": 0,
-      "like_count": 12,
-      "media_product_type": "REELS",
-      "media_type": "VIDEO",
-      "permalink": "https://www.instagram.com/reel/C5CIjr8NypK/",
-      "timestamp": "2024-03-27T21:48:41+0000",
-      "metricas": {
-        "reach": 5,
-        "views": 1084,
-        "saved": 2,
-        "shares": 0,
-        "comments": 0,
-        "likes": 12,
-        "total_interactions": 14,
-        "ig_reels_avg_watch_time": 8793,
-        "ig_reels_video_view_total_time": 8617983
-      }
+      "fecha": "2026-11-05T21:18+00:00",
+      "seguidores": 1605
     }
   ]
 }
