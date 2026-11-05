@@ -360,7 +360,21 @@ def publicar_reel(cfg, video, post):
               "share_to_feed": "true" if post.get("compartir_en_feed", True) else "false"}
     if post.get("portada_ms") is not None:
         params["thumb_offset"] = str(int(post["portada_ms"]))
-    r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **params)
+    # Reel de prueba (trial reel): Instagram lo enseña primero solo a no seguidores.
+    # post.json: "prueba_no_seguidores": true (se gradúa solo si rinde, SS_PERFORMANCE) o "MANUAL".
+    prueba = post.get("prueba_no_seguidores")
+    if prueba:
+        estrategia = "MANUAL" if str(prueba).upper() == "MANUAL" else "SS_PERFORMANCE"
+        params["trial_params"] = json.dumps({"graduation_strategy": estrategia})
+    try:
+        r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **params)
+    except ErrorAPI as e:
+        if "trial_params" not in params:
+            raise
+        log(f"reel de prueba rechazado por la API ({e}); se publica como reel normal")
+        params.pop("trial_params")
+        prueba = None
+        r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **params)
     cid = r["id"]
     uri = r.get("uri") or f"https://rupload.facebook.com/ig-api-upload/{cfg['version']}/{cid}"
     with open(video, "rb") as f:
@@ -375,7 +389,7 @@ def publicar_reel(cfg, video, post):
         enlace = api(cfg, mid, fields="permalink").get("permalink", "")
     except ErrorAPI:
         pass
-    return {"media_id": mid, "enlace": enlace}
+    return {"media_id": mid, "enlace": enlace, "prueba_no_seguidores": bool(prueba)}
 
 
 def aprobado(carpeta, cuando, ahora):

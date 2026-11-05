@@ -27,7 +27,9 @@ Lee esto entero antes de tu rol (equipo/roles/<tu_rol>.md).
 ## Formato de post.json
 {"tipo":"reel","texto":"<texto del post>","cuando":"AAAA-MM-DDTHH:MM:00+01:00 (o +02:00 en verano)",
  "palabra_clave":"PALABRA del CTA","respuesta":"respuesta automática a quien comente la palabra (máx. 200 caracteres, sin enlaces)",
- "compartir_en_feed":true,"portada_ms":2800, "original_id":"<solo remaster: id del reel antiguo>"}
+ "compartir_en_feed":true,"portada_ms":2800, "original_id":"<solo remaster: id del reel antiguo>",
+ "prueba_no_seguidores":true}
+"prueba_no_seguidores" (opcional): se publica como reel de prueba (trial reel) que Instagram enseña primero solo a no seguidores y que pasa al perfil si rinde. Por defecto en todos los remasters ¿REAL O FALSO?; si la API lo rechaza, sale como reel normal.
 NNN = siguiente número de 3 cifras tras los usados en cola/, publicados/, revision/, errores/ y descartados/.
 
 ## Formato de guion.json (reel nuevo; lo renderiza herramientas/hacer_reel.py)

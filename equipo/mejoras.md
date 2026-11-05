@@ -23,3 +23,11 @@ Línea base medida (ejemplo_guion.json + voz simulada con el mismo nivel y diná
 ### Qué comparar en la próxima ejecución
 - ig_reels_avg_watch_time y alcance de los reels renderizados después de este cambio frente a los anteriores (estadisticas.json). Escuchar un reel real con Piper: si la voz suena metálica o con siseo, bajar `equalizer=f=3500...g=3` a g=1.5 o quitar el de-esser; si suena baja, subir `makeup` a 3.6.
 - Pendiente para otra ejecución: probar la cadena con la voz real de Piper en GitHub Actions (aquí Hugging Face está bloqueado).
+
+## 5/11/2026 · Monetización: reels de prueba para no seguidores (publicar_gh.py `publicar_reel`)
+- Nuevo campo opcional en post.json: `"prueba_no_seguidores": true` (graduación automática SS_PERFORMANCE) o `"MANUAL"`. Añade `trial_params={"graduation_strategy": ...}` al crear el contenedor del reel.
+- Fuente: documentación oficial de Meta, IG User Media (developers.facebook.com/docs/instagram-platform/instagram-graph-api/reference/ig-user/media, leída 5/11/2026): "An optional parameter for publishing trial reels… graduation_strategy… MANUAL or SS_PERFORMANCE… SS_PERFORMANCE, the trial reel will be automatically graduated if the trial reel performs well."
+- Seguridad: si la API rechaza el contenedor con trial_params, se registra en registro.log y se reintenta al momento como reel normal (no se pierde la publicación). resultado.json guarda `prueba_no_seguidores` true/false.
+- Probado con la API simulada (acepta / rechaza / sin campo): los tres casos publican.
+- Motivo: la cuenta llega a 14 no seguidores en 30 días; el cuello de botella para monetizar es el alcance fuera de los seguidores.
+- Revertir: quitar el bloque "Reel de prueba" de `publicar_reel` o no poner el campo en post.json.
