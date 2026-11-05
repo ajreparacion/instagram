@@ -36,3 +36,18 @@ Línea base medida (ejemplo_guion.json + voz simulada con el mismo nivel y diná
 Guardar en estadisticas.json, por reel, la métrica de seguidores ganados ("follows", si la API la da para reels) y el alcance de no seguidores, para saber qué convierte en seguidores (recomendación 5 de monetizacion.md). Comprobar también que los reels de prueba (no salen en el perfil) se siguen midiendo por su media_id de resultado.json.
 
 - 5/11/2026 (Remasterizador, con permiso total del usuario): herramientas/remaster.py admite `cierre.partes` (varias tarjetas seguidas, cada una con su voz y un golpe de sonido en cada corte). Motivo: el cierre de un remaster era una sola tarjeta fija de 15 s, y el estándar pide un cambio visual cada 2-4 s. Probado con el 003 (33,7 s; 4 tarjetas de 3,1 a 7,3 s; 1080x1920, h264+aac, pico -6,6 dBFS antes de la voz). Es compatible con el formato antiguo (`cierre.texto` + `cierre.voz`). Para revertir: copiar herramientas/versiones/remaster.py_2026-11-05 sobre herramientas/remaster.py.
+
+## 5/11/2026 (2.ª ejecución, manual) · Remaster: nivel del tramo original
+
+Comparación de retención de la ejecución anterior: **todavía sin datos**. Ningún reel se ha renderizado aún con la nueva cadena de voz (001 se publicó con el sistema anterior; 002 y 003 se renderizarán en el próximo ciclo). Se compara en la siguiente ejecución.
+
+### Cambio 3: el tramo del reel antiguo suena al mismo nivel que el gancho y el cierre (herramientas/remaster.py)
+- Problema medido con un vídeo sintético y el remaster.json real de cola/003: si el reel antiguo tenía el audio flojo, el tramo central quedaba a −29 LUFS frente a −15 LUFS en el gancho y el cierre. Son 14 dB de bajón: parece que el vídeo se ha quedado sin sonido y la gente pasa de largo.
+- Ahora el audio del original se lleva a −15 LUFS antes de aplicar `volumen_original`. Límites: como mucho +18 dB o −20 dB, y nunca por encima de un pico de 0,85 (no fuerza el limitador). En silencio total no hace nada.
+- Resultado: original flojo, tramo de −29,1 a −20,4 LUFS (al tope de +18 dB). Original normal (−14,7 LUFS), sin cambios apreciables (−16,7 → −17,0). Gancho y cierre iguales. Pico final −1,9 dBFS. Fotogramas correctos y gancho completo a 1,2 s también en el remaster.
+- Revertir: copiar herramientas/versiones/remaster.py_2026-11-05, o poner `return 1.0` al principio de `gain_original`.
+
+### Avisos
+- Cierre de 15 s fijo en cola/003: ya lo resolvió el Remasterizador con `cierre.partes` mientras yo trabajaba. Mi cambio de nivel está combinado con el suyo y probado con su nuevo remaster.json.
+- Petición del Estratega (seguidores por reel en estadisticas.json): toca la parte de métricas de publicar_gh.py, que no es de Mejora (mi rol solo puede tocar la parte de voz y mezcla). Queda para el rol de Monetización o el Analista.
+- Detalle menor: en los remasters, el reloj del HUD vuelve a empezar en la tarjeta de cierre (03:17:54 → 03:17:46). Lo corregiré en otra ejecución si no hay nada más prioritario.
