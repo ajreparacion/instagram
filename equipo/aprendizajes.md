@@ -29,6 +29,7 @@ Regla: cada aprendizaje lleva evidencia y confianza (alta/media/baja). Sin evide
 - 5/11/2026 ESTRATEGA: se aprovechan aniversarios reales del mes (Emú 2/11/1932, Mary Celeste 7/11/1872, Manises 11/11/1979, viernes/martes 13) y se cumple siempre la Parte 2 prometida (la del 001 baile sale el 8/11). Motivo: las fechas dan gancho y actualidad; romper una promesa de Parte 2 resta confianza.
 - 5/11/2026 ESTRATEGA: experimento de la semana = duración corta (20-25 s) frente a larga (36-42 s), campo "duracion_objetivo" en plan.json; métrica: % visto medio y alcance + compartidos a 48 h. Motivo: la retención es la señal principal y es medible con ig_reels_avg_watch_time.
 - 5/11/2026 ESTRATEGA (revisión): KPI semanal = seguidores netos y alcance a no seguidores (meta por reel: alcance ≥ 300 y ≥ 3 compartidos); 1 de cada 3 expedientes de animales o naturaleza; palabras clave sin tildes. Motivo: monetizacion.md (la cuenta pierde ~0,3 seguidores/día; lo animal es lo más compartido).
+- 5/11/2026 ESTRATEGA: el objetivo es MONETIZAR. Hoja de ruta por fases en plan.json (crecer hasta 5.000 → afiliados → marcas → herramientas de Instagram) y reels de prueba para llegar a no seguidores ("prueba_no_seguidores", ya disponible). Motivo: en 30 días solo 14 no seguidores alcanzados y 0 clics en el enlace; sin alcance no hay ninguna vía de ingresos.
 
 - 5/11/2026 CALIDAD: antes de producir, Creador y Remasterizador leen equipo/estandar_calidad.md y lo cumplen. El agente de Calidad revisa cada reel de cola/ a las 12:31 y 19:31; lo que no pasa va a revision/ y no se publica.
 

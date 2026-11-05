@@ -31,3 +31,6 @@ Línea base medida (ejemplo_guion.json + voz simulada con el mismo nivel y diná
 - Probado con la API simulada (acepta / rechaza / sin campo): los tres casos publican.
 - Motivo: la cuenta llega a 14 no seguidores en 30 días; el cuello de botella para monetizar es el alcance fuera de los seguidores.
 - Revertir: quitar el bloque "Reel de prueba" de `publicar_reel` o no poner el campo en post.json.
+
+## PETICIÓN DEL ESTRATEGA (5/11/2026) · seguidores por reel
+Guardar en estadisticas.json, por reel, la métrica de seguidores ganados ("follows", si la API la da para reels) y el alcance de no seguidores, para saber qué convierte en seguidores (recomendación 5 de monetizacion.md). Comprobar también que los reels de prueba (no salen en el perfil) se siguen midiendo por su media_id de resultado.json.
