@@ -28,6 +28,7 @@ Regla: cada aprendizaje lleva evidencia y confianza (alta/media/baja). Sin evide
 - 5/11/2026 ESTRATEGA: el nicho es MISTERIOS REALES y datos verdaderos que parecen inventados (serie EXPEDIENTES con fuentes) + ¿REAL O FALSO? martes y viernes con reels antiguos. Motivo: la ficción no tuvo tracción (1-11 likes, 0-2 comentarios) y el algoritmo de 2026 premia compartidos por DM y retención, que se ganan con "no me lo creo, pero es verdad".
 - 5/11/2026 ESTRATEGA: se aprovechan aniversarios reales del mes (Emú 2/11/1932, Mary Celeste 7/11/1872, Manises 11/11/1979, viernes/martes 13) y se cumple siempre la Parte 2 prometida (la del 001 baile sale el 8/11). Motivo: las fechas dan gancho y actualidad; romper una promesa de Parte 2 resta confianza.
 - 5/11/2026 ESTRATEGA: experimento de la semana = duración corta (20-25 s) frente a larga (36-42 s), campo "duracion_objetivo" en plan.json; métrica: % visto medio y alcance + compartidos a 48 h. Motivo: la retención es la señal principal y es medible con ig_reels_avg_watch_time.
+- 5/11/2026 ESTRATEGA (revisión): KPI semanal = seguidores netos y alcance a no seguidores (meta por reel: alcance ≥ 300 y ≥ 3 compartidos); 1 de cada 3 expedientes de animales o naturaleza; palabras clave sin tildes. Motivo: monetizacion.md (la cuenta pierde ~0,3 seguidores/día; lo animal es lo más compartido).
 
 - 5/11/2026 CALIDAD: antes de producir, Creador y Remasterizador leen equipo/estandar_calidad.md y lo cumplen. El agente de Calidad revisa cada reel de cola/ a las 12:31 y 19:31; lo que no pasa va a revision/ y no se publica.
 
