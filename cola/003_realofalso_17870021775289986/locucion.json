@@ -1,0 +1,27 @@
+[
+ {
+  "inicio": 0.0,
+  "duracion": 3.867,
+  "texto": "¿Real o falso? Un koala coyote en Sierra Morena."
+ },
+ {
+  "inicio": 15.867,
+  "duracion": 3.1,
+  "texto": "Era falso. El koala coyote nunca existió."
+ },
+ {
+  "inicio": 18.967,
+  "duracion": 3.867,
+  "texto": "Lo real: los koalas salvajes solo viven en Australia."
+ },
+ {
+  "inicio": 22.833,
+  "duracion": 3.5,
+  "texto": "Pero sí existió un lobo marsupial: el tilacino."
+ },
+ {
+  "inicio": 26.333,
+  "duracion": 7.333,
+  "texto": "El último conocido murió en Tasmania, en mil novecientos treinta y seis. Envíaselo a quien se lo creyó."
+ }
+]
