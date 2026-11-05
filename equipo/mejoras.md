@@ -45,7 +45,7 @@ Comparación de retención de la ejecución anterior: **todavía sin datos**. Ni
 - Problema medido con un vídeo sintético y el remaster.json real de cola/003: si el reel antiguo tenía el audio flojo, el tramo central quedaba a −29 LUFS frente a −15 LUFS en el gancho y el cierre. Son 14 dB de bajón: parece que el vídeo se ha quedado sin sonido y la gente pasa de largo.
 - Ahora el audio del original se lleva a −15 LUFS antes de aplicar `volumen_original`. Límites: como mucho +18 dB o −20 dB, y nunca por encima de un pico de 0,85 (no fuerza el limitador). En silencio total no hace nada.
 - Resultado: original flojo, tramo de −29,1 a −20,4 LUFS (al tope de +18 dB). Original normal (−14,7 LUFS), sin cambios apreciables (−16,7 → −17,0). Gancho y cierre iguales. Pico final −1,9 dBFS. Fotogramas correctos y gancho completo a 1,2 s también en el remaster.
-- Revertir: copiar herramientas/versiones/remaster.py_2026-11-05, o poner `return 1.0` al principio de `gain_original`.
+- Revertir: poner `return 1.0` al principio de `gain_original` en herramientas/remaster.py. No copies herramientas/versiones/remaster.py_2026-11-05, porque también desharía las tarjetas de cierre del Remasterizador.
 
 ### Avisos
 - Cierre de 15 s fijo en cola/003: ya lo resolvió el Remasterizador con `cierre.partes` mientras yo trabajaba. Mi cambio de nivel está combinado con el suyo y probado con su nuevo remaster.json.
