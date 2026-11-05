@@ -170,13 +170,30 @@ def hits_track(n, times, seed):
     if pk > 0: out *= 0.42 / pk
     return out
 
+OBJ_LUFS_ORIGINAL = -15.0   # nivel del tramo original antes de volumen_original (como la voz nueva)
+PICO_MAX_ORIGINAL = 0.85    # sin forzar el limitador: la ganancia no pasa de este pico
+
+def gain_original(a):
+    """Ganancia para que el tramo original suene parecido al gancho y al cierre (antes podia
+    quedar 10-15 dB por debajo si el reel antiguo era flojo, o pegar un salto si era muy fuerte)."""
+    if len(a) < int(0.5 * SR): return 1.0
+    pk = float(np.abs(a).max())
+    if pk < 1e-4: return 1.0
+    l = hr.lufs(a)
+    if l <= -60: return 1.0
+    g = 10 ** ((OBJ_LUFS_ORIGINAL - l) / 20)
+    g = min(g, PICO_MAX_ORIGINAL / pk, 10 ** (18 / 20))   # como mucho +18 dB
+    return max(g, 10 ** (-20 / 20))
+
 def original_audio(path, inicio, dur, has_a, nsamp, vol):
     out = np.zeros((nsamp, 2))
     if not has_a or vol <= 0: return out
     r = subprocess.run([FFMPEG, "-v", "error", "-ss", "%.3f" % inicio, "-t", "%.3f" % dur, "-i", path, "-vn",
                         "-ac", "2", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True)
     a = np.frombuffer(r.stdout, "<f4").reshape(-1, 2).astype(np.float64) if r.stdout else np.zeros((0, 2))
-    k = min(len(a), nsamp); out[:k] = a[:k] * vol
+    k = min(len(a), nsamp); a = a[:k]
+    a = a * gain_original(a)
+    out[:k] = a * vol
     e = int(0.01 * SR)
     if nsamp > 2 * e:
         out[:e] *= np.linspace(0, 1, e)[:, None]; out[-e:] *= np.linspace(1, 0, e)[:, None]
