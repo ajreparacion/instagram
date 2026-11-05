@@ -60,8 +60,16 @@ def sonoridad(ruta):
     return (float(lufs[-1]) if lufs else None), (float(pico[-1]) if pico else None)
 
 
+def audio16k(ruta):
+    """Decodifica con ffmpeg a mono 16 kHz float32 (evita PyAV/torchcodec, que fallan según versión)."""
+    import numpy as np
+    r = subprocess.run(["ffmpeg", "-loglevel", "error", "-i", ruta, "-vn", "-ac", "1", "-ar", "16000",
+                        "-f", "f32le", "-"], capture_output=True, check=True)
+    return np.frombuffer(r.stdout, dtype=np.float32).copy()
+
+
 def transcribir(modelo, ruta):
-    segs, _ = modelo.transcribe(ruta, language="es", beam_size=5, vad_filter=False)
+    segs, _ = modelo.transcribe(audio16k(ruta), language="es", beam_size=5, vad_filter=False)
     return " ".join(s.text.strip() for s in segs)
 
 
@@ -88,7 +96,6 @@ def main():
         informe["aviso_asr"] = str(e)[-200:]
     try:
         import torch
-        import torchaudio
         utmos = torch.hub.load("tarepan/SpeechMOS:v1.2.0", "utmos22_strong", trust_repo=True)
     except Exception as e:
         utmos = None
@@ -158,8 +165,7 @@ def main():
             try:
                 notas = []
                 for i in range(len(tramos)):
-                    x, sr = torchaudio.load(os.path.join(trabajo, f"voz{i}.wav"))
-                    x = torchaudio.functional.resample(x.mean(0, keepdim=True), sr, 16000)
+                    x = torch.from_numpy(audio16k(os.path.join(trabajo, f"voz{i}.wav")))[None]
                     with torch.no_grad():
                         notas.append(float(utmos(x, 16000).mean()))
                 res["utmos_medio"] = round(sum(notas) / len(notas), 2)
