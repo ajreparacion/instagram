@@ -7,6 +7,5 @@
   "compartir_en_feed": true,
   "portada_ms": 2600,
   "_nota_creador": "Duración objetivo 'corto' del plan: 5 escenas, 22 s. Palabra clave GUERRA en lugar de la sugerida EMU: la detección no ignora tildes y 'EMU' no captaría 'emú'. Cifras verificadas en Britannica, Wikipedia, Australian Geographic e History Hit; 986 abatidos y 10 balas por ave son declaraciones de Meredith y se marcan como discutidas.",
-  "renderizado": "2026-11-05T21:45:21+00:00",
-  "asset": "002_guerra_emus.mp4"
+  "_nota_mejora": "5/11 22:10: renderizado anulado para rehacerlo con la voz Pocket TTS (prueba: naturalidad UTMOS 3,87 frente a 2,66 de Piper)."
 }
