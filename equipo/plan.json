@@ -1,0 +1,72 @@
+{
+  "semana": "2026-11-06 a 2026-11-12",
+  "creado_por": "configuración inicial",
+  "objetivo": "Fijar el nicho y el ritmo diario; lanzar la serie 'Expedientes' y medir qué temas generan comentarios.",
+  "serie_principal": "EXPEDIENTES: cada reel es un expediente numerado sobre algo cotidiano que 'no es lo que parece'.",
+  "experimento": "Comparar gancho de pregunta '¿Y si...?' (días pares) frente a gancho de dato con fecha inventada (días impares). Medir likes + comentarios a las 24 h.",
+  "dias": [
+    {
+      "fecha": "2026-11-06",
+      "tipo": "remaster",
+      "hora": "13:40",
+      "idea": "Remasterizar el reel del oxígeno inventado (1872) o el que más likes tenga entre los descargados",
+      "gancho": "dato_con_fecha"
+    },
+    {
+      "fecha": "2026-11-06",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "idea": "Expediente 002: las palomas no duermen nunca (¿dónde están de noche?)",
+      "gancho": "dato_con_fecha"
+    },
+    {
+      "fecha": "2026-11-07",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "idea": "Expediente 003: el wifi de casa va peor cuando hablas de él",
+      "gancho": "pregunta"
+    },
+    {
+      "fecha": "2026-11-08",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "idea": "Parte 2 de los calcetines SI el reel 001 recibió algún comentario 'IMPAR'; si no, Expediente 004: los semáforos te miran",
+      "gancho": "dato_con_fecha"
+    },
+    {
+      "fecha": "2026-11-09",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "idea": "Expediente 005: el koala que llegó antes que los humanos a Australia (vuelve el universo koala)",
+      "gancho": "pregunta"
+    },
+    {
+      "fecha": "2026-11-10",
+      "tipo": "remaster",
+      "hora": "13:40",
+      "idea": "Remasterizar el reel antiguo con más likes que esté descargado en originales/",
+      "gancho": "pregunta"
+    },
+    {
+      "fecha": "2026-11-10",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "idea": "Expediente 006: los lunes fueron inventados en 1891",
+      "gancho": "dato_con_fecha"
+    },
+    {
+      "fecha": "2026-11-11",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "idea": "Expediente 007: las escaleras mecánicas cuentan a la gente",
+      "gancho": "pregunta"
+    },
+    {
+      "fecha": "2026-11-12",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "idea": "Expediente 008: el eco de las montañas responde con retraso a propósito",
+      "gancho": "dato_con_fecha"
+    }
+  ]
+}
