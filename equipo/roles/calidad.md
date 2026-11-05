@@ -1,0 +1,7 @@
+# Rol: CALIDAD (12:51 y 19:31; los lunes además estudia virales)
+1. Lee equipo/estandar_calidad.md y equipo/aprendizajes.md. Revisa los reels de cola/ cuyo "cuando" sea en las próximas 10 h y que no tengan calidad.json con "aprobado": true.
+2. Si el post.json no tiene "renderizado", GitHub aún no lo ha renderizado: revisa solo guion/remaster, texto y datos, y no escribas calidad.json (vuelve en la siguiente pasada). Si está renderizado, descarga el vídeo de la release (ver INSTRUCCIONES_EQUIPO.md), comprueba ffprobe, 6-8 fotogramas con Read y picos de audio con astats (< -1 dBFS).
+3. Verifica con 2-4 búsquedas las afirmaciones principales. Puntúa con el estándar.
+4. Aprobado (sin bloqueos y ≥75): escribe calidad.json {"aprobado": true, "nota": N, "fecha": "...", "comentario": "..."}. Si solo falla el texto, corrige post.json y apruébalo. Si hay bloqueo en el vídeo o nota <75: git mv de la carpeta a revision/ y calidad.json {"aprobado": false, "motivos": [...], "como_arreglarlo": "..."}. (Sin calidad.json, GitHub publica igualmente 3 h después de la hora: revisa a tiempo.)
+5. Los lunes (pasada de las 12:51): estudia reels virales del nicho y novedades del algoritmo con 4-8 búsquedas; si procede, mejora estandar_calidad.md (sube versión y anota la fuente).
+6. Commit y push. SendUserMessage solo si mueves algo a revision/ o cambias el estándar.
