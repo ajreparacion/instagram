@@ -1,6 +1,6 @@
 {
-  "fecha": "2026-11-05 21:54 UTC",
-  "render_video_s": 46.5,
+  "fecha": "2026-11-05 21:59 UTC",
+  "render_video_s": 70.7,
   "frases": 6,
   "referencia": "En mil quinientos dieciocho, una ciudad entera no podía dejar de bailar. Estrasburgo, julio. Una mujer, Frau Troffea, sale a la calle y empieza a bailar. Y no para. En pocos días se le unen decenas de vecinos. En agosto, según las crónicas, eran entre cincuenta y cuatrocientos. Los médicos dijeron que era sangre caliente. La solución: más baile. Contrataron músicos y montaron un escenario. Y fue peor. Cada día bailaba más gente. ¿Cómo terminó? Comenta baile y te lo cuento en la segunda parte.",
   "variantes": {
@@ -17,25 +17,25 @@
         }
       },
       "motor_usado": "piper",
-      "sintesis_s": 4.5,
+      "sintesis_s": 4.9,
       "frases": [
         {
-          "dur_s": 4.15,
+          "dur_s": 4.08,
           "hueco_s": 5.08,
           "atempo": 1.0
         },
         {
-          "dur_s": 6.07,
+          "dur_s": 6.03,
           "hueco_s": 7.02,
           "atempo": 1.0
         },
         {
-          "dur_s": 6.63,
+          "dur_s": 6.54,
           "hueco_s": 7.78,
           "atempo": 1.0
         },
         {
-          "dur_s": 7.42,
+          "dur_s": 7.54,
           "hueco_s": 7.52,
           "atempo": 1.0
         },
@@ -45,18 +45,28 @@
           "atempo": 1.0
         },
         {
-          "dur_s": 3.85,
+          "dur_s": 3.77,
           "hueco_s": 5.08,
           "atempo": 1.0
         }
       ],
-      "voz_total_s": 31.0,
-      "veces_tiempo_real": 6.9,
+      "voz_total_s": 30.9,
+      "veces_tiempo_real": 6.3,
       "frases_que_no_caben": 0,
-      "lufs": -12.1,
+      "lufs": -12.2,
       "pico_real_dbfs": -1.7,
-      "aviso_asr": "open() got an unexpected keyword argument 'metadata_errors'",
-      "aviso_utmos": "TorchCodec is required for load_with_torchcodec. Please install torchcodec to use this function."
+      "transcripcion_mezcla": "En 1518, una ciudad entera no podía dejar de bailar. Estrasburgo, Julio. Una mujer frautrofea sale a la calle y empieza a bailar, y no para. En pocos días se le unen decenas de vecinos. En agosto, según las crónicas, eran entre cincuenta y cuatrocientos. Los médicos dijeron que era sangre caliente. La solución, más baile, contrataron músicos y montaron un escenario. Y fue peor, cada día bailaba más gente. ¿Cómo termino? Comenta, baile y te lo cuento en la segunda parte.",
+      "wer_mezcla": 0.059,
+      "wer_voz_sola": 0.129,
+      "utmos_medio": 2.66,
+      "utmos_frases": [
+        2.66,
+        2.5,
+        2.79,
+        2.53,
+        2.79,
+        2.71
+      ]
     },
     "pocket": {
       "ajustes": {
@@ -71,46 +81,56 @@
         }
       },
       "motor_usado": "pocket",
-      "sintesis_s": 24.3,
+      "sintesis_s": 18.9,
       "frases": [
         {
-          "dur_s": 5.12,
+          "dur_s": 4.72,
           "hueco_s": 5.08,
-          "atempo": 1.01
+          "atempo": 1.0
         },
         {
-          "dur_s": 8.0,
+          "dur_s": 7.68,
           "hueco_s": 7.02,
-          "atempo": 1.14
+          "atempo": 1.09
         },
         {
-          "dur_s": 7.6,
+          "dur_s": 7.92,
           "hueco_s": 7.78,
-          "atempo": 1.0
+          "atempo": 1.02
         },
         {
-          "dur_s": 8.96,
+          "dur_s": 8.48,
           "hueco_s": 7.52,
-          "atempo": 1.19
+          "atempo": 1.13
         },
         {
-          "dur_s": 3.36,
+          "dur_s": 3.84,
           "hueco_s": 3.55,
-          "atempo": 1.0
+          "atempo": 1.08
         },
         {
-          "dur_s": 4.8,
+          "dur_s": 4.0,
           "hueco_s": 5.08,
           "atempo": 1.0
         }
       ],
-      "voz_total_s": 37.8,
-      "veces_tiempo_real": 1.56,
+      "voz_total_s": 36.6,
+      "veces_tiempo_real": 1.94,
       "frases_que_no_caben": 0,
-      "lufs": -15.0,
-      "pico_real_dbfs": -2.3,
-      "aviso_asr": "open() got an unexpected keyword argument 'metadata_errors'",
-      "aviso_utmos": "TorchCodec is required for load_with_torchcodec. Please install torchcodec to use this function."
+      "lufs": -14.9,
+      "pico_real_dbfs": -1.8,
+      "transcripcion_mezcla": "En 1518, una ciudad entera no podía dejar de bailar. Estrasburgo, julio. Una mujer frautrofea sale a la calle y empieza a bailar y no para. En pocos días se le unen decenas de vecinos. En agosto, según las crónicas, eran entre 50 y 400. Los médicos dijeron que era sangre caliente. La solución más baile. Contrataron músicos y montaron un escenario y fue peor. Cada día bailaba más gente. ¿Cómo terminó? Comenta baile y te lo cuento en la segunda parte.",
+      "wer_mezcla": 0.082,
+      "wer_voz_sola": 0.082,
+      "utmos_medio": 3.87,
+      "utmos_frases": [
+        4.03,
+        3.53,
+        3.81,
+        3.72,
+        4.13,
+        4.01
+      ]
     },
     "pocket_24l": {
       "ajustes": {
@@ -125,46 +145,56 @@
         }
       },
       "motor_usado": "pocket",
-      "sintesis_s": 53.1,
+      "sintesis_s": 46.9,
       "frases": [
         {
-          "dur_s": 4.72,
+          "dur_s": 4.64,
           "hueco_s": 5.08,
           "atempo": 1.0
         },
         {
-          "dur_s": 8.64,
+          "dur_s": 7.92,
           "hueco_s": 7.02,
-          "atempo": 1.23
+          "atempo": 1.13
         },
         {
-          "dur_s": 8.0,
+          "dur_s": 8.56,
           "hueco_s": 7.78,
-          "atempo": 1.03
-        },
-        {
-          "dur_s": 8.8,
-          "hueco_s": 7.52,
-          "atempo": 1.17
-        },
-        {
-          "dur_s": 3.92,
-          "hueco_s": 3.55,
           "atempo": 1.1
         },
         {
-          "dur_s": 4.4,
+          "dur_s": 8.32,
+          "hueco_s": 7.52,
+          "atempo": 1.11
+        },
+        {
+          "dur_s": 3.6,
+          "hueco_s": 3.55,
+          "atempo": 1.01
+        },
+        {
+          "dur_s": 4.48,
           "hueco_s": 5.08,
           "atempo": 1.0
         }
       ],
-      "voz_total_s": 38.5,
-      "veces_tiempo_real": 0.72,
+      "voz_total_s": 37.5,
+      "veces_tiempo_real": 0.8,
       "frases_que_no_caben": 0,
-      "lufs": -14.8,
+      "lufs": -14.9,
       "pico_real_dbfs": -1.9,
-      "aviso_asr": "open() got an unexpected keyword argument 'metadata_errors'",
-      "aviso_utmos": "TorchCodec is required for load_with_torchcodec. Please install torchcodec to use this function."
+      "transcripcion_mezcla": "En 1518, una ciudad entera no podía dejar de bailar. Estrasburgo, julio. Una mujer frautrofea sale a la calle y empieza a bailar, y no para. En pocos días se le unen decenas de vecinos. En agosto, según las crónicas, eran entre 50 y 400. Los médicos dijeron que era sangre caliente. La solución, más baile, contrataron músicos y montaron un escenario. Y fue peor. Cada día bailaba más gente. ¿Cómo terminó? Comenta baile y te lo cuento en la segunda parte.",
+      "wer_mezcla": 0.082,
+      "wer_voz_sola": 0.106,
+      "utmos_medio": 3.79,
+      "utmos_frases": [
+        4.01,
+        3.59,
+        3.4,
+        3.92,
+        4.15,
+        3.68
+      ]
     }
   }
 }
