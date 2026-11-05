@@ -18,7 +18,8 @@
       "tipo": "remaster",
       "hora": "13:40",
       "original_id": "17870021775289986",
-      "idea": "¿REAL O FALSO? el 'Koala Coyote' de Sierra Morena (reel con más alcance de la cuenta, 1.013). Era FALSO. Lo real: los koalas solo viven en Australia, y sí existió un 'lobo marsupial': el tilacino, cuyo último ejemplar conocido murió en el zoo de Hobart en 1936."
+      "idea": "¿REAL O FALSO? el 'Koala Coyote' de Sierra Morena (reel con más alcance de la cuenta, 1.013). Era FALSO. Lo real: los koalas solo viven en Australia, y sí existió un 'lobo marsupial': el tilacino, cuyo último ejemplar conocido murió en el zoo de Hobart en 1936.",
+      "hecho": "cola/002_realofalso_17870021775289986 (Remasterizador, 5/11 22:40). No hacer otro remaster el 6/11."
     },
     {
       "fecha": "2026-11-06",
@@ -61,7 +62,8 @@
       "tipo": "remaster",
       "hora": "13:40",
       "original_id": "18031629332425415",
-      "idea": "¿REAL O FALSO? 'En 1872 un científico descubrió que el oxígeno no era natural' (8 likes y 1 comentario, de los mejores de 2025). Era FALSO. Lo real: el oxígeno lo aislaron Scheele (hacia 1771-1772) y Priestley (1774) y lo bautizó Lavoisier; y casi todo el oxígeno del aire lo producen organismos fotosintéticos (gran parte, el fitoplancton)."
+      "idea": "¿REAL O FALSO? 'En 1872 un científico descubrió que el oxígeno no era natural' (8 likes y 1 comentario, de los mejores de 2025). Era FALSO. Lo real: el oxígeno lo aislaron Scheele (hacia 1771-1772) y Priestley (1774) y lo bautizó Lavoisier; y casi todo el oxígeno del aire lo producen organismos fotosintéticos (gran parte, el fitoplancton).",
+      "investigacion_previa": "Verificado por el Remasterizador el 5/11: Scheele obtuvo oxígeno hacia 1771 (RSC: junio de 1771; Wikipedia: ca. 1771) y lo llamó 'aire de fuego' (Wikipedia, Britannica); su libro no salió hasta 1777 (Wikipedia, RSC, Britannica). Priestley lo obtuvo en 1774 y fue el primero en publicarlo (RSC, Wikipedia). Lavoisier propuso el nombre 'oxígeno' (RSC, Britannica; ninguna fuente leída da el año: no lo pongas). Al menos la mitad del oxígeno de la Tierra sale del océano (NOAA 'about half'; EarthSky '50-80 %': decir 'al menos la mitad'). Lo de Prochlorococcus 'hasta el 20 %' solo lo da NOAA (EarthSky lo copia): no usarlo. El reel original tiene 11,6 s de visualización media y 65 % de salto (Buzzfy)."
     },
     {
       "fecha": "2026-11-10",
