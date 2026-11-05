@@ -1,0 +1,170 @@
+{
+  "fecha": "2026-11-05 21:54 UTC",
+  "render_video_s": 46.5,
+  "frases": 6,
+  "referencia": "En mil quinientos dieciocho, una ciudad entera no podía dejar de bailar. Estrasburgo, julio. Una mujer, Frau Troffea, sale a la calle y empieza a bailar. Y no para. En pocos días se le unen decenas de vecinos. En agosto, según las crónicas, eran entre cincuenta y cuatrocientos. Los médicos dijeron que era sangre caliente. La solución: más baile. Contrataron músicos y montaron un escenario. Y fue peor. Cada día bailaba más gente. ¿Cómo terminó? Comenta baile y te lo cuento en la segunda parte.",
+  "variantes": {
+    "piper": {
+      "ajustes": {
+        "motor": "piper",
+        "modelo": "es/es_ES/davefx/medium/es_ES-davefx-medium",
+        "pocket": {
+          "idioma": "spanish",
+          "voz": "lola",
+          "temperatura": null,
+          "ganancia": 1.0,
+          "max_s": 600
+        }
+      },
+      "motor_usado": "piper",
+      "sintesis_s": 4.5,
+      "frases": [
+        {
+          "dur_s": 4.15,
+          "hueco_s": 5.08,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 6.07,
+          "hueco_s": 7.02,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 6.63,
+          "hueco_s": 7.78,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 7.42,
+          "hueco_s": 7.52,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 2.93,
+          "hueco_s": 3.55,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 3.85,
+          "hueco_s": 5.08,
+          "atempo": 1.0
+        }
+      ],
+      "voz_total_s": 31.0,
+      "veces_tiempo_real": 6.9,
+      "frases_que_no_caben": 0,
+      "lufs": -12.1,
+      "pico_real_dbfs": -1.7,
+      "aviso_asr": "open() got an unexpected keyword argument 'metadata_errors'",
+      "aviso_utmos": "TorchCodec is required for load_with_torchcodec. Please install torchcodec to use this function."
+    },
+    "pocket": {
+      "ajustes": {
+        "motor": "pocket",
+        "modelo": "es/es_ES/davefx/medium/es_ES-davefx-medium",
+        "pocket": {
+          "idioma": "spanish",
+          "voz": "lola",
+          "temperatura": null,
+          "ganancia": 1.0,
+          "max_s": 600
+        }
+      },
+      "motor_usado": "pocket",
+      "sintesis_s": 24.3,
+      "frases": [
+        {
+          "dur_s": 5.12,
+          "hueco_s": 5.08,
+          "atempo": 1.01
+        },
+        {
+          "dur_s": 8.0,
+          "hueco_s": 7.02,
+          "atempo": 1.14
+        },
+        {
+          "dur_s": 7.6,
+          "hueco_s": 7.78,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 8.96,
+          "hueco_s": 7.52,
+          "atempo": 1.19
+        },
+        {
+          "dur_s": 3.36,
+          "hueco_s": 3.55,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 4.8,
+          "hueco_s": 5.08,
+          "atempo": 1.0
+        }
+      ],
+      "voz_total_s": 37.8,
+      "veces_tiempo_real": 1.56,
+      "frases_que_no_caben": 0,
+      "lufs": -15.0,
+      "pico_real_dbfs": -2.3,
+      "aviso_asr": "open() got an unexpected keyword argument 'metadata_errors'",
+      "aviso_utmos": "TorchCodec is required for load_with_torchcodec. Please install torchcodec to use this function."
+    },
+    "pocket_24l": {
+      "ajustes": {
+        "motor": "pocket",
+        "modelo": "es/es_ES/davefx/medium/es_ES-davefx-medium",
+        "pocket": {
+          "idioma": "spanish_24l",
+          "voz": "lola",
+          "temperatura": null,
+          "ganancia": 1.0,
+          "max_s": 600
+        }
+      },
+      "motor_usado": "pocket",
+      "sintesis_s": 53.1,
+      "frases": [
+        {
+          "dur_s": 4.72,
+          "hueco_s": 5.08,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 8.64,
+          "hueco_s": 7.02,
+          "atempo": 1.23
+        },
+        {
+          "dur_s": 8.0,
+          "hueco_s": 7.78,
+          "atempo": 1.03
+        },
+        {
+          "dur_s": 8.8,
+          "hueco_s": 7.52,
+          "atempo": 1.17
+        },
+        {
+          "dur_s": 3.92,
+          "hueco_s": 3.55,
+          "atempo": 1.1
+        },
+        {
+          "dur_s": 4.4,
+          "hueco_s": 5.08,
+          "atempo": 1.0
+        }
+      ],
+      "voz_total_s": 38.5,
+      "veces_tiempo_real": 0.72,
+      "frases_que_no_caben": 0,
+      "lufs": -14.8,
+      "pico_real_dbfs": -1.9,
+      "aviso_asr": "open() got an unexpected keyword argument 'metadata_errors'",
+      "aviso_utmos": "TorchCodec is required for load_with_torchcodec. Please install torchcodec to use this function."
+    }
+  }
+}
