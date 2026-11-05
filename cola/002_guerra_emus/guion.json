@@ -11,40 +11,28 @@
       "voz": "Australia le declaró la guerra a los emús."
     },
     {
-      "texto": "Campion, 1932: 20.000 emús contra el trigo",
+      "texto": "20.000 emús contra 2 ametralladoras y 10.000 balas",
       "duracion": 4.5,
       "estilo": "archivo",
-      "voz": "Mil novecientos treinta y dos: veinte mil emús arrasan los trigales."
+      "voz": "Contra veinte mil emús: dos ametralladoras y diez mil balas."
     },
     {
-      "texto": "1 mayor, 2 soldados, 2 ametralladoras, 10.000 balas",
+      "texto": "Corrían más que el camión. 10 balas por emú abatido",
       "duracion": 5.0,
       "estilo": "evidencia",
-      "voz": "El ejército manda a un mayor, dos soldados, dos ametralladoras y diez mil balas."
-    },
-    {
-      "texto": "Los emús corrían más que el camión",
-      "duracion": 4.5,
-      "estilo": "evidencia",
-      "voz": "Pero los emús corren más que el camión. A los seis días, retirada."
-    },
-    {
-      "texto": "986 emús «abatidos»: 10 balas por cada uno",
-      "duracion": 5.0,
-      "estilo": "evidencia",
-      "voz": "Vuelven. El mayor presume de casi mil emús: diez balas por cada uno."
+      "voz": "Corren más que el camión. Y cada emú cuesta diez balas."
     },
     {
       "texto": "«Con la invulnerabilidad de los tanques»",
-      "duracion": 3.5,
+      "duracion": 4.0,
       "estilo": "giro",
-      "voz": "Y confiesa que aguantan las balas como tanques."
+      "voz": "El propio mayor lo admite: aguantan las balas como tanques."
     },
     {
       "texto": "Comenta 'GUERRA' y te cuento quién ganó",
-      "duracion": 4.5,
+      "duracion": 4.0,
       "estilo": "cierre",
-      "voz": "¿Quién ganó al final? Comenta guerra y te lo cuento."
+      "voz": "¿Quién ganó? Comenta guerra y te lo cuento."
     }
   ]
 }
