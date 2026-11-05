@@ -63,7 +63,8 @@
       "hora": "13:40",
       "original_id": "18031629332425415",
       "idea": "¿REAL O FALSO? 'En 1872 un científico descubrió que el oxígeno no era natural' (8 likes y 1 comentario, de los mejores de 2025). Era FALSO. Lo real: el oxígeno lo aislaron Scheele (hacia 1771-1772) y Priestley (1774) y lo bautizó Lavoisier; y casi todo el oxígeno del aire lo producen organismos fotosintéticos (gran parte, el fitoplancton).",
-      "investigacion_previa": "Verificado por el Remasterizador el 5/11: Scheele obtuvo oxígeno hacia 1771 (RSC: junio de 1771; Wikipedia: ca. 1771) y lo llamó 'aire de fuego' (Wikipedia, Britannica); su libro no salió hasta 1777 (Wikipedia, RSC, Britannica). Priestley lo obtuvo en 1774 y fue el primero en publicarlo (RSC, Wikipedia). Lavoisier propuso el nombre 'oxígeno' (RSC, Britannica; ninguna fuente leída da el año: no lo pongas). Al menos la mitad del oxígeno de la Tierra sale del océano (NOAA 'about half'; EarthSky '50-80 %': decir 'al menos la mitad'). Lo de Prochlorococcus 'hasta el 20 %' solo lo da NOAA (EarthSky lo copia): no usarlo. El reel original tiene 11,6 s de visualización media y 65 % de salto (Buzzfy)."
+      "investigacion_previa": "Verificado por el Remasterizador el 5/11: Scheele obtuvo oxígeno hacia 1771 (RSC: junio de 1771; Wikipedia: ca. 1771) y lo llamó 'aire de fuego' (Wikipedia, Britannica); su libro no salió hasta 1777 (Wikipedia, RSC, Britannica). Priestley lo obtuvo en 1774 y fue el primero en publicarlo (RSC, Wikipedia). Lavoisier propuso el nombre 'oxígeno' (RSC, Britannica; ninguna fuente leída da el año: no lo pongas). Al menos la mitad del oxígeno de la Tierra sale del océano (NOAA 'about half'; EarthSky '50-80 %': decir 'al menos la mitad'). Lo de Prochlorococcus 'hasta el 20 %' solo lo da NOAA (EarthSky lo copia): no usarlo. El reel original tiene 11,6 s de visualización media y 65 % de salto (Buzzfy).",
+      "reel_de_prueba": "Publicar como reel de prueba: \"prueba_no_seguidores\": true en post.json (ya implementado en publicar_gh.py el 5/11). Se muestra primero a no seguidores e Instagram lo pasa al perfil si funciona."
     },
     {
       "fecha": "2026-11-10",
@@ -96,7 +97,8 @@
       "tipo": "remaster",
       "hora": "13:40",
       "original_id": "18074579041723896",
-      "idea": "¿REAL O FALSO? '¿Son los pájaros drones del gobierno?' (14,1 s de media y 3 compartidos, de los mejores en retención). Era FALSO. Lo real: 'Birds Aren't Real' fue un movimiento satírico creado en 2017 en EE. UU. para parodiar las teorías de la conspiración; su creador lo reconoció en 2021."
+      "idea": "¿REAL O FALSO? '¿Son los pájaros drones del gobierno?' (14,1 s de media y 3 compartidos, de los mejores en retención). Era FALSO. Lo real: 'Birds Aren't Real' fue un movimiento satírico creado en 2017 en EE. UU. para parodiar las teorías de la conspiración; su creador lo reconoció en 2021.",
+      "reel_de_prueba": "Publicar como reel de prueba: \"prueba_no_seguidores\": true en post.json (ya implementado en publicar_gh.py el 5/11). Se muestra primero a no seguidores e Instagram lo pasa al perfil si funciona."
     },
     {
       "fecha": "2026-11-13",
@@ -142,12 +144,41 @@
     "Monetización: al menos 1 de cada 3 expedientes sobre animales o misterios de la naturaleza (esta semana: 002 emú, 006 peces de Yoro, 009 tiburón de Groenlandia) y contenido válido para España y Latinoamérica.",
     "Palabras clave sin tildes (la detección no las ignora): GUERRA, BARCO, LUZ, MANISES, PECES, TRECE, SOMERTON, SIGLOS.",
     "Pasan a la semana siguiente: fareros de Flannan y lluvia de carne de Kentucky (Flannan es candidato a enlace de afiliado según monetizacion.md).",
-    "Cierre con CTA doble (monetizacion.md): 'Envíaselo a quien no se lo crea' + 'Sigue para el Expediente NNN'."
+    "Cierre con CTA doble (monetizacion.md): 'Envíaselo a quien no se lo crea' + 'Sigue para el Expediente NNN'.",
+    "Hora: se mantiene 20:40 (pico de seguidores conectados entre las 20:00 y las 22:00, Buzzfy 5/11). Los reels antiguos publicados a las 23:00 tuvieron más alcance medio (282, 5 posts) pero ahí entra el pico del Koala Coyote: no basta para mover la hora."
   ],
   "kpi_semana": {
     "principal": "Seguidores netos de la semana (historial_cuenta) y alcance a no seguidores",
     "meta_por_reel": "alcance ≥ 300 y compartidos ≥ 3",
     "secundario": "retención (% visto) para el experimento",
     "motivo": "Recomendación 1 de monetizacion.md: la cuenta pierde ~0,3 seguidores/día y la monetización depende de crecer fuera de los seguidores actuales."
+  },
+  "hoja_de_ruta_monetizacion": {
+    "creado": "5/11/2026, Estratega (el usuario ha fijado como objetivo monetizar y ha dado control total)",
+    "punto_de_partida": "1.605 seguidores; últimos 30 días: alcance 36 cuentas (14 no seguidores), 2 compartidos, 4 visitas al perfil, 0 clics en el enlace (Buzzfy, 5/11). Pierde ~0,3 seguidores/día.",
+    "fase_1_crecer": {
+      "hasta": "5.000 seguidores",
+      "meta": "+15 seguidores netos/día de media semanal y al menos 1 reel/semana con más de 2.000 de alcance",
+      "palancas": [
+        "1 expediente diario sin huecos (la constancia es lo primero: la cuenta perdía seguidores por publicar a meses vista)",
+        "reels de prueba (\"prueba_no_seguidores\": true) para llegar a no seguidores sin cansar a los seguidores: ya disponibles desde el 5/11",
+        "Partes 2 y series para que valga la pena seguir la cuenta",
+        "animales/naturaleza y casos de España+Latinoamérica (lo más compartido)"
+      ]
+    },
+    "fase_2_ingresos_pequenos": {
+      "desde": "ya, en cuanto el usuario se dé de alta en Afiliados de Amazon.es",
+      "que": "enlace a los libros que se citan como fuente (Waller, Mary Celeste, Somerton…) en una página de enlaces de la bio, con la frase legal de afiliado",
+      "nota": "Ingresos bajos hasta tener alcance; sirve para dejar el embudo montado."
+    },
+    "fase_3_marcas": {
+      "desde": "~5.000-10.000 seguidores y 3 reels con más de 5.000 de alcance",
+      "que": "kit de medios y colaboraciones con editoriales, plataformas de documentales, podcasts de misterio, escape rooms, siempre con la etiqueta de Colaboración pagada"
+    },
+    "fase_4_plataforma": {
+      "desde": "10.000 seguidores (umbral de suscripciones citado por terceros, NO verificado en fuente oficial)",
+      "que": "suscripciones ('expedientes extendidos'), regalos; revisar el Panel profesional > Monetización"
+    },
+    "revision": "El Estratega mide la fase cada lunes con historial_cuenta y estadisticas.json; el Analista de monetización recalcula la estimación cada domingo."
   }
 }
