@@ -37,7 +37,8 @@
       "duracion_objetivo": "largo",
       "idea": "Expediente 003: Mary Celeste. Zarpó de Nueva York un 7 de noviembre de 1872 (aniversario el mismo día de publicación) y la encontraron el 4 de diciembre a la deriva, intacta, con comida y sin nadie a bordo. Plantear el misterio; las teorías, para la Parte 2.",
       "gancho": "dato_con_fecha",
-      "palabra_clave_sugerida": "BARCO"
+      "palabra_clave_sugerida": "BARCO",
+      "hecho": "cola/004_mary_celeste (Creador, 5/11 noche; largo, 37,8 s, palabra BARCO). No crear otro el 7/11."
     },
     {
       "fecha": "2026-11-08",

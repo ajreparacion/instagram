@@ -7,3 +7,10 @@
 6. Prueba el render en la nube antes de subir: pip install --break-system-packages pillow numpy si falta; python3 herramientas/hacer_reel.py cola/<NNN>/guion.json /tmp/prueba.mp4; mira 2 fotogramas con Read. No subas el vídeo (lo renderiza GitHub Actions).
 7. Commit y push de cola/<NNN_tema>/ (guion.json y post.json, "cuando" hoy a la hora del plan, 20:40 por defecto; si ya pasó, mañana).
 8. SendUserMessage breve: título, hora, nota de autoevaluación y fuentes.
+
+## Reglas de monetización (desde el 5/11/2026, objetivo del usuario: monetizar)
+- Cierre con CTA doble: «Comenta 'PALABRA'» + «Envíaselo a quien…», y en el texto del post «Sigue la cuenta: cada noche, un expediente nuevo».
+- La palabra clave siempre sin tildes (la detección no las ignora).
+- Si existe un libro o documental de referencia sobre el caso, anótalo en "_nota_creador" de post.json como candidato a enlace de afiliado. En "Fuentes:" solo va lo que se ha leído de verdad.
+- Contenido válido para España y Latinoamérica (evita referencias solo locales). 1 de cada 3 expedientes, sobre animales o naturaleza.
+- Puedes dejar en cola hasta 2 reels nuevos por delante (hoy y mañana), siempre que el plan tenga la entrada.

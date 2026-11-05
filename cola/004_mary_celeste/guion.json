@@ -1,0 +1,50 @@
+{
+  "titulo": "Expediente 003: el Mary Celeste",
+  "semilla": 1872,
+  "musica": true,
+  "portada_texto": "Un barco intacto, con comida… y sin nadie a bordo",
+  "escenas": [
+    {
+      "texto": "Un barco intacto, con comida… y sin nadie a bordo",
+      "duracion": 3.5,
+      "estilo": "gancho",
+      "voz": "Un barco intacto, con comida, y sin nadie a bordo."
+    },
+    {
+      "texto": "Nueva York, 7 de noviembre de 1872",
+      "duracion": 5.0,
+      "estilo": "archivo",
+      "voz": "Hoy hace ciento cincuenta y cuatro años, el Mary Celeste zarpa de Nueva York."
+    },
+    {
+      "texto": "10 a bordo, entre ellos una niña de 2 años",
+      "duracion": 4.5,
+      "estilo": "evidencia",
+      "voz": "Diez a bordo, con la mujer y la hija del capitán."
+    },
+    {
+      "texto": "Diciembre: a la deriva, cerca de las Azores",
+      "duracion": 5.0,
+      "estilo": "evidencia",
+      "voz": "Un mes después, otro barco lo encuentra a la deriva cerca de las Azores."
+    },
+    {
+      "texto": "Comida para 6 meses. Sus cosas, intactas.",
+      "duracion": 6.0,
+      "estilo": "evidencia",
+      "voz": "Navegable. Comida y agua para seis meses. Sus cosas, en su sitio."
+    },
+    {
+      "texto": "Solo faltaba el bote salvavidas",
+      "duracion": 3.5,
+      "estilo": "giro",
+      "voz": "Solo faltaba una cosa: el bote salvavidas."
+    },
+    {
+      "texto": "Nunca se supo nada de ellos. Comenta 'BARCO'",
+      "duracion": 7.0,
+      "estilo": "cierre",
+      "voz": "Nunca volvió a saberse de ninguno. ¿Qué pasó? Comenta barco y te cuento las teorías."
+    }
+  ]
+}
