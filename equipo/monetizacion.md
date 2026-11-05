@@ -55,6 +55,11 @@ Las conversiones son supuestos: aún no medimos seguidores ganados por reel. Se 
 5. **Página de Facebook en paralelo** — España admitida en suscripciones de FB con umbral alternativo de 250 espectadores recurrentes. Opción a estudiar si el render puede publicar también en FB.
 Descartado: compra de seguidores, cebos engañosos, resubir contenido ajeno, sorteos falsos.
 
+## Revisión 5/11/2026 21:30 UTC (ejecución manual)
+- Sin datos nuevos desde el informe (estadisticas.json sigue a 21:18, 1.605 seguidores). Cifras y estimaciones vigentes.
+- El plan del Estratega (6-16/11) ya prioriza compartidos y retención y meta Partes 2: coherente con este informe.
+- Candidatos a enlace de afiliado cuando el usuario se dé de alta (solo libros que se citen como fuente real): Expediente 001 (Waller, 2008), Mary Celeste (003), hombre de Somerton (008) e islas Flannan (009). El Creador apunta el libro en "Fuentes:" para poder enlazarlo después.
+
 ## Recomendaciones para el equipo
 1. **Estratega**: el KPI semanal pasa a ser seguidores netos y alcance a no seguidores (no likes). Meta: cada reel ≥ 300 de alcance y ≥ 3 compartidos; 1 de cada 3 expedientes sobre animales o misterios de la naturaleza (lo que mejor se ha compartido).
 2. **Creador**: gancho que reta algo que "todo el mundo sabe" en < 2 s y retención > 12 s; cierre con CTA doble: "Envíaselo a quien no se lo crea" + "Sigue para el Expediente NNN". Añadir motivo para guardar (Parte 2, listas de 3 casos). Contenido válido para España y Latinoamérica.
