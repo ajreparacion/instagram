@@ -1,11 +1,12 @@
 name: Ciclo Instagram
 
-# Cada 30 minutos de 12:05 a 23:35 (hora de España en invierno) y una vez por la mañana.
-# GitHub puede retrasar unos minutos las tareas programadas.
+# Cada 30 minutos de 12:17 a 23:47 (hora de España en invierno) y una vez por la mañana.
+# Minutos 17 y 47 a propósito: GitHub retrasa o se salta muchas ejecuciones programadas en
+# las horas en punto y a las y cinco, que es cuando más repositorios las piden.
 on:
   schedule:
-    - cron: "5,35 11-22 * * *"
-    - cron: "5 7 * * *"
+    - cron: "17,47 11-22 * * *"
+    - cron: "17 7 * * *"
   workflow_dispatch:
     inputs:
       forzar_estadisticas:
