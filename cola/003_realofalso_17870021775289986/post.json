@@ -8,5 +8,8 @@
   "portada_ms": 2800,
   "original_id": "17870021775289986",
   "prueba_no_seguidores": true,
-  "_nota_mejora": "5/11 22:10: renderizado anulado para rehacerlo con la voz Pocket TTS (prueba: naturalidad UTMOS 3,87 frente a 2,66 de Piper)."
+  "_nota_mejora": "5/11 22:10: renderizado anulado para rehacerlo con la voz Pocket TTS (prueba: naturalidad UTMOS 3,87 frente a 2,66 de Piper).",
+  "motor_voz": "pocket",
+  "renderizado": "2026-11-05T22:08:32+00:00",
+  "asset": "003_realofalso_17870021775289986.mp4"
 }
