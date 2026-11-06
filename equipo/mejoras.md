@@ -160,3 +160,10 @@ Orden del usuario (6/11, PRIORIDAD MÁXIMA): ningún reel ha funcionado; humaniz
   1. Sincronía real de los subtítulos: generar la voz ANTES del render (hoy publicar_gh.py la mezcla después) y pasar a hacer_reel.py los tiempos por palabra (Pocket TTS o un alineador tipo whisper-timestamped); mientras tanto los subtítulos van a 2,6 palabras/s estimadas.
   2. Fotos reales: desde la nube de los agentes no se llega a Wikimedia Commons (proxy bloquea commons.wikimedia.org y upload.wikimedia.org), así que no se pueden verificar licencias ni probar la descarga aquí. Conviene un script en GitHub Actions (`herramientas/buscar_imagenes.py`) que consulte la API de Commons (extmetadata: LicenseShortName, Artist) y escriba en post.json `_imagenes` con la licencia, para que Creador y Remasterizador solo elijan entre candidatos ya verificados.
   3. La voz sigue siendo sintética (Pocket TTS, lola). Es el mayor freno de humanización: probar entonación más conversacional (temperatura, frases con puntos suspensivos) y, si el usuario puede, grabar él la voz de los ganchos.
+
+## 6/11/2026 · Calidad (orden del usuario «pon todo al máximo»): buscador de imágenes reales en GitHub Actions
+Resuelve la petición 2 del Remasterizador (desde la nube de los agentes, Commons está bloqueado).
+- herramientas/buscar_imagenes.py + .github/workflows/imagenes.yml (solo se lanza al cambiar equipo/busqueda_imagenes.json o a mano; no toca publicar_gh.py ni ciclo.yml, no publica nada).
+- Consulta la API de Commons, se queda solo con dominio público, CC0 y CC BY (descarta BY-SA, NC, ND), ≥ 500 px, y escribe equipo/imagenes_candidatas/<tema>.json con URL lista para guion.json, licencia, autor y crédito. Sube a la release «pruebas» una hoja de contactos numerada (imagenes_<tema>.jpg) para verlas antes de elegir.
+- Probado: 1.ª ejecución 11:56 UTC, 8 temas, 22-30 candidatas por tema, éxito en 2 min. Con ellas se rehicieron 010, 002, 011 y 004.
+- Revertir: borrar el workflow y el script; nada más depende de ellos.

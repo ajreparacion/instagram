@@ -15,6 +15,7 @@ Versión 4 (6/11/2026). (v3 y v2: 6/11; v1: 5/11/2026.) Base: cambios del algori
    b) Voz de locutor o robótica: frases leídas de papel, misma entonación en todas, ritmo plano, sin pausas ni reacciones. Debe sonar a alguien contándoselo a un amigo.
    c) Texto con muletillas de IA («sumérgete», «descubre», «en este vídeo», «fascinante», «impactante», «adéntrate») o más de 2 emojis en el post.
    d) Aprobaciones caducadas: un calidad.json aprobado vale solo para el render que se revisó. Si el guion o el vídeo cambian, Calidad vuelve a revisar.
+   e) Imágenes solo de dominio público, CC0 o CC BY, con crédito en pantalla y licencia en "_imagenes" de post.json. CC BY-SA no: con zoom y recorte el reel es obra derivada y la cláusula «compartir igual» no se puede cumplir en Instagram. Se buscan con herramientas/buscar_imagenes.py (workflow «Buscar imágenes»: añade el tema a equipo/busqueda_imagenes.json y haz push; resultados en equipo/imagenes_candidatas/ y hoja de contactos en la release pruebas).
    Prueba de comparación: ponerlo al lado de 2-3 reels reales del nicho que funcionaron (Buzzfy). Si se nota cuál es el nuestro por lo artificial, no sale.
 6. Falta la línea "Fuentes:" en el texto, o el texto promete algo que el vídeo no cumple (cebo engañoso).
 
