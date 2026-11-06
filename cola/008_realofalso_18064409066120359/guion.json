@@ -2,43 +2,57 @@
   "titulo": "¿Real o falso? El cuervo que anuncia la muerte",
   "semilla": 1864,
   "musica": true,
+  "modo": "humano",
   "portada_texto": "¿REAL O FALSO? El cuervo que anuncia la muerte",
   "escenas": [
     {
-      "texto": "¿REAL O FALSO? El cuervo que anuncia la muerte",
-      "duracion": 4.8,
       "estilo": "gancho",
+      "duracion": 3.0,
+      "texto": "¿REAL O FALSO? El cuervo que anuncia la muerte",
       "voz": "¿Real o falso? Un cuervo que anuncia la muerte."
     },
     {
-      "texto": "«Aparece antes de cada muerte»",
-      "duracion": 3.8,
       "estilo": "archivo",
-      "voz": "Dicen que aparece antes de cada muerte."
+      "duracion": 2.5,
+      "texto": "«el Cuervo Guadaña»",
+      "voz": "Aparecía antes de cada muerte, decían."
     },
     {
-      "texto": "Era FALSO. Pero los cuervos te recuerdan",
-      "duracion": 4.3,
       "estilo": "giro",
-      "voz": "Era falso. Pero los cuervos recuerdan tu cara."
+      "duracion": 2.5,
+      "voz": "Falso. Lo inventamos nosotros."
     },
     {
-      "texto": "Los capturaron con máscaras: las atacaron años",
-      "duracion": 6.2,
       "estilo": "evidencia",
-      "voz": "Unos científicos de Seattle los capturaron con máscaras. Siguieron atacándolas durante años."
+      "duracion": 2.6,
+      "voz": "Pero lo real da más miedo."
     },
     {
-      "texto": "Y los que nunca la vieron aprendieron a odiarla",
-      "duracion": 5.7,
       "estilo": "evidencia",
-      "voz": "Y cuervos que nunca fueron capturados aprendieron a odiar la máscara."
+      "duracion": 3.4,
+      "texto": "Universidad de Washington",
+      "voz": "En Seattle capturaron cuervos con máscaras de goma puestas."
     },
     {
-      "texto": "Ante un cuervo muerto, se reúnen y gritan",
-      "duracion": 7.2,
+      "estilo": "evidencia",
+      "duracion": 3.0,
+      "voz": "Y se acordaron de esa cara durante años. Años."
+    },
+    {
+      "estilo": "evidencia",
+      "duracion": 3.6,
+      "voz": "Y los que nunca fueron capturados también atacaban la máscara. Se lo contaron."
+    },
+    {
+      "estilo": "evidencia",
+      "duracion": 3.6,
+      "texto": "«funerales» de cuervos",
+      "voz": "Si uno muere, los demás se juntan y gritan. Miran qué lo mató."
+    },
+    {
       "estilo": "cierre",
-      "voz": "Ante un cuervo muerto, se reúnen y gritan. Envíaselo a quien se lo creyó."
+      "duracion": 2.5,
+      "voz": "Mándaselo a quien se lo creyó."
     }
   ]
 }

@@ -2,43 +2,58 @@
   "titulo": "¿Real o falso? El koala adicto de Queensland",
   "semilla": 1996,
   "musica": true,
+  "modo": "humano",
   "portada_texto": "¿REAL O FALSO? El koala adicto de Queensland",
   "escenas": [
     {
-      "texto": "¿REAL O FALSO? El koala adicto de Queensland",
-      "duracion": 4.3,
       "estilo": "gancho",
+      "duracion": 3.0,
+      "texto": "¿REAL O FALSO? El koala adicto de Queensland",
       "voz": "¿Real o falso? Un koala adicto en Queensland."
     },
     {
-      "texto": "«Montó un negocio turbio»",
-      "duracion": 3.4,
       "estilo": "archivo",
-      "voz": "Cuentan que montó un negocio turbio."
+      "duracion": 2.6,
+      "texto": "Queensland · 1996",
+      "subtitulos": "En 1996. Con negocio turbio.",
+      "voz": "En mil novecientos noventa y seis. Con negocio turbio."
     },
     {
-      "texto": "Era FALSO. Pero en 1996 sí pasó algo",
-      "duracion": 6.2,
       "estilo": "giro",
-      "voz": "Era falso. Pero en mil novecientos noventa y seis, algo sí pasó."
+      "duracion": 2.5,
+      "voz": "Falso. Lo inventamos nosotros."
     },
     {
-      "texto": "Sus huellas dactilares casi igual que las nuestras",
-      "duracion": 4.8,
       "estilo": "evidencia",
-      "voz": "Sus huellas dactilares son casi idénticas a las humanas."
+      "duracion": 2.8,
+      "subtitulos": "Pero en el 96 sí pasó algo.",
+      "voz": "Pero en el noventa y seis sí pasó algo."
     },
     {
-      "texto": "Canguros y wombats no tienen huellas",
-      "duracion": 3.8,
       "estilo": "evidencia",
-      "voz": "Canguros y wombats ni siquiera tienen huellas."
+      "duracion": 3.6,
+      "texto": "Universidad de Adelaida · 1996",
+      "voz": "En Adelaida vieron que los koalas tienen huellas dactilares. Casi como las nuestras."
     },
     {
-      "texto": "¿Confundir a la policía? Un bulo",
-      "duracion": 6.2,
+      "estilo": "evidencia",
+      "duracion": 2.8,
+      "voz": "Al microscopio cuesta distinguirlas. Flipé."
+    },
+    {
+      "estilo": "evidencia",
+      "duracion": 2.8,
+      "voz": "Canguros y wombats, sus primos, ni tienen."
+    },
+    {
+      "estilo": "evidencia",
+      "duracion": 3.0,
+      "voz": "¿Lo de confundir a la policía? Eso sí es un bulo."
+    },
+    {
       "estilo": "cierre",
-      "voz": "¿Confundir a la policía? Un bulo. Envíaselo a quien se lo creyó."
+      "duracion": 2.5,
+      "voz": "Mándaselo a quien se lo creyó."
     }
   ]
 }

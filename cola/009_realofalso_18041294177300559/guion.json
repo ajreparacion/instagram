@@ -2,43 +2,58 @@
   "titulo": "¿Real o falso? El caracol imposible de León",
   "semilla": 2025,
   "musica": true,
+  "modo": "humano",
   "portada_texto": "¿REAL O FALSO? El caracol imposible de León",
   "escenas": [
     {
-      "texto": "¿REAL O FALSO? El caracol imposible de León",
-      "duracion": 5.3,
       "estilo": "gancho",
+      "duracion": 3.0,
+      "texto": "¿REAL O FALSO? El caracol imposible de León",
       "voz": "¿Real o falso? Un caracol imposible entre León y Asturias."
     },
     {
-      "texto": "«Un caracol que nunca debió existir»",
-      "duracion": 2.9,
       "estilo": "archivo",
-      "voz": "Dicen que nunca debió existir."
+      "duracion": 2.5,
+      "texto": "«Limenocaris plumae»",
+      "voz": "Nunca debió existir, decíamos."
     },
     {
-      "texto": "Era FALSO. Pero allí vive algo real",
-      "duracion": 5.3,
       "estilo": "giro",
-      "voz": "Era falso. Pero allí vive algo real y muy raro."
+      "duracion": 2.5,
+      "voz": "Falso. Lo inventamos nosotros."
     },
     {
-      "texto": "Si la tocas, se enrolla como un erizo",
-      "duracion": 6.7,
       "estilo": "evidencia",
-      "voz": "Una babosa que, si la tocas, se enrolla en bola como un erizo."
+      "duracion": 2.8,
+      "voz": "Pero allí vive un bicho real que parece inventado."
     },
     {
-      "texto": "Solo vive en el noroeste ibérico e Irlanda",
-      "duracion": 7.2,
       "estilo": "evidencia",
-      "voz": "Solo vive en el noroeste de la península y en el suroeste de Irlanda."
+      "duracion": 3.4,
+      "texto": "babosa de Kerry",
+      "voz": "Una babosa que, si la tocas, se hace una bola. Como un erizo."
     },
     {
-      "texto": "Se llama babosa de Kerry y está protegida",
-      "duracion": 8.6,
+      "estilo": "evidencia",
+      "duracion": 3.4,
+      "texto": "Galicia, Asturias, León… e Irlanda",
+      "voz": "Solo vive en el noroeste de la península y en una esquina de Irlanda."
+    },
+    {
+      "estilo": "evidencia",
+      "duracion": 2.8,
+      "voz": "Gris con manchas blancas. Come líquenes."
+    },
+    {
+      "estilo": "evidencia",
+      "duracion": 2.8,
+      "texto": "Directiva Hábitats · UE",
+      "voz": "Y la protege la Unión Europea."
+    },
+    {
       "estilo": "cierre",
-      "voz": "Es la babosa de Kerry y la protege la Unión Europea. Envíaselo a quien se lo creyó."
+      "duracion": 2.5,
+      "voz": "Mándaselo a quien se lo creyó."
     }
   ]
 }
