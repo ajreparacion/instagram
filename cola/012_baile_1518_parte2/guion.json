@@ -11,7 +11,11 @@
       "estilo": "gancho",
       "voz": "Te debía esto: cómo paró lo del baile.",
       "imagenes": [
-        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg", "credito": "Hendrik Hondius, 1642 · Dominio público", "mov": "zoom_in"}
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg",
+          "credito": "Hendrik Hondius, 1642 · Dominio público",
+          "mov": "zoom_in"
+        }
       ]
     },
     {
@@ -20,12 +24,25 @@
       "estilo": "archivo",
       "voz": "Julio, una mujer sola. Agosto... según las crónicas, hasta cuatrocientas.",
       "fechas": [
-        {"anio": "14 jul", "texto": "una mujer baila"},
-        {"anio": "ago", "texto": "hasta 400 personas"},
-        {"anio": "sept", "texto": "se acaba"}
+        {
+          "anio": "14 jul",
+          "texto": "una mujer baila"
+        },
+        {
+          "anio": "ago",
+          "texto": "hasta 400 personas"
+        },
+        {
+          "anio": "sept",
+          "texto": "se acaba"
+        }
       ],
       "imagenes": [
-        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Strasbourg_Cathedral_Exterior_-_Diliff.jpg", "credito": "David Iliff · CC BY-SA 3.0", "mov": "pan_der"}
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Strasbourg_Cathedral_Exterior_-_Diliff.jpg",
+          "credito": "David Iliff · CC BY-SA 3.0",
+          "mov": "pan_der"
+        }
       ]
     },
     {
@@ -34,16 +51,24 @@
       "estilo": "evidencia",
       "voz": "Los músicos lo empeoraron. Así que prohibieron bailar. Y la música.",
       "imagenes": [
-        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg", "credito": "Hendrik Hondius, 1642 · Dominio público", "mov": "pan_izq"}
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg",
+          "credito": "Hendrik Hondius, 1642 · Dominio público",
+          "mov": "pan_izq"
+        }
       ]
     },
     {
       "texto": "Carros al santuario de San Vito, en Saverne",
-      "duracion": 5.5,
+      "duracion": 5.6,
       "estilo": "giro",
-      "voz": "Y a los peores... los metieron en carros. Tres días hasta san Vito, en Saverne.",
+      "voz": "Y a los peores... en carros. Tres días hasta san Vito, en Saverne.",
       "imagenes": [
-        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg", "credito": "Hendrik Hondius, 1642 · Dominio público", "mov": "zoom_out"}
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg",
+          "credito": "Hendrik Hondius, 1642 · Dominio público",
+          "mov": "zoom_out"
+        }
       ]
     },
     {
@@ -52,12 +77,16 @@
       "estilo": "evidencia",
       "voz": "Zapatos rojos, cruces, agua bendita... y en una semana, casi nadie.",
       "imagenes": [
-        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paracelsus.jpg", "credito": "Retrato de Paracelso, s. XVI · Dominio público", "mov": "zoom_in"}
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paracelsus.jpg",
+          "credito": "Retrato de Paracelso, s. XVI · Dominio público",
+          "mov": "zoom_in"
+        }
       ]
     },
     {
       "texto": "¿15 muertos al día? La ciudad no anotó ninguno",
-      "duracion": 6.0,
+      "duracion": 6.4,
       "estilo": "evidencia",
       "sello": "DUDOSO",
       "sello_t": 2.6,
@@ -65,7 +94,11 @@
       "unidad": "muertos al día, dicen",
       "voz": "¿Muertos? Lo de quince al día es de crónicas tardías. La ciudad no anotó ninguno.",
       "imagenes": [
-        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Strasbourg_Cathedral_Exterior_-_Diliff.jpg", "credito": "David Iliff · CC BY-SA 3.0", "mov": "zoom_out"}
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Strasbourg_Cathedral_Exterior_-_Diliff.jpg",
+          "credito": "David Iliff · CC BY-SA 3.0",
+          "mov": "zoom_out"
+        }
       ]
     },
     {
@@ -79,7 +112,11 @@
         "Fin: finales de agosto o septiembre"
       ],
       "imagenes": [
-        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg", "credito": "Hendrik Hondius, 1642 · Dominio público", "mov": "zoom_in"}
+        {
+          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg",
+          "credito": "Hendrik Hondius, 1642 · Dominio público",
+          "mov": "zoom_in"
+        }
       ]
     }
   ]
