@@ -42,7 +42,8 @@ def main():
     for f in lote["frases"]:
         t1 = time.time()
         trozos = []
-        for _gs, _ps, audio in pipeline(f["texto"], voice=voz, speed=velocidad):
+        vel = float(f["velocidad"]) if f.get("velocidad") is not None else velocidad   # ajuste por frase (por_estilo)
+        for _gs, _ps, audio in pipeline(f["texto"], voice=voz, speed=vel):
             if audio is None:
                 continue
             x = a_numpy(audio)
