@@ -1,4 +1,31 @@
 {
  "_nota": "Lo lee herramientas/buscar_imagenes.py (workflow imagenes.yml) al hacer push. Deja aquí solo los temas pendientes: los resultados quedan en equipo/imagenes_candidatas/<tema>.json y en la release pruebas (imagenes_<tema>.jpg). Solo PD, CC0 y CC BY. Ya buscados: tilacino, emus, mary_celeste, oxigeno, pajaros_cables, koala_huellas, cuervos_seattle, babosa_kerry.",
- "baile_1518": ["dancing mania Hondius", "Brueghel dancing pilgrims Molenbeek", "dancing plague 1518", "Saint Vitus woodcut", "Saverne church", "Strasbourg 16th century engraving", "medieval wagon woodcut", "Strasbourg 1493 Nuremberg Chronicle", "red shoes medieval painting", "Vitus Martyr painting"]
+ "baile_1518": [
+  "dancing mania Hondius",
+  "Brueghel dancing pilgrims Molenbeek",
+  "dancing plague 1518",
+  "Saint Vitus woodcut",
+  "Saverne church",
+  "Strasbourg 16th century engraving",
+  "medieval wagon woodcut",
+  "Strasbourg 1493 Nuremberg Chronicle",
+  "red shoes medieval painting",
+  "Vitus Martyr painting"
+ ],
+ "npc_streaming": [
+  "live streaming setup",
+  "streamer webcam microphone",
+  "gaming setup RGB",
+  "smartphone live stream",
+  "video game character",
+  "ring light"
+ ],
+ "backmasking": [
+  "vinyl record turntable",
+  "reel-to-reel tape recorder",
+  "cassette tape",
+  "record player needle",
+  "heavy metal concert 1980s",
+  "courtroom"
+ ]
 }

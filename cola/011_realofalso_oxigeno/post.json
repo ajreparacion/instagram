@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "¿Real o falso? «En 1872 un científico inventó el oxígeno».\n\nFalso. Lo inventamos nosotros el año pasado, en este mismo perfil. El oxígeno no se inventa: se descubrió, y con bastante lío de fechas.\n\nLo que sí es verdad:\n- El boticario sueco Carl Wilhelm Scheele lo obtuvo hacia 1771-1772 y lo llamó «aire de fuego». Pero su libro no salió hasta 1777.\n- El inglés Joseph Priestley lo obtuvo en 1774 y lo publicó antes. Por eso suele llevarse la fama. El nombre «oxígeno» se lo puso el francés Lavoisier.\n- Aproximadamente la mitad del oxígeno que se produce en la Tierra sale del océano, sobre todo del fitoplancton.\n\nMándaselo a quien se lo creyó y guárdalo. Y si quieres otro dato, comenta AIRE y te lo paso.\n\nFuentes: NOAA; Royal Society of Chemistry; Encyclopaedia Britannica.\nImágenes: Wikimedia Commons y NASA (dominio público).\n#realofalso #ciencia #historia #datoscuriosos #oxigeno #curiosidades",
+  "texto": "¿Real o falso? «En 1872 un científico inventó el oxígeno».\n\nFalso. Lo inventamos nosotros el año pasado, en este mismo perfil. El oxígeno no se inventa: se descubrió, y con bastante lío de fechas.\n\nLo que sí es verdad:\n- El boticario sueco Carl Wilhelm Scheele lo obtuvo hacia 1771-1772 y lo llamó «aire de fuego». Pero su libro no salió hasta 1777.\n- El inglés Joseph Priestley lo obtuvo en 1774 y lo publicó antes. Por eso suele llevarse la fama. El nombre «oxígeno» se lo puso el francés Lavoisier.\n- Aproximadamente la mitad del oxígeno que se produce en la Tierra sale del océano, sobre todo del fitoplancton.\n\nMándaselo a quien se lo creyó y guárdalo. Y si quieres otro dato, comenta AIRE y te lo paso.\n\nFuentes: NOAA; Royal Society of Chemistry; Encyclopaedia Britannica.\nImágenes: Wikimedia Commons y NASA (dominio público).\n📚 Fuentes y libros en el enlace del perfil.\nVoz: narración generada.\n#realofalso #ciencia #historia #datoscuriosos #oxigeno #curiosidades",
   "cuando": "2026-11-09T13:40:00+01:00",
   "palabra_clave": "AIRE",
   "respuesta": "Scheele lo llamó «aire de fuego» y lo obtuvo antes que Priestley, pero no lo publicó hasta 1777, después que él. El nombre «oxígeno» se lo puso Lavoisier.",
@@ -8,7 +8,6 @@
   "portada_ms": 1200,
   "prueba_no_seguidores": true,
   "_verificacion": "Remasterizador 6/11/2026: NOAA (oceanservice.noaa.gov/facts/ocean-oxygen, leída hoy): 'roughly half'/'at least 50%' del oxígeno de la Tierra sale del océano, sobre todo del plancton fotosintético; EarthSky da 50-80 % (se dice 'al menos la mitad'). Scheele hacia 1771 'aire de fuego', libro en 1777; Priestley 1774, primero en publicar; nombre de Lavoisier sin año: verificado el 5/11 con RSC, Wikipedia y Britannica (ver plan.json). Recorte prudente 0-12 s porque no se ha podido ver el vídeo.",
-  "motor_voz": "pocket",
   "_nota_calidad": "6/11/2026 Calidad («pon todo al máximo»): rehecho con retratos reales (dominio público) y fitoplancton de la NASA; «la mitad del oxígeno que respiras» corregido a «la mitad del que se produce en la Tierra» (así lo dice NOAA). Pasa al 9/11 13:40 (hueco libre).",
   "_nota_remasterizador": "6/11/2026 Remasterizador (PRIORIDAD MÁXIMA del usuario: humanizar): guion reescrito como habla una persona (9 escenas de 2-4 s, voz coloquial), \"modo\": \"humano\" de hacer_reel.py (sin HUD ni efectos de plantilla, subtítulos palabra a palabra, música discreta), texto del post sin emojis y respuesta sin muletillas. Sin fotos todavía: desde la nube no se puede comprobar la licencia en Wikimedia Commons (bloqueado); el Creador o Mejora pueden añadir \"imagenes\" verificadas antes del render. Mismos datos y fuentes verificados.",
   "_imagenes": [
@@ -75,5 +74,6 @@
       "autor": "NASA Goddard Space Flight Center",
       "uso": "cierre"
     }
-  ]
+  ],
+  "_nota_remasterizador_pico": "6/11/2026 19:00 Remasterizador (plan.json, grupo A «pico» + orden del usuario de humanizar): 1.ª escena y portada reescritas para abrir por el pico sin «¿Real o falso?»; fotos de Calidad sin cambios; «mucha gente se lo creyó» quitado (el original tuvo 1 comentario: no hay dato); \"renderizado\"/\"asset\" quitados para que Actions lo vuelva a renderizar. Datos y fuentes sin cambios. Añadidas las líneas «Voz: narración generada» y de fuentes en el perfil (plan.json, notas del Estratega)."
 }

@@ -1,135 +1,135 @@
 {
- "titulo": "¿Real o falso? «En 1872 alguien inventó el oxígeno»",
- "semilla": 1774,
- "modo": "humano",
- "musica": true,
- "portada_texto": "¿REAL O FALSO? En 1872 alguien inventó el oxígeno",
- "escenas": [
-  {
-   "estilo": "gancho",
-   "duracion": 3.4,
-   "texto": "¿REAL O FALSO? En 1872 alguien inventó el oxígeno",
-   "voz": "¿Real o falso? En mil ochocientos setenta y dos… alguien inventó el oxígeno.",
-   "imagenes": [
+  "titulo": "¿Real o falso? «En 1872 alguien inventó el oxígeno»",
+  "semilla": 1774,
+  "modo": "humano",
+  "musica": true,
+  "portada_texto": "Alguien inventó el oxígeno en 1872",
+  "escenas": [
     {
-     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/A_Swirl_of_a_Day_for_Phytoplankton_%28154086%29.jpg/1280px-A_Swirl_of_a_Day_for_Phytoplankton_%28154086%29.jpg",
-     "credito": "NASA Earth Observatory · Dominio público",
-     "mov": "zoom_in"
-    }
-   ]
-  },
-  {
-   "estilo": "archivo",
-   "duracion": 3.0,
-   "voz": "Eso lo contamos aquí el año pasado. Y mucha gente se lo creyó.",
-   "imagenes": [
-    {
-     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Antoine_Laurent_Lavoisier_%281743%E2%80%931794%29_and_His_Wife_%28Marie_Anne_Pierrette_Paulze%2C_1758%E2%80%931836%29_MET_DP-13140-003.jpg/1280px-Antoine_Laurent_Lavoisier_%281743%E2%80%931794%29_and_His_Wife_%28Marie_Anne_Pierrette_Paulze%2C_1758%E2%80%931836%29_MET_DP-13140-003.jpg",
-     "credito": "J.-L. David, 1788 (detalle) · Dominio público",
-     "mov": "pan_der"
-    }
-   ]
-  },
-  {
-   "estilo": "giro",
-   "duracion": 3.0,
-   "voz": "Pues es falso. El oxígeno no se inventa, hombre… se descubre.",
-   "imagenes": [
-    {
-     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Antoine_Laurent_Lavoisier_%281743%E2%80%931794%29_and_His_Wife_%28Marie_Anne_Pierrette_Paulze%2C_1758%E2%80%931836%29_MET_DP-13140-003.jpg/1280px-Antoine_Laurent_Lavoisier_%281743%E2%80%931794%29_and_His_Wife_%28Marie_Anne_Pierrette_Paulze%2C_1758%E2%80%931836%29_MET_DP-13140-003.jpg",
-     "credito": "J.-L. David, 1788 (detalle) · Dominio público",
-     "mov": "zoom_in"
-    }
-   ]
-  },
-  {
-   "estilo": "evidencia",
-   "duracion": 4.6,
-   "texto": "Carl W. Scheele · hacia 1771",
-   "voz": "Y aquí viene el lío. Un boticario sueco, Scheele, lo consigue hacia mil setecientos setenta y uno.",
-   "subtitulos": "Y aquí viene el lío. Un boticario sueco, Scheele, lo consigue hacia 1771.",
-   "imagenes": [
-    {
-     "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Carl_Wilhelm_Scheele_from_Familj-Journalen1874.png",
-     "credito": "Grabado de Scheele, 1874 · Dominio público",
-     "mov": "zoom_in"
-    }
-   ]
-  },
-  {
-   "estilo": "evidencia",
-   "duracion": 3.4,
-   "texto": "«Aire de fuego»",
-   "voz": "Lo llama aire de fuego… pero tarda años en publicarlo.",
-   "imagenes": [
-    {
-     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Karl_Wilhelm_Scheelf_%28i.e._Scheele%29_LCCN93512081.jpg/1280px-Karl_Wilhelm_Scheelf_%28i.e._Scheele%29_LCCN93512081.jpg",
-     "credito": "Retrato de Scheele, 1899 · Dominio público",
-     "mov": "pan_izq"
-    }
-   ]
-  },
-  {
-   "estilo": "evidencia",
-   "duracion": 4.6,
-   "texto": "Joseph Priestley · 1774",
-   "voz": "Mientras, en Inglaterra, Priestley lo saca en mil setecientos setenta y cuatro. Y lo publica antes.",
-   "subtitulos": "Mientras, en Inglaterra, Priestley lo saca en 1774. Y lo publica antes.",
-   "imagenes": [
-    {
-     "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Priestley_%28cropped%29.jpg",
-     "credito": "E. Sharples, h. 1794 · Dominio público",
-     "mov": "zoom_in"
-    }
-   ]
-  },
-  {
-   "estilo": "evidencia",
-   "duracion": 3.6,
-   "texto": "Antoine Lavoisier",
-   "voz": "Y el nombre, oxígeno, se lo pone un francés. Lavoisier.",
-   "imagenes": [
-    {
-     "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Antoine_Lavoisier_by_Jacques-Louis_David_%28cropped%29.jpg",
-     "credito": "J.-L. David, 1788 · Dominio público",
-     "mov": "zoom_in"
+      "estilo": "gancho",
+      "duracion": 3.2,
+      "texto": "Alguien inventó el oxígeno en 1872",
+      "voz": "Alguien inventó el oxígeno en mil ochocientos setenta y dos.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/A_Swirl_of_a_Day_for_Phytoplankton_%28154086%29.jpg/1280px-A_Swirl_of_a_Day_for_Phytoplankton_%28154086%29.jpg",
+          "credito": "NASA Earth Observatory · Dominio público",
+          "mov": "zoom_in"
+        }
+      ]
     },
     {
-     "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Jacques-Louis_David_-_Portrait_of_Antoine-Laurent_and_Marie-Anne_Lavoisier_%28detail%29_-_WGA06060.jpg",
-     "credito": "J.-L. David, 1788 · Dominio público",
-     "mov": "pan_der"
-    }
-   ]
-  },
-  {
-   "estilo": "evidencia",
-   "duracion": 5.0,
-   "texto": "Fitoplancton visto desde el espacio",
-   "voz": "Y ojo, que esto flipa. Más o menos la mitad del oxígeno de la Tierra… sale del mar.",
-   "imagenes": [
-    {
-     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/NASA_satellite_view_of_Southern_Ocean_phytoplankton_bloom.jpg/1280px-NASA_satellite_view_of_Southern_Ocean_phytoplankton_bloom.jpg",
-     "credito": "NASA · Dominio público",
-     "mov": "zoom_in"
+      "estilo": "archivo",
+      "duracion": 3.0,
+      "voz": "Eso lo contamos aquí el año pasado. Tal cual.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Antoine_Laurent_Lavoisier_%281743%E2%80%931794%29_and_His_Wife_%28Marie_Anne_Pierrette_Paulze%2C_1758%E2%80%931836%29_MET_DP-13140-003.jpg/1280px-Antoine_Laurent_Lavoisier_%281743%E2%80%931794%29_and_His_Wife_%28Marie_Anne_Pierrette_Paulze%2C_1758%E2%80%931836%29_MET_DP-13140-003.jpg",
+          "credito": "J.-L. David, 1788 (detalle) · Dominio público",
+          "mov": "pan_der"
+        }
+      ]
     },
     {
-     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/A_Swirl_of_a_Day_for_Phytoplankton_%28154086%29.jpg/1280px-A_Swirl_of_a_Day_for_Phytoplankton_%28154086%29.jpg",
-     "credito": "NASA Earth Observatory · Dominio público",
-     "mov": "pan_izq"
-    }
-   ]
-  },
-  {
-   "estilo": "cierre",
-   "duracion": 3.4,
-   "voz": "Mándaselo a quien se lo creyó. Y guárdalo.",
-   "imagenes": [
+      "estilo": "giro",
+      "duracion": 3.0,
+      "voz": "Pues es falso. El oxígeno no se inventa, hombre… se descubre.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Antoine_Laurent_Lavoisier_%281743%E2%80%931794%29_and_His_Wife_%28Marie_Anne_Pierrette_Paulze%2C_1758%E2%80%931836%29_MET_DP-13140-003.jpg/1280px-Antoine_Laurent_Lavoisier_%281743%E2%80%931794%29_and_His_Wife_%28Marie_Anne_Pierrette_Paulze%2C_1758%E2%80%931836%29_MET_DP-13140-003.jpg",
+          "credito": "J.-L. David, 1788 (detalle) · Dominio público",
+          "mov": "zoom_in"
+        }
+      ]
+    },
     {
-     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Ocean_phytoplankton_bloom_feed_by_the_Amazon_River.jpg",
-     "credito": "NASA Goddard · Dominio público",
-     "mov": "zoom_out"
+      "estilo": "evidencia",
+      "duracion": 4.6,
+      "texto": "Carl W. Scheele · hacia 1771",
+      "voz": "Y aquí viene el lío. Un boticario sueco, Scheele, lo consigue hacia mil setecientos setenta y uno.",
+      "subtitulos": "Y aquí viene el lío. Un boticario sueco, Scheele, lo consigue hacia 1771.",
+      "imagenes": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Carl_Wilhelm_Scheele_from_Familj-Journalen1874.png",
+          "credito": "Grabado de Scheele, 1874 · Dominio público",
+          "mov": "zoom_in"
+        }
+      ]
+    },
+    {
+      "estilo": "evidencia",
+      "duracion": 3.4,
+      "texto": "«Aire de fuego»",
+      "voz": "Lo llama aire de fuego… pero tarda años en publicarlo.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f9/Karl_Wilhelm_Scheelf_%28i.e._Scheele%29_LCCN93512081.jpg/1280px-Karl_Wilhelm_Scheelf_%28i.e._Scheele%29_LCCN93512081.jpg",
+          "credito": "Retrato de Scheele, 1899 · Dominio público",
+          "mov": "pan_izq"
+        }
+      ]
+    },
+    {
+      "estilo": "evidencia",
+      "duracion": 4.6,
+      "texto": "Joseph Priestley · 1774",
+      "voz": "Mientras, en Inglaterra, Priestley lo saca en mil setecientos setenta y cuatro. Y lo publica antes.",
+      "subtitulos": "Mientras, en Inglaterra, Priestley lo saca en 1774. Y lo publica antes.",
+      "imagenes": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/3/36/Priestley_%28cropped%29.jpg",
+          "credito": "E. Sharples, h. 1794 · Dominio público",
+          "mov": "zoom_in"
+        }
+      ]
+    },
+    {
+      "estilo": "evidencia",
+      "duracion": 3.6,
+      "texto": "Antoine Lavoisier",
+      "voz": "Y el nombre, oxígeno, se lo pone un francés. Lavoisier.",
+      "imagenes": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Antoine_Lavoisier_by_Jacques-Louis_David_%28cropped%29.jpg",
+          "credito": "J.-L. David, 1788 · Dominio público",
+          "mov": "zoom_in"
+        },
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Jacques-Louis_David_-_Portrait_of_Antoine-Laurent_and_Marie-Anne_Lavoisier_%28detail%29_-_WGA06060.jpg",
+          "credito": "J.-L. David, 1788 · Dominio público",
+          "mov": "pan_der"
+        }
+      ]
+    },
+    {
+      "estilo": "evidencia",
+      "duracion": 5.0,
+      "texto": "Fitoplancton visto desde el espacio",
+      "voz": "Y ojo, que esto flipa. Más o menos la mitad del oxígeno de la Tierra… sale del mar.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/NASA_satellite_view_of_Southern_Ocean_phytoplankton_bloom.jpg/1280px-NASA_satellite_view_of_Southern_Ocean_phytoplankton_bloom.jpg",
+          "credito": "NASA · Dominio público",
+          "mov": "zoom_in"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/81/A_Swirl_of_a_Day_for_Phytoplankton_%28154086%29.jpg/1280px-A_Swirl_of_a_Day_for_Phytoplankton_%28154086%29.jpg",
+          "credito": "NASA Earth Observatory · Dominio público",
+          "mov": "pan_izq"
+        }
+      ]
+    },
+    {
+      "estilo": "cierre",
+      "duracion": 3.4,
+      "voz": "Mándaselo a quien se lo creyó. Y guárdalo.",
+      "imagenes": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Ocean_phytoplankton_bloom_feed_by_the_Amazon_River.jpg",
+          "credito": "NASA Goddard · Dominio público",
+          "mov": "zoom_out"
+        }
+      ]
     }
-   ]
-  }
- ]
+  ]
 }

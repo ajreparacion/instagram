@@ -3,56 +3,129 @@
   "semilla": 1864,
   "musica": true,
   "modo": "humano",
-  "portada_texto": "¿REAL O FALSO? El cuervo que anuncia la muerte",
+  "portada_texto": "Un cuervo que aparece justo antes de cada muerte",
   "escenas": [
     {
       "estilo": "gancho",
-      "duracion": 3.0,
-      "texto": "¿REAL O FALSO? El cuervo que anuncia la muerte",
-      "voz": "¿Real o falso? Un cuervo que anuncia la muerte."
+      "duracion": 3.2,
+      "texto": "Un cuervo que aparece justo antes de cada muerte",
+      "voz": "Un cuervo que aparece justo antes de cada muerte.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/79/American_crow_%28Corvus_brachyrhynchos%29_2023_3.jpg/1280px-American_crow_%28Corvus_brachyrhynchos%29_2023_3.jpg",
+          "credito": "TRinaud · CC BY 4.0",
+          "mov": "zoom_in"
+        }
+      ]
     },
     {
       "estilo": "archivo",
-      "duracion": 2.5,
+      "duracion": 3.2,
       "texto": "«el Cuervo Guadaña»",
-      "voz": "Aparecía antes de cada muerte, decían."
+      "voz": "Lo colgamos aquí el año pasado. Con fechas y todo.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/94/%E6%97%AD%E3%81%AB%E7%BE%A4%E9%B4%89%E5%9B%B3-Flock_of_Crows_at_Dawn_MET_DP211808.jpg/1280px-%E6%97%AD%E3%81%AB%E7%BE%A4%E9%B4%89%E5%9B%B3-Flock_of_Crows_at_Dawn_MET_DP211808.jpg",
+          "credito": "Kawanabe Kyōsai · CC0",
+          "mov": "pan_izq"
+        }
+      ]
     },
     {
       "estilo": "giro",
       "duracion": 2.5,
-      "voz": "Falso. Lo inventamos nosotros."
+      "voz": "Falso. Lo inventamos nosotros.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Corvus_brachyrhynchos%2C_2021-10-18%2C_Castle_Shannon.jpg/1280px-Corvus_brachyrhynchos%2C_2021-10-18%2C_Castle_Shannon.jpg",
+          "credito": "Cbaile19 · CC0",
+          "mov": "zoom_in"
+        }
+      ]
     },
     {
       "estilo": "evidencia",
       "duracion": 2.6,
-      "voz": "Pero lo real da más miedo."
+      "voz": "Pero lo real, te lo juro, da más miedo.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/43/Carrion_crow_02.jpg/1280px-Carrion_crow_02.jpg",
+          "credito": "Alexis Lours · CC BY 4.0",
+          "mov": "zoom_in"
+        }
+      ]
     },
     {
       "estilo": "evidencia",
       "duracion": 3.4,
       "texto": "Universidad de Washington",
-      "voz": "En Seattle capturaron cuervos con máscaras de goma puestas."
+      "voz": "En Seattle capturaron cuervos con máscaras de goma puestas.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f7/Corvus_brachyrhynchos_-_February_2025_-_Sarah_Stierch.jpg/1280px-Corvus_brachyrhynchos_-_February_2025_-_Sarah_Stierch.jpg",
+          "credito": "Missvain · CC0",
+          "mov": "pan_der"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Corvus_brachyrhynchos_462216180.jpg/1280px-Corvus_brachyrhynchos_462216180.jpg",
+          "credito": "Hunter Hammil · CC BY 4.0",
+          "mov": "zoom_in"
+        }
+      ]
     },
     {
       "estilo": "evidencia",
       "duracion": 3.0,
-      "voz": "Y se acordaron de esa cara durante años. Años."
+      "voz": "Y se acordaron de esa cara durante años. Años.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/American_crow_%28Corvus_brachyrhynchos%29_2023_2.jpg/1280px-American_crow_%28Corvus_brachyrhynchos%29_2023_2.jpg",
+          "credito": "TRinaud · CC BY 4.0",
+          "mov": "zoom_out"
+        }
+      ]
     },
     {
       "estilo": "evidencia",
       "duracion": 3.6,
-      "voz": "Y los que nunca fueron capturados también atacaban la máscara. Se lo contaron."
+      "voz": "Y los que nunca fueron capturados también atacaban la máscara. Se lo contaron.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/44/Murder_of_crows_777.jpg/1280px-Murder_of_crows_777.jpg",
+          "credito": "liz west · CC BY 2.0",
+          "mov": "zoom_in"
+        }
+      ]
     },
     {
       "estilo": "evidencia",
       "duracion": 3.6,
       "texto": "«funerales» de cuervos",
-      "voz": "Si uno muere, los demás se juntan y gritan. Miran qué lo mató."
+      "voz": "Si uno muere, los demás se juntan y gritan. Miran qué lo mató.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/7e/American_crow_%28Corvus_brachyrhynchos%29_2023_01.jpg/1280px-American_crow_%28Corvus_brachyrhynchos%29_2023_01.jpg",
+          "credito": "TRinaud · CC BY 4.0",
+          "mov": "pan_izq"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/93/American_crow_burtonsville_12.15.24_DSC_8844-topaz-rawdenoise.jpg/1280px-American_crow_burtonsville_12.15.24_DSC_8844-topaz-rawdenoise.jpg",
+          "credito": "lwolfartist · CC BY 2.0",
+          "mov": "zoom_in"
+        }
+      ]
     },
     {
       "estilo": "cierre",
       "duracion": 2.5,
-      "voz": "Mándaselo a quien se lo creyó."
+      "voz": "Mándaselo a quien se lo creyó.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2c/Corvus_brachyrhynchos_-_Birds_of_Indiana_-_1898.jpg/1280px-Corvus_brachyrhynchos_-_Birds_of_Indiana_-_1898.jpg",
+          "credito": "Fisher · Dominio público",
+          "mov": "zoom_out"
+        }
+      ]
     }
   ]
 }
