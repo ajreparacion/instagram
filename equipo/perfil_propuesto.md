@@ -1,6 +1,6 @@
 # Rediseño completo del perfil @nosabesloquehasvisto (Estratega, 6/11/2026)
 
-Petición expresa del usuario (6/11): «que rediseñen el perfil». Sustituye a la propuesta de bio del 5/11. Lo que solo puede tocar el dueño (nombre, bio, enlace, categoría, foto, destacados) está también en equipo/pendiente_usuario.md con la ruta exacta en la app. El resto (portadas, numeración, orden de la rejilla) lo ejecuta el equipo.
+Petición expresa del usuario (6/11): «que rediseñen el perfil». Sustituye a la propuesta de bio del 5/11 y unifica la de equipo/perfil.md (Analista, 6/11) en lo que difieran. Lo que solo puede tocar el dueño (nombre, bio, enlace, categoría, foto, destacados) está también en equipo/pendiente_usuario.md con la ruta exacta en la app. El resto (portadas, numeración, orden de la rejilla) lo ejecuta el equipo.
 
 ## 0. Diagnóstico (datos propios, 6/11/2026)
 - Perfil actual: nombre «Expedientes Imposibles 🔍», bio del 5/11 (sin horario ni CTA al enlace), enlace a TikTok (0 clics en 30 días), cuenta de EMPRESA, sin destacados coherentes con la serie, rejilla mezclada (koalas de 2025, sketches, podcast de 2024) con un solo reel del enfoque nuevo.
@@ -13,10 +13,10 @@ Petición expresa del usuario (6/11): «que rediseñen el perfil». Sustituye a 
 - Se pierde el emoji 🔍, que no se indexa y en el nombre resta un carácter útil. Lo recuperamos en la foto de perfil.
 - Alternativa si el dueño prefiere conservar la marca entera: «Expedientes Imposibles | Misterios» no cabe (34); «Expedientes Imposibles · Real» confunde. Recomiendo la primera.
 
-## 2. Biografía (máx. 150 caracteres; esta tiene 142-144 según cómo cuente el emoji)
+## 2. Biografía (máx. 150 caracteres; esta tiene 144-146 según cómo cuente el emoji). Nota 18:00: desde hoy salen varios reels al día (13:40, 16:40, 20:40), por eso la línea 2 ya no dice «cada noche».
 ```
 Misterios REALES que parecen inventados 🔍
-Expediente nuevo cada noche · 20:40
+Expedientes nuevos cada día · 20:40
 Martes y viernes: ¿REAL O FALSO?
 👇 Fuentes y libros de cada caso
 ```
