@@ -95,3 +95,27 @@ Comparación de retención de cambios anteriores: todavía sin datos (001 public
 - Respaldo activo (con el permiso del usuario): una tarea programada de Claude, «Respaldo del ciclo de Instagram (GitHub)», lanza el ciclo cada día a las 13:43 y a las 20:43 (hora de España), justo después de las publicaciones de las 13:40 y las 20:40. Solo avisa si algo falla.
 - Arreglo definitivo, que solo puede hacer el dueño: GitHub › Actions › Ciclo Instagram › «…» › Disable workflow y después Enable workflow. Cuando aparezcan ejecuciones con event=schedule, la tarea de respaldo avisa de que ya se puede borrar.
 - Consecuencia mientras tanto: las respuestas a comentarios y las estadísticas solo se actualizan en esas dos ejecuciones diarias (y en las manuales).
+
+## 6/11/2026 (4.ª ejecución, programada) · Recorte de silencios en la voz y pausa antes del giro más corta
+
+Comparación de retención: **todavía sin datos**. Ningún reel con Pocket TTS se ha publicado aún (003 sale hoy a las 13:40 y 002 a las 20:40). Se compara en la próxima ejecución frente a 001 (Piper).
+
+Medición de los renders REALES de la release «cola» (002, 004, 005, voz Pocket): −14,6 / −15,3 / −15,5 LUFS, pico real −2,1 a −2,2 dBFS (todo bien). Pero en el 002 la mezcla cae a **−53 LUFS durante ~1 s** justo antes del giro (12,5-13,5 s): es el corte de música previo al giro (1,0 s) sumado a que la voz de la escena anterior ya había terminado. Casi un segundo de silencio digital: parece que el vídeo se ha cortado.
+
+### Cambio 4: pausa antes del giro de 1,0 s a 0,5 s (herramientas/hacer_reel.py, constante `CORTE_GIRO`)
+- La música y el lecho callan 0,5 s antes de la escena «giro» (antes 1,0 s). La subida de tensión dura 0,5 s más y llega hasta el corte. El golpe del giro no cambia.
+- Prueba (ejemplo_guion.json, giro a 28,0 s): silencio de la música de 27,0→28,0 s (0,99 s) pasa a 27,5→28,0 s (0,49 s).
+- Fuentes (solo patrones): fluxnote.io «Faceless Shorts retention tips 2026» (pausa de 0,5 s antes de la revelación clave, una por vídeo); blitzcutai.com «Dead air kills watch time» (pausas intencionadas de 0,3-0,5 s; los huecos largos hacen perder espectadores).
+- Revertir: `CORTE_GIRO = 1.0` en hacer_reel.py.
+
+### Cambio 5: recorte de silencios de cada frase de la voz (publicar_gh.py `recortar_silencios`, equipo/voz.json `recorte`)
+- Antes de mezclar, a cada frase (Pocket o Piper) se le quita el silencio del principio y del final (deja 70 ms de margen) y las pausas internas de más de 0,5 s se dejan en 0,35 s. Umbral: −40 dB respecto al pico de la frase, ventanas de 20 ms, fundidos de 12 ms en cada corte (sin chasquidos). No toca pausas cortas ni la voz.
+- Motivo: Pocket habla más pausado que Piper y necesitaba atempo de hasta 1,13 (prueba_voz.json) para caber en la escena; con menos silencio hace falta menos aceleración, la voz arranca nada más empezar la escena (estándar: voz en el primer segundo) y no quedan huecos muertos dentro de una frase. Fuente: syllaby.io «Voiceover pacing, silence trimming and retention editing» (pausas entre frases de 200-400 ms; recortar silencios de más de 300 ms).
+- Prueba en la nube con voz SIMULADA (aquí Hugging Face está bloqueado; los niveles valen, el sonido no): conserva el 100 % de la energía de la voz, arranque a 90 ms, pausa interna de 0,9 s → 0,35 s, pausa de 0,45 s intacta. En la mezcla de ejemplo_guion.json recorta 0,3-0,7 s por frase y baja el atempo necesario entre 0,04 y 0,15. Vídeo 1080x1920 H.264+AAC, 36,9 s, pico real −2,0 dBFS; 5 fotogramas correctos.
+- Si falla, la frase se queda como estaba y se anota en registro.log. Cuando actúa, registro.log muestra «Voz: silencios recortados por frase (s): [...]»: así se ve cuánto recorta con la voz real.
+- Revertir: en equipo/voz.json poner `"recorte": {"activo": false}` (o borrar la clave). Código anterior: herramientas/versiones/publicar_gh.py_2026-11-06.
+
+### Próxima ejecución
+- Revisar en registro.log los segundos recortados con la voz real de Pocket. Si recorta más de 1 s en una frase o la voz suena entrecortada, subir `pausa_max_s` a 0,45 o bajar `umbral_db` a −45.
+- Comparar ig_reels_avg_watch_time de 003/002 (Pocket, sin estos cambios) y de los siguientes (con ellos) frente a 001.
+- Pendiente menor: el reloj del HUD vuelve a empezar en la tarjeta de cierre de los remasters.

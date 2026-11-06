@@ -393,11 +393,16 @@ def saw_voice(f, n, ph0):
         out += np.sin(k * ph + k * ph0) / k
     return out
 
+# Silencio de musica justo antes del giro (s). Antes 1,0 s: en el 002 real dejaba la mezcla a -53 LUFS
+# casi un segundo. Las guias de retencion piden 0,3-0,5 s de pausa antes de una revelacion.
+CORTE_GIRO = 0.5
+
+
 def make_music(scenes, n, seed, gs, hook_end):
     rng = random.Random(seed * 7919 + 13)
     total = n / SR
     bpm = rng.uniform(70, 90); beat = 60.0 / bpm
-    cut0 = gs - 1.0 if (gs and gs >= 3.0) else None
+    cut0 = gs - CORTE_GIRO if (gs and gs >= 3.0) else None
     if gs and gs >= 3.0:  # que el giro caiga en un pulso
         b2 = gs / max(1, round(gs / beat))
         if 70 <= 60 / b2 <= 90: beat = b2
@@ -543,7 +548,7 @@ def make_audio(scenes, total, seed, musica=True):
         mL, mR, cutg, info = make_music(scenes, n, seed, gs, hook_end)
         print("musica:", info)
     elif gs and gs >= 3.0:
-        i0, i1 = int((gs - 1.0) * SR), int(gs * SR); cutg[i0:i1] = 0.0
+        i0, i1 = int((gs - CORTE_GIRO) * SR), int(gs * SR); cutg[i0:i1] = 0.0
     # ---- efectos: lecho (drone + rumor) y golpes
     drone = (0.5 * np.sin(2 * np.pi * 55 * t + 0.8 * np.sin(2 * np.pi * 0.13 * t))
              + 0.35 * np.sin(2 * np.pi * 55.8 * t)
