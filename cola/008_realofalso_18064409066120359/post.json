@@ -1,14 +1,94 @@
 {
   "tipo": "reel",
-  "texto": "¿Real o falso? «El Cuervo Guadaña: un cuervo que aparece antes de cada muerte».\n\nFalso. Lo inventamos nosotros el año pasado, en este mismo perfil. Pero lo que hacen los cuervos de verdad da todavía más miedo.\n\nLo que sí es verdad:\n- En la Universidad de Washington (Seattle), el equipo de John Marzluff capturó cuervos llevando máscaras de goma. Durante años, los cuervos siguieron regañando y persiguiendo a quien se ponía esa máscara.\n- Lo más inquietante: cuervos que nunca fueron capturados también aprendieron a atacar esa máscara. Se lo «contaron» unos a otros.\n- Los «funerales» de cuervos existen: ante un cuervo muerto, se reúnen y lanzan gritos de alarma. Según la investigadora Kaeli Swift, buscan qué lo mató para evitar ese peligro.\n\nMándaselo a quien se lo creyó. Y si quieres otro dato, comenta CUERVO y te lo paso.\n\nFuentes: National Geographic; National Wildlife Federation; NPR.\n#realofalso #misterio #curiosidades #datoscuriosos #cuervos #animales",
+  "texto": "¿Real o falso? «El Cuervo Guadaña: un cuervo que aparece antes de cada muerte».\n\nFalso. Lo inventamos nosotros el año pasado, en este mismo perfil. Pero lo que hacen los cuervos de verdad da todavía más miedo.\n\nLo que sí es verdad:\n- En la Universidad de Washington (Seattle), el equipo de John Marzluff capturó cuervos llevando máscaras de goma. Durante años, los cuervos siguieron regañando y persiguiendo a quien se ponía esa máscara.\n- Lo más inquietante: cuervos que nunca fueron capturados también aprendieron a atacar esa máscara. Se lo «contaron» unos a otros.\n- Los «funerales» de cuervos existen: ante un cuervo muerto, se reúnen y lanzan gritos de alarma. Según la investigadora Kaeli Swift, buscan qué lo mató para evitar ese peligro.\n\nMándaselo a quien se lo creyó. Y si quieres otro dato, comenta CUERVO y te lo paso.\n\nFuentes: National Geographic; National Wildlife Federation; NPR.\nImágenes: Wikimedia Commons (dominio público, CC0 y CC BY; autores en pantalla).\n📚 Fuentes y libros en el enlace del perfil.\nVoz: narración generada.\n#realofalso #misterio #curiosidades #datoscuriosos #cuervos #animales",
   "cuando": "2026-11-08T13:40:00+01:00",
   "palabra_clave": "CUERVO",
   "respuesta": "En el estudio de Kaeli Swift, los cuervos asociaban con el peligro a las personas que veían junto a un cuervo muerto y evitaban comer cerca de ellas.",
   "compartir_en_feed": true,
-  "portada_ms": 2800,
+  "portada_ms": 1200,
   "prueba_no_seguidores": true,
   "_verificacion": "Remasterizador 6/11/2026: máscaras de Marzluff (U. Washington): reconocen la máscara durante años (National Geographic 3/10/2015, NWF 2012, NPR 13/9/2019); cuervos no capturados aprenden a regañarla (NWF y NPR). El año de inicio difiere (NWF 2006, NatGeo 2008): no se da. Funerales (Kaeli Swift): se reúnen, gritan y buscan la causa del peligro (NatGeo y NPR). Respuesta: NatGeo (Swift, Animal Behaviour). Original de 2025 (4 likes) elegido por ser de animales y desmontable con datos fuertes; el gancho habla de muerte pero no de ninguna tragedia real. Recorte prudente 0-12 s. Movido al martes 24/11 porque el plan del Estratega (6/11 10:34) asigna el 20/11 al Limenocaris (009); el 24/11 aún no está planificado: el Estratega puede moverlo.",
   "_nota_calidad": "6/11/2026 Calidad: reconvertido de remaster a reel nuevo (guion.json) porque el metraje del reel antiguo trae marcas de agua de terceros (iStock, Storyblocks, InVideo...). Mismos datos verificados; CTA reordenado (envíaselo, guárdalo, comenta).",
   "_nota_remasterizador": "6/11/2026 Remasterizador (PRIORIDAD MÁXIMA del usuario: humanizar): guion reescrito como habla una persona (9 escenas de 2-4 s, voz coloquial), \"modo\": \"humano\" de hacer_reel.py (sin HUD ni efectos de plantilla, subtítulos palabra a palabra, música discreta), texto del post sin emojis y respuesta sin muletillas. Sin fotos todavía: desde la nube no se puede comprobar la licencia en Wikimedia Commons (bloqueado); el Creador o Mejora pueden añadir \"imagenes\" verificadas antes del render. Mismos datos y fuentes verificados.",
-  "_nota_calidad_humano": "6/11/2026 13:00 Calidad: AVISO. El guion no lleva \"imagenes\" reales, así que se renderizará sobre fondo neutro. Con la orden del usuario del 6/11 eso es rechazo seguro en la revisión previa a su hora (como 010 y 011, ya en revision/). Añadir 1-3 fotos reales por escena con licencia comprobada antes de que se renderice."
+  "_nota_calidad_humano": "6/11/2026 13:00 Calidad: AVISO. El guion no lleva \"imagenes\" reales, así que se renderizará sobre fondo neutro. Con la orden del usuario del 6/11 eso es rechazo seguro en la revisión previa a su hora (como 010 y 011, ya en revision/). Añadir 1-3 fotos reales por escena con licencia comprobada antes de que se renderice.",
+  "_imagenes": [
+    {
+      "archivo": "File:American crow (Corvus brachyrhynchos) 2023 3.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:American_crow_(Corvus_brachyrhynchos)_2023_3.jpg",
+      "licencia": "CC BY 4.0",
+      "autor": "TRinaud",
+      "uso": "escena 1"
+    },
+    {
+      "archivo": "File:旭に群鴉図-Flock of Crows at Dawn MET DP211808.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:%E6%97%AD%E3%81%AB%E7%BE%A4%E9%B4%89%E5%9B%B3-Flock_of_Crows_at_Dawn_MET_DP211808.jpg",
+      "licencia": "CC0",
+      "autor": "Kawanabe Kyōsai",
+      "uso": "escena 2"
+    },
+    {
+      "archivo": "File:Corvus brachyrhynchos, 2021-10-18, Castle Shannon.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Corvus_brachyrhynchos,_2021-10-18,_Castle_Shannon.jpg",
+      "licencia": "CC0",
+      "autor": "Cbaile19",
+      "uso": "escena 3"
+    },
+    {
+      "archivo": "File:Carrion crow 02.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Carrion_crow_02.jpg",
+      "licencia": "CC BY 4.0",
+      "autor": "Alexis Lours",
+      "uso": "escena 4"
+    },
+    {
+      "archivo": "File:Corvus brachyrhynchos - February 2025 - Sarah Stierch.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Corvus_brachyrhynchos_-_February_2025_-_Sarah_Stierch.jpg",
+      "licencia": "CC0",
+      "autor": "Missvain",
+      "uso": "escena 5"
+    },
+    {
+      "archivo": "File:Corvus brachyrhynchos 462216180.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Corvus_brachyrhynchos_462216180.jpg",
+      "licencia": "CC BY 4.0",
+      "autor": "Hunter Hammil",
+      "uso": "escena 5"
+    },
+    {
+      "archivo": "File:American crow (Corvus brachyrhynchos) 2023 2.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:American_crow_(Corvus_brachyrhynchos)_2023_2.jpg",
+      "licencia": "CC BY 4.0",
+      "autor": "TRinaud",
+      "uso": "escena 6"
+    },
+    {
+      "archivo": "File:Murder of crows 777.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Murder_of_crows_777.jpg",
+      "licencia": "CC BY 2.0",
+      "autor": "liz west from Boxborough, MA",
+      "uso": "escena 7"
+    },
+    {
+      "archivo": "File:American crow (Corvus brachyrhynchos) 2023 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:American_crow_(Corvus_brachyrhynchos)_2023_01.jpg",
+      "licencia": "CC BY 4.0",
+      "autor": "TRinaud",
+      "uso": "escena 8"
+    },
+    {
+      "archivo": "File:American crow burtonsville 12.15.24 DSC 8844-topaz-rawdenoise.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:American_crow_burtonsville_12.15.24_DSC_8844-topaz-rawdenoise.jpg",
+      "licencia": "CC BY 2.0",
+      "autor": "lwolfartist",
+      "uso": "escena 8"
+    },
+    {
+      "archivo": "File:Corvus brachyrhynchos - Birds of Indiana - 1898.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Corvus_brachyrhynchos_-_Birds_of_Indiana_-_1898.jpg",
+      "licencia": "Public domain",
+      "autor": "Fisher, Year Book, U.S. Department of Agriculture, 1894",
+      "uso": "escena 9"
+    }
+  ],
+  "_nota_remasterizador_pico": "6/11/2026 19:00 Remasterizador (plan.json, grupo A «pico» + orden del usuario de humanizar): 1.ª escena y portada reescritas para abrir por el pico sin «¿Real o falso?»; fotos reales en todas las escenas elegidas a mano en la hoja de contactos de la release pruebas (licencias comprobadas por buscar_imagenes.py en GitHub Actions: solo PD, CC0 y CC BY, sin firmas ni marcas visibles; descartadas las que llevan firma del fotógrafo); \"renderizado\"/\"asset\" quitados para que Actions lo vuelva a renderizar. Datos y fuentes sin cambios. Añadidas las líneas «Voz: narración generada» y de fuentes en el perfil (plan.json, notas del Estratega). Sin inventar reacciones del público: el reel original no tuvo comentarios, así que no se dice «hubo gente que se lo creyó»."
 }

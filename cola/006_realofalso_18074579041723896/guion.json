@@ -3,58 +3,126 @@
   "semilla": 1371,
   "musica": true,
   "modo": "humano",
-  "portada_texto": "¿REAL O FALSO? Los pájaros son drones del Gobierno",
+  "portada_texto": "Te dijimos que los pájaros eran drones del Gobierno",
   "escenas": [
     {
       "estilo": "gancho",
-      "duracion": 3.0,
-      "texto": "¿REAL O FALSO? Los pájaros son drones del Gobierno",
-      "voz": "¿Real o falso? Los pájaros son drones del Gobierno."
+      "duracion": 3.4,
+      "texto": "Te dijimos que los pájaros eran drones del Gobierno",
+      "voz": "Te dijimos que los pájaros eran drones del Gobierno.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Manzanar_birds_on_wire_00162ua.jpg/1280px-Manzanar_birds_on_wire_00162ua.jpg",
+          "credito": "Ansel Adams · Dominio público",
+          "mov": "zoom_in"
+        }
+      ]
     },
     {
       "estilo": "archivo",
       "duracion": 2.5,
       "texto": "«se recargan en los cables»",
-      "voz": "Y se recargan en los cables, decían."
+      "voz": "Y que se recargaban en los cables.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f2/Traffic_Light_Pigeons_%284888546116%29.jpg/1280px-Traffic_Light_Pigeons_%284888546116%29.jpg",
+          "credito": "CGP Grey · CC BY 2.0",
+          "mov": "pan_der"
+        },
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Birds_on_a_wire_%2815442527000%29.jpg/1280px-Birds_on_a_wire_%2815442527000%29.jpg",
+          "credito": "Dave Lauretti · CC BY 2.0",
+          "mov": "pan_izq"
+        }
+      ]
     },
     {
       "estilo": "giro",
       "duracion": 2.5,
-      "voz": "Falso. Lo inventamos nosotros."
+      "voz": "Falso. Lo inventamos nosotros.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ac/Pigeon_balanced_on_a_steel_wire_%28Unsplash%29.jpg/1280px-Pigeon_balanced_on_a_steel_wire_%28Unsplash%29.jpg",
+          "credito": "Rafael R. Machado · CC0",
+          "mov": "zoom_in"
+        }
+      ]
     },
     {
       "estilo": "evidencia",
       "duracion": 2.5,
-      "voz": "Pero ojo: la teoría también es broma."
+      "voz": "Y lo mejor, te lo juro: la teoría también es broma.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Pigeon_on_wire.jpg/1280px-Pigeon_on_wire.jpg",
+          "credito": "DrewWilliam · CC BY 4.0",
+          "mov": "zoom_out"
+        }
+      ]
     },
     {
       "estilo": "evidencia",
       "duracion": 3.0,
       "texto": "«Birds Aren't Real» · 2017",
       "subtitulos": "«Los pájaros no son reales» nació en 2017. Como parodia.",
-      "voz": "Los pájaros no son reales nació en dos mil diecisiete. Como parodia."
+      "voz": "Los pájaros no son reales nació en dos mil diecisiete. Como parodia.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/PikiWiki_Israel_35547_Birds_on_a_Wire_2.JPG/1280px-PikiWiki_Israel_35547_Birds_on_a_Wire_2.JPG",
+          "credito": "Omri Nardi · CC BY 2.5",
+          "mov": "pan_izq"
+        }
+      ]
     },
     {
       "estilo": "evidencia",
       "duracion": 3.0,
       "texto": "2021 · The New York Times",
       "subtitulos": "En 2021 su creador lo reconoció: parodia.",
-      "voz": "En dos mil veintiuno su creador lo reconoció: parodia."
+      "voz": "En dos mil veintiuno su creador lo reconoció: parodia.",
+      "imagenes": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Starlings_Sitting_on_a_Wire.jpg",
+          "credito": "Niaz Abbas · Dominio público",
+          "mov": "zoom_in"
+        }
+      ]
     },
     {
       "estilo": "evidencia",
       "duracion": 3.4,
-      "voz": "¿Y el cable? En un solo cable no hay diferencia de voltaje. No pasa nada."
+      "voz": "¿Y el cable? En un solo cable no hay diferencia de voltaje. No pasa nada.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/3_birds_on_a_wire_%21_%286810543956%29.jpg/1280px-3_birds_on_a_wire_%21_%286810543956%29.jpg",
+          "credito": "Craig Sunter · CC BY 2.0",
+          "mov": "zoom_in"
+        }
+      ]
     },
     {
       "estilo": "evidencia",
       "duracion": 2.2,
-      "voz": "Si toca dos… ahí sí."
+      "voz": "Si toca dos… ahí sí.",
+      "imagenes": [
+        {
+          "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e4/Birds_in_power_line.jpg/1280px-Birds_in_power_line.jpg",
+          "credito": "Rollcloud · CC BY 4.0",
+          "mov": "pan_der"
+        }
+      ]
     },
     {
       "estilo": "cierre",
       "duracion": 2.5,
-      "voz": "Mándaselo a quien se lo creyó."
+      "voz": "Mándaselo a quien se lo creyó.",
+      "imagenes": [
+        {
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Crowoutline.jpg",
+          "credito": "Hardyplants · Dominio público",
+          "mov": "zoom_out"
+        }
+      ]
     }
   ]
 }
