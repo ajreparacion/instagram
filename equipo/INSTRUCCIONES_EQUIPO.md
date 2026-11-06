@@ -46,6 +46,10 @@ NNN = siguiente número de 3 cifras tras los usados en cola/, publicados/, revis
 {"titulo":"Expediente NNN: ...","semilla":<entero>,"musica":true,"portada_texto":"...",
  "escenas":[{"texto":"frase corta en pantalla (máx. ~9 palabras)","duracion":3.5,"estilo":"gancho|archivo|evidencia|giro|cierre","voz":"lo que lee el narrador; números con letra"}]}
 Opcional en cualquier escena: "sello":"FALSO" (o "REAL", "MITO", "CONFIRMADO"...) hace caer un sello grande de veredicto con golpe de sonido (rojo si es falso, verde si es real), a los 0,5 s en el giro o en "sello_t" segundos. Pensado para el ¿REAL O FALSO? hecho con guion.json: ponlo en la escena que da el veredicto.
+Opcional en cualquier escena, para que la imagen PRUEBE el dato (sustituye al dibujo decorativo; uno por escena):
+- "cifra":"20.000" (+ "unidad":"emús"): contador animado de 0 a la cifra en 1,3 s.
+- "fechas":[{"anio":"1872","texto":"zarpa"}, ...] (2-4 hitos, texto ≤ 20 caracteres): línea de tiempo que se va llenando.
+- "lista":["dato 1","dato 2","dato 3"] (máx. 3, ≤ 2 líneas cada uno): lista numerada que aparece punto a punto; úsala en el cierre como recapitulación guardable.
 
 ### Modo "humano" (obligatorio para reels nuevos desde el 6/11/2026)
 Añade "modo":"humano" al guion. Entonces hacer_reel.py NO dibuja fondos generados ni HUD: cada escena lleva fotos reales con movimiento de cámara leve y subtítulos palabra a palabra sincronizados con la voz (estimada a ~2,6 palabras/s; el texto en pantalla es la propia "voz", así que "texto" solo hace falta en el gancho y en el cierre).

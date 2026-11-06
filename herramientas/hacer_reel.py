@@ -159,6 +159,91 @@ def draw_visual(style, d, t, P):
         ay = 1320 + 14 * math.sin(t * 5)
         d.polygon([(cx - 50, ay - 30), (cx + 50, ay - 30), (cx, ay + 25)], fill=acc + (200,))
 
+def _cifra_parts(txt):
+    m = re.search(r"\d[\d.,]*", txt)
+    if not m: return None
+    digs = m.group(0).rstrip(".,")
+    try: val = int(re.sub(r"[.,]", "", digs))
+    except ValueError: return None
+    sep = "." if "." in digs else ("," if "," in digs else "")
+    return txt[:m.start()], val, txt[m.start() + len(digs):], sep
+
+def draw_prueba(sc, d, t):
+    """Recurso que PRUEBA el dato, dibujado por codigo: contador animado ("cifra"), linea de tiempo ("fechas")
+    o lista numerada que aparece punto a punto ("lista", p. ej. recapitulacion final). True si dibujo algo."""
+    acc = PAL[sc.style][1]
+    if sc.cifra:
+        parts = _cifra_parts(sc.cifra)
+        k = min(1.0, max(0.0, (t - 0.15) / 1.3)); k = 1 - (1 - k) ** 3
+        if parts:
+            pre, val, post, sep = parts
+            cur = int(round(val * k))
+            txt_n = "{:,}".format(cur).replace(",", sep) if sep else str(cur)
+            txt = pre + txt_n + post
+        else:
+            txt = sc.cifra
+        path = FONT_PATHS["gancho"]; probe = ImageDraw.Draw(Image.new("L", (4, 4)))
+        size = 230
+        while size > 90 and probe.textlength(sc.cifra, font=font(path, size)) > 900: size -= 8
+        f = font(path, size)
+        d.text((540, 560), txt, font=f, anchor="mm", fill=(255, 255, 255, 255), stroke_width=8, stroke_fill=acc + (255,))
+        if sc.unidad:
+            d.text((540, 560 + size // 2 + 50), sc.unidad.upper()[:28], font=font(MONO, 50), anchor="mm",
+                   fill=acc + (255,), stroke_width=4, stroke_fill=(0, 0, 0, 255))
+        w = int(780 * k)  # barra de progreso del contador
+        d.rectangle([150, 400, 930, 412], outline=acc + (120,), width=2)
+        d.rectangle([150, 400, 150 + w, 412], fill=acc + (230,))
+        return True
+    if sc.fechas:
+        n = len(sc.fechas); x0, x1, y = 170, 910, 650
+        prog = min(1.0, max(0.0, (t - 0.1) / max(0.6, sc.dur * 0.55)))
+        xe = x0 + (x1 - x0) * prog
+        d.line([(x0, y), (x1, y)], fill=acc + (70,), width=6)
+        d.line([(x0, y), (xe, y)], fill=acc + (255,), width=8)
+        fa = font(FONT_PATHS["gancho"], 64 if n <= 3 else 54); ft = font(DJV + "DejaVuSansCondensed-Bold.ttf", 34)
+        xs = [x0 + (x1 - x0) * (i / (n - 1) if n > 1 else 0.5) for i in range(n)]
+        for i, fe in enumerate(sc.fechas):
+            x = xs[i]; on = xe >= x - 1
+            last = on and (i == n - 1 or xe < xs[i + 1] - 1)
+            r = 24 if last else 15
+            d.ellipse([x - r, y - r, x + r, y + r], fill=(acc + (255,)) if on else (40, 40, 40, 255),
+                      outline=(255, 255, 255, 230 if on else 90), width=4)
+            up = i % 2 == 0
+            col = (255, 255, 255, 255) if on else (150, 150, 150, 110)
+            d.text((x, y - 50 if up else y + 50), str(fe.get("anio"))[:10], font=fa, anchor="md" if up else "ma",
+                   fill=col, stroke_width=5, stroke_fill=(0, 0, 0, 255))
+            tx = str(fe.get("texto", "")).strip()[:20]
+            if tx:
+                d.text((x, y - 125 if up else y + 125), tx, font=ft, anchor="md" if up else "ma",
+                       fill=(acc + (255,)) if on else (130, 130, 130, 100), stroke_width=3, stroke_fill=(0, 0, 0, 255))
+        return True
+    if sc.lista:
+        n = len(sc.lista); ft = font(DJV + "DejaVuSansCondensed-Bold.ttf", 44); fn = font(FONT_PATHS["gancho"], 66)
+        probe = ImageDraw.Draw(Image.new("L", (4, 4)))
+        step = max(0.35, min(0.9, sc.dur * 0.5 / n))
+        y = 505
+        for i, it in enumerate(sc.lista):
+            k = min(1.0, max(0.0, (t - 0.15 - i * step) / 0.2))
+            words, lines, cur = it.split(), [], ""
+            for wd in words:
+                t2 = (cur + " " + wd).strip()
+                if probe.textlength(t2, font=ft) <= 740: cur = t2
+                else: lines.append(cur); cur = wd
+            lines.append(cur); lines = lines[:2]
+            hgt = 52 * len(lines)
+            if k > 0:
+                off = int((1 - k) * 60)
+                d.rounded_rectangle([90 - off, y - 10, 990 - off, y + hgt + 10], 14, fill=(0, 0, 0, int(150 * k)),
+                                    outline=acc + (int(200 * k),), width=3)
+                d.text((150 - off, y + hgt // 2), str(i + 1), font=fn, anchor="mm", fill=acc + (int(255 * k),),
+                       stroke_width=4, stroke_fill=(0, 0, 0, 255))
+                for j, ln in enumerate(lines):
+                    d.text((215 - off, y + 4 + 52 * j), ln, font=ft, fill=(255, 255, 255, int(255 * k)),
+                           stroke_width=3, stroke_fill=(0, 0, 0, 255))
+            y += hgt + 26
+        return True
+    return False
+
 # ---------------------------------------------------------------- texto
 def wrap_fit(text, path, maxw=W - SAFE_L - SAFE_R - 40, maxlines=3, smax=118, smin=44):
     probe = ImageDraw.Draw(Image.new("L", (4, 4)))
@@ -178,13 +263,13 @@ def wrap_fit(text, path, maxw=W - SAFE_L - SAFE_R - 40, maxlines=3, smax=118, sm
     return f, smin, lines[:maxlines]
 
 class TextBlock:
-    def __init__(self, text, style):
+    def __init__(self, text, style, cy=TEXT_CY):
         if style in ("gancho", "giro"): text = text.upper()
         self.style = style
         self.f, self.size, self.lines = wrap_fit(text, FONT_PATHS[style])
         self.lh = int(self.size * 1.2)
         self.total = len(self.lines) * self.lh
-        self.top = int(TEXT_CY - self.total / 2)
+        self.top = int(cy - self.total / 2)
         self.nchars = sum(len(l) for l in self.lines)
         self.cache = {}
         probe = ImageDraw.Draw(Image.new("L", (4, 4)))
@@ -222,15 +307,22 @@ class Scene:
         self.rng = rng
         self.bg = make_bg(self.style, rng)
         self.P = make_params(self.style, rng, sc.get("visual", ""))
-        self.tb = TextBlock(sc.get("texto", ""), self.style)
+        # con lista o linea de tiempo el texto baja un poco para dejar sitio a la prueba (sigue dentro de y 500-1450)
+        cy = 1150 if (sc.get("lista") or sc.get("fechas")) else (1060 if sc.get("cifra") else TEXT_CY)
+        self.tb = TextBlock(sc.get("texto", ""), self.style, cy)
         self.nframes, self.start = nframes, start_frame
         self.dur = nframes / FPS
         cps = min(CPS[self.style], max(14, self.tb.nchars / max(0.4, self.dur * 0.6)))
         self.cps = max(cps, self.tb.nchars / max(0.3, self.dur * 0.75))
         if self.style == "gancho":  # estandar: el gancho se lee entero sin sonido en < 2 s
-            self.cps = max(self.cps, self.tb.nchars / 0.5)
+            self.cps = max(self.cps, self.tb.nchars / 0.45)  # sin retardo: entero a los 0,45 s
         self.exp = "%04d-%s" % (rng.randint(100, 9999), rng.choice("ABCDEFKX"))
-        self.delay = 0.35 if self.style == "giro" else 0.12
+        self.delay = 0.35 if self.style == "giro" else (0.0 if self.style == "gancho" else 0.12)
+        # recursos que PRUEBAN el dato (sustituyen al dibujo decorativo): cifra, fechas o lista
+        self.cifra = str(sc.get("cifra") or "").strip()
+        self.unidad = str(sc.get("unidad") or "").strip()
+        self.fechas = [f for f in (sc.get("fechas") or []) if isinstance(f, dict) and str(f.get("anio", "")).strip()][:4]
+        self.lista = [str(x).strip() for x in (sc.get("lista") or []) if str(x).strip()][:3]
         # sello de veredicto opcional ("sello": "FALSO" | "REAL" ...): cae de golpe sobre la escena
         self.sello = str(sc.get("sello") or "").strip().upper()[:12]
         self.sello_t = float(sc.get("sello_t", 0.5 if self.style == "giro" else 0.25))
@@ -300,7 +392,8 @@ def render_frame(fi, scenes, noise, date_s, title, rg):
     lf = fi - sc.start; t = lf / FPS; ta = fi / FPS
     img = sc.bg.copy()
     d = ImageDraw.Draw(img, "RGBA")
-    draw_visual(sc.style, d, t, sc.P)
+    if not draw_prueba(sc, d, t):
+        draw_visual(sc.style, d, t, sc.P)
     glitch = sc.style == "giro" and lf < 14
     n = int(max(0, t - sc.delay) * sc.cps) + (1 if t > sc.delay else 0)
     timg, ty = sc.tb.get(n)
