@@ -475,12 +475,35 @@ def trocear_subtitulos(texto, maxw=4):
         else: out.append(g)
     return out
 
+ROJO_ENFASIS = (255, 82, 58)
+
+def parsear_enfasis(texto):
+    """'*palabra*' o '*varias palabras*' en la voz = ENFASIS (6/11/2026, peticion del usuario: falta enfasis).
+    Devuelve (texto limpio para la voz, indices de las palabras enfatizadas en ese texto limpio)."""
+    texto = (texto or "").strip()
+    if "*" not in texto: return texto, []
+    idx, out, k, dentro = [], [], 0, False
+    for tok in texto.split():
+        t = tok
+        abre = t.startswith("*"); cierra = t.rstrip(".,;:!?…\"»)").endswith("*") or t.endswith("*")
+        t = t.replace("*", "")
+        if not t: continue
+        if abre: dentro = True
+        if dentro: idx.append(k)
+        if cierra: dentro = False
+        out.append(t); k += 1
+    return " ".join(out), idx
+
 class Subtitulos:
-    """Subtitulos palabra a palabra: grupo actual en grande, centrado, la palabra activa en amarillo."""
-    def __init__(self, texto, wps, delay, dur, entero=False):
+    """Subtitulos palabra a palabra: grupo actual en grande, centrado, la palabra activa en amarillo,
+    las palabras con enfasis en rojo. Con 'tiempos' (inicio real de cada palabra, en s desde el principio de
+    la escena) van clavados a la voz; si no, al ritmo wps estimado."""
+    def __init__(self, texto, wps, delay, dur, entero=False, enfasis=(), tiempos=None):
         self.grupos = trocear_subtitulos(texto)
         self.n = sum(len(g) for g in self.grupos)
         self.wps, self.delay, self.dur, self.entero = wps, delay, dur, entero
+        self.enfasis = set(int(i) for i in (enfasis or []))
+        self.tiempos = list(tiempos) if (tiempos and len(tiempos) == self.n) else None
         self.cache = {}
         self.probe = ImageDraw.Draw(Image.new("L", (4, 4)))
         self.starts = []   # indice de la primera palabra de cada grupo
@@ -491,6 +514,9 @@ class Subtitulos:
         if self.n == 0: return None
         if self.entero:
             k = self.n
+        elif self.tiempos is not None:   # tiempos reales de la voz (alineados): la palabra entra 60 ms antes de oirse
+            k = sum(1 for ti in self.tiempos if ti - 0.06 <= t)
+            k = max(0, min(k, self.n))
         else:
             k = int(max(0.0, t - self.delay) * self.wps) + (1 if t > self.delay else 0)
             k = max(0, min(k, self.n))
@@ -516,13 +542,17 @@ class Subtitulos:
         stroke = max(5, size // 12)
         space = self.probe.textlength(" ", font=f)
         idx = 0
+        base_global = 0 if self.entero else self.starts[gi]
         for i, l in enumerate(lines):
             ws = l.split()
             widths = [self.probe.textlength(w, font=f) for w in ws]
             x = (W - (sum(widths) + space * (len(ws) - 1))) / 2
             for j, w in enumerate(ws):
                 if not self.entero and idx > activo: break
-                col = AMARILLO if (not self.entero and idx == activo) else (255, 255, 255)
+                if (base_global + idx) in self.enfasis:
+                    col = ROJO_ENFASIS            # palabra con enfasis: en rojo (tambien cuando es la activa)
+                else:
+                    col = AMARILLO if (not self.entero and idx == activo) else (255, 255, 255)
                 d.text((x, 30 + i * lh), w, font=f, fill=col + (255,), stroke_width=stroke, stroke_fill=(0, 0, 0, 255))
                 x += widths[j] + space; idx += 1
         self.cache[key] = (im, int(TEXT_CY - total / 2) - 30)
@@ -566,22 +596,28 @@ def preparar_humano(sc, spec, rng):
             sc.fotos.append((preparar_foto(obj), credito, mov))
     if not sc.fotos:
         sc.fotos = [(fondo_neutro(sc.style, rng), "", rng.choice(["pan_izq", "pan_der", "zoom_in"]))]
-    voz = (spec.get("voz") or "").strip()
-    sub = (spec.get("subtitulos") or "").strip()
-    texto = (spec.get("texto") or "").strip()
+    voz, enf_voz = parsear_enfasis(spec.get("voz") or "")
+    sub, enf_sub = parsear_enfasis(spec.get("subtitulos") or "")
+    texto, enf_txt = parsear_enfasis(spec.get("texto") or "")
     if sc.style == "gancho":
-        sc.sub = Subtitulos(texto or sub or voz, WPS_HUMANO, 0.0, sc.dur, entero=True)
+        base, enf = (texto, enf_txt) if texto else ((sub, enf_sub) if sub else (voz, enf_voz))
+        sc.sub = Subtitulos(base, WPS_HUMANO, 0.0, sc.dur, entero=True, enfasis=enf)
         sc.rotulo = None
     else:
-        base = sub or voz or texto
+        base, enf = (sub, enf_sub) if sub else ((voz, enf_voz) if voz else (texto, enf_txt))
         dv = float(spec.get("_voz_dur") or 0)
+        tiempos = spec.get("_voz_palabras")   # inicio real de cada palabra (alineacion con la voz), si existe
+        if tiempos and len(tiempos) == len(base.split()):
+            tiempos = [float(x) + 0.12 for x in tiempos]   # la voz se mezcla con 120 ms de retardo
+        else:
+            tiempos = None
         if dv > 0.2:   # duracion real de la voz (voz primero): los subtitulos van al ritmo real de la frase
             wps = len(base.split()) / max(0.3, dv - 0.1)
             retardo = 0.12   # la voz entra a los 120 ms en todas las escenas (publicar_gh.py adelay)
         else:
             wps = max(WPS_HUMANO, len(base.split()) / max(0.3, sc.dur * 0.8))
             retardo = 0.35 if sc.style == "giro" else 0.12
-        sc.sub = Subtitulos(base, wps, retardo, sc.dur)
+        sc.sub = Subtitulos(base, wps, retardo, sc.dur, enfasis=enf, tiempos=tiempos)
         sc.rotulo = rotulo_humano(texto) if (texto and base != texto) else None
 
 def render_frame_humano(fi, sc, noise, rg):
@@ -1053,6 +1089,9 @@ def make_audio(scenes, total, seed, musica=True):
         mus = np.stack([mL * cutg, mR * cutg], 1)
         lm0 = lufs(mus)
         mus *= 10 ** (((-31 if MODO["humano"] else -24) - lm0) / 20)   # humano: musica discreta
+        if MODO["humano"] and hook_end < total - 2.0:
+            # el gancho va a pelo (solo la voz): la musica entra en fundido de 0,8 s cuando termina la primera escena
+            mus *= np.clip((t - hook_end + 0.2) / 0.8, 0.0, 1.0)[:, None]
         st = st + mus
     fade = np.minimum(1, np.minimum(t / 0.3, (total - t) / 0.9))
     st *= fade[:, None]
@@ -1076,9 +1115,16 @@ def main():
     # quepa sin acelerarla y los subtitulos van al ritmo real de esa frase (no al estimado de 2,6 palabras/s).
     solo_loc = "--solo-locucion" in sys.argv
     tiempos = {}
+    palabras_voz = {}   # indice de escena -> [inicio de cada palabra] (alineacion real; opcional)
     if "--tiempos" in sys.argv:
         try:
-            tiempos = {int(k): float(v) for k, v in json.load(open(sys.argv[sys.argv.index("--tiempos") + 1], encoding="utf-8")).items()}
+            for k, v in json.load(open(sys.argv[sys.argv.index("--tiempos") + 1], encoding="utf-8")).items():
+                if isinstance(v, dict):   # {"dur": s, "palabras": [[ini, fin], ...]}
+                    tiempos[int(k)] = float(v.get("dur") or 0)
+                    if v.get("palabras"):
+                        palabras_voz[int(k)] = [float(x[0]) if isinstance(x, (list, tuple)) else float(x) for x in v["palabras"]]
+                else:
+                    tiempos[int(k)] = float(v)
         except Exception as e:
             print("tiempos de voz no leidos (se usa la estimacion):", str(e)[:120])
     seed = int(g.get("semilla", 1)); title = g.get("titulo", "")
@@ -1088,19 +1134,24 @@ def main():
     bounds = [0]
     for i, e in enumerate(esc):
         d = float(e.get("duracion", 3.0))
-        voz = (e.get("voz") or "").strip()
+        voz = parsear_enfasis(e.get("voz") or "")[0]
         if voz:  # duracion minima para que el narrador termine
             if i in tiempos and tiempos[i] > 0.2:
                 need = tiempos[i] + 0.45   # voz real + 120 ms de retardo de mezcla + respiro
                 e["_voz_dur"] = tiempos[i]
+                if i in palabras_voz: e["_voz_palabras"] = palabras_voz[i]
             else:
                 need = len(voz.split()) / 2.6 + 0.6
             if i + 1 < len(esc) and esc[i + 1].get("estilo") == "giro":
                 need += 0.5  # deja libre el segundo de silencio antes del giro
             d = max(d, need)
         bounds.append(bounds[-1] + int(math.ceil(d * FPS - 1e-6)))
-    loc = [{"escena": i, "inicio": round(bounds[i] / FPS, 3), "duracion": round((bounds[i + 1] - bounds[i]) / FPS, 3), "texto": e["voz"].strip()}
-           for i, e in enumerate(esc) if (e.get("voz") or "").strip()]
+    loc = []
+    for i, e in enumerate(esc):
+        if not (e.get("voz") or "").strip(): continue
+        limpio, enf = parsear_enfasis(e["voz"])   # la voz recibe el texto sin asteriscos; el enfasis va aparte
+        loc.append({"escena": i, "estilo": e.get("estilo", "evidencia"), "inicio": round(bounds[i] / FPS, 3),
+                    "duracion": round((bounds[i + 1] - bounds[i]) / FPS, 3), "texto": limpio, "enfasis": enf})
     with open(os.path.splitext(out)[0] + ".locucion.json", "w", encoding="utf-8") as fh:
         json.dump(loc, fh, ensure_ascii=False, indent=1)
     if solo_loc:

@@ -316,26 +316,50 @@ WPS_HUMANO = 2.6          # palabras por segundo de la voz (misma cifra que usa 
 CACHE_IMG = os.path.expanduser("~/.cache/expedientes/imagenes")
 FUENTE_SUB = DJV + "DejaVuSans-Bold.ttf"
 
+ULTIMAS_FOTOS = {"fotos": None}   # fotos de la ultima escena con foto real (respaldo si una descarga falla)
+
+def url_miniatura_commons(url, ancho=1280):
+    """Para un original de upload.wikimedia.org/wikipedia/commons/a/ab/Nombre.ext devuelve la miniatura de 1280 px
+    (mucho mas ligera; los originales de Commons pueden pasar de 40 MB y fallar o tardar). None si no aplica."""
+    m = re.match(r"^(https?://upload\.wikimedia\.org/wikipedia/commons)/([0-9a-f])/([0-9a-f]{2})/([^/?#]+)$", url)
+    if not m: return None
+    base, a, ab, nombre = m.groups()
+    sufijo = ".png" if nombre.lower().endswith((".svg", ".tif", ".tiff", ".pdf", ".webp", ".gif")) else ""
+    return f"{base}/thumb/{a}/{ab}/{nombre}/{ancho}px-{nombre}{sufijo}"
+
 def descargar_imagen(url):
-    """Descarga (con cache) una foto de dominio publico / licencia libre. None si falla: no se cae el render."""
+    """Descarga (con cache) una foto de dominio publico / licencia libre. None si falla: no se cae el render.
+    Reintenta 3 veces (1 s, 3 s) y, si el original de Commons falla o pesa mas de 40 MB, prueba su miniatura
+    de 1280 px (peticion de Calidad, 6/11/2026: dos escenas salieron en negro por una descarga fallida)."""
     if not url: return None
     os.makedirs(CACHE_IMG, exist_ok=True)
     dst = os.path.join(CACHE_IMG, hashlib.md5(url.encode()).hexdigest() + ".img")
     if not os.path.exists(dst) or os.path.getsize(dst) < 1000:
-        try:
-            import urllib.request
-            req = urllib.request.Request(url, headers={"User-Agent": "ExpedientesImposibles-render/1.0 (reel de dominio publico)"})
-            with urllib.request.urlopen(req, timeout=25) as r, open(dst + ".part", "wb") as fh:
-                fh.write(r.read(40 * 1024 * 1024))
-            os.replace(dst + ".part", dst)
-        except Exception as e:
-            print("imagen no descargada:", url[:90], "->", str(e)[:120])
-            return None
+        import urllib.request
+        candidatas = [url] + ([url_miniatura_commons(url)] if url_miniatura_commons(url) else [])
+        ok = False
+        for cand in candidatas:
+            for intento, espera in enumerate((0, 1, 3)):
+                if espera: time.sleep(espera)
+                try:
+                    req = urllib.request.Request(cand, headers={"User-Agent": "ExpedientesImposibles-render/1.0 (reel de dominio publico; contacto: github.com/ajreparacion/instagram)"})
+                    with urllib.request.urlopen(req, timeout=25) as r, open(dst + ".part", "wb") as fh:
+                        datos = r.read(40 * 1024 * 1024 + 1)
+                        if len(datos) > 40 * 1024 * 1024:
+                            raise ValueError("mas de 40 MB")
+                        fh.write(datos)
+                    os.replace(dst + ".part", dst); ok = True; break
+                except Exception as e:
+                    print("imagen no descargada (intento %d):" % (intento + 1), cand[:90], "->", str(e)[:120])
+            if ok: break
+        if not ok: return None
     try:
         im = Image.open(dst); im.load()
         return im.convert("RGB")
     except Exception as e:
         print("imagen ilegible:", url[:90], "->", str(e)[:120])
+        try: os.remove(dst)
+        except OSError: pass
         return None
 
 def preparar_foto(im, zoom_max=1.10):
@@ -594,8 +618,15 @@ def preparar_humano(sc, spec, rng):
             sc.fotos.append((clip, credito, mov if mov in ("zoom_in", "zoom_out", "fijo") else "fijo"))
         else:
             sc.fotos.append((preparar_foto(obj), credito, mov))
+    if sc.fotos and any(not isinstance(f[0], Clip) for f in sc.fotos):
+        ULTIMAS_FOTOS["fotos"] = [f for f in sc.fotos if not isinstance(f[0], Clip)]
     if not sc.fotos:
-        sc.fotos = [(fondo_neutro(sc.style, rng), "", rng.choice(["pan_izq", "pan_der", "zoom_in"]))]
+        if ULTIMAS_FOTOS["fotos"]:   # antes que un fondo neutro, se repite la foto real de la escena anterior
+            prev = ULTIMAS_FOTOS["fotos"][-1]
+            print("escena sin foto: se reutiliza la de la escena anterior")
+            sc.fotos = [(prev[0], prev[1], rng.choice([m for m in ("zoom_in", "zoom_out", "pan_izq", "pan_der") if m != prev[2]]))]
+        else:
+            sc.fotos = [(fondo_neutro(sc.style, rng), "", rng.choice(["pan_izq", "pan_der", "zoom_in"]))]
     voz, enf_voz = parsear_enfasis(spec.get("voz") or "")
     sub, enf_sub = parsear_enfasis(spec.get("subtitulos") or "")
     texto, enf_txt = parsear_enfasis(spec.get("texto") or "")
