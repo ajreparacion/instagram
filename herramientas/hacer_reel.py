@@ -298,6 +298,213 @@ class TextBlock:
         self.cache[n] = (im, y0)
         return self.cache[n]
 
+
+# ---------------------------------------------------------------- modo "humano"
+# "modo": "humano" en guion.json (INSTRUCCIONES_EQUIPO.md, orden del usuario del 6/11/2026: humanizar al
+# maximo). Implementado por el Remasterizador el 6/11. Sin HUD (REC, CAM 02, etiquetas), sin sello
+# CLASIFICADO, sin ojos/siluetas/radar, sin glitch ni lineas de escaneo. Cada escena: fotos reales
+# ("imagenes": url + credito + mov) con movimiento de camara leve, o un fondo neutro si no hay fotos o
+# fallan; subtitulos estilo creador PALABRA A PALABRA (grupos de 2-4 palabras, la actual en amarillo)
+# tomados de "subtitulos" (si existe; para poner cifras con digitos) o de la propia "voz"; en el gancho,
+# el texto entero desde el primer fotograma; "texto" en las demas escenas = rotulo corto fijo arriba.
+# Musica discreta (-31 LUFS antes de la voz), sin lecho de tension, sin golpes ni subidas.
+# Con "modo" ausente o distinto, todo se comporta exactamente como antes.
+MODO = {"humano": False}
+AMARILLO = (255, 212, 0)
+WPS_HUMANO = 2.6          # palabras por segundo de la voz (misma cifra que usa main() para la duracion minima)
+CACHE_IMG = os.path.expanduser("~/.cache/expedientes/imagenes")
+FUENTE_SUB = DJV + "DejaVuSans-Bold.ttf"
+
+def descargar_imagen(url):
+    """Descarga (con cache) una foto de dominio publico / licencia libre. None si falla: no se cae el render."""
+    if not url: return None
+    os.makedirs(CACHE_IMG, exist_ok=True)
+    dst = os.path.join(CACHE_IMG, hashlib.md5(url.encode()).hexdigest() + ".img")
+    if not os.path.exists(dst) or os.path.getsize(dst) < 1000:
+        try:
+            import urllib.request
+            req = urllib.request.Request(url, headers={"User-Agent": "ExpedientesImposibles-render/1.0 (reel de dominio publico)"})
+            with urllib.request.urlopen(req, timeout=25) as r, open(dst + ".part", "wb") as fh:
+                fh.write(r.read(40 * 1024 * 1024))
+            os.replace(dst + ".part", dst)
+        except Exception as e:
+            print("imagen no descargada:", url[:90], "->", str(e)[:120])
+            return None
+    try:
+        im = Image.open(dst); im.load()
+        return im.convert("RGB")
+    except Exception as e:
+        print("imagen ilegible:", url[:90], "->", str(e)[:120])
+        return None
+
+def preparar_foto(im, zoom_max=1.10):
+    """Devuelve una imagen algo mayor que el lienzo (para zoom/paneo) que llena 1080x1920 sin bandas.
+    Las fotos muy apaisadas van sobre si mismas desenfocadas y oscurecidas (como en los reels de creadores)."""
+    tw, th = int(W * zoom_max) + 2, int(H * zoom_max) + 2
+    w, h = im.size
+    if w / h < 0.62 * 1.25:   # bastante vertical o cuadrada: llenar y recortar
+        s = max(tw / w, th / h)
+        im2 = im.resize((max(tw, int(w * s + 1)), max(th, int(h * s + 1))), Image.LANCZOS)
+        x0 = (im2.width - tw) // 2; y0 = (im2.height - th) // 2
+        return im2.crop((x0, y0, x0 + tw, y0 + th))
+    bg = im.resize((tw, th), Image.BILINEAR).filter(ImageFilter.GaussianBlur(28))
+    bg = Image.eval(bg, lambda v: int(v * 0.45))
+    fw = tw; fh = int(h * fw / w)
+    fg = im.resize((fw, fh), Image.LANCZOS)
+    bg.paste(fg, (0, (th - fh) // 2))
+    return bg
+
+def fondo_neutro(style, rng):
+    """Fondo neutro (degradado oscuro con un foco suave) cuando una escena no lleva fotos."""
+    tint = {"gancho": (24, 18, 18), "archivo": (20, 20, 18), "evidencia": (16, 19, 22),
+            "giro": (26, 16, 18), "cierre": (18, 20, 18)}[style]
+    sw, sh = 135, 240
+    yy, xx = np.mgrid[0:sh, 0:sw].astype(np.float32)
+    cx = sw * (0.5 + rng.uniform(-0.15, 0.15)); cy = sh * (0.45 + rng.uniform(-0.08, 0.08))
+    r = np.sqrt(((xx - cx) / sw) ** 2 + ((yy - cy) / sh) ** 2)
+    glow = np.clip(1.0 - r * 1.6, 0.0, 1.0) ** 1.3
+    grad = 1.0 - 0.35 * (yy / sh)
+    a = np.array(tint, np.float32)[None, None, :] * (0.7 + 1.1 * glow[..., None]) * grad[..., None]
+    tw, th = int(W * 1.10) + 2, int(H * 1.10) + 2
+    return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8)).resize((tw, th), Image.BICUBIC)
+
+def trocear_subtitulos(texto, maxw=4):
+    """Grupos de 2-4 palabras; corta en los signos de puntuacion para respetar las pausas de la voz."""
+    palabras = texto.split()
+    grupos, cur = [], []
+    for w in palabras:
+        cur.append(w)
+        if len(cur) >= maxw or w[-1] in ".,;:!?…" or (len(cur) >= 2 and w.endswith(("—", "-"))):
+            grupos.append(cur); cur = []
+    if cur: grupos.append(cur)
+    # un grupo de 1 palabra se une al anterior si cabe
+    out = []
+    for g in grupos:
+        if len(g) == 1 and out and len(out[-1]) < maxw: out[-1] = out[-1] + g
+        else: out.append(g)
+    return out
+
+class Subtitulos:
+    """Subtitulos palabra a palabra: grupo actual en grande, centrado, la palabra activa en amarillo."""
+    def __init__(self, texto, wps, delay, dur, entero=False):
+        self.grupos = trocear_subtitulos(texto)
+        self.n = sum(len(g) for g in self.grupos)
+        self.wps, self.delay, self.dur, self.entero = wps, delay, dur, entero
+        self.cache = {}
+        self.probe = ImageDraw.Draw(Image.new("L", (4, 4)))
+        self.starts = []   # indice de la primera palabra de cada grupo
+        k = 0
+        for g in self.grupos: self.starts.append(k); k += len(g)
+    def estado(self, t):
+        """(indice de grupo, palabras visibles del grupo, palabra activa global)"""
+        if self.n == 0: return None
+        if self.entero:
+            k = self.n
+        else:
+            k = int(max(0.0, t - self.delay) * self.wps) + (1 if t > self.delay else 0)
+            k = max(0, min(k, self.n))
+        if k == 0: return None
+        gi = max(i for i, s in enumerate(self.starts) if s < k)
+        return gi, k - self.starts[gi], k
+    def capa(self, t):
+        e = self.estado(t)
+        if e is None: return None
+        gi, vis, k = e
+        key = (gi, vis, k) if not self.entero else ("all",)
+        if key in self.cache: return self.cache[key]
+        if self.entero:
+            texto = " ".join(" ".join(g) for g in self.grupos)
+            f, size, lines = wrap_fit(texto, FUENTE_SUB, maxw=W - SAFE_L - SAFE_R - 40, maxlines=3, smax=104, smin=56)
+            activo = -1
+        else:
+            texto = " ".join(self.grupos[gi])
+            f, size, lines = wrap_fit(texto, FUENTE_SUB, maxw=W - SAFE_L - SAFE_R - 40, maxlines=2, smax=112, smin=64)
+            activo = vis - 1
+        lh = int(size * 1.18); total = len(lines) * lh
+        im = Image.new("RGBA", (W, total + 60), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+        stroke = max(5, size // 12)
+        space = self.probe.textlength(" ", font=f)
+        idx = 0
+        for i, l in enumerate(lines):
+            ws = l.split()
+            widths = [self.probe.textlength(w, font=f) for w in ws]
+            x = (W - (sum(widths) + space * (len(ws) - 1))) / 2
+            for j, w in enumerate(ws):
+                if not self.entero and idx > activo: break
+                col = AMARILLO if (not self.entero and idx == activo) else (255, 255, 255)
+                d.text((x, 30 + i * lh), w, font=f, fill=col + (255,), stroke_width=stroke, stroke_fill=(0, 0, 0, 255))
+                x += widths[j] + space; idx += 1
+        self.cache[key] = (im, int(TEXT_CY - total / 2) - 30)
+        return self.cache[key]
+
+def rotulo_humano(texto):
+    """Rotulo corto fijo arriba (p. ej. «1936 · Tasmania»), dentro de la zona segura."""
+    f = font(DJV + "DejaVuSansCondensed-Bold.ttf", 46)
+    probe = ImageDraw.Draw(Image.new("L", (4, 4)))
+    texto = texto.strip()[:48]
+    tw = probe.textlength(texto, font=f)
+    im = Image.new("RGBA", (W, 110), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    x0 = int((W - tw) / 2) - 26
+    d.rounded_rectangle([x0, 14, x0 + tw + 52, 96], 16, fill=(0, 0, 0, 140))
+    d.text((W / 2, 55), texto, font=f, anchor="mm", fill=(255, 255, 255, 255))
+    return im
+
+def preparar_humano(sc, spec, rng):
+    """Carga fotos, prepara subtitulos y movimiento de camara para una escena en modo humano."""
+    sc.fotos = []
+    for im_spec in (spec.get("imagenes") or [])[:3]:
+        if not isinstance(im_spec, dict): continue
+        im = descargar_imagen(str(im_spec.get("url") or "").strip())
+        if im is None: continue
+        sc.fotos.append((preparar_foto(im), str(im_spec.get("credito") or "").strip(),
+                         str(im_spec.get("mov") or rng.choice(["zoom_in", "zoom_out", "pan_izq", "pan_der"])).strip()))
+    if not sc.fotos:
+        sc.fotos = [(fondo_neutro(sc.style, rng), "", rng.choice(["pan_izq", "pan_der", "zoom_in"]))]
+    voz = (spec.get("voz") or "").strip()
+    sub = (spec.get("subtitulos") or "").strip()
+    texto = (spec.get("texto") or "").strip()
+    if sc.style == "gancho":
+        sc.sub = Subtitulos(texto or sub or voz, WPS_HUMANO, 0.0, sc.dur, entero=True)
+        sc.rotulo = None
+    else:
+        base = sub or voz or texto
+        wps = max(WPS_HUMANO, len(base.split()) / max(0.3, sc.dur * 0.8))
+        sc.sub = Subtitulos(base, wps, 0.35 if sc.style == "giro" else 0.12, sc.dur)
+        sc.rotulo = rotulo_humano(texto) if (texto and base != texto) else None
+
+def render_frame_humano(fi, sc, noise, rg):
+    lf = fi - sc.start; t = lf / FPS
+    nf = len(sc.fotos); seg = sc.dur / nf
+    k = min(nf - 1, int(t / seg)); tk = t - k * seg
+    foto, credito, mov = sc.fotos[k]
+    p = min(1.0, tk / max(0.5, seg))
+    fw, fh = foto.size
+    if mov == "zoom_in":   z = 1.0 + 0.09 * p
+    elif mov == "zoom_out": z = 1.09 - 0.09 * p
+    else: z = 1.045
+    cw, ch = int(W * z), int(H * z)
+    cw, ch = min(cw, fw), min(ch, fh)
+    cx = (fw - cw) // 2; cy = (fh - ch) // 2
+    if mov == "pan_izq": cx = int((fw - cw) * (1 - p))
+    elif mov == "pan_der": cx = int((fw - cw) * p)
+    img = foto.crop((cx, cy, cx + cw, cy + ch))
+    if (cw, ch) != (W, H): img = img.resize((W, H), Image.BILINEAR)
+    capa = sc.sub.capa(t)
+    if capa:
+        timg, ty = capa
+        img.paste(timg, (0, ty), timg)
+    if sc.rotulo is not None:
+        img.paste(sc.rotulo, (0, 470), sc.rotulo)
+    if credito:
+        d = ImageDraw.Draw(img, "RGBA")
+        d.text((W - SAFE_R, 1500), credito[:70], font=font(DJV + "DejaVuSans.ttf", 24), anchor="ra",
+               fill=(235, 235, 235, 230), stroke_width=2, stroke_fill=(0, 0, 0, 200))
+    a = np.asarray(img, dtype=np.int16).copy()
+    a += noise[fi % 8] // 4            # grano leve
+    if lf < 3: a += int(12 * (3 - lf))  # parpadeo minimo en el corte
+    np.clip(a, 0, 255, out=a)
+    return a.astype(np.uint8)
+
 # ---------------------------------------------------------------- escena
 class Scene:
     def __init__(self, idx, sc, seed, title, nframes, start_frame):
@@ -327,6 +534,8 @@ class Scene:
         self.sello = str(sc.get("sello") or "").strip().upper()[:12]
         self.sello_t = float(sc.get("sello_t", 0.5 if self.style == "giro" else 0.25))
         self.sello_t = min(max(self.sello_t, 0.0), max(0.0, self.dur - 0.6))
+        if MODO["humano"]:
+            preparar_humano(self, sc, rng)
 
 def hud(d, scene, t_abs, date_s, title):
     f = font(MONO, 44); fs = font(MONO, 32)
@@ -389,6 +598,8 @@ def build_noise(seed):
 
 def render_frame(fi, scenes, noise, date_s, title, rg):
     sc = next(s for s in scenes if fi < s.start + s.nframes)
+    if MODO["humano"]:
+        return render_frame_humano(fi, sc, noise, rg)
     lf = fi - sc.start; t = lf / FPS; ta = fi / FPS
     img = sc.bg.copy()
     d = ImageDraw.Draw(img, "RGBA")
@@ -564,7 +775,9 @@ def make_music(scenes, n, seed, gs, hook_end):
         k = int(math.ceil(ts / beat - 1e-6))
         while k * beat < te - 0.02:
             kicks.append((k * beat, 1.0 if k % 4 == 0 else 0.72)); k += 1
-    if cut0:
+    if MODO["humano"]:
+        tr0 = None            # modo humano: sin subida de tension ni bombo, solo colchon y arpegio
+    elif cut0:
         kick_run(hook_end, cut0); kick_run(gs, total); kicks.append((gs, 1.5))
     else:
         kick_run(hook_end, total)
@@ -716,13 +929,16 @@ def make_audio(scenes, total, seed, musica=True):
             if j0 < n:
                 hL[j0:j1] += thud[:j1 - j0]; hR[j0:j1] += thud[:j1 - j0]
     fx = np.stack([bL + hL, bR + hR], 1)
-    gfx = 10 ** ((-21 - lufs(fx)) / 20)
-    st = fx * gfx
+    if MODO["humano"]:
+        st = np.zeros_like(fx)            # modo humano: sin lecho de tension ni golpes
+    else:
+        gfx = 10 ** ((-21 - lufs(fx)) / 20)
+        st = fx * gfx
     lm = None
     if musica:
         mus = np.stack([mL * cutg, mR * cutg], 1)
         lm0 = lufs(mus)
-        mus *= 10 ** ((-24 - lm0) / 20)
+        mus *= 10 ** (((-31 if MODO["humano"] else -24) - lm0) / 20)   # humano: musica discreta
         st = st + mus
     fade = np.minimum(1, np.minimum(t / 0.3, (total - t) / 0.9))
     st *= fade[:, None]
@@ -741,6 +957,7 @@ def main():
     g = json.load(open(sys.argv[1], encoding="utf-8")); out = sys.argv[2]
     seed = int(g.get("semilla", 1)); title = g.get("titulo", "")
     musica = bool(g.get("musica", True))
+    MODO["humano"] = (g.get("modo") or "").strip().lower() == "humano"
     esc = g["escenas"]
     bounds = [0]
     for i, e in enumerate(esc):

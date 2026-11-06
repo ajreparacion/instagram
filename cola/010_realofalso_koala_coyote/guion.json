@@ -2,43 +2,17 @@
   "titulo": "¿Real o falso? El koala coyote de Sierra Morena",
   "semilla": 1936,
   "musica": true,
+  "modo": "humano",
   "portada_texto": "¿REAL O FALSO? Un koala coyote en Sierra Morena",
   "escenas": [
-    {
-      "texto": "¿REAL O FALSO? Un koala coyote en Sierra Morena",
-      "duracion": 4.8,
-      "estilo": "gancho",
-      "voz": "¿Real o falso? Un koala coyote en Sierra Morena."
-    },
-    {
-      "texto": "«Mitad koala, mitad coyote»",
-      "duracion": 4.3,
-      "estilo": "archivo",
-      "voz": "Dicen que lo vieron: mitad koala, mitad coyote."
-    },
-    {
-      "texto": "Era FALSO: lo inventamos nosotros",
-      "duracion": 2.9,
-      "estilo": "giro",
-      "voz": "Era falso. Lo inventamos nosotros."
-    },
-    {
-      "texto": "Los koalas solo viven en Australia",
-      "duracion": 3.8,
-      "estilo": "evidencia",
-      "voz": "Los koalas salvajes solo viven en Australia."
-    },
-    {
-      "texto": "Pero sí existió un «lobo marsupial»: el tilacino",
-      "duracion": 4.3,
-      "estilo": "evidencia",
-      "voz": "Pero sí existió un lobo marsupial: el tilacino."
-    },
-    {
-      "texto": "El último murió en 1936",
-      "duracion": 8.6,
-      "estilo": "cierre",
-      "voz": "El último murió en Tasmania, en mil novecientos treinta y seis. Envíaselo a quien se lo creyó."
-    }
+    {"estilo": "gancho", "duracion": 3.6, "texto": "¿REAL O FALSO? Un koala coyote en Sierra Morena", "voz": "¿Real o falso? Un koala coyote en Sierra Morena."},
+    {"estilo": "archivo", "duracion": 2.2, "voz": "Mitad koala, mitad coyote."},
+    {"estilo": "archivo", "duracion": 3.4, "texto": "Sierra Morena · 2025", "voz": "Y había gente que decía haberlo visto, eh."},
+    {"estilo": "giro", "duracion": 3.3, "voz": "Falso. Nos lo inventamos nosotros, aquí mismo."},
+    {"estilo": "evidencia", "duracion": 3.4, "texto": "Koalas: solo en Australia", "voz": "A ver, los koalas solo viven en Australia."},
+    {"estilo": "evidencia", "duracion": 3.5, "voz": "Pero ojo, que un lobo marsupial sí existió."},
+    {"estilo": "evidencia", "duracion": 4.4, "texto": "El tilacino", "voz": "El tilacino. Cabeza de perro y bolsa, como un canguro."},
+    {"estilo": "evidencia", "duracion": 5.6, "texto": "1936 · zoo de Hobart, Tasmania", "subtitulos": "Y el último murió en un zoo de Tasmania, en 1936.", "voz": "Y el último murió en un zoo de Tasmania, en mil novecientos treinta y seis."},
+    {"estilo": "cierre", "duracion": 3.0, "voz": "Mándaselo a quien se lo creyó."}
   ]
 }
