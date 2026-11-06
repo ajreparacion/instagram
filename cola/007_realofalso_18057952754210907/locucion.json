@@ -1,56 +1,74 @@
 [
  {
   "escena": 0,
+  "estilo": "gancho",
   "inicio": 0.0,
-  "duracion": 3.6,
-  "texto": "¿Real o falso? Un koala adicto en Queensland."
+  "duracion": 3.5,
+  "texto": "¿Real o falso? Un koala adicto en Queensland.",
+  "enfasis": []
  },
  {
   "escena": 1,
-  "inicio": 3.6,
-  "duracion": 4.433,
-  "texto": "En mil novecientos noventa y seis. Con negocio turbio."
+  "estilo": "archivo",
+  "inicio": 3.5,
+  "duracion": 4.7,
+  "texto": "En mil novecientos noventa y seis. Con negocio turbio.",
+  "enfasis": []
  },
  {
   "escena": 2,
-  "inicio": 8.033,
-  "duracion": 2.933,
-  "texto": "Falso. Lo inventamos nosotros."
+  "estilo": "giro",
+  "inicio": 8.2,
+  "duracion": 3.4,
+  "texto": "Falso. Lo inventamos nosotros.",
+  "enfasis": []
  },
  {
   "escena": 3,
-  "inicio": 10.967,
-  "duracion": 2.833,
-  "texto": "Pero en el noventa y seis sí pasó algo."
+  "estilo": "evidencia",
+  "inicio": 11.6,
+  "duracion": 4.0,
+  "texto": "Pero en el noventa y seis sí pasó algo.",
+  "enfasis": []
  },
  {
   "escena": 4,
-  "inicio": 13.8,
-  "duracion": 5.5,
-  "texto": "En Adelaida vieron que los koalas tienen huellas dactilares. Casi como las nuestras."
+  "estilo": "evidencia",
+  "inicio": 15.6,
+  "duracion": 5.333,
+  "texto": "En Adelaida vieron que los koalas tienen huellas dactilares. Casi como las nuestras.",
+  "enfasis": []
  },
  {
   "escena": 5,
-  "inicio": 19.3,
-  "duracion": 3.633,
-  "texto": "Al microscopio cuesta distinguirlas. Flipé."
+  "estilo": "evidencia",
+  "inicio": 20.933,
+  "duracion": 3.733,
+  "texto": "Al microscopio cuesta distinguirlas. Flipé.",
+  "enfasis": []
  },
  {
   "escena": 6,
-  "inicio": 22.933,
-  "duracion": 3.633,
-  "texto": "Canguros y wombats, sus primos, ni tienen."
+  "estilo": "evidencia",
+  "inicio": 24.667,
+  "duracion": 3.933,
+  "texto": "Canguros y wombats, sus primos, ni tienen.",
+  "enfasis": []
  },
  {
   "escena": 7,
-  "inicio": 26.567,
-  "duracion": 3.6,
-  "texto": "¿Lo de confundir a la policía? Eso sí es un bulo."
+  "estilo": "evidencia",
+  "inicio": 28.6,
+  "duracion": 3.833,
+  "texto": "¿Lo de confundir a la policía? Eso sí es un bulo.",
+  "enfasis": []
  },
  {
   "escena": 8,
-  "inicio": 30.167,
+  "estilo": "cierre",
+  "inicio": 32.433,
   "duracion": 2.5,
-  "texto": "Mándaselo a quien se lo creyó."
+  "texto": "Mándaselo a quien se lo creyó.",
+  "enfasis": []
  }
 ]

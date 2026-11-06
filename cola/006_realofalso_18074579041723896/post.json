@@ -1,87 +1,90 @@
 {
- "tipo": "reel",
- "texto": "¿Real o falso? «Los pájaros son drones del Gobierno y se recargan en los cables».\n\nFalso. Lo inventamos nosotros el año pasado, en este mismo perfil. Y lo mejor: la teoría de los «pájaros robot» también es una broma.\n\nLo que sí es verdad:\n- «Birds Aren't Real» («Los pájaros no son reales») nació en enero de 2017 en una marcha en Memphis (EE. UU.): un chaval la improvisó con una pancarta para reírse de las teorías de la conspiración.\n- Mantuvo el personaje durante años, hasta que en diciembre de 2021 reconoció la sátira en una entrevista con The New York Times.\n- ¿Y lo de los cables? Un pájaro posado en un solo cable no se electrocuta porque no hay diferencia de voltaje en su cuerpo. Si toca otro cable o el suelo a la vez, sí.\n\nMándaselo a quien se lo creyó. Y si quieres otro dato, comenta DRON y te lo paso.\n\nFuentes: Maldita.es; Wikipedia (Birds Aren't Real, con The New York Times); BBC Science Focus; Indiana Connection.\nImágenes: Wikimedia Commons (dominio público, CC0 y CC BY; autores en pantalla).\n📚 Fuentes y libros en el enlace del perfil.\nVoz: narración generada.\n#realofalso #misterio #curiosidades #datoscuriosos #pajaros #conspiracion",
- "cuando": "2026-11-07T13:40:00+01:00",
- "palabra_clave": "DRON",
- "respuesta": "La parodia decía que el Gobierno había cambiado todas las aves de EE. UU. por drones. Y su lema era «si vuela, espía». Todo inventado para reírse de los bulos.",
- "compartir_en_feed": true,
- "portada_ms": 1200,
- "prueba_no_seguidores": true,
- "_verificacion": "Remasterizador 6/11/2026: Wikipedia y Maldita.es coinciden: Birds Aren't Real lo creó Peter McIndoe en enero de 2017 en la Women's March de Memphis, como broma ante contramanifestantes; reconoció la sátira en The New York Times en diciembre de 2021 (Maldita; Wikipedia cita a Lorenz, NYT 9/12/2021). No se nombra al creador (persona viva) para no centrarse en él. Cables: BBC Science Focus e Indiana Connection: en un solo cable no hay diferencia de voltaje; tocar otro cable (ambas) o el suelo (Indiana Connection) electrocuta. Los años 1959-1971 de la parodia solo los da Wikipedia: no se usan. Recorte prudente 0-12 s porque no se ha podido ver el vídeo; reel original 14,1 s de media y 3 compartidos (plan.json).",
- "_nota_calidad": "6/11/2026 Calidad: reconvertido de remaster a reel nuevo (guion.json) porque el metraje del reel antiguo trae marcas de agua de terceros (iStock, Storyblocks, InVideo...). Mismos datos verificados; CTA reordenado (envíaselo, guárdalo, comenta).",
- "_nota_remasterizador": "6/11/2026 Remasterizador (PRIORIDAD MÁXIMA del usuario: humanizar): guion reescrito como habla una persona (9 escenas de 2-4 s, voz coloquial), \"modo\": \"humano\" de hacer_reel.py (sin HUD ni efectos de plantilla, subtítulos palabra a palabra, música discreta), texto del post sin emojis y respuesta sin muletillas. Sin fotos todavía: desde la nube no se puede comprobar la licencia en Wikimedia Commons (bloqueado); el Creador o Mejora pueden añadir \"imagenes\" verificadas antes del render. Mismos datos y fuentes verificados.",
- "_nota_calidad_humano": "6/11/2026 13:00 Calidad: AVISO. El guion no lleva \"imagenes\" reales, así que se renderizará sobre fondo neutro. Con la orden del usuario del 6/11 eso es rechazo seguro en la revisión previa a su hora (como 010 y 011, ya en revision/). Añadir 1-3 fotos reales por escena con licencia comprobada antes de que se renderice.",
- "_imagenes": [
-  {
-   "archivo": "File:Manzanar birds on wire 00162ua.jpg",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Manzanar_birds_on_wire_00162ua.jpg",
-   "licencia": "Public domain",
-   "autor": "Ansel Adams",
-   "uso": "escena 1"
-  },
-  {
-   "archivo": "File:Traffic Light Pigeons (4888546116).jpg",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Traffic_Light_Pigeons_(4888546116).jpg",
-   "licencia": "CC BY 2.0",
-   "autor": "CGP Grey",
-   "uso": "escena 2"
-  },
-  {
-   "archivo": "File:Birds on a wire (15442527000).jpg",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Birds_on_a_wire_(15442527000).jpg",
-   "licencia": "CC BY 2.0",
-   "autor": "Dave Lauretti from Burlington, Canada",
-   "uso": "escena 2"
-  },
-  {
-   "archivo": "File:Pigeon balanced on a steel wire (Unsplash).jpg",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Pigeon_balanced_on_a_steel_wire_(Unsplash).jpg",
-   "licencia": "CC0",
-   "autor": "Rafael Rodrigues Machado rcorneto",
-   "uso": "escena 3"
-  },
-  {
-   "archivo": "File:Pigeon on wire.jpg",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Pigeon_on_wire.jpg",
-   "licencia": "CC BY 4.0",
-   "autor": "DrewWilliam",
-   "uso": "escena 4"
-  },
-  {
-   "archivo": "File:PikiWiki Israel 35547 Birds on a Wire 2.JPG",
-   "pagina": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_35547_Birds_on_a_Wire_2.JPG",
-   "licencia": "CC BY 2.5",
-   "autor": "Omri Nardi",
-   "uso": "escena 5"
-  },
-  {
-   "archivo": "File:Starlings Sitting on a Wire.jpg",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Starlings_Sitting_on_a_Wire.jpg",
-   "licencia": "Public domain",
-   "autor": "Niaz Abbas",
-   "uso": "escena 6"
-  },
-  {
-   "archivo": "File:3 birds on a wire ! (6810543956).jpg",
-   "pagina": "https://commons.wikimedia.org/wiki/File:3_birds_on_a_wire_!_(6810543956).jpg",
-   "licencia": "CC BY 2.0",
-   "autor": "Craig Sunter from Manchester, UK",
-   "uso": "escena 7"
-  },
-  {
-   "archivo": "File:Birds in power line.jpg",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Birds_in_power_line.jpg",
-   "licencia": "CC BY 4.0",
-   "autor": "Rollcloud",
-   "uso": "escena 8"
-  },
-  {
-   "archivo": "File:Crowoutline.jpg",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Crowoutline.jpg",
-   "licencia": "Public domain",
-   "autor": "Hardyplants at English Wikipedia",
-   "uso": "escena 9"
-  }
- ],
- "_nota_remasterizador_pico": "6/11/2026 19:00 Remasterizador (plan.json, grupo A «pico» + orden del usuario de humanizar): 1.ª escena y portada reescritas para abrir por el pico sin «¿Real o falso?»; fotos reales en todas las escenas elegidas a mano en la hoja de contactos de la release pruebas (licencias comprobadas por buscar_imagenes.py en GitHub Actions: solo PD, CC0 y CC BY, sin firmas ni marcas visibles; descartadas las que llevan firma del fotógrafo); \"renderizado\"/\"asset\" quitados para que Actions lo vuelva a renderizar. Datos y fuentes sin cambios. Añadidas las líneas «Voz: narración generada» y de fuentes en el perfil (plan.json, notas del Estratega). Sin inventar reacciones del público: el reel original no tuvo comentarios, así que no se dice «hubo gente que se lo creyó»."
+  "tipo": "reel",
+  "texto": "¿Real o falso? «Los pájaros son drones del Gobierno y se recargan en los cables».\n\nFalso. Lo inventamos nosotros el año pasado, en este mismo perfil. Y lo mejor: la teoría de los «pájaros robot» también es una broma.\n\nLo que sí es verdad:\n- «Birds Aren't Real» («Los pájaros no son reales») nació en enero de 2017 en una marcha en Memphis (EE. UU.): un chaval la improvisó con una pancarta para reírse de las teorías de la conspiración.\n- Mantuvo el personaje durante años, hasta que en diciembre de 2021 reconoció la sátira en una entrevista con The New York Times.\n- ¿Y lo de los cables? Un pájaro posado en un solo cable no se electrocuta porque no hay diferencia de voltaje en su cuerpo. Si toca otro cable o el suelo a la vez, sí.\n\nMándaselo a quien se lo creyó. Y si quieres otro dato, comenta DRON y te lo paso.\n\nFuentes: Maldita.es; Wikipedia (Birds Aren't Real, con The New York Times); BBC Science Focus; Indiana Connection.\nImágenes: Wikimedia Commons (dominio público, CC0 y CC BY; autores en pantalla).\n📚 Fuentes y libros en el enlace del perfil.\nVoz: narración generada.\n#realofalso #misterio #curiosidades #datoscuriosos #pajaros #conspiracion",
+  "cuando": "2026-11-07T13:40:00+01:00",
+  "palabra_clave": "DRON",
+  "respuesta": "La parodia decía que el Gobierno había cambiado todas las aves de EE. UU. por drones. Y su lema era «si vuela, espía». Todo inventado para reírse de los bulos.",
+  "compartir_en_feed": true,
+  "portada_ms": 1200,
+  "prueba_no_seguidores": true,
+  "_verificacion": "Remasterizador 6/11/2026: Wikipedia y Maldita.es coinciden: Birds Aren't Real lo creó Peter McIndoe en enero de 2017 en la Women's March de Memphis, como broma ante contramanifestantes; reconoció la sátira en The New York Times en diciembre de 2021 (Maldita; Wikipedia cita a Lorenz, NYT 9/12/2021). No se nombra al creador (persona viva) para no centrarse en él. Cables: BBC Science Focus e Indiana Connection: en un solo cable no hay diferencia de voltaje; tocar otro cable (ambas) o el suelo (Indiana Connection) electrocuta. Los años 1959-1971 de la parodia solo los da Wikipedia: no se usan. Recorte prudente 0-12 s porque no se ha podido ver el vídeo; reel original 14,1 s de media y 3 compartidos (plan.json).",
+  "_nota_calidad": "6/11/2026 Calidad: reconvertido de remaster a reel nuevo (guion.json) porque el metraje del reel antiguo trae marcas de agua de terceros (iStock, Storyblocks, InVideo...). Mismos datos verificados; CTA reordenado (envíaselo, guárdalo, comenta).",
+  "_nota_remasterizador": "6/11/2026 Remasterizador (PRIORIDAD MÁXIMA del usuario: humanizar): guion reescrito como habla una persona (9 escenas de 2-4 s, voz coloquial), \"modo\": \"humano\" de hacer_reel.py (sin HUD ni efectos de plantilla, subtítulos palabra a palabra, música discreta), texto del post sin emojis y respuesta sin muletillas. Sin fotos todavía: desde la nube no se puede comprobar la licencia en Wikimedia Commons (bloqueado); el Creador o Mejora pueden añadir \"imagenes\" verificadas antes del render. Mismos datos y fuentes verificados.",
+  "_nota_calidad_humano": "6/11/2026 13:00 Calidad: AVISO. El guion no lleva \"imagenes\" reales, así que se renderizará sobre fondo neutro. Con la orden del usuario del 6/11 eso es rechazo seguro en la revisión previa a su hora (como 010 y 011, ya en revision/). Añadir 1-3 fotos reales por escena con licencia comprobada antes de que se renderice.",
+  "_imagenes": [
+    {
+      "archivo": "File:Manzanar birds on wire 00162ua.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Manzanar_birds_on_wire_00162ua.jpg",
+      "licencia": "Public domain",
+      "autor": "Ansel Adams",
+      "uso": "escena 1"
+    },
+    {
+      "archivo": "File:Traffic Light Pigeons (4888546116).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Traffic_Light_Pigeons_(4888546116).jpg",
+      "licencia": "CC BY 2.0",
+      "autor": "CGP Grey",
+      "uso": "escena 2"
+    },
+    {
+      "archivo": "File:Birds on a wire (15442527000).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Birds_on_a_wire_(15442527000).jpg",
+      "licencia": "CC BY 2.0",
+      "autor": "Dave Lauretti from Burlington, Canada",
+      "uso": "escena 2"
+    },
+    {
+      "archivo": "File:Pigeon balanced on a steel wire (Unsplash).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Pigeon_balanced_on_a_steel_wire_(Unsplash).jpg",
+      "licencia": "CC0",
+      "autor": "Rafael Rodrigues Machado rcorneto",
+      "uso": "escena 3"
+    },
+    {
+      "archivo": "File:Pigeon on wire.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Pigeon_on_wire.jpg",
+      "licencia": "CC BY 4.0",
+      "autor": "DrewWilliam",
+      "uso": "escena 4"
+    },
+    {
+      "archivo": "File:PikiWiki Israel 35547 Birds on a Wire 2.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:PikiWiki_Israel_35547_Birds_on_a_Wire_2.JPG",
+      "licencia": "CC BY 2.5",
+      "autor": "Omri Nardi",
+      "uso": "escena 5"
+    },
+    {
+      "archivo": "File:Starlings Sitting on a Wire.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Starlings_Sitting_on_a_Wire.jpg",
+      "licencia": "Public domain",
+      "autor": "Niaz Abbas",
+      "uso": "escena 6"
+    },
+    {
+      "archivo": "File:3 birds on a wire ! (6810543956).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:3_birds_on_a_wire_!_(6810543956).jpg",
+      "licencia": "CC BY 2.0",
+      "autor": "Craig Sunter from Manchester, UK",
+      "uso": "escena 7"
+    },
+    {
+      "archivo": "File:Birds in power line.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Birds_in_power_line.jpg",
+      "licencia": "CC BY 4.0",
+      "autor": "Rollcloud",
+      "uso": "escena 8"
+    },
+    {
+      "archivo": "File:Crowoutline.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Crowoutline.jpg",
+      "licencia": "Public domain",
+      "autor": "Hardyplants at English Wikipedia",
+      "uso": "escena 9"
+    }
+  ],
+  "_nota_remasterizador_pico": "6/11/2026 19:00 Remasterizador (plan.json, grupo A «pico» + orden del usuario de humanizar): 1.ª escena y portada reescritas para abrir por el pico sin «¿Real o falso?»; fotos reales en todas las escenas elegidas a mano en la hoja de contactos de la release pruebas (licencias comprobadas por buscar_imagenes.py en GitHub Actions: solo PD, CC0 y CC BY, sin firmas ni marcas visibles; descartadas las que llevan firma del fotógrafo); \"renderizado\"/\"asset\" quitados para que Actions lo vuelva a renderizar. Datos y fuentes sin cambios. Añadidas las líneas «Voz: narración generada» y de fuentes en el perfil (plan.json, notas del Estratega). Sin inventar reacciones del público: el reel original no tuvo comentarios, así que no se dice «hubo gente que se lo creyó».",
+  "motor_voz": "chatterbox",
+  "renderizado": "2026-11-06T19:04:32+00:00",
+  "asset": "006_realofalso_18074579041723896.mp4"
 }
