@@ -49,6 +49,9 @@ Regla: cada aprendizaje lleva evidencia y confianza (alta/media/baja). Sin evide
 - 5/11/2026 MONETIZACIÓN: vía más cercana = afiliados de libros/documentales de las fuentes (Amazon.es) con aviso de afiliado; requiere alta del usuario y página de enlaces en la bio.
 
 - 5/11/2026 MONETIZACIÓN: los remasters ¿REAL O FALSO? se publican como reel de prueba para no seguidores ("prueba_no_seguidores": true en post.json). El Analista compara su alcance a no seguidores con el de los reels normales; si no mejora en 2 semanas, se quita.
+- 6/11/2026 ESTRATEGA (viernes): corrección de datos. El 001 BAILE a las 14 h marca alcance 16, 24 reproducciones, 0 compartidos y 12,1 s de media (estadisticas.json, 7:53 UTC); los 38,7 s y 26,1 s anteriores eran provisionales y erróneos. Es 1,3 veces la mediana de la cuenta (9,4 s), no 3. Últimos 7 días: alcance 22 (14 no seguidores), 1 interacción, 0 clics y 1.605 seguidores sin cambio (Buzzfy). Motivo: no sobrevalorar la retención del formato hasta tener varios reels.
+- 6/11/2026 ESTRATEGA: se amplía plan.json hasta el 20/11 con remasters ya asignados (koala de Queensland el 17/11, Limenocaris el 20/11) y aniversarios reales (Essex 20/11/1820; Cooper para el 24/11). Motivo: que no haya huecos si falla un ciclo y mantener 1 reel diario, que es la palanca de constancia.
+- 6/11/2026 ESTRATEGA: el experimento corto/largo no se evalúa hasta tener 5 reels por grupo (primeros datos completos hacia el 12/11); regla de decisión sin cambios. Motivo: con alcance de dos dígitos por reel, comparar menos reels solo daría ruido.
 
 ## Registro diario
 (El Analista añade aquí una línea por día: fecha, qué se publicó, resultado a 24-48 h, conclusión.)
