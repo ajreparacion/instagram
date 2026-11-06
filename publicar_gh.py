@@ -689,7 +689,7 @@ def _mezclar_voz(video, tramos, wavs, aj, cadena, trabajo):
     salida = os.path.join(trabajo, "con_voz.mp4")
     r = subprocess.run(["ffmpeg", "-y", *entradas, "-filter_complex", ";".join(filtros),
                         "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
-                        "-shortest", salida], capture_output=True, timeout=600)
+                        "-movflags", "+faststart", "-shortest", salida], capture_output=True, timeout=600)
     if r.returncode != 0:
         raise ErrorAPI(f"ffmpeg falló al mezclar la voz: {r.stderr.decode(errors='replace')[-400:]}")
     os.replace(salida, video)
@@ -812,6 +812,16 @@ def esperar_contenedor(cfg, cid, max_seg=900):
     raise ErrorAPI("Instagram tardó demasiado en procesar el vídeo")
 
 
+def subir_y_esperar(cfg, cid, video, uri=None):
+    uri = uri or f"https://rupload.facebook.com/ig-api-upload/{cfg['version']}/{cid}"
+    with open(video, "rb") as f:
+        datos = f.read()
+    peticion(uri, "POST", cuerpo=datos, timeout=600, cabeceras={
+        "Authorization": f"OAuth {cfg['page_token']}", "offset": "0", "file_size": str(len(datos)),
+        "Content-Type": "application/octet-stream"})
+    esperar_contenedor(cfg, cid)
+
+
 def publicar_reel(cfg, video, post):
     params = {"media_type": "REELS", "upload_type": "resumable",
               "caption": con_atribucion(post.get("texto", ""), post.get("motor_voz")),
@@ -834,13 +844,19 @@ def publicar_reel(cfg, video, post):
         prueba = None
         r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **params)
     cid = r["id"]
-    uri = r.get("uri") or f"https://rupload.facebook.com/ig-api-upload/{cfg['version']}/{cid}"
-    with open(video, "rb") as f:
-        datos = f.read()
-    peticion(uri, "POST", cuerpo=datos, timeout=600, cabeceras={
-        "Authorization": f"OAuth {cfg['page_token']}", "offset": "0", "file_size": str(len(datos)),
-        "Content-Type": "application/octet-stream"})
-    esperar_contenedor(cfg, cid)
+    try:
+        subir_y_esperar(cfg, cid, video, r.get("uri"))
+    except ErrorAPI as e:
+        if "trial_params" not in params:
+            raise
+        # 6/11/2026: el 010 (reel de prueba) falló en la subida con «ProcessingFailedError: Request processing
+        # failed». Si el contenedor de prueba no procesa el vídeo, se reintenta al momento como reel normal.
+        log(f"reel de prueba: fallo al subir/procesar ({str(e)[-160:]}); se publica como reel normal")
+        params.pop("trial_params")
+        prueba = None
+        r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **params)
+        cid = r["id"]
+        subir_y_esperar(cfg, cid, video, r.get("uri"))
     mid = api(cfg, f"{cfg['ig_user_id']}/media_publish", "POST", creation_id=cid)["id"]
     enlace = ""
     try:
