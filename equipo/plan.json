@@ -100,7 +100,8 @@
       "hora": "13:40",
       "original_id": "18074579041723896",
       "idea": "¿REAL O FALSO? '¿Son los pájaros drones del gobierno?' (14,1 s de media y 3 compartidos, de los mejores en retención). Era FALSO. Lo real: 'Birds Aren't Real' fue un movimiento satírico creado en 2017 en EE. UU. para parodiar las teorías de la conspiración; su creador lo reconoció en 2021.",
-      "reel_de_prueba": "Publicar como reel de prueba: \"prueba_no_seguidores\": true en post.json (ya implementado en publicar_gh.py el 5/11). Se muestra primero a no seguidores e Instagram lo pasa al perfil si funciona."
+      "reel_de_prueba": "Publicar como reel de prueba: \"prueba_no_seguidores\": true en post.json (ya implementado en publicar_gh.py el 5/11). Se muestra primero a no seguidores e Instagram lo pasa al perfil si funciona.",
+      "hecho": "cola/006_realofalso_18074579041723896 (Remasterizador, 6/11, adelantado; palabra DRON). No hacer otro remaster el 13/11."
     },
     {
       "fecha": "2026-11-13",
@@ -143,7 +144,8 @@
       "hora": "13:40",
       "original_id": "18057952754210907",
       "idea": "¿REAL O FALSO? 'Un koala en Queensland en 1996' (reel de 2025 con 2 compartidos y 12,6 s de visualización media). Era FALSO (ficción de la cuenta). Lo real, con 2 fuentes que verifique el Remasterizador: datos comprobables de koalas (hábitat en el este de Australia, estado de conservación en Queensland, dieta de eucalipto y sueño de unas 18-22 horas). No inventar ninguna cifra: si una no se verifica con 2 fuentes, no se pone.",
-      "reel_de_prueba": "\"prueba_no_seguidores\": true en post.json."
+      "reel_de_prueba": "\"prueba_no_seguidores\": true en post.json.",
+      "hecho": "cola/007_realofalso_18057952754210907 (Remasterizador, 6/11, adelantado; palabra HUELLA). Datos reales: huellas dactilares de koala casi idénticas a las humanas (Universidad de Adelaida, 1996; PBS NOVA, Live Science, Snopes), en vez de dieta y sueño: encaja con el '1996' del original y es más compartible. No hacer otro remaster el 17/11."
     },
     {
       "fecha": "2026-11-17",
@@ -177,7 +179,8 @@
       "hora": "13:40",
       "original_id": "18041294177300559",
       "idea": "¿REAL O FALSO? 'Limenocaris plumae' (criatura inventada del bestiario de la cuenta, 7,4 s de media, 179 de alcance). Era FALSO. Lo real: el Remasterizador debe buscar un animal real con camuflaje o aspecto extraño en bosques (2 fuentes) y contrastarlo con la criatura inventada. Si no encuentra datos verificables, usar 18165677086357589 (koala de Camboya) con el mismo enfoque que el 003.",
-      "reel_de_prueba": "\"prueba_no_seguidores\": true en post.json."
+      "reel_de_prueba": "\"prueba_no_seguidores\": true en post.json.",
+      "hecho": "cola/009_realofalso_18041294177300559 (Remasterizador, 6/11, adelantado; palabra BABOSA). Animal real: babosa de Kerry, que vive en León y Asturias y se enrolla en bola (MITECO, Irish Times, Wikipedia). No hacer otro remaster el 20/11."
     },
     {
       "fecha": "2026-11-20",
