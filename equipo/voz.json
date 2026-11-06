@@ -63,10 +63,12 @@
  "limite": 0.78,
  "cadena_voz": "highpass=f=80,equalizer=f=300:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=3,acompressor=threshold=0.08:ratio=3:attack=2:release=120:makeup=3.2,deesser=i=0.4,alimiter=limit=0.62:attack=1:release=40:level=false",
  "recorte": {
+  "activo": true,
   "umbral_db": -40,
-  "margen_ms": 70,
-  "pausa_larga_s": 0.5,
-  "pausa_max_s": 0.35
+  "margen_ms": 120,
+  "pausa_larga_s": 9.0,
+  "pausa_max_s": 0.6,
+  "_nota": "6/11 (queja del usuario: se notan cortes): solo se recorta el silencio del principio y del final (120 ms de margen); las pausas internas NO se tocan (pausa_larga_s 9 s). Con voz primero ya no hace falta acortarlas para que quepan."
  },
  "alineacion": {
   "activo": true,
@@ -76,8 +78,10 @@
  },
  "enfasis": {
   "activo": true,
-  "db": 3.5,
-  "pausa_ms": 90,
-  "_nota": "palabras marcadas con *asteriscos* en la voz del guion: +3,5 dB y un respiro de 90 ms antes del grupo; en los subtítulos salen en rojo."
+  "db": 3.0,
+  "rampa_ms": 60,
+  "pausa_ms": 0,
+  "db_previo": 0,
+  "_nota": "palabras entre *asteriscos*: +3 dB con rampas de 60 ms (sin escalón); pausa_ms 0 = sin respiro insertado (se oía como corte). En los subtítulos salen en rojo."
  }
 }

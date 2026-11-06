@@ -523,9 +523,13 @@ def aplicar_enfasis(wav, palabras, indices, aj):
             if (i - 1) not in idx and i > 0 and pausa > 0:
                 inserts.append((i0, int(pausa * sr)))
         y = x * g
-        # respiro antes del énfasis: se inserta silencio (desplaza lo que viene después)
+        # respiro antes del énfasis: se inserta silencio con fundidos de 15 ms a cada lado (sin chasquido ni corte seco)
+        fd = int(sr * 0.015)
         for pos, m in sorted(inserts, reverse=True):
-            y = np.concatenate([y[:pos], np.zeros(m, np.float32), y[pos:]])
+            antes, despues = y[:pos].copy(), y[pos:].copy()
+            if len(antes) > fd: antes[-fd:] *= np.linspace(1.0, 0.0, fd, dtype=np.float32)
+            if len(despues) > fd: despues[:fd] *= np.linspace(0.0, 1.0, fd, dtype=np.float32)
+            y = np.concatenate([antes, np.zeros(m, np.float32), despues])
         pk = float(np.abs(y).max()) if y.size else 0.0
         if pk > 0.97:
             y *= 0.97 / pk
@@ -663,10 +667,17 @@ def realce_enfasis(tramo, aj):
             if cur: grupos.append(cur)
             cur = [i, i]
     if cur: grupos.append(cur)
-    out = ""
+    # Ganancia con RAMPAS suaves (`rampa_ms`, 60 ms) a cada lado, no un escalón: un cambio brusco de nivel se oye
+    # como un corte (queja del usuario 6/11). La expresión se evalúa por fotograma de audio (~23 ms).
+    r = max(0.01, float(cfg.get("rampa_ms", 60)) / 1000.0)
+    g = 10 ** (db / 20)
+    out = "asetnsamples=n=256:p=0,"   # fotogramas de audio de 256 muestras (~6 ms) para que la rampa sea fina
     for a, b in grupos:
-        t0 = max(0.0, float(pal[a][0]) - 0.02); t1 = float(pal[b][1]) + 0.02
-        out += f"volume=enable='between(t,{t0:.3f},{t1:.3f})':volume={db:.2f}dB:eval=frame,"
+        t0 = max(r, float(pal[a][0]) - 0.01); t1 = float(pal[b][1]) + 0.01
+        expr = (f"if(between(t,{t0:.3f},{t1:.3f}),{g:.4f},"
+                f"if(between(t,{t0 - r:.3f},{t0:.3f}),1+({g:.4f}-1)*(t-{t0 - r:.3f})/{r:.3f},"
+                f"if(between(t,{t1:.3f},{t1 + r:.3f}),{g:.4f}-({g:.4f}-1)*(t-{t1:.3f})/{r:.3f},1)))")
+        out += f"volume=volume='{expr}':eval=frame,"
     return out
 
 
