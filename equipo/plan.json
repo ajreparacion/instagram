@@ -1,6 +1,6 @@
 {
-  "semana": "2026-11-06 a 2026-11-16",
-  "creado_por": "Estratega, 5/11/2026 (primera ejecución; plan puente de viernes a lunes de la semana siguiente porque el plan inicial era de ficción y contradecía el enfoque actual). El Estratega del lunes 9/11 puede ajustar del 10/11 en adelante con más datos. Revisado el 5/11/2026 22:40 (ejecución manual) tras el commit del Analista y el primer informe de monetización.",
+  "semana": "2026-11-06 a 2026-11-20",
+  "creado_por": "Estratega, 5/11/2026 (primera ejecución; plan puente de viernes a lunes de la semana siguiente porque el plan inicial era de ficción y contradecía el enfoque actual). El Estratega del lunes 9/11 puede ajustar del 10/11 en adelante con más datos. Revisado el 5/11/2026 22:40 (ejecución manual) tras el commit del Analista y el primer informe de monetización. Ampliado el 6/11/2026 10:45 UTC por el Estratega (ejecución de viernes): se añade el 17-20/11 con ids de remaster concretos para que no haya huecos si falla el ciclo del lunes; el Estratega del 9/11 y del 16/11 pueden ajustarlo.",
   "objetivo": "Consolidar la serie EXPEDIENTES de misterios REALES con fuentes (1 al día) y el formato ¿REAL O FALSO? (martes y viernes), aprovechando aniversarios reales de este mes. Prioridad de métricas: compartidos por mensaje y retención, por encima de los likes.",
   "serie_principal": "EXPEDIENTES NNN: un caso real, documentado y sorprendente (historia, ciencia, naturaleza, España y Latinoamérica). Siempre verificado con 2+ fuentes y línea Fuentes:. Martes y viernes: ¿REAL O FALSO? desmontando reels antiguos de ficción de la propia cuenta.",
   "situacion_de_partida": "1.605 seguidores. Solo 1 reel del enfoque nuevo publicado (001 baile 1518, 5/11 21:46): a las 0,5 h tenía 6 reproducciones y 38,7 s de visualización media; sin datos de alcance reales todavía. Mejor referencia histórica: Koala Coyote (5/6/2025) alcance 1.013 y 16,2 s de media; koala 25/10/2026 alcance 30, 2 compartidos, 11,5 s. Los reels con menos de 5 s de media (mimocultor 2,6 s, cabra invertida 2,8 s) no retuvieron.",
@@ -136,6 +136,57 @@
       "idea": "Expediente 009: Un tiburón que puede llevar vivo desde antes de que existiera Estados Unidos: el tiburón de Groenlandia, el vertebrado más longevo conocido (estimación por radiocarbono en el cristalino, revista Science, 2016: unos 272-512 años, el mayor de ellos). Dar el intervalo, no una cifra cerrada. Animal + dato real que parece inventado.",
       "gancho": "dato_con_fecha",
       "palabra_clave_sugerida": "SIGLOS"
+    },
+    {
+      "fecha": "2026-11-17",
+      "tipo": "remaster",
+      "hora": "13:40",
+      "original_id": "18057952754210907",
+      "idea": "¿REAL O FALSO? 'Un koala en Queensland en 1996' (reel de 2025 con 2 compartidos y 12,6 s de visualización media). Era FALSO (ficción de la cuenta). Lo real, con 2 fuentes que verifique el Remasterizador: datos comprobables de koalas (hábitat en el este de Australia, estado de conservación en Queensland, dieta de eucalipto y sueño de unas 18-22 horas). No inventar ninguna cifra: si una no se verifica con 2 fuentes, no se pone.",
+      "reel_de_prueba": "\"prueba_no_seguidores\": true en post.json."
+    },
+    {
+      "fecha": "2026-11-17",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "duracion_objetivo": "corto",
+      "idea": "Expediente 010: Los fareros de las islas Flannan (diciembre de 1900, Escocia): tres hombres desaparecen de un faro y se encuentra la mesa puesta. Contar lo documentado frente a lo legendario (la versión del 'libro de registro con tormenta' es posterior y discutida: decirlo si las fuentes lo confirman). Candidato a enlace de afiliado (libro citado en Fuentes).",
+      "gancho": "dato_con_fecha",
+      "palabra_clave_sugerida": "FARO"
+    },
+    {
+      "fecha": "2026-11-18",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "duracion_objetivo": "largo",
+      "idea": "Expediente 011: La lluvia de carne de Kentucky (marzo de 1876, condado de Bath): trozos de carne cayeron del cielo y se analizaron. Contar la hipótesis más aceptada (según las fuentes, regurgitación de buitres) y lo que no se sabe. Animal + naturaleza.",
+      "gancho": "pregunta",
+      "palabra_clave_sugerida": "CARNE"
+    },
+    {
+      "fecha": "2026-11-19",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "duracion_objetivo": "corto",
+      "idea": "PARTE 2 del expediente con más compartidos + comentarios entre el 006 (peces de Yoro), el 007 (martes 13) y el 008 (Somerton). Si empatan, el de la serie con más alcance a no seguidores.",
+      "gancho": "pregunta"
+    },
+    {
+      "fecha": "2026-11-20",
+      "tipo": "remaster",
+      "hora": "13:40",
+      "original_id": "18041294177300559",
+      "idea": "¿REAL O FALSO? 'Limenocaris plumae' (criatura inventada del bestiario de la cuenta, 7,4 s de media, 179 de alcance). Era FALSO. Lo real: el Remasterizador debe buscar un animal real con camuflaje o aspecto extraño en bosques (2 fuentes) y contrastarlo con la criatura inventada. Si no encuentra datos verificables, usar 18165677086357589 (koala de Camboya) con el mismo enfoque que el 003.",
+      "reel_de_prueba": "\"prueba_no_seguidores\": true en post.json."
+    },
+    {
+      "fecha": "2026-11-20",
+      "tipo": "nuevo",
+      "hora": "20:40",
+      "duracion_objetivo": "largo",
+      "idea": "Expediente 012 (aniversario exacto: 20 de noviembre de 1820): el ataque de un cachalote al ballenero Essex (Nantucket, Pacífico), el hecho real que inspiró Moby Dick. Datos de las fuentes (Smithsonian, Britannica, libro de Nathaniel Philbrick); sin escenas truculentas. Animal + historia real + aniversario. Candidato a afiliado (Philbrick, 'En el corazón del mar').",
+      "gancho": "dato_con_fecha",
+      "palabra_clave_sugerida": "BALLENA"
     }
   ],
   "notas_para_el_equipo": [
@@ -147,7 +198,9 @@
     "Palabras clave sin tildes (la detección no las ignora): GUERRA, BARCO, LUZ, MANISES, PECES, TRECE, SOMERTON, SIGLOS.",
     "Pasan a la semana siguiente: fareros de Flannan y lluvia de carne de Kentucky (Flannan es candidato a enlace de afiliado según monetizacion.md).",
     "Cierre con CTA doble (monetizacion.md): 'Envíaselo a quien no se lo crea' + 'Sigue para el Expediente NNN'.",
-    "Hora: se mantiene 20:40 (pico de seguidores conectados entre las 20:00 y las 22:00, Buzzfy 5/11). Los reels antiguos publicados a las 23:00 tuvieron más alcance medio (282, 5 posts) pero ahí entra el pico del Koala Coyote: no basta para mover la hora."
+    "Hora: se mantiene 20:40 (pico de seguidores conectados entre las 20:00 y las 22:00, Buzzfy 5/11). Los reels antiguos publicados a las 23:00 tuvieron más alcance medio (282, 5 posts) pero ahí entra el pico del Koala Coyote: no basta para mover la hora.",
+    "21-23/11: por decidir el lunes 16/11 con los datos de la semana (candidatos: Parte 2 del Essex o de Flannan, y D. B. Cooper para el 24/11, aniversario del secuestro de 1971 y caso cerrado por el FBI en 2016).",
+    "Estado de datos 6/11 10:30 UTC: solo hay 1 reel del enfoque nuevo medido (001: alcance 16, 24 reproducciones, 12,1 s de visualización media; la cifra provisional de 38,7 s era errónea). El experimento corto/largo aún no tiene muestra; no se saca ninguna conclusión antes de tener 5 reels por grupo."
   ],
   "kpi_semana": {
     "principal": "Seguidores netos de la semana (historial_cuenta) y alcance a no seguidores",
