@@ -1,11 +1,7 @@
 {
- "_nota": "Lo lee herramientas/buscar_imagenes.py (workflow imagenes.yml). Cada tema: consultas en inglés (Commons está sobre todo en inglés). Añade temas nuevos y haz push: el workflow corre solo.",
- "tilacino": ["thylacine Hobart zoo", "Thylacinus cynocephalus photograph", "thylacine Beaumaris zoo 1933", "koala wild eucalyptus", "Sierra Morena landscape"],
- "emus": ["Emu War 1932", "emu Dromaius novaehollandiae", "emus flock Western Australia", "wheat field Western Australia 1930s", "Lewis gun"],
- "mary_celeste": ["Mary Celeste", "Dei Gratia ship", "brigantine 19th century painting", "Gibraltar 1870s", "Benjamin Briggs captain"],
- "oxigeno": ["Carl Wilhelm Scheele portrait", "Joseph Priestley portrait", "Antoine Lavoisier portrait", "phytoplankton bloom satellite", "diatoms microscope"],
- "pajaros_cables": ["birds on power line", "pigeons on wire", "starlings power lines", "Birds Aren't Real protest"],
- "koala_huellas": ["koala close up", "koala hand paw", "fingerprint macro", "wombat", "kangaroo Australia"],
- "cuervos_seattle": ["American crow Corvus brachyrhynchos", "crow face close up", "crows flock", "Seattle University of Washington campus", "crow funeral"],
- "babosa_kerry": ["Geomalacus maculosus", "Kerry slug", "Picos de Europa", "lichen rock Galicia", "Asturias forest"]
+ "_nota": "Lo lee herramientas/buscar_imagenes.py (workflow imagenes.yml) al hacer push. Deja aquí solo los temas pendientes: los resultados quedan en equipo/imagenes_candidatas/<tema>.json y en la release pruebas (imagenes_<tema>.jpg). Solo PD, CC0 y CC BY. Ya buscados: tilacino, emus, mary_celeste, oxigeno.",
+ "pajaros_cables": ["birds on wire", "pigeons on wire", "swallows on wire", "starlings on wire", "birds power line", "crows power line"],
+ "koala_huellas": ["koala", "Phascolarctos cinereus", "koala paw", "fingerprint", "fingerprint macro", "kangaroo"],
+ "cuervos_seattle": ["American crow", "Corvus brachyrhynchos", "crow portrait", "crows flock", "University of Washington Seattle campus", "crow mask"],
+ "babosa_kerry": ["Geomalacus maculosus", "slug Ireland", "Galicia forest", "lichen", "Kerry Ireland landscape", "Asturias landscape"]
 }
