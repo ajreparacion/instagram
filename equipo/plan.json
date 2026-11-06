@@ -1,6 +1,6 @@
 {
   "semana": "2026-11-07 a 2026-11-16",
-  "creado_por": "Estratega, viernes 6/11/2026 18:40 (ejecución extraordinaria por orden del usuario: «ningún reel ha funcionado; replantea con datos reales y que todo parezca hecho por una persona»). Sustituye al plan del 5-6/11. El Estratega del lunes 9/11 ajusta del 10/11 en adelante con los primeros 8-10 reels medidos.",
+  "creado_por": "Estratega, viernes 6/11/2026 18:40 (ejecución extraordinaria por orden del usuario: «ningún reel ha funcionado; replantea con datos reales y que todo parezca hecho por una persona»). Sustituye al plan del 5-6/11. El Estratega del lunes 9/11 ajusta del 10/11 en adelante con los primeros 8-10 reels medidos. Revisado el 6/11 a las 19:00 por una 2.ª ejecución del Estratega: bloque segunda_vida y huecos de ¿REAL O FALSO? del 10 y 13/11 con los reels más vistos de la cuenta.",
   "diagnostico_con_datos_reales": [
     "Cuenta (Buzzfy, 6/11 18:25): 1.605 seguidores sin cambio; últimos 7 días alcance 22 (14 no seguidores), 28 reproducciones, 1 interacción, 0 compartidos, 0 clics en el enlace (sigue apuntando a TikTok).",
     "Único reel del enfoque nuevo medido, 001 BAILE (20,7 h): alcance 21 (0,13 veces la mediana de la cuenta, 156), 28 reproducciones, 1 like, 0 compartidos/guardados/comentarios, visualización media 14,4 s (1,71 veces la mediana de 8,4 s), salto 57 % (mediana 65 %). Lectura: el que entra se queda más que nunca, pero casi nadie entra. Con 57 % de salto el playbook de Buzzfy da un 2 % de probabilidad de despegue; con menos de 40 %, 12 % o más.",
@@ -136,10 +136,12 @@
       "tipo": "remaster",
       "hora": "13:40",
       "gancho": "pico",
-      "original_id": "18065675810099237",
-      "palabra_clave_sugerida": "NPC",
-      "idea": "¿REAL O FALSO? «Los streamers están programados y cada gesto que ves está escrito» (reel de ficción del 8/6/2025, alcance 211, de los mejores de 2025). Era FALSO. Lo real, verificable con 2 fuentes (NYT, The Guardian, BBC, 2023): la moda del «NPC streaming» (gente cobrando regalos por actuar como personaje de videojuego en directo; caso más citado: Pinkydoll, 2023) y lo que gana una emisión así según las fuentes. Hecho como reel nuevo (guion.json, modo humano), sin metraje del original. Reel de prueba. Si no se verifica, el Remasterizador elige otro id no usado de originales/ y lo anota aquí.",
-      "fuente_libro": null
+      "original_id": "18073380868454656",
+      "palabra_clave_sugerida": "ERATOSTENES",
+      "idea": "SEGUNDA VIDA (ver bloque segunda_vida): ¿REAL O FALSO? del podcast Empírico «la Tierra no es una esfera» con Mr. Tartaria (21/1/2024: 3.879 reproducciones, 7,7 veces la mediana de la cuenta, 28,7 s de visualización, 48 comentarios). Era humor. Lo real, con 2 fuentes: Eratóstenes midió la circunferencia de la Tierra hacia el 240 a. C. con la sombra de un palo en Siena y Alejandría. Apertura por el pico en 1.ª persona («Hace casi tres años colgamos aquí que la Tierra no era redonda. Y casi cuatro mil personas se quedaron a verlo.»). Reel de prueba para no seguidores.",
+      "fuente_libro": null,
+      "como": "Remasterizador: descargar el original (remaster.py) y mirar fotogramas. Si no hay marcas ajenas ni material de terceros (ojo a #deisputnik y #mickeymouseempirico: comprobar que los personajes y el audio son de la cuenta), remaster.json con recorte del 20-40 %, gancho nuevo por el pico y cierre con el dato real (se cambian al menos 2 cosas, como pide el playbook). Si hay marcas o dudas, reel nuevo en modo humano contando la historia del reel antiguo. Anotar en remasters_hechos.txt.",
+      "reserva": "Si no se puede verificar o el original no sirve: el anterior de este hueco, «streamers programados» (8/6/2025, original_id 18065675810099237)."
     },
     {
       "fecha": "2026-11-10",
@@ -173,10 +175,12 @@
       "tipo": "remaster",
       "hora": "13:40",
       "gancho": "pico",
-      "original_id": "18092302801695462",
-      "palabra_clave_sugerida": "MENSAJE",
-      "idea": "¿REAL O FALSO? «Descifrando canciones: los mensajes ocultos» (reel de humor del 21/9/2025, 6 likes). Era humor. Lo real, con 2 fuentes: el «backmasking» y el pánico de los años ochenta en EE. UU. (audiencias y leyes estatales propuestas sobre mensajes al revés; el caso del juicio a Judas Priest de 1990, resuelto a favor del grupo). Sin acusar a nadie vivo; contar lo documentado. Reel nuevo en modo humano, reel de prueba. Si no se verifica, otro id no usado.",
-      "fuente_libro": null
+      "original_id": "18018636716017127",
+      "palabra_clave_sugerida": "SANDIA",
+      "idea": "SEGUNDA VIDA del ÚNICO VIRAL de la cuenta, en viernes 13: el podcast Empírico de «la sandía y el número 13» (31/1/2024: 128.286 reproducciones, 255 veces la mediana, 41,8 s de visualización, 666 comentarios, 477 guardados; nunca se ha reutilizado). Era humor. Apertura en 1.ª persona por el pico («Hace casi tres años colgamos aquí una tontería sobre una sandía y el número trece. Y la vieron ciento veintiocho mil personas.»). Lo real, con 2 fuentes: de dónde sale el miedo al 13 (triscaidecafobia) y un dato verificable; el CTA manda al expediente de las 20:40 sobre el martes 13. Reel de prueba para no seguidores.",
+      "fuente_libro": null,
+      "como": "Igual que el 10/11: mirar fotogramas del original; si está limpio, remaster.json (recorte 20-40 %, gancho nuevo, cierre con el dato real); si no, reel nuevo en modo humano. Si el dato del 13 no se verifica con 2 fuentes, se cambia el dato, no el original.",
+      "reserva": "«Descifrando canciones» (original_id 18092302801695462, backmasking y juicio a Judas Priest de 1990) pasa a reserva para el 17/11 o después."
     },
     {
       "fecha": "2026-11-13",
@@ -224,7 +228,9 @@
     "Monetización: campo fuente_libro rellenado donde hay libro real (Hicks, Marzluff, Waller, Ballester Olmos, Greenwood); el Creador lo cita en Fuentes: y Mejora lo enlaza en el hub. Ningún post de esta semana lleva app_propia (ningún tema encaja con Insultator ni GPS Andaluz sin forzarlo). Línea «📚 Fuentes y libros en el enlace del perfil» en cada post (único emoji permitido junto al 📩 del CTA).",
     "Animales/naturaleza: 002 emú, 007 koala, 008 cuervo, 009 babosa, 007 Yoro, 010 tiburón: por encima de 1 de cada 3.",
     "Palabras clave sin tildes y distintas: LOBO, GUERRA, DRON, HUELLA, BARCO, CUERVO, BABOSA, BAILE, AIRE, LUZ, NPC, MANISES, PECES, MENSAJE, TRECE, SOMERTON, SIGLOS.",
-    "17-20/11 (por confirmar el lunes 16/11 con 10 reels medidos): Parte 2 del Emú (17/11), fareros de Flannan (18/11), lluvia de carne de Kentucky (19/11), Essex 20/11/1820 (20/11); ¿REAL O FALSO? del martes 17 y viernes 20 con ids no usados de originales/ (quedan 24 sin usar; Cuervo Guadaña 18064409066120359 ya se adelanta al 8/11, así que el 24/11 queda libre)."
+    "17-20/11 (por confirmar el lunes 16/11 con 10 reels medidos): Parte 2 del Emú (17/11), fareros de Flannan (18/11), lluvia de carne de Kentucky (19/11), Essex 20/11/1820 (20/11); ¿REAL O FALSO? del martes 17 y viernes 20 con ids no usados de originales/ (quedan 24 sin usar; Cuervo Guadaña 18064409066120359 ya se adelanta al 8/11, así que el 24/11 queda libre).",
+    "Estratega 6/11 19:00 · Mejora (prioridad media, después del disparo externo del cron): modo «diálogo» en hacer_reel.py, con campo opcional \"hablante\":\"A\"|\"B\" por escena y dos voces distintas (p. ej. Pocket lola + Kokoro em_alex), para recuperar el formato que hizo el único viral de la cuenta (dos personajes fijos que discuten). Se prueba en un reel cuando acabe el experimento pico/etiqueta (desde el 13/11).",
+    "Estratega 6/11 19:00 · Buzzfy solo da 10 búsquedas de reels al día y hoy se agotaron antes de las 18:00 UTC: Calidad tiene prioridad para usarlas (comparar cada reel con virales del nicho); el resto del equipo usa buzzfy_playbook (no consume búsquedas) o búsqueda web."
   ],
   "kpi_semana": {
     "principal": "Salto (skip_rate_pct) por reel: al menos 1 reel por debajo del 45 % y mediana de la semana por debajo del 55 % (hoy 57 %, mediana histórica 65 %).",
@@ -277,5 +283,84 @@
       "KPI semanal = salto, alcance a no seguidores y seguidores netos (kpi_semana)."
     ],
     "lo_que_frena_los_ingresos_hoy": "0 clics porque la bio sigue apuntando a TikTok y no hay ID de afiliado: ambas cosas solo las puede hacer el dueño (pendiente_usuario.md 1 y 2). Hasta que un reel pase de 300 de alcance, ninguna vía produce; por eso este plan va todo a distribución."
+  },
+  "segunda_vida": {
+    "creado": "Estratega, 6/11/2026 19:00 (2.ª ejecución del día por la orden del usuario)",
+    "dato": "Viral Reels Playbook 2026 de Buzzfy, tema second_life (51.697 reels vueltos a publicar como reel de prueba): superan el alcance habitual el 35 % de las veces si el original fue 5 veces lo normal o más; el 15 % si fue 2-5 veces; solo el 7 % si fue 1-2 veces. Con salto del original < 30 %: 37 %. Hay que cambiar al menos 2 cosas (apertura nueva por el pico, subtítulos, recorte del 20-40 %) porque Instagram limita lo que ve como repetido.",
+    "lectura": "Los ¿REAL O FALSO? de esta semana salen de reels de 2025 que fueron 1-2 veces lo normal (koala adicto, pájaros, babosa, cuervo, oxígeno: 5-11 likes): la franja de menor probabilidad (7 %). En cambio, los 9 reels más vistos de la cuenta (mediana de 199 reels con datos: 502 reproducciones) son TODOS del podcast Empírico de enero-febrero de 2024 y TODOS están por encima de 5 veces lo normal. Además ese formato era lo más humano que ha tenido la cuenta: dos personajes fijos que discuten una teoría absurda, es decir, conversación y no locución.",
+    "candidatos_por_orden": [
+      {
+        "id": "18018636716017127",
+        "fecha": "31/1/2024",
+        "tema": "sandía y número 13",
+        "reproducciones": 128286,
+        "veces_lo_normal": 255.5,
+        "visualizacion_s": 41.8,
+        "comentarios": 666,
+        "uso": "13/11 13:40"
+      },
+      {
+        "id": "18073380868454656",
+        "fecha": "21/1/2024",
+        "tema": "la Tierra no es una esfera (Mr. Tartaria)",
+        "reproducciones": 3879,
+        "veces_lo_normal": 7.7,
+        "visualizacion_s": 28.7,
+        "comentarios": 48,
+        "uso": "10/11 13:40"
+      },
+      {
+        "id": "18214642201272728",
+        "fecha": "23/1/2024",
+        "tema": "teléfono rojo y «estirpe Adanieva»",
+        "reproducciones": 4256,
+        "veces_lo_normal": 8.5,
+        "visualizacion_s": 15.4,
+        "comentarios": 15,
+        "uso": "libre (lo real: la línea directa Washington-Moscú de 1963, que no era un teléfono rojo sino un teletipo; verificar con 2 fuentes)"
+      },
+      {
+        "id": "18015860951035050",
+        "fecha": "25/1/2024",
+        "reproducciones": 4158,
+        "veces_lo_normal": 8.3,
+        "visualizacion_s": 17.4,
+        "comentarios": 32,
+        "uso": "libre"
+      },
+      {
+        "id": "17986749344402864",
+        "fecha": "28/1/2024",
+        "reproducciones": 3882,
+        "veces_lo_normal": 7.7,
+        "visualizacion_s": 18.5,
+        "comentarios": 13,
+        "uso": "libre"
+      },
+      {
+        "id": "18085269121411497",
+        "fecha": "26/1/2024",
+        "reproducciones": 3634,
+        "veces_lo_normal": 7.2,
+        "visualizacion_s": 19.6,
+        "comentarios": 15,
+        "uso": "libre"
+      },
+      {
+        "id": "18049624702572067",
+        "fecha": "4/2/2024",
+        "reproducciones": 3199,
+        "veces_lo_normal": 6.4,
+        "visualizacion_s": 23.5,
+        "comentarios": 23,
+        "uso": "libre"
+      }
+    ],
+    "reglas": [
+      "Desde el 10/11 los ¿REAL O FALSO? salen de esta lista antes que de los reels de 2025, salvo que Calidad vea material de terceros en el original.",
+      "Siempre reel de prueba para no seguidores; si supera el alcance habitual, se comparte al perfil y se hace otra versión (34 % vuelve a ganar, playbook).",
+      "Honestidad: se dice que era humor de la propia cuenta y se desmonta con datos con fuentes; nunca se reutiliza como si fuera verdad.",
+      "Medición: alcance a no seguidores y salto a 48 h frente a 006-011 (originales de 1-2 veces lo normal). No es un experimento nuevo: es elegir mejor el material de los huecos ya previstos."
+    ]
   }
 }
