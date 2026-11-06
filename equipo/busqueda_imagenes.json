@@ -1,7 +1,4 @@
 {
- "_nota": "Lo lee herramientas/buscar_imagenes.py (workflow imagenes.yml) al hacer push. Deja aquí solo los temas pendientes: los resultados quedan en equipo/imagenes_candidatas/<tema>.json y en la release pruebas (imagenes_<tema>.jpg). Solo PD, CC0 y CC BY. Ya buscados: tilacino, emus, mary_celeste, oxigeno.",
- "pajaros_cables": ["birds on wire", "pigeons on wire", "swallows on wire", "starlings on wire", "birds power line", "crows power line"],
- "koala_huellas": ["koala", "Phascolarctos cinereus", "koala paw", "fingerprint", "fingerprint macro", "kangaroo"],
- "cuervos_seattle": ["American crow", "Corvus brachyrhynchos", "crow portrait", "crows flock", "University of Washington Seattle campus", "crow mask"],
- "babosa_kerry": ["Geomalacus maculosus", "slug Ireland", "Galicia forest", "lichen", "Kerry Ireland landscape", "Asturias landscape"]
+ "_nota": "Lo lee herramientas/buscar_imagenes.py (workflow imagenes.yml) al hacer push. Deja aquí solo los temas pendientes: los resultados quedan en equipo/imagenes_candidatas/<tema>.json y en la release pruebas (imagenes_<tema>.jpg). Solo PD, CC0 y CC BY. Ya buscados: tilacino, emus, mary_celeste, oxigeno, pajaros_cables, koala_huellas, cuervos_seattle, babosa_kerry.",
+ "baile_1518": ["dancing mania Hondius", "Brueghel dancing pilgrims Molenbeek", "dancing plague 1518", "Saint Vitus woodcut", "Saverne church", "Strasbourg 16th century engraving", "medieval wagon woodcut", "Strasbourg 1493 Nuremberg Chronicle", "red shoes medieval painting", "Vitus Martyr painting"]
 }
