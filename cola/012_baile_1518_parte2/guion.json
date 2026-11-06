@@ -1,123 +1,119 @@
 {
-  "titulo": "Expediente 001 · Parte 2: así acabó la epidemia de baile",
-  "semilla": 1518,
-  "modo": "humano",
-  "musica": true,
-  "portada_texto": "1518: así acabó la epidemia de baile",
-  "escenas": [
+ "titulo": "Expediente 001 · Parte 2: así acabó la epidemia de baile",
+ "semilla": 1518,
+ "modo": "humano",
+ "musica": true,
+ "portada_texto": "Les pusieron zapatos rojos y dejaron de bailar",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "duracion": 3.6,
+   "voz": "Les pusieron zapatos rojos… y dejaron de bailar.",
+   "texto": "Les pusieron zapatos rojos y dejaron de bailar",
+   "imagenes": [
     {
-      "texto": "1518: así acabó la epidemia de baile",
-      "duracion": 3.7,
-      "estilo": "gancho",
-      "voz": "Te debía esto: cómo paró lo del baile.",
-      "imagenes": [
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg",
-          "credito": "Hendrik Hondius, 1642 · Dominio público",
-          "mov": "zoom_in"
-        }
-      ]
-    },
-    {
-      "texto": "Julio: una mujer. Agosto: cientos",
-      "duracion": 4.5,
-      "estilo": "archivo",
-      "voz": "Julio, una mujer sola. Agosto... según las crónicas, hasta cuatrocientas.",
-      "fechas": [
-        {
-          "anio": "14 jul",
-          "texto": "una mujer baila"
-        },
-        {
-          "anio": "ago",
-          "texto": "hasta 400 personas"
-        },
-        {
-          "anio": "sept",
-          "texto": "se acaba"
-        }
-      ],
-      "imagenes": [
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Strasbourg_Cathedral_Exterior_-_Diliff.jpg",
-          "credito": "David Iliff · CC BY-SA 3.0",
-          "mov": "pan_der"
-        }
-      ]
-    },
-    {
-      "texto": "Prohibido bailar. Prohibida la música",
-      "duracion": 4.9,
-      "estilo": "evidencia",
-      "voz": "Los músicos lo empeoraron. Así que prohibieron bailar. Y la música.",
-      "imagenes": [
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg",
-          "credito": "Hendrik Hondius, 1642 · Dominio público",
-          "mov": "pan_izq"
-        }
-      ]
-    },
-    {
-      "texto": "Carros al santuario de San Vito, en Saverne",
-      "duracion": 5.6,
-      "estilo": "giro",
-      "voz": "Y a los peores... en carros. Tres días hasta san Vito, en Saverne.",
-      "imagenes": [
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg",
-          "credito": "Hendrik Hondius, 1642 · Dominio público",
-          "mov": "zoom_out"
-        }
-      ]
-    },
-    {
-      "texto": "Zapatos rojos, cruces, agua bendita",
-      "duracion": 4.5,
-      "estilo": "evidencia",
-      "voz": "Zapatos rojos, cruces, agua bendita... y en una semana, casi nadie.",
-      "imagenes": [
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paracelsus.jpg",
-          "credito": "Retrato de Paracelso, s. XVI · Dominio público",
-          "mov": "zoom_in"
-        }
-      ]
-    },
-    {
-      "texto": "¿15 muertos al día? La ciudad no anotó ninguno",
-      "duracion": 6.4,
-      "estilo": "evidencia",
-      "sello": "DUDOSO",
-      "sello_t": 2.6,
-      "cifra": "15",
-      "unidad": "muertos al día, dicen",
-      "voz": "¿Muertos? Lo de quince al día es de crónicas tardías. La ciudad no anotó ninguno.",
-      "imagenes": [
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Strasbourg_Cathedral_Exterior_-_Diliff.jpg",
-          "credito": "David Iliff · CC BY-SA 3.0",
-          "mov": "zoom_out"
-        }
-      ]
-    },
-    {
-      "texto": "Envíaselo y comenta 'BAILE'",
-      "duracion": 6.8,
-      "estilo": "cierre",
-      "voz": "Waller: pánico colectivo, no un hongo. Envíaselo a quien no se lo crea, y comenta baile.",
-      "lista": [
-        "Prohibidos baile y música",
-        "Carros a Saverne: zapatos rojos",
-        "Fin: finales de agosto o septiembre"
-      ],
-      "imagenes": [
-        {
-          "url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg",
-          "credito": "Hendrik Hondius, 1642 · Dominio público",
-          "mov": "zoom_in"
-        }
-      ]
+     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Danse_Saint-Guy_1518_Charles_Spindler_d%C3%A9tail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "credito": "Charles Spindler · Public domain",
+     "mov": "zoom_in"
     }
-  ]
+   ]
+  },
+  {
+   "estilo": "archivo",
+   "duracion": 4.9,
+   "voz": "Te lo debía. Estrasburgo, mil quinientos dieciocho, gente bailando sin parar.",
+   "texto": "Parte 2 · Estrasburgo, 1518",
+   "subtitulos": "Te lo debía. Estrasburgo, 1518, gente bailando sin parar.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/38/Strasbourg%2C_woodcut_from_Schedel%27s_Weltchronik_%281493%29%2C_compressed.jpg/1280px-Strasbourg%2C_woodcut_from_Schedel%27s_Weltchronik_%281493%29%2C_compressed.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Woodcuts by Michel Wolgemut, Wilhelm Pleydenwurff (text: Hartmann Schedel ) · Public domain",
+     "mov": "pan_der"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Dancingplague2_%28alt%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "credito": "Unknown author Unknown author · Public domain",
+     "mov": "zoom_out"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 5.8,
+   "voz": "Pusieron músicos, para que se les pasara. Fue peor. Así que… prohibieron bailar.",
+   "texto": "El bando: prohibido bailar",
+   "imagenes": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/1/1c/Saint_John%E2%80%99s_Dancers_in_Molenbeeck%E2%80%99_%281592%29_by_Pieter_Brueghel_II.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "credito": "Pieter Brueghel the Younger · Public domain",
+     "mov": "pan_izq"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/18/Interdiction_danse_Strasbourg_Sebastien_Brant_1518.jpg/1280px-Interdiction_danse_Strasbourg_Sebastien_Brant_1518.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Sébastien Brant (1458-1521) · Public domain",
+     "mov": "zoom_in"
+    }
+   ]
+  },
+  {
+   "estilo": "giro",
+   "duracion": 7.6,
+   "voz": "Y aquí viene lo raro. A los que no paraban, en carros… a San Vito, en Saverne.",
+   "texto": "Saverne · santuario de San Vito",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/55/Eglise_protestante_de_Saverne_-_btv1b102253088.jpg/1280px-Eglise_protestante_de_Saverne_-_btv1b102253088.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Kolb, J. J.. Illustrateur Lemaitre, Emile ((lithogr)). Fonction indéterminée · Public domain",
+     "mov": "pan_der"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Eglise_protestante_de_Saverne_-_btv1b10108369b.jpg/1280px-Eglise_protestante_de_Saverne_-_btv1b10108369b.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Kolb, J. J.. Illustrateur Lemaitre, Emile ((lithogr)). Fonction indéterminée · Public domain",
+     "mov": "zoom_out"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 6.7,
+   "voz": "Zapatos rojos, con cruces de aceite santo en la suela. Y poco a poco… pararon.",
+   "texto": "Zapatos rojos y aceite santo",
+   "imagenes": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/c/c7/Print%2C_book-illustration_%28BM_1922%2C1218.29%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "credito": "Print made by: Hans Schäufelein Printed by: Johann Schönsberger · Public domain",
+     "mov": "pan_izq"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/91/Danse_Saint_Guy_1518_Charles_Spindler.jpg/1280px-Danse_Saint_Guy_1518_Charles_Spindler.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Charles Spindler · Public domain",
+     "mov": "zoom_in"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/fa/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg/1280px-Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Pieter Brueghel the Elder · Public domain",
+     "mov": "pan_der"
+    }
+   ]
+  },
+  {
+   "estilo": "cierre",
+   "duracion": 9.8,
+   "voz": "¿Muertos? Dicen que quince al día. Pero en los papeles de la ciudad… ni uno. Mándaselo a quien no se lo crea.",
+   "texto": "¿15 muertos al día? La ciudad no anotó ninguno",
+   "subtitulos": "¿Muertos? Dicen que 15 al día. Pero en los papeles de la ciudad… ni uno. Mándaselo a quien no se lo crea.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3a/Wolf-Dietrich-Klebeband_St%C3%A4dtebilder_G_026_III.jpg/1280px-Wolf-Dietrich-Klebeband_St%C3%A4dtebilder_G_026_III.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Daniel Specklin · Public domain",
+     "mov": "zoom_out"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Danse_Saint-Guy_1518_Charles_Spindler_d%C3%A9tail.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "credito": "Charles Spindler · Public domain",
+     "mov": "pan_izq"
+    }
+   ]
+  }
+ ]
 }

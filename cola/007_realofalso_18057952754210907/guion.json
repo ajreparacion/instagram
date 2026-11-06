@@ -1,59 +1,132 @@
 {
-  "titulo": "¿Real o falso? El koala adicto de Queensland",
-  "semilla": 1996,
-  "musica": true,
-  "modo": "humano",
-  "portada_texto": "¿REAL O FALSO? El koala adicto de Queensland",
-  "escenas": [
+ "titulo": "¿Real o falso? El koala adicto de Queensland",
+ "semilla": 1996,
+ "musica": true,
+ "modo": "humano",
+ "portada_texto": "¿REAL O FALSO? El koala adicto de Queensland",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "duracion": 3.0,
+   "texto": "¿REAL O FALSO? El koala adicto de Queensland",
+   "voz": "¿Real o falso? Un koala adicto en Queensland.",
+   "imagenes": [
     {
-      "estilo": "gancho",
-      "duracion": 3.0,
-      "texto": "¿REAL O FALSO? El koala adicto de Queensland",
-      "voz": "¿Real o falso? Un koala adicto en Queensland."
-    },
-    {
-      "estilo": "archivo",
-      "duracion": 2.6,
-      "texto": "Queensland · 1996",
-      "subtitulos": "En 1996. Con negocio turbio.",
-      "voz": "En mil novecientos noventa y seis. Con negocio turbio."
-    },
-    {
-      "estilo": "giro",
-      "duracion": 2.5,
-      "voz": "Falso. Lo inventamos nosotros."
-    },
-    {
-      "estilo": "evidencia",
-      "duracion": 2.8,
-      "subtitulos": "Pero en el 96 sí pasó algo.",
-      "voz": "Pero en el noventa y seis sí pasó algo."
-    },
-    {
-      "estilo": "evidencia",
-      "duracion": 3.6,
-      "texto": "Universidad de Adelaida · 1996",
-      "voz": "En Adelaida vieron que los koalas tienen huellas dactilares. Casi como las nuestras."
-    },
-    {
-      "estilo": "evidencia",
-      "duracion": 2.8,
-      "voz": "Al microscopio cuesta distinguirlas. Flipé."
-    },
-    {
-      "estilo": "evidencia",
-      "duracion": 2.8,
-      "voz": "Canguros y wombats, sus primos, ni tienen."
-    },
-    {
-      "estilo": "evidencia",
-      "duracion": 3.0,
-      "voz": "¿Lo de confundir a la policía? Eso sí es un bulo."
-    },
-    {
-      "estilo": "cierre",
-      "duracion": 2.5,
-      "voz": "Mándaselo a quien se lo creyó."
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d8/Koala_bear_in_a_tree.jpg/1280px-Koala_bear_in_a_tree.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Dinkum · CC0",
+     "mov": "zoom_in"
     }
-  ]
+   ]
+  },
+  {
+   "estilo": "archivo",
+   "duracion": 2.6,
+   "texto": "Queensland · 1996",
+   "subtitulos": "En 1996. Con negocio turbio.",
+   "voz": "En mil novecientos noventa y seis. Con negocio turbio.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a1/Koala_bear_Australia_%2822505362794%29.jpg/1280px-Koala_bear_Australia_%2822505362794%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "dronepicr · CC BY 2.0",
+     "mov": "pan_der"
+    }
+   ]
+  },
+  {
+   "estilo": "giro",
+   "duracion": 2.5,
+   "voz": "Falso. Lo inventamos nosotros.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Yawning_koala_bear_%283589381656%29.jpg/1280px-Yawning_koala_bear_%283589381656%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "National Media Museum · No restrictions",
+     "mov": "zoom_out"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 2.8,
+   "subtitulos": "Pero en el 96 sí pasó algo.",
+   "voz": "Pero en el noventa y seis sí pasó algo.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/03/Koala_Bear_%284242114497%29.jpg/1280px-Koala_Bear_%284242114497%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Rennett Stowe from USA · CC BY 2.0",
+     "mov": "pan_izq"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 3.6,
+   "texto": "Universidad de Adelaida · 1996",
+   "voz": "En Adelaida vieron que los koalas tienen huellas dactilares. Casi como las nuestras.",
+   "imagenes": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Fingerprint_%28PSF%29.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "credito": "Pearson Scott Foresman · Public domain",
+     "mov": "zoom_in"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/89/Macro_Fingerprints.jpg/1280px-Macro_Fingerprints.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "D. Sharon Pruitt · CC BY 2.0",
+     "mov": "pan_der"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 2.8,
+   "voz": "Al microscopio cuesta distinguirlas. Flipé.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Drinking_glass_fingerprint_FTIR.jpg/1280px-Drinking_glass_fingerprint_FTIR.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Olli Niemitalo · Public domain",
+     "mov": "zoom_out"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Fingertips_macro.jpg/1280px-Fingertips_macro.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Autor desconocido · CC BY 2.0",
+     "mov": "pan_izq"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 2.8,
+   "voz": "Canguros y wombats, sus primos, ni tienen.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Eastern_Grey_Kangaroo%2C_Jeogla_%28Unsplash_jTTe3zz8kcY%29.jpg/1280px-Eastern_Grey_Kangaroo%2C_Jeogla_%28Unsplash_jTTe3zz8kcY%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Iván Lojko ilojko · CC0",
+     "mov": "zoom_in"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 3.0,
+   "voz": "¿Lo de confundir a la policía? Eso sí es un bulo.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/52/Dusting_for_fingerprints.jpg/1280px-Dusting_for_fingerprints.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "US Air Force · Public domain",
+     "mov": "pan_der"
+    }
+   ]
+  },
+  {
+   "estilo": "cierre",
+   "duracion": 2.5,
+   "voz": "Mándaselo a quien se lo creyó.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/90/Koala_in_Zoo_Duisburg.jpg/1280px-Koala_in_Zoo_Duisburg.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Till Niermann · CC BY 3.0",
+     "mov": "zoom_out"
+    }
+   ]
+  }
+ ]
 }

@@ -1,59 +1,132 @@
 {
-  "titulo": "¿Real o falso? El caracol imposible de León",
-  "semilla": 2025,
-  "musica": true,
-  "modo": "humano",
-  "portada_texto": "¿REAL O FALSO? El caracol imposible de León",
-  "escenas": [
+ "titulo": "¿Real o falso? El caracol imposible de León",
+ "semilla": 2025,
+ "musica": true,
+ "modo": "humano",
+ "portada_texto": "¿REAL O FALSO? El caracol imposible de León",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "duracion": 3.0,
+   "texto": "¿REAL O FALSO? El caracol imposible de León",
+   "voz": "¿Real o falso? Un caracol imposible entre León y Asturias.",
+   "imagenes": [
     {
-      "estilo": "gancho",
-      "duracion": 3.0,
-      "texto": "¿REAL O FALSO? El caracol imposible de León",
-      "voz": "¿Real o falso? Un caracol imposible entre León y Asturias."
-    },
-    {
-      "estilo": "archivo",
-      "duracion": 2.5,
-      "texto": "«Limenocaris plumae»",
-      "voz": "Nunca debió existir, decíamos."
-    },
-    {
-      "estilo": "giro",
-      "duracion": 2.5,
-      "voz": "Falso. Lo inventamos nosotros."
-    },
-    {
-      "estilo": "evidencia",
-      "duracion": 2.8,
-      "voz": "Pero allí vive un bicho real que parece inventado."
-    },
-    {
-      "estilo": "evidencia",
-      "duracion": 3.4,
-      "texto": "babosa de Kerry",
-      "voz": "Una babosa que, si la tocas, se hace una bola. Como un erizo."
-    },
-    {
-      "estilo": "evidencia",
-      "duracion": 3.4,
-      "texto": "Galicia, Asturias, León… e Irlanda",
-      "voz": "Solo vive en el noroeste de la península y en una esquina de Irlanda."
-    },
-    {
-      "estilo": "evidencia",
-      "duracion": 2.8,
-      "voz": "Gris con manchas blancas. Come líquenes."
-    },
-    {
-      "estilo": "evidencia",
-      "duracion": 2.8,
-      "texto": "Directiva Hábitats · UE",
-      "voz": "Y la protege la Unión Europea."
-    },
-    {
-      "estilo": "cierre",
-      "duracion": 2.5,
-      "voz": "Mándaselo a quien se lo creyó."
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/ab/Mountains_Landscape%2C_Asturias%2C_Spain%2C_panoramic.jpg/1280px-Mountains_Landscape%2C_Asturias%2C_Spain%2C_panoramic.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Joselodos · CC0",
+     "mov": "zoom_in"
     }
-  ]
+   ]
+  },
+  {
+   "estilo": "archivo",
+   "duracion": 2.5,
+   "texto": "«Limenocaris plumae»",
+   "voz": "Nunca debió existir, decíamos.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/57/Lichen_tower_and_liverworts.jpg/1280px-Lichen_tower_and_liverworts.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Terry.grignon · CC0",
+     "mov": "pan_der"
+    }
+   ]
+  },
+  {
+   "estilo": "giro",
+   "duracion": 2.5,
+   "voz": "Falso. Lo inventamos nosotros.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/cd/Lichen_A_03.jpg/1280px-Lichen_A_03.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "MallardTV · CC0",
+     "mov": "zoom_out"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 2.8,
+   "voz": "Pero allí vive un bicho real que parece inventado.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/80/Geomalacus_maculosus_4.jpg/1280px-Geomalacus_maculosus_4.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Robert Welch aka Robert John Welch (1859-1936; Ireland). (Published by John Will · Public domain",
+     "mov": "pan_izq"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 3.4,
+   "texto": "babosa de Kerry",
+   "voz": "Una babosa que, si la tocas, se hace una bola. Como un erizo.",
+   "imagenes": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Geomalacus_maculosus_2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "credito": "John William Taylor (1845-1931; UK) · Public domain",
+     "mov": "zoom_in"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 3.4,
+   "texto": "Galicia, Asturias, León… e Irlanda",
+   "voz": "Solo vive en el noroeste de la península y en una esquina de Irlanda.",
+   "imagenes": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Geomalacus_maculosus_map.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "credito": "Michal Maňas · Public domain",
+     "mov": "pan_der"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/61/Ring_of_Kerry%2C_Ireland%2C_Landscape_Nature_%2817218136290%29.jpg/1280px-Ring_of_Kerry%2C_Ireland%2C_Landscape_Nature_%2817218136290%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Tony Webster from Minneapolis, Minnesota, United States · CC BY 2.0",
+     "mov": "zoom_out"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 2.8,
+   "voz": "Gris con manchas blancas. Come líquenes.",
+   "imagenes": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Slugs_1896.png?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
+     "credito": "Adams, Lionel Ernest (1854–1945) · Public domain",
+     "mov": "pan_izq"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/f/f5/Lichen_A_13.jpg/1280px-Lichen_A_13.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "MallardTV · CC0",
+     "mov": "zoom_in"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 2.8,
+   "texto": "Directiva Hábitats · UE",
+   "voz": "Y la protege la Unión Europea.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c7/Cienfuegos_%28Quir%C3%B3s%2C_Asturias%29.jpg/1280px-Cienfuegos_%28Quir%C3%B3s%2C_Asturias%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Carmenmoran · CC BY 4.0",
+     "mov": "pan_der"
+    }
+   ]
+  },
+  {
+   "estilo": "cierre",
+   "duracion": 2.5,
+   "voz": "Mándaselo a quien se lo creyó.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/9a/From_Montsacro%2C_Asturias_landscape.JPG/1280px-From_Montsacro%2C_Asturias_landscape.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+     "credito": "Davidwishard · CC BY 3.0",
+     "mov": "zoom_out"
+    }
+   ]
+  }
+ ]
 }

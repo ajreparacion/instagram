@@ -1,14 +1,94 @@
 {
-  "tipo": "reel",
-  "texto": "¿Real o falso? «El Limenocaris plumae: un caracol que nunca debió existir, en los bosques entre León y Asturias».\n\nFalso. Lo inventamos nosotros el año pasado, en este mismo perfil. Pero en esos mismos bosques vive un bicho real que parece de ficción.\n\nLo que sí es verdad:\n- La babosa de Kerry (Geomalacus maculosus) solo vive en el noroeste de la península ibérica (Galicia, Asturias, Cantabria, León… hasta el centro de Portugal) y en el suroeste de Irlanda.\n- Si la tocas, se enrolla en una bola, como un erizo. En Irlanda es la única babosa que lo hace.\n- Es gris con manchas blancas (o verdosa con manchas amarillas) y come los líquenes de las piedras y los troncos.\n- Está protegida por la Directiva Hábitats de la Unión Europea.\n\nMándaselo a quien se lo creyó. Y si quieres otro dato, comenta BABOSA y te lo paso.\n\nFuentes: Ministerio para la Transición Ecológica (Inventario Español de Especies Terrestres y fichas de hábitats); The Irish Times; Wikipedia.\n#realofalso #misterio #curiosidades #datoscuriosos #naturaleza #asturias",
-  "cuando": "2026-11-08T16:40:00+01:00",
-  "palabra_clave": "BABOSA",
-  "respuesta": "Un estudio genético vio que las babosas de Kerry de Irlanda se parecen mucho a las del norte de España y Portugal: quizá llegaron allí desde la península.",
-  "compartir_en_feed": true,
-  "portada_ms": 2800,
-  "prueba_no_seguidores": true,
-  "_verificacion": "Remasterizador 6/11/2026, según el plan (20/11, Limenocaris plumae → animal real de bosque). Distribución solo en el SO de Irlanda y el NO ibérico, con León y Asturias y límite sur en la Serra da Estrela (MITECO, Inventario/Libro Rojo, Castillejo e Iglesias; Wikipedia EN; Irish Times 25/8/2018). Se enrolla en bola al tocarla, única entre las babosas de Irlanda (Irish Times; Wikipedia EN: única en Arionidae y entre las babosas de Irlanda): no se dice 'única babosa del mundo'. Color gris con manchas blancas o verdoso con manchas amarillas (MITECO); manchas amarillentas (Wikipedia). Come líquenes de piedras y troncos (MITECO, las dos fichas; Wikipedia). Directiva Hábitats, anexos II y IV (ficha MITECO de Gómez Moliner y Madeira 2012; Wikipedia EN). No se cita la categoría de amenaza porque las fuentes difieren (VU frente a preocupación menor). Respuesta: vínculo genético con el norte de España y Portugal (Irish Times, 'strong links'; Wikipedia EN 'Lusitanian distribution'): se dice 'quizá'. Recorte prudente 0-12 s (el original tiene 7,4 s de media).",
-  "_nota_calidad": "6/11/2026 Calidad: reconvertido de remaster a reel nuevo (guion.json) porque el metraje del reel antiguo trae marcas de agua de terceros (iStock, Storyblocks, InVideo...). Mismos datos verificados; CTA reordenado (envíaselo, guárdalo, comenta).",
-  "_nota_remasterizador": "6/11/2026 Remasterizador (PRIORIDAD MÁXIMA del usuario: humanizar): guion reescrito como habla una persona (9 escenas de 2-4 s, voz coloquial), \"modo\": \"humano\" de hacer_reel.py (sin HUD ni efectos de plantilla, subtítulos palabra a palabra, música discreta), texto del post sin emojis y respuesta sin muletillas. Sin fotos todavía: desde la nube no se puede comprobar la licencia en Wikimedia Commons (bloqueado); el Creador o Mejora pueden añadir \"imagenes\" verificadas antes del render. Mismos datos y fuentes verificados.",
-  "_nota_calidad_humano": "6/11/2026 13:00 Calidad: AVISO. El guion no lleva \"imagenes\" reales, así que se renderizará sobre fondo neutro. Con la orden del usuario del 6/11 eso es rechazo seguro en la revisión previa a su hora (como 010 y 011, ya en revision/). Añadir 1-3 fotos reales por escena con licencia comprobada antes de que se renderice."
+ "tipo": "reel",
+ "texto": "¿Real o falso? «El Limenocaris plumae: un caracol que nunca debió existir, en los bosques entre León y Asturias».\n\nFalso. Lo inventamos nosotros el año pasado, en este mismo perfil. Pero en esos mismos bosques vive un bicho real que parece de ficción.\n\nLo que sí es verdad:\n- La babosa de Kerry (Geomalacus maculosus) solo vive en el noroeste de la península ibérica (Galicia, Asturias, Cantabria, León… hasta el centro de Portugal) y en el suroeste de Irlanda.\n- Si la tocas, se enrolla en una bola, como un erizo. En Irlanda es la única babosa que lo hace.\n- Es gris con manchas blancas (o verdosa con manchas amarillas) y come los líquenes de las piedras y los troncos.\n- Está protegida por la Directiva Hábitats de la Unión Europea.\n\nMándaselo a quien se lo creyó. Y si quieres otro dato, comenta BABOSA y te lo paso.\n\nFuentes: Ministerio para la Transición Ecológica (Inventario Español de Especies Terrestres y fichas de hábitats); The Irish Times; Wikipedia.\nImágenes: Wikimedia Commons (dominio público, CC0 o CC BY; autor en pantalla).\nVoz: narración generada.\n#realofalso #misterio #curiosidades #datoscuriosos #naturaleza #asturias",
+ "cuando": "2026-11-08T16:40:00+01:00",
+ "palabra_clave": "BABOSA",
+ "respuesta": "Un estudio genético vio que las babosas de Kerry de Irlanda se parecen mucho a las del norte de España y Portugal: quizá llegaron allí desde la península.",
+ "compartir_en_feed": true,
+ "portada_ms": 2800,
+ "prueba_no_seguidores": true,
+ "_verificacion": "Remasterizador 6/11/2026, según el plan (20/11, Limenocaris plumae → animal real de bosque). Distribución solo en el SO de Irlanda y el NO ibérico, con León y Asturias y límite sur en la Serra da Estrela (MITECO, Inventario/Libro Rojo, Castillejo e Iglesias; Wikipedia EN; Irish Times 25/8/2018). Se enrolla en bola al tocarla, única entre las babosas de Irlanda (Irish Times; Wikipedia EN: única en Arionidae y entre las babosas de Irlanda): no se dice 'única babosa del mundo'. Color gris con manchas blancas o verdoso con manchas amarillas (MITECO); manchas amarillentas (Wikipedia). Come líquenes de piedras y troncos (MITECO, las dos fichas; Wikipedia). Directiva Hábitats, anexos II y IV (ficha MITECO de Gómez Moliner y Madeira 2012; Wikipedia EN). No se cita la categoría de amenaza porque las fuentes difieren (VU frente a preocupación menor). Respuesta: vínculo genético con el norte de España y Portugal (Irish Times, 'strong links'; Wikipedia EN 'Lusitanian distribution'): se dice 'quizá'. Recorte prudente 0-12 s (el original tiene 7,4 s de media).",
+ "_nota_calidad": "6/11/2026 Calidad: reconvertido de remaster a reel nuevo (guion.json) porque el metraje del reel antiguo trae marcas de agua de terceros (iStock, Storyblocks, InVideo...). Mismos datos verificados; CTA reordenado (envíaselo, guárdalo, comenta).",
+ "_nota_remasterizador": "6/11/2026 Remasterizador (PRIORIDAD MÁXIMA del usuario: humanizar): guion reescrito como habla una persona (9 escenas de 2-4 s, voz coloquial), \"modo\": \"humano\" de hacer_reel.py (sin HUD ni efectos de plantilla, subtítulos palabra a palabra, música discreta), texto del post sin emojis y respuesta sin muletillas. Sin fotos todavía: desde la nube no se puede comprobar la licencia en Wikimedia Commons (bloqueado); el Creador o Mejora pueden añadir \"imagenes\" verificadas antes del render. Mismos datos y fuentes verificados.",
+ "_nota_calidad_humano": "6/11/2026 13:00 Calidad: AVISO. El guion no lleva \"imagenes\" reales, así que se renderizará sobre fondo neutro. Con la orden del usuario del 6/11 eso es rechazo seguro en la revisión previa a su hora (como 010 y 011, ya en revision/). Añadir 1-3 fotos reales por escena con licencia comprobada antes de que se renderice.",
+ "_imagenes": [
+  {
+   "archivo": "File:Mountains Landscape, Asturias, Spain, panoramic.jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Mountains_Landscape,_Asturias,_Spain,_panoramic.jpg",
+   "licencia": "CC0",
+   "autor": "Joselodos",
+   "uso": "escenas 1"
+  },
+  {
+   "archivo": "File:Lichen tower and liverworts.jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Lichen_tower_and_liverworts.jpg",
+   "licencia": "CC0",
+   "autor": "Terry.grignon",
+   "uso": "escenas 2"
+  },
+  {
+   "archivo": "File:Lichen A 03.jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Lichen_A_03.jpg",
+   "licencia": "CC0",
+   "autor": "MallardTV",
+   "uso": "escenas 3"
+  },
+  {
+   "archivo": "File:Geomalacus maculosus 4.jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Geomalacus_maculosus_4.jpg",
+   "licencia": "Public domain",
+   "autor": "Robert Welch aka Robert John Welch (1859-1936; Ireland). (Published by John Will",
+   "uso": "escenas 4"
+  },
+  {
+   "archivo": "File:Geomalacus maculosus 2.jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Geomalacus_maculosus_2.jpg",
+   "licencia": "Public domain",
+   "autor": "John William Taylor (1845-1931; UK)",
+   "uso": "escenas 5"
+  },
+  {
+   "archivo": "File:Geomalacus maculosus map.png",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Geomalacus_maculosus_map.png",
+   "licencia": "Public domain",
+   "autor": "Michal Maňas",
+   "uso": "escenas 6"
+  },
+  {
+   "archivo": "File:Ring of Kerry, Ireland, Landscape Nature (17218136290).jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Ring_of_Kerry,_Ireland,_Landscape_Nature_(17218136290).jpg",
+   "licencia": "CC BY 2.0",
+   "autor": "Tony Webster from Minneapolis, Minnesota, United States",
+   "uso": "escenas 6"
+  },
+  {
+   "archivo": "File:Slugs 1896.png",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Slugs_1896.png",
+   "licencia": "Public domain",
+   "autor": "Adams, Lionel Ernest (1854–1945)",
+   "uso": "escenas 7"
+  },
+  {
+   "archivo": "File:Lichen A 13.jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Lichen_A_13.jpg",
+   "licencia": "CC0",
+   "autor": "MallardTV",
+   "uso": "escenas 7"
+  },
+  {
+   "archivo": "File:Cienfuegos (Quirós, Asturias).jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Cienfuegos_(Quir%C3%B3s,_Asturias).jpg",
+   "licencia": "CC BY 4.0",
+   "autor": "Carmenmoran",
+   "uso": "escenas 8"
+  },
+  {
+   "archivo": "File:From Montsacro, Asturias landscape.JPG",
+   "pagina": "https://commons.wikimedia.org/wiki/File:From_Montsacro,_Asturias_landscape.JPG",
+   "licencia": "CC BY 3.0",
+   "autor": "Davidwishard",
+   "uso": "escenas 9"
+  }
+ ],
+ "_nota_creador_humano": "6/11/2026 19:30 Creador (PRIORIDAD MÁXIMA del usuario, humanizar): fotos reales con licencia comprobada por herramientas/buscar_imagenes.py en todas las escenas; apertura sin tocar (grupo B, control)."
 }
