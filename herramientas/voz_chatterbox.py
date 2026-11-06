@@ -107,10 +107,14 @@ def main():
         # Chatterbox a veces alucina (repite o añade palabras): si la frase dura mucho más de lo que
         # corresponde a sus palabras (~2,2 palabras/s + pausas), se vuelve a generar con otra semilla (máx. 2 veces).
         esperado = len(f["texto"].split()) / 2.2 + 0.8 + 0.4 * f["texto"].count("…")
+        kwf = dict(kw)   # ajustes propios de la frase (publicar_gh.py por_estilo: gancho y giro más intensos)
+        for k_json, k_cb in (("exageracion", "exaggeration"), ("cfg", "cfg_weight"), ("temperatura", "temperature")):
+            if f.get(k_json) is not None:
+                kwf[k_cb] = float(f[k_json])
         x = None
         for intento in range(3):
             with torch.inference_mode():
-                wav = modelo.generate(f["texto"], **kw)
+                wav = modelo.generate(f["texto"], **kwf)
             x = a_numpy(wav)
             dur = x.size / sr
             if x.size >= sr * 0.2 and np.isfinite(x).all() and dur <= esperado * 1.6:

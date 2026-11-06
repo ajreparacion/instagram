@@ -102,6 +102,12 @@ jobs:
         continue-on-error: true
         run: pip install --quiet pocket-tts --extra-index-url https://download.pytorch.org/whl/cpu
 
+      - name: Alineación de la voz por palabra (faster-whisper, CPU)
+        if: steps.trabajo.outputs.ml == 'si'
+        # Subtítulos clavados a la voz y énfasis (*palabra*). Si falla, publicar_gh.py sigue con la estimación.
+        continue-on-error: true
+        run: pip install --quiet faster-whisper
+
       - name: Voz Kokoro (CPU)
         if: steps.trabajo.outputs.kokoro == 'si'
         continue-on-error: true

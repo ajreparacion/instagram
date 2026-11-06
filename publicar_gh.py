@@ -227,12 +227,14 @@ def sintetizar(texto, salida):
         raise ErrorAPI(f"Piper falló: {r.stderr.decode(errors='replace')[-300:]}")
 
 
-def _sintetizar_lote(nombre, script, python, lote_datos, textos, salidas, trabajo, max_s):
+def _sintetizar_lote(nombre, script, python, lote_datos, textos, salidas, trabajo, max_s, extras=None):
     """Todas las frases en un solo proceso (el modelo se carga una vez). Lanza ErrorAPI si algo falla.
-    Devuelve el JSON que imprime el script (tiempos, modelo usado...)."""
+    Devuelve el JSON que imprime el script (tiempos, modelo usado...).
+    extras: lista opcional (una por frase) de dicts con ajustes propios de esa frase (p. ej. "exageracion")."""
     lote = os.path.join(trabajo, "lote_" + "".join(c if c.isalnum() else "_" for c in nombre.lower()) + ".json")
     lote_datos = dict(lote_datos)
-    lote_datos["frases"] = [{"texto": t, "salida": s} for t, s in zip(textos, salidas)]
+    lote_datos["frases"] = [dict((extras[i] if extras and i < len(extras) and extras[i] else {}), texto=t, salida=s)
+                            for i, (t, s) in enumerate(zip(textos, salidas))]
     escribir_json(lote, lote_datos)
     t0 = time.time()
     try:
@@ -250,7 +252,20 @@ def _sintetizar_lote(nombre, script, python, lote_datos, textos, salidas, trabaj
     return info
 
 
-def sintetizar_pocket(textos, salidas, trabajo, aj):
+def ajustes_por_estilo(cfg_motor, estilos, claves):
+    """Ajustes por frase según el estilo de su escena (equipo/voz.json <motor>.por_estilo, p. ej.
+    {"gancho": {"exageracion": 0.85, "cfg": 0.3}}). 6/11/2026: el gancho y el giro con más intensidad (énfasis)."""
+    pe = cfg_motor.get("por_estilo") or {}
+    if not estilos or not isinstance(pe, dict):
+        return None
+    out = []
+    for e in estilos:
+        d = pe.get(str(e or ""), {}) if isinstance(pe.get(str(e or "")), dict) else {}
+        out.append({k: d[k] for k in claves if k in d})
+    return out if any(out) else None
+
+
+def sintetizar_pocket(textos, salidas, trabajo, aj, estilos=None):
     pk = dict(aj.get("pocket") or {})
     info = _sintetizar_lote("Pocket TTS", VOZ_POCKET, sys.executable,
                             {"idioma": pk.get("idioma", "spanish"), "voz": pk.get("voz", "lola"),
@@ -260,7 +275,7 @@ def sintetizar_pocket(textos, salidas, trabajo, aj):
         f"{len(textos)} frases en {info['_segundos']} s")
 
 
-def sintetizar_chatterbox(textos, salidas, trabajo, aj):
+def sintetizar_chatterbox(textos, salidas, trabajo, aj, estilos=None):
     """Chatterbox (Resemble AI, MIT). Referencia de voz: solo la del usuario (voces/referencia_usuario.wav)
     o una con licencia libre; si el archivo no existe se usa la voz integrada del modelo."""
     cb = dict(aj.get("chatterbox") or {})
@@ -276,7 +291,8 @@ def sintetizar_chatterbox(textos, salidas, trabajo, aj):
                              "exageracion": cb.get("exageracion", 0.5), "cfg": cb.get("cfg", 0.5),
                              "temperatura": cb.get("temperatura", 0.8), "referencia": ref if ref and os.path.exists(ref) else None,
                              "ganancia": cb.get("ganancia", 1.0), "semilla": cb.get("semilla")},
-                            textos, salidas, trabajo, cb.get("max_s", 1500))
+                            textos, salidas, trabajo, cb.get("max_s", 1500),
+                            extras=ajustes_por_estilo(cb, estilos, ("exageracion", "cfg", "temperatura")))
     log(f"Voz con Chatterbox ({info.get('modelo_usado', '?')}, referencia={'sí' if info.get('referencia') else 'integrada'}, "
         f"exageración {cb.get('exageracion', 0.5)}, cfg {cb.get('cfg', 0.5)}): {len(textos)} frases en {info['_segundos']} s"
         + (f"; avisos: {info['avisos']}" if info.get("avisos") else ""))
@@ -303,16 +319,17 @@ def referencia_kokoro(voz, aj, trabajo):
         return None
 
 
-def sintetizar_kokoro(textos, salidas, trabajo, aj):
+def sintetizar_kokoro(textos, salidas, trabajo, aj, estilos=None):
     kk = dict(aj.get("kokoro") or {})
     info = _sintetizar_lote("Kokoro", VOZ_KOKORO, sys.executable,
                             {"voz": kk.get("voz", "em_alex"), "velocidad": kk.get("velocidad", 1.0),
                              "ganancia": kk.get("ganancia", 1.0)},
-                            textos, salidas, trabajo, kk.get("max_s", 300))
+                            textos, salidas, trabajo, kk.get("max_s", 300),
+                            extras=ajustes_por_estilo(kk, estilos, ("velocidad",)))
     log(f"Voz con Kokoro ({kk.get('voz', 'em_alex')}): {len(textos)} frases en {info['_segundos']} s")
 
 
-def sintetizar_piper(textos, salidas, trabajo, aj):
+def sintetizar_piper(textos, salidas, trabajo, aj, estilos=None):
     for t, s in zip(textos, salidas):
         sintetizar(t, s)
 
@@ -321,16 +338,17 @@ SINTETIZADORES = {"chatterbox": sintetizar_chatterbox, "kokoro": sintetizar_koko
                   "pocket": sintetizar_pocket, "piper": sintetizar_piper}
 
 
-def generar_locucion(textos, trabajo, aj=None):
+def generar_locucion(textos, trabajo, aj=None, estilos=None):
     """Devuelve (lista de wav, motor usado). Se prueba el motor de equipo/voz.json y, si falla, los de "respaldo"
-    en orden (Piper siempre el último). Toda la locución sale del mismo motor: no se mezclan voces."""
+    en orden (Piper siempre el último). Toda la locución sale del mismo motor: no se mezclan voces.
+    estilos: estilo de la escena de cada frase (gancho, giro...) para los ajustes por estilo del motor."""
     aj = aj or ajustes_voz()
     salidas = [os.path.join(trabajo, f"voz{i}.wav") for i in range(len(textos))]
     motores = cadena_motores(aj)
     ultimo = None
     for motor in motores:
         try:
-            SINTETIZADORES[motor](textos, salidas, trabajo, aj)
+            SINTETIZADORES[motor](textos, salidas, trabajo, aj, estilos=estilos)
             return salidas, motor
         except Exception as e:
             ultimo = e
@@ -426,11 +444,103 @@ def preparar_voz(locucion, trabajo):
     if not tramos:
         return tramos, [], None, None
     aj = ajustes_voz()
-    rutas, motor = generar_locucion([t["texto"] for t in tramos], trabajo, aj)
+    rutas, motor = generar_locucion([t["texto"] for t in tramos], trabajo, aj, estilos=[t.get("estilo") for t in tramos])
     recortes = [recortar_silencios(w, aj.get("recorte")) for w in rutas]
     if any(recortes):
         log(f"Voz: silencios recortados por frase (s): {[r or 0 for r in recortes]}")
+    # Alineación palabra a palabra (faster-whisper) → subtítulos clavados a la voz y énfasis en las palabras marcadas
+    palabras = alinear_palabras(rutas, [t["texto"] for t in tramos], trabajo, aj)
+    for t, w, p in zip(tramos, rutas, palabras):
+        if p:
+            t["palabras"] = p
+            if t.get("enfasis"):
+                aplicar_enfasis(w, p, t["enfasis"], aj)
     return tramos, [(w, duracion_wav(w)) for w in rutas], motor, aj
+
+
+VOZ_ALINEAR = os.path.join(BASE, "herramientas", "alinear_voz.py")
+
+
+def alinear_palabras(rutas, textos, trabajo, aj):
+    """[(inicio, fin) por palabra] para cada frase, o None por frase si no se pudo. Nunca lanza: si falta
+    faster-whisper o falla, se sigue con la estimación (subtítulos a ritmo estimado, sin realce de énfasis)."""
+    cfg = aj.get("alineacion") if isinstance(aj.get("alineacion"), dict) else {}
+    if cfg.get("activo") is False:
+        return [None] * len(rutas)
+    lote = os.path.join(trabajo, "lote_alineacion.json")
+    escribir_json(lote, {"modelo": cfg.get("modelo", "small"),
+                         "frases": [{"wav": w, "texto": t} for w, t in zip(rutas, textos)]})
+    try:
+        r = subprocess.run([sys.executable, VOZ_ALINEAR, lote], capture_output=True, text=True,
+                           timeout=float(cfg.get("max_s", 420)))
+        if r.returncode != 0:
+            raise ErrorAPI((r.stderr or r.stdout)[-200:])
+        info = json.loads((r.stdout or "").strip().splitlines()[-1])
+        res = list(info.get("frases") or [])
+        res += [None] * (len(rutas) - len(res))
+        log(f"Voz: alineación palabra a palabra ({info.get('modelo')}, {info.get('segundos')} s): "
+            f"{sum(1 for x in res if x)}/{len(rutas)} frases")
+        return res[:len(rutas)]
+    except Exception as e:
+        log(f"Voz: sin alineación por palabra ({str(e)[-160:]}); subtítulos a ritmo estimado")
+        return [None] * len(rutas)
+
+
+def aplicar_enfasis(wav, palabras, indices, aj):
+    """Énfasis de las palabras marcadas con *asteriscos* en el guion, parte 1 (sobre el wav, antes de la cadena):
+    mete un respiro de `pausa_ms` (90 ms) antes de la primera palabra de cada grupo, como quien recalca algo, y
+    un realce previo opcional `db_previo` (0 por defecto; el compresor de la cadena lo aplastaría). La subida de
+    volumen de verdad (`db`, +3,5 dB) se aplica DESPUÉS de la cadena, en la mezcla (_mezclar_voz). Nunca lanza."""
+    cfg = aj.get("enfasis") if isinstance(aj.get("enfasis"), dict) else {}
+    if cfg.get("activo") is False or not indices:
+        return False
+    db = float(cfg.get("db_previo", 0.0)); pausa = float(cfg.get("pausa_ms", 90)) / 1000.0
+    try:
+        import numpy as np
+        import wave
+        with wave.open(wav, "rb") as f:
+            sr, nch, sw, n = f.getframerate(), f.getnchannels(), f.getsampwidth(), f.getnframes()
+            raw = f.readframes(n)
+        if sw != 2:
+            return False
+        x = np.frombuffer(raw, dtype="<i2").astype(np.float32) / 32768.0
+        if nch > 1:
+            x = x.reshape(-1, nch).mean(1)
+        g = np.ones(len(x), np.float32)
+        ramp = max(1, int(sr * 0.025))
+        idx = sorted(set(int(i) for i in indices if 0 <= int(i) < len(palabras)))
+        inserts = []   # (posición, nº de muestras de silencio) antes de la primera palabra de cada grupo
+        for i in idx:
+            a, b = palabras[i]
+            i0, i1 = int(a * sr), int(b * sr)
+            i0 = max(0, min(i0, len(x))); i1 = max(i0, min(i1, len(x)))
+            amp = 10 ** (db / 20)
+            seg = np.full(i1 - i0, amp, np.float32)
+            k = min(ramp, len(seg) // 2)
+            if k > 0:
+                seg[:k] = np.linspace(1.0, amp, k); seg[-k:] = np.linspace(amp, 1.0, k)
+            g[i0:i1] = np.maximum(g[i0:i1], seg)
+            if (i - 1) not in idx and i > 0 and pausa > 0:
+                inserts.append((i0, int(pausa * sr)))
+        y = x * g
+        # respiro antes del énfasis: se inserta silencio (desplaza lo que viene después)
+        for pos, m in sorted(inserts, reverse=True):
+            y = np.concatenate([y[:pos], np.zeros(m, np.float32), y[pos:]])
+        pk = float(np.abs(y).max()) if y.size else 0.0
+        if pk > 0.97:
+            y *= 0.97 / pk
+        with wave.open(wav, "wb") as f:
+            f.setnchannels(1); f.setsampwidth(2); f.setframerate(sr)
+            f.writeframes((np.clip(y, -1, 1) * 32767).astype("<i2").tobytes())
+        # los tiempos de las palabras posteriores a cada respiro se desplazan
+        if inserts:   # (la palabra enfatizada también se desplaza: el silencio va delante de ella)
+            for j, (a, b) in enumerate(palabras):
+                desplaza = sum(m for pos, m in inserts if pos <= int(a * sr)) / sr
+                palabras[j] = [round(a + desplaza, 3), round(b + desplaza, 3)]
+        return True
+    except Exception as e:
+        log(f"Voz: énfasis no aplicado ({str(e)[-120:]})")
+        return False
 
 
 def anadir_voz(video, locucion, trabajo):
@@ -513,7 +623,8 @@ def renderizar_guion(guion, video, trabajo):
     cmd = [sys.executable, os.path.join(HERR_REEL, "hacer_reel.py"), guion, video]
     if tramos:
         tiempos = os.path.join(trabajo, "tiempos_voz.json")
-        escribir_json(tiempos, {str(t.get("escena", i)): round(d, 3) for i, (t, (_, d)) in enumerate(zip(tramos, wavs))})
+        escribir_json(tiempos, {str(t.get("escena", i)): {"dur": round(d, 3), "palabras": t.get("palabras")}
+                                for i, (t, (_, d)) in enumerate(zip(tramos, wavs))})
         cmd += ["--tiempos", tiempos]
     r = subprocess.run(cmd, capture_output=True, text=True, timeout=1200, cwd=HERR_REEL)
     if r.returncode != 0 or not os.path.exists(video):
@@ -523,10 +634,40 @@ def renderizar_guion(guion, video, trabajo):
     if tramos:
         nuevos = [t for t in (leer_json(locucion, []) or []) if t.get("texto", "").strip()]
         if len(nuevos) == len(tramos) and all(a["texto"] == b["texto"] for a, b in zip(nuevos, tramos)):
+            for a, b in zip(nuevos, tramos):   # los tiempos por palabra (alineación) viven en los tramos viejos
+                if b.get("palabras"):
+                    a["palabras"] = b["palabras"]
             mezclar_voz(video, nuevos, wavs, aj, trabajo)
             return motor
         log("Voz primero: los tramos cambiaron entre pasadas; se vuelve a generar la voz")
     return anadir_voz(video, locucion, trabajo)
+
+
+def realce_enfasis(tramo, aj):
+    """Filtros ffmpeg 'volume' con línea de tiempo para subir `enfasis.db` las palabras marcadas (grupos de
+    palabras seguidas en un solo filtro, 20 ms de margen a cada lado). Cadena vacía si no hay énfasis o tiempos."""
+    cfg = aj.get("enfasis") if isinstance(aj.get("enfasis"), dict) else {}
+    pal = tramo.get("palabras"); idx = sorted(set(int(i) for i in (tramo.get("enfasis") or [])))
+    if cfg.get("activo") is False or not pal or not idx:
+        return ""
+    db = float(cfg.get("db", 3.5))
+    if db <= 0:
+        return ""
+    grupos, cur = [], None
+    for i in idx:
+        if i < 0 or i >= len(pal):
+            continue
+        if cur and i == cur[1] + 1:
+            cur[1] = i
+        else:
+            if cur: grupos.append(cur)
+            cur = [i, i]
+    if cur: grupos.append(cur)
+    out = ""
+    for a, b in grupos:
+        t0 = max(0.0, float(pal[a][0]) - 0.02); t1 = float(pal[b][1]) + 0.02
+        out += f"volume=enable='between(t,{t0:.3f},{t1:.3f})':volume={db:.2f}dB:eval=frame,"
+    return out
 
 
 def _mezclar_voz(video, tramos, wavs, aj, cadena, trabajo):
@@ -539,6 +680,7 @@ def _mezclar_voz(video, tramos, wavs, aj, cadena, trabajo):
         entradas += ["-i", wav]
         ms = int(float(t["inicio"]) * 1000 + 120)
         proc = f"{cadena}," if cadena else ""
+        proc += realce_enfasis(t, aj)   # énfasis (+dB en las palabras marcadas), después de la cadena
         filtros.append(f"[{i + 1}:a]aresample=44100,{proc}atempo={tempo:.3f},adelay={ms}|{ms},volume={aj['volumen_voz']}[v{i}]")
         etiquetas.append(f"[v{i}]")
     filtros.append(f"{''.join(etiquetas)}amix=inputs={len(etiquetas)}:normalize=0,pan=stereo|c0=c0|c1=c0,apad,asplit=2[vox][key]")

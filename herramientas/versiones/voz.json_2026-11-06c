@@ -1,0 +1,49 @@
+{
+ "motor": "chatterbox",
+ "respaldo": [
+  "kokoro",
+  "pocket",
+  "piper"
+ ],
+ "chatterbox": {
+  "modelo": "es-es",
+  "idioma": "es",
+  "exageracion": 0.6,
+  "cfg": 0.35,
+  "temperatura": 0.75,
+  "referencia": null,
+  "referencia_kokoro": "em_alex",
+  "ganancia": 1.0,
+  "semilla": 7,
+  "max_s": 1500,
+  "_nota": "referencia: ruta al wav de la voz del propio usuario (p. ej. voces/referencia_usuario.wav). null hasta que la prueba de la voz del dueño (voz_usuario.yml) confirme parecido y WER; mientras tanto se usa referencia_kokoro."
+ },
+ "kokoro": {
+  "voz": "em_alex",
+  "velocidad": 0.95,
+  "ganancia": 1.0,
+  "max_s": 300
+ },
+ "pocket": {
+  "idioma": "spanish",
+  "voz": "lola",
+  "temperatura": null,
+  "ganancia": 1.0,
+  "max_s": 600
+ },
+ "modelo": "es/es_ES/davefx/medium/es_ES-davefx-medium",
+ "lentitud": 1.08,
+ "variacion": 0.667,
+ "ruido": 0.8,
+ "volumen_voz": 1.25,
+ "umbral_duck": 0.02,
+ "ratio_duck": 4,
+ "limite": 0.78,
+ "cadena_voz": "highpass=f=80,equalizer=f=300:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=3,acompressor=threshold=0.08:ratio=3:attack=2:release=120:makeup=3.2,deesser=i=0.4,alimiter=limit=0.62:attack=1:release=40:level=false",
+ "recorte": {
+  "umbral_db": -40,
+  "margen_ms": 70,
+  "pausa_larga_s": 0.5,
+  "pausa_max_s": 0.35
+ }
+}

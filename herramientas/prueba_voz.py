@@ -185,9 +185,9 @@ def main():
         res = {"flujo": flujo, "ajustes": {k: aj.get(k) for k in ("motor", "modelo", "pocket", "kokoro", "chatterbox") if k in cambios or k == "motor"}}
         tiempos = {}
 
-        def cronometrado(textos, trabajo_, aj_=None, _t=tiempos):
+        def cronometrado(textos, trabajo_, aj_=None, _t=tiempos, **kw):
             t1 = time.time()
-            out = gen_original(textos, trabajo_, aj_)
+            out = gen_original(textos, trabajo_, aj_, **kw)   # kw: estilos (ajustes por estilo: gancho/giro)
             _t["sintesis_s"] = round(time.time() - t1, 1)
             return out
 

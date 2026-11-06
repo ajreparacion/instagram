@@ -16,13 +16,35 @@
   "ganancia": 1.0,
   "semilla": 7,
   "max_s": 1500,
-  "_nota": "referencia: ruta al wav de la voz del propio usuario (p. ej. voces/referencia_usuario.wav). null hasta que la prueba de la voz del dueño (voz_usuario.yml) confirme parecido y WER; mientras tanto se usa referencia_kokoro."
+  "_nota": "referencia: ruta al wav de la voz del propio usuario (p. ej. voces/referencia_usuario.wav). null hasta que la prueba de la voz del dueño (voz_usuario.yml) confirme parecido y WER; mientras tanto se usa referencia_kokoro.",
+  "por_estilo": {
+   "gancho": {
+    "exageracion": 0.85,
+    "cfg": 0.3
+   },
+   "giro": {
+    "exageracion": 0.8,
+    "cfg": 0.3
+   },
+   "cierre": {
+    "exageracion": 0.7
+   }
+  },
+  "_nota_por_estilo": "6/11: gancho y giro con más intensidad (exageracion 0,8-0,85, cfg 0,3) que el resto (0,6 / 0,35). Petición del usuario: falta gancho y énfasis."
  },
  "kokoro": {
   "voz": "em_alex",
   "velocidad": 0.95,
   "ganancia": 1.0,
-  "max_s": 300
+  "max_s": 300,
+  "por_estilo": {
+   "gancho": {
+    "velocidad": 0.88
+   },
+   "giro": {
+    "velocidad": 0.9
+   }
+  }
  },
  "pocket": {
   "idioma": "spanish",
@@ -45,5 +67,17 @@
   "margen_ms": 70,
   "pausa_larga_s": 0.5,
   "pausa_max_s": 0.35
+ },
+ "alineacion": {
+  "activo": true,
+  "modelo": "small",
+  "max_s": 420,
+  "_nota": "faster-whisper por palabra: subtítulos clavados a la voz y énfasis. Si falla, se sigue con la estimación."
+ },
+ "enfasis": {
+  "activo": true,
+  "db": 3.5,
+  "pausa_ms": 90,
+  "_nota": "palabras marcadas con *asteriscos* en la voz del guion: +3,5 dB y un respiro de 90 ms antes del grupo; en los subtítulos salen en rojo."
  }
 }

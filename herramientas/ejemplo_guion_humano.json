@@ -8,8 +8,8 @@
   {
    "estilo": "gancho",
    "duracion": 3.6,
-   "texto": "Un barco a la deriva. Con comida. Y sin nadie",
-   "voz": "Un barco a la deriva… con comida para seis meses. Y sin nadie.",
+   "texto": "Un barco a la deriva. Con comida. Y *sin nadie*",
+   "voz": "Un barco a la deriva… con comida para seis meses. Y *sin nadie*.",
    "imagenes": [
     {
      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Aivazovsky_gibraltar.jpg/1280px-Aivazovsky_gibraltar.jpg",
@@ -48,7 +48,7 @@
   {
    "estilo": "evidencia",
    "duracion": 3.8,
-   "voz": "Suben… y está todo. La comida, el agua, sus cosas.",
+   "voz": "Suben… y está *todo*. La comida, el agua, sus cosas.",
    "imagenes": [
     {
      "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Mary_Celeste_engraving.jpg",
@@ -60,7 +60,7 @@
   {
    "estilo": "giro",
    "duracion": 3.4,
-   "voz": "Solo falta una cosa. El bote salvavidas.",
+   "voz": "Solo falta *una* cosa. *El bote salvavidas*.",
    "imagenes": [
     {
      "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/%27Brigantine_William_G._Irwin_off_Diamond_Head%27%2C_oil_on_canvas_painting_by_Gideon_Jacques_Denny.JPG/1280px-%27Brigantine_William_G._Irwin_off_Diamond_Head%27%2C_oil_on_canvas_painting_by_Gideon_Jacques_Denny.JPG",
@@ -86,7 +86,7 @@
    "estilo": "evidencia",
    "duracion": 4.6,
    "texto": "Última anotación: 25 nov. 1872",
-   "voz": "La última nota del diario es del veinticinco de noviembre. Y luego… nada.",
+   "voz": "La última nota del diario es del veinticinco de noviembre. Y luego… *nada*.",
    "subtitulos": "La última nota del diario es del 25 de noviembre. Y luego… nada.",
    "imagenes": [
     {
@@ -108,5 +108,6 @@
     }
    ]
   }
- ]
+ ],
+ "_enfasis": "Las palabras entre *asteriscos* en «voz» (o «texto») suenan más fuertes (con un respiro antes) y salen en rojo en los subtítulos."
 }
