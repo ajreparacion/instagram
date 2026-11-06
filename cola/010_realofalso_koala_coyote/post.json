@@ -9,5 +9,7 @@
   "prueba_no_seguidores": true,
   "_nota_mejora": "5/11 22:10: renderizado anulado para rehacerlo con la voz Pocket TTS (prueba: naturalidad UTMOS 3,87 frente a 2,66 de Piper).",
   "motor_voz": "pocket",
-  "_nota_calidad": "6/11/2026 Calidad: reconvertido de remaster a reel nuevo (guion.json) porque el metraje del reel antiguo trae marcas de agua de terceros (iStock, Storyblocks, InVideo...). Mismos datos verificados; CTA reordenado (envíaselo, guárdalo, comenta)."
+  "_nota_calidad": "6/11/2026 Calidad: reconvertido de remaster a reel nuevo (guion.json) porque el metraje del reel antiguo trae marcas de agua de terceros (iStock, Storyblocks, InVideo...). Mismos datos verificados; CTA reordenado (envíaselo, guárdalo, comenta).",
+  "renderizado": "2026-11-06T10:47:09+00:00",
+  "asset": "010_realofalso_koala_coyote.mp4"
 }

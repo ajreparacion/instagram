@@ -9,5 +9,7 @@
   "prueba_no_seguidores": true,
   "_verificacion": "Remasterizador 6/11/2026: NOAA (oceanservice.noaa.gov/facts/ocean-oxygen, leída hoy): 'roughly half'/'at least 50%' del oxígeno de la Tierra sale del océano, sobre todo del plancton fotosintético; EarthSky da 50-80 % (se dice 'al menos la mitad'). Scheele hacia 1771 'aire de fuego', libro en 1777; Priestley 1774, primero en publicar; nombre de Lavoisier sin año: verificado el 5/11 con RSC, Wikipedia y Britannica (ver plan.json). Recorte prudente 0-12 s porque no se ha podido ver el vídeo.",
   "motor_voz": "pocket",
-  "_nota_calidad": "6/11/2026 Calidad: reconvertido de remaster a reel nuevo (guion.json) porque el metraje del reel antiguo trae marcas de agua de terceros (iStock, Storyblocks, InVideo...). Mismos datos verificados; CTA reordenado (envíaselo, guárdalo, comenta)."
+  "_nota_calidad": "6/11/2026 Calidad: reconvertido de remaster a reel nuevo (guion.json) porque el metraje del reel antiguo trae marcas de agua de terceros (iStock, Storyblocks, InVideo...). Mismos datos verificados; CTA reordenado (envíaselo, guárdalo, comenta).",
+  "renderizado": "2026-11-06T10:47:58+00:00",
+  "asset": "011_realofalso_oxigeno.mp4"
 }

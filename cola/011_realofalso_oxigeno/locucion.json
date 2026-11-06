@@ -1,0 +1,32 @@
+[
+ {
+  "inicio": 0.0,
+  "duracion": 6.7,
+  "texto": "¿Real o falso? En mil ochocientos setenta y dos alguien inventó el oxígeno."
+ },
+ {
+  "inicio": 6.7,
+  "duracion": 3.033,
+  "texto": "Un científico dijo haberlo inventado."
+ },
+ {
+  "inicio": 9.733,
+  "duracion": 3.8,
+  "texto": "Era falso. Nadie lo inventó: se descubrió."
+ },
+ {
+  "inicio": 13.533,
+  "duracion": 5.7,
+  "texto": "Lo real: Scheele lo obtuvo hacia mil setecientos setenta y uno."
+ },
+ {
+  "inicio": 19.233,
+  "duracion": 6.7,
+  "texto": "Priestley, en mil setecientos setenta y cuatro, y fue el primero en publicarlo."
+ },
+ {
+  "inicio": 25.933,
+  "duracion": 8.1,
+  "texto": "Y al menos la mitad del oxígeno sale del océano. Envíaselo a quien se lo creyó."
+ }
+]
