@@ -1,106 +1,12 @@
 {
-  "fecha": "2026-11-06 18:47 UTC",
+  "fecha": "2026-11-06 19:11 UTC",
   "guion": "herramientas/ejemplo_guion_humano.json",
-  "render_video_s": 57.6,
+  "render_video_s": 63.3,
   "frases": 8,
   "palabras": 104,
   "referencia": "Un barco a la deriva… con comida para seis meses. Y sin nadie. Tal día como hoy, en mil ochocientos setenta y dos, sale de Nueva York el Mary Celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las Azores y Portugal. Suben… y está todo. La comida, el agua, sus cosas. Solo falta una cosa. El bote salvavidas. Y eran diez. Con la mujer del capitán… y su hija de dos años. La última nota del diario es del veinticinco de noviembre. Y luego… nada. De los diez, nunca más se supo. Mándaselo a quien le flipen los misterios.",
   "cpu": 4,
   "variantes": {
-    "kokoro_alex": {
-      "flujo": "voz_primero",
-      "ajustes": {
-        "motor": "kokoro",
-        "kokoro": {
-          "voz": "em_alex",
-          "velocidad": 0.95,
-          "ganancia": 1.0,
-          "max_s": 300,
-          "por_estilo": {
-            "gancho": {
-              "velocidad": 0.88
-            },
-            "giro": {
-              "velocidad": 0.9
-            }
-          }
-        }
-      },
-      "render_total_s": 82.4,
-      "duracion_reel_s": 38.1,
-      "motor_usado": "kokoro",
-      "sintesis_s": 14.2,
-      "frases": [
-        {
-          "dur_s": 4.07,
-          "hueco_s": 4.38,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 5.3,
-          "hueco_s": 5.62,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 4.96,
-          "hueco_s": 5.28,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 3.37,
-          "hueco_s": 4.18,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 3.08,
-          "hueco_s": 3.38,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 3.7,
-          "hueco_s": 4.45,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 4.51,
-          "hueco_s": 4.82,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 4.42,
-          "hueco_s": 4.75,
-          "atempo": 1.0
-        }
-      ],
-      "voz_total_s": 33.4,
-      "veces_tiempo_real": 2.35,
-      "frases_que_no_caben": 0,
-      "lufs": -15.0,
-      "pico_real_dbfs": -2.1,
-      "prosodia": {
-        "f0_mediana_hz": 133.1,
-        "tono_desv_st": 3.24,
-        "tono_rango_st": 8.6,
-        "pausas_pct": 15.7,
-        "duracion_s": 33.41,
-        "palabras_por_s": 3.11
-      },
-      "transcripcion_mezcla": "Un barco a la deriva con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el mar y celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las azores y Portugal. Suben y está a todo la comida el agua sus cosas. Sólo falta una cosa, el bote salvavidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre y luego nada. De los diez nunca más se supo, mandáselo a quien le flippen los misterios.",
-      "wer_mezcla": 0.096,
-      "transcripcion_voz_sola": "Un barco a la deriva con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el mar y celeste. Un mes después otro barco se lo encuentra a la deriva entre las azores y Portugal. Suben y está todo, la comida, el agua, sus cosas. Sólo falta una cosa, el bote salvavidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre, y luego nada. De los diez, nunca más se supo, mándaselo a quien le flippen los misterios.",
-      "wer_voz_sola": 0.087,
-      "utmos_medio": 3.5,
-      "utmos_frases": [
-        3.4,
-        3.01,
-        3.52,
-        3.37,
-        3.63,
-        3.66,
-        3.51,
-        3.89
-      ]
-    },
     "chatterbox_es_ref": {
       "flujo": "voz_primero",
       "ajustes": {
@@ -133,78 +39,78 @@
           "_nota_por_estilo": "6/11: gancho y giro con más intensidad (exageracion 0,8-0,85, cfg 0,3) que el resto (0,6 / 0,35). Petición del usuario: falta gancho y énfasis."
         }
       },
-      "render_total_s": 320.5,
-      "duracion_reel_s": 41.0,
+      "render_total_s": 473.4,
+      "duracion_reel_s": 41.6,
       "motor_usado": "chatterbox",
-      "sintesis_s": 243.2,
+      "sintesis_s": 397.0,
       "frases": [
         {
-          "dur_s": 4.03,
-          "hueco_s": 4.35,
+          "dur_s": 4.24,
+          "hueco_s": 4.55,
           "atempo": 1.0
         },
         {
-          "dur_s": 5.64,
-          "hueco_s": 5.95,
+          "dur_s": 5.7,
+          "hueco_s": 6.02,
           "atempo": 1.0
         },
         {
-          "dur_s": 5.66,
-          "hueco_s": 5.98,
+          "dur_s": 5.92,
+          "hueco_s": 6.25,
           "atempo": 1.0
         },
         {
-          "dur_s": 4.31,
-          "hueco_s": 5.12,
+          "dur_s": 4.28,
+          "hueco_s": 5.08,
           "atempo": 1.0
         },
         {
-          "dur_s": 2.94,
+          "dur_s": 2.82,
           "hueco_s": 3.25,
           "atempo": 1.0
         },
         {
-          "dur_s": 3.96,
+          "dur_s": 4.02,
           "hueco_s": 4.45,
           "atempo": 1.0
         },
         {
-          "dur_s": 5.15,
+          "dur_s": 5.12,
           "hueco_s": 5.45,
           "atempo": 1.0
         },
         {
-          "dur_s": 4.98,
-          "hueco_s": 5.28,
+          "dur_s": 5.02,
+          "hueco_s": 5.35,
           "atempo": 1.0
         }
       ],
-      "voz_total_s": 36.7,
-      "veces_tiempo_real": 0.15,
+      "voz_total_s": 37.1,
+      "veces_tiempo_real": 0.09,
       "frases_que_no_caben": 0,
       "lufs": -15.5,
       "pico_real_dbfs": -2.0,
       "prosodia": {
         "f0_mediana_hz": 130.9,
-        "tono_desv_st": 4.55,
-        "tono_rango_st": 9.97,
-        "pausas_pct": 25.0,
-        "duracion_s": 36.67,
-        "palabras_por_s": 2.84
+        "tono_desv_st": 4.59,
+        "tono_rango_st": 10.0,
+        "pausas_pct": 26.3,
+        "duracion_s": 37.12,
+        "palabras_por_s": 2.8
       },
-      "transcripcion_mezcla": "Un barco a la deriva, con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el meri celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las azores y Portugal. Suben, y está todo, la comida, el agua, sus cosas. Sólo falta una cosa, el bote salva vidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre. Y luego, nada. De los diez, nunca más se supo. Mándaselo a quien le flipen los misterios.",
+      "transcripcion_mezcla": "Un barco a la deriva, con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el Meri Celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las azores y Portugal. Suben, y está todo, la comida, el agua, sus cosas. Solo falta una cosa, el bote salva vidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre. Y luego, nada. De los diez, nunca más se supo. Mándaselo a quien le flipen los misterios.",
       "wer_mezcla": 0.087,
-      "transcripcion_voz_sola": "Un barco a la deriva, con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el Merry Celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las azores y Portugal. Suben. Y está todo, la comida, el agua, sus cosas. Sólo falta una cosa, el bote salva vidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre. Y luego, nada, de los diez, nunca más se supo. Mándaselo a quien le flipen los misterios.",
+      "transcripcion_voz_sola": "Un barco a la deriva, con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el Meri Celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las azores y Portugal. Suben. Y está todo, la comida, el agua, sus cosas. Sólo falta una cosa, el bote salva vidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre. Y luego, nada, de los diez, nunca más se supo. Mándaselo a quien le flipen los misterios.",
       "wer_voz_sola": 0.087,
-      "utmos_medio": 3.53,
+      "utmos_medio": 3.62,
       "utmos_frases": [
-        3.74,
+        3.98,
         3.52,
-        3.17,
-        3.43,
-        3.33,
-        3.24,
+        3.18,
         3.64,
+        3.58,
+        3.24,
+        3.65,
         4.17
       ]
     }
@@ -250,11 +156,14 @@
     "2026-11-06 19:18  Voz con Pocket TTS (spanish/lola): 9 frases en 15 s",
     "2026-11-06 19:18  Voz: silencios recortados por frase (s): [0.94, 0.52, 0.24, 0.1, 0.64, 0.6, 0.1, 0.72, 0.16]",
     "2026-11-06 19:19  007_realofalso_18057952754210907: renderizado con voz y subido a la release 'cola'",
-    "2026-11-06 19:47  Voz con Kokoro (em_alex): 8 frases en 14 s",
-    "2026-11-06 19:47  Voz: silencios recortados por frase (s): [0.24, 0.25, 0.24, 0.22, 0.23, 0.23, 0.23, 0.23]",
-    "2026-11-06 19:47  Voz: alineación palabra a palabra (small, 16.7 s): 8/8 frases",
-    "2026-11-06 19:53  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.35): 8 frases en 243 s",
-    "2026-11-06 19:53  Voz: silencios recortados por frase (s): [0.42, 0.52, 0.26, 0.5, 0.88, 0.52, 0.3, 0.46]",
-    "2026-11-06 19:53  Voz: alineación palabra a palabra (small, 17.6 s): 8/8 frases"
+    "2026-11-06 19:35  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.35): 9 frases en 412 s",
+    "2026-11-06 19:35  Voz: silencios recortados por frase (s): [0.06, 0.82, 0.28, 0.56, 0.32, 0.46, 0.46, 0.42, 0.38]",
+    "2026-11-06 19:36  010_realofalso_koala_coyote: renderizado con voz y subido a la release 'cola'",
+    "2026-11-06 19:42  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.35): 8 frases en 354 s",
+    "2026-11-06 19:42  Voz: silencios recortados por frase (s): [0.24, 0.02, 0.52, 0.24, 0.7, 0.78, 0.48, 0.68]",
+    "2026-11-06 19:43  002_guerra_emus: renderizado con voz y subido a la release 'cola'",
+    "2026-11-06 20:18  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.35): 8 frases en 397 s",
+    "2026-11-06 20:18  Voz: silencios recortados por frase (s): [0.12, 0.46, 0, 0.44, 0.82, 0.46, 0.24, 0.42]",
+    "2026-11-06 20:18  Voz: alineación palabra a palabra (small, 17.9 s): 8/8 frases"
   ]
 }
