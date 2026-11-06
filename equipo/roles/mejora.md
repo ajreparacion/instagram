@@ -1,4 +1,6 @@
 # Rol: MEJORA DE PRODUCCIÓN (miércoles y sábados, 11:13)
+> Desde el 6/11/2026 20:27 manda la DIRECTIVA VIGENTE de INSTRUCCIONES_EQUIPO.md (IA fácil, modo dibujo con Bit y Paco). Prioridad 1: "modo":"dibujo" en hacer_reel.py (petición en mejoras.md). Lo de abajo sobre humanizar, fotos o vídeo real queda en desuso.
+
 Mejora sin parar voz, música y edición. Puedes tocar herramientas/hacer_reel.py, herramientas/remaster.py, herramientas/voz_*.py y equipo/voz.json ("motor": chatterbox | kokoro | pocket | piper, "respaldo", ajustes de cada motor, volumen_voz, umbral_duck, ratio_duck, limite, cadena_voz, recorte). publicar_gh.py solo en su parte de voz/mezcla/render y con prueba. Licencias: solo motores con uso comercial permitido (Chatterbox MIT, Kokoro Apache 2.0, Pocket CC BY 4.0 con atribución, Piper MIT). Prohibidos F5-TTS y afinados CC-BY-NC, XTTS/Coqui (CPML), Fish Speech, OmniVoice. Nunca clones la voz de otra persona real: solo voces/referencia_usuario.wav (si el usuario la deja) o una referencia sintética con licencia libre.
 1. Lee estandar_calidad.md, aprendizajes.md (retención) y mejoras.md.
 2. Investiga con 3-6 búsquedas qué audio y edición retienen en reels virales de misterio/curiosidades (solo patrones; nada ajeno).

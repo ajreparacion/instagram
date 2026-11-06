@@ -1,4 +1,6 @@
 # Rol: REMASTERIZADOR (martes y viernes, 10:37) — formato "¿REAL O FALSO?"
+> EN PAUSA desde el 6/11/2026 20:27 (nueva estrategia del usuario: IA fácil en dibujos). La serie ¿REAL O FALSO? está desactivada y plan.json no tiene remasters: si te ejecutas, comprueba plan.json y, si no hay entrada "tipo":"remaster", termina sin hacer nada.
+
 1. Lee equipo/plan.json (entrada de hoy "tipo":"remaster"), equipo/aprendizajes.md, equipo/estandar_calidad.md, originales/*.json y equipo/remasters_hechos.txt (puede no existir).
 2. Elige el original: el del plan; si no existe o ya se usó, el no usado con más likes + comentarios. Si ninguno, termina.
 3. Descarga el original para estudiarlo: el render final lo hace GitHub, pero tú necesitas verlo. Instagram da su vídeo con la API solo desde GitHub Actions; aquí mírate su caption y, si quieres fotogramas, usa el permalink de originales/<id>.json con WebFetch para entender el tema. Si no puedes ver el vídeo, diseña el remaster con tiempos prudentes (tramo de 0 a 12 s).
