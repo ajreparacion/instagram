@@ -448,6 +448,50 @@ def mezclar_voz(video, tramos, wavs, aj, trabajo):
         _mezclar_voz(video, tramos, wavs, aj, "", trabajo)
 
 
+def resolver_videos_guion(cfg, guion, trabajo):
+    """Clips de video REAL del propio usuario en un guion en modo humano (6/11/2026, humanizar).
+    En "imagenes" una entrada puede llevar {"original_id": "<id del reel antiguo de la cuenta>", "inicio": s, ...}:
+    aquí se descarga ese reel (media_url de la API) a la carpeta de trabajo y se escribe una copia del guion con
+    "video": <ruta local> para hacer_reel.py. Si un original no se puede bajar, la entrada queda como estaba
+    (hacer_reel.py la ignora y usa la foto "url" si la hay, o el fondo neutro) y se anota en registro.log.
+    Devuelve la ruta del guion que hay que renderizar (el original si no había nada que resolver)."""
+    g = leer_json(guion, None)
+    if not isinstance(g, dict):
+        return guion
+    cambiado = False
+    bajados = {}
+    for esc in g.get("escenas") or []:
+        for im in (esc.get("imagenes") or []) if isinstance(esc, dict) else []:
+            if not isinstance(im, dict):
+                continue
+            v = str(im.get("video") or "").strip()
+            if v and not v.startswith("http") and not os.path.isabs(v):   # ruta relativa a la carpeta del guion
+                im["video"] = os.path.join(os.path.dirname(os.path.abspath(guion)), v)
+                cambiado = True
+            oid = str(im.get("original_id") or "").strip()
+            if not oid or im.get("video"):
+                continue
+            if oid not in bajados:
+                destino = os.path.join(trabajo, f"original_{oid}.mp4")
+                try:
+                    url = api(cfg, oid, fields="media_url").get("media_url")
+                    if not url:
+                        raise ErrorAPI("Instagram no da media_url (¿música con licencia?)")
+                    descargar(url, destino)
+                    bajados[oid] = destino
+                except Exception as e:
+                    bajados[oid] = None
+                    log(f"Clip propio {oid} no disponible ({str(e)[-160:]}); la escena usa su foto o el fondo neutro")
+            if bajados.get(oid):
+                im["video"] = bajados[oid]
+                cambiado = True
+    if not cambiado:
+        return guion
+    copia = os.path.join(trabajo, "guion_resuelto.json")
+    escribir_json(copia, g)
+    return copia
+
+
 def renderizar_guion(guion, video, trabajo):
     """Reel nuevo con la VOZ PRIMERO (6/11/2026, humanizar): 1) hacer_reel.py --solo-locucion escribe los tramos;
     2) se genera y recorta la voz; 3) hacer_reel.py --tiempos renderiza con cada escena alargada a la duración real
@@ -552,7 +596,8 @@ def renderizar(cfg, carpeta, post):
         raise ErrorAPI("Falta guion.json o remaster.json")
     locucion = os.path.join(trabajo, "video.locucion.json")
     if cmd is None:
-        motor = renderizar_guion(os.path.join(carpeta, "guion.json"), video, trabajo)
+        guion = resolver_videos_guion(cfg, os.path.join(carpeta, "guion.json"), trabajo)
+        motor = renderizar_guion(guion, video, trabajo)
         if os.path.exists(locucion):
             shutil.copy(locucion, os.path.join(carpeta, "locucion.json"))
         if motor:
