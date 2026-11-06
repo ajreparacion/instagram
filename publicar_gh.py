@@ -282,6 +282,8 @@ def sintetizar_chatterbox(textos, salidas, trabajo, aj, estilos=None):
     ref = cb.get("referencia")
     if ref and not os.path.isabs(ref):
         ref = os.path.join(BASE, ref)
+    if ref and os.path.exists(ref) and cb.get("eq_referencia"):
+        ref = referencia_con_eq(ref, str(cb["eq_referencia"]))
     if not (ref and os.path.exists(ref)) and cb.get("referencia_kokoro"):
         # Sin voz del usuario: referencia sintética con licencia libre (Kokoro, Apache 2.0), generada aquí mismo
         # y guardada en la caché. No es la voz de ninguna persona real.
@@ -296,6 +298,26 @@ def sintetizar_chatterbox(textos, salidas, trabajo, aj, estilos=None):
     log(f"Voz con Chatterbox ({info.get('modelo_usado', '?')}, referencia={'sí' if info.get('referencia') else 'integrada'}, "
         f"exageración {cb.get('exageracion', 0.5)}, cfg {cb.get('cfg', 0.5)}): {len(textos)} frases en {info['_segundos']} s"
         + (f"; avisos: {info['avisos']}" if info.get("avisos") else ""))
+
+
+def referencia_con_eq(ref, filtros):
+    """Copia de la referencia de voz con una ecualización (ffmpeg, p. ej. realce de agudos si la grabación suena
+    apagada, como una nota de voz de móvil o una voz separada de la música). Con caché; si falla, la original."""
+    try:
+        import hashlib
+        clave = hashlib.md5((os.path.abspath(ref) + "|" + filtros + "|" + str(os.path.getmtime(ref))).encode()).hexdigest()[:12]
+        destino = os.path.join(CACHE, "voces", f"ref_eq_{clave}.wav")
+        if os.path.exists(destino) and os.path.getsize(destino) > 20000:
+            return destino
+        os.makedirs(os.path.dirname(destino), exist_ok=True)
+        r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", ref, "-af", filtros + ",alimiter=limit=0.85:level=false",
+                            "-ar", "24000", "-ac", "1", destino], capture_output=True, timeout=120)
+        if r.returncode != 0 or not os.path.exists(destino):
+            raise ErrorAPI(r.stderr.decode(errors="replace")[-160:])
+        return destino
+    except Exception as e:
+        log(f"EQ de la referencia no aplicada ({str(e)[-120:]}); se usa la referencia tal cual")
+        return ref
 
 
 TEXTO_REFERENCIA = ("A ver, te cuento una cosa que me pasó el otro día. Estaba en casa, tranquilo, y de repente… "
