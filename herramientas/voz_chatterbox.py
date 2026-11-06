@@ -20,6 +20,7 @@ Escribe en stdout un JSON con tiempos. Código de salida != 0 si algo falla: pub
 """
 import json
 import os
+import re
 import sys
 import time
 import wave
@@ -106,7 +107,9 @@ def main():
         t1 = time.time()
         # Chatterbox a veces alucina (repite o añade palabras): si la frase dura mucho más de lo que
         # corresponde a sus palabras (~2,2 palabras/s + pausas), se vuelve a generar con otra semilla (máx. 2 veces).
-        esperado = len(f["texto"].split()) / 2.2 + 0.8 + 0.4 * f["texto"].count("…")
+        # (base 1,0 s + 0,5 s por cada punto/signo interno: «Falso. Lo inventamos nosotros.» dura 4,4 s de forma legítima)
+        esperado = len(f["texto"].split()) / 2.2 + 1.0 + 0.4 * f["texto"].count("…") \
+            + 0.5 * max(0, len(re.findall(r"[.!?;:]\s", f["texto"].strip())))
         kwf = dict(kw)   # ajustes propios de la frase (publicar_gh.py por_estilo: gancho y giro más intensos)
         for k_json, k_cb in (("exageracion", "exaggeration"), ("cfg", "cfg_weight"), ("temperatura", "temperature")):
             if f.get(k_json) is not None:
