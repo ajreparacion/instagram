@@ -23,6 +23,10 @@ Sistema automático de la cuenta de Instagram. Funciona sin ningún dispositivo 
 Para lanzar un ciclo a mano: pestaña *Actions → Ciclo Instagram → Run workflow*.
 
 ## Voz
-- Motor de voz en `equipo/voz.json` (`"motor"`): `pocket` (Kyutai Pocket TTS, español, voz «lola») o `piper` (respaldo automático si Pocket falla).
-- Atribución obligatoria (licencia CC BY 4.0 de los pesos): **Voz: Kyutai Pocket TTS (CC BY 4.0)** — se añade sola al final del texto de cada post que lleva esta voz. Código de Pocket TTS: MIT (github.com/kyutai-labs/pocket-tts). La voz «lola» procede de un clip de Mozilla Common Voice (CC0).
-- Prueba comparativa a mano: *Actions → Prueba de voz → Run workflow* (resultado en `equipo/pruebas/prueba_voz.json`, vídeos en la release `pruebas`).
+- Motor de voz en `equipo/voz.json` (`"motor"`) y cadena de respaldo (`"respaldo"`, Piper siempre al final; toda la locución sale del mismo motor):
+  - `chatterbox`: Chatterbox de Resemble AI (código y pesos MIT, uso comercial libre; github.com/resemble-ai/chatterbox). Afinado para español de España `ResembleAI/Chatterbox-Multilingual-es-es` (MIT) sobre el multilingüe; CPU, en su propio venv (`herramientas/voz_chatterbox.py`). Expresividad: `exageracion` y `cfg`. Referencia de voz: solo `voces/referencia_usuario.wav` (la del propio usuario, si la deja en el repo) o una sintética con licencia libre generada con Kokoro (`referencia_kokoro`); nunca la de otra persona real.
+  - `kokoro`: Kokoro-82M (Apache 2.0; hexgrad/Kokoro-82M), voces españolas `em_alex`, `ef_dora`, `em_santa`; muy rápido en CPU (`herramientas/voz_kokoro.py`).
+  - `pocket`: Kyutai Pocket TTS (código MIT, pesos CC BY 4.0), voz «lola». Atribución obligatoria **Voz: Kyutai Pocket TTS (CC BY 4.0)**: se añade sola al final del texto de cada post que lleva esta voz. La voz «lola» procede de un clip de Mozilla Common Voice (CC0).
+  - `piper`: Piper (MIT), voz `es_ES-davefx-medium`.
+- Flujo «voz primero» (reels nuevos con guion.json): se genera la voz antes del render, cada escena se alarga a la duración real de su frase (la voz no se acelera) y los subtítulos palabra a palabra siguen el ritmo real de cada frase.
+- Prueba comparativa a mano: *Actions → Prueba de voz → Run workflow* (resultado en `equipo/pruebas/prueba_voz.json`, vídeos y mp3 de voz sola en la release `pruebas`).
