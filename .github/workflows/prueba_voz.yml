@@ -67,6 +67,15 @@ jobs:
           ~/.venvs/chatterbox/bin/python -c "import chatterbox.mtl_tts, torch; print('chatterbox OK, torch', torch.__version__)"
           echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
 
+      - name: Voz del dueño (referencia de Chatterbox, release «voces»)
+        # Autorizada por el dueño el 6/11/2026. Necesaria para las variantes chatterbox_usuario*. voces/ está en .gitignore.
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p voces
+          gh release download voces -p referencia_usuario.wav -D voces --clobber && ls -la voces/ || echo "Sin referencia del dueño"
+
       - name: Prueba
         env:
           TZ: Europe/Madrid
