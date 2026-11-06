@@ -1,56 +1,74 @@
 [
  {
   "escena": 0,
+  "estilo": "gancho",
   "inicio": 0.0,
-  "duracion": 3.4,
-  "texto": "Te dijimos que los pájaros eran drones del Gobierno."
+  "duracion": 4.4,
+  "texto": "Te dijimos que los pájaros eran drones del Gobierno.",
+  "enfasis": []
  },
  {
   "escena": 1,
-  "inicio": 3.4,
-  "duracion": 3.0,
-  "texto": "Y que se recargaban en los cables."
+  "estilo": "archivo",
+  "inicio": 4.4,
+  "duracion": 3.533,
+  "texto": "Y que se recargaban en los cables.",
+  "enfasis": []
  },
  {
   "escena": 2,
-  "inicio": 6.4,
-  "duracion": 2.567,
-  "texto": "Falso. Lo inventamos nosotros."
+  "estilo": "giro",
+  "inicio": 7.933,
+  "duracion": 3.4,
+  "texto": "Falso. Lo inventamos nosotros.",
+  "enfasis": []
  },
  {
   "escena": 3,
-  "inicio": 8.967,
-  "duracion": 4.033,
-  "texto": "Y lo mejor, te lo juro: la teoría también es broma."
+  "estilo": "evidencia",
+  "inicio": 11.333,
+  "duracion": 4.133,
+  "texto": "Y lo mejor, te lo juro: la teoría también es broma.",
+  "enfasis": []
  },
  {
   "escena": 4,
-  "inicio": 13.0,
-  "duracion": 4.7,
-  "texto": "Los pájaros no son reales nació en dos mil diecisiete. Como parodia."
+  "estilo": "evidencia",
+  "inicio": 15.467,
+  "duracion": 5.1,
+  "texto": "Los pájaros no son reales nació en dos mil diecisiete. Como parodia.",
+  "enfasis": []
  },
  {
   "escena": 5,
-  "inicio": 17.7,
-  "duracion": 3.767,
-  "texto": "En dos mil veintiuno su creador lo reconoció: parodia."
+  "estilo": "evidencia",
+  "inicio": 20.567,
+  "duracion": 4.067,
+  "texto": "En dos mil veintiuno su creador lo reconoció: parodia.",
+  "enfasis": []
  },
  {
   "escena": 6,
-  "inicio": 21.467,
-  "duracion": 5.2,
-  "texto": "¿Y el cable? En un solo cable no hay diferencia de voltaje. No pasa nada."
+  "estilo": "evidencia",
+  "inicio": 24.633,
+  "duracion": 5.767,
+  "texto": "¿Y el cable? En un solo cable no hay diferencia de voltaje. No pasa nada.",
+  "enfasis": []
  },
  {
   "escena": 7,
-  "inicio": 26.667,
-  "duracion": 2.533,
-  "texto": "Si toca dos… ahí sí."
+  "estilo": "evidencia",
+  "inicio": 30.4,
+  "duracion": 2.2,
+  "texto": "Si toca dos… ahí sí.",
+  "enfasis": []
  },
  {
   "escena": 8,
-  "inicio": 29.2,
+  "estilo": "cierre",
+  "inicio": 32.6,
   "duracion": 2.5,
-  "texto": "Mándaselo a quien se lo creyó."
+  "texto": "Mándaselo a quien se lo creyó.",
+  "enfasis": []
  }
 ]
