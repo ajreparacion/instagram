@@ -76,11 +76,6 @@
       "videos": [
         "18048020833521161",
         "18085269121411497"
-      ],
-      "ejemplos": [
-        "13, aquí arriba, muy bien, es así, yo vengo de, estuvo Adán, estuvo Eva, son los",
-        "Bueno el teléfono rojo me lo han dado cuando nací, yo vengo de un linaje oscuro,",
-        "Es que planeta se llama Sion originalmente, no tierra, no tierra. Sion, Sion."
       ]
     },
     {
@@ -89,11 +84,6 @@
       "tramos": 3,
       "videos": [
         "18048020833521161"
-      ],
-      "ejemplos": [
-        "No, no, no, no, originalmente, todo ahí, mire de todas las que esto hay en grieg",
-        "Por ejemplo, ahora queda eso, las 11 y 51, uno, uno, dos, cinco, siete, las uno,",
-        "Pirámide, ahí lo dejamos"
       ]
     },
     {
@@ -102,11 +92,6 @@
       "tramos": 3,
       "videos": [
         "18085269121411497"
-      ],
-      "ejemplos": [
-        "La I es ocho, en el alfabeto riego.",
-        "Más cuatro, que es la O, dos, M, dos.",
-        "¿Por qué tienes dos jorobas?"
       ]
     },
     {
@@ -115,9 +100,6 @@
       "tramos": 1,
       "videos": [
         "18085269121411497"
-      ],
-      "ejemplos": [
-        "Porque S es uno, en el alfabeto riego."
       ]
     },
     {
@@ -126,9 +108,6 @@
       "tramos": 1,
       "videos": [
         "18085269121411497"
-      ],
-      "ejemplos": [
-        "¿Y qué significa?"
       ]
     },
     {
@@ -137,9 +116,6 @@
       "tramos": 1,
       "videos": [
         "18085269121411497"
-      ],
-      "ejemplos": [
-        "Ocho más uno, nueve."
       ]
     },
     {
@@ -148,9 +124,6 @@
       "tramos": 1,
       "videos": [
         "18085269121411497"
-      ],
-      "ejemplos": [
-        "Siempre llegamos al trece, Carmen."
       ]
     },
     {
@@ -159,9 +132,6 @@
       "tramos": 1,
       "videos": [
         "18085269121411497"
-      ],
-      "ejemplos": [
-        "Porque dos jorobas."
       ]
     },
     {
@@ -170,9 +140,6 @@
       "tramos": 1,
       "videos": [
         "18179330035291210"
-      ],
-      "ejemplos": [
-        "real a escala."
       ]
     }
   ],
@@ -253,41 +220,41 @@
           "sim_hablante": 0.942
         }
       ]
-    },
-    "referencia_hablante_2": {
-      "archivo": "voces/referencia_hablante_2.wav",
-      "segundos": 11.0,
-      "audio": "original",
-      "tramos": [
-        {
-          "id": "18085269121411497",
-          "inicio": 0.0,
-          "fin": 8.0,
-          "texto": "Es que planeta se llama Sion originalmente, no tierra, no tierra. Sion, Sion.",
-          "logprob": -0.371,
-          "musica_db_rel": -32.5,
-          "sim_hablante": 0.926
-        },
-        {
-          "id": "18085269121411497",
-          "inicio": 38.0,
-          "fin": 41.0,
-          "texto": "Porque nuestro linaje, y estamos arriba.",
-          "logprob": -0.28,
-          "musica_db_rel": -30.3,
-          "sim_hablante": 0.935
-        }
-      ]
     }
   },
   "similitud_con_referencia": {
-    "referencias": {
-      "referencia_usuario_larga": 0.979,
-      "referencia_hablante_2": 0.713
-    },
+    "fuente": "prueba voz_usuario.yml n.º 4 (6/11 19:12 UTC, job 128081053597; el JSON no llegó a git por un conflicto)",
     "voces_sintetizadas": {
-      "pocket": 0.634
+      "chatterbox_usuario": 0.943,
+      "chatterbox_usuario_suave": 0.94,
+      "chatterbox_mtl_usuario": 0.927,
+      "pocket": 0.59
     },
-    "lectura": "Coseno Resemblyzer con voces/referencia_usuario.wav. Orientativo: > 0,80 misma voz; 0,65-0,80 parecida; < 0,65 otra persona. Pocket/Piper sirven de control (no son la voz del dueño)."
-  }
+    "wer_voz_sola": {
+      "chatterbox_usuario": 0.135,
+      "chatterbox_usuario_suave": 0.163,
+      "chatterbox_mtl_usuario": 0.135,
+      "pocket": 0.144
+    },
+    "wer_mezcla": {
+      "chatterbox_usuario": 0.144,
+      "chatterbox_usuario_suave": 0.144,
+      "chatterbox_mtl_usuario": 0.115,
+      "pocket": 0.163
+    },
+    "utmos": {
+      "chatterbox_usuario": 1.87,
+      "chatterbox_usuario_suave": 1.95,
+      "chatterbox_mtl_usuario": 2.29,
+      "pocket": 3.86
+    },
+    "tono_desv_st": {
+      "chatterbox_usuario": 5.29,
+      "chatterbox_usuario_suave": 5.05,
+      "chatterbox_mtl_usuario": 5.09,
+      "pocket": 2.04
+    },
+    "decision": "chatterbox_usuario (es-es) pasa a producción el 6/11 20:20."
+  },
+  "confirmacion_dueno": "6/11/2026: el dueño confirma que su voz es la «voz A» (hablante 1, reel del Proyecto ALCAYATA 18179330035291210). La voz B (Mr. Tartaria) no es suya: se ha retirado y no se clona."
 }

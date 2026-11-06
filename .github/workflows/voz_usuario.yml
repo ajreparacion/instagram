@@ -121,8 +121,11 @@ jobs:
           git config user.name "expedientes-bot"
           git config user.email "expedientes-bot@users.noreply.github.com"
           git checkout -- registro.log 2>/dev/null || true
-          git add equipo/pruebas/voz_usuario.json equipo/pruebas/prueba_voz.json 2>/dev/null || true
+          # El informe de prueba_voz va a su propio archivo para no chocar con las pruebas de Mejora
+          cp equipo/pruebas/prueba_voz.json equipo/pruebas/prueba_voz_usuario.json 2>/dev/null || true
+          git checkout -- equipo/pruebas/prueba_voz.json 2>/dev/null || true
+          git add equipo/pruebas/voz_usuario.json equipo/pruebas/prueba_voz_usuario.json 2>/dev/null || true
           if git diff --cached --quiet; then exit 0; fi
           git commit -q -m "Voz del dueño: referencia y prueba $(date -u +%FT%H:%MZ)"
-          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 5; done
+          for i in 1 2 3; do git pull --rebase --autostash -q -X theirs && git push -q && exit 0; git rebase --abort 2>/dev/null; sleep 5; done
           exit 1
