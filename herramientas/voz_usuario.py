@@ -12,7 +12,6 @@ Uso:
       GE2E) y se queda con el hablante que más habla (el protagonista). Elige los tramos más limpios y escribe:
         voces/referencia_usuario.wav        ~10-14 s, 24 kHz mono, -20 LUFS (la que usa Chatterbox)
         voces/referencia_usuario_larga.wav  ~30 s (para pruebas futuras)
-        voces/referencia_hablante_2.wav     si hay un 2.º hablante con bastante voz (por si el protagonista es ese)
       y el informe equipo/pruebas/voz_usuario.json (sin audio: ids, tiempos, texto, hablantes).
   python3 herramientas/voz_usuario.py similitud
       Compara (coseno de Resemblyzer) la referencia con las voces sintetizadas de /tmp/prueba_voz/salida/voz_*.mp3 y lo añade
@@ -223,14 +222,14 @@ def extraer(ids):
 
     refs = {"referencia_usuario": construir(1, 11.0, "referencia_usuario"),
             "referencia_usuario_larga": construir(1, 30.0, "referencia_usuario_larga")}
-    if len(hablantes) > 1 and hablantes[1]["segundos"] >= 12:
-        refs["referencia_hablante_2"] = construir(2, 11.0, "referencia_hablante_2")
+    # El dueño confirmó el 6/11/2026 que su voz es la del hablante 1 («voz A», el reel del Proyecto ALCAYATA).
+    # La de los demás hablantes (p. ej. Mr. Tartaria) NO es suya: nunca se guarda ni se clona.
     informe = {"fecha": time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()),
                "autorizacion": "El dueño de la cuenta, 6/11/2026: «los vídeos subidos son todos míos, soy yo el protagonista, "
                                "clona mi voz de esos vídeos de Mr. Empírico».",
                "videos": videos, "similitud_hablante_1_y_2": sim12,
-               "nota_hablantes": "Hablante 1 = el que más habla en los vídeos (se toma como el dueño). Si el dueño hacía "
-                                 "dos personajes con voces distintas, pueden salir 2 hablantes con similitud alta (> 0,75).",
+               "nota_hablantes": "Hablante 1 = el que más habla. El dueño confirmó el 6/11/2026 que es él («voz A»: reel del "
+                                 "Proyecto ALCAYATA, 18179330035291210). El resto de hablantes no son él y no se clonan.",
                "hablantes": [{k: v for k, v in h.items() if not k.startswith("_")} for h in hablantes],
                "referencias": refs}
     os.makedirs(os.path.dirname(INFORME), exist_ok=True)
@@ -246,7 +245,7 @@ def similitud():
         raise SystemExit("No hay voces/referencia_usuario.wav")
     er = embedding(cargar_audio(ref))
     otras = {}
-    for nombre in ("referencia_usuario_larga", "referencia_hablante_2"):
+    for nombre in ("referencia_usuario_larga",):
         p = os.path.join(VOCES, nombre + ".wav")
         if os.path.exists(p):
             otras[nombre] = round(float(embedding(cargar_audio(p)) @ er), 3)
