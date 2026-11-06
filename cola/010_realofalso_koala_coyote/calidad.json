@@ -1,0 +1,10 @@
+{
+ "aprobado": false,
+ "fecha": "2026-11-06T18:37:00+00:00",
+ "motivos": [
+  "BLOQUEO 7a (artificial/de plantilla): en el render de las 15:00 UTC la escena de cierre («Mándaselo a quien se lo creyó. Y guárdalo.», unos 5 s) salió sobre fondo neutro negro porque la foto https://upload.wikimedia.org/…/a/a8/Colored-Crop-Tasmanian_tiger.jpg no se descargó.",
+  "Ese render ya está caducado (re-render con voz nueva ordenado a las 18:25 UTC); el reel ya pasó de su hora (16:40) y sin este bloqueo saldría al re-renderizarse sin que nadie vea el vídeo nuevo."
+ ],
+ "como_arreglarlo": "Calidad ya ha añadido una segunda foto de respaldo (Thylacinus en el zoo de Hobart, 1928, dominio público, que sí cargó) a la escena de cierre de guion.json. Tras el nuevo render, la pasada de Calidad del 7/11 lo revisa y, si todas las escenas llevan foto real, lo aprueba. Contenido OK: koala coyote falso, tilacino real (último ejemplar cautivo, Hobart, 1936).",
+ "datos_revisados": "texto sin emojis ni muletillas; 9 escenas, 33,2 s; fotos reales en 8 de 9 escenas en el render viejo."
+}
