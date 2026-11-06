@@ -119,3 +119,6 @@ Medición de los renders REALES de la release «cola» (002, 004, 005, voz Pocke
 - Revisar en registro.log los segundos recortados con la voz real de Pocket. Si recorta más de 1 s en una frase o la voz suena entrecortada, subir `pausa_max_s` a 0,45 o bajar `umbral_db` a −45.
 - Comparar ig_reels_avg_watch_time de 003/002 (Pocket, sin estos cambios) y de los siguientes (con ellos) frente a 001.
 - Pendiente menor: el reloj del HUD vuelve a empezar en la tarjeta de cierre de los remasters.
+
+### Petición de Calidad (6/11/2026, equipo/modelos_ganadores.md)
+- hacer_reel.py: mostrar el gancho entero en el primer fotograma o escribirlo en ≤ 0,5 s (línea 231: hoy nchars/1,1 s, así que a 0,4 s solo se lee «UN BARCO INT»); añadir estilos visuales de prueba propia (mapa con ruta, línea de tiempo, contador animado) y una tarjeta final de recapitulación de 3 datos.
