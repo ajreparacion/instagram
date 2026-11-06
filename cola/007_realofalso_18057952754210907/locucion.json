@@ -1,47 +1,56 @@
 [
  {
+  "escena": 0,
   "inicio": 0.0,
-  "duracion": 3.7,
+  "duracion": 3.6,
   "texto": "¿Real o falso? Un koala adicto en Queensland."
  },
  {
-  "inicio": 3.7,
-  "duracion": 4.567,
+  "escena": 1,
+  "inicio": 3.6,
+  "duracion": 4.433,
   "texto": "En mil novecientos noventa y seis. Con negocio turbio."
  },
  {
-  "inicio": 8.267,
-  "duracion": 2.5,
+  "escena": 2,
+  "inicio": 8.033,
+  "duracion": 2.933,
   "texto": "Falso. Lo inventamos nosotros."
  },
  {
-  "inicio": 10.767,
-  "duracion": 4.067,
+  "escena": 3,
+  "inicio": 10.967,
+  "duracion": 2.833,
   "texto": "Pero en el noventa y seis sí pasó algo."
  },
  {
-  "inicio": 14.833,
-  "duracion": 5.6,
+  "escena": 4,
+  "inicio": 13.8,
+  "duracion": 5.5,
   "texto": "En Adelaida vieron que los koalas tienen huellas dactilares. Casi como las nuestras."
  },
  {
-  "inicio": 20.433,
-  "duracion": 2.8,
+  "escena": 5,
+  "inicio": 19.3,
+  "duracion": 3.633,
   "texto": "Al microscopio cuesta distinguirlas. Flipé."
  },
  {
-  "inicio": 23.233,
-  "duracion": 3.3,
+  "escena": 6,
+  "inicio": 22.933,
+  "duracion": 3.633,
   "texto": "Canguros y wombats, sus primos, ni tienen."
  },
  {
-  "inicio": 26.533,
-  "duracion": 4.833,
+  "escena": 7,
+  "inicio": 26.567,
+  "duracion": 3.6,
   "texto": "¿Lo de confundir a la policía? Eso sí es un bulo."
  },
  {
-  "inicio": 31.367,
-  "duracion": 2.933,
+  "escena": 8,
+  "inicio": 30.167,
+  "duracion": 2.5,
   "texto": "Mándaselo a quien se lo creyó."
  }
 ]

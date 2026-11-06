@@ -1,47 +1,56 @@
 [
  {
+  "escena": 0,
   "inicio": 0.0,
-  "duracion": 4.067,
-  "texto": "¿Real o falso? Los pájaros son drones del Gobierno."
+  "duracion": 3.4,
+  "texto": "Te dijimos que los pájaros eran drones del Gobierno."
  },
  {
-  "inicio": 4.067,
-  "duracion": 3.8,
-  "texto": "Y se recargan en los cables, decían."
+  "escena": 1,
+  "inicio": 3.4,
+  "duracion": 3.0,
+  "texto": "Y que se recargaban en los cables."
  },
  {
-  "inicio": 7.867,
-  "duracion": 2.5,
+  "escena": 2,
+  "inicio": 6.4,
+  "duracion": 2.567,
   "texto": "Falso. Lo inventamos nosotros."
  },
  {
-  "inicio": 10.367,
-  "duracion": 3.3,
-  "texto": "Pero ojo: la teoría también es broma."
+  "escena": 3,
+  "inicio": 8.967,
+  "duracion": 4.033,
+  "texto": "Y lo mejor, te lo juro: la teoría también es broma."
  },
  {
-  "inicio": 13.667,
-  "duracion": 5.233,
+  "escena": 4,
+  "inicio": 13.0,
+  "duracion": 4.7,
   "texto": "Los pájaros no son reales nació en dos mil diecisiete. Como parodia."
  },
  {
-  "inicio": 18.9,
-  "duracion": 4.067,
+  "escena": 5,
+  "inicio": 17.7,
+  "duracion": 3.767,
   "texto": "En dos mil veintiuno su creador lo reconoció: parodia."
  },
  {
-  "inicio": 22.967,
-  "duracion": 6.4,
+  "escena": 6,
+  "inicio": 21.467,
+  "duracion": 5.2,
   "texto": "¿Y el cable? En un solo cable no hay diferencia de voltaje. No pasa nada."
  },
  {
-  "inicio": 29.367,
+  "escena": 7,
+  "inicio": 26.667,
   "duracion": 2.533,
   "texto": "Si toca dos… ahí sí."
  },
  {
-  "inicio": 31.9,
-  "duracion": 2.933,
+  "escena": 8,
+  "inicio": 29.2,
+  "duracion": 2.5,
   "texto": "Mándaselo a quien se lo creyó."
  }
 ]

@@ -83,5 +83,8 @@
       "uso": "escena 9"
     }
   ],
-  "_nota_remasterizador_pico": "6/11/2026 19:00 Remasterizador (plan.json, grupo A «pico» + orden del usuario de humanizar): 1.ª escena y portada reescritas para abrir por el pico sin «¿Real o falso?»; fotos reales en todas las escenas elegidas a mano en la hoja de contactos de la release pruebas (licencias comprobadas por buscar_imagenes.py en GitHub Actions: solo PD, CC0 y CC BY, sin firmas ni marcas visibles; descartadas las que llevan firma del fotógrafo); \"renderizado\"/\"asset\" quitados para que Actions lo vuelva a renderizar. Datos y fuentes sin cambios. Añadidas las líneas «Voz: narración generada» y de fuentes en el perfil (plan.json, notas del Estratega). Sin inventar reacciones del público: el reel original no tuvo comentarios, así que no se dice «hubo gente que se lo creyó»."
+  "_nota_remasterizador_pico": "6/11/2026 19:00 Remasterizador (plan.json, grupo A «pico» + orden del usuario de humanizar): 1.ª escena y portada reescritas para abrir por el pico sin «¿Real o falso?»; fotos reales en todas las escenas elegidas a mano en la hoja de contactos de la release pruebas (licencias comprobadas por buscar_imagenes.py en GitHub Actions: solo PD, CC0 y CC BY, sin firmas ni marcas visibles; descartadas las que llevan firma del fotógrafo); \"renderizado\"/\"asset\" quitados para que Actions lo vuelva a renderizar. Datos y fuentes sin cambios. Añadidas las líneas «Voz: narración generada» y de fuentes en el perfil (plan.json, notas del Estratega). Sin inventar reacciones del público: el reel original no tuvo comentarios, así que no se dice «hubo gente que se lo creyó».",
+  "motor_voz": "pocket",
+  "renderizado": "2026-11-06T18:18:16+00:00",
+  "asset": "006_realofalso_18074579041723896.mp4"
 }
