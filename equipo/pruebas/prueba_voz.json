@@ -1,13 +1,13 @@
 {
-  "fecha": "2026-11-06 19:11 UTC",
+  "fecha": "2026-11-06 19:31 UTC",
   "guion": "herramientas/ejemplo_guion_humano.json",
-  "render_video_s": 63.3,
+  "render_video_s": 83.1,
   "frases": 8,
   "palabras": 104,
   "referencia": "Un barco a la deriva… con comida para seis meses. Y sin nadie. Tal día como hoy, en mil ochocientos setenta y dos, sale de Nueva York el Mary Celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las Azores y Portugal. Suben… y está todo. La comida, el agua, sus cosas. Solo falta una cosa. El bote salvavidas. Y eran diez. Con la mujer del capitán… y su hija de dos años. La última nota del diario es del veinticinco de noviembre. Y luego… nada. De los diez, nunca más se supo. Mándaselo a quien le flipen los misterios.",
   "cpu": 4,
   "variantes": {
-    "chatterbox_es_ref": {
+    "chatterbox_usuario": {
       "flujo": "voz_primero",
       "ajustes": {
         "motor": "chatterbox",
@@ -17,12 +17,12 @@
           "exageracion": 0.6,
           "cfg": 0.35,
           "temperatura": 0.75,
-          "referencia": null,
-          "referencia_kokoro": "em_alex",
+          "referencia": "voces/referencia_usuario.wav",
+          "referencia_kokoro": null,
           "ganancia": 1.0,
           "semilla": 7,
           "max_s": 2400,
-          "_nota": "referencia: ruta al wav de la voz del propio usuario (p. ej. voces/referencia_usuario.wav). null hasta que la prueba de la voz del dueño (voz_usuario.yml) confirme parecido y WER; mientras tanto se usa referencia_kokoro.",
+          "_nota": "referencia = VOZ DEL DUEÑO (autorizada por él el 6/11/2026; confirmó que es la «voz A», reel del Proyecto ALCAYATA). Activada el 6/11 a las 20:20 tras la prueba voz_usuario.yml n.º 4: parecido con su voz 0,943 (Resemblyzer; Pocket de control 0,59), WER 0,135 voz sola / 0,144 mezcla (Pocket 0,144 / 0,163), variación de tono 5,3 st (Pocket 2,0). UTMOS bajo (1,87 frente a 3,86 de Pocket): hereda el sonido de móvil y la separación de música de la referencia; mejora si el dueño sube una nota de voz limpia. Si no existe el wav (release «voces»), se usa referencia_kokoro.",
           "por_estilo": {
             "gancho": {
               "exageracion": 0.85,
@@ -39,87 +39,190 @@
           "_nota_por_estilo": "6/11: gancho y giro con más intensidad (exageracion 0,8-0,85, cfg 0,3) que el resto (0,6 / 0,35). Petición del usuario: falta gancho y énfasis."
         }
       },
-      "render_total_s": 473.4,
-      "duracion_reel_s": 41.6,
+      "render_total_s": 476.1,
+      "duracion_reel_s": 51.7,
       "motor_usado": "chatterbox",
-      "sintesis_s": 397.0,
+      "sintesis_s": 363.0,
       "frases": [
         {
-          "dur_s": 4.24,
-          "hueco_s": 4.55,
+          "dur_s": 4.84,
+          "hueco_s": 5.15,
           "atempo": 1.0
         },
         {
-          "dur_s": 5.7,
-          "hueco_s": 6.02,
+          "dur_s": 7.9,
+          "hueco_s": 8.22,
           "atempo": 1.0
         },
         {
-          "dur_s": 5.92,
-          "hueco_s": 6.25,
+          "dur_s": 6.02,
+          "hueco_s": 6.35,
           "atempo": 1.0
         },
         {
-          "dur_s": 4.28,
-          "hueco_s": 5.08,
+          "dur_s": 5.16,
+          "hueco_s": 5.98,
           "atempo": 1.0
         },
         {
-          "dur_s": 2.82,
-          "hueco_s": 3.25,
+          "dur_s": 5.36,
+          "hueco_s": 5.68,
           "atempo": 1.0
         },
         {
-          "dur_s": 4.02,
-          "hueco_s": 4.45,
+          "dur_s": 4.68,
+          "hueco_s": 4.98,
           "atempo": 1.0
         },
         {
-          "dur_s": 5.12,
-          "hueco_s": 5.45,
+          "dur_s": 7.28,
+          "hueco_s": 7.58,
           "atempo": 1.0
         },
         {
-          "dur_s": 5.02,
-          "hueco_s": 5.35,
+          "dur_s": 6.22,
+          "hueco_s": 6.55,
           "atempo": 1.0
         }
       ],
-      "voz_total_s": 37.1,
-      "veces_tiempo_real": 0.09,
+      "voz_total_s": 47.5,
+      "veces_tiempo_real": 0.13,
       "frases_que_no_caben": 0,
-      "lufs": -15.5,
+      "lufs": -11.5,
       "pico_real_dbfs": -2.0,
       "prosodia": {
-        "f0_mediana_hz": 130.9,
-        "tono_desv_st": 4.59,
-        "tono_rango_st": 10.0,
-        "pausas_pct": 26.3,
-        "duracion_s": 37.12,
-        "palabras_por_s": 2.8
+        "f0_mediana_hz": 181.9,
+        "tono_desv_st": 4.76,
+        "tono_rango_st": 9.3,
+        "pausas_pct": 40.8,
+        "duracion_s": 47.46,
+        "palabras_por_s": 2.19
       },
-      "transcripcion_mezcla": "Un barco a la deriva, con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el Meri Celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las azores y Portugal. Suben, y está todo, la comida, el agua, sus cosas. Solo falta una cosa, el bote salva vidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre. Y luego, nada. De los diez, nunca más se supo. Mándaselo a quien le flipen los misterios.",
-      "wer_mezcla": 0.087,
-      "transcripcion_voz_sola": "Un barco a la deriva, con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el Meri Celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las azores y Portugal. Suben. Y está todo, la comida, el agua, sus cosas. Sólo falta una cosa, el bote salva vidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre. Y luego, nada, de los diez, nunca más se supo. Mándaselo a quien le flipen los misterios.",
-      "wer_voz_sola": 0.087,
-      "utmos_medio": 3.62,
+      "transcripcion_mezcla": "un barco a la deriva con comida para seis meses y sin nadie tal día como hoy en 1872 sale de Nueva York el Mari Celeste un mes después otro barco se lo encuentra a la deriva entre las azores y Portugal suben y está todo la comida el agua sus cosas sólo falta una cosa el bote salvo a vidas y eran diez con la mujer del capitán y su hija de dos años la última nota del diario es del 25 de noviembre y luego nada de los diez nunca más se supo mandaselo a quien le frípen los misterios",
+      "wer_mezcla": 0.106,
+      "transcripcion_voz_sola": "Un barco a la deriva, con comida para seis meses. Y sin nadie, tal día como hoy, en 1872 sale de Nueva York el Mari Celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las Azores y Portugal. Sube y está todo. La comida, el agua, sus cosas, sólo falta una cosa, el bote salvo a vidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre, y luego nada. De los diez, nunca más es supo. Mándaselo a quien le frípen los misterios.",
+      "wer_voz_sola": 0.125,
+      "utmos_medio": 1.89,
       "utmos_frases": [
-        3.98,
-        3.52,
-        3.18,
-        3.64,
-        3.58,
-        3.24,
-        3.65,
-        4.17
+        2.08,
+        1.81,
+        1.63,
+        2.29,
+        1.76,
+        1.86,
+        1.38,
+        2.31
+      ]
+    },
+    "chatterbox_usuario_suave": {
+      "flujo": "voz_primero",
+      "ajustes": {
+        "motor": "chatterbox",
+        "chatterbox": {
+          "modelo": "es-es",
+          "idioma": "es",
+          "exageracion": 0.45,
+          "cfg": 0.5,
+          "temperatura": 0.75,
+          "referencia": "voces/referencia_usuario.wav",
+          "referencia_kokoro": null,
+          "ganancia": 1.0,
+          "semilla": 7,
+          "max_s": 2400,
+          "_nota": "referencia = VOZ DEL DUEÑO (autorizada por él el 6/11/2026; confirmó que es la «voz A», reel del Proyecto ALCAYATA). Activada el 6/11 a las 20:20 tras la prueba voz_usuario.yml n.º 4: parecido con su voz 0,943 (Resemblyzer; Pocket de control 0,59), WER 0,135 voz sola / 0,144 mezcla (Pocket 0,144 / 0,163), variación de tono 5,3 st (Pocket 2,0). UTMOS bajo (1,87 frente a 3,86 de Pocket): hereda el sonido de móvil y la separación de música de la referencia; mejora si el dueño sube una nota de voz limpia. Si no existe el wav (release «voces»), se usa referencia_kokoro.",
+          "por_estilo": {
+            "gancho": {
+              "exageracion": 0.85,
+              "cfg": 0.3
+            },
+            "giro": {
+              "exageracion": 0.8,
+              "cfg": 0.3
+            },
+            "cierre": {
+              "exageracion": 0.7
+            }
+          },
+          "_nota_por_estilo": "6/11: gancho y giro con más intensidad (exageracion 0,8-0,85, cfg 0,3) que el resto (0,6 / 0,35). Petición del usuario: falta gancho y énfasis."
+        }
+      },
+      "render_total_s": 421.4,
+      "duracion_reel_s": 49.5,
+      "motor_usado": "chatterbox",
+      "sintesis_s": 314.9,
+      "frases": [
+        {
+          "dur_s": 4.84,
+          "hueco_s": 5.15,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 6.54,
+          "hueco_s": 6.85,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 7.8,
+          "hueco_s": 8.12,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 5.22,
+          "hueco_s": 6.05,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 3.1,
+          "hueco_s": 3.42,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 4.18,
+          "hueco_s": 4.48,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 6.46,
+          "hueco_s": 6.78,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 7.12,
+          "hueco_s": 7.45,
+          "atempo": 1.0
+        }
+      ],
+      "voz_total_s": 45.3,
+      "veces_tiempo_real": 0.14,
+      "frases_que_no_caben": 0,
+      "lufs": -11.7,
+      "pico_real_dbfs": -2.0,
+      "prosodia": {
+        "f0_mediana_hz": 177.7,
+        "tono_desv_st": 6.33,
+        "tono_rango_st": 19.2,
+        "pausas_pct": 40.5,
+        "duracion_s": 45.26,
+        "palabras_por_s": 2.3
+      },
+      "transcripcion_mezcla": "un barco a la deriva con comida para seis meses y sin nadie tal día como hoy en 1872 sale de Nueva York el marí celeste un mes después otro barco se lo encuentra a la deriva entre las azores y Portugal suben y está todo la comida el agua sus cosas sólo falta una cosa el bote sólo vidas y eran 10 con la mujer del capitán y su hija de dos años la última nota del diario es del 25 de noviembre y luego nada de los 10 nunca más se supo mándale a quien le flippen los misterios",
+      "wer_mezcla": 0.125,
+      "transcripcion_voz_sola": "Un barco a la deriva, con comida para seis meses, y sin nadie tal día como hoy, en 1872 sale de Nueva York el Mari Celeste, un mes después. Otro barco se lo encuentra a la deriva, entre las azores y Portugal. Sube. Y está todo. La comida, el agua, sus cosas, solo falta una cosa. El bote está a las vidas. Y eran diez. Con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre y luego nada. De los diez. Nunca más se supo. Mándaselo a quien le flipe en los misterios.",
+      "wer_voz_sola": 0.135,
+      "utmos_medio": 1.82,
+      "utmos_frases": [
+        2.08,
+        1.46,
+        1.91,
+        2.36,
+        1.97,
+        1.9,
+        1.51,
+        1.36
       ]
     }
   },
   "registro": [
-    "2026-11-05 22:44  003_realofalso_17870021775289986: renderizado con voz y subido a la release 'cola'",
-    "2026-11-05 22:45  002_guerra_emus: renderizado con voz y subido a la release 'cola'",
-    "2026-11-05 23:08  Voz con Pocket TTS (spanish/lola): 5 frases en 25 s",
-    "2026-11-05 23:08  003_realofalso_17870021775289986: renderizado con voz y subido a la release 'cola'",
     "2026-11-05 23:09  Voz con Pocket TTS (spanish/lola): 5 frases en 13 s",
     "2026-11-05 23:09  002_guerra_emus: renderizado con voz y subido a la release 'cola'",
     "2026-11-05 23:24  Voz con Pocket TTS (spanish/lola): 7 frases en 17 s",
@@ -162,8 +265,19 @@
     "2026-11-06 19:42  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.35): 8 frases en 354 s",
     "2026-11-06 19:42  Voz: silencios recortados por frase (s): [0.24, 0.02, 0.52, 0.24, 0.7, 0.78, 0.48, 0.68]",
     "2026-11-06 19:43  002_guerra_emus: renderizado con voz y subido a la release 'cola'",
-    "2026-11-06 20:18  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.35): 8 frases en 397 s",
-    "2026-11-06 20:18  Voz: silencios recortados por frase (s): [0.12, 0.46, 0, 0.44, 0.82, 0.46, 0.24, 0.42]",
-    "2026-11-06 20:18  Voz: alineación palabra a palabra (small, 17.9 s): 8/8 frases"
+    "2026-11-06 20:03  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.35): 9 frases en 446 s; avisos: [\"frases regeneradas por duración anómala: [{'texto': 'Falso. Lo inventamos nosotros.', 'dur': 4.36, 'esperado': 2.62}]\"]",
+    "2026-11-06 20:03  Voz: silencios recortados por frase (s): [0.02, 0.28, 0.32, 0.56, 0.9, 0.64, 0.02, 0.54, 0.88]",
+    "2026-11-06 20:03  Voz: alineación palabra a palabra (small, 28.4 s): 7/9 frases",
+    "2026-11-06 20:04  006_realofalso_18074579041723896: renderizado con voz y subido a la release 'cola'",
+    "2026-11-06 20:11  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.35): 9 frases en 429 s; avisos: [\"frases regeneradas por duración anómala: [{'texto': 'Falso. Lo inventamos nosotros.', 'dur': 4.44, 'esperado': 2.62}]\"]",
+    "2026-11-06 20:11  Voz: silencios recortados por frase (s): [0.54, 0.48, 0.32, 0.02, 0.5, 0.58, 0.6, 0.3, 0.92]",
+    "2026-11-06 20:12  Voz: alineación palabra a palabra (small, 25.7 s): 8/9 frases",
+    "2026-11-06 20:13  007_realofalso_18057952754210907: renderizado con voz y subido a la release 'cola'",
+    "2026-11-06 20:37  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.35): 8 frases en 363 s",
+    "2026-11-06 20:37  Voz: silencios recortados por frase (s): [0.2, 0.22, 0.82, 0, 0, 0.24, 0, 0.18]",
+    "2026-11-06 20:37  Voz: alineación palabra a palabra (small, 22.0 s): 8/8 frases",
+    "2026-11-06 20:45  Voz con Chatterbox (es-es, referencia=sí, exageración 0.45, cfg 0.5): 8 frases en 315 s",
+    "2026-11-06 20:45  Voz: silencios recortados por frase (s): [0.2, 0.26, 0.12, 0.06, 0.18, 0.18, 0.26, 0]",
+    "2026-11-06 20:45  Voz: alineación palabra a palabra (small, 20.9 s): 8/8 frases"
   ]
 }
