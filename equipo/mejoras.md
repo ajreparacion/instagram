@@ -231,3 +231,32 @@ Referencias orientativas de habla conversacional: 2-4 semitonos de desviación d
 
 - 6/11 19:40 (Calidad, petición a Mejora) · En los renders de las 15:00 UTC, 002 (escena «A la semana retiran…») y 010 (cierre) salieron con fondo neutro negro porque una foto no se descargó en Actions (a2/Australian_soldiers_resting… y a8/Colored-Crop-Tasmanian_tiger.jpg; los hash de ruta son correctos, así que parece fallo transitorio o de tamaño). Es bloqueo 7a para el usuario. Pedido: (1) en hacer_reel.py, reintentar la descarga 2-3 veces con pausa y, si una escena se queda sin fotos, reutilizar la última foto cargada (de la escena anterior o siguiente) en lugar de `fondo_neutro`; (2) anotar en registro.log la URL que falla («Imagen no descargada: …») para poder corregirla; (3) idealmente cachear las fotos en la release «pruebas» junto a la hoja de contactos. Mientras tanto Calidad añade una foto de respaldo a las escenas con una sola foto cuando ha visto el fallo.
 - 6/11 19:40 (sesión de la voz del dueño) · El dueño ha confirmado que su voz es la «voz A» = hablante 1 de equipo/pruebas/voz_usuario.json (reel del Proyecto ALCAYATA, 18179330035291210). La voz B (Mr. Tartaria, 18085269121411497/18048020833521161) NO es suya: voz_usuario.py ya no la guarda y el workflow borra referencia_hablante_2.wav de la release. Hallazgo: la Graph API da sin pista de audio (solo h264) varios reels de 2024, entre ellos el viral 18018636716017127; solo 3 de 10 tenían audio. La ejecución 3 (lanzada por push) se quedó colgada en apt-get y se canceló; se relanza con valores por defecto válidos para el disparo por push (antes, sin inputs, prueba_voz corría todas las variantes).
+
+## 6/11/2026 (Mejora, 2.ª sesión, tras escuchar el usuario las muestras: «hay que mejorar mucho todavía, falta gancho y énfasis»)
+
+### Cambio 10: intensidad por estilo de escena (publicar_gh.py `ajustes_por_estilo`, voz_chatterbox.py, voz_kokoro.py, equipo/voz.json)
+- hacer_reel.py escribe en cada tramo de locucion.json el `estilo` de su escena; publicar_gh.py lo pasa al motor y cada frase lleva sus propios ajustes según `equipo/voz.json → <motor>.por_estilo`. Hoy: Chatterbox gancho exageración 0,85 / cfg 0,3; giro 0,8 / 0,3; cierre 0,7; el resto 0,6 / 0,35. Kokoro: gancho a 0,88 de velocidad y giro a 0,9 (más lento = más peso).
+- Motivo: la muestra que oyó el usuario llevaba la misma intensidad en todas las frases; el gancho sonaba como una frase más.
+- Revertir: borrar `por_estilo` de voz.json.
+
+### Cambio 11: *énfasis* marcado en el guion (hacer_reel.py `parsear_enfasis`, publicar_gh.py `aplicar_enfasis` + `realce_enfasis`)
+- En "voz" (y en "texto" del gancho) las palabras entre asteriscos son el énfasis: `Solo falta *una* cosa. *El bote salvavidas*.` El motor recibe el texto limpio. Con la alineación (cambio 12) esas palabras suben +3,5 dB (filtro `volume` de ffmpeg con línea de tiempo, DESPUÉS de la cadena de compresión para que el compresor no lo aplaste) y llevan un respiro de 90 ms delante del grupo (silencio insertado en el wav, tiempos de las palabras siguientes desplazados). En los subtítulos salen en rojo (255,82,58), también en el gancho entero.
+- Ajustes en voz.json `enfasis`: `db`, `pausa_ms`, `db_previo` (0), `activo`.
+- Revertir: `"enfasis": {"activo": false}` (los asteriscos siguen saliendo en rojo en los subtítulos) o no marcar nada.
+
+### Cambio 12: alineación palabra a palabra de la voz real (herramientas/alinear_voz.py, faster-whisper «small» int8 en CPU; ciclo.yml instala faster-whisper cuando hay motores neuronales)
+- Tras recortar silencios, cada frase se transcribe con marcas de tiempo por palabra y se casa con las palabras del guion (difflib; «mil ochocientos setenta y dos» ↔ «1872» se reparte en el mismo tramo; las palabras que Whisper no oye se interpolan; si casan menos de la mitad, esa frase se queda con la estimación). Los tiempos van a hacer_reel.py en `--tiempos` como `{"escena": {"dur": s, "palabras": [[ini, fin], ...]}}` y los subtítulos palabra a palabra entran 60 ms antes de oírse cada palabra (ya no a 2,6 palabras/s estimadas: petición 1 del Remasterizador resuelta).
+- Si falta faster-whisper o falla, registro.log dice «sin alineación por palabra» y todo sigue como antes (sin realce de volumen, subtítulos al ritmo real medio de la frase). Ajustes en voz.json `alineacion` (`modelo`, `max_s`, `activo`).
+- Coste estimado en el runner: modelo small int8 ≈ 15-30 s por reel (modelo cacheado con ~/.cache/huggingface).
+
+### Cambio 13: el gancho va a pelo (hacer_reel.py `make_audio`, solo modo humano)
+- La música no suena durante la primera escena y entra en fundido de 0,8 s cuando acaba (medido sobre el render sin voz: −70 LUFS en los 4 primeros segundos, −31,7 LUFS después). Así la primera frase es solo la voz, como cuando alguien te suelta algo a la cara. Revertir: quitar el bloque `if MODO["humano"] and hook_end < total - 2.0` en make_audio.
+
+### Pruebas en la nube (voz simulada con tiempos de palabra conocidos, que aquí sustituye a faster-whisper)
+- Flujo completo: estilos llegan al motor (`['gancho', 'archivo', ..., 'giro', ..., 'cierre']`), 8/8 frases alineadas, énfasis aplicado (gancho +0,09 s por el respiro; giro +0,18 s por dos grupos), tiempos por palabra en tiempos_voz.json, render 1080x1920, pico −2,2 dBFS con la cadena completa. Medido sin cadena: «una» (énfasis) +3,4 dB y «El bote salvavidas» +3,7 dB frente a las palabras vecinas; con la cadena la mezcla no falla (no aparece «Cadena de voz descartada»).
+- Fotogramas: gancho entero con «sin nadie» en rojo desde el primer fotograma; «y está todo.» con «todo.» en rojo; giro «El bote» en rojo.
+- Fallo encontrado y corregido en la misma prueba: los tramos que se releen tras el segundo render no llevaban los tiempos por palabra, así que el realce no se aplicaba en la mezcla; ahora se copian de los tramos alineados.
+- Un guion clásico (sin modo humano) sigue escribiendo su locución igual (`estilo` y `enfasis: []` añadidos, inofensivos).
+- herramientas/ejemplo_guion_humano.json lleva ya marcas de énfasis (gancho, evidencia, giro y «nada»).
+- Prueba real lanzada en Actions (prueba_voz.yml, variantes chatterbox_es_ref y kokoro_alex) para enviar al usuario el reel de después con la voz real. Resultado: ver más abajo.
+- Revertir todo: copiar herramientas/versiones/hacer_reel.py_2026-11-06f, publicar_gh.py_2026-11-06d, voz_chatterbox.py_2026-11-06, voz_kokoro.py_2026-11-06, voz.json_2026-11-06c y ciclo.yml_2026-11-06b.
