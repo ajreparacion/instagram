@@ -1,14 +1,78 @@
 {
   "tipo": "reel",
-  "texto": "¿Real o falso? El «koala coyote» de Sierra Morena.\n\nFalso. Nos lo inventamos nosotros el año pasado, en este mismo perfil. No existe ningún cruce de koala y coyote.\n\nLo que sí es verdad:\n- Los koalas salvajes solo viven en Australia (este y sur del país), y no son osos: son marsupiales.\n- Un «lobo marsupial» sí existió: el tilacino o tigre de Tasmania, un marsupial carnívoro con cabeza de perro y bolsa como la de un canguro.\n- El último tilacino conocido murió en cautividad en 1936, en un zoo de Tasmania. En la Australia continental ya había desaparecido hacía unos 2.000-3.000 años, según la fuente.\n\nMándaselo a quien se lo creyó. Y si quieres otro dato del tilacino, comenta LOBO y te lo paso.\n\nFuentes: Encyclopaedia Britannica; Australian Museum; National Museum of Australia; Live Science.\n#realofalso #misterio #curiosidades #datoscuriosos #tilacino #koala",
-  "cuando": "2026-11-06T13:40:00+01:00",
+  "texto": "¿Real o falso? El «koala coyote» de Sierra Morena.\n\nFalso. Nos lo inventamos nosotros el año pasado, en este mismo perfil. No existe ningún cruce de koala y coyote.\n\nLo que sí es verdad:\n- Los koalas salvajes solo viven en Australia (este y sur del país), y no son osos: son marsupiales.\n- Un «lobo marsupial» sí existió: el tilacino o tigre de Tasmania, un marsupial carnívoro con cabeza de perro y bolsa como la de un canguro.\n- El último tilacino conocido murió en cautividad en 1936, en un zoo de Tasmania. En la Australia continental ya había desaparecido hacía unos 2.000-3.000 años, según la fuente.\n\nMándaselo a quien se lo creyó y guárdalo para la próxima discusión. Y si quieres otro dato del tilacino, comenta LOBO y te lo paso.\n\nFuentes: Encyclopaedia Britannica; Australian Museum; National Museum of Australia; Live Science.\nFotos: Wikimedia Commons (dominio público y CC BY; autores en pantalla).\n#realofalso #misterio #curiosidades #datoscuriosos #tilacino #koala",
+  "cuando": "2026-11-06T16:40:00+01:00",
   "palabra_clave": "LOBO",
   "respuesta": "Su nombre científico, Thylacinus cynocephalus, significa «perro con bolsa y cabeza de perro». Era el mayor marsupial carnívoro de su época.",
   "compartir_en_feed": true,
-  "portada_ms": 2800,
+  "portada_ms": 1200,
   "prueba_no_seguidores": true,
-  "_nota_mejora": "5/11 22:10: renderizado anulado para rehacerlo con la voz Pocket TTS (prueba: naturalidad UTMOS 3,87 frente a 2,66 de Piper).",
   "motor_voz": "pocket",
-  "_nota_calidad": "6/11/2026 Calidad: reconvertido de remaster a reel nuevo (guion.json) porque el metraje del reel antiguo trae marcas de agua de terceros (iStock, Storyblocks, InVideo...). Mismos datos verificados; CTA reordenado (envíaselo, guárdalo, comenta).",
-  "_nota_remasterizador": "6/11/2026 Remasterizador (PRIORIDAD MÁXIMA del usuario: humanizar): guion reescrito como habla una persona (9 escenas de 2-6 s, voz coloquial con «a ver», «ojo», «eh»), \"modo\": \"humano\" de hacer_reel.py (sin HUD ni efectos de plantilla, subtítulos palabra a palabra, música discreta), texto del post sin emojis. Sin fotos todavía: desde la nube no se puede comprobar la licencia en Wikimedia Commons (bloqueado); el Creador o Mejora pueden añadir \"imagenes\" verificadas. Mismos datos y fuentes que aprobó Calidad (81). Se quitan renderizado/asset para que se renderice de nuevo antes de las 13:40."
+  "_nota_calidad": "6/11/2026 13:15 Calidad (orden del usuario «pon todo al máximo»): rehecho con fotos reales verificadas en Commons (dominio público y CC BY; se evita CC BY-SA por la cláusula de compartir igual en obras derivadas), guion con más reacción («pues es falso», «pero ojo…»), CTA envía+guarda+comenta. Pasa de 13:40 a 16:40.",
+  "_nota_remasterizador": "6/11/2026 Remasterizador (PRIORIDAD MÁXIMA del usuario: humanizar): guion reescrito como habla una persona (9 escenas de 2-6 s, voz coloquial con «a ver», «ojo», «eh»), \"modo\": \"humano\" de hacer_reel.py (sin HUD ni efectos de plantilla, subtítulos palabra a palabra, música discreta), texto del post sin emojis. Sin fotos todavía: desde la nube no se puede comprobar la licencia en Wikimedia Commons (bloqueado); el Creador o Mejora pueden añadir \"imagenes\" verificadas. Mismos datos y fuentes que aprobó Calidad (81). Se quitan renderizado/asset para que se renderice de nuevo antes de las 13:40.",
+  "_imagenes": [
+    {
+      "archivo": "File:Sierra Morena - 51501231675.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sierra_Morena_-_51501231675.jpg",
+      "licencia": "CC BY 2.0",
+      "autor": "Guillaume Caillon",
+      "uso": "gancho y escena 3"
+    },
+    {
+      "archivo": "File:Finca SierraMorena.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Finca_SierraMorena.jpg",
+      "licencia": "Public domain",
+      "autor": "Ulamm",
+      "uso": "escena 2"
+    },
+    {
+      "archivo": "File:Afternoon Nap (147513865).jpeg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Afternoon_Nap_(147513865).jpeg",
+      "licencia": "CC BY 3.0",
+      "autor": "Arnas Goldberg",
+      "uso": "escenas 4-5"
+    },
+    {
+      "archivo": "File:Thylacinus cynocephalus (Gould).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Thylacinus_cynocephalus_(Gould).jpg",
+      "licencia": "Public domain",
+      "autor": "Henry Constantine Richter / After John Gould",
+      "uso": "escena 6"
+    },
+    {
+      "archivo": "File:Thylacine in Hobart Zoo Australia.webp",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Thylacine_in_Hobart_Zoo_Australia.webp",
+      "licencia": "Public domain",
+      "autor": "Unknown author Unknown author",
+      "uso": "escena 7"
+    },
+    {
+      "archivo": "File:Thylacine cubs.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Thylacine_cubs.jpg",
+      "licencia": "Public domain",
+      "autor": "Unknown author Unknown author",
+      "uso": "escena 7"
+    },
+    {
+      "archivo": "File:Tasmanian wolf.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Tasmanian_wolf.jpg",
+      "licencia": "Public domain",
+      "autor": "Benjamin A. Sheppard.",
+      "uso": "escena 8"
+    },
+    {
+      "archivo": "File:Thylacinus cynocephalus at Hobart Zoo 1928.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Thylacinus_cynocephalus_at_Hobart_Zoo_1928.jpg",
+      "licencia": "Public domain",
+      "autor": "Harry Burrell",
+      "uso": "escena 8"
+    },
+    {
+      "archivo": "File:Colored-Crop-Tasmanian tiger.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Colored-Crop-Tasmanian_tiger.jpg",
+      "licencia": "Public domain",
+      "autor": "Hobart Zoo",
+      "uso": "cierre"
+    }
+  ]
 }
