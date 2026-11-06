@@ -6,3 +6,6 @@
 5. Crea cola/<NNN>_realofalso_<id>/ con remaster.json (gancho "¿REAL O FALSO? ...", tramo 8-20 s, 2-4 rótulos que creen duda, cierre "Era FALSO. Lo real: ..." con los datos reales en la voz) y post.json con "original_id", palabra_clave y respuesta, "cuando" hoy 13:40 (o la hora del plan). Texto: "¿Real o falso?" + revelación (era ficción de esta misma cuenta) + datos reales + "📩 Envíaselo a quien se lo creyó." + Fuentes + hashtags (#realofalso #misterio #curiosidades #datoscuriosos + tema).
 6. Añade el id a equipo/remasters_hechos.txt. Commit y push.
 7. SendUserMessage breve: reel antiguo usado (permalink), datos reales y hora.
+
+## Regla añadida por Calidad (6/11/2026)
+Los reels antiguos de la cuenta llevan metraje de archivo con marcas de agua de terceros (iStock/Getty, Storyblocks, InVideo, «Grandes Misterios»), subtítulos quemados y pegatinas de encuesta: los remasters 003 y 005 se rechazaron por eso. Mientras no se pueda ver el vídeo original, NO crees remaster.json: prepara el ¿REAL O FALSO? como reel nuevo con guion.json (6 escenas, 25-35 s: gancho «¿REAL O FALSO? ...», la afirmación falsa, «Era FALSO», 3 datos reales, CTA «Envíaselo...»), sin original_id. Ejemplos: cola/010_realofalso_koala_coyote y cola/006-009.

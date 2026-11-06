@@ -1,0 +1,44 @@
+{
+  "titulo": "¿Real o falso? Los pájaros son drones del Gobierno",
+  "semilla": 1371,
+  "musica": true,
+  "portada_texto": "¿REAL O FALSO? Los pájaros son drones del Gobierno",
+  "escenas": [
+    {
+      "texto": "¿REAL O FALSO? Los pájaros son drones del Gobierno",
+      "duracion": 4.8,
+      "estilo": "gancho",
+      "voz": "¿Real o falso? Los pájaros son drones del Gobierno."
+    },
+    {
+      "texto": "«Se recargan en los cables»",
+      "duracion": 3.8,
+      "estilo": "archivo",
+      "voz": "Dicen que se recargan en los cables."
+    },
+    {
+      "texto": "Era FALSO. Y la teoría es una broma",
+      "duracion": 4.3,
+      "estilo": "giro",
+      "voz": "Era falso. Y la teoría es una broma."
+    },
+    {
+      "texto": "«Birds Aren't Real» nació en 2017 como parodia",
+      "duracion": 6.2,
+      "estilo": "evidencia",
+      "voz": "Los pájaros no son reales nació en dos mil diecisiete, como parodia."
+    },
+    {
+      "texto": "Su creador lo reconoció en 2021",
+      "duracion": 4.3,
+      "estilo": "evidencia",
+      "voz": "Su creador lo reconoció en dos mil veintiuno."
+    },
+    {
+      "texto": "En un solo cable no hay descarga",
+      "duracion": 8.6,
+      "estilo": "cierre",
+      "voz": "En un solo cable no hay descarga: no les pasa nada. Envíaselo a quien se lo creyó."
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "titulo": "¿Real o falso? El koala adicto de Queensland",
+  "semilla": 1996,
+  "musica": true,
+  "portada_texto": "¿REAL O FALSO? El koala adicto de Queensland",
+  "escenas": [
+    {
+      "texto": "¿REAL O FALSO? El koala adicto de Queensland",
+      "duracion": 4.3,
+      "estilo": "gancho",
+      "voz": "¿Real o falso? Un koala adicto en Queensland."
+    },
+    {
+      "texto": "«Montó un negocio turbio»",
+      "duracion": 3.4,
+      "estilo": "archivo",
+      "voz": "Cuentan que montó un negocio turbio."
+    },
+    {
+      "texto": "Era FALSO. Pero en 1996 sí pasó algo",
+      "duracion": 6.2,
+      "estilo": "giro",
+      "voz": "Era falso. Pero en mil novecientos noventa y seis, algo sí pasó."
+    },
+    {
+      "texto": "Sus huellas dactilares casi igual que las nuestras",
+      "duracion": 4.8,
+      "estilo": "evidencia",
+      "voz": "Sus huellas dactilares son casi idénticas a las humanas."
+    },
+    {
+      "texto": "Canguros y wombats no tienen huellas",
+      "duracion": 3.8,
+      "estilo": "evidencia",
+      "voz": "Canguros y wombats ni siquiera tienen huellas."
+    },
+    {
+      "texto": "¿Confundir a la policía? Un bulo",
+      "duracion": 6.2,
+      "estilo": "cierre",
+      "voz": "¿Confundir a la policía? Un bulo. Envíaselo a quien se lo creyó."
+    }
+  ]
+}

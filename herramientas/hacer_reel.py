@@ -228,7 +228,7 @@ class Scene:
         cps = min(CPS[self.style], max(14, self.tb.nchars / max(0.4, self.dur * 0.6)))
         self.cps = max(cps, self.tb.nchars / max(0.3, self.dur * 0.75))
         if self.style == "gancho":  # estandar: el gancho se lee entero sin sonido en < 2 s
-            self.cps = max(self.cps, self.tb.nchars / 1.1)
+            self.cps = max(self.cps, self.tb.nchars / 0.5)
         self.exp = "%04d-%s" % (rng.randint(100, 9999), rng.choice("ABCDEFKX"))
         self.delay = 0.35 if self.style == "giro" else 0.12
 
