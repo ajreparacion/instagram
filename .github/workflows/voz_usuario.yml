@@ -1,0 +1,123 @@
+name: Voz del dueño (clonación desde sus reels de Mr. Empírico)
+
+# Solo a mano. No publica nada en Instagram.
+# Autorizado por el dueño de la cuenta el 6/11/2026: «los vídeos subidos son todos míos, soy yo el protagonista,
+# clona mi voz de esos vídeos de Mr. Empírico». Solo su voz y solo para esta cuenta.
+# 1) herramientas/voz_usuario.py extraer: descarga sus reels del podcast, separa la voz (Demucs), transcribe,
+#    agrupa por hablante y crea voces/referencia_usuario.wav (~11 s) + versión larga (~30 s).
+# 2) herramientas/prueba_voz.py: renderiza el guion de prueba con Chatterbox usando esa referencia (y Pocket de control).
+# 3) voz_usuario.py similitud: parecido (ECAPA) entre la referencia y cada voz sintetizada.
+# Audios a la release privada «voces» (referencias) y «pruebas» (vídeos/mp3 de prueba); al git solo los informes JSON.
+on:
+  workflow_dispatch:
+    inputs:
+      ids:
+        description: "Ids de reels separados por comas (vacío = los 10 más vistos del podcast Empírico)"
+        default: ""
+      guion:
+        description: "Guion de prueba"
+        default: "herramientas/ejemplo_guion_humano.json"
+      variantes:
+        description: "Variantes de prueba_voz.py"
+        default: "pocket,chatterbox_usuario,chatterbox_usuario_suave,chatterbox_mtl_usuario"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: voz-usuario
+  cancel-in-progress: true
+
+jobs:
+  voz:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Herramientas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core espeak-ng > /dev/null
+          pip install --quiet pillow numpy
+
+      - name: Caché de modelos
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/expedientes
+            ~/.cache/huggingface
+            ~/.cache/pocket_tts
+            ~/.cache/torch
+            ~/.cache/pip
+          key: voz-usuario-v1-${{ hashFiles('herramientas/voz_usuario.py') }}
+          restore-keys: |
+            voz-usuario-v1-
+            prueba-voz-v2-
+            voz-v2-
+
+      - name: Demucs, SpeechBrain, Whisper, Pocket TTS, librosa (CPU)
+        run: |
+          pip install --quiet torch==2.5.1 torchaudio==2.5.1 --extra-index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet demucs "speechbrain>=1.0,<1.1" scikit-learn faster-whisper pocket-tts soundfile librosa torch==2.5.1 torchaudio==2.5.1 --extra-index-url https://download.pytorch.org/whl/cpu
+          python3 -c "import demucs, speechbrain, sklearn, faster_whisper; print('OK')"
+
+      - name: Extraer la voz del dueño
+        env:
+          PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+          TZ: Europe/Madrid
+        run: python3 herramientas/voz_usuario.py extraer "${{ inputs.ids }}"
+
+      - name: Subir referencias a la release «voces»
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ls -la voces/
+          gh release view voces >/dev/null 2>&1 || gh release create voces --title "Voces" --notes "Referencias de voz del dueño de la cuenta (privado). No se publican."
+          gh release upload voces voces/*.wav --clobber
+
+      - name: Chatterbox (CPU, entorno propio)
+        continue-on-error: true
+        run: |
+          python -m venv ~/.venvs/chatterbox
+          ~/.venvs/chatterbox/bin/pip install --quiet --upgrade pip
+          ~/.venvs/chatterbox/bin/pip install --quiet chatterbox-tts --extra-index-url https://download.pytorch.org/whl/cpu
+          ~/.venvs/chatterbox/bin/python -c "import chatterbox.mtl_tts, torch; print('chatterbox OK, torch', torch.__version__)"
+          echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
+
+      - name: Prueba con la voz clonada
+        continue-on-error: true
+        env:
+          TZ: Europe/Madrid
+        run: python3 herramientas/prueba_voz.py "${{ inputs.guion }}" "${{ inputs.variantes }}"
+
+      - name: Parecido con la voz del dueño
+        if: always()
+        continue-on-error: true
+        run: python3 herramientas/voz_usuario.py similitud
+
+      - name: Subir vídeos y mp3 de prueba a la release «pruebas»
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ls /tmp/prueba_voz/salida/ || exit 0
+          gh release view pruebas >/dev/null 2>&1 || gh release create pruebas --title "Pruebas de producción" --notes "Vídeos de prueba de Mejora (no se publican)."
+          for f in /tmp/prueba_voz/salida/*; do cp "$f" "/tmp/voz_usuario_$(basename "$f")"; done
+          gh release upload pruebas /tmp/voz_usuario_* --clobber
+
+      - name: Guardar informes (sin audio)
+        if: always()
+        run: |
+          git config user.name "expedientes-bot"
+          git config user.email "expedientes-bot@users.noreply.github.com"
+          git checkout -- registro.log 2>/dev/null || true
+          git add equipo/pruebas/voz_usuario.json equipo/pruebas/prueba_voz.json 2>/dev/null || true
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -q -m "Voz del dueño: referencia y prueba $(date -u +%FT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 5; done
+          exit 1
