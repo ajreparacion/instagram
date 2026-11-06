@@ -1,0 +1,293 @@
+{
+  "fecha": "2026-11-06 18:14 UTC",
+  "autorizacion": "El dueño de la cuenta, 6/11/2026: «los vídeos subidos son todos míos, soy yo el protagonista, clona mi voz de esos vídeos de Mr. Empírico».",
+  "videos": [
+    {
+      "id": "18018636716017127",
+      "tamano": 12386786,
+      "error": "ffmpeg: VC Coding\nOutput #0, wav, to '/tmp/voz_usuario/18018636716017127.wav':\n[out#0/wav @ 0x560269f3a600] Output file does not contain any stream\nError opening output file /tmp/voz_usuario/18018636716017127.wav.\nError opening output files: Invalid argument | flujos: h264,video"
+    },
+    {
+      "id": "18214642201272728",
+      "tamano": 11481060,
+      "error": "ffmpeg: VC Coding\nOutput #0, wav, to '/tmp/voz_usuario/18214642201272728.wav':\n[out#0/wav @ 0x55c3634cf640] Output file does not contain any stream\nError opening output file /tmp/voz_usuario/18214642201272728.wav.\nError opening output files: Invalid argument | flujos: h264,video"
+    },
+    {
+      "id": "18015860951035050",
+      "error": "Instagram no da el vídeo (música con licencia o borrado)"
+    },
+    {
+      "id": "17986749344402864",
+      "error": "Instagram no da el vídeo (música con licencia o borrado)"
+    },
+    {
+      "id": "18073380868454656",
+      "tamano": 17045485,
+      "error": "ffmpeg: VC Coding\nOutput #0, wav, to '/tmp/voz_usuario/18073380868454656.wav':\n[out#0/wav @ 0x561ead776900] Output file does not contain any stream\nError opening output file /tmp/voz_usuario/18073380868454656.wav.\nError opening output files: Invalid argument | flujos: h264,video"
+    },
+    {
+      "id": "18085269121411497",
+      "duracion_s": 60.2,
+      "musica_db_rel": -10.7,
+      "tramos": 12
+    },
+    {
+      "id": "18048020833521161",
+      "duracion_s": 66.4,
+      "musica_db_rel": -10.4,
+      "tramos": 5
+    },
+    {
+      "id": "18049624702572067",
+      "tamano": 12293301,
+      "error": "ffmpeg: VC Coding\nOutput #0, wav, to '/tmp/voz_usuario/18049624702572067.wav':\n[out#0/wav @ 0x55e49fd7e200] Output file does not contain any stream\nError opening output file /tmp/voz_usuario/18049624702572067.wav.\nError opening output files: Invalid argument | flujos: h264,video"
+    },
+    {
+      "id": "18025678987767764",
+      "error": "Instagram no da el vídeo (música con licencia o borrado)"
+    },
+    {
+      "id": "18179330035291210",
+      "duracion_s": 81.6,
+      "musica_db_rel": -1.5,
+      "tramos": 7
+    }
+  ],
+  "similitud_hablante_1_y_2": 0.726,
+  "nota_hablantes": "Hablante 1 = el que más habla en los vídeos (se toma como el dueño). Si el dueño hacía dos personajes con voces distintas, pueden salir 2 hablantes con similitud alta (> 0,75).",
+  "hablantes": [
+    {
+      "hablante": 1,
+      "segundos": 77.8,
+      "tramos": 6,
+      "videos": [
+        "18179330035291210"
+      ],
+      "ejemplos": [
+        "La maquinaria cuántica, esto va a ser la maquinaria cuántica, esto ha sido sensa",
+        "ha sido impecable el despegue y el aterrizaje, esto es increíble, solamente con ",
+        "realmente emocionado, estoy emocionado de lo que estamos logrando, de lo que vam"
+      ]
+    },
+    {
+      "hablante": 2,
+      "segundos": 42.0,
+      "tramos": 6,
+      "videos": [
+        "18048020833521161",
+        "18085269121411497"
+      ],
+      "ejemplos": [
+        "13, aquí arriba, muy bien, es así, yo vengo de, estuvo Adán, estuvo Eva, son los",
+        "Bueno el teléfono rojo me lo han dado cuando nací, yo vengo de un linaje oscuro,",
+        "Es que planeta se llama Sion originalmente, no tierra, no tierra. Sion, Sion."
+      ]
+    },
+    {
+      "hablante": 3,
+      "segundos": 34.0,
+      "tramos": 3,
+      "videos": [
+        "18048020833521161"
+      ],
+      "ejemplos": [
+        "No, no, no, no, originalmente, todo ahí, mire de todas las que esto hay en grieg",
+        "Por ejemplo, ahora queda eso, las 11 y 51, uno, uno, dos, cinco, siete, las uno,",
+        "Pirámide, ahí lo dejamos"
+      ]
+    },
+    {
+      "hablante": 4,
+      "segundos": 11.0,
+      "tramos": 3,
+      "videos": [
+        "18085269121411497"
+      ],
+      "ejemplos": [
+        "La I es ocho, en el alfabeto riego.",
+        "Más cuatro, que es la O, dos, M, dos.",
+        "¿Por qué tienes dos jorobas?"
+      ]
+    },
+    {
+      "hablante": 5,
+      "segundos": 4.0,
+      "tramos": 1,
+      "videos": [
+        "18085269121411497"
+      ],
+      "ejemplos": [
+        "Porque S es uno, en el alfabeto riego."
+      ]
+    },
+    {
+      "hablante": 6,
+      "segundos": 2.0,
+      "tramos": 1,
+      "videos": [
+        "18085269121411497"
+      ],
+      "ejemplos": [
+        "¿Y qué significa?"
+      ]
+    },
+    {
+      "hablante": 7,
+      "segundos": 2.0,
+      "tramos": 1,
+      "videos": [
+        "18085269121411497"
+      ],
+      "ejemplos": [
+        "Ocho más uno, nueve."
+      ]
+    },
+    {
+      "hablante": 8,
+      "segundos": 2.0,
+      "tramos": 1,
+      "videos": [
+        "18085269121411497"
+      ],
+      "ejemplos": [
+        "Siempre llegamos al trece, Carmen."
+      ]
+    },
+    {
+      "hablante": 9,
+      "segundos": 2.0,
+      "tramos": 1,
+      "videos": [
+        "18085269121411497"
+      ],
+      "ejemplos": [
+        "Porque dos jorobas."
+      ]
+    },
+    {
+      "hablante": 10,
+      "segundos": 1.5,
+      "tramos": 1,
+      "videos": [
+        "18179330035291210"
+      ],
+      "ejemplos": [
+        "real a escala."
+      ]
+    }
+  ],
+  "referencias": {
+    "referencia_usuario": {
+      "archivo": "voces/referencia_usuario.wav",
+      "segundos": 14.3,
+      "audio": "voz separada (Demucs)",
+      "tramos": [
+        {
+          "id": "18179330035291210",
+          "inicio": 0.0,
+          "fin": 5.72,
+          "texto": "Ahora vamos a hacer una demostración totalmente real de cómo va a ser este viaje, obviamente",
+          "logprob": -0.166,
+          "musica_db_rel": -21.8,
+          "sim_hablante": 0.892
+        },
+        {
+          "id": "18179330035291210",
+          "inicio": 49.62,
+          "fin": 58.22,
+          "texto": "ha sido impecable el despegue y el aterrizaje, esto es increíble, solamente con esta maquinaria",
+          "logprob": -0.166,
+          "musica_db_rel": -15.3,
+          "sim_hablante": 0.957
+        }
+      ]
+    },
+    "referencia_usuario_larga": {
+      "archivo": "voces/referencia_usuario_larga.wav",
+      "segundos": 35.4,
+      "audio": "voz separada (Demucs)",
+      "tramos": [
+        {
+          "id": "18179330035291210",
+          "inicio": 0.0,
+          "fin": 5.72,
+          "texto": "Ahora vamos a hacer una demostración totalmente real de cómo va a ser este viaje, obviamente",
+          "logprob": -0.166,
+          "musica_db_rel": -21.8,
+          "sim_hablante": 0.892
+        },
+        {
+          "id": "18179330035291210",
+          "inicio": 49.62,
+          "fin": 58.22,
+          "texto": "ha sido impecable el despegue y el aterrizaje, esto es increíble, solamente con esta maquinaria",
+          "logprob": -0.166,
+          "musica_db_rel": -15.3,
+          "sim_hablante": 0.957
+        },
+        {
+          "id": "18179330035291210",
+          "inicio": 58.22,
+          "fin": 64.89,
+          "texto": "cuántica que hemos inventado es posible hacer algo así, es impresionante, estoy",
+          "logprob": -0.166,
+          "musica_db_rel": -13.0,
+          "sim_hablante": 0.956
+        },
+        {
+          "id": "18179330035291210",
+          "inicio": 64.89,
+          "fin": 72.29,
+          "texto": "realmente emocionado, estoy emocionado de lo que estamos logrando, de lo que vamos a realizar,",
+          "logprob": -0.23,
+          "musica_db_rel": -13.1,
+          "sim_hablante": 0.958
+        },
+        {
+          "id": "18179330035291210",
+          "inicio": 72.29,
+          "fin": 79.29,
+          "texto": "del cambio en el mundo que vamos a lograr, esto no tengo palabras para definir todo esto.",
+          "logprob": -0.23,
+          "musica_db_rel": -10.4,
+          "sim_hablante": 0.942
+        }
+      ]
+    },
+    "referencia_hablante_2": {
+      "archivo": "voces/referencia_hablante_2.wav",
+      "segundos": 11.0,
+      "audio": "original",
+      "tramos": [
+        {
+          "id": "18085269121411497",
+          "inicio": 0.0,
+          "fin": 8.0,
+          "texto": "Es que planeta se llama Sion originalmente, no tierra, no tierra. Sion, Sion.",
+          "logprob": -0.371,
+          "musica_db_rel": -32.5,
+          "sim_hablante": 0.926
+        },
+        {
+          "id": "18085269121411497",
+          "inicio": 38.0,
+          "fin": 41.0,
+          "texto": "Porque nuestro linaje, y estamos arriba.",
+          "logprob": -0.28,
+          "musica_db_rel": -30.3,
+          "sim_hablante": 0.935
+        }
+      ]
+    }
+  },
+  "similitud_con_referencia": {
+    "referencias": {
+      "referencia_usuario_larga": 0.979,
+      "referencia_hablante_2": 0.713
+    },
+    "voces_sintetizadas": {
+      "pocket": 0.634
+    },
+    "lectura": "Coseno Resemblyzer con voces/referencia_usuario.wav. Orientativo: > 0,80 misma voz; 0,65-0,80 parecida; < 0,65 otra persona. Pocket/Piper sirven de control (no son la voz del dueño)."
+  }
+}
