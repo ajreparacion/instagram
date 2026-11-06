@@ -58,6 +58,9 @@ VOZ_KOKORO = os.path.join(BASE, "herramientas", "voz_kokoro.py")
 # Chatterbox va en su propio entorno virtual (fija torch 2.6 y transformers 4.46): ciclo.yml exporta PYTHON_CHATTERBOX
 PYTHON_CHATTERBOX = os.environ.get("PYTHON_CHATTERBOX") or sys.executable
 ATRIBUCION_POCKET = "Voz: Kyutai Pocket TTS (CC BY 4.0)"
+# Chatterbox (MIT) y Kokoro (Apache 2.0) no exigen atribución, pero Meta pide marcar el audio realista generado:
+ATRIBUCION_IA = "Voz generada por IA"
+ATRIBUCIONES = {"pocket": ATRIBUCION_POCKET, "chatterbox": ATRIBUCION_IA, "kokoro": ATRIBUCION_IA}
 MAX_RENDERS = 2
 GRACIA_SIN_CALIDAD = timedelta(hours=3)
 
@@ -340,10 +343,12 @@ def generar_locucion(textos, trabajo, aj=None):
 
 
 def con_atribucion(texto, motor):
-    """Pocket TTS (CC BY 4.0) exige atribución: se añade al final del texto del post."""
-    if motor != "pocket" or ATRIBUCION_POCKET in (texto or ""):
+    """Pocket TTS (CC BY 4.0) exige atribución; con Chatterbox/Kokoro se marca que la voz es generada.
+    Se añade al final del texto del post (una sola vez)."""
+    linea = ATRIBUCIONES.get(str(motor or "").lower())
+    if not linea or linea in (texto or "") or "Voz generada" in (texto or "") or "Voz: generada" in (texto or ""):
         return texto
-    return (texto or "").rstrip() + "\n\n" + ATRIBUCION_POCKET
+    return (texto or "").rstrip() + "\n\n" + linea
 
 
 def duracion_wav(ruta):

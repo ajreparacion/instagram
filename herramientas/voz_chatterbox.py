@@ -101,12 +101,23 @@ def main():
         ref = None
     ganancia = float(lote.get("ganancia", 1.0))
     tiempos = []
+    reintentos = []
     for f in lote["frases"]:
         t1 = time.time()
-        with torch.inference_mode():
-            wav = modelo.generate(f["texto"], **kw)
-        x = a_numpy(wav)
-        if x.size < sr * 0.2 or not np.isfinite(x).all():
+        # Chatterbox a veces alucina (repite o añade palabras): si la frase dura mucho más de lo que
+        # corresponde a sus palabras (~2,2 palabras/s + pausas), se vuelve a generar con otra semilla (máx. 2 veces).
+        esperado = len(f["texto"].split()) / 2.2 + 0.8 + 0.4 * f["texto"].count("…")
+        x = None
+        for intento in range(3):
+            with torch.inference_mode():
+                wav = modelo.generate(f["texto"], **kw)
+            x = a_numpy(wav)
+            dur = x.size / sr
+            if x.size >= sr * 0.2 and np.isfinite(x).all() and dur <= esperado * 1.6:
+                break
+            reintentos.append({"texto": f["texto"][:40], "dur": round(dur, 2), "esperado": round(esperado, 2)})
+            torch.manual_seed(int(lote.get("semilla") or 7) + 101 * (intento + 1))
+        if x is None or x.size < sr * 0.2 or not np.isfinite(x).all():
             raise SystemExit(f"Chatterbox devolvió audio vacío o inválido para: {f['texto'][:60]}")
         pico = float(np.abs(x).max())
         if pico > 0.98:  # el modelo a veces roza el techo: se normaliza a -1 dBFS antes del procesado posterior
@@ -118,6 +129,8 @@ def main():
             w.setframerate(sr)
             w.writeframes((x * 32767).astype("<i2").tobytes())
         tiempos.append(round(time.time() - t1, 2))
+    if reintentos:
+        avisos.append(f"frases regeneradas por duración anómala: {reintentos}")
     print(json.dumps({"modelo_usado": usado, "referencia": bool(ref), "avisos": avisos, "carga_s": round(carga, 1),
                       "frases_s": tiempos, "total_s": round(time.time() - t0, 1), "sample_rate": sr,
                       "ajustes": {k: v for k, v in kw.items() if k != "audio_prompt_path"}}, ensure_ascii=False))
