@@ -250,12 +250,79 @@ def duracion_wav(ruta):
         return w.getnframes() / float(w.getframerate())
 
 
+def recortar_silencios(ruta, cfg):
+    """Quita el silencio del principio y del final de una frase y acorta las pausas internas largas.
+
+    equipo/voz.json "recorte": {"umbral_db": -40, "margen_ms": 70, "pausa_larga_s": 0.5, "pausa_max_s": 0.35}
+    (umbral relativo al pico de la frase; ventanas de 20 ms). Así la voz arranca justo al empezar la escena,
+    hace falta menos atempo para que quepa y no quedan huecos muertos dentro de una frase.
+    Si algo falla, la frase se queda como estaba (devuelve False)."""
+    if not cfg or cfg.get("activo") is False:
+        return False
+    try:
+        import numpy as np
+        with wave.open(ruta) as w:
+            sr, ch, sw = w.getframerate(), w.getnchannels(), w.getsampwidth()
+            raw = w.readframes(w.getnframes())
+        if sw != 2:
+            return False
+        x = np.frombuffer(raw, "<i2").astype(np.float32).reshape(-1, ch)
+        mono = np.abs(x).mean(axis=1)
+        hop = max(1, int(sr * 0.02))
+        nv = len(mono) // hop
+        if nv < 10:
+            return False
+        rms = np.sqrt((mono[:nv * hop].reshape(nv, hop) ** 2).mean(axis=1) + 1e-9)
+        pico = rms.max()
+        if pico < 30:  # frase casi muda: no se toca
+            return False
+        habla = 20 * np.log10(rms / pico) > float(cfg.get("umbral_db", -40))
+        idx = np.flatnonzero(habla)
+        if idx.size == 0:
+            return False
+        margen = int(float(cfg.get("margen_ms", 70)) / 1000 * sr / hop + 0.5)
+        larga = float(cfg.get("pausa_larga_s", 0.5)) * sr / hop
+        maxp = float(cfg.get("pausa_max_s", 0.35)) * sr / hop
+        # tramos de habla (ventanas) separados por pausas; las pausas > pausa_larga se dejan en pausa_max
+        trozos, ini, prev = [], idx[0], idx[0]
+        for i in idx[1:]:
+            if i - prev - 1 > larga:
+                trozos.append((ini, prev)); ini = i
+            prev = i
+        trozos.append((ini, prev))
+        piezas = []
+        fade = int(sr * 0.012)
+        for k, (a, b) in enumerate(trozos):
+            ext_a = margen if k == 0 else int(maxp / 2)
+            ext_b = margen if k == len(trozos) - 1 else int(maxp / 2)
+            s0 = max(0, (a - ext_a) * hop)
+            s1 = min(len(x), (b + 1 + ext_b) * hop)
+            seg = x[s0:s1].copy()
+            if len(seg) > 2 * fade:  # fundidos cortos para que no haya chasquidos en los cortes
+                r = np.linspace(0, 1, fade, dtype=np.float32)[:, None]
+                seg[:fade] *= r; seg[-fade:] *= r[::-1]
+            piezas.append(seg)
+        y = np.concatenate(piezas)
+        if len(y) < sr * 0.2 or len(y) > len(x):
+            return False
+        with wave.open(ruta, "wb") as w:
+            w.setnchannels(ch); w.setsampwidth(2); w.setframerate(sr)
+            w.writeframes(np.clip(y, -32768, 32767).astype("<i2").tobytes())
+        return round((len(x) - len(y)) / sr, 2)
+    except Exception as e:
+        log(f"Recorte de silencios omitido en {os.path.basename(ruta)}: {str(e)[-120:]}")
+        return False
+
+
 def anadir_voz(video, locucion, trabajo):
     tramos = [t for t in (leer_json(locucion, []) or []) if t.get("texto", "").strip()]
     if not tramos:
         return
     aj = ajustes_voz()
     rutas, motor = generar_locucion([t["texto"] for t in tramos], trabajo, aj)
+    recortes = [recortar_silencios(w, aj.get("recorte")) for w in rutas]
+    if any(recortes):
+        log(f"Voz: silencios recortados por frase (s): {[r or 0 for r in recortes]}")
     wavs = [(w, duracion_wav(w)) for w in rutas]
     cadena = (aj.get("cadena_voz") or "").strip().strip(",")
     try:
