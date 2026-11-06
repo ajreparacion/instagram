@@ -1,74 +1,63 @@
 # Monetización de @nosabesloquehasvisto
 
-Informe del Analista de monetización. Versión 1: 5/11/2026 (primer informe; no hay anterior). Próxima revisión: domingo.
+Informe del Analista de monetización. Versión 2: 6/11/2026 (sustituye a la v1 del 5/11). Próxima revisión: domingo 8/11.
+Regla de este informe: lo que no he leído en una fuente se marca "NO VERIFICADO" o "no consta".
 
-## 1. Estado actual (datos reales, 5/11/2026)
-- Seguidores: 1.605 (cuenta tipo BUSINESS, 809 publicaciones). Faltan 8.395 para 10.000.
-- Crecimiento 90 días (7/8 a 2/11/2026): +23 seguidores nuevos, -50 bajas → **neto -27**. Últimos 30 días finalizados: 9 altas, 31 bajas. La cuenta pierde ~0,3 seguidores/día.
-- Últimos 30 días: alcance 34 cuentas (14 no seguidores), 56 reproducciones, 11 interacciones, 2 compartidos, 0 guardados, 4 visitas al perfil, 0 clics en el enlace.
-- Audiencia (seguidores, 90 días): España 32 %, México 14 %, Chile 14 %, Argentina 12 %, EE. UU. 7 %. 73 % hombres (de los que lo indican). Edad: 35-44 (34 %), 25-34 (29 %), 45-54 (23 %); solo 3 % de 18-24.
-- Conclusión: hoy la cuenta **no cumple ningún umbral de pago por plataforma** y, al ritmo actual, no lo cumpliría nunca. El cuello de botella es el alcance a no seguidores y convertirlo en seguidores.
+## 1. Estado actual (datos reales, 6/11/2026 ~11:30 h)
+- Seguidores: 1.605 (cuenta BUSINESS, 809 publicaciones). Sin cambios desde el 5/11 21:18. Faltan 8.395 para 10.000 y 3.395 para 5.000.
+- Últimos 30 días (7/10-6/11, Buzzfy): alcance 49 cuentas (27 no seguidores, 22 seguidores), 81 reproducciones, 12 interacciones, 2 compartidos, 0 guardados, 3 visitas al perfil, 0 clics en el enlace. Todo orgánico (0 de anuncios).
+- Seguidores 7/10-3/11 (días cerrados): +10 altas, -23 bajas = **neto -13** (-0,45/día). Los días 4 y 5/11 aún no están cerrados por Instagram.
+- Único reel del enfoque nuevo (001 Epidemia de baile 1518, 5/11 21:46 h): a las 13,8 h alcance 21, 28 reproducciones, 0 compartidos/guardados/comentarios, 1 like. Visualización media 13,8 s (1,64 veces la mediana de la cuenta, 8,4 s), salto 57 % (mediana 65 %). Dato provisional (<48 h). Alcance = 0,13 veces la mediana. Nota: estadisticas.json es una foto de las 07:53 UTC (alcance 16).
+- Audiencia (90 días): España 32 %, México 14 %, Chile 14 %, Argentina 12 %, EE. UU. 7 %; 73 % hombres; 25-54 años (86 %).
+- Conclusión: hoy no se cumple **ningún** umbral de pago y, con la tendencia actual, nunca se cumpliría. El cuello de botella no es el contenido de quien lo ve (la retención del 001 es buena) sino que Instagram casi no lo distribuye.
 
-## 2. Requisitos de los programas (leídos el 5/11/2026)
-Aviso: las páginas de ayuda de help.instagram.com no se pudieron leer (cargan con JavaScript y solo devolvieron el título). Lo marcado "NO VERIFICADO" viene de fuentes de terceros y hay que confirmarlo en Panel profesional > Monetización (solo lo ve el dueño).
+## 2. Requisitos y normas (leídos el 6/11/2026)
+Las páginas oficiales creators.instagram.com/earn-money/* (suscripciones, regalos, insignias, bonificaciones, marketplace; leídas hoy, sin fecha, © 2026 Meta) **no publican umbrales de seguidores, edad ni países**. Los números salen de un anuncio de Meta de 2023 y de un tercero; hay que confirmarlos en Panel profesional > Monetización (solo lo ve el dueño).
 
-| Vía | Requisito | Fuente y fecha | Estado |
+| Vía | Requisito leído | Fuente y fecha | Estado |
 |---|---|---|---|
-| Todas las herramientas de monetización | Cumplir las Normas de monetización para socios (Partner Monetization Policies) | creators.instagram.com/faq (© 2026, leído 5/11/2026) | Verificado (sin umbrales en el texto) |
-| Contenido no original | Las cuentas que publican sobre todo contenido no original (resubir trabajo ajeno sin aportación creativa relevante) dejan de recomendarse; se recupera si la mayoría de lo publicado en 30 días es original | Blog oficial creators.instagram.com, 30/4/2026 | Verificado |
-| Contenido no original (FAQ) | "Don't share unoriginal content… even when the content is reposted by other accounts" | creators.instagram.com/faq, leído 5/11/2026 | Verificado |
-| Suscripciones de Instagram | 10.000 seguidores, cuenta profesional, normas de monetización | linkdash.eu, 29/6/2026 | NO VERIFICADO |
-| Insignias en directo | 18+ años, país admitido (UE incluida) | linkdash.eu, 29/6/2026 | NO VERIFICADO |
-| Regalos (Gifts) en reels | Se comprueba la elegibilidad en el Panel profesional; sin umbral público leído | about.fb.com 8/2/2023 (solo EE. UU., antiguo) | Requisito actual no leído |
-| Bonificaciones | Solo por invitación; los "Play bonuses" de reels fueron sustituidos por ingresos de anuncios, regalos y suscripciones | linkdash.eu 29/6/2026; creatornewsdesk.com 9/10/2026 | NO VERIFICADO |
-| Marketplace de creadores (marcas) | Etiqueta obligatoria de "Colaboración pagada"; categorías prohibidas (drogas, armas…). España incluida desde 2024 | creators.instagram.com/earn-money/creator-marketplace (leído 5/11/2026); España: TechCrunch/SocialSamosa 2024 | Etiqueta verificada; España NO VERIFICADO en oficial |
-| Suscripciones de Facebook (si se usa una Página de FB) | España incluida. 10.000 seguidores o 250+ espectadores recurrentes, y en 60 días 50.000 interacciones o 180.000 minutos vistos | creators.facebook.com/tools/subscriptions, leído 5/11/2026 | Verificado |
-| IA y música | Hay que declarar el contenido generado con IA y la música debe ser propia o con licencia para monetizar | creatornewsdesk.com, 9/10/2026 | NO VERIFICADO |
-| Afiliados Amazon.es | Admite monetizar con contenido en redes sociales; ser mayor de edad; frase obligatoria "En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables" | afiliados.amazon.es, acuerdo actualizado 15/10/2025 | Verificado (el documento "Requisitos de participación" no se leyó) |
+| Regalos (Gifts) | Cuenta profesional, +18 años, normas de monetización y **5.000 seguidores**. España **no** aparece en la lista de países de 2023 (Chile, Colombia y Perú sí; lista completa en help.instagram.com/523408036294825, no leída) | Meta, creators.facebook.com, 6/11/2023 | Oficial pero antiguo; España no consta |
+| Suscripciones | Cuenta profesional, +18 años y **10.000 seguidores**; España no mencionada | Metricool, 8/1/2026 (mod. 28/1/2026) | Tercero, NO VERIFICADO |
+| Insignias en directo | +18, 10.000 seguidores; "disponible en EE. UU." | Metricool, 8/1/2026 | Tercero, NO VERIFICADO |
+| Bonificaciones | "Limitadas en el tiempo y solo por invitación" | creators.instagram.com/earn-money/bonuses, leído 6/11/2026 | Oficial; no se puede solicitar |
+| Marketplace de creadores | Etiqueta obligatoria de Colaboración pagada (también si se cobra en especie); categorías restringidas (drogas, armas, alcohol con límites). Países no indicados | creators.instagram.com/earn-money/creator-marketplace, leído 6/11/2026 | España no consta |
+| Contenido no original | Quien publica sobre todo obra ajena sin aportación creativa relevante (no bastan un borde, una marca de agua, subtítulos o un crédito en el pie) deja de ser recomendado; ventana móvil de 30 días; no afecta a lo que ven los seguidores; se revisa en "Estado de la cuenta". Protección extendida a fotos y carruseles | creators.instagram.com/blog/rewarding-original-creators-on-instagram, 30/4/2026 | Oficial |
+| Etiqueta de IA / voz sintética / música generada | **No consta** en el post oficial ni en la prensa leída. Existe un post oficial del 31/8/2026 sobre etiquetar perfiles generados por IA (solo vi el título) | creators.instagram.com/blog | Sin confirmar |
+| Afiliados Amazon.es | Las Políticas (act. 14/4/2026) piden un sitio con contenido original, público en la dirección indicada en la solicitud; el Acuerdo (15/10/2025) cita las redes sociales como tipo de sitio. Frase obligatoria (cláusula 5): "En calidad de Afiliado de Amazon, obtengo ingresos por las compras adscritas que cumplen los requisitos aplicables". Prohibido incitar a guardar los enlaces; no usar marcas de Amazon en el nombre de usuario | afiliados.amazon.es/help/operating/agreement y /policies, leídos 6/11/2026 | Oficial. Umbral de ventas o plazo de aprobación: no consta |
+| Suscripciones de Facebook (por si hay Página) | España incluida; 10.000 seguidores o 250 espectadores recurrentes y, en 60 días, 50.000 interacciones o 180.000 minutos | creators.facebook.com/tools/subscriptions, leído 5/11/2026 | Oficial |
 
-Punto a favor: la música de los reels la genera herramientas/hacer_reel.py (propia) y no usamos vídeo ajeno, así que el contenido es original. Los remasters reutilizan reels **propios** con edición nueva: encaja con la norma de originalidad.
-Punto a vigilar: la voz es sintética. Si Instagram exige declarar IA para monetizar (no verificado), habrá que activar la etiqueta "Información de IA".
+Lectura: el primer umbral plausible para Instagram en España es **5.000** (regalos, si España se ha añadido desde 2023: sin confirmar) y el siguiente **10.000** (suscripciones: sin confirmar). Los remasters son reels propios con edición nueva y no encajan en la definición oficial de "obra ajena", pero Instagram no dice nada expreso sobre reutilizar contenido propio: vigilar "Estado de la cuenta".
 
 ## 3. Qué contenido acerca a monetizar y por qué
-Lo que valoran plataforma y marcas: alcance a no seguidores, compartidos (por mensaje), retención y seguidores ganados.
-- Reels de 2025-2026 con algún compartido (9) tuvieron de media **254 de alcance**, frente a 133 los que no tuvieron ninguno (10). Compartir duplica el alcance. Confianza: media (muestra pequeña).
-- Mejor reel de la muestra: criatura del bestiario *Canis arboricola marsupiatus* (5/6/2025, 21:08): 1.013 de alcance, 16,2 s de visualización media. Gancho de "animal desconocido" + nombre científico. Es el único que salió del círculo de seguidores. Confianza: media (un caso).
-- Más compartidos: "¿Son los pájaros drones del gobierno?" (3; 14,1 s), koala de Queensland 1996 (2; 12,6 s), koala 2026 (2; 11,5 s). Patrón: animales + misterio + pregunta que reta lo que "sabes".
-- Lo que no funciona: gancho lento o de sketch ("El mimocultor": 209 de alcance pero 2,6 s de media; "La Cabra Invertida": 2,8 s). Sin retención no hay distribución.
-- Guardados casi nulos (máx. 2): falta motivo para guardar (listas, series, Parte 2).
-- Hora: todo lo de 2025 se publicó entre 18 y 22 h; no hay variación para comparar horas. Hipótesis sin datos.
-- Audiencia 25-54 años, hispanohablante y repartida entre España y Latinoamérica: el contenido y las marcas deben servir a ambos lados (evitar referencias solo locales).
+Plataforma y marcas miran alcance a no seguidores, compartidos por mensaje, retención y seguidores netos.
+- Reels de 2025-26 (19) con algún compartido (9): alcance medio 254 y mediana 176; sin compartidos (10): media 134 y mediana ~139. **Corrección a la v1**: "compartir duplica el alcance" estaba exagerado; la media la tira hacia arriba un solo reel (1.013, con 1 compartido). Con medianas la ventaja es de ~27 %. Confianza: baja-media (muestra de 19).
+- Retención: los reels con compartidos tuvieron 9,3 s de media frente a 8,4 s. La visualización media predice las reproducciones (histórico de 200 reels: 18 s o más → mediana de 1.665). Confianza: alta.
+- El mejor reel de 2025-26 (*Canis arboricola*, 1.013 de alcance, 16,2 s) y los más compartidos (pájaros-drones, 3; koalas, 2) tratan animales y "lo que sabes está mal". Confianza: media (casos sueltos).
+- Guardados casi nulos (13 en 30 reels, máx. 2): faltan motivos para guardar (listas, Parte 2).
+- 001: la retención (13,8 s) supera la mediana, pero con 21 de alcance no se puede concluir que el formato "misterio real" vaya a distribuirse. Hace falta 002-005 antes de decidir. Confianza: baja.
+- Seguidores ganados por reel: la API de reels no los da (en Buzzfy solo para fotos e historias). Hay que medirlo con el cambio diario de seguidores.
 
 ## 4. Cuándo se podrían cumplir los requisitos (estimación prudente)
-Objetivo de referencia: 10.000 seguidores (umbral citado para suscripciones; no verificado en oficial). Faltan 8.395.
-- Ritmo actual (neto -0,3/día): no se alcanza nunca.
-- Escenario bajo (+5 netos/día, p. ej. 1 reel diario con ~300 de alcance y ~1-2 % de conversión a seguidor): 8.395 / 5 ≈ 1.680 días ≈ **4,6 años**.
-- Escenario medio (+15/día, algún reel de 2.000-5.000 de alcance por semana): ≈ 560 días ≈ **18 meses (mayo 2028)**.
-- Escenario alto (+30/día, un reel viral al mes): ≈ 280 días ≈ **9 meses (agosto 2027)**.
-Las conversiones son supuestos: aún no medimos seguidores ganados por reel. Se recalcula cada domingo con datos reales.
+Hoy: neto -0,45/día, 1.605 seguidores. Supuestos de conversión no medidos aún.
+- Escenario bajo (+5 netos/día): 5.000 en 679 días (≈ sept. 2028); 10.000 en 1.679 días (≈ 4,6 años).
+- Escenario medio (+15/día, un reel de 2.000-5.000 de alcance por semana): 5.000 en 226 días (≈ 20/6/2027); 10.000 en 560 días (≈ mayo 2028).
+- Escenario alto (+30/día, un reel viral al mes): 5.000 en 113 días (≈ 1/3/2027); 10.000 en 280 días (≈ agosto 2027).
+Cálculo: seguidores que faltan ÷ netos por día. Se recalcula cada domingo con datos reales. Ningún escenario da ingresos de plataforma antes de 2027.
 
 ## 5. Vías posibles y próximos pasos
-1. **Afiliados de libros y documentales de misterio (Amazon.es)** — la más realista a corto plazo, sin mínimo de seguidores leído. Encaja: cada expediente tiene "Fuentes" (p. ej. el libro de John Waller del reel 001). Falta: alta del usuario en afiliados.amazon.es (lo tiene que hacer él), una página de enlaces en la bio (ahora apunta a TikTok) y la frase de afiliado en la bio/post. Ingresos esperables bajos hasta tener alcance.
-2. **Promoción de apps propias de Neogest Lab** — sin requisitos de plataforma. Solo si hay una app afín (curiosidades, quiz, lectura) y siempre diciendo que es propia. Máx. 1 de cada 10 posts para no romper el nicho.
-3. **Colaboraciones con marcas afines** (editoriales, plataformas de documentales, podcasts de misterio, museos, escape rooms) con etiqueta de Colaboración pagada. Las marcas miran alcance y compartidos: realista a partir de ~5.000-10.000 seguidores con reels que superen 5.000 de alcance. Paso previo: kit de medios cuando haya 3 reels por encima de 5.000.
-4. **Regalos, suscripciones e insignias de Instagram** — revisar el Panel profesional (la cuenta es BUSINESS; algunas herramientas podrían requerir cuenta de creador: no verificado). Suscripciones solo con contenido exclusivo sostenible (p. ej. "expedientes extendidos").
-5. **Página de Facebook en paralelo** — España admitida en suscripciones de FB con umbral alternativo de 250 espectadores recurrentes. Opción a estudiar si el render puede publicar también en FB.
+1. **Afiliados de libros y documentales (Amazon.es)**: la más cercana. La página "enlace en bio" (https://expedientes-imposibles-bdf431bd.base44.app, contenido original, pública) puede ser el "sitio" de la solicitud. Falta el alta del usuario y su ID de afiliado; después el equipo marca los libros con afiliado:true y pone la frase de la cláusula 5. Compras: bajas mientras el alcance sea 20-50 personas.
+2. **Apps propias de Neogest Lab**: sin requisitos de plataforma; solo si encajan con misterios/curiosidades y siempre diciendo que son propias; máx. 1 de cada 10 posts.
+3. **Marcas afines** (editoriales, podcasts de misterio, museos, escape rooms) con etiqueta de Colaboración pagada: realista con 5.000-10.000 seguidores y reels sobre 5.000 de alcance. Kit de medios cuando haya 3 así.
+4. **Regalos/suscripciones/insignias de Instagram**: revisar disponibilidad en el Panel profesional; suscripciones solo con contenido exclusivo sostenible. No hay nada que hacer antes de los umbrales.
+5. **Publicidad (máx. 10 € autorizados el 5/11)**: la cuenta publicitaria 966846446095574 (EUR, activa) **sigue sin método de pago** (comprobado 6/11 11:30). Sin eso no se puede lanzar el plan del 8/11; si el usuario no lo añade, queda sin ejecutar y sin gasto.
 Descartado: compra de seguidores, cebos engañosos, resubir contenido ajeno, sorteos falsos.
 
-## Revisión 5/11/2026 21:30 UTC (ejecución manual)
-- Sin datos nuevos desde el informe (estadisticas.json sigue a 21:18, 1.605 seguidores). Cifras y estimaciones vigentes.
-- El plan del Estratega (6-16/11) ya prioriza compartidos y retención y meta Partes 2: coherente con este informe.
-- Candidatos a enlace de afiliado cuando el usuario se dé de alta (solo libros que se citen como fuente real): Expediente 001 (Waller, 2008), Mary Celeste (003), hombre de Somerton (008) e islas Flannan (009). El Creador apunta el libro en "Fuentes:" para poder enlazarlo después.
-
-## Acciones ejecutadas (5/11/2026, con control total del usuario)
-- **Reels de prueba para no seguidores** activados en publicar_gh.py (campo "prueba_no_seguidores", trial_params de la API oficial, con vuelta a reel normal si la API lo rechaza). Primer caso: remaster 003 (6/11 13:40). Medir: alcance a no seguidores frente a reels normales durante 2 semanas.
-- **Página "enlace en bio"** publicada: https://expedientes-imposibles-bdf431bd.base44.app (app de Base44 "Expedientes Imposibles", id 6aecf6db89aecc23bdf431bd, pública sin login). Contiene: botones a Instagram/TikTok, expedientes con fuentes, "Para seguir investigando" (libros citados como fuente, enlaces a Amazon.es SIN afiliado de momento) y "Colaboraciones" (datos de audiencia, contacto por DM). El aviso legal de afiliado aparece solo cuando un libro se marca afiliado:true. Datos editables en src/routes/index.jsx (listas EXPEDIENTES y LIBROS); solo un agente con acceso a Base44 puede editarla.
-- Pendiente del usuario (no se puede hacer por API): 1) poner ese enlace como sitio web del perfil (ahora apunta a TikTok); 2) darse de alta en afiliados.amazon.es y pasar la etiqueta de afiliado (no es secreta) para convertir los enlaces; 3) revisar Panel profesional > Monetización y Configuración > Estado de la cuenta (si la cuenta puede recomendarse a no seguidores: el reel 001 llegó a 1 cuenta en su primera media hora).
-- **Publicidad: máximo 10 € en total** (autorizado por el usuario el 5/11/2026). Bloqueos: la cuenta publicitaria 966846446095574 (EUR) no tiene método de pago y no tiene la cuenta de Instagram vinculada, así que aún no se puede lanzar desde aquí. Plan: el 8/11 a mediodía se elige el reel real con mejor retención y compartidos, y se promociona con objetivo de visitas al perfil, 10 € en 5 días (2 €/día), en ES, MX, AR, CL y CO, de 25 a 54 años. Nunca se gasta más de 10 € sin una nueva autorización del usuario.
+## Pendiente del usuario (resumen; detalle en pendiente_usuario.md)
+Alta en afiliados.amazon.es y pasar el ID; cambiar el sitio web del perfil (aún TikTok, 0 clics en 30 días) a la página de enlaces; añadir método de pago a la cuenta publicitaria si quiere el impulso de 10 €; anotar qué herramientas aparecen en Panel profesional > Monetización.
 
 ## Recomendaciones para el equipo
-1. **Estratega**: el KPI semanal pasa a ser seguidores netos y alcance a no seguidores (no likes). Meta: cada reel ≥ 300 de alcance y ≥ 3 compartidos; 1 de cada 3 expedientes sobre animales o misterios de la naturaleza (lo que mejor se ha compartido).
-2. **Creador**: gancho que reta algo que "todo el mundo sabe" en < 2 s y retención > 12 s; cierre con CTA doble: "Envíaselo a quien no se lo crea" + "Sigue para el Expediente NNN". Añadir motivo para guardar (Parte 2, listas de 3 casos). Contenido válido para España y Latinoamérica.
-3. **Calidad**: mantener el bloqueo de contenido ajeno (es lo que protege la elegibilidad) y vigilar que los CTA no sean cebo engañoso. Si se confirma la norma, exigir la etiqueta de IA por la voz sintética.
-4. **Remasterizador**: cada remaster debe tener edición material nueva (gancho, rótulos, cierre con dato real), nunca resubida tal cual.
-5. **Mejora**: guardar en estadisticas.json los seguidores ganados por reel (métrica "follows" de insights, si la API la da para reels; si no, el historial diario de seguidores) y el alcance de no seguidores, para poder medir qué convierte.
+1. **Estratega**: el KPI de la semana 6-16/11 es alcance a no seguidores y seguidores netos por reel, no likes. Decidir el 10/11 si el formato sigue con 002-005 medidos a 48 h: si la mediana de alcance sigue < 100, cambiar de gancho/tema (animales y naturaleza, 1 de cada 3) antes de tocar la duración.
+2. **Creador**: gancho que reta algo "que todo el mundo sabe" en < 2 s y retención > 12 s (el 001 ya llega a 13,8 s); cierre con dos CTA: "Envíaselo a quien no se lo crea" y "Sigue para el Expediente NNN"; añadir motivo para guardar (Parte 2, lista de 3 casos). Español neutro, válido para España y Latinoamérica.
+3. **Calidad**: mantener el bloqueo de contenido ajeno (protege la recomendación) y rechazar CTA que sean cebo. Sin norma verificada sobre voz sintética: no bloquear, pero registrar si el reel lleva voz de IA.
+4. **Remasterizador**: cada remaster con edición material nueva (gancho, rótulos, cierre con dato real) y dejar claro que el original era ficción propia; medir los reels de prueba para no seguidores (003 sale el 6/11 13:40) frente a los normales durante 2 semanas.
+5. **Mejora**: comprobar si la API de publicación permite marcar "contenido generado por IA" (Buzzfy devuelve el campo ai_generated) y, si es posible, activarlo en los reels con voz sintética como medida preventiva; y guardar en estadisticas.json el alcance de no seguidores por reel y el cambio diario de seguidores.
