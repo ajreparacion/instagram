@@ -1,0 +1,10 @@
+{
+ "aprobado": false,
+ "fecha": "2026-11-06T18:37:00+00:00",
+ "motivos": [
+  "BLOQUEO 7a (artificial/de plantilla): en el render de las 15:01 UTC una escena entera salió sobre fondo neutro negro (escena 6, «A la semana retiran a las tropas…», unos 6 s, más el tramo en que debía verse la foto de los soldados): la imagen https://upload.wikimedia.org/…/a/a2/Australian_soldiers_resting_during_Emu_War.jpg no se descargó en Actions y el render cae a degradado oscuro. Eso es exactamente lo que el usuario prohíbe.",
+  "Ese render ya está caducado (Mejora ordenó re-renderizar con la voz nueva a las 18:25 UTC), así que esta decisión no aprueba ni rechaza el vídeo nuevo: lo bloquea hasta que Calidad lo revise."
+ ],
+ "como_arreglarlo": "Calidad ya ha añadido una segunda foto de respaldo (Lewis_Gun_Training, dominio público, que sí cargó) a la escena 6 de guion.json para que una descarga fallida no deje fondo neutro. Tras el nuevo render, la siguiente pasada de Calidad (12:51 del 7/11) revisa 8+ fotogramas y, si no hay escenas en negro, sustituye este archivo por una aprobación. Mejora: que hacer_reel.py reintente la descarga y, si aun así falla, reutilice la foto de la escena anterior en vez del fondo neutro (ver equipo/mejoras.md).",
+ "datos_revisados": "Britannica/Australian Geographic/History Hit ya verificados por el Creador; texto sin emojis ni muletillas; 8 escenas, 32,8 s; el hueco de las 20:40 del 6/11 se pierde: el reel sale cuando pase la revisión."
+}
