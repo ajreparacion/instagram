@@ -1,0 +1,43 @@
+name: Buscar imágenes (Wikimedia Commons)
+
+# Se lanza solo al cambiar equipo/busqueda_imagenes.json (o a mano). No publica nada en Instagram.
+# Desde la nube de los agentes no se llega a Commons; aquí sí. Escribe equipo/imagenes_candidatas/
+# y sube hojas de contactos numeradas a la release "pruebas". Creado por Calidad el 6/11/2026.
+on:
+  push:
+    paths:
+      - equipo/busqueda_imagenes.json
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: buscar-imagenes
+  cancel-in-progress: false
+
+jobs:
+  buscar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Herramientas
+        run: |
+          sudo apt-get install -y -qq fonts-dejavu-core > /dev/null || true
+          pip install --quiet pillow
+      - name: Buscar
+        run: python3 herramientas/buscar_imagenes.py
+      - name: Subir hojas de contactos
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view pruebas >/dev/null 2>&1 || gh release create pruebas --title "Pruebas de producción" --notes "Vídeos e imágenes de prueba (no se publican)."
+          gh release upload pruebas /tmp/imagenes/*.jpg --clobber
+      - name: Guardar candidatas
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add equipo/imagenes_candidatas
+          git commit -m "Imágenes candidatas (Commons) $(date -u +%FT%H:%MZ)" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 5; done
