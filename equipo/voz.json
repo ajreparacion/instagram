@@ -11,11 +11,12 @@
   "exageracion": 0.6,
   "cfg": 0.35,
   "temperatura": 0.75,
-  "referencia": "voces/referencia_usuario.wav",
+  "referencia": null,
   "referencia_kokoro": "em_alex",
   "ganancia": 1.0,
   "semilla": 7,
-  "max_s": 1500
+  "max_s": 1500,
+  "_nota": "referencia: ruta al wav de la voz del propio usuario (p. ej. voces/referencia_usuario.wav). null hasta que la prueba de la voz del dueño (voz_usuario.yml) confirme parecido y WER; mientras tanto se usa referencia_kokoro."
  },
  "kokoro": {
   "voz": "em_alex",
