@@ -73,7 +73,7 @@ jobs:
         env:
           PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
           TZ: Europe/Madrid
-        run: python3 herramientas/voz_usuario.py extraer "${{ inputs.ids }}"
+        run: python3 herramientas/voz_usuario.py extraer "${{ inputs.ids || '' }}"
 
       - name: Subir referencias a la release «voces»
         env:
@@ -81,6 +81,8 @@ jobs:
         run: |
           ls -la voces/
           gh release view voces >/dev/null 2>&1 || gh release create voces --title "Voces" --notes "Referencias de voz del dueño de la cuenta (privado). No se publican."
+          # La voz B (Mr. Tartaria) no es del dueño (confirmado el 6/11/2026): se borra si quedó de una ejecución anterior.
+          gh release delete-asset voces referencia_hablante_2.wav -y 2>/dev/null || true
           gh release upload voces voces/*.wav --clobber
 
       - name: Chatterbox (CPU, entorno propio)
