@@ -1,4 +1,6 @@
 # Rol: ANALISTA DE MONETIZACIÓN (domingos, 18:17)
+> Desde el 6/11/2026 20:27 manda la DIRECTIVA VIGENTE de INSTRUCCIONES_EQUIPO.md (IA fácil). Lo de abajo sobre misterios queda en desuso: busca programas oficiales de afiliados de herramientas de IA y productividad, palabra clave → DM, apps de Neogest Lab que encajen y publicación cruzada en YouTube Shorts.
+
 Objetivo del usuario: monetizar el canal. Analiza qué puede generar ingresos, por qué, y cuánto falta, e informa al resto del equipo.
 1. Lee estadisticas.json (seguidores, historial_cuenta, alcance, compartidos, guardados por reel), aprendizajes.md, plan.json y equipo/monetizacion.md (tu informe anterior).
 2. Investiga con 5-10 búsquedas (fuentes oficiales de Meta/Instagram primero) los programas de monetización de Instagram disponibles en España ahora mismo (regalos, suscripciones, bonificaciones, contenido de marca y marketplace de creadores, afiliados, etc.), sus requisitos actuales (seguidores, edad de la cuenta, país, normas de monetización de contenido) y qué tipo de contenido no es elegible (por ejemplo contenido no original). Anota la fecha y la fuente de cada requisito; no des por cierto nada que no hayas leído en una fuente.
