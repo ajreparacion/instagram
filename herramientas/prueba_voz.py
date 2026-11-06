@@ -1,13 +1,18 @@
 #!/usr/bin/env python3
 """Prueba comparativa de motores de voz (la lanza .github/workflows/prueba_voz.yml, a mano).
 
-Renderiza herramientas/ejemplo_guion.json una vez y le pone la voz con cada motor:
-  piper (voz actual), pocket (Kyutai Pocket TTS, spanish/lola) y pocket_24l (spanish_24l/lola, más grande).
-Mide para cada uno: tiempo de síntesis en la CPU del runner, duración de las frases frente al hueco de su
-escena (atempo necesario), sonoridad final (LUFS, pico real), inteligibilidad (Whisper → % de palabras mal
-reconocidas, WER) y naturalidad estimada (UTMOS22, escala 1-5, predictor de MOS para voz sintética).
-Escribe equipo/pruebas/prueba_voz.json y deja los vídeos en /tmp/prueba_voz/salida/ (el workflow los sube
-a la release "pruebas"; nunca al historial de git).
+Uso: python3 herramientas/prueba_voz.py [guion.json] [variante,variante,...]
+  guion.json: por defecto herramientas/ejemplo_guion_humano.json (modo humano, fotos reales).
+  variantes: por defecto todas las de VARIANTES.
+
+Renderiza el guion una vez y le pone la voz con cada motor: piper, pocket (Kyutai, lola), kokoro (em_alex / ef_dora)
+y chatterbox (Resemble AI; afinado es-es con voz integrada, con referencia Kokoro, y multilingüe).
+Mide para cada uno: tiempo de síntesis en la CPU del runner, duración frente al hueco de su escena (atempo),
+sonoridad final (LUFS, pico real), inteligibilidad (Whisper → WER), naturalidad estimada (UTMOS22, 1-5) y
+PROSODIA (variación del tono en semitonos, proporción de pausas, palabras por segundo): una voz humana contando
+algo varía el tono y hace pausas; una voz de locutor sintético es plana y continua.
+Escribe equipo/pruebas/prueba_voz.json y deja en /tmp/prueba_voz/salida/ los vídeos (prueba_voz_<variante>.mp4) y
+la voz sola en mp3 (voz_<variante>.mp3) para escucharlos; el workflow los sube a la release "pruebas".
 """
 import copy
 import json
@@ -26,10 +31,16 @@ import publicar_gh as pg  # noqa: E402
 DIR = "/tmp/prueba_voz"
 SALIDA = os.path.join(DIR, "salida")
 INFORME = os.path.join(BASE, "equipo", "pruebas", "prueba_voz.json")
+CB = {"modelo": "es-es", "idioma": "es", "exageracion": 0.6, "cfg": 0.35, "temperatura": 0.75,
+      "referencia": None, "referencia_kokoro": None, "semilla": 7, "max_s": 2400}
 VARIANTES = [
-    ("piper", {"motor": "piper"}),
-    ("pocket", {"motor": "pocket", "pocket": {"idioma": "spanish", "voz": "lola"}}),
-    ("pocket_24l", {"motor": "pocket", "pocket": {"idioma": "spanish_24l", "voz": "lola"}}),
+    ("piper", {"motor": "piper", "respaldo": []}),
+    ("pocket", {"motor": "pocket", "respaldo": [], "pocket": {"idioma": "spanish", "voz": "lola"}}),
+    ("kokoro_alex", {"motor": "kokoro", "respaldo": [], "kokoro": {"voz": "em_alex", "velocidad": 0.95}}),
+    ("kokoro_dora", {"motor": "kokoro", "respaldo": [], "kokoro": {"voz": "ef_dora", "velocidad": 0.95}}),
+    ("chatterbox_es", {"motor": "chatterbox", "respaldo": [], "chatterbox": dict(CB)}),
+    ("chatterbox_es_ref", {"motor": "chatterbox", "respaldo": [], "chatterbox": {**CB, "referencia_kokoro": "em_alex"}}),
+    ("chatterbox_mtl", {"motor": "chatterbox", "respaldo": [], "chatterbox": {**CB, "modelo": "multilingue"}}),
 ]
 
 
@@ -73,20 +84,51 @@ def transcribir(modelo, ruta):
     return " ".join(s.text.strip() for s in segs)
 
 
+def prosodia(ruta, n_palabras):
+    """Variación del tono (desviación típica y rango 10-90 % en semitonos), proporción de pausas y palabras/s.
+    Referencia orientativa: habla conversacional ~2-4 st de desviación y 15-25 % de pausas; lectura plana < 1,5 st."""
+    import numpy as np
+    try:
+        import librosa
+    except Exception as e:
+        return {"aviso": f"sin librosa: {str(e)[-80:]}"}
+    y = audio16k(ruta)
+    sr = 16000
+    f0, voiced, _ = librosa.pyin(y, fmin=60, fmax=400, sr=sr, frame_length=1024, hop_length=160)
+    f0v = f0[np.isfinite(f0) & (voiced == True)]  # noqa: E712
+    out = {}
+    if f0v.size > 20:
+        st = 12 * np.log2(f0v / np.median(f0v))
+        out["f0_mediana_hz"] = round(float(np.median(f0v)), 1)
+        out["tono_desv_st"] = round(float(np.std(st)), 2)
+        out["tono_rango_st"] = round(float(np.percentile(st, 90) - np.percentile(st, 10)), 2)
+    rms = librosa.feature.rms(y=y, frame_length=1024, hop_length=160)[0]
+    umbral = max(rms.max() * 0.05, 1e-4)
+    out["pausas_pct"] = round(float((rms < umbral).mean() * 100), 1)
+    dur = len(y) / sr
+    out["duracion_s"] = round(dur, 2)
+    out["palabras_por_s"] = round(n_palabras / max(dur, 0.1), 2)
+    return out
+
+
 def main():
+    guion = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] else os.path.join(pg.HERR_REEL, "ejemplo_guion_humano.json")
+    solo = set(sys.argv[2].split(",")) if len(sys.argv) > 2 and sys.argv[2] else None
+    variantes = [v for v in VARIANTES if not solo or v[0] in solo]
     shutil.rmtree(DIR, ignore_errors=True)
     os.makedirs(SALIDA)
     base = os.path.join(DIR, "base.mp4")
     t0 = time.time()
-    subprocess.run([sys.executable, os.path.join(pg.HERR_REEL, "hacer_reel.py"),
-                    os.path.join(pg.HERR_REEL, "ejemplo_guion.json"), base], check=True, cwd=pg.HERR_REEL)
+    subprocess.run([sys.executable, os.path.join(pg.HERR_REEL, "hacer_reel.py"), guion, base], check=True, cwd=pg.HERR_REEL)
     render_s = round(time.time() - t0, 1)
     locucion = os.path.join(DIR, "base.locucion.json")
     tramos = [t for t in pg.leer_json(locucion, []) if t.get("texto", "").strip()]
     referencia = " ".join(t["texto"] for t in tramos)
+    n_palabras = len(referencia.split())
     original = pg.ajustes_voz()
-    informe = {"fecha": time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()), "render_video_s": render_s,
-               "frases": len(tramos), "referencia": referencia, "variantes": {}}
+    informe = {"fecha": time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()), "guion": os.path.relpath(guion, BASE),
+               "render_video_s": render_s, "frases": len(tramos), "palabras": n_palabras, "referencia": referencia,
+               "cpu": os.cpu_count(), "variantes": {}}
 
     try:
         from faster_whisper import WhisperModel
@@ -101,7 +143,8 @@ def main():
         utmos = None
         informe["aviso_utmos"] = str(e)[-200:]
 
-    for nombre, cambios in VARIANTES:
+    gen_original = pg.generar_locucion
+    for nombre, cambios in variantes:
         aj = copy.deepcopy(original)
         for k, v in cambios.items():
             if isinstance(v, dict):
@@ -113,10 +156,8 @@ def main():
         video = os.path.join(trabajo, "video.mp4")
         shutil.copy(base, video)
         pg.ajustes_voz = lambda aj=aj: aj
-        res = {"ajustes": {k: aj.get(k) for k in ("motor", "modelo", "pocket")}}
+        res = {"ajustes": {k: aj.get(k) for k in ("motor", "modelo", "pocket", "kokoro", "chatterbox") if k in cambios or k == "motor"}}
         tiempos = {}
-        gen_original = pg.generar_locucion if not hasattr(pg, "_gen_orig") else pg._gen_orig
-        pg._gen_orig = gen_original
 
         def cronometrado(textos, trabajo_, aj_=None, _t=tiempos):
             t1 = time.time()
@@ -130,8 +171,13 @@ def main():
         except Exception as e:
             res["error"] = str(e)[-300:]
             informe["variantes"][nombre] = res
+            print(json.dumps({nombre: res}, ensure_ascii=False), flush=True)
             continue
+        finally:
+            pg.generar_locucion = gen_original
         res["motor_usado"] = motor
+        if motor != aj["motor"]:
+            res["error"] = f"el motor {aj['motor']} falló y la voz salió con {motor} (ver registro.log)"
         res.update(tiempos)
         frases = []
         voz_total = 0.0
@@ -146,19 +192,26 @@ def main():
         res["veces_tiempo_real"] = round(voz_total / max(res.get("sintesis_s", 0.01), 0.01), 2)
         res["frases_que_no_caben"] = sum(1 for f in frases if f["atempo"] > 1.35)
         res["lufs"], res["pico_real_dbfs"] = sonoridad(video)
-        # voz sola (sin música) para la naturalidad y la inteligibilidad pura
+        # voz sola (sin música) para la naturalidad, la inteligibilidad pura y la prosodia
         lista = os.path.join(trabajo, "lista.txt")
         with open(lista, "w") as f:
             for i in range(len(tramos)):
                 f.write(f"file '{os.path.join(trabajo, f'voz{i}.wav')}'\n")
-        solo = os.path.join(trabajo, "voz_sola_16k.wav")
+        solo_wav = os.path.join(trabajo, "voz_sola_16k.wav")
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lista,
-                        "-ar", "16000", "-ac", "1", solo], check=True)
+                        "-ar", "16000", "-ac", "1", solo_wav], check=True)
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "concat", "-safe", "0", "-i", lista,
+                        "-ac", "1", "-b:a", "96k", os.path.join(SALIDA, f"voz_{nombre}.mp3")], check=True)
+        try:
+            res["prosodia"] = prosodia(solo_wav, n_palabras)
+        except Exception as e:
+            res["aviso_prosodia"] = str(e)[-200:]
         if asr:
             try:
                 res["transcripcion_mezcla"] = transcribir(asr, video)
                 res["wer_mezcla"] = wer(referencia, res["transcripcion_mezcla"])
-                res["wer_voz_sola"] = wer(referencia, transcribir(asr, solo))
+                res["transcripcion_voz_sola"] = transcribir(asr, solo_wav)
+                res["wer_voz_sola"] = wer(referencia, res["transcripcion_voz_sola"])
             except Exception as e:
                 res["aviso_asr"] = str(e)[-200:]
         if utmos:
@@ -176,6 +229,8 @@ def main():
         informe["variantes"][nombre] = res
         print(json.dumps({nombre: res}, ensure_ascii=False), flush=True)
 
+    informe["registro"] = [l for l in open(pg.REGISTRO, encoding="utf-8", errors="replace").read().splitlines()[-60:]
+                           if "Voz" in l or "voz" in l or "Chatterbox" in l or "Kokoro" in l] if os.path.exists(pg.REGISTRO) else []
     os.makedirs(os.path.dirname(INFORME), exist_ok=True)
     pg.escribir_json(INFORME, informe)
     print(json.dumps(informe, ensure_ascii=False, indent=1))

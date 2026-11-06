@@ -1,11 +1,18 @@
-name: Prueba de voz (Piper vs Pocket TTS)
+name: Prueba de voz (Piper, Pocket, Kokoro, Chatterbox)
 
 # Solo a mano (Actions → Prueba de voz → Run workflow). No publica nada en Instagram.
-# Renderiza herramientas/ejemplo_guion.json con cada motor de voz, mide tiempo, sonoridad,
-# inteligibilidad (Whisper) y naturalidad estimada (UTMOS), guarda equipo/pruebas/prueba_voz.json
-# y sube los vídeos a la release "pruebas" (nunca al historial de git).
+# Renderiza un guion (por defecto herramientas/ejemplo_guion_humano.json) con cada motor de voz, mide tiempo,
+# sonoridad, inteligibilidad (Whisper), naturalidad estimada (UTMOS) y prosodia, guarda
+# equipo/pruebas/prueba_voz.json y sube vídeos y mp3 de voz sola a la release "pruebas" (nunca al historial de git).
 on:
   workflow_dispatch:
+    inputs:
+      guion:
+        description: "Ruta del guion.json a usar"
+        default: "herramientas/ejemplo_guion_humano.json"
+      variantes:
+        description: "Variantes separadas por comas (vacío = todas): piper,pocket,kokoro_alex,kokoro_dora,chatterbox_es,chatterbox_es_ref,chatterbox_mtl"
+        default: ""
 
 permissions:
   contents: write
@@ -17,14 +24,18 @@ concurrency:
 jobs:
   prueba:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 150
     steps:
       - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
 
       - name: Herramientas
         run: |
           sudo apt-get update -qq
-          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core > /dev/null
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core espeak-ng > /dev/null
           pip install --quiet pillow numpy
 
       - name: Caché de modelos
@@ -36,31 +47,50 @@ jobs:
             ~/.cache/pocket_tts
             ~/.cache/torch
             ~/.cache/pip
-          key: prueba-voz-v1-${{ hashFiles('equipo/voz.json') }}
-          restore-keys: prueba-voz-v1-
+          key: prueba-voz-v2-${{ hashFiles('herramientas/prueba_voz.py') }}
+          restore-keys: |
+            prueba-voz-v2-
+            voz-v2-
 
-      - name: Pocket TTS, Whisper y UTMOS (CPU)
+      - name: Pocket TTS, Kokoro, Whisper, UTMOS y librosa (CPU)
         run: |
-          pip install --quiet pocket-tts torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet pocket-tts torchaudio kokoro soundfile librosa --extra-index-url https://download.pytorch.org/whl/cpu
           pip install --quiet faster-whisper
-          python3 -c "import pocket_tts, torch; print('pocket-tts OK, torch', torch.__version__)"
+          python3 -c "import pocket_tts, kokoro, torch; print('pocket-tts y kokoro OK, torch', torch.__version__)"
+
+      - name: Chatterbox (CPU, entorno propio)
+        continue-on-error: true
+        run: |
+          python -m venv ~/.venvs/chatterbox
+          ~/.venvs/chatterbox/bin/pip install --quiet --upgrade pip
+          ~/.venvs/chatterbox/bin/pip install --quiet chatterbox-tts --extra-index-url https://download.pytorch.org/whl/cpu
+          ~/.venvs/chatterbox/bin/python -c "import chatterbox.mtl_tts, torch; print('chatterbox OK, torch', torch.__version__)"
+          echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
 
       - name: Prueba
         env:
           TZ: Europe/Madrid
-        run: python3 herramientas/prueba_voz.py
+        run: python3 herramientas/prueba_voz.py "${{ inputs.guion }}" "${{ inputs.variantes }}"
 
-      - name: Subir vídeos a la release "pruebas"
+      - name: Subir vídeos y mp3 a la release "pruebas"
+        if: always()
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          ls /tmp/prueba_voz/salida/ || exit 0
           gh release view pruebas >/dev/null 2>&1 || gh release create pruebas --title "Pruebas de producción" --notes "Vídeos de prueba de Mejora (no se publican)."
-          gh release upload pruebas /tmp/prueba_voz/salida/*.mp4 --clobber
+          gh release upload pruebas /tmp/prueba_voz/salida/* --clobber
+
+      - name: Registro de la voz (para depurar)
+        if: always()
+        run: grep -i "voz\|chatterbox\|kokoro\|pocket" registro.log | tail -40 || true
 
       - name: Guardar informe
+        if: always()
         run: |
           git config user.name "expedientes-bot"
           git config user.email "expedientes-bot@users.noreply.github.com"
+          git checkout -- registro.log 2>/dev/null || true
           git add equipo/pruebas/prueba_voz.json
           if git diff --cached --quiet; then exit 0; fi
           git commit -q -m "Prueba de voz automática $(date -u +%FT%H:%MZ)"
