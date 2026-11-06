@@ -1,6 +1,7 @@
-17870021775289986  # 2026-11-06 13:40 · cola/003_realofalso_17870021775289986 · Koala Coyote → tilacino (Remasterizador, preparado el 5/11)
-18031629332425415  # 2026-11-10 13:40 · cola/005_realofalso_18031629332425415 · oxígeno 1872 → Scheele, Priestley y el océano (Remasterizador, preparado el 6/11)
+17870021775289986  # 2026-11-06 13:40 · cola/010_realofalso_koala_coyote · Koala Coyote → tilacino (Remasterizador 5/11; el 003 lo rechazó Calidad por marcas de agua y lo rehízo como reel nuevo 010)
+18031629332425415  # 2026-11-10 13:40 · cola/011_realofalso_oxigeno · oxígeno 1872 → Scheele, Priestley y el océano (Remasterizador 6/11; el 005 lo rechazó Calidad y lo rehízo como reel nuevo 011)
 18074579041723896  # 2026-11-13 13:40 · cola/006_realofalso_18074579041723896 · pájaros drones → Birds Aren't Real (parodia de 2017) y por qué no se electrocutan en un cable (Remasterizador, adelantado el 6/11; DRON)
 18057952754210907  # 2026-11-17 13:40 · cola/007_realofalso_18057952754210907 · koala adicto 1996 → huellas dactilares de koala (Adelaida, 1996) (Remasterizador, adelantado el 6/11; HUELLA)
 18041294177300559  # 2026-11-20 13:40 · cola/009_realofalso_18041294177300559 · Limenocaris plumae → babosa de Kerry de León y Asturias (Remasterizador, adelantado el 6/11; BABOSA)
 18064409066120359  # 2026-11-24 13:40 · cola/008_realofalso_18064409066120359 · Cuervo Guadaña → cuervos que recuerdan caras y «funerales» (Remasterizador, colchón fuera de plan el 6/11; CUERVO). Estratega: el martes 24/11 ya tiene remaster; cámbialo o muévelo si prefieres otro.
+# 6/11/2026: desde hoy los ¿REAL O FALSO? son reels nuevos (guion.json) sin metraje del original, que lleva marcas de agua de bancos de vídeo. Regla en equipo/roles/remasterizador.md. 006-009 ya convertidos por Calidad.
