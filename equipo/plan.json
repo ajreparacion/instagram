@@ -1,366 +1,252 @@
 {
-  "semana": "2026-11-07 a 2026-11-16",
-  "creado_por": "Estratega, viernes 6/11/2026 18:40 (ejecución extraordinaria por orden del usuario: «ningún reel ha funcionado; replantea con datos reales y que todo parezca hecho por una persona»). Sustituye al plan del 5-6/11. El Estratega del lunes 9/11 ajusta del 10/11 en adelante con los primeros 8-10 reels medidos. Revisado el 6/11 a las 19:00 por una 2.ª ejecución del Estratega: bloque segunda_vida y huecos de ¿REAL O FALSO? del 10 y 13/11 con los reels más vistos de la cuenta.",
-  "diagnostico_con_datos_reales": [
-    "Cuenta (Buzzfy, 6/11 18:25): 1.605 seguidores sin cambio; últimos 7 días alcance 22 (14 no seguidores), 28 reproducciones, 1 interacción, 0 compartidos, 0 clics en el enlace (sigue apuntando a TikTok).",
-    "Único reel del enfoque nuevo medido, 001 BAILE (20,7 h): alcance 21 (0,13 veces la mediana de la cuenta, 156), 28 reproducciones, 1 like, 0 compartidos/guardados/comentarios, visualización media 14,4 s (1,71 veces la mediana de 8,4 s), salto 57 % (mediana 65 %). Lectura: el que entra se queda más que nunca, pero casi nadie entra. Con 57 % de salto el playbook de Buzzfy da un 2 % de probabilidad de despegue; con menos de 40 %, 12 % o más.",
-    "Formato (Viral Reels Playbook 2026, 531.037 creadores comparados consigo mismos): en cuentas de 1-5K seguidores el formato HISTORIA (pico → contexto → giro → desenlace) rinde 1,28 veces lo normal del creador y el MONTAJE (fotos o rótulos encadenados sin situación que cambie) 0,69 veces. Nuestros reels de archivo clasificado eran montajes: el peor formato posible. Hablar a cámara sin historia (talking head) solo da 0,91: la cara no salva un reel sin historia; la historia sí salva un reel sin cara. Metraje crudo real: 1,11.",
-    "Apertura (mismo playbook): primera frase de 4-8 palabras, concreta (nombre, año, cifra), que deje la pregunta abierta y no empiece por saludo ni etiqueta; texto en pantalla desde el primer fotograma, 1,18 veces. Abrir por el pico y rebobinar sube la retención en historias (+4,8 puntos).",
-    "Nicho en español (Buzzfy, revisión de Calidad del 6/11): cuentas de ~1.000 seguidores llegan a 1.900-3.400 visualizaciones con voz en off + fotos/vídeo real + historia contada en primera persona («Un tipo tumbó una pared de su casa y encontró una ciudad entera»); la estética «archivo clasificado» con rótulos se queda en 17-352. Confianza: media (muestra pequeña).",
-    "Cuentas pequeñas (playbook): un reel que despega consigue unas 1,85 veces los seguidores en reproducciones (para nosotros, ≈ 3.000); el 64 % de los despegues superó a los seguidores. Los reels de prueba para no seguidores superan el alcance habitual el 21 % de las veces en cuentas pequeñas (13 % en las grandes). Se mantienen.",
-    "Algoritmo 2026 (Qué! 27/6/2026): más del 55 % de las visualizaciones de reels vienen de no seguidores y los envíos por DM pesan 3-5 veces más que los likes; penaliza resubidos, marcas de agua ajenas y «contenido genérico». IA (wwwhatsnew 5/11/2026, Infobae 5/5/2026, Infosertecla 2/9/2026): Meta obliga a marcar vídeo fotorrealista o audio realista generado o alterado y limita el alcance de los perfiles con personas sintéticas sin etiqueta; el Reglamento europeo de IA (art. 50) obliga desde el 2/8/2026 a declarar el contenido artificial en uso profesional. Consecuencia: «parecer humano» significa estilo humano con material real, NUNCA ocultar la voz sintética: la nota «Voz: narración generada» se mantiene en el texto del post hasta que la voz sea la del dueño.",
-    "Operativa (6/11 18:25): la programación de GitHub Actions («17,47 11-22 UTC») solo se ha disparado una vez por cron hoy (14:59 UTC); desde las 15:02 UTC han pasado 5 franjas sin ejecución, el 010 (16:40) no se ha publicado y la cola no tiene calidad.json, así que cada reel saldrá con 3 h de retraso salvo que Calidad apruebe antes. Mejora debe estudiar un disparo externo (workflow_dispatch desde una tarea programada) además del cron.",
-    "Experimento corto/largo (plan del 5/11): CANCELADO sin resultado. La reescritura en modo humano cambió todas las duraciones (ahora 25-34 s) y los grupos ya no son comparables."
-  ],
-  "objetivo": "Que un reel entre en el circuito de no seguidores: salto por debajo del 45 % y alcance ≥ 300 en al menos 1 reel antes del lunes 16/11. Medio: formato HISTORIA contada en primera persona sobre material real (fotos y clips con licencia libre), voz conversacional, apertura por el pico. La monetización (afiliados Amazon.es + apps propias) sigue siendo la meta final y no cambia (equipo/monetizacion.md).",
-  "serie_principal": "EXPEDIENTES NNN contados como historia: alguien, en un año y un lugar, al que le pasa algo que no cuadra; giro antes del segundo 12; desenlace con lo que dicen las fuentes. Siempre 2+ fuentes y línea Fuentes:. ¿REAL O FALSO? (martes y viernes 13:40, reel de prueba para no seguidores) hecho como reel nuevo: el disparate se cuenta como historia («el año pasado colgamos aquí que…») y el giro es «nos lo inventamos; lo real es peor».",
-  "formato_humano": {
-    "v1_ya_disponible": "guion.json con \"modo\":\"humano\": fotos reales con licencia (dominio público/CC0/CC BY), movimiento de cámara, subtítulos palabra a palabra, voz Pocket TTS coloquial con pausas, música muy baja. Es lo que sale del 6/11 al 9/11 (002, 004, 006-011).",
-    "v1_mejoras_para_mejora": [
-      "Clips de VÍDEO real además de fotos: aceptar en \"imagenes\" una entrada {\"video\":\"https://…\",\"inicio\":s,\"duracion\":s,\"credito\":\"…\"} con fuentes de dominio público o CC0 (archive.org colección Prelinger y dominio público, NASA, Pexels/Pixabay vídeo, Wikimedia Commons .webm). El metraje real crudo rinde 1,11 veces (playbook) y rompe la sensación de pase de diapositivas.",
-      "Hueco opcional de 5-10 s al inicio o al cierre para un clip grabado por el dueño con el móvil (campo \"clip_usuario\":\"nombre.mp4\" en la release 'voces'): cara a cámara o solo la mano señalando la foto. No bloquea nada si no existe.",
-      "Voz: probar la clonación de voz de Pocket TTS/Kyutai con una muestra de 30-60 s grabada por el dueño (solo con su permiso explícito, es su voz) o, mejor, usar directamente su audio por frase si lo graba (campo \"audio\":\"nombre.wav\" por escena). Comparar UTMOS y naturalidad con lola."
-    ],
-    "v2_depende_del_usuario": "La palanca más fuerte que no podemos accionar: la voz real del dueño. Pedido en equipo/pendiente_usuario.md (punto 0): una nota de voz al día de 60-90 s leyendo el guion del día de forma natural, o una muestra única de 60 s para clonar. Con eso, el reel pasa de «hecho con IA» a «contado por una persona» sin cambiar nada más del flujo.",
-    "reglas_de_guion_humano": [
-      "Primera frase = el pico, 4-8 palabras, sin «¿Real o falso?», sin «Expediente», sin saludo ni pregunta retórica. Ejemplos de estructura (no copiar): «Un barco entero, a la deriva, y nadie dentro.» / «Mil novecientos treinta y dos. Australia declara la guerra… a los emús.»",
-      "Rebobinar en la 2.ª frase («A ver, te cuento») y dar año + lugar + persona con nombre.",
-      "Giro antes del segundo 12: la frase que cambia la historia («Y aquí viene lo bueno…»).",
-      "Reacción propia al menos una vez («te juro que lo leí dos veces», «esto no me lo esperaba»).",
-      "Cierre en 1 frase con dato o pregunta que invite a enviarlo; CTA hablado solo uno: «mándaselo a quien no se lo crea». El resto del CTA (guardar, palabra) va en el texto del post.",
-      "Duración 25-40 s; cambio de imagen cada 2-4 s; la voz manda sobre la música."
-    ]
+  "semana": "2026-11-07 a 2026-11-13",
+  "creado_por": "Estratega, viernes 6/11/2026 20:35, ejecución extraordinaria por la NUEVA ESTRATEGIA del usuario (6/11 20:27): IA y automatizaciones fáciles, formato dibujo doodle con Bit y Paco. Sustituye por completo al plan de misterios; lo que había en cola/ y revision/ está en descartados/.",
+  "objetivo": "Reposicionar la cuenta en IA fácil y conseguir que al menos 1 reel llegue a 300 cuentas no seguidoras antes del viernes 13/11, con 2 reels al día. Medio: temas con mucha búsqueda, gancho en 2 s, truco comprobado y guardable, palabra clave → DM.",
+  "punto_de_partida": "1.605 seguidores; últimos 7 días alcance 22 (14 no seguidores), 1 interacción, 0 compartidos, 0 clics (Buzzfy, 6/11). Público ES 32 %, MX 14 %, CL 14 %, AR 12 %; 25-54 años. La audiencia actual vino por misterio/humor: por eso los reels de las 13:40 salen como reels de prueba para no seguidores.",
+  "formato": "modo dibujo (INSTRUCCIONES_EQUIPO.md): Bit enseña, Paco se agobia; papel claro, trazo negro, acento cian; 20-35 s; 5-7 escenas: gancho (≤ 2 s), problema, 1-3 pasos con «pantalla», resultado, cierre con palabra clave o «Sígueme para un truco al día».",
+  "series": {
+    "truco_del_dia": {
+      "activa": true,
+      "nombre": "Truco NNN"
+    },
+    "realofalso": {
+      "activa": false,
+      "motivo": "Desactivada por orden del usuario 6/11/2026 20:27."
+    },
+    "expedientes": {
+      "activa": false,
+      "motivo": "Fin del enfoque de misterios (6/11/2026)."
+    },
+    "remasters": {
+      "activa": false,
+      "motivo": "Los reels antiguos no encajan con la temática."
+    }
+  },
+  "horas": {
+    "13:40": "reel de prueba para no seguidores (prueba_no_seguidores: true)",
+    "20:40": "reel normal compartido en el feed (rehace la rejilla con la temática nueva)"
   },
   "experimento": {
-    "nombre": "Apertura por el pico frente a apertura con etiqueta/pregunta",
-    "hipotesis": "En nuestra audiencia (ES/LatAm, 25-54, 73 % hombres) una primera frase que cuenta el pico de la historia («Un barco a la deriva con comida para seis meses. Y sin nadie.») retiene más que una que etiqueta («¿Real o falso? …») o que arranca con el dato con fecha («En mil novecientos treinta y dos…»).",
-    "como": "Cada entrada lleva \"gancho\": \"pico\" (grupo A) o \"etiqueta\" (grupo B). Grupo A: 006, 008, 011 (Creador/Remasterizador reescribe SOLO la primera escena y portada_texto antes de que se rendericen; están sin renderizar), 004 (ya abre por el pico), Parte 2 del baile (8/11) y los nuevos del 9, 11 y 12/11. Grupo B: 002 y 010 (ya renderizados, se dejan), 007 y 009 (se dejan como están para tener grupo de control). Nada más cambia: mismas fotos, misma voz, misma duración.",
-    "metrica": "skip_rate_pct de ig_post_stats (Buzzfy) a 48 h, alcance a no seguidores y compartidos a 48 h. Mínimo 4 reels por grupo (datos completos hacia el 12-13/11).",
-    "regla_de_decision": "Si la mediana de salto del grupo A es al menos 8 puntos menor que la de B (o la mediana de alcance a no seguidores es 1,5 veces mayor), «pico» pasa a ser obligatorio en estandar_calidad.md. Si no hay diferencia, se mantiene «pico» por defecto (es lo que marca el playbook) y se prueba la siguiente variable: voz real del dueño frente a TTS (necesita las notas de voz)."
+    "nombre": "Tipo de gancho: pregunta vs número vs mini historia",
+    "como": "Cada entrada lleva gancho_tipo (pregunta 5, número 4, historia 5). Métrica: salto (skip_rate) y alcance a no seguidores a 48 h; desempate: compartidos + guardados.",
+    "decision": "El lunes 16/11 el Estratega fija el tipo ganador (menor mediana de salto) para el 60 % de la semana siguiente."
   },
-  "hora_por_defecto": "20:40 para el reel nuevo diario (pico de seguidores conectados 20-22 h, Buzzfy 5/11). Reels de prueba ¿REAL O FALSO?: 13:40. Hasta el 9/11 se mantiene la orden del usuario de hasta 3 reels al día para vaciar la cola ya producida; desde el 10/11, 1 reel nuevo al día + ¿REAL O FALSO? martes y viernes (3 al día del mismo formato compiten entre sí por los mismos 20 espectadores y no dejan medir nada).",
   "dias": [
     {
-      "fecha": "2026-11-06",
-      "tipo": "nuevo",
-      "hora": "16:40",
-      "gancho": "etiqueta",
-      "idea": "¿REAL O FALSO? Koala coyote → tilacino.",
-      "hecho": "cola/010_realofalso_koala_coyote (renderizado 15:00 UTC; sale cuando corra el ciclo: a las 19:40 por la gracia de 3 h sin calidad.json, o antes si Calidad aprueba). No tocar.",
-      "fuente_libro": null
-    },
-    {
-      "fecha": "2026-11-06",
-      "tipo": "nuevo",
-      "hora": "20:40",
-      "gancho": "etiqueta",
-      "idea": "Expediente 002: Gran Guerra del Emú (1932).",
-      "hecho": "cola/002_guerra_emus (renderizado 15:01 UTC). No tocar. Calidad: escribir calidad.json antes de las 19:40 para que no salga a las 23:40.",
-      "fuente_libro": null
-    },
-    {
       "fecha": "2026-11-07",
-      "tipo": "nuevo",
       "hora": "13:40",
-      "gancho": "pico",
-      "idea": "¿REAL O FALSO? pájaros drones → Birds Aren't Real (2017).",
-      "hecho": "cola/006_realofalso_18074579041723896 (sin renderizar). TAREA Creador/Remasterizador (sábado, antes de las 11:00): reescribir SOLO la 1.ª escena ('voz' y 'portada_texto') para abrir por el pico, p. ej. estructura «El año pasado colgamos aquí que los pájaros eran drones del Gobierno. Y hubo gente que se lo creyó.»; quitar «¿Real o falso?» del primer segundo (puede ir en el texto del post). Reel de prueba. HECHO 6/11 19:00 (Remasterizador): abre por el pico «Te dijimos que los pájaros eran drones del Gobierno.», fotos reales con licencia en las 9 escenas; quitado «renderizado» para que Actions lo vuelva a renderizar.",
-      "fuente_libro": null
+      "tipo": "nuevo",
+      "modo": "dibujo",
+      "gancho_tipo": "numero",
+      "tema": "Cómo usar Claude (búsqueda alta: «cómo usar Claude»)",
+      "gancho": "3 cosas que Claude hace gratis y casi nadie usa",
+      "contenido": "Lista de 3 funciones de Claude en el plan gratis (candidatas: Proyectos, Artefactos, memoria; según Tom's Guide y TechRadar pasaron al plan gratis en 2026; confirmar en support.claude.com). Paco usa la IA solo para preguntar; Bit le enseña las 3.",
+      "palabra_clave": "CLAUDE",
+      "prueba_no_seguidores": true,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null
     },
     {
       "fecha": "2026-11-07",
-      "tipo": "nuevo",
-      "hora": "16:40",
-      "gancho": "etiqueta",
-      "idea": "¿REAL O FALSO? koala adicto 1996 → huellas dactilares de koala (Adelaida, 1996).",
-      "hecho": "cola/007_realofalso_18057952754210907 (sin renderizar). Grupo de control: se deja la apertura «¿Real o falso?» tal cual. Reel de prueba.",
-      "fuente_libro": null
-    },
-    {
-      "fecha": "2026-11-07",
-      "tipo": "nuevo",
       "hora": "20:40",
-      "gancho": "pico",
-      "idea": "Expediente 004: Mary Celeste (aniversario exacto de la salida de Nueva York, 7/11/1872).",
-      "hecho": "cola/004_mary_celeste (sin renderizar; ya abre por el pico «Un barco a la deriva… con comida para seis meses. Y sin nadie.»). No tocar el guion; Calidad lo aprueba con calidad.json en cuanto esté renderizado.",
-      "fuente_libro": "Brian Hicks, «Ghost Ship: The Mysterious True Story of the Mary Celeste and Her Missing Crew» (2004); comprobar edición disponible en Amazon.es antes de enlazar."
+      "tipo": "nuevo",
+      "modo": "dibujo",
+      "gancho_tipo": "historia",
+      "tema": "Prompts (búsqueda alta: «prompts»)",
+      "gancho": "Si ChatGPT te contesta fatal, es por esto",
+      "contenido": "Antes/después: Paco escribe «hazme un correo» y sale un churro; Bit le enseña la fórmula de 4 piezas (quién eres / qué quieres / para quién / en qué formato) y el resultado mejora. En «pantalla» el prompt completo. Vale para ChatGPT, Claude y Gemini.",
+      "palabra_clave": "PROMPT",
+      "prueba_no_seguidores": false,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null,
+      "respuesta_idea": "Plantilla de las 4 piezas lista para copiar"
     },
     {
       "fecha": "2026-11-08",
-      "tipo": "nuevo",
       "hora": "13:40",
-      "gancho": "pico",
-      "idea": "¿REAL O FALSO? Cuervo Guadaña → cuervos que recuerdan caras y hacen «funerales» (Marzluff, Univ. de Washington).",
-      "hecho": "cola/008_realofalso_18064409066120359 (sin renderizar). TAREA Creador: reescribir SOLO la 1.ª escena para abrir por el pico (estructura: «Un cuervo que aparece justo antes de cada muerte. Lo colgamos aquí el año pasado.»). Reel de prueba. HECHO 6/11 19:00 (Remasterizador): abre por el pico «Un cuervo que aparece justo antes de cada muerte.», fotos reales con licencia en las 9 escenas.",
-      "fuente_libro": "John Marzluff y Tony Angell, «Gifts of the Crow» (2012); comprobar en Amazon.es."
+      "tipo": "nuevo",
+      "modo": "dibujo",
+      "gancho_tipo": "pregunta",
+      "tema": "Automatizar el correo (búsqueda alta)",
+      "gancho": "¿Tienes 40 correos sin leer? Mira esto",
+      "contenido": "Resumir un hilo largo de Gmail con Gemini en un toque (Google lo anunció gratis en enero de 2026 según iPhone in Canada y Xataka Android; confirmar en support.google.com si llega a cuentas gratuitas en España y en español). Alternativa si no: «Escríbeme» / respuestas inteligentes.",
+      "palabra_clave": "GMAIL",
+      "prueba_no_seguidores": true,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null
     },
     {
       "fecha": "2026-11-08",
-      "tipo": "nuevo",
-      "hora": "16:40",
-      "gancho": "etiqueta",
-      "idea": "¿REAL O FALSO? Limenocaris plumae → babosa de Kerry (León y Asturias).",
-      "hecho": "cola/009_realofalso_18041294177300559 (sin renderizar). Grupo de control: apertura tal cual. Reel de prueba.",
-      "fuente_libro": null
-    },
-    {
-      "fecha": "2026-11-08",
-      "tipo": "nuevo",
       "hora": "20:40",
-      "gancho": "pico",
-      "palabra_clave_sugerida": "BAILE",
-      "idea": "PARTE 2 del Expediente 001 (epidemia de baile de 1518): PROMETIDA en el 001 y HOY NO ESTÁ EN cola/. Prioridad 1 del Creador el sábado 7/11. Abrir por el pico de la Parte 2 (estructura: «Los metieron en carros y los llevaron a un santuario. Así acabó la ciudad que no podía dejar de bailar.»), 1 frase de recordatorio de la Parte 1, cómo terminó según Waller (santuario de San Vito en Saverne; final hacia septiembre de 1518 según las fuentes), hipótesis actual (enfermedad psicógena colectiva; ergotismo descartado por la mayoría) con matices. 25-35 s, modo humano, fotos reales de Estrasburgo del siglo XVI (grabados de dominio público). Actualizar la 'respuesta' automática del 001 para avisar de que la Parte 2 ya está publicada.",
-      "fuente_libro": "John Waller, «A Time to Dance, a Time to Die: The Extraordinary Story of the Dancing Plague of 1518» (2008)."
+      "tipo": "nuevo",
+      "modo": "dibujo",
+      "gancho_tipo": "historia",
+      "tema": "Automatizar el correo gratis sin IA",
+      "gancho": "Tu correo se puede ordenar solo. Gratis.",
+      "contenido": "Filtros de Gmail: buscar «factura» → Crear filtro → Aplicar etiqueta «Facturas» y saltar la bandeja. 3 pasos con los nombres exactos del menú (comprobar en support.google.com/mail). Paco agobiado con la bandeja; al final, bandeja limpia.",
+      "palabra_clave": "FILTRO",
+      "prueba_no_seguidores": false,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null
     },
     {
       "fecha": "2026-11-09",
-      "tipo": "nuevo",
       "hora": "13:40",
-      "gancho": "pico",
-      "idea": "¿REAL O FALSO? «En 1872 un científico inventó el oxígeno» → Scheele, Priestley, Lavoisier y el océano.",
-      "hecho": "cola/011_realofalso_oxigeno (sin renderizar). TAREA Creador: reescribir SOLO la 1.ª escena para abrir por el pico (estructura: «El año pasado dijimos aquí que alguien inventó el oxígeno en mil ochocientos setenta y dos. Hubo quien se lo creyó.»). Reel de prueba. HECHO 6/11 19:00 (Remasterizador): abre por el pico «Alguien inventó el oxígeno en 1872.»; fotos de Calidad sin cambios.",
-      "fuente_libro": null
+      "tipo": "nuevo",
+      "modo": "dibujo",
+      "gancho_tipo": "numero",
+      "tema": "IA gratis (búsqueda alta: «IA gratis»)",
+      "gancho": "No pagues por una IA hasta ver esto",
+      "contenido": "3 IA que se pueden usar gratis hoy y para qué es mejor cada una (ChatGPT, Claude, Gemini como personajes inventados con su nombre). Límites del plan gratis según cada página oficial de precios; sin cifras que no se puedan comprobar.",
+      "palabra_clave": "GRATIS",
+      "prueba_no_seguidores": true,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null
     },
     {
       "fecha": "2026-11-09",
-      "tipo": "nuevo",
       "hora": "20:40",
-      "gancho": "pico",
-      "palabra_clave_sugerida": "LUZ",
-      "idea": "Expediente 005: la bombilla que lleva encendida desde 1901 (parque de bomberos de Livermore, California; Guinness). Historia: «Hay una bombilla que nadie se atreve a apagar» → quién la encendió (donación de Dennis Bernal, 1901, según el Centennial Light Bulb Committee), los traslados, la webcam que la vigila, y qué dice la ciencia de por qué dura (filamento de carbono y baja potencia; decir «según los expertos consultados por las fuentes»). 25-35 s. Fotos: dominio público/CC BY de Wikimedia Commons (comprobar licencia una a una).",
-      "fuente_libro": null,
-      "nota_monetizacion": "Sin libro claro: en el hub, enlazar la web oficial (centennialbulb.org) como fuente."
+      "tipo": "nuevo",
+      "modo": "dibujo",
+      "gancho_tipo": "historia",
+      "tema": "Estudios",
+      "gancho": "Haz una foto a tus apuntes y mira",
+      "contenido": "Foto de apuntes → la IA hace un resumen y 5 preguntas tipo test. Prompt exacto en «pantalla». Comprobar que la versión gratis de la app elegida admite imágenes.",
+      "palabra_clave": "APUNTES",
+      "prueba_no_seguidores": false,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null
     },
     {
       "fecha": "2026-11-10",
-      "tipo": "remaster",
       "hora": "13:40",
-      "gancho": "pico",
-      "original_id": "18073380868454656",
-      "palabra_clave_sugerida": "ERATOSTENES",
-      "idea": "SEGUNDA VIDA (ver bloque segunda_vida): ¿REAL O FALSO? del podcast Empírico «la Tierra no es una esfera» con Mr. Tartaria (21/1/2024: 3.879 reproducciones, 7,7 veces la mediana de la cuenta, 28,7 s de visualización, 48 comentarios). Era humor. Lo real, con 2 fuentes: Eratóstenes midió la circunferencia de la Tierra hacia el 240 a. C. con la sombra de un palo en Siena y Alejandría. Apertura por el pico en 1.ª persona («Hace casi tres años colgamos aquí que la Tierra no era redonda. Y casi cuatro mil personas se quedaron a verlo.»). Reel de prueba para no seguidores.",
-      "fuente_libro": null,
-      "como": "Remasterizador: descargar el original (remaster.py) y mirar fotogramas. Si no hay marcas ajenas ni material de terceros (ojo a #deisputnik y #mickeymouseempirico: comprobar que los personajes y el audio son de la cuenta), remaster.json con recorte del 20-40 %, gancho nuevo por el pico y cierre con el dato real (se cambian al menos 2 cosas, como pide el playbook). Si hay marcas o dudas, reel nuevo en modo humano contando la historia del reel antiguo. Anotar en remasters_hechos.txt.",
-      "reserva": "Si no se puede verificar o el original no sirve: el anterior de este hueco, «streamers programados» (8/6/2025, original_id 18065675810099237)."
+      "tipo": "nuevo",
+      "modo": "dibujo",
+      "gancho_tipo": "pregunta",
+      "tema": "Estudios y trabajo: NotebookLM",
+      "gancho": "¿Y si tu PDF de 50 páginas fuera un podcast?",
+      "contenido": "NotebookLM de Google: subir un PDF → «Resumen de audio». Confirmar en support.google.com/notebooklm el nombre del botón en español, que es gratis y que habla en español.",
+      "palabra_clave": "PODCAST",
+      "prueba_no_seguidores": true,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null
     },
     {
       "fecha": "2026-11-10",
-      "tipo": "nuevo",
       "hora": "20:40",
-      "gancho": "pico",
-      "idea": "PARTE 2 del mejor entre 002 (Emú) y 004 (Mary Celeste) por compartidos + comentarios a 48 h (estadisticas.json / ig_post_stats). Empate: Mary Celeste (las teorías y la más aceptada hoy, sin afirmar como seguro lo que no lo es; el 002 ya promete «cómo acabó de verdad»: su Parte 2 va el 17/11 si no gana). Abrir por el pico de la Parte 2.",
-      "fuente_libro": "Si Mary Celeste: Brian Hicks (2004). Si Emú: ninguno; enlazar la fuente del archivo nacional australiano."
+      "tipo": "nuevo",
+      "modo": "dibujo",
+      "gancho_tipo": "historia",
+      "tema": "Casa y trámites",
+      "gancho": "Paco llevaba tres semanas esperando un reembolso",
+      "contenido": "La IA redacta una reclamación educada y firme a partir de 3 datos (qué compraste, qué pasó, qué quieres). Aviso: revisa los datos antes de enviar y no pegues datos sensibles. Sin consejo legal.",
+      "palabra_clave": "RECLAMA",
+      "prueba_no_seguidores": false,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null
     },
     {
       "fecha": "2026-11-11",
+      "hora": "13:40",
       "tipo": "nuevo",
+      "modo": "dibujo",
+      "gancho_tipo": "pregunta",
+      "tema": "Móvil: Google Lens",
+      "gancho": "¿Sabías que tu cámara copia texto?",
+      "contenido": "Google Lens (Android y app de Google en iPhone): apuntar a un cartel o un papel → copiar texto o traducir. iPhone sin Google: Texto en vivo. Nombres de botones según la ayuda oficial.",
+      "palabra_clave": "LENS",
+      "prueba_no_seguidores": true,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null
+    },
+    {
+      "fecha": "2026-11-11",
       "hora": "20:40",
-      "gancho": "pico",
-      "palabra_clave_sugerida": "MANISES",
-      "idea": "Expediente 006: el caso Manises, aniversario exacto (noche del 11 al 12/11/1979). Historia: «Un avión lleno de pasajeros aterriza de emergencia en Valencia por unas luces. Después despega un caza.» → el vuelo TAE de Palma a Canarias, el comandante Lerdo de Tejada, el Mirage F1 de Los Llanos, el expediente desclasificado por Defensa (1994) y la explicación oficial (luces de la refinería de Escombreras es una de las hipótesis citadas: decir «según el informe» y «hipótesis»). Nada de afirmar naves. 30-40 s. Único reel de la semana con tema España: el más compartible aquí.",
-      "fuente_libro": "Vicente-Juan Ballester Olmos, «Expedientes insólitos: el fenómeno OVNI y los archivos de Defensa» (1995); comprobar título y disponibilidad antes de enlazar.",
-      "app_propia": null
+      "tipo": "nuevo",
+      "modo": "dibujo",
+      "gancho_tipo": "numero",
+      "tema": "Cómo usar ChatGPT/Claude mejor",
+      "gancho": "Deja de explicarle a la IA lo mismo cada día",
+      "contenido": "Instrucciones personalizadas / Proyectos: se le dice una vez quién eres y cómo quieres las respuestas. Rutas exactas de ChatGPT y Claude según su ayuda oficial.",
+      "palabra_clave": "PERFIL",
+      "prueba_no_seguidores": false,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null
     },
     {
       "fecha": "2026-11-12",
-      "tipo": "nuevo",
-      "hora": "20:40",
-      "gancho": "pico",
-      "palabra_clave_sugerida": "PECES",
-      "idea": "Expediente 007: la lluvia de peces de Yoro (Honduras). Historia: «Cada año, en un pueblo de Honduras, después de la tormenta hay peces vivos en la calle.» → el festival, lo que han visto los periodistas (National Geographic, BBC), las hipótesis (peces subterráneos que salen con las inundaciones frente a trombas marinas) y lo que no se sabe. Animal + naturaleza + Latinoamérica. Fotos: Commons con licencia comprobada; si no hay fotos del fenómeno, mapa propio + fotos de Yoro y de los peces (dominio público).",
-      "fuente_libro": null
-    },
-    {
-      "fecha": "2026-11-13",
-      "tipo": "remaster",
       "hora": "13:40",
-      "gancho": "pico",
-      "original_id": "18018636716017127",
-      "palabra_clave_sugerida": "SANDIA",
-      "idea": "SEGUNDA VIDA del ÚNICO VIRAL de la cuenta, en viernes 13: el podcast Empírico de «la sandía y el número 13» (31/1/2024: 128.286 reproducciones, 255 veces la mediana, 41,8 s de visualización, 666 comentarios, 477 guardados; nunca se ha reutilizado). Era humor. Apertura en 1.ª persona por el pico («Hace casi tres años colgamos aquí una tontería sobre una sandía y el número trece. Y la vieron ciento veintiocho mil personas.»). Lo real, con 2 fuentes: de dónde sale el miedo al 13 (triscaidecafobia) y un dato verificable; el CTA manda al expediente de las 20:40 sobre el martes 13. Reel de prueba para no seguidores.",
-      "fuente_libro": null,
-      "como": "Igual que el 10/11: mirar fotogramas del original; si está limpio, remaster.json (recorte 20-40 %, gancho nuevo, cierre con el dato real); si no, reel nuevo en modo humano. Si el dato del 13 no se verifica con 2 fuentes, se cambia el dato, no el original.",
-      "reserva": "«Descifrando canciones» (original_id 18092302801695462, backmasking y juicio a Judas Priest de 1990) pasa a reserva para el 17/11 o después."
+      "tipo": "nuevo",
+      "modo": "dibujo",
+      "gancho_tipo": "historia",
+      "tema": "Casa",
+      "gancho": "Menú de la semana y lista de la compra en 30 segundos",
+      "contenido": "Prompt: personas, presupuesto, lo que hay en la nevera → menú y lista agrupada por pasillos. Sin dietas ni consejos de salud.",
+      "palabra_clave": "MENU",
+      "prueba_no_seguidores": true,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null,
+      "app_propia": "GH PLUS · Gestión Hogar solo si de verdad guarda listas o menús (comprobar en la app antes de citarla; si no, nada)"
+    },
+    {
+      "fecha": "2026-11-12",
+      "hora": "20:40",
+      "tipo": "nuevo",
+      "modo": "dibujo",
+      "gancho_tipo": "pregunta",
+      "tema": "Automatizaciones gratis en el móvil",
+      "gancho": "Tu móvil puede hacer esto solo",
+      "contenido": "Automatización: al llegar al trabajo se activa No molestar (iPhone: Atajos > Automatización; Android: Modos y rutinas / Rutinas de Google). Comprobar nombres de menús en la ayuda de Apple y Google; si cambia por marca, decirlo.",
+      "palabra_clave": "ATAJO",
+      "prueba_no_seguidores": false,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null
     },
     {
       "fecha": "2026-11-13",
+      "hora": "13:40",
       "tipo": "nuevo",
-      "hora": "20:40",
-      "gancho": "pico",
-      "palabra_clave_sugerida": "TRECE",
-      "idea": "Expediente 008 (viernes 13): por qué en España y Latinoamérica el día de mala suerte es el MARTES 13 y en casi todo el mundo el viernes 13. Historia: «Hoy es viernes 13 y en media Europa tiemblan. Aquí no: aquí el malo es el martes.» → orígenes documentados (Marte, dios de la guerra; refrán «en martes ni te cases ni te embarques»), lo que NO está probado (la caída de Constantinopla fue un martes 29 de mayo de 1453: decir que es una explicación popular, no probada) y la película «Martes 13» (1980) en España. Muy compartible por DM ese mismo día.",
-      "fuente_libro": null
+      "modo": "dibujo",
+      "gancho_tipo": "numero",
+      "tema": "Trabajo: prompts (búsqueda alta)",
+      "gancho": "3 prompts que te ahorran una hora en el trabajo",
+      "contenido": "Resumir una reunión, convertir notas en un correo, pasar datos sueltos a tabla. Los 3 prompts en «pantalla» y completos en la respuesta por DM.",
+      "palabra_clave": "PROMPTS",
+      "prueba_no_seguidores": true,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null
     },
     {
-      "fecha": "2026-11-14",
-      "tipo": "nuevo",
+      "fecha": "2026-11-13",
       "hora": "20:40",
-      "gancho": "pico",
-      "idea": "PARTE 2 del expediente con más compartidos + comentarios entre el 005 (bombilla), el 006 (Manises) y el 007 (Yoro). Por defecto, Manises: qué dicen los documentos desclasificados y las explicaciones propuestas, con matices.",
-      "fuente_libro": "Si Manises: Ballester Olmos (1995)."
-    },
-    {
-      "fecha": "2026-11-15",
       "tipo": "nuevo",
-      "hora": "20:40",
-      "gancho": "pico",
-      "palabra_clave_sugerida": "SOMERTON",
-      "idea": "Expediente 009: el hombre de Somerton (Adelaida, 1/12/1948) y el papel «Tamám Shud». Historia: «Un hombre aparece muerto en una playa, trajeado, sin etiquetas en la ropa y con un trozo de papel escondido en el bolsillo.» → el libro de Omar Khayyam, el código, y la identificación por ADN propuesta en 2022 (Derek Abbott y Colleen Fitzpatrick: Carl Webb) con el matiz de si la policía la ha confirmado según las fuentes. 30-40 s.",
-      "fuente_libro": "Kerry Greenwood, «Tamam Shud: The Somerton Man Mystery» (2012); comprobar en Amazon.es."
-    },
-    {
-      "fecha": "2026-11-16",
-      "tipo": "nuevo",
-      "hora": "20:40",
-      "gancho": "pico",
-      "palabra_clave_sugerida": "SIGLOS",
-      "idea": "Expediente 010: el tiburón de Groenlandia, un animal que puede llevar vivo desde antes de que existiera Estados Unidos. Historia: «Hay un tiburón nadando ahora mismo que nació cuando Felipe IV era rey.» (solo si el intervalo de las fuentes lo permite: Science 2016, estimación por radiocarbono en el cristalino, 272-512 años el mayor; dar el intervalo, no una cifra). Animal + dato que parece inventado. Vídeo real si Mejora ya admite clips (NOAA/Commons).",
-      "fuente_libro": null
+      "modo": "dibujo",
+      "gancho_tipo": "pregunta",
+      "tema": "Comparativa (búsqueda alta: «ChatGPT o Claude o Gemini»)",
+      "gancho": "¿ChatGPT, Claude o Gemini? Depende de esto",
+      "contenido": "Para qué va mejor cada uno en tareas normales, solo con lo que digan sus páginas oficiales y pruebas propias descritas con honestidad. Cierre: «¿Parte 2 con prompts para cada uno? Comenta IA».",
+      "palabra_clave": "IA",
+      "prueba_no_seguidores": false,
+      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
+      "hecho": null,
+      "parte2_si": "≥ 5 comentarios con IA o compartidos ≥ 3 a 48 h"
     }
   ],
-  "notas_para_el_equipo": [
-    "Los números de expediente son orientativos: el Creador usa el siguiente libre según cola/, publicados/, revision/ y errores/.",
-    "PRIORIDAD 1 (Creador, sábado 7/11): la Parte 2 del baile (8/11 20:40) no existe en cola/ y está prometida en el 001 y en su respuesta automática. PRIORIDAD 2: reescribir solo la 1.ª escena de 006, 008 y 011 (grupo A del experimento) antes de que se rendericen; 007 y 009 se dejan tal cual (grupo B).",
-    "Toda la semana en modo humano v1 (fotos reales con licencia comprobada, voz conversacional, subtítulos palabra a palabra). Si una foto no se puede comprobar, se cambia de foto, no de licencia. CC BY-SA no (estandar_calidad.md v4).",
-    "Honestidad sobre la IA: mientras la voz sea sintética, el texto del post lleva «Voz: narración generada» (Meta exige marcar audio realista generado; Reglamento UE de IA art. 50 desde el 2/8/2026). Parecer humano = estilo y material real, no ocultación. Mejora comprueba si la API permite marcar «hecho con IA» y lo activa solo para la voz.",
-    "Calidad: escribir calidad.json en cola/ en cuanto el render exista; sin él, publicar_gh.py retrasa cada reel 3 h (GRACIA_SIN_CALIDAD). Revisar también a las 16:31 además de 12:31 y 19:31 mientras haya 3 reels al día.",
-    "Mejora (prioridad alta): (1) la programación de Actions se saltó 5 franjas seguidas el 6/11 (15:17-17:17 UTC): añadir un disparo externo del workflow (workflow_dispatch desde una tarea programada de la nube, o un segundo cron a los minutos 02 y 32) y registrar en registro.log cada arranque; (2) clips de vídeo real en hacer_reel.py; (3) campo de audio por escena para la voz del dueño cuando exista; (4) conservar guion.json al mover a publicados/.",
-    "Monetización: campo fuente_libro rellenado donde hay libro real (Hicks, Marzluff, Waller, Ballester Olmos, Greenwood); el Creador lo cita en Fuentes: y Mejora lo enlaza en el hub. Ningún post de esta semana lleva app_propia (ningún tema encaja con Insultator ni GPS Andaluz sin forzarlo). Línea «📚 Fuentes y libros en el enlace del perfil» en cada post (único emoji permitido junto al 📩 del CTA).",
-    "Animales/naturaleza: 002 emú, 007 koala, 008 cuervo, 009 babosa, 007 Yoro, 010 tiburón: por encima de 1 de cada 3.",
-    "Palabras clave sin tildes y distintas: LOBO, GUERRA, DRON, HUELLA, BARCO, CUERVO, BABOSA, BAILE, AIRE, LUZ, NPC, MANISES, PECES, MENSAJE, TRECE, SOMERTON, SIGLOS.",
-    "17-20/11 (por confirmar el lunes 16/11 con 10 reels medidos): Parte 2 del Emú (17/11), fareros de Flannan (18/11), lluvia de carne de Kentucky (19/11), Essex 20/11/1820 (20/11); ¿REAL O FALSO? del martes 17 y viernes 20 con ids no usados de originales/ (quedan 24 sin usar; Cuervo Guadaña 18064409066120359 ya se adelanta al 8/11, así que el 24/11 queda libre).",
-    "Estratega 6/11 19:00 · Mejora (prioridad media, después del disparo externo del cron): modo «diálogo» en hacer_reel.py, con campo opcional \"hablante\":\"A\"|\"B\" por escena y dos voces distintas (p. ej. Pocket lola + Kokoro em_alex), para recuperar el formato que hizo el único viral de la cuenta (dos personajes fijos que discuten). Se prueba en un reel cuando acabe el experimento pico/etiqueta (desde el 13/11).",
-    "Estratega 6/11 19:00 · Buzzfy solo da 10 búsquedas de reels al día y hoy se agotaron antes de las 18:00 UTC: Calidad tiene prioridad para usarlas (comparar cada reel con virales del nicho); el resto del equipo usa buzzfy_playbook (no consume búsquedas) o búsqueda web."
-  ],
   "kpi_semana": {
-    "principal": "Salto (skip_rate_pct) por reel: al menos 1 reel por debajo del 45 % y mediana de la semana por debajo del 55 % (hoy 57 %, mediana histórica 65 %).",
-    "segundo": "Alcance a no seguidores: al menos 1 reel con alcance ≥ 300 (hoy máximo 21).",
-    "tercero": "Compartidos ≥ 3 en algún reel y seguidores netos ≥ 0 en la semana (historial_cuenta).",
-    "motivo": "El salto decide la distribución (playbook: 57 % → 2 % de probabilidad de despegue; < 40 % → 12 % o más) y la distribución es la condición de cualquier vía de ingresos (monetizacion.md §0)."
+    "principal": "Al menos 1 reel con alcance ≥ 300 (no seguidores).",
+    "segundo": "Mediana de salto < 55 %.",
+    "tercero": "≥ 10 comentarios con palabra clave en la semana (DM enviados) y seguidores netos ≥ 0."
   },
-  "hoja_de_ruta_monetizacion": {
-    "creado": "5/11/2026, Estratega (el usuario ha fijado como objetivo monetizar y ha dado control total)",
-    "punto_de_partida": "1.605 seguidores; últimos 30 días: alcance 36 cuentas (14 no seguidores), 2 compartidos, 4 visitas al perfil, 0 clics en el enlace (Buzzfy, 5/11). Pierde ~0,3 seguidores/día.",
-    "fase_1_crecer": {
-      "hasta": "5.000 seguidores",
-      "meta": "+15 seguidores netos/día de media semanal y al menos 1 reel/semana con más de 2.000 de alcance",
-      "palancas": [
-        "1 expediente diario sin huecos (la constancia es lo primero: la cuenta perdía seguidores por publicar a meses vista)",
-        "reels de prueba (\"prueba_no_seguidores\": true) para llegar a no seguidores sin cansar a los seguidores: ya disponibles desde el 5/11",
-        "Partes 2 y series para que valga la pena seguir la cuenta",
-        "animales/naturaleza y casos de España+Latinoamérica (lo más compartido)"
-      ]
-    },
-    "fase_2_ingresos_pequenos": {
-      "desde": "ya, en cuanto el usuario se dé de alta en Afiliados de Amazon.es",
-      "que": "enlace a los libros que se citan como fuente (Waller, Mary Celeste, Somerton…) en una página de enlaces de la bio, con la frase legal de afiliado",
-      "nota": "Ingresos bajos hasta tener alcance; sirve para dejar el embudo montado."
-    },
-    "fase_3_marcas": {
-      "desde": "~5.000-10.000 seguidores y 3 reels con más de 5.000 de alcance",
-      "que": "kit de medios y colaboraciones con editoriales, plataformas de documentales, podcasts de misterio, escape rooms, siempre con la etiqueta de Colaboración pagada"
-    },
-    "fase_4_plataforma": {
-      "desde": "10.000 seguidores (umbral de suscripciones citado por terceros, NO verificado en fuente oficial)",
-      "que": "suscripciones ('expedientes extendidos'), regalos; revisar el Panel profesional > Monetización"
-    },
-    "revision": "El Estratega mide la fase cada lunes con historial_cuenta y estadisticas.json; el Analista de monetización recalcula la estimación cada domingo. 6/11 (viernes, replanteamiento humano): la fase 1 no arranca hasta que un reel supere 300 de alcance; mientras, la palanca es el formato humano (ver experimento)."
+  "monetizacion": {
+    "palabra_clave_dm": "Todos los reels: la respuesta lleva el prompt o los pasos de verdad (máx. 200 caracteres, sin enlaces).",
+    "afiliados": "Solo herramientas con programa oficial de afiliados comprobado por Monetización (equipo/monetizacion.md) y con «enlace de afiliado» en el texto. ChatGPT, Claude y Gemini: no consta programa de afiliados; no se enlazan como afiliado.",
+    "apps_neogest": "Máx. 1 de cada 7 reels, solo si la app hace de verdad lo que se cuenta (candidatas a comprobar: GH PLUS · Gestión Hogar, CajaSegura IA).",
+    "youtube_shorts": "Preparar la publicación cruzada: mismo vídeo y título = gancho; Monetización/Mejora documentan qué falta (canal y permiso del dueño) en pendiente_usuario.md."
   },
-  "coordinacion_monetizacion": {
-    "fase_actual": "Fase 0 · Fundamentos (6-16/11, monetizacion.md §5). Hito de salida: 10 reels medidos a 48 h, enlace de la bio al hub, ID de afiliado. Decisión del 16/11: si la mediana de alcance de los 10 sigue < 100, se cambia gancho/tema antes que la duración (ya recogido en el experimento pico/etiqueta de este plan).",
-    "palancas_de_crecimiento_rapido": [
-      "Reels de prueba para no seguidores en todos los ¿REAL O FALSO? (superan el alcance habitual el 21 % de las veces en cuentas pequeñas, playbook 2026).",
-      "Formato historia con apertura por el pico: la única variable que mueve el salto, y el salto decide la distribución a desconocidos.",
-      "CTA hablado único «mándaselo a quien no se lo crea»: los envíos por DM pesan 3-5 veces más que los likes (Qué! 27/6/2026).",
-      "Partes 2 cumplidas y numeración de expedientes: razón para seguir la cuenta; la primera (baile 1518) sale el 8/11.",
-      "Aniversarios exactos (Mary Celeste 7/11, Manises 11/11, viernes 13) y 1 tema de España por semana: lo más compartible en nuestra audiencia (ES 32 %).",
-      "Constancia sin huecos: 1 reel nuevo al día desde el 10/11 (3 al día solo hasta vaciar la cola ya producida)."
-    ],
-    "tareas_vinculantes_cumplidas_por_el_estratega": [
-      "fuente_libro asignado donde hay libro real (Waller, Hicks, Marzluff, Ballester Olmos, Greenwood) para el hub de afiliados de Amazon.es.",
-      "Animales/naturaleza por encima de 1 de cada 3.",
-      "app_propia: ninguna esta semana (ningún tema encaja sin forzarlo; máximo 1 de cada 10 cuando encaje).",
-      "KPI semanal = salto, alcance a no seguidores y seguidores netos (kpi_semana)."
-    ],
-    "lo_que_frena_los_ingresos_hoy": "0 clics porque la bio sigue apuntando a TikTok y no hay ID de afiliado: ambas cosas solo las puede hacer el dueño (pendiente_usuario.md 1 y 2). Hasta que un reel pase de 300 de alcance, ninguna vía produce; por eso este plan va todo a distribución."
-  },
-  "segunda_vida": {
-    "creado": "Estratega, 6/11/2026 19:00 (2.ª ejecución del día por la orden del usuario)",
-    "dato": "Viral Reels Playbook 2026 de Buzzfy, tema second_life (51.697 reels vueltos a publicar como reel de prueba): superan el alcance habitual el 35 % de las veces si el original fue 5 veces lo normal o más; el 15 % si fue 2-5 veces; solo el 7 % si fue 1-2 veces. Con salto del original < 30 %: 37 %. Hay que cambiar al menos 2 cosas (apertura nueva por el pico, subtítulos, recorte del 20-40 %) porque Instagram limita lo que ve como repetido.",
-    "lectura": "Los ¿REAL O FALSO? de esta semana salen de reels de 2025 que fueron 1-2 veces lo normal (koala adicto, pájaros, babosa, cuervo, oxígeno: 5-11 likes): la franja de menor probabilidad (7 %). En cambio, los 9 reels más vistos de la cuenta (mediana de 199 reels con datos: 502 reproducciones) son TODOS del podcast Empírico de enero-febrero de 2024 y TODOS están por encima de 5 veces lo normal. Además ese formato era lo más humano que ha tenido la cuenta: dos personajes fijos que discuten una teoría absurda, es decir, conversación y no locución.",
-    "candidatos_por_orden": [
-      {
-        "id": "18018636716017127",
-        "fecha": "31/1/2024",
-        "tema": "sandía y número 13",
-        "reproducciones": 128286,
-        "veces_lo_normal": 255.5,
-        "visualizacion_s": 41.8,
-        "comentarios": 666,
-        "uso": "13/11 13:40"
-      },
-      {
-        "id": "18073380868454656",
-        "fecha": "21/1/2024",
-        "tema": "la Tierra no es una esfera (Mr. Tartaria)",
-        "reproducciones": 3879,
-        "veces_lo_normal": 7.7,
-        "visualizacion_s": 28.7,
-        "comentarios": 48,
-        "uso": "10/11 13:40"
-      },
-      {
-        "id": "18214642201272728",
-        "fecha": "23/1/2024",
-        "tema": "teléfono rojo y «estirpe Adanieva»",
-        "reproducciones": 4256,
-        "veces_lo_normal": 8.5,
-        "visualizacion_s": 15.4,
-        "comentarios": 15,
-        "uso": "libre (lo real: la línea directa Washington-Moscú de 1963, que no era un teléfono rojo sino un teletipo; verificar con 2 fuentes)"
-      },
-      {
-        "id": "18015860951035050",
-        "fecha": "25/1/2024",
-        "reproducciones": 4158,
-        "veces_lo_normal": 8.3,
-        "visualizacion_s": 17.4,
-        "comentarios": 32,
-        "uso": "libre"
-      },
-      {
-        "id": "17986749344402864",
-        "fecha": "28/1/2024",
-        "reproducciones": 3882,
-        "veces_lo_normal": 7.7,
-        "visualizacion_s": 18.5,
-        "comentarios": 13,
-        "uso": "libre"
-      },
-      {
-        "id": "18085269121411497",
-        "fecha": "26/1/2024",
-        "reproducciones": 3634,
-        "veces_lo_normal": 7.2,
-        "visualizacion_s": 19.6,
-        "comentarios": 15,
-        "uso": "libre"
-      },
-      {
-        "id": "18049624702572067",
-        "fecha": "4/2/2024",
-        "reproducciones": 3199,
-        "veces_lo_normal": 6.4,
-        "visualizacion_s": 23.5,
-        "comentarios": 23,
-        "uso": "libre"
-      }
-    ],
-    "reglas": [
-      "Desde el 10/11 los ¿REAL O FALSO? salen de esta lista antes que de los reels de 2025, salvo que Calidad vea material de terceros en el original.",
-      "Siempre reel de prueba para no seguidores; si supera el alcance habitual, se comparte al perfil y se hace otra versión (34 % vuelve a ganar, playbook).",
-      "Honestidad: se dice que era humor de la propia cuenta y se desmonta con datos con fuentes; nunca se reutiliza como si fuera verdad.",
-      "Medición: alcance a no seguidores y salto a 48 h frente a 006-011 (originales de 1-2 veces lo normal). No es un experimento nuevo: es elegir mejor el material de los huecos ya previstos."
-    ]
-  }
+  "notas_para_el_equipo": [
+    "Números de truco: el Creador usa el siguiente libre según cola/, publicados/, revision/, errores/ y descartados/.",
+    "MEJORA: prioridad absoluta, modo dibujo en hacer_reel.py antes del sábado 7/11 11:00; si no llega, el render no debe publicar guiones en modo dibujo con el estilo antiguo.",
+    "CREADOR: puede dejar en cola hasta 2 reels por delante. Si un truco no se confirma en la documentación oficial, cambia el tema por otro de la misma categoría y lo anota en \"hecho\".",
+    "Fuentes de las notas de este plan (solo orientativas, no sustituyen a la ayuda oficial): Tom's Guide y TechRadar (Claude gratis: Proyectos, Artefactos, apps), iPhone in Canada 8/1/2026 y Xataka Android (Gemini en Gmail gratis), TechRepublic/Engadget «What is free on ChatGPT in 2026»."
+  ]
 }
