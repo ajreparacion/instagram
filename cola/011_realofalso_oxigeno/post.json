@@ -1,0 +1,13 @@
+{
+  "tipo": "reel",
+  "texto": "¿Real o falso? «En 1872 un científico inventó el oxígeno» 🧪\n\nEra FALSO: lo inventamos nosotros en 2025, en este mismo perfil. Nadie inventó el oxígeno: se descubrió.\n\nLo real:\n• El químico sueco Carl Wilhelm Scheele obtuvo oxígeno hacia 1771 y lo llamó «aire de fuego», pero su libro no salió hasta 1777.\n• El inglés Joseph Priestley lo obtuvo en 1774 y fue el primero en publicarlo. El nombre «oxígeno» se lo dio el francés Antoine Lavoisier.\n• Al menos la mitad del oxígeno de la Tierra se produce en el océano, sobre todo gracias al plancton que hace la fotosíntesis.\n\n📩 Envíaselo a quien se lo creyó.\n🔖 Guárdalo y comenta «AIRE»: te mando otro dato.\n🔔 Síguenos: cada día, un expediente real que parece inventado.\n\nFuentes: NOAA; Royal Society of Chemistry; Encyclopaedia Britannica; EarthSky.\n#realofalso #misterio #curiosidades #datoscuriosos #oxigeno #ciencia",
+  "cuando": "2026-11-10T13:40:00+01:00",
+  "palabra_clave": "AIRE",
+  "respuesta": "¡Ahí va! 🔥 Scheele lo llamó «aire de fuego» y lo obtuvo antes que Priestley, pero no lo publicó hasta 1777, después que él. El nombre «oxígeno» se lo puso Lavoisier.",
+  "compartir_en_feed": true,
+  "portada_ms": 2800,
+  "prueba_no_seguidores": true,
+  "_verificacion": "Remasterizador 6/11/2026: NOAA (oceanservice.noaa.gov/facts/ocean-oxygen, leída hoy): 'roughly half'/'at least 50%' del oxígeno de la Tierra sale del océano, sobre todo del plancton fotosintético; EarthSky da 50-80 % (se dice 'al menos la mitad'). Scheele hacia 1771 'aire de fuego', libro en 1777; Priestley 1774, primero en publicar; nombre de Lavoisier sin año: verificado el 5/11 con RSC, Wikipedia y Britannica (ver plan.json). Recorte prudente 0-12 s porque no se ha podido ver el vídeo.",
+  "motor_voz": "pocket",
+  "_nota_calidad": "6/11/2026 Calidad: reconvertido de remaster a reel nuevo (guion.json) porque el metraje del reel antiguo trae marcas de agua de terceros (iStock, Storyblocks, InVideo...). Mismos datos verificados; CTA reordenado (envíaselo, guárdalo, comenta)."
+}

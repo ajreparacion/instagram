@@ -1,0 +1,44 @@
+{
+  "titulo": "¿Real o falso? El caracol imposible de León",
+  "semilla": 2025,
+  "musica": true,
+  "portada_texto": "¿REAL O FALSO? El caracol imposible de León",
+  "escenas": [
+    {
+      "texto": "¿REAL O FALSO? El caracol imposible de León",
+      "duracion": 5.3,
+      "estilo": "gancho",
+      "voz": "¿Real o falso? Un caracol imposible entre León y Asturias."
+    },
+    {
+      "texto": "«Un caracol que nunca debió existir»",
+      "duracion": 2.9,
+      "estilo": "archivo",
+      "voz": "Dicen que nunca debió existir."
+    },
+    {
+      "texto": "Era FALSO. Pero allí vive algo real",
+      "duracion": 5.3,
+      "estilo": "giro",
+      "voz": "Era falso. Pero allí vive algo real y muy raro."
+    },
+    {
+      "texto": "Si la tocas, se enrolla como un erizo",
+      "duracion": 6.7,
+      "estilo": "evidencia",
+      "voz": "Una babosa que, si la tocas, se enrolla en bola como un erizo."
+    },
+    {
+      "texto": "Solo vive en el noroeste ibérico e Irlanda",
+      "duracion": 7.2,
+      "estilo": "evidencia",
+      "voz": "Solo vive en el noroeste de la península y en el suroeste de Irlanda."
+    },
+    {
+      "texto": "Se llama babosa de Kerry y está protegida",
+      "duracion": 8.6,
+      "estilo": "cierre",
+      "voz": "Es la babosa de Kerry y la protege la Unión Europea. Envíaselo a quien se lo creyó."
+    }
+  ]
+}

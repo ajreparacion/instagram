@@ -1,0 +1,44 @@
+{
+  "titulo": "¿Real o falso? El cuervo que anuncia la muerte",
+  "semilla": 1864,
+  "musica": true,
+  "portada_texto": "¿REAL O FALSO? El cuervo que anuncia la muerte",
+  "escenas": [
+    {
+      "texto": "¿REAL O FALSO? El cuervo que anuncia la muerte",
+      "duracion": 4.8,
+      "estilo": "gancho",
+      "voz": "¿Real o falso? Un cuervo que anuncia la muerte."
+    },
+    {
+      "texto": "«Aparece antes de cada muerte»",
+      "duracion": 3.8,
+      "estilo": "archivo",
+      "voz": "Dicen que aparece antes de cada muerte."
+    },
+    {
+      "texto": "Era FALSO. Pero los cuervos te recuerdan",
+      "duracion": 4.3,
+      "estilo": "giro",
+      "voz": "Era falso. Pero los cuervos recuerdan tu cara."
+    },
+    {
+      "texto": "Los capturaron con máscaras: las atacaron años",
+      "duracion": 6.2,
+      "estilo": "evidencia",
+      "voz": "Unos científicos de Seattle los capturaron con máscaras. Siguieron atacándolas durante años."
+    },
+    {
+      "texto": "Y los que nunca la vieron aprendieron a odiarla",
+      "duracion": 5.7,
+      "estilo": "evidencia",
+      "voz": "Y cuervos que nunca fueron capturados aprendieron a odiar la máscara."
+    },
+    {
+      "texto": "Ante un cuervo muerto, se reúnen y gritan",
+      "duracion": 7.2,
+      "estilo": "cierre",
+      "voz": "Ante un cuervo muerto, se reúnen y gritan. Envíaselo a quien se lo creyó."
+    }
+  ]
+}
