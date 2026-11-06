@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Generador de reels de misterio / falso documental.
-Uso: python3 hacer_reel.py guion.json salida.mp4
+Uso: python3 hacer_reel.py guion.json salida.mp4 [--solo-locucion] [--tiempos tiempos.json]
+Modo "humano": fotos y CLIPS DE VIDEO reales ("imagenes": [{"video": url|ruta, "inicio": s, ...}]) con subtitulos palabra a palabra.
 Solo Pillow + numpy + ffmpeg (subprocess). Fuentes: DejaVu del sistema; si hay
 fuentes opcionales en ./fonts (Oswald*.ttf, SpecialElite*.ttf) se usan."""
 import sys, os, re, json, math, random, shutil, subprocess, tempfile, wave, time, glob, hashlib
@@ -354,6 +355,96 @@ def preparar_foto(im, zoom_max=1.10):
     bg.paste(fg, (0, (th - fh) // 2))
     return bg
 
+CACHE_VID = os.path.expanduser("~/.cache/expedientes/videos")
+
+def descargar_video(src):
+    """Ruta local de un clip de video (6/11/2026, humanizar: video REAL en vez de fondos generados).
+    src: URL http(s) de un video de dominio publico / licencia libre (Commons .webm/.ogv/.mp4, NASA, Pexels...),
+    o una ruta local (absoluta o relativa al guion; publicar_gh.py deja ahi los reels propios del usuario).
+    Con cache en ~/.cache/expedientes/videos/. None si falla: la escena sigue con sus fotos o el fondo neutro."""
+    src = (src or "").strip()
+    if not src: return None
+    if not re.match(r"https?://", src):
+        p = src if os.path.isabs(src) else os.path.join(GUION_DIR[0], src)
+        return p if os.path.exists(p) and os.path.getsize(p) > 1000 else None
+    os.makedirs(CACHE_VID, exist_ok=True)
+    dst = os.path.join(CACHE_VID, hashlib.md5(src.encode()).hexdigest() + ".vid")
+    if not os.path.exists(dst) or os.path.getsize(dst) < 1000:
+        try:
+            import urllib.request
+            req = urllib.request.Request(src, headers={"User-Agent": "ExpedientesImposibles-render/1.0 (reel de dominio publico)"})
+            with urllib.request.urlopen(req, timeout=60) as r, open(dst + ".part", "wb") as fh:
+                shutil.copyfileobj(r, fh, 1 << 20)
+            if os.path.getsize(dst + ".part") > 200 * 1024 * 1024:
+                os.remove(dst + ".part"); print("video demasiado grande (>200 MB):", src[:90]); return None
+            os.replace(dst + ".part", dst)
+        except Exception as e:
+            print("video no descargado:", src[:90], "->", str(e)[:120])
+            return None
+    return dst
+
+def sonda_video(path):
+    """(ancho, alto, duracion) con ffprobe; None si no es un video legible."""
+    try:
+        r = subprocess.run([shutil.which("ffprobe") or "ffprobe", "-v", "error", "-select_streams", "v:0",
+                            "-show_entries", "stream=width,height:format=duration", "-of", "json", path],
+                           capture_output=True, text=True, timeout=60)
+        j = json.loads(r.stdout or "{}")
+        st = (j.get("streams") or [{}])[0]
+        return int(st["width"]), int(st["height"]), float((j.get("format") or {}).get("duration") or 0)
+    except Exception as e:
+        print("video ilegible:", path[-60:], "->", str(e)[:100])
+        return None
+
+class Clip:
+    """Fotogramas de un clip de video ya encajados en el lienzo (algo mayor, como las fotos, para el zoom/paneo).
+    Se extraen con ffmpeg a JPEG en una carpeta temporal; frame(i) devuelve el fotograma i (el ultimo si se acaba)."""
+    def __init__(self, path, inicio, dur, zoom_max=1.10):
+        self.ok = False
+        info = sonda_video(path)
+        if not info or info[0] < 16 or info[1] < 16: return
+        w, h, total = info
+        tw, th = int(W * zoom_max) + 2, int(H * zoom_max) + 2
+        if tw % 2: tw += 1
+        if th % 2: th += 1
+        self.size = (tw, th)
+        inicio = max(0.0, float(inicio or 0))
+        if total > 0.5 and inicio >= total - 0.3: inicio = 0.0
+        need = dur + 0.25
+        vert = w / h < 0.62 * 1.25
+        encaje = ("scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d" % (tw, th, tw, th)) if vert else (
+            "split[a][b];[a]scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d,gblur=sigma=28,"
+            "eq=brightness=-0.28[bg];[b]scale=%d:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2" % (tw, th, tw, th, tw))
+        self.dir = tempfile.mkdtemp(prefix="clip_")
+        CLIP_DIRS.append(self.dir)   # se borran al terminar (atexit)
+        cmd = [FFMPEG, "-y", "-loglevel", "error"]
+        if total > 0.5 and total - inicio < need:   # clip corto: se repite en bucle para llenar la escena
+            cmd += ["-stream_loop", "-1"]
+        cmd += ["-i", path, "-ss", "%.3f" % inicio, "-t", "%.3f" % need, "-an",
+                "-filter_complex", "[0:v]" + encaje + ",fps=%d,format=yuv420p[v]" % FPS, "-map", "[v]",
+                "-q:v", "3", os.path.join(self.dir, "f%05d.jpg")]
+        try:
+            subprocess.run(cmd, check=True, timeout=600, capture_output=True)
+        except Exception as e:
+            print("clip no extraido:", path[-60:], "->", str(getattr(e, 'stderr', b'') or e)[-160:])
+            return
+        self.files = sorted(glob.glob(os.path.join(self.dir, "f*.jpg")))
+        self.n = len(self.files)
+        self.ok = self.n >= 2
+        self.last = (None, None)
+    def frame(self, i):
+        i = max(0, min(i, self.n - 1))
+        if self.last[0] != i:
+            im = Image.open(self.files[i]).convert("RGB")
+            if im.size != self.size: im = im.resize(self.size, Image.BILINEAR)
+            self.last = (i, im)
+        return self.last[1]
+
+GUION_DIR = [os.getcwd()]   # carpeta del guion (rutas relativas de "video")
+CLIP_DIRS = []
+import atexit
+atexit.register(lambda: [shutil.rmtree(d, ignore_errors=True) for d in CLIP_DIRS])
+
 def fondo_neutro(style, rng):
     """Fondo neutro (degradado oscuro con un foco suave) cuando una escena no lleva fotos."""
     tint = {"gancho": (24, 18, 18), "archivo": (20, 20, 18), "evidencia": (16, 19, 22),
@@ -452,12 +543,27 @@ def rotulo_humano(texto):
 def preparar_humano(sc, spec, rng):
     """Carga fotos, prepara subtitulos y movimiento de camara para una escena en modo humano."""
     sc.fotos = []
+    # 1) fotos y rutas de video validas (un "video" por entrada tiene prioridad sobre su "url")
+    entradas = []
     for im_spec in (spec.get("imagenes") or [])[:3]:
         if not isinstance(im_spec, dict): continue
+        credito = str(im_spec.get("credito") or "").strip()
+        mov = str(im_spec.get("mov") or rng.choice(["zoom_in", "zoom_out", "pan_izq", "pan_der"])).strip()
+        vid = descargar_video(str(im_spec.get("video") or "")) if im_spec.get("video") else None
+        if vid:
+            entradas.append(("video", vid, float(im_spec.get("inicio") or 0), credito, mov)); continue
         im = descargar_imagen(str(im_spec.get("url") or "").strip())
         if im is None: continue
-        sc.fotos.append((preparar_foto(im), str(im_spec.get("credito") or "").strip(),
-                         str(im_spec.get("mov") or rng.choice(["zoom_in", "zoom_out", "pan_izq", "pan_der"])).strip()))
+        entradas.append(("foto", im, 0.0, credito, mov))
+    # 2) cada entrada ocupa el mismo tramo de la escena; los clips se extraen solo para ese tramo
+    seg = sc.dur / max(1, len(entradas))
+    for tipo, obj, inicio, credito, mov in entradas:
+        if tipo == "video":
+            clip = Clip(obj, inicio, seg)
+            if not clip.ok: continue
+            sc.fotos.append((clip, credito, mov if mov in ("zoom_in", "zoom_out", "fijo") else "fijo"))
+        else:
+            sc.fotos.append((preparar_foto(obj), credito, mov))
     if not sc.fotos:
         sc.fotos = [(fondo_neutro(sc.style, rng), "", rng.choice(["pan_izq", "pan_der", "zoom_in"]))]
     voz = (spec.get("voz") or "").strip()
@@ -483,6 +589,8 @@ def render_frame_humano(fi, sc, noise, rg):
     nf = len(sc.fotos); seg = sc.dur / nf
     k = min(nf - 1, int(t / seg)); tk = t - k * seg
     foto, credito, mov = sc.fotos[k]
+    if isinstance(foto, Clip):   # clip de video real: fotograma del tramo (el clip corre a la misma velocidad)
+        foto = foto.frame(lf - int(k * seg * FPS))
     p = min(1.0, tk / max(0.5, seg))
     fw, fh = foto.size
     if mov == "zoom_in":   z = 1.0 + 0.09 * p
@@ -961,6 +1069,7 @@ def main():
         print("Uso: python3 hacer_reel.py guion.json salida.mp4 [--solo-locucion] [--tiempos tiempos.json]"); sys.exit(1)
     t0 = time.time()
     g = json.load(open(sys.argv[1], encoding="utf-8")); out = sys.argv[2]
+    GUION_DIR[0] = os.path.dirname(os.path.abspath(sys.argv[1]))
     # Voz primero (publicar_gh.py, 6/11/2026): con --solo-locucion solo se escribe <salida>.locucion.json (sin
     # fotogramas) para generar la voz antes; con --tiempos se recibe la duracion REAL de la voz de cada escena
     # ({"0": 3.21, "2": 4.8, ...}, indice de escena -> segundos) y entonces la escena se alarga para que la voz

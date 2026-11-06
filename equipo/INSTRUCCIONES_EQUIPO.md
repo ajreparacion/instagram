@@ -58,6 +58,10 @@ Añade "modo":"humano" al guion. Entonces hacer_reel.py NO dibuja fondos generad
    "texto":"(opcional) rótulo corto fijo arriba, p. ej. «1932 · Australia»",
    "imagenes":[{"url":"https://upload.wikimedia.org/...","credito":"Autor · Dominio público","mov":"zoom_in|zoom_out|pan_izq|pan_der"}]}]}
 - "imagenes": 1-3 por escena (corte cada 2-4 s). Solo dominio público o licencia libre (CC0, CC BY, CC BY-SA con crédito). El crédito se muestra pequeño en pantalla y la licencia debe anotarse en "_imagenes" de post.json. Si una URL falla al descargar, el render usa un fondo de textura neutra (no se cae), pero Calidad lo marca.
+- CLIPS DE VÍDEO REAL (desde el 6/11/2026, prioritarios frente a las fotos cuando existan): una entrada de "imagenes" puede ser un vídeo en vez de una foto, con las mismas reglas de licencia y el mismo crédito:
+  {"video":"https://upload.wikimedia.org/....webm","inicio":12.0,"credito":"Autor · Dominio público","mov":"zoom_in"} → URL directa de un vídeo (Commons .webm/.ogv/.mp4, NASA, Pexels/Pixabay con licencia libre) o ruta local relativa a la carpeta del reel.
+  {"original_id":"18064409066120359","inicio":3.0,"credito":"Vídeo propio"} → un reel antiguo de la propia cuenta (id de originales/); publicar_gh.py lo descarga de la API al renderizar. Solo si el fotograma está limpio de marcas ajenas (iStock, Storyblocks, InVideo…).
+  "inicio" = segundo del clip por el que empieza; el clip ocupa su tramo de la escena a velocidad real, sin su audio, y si es más corto que el tramo se repite en bucle. Los apaisados van sobre sí mismos desenfocados. "mov" solo zoom_in | zoom_out | fijo (sin paneo: el vídeo ya se mueve). Si el vídeo no se puede descargar o leer, la entrada se ignora y la escena sigue con sus fotos o el fondo neutro (queda anotado en registro.log).
 - Caché local: las imágenes se descargan a ~/.cache/expedientes/imagenes/ (GitHub Actions las cachea con la voz).
 
 ## Formato de remaster.json (reel antiguo; lo renderiza herramientas/remaster.py descargando el original_id)
