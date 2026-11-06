@@ -1,32 +1,47 @@
 [
  {
   "inicio": 0.0,
-  "duracion": 4.3,
+  "duracion": 3.7,
   "texto": "¿Real o falso? Un koala adicto en Queensland."
  },
  {
-  "inicio": 4.3,
-  "duracion": 3.433,
-  "texto": "Cuentan que montó un negocio turbio."
+  "inicio": 3.7,
+  "duracion": 4.567,
+  "texto": "En mil novecientos noventa y seis. Con negocio turbio."
  },
  {
-  "inicio": 7.733,
-  "duracion": 6.2,
-  "texto": "Era falso. Pero en mil novecientos noventa y seis, algo sí pasó."
+  "inicio": 8.267,
+  "duracion": 2.5,
+  "texto": "Falso. Lo inventamos nosotros."
  },
  {
-  "inicio": 13.933,
-  "duracion": 4.8,
-  "texto": "Sus huellas dactilares son casi idénticas a las humanas."
+  "inicio": 10.767,
+  "duracion": 4.067,
+  "texto": "Pero en el noventa y seis sí pasó algo."
  },
  {
-  "inicio": 18.733,
-  "duracion": 3.8,
-  "texto": "Canguros y wombats ni siquiera tienen huellas."
+  "inicio": 14.833,
+  "duracion": 5.6,
+  "texto": "En Adelaida vieron que los koalas tienen huellas dactilares. Casi como las nuestras."
  },
  {
-  "inicio": 22.533,
-  "duracion": 6.2,
-  "texto": "¿Confundir a la policía? Un bulo. Envíaselo a quien se lo creyó."
+  "inicio": 20.433,
+  "duracion": 2.8,
+  "texto": "Al microscopio cuesta distinguirlas. Flipé."
+ },
+ {
+  "inicio": 23.233,
+  "duracion": 3.3,
+  "texto": "Canguros y wombats, sus primos, ni tienen."
+ },
+ {
+  "inicio": 26.533,
+  "duracion": 4.833,
+  "texto": "¿Lo de confundir a la policía? Eso sí es un bulo."
+ },
+ {
+  "inicio": 31.367,
+  "duracion": 2.933,
+  "texto": "Mándaselo a quien se lo creyó."
  }
 ]
