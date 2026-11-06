@@ -1,15 +1,15 @@
 {
   "_nota": "Cifras que solo da Buzzfy/Instagram, copiadas a mano por el Analista (herramientas de solo lectura). Las actualiza el Analista cada noche. Si una cifra no se ha leído, dejarla en null.",
-  "fecha": "2026-11-06 12:55 CET",
+  "fecha": "2026-11-06 23:24 CET",
   "dias": 7,
-  "alcance_total": 22,
-  "alcance_no_seguidores_total": 14,
-  "alcance_seguidores_total": 8,
-  "visualizaciones_no_seguidores": 17,
+  "alcance_total": 24,
+  "alcance_no_seguidores_total": 15,
+  "alcance_seguidores_total": 9,
+  "visualizaciones_no_seguidores": 21,
   "clics_enlace": 0,
   "visitas_perfil": 1,
   "seguidores_netos_dia": -0.33,
-  "_seguidores_detalle": "ig_follower_growth 23/10-3/11 (12 días cerrados): +6 / -10 = -4 netos; 4 y 5/11 pendientes",
+  "_seguidores_detalle": "ig_follower_growth 23/10-3/11 (12 días cerrados): +6 / -10 = -4 netos; 4 y 5/11 aún pendientes (Instagram tarda ~48 h)",
   "no_seguidores_por_reel": {
     "17996499894053316": null
   }

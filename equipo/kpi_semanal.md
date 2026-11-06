@@ -20,23 +20,23 @@ Reglas: todo reel con < 48 h es PROVISIONAL (Instagram tarda hasta 48 h en asent
 
 ## Tabla (generada)
 <!-- KPI:INICIO -->
-Actualizado con estadisticas.json de 06/11/2026 07:53 UTC · ventana 7 días · 1 reel(s) del enfoque nuevo · PROVISIONAL: hay reels con < 48 h
-Cifras de Buzzfy copiadas a mano el 2026-11-06 12:55 CET (ventana 7 días).
+Actualizado con estadisticas.json de 06/11/2026 15:02 UTC · ventana 7 días · 1 reel(s) del enfoque nuevo · PROVISIONAL: hay reels con < 48 h
+Cifras de Buzzfy copiadas a mano el 2026-11-06 23:24 CET (ventana 7 días).
 
 | KPI | Valor actual | Objetivo Fase 0 | Cómo se calcula |
 |---|---|---|---|
-| Seguidores netos / día | -0,33 | ≥ 0 (dejar de perder); Fase 1: +5/día | historial_cuenta: Buzzfy ig_follower_growth (2026-11-06 12:55 CET) |
-| Alcance a no seguidores / reel | 14,0 | ≥ 150 (la mitad de los 300 de alcance meta por reel) | solo Buzzfy (ig_account_stats reach.nonFollowers ÷ reels de la ventana); n/d si no se pasa --buzzfy |
-| Alcance / reel (media · mediana) | 16,0 | mediana ≥ 100 a 48 h en los 10 reels (decisión del 16/11); meta ≥ 300 | metricas.reach; mediana ventana 16; referencia 30 últimos 130,0 |
+| Seguidores netos / día | -0,33 | ≥ 0 (dejar de perder); Fase 1: +5/día | historial_cuenta: Buzzfy ig_follower_growth (2026-11-06 23:24 CET) |
+| Alcance a no seguidores / reel | 15,0 | ≥ 150 (la mitad de los 300 de alcance meta por reel) | solo Buzzfy (ig_account_stats reach.nonFollowers ÷ reels de la ventana); n/d si no se pasa --buzzfy |
+| Alcance / reel (media · mediana) | 21,0 | mediana ≥ 100 a 48 h en los 10 reels (decisión del 16/11); meta ≥ 300 | metricas.reach; mediana ventana 21; referencia 30 últimos 130,0 |
 | Compartidos / reel | 0,00 | ≥ 3 por reel | metricas.shares; referencia 30 últimos (mediana) 0,0 |
 | Guardados / reel | 0,00 | ≥ 2 por reel | metricas.saved; referencia 30 últimos (mediana) 0,0 |
 | Clics en el enlace / semana | 0 | enlace activo al hub; Fase 1: 20/semana | solo Buzzfy (ig_account_stats profileActivity.websiteClicks + linkTaps) |
-| Visualización media (s) | 12,1 | ≥ 15 s | ig_reels_avg_watch_time ÷ 1000; referencia 30 últimos (mediana) 9,4 s |
+| Visualización media (s) | 14,4 | ≥ 15 s | ig_reels_avg_watch_time ÷ 1000; referencia 30 últimos (mediana) 9,4 s |
 | % visto (vis. media ÷ duración) | n/d | ≥ 50 % del reel | duración de publicados/*/locucion.json o guion.json; n/d si la carpeta no los conserva |
 
 | Reel | Publicado (CET) | Edad | Alcance | Repr. | Comp. | Guard. | Coment. | Vis. media | Duración | % visto |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 17996499894053316 | 05/11 21:46 | 11 h (prov.) | 16 | 24 | 0 | 0 | 0 | 12,1 s | n/d | n/d |
+| 17996499894053316 | 05/11 21:46 | 18 h (prov.) | 21 | 28 | 0 | 0 | 0 | 14,4 s | n/d | n/d |
 
 Referencia: mediana de los 30 reels de estadisticas.json — alcance 130,0, compartidos 0,0, guardados 0,0, visualización media 9,4 s.
 <!-- KPI:FIN -->
