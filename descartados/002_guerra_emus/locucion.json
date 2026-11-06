@@ -1,50 +1,66 @@
 [
  {
   "escena": 0,
+  "estilo": "gancho",
   "inicio": 0.0,
-  "duracion": 6.533,
-  "texto": "En mil novecientos treinta y dos, Australia mandó al ejército… contra los emús."
+  "duracion": 5.6,
+  "texto": "En mil novecientos treinta y dos, Australia mandó al ejército… contra los emús.",
+  "enfasis": []
  },
  {
   "escena": 1,
-  "inicio": 6.533,
-  "duracion": 4.6,
-  "texto": "Te lo juro. Unos veinte mil emús arrasando el trigo."
+  "estilo": "archivo",
+  "inicio": 5.6,
+  "duracion": 4.0,
+  "texto": "Te lo juro. Unos veinte mil emús arrasando el trigo.",
+  "enfasis": []
  },
  {
   "escena": 2,
-  "inicio": 11.133,
-  "duracion": 4.033,
-  "texto": "Los granjeros, muchos veteranos de guerra, piden ayuda."
+  "estilo": "archivo",
+  "inicio": 9.6,
+  "duracion": 4.067,
+  "texto": "Los granjeros, muchos veteranos de guerra, piden ayuda.",
+  "enfasis": []
  },
  {
   "escena": 3,
-  "inicio": 15.167,
-  "duracion": 5.233,
-  "texto": "¿Y qué mandan? Dos soldados, dos ametralladoras… y diez mil balas."
+  "estilo": "evidencia",
+  "inicio": 13.667,
+  "duracion": 5.2,
+  "texto": "¿Y qué mandan? Dos soldados, dos ametralladoras… y diez mil balas.",
+  "enfasis": []
  },
  {
   "escena": 4,
-  "inicio": 20.4,
-  "duracion": 4.933,
-  "texto": "Y aquí viene lo bueno. Los emús se separaban… y corrían más que el camión."
+  "estilo": "giro",
+  "inicio": 18.867,
+  "duracion": 5.067,
+  "texto": "Y aquí viene lo bueno. Los emús se separaban… y corrían más que el camión.",
+  "enfasis": []
  },
  {
   "escena": 5,
-  "inicio": 25.333,
-  "duracion": 5.4,
-  "texto": "A la semana retiran a las tropas. Vuelven… y en diciembre, se rinden."
+  "estilo": "evidencia",
+  "inicio": 23.933,
+  "duracion": 5.3,
+  "texto": "A la semana retiran a las tropas. Vuelven… y en diciembre, se rinden.",
+  "enfasis": []
  },
  {
   "escena": 6,
-  "inicio": 30.733,
-  "duracion": 5.0,
-  "texto": "Y el mayor dijo que aguantaban las balas… con la invulnerabilidad de los tanques."
+  "estilo": "evidencia",
+  "inicio": 29.233,
+  "duracion": 6.2,
+  "texto": "Y el mayor dijo que aguantaban las balas… con la invulnerabilidad de los tanques.",
+  "enfasis": []
  },
  {
   "escena": 7,
-  "inicio": 35.733,
-  "duracion": 4.0,
-  "texto": "Mándaselo a quien no se lo crea. Y guárdalo."
+  "estilo": "cierre",
+  "inicio": 35.433,
+  "duracion": 4.933,
+  "texto": "Mándaselo a quien no se lo crea. Y guárdalo.",
+  "enfasis": []
  }
 ]
