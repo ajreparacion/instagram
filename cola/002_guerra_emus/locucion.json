@@ -1,42 +1,50 @@
 [
  {
+  "escena": 0,
   "inicio": 0.0,
-  "duracion": 5.6,
+  "duracion": 6.533,
   "texto": "En mil novecientos treinta y dos, Australia mandó al ejército… contra los emús."
  },
  {
-  "inicio": 5.6,
-  "duracion": 4.467,
+  "escena": 1,
+  "inicio": 6.533,
+  "duracion": 4.6,
   "texto": "Te lo juro. Unos veinte mil emús arrasando el trigo."
  },
  {
-  "inicio": 10.067,
-  "duracion": 3.8,
+  "escena": 2,
+  "inicio": 11.133,
+  "duracion": 4.033,
   "texto": "Los granjeros, muchos veteranos de guerra, piden ayuda."
  },
  {
-  "inicio": 13.867,
-  "duracion": 5.333,
+  "escena": 3,
+  "inicio": 15.167,
+  "duracion": 5.233,
   "texto": "¿Y qué mandan? Dos soldados, dos ametralladoras… y diez mil balas."
  },
  {
-  "inicio": 19.2,
-  "duracion": 6.4,
+  "escena": 4,
+  "inicio": 20.4,
+  "duracion": 4.933,
   "texto": "Y aquí viene lo bueno. Los emús se separaban… y corrían más que el camión."
  },
  {
-  "inicio": 25.6,
-  "duracion": 5.6,
+  "escena": 5,
+  "inicio": 25.333,
+  "duracion": 5.4,
   "texto": "A la semana retiran a las tropas. Vuelven… y en diciembre, se rinden."
  },
  {
-  "inicio": 31.2,
-  "duracion": 6.0,
+  "escena": 6,
+  "inicio": 30.733,
+  "duracion": 5.0,
   "texto": "Y el mayor dijo que aguantaban las balas… con la invulnerabilidad de los tanques."
  },
  {
-  "inicio": 37.2,
-  "duracion": 4.067,
+  "escena": 7,
+  "inicio": 35.733,
+  "duracion": 4.0,
   "texto": "Mándaselo a quien no se lo crea. Y guárdalo."
  }
 ]
