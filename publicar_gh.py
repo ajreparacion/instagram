@@ -3,7 +3,8 @@
 
 Lo ejecuta .github/workflows/ciclo.yml varias veces al día. En cada pasada:
   1. Renderiza los reels nuevos de cola/ (guion.json -> hacer_reel.py, remaster.json -> remaster.py),
-     les pone la voz (Piper o Kyutai Pocket TTS, según equipo/voz.json "motor") y guarda el vídeo como archivo de la release "cola" (no en el historial de git).
+     les pone la voz (Chatterbox, Kokoro, Kyutai Pocket TTS o Piper, según equipo/voz.json "motor" y "respaldo")
+     y guarda el vídeo como archivo de la release "cola" (no en el historial de git).
   2. Publica en Instagram los que ya tienen su hora y el visto bueno de Calidad (calidad.json).
   3. Responde a los comentarios con la palabra clave de cada reel.
   4. Actualiza estadisticas.json y originales/*.json.
@@ -52,6 +53,10 @@ PIPER_URLS = [
 ]
 VOZ_RAIZ = "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/"
 VOZ_POCKET = os.path.join(BASE, "herramientas", "voz_pocket.py")
+VOZ_CHATTERBOX = os.path.join(BASE, "herramientas", "voz_chatterbox.py")
+VOZ_KOKORO = os.path.join(BASE, "herramientas", "voz_kokoro.py")
+# Chatterbox va en su propio entorno virtual (fija torch 2.6 y transformers 4.46): ciclo.yml exporta PYTHON_CHATTERBOX
+PYTHON_CHATTERBOX = os.environ.get("PYTHON_CHATTERBOX") or sys.executable
 ATRIBUCION_POCKET = "Voz: Kyutai Pocket TTS (CC BY 4.0)"
 MAX_RENDERS = 2
 GRACIA_SIN_CALIDAD = timedelta(hours=3)
@@ -150,14 +155,32 @@ def gh(*args, check=True):
     return r
 
 
-# ---------------------------------------------------------------- voz (Piper / Pocket TTS)
+# ---------------------------------------------------------------- voz (Chatterbox / Kokoro / Pocket TTS / Piper)
+MOTORES = ("chatterbox", "kokoro", "pocket", "piper")
+
+
 def ajustes_voz():
-    base = {"motor": "piper", "modelo": "es/es_ES/davefx/medium/es_ES-davefx-medium", "lentitud": 1.08,
+    base = {"motor": "piper", "respaldo": ["pocket", "piper"],
+            "modelo": "es/es_ES/davefx/medium/es_ES-davefx-medium", "lentitud": 1.08,
             "volumen_voz": 1.25, "umbral_duck": 0.02, "ratio_duck": 8, "limite": 0.7, "variacion": 0.667,
             "ruido": 0.8, "cadena_voz": "",
-            "pocket": {"idioma": "spanish", "voz": "lola", "temperatura": None, "ganancia": 1.0, "max_s": 600}}
+            "pocket": {"idioma": "spanish", "voz": "lola", "temperatura": None, "ganancia": 1.0, "max_s": 600},
+            "chatterbox": {"modelo": "es-es", "idioma": "es", "exageracion": 0.6, "cfg": 0.35, "temperatura": 0.75,
+                           "referencia": "voces/referencia_usuario.wav", "referencia_kokoro": None,
+                           "ganancia": 1.0, "semilla": 7, "max_s": 1500},
+            "kokoro": {"voz": "em_alex", "velocidad": 0.95, "ganancia": 1.0, "max_s": 300}}
     base.update(leer_json(AJUSTES_VOZ, {}) or {})
     return base
+
+
+def cadena_motores(aj):
+    """Motor principal y después los de respaldo, sin repetir y solo los conocidos. Piper siempre cierra la lista."""
+    orden = [str(aj.get("motor", "piper")).lower()] + [str(m).lower() for m in (aj.get("respaldo") or [])] + ["piper"]
+    vistos = []
+    for m in orden:
+        if m in MOTORES and m not in vistos:
+            vistos.append(m)
+    return vistos
 
 
 def ruta_piper():
@@ -201,41 +224,119 @@ def sintetizar(texto, salida):
         raise ErrorAPI(f"Piper falló: {r.stderr.decode(errors='replace')[-300:]}")
 
 
-def sintetizar_pocket(textos, salidas, trabajo, aj):
-    """Todas las frases en un solo proceso (el modelo se carga una vez). Lanza ErrorAPI si algo falla."""
-    pk = dict(aj.get("pocket") or {})
-    lote = os.path.join(trabajo, "lote_pocket.json")
-    escribir_json(lote, {"idioma": pk.get("idioma", "spanish"), "voz": pk.get("voz", "lola"),
-                         "temperatura": pk.get("temperatura"), "ganancia": pk.get("ganancia", 1.0),
-                         "frases": [{"texto": t, "salida": s} for t, s in zip(textos, salidas)]})
+def _sintetizar_lote(nombre, script, python, lote_datos, textos, salidas, trabajo, max_s):
+    """Todas las frases en un solo proceso (el modelo se carga una vez). Lanza ErrorAPI si algo falla.
+    Devuelve el JSON que imprime el script (tiempos, modelo usado...)."""
+    lote = os.path.join(trabajo, "lote_" + "".join(c if c.isalnum() else "_" for c in nombre.lower()) + ".json")
+    lote_datos = dict(lote_datos)
+    lote_datos["frases"] = [{"texto": t, "salida": s} for t, s in zip(textos, salidas)]
+    escribir_json(lote, lote_datos)
     t0 = time.time()
     try:
-        r = subprocess.run([sys.executable, VOZ_POCKET, lote], capture_output=True, text=True,
-                           timeout=float(pk.get("max_s", 600)))
+        r = subprocess.run([python, script, lote], capture_output=True, text=True, timeout=float(max_s))
     except subprocess.TimeoutExpired:
-        raise ErrorAPI(f"Pocket TTS tardó más de {pk.get('max_s', 600)} s")
+        raise ErrorAPI(f"{nombre} tardó más de {max_s} s")
     if r.returncode != 0 or not all(os.path.exists(s) and os.path.getsize(s) > 1000 for s in salidas):
-        raise ErrorAPI(f"Pocket TTS falló: {(r.stderr or r.stdout)[-300:]}")
+        lineas = [l.strip() for l in ((r.stderr or "") + "\n" + (r.stdout or "")).splitlines() if l.strip()]
+        raise ErrorAPI(f"{nombre} falló: {' | '.join(lineas[-2:])[-300:]}")
+    try:
+        info = json.loads((r.stdout or "").strip().splitlines()[-1])
+    except Exception:
+        info = {}
+    info["_segundos"] = round(time.time() - t0)
+    return info
+
+
+def sintetizar_pocket(textos, salidas, trabajo, aj):
+    pk = dict(aj.get("pocket") or {})
+    info = _sintetizar_lote("Pocket TTS", VOZ_POCKET, sys.executable,
+                            {"idioma": pk.get("idioma", "spanish"), "voz": pk.get("voz", "lola"),
+                             "temperatura": pk.get("temperatura"), "ganancia": pk.get("ganancia", 1.0)},
+                            textos, salidas, trabajo, pk.get("max_s", 600))
     log(f"Voz con Pocket TTS ({pk.get('idioma', 'spanish')}/{pk.get('voz', 'lola')}): "
-        f"{len(textos)} frases en {time.time() - t0:.0f} s")
+        f"{len(textos)} frases en {info['_segundos']} s")
+
+
+def sintetizar_chatterbox(textos, salidas, trabajo, aj):
+    """Chatterbox (Resemble AI, MIT). Referencia de voz: solo la del usuario (voces/referencia_usuario.wav)
+    o una con licencia libre; si el archivo no existe se usa la voz integrada del modelo."""
+    cb = dict(aj.get("chatterbox") or {})
+    ref = cb.get("referencia")
+    if ref and not os.path.isabs(ref):
+        ref = os.path.join(BASE, ref)
+    if not (ref and os.path.exists(ref)) and cb.get("referencia_kokoro"):
+        # Sin voz del usuario: referencia sintética con licencia libre (Kokoro, Apache 2.0), generada aquí mismo
+        # y guardada en la caché. No es la voz de ninguna persona real.
+        ref = referencia_kokoro(str(cb["referencia_kokoro"]), aj, trabajo)
+    info = _sintetizar_lote("Chatterbox", VOZ_CHATTERBOX, PYTHON_CHATTERBOX,
+                            {"modelo": cb.get("modelo", "es-es"), "idioma": cb.get("idioma", "es"),
+                             "exageracion": cb.get("exageracion", 0.5), "cfg": cb.get("cfg", 0.5),
+                             "temperatura": cb.get("temperatura", 0.8), "referencia": ref if ref and os.path.exists(ref) else None,
+                             "ganancia": cb.get("ganancia", 1.0), "semilla": cb.get("semilla")},
+                            textos, salidas, trabajo, cb.get("max_s", 1500))
+    log(f"Voz con Chatterbox ({info.get('modelo_usado', '?')}, referencia={'sí' if info.get('referencia') else 'integrada'}, "
+        f"exageración {cb.get('exageracion', 0.5)}, cfg {cb.get('cfg', 0.5)}): {len(textos)} frases en {info['_segundos']} s"
+        + (f"; avisos: {info['avisos']}" if info.get("avisos") else ""))
+
+
+TEXTO_REFERENCIA = ("A ver, te cuento una cosa que me pasó el otro día. Estaba en casa, tranquilo, y de repente… "
+                    "oigo un ruido en la cocina. Nada, pensé. Pero no. Ojo, que esto se pone bueno.")
+
+
+def referencia_kokoro(voz, aj, trabajo):
+    """Clip de referencia (~10 s, español) generado con Kokoro para que Chatterbox imite su timbre. Con caché."""
+    destino = os.path.join(CACHE, "voces", f"referencia_kokoro_{voz}.wav")
+    if os.path.exists(destino) and os.path.getsize(destino) > 20000:
+        return destino
+    try:
+        os.makedirs(os.path.dirname(destino), exist_ok=True)
+        tmp = os.path.join(trabajo, "ref_kokoro.wav")
+        _sintetizar_lote("Kokoro (referencia)", VOZ_KOKORO, sys.executable,
+                         {"voz": voz, "velocidad": 1.0, "ganancia": 1.0}, [TEXTO_REFERENCIA], [tmp], trabajo, 300)
+        shutil.copy(tmp, destino)
+        return destino
+    except Exception as e:
+        log(f"Referencia Kokoro no disponible ({str(e)[-160:]}); Chatterbox usa su voz integrada")
+        return None
+
+
+def sintetizar_kokoro(textos, salidas, trabajo, aj):
+    kk = dict(aj.get("kokoro") or {})
+    info = _sintetizar_lote("Kokoro", VOZ_KOKORO, sys.executable,
+                            {"voz": kk.get("voz", "em_alex"), "velocidad": kk.get("velocidad", 1.0),
+                             "ganancia": kk.get("ganancia", 1.0)},
+                            textos, salidas, trabajo, kk.get("max_s", 300))
+    log(f"Voz con Kokoro ({kk.get('voz', 'em_alex')}): {len(textos)} frases en {info['_segundos']} s")
+
+
+def sintetizar_piper(textos, salidas, trabajo, aj):
+    for t, s in zip(textos, salidas):
+        sintetizar(t, s)
+
+
+SINTETIZADORES = {"chatterbox": sintetizar_chatterbox, "kokoro": sintetizar_kokoro,
+                  "pocket": sintetizar_pocket, "piper": sintetizar_piper}
 
 
 def generar_locucion(textos, trabajo, aj=None):
-    """Devuelve (lista de wav, motor usado). Si Pocket falla, toda la locución se hace con Piper (no se mezclan voces)."""
+    """Devuelve (lista de wav, motor usado). Se prueba el motor de equipo/voz.json y, si falla, los de "respaldo"
+    en orden (Piper siempre el último). Toda la locución sale del mismo motor: no se mezclan voces."""
     aj = aj or ajustes_voz()
     salidas = [os.path.join(trabajo, f"voz{i}.wav") for i in range(len(textos))]
-    if str(aj.get("motor", "piper")).lower() == "pocket":
+    motores = cadena_motores(aj)
+    ultimo = None
+    for motor in motores:
         try:
-            sintetizar_pocket(textos, salidas, trabajo, aj)
-            return salidas, "pocket"
+            SINTETIZADORES[motor](textos, salidas, trabajo, aj)
+            return salidas, motor
         except Exception as e:
-            log(f"Pocket TTS no disponible en este render ({str(e)[-200:]}); se usa Piper")
+            ultimo = e
+            if motor != motores[-1]:
+                log(f"Voz {motor} no disponible en este render ({str(e)[-200:]}); se prueba el siguiente")
             for s in salidas:
                 if os.path.exists(s):
                     os.remove(s)
-    for t, s in zip(textos, salidas):
-        sintetizar(t, s)
-    return salidas, "piper"
+    raise ErrorAPI(f"Ningún motor de voz funcionó ({motores}): {str(ultimo)[-200:]}")
 
 
 def con_atribucion(texto, motor):

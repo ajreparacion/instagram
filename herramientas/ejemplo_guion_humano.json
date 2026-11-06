@@ -1,0 +1,112 @@
+{
+ "titulo": "Expediente 003: el Mary Celeste",
+ "semilla": 1872,
+ "modo": "humano",
+ "musica": true,
+ "portada_texto": "Un barco a la deriva. Con comida. Y sin nadie",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "duracion": 3.6,
+   "texto": "Un barco a la deriva. Con comida. Y sin nadie",
+   "voz": "Un barco a la deriva… con comida para seis meses. Y sin nadie.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Aivazovsky_gibraltar.jpg/1280px-Aivazovsky_gibraltar.jpg",
+     "credito": "I. Aivazovski, 1873 · Dominio público",
+     "mov": "zoom_in"
+    }
+   ]
+  },
+  {
+   "estilo": "archivo",
+   "duracion": 5.0,
+   "texto": "Nueva York · 7 nov. 1872",
+   "voz": "Tal día como hoy, en mil ochocientos setenta y dos, sale de Nueva York el Mary Celeste.",
+   "subtitulos": "Tal día como hoy, en 1872, sale de Nueva York el Mary Celeste.",
+   "imagenes": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/9/92/Mary_Celeste_as_Amazon_in_1861.jpg",
+     "credito": "El barco en 1861, aún llamado Amazon · Dominio público",
+     "mov": "pan_der"
+    }
+   ]
+  },
+  {
+   "estilo": "archivo",
+   "duracion": 4.6,
+   "texto": "Diciembre de 1872",
+   "voz": "Un mes después, otro barco se lo encuentra a la deriva, entre las Azores y Portugal.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/77/Admiralty_Chart_No_2717_Gibraltar_to_Alicante_and_Cape_Spartel_to_Cape_Ferrat%2C_Published_1878.jpg/1280px-Admiralty_Chart_No_2717_Gibraltar_to_Alicante_and_Cape_Spartel_to_Cape_Ferrat%2C_Published_1878.jpg",
+     "credito": "Carta náutica, 1878 · Dominio público",
+     "mov": "pan_izq"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 3.8,
+   "voz": "Suben… y está todo. La comida, el agua, sus cosas.",
+   "imagenes": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/64/Mary_Celeste_engraving.jpg",
+     "credito": "Grabado del Mary Celeste · Dominio público",
+     "mov": "zoom_in"
+    }
+   ]
+  },
+  {
+   "estilo": "giro",
+   "duracion": 3.4,
+   "voz": "Solo falta una cosa. El bote salvavidas.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/%27Brigantine_William_G._Irwin_off_Diamond_Head%27%2C_oil_on_canvas_painting_by_Gideon_Jacques_Denny.JPG/1280px-%27Brigantine_William_G._Irwin_off_Diamond_Head%27%2C_oil_on_canvas_painting_by_Gideon_Jacques_Denny.JPG",
+     "credito": "G. J. Denny, 1890 · Dominio público",
+     "mov": "zoom_in"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 4.6,
+   "texto": "10 personas a bordo",
+   "voz": "Y eran diez. Con la mujer del capitán… y su hija de dos años.",
+   "imagenes": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Clement_Drew_-_The_American_brigantine_M_Louisa_Miller_off_the_coast_of_Maine%2C_1866.jpg",
+     "credito": "C. Drew, 1866 · Dominio público",
+     "mov": "pan_der"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 4.6,
+   "texto": "Última anotación: 25 nov. 1872",
+   "voz": "La última nota del diario es del veinticinco de noviembre. Y luego… nada.",
+   "subtitulos": "La última nota del diario es del 25 de noviembre. Y luego… nada.",
+   "imagenes": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Mary_Celeste_NYTimes_1873February26.png",
+     "credito": "Prensa de Boston, febrero de 1873 · Dominio público",
+     "mov": "zoom_in"
+    }
+   ]
+  },
+  {
+   "estilo": "cierre",
+   "duracion": 4.8,
+   "voz": "De los diez, nunca más se supo. Mándaselo a quien le flipen los misterios.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/1/17/Aivazovsky_gibraltar.jpg/1280px-Aivazovsky_gibraltar.jpg",
+     "credito": "I. Aivazovski, 1873 · Dominio público",
+     "mov": "zoom_out"
+    }
+   ]
+  }
+ ]
+}
