@@ -9,7 +9,7 @@ y escribe para cada tema:
     (miniatura de 1080 px de ancho de upload.wikimedia.org), licencia, autor y crédito ya redactado.
   - /tmp/imagenes/<tema>.jpg: hoja de contactos numerada (se sube a la release "pruebas") para que
     Calidad, Creador y Remasterizador vean las fotos antes de elegir.
-Solo acepta dominio público, CC0, CC BY y CC BY-SA (nunca NC, ND ni «uso legítimo»).
+Solo acepta dominio público, CC0 y CC BY (nunca BY-SA, NC, ND ni «uso legítimo»).
 Creado por Calidad el 6/11/2026 (petición 2 de equipo/mejoras.md), con autorización total del usuario.
 """
 import io, json, os, re, sys, time, html, urllib.parse, urllib.request
@@ -21,8 +21,9 @@ UA = "ExpedientesImposibles-buscador/1.0 (https://github.com/ajreparacion/instag
 ENTRADA = "equipo/busqueda_imagenes.json"
 SALIDA = "equipo/imagenes_candidatas"
 HOJAS = "/tmp/imagenes"
-ACEPTADAS = re.compile(r"^(public domain|pd\b|pd-|cc0|cc[ -]by(-sa)?[ -]?\d|cc[ -]by(-sa)?$|no restrictions)", re.I)
-VETADAS = re.compile(r"(nc|nd|fair use|non-free)", re.I)
+ACEPTADAS = re.compile(r"^(public domain|pd\b|pd-|cc0|cc[ -]by[ -]?\d|cc[ -]by$|no restrictions)", re.I)
+# Sin CC BY-SA: un reel con zoom/recorte es obra derivada y la cláusula «compartir igual» no se puede cumplir en Instagram.
+VETADAS = re.compile(r"(nc|nd|sa|fair use|non-free)", re.I)
 
 
 def get(url, binario=False):
@@ -43,7 +44,7 @@ def limpio(s):
     return re.sub(r"\s+", " ", html.unescape(s)).strip()
 
 
-def buscar(consulta, n=10):
+def buscar(consulta, n=25):
     q = {"action": "query", "format": "json", "generator": "search", "gsrnamespace": "6",
          "gsrsearch": consulta + " filetype:bitmap", "gsrlimit": str(n), "prop": "imageinfo",
          "iiprop": "url|extmetadata|size|mime", "iiurlwidth": "1080"}
@@ -118,7 +119,7 @@ def main():
                     continue
                 vistos.add(c["titulo"]); cands.append(c)
             time.sleep(0.5)
-        cands = cands[:30]
+        cands = cands[:40]
         for i, c in enumerate(cands, 1):
             c["n"] = i
         json.dump({"tema": tema, "fecha": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
