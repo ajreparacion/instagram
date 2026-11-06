@@ -1,0 +1,33 @@
+{
+  "titulo": "Truco 014: la fórmula de 4 piezas para pedirle cosas a la IA",
+  "semilla": 1402,
+  "modo": "dibujo",
+  "musica": true,
+  "portada_texto": "¿La IA te contesta fatal?",
+  "escenas": [
+    {"estilo": "gancho", "duracion": 3.0,
+     "texto": "¿TE CONTESTA FATAL?",
+     "voz": "¿ChatGPT te contesta *fatal*? Es por esto.",
+     "dibujo": {"personajes": ["paco"], "accion": "agobiado", "objeto": "chat", "invitados": ["chatgpt"]}},
+    {"estilo": "problema", "duracion": 5.0,
+     "voz": "Paco le escribe: hazme un correo. Y sale un churro que no le vale para nada.",
+     "dibujo": {"personajes": ["paco"], "accion": "agobiado", "objeto": "chat", "pantalla": ["hazme un correo"], "invitados": ["chatgpt"]}},
+    {"estilo": "paso", "duracion": 5.0,
+     "texto": "QUIÉN ERES + QUÉ QUIERES",
+     "voz": "Bit le enseña *cuatro piezas*. Primero, quién eres y qué quieres.",
+     "dibujo": {"personajes": ["bit", "paco"], "accion": "explica", "objeto": "chat", "pantalla": ["Tengo un bar en Valencia.", "Escribe un correo pidiendo presupuesto de café"]}},
+    {"estilo": "paso", "duracion": 5.0,
+     "texto": "PARA QUIÉN + FORMATO",
+     "voz": "Luego, para quién es, y en qué formato lo quieres.",
+     "dibujo": {"personajes": ["bit"], "accion": "senala", "objeto": "chat", "pantalla": ["Es para un proveedor nuevo.", "Tono amable, máximo 5 líneas."]}},
+    {"estilo": "resultado", "duracion": 5.0,
+     "voz": "Y ahora sale un correo que *sí* puedes usar. Vale igual en Claude y en Gemini.",
+     "dibujo": {"personajes": ["paco", "bit"], "accion": "celebra", "objeto": "correo", "invitados": ["chatgpt", "claude", "gemini"]},
+     "sello": "MEJOR"},
+    {"estilo": "cierre", "duracion": 4.0,
+     "texto": "COMENTA «PROMPT»",
+     "voz": "Comenta *PROMPT* y te mando la plantilla.",
+     "dibujo": {"personajes": ["bit", "paco"], "accion": "celebra", "objeto": "nada"},
+     "lista": ["Quién eres y qué quieres", "Para quién es", "En qué formato"]}
+  ]
+}

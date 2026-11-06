@@ -1,0 +1,26 @@
+{
+  "tipo": "reel",
+  "texto": "Cómo usar Claude gratis: 3 cosas que casi nadie usa 👇\n\n1. Proyectos: subes tus documentos e instrucciones una vez y Claude los tiene en cada chat del proyecto. En el plan gratis, hasta 5.\n2. Pídele una tabla, una plantilla o una mini app: te la abre en una ventana al lado del chat (Anthropic los llama «artefactos»).\n3. Memoria: recuerda lo importante entre chats. Se gestiona en Configuración > Tu Claude > «Generar memoria a partir de chats».\n\nOjo: no le pegues datos sensibles (contraseñas, DNI, datos bancarios).\n\nComenta CLAUDE y te mando los pasos por mensaje.\nSígueme para un truco al día.\n\nComprobado en: ayuda oficial de Anthropic y claude.com/pricing (nov. 2026). Los menús pueden cambiar según la versión de la app.\nVoz: narración generada.\n\n#inteligenciaartificial #claude #trucos #productividad #ia",
+  "cuando": "2026-11-07T13:40:00+01:00",
+  "palabra_clave": "CLAUDE",
+  "respuesta": "1) Barra lateral > Proyectos: sube docs e instrucciones (gratis hasta 5). 2) Pide «hazme una tabla de…» y se abre al lado. 3) Configuración > Tu Claude > Generar memoria a partir de chats.",
+  "compartir_en_feed": true,
+  "portada_ms": 1500,
+  "prueba_no_seguidores": true,
+  "_fuentes": [
+    "https://claude.com/pricing",
+    "https://support.claude.com/es/articles/9517075-what-are-projects",
+    "https://support.claude.com/en/articles/9487310-what-are-artifacts-and-how-do-i-use-them",
+    "https://support.claude.com/es/articles/11817273-using-claude-s-chat-search-and-memory-to-build-on-previous-context"
+  ],
+  "_comprobado": "6/11/2026: pricing (Free: Projects «Up to 5», Create Artifacts Yes, Memory Yes); ayuda ES «Los usuarios gratuitos pueden crear un máximo de cinco proyectos»; artefactos «available on Free, Pro, Max, Team, and Enterprise» (requiere «Cloud code execution and file creation» activado en Settings > Capabilities); memoria «activada de forma predeterminada para planes Free, Pro, Max y Ultra», ruta «Configuración > Tu Claude» (diseño antiguo: Configuración > Memoria). No se cita la búsqueda en chats pasados: es solo de pago.",
+  "_nota_creador": "Plan 7/11 13:40, gancho_tipo número. Sin afiliado (Anthropic no consta con programa). Nombre exacto de la pestaña de artefactos en español no confirmado: por eso el reel no lo nombra.",
+  "_autoevaluacion": {
+    "gancho": 21,
+    "truco_valor": 22,
+    "retencion": 17,
+    "estilo": 13,
+    "cta_monetizacion": 9,
+    "total": 82
+  }
+}

@@ -1,0 +1,119 @@
+{
+  "titulo": "Truco 013: 3 cosas que Claude hace gratis",
+  "semilla": 1301,
+  "modo": "dibujo",
+  "musica": true,
+  "portada_texto": "3 cosas gratis de Claude",
+  "escenas": [
+    {
+      "estilo": "gancho",
+      "duracion": 3.5,
+      "texto": "3 COSAS GRATIS",
+      "voz": "Claude hace *tres* cosas gratis. Y casi nadie las usa.",
+      "dibujo": {
+        "personajes": [
+          "bit",
+          "paco"
+        ],
+        "accion": "sorprendido",
+        "objeto": "nada",
+        "invitados": [
+          "claude"
+        ]
+      }
+    },
+    {
+      "estilo": "problema",
+      "duracion": 3.5,
+      "voz": "Paco solo le hace preguntas sueltas. Y cada día empieza de cero.",
+      "dibujo": {
+        "personajes": [
+          "paco"
+        ],
+        "accion": "agobiado",
+        "objeto": "chat",
+        "pantalla": [
+          "Hola, otra vez:",
+          "soy Paco, tengo un bar..."
+        ],
+        "invitados": [
+          "claude"
+        ]
+      }
+    },
+    {
+      "estilo": "paso",
+      "duracion": 6.5,
+      "texto": "1 · PROYECTOS",
+      "voz": "Uno: *Proyectos*. Subes tus documentos e instrucciones una vez y los tiene en cada chat. Gratis, hasta cinco.",
+      "dibujo": {
+        "personajes": [
+          "bit",
+          "paco"
+        ],
+        "accion": "explica",
+        "objeto": "carpeta",
+        "pantalla": [
+          "Proyecto: Mi bar",
+          "Instrucciones: respuestas cortas",
+          "Archivos: carta.pdf"
+        ]
+      }
+    },
+    {
+      "estilo": "paso",
+      "duracion": 5.5,
+      "texto": "2 · TABLAS Y PLANTILLAS",
+      "voz": "Dos: pídele una tabla o una plantilla. Te la abre al lado, lista para usar.",
+      "dibujo": {
+        "personajes": [
+          "bit"
+        ],
+        "accion": "senala",
+        "objeto": "portatil",
+        "pantalla": [
+          "Hazme una tabla de turnos",
+          "para 4 camareros"
+        ]
+      }
+    },
+    {
+      "estilo": "paso",
+      "duracion": 6.0,
+      "texto": "3 · MEMORIA",
+      "voz": "Tres: la *memoria*. Recuerda lo importante entre chats. Está en Configuración, Tu Claude.",
+      "dibujo": {
+        "personajes": [
+          "bit",
+          "paco"
+        ],
+        "accion": "explica",
+        "objeto": "movil",
+        "pantalla": [
+          "Configuración",
+          "Tu Claude",
+          "Generar memoria a partir de chats"
+        ]
+      }
+    },
+    {
+      "estilo": "cierre",
+      "duracion": 5.0,
+      "texto": "COMENTA «CLAUDE»",
+      "voz": "Paco ya no empieza de cero. Comenta *CLAUDE* y te mando los pasos.",
+      "dibujo": {
+        "personajes": [
+          "paco",
+          "bit"
+        ],
+        "accion": "celebra",
+        "objeto": "nada"
+      },
+      "lista": [
+        "Proyectos: hasta 5 gratis",
+        "Tablas y plantillas al lado",
+        "Memoria entre chats"
+      ]
+    }
+  ]
+}

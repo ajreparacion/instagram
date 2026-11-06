@@ -44,7 +44,7 @@
       "palabra_clave": "CLAUDE",
       "prueba_no_seguidores": true,
       "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null
+      "hecho": "Creador 6/11 23:30: cola/013_claude_gratis (Proyectos hasta 5, tablas/plantillas al lado = artefactos, memoria). Confirmado en claude.com/pricing y support.claude.com. Pendiente de render en modo dibujo."
     },
     {
       "fecha": "2026-11-07",
@@ -58,7 +58,7 @@
       "palabra_clave": "PROMPT",
       "prueba_no_seguidores": false,
       "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null,
+      "hecho": "Creador 6/11 23:30: cola/014_formula_prompt (quién eres / qué quieres / para quién / formato). Base: guías oficiales de OpenAI y Anthropic. Pendiente de render en modo dibujo.",
       "respuesta_idea": "Plantilla de las 4 piezas lista para copiar"
     },
     {
