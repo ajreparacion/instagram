@@ -1,0 +1,51 @@
+{
+ "semilla": 1774,
+ "gancho": {
+  "texto": "¿REAL O FALSO? En 1872 alguien inventó el oxígeno",
+  "voz": "¿Real o falso? Alguien inventó el oxígeno.",
+  "duracion": 2.5
+ },
+ "recorte": {
+  "inicio": 0.0,
+  "fin": 12.0
+ },
+ "rotulos": [
+  {
+   "inicio": 0.2,
+   "fin": 4.0,
+   "texto": "«Un científico dijo haberlo inventado»"
+  },
+  {
+   "inicio": 4.0,
+   "fin": 8.0,
+   "texto": "¿Y si el aire que respiras no fuera natural?"
+  },
+  {
+   "inicio": 8.0,
+   "fin": 11.9,
+   "texto": "¿Te lo crees?"
+  }
+ ],
+ "cierre": {
+  "partes": [
+   {
+    "texto": "Era FALSO. Nadie inventó el oxígeno",
+    "voz": "Era falso. Nadie inventó el oxígeno."
+   },
+   {
+    "texto": "Lo real: Scheele lo obtuvo hacia 1771",
+    "voz": "Lo real: Scheele lo obtuvo hacia mil setecientos setenta y uno."
+   },
+   {
+    "texto": "Priestley lo logró en 1774 y lo publicó antes",
+    "voz": "Priestley lo logró en mil setecientos setenta y cuatro y lo publicó antes."
+   },
+   {
+    "texto": "Y al menos la mitad sale del océano",
+    "voz": "Y al menos la mitad sale del plancton del océano. Envíaselo a quien se lo creyó."
+   }
+  ]
+ },
+ "musica": true,
+ "volumen_original": 0.8
+}
