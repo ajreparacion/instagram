@@ -1,87 +1,87 @@
 {
- "motor": "chatterbox",
- "respaldo": [
-  "kokoro",
-  "pocket",
-  "piper"
- ],
- "chatterbox": {
-  "modelo": "es-es",
-  "idioma": "es",
-  "exageracion": 0.6,
-  "cfg": 0.35,
-  "temperatura": 0.75,
-  "referencia": null,
-  "referencia_kokoro": "em_alex",
-  "ganancia": 1.0,
-  "semilla": 7,
-  "max_s": 1500,
-  "_nota": "referencia: ruta al wav de la voz del propio usuario (p. ej. voces/referencia_usuario.wav). null hasta que la prueba de la voz del dueño (voz_usuario.yml) confirme parecido y WER; mientras tanto se usa referencia_kokoro.",
-  "por_estilo": {
-   "gancho": {
-    "exageracion": 0.85,
-    "cfg": 0.3
-   },
-   "giro": {
-    "exageracion": 0.8,
-    "cfg": 0.3
-   },
-   "cierre": {
-    "exageracion": 0.7
-   }
+  "motor": "chatterbox",
+  "respaldo": [
+    "kokoro",
+    "pocket",
+    "piper"
+  ],
+  "chatterbox": {
+    "modelo": "es-es",
+    "idioma": "es",
+    "exageracion": 0.6,
+    "cfg": 0.35,
+    "temperatura": 0.75,
+    "referencia": "voces/referencia_usuario.wav",
+    "referencia_kokoro": "em_alex",
+    "ganancia": 1.0,
+    "semilla": 7,
+    "max_s": 1500,
+    "_nota": "referencia = VOZ DEL DUEÑO (autorizada por él el 6/11/2026; confirmó que es la «voz A», reel del Proyecto ALCAYATA). Activada el 6/11 a las 20:20 tras la prueba voz_usuario.yml n.º 4: parecido con su voz 0,943 (Resemblyzer; Pocket de control 0,59), WER 0,135 voz sola / 0,144 mezcla (Pocket 0,144 / 0,163), variación de tono 5,3 st (Pocket 2,0). UTMOS bajo (1,87 frente a 3,86 de Pocket): hereda el sonido de móvil y la separación de música de la referencia; mejora si el dueño sube una nota de voz limpia. Si no existe el wav (release «voces»), se usa referencia_kokoro.",
+    "por_estilo": {
+      "gancho": {
+        "exageracion": 0.85,
+        "cfg": 0.3
+      },
+      "giro": {
+        "exageracion": 0.8,
+        "cfg": 0.3
+      },
+      "cierre": {
+        "exageracion": 0.7
+      }
+    },
+    "_nota_por_estilo": "6/11: gancho y giro con más intensidad (exageracion 0,8-0,85, cfg 0,3) que el resto (0,6 / 0,35). Petición del usuario: falta gancho y énfasis."
   },
-  "_nota_por_estilo": "6/11: gancho y giro con más intensidad (exageracion 0,8-0,85, cfg 0,3) que el resto (0,6 / 0,35). Petición del usuario: falta gancho y énfasis."
- },
- "kokoro": {
-  "voz": "em_alex",
-  "velocidad": 0.95,
-  "ganancia": 1.0,
-  "max_s": 300,
-  "por_estilo": {
-   "gancho": {
-    "velocidad": 0.88
-   },
-   "giro": {
-    "velocidad": 0.9
-   }
+  "kokoro": {
+    "voz": "em_alex",
+    "velocidad": 0.95,
+    "ganancia": 1.0,
+    "max_s": 300,
+    "por_estilo": {
+      "gancho": {
+        "velocidad": 0.88
+      },
+      "giro": {
+        "velocidad": 0.9
+      }
+    }
+  },
+  "pocket": {
+    "idioma": "spanish",
+    "voz": "lola",
+    "temperatura": null,
+    "ganancia": 1.0,
+    "max_s": 600
+  },
+  "modelo": "es/es_ES/davefx/medium/es_ES-davefx-medium",
+  "lentitud": 1.08,
+  "variacion": 0.667,
+  "ruido": 0.8,
+  "volumen_voz": 1.25,
+  "umbral_duck": 0.02,
+  "ratio_duck": 4,
+  "limite": 0.78,
+  "cadena_voz": "highpass=f=80,equalizer=f=300:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=3,acompressor=threshold=0.08:ratio=3:attack=2:release=120:makeup=3.2,deesser=i=0.4,alimiter=limit=0.62:attack=1:release=40:level=false",
+  "recorte": {
+    "activo": true,
+    "umbral_db": -40,
+    "margen_ms": 120,
+    "pausa_larga_s": 9.0,
+    "pausa_max_s": 0.6,
+    "_nota": "6/11 (queja del usuario: se notan cortes): solo se recorta el silencio del principio y del final (120 ms de margen); las pausas internas NO se tocan (pausa_larga_s 9 s). Con voz primero ya no hace falta acortarlas para que quepan."
+  },
+  "alineacion": {
+    "activo": true,
+    "modelo": "small",
+    "max_s": 420,
+    "_nota": "faster-whisper por palabra: subtítulos clavados a la voz y énfasis. Si falla, se sigue con la estimación."
+  },
+  "enfasis": {
+    "activo": true,
+    "db": 3.0,
+    "rampa_ms": 60,
+    "pausa_ms": 0,
+    "db_previo": 0,
+    "_nota": "palabras entre *asteriscos*: +3 dB con rampas de 60 ms (sin escalón); pausa_ms 0 = sin respiro insertado (se oía como corte). En los subtítulos salen en rojo."
   }
- },
- "pocket": {
-  "idioma": "spanish",
-  "voz": "lola",
-  "temperatura": null,
-  "ganancia": 1.0,
-  "max_s": 600
- },
- "modelo": "es/es_ES/davefx/medium/es_ES-davefx-medium",
- "lentitud": 1.08,
- "variacion": 0.667,
- "ruido": 0.8,
- "volumen_voz": 1.25,
- "umbral_duck": 0.02,
- "ratio_duck": 4,
- "limite": 0.78,
- "cadena_voz": "highpass=f=80,equalizer=f=300:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=3,acompressor=threshold=0.08:ratio=3:attack=2:release=120:makeup=3.2,deesser=i=0.4,alimiter=limit=0.62:attack=1:release=40:level=false",
- "recorte": {
-  "activo": true,
-  "umbral_db": -40,
-  "margen_ms": 120,
-  "pausa_larga_s": 9.0,
-  "pausa_max_s": 0.6,
-  "_nota": "6/11 (queja del usuario: se notan cortes): solo se recorta el silencio del principio y del final (120 ms de margen); las pausas internas NO se tocan (pausa_larga_s 9 s). Con voz primero ya no hace falta acortarlas para que quepan."
- },
- "alineacion": {
-  "activo": true,
-  "modelo": "small",
-  "max_s": 420,
-  "_nota": "faster-whisper por palabra: subtítulos clavados a la voz y énfasis. Si falla, se sigue con la estimación."
- },
- "enfasis": {
-  "activo": true,
-  "db": 3.0,
-  "rampa_ms": 60,
-  "pausa_ms": 0,
-  "db_previo": 0,
-  "_nota": "palabras entre *asteriscos*: +3 dB con rampas de 60 ms (sin escalón); pausa_ms 0 = sin respiro insertado (se oía como corte). En los subtítulos salen en rojo."
- }
 }
