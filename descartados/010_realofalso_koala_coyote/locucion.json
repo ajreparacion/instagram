@@ -1,56 +1,74 @@
 [
  {
   "escena": 0,
+  "estilo": "gancho",
   "inicio": 0.0,
   "duracion": 3.8,
-  "texto": "¿Un koala coyote… en Sierra Morena?"
+  "texto": "¿Un koala coyote… en Sierra Morena?",
+  "enfasis": []
  },
  {
   "escena": 1,
+  "estilo": "archivo",
   "inicio": 3.8,
-  "duracion": 3.633,
-  "texto": "Mitad koala, mitad coyote. Eso contamos aquí, eh."
+  "duracion": 3.7,
+  "texto": "Mitad koala, mitad coyote. Eso contamos aquí, eh.",
+  "enfasis": []
  },
  {
   "escena": 2,
-  "inicio": 7.433,
-  "duracion": 3.533,
-  "texto": "Y hubo gente que juraba haberlo visto."
+  "estilo": "archivo",
+  "inicio": 7.5,
+  "duracion": 3.6,
+  "texto": "Y hubo gente que juraba haberlo visto.",
+  "enfasis": []
  },
  {
   "escena": 3,
-  "inicio": 10.967,
-  "duracion": 3.2,
-  "texto": "Pues es falso. Nos lo inventamos nosotros."
+  "estilo": "giro",
+  "inicio": 11.1,
+  "duracion": 3.733,
+  "texto": "Pues es falso. Nos lo inventamos nosotros.",
+  "enfasis": []
  },
  {
   "escena": 4,
-  "inicio": 14.167,
-  "duracion": 4.6,
-  "texto": "A ver, los koalas salvajes solo viven en Australia."
+  "estilo": "evidencia",
+  "inicio": 14.833,
+  "duracion": 4.3,
+  "texto": "A ver, los koalas salvajes solo viven en Australia.",
+  "enfasis": []
  },
  {
   "escena": 5,
-  "inicio": 18.767,
-  "duracion": 3.4,
-  "texto": "Pero ojo… que un lobo con bolsa sí existió."
+  "estilo": "evidencia",
+  "inicio": 19.133,
+  "duracion": 4.067,
+  "texto": "Pero ojo… que un lobo con bolsa sí existió.",
+  "enfasis": []
  },
  {
   "escena": 6,
-  "inicio": 22.167,
-  "duracion": 5.9,
-  "texto": "El tilacino. Cabeza de perro, rayas de tigre… y bolsa, como un canguro."
+  "estilo": "evidencia",
+  "inicio": 23.2,
+  "duracion": 5.433,
+  "texto": "El tilacino. Cabeza de perro, rayas de tigre… y bolsa, como un canguro.",
+  "enfasis": []
  },
  {
   "escena": 7,
-  "inicio": 28.067,
+  "estilo": "evidencia",
+  "inicio": 28.633,
   "duracion": 6.4,
-  "texto": "Y el último que se conoce murió en un zoo de Tasmania, en mil novecientos treinta y seis."
+  "texto": "Y el último que se conoce murió en un zoo de Tasmania, en mil novecientos treinta y seis.",
+  "enfasis": []
  },
  {
   "escena": 8,
-  "inicio": 34.467,
-  "duracion": 3.5,
-  "texto": "Mándaselo a quien se lo creyó. Y guárdalo."
+  "estilo": "cierre",
+  "inicio": 35.033,
+  "duracion": 3.4,
+  "texto": "Mándaselo a quien se lo creyó. Y guárdalo.",
+  "enfasis": []
  }
 ]
