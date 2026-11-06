@@ -183,3 +183,47 @@ Hasta ahora el modo humano solo admitía fotos con movimiento de cámara. Ahora 
 - Para el Creador y el Remasterizador: en los ¿REAL O FALSO? de segunda vida (010, 013…) se puede poner la escena de apertura con `{"original_id": "<id del reel antiguo>", "inicio": <segundo del pico>}` en vez de una foto, SOLO si el fotograma está limpio de marcas ajenas. Documentado en INSTRUCCIONES_EQUIPO.md (modo humano).
 - Revertir: no usar `"video"` ni `"original_id"` (sin esos campos el render es idéntico), o copiar herramientas/versiones/hacer_reel.py_2026-11-06e y publicar_gh.py_2026-11-06c (ojo: esta última copia es anterior a los cambios de voz de la otra sesión de Mejora de hoy; mejor quitar solo `resolver_videos_guion` y su llamada en `renderizar`).
 - Coordinación: la otra sesión de Mejora de hoy lleva la voz (Chatterbox/Kokoro, voz del dueño, prueba_voz #4); esta sesión no toca voz.json ni los motores para no pisarla.
+
+## 6/11/2026 (Mejora, sesión de voz, ejecución programada) · Chatterbox sustituye a Pocket/Piper como voz predeterminada + flujo «voz primero»
+
+Orden del usuario (6/11): humanizar al máximo; sustituir Piper por un TTS moderno, gratuito y con licencia comercial (Chatterbox primero, Kokoro como alternativa rápida; nada CC-BY-NC/CPML). Comparación de retención de los cambios anteriores: **todavía sin datos** (ningún reel con Pocket se ha publicado aún; 002 sale hoy a las 20:40).
+
+### Licencias comprobadas
+- Chatterbox (Resemble AI): código y pesos MIT (github.com/resemble-ai/chatterbox; ficha HF ResembleAI/Chatterbox-Multilingual-es-es «License: mit», archivos t3_es_es.safetensors + s3gen_v3 + tokenizer). Lleva marca de agua inaudible Perth (no afecta). Sin atribución obligatoria; el post lleva «Voz generada por IA» (Meta pide marcar audio realista generado).
+- Kokoro-82M (hexgrad): Apache 2.0, voces españolas ef_dora / em_alex / em_santa (voces del propio modelo, de nadie real).
+- Referencia de voz para Chatterbox: NO hay audio del usuario en el repo todavía (la otra sesión de Mejora lo está sacando de sus reels con su autorización; release «voces»). Mientras tanto la referencia es un clip de 10 s en español generado con Kokoro em_alex (`referencia_kokoro`), que se genera en el propio runner y se cachea (~/.cache/expedientes/voces/): licencia libre, ninguna persona real. En cuanto exista voces/referencia_usuario.wav, publicar_gh.py la usa automáticamente (tiene prioridad sobre la de Kokoro).
+
+### Cambio 8: motores de voz nuevos y cadena de respaldo (publicar_gh.py, herramientas/voz_chatterbox.py, voz_kokoro.py, ciclo.yml, equipo/voz.json)
+- equipo/voz.json: `"motor": "chatterbox"`, `"respaldo": ["kokoro", "pocket", "piper"]` (toda la locución sale del mismo motor; si uno falla o se pasa de `max_s`, se prueba el siguiente y queda en registro.log «Voz X no disponible…»).
+- Chatterbox va en su propio venv (~/.venvs/chatterbox, fija torch 2.6 / transformers 4.46; `PYTHON_CHATTERBOX`), en CPU, con el afinado es-es cargado sobre el multilingüe v3 (si no encaja, usa el multilingüe con language_id=es y lo dice en el log: `modelo_usado`). Ajustes: exageración 0,6, cfg 0,35, temperatura 0,75, semilla fija 7. Guardia contra alucinaciones: si una frase dura más de 1,6× lo esperable por sus palabras, se regenera con otra semilla (máx. 2 veces) y queda en el log.
+- ciclo.yml: Python 3.11 cuando hay motores neuronales; instala solo lo que pide la cadena (Chatterbox solo si es principal; Kokoro/Pocket también como respaldo); caché `voz-v2-*` de ~/.cache/huggingface, pocket_tts y pip; timeout 60 min.
+- Coste: Chatterbox tarda ~6 min por reel de 8 frases en el runner (4 CPU): 331-378 s de síntesis. Kokoro 18-26 s. Pocket 18-21 s. Piper 8 s. Dentro del límite (`max_s` 1500) y del ciclo (2 renders por pasada).
+
+### Cambio 9: «voz primero» (publicar_gh.py `renderizar_guion`, hacer_reel.py `--solo-locucion` / `--tiempos`)
+- Antes: se renderizaba el vídeo con escenas estimadas a 2,6 palabras/s y después la voz se ACELERABA (atempo hasta 1,35) para caber, y los subtítulos iban a un ritmo estimado (petición 1 del Remasterizador).
+- Ahora, en los reels nuevos (guion.json): 1) hacer_reel.py --solo-locucion escribe los tramos sin dibujar nada; 2) se genera y recorta la voz; 3) hacer_reel.py --tiempos recibe la duración real de cada frase: la escena se alarga a voz + 0,45 s (nunca se acorta por debajo de lo que pide el guion) y los subtítulos palabra a palabra van al ritmo real de ESA frase; 4) se mezcla. Resultado en la prueba: atempo 1,00 en las 8 frases con todos los motores (antes el 002 llevaba hasta 1,13). Si el paso 1 falla, se hace como antes. Los remasters no cambian.
+- Probado en la nube con voz simulada (lenta, 2 pal/s): las 8 escenas se alargan, atempo 1,0, 1080x1920 H.264+AAC, 5 fotogramas correctos, pico −5,9 dBFS; y en el runner con los 7 motores reales (abajo).
+
+### Prueba real (GitHub Actions, run 42264747098, 4 CPU, guion herramientas/ejemplo_guion_humano.json = cola/004 Mary Celeste, 8 frases, 104 palabras) → equipo/pruebas/prueba_voz.json; vídeos y mp3 de voz sola en la release «pruebas»
+| Variante | Síntesis | UTMOS (1-5) | WER voz sola | Tono: desv. / rango (semitonos) | Pausas | Pal/s | Observaciones (transcripción Whisper) |
+|---|---|---|---|---|---|---|---|
+| pocket_antes (flujo viejo, lola) | 21 s | 3,83 | 21,2 % | 2,0 / 5,2 | 32 % | 2,71 | **mete sílabas inventadas** («el triba Xie», «que Jévi», «que encioremos hija», «que emance») en 4 de 8 frases |
+| piper davefx | 8 s | 2,89 | 19,2 % | 3,1 / 8,2 | 17 % | 3,27 | robótica, «suven», «solo salta» |
+| pocket (voz primero) | 18 s | 3,98 | 18,3 % | 2,0 / 5,5 | 34 % | 2,65 | mismas sílabas inventadas |
+| kokoro_alex | 26 s | 3,64 | **8,7 %** | 3,3 / 8,6 | 15 % | 3,18 | limpia, pero ritmo de lector: ignora los «…» |
+| kokoro_dora | 18 s | 3,81 | **8,7 %** | 2,9 / 7,7 | 17 % | 3,24 | ídem, voz femenina |
+| chatterbox_es (voz integrada inglesa) | 331 s | 3,32 | 14,4 % | 6,7 / 17,1 | 16 % | 3,24 | acento («vaco», «Mérice Leste»), añade «Bueno,» |
+| **chatterbox_es_ref (referencia Kokoro em_alex)** | 378 s | 3,60 | 10,6 % | **4,0 / 9,9** | **23 %** | **2,87** | limpia; respeta los «…»; única con perfil de conversación |
+| chatterbox_mtl (multilingüe, voz integrada) | 273 s | 3,81 | 12,5 % | 5,3 / 14,2 | 20 % | 3,24 | «parco», «Mery», añade «Ah,» |
+
+Referencias orientativas de habla conversacional: 2-4 semitonos de desviación del tono y 15-25 % de pausas; lectura plana < 2 semitonos (medido con librosa pyin sobre la voz sola; UTMOS22 es un predictor entrenado sobre todo en inglés, orientativo: le da la nota más alta a Pocket, que es justo la que inventa sílabas).
+
+### Decisión (de oído razonado, no escuchado: aquí no hay altavoz; el usuario tiene los mp3 para elegir)
+- **Predeterminada: Chatterbox es-es con referencia Kokoro em_alex** (`chatterbox_es_ref`). Es la única que suena a alguien contando algo: hace las pausas de los puntos suspensivos (23 % de pausa, 2,9 pal/s frente a 3,2 de Kokoro), varía el tono como una conversación (4 st) sin pasarse (la voz integrada se dispara a 6,7 st y mete palabras), y pronuncia limpio (WER 10,6 %, sin sílabas inventadas). Se descarta Pocket (predeterminada hasta hoy) porque inventa sílabas en la mitad de las frases: es el artefacto de IA más delatador. Kokoro es la mejor en pronunciación (8,7 %) y 15 veces más rápida, pero lee de carrerilla: queda de primer respaldo.
+- Revertir: en equipo/voz.json `"motor": "kokoro"` (rápido y limpio) o `"motor": "pocket"` (como el 5/11); `"respaldo"` queda igual. Para desactivar el flujo voz primero sin tocar código: no hay interruptor; copiar herramientas/versiones/publicar_gh.py_2026-11-06b y hacer_reel.py_2026-11-06d (ojo: deshace también los clips de vídeo de la otra sesión; mejor quitar solo la llamada a `renderizar_guion` en `renderizar`).
+
+### Próxima ejecución
+- Escuchar un render real de la cola con Chatterbox (release «cola») y leer en registro.log «Voz con Chatterbox (es-es…)»: si pone `modelo_usado` multilingue o aparecen «frases regeneradas por duración anómala» repetidas, revisar. Si el usuario elige otra muestra, cambiar `"motor"` (y `kokoro.voz`) en voz.json.
+- Cuando la otra sesión suba voces/referencia_usuario.wav a la release «voces», el ciclo la usará en el siguiente render: comprobar WER y que no salga con acento; si empeora, poner `"referencia": null` en voz.json (y queda la de Kokoro).
+- Comparar ig_reels_avg_watch_time de los reels con Chatterbox frente a 001 (Piper) y 002/003 (Pocket).
+- Pendiente menor: en el modo humano el rótulo superior tapa texto cuando la foto es un recorte de periódico (fotograma 33 s del 004): bajar la opacidad de la foto bajo el rótulo o subir el rótulo.

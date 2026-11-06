@@ -1,6 +1,7 @@
 {
- "motor": "pocket",
+ "motor": "chatterbox",
  "respaldo": [
+  "kokoro",
   "pocket",
   "piper"
  ],
@@ -11,7 +12,7 @@
   "cfg": 0.35,
   "temperatura": 0.75,
   "referencia": "voces/referencia_usuario.wav",
-  "referencia_kokoro": null,
+  "referencia_kokoro": "em_alex",
   "ganancia": 1.0,
   "semilla": 7,
   "max_s": 1500
