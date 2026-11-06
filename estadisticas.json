@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-05T21:18:54+00:00",
+  "actualizado": "2026-11-06T07:53:19+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1605,
@@ -12,21 +12,21 @@
       "id": "17996499894053316",
       "caption": "En 1518, una ciudad entera no podía dejar de bailar.\n\nEstrasburgo, julio de 1518. Una mujer, Frau Troffea, empieza a bailar en la calle y no para.\nEn días se le unen decenas de vecinos. En agosto, según las crónicas, eran entre 50 y 400.\nLos médicos lo atribuyeron a la \"sangre caliente\" y recetaron… más baile: músicos y un escenario.\nFue peor.\n\nHoy se estudia como un caso de enfermedad psicógena colectiva (historiador John Waller).\n\nComenta \"BAILE\" y te cuento cómo acabó en la Parte 2.\n📩 Envíaselo a quien no se lo vaya a creer.\n\nFuentes: crónicas de Estrasburgo de 1518; John Waller, \"A Time to Dance, a Time to Die\" (2008).\n#misterio #historia #curiosidades #datoscuriosos #epidemiadebaile",
       "comments_count": 0,
-      "like_count": 0,
+      "like_count": 1,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DfX69HFiU6w/",
       "timestamp": "2026-11-05T20:46:00+0000",
       "metricas": {
-        "reach": 1,
-        "views": 6,
+        "reach": 16,
+        "views": 24,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 0,
-        "total_interactions": 0,
-        "ig_reels_avg_watch_time": 38705,
-        "ig_reels_video_view_total_time": 77411
+        "likes": 1,
+        "total_interactions": 1,
+        "ig_reels_avg_watch_time": 12112,
+        "ig_reels_video_view_total_time": 193803
       }
     },
     {
@@ -642,6 +642,10 @@
   "historial_cuenta": [
     {
       "fecha": "2026-11-05T21:18+00:00",
+      "seguidores": 1605
+    },
+    {
+      "fecha": "2026-11-06T07:53+00:00",
       "seguidores": 1605
     }
   ]
