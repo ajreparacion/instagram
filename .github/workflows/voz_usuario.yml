@@ -1,6 +1,6 @@
 name: Voz del dueño (clonación desde sus reels de Mr. Empírico)
 
-# Solo a mano. No publica nada en Instagram.
+# A mano o al cambiar equipo/disparadores/voz_usuario.txt (así los agentes pueden lanzarlo con un push). No publica nada en Instagram.
 # Autorizado por el dueño de la cuenta el 6/11/2026: «los vídeos subidos son todos míos, soy yo el protagonista,
 # clona mi voz de esos vídeos de Mr. Empírico». Solo su voz y solo para esta cuenta.
 # 1) herramientas/voz_usuario.py extraer: descarga sus reels del podcast, separa la voz (Demucs), transcribe,
@@ -9,6 +9,9 @@ name: Voz del dueño (clonación desde sus reels de Mr. Empírico)
 # 3) voz_usuario.py similitud: parecido (Resemblyzer) entre la referencia y cada voz sintetizada.
 # Audios a la release privada «voces» (referencias) y «pruebas» (vídeos/mp3 de prueba); al git solo los informes JSON.
 on:
+  push:
+    branches: [main]
+    paths: ["equipo/disparadores/voz_usuario.txt"]
   workflow_dispatch:
     inputs:
       ids:
@@ -93,7 +96,7 @@ jobs:
         continue-on-error: true
         env:
           TZ: Europe/Madrid
-        run: python3 herramientas/prueba_voz.py "${{ inputs.guion }}" "${{ inputs.variantes }}"
+        run: python3 herramientas/prueba_voz.py "${{ inputs.guion || 'herramientas/ejemplo_guion_humano.json' }}" "${{ inputs.variantes || 'pocket,chatterbox_usuario,chatterbox_usuario_suave,chatterbox_mtl_usuario' }}"
 
       - name: Parecido con la voz del dueño
         if: always()
