@@ -133,3 +133,15 @@ Contexto: Calidad mandó 003 y 005 a revision/ porque el metraje de los reels an
 - Motivo: el veredicto es el momento de «no me lo creo» del formato; un golpe visual y sonoro en el giro marca la revelación (fish.audio, «Using sound effects for short-form content»: golpe o «stinger» en las revelaciones; fluxnote.io: pausa y golpe en la revelación clave).
 - Prueba: guion de prueba ¿REAL O FALSO? (koala coyote, 6 escenas, sellos FALSO y REAL) + voz simulada: 1080x1920 H.264+AAC, 24,7 s, pico real −2,0 dBFS; sin voz, −0,8 dBFS, igual que antes (el golpe no sube el pico). 5 fotogramas revisados: gancho completo a 1,2 s, sello legible y sin tapar la etiqueta. Un guion SIN `sello` da exactamente el mismo audio que antes (md5 idéntico).
 - Revertir: no usar el campo, o copiar herramientas/versiones/hacer_reel.py_2026-11-06b (conserva la pausa de 0,5 s del cambio 4).
+
+### Cambio 7 (misma ejecución): petición de Calidad, gancho en 0,45 s y recursos que prueban el dato (herramientas/hacer_reel.py)
+- Gancho: se escribe entero en 0,45 s y sin retardo inicial (antes 0,5 s + 0,12 s de retardo, entero a ~0,62 s). Comprobado: a 0,45 s se lee completo.
+- Campos opcionales nuevos por escena (documentados en INSTRUCCIONES_EQUIPO.md); si no se usan, el reel sale igual que antes:
+  - `"cifra"` (+ `"unidad"`): contador animado grande con barra de progreso (0 → cifra en 1,3 s, respeta el punto de miles).
+  - `"fechas"`: línea de tiempo de 2-4 hitos que se rellena durante la escena; el hito actual se agranda.
+  - `"lista"`: hasta 3 puntos numerados que entran uno a uno (recapitulación final guardable).
+  - El texto de la escena baja un poco (y 1060-1150) para dejar sitio; todo queda entre y≈400 y 1450, sin tapar etiquetas ni el sello CLASIFICADO.
+- Motivo: equipo/modelos_ganadores.md (Calidad, 6/11): los grandes del nicho usan contadores, líneas de tiempo y mapas que prueban el dato; nuestras escenas eran decoración repetida; falta un recurso guardable al final.
+- Prueba: guion de prueba de 5 escenas (gancho, cifra, fechas, sello REAL, lista) + voz simulada: 1080x1920 H.264+AAC, 22,9 s, pico real −1,9 dBFS; fotogramas revisados (contador a medias y completo, línea de tiempo, lista, sello), sin solapes.
+- Pendiente: mapas (ruta entre lugares). Necesitan contornos de dominio público (Natural Earth) dibujados por código; aquí no hay red para descargarlos. Otra ejecución.
+- Revertir: no usar los campos; para el gancho, poner `nchars / 0.5` y `self.delay = 0.35 if self.style == "giro" else 0.12`. Copia anterior: herramientas/versiones/hacer_reel.py_2026-11-06c.
