@@ -1,0 +1,11 @@
+{
+ "aprobado": false,
+ "fecha": "2026-11-06T10:37:00+00:00",
+ "motivos": [
+  "BLOQUEO 4 (contenido ajeno y marcas de agua): el metraje original 18031629332425415 trae marcas de agua de terceros: 'invideo/andrés' (arriba, durante todo el recorte) y 'Storyblocks' (abajo), además de un sello 'LO SAPIAS?' y una pegatina de encuesta de Instagram (Sí/No) incrustada.",
+  "BLOQUEO 2 (texto ilegible/solapado): subtítulos quemados del original ('oxígeno...', 'olvidado.', 'le', 'Friedrich') chocan con los rótulos nuevos, y la encuesta Sí/No tapa los rótulos.",
+  "BLOQUEO 1 (dato/imagen engañosa): a los ~11 s aparece un sello ruso con el retrato de Mendeleev con el nombre 'Friedrich', imagen que no tiene que ver con Scheele/Priestley/Lavoisier y confunde.",
+  "Los datos del texto (Scheele ~1771 y libro en 1777, Priestley 1774, Lavoisier le da nombre, al menos la mitad del oxígeno viene del océano según NOAA) están bien."
+ ],
+ "como_arreglarlo": "No reutilizar el metraje original. Reconvertir en reel nuevo con guion.json generado por hacer_reel.py (sin vídeo ajeno): gancho '¿REAL O FALSO? En 1872 alguien inventó el oxígeno', escenas 'Era FALSO: nadie inventó el oxígeno', 'Scheele lo obtuvo hacia 1771 (libro en 1777)', 'Priestley, 1774: el primero en publicarlo', 'Lavoisier le puso el nombre', 'Al menos la mitad del oxígeno sale del océano'. Mantener texto, palabra_clave AIRE y respuesta. Reprogramar a 10/11 13:40 como estaba."
+}

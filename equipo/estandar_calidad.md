@@ -2,13 +2,13 @@
 
 Lo mantiene el agente de CALIDAD (lo revisa cada semana estudiando reels virales del nicho). Creador y Remasterizador lo leen antes de producir. Ningún reel se publica si no pasa este estándar.
 
-Versión 1 (5/11/2026). Base: cambios del algoritmo de Instagram en 2026 (los compartidos por mensaje y la retención pesan más que los likes; desde abril de 2026 se penaliza a las cuentas que resuben contenido sin edición material) y patrones de reels sin rostro de misterios y curiosidades.
+Versión 2 (6/11/2026). (v1: 5/11/2026.) Base: cambios del algoritmo de Instagram en 2026 (los compartidos por mensaje y la retención pesan más que los likes; desde abril de 2026 se penaliza a las cuentas que resuben contenido sin edición material) y patrones de reels sin rostro de misterios y curiosidades.
 
 ## Bloqueos (si falla uno, NO se publica)
 1. Algún dato no verificado con al menos 2 fuentes, o una cifra, fecha o nombre que no coincide con las fuentes.
 2. Texto ilegible en algún momento (tamaño, contraste, cortado o tapado por la interfaz de Instagram).
 3. Audio con distorsión, voz que se solapa o se corta, o silencio largo no intencionado.
-4. Contenido ajeno (vídeo, imagen o música de terceros) o marcas de agua.
+4. Contenido ajeno (vídeo, imagen o música de terceros) o marcas de agua. Atención en los remasters: los reels antiguos de la cuenta llevan metraje de archivo con marcas de agua de terceros (iStock/Getty, Storyblocks, InVideo, «Grandes Misterios»), subtítulos quemados y pegatinas de encuesta. Si en el recorte se ve cualquiera de ellos, es bloqueo.
 5. Temas vetados: consejos de salud, tragedias recientes con víctimas, acusaciones a personas reales vivas, desinformación.
 6. Falta la línea "Fuentes:" en el texto, o el texto promete algo que el vídeo no cumple (cebo engañoso).
 
@@ -39,6 +39,11 @@ Versión 1 (5/11/2026). Base: cambios del algoritmo de Instagram en 2026 (los co
 - 4-6 líneas útiles, sin relleno; 4-6 hashtags de nicho (5).
 - Portada (portada_ms) en un fotograma con el texto del gancho completo y legible (5).
 
+## Reglas para remasters (añadido en v2)
+- Antes de renderizar un remaster, el Remasterizador descarga el original y mira 4-6 fotogramas del tramo de recorte. Si hay marcas de agua, subtítulos quemados, pegatinas o imágenes que no encajan con el dato (p. ej. un retrato equivocado), NO se reutiliza ese metraje: el expediente se hace como reel nuevo con guion.json (escenas generadas por hacer_reel.py), conservando el formato ¿REAL O FALSO?.
+- Solo se aprueba un remaster si el tramo recortado está limpio de marcas ajenas en todos los fotogramas.
+- Los remasters aún sin renderizar del plan (17/11 koala de Queensland, 20/11 Limenocaris) deben pasar esta comprobación antes de renderizarse.
+
 ## Reglas de formato
 - 1080x1920, H.264 + AAC, menos de 100 MB. Pico de audio por debajo de -1 dBFS; voz claramente por encima de la música.
 - Texto clave entre y=500 e y=1450. Nada importante en los 350 px de abajo ni en los 150 de arriba.
@@ -46,3 +51,4 @@ Versión 1 (5/11/2026). Base: cambios del algoritmo de Instagram en 2026 (los co
 
 ## Registro de cambios
 - v1, 5/11/2026: versión inicial.
+- v2, 6/11/2026: bloqueo explícito de marcas de agua ajenas en remasters y reglas de comprobación previa. Motivo: los remasters 003 (Koala Coyote) y 005 (oxígeno) mostraban iStock, Storyblocks, InVideo y «Grandes Misterios»; ambos fueron a revision/. Fuente: revisión de fotogramas de Calidad el 6/11/2026.

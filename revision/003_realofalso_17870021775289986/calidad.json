@@ -1,0 +1,10 @@
+{
+ "aprobado": false,
+ "fecha": "2026-11-06T10:37:00+00:00",
+ "motivos": [
+  "BLOQUEO 4 (contenido ajeno y marcas de agua): el metraje del reel original 17870021775289986 trae incrustadas marcas de agua de terceros que se ven durante los 12 s de recorte: el logotipo 'GRANDES MISTERIOS / Culturizando original' (arriba, grande) y 'iStock by Getty Images' (centro). Es vídeo de archivo con derechos ajenos.",
+  "BLOQUEO 2 (texto ilegible/solapado): el original lleva subtítulos quemados ('Córdoba,', 'dos', 'en', 'criatura'...) que chocan con los rótulos nuevos '«Avistado en Sierra Morena»' y '¿Mitad koala, mitad coyote?'.",
+  "Aviso: 'Lo real' dice que los koalas viven 'en el este y sur del país' pero el vídeo solo dice 'solo viven en Australia': correcto, pero conviene mantener el matiz en el post."
+ ],
+ "como_arreglarlo": "No usar el metraje del original. Reconvertir este expediente en reel nuevo con guion.json (escenas generadas por herramientas/hacer_reel.py, sin vídeo ajeno): gancho '¿REAL O FALSO? Un koala coyote en Sierra Morena', 'Era FALSO: lo inventamos nosotros en 2025', 'Lo real: los koalas solo viven en Australia', 'Sí existió un lobo marsupial: el tilacino', 'El último murió en 1936 en un zoo de Tasmania'. Se puede enseñar la portada o un fotograma del original SOLO si se tapa/recorta la zona de la marca (no es posible con la marca de iStock en el centro). Los datos del texto (tilacino 1936, desaparecido del continente hace unos 2.000 años) están bien verificados (Britannica, Australian Museum, NMA). Reprogramar la hora: la de las 13:40 de hoy se pierde."
+}
