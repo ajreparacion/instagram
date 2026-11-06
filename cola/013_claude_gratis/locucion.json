@@ -1,0 +1,58 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "inicio": 0.0,
+  "duracion": 6.2,
+  "texto": "Claude hace tres cosas gratis. Y casi nadie las usa.",
+  "enfasis": [
+   2
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "problema",
+  "inicio": 6.2,
+  "duracion": 5.633,
+  "texto": "Paco solo le hace preguntas sueltas. Y cada día empieza de cero.",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "paso",
+  "inicio": 11.833,
+  "duracion": 9.233,
+  "texto": "Uno: Proyectos. Subes tus documentos e instrucciones una vez y los tiene en cada chat. Gratis, hasta cinco.",
+  "enfasis": [
+   1
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "paso",
+  "inicio": 21.067,
+  "duracion": 5.9,
+  "texto": "Dos: pídele una tabla o una plantilla. Te la abre al lado, lista para usar.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "paso",
+  "inicio": 26.967,
+  "duracion": 6.533,
+  "texto": "Tres: la memoria. Recuerda lo importante entre chats. Está en Configuración, Tu Claude.",
+  "enfasis": [
+   2
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "cierre",
+  "inicio": 33.5,
+  "duracion": 5.267,
+  "texto": "Paco ya no empieza de cero. Comenta CLAUDE y te mando los pasos.",
+  "enfasis": [
+   7
+  ]
+ }
+]
