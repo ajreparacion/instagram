@@ -89,3 +89,9 @@ Comparación de retención de cambios anteriores: todavía sin datos (001 public
 - Revertir: en equipo/voz.json poner `"motor": "piper"` (todo lo demás queda inactivo). Código anterior: herramientas/versiones/publicar_gh.py_2026-11-05b y ciclo.yml_2026-11-05.
 - Próxima ejecución: comparar ig_reels_avg_watch_time y alcance de 002/003/004 (Pocket) frente a 001 (Piper) y revisar en registro.log que no aparezca «Pocket TTS no disponible».
 - 5/11 23:25 (ejecución manual, solo Pocket TTS): comprobado en producción. Los 3 reels de la cola (002, 003, 004) ya están renderizados con Pocket (`motor_voz: pocket`; 13-25 s de voz por reel; 002 −14,6 LUFS, 003 −15,1 LUFS, pico −2,2 dBFS), sin fallos ni vuelta a Piper. Los cron de :17/:47 aún no habían disparado; el 004 lo rendericé con un ciclo lanzado a mano. Nada más pendiente de esta prioridad.
+
+## 6/11/2026 · El ciclo de GitHub no arranca solo: respaldo
+- Desde que existe, "Ciclo Instagram" nunca se ha ejecutado por su horario (`schedule`). Todas las ejecuciones han sido manuales (`workflow_dispatch`), también después de pasar el cron a los minutos 17 y 47 y de desactivar y reactivar el workflow por API. Causa probable: el archivo del workflow solo lo han guardado bots (expedientes-bot y Claude), nunca la cuenta del dueño.
+- Respaldo activo (con el permiso del usuario): una tarea programada de Claude, «Respaldo del ciclo de Instagram (GitHub)», lanza el ciclo cada día a las 13:43 y a las 20:43 (hora de España), justo después de las publicaciones de las 13:40 y las 20:40. Solo avisa si algo falla.
+- Arreglo definitivo, que solo puede hacer el dueño: GitHub › Actions › Ciclo Instagram › «…» › Disable workflow y después Enable workflow. Cuando aparezcan ejecuciones con event=schedule, la tarea de respaldo avisa de que ya se puede borrar.
+- Consecuencia mientras tanto: las respuestas a comentarios y las estadísticas solo se actualizan en esas dos ejecuciones diarias (y en las manuales).
