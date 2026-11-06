@@ -44,6 +44,15 @@ VARIANTES = [
     ("chatterbox_es", {"motor": "chatterbox", "respaldo": [], "chatterbox": dict(CB)}),
     ("chatterbox_es_ref", {"motor": "chatterbox", "respaldo": [], "chatterbox": {**CB, "referencia_kokoro": "em_alex"}}),
     ("chatterbox_mtl", {"motor": "chatterbox", "respaldo": [], "chatterbox": {**CB, "modelo": "multilingue"}}),
+    # Voz CLONADA del dueño (autorizada por él el 6/11/2026; la saca herramientas/voz_usuario.py de sus reels de
+    # Mr. Empírico). Solo funcionan si existe voces/referencia_usuario.wav (workflow voz_usuario.yml).
+    ("chatterbox_usuario", {"motor": "chatterbox", "respaldo": [],
+                            "chatterbox": {**CB, "referencia": "voces/referencia_usuario.wav"}}),
+    ("chatterbox_usuario_suave", {"motor": "chatterbox", "respaldo": [],
+                                  "chatterbox": {**CB, "referencia": "voces/referencia_usuario.wav",
+                                                 "exageracion": 0.45, "cfg": 0.5}}),
+    ("chatterbox_mtl_usuario", {"motor": "chatterbox", "respaldo": [],
+                                "chatterbox": {**CB, "modelo": "multilingue", "referencia": "voces/referencia_usuario.wav"}}),
 ]
 
 

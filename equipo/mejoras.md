@@ -167,3 +167,9 @@ Resuelve la petición 2 del Remasterizador (desde la nube de los agentes, Common
 - Consulta la API de Commons, se queda solo con dominio público, CC0 y CC BY (descarta BY-SA, NC, ND), ≥ 500 px, y escribe equipo/imagenes_candidatas/<tema>.json con URL lista para guion.json, licencia, autor y crédito. Sube a la release «pruebas» una hoja de contactos numerada (imagenes_<tema>.jpg) para verlas antes de elegir.
 - Probado: 1.ª ejecución 11:56 UTC, 8 temas, 22-30 candidatas por tema, éxito en 2 min. Con ellas se rehicieron 010, 002, 011 y 004.
 - Revertir: borrar el workflow y el script; nada más depende de ellos.
+
+## 6/11/2026 · Voz del dueño clonada desde sus reels de Mr. Empírico (orden directa del usuario)
+- Autorización por escrito del dueño (6/11/2026): «los vídeos subidos son todos míos, soy yo el protagonista, clona mi voz de esos vídeos de Mr. Empírico».
+- Nuevo workflow manual .github/workflows/voz_usuario.yml + herramientas/voz_usuario.py: descarga los 10 reels más vistos del podcast Empírico (Graph API), separa la voz de la música con Demucs, transcribe con faster-whisper, agrupa los tramos por hablante (ECAPA de SpeechBrain) y monta voces/referencia_usuario.wav (~11 s) y la versión larga (~30 s) con el hablante que más habla. Las sube a la release privada «voces». Después prueba Chatterbox con esa referencia (variantes chatterbox_usuario, chatterbox_usuario_suave y chatterbox_mtl_usuario de prueba_voz.py, con Pocket de control) y mide el parecido (coseno ECAPA). Informe: equipo/pruebas/voz_usuario.json.
+- ciclo.yml descarga voces/referencia_usuario.wav de la release cuando el motor principal es Chatterbox. voces/ va en .gitignore (nunca audio en git).
+- Pendiente: pasar equipo/voz.json a "motor": "chatterbox" (respaldo pocket, piper) cuando la prueba dé un parecido ≥ 0,5 y una inteligibilidad (WER) ≤ 0,15.
