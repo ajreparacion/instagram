@@ -415,16 +415,28 @@ def recortar_silencios(ruta, cfg):
         return False
 
 
-def anadir_voz(video, locucion, trabajo):
+def preparar_voz(locucion, trabajo):
+    """Genera y recorta la voz de cada tramo de locucion.json. Devuelve (tramos, [(wav, duración)], motor, ajustes)."""
     tramos = [t for t in (leer_json(locucion, []) or []) if t.get("texto", "").strip()]
     if not tramos:
-        return
+        return tramos, [], None, None
     aj = ajustes_voz()
     rutas, motor = generar_locucion([t["texto"] for t in tramos], trabajo, aj)
     recortes = [recortar_silencios(w, aj.get("recorte")) for w in rutas]
     if any(recortes):
         log(f"Voz: silencios recortados por frase (s): {[r or 0 for r in recortes]}")
-    wavs = [(w, duracion_wav(w)) for w in rutas]
+    return tramos, [(w, duracion_wav(w)) for w in rutas], motor, aj
+
+
+def anadir_voz(video, locucion, trabajo):
+    tramos, wavs, motor, aj = preparar_voz(locucion, trabajo)
+    if not tramos:
+        return
+    mezclar_voz(video, tramos, wavs, aj, trabajo)
+    return motor
+
+
+def mezclar_voz(video, tramos, wavs, aj, trabajo):
     cadena = (aj.get("cadena_voz") or "").strip().strip(",")
     try:
         _mezclar_voz(video, tramos, wavs, aj, cadena, trabajo)
@@ -434,7 +446,38 @@ def anadir_voz(video, locucion, trabajo):
         # Si la cadena de voz de equipo/voz.json da problemas, se mezcla sin ella en vez de no publicar.
         log(f"Cadena de voz descartada en este render ({str(e)[-160:]}); se mezcla sin procesar la voz")
         _mezclar_voz(video, tramos, wavs, aj, "", trabajo)
-    return motor
+
+
+def renderizar_guion(guion, video, trabajo):
+    """Reel nuevo con la VOZ PRIMERO (6/11/2026, humanizar): 1) hacer_reel.py --solo-locucion escribe los tramos;
+    2) se genera y recorta la voz; 3) hacer_reel.py --tiempos renderiza con cada escena alargada a la duración real
+    de su frase (sin acelerar la voz) y los subtítulos al ritmo real; 4) se mezcla. Devuelve el motor de voz usado.
+    Si el paso 1 falla (generador antiguo), se hace como antes: render y después la voz acelerada para que quepa."""
+    locucion = os.path.splitext(video)[0] + ".locucion.json"
+    r = subprocess.run([sys.executable, os.path.join(HERR_REEL, "hacer_reel.py"), guion, video, "--solo-locucion"],
+                       capture_output=True, text=True, timeout=300, cwd=HERR_REEL)
+    tramos, wavs, motor, aj = (None, None, None, None)
+    if r.returncode == 0 and os.path.exists(locucion):
+        tramos, wavs, motor, aj = preparar_voz(locucion, trabajo)
+    else:
+        log(f"Voz primero no disponible ({(r.stderr or r.stdout)[-160:]}); se renderiza como antes")
+    cmd = [sys.executable, os.path.join(HERR_REEL, "hacer_reel.py"), guion, video]
+    if tramos:
+        tiempos = os.path.join(trabajo, "tiempos_voz.json")
+        escribir_json(tiempos, {str(t.get("escena", i)): round(d, 3) for i, (t, (_, d)) in enumerate(zip(tramos, wavs))})
+        cmd += ["--tiempos", tiempos]
+    r = subprocess.run(cmd, capture_output=True, text=True, timeout=1200, cwd=HERR_REEL)
+    if r.returncode != 0 or not os.path.exists(video):
+        raise ErrorAPI(f"El generador falló: {(r.stderr or r.stdout)[-500:]}")
+    if not os.path.exists(locucion):
+        return None
+    if tramos:
+        nuevos = [t for t in (leer_json(locucion, []) or []) if t.get("texto", "").strip()]
+        if len(nuevos) == len(tramos) and all(a["texto"] == b["texto"] for a, b in zip(nuevos, tramos)):
+            mezclar_voz(video, nuevos, wavs, aj, trabajo)
+            return motor
+        log("Voz primero: los tramos cambiaron entre pasadas; se vuelve a generar la voz")
+    return anadir_voz(video, locucion, trabajo)
 
 
 def _mezclar_voz(video, tramos, wavs, aj, cadena, trabajo):
@@ -504,18 +547,25 @@ def renderizar(cfg, carpeta, post):
         cmd = [sys.executable, os.path.join(HERR_REEL, "remaster.py"), original,
                os.path.join(carpeta, "remaster.json"), video]
     elif os.path.exists(os.path.join(carpeta, "guion.json")):
-        cmd = [sys.executable, os.path.join(HERR_REEL, "hacer_reel.py"), os.path.join(carpeta, "guion.json"), video]
+        cmd = None  # reel nuevo: voz primero y después el render ajustado a la voz (renderizar_guion)
     else:
         raise ErrorAPI("Falta guion.json o remaster.json")
-    r = subprocess.run(cmd, capture_output=True, text=True, timeout=1200, cwd=HERR_REEL)
-    if r.returncode != 0 or not os.path.exists(video):
-        raise ErrorAPI(f"El generador falló: {(r.stderr or r.stdout)[-500:]}")
     locucion = os.path.join(trabajo, "video.locucion.json")
-    if os.path.exists(locucion):
-        shutil.copy(locucion, os.path.join(carpeta, "locucion.json"))
-        motor = anadir_voz(video, locucion, trabajo)
+    if cmd is None:
+        motor = renderizar_guion(os.path.join(carpeta, "guion.json"), video, trabajo)
+        if os.path.exists(locucion):
+            shutil.copy(locucion, os.path.join(carpeta, "locucion.json"))
         if motor:
             post["motor_voz"] = motor
+    else:
+        r = subprocess.run(cmd, capture_output=True, text=True, timeout=1200, cwd=HERR_REEL)
+        if r.returncode != 0 or not os.path.exists(video):
+            raise ErrorAPI(f"El generador falló: {(r.stderr or r.stdout)[-500:]}")
+        if os.path.exists(locucion):
+            shutil.copy(locucion, os.path.join(carpeta, "locucion.json"))
+            motor = anadir_voz(video, locucion, trabajo)
+            if motor:
+                post["motor_voz"] = motor
     asset = os.path.join(trabajo, f"{nombre}.mp4")
     os.replace(video, asset)
     asegurar_release()

@@ -468,8 +468,14 @@ def preparar_humano(sc, spec, rng):
         sc.rotulo = None
     else:
         base = sub or voz or texto
-        wps = max(WPS_HUMANO, len(base.split()) / max(0.3, sc.dur * 0.8))
-        sc.sub = Subtitulos(base, wps, 0.35 if sc.style == "giro" else 0.12, sc.dur)
+        dv = float(spec.get("_voz_dur") or 0)
+        if dv > 0.2:   # duracion real de la voz (voz primero): los subtitulos van al ritmo real de la frase
+            wps = len(base.split()) / max(0.3, dv - 0.1)
+            retardo = 0.12   # la voz entra a los 120 ms en todas las escenas (publicar_gh.py adelay)
+        else:
+            wps = max(WPS_HUMANO, len(base.split()) / max(0.3, sc.dur * 0.8))
+            retardo = 0.35 if sc.style == "giro" else 0.12
+        sc.sub = Subtitulos(base, wps, retardo, sc.dur)
         sc.rotulo = rotulo_humano(texto) if (texto and base != texto) else None
 
 def render_frame_humano(fi, sc, noise, rg):
@@ -952,9 +958,20 @@ def make_audio(scenes, total, seed, musica=True):
 # ---------------------------------------------------------------- principal
 def main():
     if len(sys.argv) < 3:
-        print("Uso: python3 hacer_reel.py guion.json salida.mp4"); sys.exit(1)
+        print("Uso: python3 hacer_reel.py guion.json salida.mp4 [--solo-locucion] [--tiempos tiempos.json]"); sys.exit(1)
     t0 = time.time()
     g = json.load(open(sys.argv[1], encoding="utf-8")); out = sys.argv[2]
+    # Voz primero (publicar_gh.py, 6/11/2026): con --solo-locucion solo se escribe <salida>.locucion.json (sin
+    # fotogramas) para generar la voz antes; con --tiempos se recibe la duracion REAL de la voz de cada escena
+    # ({"0": 3.21, "2": 4.8, ...}, indice de escena -> segundos) y entonces la escena se alarga para que la voz
+    # quepa sin acelerarla y los subtitulos van al ritmo real de esa frase (no al estimado de 2,6 palabras/s).
+    solo_loc = "--solo-locucion" in sys.argv
+    tiempos = {}
+    if "--tiempos" in sys.argv:
+        try:
+            tiempos = {int(k): float(v) for k, v in json.load(open(sys.argv[sys.argv.index("--tiempos") + 1], encoding="utf-8")).items()}
+        except Exception as e:
+            print("tiempos de voz no leidos (se usa la estimacion):", str(e)[:120])
     seed = int(g.get("semilla", 1)); title = g.get("titulo", "")
     musica = bool(g.get("musica", True))
     MODO["humano"] = (g.get("modo") or "").strip().lower() == "humano"
@@ -964,17 +981,23 @@ def main():
         d = float(e.get("duracion", 3.0))
         voz = (e.get("voz") or "").strip()
         if voz:  # duracion minima para que el narrador termine
-            need = len(voz.split()) / 2.6 + 0.6
+            if i in tiempos and tiempos[i] > 0.2:
+                need = tiempos[i] + 0.45   # voz real + 120 ms de retardo de mezcla + respiro
+                e["_voz_dur"] = tiempos[i]
+            else:
+                need = len(voz.split()) / 2.6 + 0.6
             if i + 1 < len(esc) and esc[i + 1].get("estilo") == "giro":
                 need += 0.5  # deja libre el segundo de silencio antes del giro
             d = max(d, need)
         bounds.append(bounds[-1] + int(math.ceil(d * FPS - 1e-6)))
-    scenes = [Scene(i, e, seed, title, bounds[i + 1] - bounds[i], bounds[i]) for i, e in enumerate(esc)]
-    total_f = bounds[-1]
-    loc = [{"inicio": round(bounds[i] / FPS, 3), "duracion": round((bounds[i + 1] - bounds[i]) / FPS, 3), "texto": e["voz"].strip()}
+    loc = [{"escena": i, "inicio": round(bounds[i] / FPS, 3), "duracion": round((bounds[i + 1] - bounds[i]) / FPS, 3), "texto": e["voz"].strip()}
            for i, e in enumerate(esc) if (e.get("voz") or "").strip()]
     with open(os.path.splitext(out)[0] + ".locucion.json", "w", encoding="utf-8") as fh:
         json.dump(loc, fh, ensure_ascii=False, indent=1)
+    if solo_loc:
+        print("locucion %d frases, %.1fs" % (len(loc), bounds[-1] / FPS)); return
+    scenes = [Scene(i, e, seed, title, bounds[i + 1] - bounds[i], bounds[i]) for i, e in enumerate(esc)]
+    total_f = bounds[-1]
     rr = random.Random(seed)
     date_s = "%02d/%02d/%d" % (rr.randint(1, 28), rr.randint(1, 12), rr.randint(1994, 2007))
     noise = build_noise(seed); rg = random.Random(seed + 99)

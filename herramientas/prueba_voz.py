@@ -34,6 +34,9 @@ INFORME = os.path.join(BASE, "equipo", "pruebas", "prueba_voz.json")
 CB = {"modelo": "es-es", "idioma": "es", "exageracion": 0.6, "cfg": 0.35, "temperatura": 0.75,
       "referencia": None, "referencia_kokoro": None, "semilla": 7, "max_s": 2400}
 VARIANTES = [
+    # "pocket_antes" = flujo ANTERIOR (render y después la voz acelerada para caber, subtítulos a 2,6 pal/s estimadas).
+    # El resto usa el flujo nuevo "voz primero" de publicar_gh.renderizar_guion (escena ajustada a la voz real).
+    ("pocket_antes", {"motor": "pocket", "respaldo": [], "pocket": {"idioma": "spanish", "voz": "lola"}, "_flujo": "antiguo"}),
     ("piper", {"motor": "piper", "respaldo": []}),
     ("pocket", {"motor": "pocket", "respaldo": [], "pocket": {"idioma": "spanish", "voz": "lola"}}),
     ("kokoro_alex", {"motor": "kokoro", "respaldo": [], "kokoro": {"voz": "em_alex", "velocidad": 0.95}}),
@@ -69,6 +72,15 @@ def sonoridad(ruta):
     lufs = re.findall(r"I:\s+(-?[\d.]+) LUFS", txt)
     pico = re.findall(r"Peak:\s+(-?[\d.]+) dBFS", txt)
     return (float(lufs[-1]) if lufs else None), (float(pico[-1]) if pico else None)
+
+
+def duracion_video(ruta):
+    r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", ruta],
+                       capture_output=True, text=True)
+    try:
+        return round(float(r.stdout.strip()), 1)
+    except ValueError:
+        return None
 
 
 def audio16k(ruta):
@@ -113,21 +125,23 @@ def prosodia(ruta, n_palabras):
 
 def main():
     guion = sys.argv[1] if len(sys.argv) > 1 and sys.argv[1] else os.path.join(pg.HERR_REEL, "ejemplo_guion_humano.json")
+    guion = os.path.abspath(guion)
     solo = set(sys.argv[2].split(",")) if len(sys.argv) > 2 and sys.argv[2] else None
     variantes = [v for v in VARIANTES if not solo or v[0] in solo]
     shutil.rmtree(DIR, ignore_errors=True)
     os.makedirs(SALIDA)
     base = os.path.join(DIR, "base.mp4")
     t0 = time.time()
+    # render del flujo antiguo (una vez; lo comparten las variantes "_flujo": "antiguo")
     subprocess.run([sys.executable, os.path.join(pg.HERR_REEL, "hacer_reel.py"), guion, base], check=True, cwd=pg.HERR_REEL)
     render_s = round(time.time() - t0, 1)
-    locucion = os.path.join(DIR, "base.locucion.json")
-    tramos = [t for t in pg.leer_json(locucion, []) if t.get("texto", "").strip()]
-    referencia = " ".join(t["texto"] for t in tramos)
+    locucion_base = os.path.join(DIR, "base.locucion.json")
+    tramos_base = [t for t in pg.leer_json(locucion_base, []) if t.get("texto", "").strip()]
+    referencia = " ".join(t["texto"] for t in tramos_base)
     n_palabras = len(referencia.split())
     original = pg.ajustes_voz()
     informe = {"fecha": time.strftime("%Y-%m-%d %H:%M UTC", time.gmtime()), "guion": os.path.relpath(guion, BASE),
-               "render_video_s": render_s, "frases": len(tramos), "palabras": n_palabras, "referencia": referencia,
+               "render_video_s": render_s, "frases": len(tramos_base), "palabras": n_palabras, "referencia": referencia,
                "cpu": os.cpu_count(), "variantes": {}}
 
     try:
@@ -146,7 +160,10 @@ def main():
     gen_original = pg.generar_locucion
     for nombre, cambios in variantes:
         aj = copy.deepcopy(original)
+        flujo = cambios.get("_flujo", "voz_primero")
         for k, v in cambios.items():
+            if k.startswith("_"):
+                continue
             if isinstance(v, dict):
                 aj[k] = {**(aj.get(k) or {}), **v}
             else:
@@ -154,9 +171,9 @@ def main():
         trabajo = os.path.join(DIR, nombre)
         os.makedirs(trabajo)
         video = os.path.join(trabajo, "video.mp4")
-        shutil.copy(base, video)
+        locucion = os.path.join(trabajo, "video.locucion.json")
         pg.ajustes_voz = lambda aj=aj: aj
-        res = {"ajustes": {k: aj.get(k) for k in ("motor", "modelo", "pocket", "kokoro", "chatterbox") if k in cambios or k == "motor"}}
+        res = {"flujo": flujo, "ajustes": {k: aj.get(k) for k in ("motor", "modelo", "pocket", "kokoro", "chatterbox") if k in cambios or k == "motor"}}
         tiempos = {}
 
         def cronometrado(textos, trabajo_, aj_=None, _t=tiempos):
@@ -166,8 +183,17 @@ def main():
             return out
 
         pg.generar_locucion = cronometrado
+        t_var = time.time()
         try:
-            motor = pg.anadir_voz(video, locucion, trabajo)
+            if flujo == "antiguo":
+                shutil.copy(base, video)
+                shutil.copy(locucion_base, locucion)
+                motor = pg.anadir_voz(video, locucion, trabajo)
+            else:
+                motor = pg.renderizar_guion(guion, video, trabajo)
+            res["render_total_s"] = round(time.time() - t_var, 1)
+            tramos = [t for t in pg.leer_json(locucion, []) if t.get("texto", "").strip()]
+            res["duracion_reel_s"] = duracion_video(video)
         except Exception as e:
             res["error"] = str(e)[-300:]
             informe["variantes"][nombre] = res
