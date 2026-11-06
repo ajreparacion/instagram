@@ -122,3 +122,14 @@ Medición de los renders REALES de la release «cola» (002, 004, 005, voz Pocke
 
 ### Petición de Calidad (6/11/2026, equipo/modelos_ganadores.md)
 - hacer_reel.py: mostrar el gancho entero en el primer fotograma o escribirlo en ≤ 0,5 s (línea 231: hoy nchars/1,1 s, así que a 0,4 s solo se lee «UN BARCO INT»); añadir estilos visuales de prueba propia (mapa con ruta, línea de tiempo, contador animado) y una tarjeta final de recapitulación de 3 datos.
+
+## 6/11/2026 (5.ª ejecución, extra pedida por el usuario) · Sello de veredicto para el ¿REAL O FALSO? sin metraje ajeno
+
+Contexto: Calidad mandó 003 y 005 a revision/ porque el metraje de los reels antiguos tiene marcas de agua ajenas (iStock, Storyblocks, InVideo); estándar v2: esos ¿REAL O FALSO? se rehacen como reel nuevo con guion.json. Faltaba en hacer_reel.py un recurso visual para el veredicto.
+
+### Cambio 6: campo opcional `"sello"` en las escenas de guion.json (herramientas/hacer_reel.py)
+- `"sello": "FALSO"` (o "REAL", "MITO", "CONFIRMADO"...): un sello grande cae de golpe sobre la parte de arriba de la escena (de 2,3x a 1x en 0,13 s, con temblor de 4 fotogramas, destello y un golpe seco de sonido). Rojo para FALSO/MITO/BULO, verde para REAL/VERDADERO/CIERTO/CONFIRMADO, ámbar para lo demás. Por defecto cae a los 0,5 s en la escena «giro» (cuando la voz dice el veredicto) y a los 0,25 s en las demás; `"sello_t"` lo cambia.
+- Va en y≈490 (zona del dibujo), no tapa la etiqueta ni el texto. Documentado en INSTRUCCIONES_EQUIPO.md (formato de guion.json).
+- Motivo: el veredicto es el momento de «no me lo creo» del formato; un golpe visual y sonoro en el giro marca la revelación (fish.audio, «Using sound effects for short-form content»: golpe o «stinger» en las revelaciones; fluxnote.io: pausa y golpe en la revelación clave).
+- Prueba: guion de prueba ¿REAL O FALSO? (koala coyote, 6 escenas, sellos FALSO y REAL) + voz simulada: 1080x1920 H.264+AAC, 24,7 s, pico real −2,0 dBFS; sin voz, −0,8 dBFS, igual que antes (el golpe no sube el pico). 5 fotogramas revisados: gancho completo a 1,2 s, sello legible y sin tapar la etiqueta. Un guion SIN `sello` da exactamente el mismo audio que antes (md5 idéntico).
+- Revertir: no usar el campo, o copiar herramientas/versiones/hacer_reel.py_2026-11-06b (conserva la pausa de 0,5 s del cambio 4).

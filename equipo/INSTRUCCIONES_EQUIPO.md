@@ -36,6 +36,7 @@ NNN = siguiente número de 3 cifras tras los usados en cola/, publicados/, revis
 ## Formato de guion.json (reel nuevo; lo renderiza herramientas/hacer_reel.py)
 {"titulo":"Expediente NNN: ...","semilla":<entero>,"musica":true,"portada_texto":"...",
  "escenas":[{"texto":"frase corta en pantalla (máx. ~9 palabras)","duracion":3.5,"estilo":"gancho|archivo|evidencia|giro|cierre","voz":"lo que lee el narrador; números con letra"}]}
+Opcional en cualquier escena: "sello":"FALSO" (o "REAL", "MITO", "CONFIRMADO"...) hace caer un sello grande de veredicto con golpe de sonido (rojo si es falso, verde si es real), a los 0,5 s en el giro o en "sello_t" segundos. Pensado para el ¿REAL O FALSO? hecho con guion.json: ponlo en la escena que da el veredicto.
 
 ## Formato de remaster.json (reel antiguo; lo renderiza herramientas/remaster.py descargando el original_id)
 {"semilla":<entero>,"gancho":{"texto":"...","voz":"...","duracion":2.5},"recorte":{"inicio":s,"fin":s},

@@ -231,6 +231,10 @@ class Scene:
             self.cps = max(self.cps, self.tb.nchars / 0.5)
         self.exp = "%04d-%s" % (rng.randint(100, 9999), rng.choice("ABCDEFKX"))
         self.delay = 0.35 if self.style == "giro" else 0.12
+        # sello de veredicto opcional ("sello": "FALSO" | "REAL" ...): cae de golpe sobre la escena
+        self.sello = str(sc.get("sello") or "").strip().upper()[:12]
+        self.sello_t = float(sc.get("sello_t", 0.5 if self.style == "giro" else 0.25))
+        self.sello_t = min(max(self.sello_t, 0.0), max(0.0, self.dur - 0.6))
 
 def hud(d, scene, t_abs, date_s, title):
     f = font(MONO, 44); fs = font(MONO, 32)
@@ -263,6 +267,26 @@ def stamp_img():
         _stamp["s"] = im.rotate(8, expand=True, resample=Image.BICUBIC)
     return _stamp["s"]
 
+_veredicto = {}
+def veredicto_img(txt):
+    """Sello grande de veredicto (¿REAL O FALSO?): rojo si es FALSO, verde si es REAL/VERDADERO/CIERTO."""
+    if txt not in _veredicto:
+        if txt.startswith("FALS") or txt in ("MITO", "BULO", "MENTIRA"): col = (232, 38, 38)
+        elif txt in ("REAL", "VERDAD", "VERDADERO", "CIERTO", "CONFIRMADO"): col = (60, 215, 105)
+        else: col = (240, 190, 60)
+        path = DJV + "DejaVuSansCondensed-Bold.ttf"; probe = ImageDraw.Draw(Image.new("L", (4, 4)))
+        size = 168
+        while size > 80 and probe.textlength(txt, font=font(path, size)) > 640: size -= 6
+        f = font(path, size); tw = int(probe.textlength(txt, font=f))
+        bw, bh = tw + 110, int(size * 1.25) + 60
+        im = Image.new("RGBA", (bw + 20, bh + 20), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+        d.rounded_rectangle([10, 10, bw + 10, bh + 10], 22, fill=(0, 0, 0, 170), outline=col + (255,), width=14)
+        d.rounded_rectangle([30, 30, bw - 10, bh - 10], 14, outline=col + (200,), width=5)
+        d.text(((bw + 20) // 2, (bh + 20) // 2), txt, font=f, fill=col + (255,), anchor="mm",
+               stroke_width=4, stroke_fill=(0, 0, 0, 255))
+        _veredicto[txt] = im.rotate(-7, expand=True, resample=Image.BICUBIC)
+    return _veredicto[txt]
+
 def build_noise(seed):
     rg = np.random.default_rng(seed)
     out = []
@@ -290,6 +314,17 @@ def render_frame(fi, scenes, noise, date_s, title, rg):
             sz = (int(st.width * (1.8 - 0.8 * k)), int(st.height * (1.8 - 0.8 * k)))
             st = st.resize(sz)
         img.paste(st, (540 - st.width // 2, 1360 - st.height // 2), st)
+    impacto = 0
+    if sc.sello and t >= sc.sello_t:
+        st = veredicto_img(sc.sello); k = min(1.0, (t - sc.sello_t) / 0.13)
+        if k < 1.0:
+            z = 2.3 - 1.3 * k
+            st = st.resize((int(st.width * z), int(st.height * z)))
+            al = st.getchannel("A").point(lambda v: int(v * (0.35 + 0.65 * k))); st.putalpha(al)
+        else:
+            impacto = int((t - sc.sello_t - 0.13) * FPS)
+        sx, sy = (rg.randint(-12, 12), rg.randint(-8, 8)) if 0 <= impacto < 4 and k >= 1.0 else (0, 0)
+        img.paste(st, (540 - st.width // 2 + sx, 490 - st.height // 2 + sy), st)
     a = np.asarray(img, dtype=np.int16).copy()
     if glitch:
         for _ in range(rg.randint(4, 8)):
@@ -304,6 +339,7 @@ def render_frame(fi, scenes, noise, date_s, title, rg):
     vec += (24 * np.exp(-((rows - band) / 60.0) ** 2)).astype(np.int16)
     flick = int(rg.randint(-5, 5)) + (int(90 * (1 - lf / 5)) if lf < 5 else 0)
     if sc.style == "giro" and lf < 5: flick += 40
+    if sc.sello and t >= sc.sello_t + 0.13 and impacto < 3: flick += 55 - 15 * impacto  # destello del golpe
     vec += flick
     a += noise[fi % 8]
     a += vec[:, None, None]
@@ -578,6 +614,14 @@ def make_audio(scenes, total, seed, musica=True):
             sig += 0.12 * (np.sin(2 * np.pi * 740 * tt) + np.sin(2 * np.pi * 783 * tt) * 0.9 + np.sin(2 * np.pi * 1109 * tt) * 0.5) * np.exp(-tt * 3.5)
         i0 = int(s.start / FPS * SR); i1 = min(n, i0 + m)
         hL[i0:i1] += sig[:i1 - i0]; hR[i0:i1] += sig[:i1 - i0] * 0.92
+        if getattr(s, "sello", ""):  # golpe seco del sello (cuando termina de caer)
+            m2 = int(0.45 * SR); t2 = np.arange(m2) / SR
+            f2 = 38 + 120 * np.exp(-t2 * 22)
+            thud = np.sin(2 * np.pi * np.cumsum(f2) / SR) * np.exp(-t2 * 9) * 0.9
+            thud += lowpass_sweep(rg.standard_normal(m2), 0.25, 0.04) * np.exp(-t2 * 28) * 1.1
+            j0 = int((s.start / FPS + s.sello_t + 0.13) * SR); j1 = min(n, j0 + m2)
+            if j0 < n:
+                hL[j0:j1] += thud[:j1 - j0]; hR[j0:j1] += thud[:j1 - j0]
     fx = np.stack([bL + hL, bR + hR], 1)
     gfx = 10 ** ((-21 - lufs(fx)) / 20)
     st = fx * gfx
