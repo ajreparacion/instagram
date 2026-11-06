@@ -1,0 +1,86 @@
+{
+  "titulo": "Expediente 001 · Parte 2: así acabó la epidemia de baile",
+  "semilla": 1518,
+  "modo": "humano",
+  "musica": true,
+  "portada_texto": "1518: así acabó la epidemia de baile",
+  "escenas": [
+    {
+      "texto": "1518: así acabó la epidemia de baile",
+      "duracion": 3.7,
+      "estilo": "gancho",
+      "voz": "Te debía esto: cómo paró lo del baile.",
+      "imagenes": [
+        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg", "credito": "Hendrik Hondius, 1642 · Dominio público", "mov": "zoom_in"}
+      ]
+    },
+    {
+      "texto": "Julio: una mujer. Agosto: cientos",
+      "duracion": 4.5,
+      "estilo": "archivo",
+      "voz": "Julio, una mujer sola. Agosto... según las crónicas, hasta cuatrocientas.",
+      "fechas": [
+        {"anio": "14 jul", "texto": "una mujer baila"},
+        {"anio": "ago", "texto": "hasta 400 personas"},
+        {"anio": "sept", "texto": "se acaba"}
+      ],
+      "imagenes": [
+        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Strasbourg_Cathedral_Exterior_-_Diliff.jpg", "credito": "David Iliff · CC BY-SA 3.0", "mov": "pan_der"}
+      ]
+    },
+    {
+      "texto": "Prohibido bailar. Prohibida la música",
+      "duracion": 4.9,
+      "estilo": "evidencia",
+      "voz": "Los músicos lo empeoraron. Así que prohibieron bailar. Y la música.",
+      "imagenes": [
+        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg", "credito": "Hendrik Hondius, 1642 · Dominio público", "mov": "pan_izq"}
+      ]
+    },
+    {
+      "texto": "Carros al santuario de San Vito, en Saverne",
+      "duracion": 5.5,
+      "estilo": "giro",
+      "voz": "Y a los peores... los metieron en carros. Tres días hasta san Vito, en Saverne.",
+      "imagenes": [
+        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg", "credito": "Hendrik Hondius, 1642 · Dominio público", "mov": "zoom_out"}
+      ]
+    },
+    {
+      "texto": "Zapatos rojos, cruces, agua bendita",
+      "duracion": 4.5,
+      "estilo": "evidencia",
+      "voz": "Zapatos rojos, cruces, agua bendita... y en una semana, casi nadie.",
+      "imagenes": [
+        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Paracelsus.jpg", "credito": "Retrato de Paracelso, s. XVI · Dominio público", "mov": "zoom_in"}
+      ]
+    },
+    {
+      "texto": "¿15 muertos al día? La ciudad no anotó ninguno",
+      "duracion": 6.0,
+      "estilo": "evidencia",
+      "sello": "DUDOSO",
+      "sello_t": 2.6,
+      "cifra": "15",
+      "unidad": "muertos al día, dicen",
+      "voz": "¿Muertos? Lo de quince al día es de crónicas tardías. La ciudad no anotó ninguno.",
+      "imagenes": [
+        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Strasbourg_Cathedral_Exterior_-_Diliff.jpg", "credito": "David Iliff · CC BY-SA 3.0", "mov": "zoom_out"}
+      ]
+    },
+    {
+      "texto": "Envíaselo y comenta 'BAILE'",
+      "duracion": 6.8,
+      "estilo": "cierre",
+      "voz": "Waller: pánico colectivo, no un hongo. Envíaselo a quien no se lo crea, y comenta baile.",
+      "lista": [
+        "Prohibidos baile y música",
+        "Carros a Saverne: zapatos rojos",
+        "Fin: finales de agosto o septiembre"
+      ],
+      "imagenes": [
+        {"url": "https://commons.wikimedia.org/wiki/Special:FilePath/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg", "credito": "Hendrik Hondius, 1642 · Dominio público", "mov": "zoom_in"}
+      ]
+    }
+  ]
+}
