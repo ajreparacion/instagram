@@ -6,7 +6,7 @@ name: Voz del dueño (clonación desde sus reels de Mr. Empírico)
 # 1) herramientas/voz_usuario.py extraer: descarga sus reels del podcast, separa la voz (Demucs), transcribe,
 #    agrupa por hablante y crea voces/referencia_usuario.wav (~11 s) + versión larga (~30 s).
 # 2) herramientas/prueba_voz.py: renderiza el guion de prueba con Chatterbox usando esa referencia (y Pocket de control).
-# 3) voz_usuario.py similitud: parecido (ECAPA) entre la referencia y cada voz sintetizada.
+# 3) voz_usuario.py similitud: parecido (Resemblyzer) entre la referencia y cada voz sintetizada.
 # Audios a la release privada «voces» (referencias) y «pruebas» (vídeos/mp3 de prueba); al git solo los informes JSON.
 on:
   workflow_dispatch:
@@ -60,11 +60,11 @@ jobs:
             prueba-voz-v2-
             voz-v2-
 
-      - name: Demucs, SpeechBrain, Whisper, Pocket TTS, librosa (CPU)
+      - name: Demucs, Resemblyzer, Whisper, Pocket TTS, librosa (CPU)
         run: |
           pip install --quiet torch==2.5.1 torchaudio==2.5.1 --extra-index-url https://download.pytorch.org/whl/cpu
-          pip install --quiet demucs "speechbrain>=1.0,<1.1" scikit-learn faster-whisper pocket-tts soundfile librosa torch==2.5.1 torchaudio==2.5.1 --extra-index-url https://download.pytorch.org/whl/cpu
-          python3 -c "import demucs, speechbrain, sklearn, faster_whisper; print('OK')"
+          pip install --quiet demucs resemblyzer scikit-learn faster-whisper pocket-tts soundfile librosa torch==2.5.1 torchaudio==2.5.1 --extra-index-url https://download.pytorch.org/whl/cpu
+          python3 -c "import demucs, resemblyzer, sklearn, faster_whisper; print('OK')"
 
       - name: Extraer la voz del dueño
         env:

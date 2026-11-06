@@ -8,15 +8,15 @@ cuenta (ver equipo/pendiente_usuario.md, punto 0). Nunca se clona la voz de otra
 Uso:
   python3 herramientas/voz_usuario.py extraer [id1,id2,...]
       Descarga los reels del podcast Empírico (por defecto, los 10 más vistos de equipo/historico.json; o los ids que se
-      pasen), separa la voz de la música (Demucs), transcribe (faster-whisper), agrupa los tramos por hablante (ECAPA,
-      SpeechBrain) y se queda con el hablante que más habla (el protagonista). Elige los tramos más limpios y escribe:
+      pasen), separa la voz de la música (Demucs), transcribe (faster-whisper), agrupa los tramos por hablante (Resemblyzer,
+      GE2E) y se queda con el hablante que más habla (el protagonista). Elige los tramos más limpios y escribe:
         voces/referencia_usuario.wav        ~10-14 s, 24 kHz mono, -20 LUFS (la que usa Chatterbox)
         voces/referencia_usuario_larga.wav  ~30 s (para pruebas futuras)
         voces/referencia_hablante_2.wav     si hay un 2.º hablante con bastante voz (por si el protagonista es ese)
       y el informe equipo/pruebas/voz_usuario.json (sin audio: ids, tiempos, texto, hablantes).
   python3 herramientas/voz_usuario.py similitud
-      Compara (coseno ECAPA) la referencia con las voces sintetizadas de /tmp/prueba_voz/salida/voz_*.mp3 y lo añade
-      al informe. Orientativo: > 0,6 suele ser «la misma voz»; < 0,3, otra persona.
+      Compara (coseno de Resemblyzer) la referencia con las voces sintetizadas de /tmp/prueba_voz/salida/voz_*.mp3 y lo añade
+      al informe. Orientativo con Resemblyzer: > 0,80 suele ser la misma voz; < 0,65, otra persona.
 Los audios NUNCA van al historial de git (voces/ está en .gitignore): el workflow los sube a la release «voces».
 """
 import json
@@ -55,27 +55,25 @@ def ids_por_defecto(n=10):
     return [str(p["id"]) for p in posts[:n]]
 
 
-_ECAPA = None
+_ENC = None
 
 
-def ecapa():
-    global _ECAPA
-    if _ECAPA is None:
-        try:
-            from speechbrain.inference.speaker import EncoderClassifier
-        except ImportError:  # versiones antiguas de SpeechBrain
-            from speechbrain.pretrained import EncoderClassifier
-        _ECAPA = EncoderClassifier.from_hparams(source="speechbrain/spkrec-ecapa-voxceleb",
-                                                savedir=os.path.expanduser("~/.cache/expedientes/ecapa"),
-                                                run_opts={"device": "cpu"})
-    return _ECAPA
+def codificador():
+    """Resemblyzer (MIT, GE2E; los pesos vienen dentro del paquete, sin Hugging Face)."""
+    global _ENC
+    if _ENC is None:
+        from resemblyzer import VoiceEncoder
+        _ENC = VoiceEncoder("cpu", verbose=False)
+    return _ENC
 
 
 def embedding(x):
     import numpy as np
-    import torch
-    with torch.inference_mode():
-        e = ecapa().encode_batch(torch.from_numpy(x).unsqueeze(0)).squeeze().cpu().numpy()
+    from resemblyzer import preprocess_wav
+    w = preprocess_wav(x.astype(np.float32), source_sr=SR)
+    if len(w) < SR * 0.5:
+        w = x.astype(np.float32)
+    e = codificador().embed_utterance(w)
     return e / (np.linalg.norm(e) + 1e-9)
 
 
@@ -119,7 +117,14 @@ def extraer(ids):
             mp4 = os.path.join(DIR, f"{oid}.mp4")
             pg.descargar(url, mp4)
             wav = os.path.join(DIR, f"{oid}.wav")
-            sh("ffmpeg", "-loglevel", "error", "-y", "-i", mp4, "-vn", "-ac", "1", "-ar", "44100", wav)
+            r = subprocess.run(["ffmpeg", "-hide_banner", "-y", "-i", mp4, "-vn", "-ac", "1", "-ar", "44100", wav],
+                               capture_output=True, text=True)
+            if r.returncode != 0:
+                p = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "stream=codec_type,codec_name",
+                                    "-of", "csv=p=0", mp4], capture_output=True, text=True)
+                info["tamano"] = os.path.getsize(mp4)
+                info["error"] = f"ffmpeg: {r.stderr.strip()[-250:]} | flujos: {p.stdout.strip() or p.stderr.strip()[-120:]}"
+                continue
             original = cargar_audio(wav)
             voz, resto, ruta_voz = separar(wav, os.path.join(DIR, "sep"))
             n = min(len(voz), len(resto), len(original))
@@ -149,7 +154,7 @@ def extraer(ids):
     E = np.stack([t["_emb"] for t in tramos])
     if len(tramos) >= 2:
         etiquetas = AgglomerativeClustering(n_clusters=None, metric="cosine", linkage="average",
-                                            distance_threshold=0.55).fit_predict(E)
+                                            distance_threshold=0.25).fit_predict(E)
     else:
         etiquetas = np.zeros(1, dtype=int)
     for t, e in zip(tramos, etiquetas):
@@ -225,7 +230,7 @@ def extraer(ids):
                                "clona mi voz de esos vídeos de Mr. Empírico».",
                "videos": videos, "similitud_hablante_1_y_2": sim12,
                "nota_hablantes": "Hablante 1 = el que más habla en los vídeos (se toma como el dueño). Si el dueño hacía "
-                                 "dos personajes con voces distintas, pueden salir 2 hablantes con similitud alta (> 0,5).",
+                                 "dos personajes con voces distintas, pueden salir 2 hablantes con similitud alta (> 0,75).",
                "hablantes": [{k: v for k, v in h.items() if not k.startswith("_")} for h in hablantes],
                "referencias": refs}
     os.makedirs(os.path.dirname(INFORME), exist_ok=True)
@@ -251,8 +256,8 @@ def similitud():
         if f.startswith("voz_") and f.endswith(".mp3"):
             res[f[4:-4]] = round(float(embedding(cargar_audio(os.path.join(sal, f))) @ er), 3)
     informe["similitud_con_referencia"] = {"referencias": otras, "voces_sintetizadas": res,
-                                           "lectura": "Coseno ECAPA con voces/referencia_usuario.wav. Orientativo: "
-                                                      "> 0,6 misma voz; 0,3-0,6 parecida; < 0,3 otra persona. "
+                                           "lectura": "Coseno Resemblyzer con voces/referencia_usuario.wav. Orientativo: "
+                                                      "> 0,80 misma voz; 0,65-0,80 parecida; < 0,65 otra persona. "
                                                       "Pocket/Piper sirven de control (no son la voz del dueño)."}
     with open(INFORME, "w", encoding="utf-8") as f:
         json.dump(informe, f, ensure_ascii=False, indent=2)
