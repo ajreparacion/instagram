@@ -259,5 +259,23 @@
       "que": "suscripciones ('expedientes extendidos'), regalos; revisar el Panel profesional > Monetización"
     },
     "revision": "El Estratega mide la fase cada lunes con historial_cuenta y estadisticas.json; el Analista de monetización recalcula la estimación cada domingo. 6/11 (viernes, replanteamiento humano): la fase 1 no arranca hasta que un reel supere 300 de alcance; mientras, la palanca es el formato humano (ver experimento)."
+  },
+  "coordinacion_monetizacion": {
+    "fase_actual": "Fase 0 · Fundamentos (6-16/11, monetizacion.md §5). Hito de salida: 10 reels medidos a 48 h, enlace de la bio al hub, ID de afiliado. Decisión del 16/11: si la mediana de alcance de los 10 sigue < 100, se cambia gancho/tema antes que la duración (ya recogido en el experimento pico/etiqueta de este plan).",
+    "palancas_de_crecimiento_rapido": [
+      "Reels de prueba para no seguidores en todos los ¿REAL O FALSO? (superan el alcance habitual el 21 % de las veces en cuentas pequeñas, playbook 2026).",
+      "Formato historia con apertura por el pico: la única variable que mueve el salto, y el salto decide la distribución a desconocidos.",
+      "CTA hablado único «mándaselo a quien no se lo crea»: los envíos por DM pesan 3-5 veces más que los likes (Qué! 27/6/2026).",
+      "Partes 2 cumplidas y numeración de expedientes: razón para seguir la cuenta; la primera (baile 1518) sale el 8/11.",
+      "Aniversarios exactos (Mary Celeste 7/11, Manises 11/11, viernes 13) y 1 tema de España por semana: lo más compartible en nuestra audiencia (ES 32 %).",
+      "Constancia sin huecos: 1 reel nuevo al día desde el 10/11 (3 al día solo hasta vaciar la cola ya producida)."
+    ],
+    "tareas_vinculantes_cumplidas_por_el_estratega": [
+      "fuente_libro asignado donde hay libro real (Waller, Hicks, Marzluff, Ballester Olmos, Greenwood) para el hub de afiliados de Amazon.es.",
+      "Animales/naturaleza por encima de 1 de cada 3.",
+      "app_propia: ninguna esta semana (ningún tema encaja sin forzarlo; máximo 1 de cada 10 cuando encaje).",
+      "KPI semanal = salto, alcance a no seguidores y seguidores netos (kpi_semana)."
+    ],
+    "lo_que_frena_los_ingresos_hoy": "0 clics porque la bio sigue apuntando a TikTok y no hay ID de afiliado: ambas cosas solo las puede hacer el dueño (pendiente_usuario.md 1 y 2). Hasta que un reel pase de 300 de alcance, ninguna vía produce; por eso este plan va todo a distribución."
   }
 }
