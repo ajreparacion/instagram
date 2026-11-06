@@ -9,3 +9,9 @@
 
 ## Regla añadida por Calidad (6/11/2026)
 Los reels antiguos de la cuenta llevan metraje de archivo con marcas de agua de terceros (iStock/Getty, Storyblocks, InVideo, «Grandes Misterios»), subtítulos quemados y pegatinas de encuesta: los remasters 003 y 005 se rechazaron por eso. Mientras no se pueda ver el vídeo original, NO crees remaster.json: prepara el ¿REAL O FALSO? como reel nuevo con guion.json (6 escenas, 25-35 s: gancho «¿REAL O FALSO? ...», la afirmación falsa, «Era FALSO», 3 datos reales, CTA «Envíaselo...»), sin original_id. Ejemplos: cola/010_realofalso_koala_coyote y cola/006-009.
+
+## Regla del usuario (6/11/2026, PRIORIDAD MÁXIMA): humanizar al máximo
+- Todo ¿REAL O FALSO? nuevo sale con `"modo": "humano"` en guion.json (ver INSTRUCCIONES_EQUIPO.md): sin HUD ni efectos de plantilla, subtítulos palabra a palabra, música discreta, fotos reales con licencia verificada cuando se puedan comprobar (desde la nube no se llega a Wikimedia Commons: si no puedes verificar la licencia, deja la escena sin `"imagenes"`; el render usa un fondo neutro).
+- Guion en primera persona, como se lo contarías a un amigo en España: 8-9 escenas de 2-4 s, frases cortas con pausas («a ver», «ojo», «eh», «te juro»), sin «Era FALSO» de locutor, sin «descubre», «fascinante», «sumérgete». Texto del post sin emojis (máx. 2) y respuesta automática sin «¡Ahí va!».
+- Antes de dar un reel por bueno, compáralo con reels virales reales del nicho en español (Buzzfy buzzfy_reel_search): los que funcionan son gente real hablando o narrando sobre imagen real; descarta lo que suene o se vea artificial.
+- Los reels antiguos de la cuenta (originales/) sí tienen imagen real y subtítulos palabra a palabra, pero llevan marca de terceros («GRANDES MISTERIOS · Culturizando original», iStock, Storyblocks): no se reutiliza su metraje hasta que alguien revise fotogramas limpios desde GitHub Actions.

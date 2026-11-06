@@ -2,43 +2,59 @@
   "titulo": "¿Real o falso? Los pájaros son drones del Gobierno",
   "semilla": 1371,
   "musica": true,
+  "modo": "humano",
   "portada_texto": "¿REAL O FALSO? Los pájaros son drones del Gobierno",
   "escenas": [
     {
-      "texto": "¿REAL O FALSO? Los pájaros son drones del Gobierno",
-      "duracion": 4.8,
       "estilo": "gancho",
+      "duracion": 3.0,
+      "texto": "¿REAL O FALSO? Los pájaros son drones del Gobierno",
       "voz": "¿Real o falso? Los pájaros son drones del Gobierno."
     },
     {
-      "texto": "«Se recargan en los cables»",
-      "duracion": 3.8,
       "estilo": "archivo",
-      "voz": "Dicen que se recargan en los cables."
+      "duracion": 2.5,
+      "texto": "«se recargan en los cables»",
+      "voz": "Y se recargan en los cables, decían."
     },
     {
-      "texto": "Era FALSO. Y la teoría es una broma",
-      "duracion": 4.3,
       "estilo": "giro",
-      "voz": "Era falso. Y la teoría es una broma."
+      "duracion": 2.5,
+      "voz": "Falso. Lo inventamos nosotros."
     },
     {
-      "texto": "«Birds Aren't Real» nació en 2017 como parodia",
-      "duracion": 6.2,
       "estilo": "evidencia",
-      "voz": "Los pájaros no son reales nació en dos mil diecisiete, como parodia."
+      "duracion": 2.5,
+      "voz": "Pero ojo: la teoría también es broma."
     },
     {
-      "texto": "Su creador lo reconoció en 2021",
-      "duracion": 4.3,
       "estilo": "evidencia",
-      "voz": "Su creador lo reconoció en dos mil veintiuno."
+      "duracion": 3.0,
+      "texto": "«Birds Aren't Real» · 2017",
+      "subtitulos": "«Los pájaros no son reales» nació en 2017. Como parodia.",
+      "voz": "Los pájaros no son reales nació en dos mil diecisiete. Como parodia."
     },
     {
-      "texto": "En un solo cable no hay descarga",
-      "duracion": 8.6,
+      "estilo": "evidencia",
+      "duracion": 3.0,
+      "texto": "2021 · The New York Times",
+      "subtitulos": "En 2021 su creador lo reconoció: parodia.",
+      "voz": "En dos mil veintiuno su creador lo reconoció: parodia."
+    },
+    {
+      "estilo": "evidencia",
+      "duracion": 3.4,
+      "voz": "¿Y el cable? En un solo cable no hay diferencia de voltaje. No pasa nada."
+    },
+    {
+      "estilo": "evidencia",
+      "duracion": 2.2,
+      "voz": "Si toca dos… ahí sí."
+    },
+    {
       "estilo": "cierre",
-      "voz": "En un solo cable no hay descarga: no les pasa nada. Envíaselo a quien se lo creyó."
+      "duracion": 2.5,
+      "voz": "Mándaselo a quien se lo creyó."
     }
   ]
 }
