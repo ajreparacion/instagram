@@ -90,8 +90,5 @@
       "uso": "escenas 9"
     }
   ],
-  "_nota_creador_humano": "6/11/2026 19:30 Creador (PRIORIDAD MÁXIMA del usuario, humanizar): fotos reales con licencia comprobada por herramientas/buscar_imagenes.py en todas las escenas; apertura sin tocar (grupo B, control); quitado renderizado/asset para que se vuelva a renderizar.",
-  "motor_voz": "chatterbox",
-  "renderizado": "2026-11-06T19:13:14+00:00",
-  "asset": "007_realofalso_18057952754210907.mp4"
+  "_nota_creador_humano": "6/11/2026 19:30 Creador (PRIORIDAD MÁXIMA del usuario, humanizar): fotos reales con licencia comprobada por herramientas/buscar_imagenes.py en todas las escenas; apertura sin tocar (grupo B, control); quitado renderizado/asset para que se vuelva a renderizar."
 }
