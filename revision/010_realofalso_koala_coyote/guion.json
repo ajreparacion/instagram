@@ -1,18 +1,133 @@
 {
-  "titulo": "¿Real o falso? El koala coyote de Sierra Morena",
-  "semilla": 1936,
-  "musica": true,
-  "modo": "humano",
-  "portada_texto": "¿REAL O FALSO? Un koala coyote en Sierra Morena",
-  "escenas": [
-    {"estilo": "gancho", "duracion": 3.6, "texto": "¿REAL O FALSO? Un koala coyote en Sierra Morena", "voz": "¿Real o falso? Un koala coyote en Sierra Morena."},
-    {"estilo": "archivo", "duracion": 2.2, "voz": "Mitad koala, mitad coyote."},
-    {"estilo": "archivo", "duracion": 3.4, "texto": "Sierra Morena · 2025", "voz": "Y había gente que decía haberlo visto, eh."},
-    {"estilo": "giro", "duracion": 3.3, "voz": "Falso. Nos lo inventamos nosotros, aquí mismo."},
-    {"estilo": "evidencia", "duracion": 3.4, "texto": "Koalas: solo en Australia", "voz": "A ver, los koalas solo viven en Australia."},
-    {"estilo": "evidencia", "duracion": 3.5, "voz": "Pero ojo, que un lobo marsupial sí existió."},
-    {"estilo": "evidencia", "duracion": 4.4, "texto": "El tilacino", "voz": "El tilacino. Cabeza de perro y bolsa, como un canguro."},
-    {"estilo": "evidencia", "duracion": 5.6, "texto": "1936 · zoo de Hobart, Tasmania", "subtitulos": "Y el último murió en un zoo de Tasmania, en 1936.", "voz": "Y el último murió en un zoo de Tasmania, en mil novecientos treinta y seis."},
-    {"estilo": "cierre", "duracion": 3.0, "voz": "Mándaselo a quien se lo creyó."}
-  ]
+ "titulo": "¿Real o falso? El koala coyote de Sierra Morena",
+ "semilla": 1936,
+ "modo": "humano",
+ "musica": true,
+ "portada_texto": "¿Un koala coyote en Sierra Morena?",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "duracion": 3.2,
+   "texto": "¿Un koala coyote en Sierra Morena?",
+   "voz": "¿Un koala coyote… en Sierra Morena?",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Sierra_Morena_-_51501231675.jpg/1280px-Sierra_Morena_-_51501231675.jpg",
+     "credito": "Foto: G. Caillon · CC BY 2.0",
+     "mov": "zoom_in"
+    }
+   ]
+  },
+  {
+   "estilo": "archivo",
+   "duracion": 3.0,
+   "voz": "Mitad koala, mitad coyote. Eso contamos aquí, eh.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c5/Finca_SierraMorena.jpg/1280px-Finca_SierraMorena.jpg",
+     "credito": "Foto: Ulamm · Dominio público",
+     "mov": "pan_der"
+    }
+   ]
+  },
+  {
+   "estilo": "archivo",
+   "duracion": 2.8,
+   "texto": "Sierra Morena · 2025",
+   "voz": "Y hubo gente que juraba haberlo visto.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c2/Sierra_Morena_-_51501231675.jpg/1280px-Sierra_Morena_-_51501231675.jpg",
+     "credito": "Foto: G. Caillon · CC BY 2.0",
+     "mov": "pan_izq"
+    }
+   ]
+  },
+  {
+   "estilo": "giro",
+   "duracion": 3.0,
+   "voz": "Pues es falso. Nos lo inventamos nosotros.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Afternoon_Nap_%28147513865%29.jpeg/1280px-Afternoon_Nap_%28147513865%29.jpeg",
+     "credito": "Foto: A. Goldberg · CC BY 3.0",
+     "mov": "zoom_in"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 3.4,
+   "texto": "Koalas: solo en Australia",
+   "voz": "A ver, los koalas salvajes solo viven en Australia.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Afternoon_Nap_%28147513865%29.jpeg/1280px-Afternoon_Nap_%28147513865%29.jpeg",
+     "credito": "Foto: A. Goldberg · CC BY 3.0",
+     "mov": "zoom_out"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 3.0,
+   "voz": "Pero ojo… que un lobo con bolsa sí existió.",
+   "imagenes": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Thylacinus_cynocephalus_%28Gould%29.jpg",
+     "credito": "Lámina de J. Gould, 1863 · Dominio público",
+     "mov": "zoom_in"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 5.0,
+   "texto": "El tilacino",
+   "voz": "El tilacino. Cabeza de perro, rayas de tigre… y bolsa, como un canguro.",
+   "imagenes": [
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/bf/Thylacine_in_Hobart_Zoo_Australia.webp/1280px-Thylacine_in_Hobart_Zoo_Australia.webp",
+     "credito": "Zoo de Hobart · Dominio público",
+     "mov": "pan_der"
+    },
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/d/df/Thylacine_cubs.jpg",
+     "credito": "Zoo de Hobart, 1909 · Dominio público",
+     "mov": "zoom_in"
+    }
+   ]
+  },
+  {
+   "estilo": "evidencia",
+   "duracion": 6.4,
+   "texto": "1936 · Hobart, Tasmania",
+   "subtitulos": "Y el último que se conoce murió en un zoo de Tasmania, en 1936.",
+   "voz": "Y el último que se conoce murió en un zoo de Tasmania, en mil novecientos treinta y seis.",
+   "imagenes": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Tasmanian_wolf.jpg",
+     "credito": "Foto: B. Sheppard, 1928 · Dominio público",
+     "mov": "zoom_in"
+    },
+    {
+     "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/07/Thylacinus_cynocephalus_at_Hobart_Zoo_1928.jpg/1280px-Thylacinus_cynocephalus_at_Hobart_Zoo_1928.jpg",
+     "credito": "Foto: H. Burrell, 1928 · Dominio público",
+     "mov": "pan_izq"
+    }
+   ]
+  },
+  {
+   "estilo": "cierre",
+   "duracion": 3.4,
+   "voz": "Mándaselo a quien se lo creyó. Y guárdalo.",
+   "imagenes": [
+    {
+     "url": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Colored-Crop-Tasmanian_tiger.jpg",
+     "credito": "Zoo de Hobart, 1921 · Dominio público",
+     "mov": "zoom_out"
+    }
+   ]
+  }
+ ]
 }
