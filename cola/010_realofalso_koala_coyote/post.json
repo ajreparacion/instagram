@@ -7,7 +7,6 @@
  "compartir_en_feed": true,
  "portada_ms": 1200,
  "prueba_no_seguidores": true,
- "motor_voz": "pocket",
  "_nota_calidad": "6/11/2026 13:15 Calidad (orden del usuario «pon todo al máximo»): rehecho con fotos reales verificadas en Commons (dominio público y CC BY; se evita CC BY-SA por la cláusula de compartir igual en obras derivadas), guion con más reacción («pues es falso», «pero ojo…»), CTA envía+guarda+comenta. Pasa de 13:40 a 16:40.",
  "_nota_remasterizador": "6/11/2026 Remasterizador (PRIORIDAD MÁXIMA del usuario: humanizar): guion reescrito como habla una persona (9 escenas de 2-6 s, voz coloquial con «a ver», «ojo», «eh»), \"modo\": \"humano\" de hacer_reel.py (sin HUD ni efectos de plantilla, subtítulos palabra a palabra, música discreta), texto del post sin emojis. Sin fotos todavía: desde la nube no se puede comprobar la licencia en Wikimedia Commons (bloqueado); el Creador o Mejora pueden añadir \"imagenes\" verificadas. Mismos datos y fuentes que aprobó Calidad (81). Se quitan renderizado/asset para que se renderice de nuevo antes de las 13:40.",
  "_imagenes": [
@@ -74,7 +73,5 @@
    "autor": "Hobart Zoo",
    "uso": "cierre"
   }
- ],
- "renderizado": "2026-11-06T15:00:52+00:00",
- "asset": "010_realofalso_koala_coyote.mp4"
+ ]
 }

@@ -1,97 +1,94 @@
 {
-  "tipo": "reel",
-  "texto": "¿Real o falso? «En 1996, un koala de Queensland se volvió adicto y montó un negocio turbio».\n\nFalso. Lo inventamos nosotros el año pasado, en este mismo perfil. Pero en 1996 sí se descubrió algo muy raro de los koalas.\n\nLo que sí es verdad:\n- En 1996, un equipo de la Universidad de Adelaida (Australia), con el antropólogo Maciej Henneberg, vio que los koalas tienen huellas dactilares casi idénticas a las humanas. Tanto, que cuesta distinguirlas incluso al microscopio.\n- Y eso que sus parientes más cercanos, los canguros y los wombats, no tienen huellas.\n- Lo de que han confundido a la policía en escenas de crímenes es un bulo: no hay ningún caso documentado.\n\nMándaselo a quien se lo creyó. Y si quieres otro dato, comenta HUELLA y te lo paso.\n\nFuentes: PBS NOVA; Live Science; Snopes.\nImágenes: Wikimedia Commons (dominio público, CC0 o CC BY; autor en pantalla).\nVoz: narración generada.\n#realofalso #misterio #curiosidades #datoscuriosos #koala #animales",
-  "cuando": "2026-11-07T16:40:00+01:00",
-  "palabra_clave": "HUELLA",
-  "respuesta": "Henneberg dijo que las huellas de koala se parecen tanto a las nuestras que la policía debería saberlo, aunque es muy improbable encontrarlas en un crimen.",
-  "compartir_en_feed": true,
-  "portada_ms": 2800,
-  "prueba_no_seguidores": true,
-  "_verificacion": "Remasterizador 6/11/2026: huellas de koala casi idénticas a las humanas, Universidad de Adelaida (PBS NOVA 21/9/2022, Live Science 3/5/2011, Snopes); año: Live Science 'discovered koala fingerprints in 1996', PBS 'mid-1990s' y cita de Henneberg en The Independent en 1996; difíciles de distinguir al microscopio (Live Science; PBS: 'could easily be mixed up'); canguros y wombats sin huellas (PBS y Live Science). Bulo de las escenas de crimen: Snopes (policía de Nueva Gales del Sur) y PBS (Henneberg: 'extremely unlikely'). Descartado 'únicos no primates con huellas' (solo PBS). Original de 2025 (6 likes) elegido en vez de los podcasts de 2024 (más likes) porque es de animales (1 de cada 3, plan) y los podcasts tratan piedras energéticas y marcas (riesgo de consejo de salud). Recorte prudente 0-12 s.",
-  "_nota_calidad": "6/11/2026 Calidad: reconvertido de remaster a reel nuevo (guion.json) porque el metraje del reel antiguo trae marcas de agua de terceros (iStock, Storyblocks, InVideo...). Mismos datos verificados; CTA reordenado (envíaselo, guárdalo, comenta).",
-  "_nota_remasterizador": "6/11/2026 Remasterizador (PRIORIDAD MÁXIMA del usuario: humanizar): guion reescrito como habla una persona (9 escenas de 2-4 s, voz coloquial), \"modo\": \"humano\" de hacer_reel.py (sin HUD ni efectos de plantilla, subtítulos palabra a palabra, música discreta), texto del post sin emojis y respuesta sin muletillas. Sin fotos todavía: desde la nube no se puede comprobar la licencia en Wikimedia Commons (bloqueado); el Creador o Mejora pueden añadir \"imagenes\" verificadas antes del render. Mismos datos y fuentes verificados.",
-  "_nota_calidad_humano": "6/11/2026 13:00 Calidad: AVISO. El guion no lleva \"imagenes\" reales, así que se renderizará sobre fondo neutro. Con la orden del usuario del 6/11 eso es rechazo seguro en la revisión previa a su hora (como 010 y 011, ya en revision/). Añadir 1-3 fotos reales por escena con licencia comprobada antes de que se renderice.",
-  "_imagenes": [
-    {
-      "archivo": "File:Koala bear in a tree.jpg",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Koala_bear_in_a_tree.jpg",
-      "licencia": "CC0",
-      "autor": "Dinkum",
-      "uso": "escenas 1"
-    },
-    {
-      "archivo": "File:Koala bear Australia (22505362794).jpg",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Koala_bear_Australia_(22505362794).jpg",
-      "licencia": "CC BY 2.0",
-      "autor": "dronepicr",
-      "uso": "escenas 2"
-    },
-    {
-      "archivo": "File:Yawning koala bear (3589381656).jpg",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Yawning_koala_bear_(3589381656).jpg",
-      "licencia": "No restrictions",
-      "autor": "National Media Museum",
-      "uso": "escenas 3"
-    },
-    {
-      "archivo": "File:Koala Bear (4242114497).jpg",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Koala_Bear_(4242114497).jpg",
-      "licencia": "CC BY 2.0",
-      "autor": "Rennett Stowe from USA",
-      "uso": "escenas 4"
-    },
-    {
-      "archivo": "File:Fingerprint (PSF).png",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Fingerprint_(PSF).png",
-      "licencia": "Public domain",
-      "autor": "Pearson Scott Foresman",
-      "uso": "escenas 5"
-    },
-    {
-      "archivo": "File:Macro Fingerprints.jpg",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Macro_Fingerprints.jpg",
-      "licencia": "CC BY 2.0",
-      "autor": "D. Sharon Pruitt",
-      "uso": "escenas 5"
-    },
-    {
-      "archivo": "File:Drinking glass fingerprint FTIR.jpg",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Drinking_glass_fingerprint_FTIR.jpg",
-      "licencia": "Public domain",
-      "autor": "Olli Niemitalo",
-      "uso": "escenas 6"
-    },
-    {
-      "archivo": "File:Fingertips macro.jpg",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Fingertips_macro.jpg",
-      "licencia": "CC BY 2.0",
-      "autor": "Autor desconocido",
-      "uso": "escenas 6"
-    },
-    {
-      "archivo": "File:Eastern Grey Kangaroo, Jeogla (Unsplash jTTe3zz8kcY).jpg",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Eastern_Grey_Kangaroo,_Jeogla_(Unsplash_jTTe3zz8kcY).jpg",
-      "licencia": "CC0",
-      "autor": "Iván Lojko ilojko",
-      "uso": "escenas 7"
-    },
-    {
-      "archivo": "File:Dusting for fingerprints.jpg",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Dusting_for_fingerprints.jpg",
-      "licencia": "Public domain",
-      "autor": "US Air Force",
-      "uso": "escenas 8"
-    },
-    {
-      "archivo": "File:Koala in Zoo Duisburg.jpg",
-      "pagina": "https://commons.wikimedia.org/wiki/File:Koala_in_Zoo_Duisburg.jpg",
-      "licencia": "CC BY 3.0",
-      "autor": "Till Niermann",
-      "uso": "escenas 9"
-    }
-  ],
-  "_nota_creador_humano": "6/11/2026 19:30 Creador (PRIORIDAD MÁXIMA del usuario, humanizar): fotos reales con licencia comprobada por herramientas/buscar_imagenes.py en todas las escenas; apertura sin tocar (grupo B, control); quitado renderizado/asset para que se vuelva a renderizar.",
-  "motor_voz": "pocket",
-  "renderizado": "2026-11-06T18:19:28+00:00",
-  "asset": "007_realofalso_18057952754210907.mp4"
+ "tipo": "reel",
+ "texto": "¿Real o falso? «En 1996, un koala de Queensland se volvió adicto y montó un negocio turbio».\n\nFalso. Lo inventamos nosotros el año pasado, en este mismo perfil. Pero en 1996 sí se descubrió algo muy raro de los koalas.\n\nLo que sí es verdad:\n- En 1996, un equipo de la Universidad de Adelaida (Australia), con el antropólogo Maciej Henneberg, vio que los koalas tienen huellas dactilares casi idénticas a las humanas. Tanto, que cuesta distinguirlas incluso al microscopio.\n- Y eso que sus parientes más cercanos, los canguros y los wombats, no tienen huellas.\n- Lo de que han confundido a la policía en escenas de crímenes es un bulo: no hay ningún caso documentado.\n\nMándaselo a quien se lo creyó. Y si quieres otro dato, comenta HUELLA y te lo paso.\n\nFuentes: PBS NOVA; Live Science; Snopes.\nImágenes: Wikimedia Commons (dominio público, CC0 o CC BY; autor en pantalla).\nVoz: narración generada.\n#realofalso #misterio #curiosidades #datoscuriosos #koala #animales",
+ "cuando": "2026-11-07T16:40:00+01:00",
+ "palabra_clave": "HUELLA",
+ "respuesta": "Henneberg dijo que las huellas de koala se parecen tanto a las nuestras que la policía debería saberlo, aunque es muy improbable encontrarlas en un crimen.",
+ "compartir_en_feed": true,
+ "portada_ms": 2800,
+ "prueba_no_seguidores": true,
+ "_verificacion": "Remasterizador 6/11/2026: huellas de koala casi idénticas a las humanas, Universidad de Adelaida (PBS NOVA 21/9/2022, Live Science 3/5/2011, Snopes); año: Live Science 'discovered koala fingerprints in 1996', PBS 'mid-1990s' y cita de Henneberg en The Independent en 1996; difíciles de distinguir al microscopio (Live Science; PBS: 'could easily be mixed up'); canguros y wombats sin huellas (PBS y Live Science). Bulo de las escenas de crimen: Snopes (policía de Nueva Gales del Sur) y PBS (Henneberg: 'extremely unlikely'). Descartado 'únicos no primates con huellas' (solo PBS). Original de 2025 (6 likes) elegido en vez de los podcasts de 2024 (más likes) porque es de animales (1 de cada 3, plan) y los podcasts tratan piedras energéticas y marcas (riesgo de consejo de salud). Recorte prudente 0-12 s.",
+ "_nota_calidad": "6/11/2026 Calidad: reconvertido de remaster a reel nuevo (guion.json) porque el metraje del reel antiguo trae marcas de agua de terceros (iStock, Storyblocks, InVideo...). Mismos datos verificados; CTA reordenado (envíaselo, guárdalo, comenta).",
+ "_nota_remasterizador": "6/11/2026 Remasterizador (PRIORIDAD MÁXIMA del usuario: humanizar): guion reescrito como habla una persona (9 escenas de 2-4 s, voz coloquial), \"modo\": \"humano\" de hacer_reel.py (sin HUD ni efectos de plantilla, subtítulos palabra a palabra, música discreta), texto del post sin emojis y respuesta sin muletillas. Sin fotos todavía: desde la nube no se puede comprobar la licencia en Wikimedia Commons (bloqueado); el Creador o Mejora pueden añadir \"imagenes\" verificadas antes del render. Mismos datos y fuentes verificados.",
+ "_nota_calidad_humano": "6/11/2026 13:00 Calidad: AVISO. El guion no lleva \"imagenes\" reales, así que se renderizará sobre fondo neutro. Con la orden del usuario del 6/11 eso es rechazo seguro en la revisión previa a su hora (como 010 y 011, ya en revision/). Añadir 1-3 fotos reales por escena con licencia comprobada antes de que se renderice.",
+ "_imagenes": [
+  {
+   "archivo": "File:Koala bear in a tree.jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Koala_bear_in_a_tree.jpg",
+   "licencia": "CC0",
+   "autor": "Dinkum",
+   "uso": "escenas 1"
+  },
+  {
+   "archivo": "File:Koala bear Australia (22505362794).jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Koala_bear_Australia_(22505362794).jpg",
+   "licencia": "CC BY 2.0",
+   "autor": "dronepicr",
+   "uso": "escenas 2"
+  },
+  {
+   "archivo": "File:Yawning koala bear (3589381656).jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Yawning_koala_bear_(3589381656).jpg",
+   "licencia": "No restrictions",
+   "autor": "National Media Museum",
+   "uso": "escenas 3"
+  },
+  {
+   "archivo": "File:Koala Bear (4242114497).jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Koala_Bear_(4242114497).jpg",
+   "licencia": "CC BY 2.0",
+   "autor": "Rennett Stowe from USA",
+   "uso": "escenas 4"
+  },
+  {
+   "archivo": "File:Fingerprint (PSF).png",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Fingerprint_(PSF).png",
+   "licencia": "Public domain",
+   "autor": "Pearson Scott Foresman",
+   "uso": "escenas 5"
+  },
+  {
+   "archivo": "File:Macro Fingerprints.jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Macro_Fingerprints.jpg",
+   "licencia": "CC BY 2.0",
+   "autor": "D. Sharon Pruitt",
+   "uso": "escenas 5"
+  },
+  {
+   "archivo": "File:Drinking glass fingerprint FTIR.jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Drinking_glass_fingerprint_FTIR.jpg",
+   "licencia": "Public domain",
+   "autor": "Olli Niemitalo",
+   "uso": "escenas 6"
+  },
+  {
+   "archivo": "File:Fingertips macro.jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Fingertips_macro.jpg",
+   "licencia": "CC BY 2.0",
+   "autor": "Autor desconocido",
+   "uso": "escenas 6"
+  },
+  {
+   "archivo": "File:Eastern Grey Kangaroo, Jeogla (Unsplash jTTe3zz8kcY).jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Eastern_Grey_Kangaroo,_Jeogla_(Unsplash_jTTe3zz8kcY).jpg",
+   "licencia": "CC0",
+   "autor": "Iván Lojko ilojko",
+   "uso": "escenas 7"
+  },
+  {
+   "archivo": "File:Dusting for fingerprints.jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Dusting_for_fingerprints.jpg",
+   "licencia": "Public domain",
+   "autor": "US Air Force",
+   "uso": "escenas 8"
+  },
+  {
+   "archivo": "File:Koala in Zoo Duisburg.jpg",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Koala_in_Zoo_Duisburg.jpg",
+   "licencia": "CC BY 3.0",
+   "autor": "Till Niermann",
+   "uso": "escenas 9"
+  }
+ ],
+ "_nota_creador_humano": "6/11/2026 19:30 Creador (PRIORIDAD MÁXIMA del usuario, humanizar): fotos reales con licencia comprobada por herramientas/buscar_imagenes.py en todas las escenas; apertura sin tocar (grupo B, control); quitado renderizado/asset para que se vuelva a renderizar."
 }

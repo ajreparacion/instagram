@@ -7,7 +7,6 @@
  "compartir_en_feed": true,
  "portada_ms": 1200,
  "_nota_creador": "Duración objetivo 'corto' del plan: 5 escenas, 22 s. Palabra clave GUERRA en lugar de la sugerida EMU: la detección no ignora tildes y 'EMU' no captaría 'emú'. Cifras verificadas en Britannica, Wikipedia, Australian Geographic e History Hit; 986 abatidos y 10 balas por ave son declaraciones de Meredith y se marcan como discutidas.",
- "motor_voz": "pocket",
  "_imagenes": [
   {
    "archivo": "File:Flickr - aussiegall - Having a bad hair day.jpg",
@@ -66,7 +65,5 @@
    "uso": "escena 7"
   }
  ],
- "_nota_calidad": "6/11/2026 13:15 Calidad (orden del usuario «pon todo al máximo»): rehecho en modo humano con fotos reales de 1932 (dominio público) y de emús (CC0/CC BY), voz contada («te lo juro», «y aquí viene lo bueno»), «declaró la guerra» cambiado por «mandó al ejército» (no hubo declaración formal), sin emojis, CTA envía+guarda+comenta.",
- "renderizado": "2026-11-06T15:01:50+00:00",
- "asset": "002_guerra_emus.mp4"
+ "_nota_calidad": "6/11/2026 13:15 Calidad (orden del usuario «pon todo al máximo»): rehecho en modo humano con fotos reales de 1932 (dominio público) y de emús (CC0/CC BY), voz contada («te lo juro», «y aquí viene lo bueno»), «declaró la guerra» cambiado por «mandó al ejército» (no hubo declaración formal), sin emojis, CTA envía+guarda+comenta."
 }
