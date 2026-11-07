@@ -1472,7 +1472,13 @@ def render_frame_dibujo(fi, sc, noise, rg, seed):
 # «By Neogest Lab» siempre. Audio original bajado ("volumen_original"; 0 = quitado) + ducking en publicar_gh.py; si
 # el video no trae sonido, musica discreta (la del modo dibujo). Subtitulos palabra a palabra de la propia "voz".
 # Video vertical: a pantalla completa. Apaisado: enmarcado a mano sobre papel (estilo dibujo).
-APP = {"path": None, "w": 0, "h": 0, "dur": 0.0, "vertical": True, "audio": False, "volumen": 0.5, "primer_inicio": 0.0}
+APP = {"path": None, "w": 0, "h": 0, "dur": 0.0, "vertical": True, "audio": False, "volumen": 0.5, "primer_inicio": 0.0, "plantilla": False}
+# "plantilla": true (guion app, 7/11/2026 tarde): el video es una grabacion de pantalla de herramientas/grabar_pantalla.py
+# (movil/portatil sobre fondo plano suave, 1080x1920). Entonces: gancho y rotulo ARRIBA en tinta oscura (sin banda negra
+# ni Ken Burns que corten el marco), subtitulos oscuros bajo el dispositivo con el unico acento cian, Bit mas abajo.
+PLANT_HOOK_CY = 185       # gancho en la franja libre sobre el dispositivo (plantilla)
+PLANT_ROTULO_Y = 120      # rotulo corto (plantilla)
+SUB_CY_PLANT = 1478       # subtitulos bajo el dispositivo (plantilla)
 MAX_VEL_APP = 1.75
 APP_VID_W = 1000          # ancho del video apaisado enmarcado sobre papel
 APP_VID_CY = 800          # centro vertical del video apaisado
@@ -1572,7 +1578,7 @@ def preparar_app(sc, spec, rng):
         if ini is None and sc.estilo_a == "gancho":   # gancho sin tramo: fotograma fijo del primer tramo
             st = fotograma_video(APP["path"], APP["primer_inicio"])
             if st is not None:
-                if vert: sc.still = preparar_foto(st, 1.10)
+                if vert: sc.still = st.resize((W, H), Image.LANCZOS) if APP["plantilla"] else preparar_foto(st, 1.10)
                 else: sc.still = st.resize((APP_VID_W, max(2, int(st.height * APP_VID_W / st.width))), Image.LANCZOS)
         if sc.still is None:
             ini = max(0.0, min(float(ini if ini is not None else APP["primer_inicio"]), max(0.0, APP["dur"] - 0.5)))
@@ -1599,33 +1605,39 @@ def preparar_app(sc, spec, rng):
     else:
         wps = max(WPS_HUMANO, len(voz.split()) / max(0.3, sc.dur * 0.8))
     sobre_video = vert and sc.estilo_a != "cierre"
-    if sobre_video:
+    plant = bool(APP["plantilla"]) and vert and sc.estilo_a != "cierre"
+    if plant:
+        est = dict(fill=TINTA, stroke=(255, 255, 255), activo=CIAN, enfasis=TINTA, marca=True, grosor=14, cy=SUB_CY_PLANT, smax=74, smin=50)
+    elif sobre_video:
         est = dict(fill=(255, 255, 255), stroke=(0, 0, 0), activo=CIAN, enfasis=TINTA, marca=True, grosor=11, cy=SUB_CY_APP_V, smax=96, smin=56)
     else:
         est = dict(fill=TINTA, stroke=PAPEL, activo=CIAN, enfasis=TINTA, marca=True, cy=(1330 if sc.estilo_a == "cierre" else SUB_CY_APP_H), smax=88, smin=54)
     sc.sub = None; sc.grande = None; sc.rotulo = None
     if sc.estilo_a == "gancho":
         base, enf = (texto, enf_txt) if texto else (voz, enf_voz)
-        est_g = dict(est, cy=(720 if vert else 290), smax_entero=(112 if vert else 90))
+        est_g = dict(est, cy=(PLANT_HOOK_CY if plant else (720 if vert else 290)), smax_entero=(80 if plant else (112 if vert else 90)))
         sc.grande = Subtitulos(base, wps, 0.0, sc.dur, entero=True, enfasis=enf, estilo=est_g) if base else None
     else:
         sc.sub = Subtitulos(voz, wps, 0.12, sc.dur, enfasis=enf_voz, tiempos=tiempos, estilo=est) if voz else None
         env = spec.get("_voz_env")
         sc.env = [min(1.0, max(0.0, float(x))) for x in env] if isinstance(env, list) and env else None
         if texto:
-            sc.rotulo = rotulo_humano(texto) if sobre_video else rotulo_dibujo(texto, grande=(sc.estilo_a == "cierre"))
+            sc.rotulo = rotulo_humano(texto) if (sobre_video and not plant) else rotulo_dibujo(texto, grande=(sc.estilo_a == "cierre"))
 
 def render_frame_app(fi, sc, noise, rg, seed):
     lf = fi - sc.start; t = lf / FPS
     rng = random.Random(seed * 31 + sc.idx * 101 + fi // 4)
     vert = APP["vertical"]
     sobre_video = vert and sc.estilo_a != "cierre" and (sc.clip is not None or sc.still is not None)
+    plant = bool(APP["plantilla"]) and sobre_video
     if sc.clip is not None:
         fr = sc.clip.frame(lf)
         if vert:
             img = fr.crop((0, 0, W, H)).copy() if fr.size != (W, H) else fr.copy()
         else:
             img = enmarcar_apaisado(fr, seed, rng)
+    elif sc.still is not None and plant:
+        img = sc.still.copy()
     elif sc.still is not None:
         if vert:   # zoom lento (Ken Burns) sobre el fotograma fijo
             fw, fh = sc.still.size; z = 1.0 + 0.06 * min(1.0, t / 3.0)
@@ -1634,12 +1646,14 @@ def render_frame_app(fi, sc, noise, rg, seed):
             img = sc.still.crop((cx, cy, cx + cw, cy + ch)).resize((W, H), Image.BILINEAR)
         else:
             img = enmarcar_apaisado(sc.still, seed, rng)
+    elif APP["plantilla"] and APP.get("fondo"):
+        img = Image.new("RGB", (W, H), APP["fondo"])   # cierre en plantilla: el mismo fondo plano de la grabacion
     else:
         img = papel_img(seed).copy()
     d = ImageDraw.Draw(img, "RGBA")
     # ---- gancho: texto grande (entra con un pequeno "pop")
     if sc.grande is not None:
-        if sobre_video:
+        if sobre_video and not plant:
             img.paste(banda_oscura(), (0, 0), banda_oscura())
         cp = sc.grande.capa(t)
         if cp:
@@ -1655,7 +1669,7 @@ def render_frame_app(fi, sc, noise, rg, seed):
     if sc.rotulo is not None:
         k = ease_out(t / 0.3); ro = sc.rotulo
         if k < 1.0: ro = ro.crop((0, 0, max(1, int(W * k)), ro.height))
-        img.paste(ro, (0, 170 if not sobre_video else 200), ro)
+        img.paste(ro, (0, PLANT_ROTULO_Y if plant else (170 if not sobre_video else 200)), ro)
     # ---- Bit (gancho: abajo a la derecha sobre un circulo de papel; cierre: en el centro celebrando)
     if sc.bit and sc.estilo_a in ("gancho", "cierre"):
         habla = boca(sc, t) if sc.sub is not None else ((0.45 + 0.55 * abs(math.sin(t * 17.0))) if t < max(0.6, sc.dur - 0.4) else 0.0)   # apertura 0-1 (voz real)
@@ -1668,6 +1682,7 @@ def render_frame_app(fi, sc, noise, rg, seed):
         else:
             k = ease_out(t / 0.45); s = 0.62
             cx = 880 + int((1 - k) * 420); base = (1400 if vert else 1465)
+            if plant: s = 0.42; cx = 910 + int((1 - k) * 420); base = 1640
             circulo(dc, cx, base - 130 * s, 190 * s, rng, 7, relleno=PAPEL, amp=2.5)
             dibujar_bit(dc, cx, base, t, rng, sc.accion_bit if sc.accion_bit in ("celebra", "explica", "sorprendido", "senala") else "sorprendido", habla, s=s)
         img.paste(capa, (0, 0), capa)
@@ -1677,7 +1692,7 @@ def render_frame_app(fi, sc, noise, rg, seed):
         if cp:
             timg, ty = cp
             img.paste(timg, (0, ty), timg)
-    pie_neogest(d, sobre_video)
+    pie_neogest(d, sobre_video and not plant)
     a = np.asarray(img, dtype=np.int16).copy()
     a += noise[fi % 8] // 8
     if lf < 3: a += int(10 * (3 - lf))   # parpadeo minimo en el corte
@@ -2331,6 +2346,10 @@ def main():
     MODO["app"] = modo == "app"
     if MODO["app"]:
         cargar_video_app(str(g.get("video") or ""))
+        APP["plantilla"] = bool(g.get("plantilla")) and APP["vertical"]
+        if APP["plantilla"]:
+            f0 = fotograma_video(APP["path"], 0.0)
+            if f0 is not None: APP["fondo"] = f0.getpixel((4, 4))
         APP["volumen"] = max(0.0, min(1.5, float(g.get("volumen_original", 0.5))))
         if "musica" not in g: musica = None   # automatico: segun si el video trae sonido
         for e in g["escenas"]:

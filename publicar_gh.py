@@ -635,6 +635,31 @@ def resolver_videos_guion(cfg, guion, trabajo):
     return copia
 
 
+def grabar_pantalla_guion(guion, trabajo):
+    """Plantilla de grabación de pantalla (7/11/2026, directiva «mismo patrón que @claudeai»): si junto al guion hay un
+    grabacion.json, herramientas/grabar_pantalla.py abre la página REAL con Playwright (móvil/portátil sobre fondo plano,
+    cursor, zoom) y escribe trabajo/grabacion.mp4; devuelve una copia del guion con "video" apuntando a él. Sin
+    grabacion.json o si falla, devuelve el guion tal cual (hacer_reel.py ya se detiene si no encuentra el vídeo)."""
+    carpeta = os.path.dirname(os.path.abspath(guion))
+    spec = os.path.join(carpeta, "grabacion.json")
+    if not os.path.exists(spec):
+        return guion
+    g = leer_json(guion, None)
+    if not isinstance(g, dict) or str(g.get("modo", "")).lower() != "app":
+        return guion
+    salida = os.path.join(trabajo, "grabacion.mp4")
+    r = subprocess.run([sys.executable, os.path.join(HERR_REEL, "grabar_pantalla.py"), spec, salida],
+                       capture_output=True, text=True, timeout=900, cwd=HERR_REEL)
+    if r.returncode != 0 or not os.path.exists(salida):
+        raise ErrorAPI(f"La grabación de pantalla falló: {(r.stderr or r.stdout)[-400:]}")
+    log("Grabación de pantalla: " + (r.stdout.strip().splitlines() or [""])[-1][:160])
+    g["video"] = salida
+    g.setdefault("plantilla", True)
+    copia = os.path.join(trabajo, "guion_grabado.json")
+    escribir_json(copia, g)
+    return copia
+
+
 def envolvente_voz(ruta, fps=30):
     """Envolvente de la voz de una frase (wav 16 bits) a `fps` valores por segundo, 0-1 (normalizada al percentil 95,
     suavizada): hacer_reel.py mueve la boca de Bit y Paco con ella (labios sincronizados con la voz real).
@@ -805,7 +830,8 @@ def renderizar(cfg, carpeta, post):
         raise ErrorAPI("Falta guion.json o remaster.json")
     locucion = os.path.join(trabajo, "video.locucion.json")
     if cmd is None:
-        guion = resolver_videos_guion(cfg, os.path.join(carpeta, "guion.json"), trabajo)
+        guion = grabar_pantalla_guion(os.path.join(carpeta, "guion.json"), trabajo)
+        guion = resolver_videos_guion(cfg, guion, trabajo)
         motor = renderizar_guion(guion, video, trabajo)
         if os.path.exists(locucion):
             shutil.copy(locucion, os.path.join(carpeta, "locucion.json"))

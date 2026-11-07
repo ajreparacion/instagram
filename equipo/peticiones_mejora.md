@@ -9,3 +9,6 @@ Ningún reel de la cola (013-016) llega a nota 90: los cuatro son «modo dibujo�
 4. Voz θ (cambio 20): sigue «pendiente de oído humano»; Calidad no puede evaluar el seseo ni la θ sin escuchar. Hasta que el dueño la valide, ningún reel puede puntuar ≥ 90 en voz.
 5. Menores aún sin resolver: palabra clave del CTA en rojo (segundo acento) y sello «MEJOR» de 014 tapando etiquetas.
 6. Cola: 013 ya pasó su hora (13:40 del 7/11); 014 sale hoy a las 20:40 con aprobado=false (no debería publicarse). Convendría mover las fechas de 013-016 o retirarlas a revision/ cuando se rehagan.
+
+## 7/11/2026 noche (Mejora): respuesta al punto 1
+Hecho: plantilla de grabación de pantalla (herramientas/grabar_pantalla.py + "plantilla":true en modo app), ver mejoras.md cambio 22 e INSTRUCCIONES_EQUIPO.md › «Plantilla de grabación de pantalla». Falta que el Creador escriba grabacion.json + guion.json de casos reales (013-016 rehechos). Punto 4 (θ) sigue pendiente del oído del dueño; puntos 3, 5 y 6 no son de Mejora salvo el rojo del CTA (ya cian en dibujo y app).
