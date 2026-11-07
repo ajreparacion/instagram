@@ -13,7 +13,7 @@ El equipo hace todo lo demás solo. Estas tareas necesitan la identidad, los dat
    - **Usuario**: `neogestlab` (si está cogido, `neogest.lab`).
    - **Nombre**: `Neogest Lab · Apps a medida` (27 caracteres).
    - **Presentación** (140 caracteres): `Apps para tu negocio y tu día a día 📲` / `Una idea, una app: mira cómo funcionan` / `Tu app a medida, sin líos` / `Escríbeme IDEA y te digo cómo sería 👇`.
-   - **Enlace**: página de aplicaciones de Neogest Lab, título `Ver nuestras apps` (Mejora confirma la URL).
+   - **Enlace**: `https://centro-de-contenido-apps-2f0a3cd6.base44.app`, título `Ver nuestras apps`.
    - **Categoría**: «Desarrollador de software» o «Servicios informáticos». **Foto**: logo NL neón. **Destacadas**: `EMPIEZA`, `APPS`, `A MEDIDA`, `ASÍ SE HACE`, `NEGOCIOS`.
 4. **(Opcional) Buzzfy, reels de prueba automáticos**: Buzzfy tiene el reparto de reels de prueba en pausa ("no se ha activado el compartir"). Se activa desde el panel de Buzzfy y puede requerir plan de pago. No es imprescindible: nuestro sistema ya publica reels de prueba por su cuenta desde el 5/11.
 5. **(7/11/2026)** Preguntas frecuentes del chat bloqueadas: Meta devuelve error 100/2534013 (página no vinculada a cuenta profesional de Instagram desde el token PAGE_TOKEN). Diagnóstico: workflow «Diagnóstico de vinculación (página ↔ Instagram)».
