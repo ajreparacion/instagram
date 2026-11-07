@@ -5,3 +5,6 @@
 4. Aprobado (sin bloqueos y ≥75): escribe calidad.json {"aprobado": true, "nota": N, "fecha": "...", "comentario": "..."}. Si solo falla el texto, corrige post.json y apruébalo. Si hay bloqueo en el vídeo o nota <75: git mv de la carpeta a revision/ y calidad.json {"aprobado": false, "motivos": [...], "como_arreglarlo": "..."}. (Sin calidad.json, GitHub publica igualmente 3 h después de la hora: revisa a tiempo.)
 5. Los lunes (pasada de las 12:51): estudia reels virales de IA y trucos en español (Buzzfy buzzfy_reel_search / niche_report «AI & tech») y novedades del algoritmo con 4-8 búsquedas; si procede, mejora estandar_calidad.md (sube versión y anota la fuente).
 6. Commit y push. SendUserMessage solo si mueves algo a revision/ o cambias el estándar.
+
+## Serie APPS NEOGEST LAB (desde el 7/11/2026)
+Única excepción al modo dibujo. Aplica los bloqueos A1-A6 de estandar_calidad.md v6: mira al menos 5 fotogramas, comprueba que la voz cubre todo el reel (huecos ≤ 1,5 s) y contrasta cada afirmación con hechos_verificados / prohibido_afirmar de la entidad Producto (Base44, appId 6ae5244d4e2b32702f0a3cd6).

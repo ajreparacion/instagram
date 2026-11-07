@@ -24,7 +24,7 @@
   },
   "horas": {
     "13:40": "reel de prueba para no seguidores (prueba_no_seguidores: true)",
-    "20:40": "reel normal compartido en el feed (rehace la rejilla con la temática nueva)"
+    "20:40": "SERIE APPS NEOGEST LAB (Gestión Integral 7D primero) cuando haya vídeo fuente con media_url y aprobado; si no, el truco del plan en dibujo, reel normal compartido en el feed."
   },
   "experimento": {
     "nombre": "Tipo de gancho: pregunta vs número vs mini historia",
@@ -240,7 +240,7 @@
   "monetizacion": {
     "palabra_clave_dm": "Todos los reels: la respuesta lleva el prompt o los pasos de verdad (máx. 200 caracteres, sin enlaces).",
     "afiliados": "Solo herramientas con programa oficial de afiliados comprobado por Monetización (equipo/monetizacion.md) y con «enlace de afiliado» en el texto. ChatGPT, Claude y Gemini: no consta programa de afiliados; no se enlazan como afiliado.",
-    "apps_neogest": "Máx. 1 de cada 7 reels, solo si la app hace de verdad lo que se cuenta (candidatas a comprobar: GH PLUS · Gestión Hogar, CajaSegura IA).",
+    "apps_neogest": "Serie propia en la franja de las 20:40 (ver serie_apps). En los trucos de IA, mención a una app solo si la función existe de verdad.",
     "youtube_shorts": "Preparar la publicación cruzada: mismo vídeo y título = gancho; Monetización/Mejora documentan qué falta (canal y permiso del dueño) en pendiente_usuario.md."
   },
   "notas_para_el_equipo": [
@@ -248,5 +248,16 @@
     "MEJORA: prioridad absoluta, modo dibujo en hacer_reel.py antes del sábado 7/11 11:00; si no llega, el render no debe publicar guiones en modo dibujo con el estilo antiguo.",
     "CREADOR: puede dejar en cola hasta 2 reels por delante. Si un truco no se confirma en la documentación oficial, cambia el tema por otro de la misma categoría y lo anota en \"hecho\".",
     "Fuentes de las notas de este plan (solo orientativas, no sustituyen a la ayuda oficial): Tom's Guide y TechRadar (Claude gratis: Proyectos, Artefactos, apps), iPhone in Canada 8/1/2026 y Xataka Android (Gemini en Gmail gratis), TechRepublic/Engadget «What is free on ChatGPT in 2026»."
-  ]
+  ],
+  "serie_apps": {
+    "activa": true,
+    "orden": "usuario 7/11/2026 11:01",
+    "reglas": "INSTRUCCIONES_EQUIPO.md › SERIE APPS NEOGEST LAB",
+    "apps_permitidas_7_11": [
+      "gestion-integral-7d (único producto en estado «activo»; CTA «Pide la demo y prueba 30 días sin tarjeta»)"
+    ],
+    "videos_fuente_7_11": "Ninguno: las 2 Publicacion de reel (gestion-integral-7d y gps-andaluz) están en borrador y sin media_url. Falta que el usuario suba los vídeos.",
+    "bloqueo_tecnico": "El render aún no pone locución sobre un vídeo propio por URL; Mejora de producción lo está implementando (mejoras.md).",
+    "metrica": "clics al enlace del perfil y altas en la prueba gratuita de Gestión Integral 7D"
+  }
 }

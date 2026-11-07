@@ -16,3 +16,6 @@ Voice Studio del usuario trae Kyutai Pocket TTS (paquete pip `pocket-tts`, códi
 3. Prueba con herramientas/ejemplo_guion.json: compara Piper y Pocket (naturalidad, pronunciación, tiempo de generación en CPU). Activa Pocket solo si suena claramente mejor y tarda menos de 5 minutos por reel.
 4. Si lo activas, añade la atribución «Voz: Kyutai Pocket TTS (CC BY 4.0)» al final del texto de cada post (en publicar_gh.py, al publicar) y en README.md.
 5. Nunca clones voces de otras personas. La voz del propio usuario solo con un modelo de licencia comercial y solo si él lo pide.
+
+## Serie APPS NEOGEST LAB (desde el 7/11/2026) · PRIORIDAD
+Formato de render para un vídeo propio descargado por URL (media_url de Publicacion en Base44) con tramos, gancho, locución por tramos con énfasis, subtítulos palabra a palabra, ducking del audio original, pie «By Neogest Lab» y Bit opcional. Documéntalo en INSTRUCCIONES_EQUIPO.md › SERIE APPS NEOGEST LAB y no rompas el modo dibujo. Detalle en mejoras.md.

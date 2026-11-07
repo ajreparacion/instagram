@@ -2,7 +2,7 @@
 
 Lo mantiene el agente de CALIDAD (lo revisa cada lunes estudiando reels virales de IA y trucos). Creador lee esto antes de producir. Ningún reel se publica si no pasa este estándar.
 
-Versión 5 (6/11/2026 20:35, Estratega, por la NUEVA ESTRATEGIA del usuario: IA fácil en dibujos animados doodle). Sustituye a la v4 (misterios reales con fotos y vídeo real). Base: algoritmo de Instagram 2026 (compartidos por mensaje, guardados y retención pesan más que los likes; contenido original) e informe Buzzfy «AI & tech» de 6/11 (en cuentas pequeñas funcionan los ganchos de pregunta, número o mini historia / antes-después en los primeros 2 s).
+Versión 6 (7/11/2026, serie de apps). Versión 5 (6/11/2026 20:35, Estratega, por la NUEVA ESTRATEGIA del usuario: IA fácil en dibujos animados doodle). Sustituye a la v4 (misterios reales con fotos y vídeo real). Base: algoritmo de Instagram 2026 (compartidos por mensaje, guardados y retención pesan más que los likes; contenido original) e informe Buzzfy «AI & tech» de 6/11 (en cuentas pequeñas funcionan los ganchos de pregunta, número o mini historia / antes-después en los primeros 2 s).
 
 ## Bloqueos (si falla uno, NO se publica)
 1. Un truco, menú, botón, precio o requisito que no coincide con la documentación oficial actual, o que no existe en la versión que se dice (gratis / España / español). Sin "_fuentes" oficiales en post.json.
@@ -42,11 +42,22 @@ Versión 5 (6/11/2026 20:35, Estratega, por la NUEVA ESTRATEGIA del usuario: IA 
 - 3-5 líneas con los pasos y 4-6 hashtags del nicho (5).
 - Portada (portada_ms) en un fotograma con el gancho completo y Bit o Paco visibles (5).
 
+## Serie APPS NEOGEST LAB (v6, orden del usuario 7/11/2026)
+Excepción de estilo: la imagen es la demo de la app (no modo dibujo), 20-45 s, pie «By Neogest Lab»; Bit opcional en gancho o cierre. Se revisan al menos 5 fotogramas y el audio. Bloqueos propios (si falla uno, no se publica):
+A1. Sin locución durante todo el reel o con huecos sin voz de más de 1,5 s.
+A2. Gancho flojo en los 2 primeros segundos (sin problema real del público, sin pregunta, número ni antes/después).
+A3. Cualquier afirmación (voz, rótulos o texto) fuera de hechos_verificados de la entidad Producto o dentro de prohibido_afirmar.
+A4. Datos reales de clientes en pantalla (nombres, teléfonos, matrículas, importes de terceros).
+A5. Más de 45 s.
+A6. El post no dice que es «nuestra app». También: app no «activo», GPS Andaluz sin voces grabadas, AjReparacion Gestión original, AJ Sistema DEMO, afirmaciones de salud en MEDICATOR.
+El resto de la puntuación (100 puntos, mínimo 75) se aplica igual, cambiando «modo dibujo» por «demo clara de la app».
+
 ## Reglas de formato
-- 1080x1920, H.264 + AAC, menos de 60 s (válido también para YouTube Shorts) y menos de 100 MB. Pico de audio por debajo de -1 dBFS; voz claramente por encima de la música.
+- 1080x1920, H.264 + AAC, menos de 60 s (trucos: 20-35 s; apps: 20-45 s) (válido también para YouTube Shorts) y menos de 100 MB. Pico de audio por debajo de -1 dBFS; voz claramente por encima de la música.
 - Texto clave entre y=500 e y=1450. Nada importante en los 350 px de abajo ni en los 150 de arriba.
 - Números escritos con letra en la voz.
 
 ## Registro de cambios
+- v6, 7/11/2026: excepción y bloqueos de la serie APPS NEOGEST LAB (orden del usuario 7/11 11:01).
 - v5, 6/11/2026 20:35: cambio de temática y formato por orden del usuario (IA fácil, modo dibujo con Bit y Paco). Se quitan el vídeo/foto real obligatorio, las fuentes de misterio y las reglas de remasters; se añaden la comprobación en documentación oficial, el veto a logos y el estilo doodle.
 - v1-v4 (5-6/11/2026): estándar de misterios reales; ver el historial de git.

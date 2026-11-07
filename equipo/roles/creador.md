@@ -13,3 +13,7 @@
 - Afiliados solo de herramientas con programa oficial comprobado en equipo/monetizacion.md, con «enlace de afiliado» en el texto; si hay candidata, anótala en "_nota_creador".
 - Apps de Neogest Lab solo si la entrada del plan lo indica y la función existe de verdad en la app.
 - Español de España en la voz, pero trucos válidos en España y Latinoamérica (si cambia por país, se dice).
+
+## Serie APPS NEOGEST LAB (desde el 7/11/2026)
+- Franja de las 20:40: 1 reel de app al día si hay vídeo fuente (Publicacion con media_url, reel, instagram, estado distinto de programada/publicada) de una app «activo». Reglas completas en INSTRUCCIONES_EQUIPO.md › SERIE APPS NEOGEST LAB. Mira fotogramas del vídeo antes de escribir la voz; solo hechos_verificados; «nuestra app»; locución en todo el reel; 20-45 s. Al meterlo en cola/, estado «programada» en Base44.
+- Si el render de vídeo propio aún no existe, prepara la carpeta con el guion de voz por tramos y "renderizado": false, y anótalo en mejoras.md. Nunca publiques un reel de app sin voz. Sin vídeo fuente, las 20:40 siguen con el truco del plan.
