@@ -1,0 +1,26 @@
+name: Respuestas del chat (ice breakers)
+
+# Cada 15 minutos revisa los chats de Instagram y contesta a quien haya pulsado una de las
+# 4 preguntas de bienvenida. Usa el secreto PAGE_TOKEN; no escribe nada en el repositorio.
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: respuestas-chat
+  cancel-in-progress: false
+
+jobs:
+  responder:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Revisar chats y responder
+        env:
+          PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+        run: python3 herramientas/respuestas_chat.py
