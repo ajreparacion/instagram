@@ -1,0 +1,19 @@
+name: Diagnóstico de vinculación (página ↔ Instagram)
+
+# Solo a mano. Solo lecturas (GET) a la Graph API con PAGE_TOKEN; no imprime el token ni escribe en el repositorio.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  diagnostico:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Leer vinculación
+        env:
+          PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+        run: python3 herramientas/diagnostico_vinculacion.py
