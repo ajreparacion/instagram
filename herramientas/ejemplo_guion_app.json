@@ -1,0 +1,23 @@
+{
+  "titulo": "Apps 000: ejemplo del modo app (demo de TareasPro)",
+  "semilla": 7,
+  "modo": "app",
+  "video": "https://EJEMPLO.base44.app/.../demo.mp4  <- media_url de la entidad Publicacion (Base44, appId 6ae5244d4e2b32702f0a3cd6); en local vale una ruta relativa a la carpeta del guion",
+  "volumen_original": 0.5,
+  "portada_texto": "Tus tareas, ordenadas solas",
+  "escenas": [
+    {"estilo": "gancho", "bit": true,
+     "texto": "¿Todavía apuntas las tareas *a mano*?",
+     "voz": "¿Todavía apuntas las tareas *a mano*?"},
+    {"estilo": "tramo", "clip": {"inicio": 0.5, "fin": 5.0},
+     "texto": "TareasPro",
+     "voz": "Esto es TareasPro. Abres la app y tienes la lista del día, *sin configurar nada*."},
+    {"estilo": "tramo", "clip": {"inicio": 5.0, "fin": 10.0},
+     "voz": "Tocas una tarea y queda hecha. Mira cómo se marcan *en verde* una a una."},
+    {"estilo": "tramo", "clip": {"inicio": 10.0, "fin": 13.5},
+     "voz": "Y con el botón más añades la siguiente en *dos segundos*."},
+    {"estilo": "cierre", "bit": true,
+     "texto": "Comenta «TAREAS»",
+     "voz": "Comenta *tareas* y te mando el enlace por mensaje. Sígueme para más apps."}
+  ]
+}
