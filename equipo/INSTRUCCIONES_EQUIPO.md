@@ -125,3 +125,6 @@ Añade "modo":"humano" al guion. Entonces hacer_reel.py NO dibuja fondos generad
 - Nada de consejos médicos, legales ni financieros personalizados; nada de trucos para saltarse normas, términos de uso, pagos o privacidad de otros; nada de pedir contraseñas ni datos personales. Siempre un aviso breve cuando el truco implique dar datos a una IA («no le pegues datos sensibles»).
 - Sin logos ni capturas de marcas, sin vídeo, música ni imágenes de terceros. Afiliados solo con programa oficial y con «enlace de afiliado» en el texto.
 - Cumple equipo/estandar_calidad.md.
+
+## Fórmulas ganadoras (orden del usuario, 7/11/2026)
+Todos los roles leen equipo/formulas_ganadoras_ia.md: ocho fórmulas F1-F8 sacadas del nicho IA y tecnología (solo estructuras, nada copiado), escalera de monetización y tareas por rol. Los reels nuevos llevan en post.json "formula":"F1".."F8".

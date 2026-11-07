@@ -19,3 +19,5 @@ Voice Studio del usuario trae Kyutai Pocket TTS (paquete pip `pocket-tts`, códi
 
 ## Serie APPS NEOGEST LAB (desde el 7/11/2026) · PRIORIDAD
 Formato de render para un vídeo propio descargado por URL (media_url de Publicacion en Base44) con tramos, gancho, locución por tramos con énfasis, subtítulos palabra a palabra, ducking del audio original, pie «By Neogest Lab» y Bit opcional. Documéntalo en INSTRUCCIONES_EQUIPO.md › SERIE APPS NEOGEST LAB y no rompas el modo dibujo. Detalle en mejoras.md.
+
+> NUEVO (7/11/2026, orden del usuario): equipo/formulas_ganadoras_ia.md, sección 4, lista lo que piden las fórmulas al motor (rueda/lista de herramientas, comparativa precio/gratis, personajes con nombre y globos, panel de comprobación). Pasa también el acento rojo del CTA a cian.
