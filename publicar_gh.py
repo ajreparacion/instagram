@@ -166,7 +166,7 @@ MOTORES = ("chatterbox", "kokoro", "pocket", "piper")
 def ajustes_voz():
     base = {"motor": "piper", "respaldo": ["pocket", "piper"],
             "modelo": "es/es_ES/davefx/medium/es_ES-davefx-medium", "lentitud": 1.08,
-            "volumen_voz": 1.25, "umbral_duck": 0.02, "ratio_duck": 8, "limite": 0.7, "variacion": 0.667,
+            "volumen_voz": 1.25, "umbral_duck": 0.04, "ratio_duck": 3, "limite": 0.7, "variacion": 0.667,
             "ruido": 0.8, "cadena_voz": "",
             "pocket": {"idioma": "spanish", "voz": "lola", "temperatura": None, "ganancia": 1.0, "max_s": 600},
             "chatterbox": {"modelo": "es-es", "idioma": "es", "exageracion": 0.6, "cfg": 0.35, "temperatura": 0.75,

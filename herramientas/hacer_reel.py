@@ -2179,16 +2179,16 @@ def sfx_dibujo(tipo, dur, rg):
         x = rg.standard_normal(m)
         x = lp_fft(x, 3200, 2) - lp_fft(x, 500, 2)
         env = np.sin(np.pi * np.minimum(1.0, tt / dur)) ** 2 * np.linspace(0.4, 1.0, m)
-        return x * env * 0.11
+        return x * env * 0.30
     if tipo == "pop":
         f = 420 - 220 * tt / dur
-        return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt * 40) * 0.14
+        return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt * 40) * 0.32
     if tipo == "lapiz":
         x = rg.standard_normal(m)
         x = lp_fft(x, 6000, 2) - lp_fft(x, 1500, 2)
         mod = 0.55 + 0.45 * np.abs(np.sin(2 * np.pi * 11 * tt + rg.uniform(0, 3)))
         env = np.minimum(1.0, tt / 0.03) * np.minimum(1.0, (dur - tt) / 0.06)
-        return x * mod * env * 0.045
+        return x * mod * env * 0.10
     if tipo == "teclas":
         out = np.zeros(m); k = 0.0
         while k < dur - 0.02:
@@ -2198,9 +2198,9 @@ def sfx_dibujo(tipo, dur, rg):
             click = (lp_fft(rg.standard_normal(mm), 4500, 2) if mm > 8 else np.zeros(mm)) * np.exp(-t2 * 260)
             out[i0:i0 + mm] += click * rg.uniform(0.5, 1.0)
             k += rg.uniform(0.07, 0.12)
-        return out * 0.09
+        return out * 0.22
     if tipo == "ding":
-        return (np.sin(2 * np.pi * 1318.5 * tt) + 0.35 * np.sin(2 * np.pi * 2637 * tt)) * np.exp(-tt * 6.5) * 0.075
+        return (np.sin(2 * np.pi * 1318.5 * tt) + 0.35 * np.sin(2 * np.pi * 2637 * tt)) * np.exp(-tt * 6.5) * 0.17
     return None
 
 def make_audio(scenes, total, seed, musica=True):
@@ -2273,10 +2273,19 @@ def make_audio(scenes, total, seed, musica=True):
         st = np.zeros_like(fx)            # modo humano/dibujo: sin lecho de tension ni golpes
         if modo_alegre():                 # dibujo/app: un "pop" suave en cada corte de escena
             m = int(0.09 * SR); tp = np.arange(m) / SR
-            pop = np.sin(2 * np.pi * np.cumsum(620 - 300 * tp / 0.09) / SR) * np.exp(-tp * 45) * 0.22
+            pop = np.sin(2 * np.pi * np.cumsum(620 - 300 * tp / 0.09) / SR) * np.exp(-tp * 45) * 0.45
             for s in scenes[1:]:
                 i0 = int(s.start / FPS * SR); i1 = min(n, i0 + m)
                 st[i0:i1, 0] += pop[:i1 - i0]; st[i0:i1, 1] += pop[:i1 - i0]
+        if MODO["app"]:      # 7/11 (queja del dueno: «mas efectos sonoros»): whoosh en cada corte, pop de entrada y ding en el cierre
+            for k, s in enumerate(scenes):
+                for tipo, t_rel, dur, amp in ([("whoosh", -0.12, 0.34, 1.0)] if k else [("pop", 0.0, 0.09, 1.0)]) + \
+                                             ([("ding", 0.25, 0.5, 1.0)] if k == len(scenes) - 1 else []):
+                    sig = sfx_dibujo(tipo, dur, rg)
+                    if sig is None: continue
+                    i0 = max(0, int((s.start / FPS + t_rel) * SR)); i1 = min(n, i0 + len(sig))
+                    if i0 < n and i1 > i0:
+                        st[i0:i1, 0] += amp * sig[:i1 - i0]; st[i0:i1, 1] += amp * sig[:i1 - i0] * 0.95
         if MODO["dibujo"]:   # efectos sutiles por evento (whoosh en el corte, pop del rebote, lapiz, teclas, ding)
             for s in scenes:
                 for tipo, t_rel, dur in getattr(s, "sfx", []):
@@ -2294,7 +2303,7 @@ def make_audio(scenes, total, seed, musica=True):
     if musica:
         mus = np.stack([mL * cutg, mR * cutg], 1)
         lm0 = lufs(mus)
-        mus *= 10 ** (((-31 if MODO["humano"] else (-26 if modo_alegre() else -24)) - lm0) / 20)   # humano/dibujo/app: musica discreta
+        mus *= 10 ** (((-31 if MODO["humano"] else (-18 if modo_alegre() else -24)) - lm0) / 20)   # humano/dibujo/app: musica discreta
         if modo_suave() and hook_end < total - 2.0:
             # el gancho va a pelo (solo la voz): la musica entra en fundido de 0,8 s cuando termina la primera escena
             mus *= np.clip((t - hook_end + 0.2) / 0.8, 0.5 if modo_alegre() else 0.0, 1.0)[:, None]   # dibujo/app: ya suena en el gancho (a media fuerza)
