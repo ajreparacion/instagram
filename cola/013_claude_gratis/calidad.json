@@ -1,7 +1,13 @@
 {
  "aprobado": false,
- "nota": 80,
- "fecha": "2026-11-07T12:55:00+01:00",
- "comentario": "Render 7/11 10:23 UTC (Chatterbox, referencia=sí, voz del dueño). 1080x1920, 29,4 s, pico -2,1 dBFS, sin silencios >0,8 s. Movimiento medio 4,2/255 a 4 fps, ningún tramo quieto (mín. 1,1). Modo dibujo (papel, trazo negro, cian, Bit y Paco), gancho «3 COSAS GRATIS» con voz desde 0 s, sin logos (Claude solo como personaje con nombre en texto), 1 emoji, sin muletillas. Datos (Proyectos hasta 5 gratis, artefactos, memoria en Configuración > Tu Claude) coinciden con pricing y ayuda oficial (_comprobado 6/11). Menor: la palabra clave del CTA final sale en rojo (segundo acento); aviso a Mejora.",
- "motivo_bloqueo": "7/11 13:10 (dueño): fallos en la voz (clipeos, acento latino al principio, silencios). Se vuelve a renderizar con voz.json corregido; Calidad debe revisar de nuevo (sin pausas > 0,6 s, acento de España constante) antes de aprobar."
+ "nota": 68,
+ "fecha": "2026-11-07T19:40:00+01:00",
+ "comentario": "Pasada de tarde 7/11 (directiva de las 13:49). Técnica OK en el render revisado: 1080x1920 H.264+AAC, pico ≈ -1,9 dBFS, sin silencios > 0,6 s (silencedetect -40 dB), sonoridad ≈ -13 LUFS. Fotogramas revisados: papel claro, trazo negro, acento cian, sin logos, texto legible y dentro de zona segura. Render anterior al cambio 20-21 (voz θ y música con ritmo) y con aviso del dueño por clipeos, acento latino y silencios: no se puede dar por bueno el audio. El CTA sale con la palabra clave en rojo (segundo acento).",
+ "motivos": [
+  "DIRECTIVA VIGENTE 7/11 13:49 (nota ≥ 90, sin excepciones): el formato es grabación de pantalla REAL sobre fondo plano de color suave, con cursor e interfaz reales y resultado funcionando desde el segundo 0; «cero dibujos infantiles», Bit y Paco solo como recurso puntual (máx. 3 s). Este reel es 100 % «modo dibujo» (Paco y Bit en todas las escenas) con una pantalla simulada que teclea texto: no hay nada grabado funcionando.",
+  "Directiva §2: «si no se puede grabar funcionando, no se publica». Aquí la «pantalla» es un dibujo de portátil/chat con texto tecleado por código, no la interfaz real.",
+  "Gancho: no empieza por el resultado tangible funcionando (empieza con un dibujo de Paco agobiado).",
+  "Audio no revisado tras el re-render: este vídeo es de 12:30 UTC, anterior a voz θ y música con ritmo. La hora 13:40 ya pasó."
+ ],
+ "como_arreglarlo": "Rehacer en el formato de la directiva: grabar con Playwright la herramienta o app funcionando de verdad (p. ej. el chat/correo/Gmail real con datos de prueba) en modo \"app\" de herramientas/hacer_reel.py, fondo plano suave, cursor visible, subtítulos limpios, gancho = resultado + frase de 5-8 palabras; Bit/Paco ≤ 3 s. Mantener el truco, las fuentes y la palabra clave. Hasta que exista la plantilla de grabación de pantalla (peticiones_mejora.md) no se publica."
 }

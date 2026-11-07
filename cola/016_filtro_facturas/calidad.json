@@ -1,0 +1,13 @@
+{
+ "aprobado": false,
+ "nota": 66,
+ "fecha": "2026-11-07T19:40:00+01:00",
+ "comentario": "Pasada de tarde 7/11 (directiva de las 13:49). Técnica OK en el render revisado: 1080x1920 H.264+AAC, pico ≈ -1,9 dBFS, sin silencios > 0,6 s (silencedetect -40 dB), sonoridad ≈ -13 LUFS. Fotogramas revisados: papel claro, trazo negro, acento cian, sin logos, texto legible y dentro de zona segura. Riesgo de dato: «Saltar Recibidos» solo está citado de Genbeta, no de la ayuda oficial; en Gmail en español de España la casilla suele llamarse «Omitir Recibidos (archivarlo)». Hay que comprobarlo con la interfaz real al grabar (la búsqueda de esta pasada no lo confirmó). Voz θ y música con ritmo no verificables sin escucha humana.",
+ "motivos": [
+  "DIRECTIVA VIGENTE 7/11 13:49 (nota ≥ 90, sin excepciones): el formato es grabación de pantalla REAL sobre fondo plano de color suave, con cursor e interfaz reales y resultado funcionando desde el segundo 0; «cero dibujos infantiles», Bit y Paco solo como recurso puntual (máx. 3 s). Este reel es 100 % «modo dibujo» (Paco y Bit en todas las escenas) con una pantalla simulada que teclea texto: no hay nada grabado funcionando.",
+  "Directiva §2: «si no se puede grabar funcionando, no se publica». Aquí la «pantalla» es un dibujo de portátil/chat con texto tecleado por código, no la interfaz real.",
+  "Gancho: no empieza por el resultado tangible funcionando (empieza con un dibujo de Paco agobiado).",
+  "Rótulo «Saltar Recibidos» no confirmado en la ayuda oficial (posible nombre real: «Omitir Recibidos (archivarlo)»): corregir en guion, texto y respuesta tras verlo en la interfaz real."
+ ],
+ "como_arreglarlo": "Rehacer en el formato de la directiva: grabar con Playwright la herramienta o app funcionando de verdad (p. ej. el chat/correo/Gmail real con datos de prueba) en modo \"app\" de herramientas/hacer_reel.py, fondo plano suave, cursor visible, subtítulos limpios, gancho = resultado + frase de 5-8 palabras; Bit/Paco ≤ 3 s. Mantener el truco, las fuentes y la palabra clave. Hasta que exista la plantilla de grabación de pantalla (peticiones_mejora.md) no se publica."
+}
