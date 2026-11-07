@@ -1,37 +1,61 @@
 # DIRECTIVA VIGENTE (manda sobre cualquier otra instrucción del repo)
 
-> EXCEPCIÓN DEL DUEÑO (7/11/2026 20:40): con el perfil a 0 publicaciones, ordenó «publicar ya los de dibujos». 014 (hoy 20:40), 015 (8/11 13:40) y 013 (8/11 20:40) están aprobados por él (calidad.json "aprobado_por": "dueño"). Calidad NO los toca ni los rechaza. 016 sigue retenido hasta comprobar en Gmail real el nombre de la casilla. Lo nuevo que se cree sigue esta directiva.
+Orden del dueño, 7/11/2026 23:42-23:44: **la cuenta pasa a ser el escaparate de Neogest Lab.** Sirve para vender las apps que ya existen y apps a medida para personas y negocios. Se fusiona con el proyecto de vídeos tutoriales. Formato estrella: **«Una idea, una app»**: vídeos cortos virales que captan posibles clientes. Corrección del dueño: **no centrarse solo en talleres**; hay que llegar a cualquier tipo de persona o negocio.
 
-Orden del dueño, 7/11/2026 13:49: «Seguimos el mismo patrón que @claudeai». Además: la voz sesea al principio, la música no resalta nada, queda pobre y no engancha. Se sube mucho el listón: todo pasa por Calidad (nota ≥ 90, sin excepciones).
+Sustituye el enfoque «IA Fácil · Trucos que no sabes». Se mantiene todo lo de producción de la directiva anterior: patrón de @claudeai (sistema, no marca), su voz clonada sin seseo y con énfasis, música con ritmo y cortes al golpe, y Calidad con nota ≥ 90 sin excepciones.
 
-## 1. Qué hace @claudeai (estudiado el 7/11/2026 en su perfil: 411 publicaciones, 2,4 M seguidores)
-Reels con más visitas y de qué tratan:
-- 3,7 M: cómo cambia el trabajo cuando la IA hace el software (ideas, probar direcciones, reacciones rápidas).
-- 2,5 M (con @rpn): «Mi estudio funciona con Claude»: calendario, correo, archivos, luces y puertas conectados. Se ve todo funcionando de verdad.
-- 2,4 M: «¿Chat o Cowork? Ya no hace falta elegir»: analiza tus gastos y pídelo como documento, panel o diseño. Grabación de pantalla limpia sobre fondo de color plano, con el cursor y la interfaz real.
-- 1,4 M (con @thezeroquotient): decoración de Diwali hecha por un ingeniero: un rangoli que reacciona a la música, construido con Claude.
-- 1,2 M: «Cada 20 minutos, Tony el Rigatoni te dice que te sientes recto». Hecho en una tarde con Claude. Manos en el portátil y resultado funcionando.
-- 454 mil: un club de citas donde una app hecha con Claude empareja a los invitados.
+## 1. Objetivo y tono
+- Objetivo: que quien vea un reel piense «esto me vendría bien a mí o a mi negocio» y escriba. Métricas que mandan: DMs con intención (palabra clave, «¿cuánto cuesta?», «¿me haces una?»), toques al enlace, guardados y compartidos. Los seguidores van después.
+- Regla 80/20: el vídeo aporta valor y entretiene. La venta va solo en el cierre y es suave. El cliente no debe notar que solo se le quiere vender (palabras del dueño).
+- Confianza: siempre la app real funcionando con datos de ejemplo. Firma «By Neogest Lab» y logo NL neón al cierre (skill neogest-marca, Montserrat).
 
-El patrón que se repite:
-1. Empieza por el resultado tangible y curioso, no por la explicación (lo primero que se ve es algo funcionando).
-2. Una frase de gancho corta y concreta, en texto pequeño y elegante sobre la imagen, y voz natural de persona real, nada de locutor.
-3. «Lo hice con Claude en una tarde»: idea → cómo se pidió → resultado real funcionando. Un solo caso por reel.
-4. Imágenes reales: manos en el teclado, pantallas con la interfaz y el resultado, el objeto o la app funcionando. Cero dibujos infantiles.
-5. Estética limpia: pocos elementos, fondos planos de color suave, buena luz, cortes al ritmo de la música.
-6. Música con ritmo y presencia, cortes sincronizados con los golpes; la voz por encima, clara.
-7. Texto del post: 2-4 frases que cuentan qué se construyó y cómo probarlo (p. ej. «escribe /doc para probarlo»).
+## 2. Mezcla de contenido (por semana, 2 al día, 13:40 y 20:40)
+1. **«Una idea, una app» (≈ 60 %)**: un público concreto con un problema cotidiano, y la app de Neogest Lab que lo resuelve, en pantalla real. Estructura: segundo 0 con el resultado funcionando y un gancho de 5-8 palabras dirigido a ese público («¿Llevas las citas en una libreta?»). Después 2-3 funciones reales y el cierre. 20-35 s.
+2. **«Así se hace» (≈ 25 %)**: tutoriales y cómo se crea una app desde cero con IA, con el antes y el después y trozos del proceso real. Esto es lo que fusiona el proyecto de vídeos tutoriales. Da confianza: «esto lo hacemos nosotros».
+3. **«¿Y si tu idea fuera una app?» (≈ 15 %)**: apps a medida. Se lanza una idea de un tipo de negocio o persona, se enseña un prototipo o demo real hecha por el equipo y se invita a contar su idea por DM. Nunca se prometen precios ni plazos en el post.
+- Los reels ya en cola (017-020, trucos de IA cotidianos) se pueden publicar como contenido de valor si pasan Calidad, cambiando el cierre y el texto del post al de Neogest Lab (§5).
 
-## 2. Cómo lo adaptamos a esta cuenta (sin copiar su marca)
-- Nunca su logo, su asterisco, sus colores de marca, su tipografía ni nada que haga pensar que somos la cuenta oficial. Ni sus vídeos, textos ni músicas. Copiamos el SISTEMA, no la marca. Sí se puede decir «hecho con Claude» en texto.
-- Contenido: casos reales de «lo he hecho con IA en una tarde» y trucos que se ven funcionando. Fuente principal: las apps reales de Neogest Lab (GPS Andaluz, MEDICATOR, Insultator, Studio Beats PRO, etc.) grabadas de verdad con Playwright en el "modo":"app" de herramientas/hacer_reel.py, más resultados reales que generéis vosotros (un documento, una hoja, una web, una automatización) grabados en pantalla. Nada inventado: si no se puede grabar funcionando, no se publica.
-- Formato: vertical 1080x1920, 20-35 s. Segundo 0: el resultado funcionando + gancho de 5-8 palabras. Después: qué problema resuelve, cómo se pidió (el prompt en pantalla), resultado. Cierre: «Sígueme para ver qué más se puede hacer con IA» o palabra clave → DM.
-- Imagen: grabaciones de pantalla reales con zoom suave hacia lo importante, cursor visible, fondo plano de color suave alrededor del móvil o portátil, subtítulos limpios (Montserrat o Poppins, blanco o negro según fondo, palabra destacada en un único color de acento). Bit y Paco quedan solo como recurso puntual (máx. 3 s), no como formato.
-- Voz: la del dueño (voz_dueno/referencia_usuario.wav), natural, como contándoselo a un amigo, acento de España SIN seseo (la «c» y la «z» como «th»). Si Chatterbox sesea, no vale: ver tarea de Mejora.
-- Música: con ritmo y presencia (pista libre de derechos con licencia que permita uso comercial, guardada con su licencia en musica/LICENCIAS.md, o música generada que suene profesional), cortes al golpe, ducking bajo la voz pero sin desaparecer.
+## 3. Públicos: rotar, NO solo talleres
+Nunca dos reels seguidos para el mismo público, y como máximo 1 reel a la semana de talleres o servicios de reparación. Lista de partida (el Estratega la amplía con datos):
+| Público | Ejemplos de problema | Apps reales a revisar |
+|---|---|---|
+| Hostelería y comercio | caja, pedidos, stock, clientes | CajaSegura IA, Gestión Integral 7D, Son Nasi Gestión |
+| Hogar y familias | gastos de casa, tareas, compras | GH PLUS · Gestión Hogar |
+| Mayores y quien los cuida | citas médicas, recordar la medicación | MEDICATOR |
+| Autónomos y servicios técnicos | órdenes de trabajo, presupuestos, clientes | AjReparacion Gestión, AJ Sistema DEMO, Gestión Integral 7D |
+| Música y creadores | hacer bases, sonidos, contenido | Studio Beats PRO, Beats Studio, Centro de Contenido Apps |
+| Ocio, humor y viajes | reírse, conducir con gracia | Insultator, GPS Andaluz |
+| Aficiones y tiendas pequeñas | catálogo, pedidos personalizados | PlaymoCustons |
+| Cualquier negocio con una idea | «¿y si tu idea fuera una app?» | demo a medida del equipo |
 
-## 3. Tareas
-- MEJORA DE PRODUCCIÓN (prioridad 1, la voz): el seseo viene del modelo español de Chatterbox (entrenado sobre todo con acento latinoamericano). Prueba en GitHub Actions, gratis y en CPU: (a) TTS con acento de España que distinga «c/z» (p. ej. Piper es_ES, Kokoro u otro libre) + conversión de timbre a la voz del dueño (Seed-VC, OpenVoice, RVC u otro libre) con voz_dueno/referencia_usuario_larga.wav; (b) otros modelos libres de clonación en español de España. Elige con datos: parecido ≥ 0,85, palabras mal reconocidas ≤ 10 %, sin seseo (comprueba con palabras como «hace», «gracias», «cerveza», «zapato»), variación de tono ≥ 4 semitonos. Deja muestras en la release «pruebas» y apunta todo en mejoras.md. Prioridad 2: música con ritmo y cortes al golpe. Prioridad 3: plantilla de grabación de pantalla tipo @claudeai en "modo":"app".
-- ESTRATEGA: reescribe INSTRUCCIONES_EQUIPO.md, plan.json (7 días, 2 al día, 13:40 y 20:40) y los roles según esta directiva.
-- CREADOR: guiones de este formato, uno por caso real grabable.
-- CALIDAD: aplica esta directiva y estandar_calidad.md; nota ≥ 90 o no sale.
+Reglas de la tabla:
+- **Solo funciones reales comprobadas en la app** (skill posts-apps-neogest). Antes de guionizar una app, abrirla y anotar qué hace de verdad. Si una app no está publicada o no funciona bien, no sale.
+- La regla antigua «MEDICATOR no se promociona nunca» era del canal de misterios y queda anulada. MEDICATOR sí se enseña, como organizador de citas y recordatorios: sin consejos médicos, sin prometer resultados de salud, con datos de ejemplo y el aviso «no sustituye a tu médico».
+- Cero clientes, testimonios, cifras de ventas o reseñas inventados. Si no hay un caso real, se habla de «imagina que…» y se dice claramente que es una demo.
+- No usar marcas ajenas como si fueran clientes.
+
+## 4. Producción (igual que antes, resumido)
+- Vertical 1080x1920. Grabación real de la app con Playwright en el "modo":"app" de herramientas/hacer_reel.py: zoom suave a lo importante, cursor visible, móvil o portátil sobre fondo plano de color suave, subtítulos Montserrat con una palabra destacada en el color de acento de Neogest.
+- Voz: la del dueño (voz_dueno/), natural, con énfasis, acento de España sin seseo. Nada de clipeos ni silencios. Los posts llevan «Voz: generada a partir de la voz del autor».
+- Música con licencia comercial apuntada en musica/LICENCIAS.md, cortes al golpe y ducking sin que la música desaparezca.
+- Bit y Paco (los dibujos) solo como recurso puntual, de 3 s como máximo.
+
+## 5. Texto del post y cierre
+- 2-4 frases: qué problema resuelve, para quién es, cómo probarla. Cierre fijo en una de estas formas:
+  - «Comenta APP y te paso el enlace» (respuesta por DM cuando la automatización esté activa; mientras no lo esté, «enlace en el perfil»).
+  - «¿Tienes una idea para tu negocio? Escríbeme IDEA por privado y te digo cómo sería tu app.»
+- 3-5 hashtags del público concreto (#hosteleria, #autonomos, #pymes…) más #apps y #neogestlab.
+
+## 6. Perfil (lo deja listo el Estratega en perfil_propuesto.md y pendiente_usuario.md; la API no lo puede cambiar)
+- Usuario: @neogestlab (si está cogido: @neogest.lab o @neogestlab.apps). Nombre visible: **Neogest Lab · Apps a medida** (27 caracteres).
+- Bio (140/150, entregada al dueño el 7/11 23:45): «Apps para tu negocio y tu día a día 📲 / Una idea, una app: mira cómo funcionan / Tu app a medida, sin líos / Escríbeme IDEA y te digo cómo sería 👇». Título del enlace: «Ver nuestras apps». Categoría: «Desarrollador de software» o «Servicios informáticos».
+- Enlace: la página de aplicaciones de Neogest Lab. Mejora comprueba si es «Centro de Contenido Apps» (Base44, id 6ae5244d4e2b32702f0a3cd6) con GET /api/apps/platform/{id}/published-url. Si no lo es, reconvierte el hub Expedientes Imposibles (id 6aecf6db89aecc23bdf431bd) en «Apps de Neogest Lab», con una ficha por app visible, `?ref=ig` y un formulario o botón «Cuéntame tu idea». Solo con las herramientas de código del MCP de Base44, nunca el builder con prompt.
+- Foto: logo NL neón. Destacadas: EMPIEZA, APPS, A MEDIDA, ASÍ SE HACE, NEGOCIOS.
+- Rejilla: archivar (no borrar) lo que no encaje cuando haya 9 reels nuevos publicados. Fijar arriba 1 «Una idea, una app», 1 «Así se hace» y 1 «A medida».
+
+## 7. Tareas
+- **ESTRATEGA (ya)**: reescribir INSTRUCCIONES_EQUIPO.md, plan.json (7 días, 2 al día, con el público de cada reel y la rotación de §3) y los roles según esta directiva. Actualizar perfil_propuesto.md y el punto de perfil de pendiente_usuario.md.
+- **CREADOR**: antes de guionizar, inventario de las apps reales (qué está publicado, URL y qué hace cada una de verdad) en equipo/catalogo_apps.md. Después, guiones de §2 con públicos alternos.
+- **MEJORA**: página de apps y enlace (§6), plantilla «Una idea, una app» en hacer_reel.py, automatización de la palabra clave APP/IDEA en DM si las herramientas conectadas lo permiten (si no, apuntarlo en pendiente_usuario.md).
+- **ANALISTA**: medir por público (qué sector da más DMs y toques al enlace) y avisar al Estratega cada semana.
+- **CALIDAD**: esta directiva y estandar_calidad.md; nota ≥ 90 o no sale. Rechazo automático si aparece una función que la app no tiene, un cliente o testimonio inventado o dos reels seguidos del mismo público.
