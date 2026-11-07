@@ -45,7 +45,11 @@ if st != 200:
 
 st, resp = llamar(f"{URL}?fields=ice_breakers&platform=instagram")
 print("GET", st, json.dumps(resp, ensure_ascii=False)[:1200])
-ok = st == 200 and any(len(x.get("call_to_actions", [])) == 4 for x in resp.get("data", [{}])[0].get("ice_breakers", [])) \
-    if st == 200 and resp.get("data") else False
+# Meta puede devolver las preguntas en lista simple o dentro de "call_to_actions"
+ok = False
+if st == 200 and resp.get("data"):
+    ib = resp["data"][0].get("ice_breakers", [])
+    n = sum(len(x["call_to_actions"]) if "call_to_actions" in x else 1 for x in ib)
+    ok = n == len(PREGUNTAS[:4])
 print("VERIFICADO" if ok else "NO VERIFICADO")
 sys.exit(0 if ok else 1)
