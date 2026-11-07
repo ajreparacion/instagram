@@ -835,8 +835,9 @@ def ease_out(k): k = min(1.0, max(0.0, k)); return 1 - (1 - k) ** 3
 # ---- personajes
 def dibujar_bit(d, cx, base, t, rng, accion, habla, entrada=1.0, s=1.0):
     """Bit: robot redondo blanco con cara-pantalla cian. base = y del suelo."""
+    hv = float(habla); habla = hv > 0.08     # hv: apertura de la boca 0-1 (envolvente real de la voz)
     resp = math.sin(t * 2.2)
-    cy = base - 150 * s + 3 * resp
+    cy = base - 150 * s + 3 * resp - 4 * hv * s   # al hablar se yergue un poco
     r = 92 * s
     if accion == "celebra": cy -= 22 * abs(math.sin(t * 6.5))
     # ruedas / pies
@@ -844,8 +845,8 @@ def dibujar_bit(d, cx, base, t, rng, accion, habla, entrada=1.0, s=1.0):
         circulo(d, cx + sx * 44 * s, base - 14 * s, 18 * s, rng, 7, relleno=(255, 255, 255))
     # brazos (antes del cuerpo para que queden detras)
     if accion in ("explica", "senala"):
-        ang_r = -1.05 + 0.12 * math.sin(t * 3.0)        # brazo derecho senalando arriba (al objeto)
-        ang_l = 0.55
+        ang_r = -1.05 + 0.12 * math.sin(t * 3.0) - 0.25 * hv   # brazo derecho senalando arriba (al objeto); gesticula con la voz
+        ang_l = 0.55 - 0.35 * hv
     elif accion == "celebra":
         ang_r = -1.25 + 0.3 * math.sin(t * 7); ang_l = -1.25 - 0.3 * math.sin(t * 7)
     elif accion == "sorprendido":
@@ -885,16 +886,17 @@ def dibujar_bit(d, cx, base, t, rng, accion, habla, entrada=1.0, s=1.0):
             d.ellipse([ex - 4 * s, ey - 4 * s, ex + 4 * s, ey + 4 * s], fill=TINTA)
     # boca
     my = cy + 18 * s
-    if habla:
-        ab = 4 + 12 * abs(math.sin(t * 17.0)) + 4 * abs(math.sin(t * 7.3))
-        d.ellipse([cx - 16 * s, my - ab * s / 2, cx + 16 * s, my + ab * s / 2 + 2], fill=(255, 255, 255))
+    if habla:   # boca abierta segun la envolvente real de la voz (labios sincronizados)
+        ab = 3 + 19 * hv; aw = 12 + 6 * hv
+        d.ellipse([cx - aw * s, my - ab * s / 2, cx + aw * s, my + ab * s / 2 + 2], fill=(255, 255, 255))
+        if ab > 12: d.ellipse([cx - (aw - 5) * s, my + 2 * s, cx + (aw - 5) * s, my + ab * s / 2], fill=(0, 120, 150))
     elif accion == "sorprendido":
         d.ellipse([cx - 10 * s, my - 10 * s, cx + 10 * s, my + 10 * s], fill=(255, 255, 255))
     else:
         trazo(d, [(cx - 16 * s, my - 2), (cx, my + 8 * s), (cx + 16 * s, my - 2)], rng, 6, (255, 255, 255), 0.8)
     if habla:  # rayitas de voz junto a la boca
         for i in range(2):
-            x = cx + 90 * s + i * 14 * s; a = 0.6 + 0.4 * abs(math.sin(t * 9 + i))
+            x = cx + 90 * s + i * 14 * s; a = (0.3 + 0.7 * hv) * (0.7 + 0.3 * abs(math.sin(t * 9 + i)))
             trazo(d, [(x, cy + 8 * s - 12 * a * s), (x, cy + 8 * s + 12 * a * s)], rng, 5, CIAN, 1.0)
     if accion == "celebra":
         for i in range(5):
@@ -904,7 +906,8 @@ def dibujar_bit(d, cx, base, t, rng, accion, habla, entrada=1.0, s=1.0):
 
 def dibujar_paco(d, cx, base, t, rng, accion, habla, s=1.0):
     """Paco: muneco de palo que se agobia con la tecnologia."""
-    bob = 2.5 * math.sin(t * 2.0)
+    hv = float(habla); habla = hv > 0.08     # hv: apertura de la boca 0-1 (envolvente real de la voz)
+    bob = 2.5 * math.sin(t * 2.0) - 3 * hv
     salto = 24 * abs(math.sin(t * 6.5)) if accion == "celebra" else 0
     tiembla = 2.0 * math.sin(t * 30) if accion == "agobiado" else 0
     hy = base - 300 * s + bob - salto + tiembla * 0.3   # centro de la cabeza
@@ -942,6 +945,8 @@ def dibujar_paco(d, cx, base, t, rng, accion, habla, s=1.0):
         brazo(1, -0.5, -2.0); brazo(-1, 1.1)
     elif accion in ("senala",):
         brazo(1, -0.75 + 0.08 * math.sin(t * 3), -0.75); brazo(-1, 1.1)
+    elif habla:                     # Paco habla (sin Bit): gesticula con la mano al ritmo de la voz
+        brazo(1, -0.1 - 0.6 * hv, -1.3 - 0.3 * hv); brazo(-1, 1.1 + 0.05 * bob)
     else:                           # escucha: brazos relajados, ligero balanceo
         brazo(1, 1.15 + 0.05 * bob); brazo(-1, 1.15 - 0.05 * bob)
     # cabeza
@@ -963,9 +968,9 @@ def dibujar_paco(d, cx, base, t, rng, accion, habla, s=1.0):
         for sx in (-1, 1):
             trazo(d, [(cx + sx * 24 * s, ey - 20 * s), (cx + sx * 7 * s, ey - 14 * s)], rng, 5, TINTA, 0.8)
     my = hy + 16 * s
-    if habla:
-        ab = 3 + 9 * abs(math.sin(t * 16.0))
-        d.ellipse([cx - 11 * s, my - ab * s / 2, cx + 11 * s, my + ab * s / 2 + 2], fill=TINTA)
+    if habla:   # boca abierta segun la envolvente real de la voz
+        ab = 2 + 13 * hv; aw = 9 + 4 * hv
+        d.ellipse([cx - aw * s, my - ab * s / 2, cx + aw * s, my + ab * s / 2 + 2], fill=TINTA)
     elif accion == "agobiado":
         trazo(d, [(cx - 14 * s, my + 2), (cx - 7 * s, my - 4), (cx, my + 2), (cx + 7 * s, my - 4), (cx + 14 * s, my + 2)], rng, 5, TINTA, 0.8)
     elif accion == "sorprendido":
@@ -1275,6 +1280,29 @@ def hablando(sub, t):
         return any(ti - 0.05 <= t <= ti + 0.42 for ti in sub.tiempos)
     return sub.delay < t < sub.delay + sub.n / max(0.5, sub.wps) + 0.15
 
+def boca(sc, t):
+    """Apertura de la boca (0-1) sincronizada con la voz REAL: envolvente de la locucion (tiempos_voz.json "env",
+    FPS valores por segundo, la escribe publicar_gh.py) si la hay; si no, alterna mientras suena una palabra."""
+    env = getattr(sc, "env", None)
+    if env:
+        i = int((t - 0.12) * FPS)   # la voz entra en la mezcla 120 ms despues del inicio de la escena
+        return float(env[i]) if 0 <= i < len(env) else 0.0
+    if not hablando(sc.sub, t): return 0.0
+    return 0.45 + 0.55 * abs(math.sin(t * 17.0))
+
+def capa_escala(capa, z, px, py):
+    """Escala una capa RGBA alrededor del punto (px, py) (rebote de entrada de los objetos)."""
+    z = max(0.05, z)
+    nw, nh = max(1, int(W * z)), max(1, int(H * z))
+    r = capa.resize((nw, nh), Image.BILINEAR)
+    out = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+    out.paste(r, (int(px - px * z), int(py - py * z)), r)
+    return out
+
+def ease_out_back(k, c1=1.70158):
+    k = min(1.0, max(0.0, k)); c3 = c1 + 1
+    return 1 + c3 * (k - 1) ** 3 + c1 * (k - 1) ** 2
+
 def preparar_dibujo(sc, spec, rng):
     """Prepara una escena en modo dibujo: subtitulos, rotulo, personajes, objeto y recursos."""
     sc.estilo_d = str(spec.get("estilo") or "paso").strip().lower()
@@ -1318,6 +1346,20 @@ def preparar_dibujo(sc, spec, rng):
     sc.sub = Subtitulos(base, wps, retardo, sc.dur, enfasis=enf, tiempos=tiempos, estilo=estilo_sub) if base else None
     sc.rotulo = rotulo_dibujo(texto, grande=(sc.estilo_d == "gancho")) if texto else None
     sc.habla_bit = "bit" in sc.pers
+    env = spec.get("_voz_env")
+    sc.env = [min(1.0, max(0.0, float(x))) for x in env] if isinstance(env, list) and env else None
+    sc.rebote = bool(sc.con_objeto and not (sc.pizarra or sc.lista))   # objeto/cifra/antes-despues entran con rebote; pizarra/lista se dibujan
+    # efectos de sonido sutiles de la escena (los mezcla make_audio): (tipo, t relativo, duracion)
+    sc.sfx = []
+    if sc.idx > 0 or sc.entran: sc.sfx.append(("whoosh", 0.0, 0.22))
+    if sc.rebote: sc.sfx.append(("pop", 0.3, 0.09))
+    piz = sc.lista or sc.pizarra
+    if piz:
+        paso = max(0.45, min(1.1, 0.55 * (3.0 / len(piz))))
+        for i in range(len(piz)): sc.sfx.append(("lapiz", 0.35 + i * paso, 0.45))
+    if sc.pantalla and sc.objeto != "nada":
+        sc.sfx.append(("teclas", 0.55, min(sc.dur - 0.8, sum(len(x) for x in sc.pantalla) / 30.0)))
+    if sc.cifra: sc.sfx.append(("ding", 1.3, 0.5))
     # camara: segmentos de ~3 s con encuadre distinto (corte dentro de escenas largas)
     rc = random.Random(sc.idx * 13 + 5)
     sc.cam = [(rc.choice([1.02, 1.04, 1.06]), rc.uniform(-14, 14), rc.uniform(-10, 10), rc.choice([1, -1])) for _ in range(int(sc.dur / 3.0) + 2)]
@@ -1349,12 +1391,17 @@ def render_frame_dibujo(fi, sc, noise, rg, seed):
         flecha_mano(dc, (x0, 540), (xr + 45, 620), rng, 10, CIAN, prog)
         if isinstance(sc.flecha, str) and prog >= 1.0:
             texto_mano(dc, x0, 500, sc.flecha[:18], font(F_DIB_C, 40), rng, CIAN, "mm")
-    if t < 0.5:   # el objeto aparece dibujandose (barrido de arriba abajo)
-        a = np.asarray(capa.getchannel("A"), dtype=np.uint8).copy()
-        corte = 300 + int(1000 * ease_out(t / 0.5))
-        a[corte:, :] = 0
-        capa.putalpha(Image.fromarray(a))
-    img.paste(capa, (0, 0), capa)
+    if sc.rebote:   # objeto, cifra o antes/despues: entra con rebote (0,45 s) y despues flota (nada queda quieto)
+        if t < 0.45:
+            capa = capa_escala(capa, ease_out_back(t / 0.45), 540, ocy)
+        img.paste(capa, (0, int(4 * math.sin(t * 1.9 + sc.idx))), capa)
+    else:
+        if t < 0.5:   # pizarra / lista: aparece dibujandose (barrido de arriba abajo)
+            a = np.asarray(capa.getchannel("A"), dtype=np.uint8).copy()
+            corte = 300 + int(1000 * ease_out(t / 0.5))
+            a[corte:, :] = 0
+            capa.putalpha(Image.fromarray(a))
+        img.paste(capa, (0, 0), capa)
     # ---- rotulo
     if sc.rotulo is not None:
         k = ease_out(t / 0.3)
@@ -1363,7 +1410,7 @@ def render_frame_dibujo(fi, sc, noise, rg, seed):
             ro = ro.crop((0, 0, max(1, int(W * k)), ro.height))
         img.paste(ro, (0, 170), ro)
     # ---- personajes
-    habla = hablando(sc.sub, t)
+    hv = boca(sc, t)   # apertura de la boca 0-1 (voz real)
     esc = 1.0 if sc.con_objeto else 1.3
     if len(sc.pers) == 2:
         pos = {"paco": 300, "bit": 740} if sc.con_objeto else {"paco": 280, "bit": 770}
@@ -1376,11 +1423,11 @@ def render_frame_dibujo(fi, sc, noise, rg, seed):
             x += (1 - k) * (-520 if p == "paco" else 520)
         if p == "bit":
             dibujar_bit(d, x, SUELO_DIB, t, rng, sc.accion if sc.accion in ("explica", "senala", "celebra", "sorprendido", "piensa") else "explica",
-                        habla and sc.habla_bit, s=esc)
+                        hv if sc.habla_bit else 0.0, s=esc)
         else:
             acc_p = sc.accion
             if "bit" in sc.pers and acc_p in ("explica", "senala"): acc_p = "escucha"
-            dibujar_paco(d, x, SUELO_DIB, t, rng, acc_p, habla and not sc.habla_bit, s=esc)
+            dibujar_paco(d, x, SUELO_DIB, t, rng, acc_p, 0.0 if sc.habla_bit else hv, s=esc)
     # suelo
     trazo(d, [(120, SUELO_DIB + 6), (960, SUELO_DIB + 2)], rng, 7, TINTA, 1.5)
     # ---- subtitulos
@@ -1404,6 +1451,7 @@ def render_frame_dibujo(fi, sc, noise, rg, seed):
     seg = min(len(sc.cam) - 1, int(t / 3.0)); z0, dx, dy, sg = sc.cam[seg]
     ts = t - seg * 3.0
     z = z0 + 0.012 * sg * ts / 3.0
+    if sc.idx > 0: z *= 1 + 0.045 * (1 - ease_out(t / 0.3))   # «punch-in» en cada corte (entra un 4,5 % mas cerca y se asienta)
     cw, ch = int(W / z), int(H / z)
     cx = int((W - cw) / 2 + dx * ts / 3.0); cy = int((H - ch) / 2 + dy * ts / 3.0)
     cx = max(0, min(W - cw, cx)); cy = max(0, min(H - ch, cy))
@@ -1562,6 +1610,8 @@ def preparar_app(sc, spec, rng):
         sc.grande = Subtitulos(base, wps, 0.0, sc.dur, entero=True, enfasis=enf, estilo=est_g) if base else None
     else:
         sc.sub = Subtitulos(voz, wps, 0.12, sc.dur, enfasis=enf_voz, tiempos=tiempos, estilo=est) if voz else None
+        env = spec.get("_voz_env")
+        sc.env = [min(1.0, max(0.0, float(x))) for x in env] if isinstance(env, list) and env else None
         if texto:
             sc.rotulo = rotulo_humano(texto) if sobre_video else rotulo_dibujo(texto, grande=(sc.estilo_a == "cierre"))
 
@@ -1608,7 +1658,7 @@ def render_frame_app(fi, sc, noise, rg, seed):
         img.paste(ro, (0, 170 if not sobre_video else 200), ro)
     # ---- Bit (gancho: abajo a la derecha sobre un circulo de papel; cierre: en el centro celebrando)
     if sc.bit and sc.estilo_a in ("gancho", "cierre"):
-        habla = hablando(sc.sub, t) if sc.sub is not None else (t < max(0.6, sc.dur - 0.4))
+        habla = boca(sc, t) if sc.sub is not None else ((0.45 + 0.55 * abs(math.sin(t * 17.0))) if t < max(0.6, sc.dur - 0.4) else 0.0)   # apertura 0-1 (voz real)
         capa = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dc = ImageDraw.Draw(capa, "RGBA")
         if sc.estilo_a == "cierre":
             k = ease_out(t / 0.45)
@@ -2024,6 +2074,39 @@ def make_music(scenes, n, seed, gs, hook_end):
         cutg[i0:i0 + r0] = np.linspace(1, 0, r0); cutg[i0 + r0:i1] = 0.0
     return L, R, cutg, dict(bpm=60 / beat, key=key, prog=(PROGS_MAYOR if modo_alegre() else PROGS).index(prog), box=box, cut=cut0, riser=tr0)
 
+def sfx_dibujo(tipo, dur, rg):
+    """Efectos de sonido del modo dibujo, generados por codigo y discretos (amplitud < 0,16; la voz los hunde en la
+    mezcla): whoosh (entrada / corte), pop (el objeto aterriza tras el rebote), lapiz (trazo que se dibuja en la
+    pizarra), teclas (texto que se teclea en la pantalla) y ding (la cifra llega a su valor)."""
+    dur = max(0.03, float(dur)); m = int(dur * SR); tt = np.arange(m) / SR
+    if tipo == "whoosh":
+        x = rg.standard_normal(m)
+        x = lp_fft(x, 3200, 2) - lp_fft(x, 500, 2)
+        env = np.sin(np.pi * np.minimum(1.0, tt / dur)) ** 2 * np.linspace(0.4, 1.0, m)
+        return x * env * 0.11
+    if tipo == "pop":
+        f = 420 - 220 * tt / dur
+        return np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-tt * 40) * 0.14
+    if tipo == "lapiz":
+        x = rg.standard_normal(m)
+        x = lp_fft(x, 6000, 2) - lp_fft(x, 1500, 2)
+        mod = 0.55 + 0.45 * np.abs(np.sin(2 * np.pi * 11 * tt + rg.uniform(0, 3)))
+        env = np.minimum(1.0, tt / 0.03) * np.minimum(1.0, (dur - tt) / 0.06)
+        return x * mod * env * 0.045
+    if tipo == "teclas":
+        out = np.zeros(m); k = 0.0
+        while k < dur - 0.02:
+            i0 = int(k * SR); mm = min(int(0.018 * SR), m - i0)
+            if mm <= 0: break
+            t2 = np.arange(mm) / SR
+            click = (lp_fft(rg.standard_normal(mm), 4500, 2) if mm > 8 else np.zeros(mm)) * np.exp(-t2 * 260)
+            out[i0:i0 + mm] += click * rg.uniform(0.5, 1.0)
+            k += rg.uniform(0.07, 0.12)
+        return out * 0.09
+    if tipo == "ding":
+        return (np.sin(2 * np.pi * 1318.5 * tt) + 0.35 * np.sin(2 * np.pi * 2637 * tt)) * np.exp(-tt * 6.5) * 0.075
+    return None
+
 def make_audio(scenes, total, seed, musica=True):
     rg = np.random.default_rng(seed)
     n = int(total * SR); t = np.arange(n) / SR
@@ -2098,6 +2181,14 @@ def make_audio(scenes, total, seed, musica=True):
             for s in scenes[1:]:
                 i0 = int(s.start / FPS * SR); i1 = min(n, i0 + m)
                 st[i0:i1, 0] += pop[:i1 - i0]; st[i0:i1, 1] += pop[:i1 - i0]
+        if MODO["dibujo"]:   # efectos sutiles por evento (whoosh en el corte, pop del rebote, lapiz, teclas, ding)
+            for s in scenes:
+                for tipo, t_rel, dur in getattr(s, "sfx", []):
+                    sig = sfx_dibujo(tipo, dur, rg)
+                    if sig is None: continue
+                    i0 = int((s.start / FPS + t_rel) * SR); i1 = min(n, i0 + len(sig))
+                    if i0 < n and i1 > i0:
+                        st[i0:i1, 0] += sig[:i1 - i0]; st[i0:i1, 1] += sig[:i1 - i0] * 0.95
     else:
         gfx = 10 ** ((-21 - lufs(fx)) / 20)
         st = fx * gfx
@@ -2135,13 +2226,16 @@ def main():
     solo_loc = "--solo-locucion" in sys.argv
     tiempos = {}
     palabras_voz = {}   # indice de escena -> [inicio de cada palabra] (alineacion real; opcional)
+    env_voz = {}        # indice de escena -> envolvente de la voz (FPS valores/s, 0-1) para la boca (opcional)
     if "--tiempos" in sys.argv:
         try:
             for k, v in json.load(open(sys.argv[sys.argv.index("--tiempos") + 1], encoding="utf-8")).items():
-                if isinstance(v, dict):   # {"dur": s, "palabras": [[ini, fin], ...]}
+                if isinstance(v, dict):   # {"dur": s, "palabras": [[ini, fin], ...], "env": [0.0-1.0, ...]}
                     tiempos[int(k)] = float(v.get("dur") or 0)
                     if v.get("palabras"):
                         palabras_voz[int(k)] = [float(x[0]) if isinstance(x, (list, tuple)) else float(x) for x in v["palabras"]]
+                    if isinstance(v.get("env"), list) and v["env"]:
+                        env_voz[int(k)] = v["env"]
                 else:
                     tiempos[int(k)] = float(v)
         except Exception as e:
@@ -2179,6 +2273,7 @@ def main():
                 need = tiempos[i] + 0.45   # voz real + 120 ms de retardo de mezcla + respiro
                 e["_voz_dur"] = tiempos[i]
                 if i in palabras_voz: e["_voz_palabras"] = palabras_voz[i]
+                if i in env_voz: e["_voz_env"] = env_voz[i]
             else:
                 need = len(voz.split()) / 2.6 + 0.6
             if i + 1 < len(esc) and esc[i + 1].get("estilo") == "giro":

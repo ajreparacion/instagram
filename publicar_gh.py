@@ -633,6 +633,32 @@ def resolver_videos_guion(cfg, guion, trabajo):
     return copia
 
 
+def envolvente_voz(ruta, fps=30):
+    """Envolvente de la voz de una frase (wav 16 bits) a `fps` valores por segundo, 0-1 (normalizada al percentil 95,
+    suavizada): hacer_reel.py mueve la boca de Bit y Paco con ella (labios sincronizados con la voz real).
+    Si algo falla devuelve None y el render alterna la boca con las palabras, como antes."""
+    try:
+        import numpy as np
+        with wave.open(ruta) as w:
+            sr, ch, sw = w.getframerate(), w.getnchannels(), w.getsampwidth()
+            raw = w.readframes(w.getnframes())
+        if sw != 2 or not raw:
+            return None
+        x = np.frombuffer(raw, "<i2").astype(np.float32).reshape(-1, ch).mean(axis=1) / 32768.0
+        hop = max(1, int(sr / fps))
+        nv = len(x) // hop
+        if nv < 2:
+            return None
+        rms = np.sqrt((x[:nv * hop].reshape(nv, hop) ** 2).mean(axis=1))
+        ref = max(float(np.percentile(rms, 95)), 1e-4)
+        e = np.clip(rms / ref, 0.0, 1.0)
+        e = np.convolve(e, [0.25, 0.5, 0.25], mode="same")   # suaviza (sin aleteo entre fotogramas)
+        e = np.where(e < 0.06, 0.0, e)                       # el ruido de fondo no abre la boca
+        return [round(float(v), 2) for v in e]
+    except Exception:
+        return None
+
+
 def renderizar_guion(guion, video, trabajo):
     """Reel nuevo con la VOZ PRIMERO (6/11/2026, humanizar): 1) hacer_reel.py --solo-locucion escribe los tramos;
     2) se genera y recorta la voz; 3) hacer_reel.py --tiempos renderiza con cada escena alargada a la duración real
@@ -649,8 +675,9 @@ def renderizar_guion(guion, video, trabajo):
     cmd = [sys.executable, os.path.join(HERR_REEL, "hacer_reel.py"), guion, video]
     if tramos:
         tiempos = os.path.join(trabajo, "tiempos_voz.json")
-        escribir_json(tiempos, {str(t.get("escena", i)): {"dur": round(d, 3), "palabras": t.get("palabras")}
-                                for i, (t, (_, d)) in enumerate(zip(tramos, wavs))})
+        escribir_json(tiempos, {str(t.get("escena", i)): {"dur": round(d, 3), "palabras": t.get("palabras"),
+                                                          "env": envolvente_voz(wav)}   # boca sincronizada con la voz
+                                for i, (t, (wav, d)) in enumerate(zip(tramos, wavs))})
         cmd += ["--tiempos", tiempos]
     r = subprocess.run(cmd, capture_output=True, text=True, timeout=1200, cwd=HERR_REEL)
     if r.returncode != 0 or not os.path.exists(video):
