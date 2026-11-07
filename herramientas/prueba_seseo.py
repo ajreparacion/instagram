@@ -51,8 +51,12 @@ def a_theta(t, modo="th"):
     modo "th": con «th» (hace → hathe). Medido el 7/11: WER 15 %, «gratias», «terveta»: no vale.
     modo "griego": con la letra griega θ (hace → haθe); el tokenizador multilingüe de Chatterbox incluye el griego."""
     t1, t2 = ("th", "Th") if modo == "th" else ("θ", "Θ")
-    t = re.sub(r"c(?=[eiéí])", t1, t)
-    t = re.sub(r"C(?=[eiéí])", t2, t)
+    if modo == "griego_sin_inicial":   # el 7/11 se oyó «cerveza» → «terveza», «cinco» → «tinco»: la c inicial se deja
+        t = re.sub(r"(?<=[\wáéíóúñ])c(?=[eiéí])", t1, t)
+        t = re.sub(r"(?<=[\wáéíóúñ])C(?=[eiéí])", t2, t)
+    else:
+        t = re.sub(r"c(?=[eiéí])", t1, t)
+        t = re.sub(r"C(?=[eiéí])", t2, t)
     t = t.replace("z", t1).replace("Z", t2)
     return t
 
@@ -141,7 +145,7 @@ VOZ_RAIZ = "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/"
 PIPER_MODELO = "es/es_ES/davefx/medium/es_ES-davefx-medium"
 
 
-def sintetizar_piper(carpeta):
+def sintetizar_piper(carpeta, noise_scale="0.667", noise_w="0.8", length="1.05"):
     piper = os.path.join(CACHE, "piper", "piper")
     if not os.path.exists(piper):
         os.makedirs(CACHE, exist_ok=True)
@@ -158,8 +162,8 @@ def sintetizar_piper(carpeta):
     sw, pw = nombres_wav(carpeta)
     t0 = time.time()
     for t, s in zip(textos_prueba(), sw + pw):
-        r = subprocess.run([piper, "--model", modelo, "--output_file", s, "--length_scale", "1.05",
-                            "--noise_scale", "0.667", "--noise_w", "0.8"], input=t.encode(),
+        r = subprocess.run([piper, "--model", modelo, "--output_file", s, "--length_scale", length,
+                            "--noise_scale", noise_scale, "--noise_w", noise_w], input=t.encode(),
                            cwd=os.path.dirname(piper), capture_output=True, timeout=180)
         if r.returncode != 0:
             raise RuntimeError("Piper falló: " + r.stderr.decode(errors="replace")[-300:])
@@ -343,6 +347,9 @@ def main():
     variante("cb_actual", lambda c: sintetizar_chatterbox(c, False))
     variante("cb_theta", lambda c: sintetizar_chatterbox(c, "th"))
     variante("cb_griego", lambda c: sintetizar_chatterbox(c, "griego"))
+    variante("cb_griego2", lambda c: sintetizar_chatterbox(c, "griego_sin_inicial"))
+    variante("piper2", lambda c: sintetizar_piper(c, "1.0", "1.0", "1.0"))
+    variante("piper2_ov", con_ov("piper2", lambda c: sintetizar_piper(c, "1.0", "1.0", "1.0")))
 
     json.dump(informe, open(INFORME, "w"), ensure_ascii=False, indent=1)
     print(json.dumps({k: {x: v.get(x) for x in ("theta_pct", "parecido_ref", "wer", "error")}
