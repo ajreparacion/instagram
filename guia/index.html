@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Guía gratuita de @iafacil.trucos: fórmula de prompts, herramientas gratis y 10 prompts para copiar.">
+<style>:root{color-scheme:light}body{margin:0}*{box-sizing:border-box}img{max-width:100%}</style>
+<title>Guía de prompts gratis</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: una columna de lectura; cada prompt es una ficha copiable con su "receta" */
+:root{
+  --bg:#F5F8F8; --surface:#FFFFFF; --fg:#13201F; --muted:#56706D; --line:#D7E2E1; --accent:#0B7A80; --accent-ink:#FFFFFF; --code:#EAF2F1;
+  --display:"Montserrat",system-ui,sans-serif; --body:"Montserrat",system-ui,sans-serif; --mono:"JetBrains Mono",ui-monospace,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0E1716; --surface:#152120; --fg:#E6F0EF; --muted:#93AEAA; --line:#24403D; --accent:#46C3C9; --accent-ink:#06201F; --code:#1B2C2A; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0E1716; --surface:#152120; --fg:#E6F0EF; --muted:#93AEAA; --line:#24403D; --accent:#46C3C9; --accent-ink:#06201F; --code:#1B2C2A; color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-size:16px;line-height:1.6}
+.wrap{max-width:720px;margin:0 auto;padding-block:40px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:36px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);font-weight:700}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(30px,7vw,46px);line-height:1.08;margin:8px 0 12px;text-wrap:balance}
+h2{font-family:var(--display);font-size:22px;margin:0 0 12px;text-wrap:balance}
+p{margin:0 0 10px;max-width:65ch}
+.lead{color:var(--muted);font-size:17px}
+.formula{font-family:var(--mono);font-size:15px;background:var(--code);border-radius:8px;padding:14px 16px;overflow-x:auto}
+.formula b{color:var(--accent);font-weight:500}
+.tools{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-top:6px}
+.tool{border:1px solid var(--line);border-radius:8px;padding:12px 14px;background:var(--surface)}
+.tool strong{display:block}
+.tool span{font-family:var(--mono);font-size:13px;color:var(--muted);word-break:break-all}
+.list{display:flex;flex-direction:column;gap:14px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card h3{margin:0;font-size:16px}
+.card .use{font-size:14px;color:var(--muted);margin:0}
+.card pre{margin:0;font-family:var(--mono);font-size:14px;white-space:pre-wrap;background:var(--code);border-radius:6px;padding:12px}
+button{align-self:flex-start;font:600 14px var(--body);background:var(--accent);color:var(--accent-ink);border:0;border-radius:6px;padding:8px 14px;cursor:pointer}
+button:focus-visible{outline:3px solid var(--fg);outline-offset:2px}
+ul.tips{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+footer b{color:var(--fg)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+<header>
+  <div class="eyebrow">@iafacil.trucos · gratis</div>
+  <h1>Guía de prompts para usar la IA sin pagar</h1>
+  <p class="lead">Diez prompts listos para copiar, la fórmula para escribir los tuyos y dónde usarlos gratis. Copia, cambia lo que va entre corchetes y pega.</p>
+</header>
+
+<section>
+  <h2>La fórmula de un buen prompt</h2>
+  <p>Cuanto más contexto le das, mejor responde. Usa estas cuatro piezas:</p>
+  <div class="formula"><b>Rol</b> + <b>Tarea</b> + <b>Contexto</b> + <b>Formato</b></div>
+  <p style="margin-top:10px">Ejemplo: «Actúa como <b>nutricionista</b>. <b>Hazme un menú semanal</b> para <b>2 personas con poco tiempo para cocinar</b>. <b>Dámelo en una tabla</b> con la lista de la compra al final.»</p>
+</section>
+
+<section>
+  <h2>Dónde usarlos gratis</h2>
+  <p>Todas tienen versión gratuita con un límite de uso. Si llegas al límite en una, cambia a otra.</p>
+  <div class="tools">
+    <div class="tool"><strong>Claude</strong><span>claude.ai</span></div>
+    <div class="tool"><strong>ChatGPT</strong><span>chatgpt.com</span></div>
+    <div class="tool"><strong>Gemini</strong><span>gemini.google.com</span></div>
+    <div class="tool"><strong>Copilot</strong><span>copilot.microsoft.com</span></div>
+  </div>
+</section>
+
+<section>
+  <h2>10 prompts para copiar</h2>
+  <div class="list" id="prompts"></div>
+</section>
+
+<section>
+  <h2>Trucos rápidos</h2>
+  <ul class="tips">
+    <li>Si la respuesta no te gusta, no empieces de cero: dile qué cambiar («más corto», «más cercano», «en lista»).</li>
+    <li>Pídele que te haga preguntas antes de responder: «Antes de empezar, pregúntame lo que necesites saber».</li>
+    <li>Revisa siempre datos, cifras y fechas. La IA puede equivocarse con seguridad.</li>
+    <li>No pegues contraseñas, datos bancarios ni datos personales de otras personas.</li>
+  </ul>
+</section>
+
+<footer><span>Guía gratuita de <b>@iafacil.trucos</b></span><span>By <b>Neogest Lab</b></span></footer>
+</div>
+
+<script>
+const P=[
+ ["Resumir cualquier texto","Para artículos, correos largos o apuntes.","Resume este texto en 5 puntos clave, con lenguaje sencillo. Al final, dime en una frase la idea más importante:\n\n[pega aquí el texto]"],
+ ["Escribir un correo difícil","Reclamaciones, pedir algo al jefe, decir que no.","Actúa como experto en comunicación. Escribe un correo [formal/cercano] para [a quién] en el que [qué quieres conseguir]. Que sea educado, claro y de menos de 150 palabras."],
+ ["Explicar algo complicado","Para entender un tema, una factura o un contrato.","Explícame [tema] como si tuviera 12 años. Usa un ejemplo de la vida diaria y termina con 3 preguntas para comprobar si lo he entendido."],
+ ["Menú semanal y lista de la compra","Ahorra tiempo y dinero.","Actúa como nutricionista. Hazme un menú semanal para [número] personas, con un presupuesto de [cantidad] € y [preferencias o alergias]. Dámelo en una tabla y añade la lista de la compra agrupada por secciones."],
+ ["Preparar una entrevista de trabajo","Practica antes del día.","Actúa como entrevistador de [empresa o sector] para el puesto de [puesto]. Hazme una pregunta cada vez, espera mi respuesta y dime cómo mejorarla."],
+ ["Mejorar tu currículum","Para que destaque más.","Revisa este currículum para el puesto de [puesto]. Dime 5 mejoras concretas y reescribe el apartado de experiencia con verbos de acción:\n\n[pega tu currículum]"],
+ ["Ideas para contenido","Para redes sociales o un negocio.","Dame 10 ideas de publicaciones para [red social] sobre [tema], pensadas para [público]. Para cada una, escribe un gancho de una frase."],
+ ["Planificar tu semana","Cuando tienes mil cosas pendientes.","Estas son mis tareas de la semana: [lista]. Ordénalas por urgencia e importancia y repártelas de lunes a viernes, con un máximo de [horas] horas al día."],
+ ["Aprender un idioma","Tu profesor particular.","Actúa como profesor de [idioma]. Mantén una conversación conmigo sobre [tema] a nivel [principiante/intermedio]. Corrige mis errores al final de cada respuesta."],
+ ["Tomar una decisión","Ver pros y contras sin liarte.","Tengo que decidir entre [opción A] y [opción B]. Mi situación es [contexto]. Hazme una tabla de pros y contras y dime qué preguntas debería hacerme antes de decidir."]
+];
+const box=document.getElementById('prompts');
+P.forEach(([t,u,p],i)=>{
+  const c=document.createElement('article');c.className='card';
+  c.innerHTML=`<h3></h3><p class="use"></p><pre id="p${i}"></pre><button type="button" id="b${i}">Copiar prompt</button>`;
+  c.querySelector('h3').textContent=t;c.querySelector('.use').textContent=u;c.querySelector('pre').textContent=p;
+  const b=c.querySelector('button');
+  b.addEventListener('click',()=>{
+    const done=()=>{b.textContent='Copiado';setTimeout(()=>b.textContent='Copiar prompt',1600)};
+    try{navigator.clipboard.writeText(p).then(done,()=>sel(c.querySelector('pre')))}catch(e){sel(c.querySelector('pre'))}
+  });
+  box.appendChild(c);
+});
+function sel(el){const r=document.createRange();r.selectNodeContents(el);const s=getSelection();s.removeAllRanges();s.addRange(r)}
+</script>
+</body>
+</html>
