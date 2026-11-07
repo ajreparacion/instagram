@@ -158,3 +158,6 @@ ModuleNotFoundError: No module named 'faster_whisper'
 2026-11-07 22:03  013_claude_gratis: publicando…
 2026-11-07 22:04  013_claude_gratis: publicado https://www.instagram.com/reel/DfdGnytjhpq/
 2026-11-07 22:04  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-07 22:05  014_formula_prompt: publicando…
+2026-11-07 22:05  014_formula_prompt: publicado https://www.instagram.com/reel/DfdGy95jRt_/
+2026-11-07 22:05  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
