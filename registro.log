@@ -131,3 +131,12 @@ ModuleNotFoundError: No module named 'faster_whisper'
 ); subtítulos a ritmo estimado
 2026-11-07 15:45  015_resumir_correo: renderizado con voz y subido a la release 'cola'
 2026-11-07 15:45  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-07 16:02  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 6 frases en 406 s
+2026-11-07 16:02  Voz: silencios recortados por frase (s): [0, 0.24, 1.0, 0.24, 0.72, 0]
+2026-11-07 16:02  Voz: alineación palabra a palabra (small, 25.5 s): 6/6 frases
+2026-11-07 16:03  014_formula_prompt: renderizado con voz y subido a la release 'cola'
+2026-11-07 16:08  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 6 frases en 319 s
+2026-11-07 16:08  Voz: silencios recortados por frase (s): [0, 0.26, 0, 0.24, 0.06, 0]
+2026-11-07 16:09  Voz: alineación palabra a palabra (small, 18.1 s): 6/6 frases
+2026-11-07 16:10  015_resumir_correo: renderizado con voz y subido a la release 'cola'
+2026-11-07 16:10  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)

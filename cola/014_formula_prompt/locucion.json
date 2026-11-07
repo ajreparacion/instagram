@@ -3,7 +3,7 @@
   "escena": 0,
   "estilo": "gancho",
   "inicio": 0.0,
-  "duracion": 3.233,
+  "duracion": 4.233,
   "texto": "¿ChatGPT te contesta fatal? Es por esto.",
   "enfasis": [
    3
@@ -12,15 +12,15 @@
  {
   "escena": 1,
   "estilo": "problema",
-  "inicio": 3.233,
-  "duracion": 5.267,
+  "inicio": 4.233,
+  "duracion": 5.867,
   "texto": "Paco le escribe: hazme un correo. Y sale un churro que no le vale para nada.",
   "enfasis": []
  },
  {
   "escena": 2,
   "estilo": "paso",
-  "inicio": 8.5,
+  "inicio": 10.1,
   "duracion": 5.0,
   "texto": "Bit le enseña cuatro piezas. Primero, quién eres y qué quieres.",
   "enfasis": [
@@ -31,7 +31,7 @@
  {
   "escena": 3,
   "estilo": "paso",
-  "inicio": 13.5,
+  "inicio": 15.1,
   "duracion": 5.0,
   "texto": "Luego, para quién es, y en qué formato lo quieres.",
   "enfasis": []
@@ -39,7 +39,7 @@
  {
   "escena": 4,
   "estilo": "resultado",
-  "inicio": 18.5,
+  "inicio": 20.1,
   "duracion": 5.0,
   "texto": "Y ahora sale un correo que sí puedes usar. Vale igual en Claude y en Gemini.",
   "enfasis": [
@@ -49,8 +49,8 @@
  {
   "escena": 5,
   "estilo": "cierre",
-  "inicio": 23.5,
-  "duracion": 4.0,
+  "inicio": 25.1,
+  "duracion": 4.4,
   "texto": "Comenta PROMPT y te mando la plantilla.",
   "enfasis": [
    1
