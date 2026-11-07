@@ -1,5 +1,5 @@
 {
- "fecha": "2026-11-07 13:24 UTC",
+ "fecha": "2026-11-07 14:17 UTC",
  "frases": [
   "¿Sabías que puedes hacer un resumen de cien correos en cinco minutos?",
   "Gracias a la inteligencia artificial, esto ya no cuesta nada.",
@@ -19,356 +19,32 @@
   "azúcar": 1
  },
  "variantes": {
-  "piper": {
+  "cb_griego2": {
    "sintesis": {
-    "total_s": 5.1
-   },
-   "textos": [
-    "¿Sabías que puedes hacer un resumen de cien correos en cinco minutos?",
-    "Gracias a la inteligencia artificial, esto ya no cuesta nada.",
-    "Pídele a Claude que ordene tus facturas y te diga cuáles hay que pagar hoy.",
-    "Cerveza, zapatos, azúcar… da igual lo que busques: lo encuentra al instante.",
-    "Y lo mejor: no necesitas saber programar, solo escribir con calma lo que quieres.",
-    "Comenta la palabra CLAUDE y te mando la guía completa."
-   ],
-   "palabras_theta": {
-    "hace": {
-     "fonemas": "m i ɡ a a ts e",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "gracias": {
-     "fonemas": "m i d a ɡ r a θ i a s",
-     "theta": 1,
-     "esperadas": 1
-    },
-    "cerveza": {
-     "fonemas": "n i ð a s e r v e θ a",
-     "theta": 1,
-     "esperadas": 2
-    },
-    "zapato": {
-     "fonemas": "m i ɾ a s a p a t o",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "cielo": {
-     "fonemas": "m i ɾ a θ j e l o",
-     "theta": 1,
-     "esperadas": 1
-    },
-    "plaza": {
-     "fonemas": "n i ð a b o l a f a r",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "cinco": {
-     "fonemas": "m e d a s i n k o",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "azúcar": {
-     "fonemas": "m i d a a u k a r",
-     "theta": 0,
-     "esperadas": 1
-    }
-   },
-   "theta_pct": 33.3,
-   "palabras_con_theta": 3,
-   "prosodia": {
-    "f0_mediana_hz": 125.0,
-    "tono_desv_st": 2.77,
-    "tono_rango_st": 6.5,
-    "duracion_s": 23.73
-   },
-   "transcripcion": "¿Sabías que puedes hacer un resumen de 100 correos en 5 minutos? Gracias a la inteligencia artificial, esto ya no cuesta nada. Pidre a Claude que ordene tus facturas y te diga cuáles hay que pagarle. Cerveza, zapatos, azúcar, da igual lo que busques, lo encuentra al instante. Y lo mejor, no necesitas saber programar, solo escribir con calma lo que quieres. Comenta la palabra Claude y te mando la guía completa.",
-   "wer": 0.068,
-   "parecido_ref": 0.661,
-   "parecido_larga": 0.662,
-   "total_s": 16.8
-  },
-  "kokoro": {
-   "sintesis": {
-    "voz": "em_alex",
-    "carga_s": 7.6,
-    "frases_s": [
-     2.72,
-     1.65,
-     1.96,
-     2.05,
-     1.89,
-     1.26,
-     0.54,
-     0.61,
-     0.59,
-     0.57,
-     0.52,
-     0.55,
-     0.54,
-     0.59
-    ],
-    "total_s": 23.6,
-    "sample_rate": 24000
-   },
-   "textos": [
-    "¿Sabías que puedes hacer un resumen de cien correos en cinco minutos?",
-    "Gracias a la inteligencia artificial, esto ya no cuesta nada.",
-    "Pídele a Claude que ordene tus facturas y te diga cuáles hay que pagar hoy.",
-    "Cerveza, zapatos, azúcar… da igual lo que busques: lo encuentra al instante.",
-    "Y lo mejor: no necesitas saber programar, solo escribir con calma lo que quieres.",
-    "Comenta la palabra CLAUDE y te mando la guía completa."
-   ],
-   "palabras_theta": {
-    "hace": {
-     "fonemas": "m iː r a a s e",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "gracias": {
-     "fonemas": "m i r a ɡ r a θ i a s",
-     "theta": 1,
-     "esperadas": 1
-    },
-    "cerveza": {
-     "fonemas": "m i d a s e r m e s a",
-     "theta": 0,
-     "esperadas": 2
-    },
-    "zapato": {
-     "fonemas": "m i ɾ a s a p a t o",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "cielo": {
-     "fonemas": "m i d a s j e l o",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "plaza": {
-     "fonemas": "m i d a p l a s a",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "cinco": {
-     "fonemas": "m i ɾ a s i ŋ k o",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "azúcar": {
-     "fonemas": "m i d a a s u k a r",
-     "theta": 0,
-     "esperadas": 1
-    }
-   },
-   "theta_pct": 11.1,
-   "palabras_con_theta": 1,
-   "prosodia": {
-    "f0_mediana_hz": 131.2,
-    "tono_desv_st": 3.56,
-    "tono_rango_st": 9.23,
-    "duracion_s": 26.6
-   },
-   "transcripcion": "Sabías que puedes hacer un resumen de 100 correos en 5 minutos. Gracias a la inteligencia artificial, esto ya no cuesta nada. Pídele a Cloudy que ordene tus facturas y te diga cuáles hay que pagar hoy. Tervesa, zapatos, azúcar, da igual lo que busques, lo encuentra al instante. Y lo mejor, no necesitas saber programar, solo escribir con calma lo que quieres. Comenta la palabra Cloudy y te mando la guía completa.",
-   "wer": 0.068,
-   "parecido_ref": 0.743,
-   "parecido_larga": 0.741,
-   "total_s": 35.2
-  },
-  "piper_ov": {
-   "sintesis": {
-    "carga_s": 6.5,
-    "pares_s": [
-     1.37,
-     1.18,
-     1.35,
-     1.66,
-     1.96,
-     1.15,
-     0.5,
-     0.52,
-     0.53,
-     0.42,
-     0.48,
-     0.55,
-     0.51,
-     0.57
-    ],
-    "total_s": 28.6,
-    "tau": 0.3
-   },
-   "textos": [
-    "¿Sabías que puedes hacer un resumen de cien correos en cinco minutos?",
-    "Gracias a la inteligencia artificial, esto ya no cuesta nada.",
-    "Pídele a Claude que ordene tus facturas y te diga cuáles hay que pagar hoy.",
-    "Cerveza, zapatos, azúcar… da igual lo que busques: lo encuentra al instante.",
-    "Y lo mejor: no necesitas saber programar, solo escribir con calma lo que quieres.",
-    "Comenta la palabra CLAUDE y te mando la guía completa."
-   ],
-   "palabras_theta": {
-    "hace": {
-     "fonemas": "m i d a a θ e",
-     "theta": 1,
-     "esperadas": 1
-    },
-    "gracias": {
-     "fonemas": "m i n a v i r a θ i e s",
-     "theta": 1,
-     "esperadas": 1
-    },
-    "cerveza": {
-     "fonemas": "n iː d a s e r β e θ a",
-     "theta": 1,
-     "esperadas": 2
-    },
-    "zapato": {
-     "fonemas": "m i d a s a p a t o",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "cielo": {
-     "fonemas": "m i ð a s j e l o",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "plaza": {
-     "fonemas": "n i d a b l a θ a",
-     "theta": 1,
-     "esperadas": 1
-    },
-    "cinco": {
-     "fonemas": "m e ɾ a s i n k o",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "azúcar": {
-     "fonemas": "m i d a f u k a r",
-     "theta": 0,
-     "esperadas": 1
-    }
-   },
-   "theta_pct": 44.4,
-   "palabras_con_theta": 4,
-   "prosodia": {
-    "f0_mediana_hz": 96.4,
-    "tono_desv_st": 3.67,
-    "tono_rango_st": 9.5,
-    "duracion_s": 23.72
-   },
-   "transcripcion": "¿Sabías que puedes hacer un resumen de 100 correos en 5 minutos? Gracias a la inteligencia artificial, esto ya no cuesta nada. Pide a Cloudy que ordene tus facturas y te diga cuáles hay que parar hoy. Cerveza, zapatos, azúcar da igual lo que busques, lo encuentra al instante. Y lo mejor, no necesitas saber programar, solo escribir con calma lo que quieres. Comenta la palabra Cloudy y te mando la guía completa.",
-   "wer": 0.082,
-   "parecido_ref": 0.872,
-   "parecido_larga": 0.888,
-   "total_s": 39.5
-  },
-  "kokoro_ov": {
-   "sintesis": {
-    "carga_s": 4.6,
-    "pares_s": [
-     1.66,
-     1.45,
-     1.67,
-     1.82,
-     1.85,
-     1.27,
-     0.51,
-     0.57,
-     0.57,
-     0.55,
-     0.53,
-     0.54,
-     0.54,
-     0.57
-    ],
-    "total_s": 19.3,
-    "tau": 0.3
-   },
-   "textos": [
-    "¿Sabías que puedes hacer un resumen de cien correos en cinco minutos?",
-    "Gracias a la inteligencia artificial, esto ya no cuesta nada.",
-    "Pídele a Claude que ordene tus facturas y te diga cuáles hay que pagar hoy.",
-    "Cerveza, zapatos, azúcar… da igual lo que busques: lo encuentra al instante.",
-    "Y lo mejor: no necesitas saber programar, solo escribir con calma lo que quieres.",
-    "Comenta la palabra CLAUDE y te mando la guía completa."
-   ],
-   "palabras_theta": {
-    "hace": {
-     "fonemas": "m iː d a a s e",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "gracias": {
-     "fonemas": "m i d ɔ ɡ r a θ i a s",
-     "theta": 1,
-     "esperadas": 1
-    },
-    "cerveza": {
-     "fonemas": "m iː d a s e r v e s a",
-     "theta": 0,
-     "esperadas": 2
-    },
-    "zapato": {
-     "fonemas": "m i d a s a p a t o",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "cielo": {
-     "fonemas": "m i ɾ a s i l o",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "plaza": {
-     "fonemas": "m iː d ʌ p l a s ʌ",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "cinco": {
-     "fonemas": "m i d a s i ŋ k o",
-     "theta": 0,
-     "esperadas": 1
-    },
-    "azúcar": {
-     "fonemas": "m iː d a a s u k a r",
-     "theta": 0,
-     "esperadas": 1
-    }
-   },
-   "theta_pct": 11.1,
-   "palabras_con_theta": 1,
-   "prosodia": {
-    "f0_mediana_hz": 94.2,
-    "tono_desv_st": 3.81,
-    "tono_rango_st": 9.9,
-    "duracion_s": 26.55
-   },
-   "transcripcion": "Sabías que puedes hacer un resumen de 100 correos en 5 minutos. Gracias a la Inteligencia Artificial, esto ya no cuesta nada. Pídele a Cloudy que ordene tus facturas y te diga cuáles hay que pagar hoy. Terbesas, zapatos, azúcar, da igual lo que busques, lo encuentra al instante. Y lo mejor, no necesitas saber programar, solo escribir con calma lo que quieres. Comenta la palabra Cloudy y te mando la guía completa.",
-   "wer": 0.068,
-   "parecido_ref": 0.861,
-   "parecido_larga": 0.866,
-   "total_s": 30.5
-  },
-  "cb_actual": {
-   "sintesis": {
-    "modelo_usado": "es-es",
+    "modelo_usado": "multilingue",
     "referencia": true,
-    "avisos": [],
-    "carga_s": 56.5,
-    "frases_s": [
-     54.35,
-     46.99,
-     45.48,
-     53.4,
-     50.93,
-     43.97,
-     22.25,
-     23.12,
-     23.82,
-     23.21,
-     27.3,
-     29.83,
-     23.9,
-     32.03
+    "avisos": [
+     "afinado es-es no disponible (Task error: File reconstruction error: IO Error: No space left on device (os error 28)); se usa el multilingüe",
+     "frases regeneradas por duración anómala: [{'texto': 'Mira, θapato.', 'dur': 4.36, 'esperado': 1.91}]"
     ],
-    "total_s": 557.1,
+    "carga_s": 82.8,
+    "frases_s": [
+     108.98,
+     88.0,
+     84.1,
+     92.36,
+     96.99,
+     74.33,
+     44.91,
+     43.09,
+     43.01,
+     126.35,
+     44.79,
+     44.41,
+     51.34,
+     41.5
+    ],
+    "total_s": 1067.0,
     "sample_rate": 24000,
     "ajustes": {
      "language_id": "es",
@@ -378,36 +54,36 @@
     }
    },
    "textos": [
-    "¿Sabías que puedes hacer un resumen de cien correos en cinco minutos?",
-    "Gracias a la inteligencia artificial, esto ya no cuesta nada.",
+    "¿Sabías que puedes haθer un resumen de cien correos en cinco minutos?",
+    "Graθias a la inteligenθia artifiθial, esto ya no cuesta nada.",
     "Pídele a Claude que ordene tus facturas y te diga cuáles hay que pagar hoy.",
-    "Cerveza, zapatos, azúcar… da igual lo que busques: lo encuentra al instante.",
-    "Y lo mejor: no necesitas saber programar, solo escribir con calma lo que quieres.",
+    "Cerveθa, θapatos, aθúcar… da igual lo que busques: lo encuentra al instante.",
+    "Y lo mejor: no neθesitas saber programar, solo escribir con calma lo que quieres.",
     "Comenta la palabra CLAUDE y te mando la guía completa."
    ],
    "palabras_theta": {
     "hace": {
-     "fonemas": "m i ɾ a a f e",
+     "fonemas": "m i r a a s e a",
      "theta": 0,
      "esperadas": 1
     },
     "gracias": {
-     "fonemas": "m i ɾ a ɡ ɾ a s j ə s",
-     "theta": 0,
+     "fonemas": "m i ɾ a ɡ ɾ a θ j a s",
+     "theta": 1,
      "esperadas": 1
     },
     "cerveza": {
-     "fonemas": "m i ɾ a s e ɾ o β e s a",
-     "theta": 0,
+     "fonemas": "m i ɾ a s e r β e θ a",
+     "theta": 1,
      "esperadas": 2
     },
     "zapato": {
-     "fonemas": "m i ɾ a s a p a t o",
+     "fonemas": "m i ɾ a t a p a t o",
      "theta": 0,
      "esperadas": 1
     },
     "cielo": {
-     "fonemas": "m i ɾ a f i e l o",
+     "fonemas": "m i ɾ a s j e l o",
      "theta": 0,
      "esperadas": 1
     },
@@ -417,107 +93,80 @@
      "esperadas": 1
     },
     "cinco": {
-     "fonemas": "m i ɾ a s i ŋ k o",
+     "fonemas": "m i ɾ a t s i ŋ k o",
      "theta": 0,
      "esperadas": 1
     },
     "azúcar": {
-     "fonemas": "m i d a f uː k a r",
+     "fonemas": "m i ɾ a s u k a r",
      "theta": 0,
      "esperadas": 1
     }
    },
-   "theta_pct": 0.0,
-   "palabras_con_theta": 0,
+   "theta_pct": 22.2,
+   "palabras_con_theta": 2,
    "prosodia": {
-    "f0_mediana_hz": 88.4,
-    "tono_desv_st": 3.77,
-    "tono_rango_st": 10.1,
-    "duracion_s": 32.0
+    "f0_mediana_hz": 100.3,
+    "tono_desv_st": 7.08,
+    "tono_rango_st": 16.41,
+    "duracion_s": 32.16
    },
-   "transcripcion": "¿Sabías que puedes hacer un resumen de 100 correos en 5 minutos? Gracias a la Inteligencia Artificial, esto ya no cuesta nada. Pídele a Claude que ordene tus facturas y te diga cuál es hay que pagar hoy. Cerveza, zapatos, azúcar, da igual lo que busques, lo encuentra al instante. Y lo mejor, no necesitas saber programar, solo escribir con calma lo que quieres. Comenta la palabra Claude y te mando la guía completa.",
-   "wer": 0.055,
-   "parecido_ref": 0.956,
-   "parecido_larga": 0.963,
-   "total_s": 572.0
+   "transcripcion": "Sabías que puedes hacer un resumen de 100 correos en 5 minutos. Gracias a la inteligencia artificial, esto ya no cuesta nada. Pídele a Cloud que ordene tus facturas y te diga cuáles hay que parar hoy. Cerveza, zapatos, azúcar, da igual lo que busques, lo encuentra al instante. Y lo mejor, no necesitas saber programar, solo escribir con calma lo que quieres. Comenta la palabra Cloud y te mando la guía completa.",
+   "wer": 0.068,
+   "parecido_ref": 0.959,
+   "parecido_larga": 0.959,
+   "total_s": 1100.7
   },
-  "cb_griego": {
+  "piper2": {
    "sintesis": {
-    "modelo_usado": "es-es",
-    "referencia": true,
-    "avisos": [],
-    "carga_s": 23.1,
-    "frases_s": [
-     43.08,
-     38.72,
-     41.48,
-     48.53,
-     51.58,
-     44.45,
-     22.84,
-     23.67,
-     24.04,
-     22.71,
-     30.1,
-     22.92,
-     22.35,
-     21.89
-    ],
-    "total_s": 481.5,
-    "sample_rate": 24000,
-    "ajustes": {
-     "language_id": "es",
-     "exaggeration": 0.65,
-     "cfg_weight": 0.45,
-     "temperature": 0.65
-    }
+    "total_s": 7.7
    },
    "textos": [
-    "¿Sabías que puedes haθer un resumen de θien correos en θinco minutos?",
-    "Graθias a la inteligenθia artifiθial, esto ya no cuesta nada.",
+    "¿Sabías que puedes hacer un resumen de cien correos en cinco minutos?",
+    "Gracias a la inteligencia artificial, esto ya no cuesta nada.",
     "Pídele a Claude que ordene tus facturas y te diga cuáles hay que pagar hoy.",
-    "Θerveθa, θapatos, aθúcar… da igual lo que busques: lo encuentra al instante.",
-    "Y lo mejor: no neθesitas saber programar, solo escribir con calma lo que quieres.",
+    "Cerveza, zapatos, azúcar… da igual lo que busques: lo encuentra al instante.",
+    "Y lo mejor: no necesitas saber programar, solo escribir con calma lo que quieres.",
     "Comenta la palabra CLAUDE y te mando la guía completa."
    ],
    "palabras_theta": {
     "hace": {
-     "fonemas": "m i ɾ a h a s t eː",
+     "fonemas": "m i d a a r s e",
      "theta": 0,
      "esperadas": 1
     },
     "gracias": {
-     "fonemas": "m i d a ɡ ɾ a θ j a s",
+     "fonemas": "m iː d a n ð e r a θ j s",
      "theta": 1,
      "esperadas": 1
     },
     "cerveza": {
-     "fonemas": "m i ɾ a t e r β e θ a",
+     "fonemas": "m i ð a s e r β e θ a",
      "theta": 1,
      "esperadas": 2
     },
     "zapato": {
-     "fonemas": "m i ɾ a s a p a t o",
+     "fonemas": "n iː ɡ a f a p a t o",
      "theta": 0,
      "esperadas": 1
     },
     "cielo": {
-     "fonemas": "m i ɾ a θ j e l o",
+     "fonemas": "m i ɡ a θ j e l o",
      "theta": 1,
      "esperadas": 1
     },
     "plaza": {
-     "fonemas": "m i ɾ a b l a s a",
+     "fonemas": "n i d a p o l a f a",
      "theta": 0,
      "esperadas": 1
     },
     "cinco": {
-     "fonemas": "m i ɾ a t i ŋ k o",
+     "fonemas": "m i ɾ a s i n k o",
      "theta": 0,
      "esperadas": 1
     },
     "azúcar": {
-     "fonemas": "m i ɾ a a f u k a",
+     "fonemas": "m i d a a f u k a r",
      "theta": 0,
      "esperadas": 1
     }
@@ -525,16 +174,102 @@
    "theta_pct": 33.3,
    "palabras_con_theta": 3,
    "prosodia": {
-    "f0_mediana_hz": 90.9,
-    "tono_desv_st": 6.68,
-    "tono_rango_st": 9.92,
-    "duracion_s": 30.6
+    "f0_mediana_hz": 124.2,
+    "tono_desv_st": 2.47,
+    "tono_rango_st": 6.5,
+    "duracion_s": 23.78
    },
-   "transcripcion": "¿Sabías que puedes hacer un resumen de 100 correos en 5 minutos? Gracias a la Inteligente Artificial, esto ya no cuesta nada. Pídele a Claude que ordene tus facturas y te diga cuál es hay que pagar hoy. Terbeza, zapatos, azúcar, da igual lo que busques, lo encuentre al instante. Y lo mejor, no necesitas saber programar, solo escribir con calma lo que quieres. Comenta la palabra Claude y te mando la guía completa. ¡Suscríbete!",
-   "wer": 0.11,
-   "parecido_ref": 0.958,
-   "parecido_larga": 0.954,
-   "total_s": 495.6
+   "transcripcion": "¿Sabías que puedes hacer un resumen de 100 correos en 5 minutos? Gracias a la inteligencia artificial, esto ya no apuesta nada. Dile a Claudio que ordene tus facturas y te diga cuáles hay que pagar hoy. Cerveza, zapatos, azúcar da igual lo que busques, lo encuentra al instante. Y lo mejor, no necesitas saber programar, solo escribir con calma lo que quieres. Comenta la palabra Claudio y te mando la guía completa.",
+   "wer": 0.082,
+   "parecido_ref": 0.675,
+   "parecido_larga": 0.678,
+   "total_s": 27.4
+  },
+  "piper2_ov": {
+   "sintesis": {
+    "carga_s": 11.1,
+    "pares_s": [
+     3.0,
+     2.82,
+     3.06,
+     3.58,
+     4.17,
+     2.55,
+     1.07,
+     1.22,
+     1.09,
+     1.03,
+     0.89,
+     1.07,
+     1.01,
+     1.13
+    ],
+    "total_s": 50.1,
+    "tau": 0.3
+   },
+   "textos": [
+    "¿Sabías que puedes hacer un resumen de cien correos en cinco minutos?",
+    "Gracias a la inteligencia artificial, esto ya no cuesta nada.",
+    "Pídele a Claude que ordene tus facturas y te diga cuáles hay que pagar hoy.",
+    "Cerveza, zapatos, azúcar… da igual lo que busques: lo encuentra al instante.",
+    "Y lo mejor: no necesitas saber programar, solo escribir con calma lo que quieres.",
+    "Comenta la palabra CLAUDE y te mando la guía completa."
+   ],
+   "palabras_theta": {
+    "hace": {
+     "fonemas": "m i d a a r s e",
+     "theta": 0,
+     "esperadas": 1
+    },
+    "gracias": {
+     "fonemas": "m iː d a d e ɛ f eː ɾ s",
+     "theta": 0,
+     "esperadas": 1
+    },
+    "cerveza": {
+     "fonemas": "m iː d a s e r v e s a",
+     "theta": 0,
+     "esperadas": 2
+    },
+    "zapato": {
+     "fonemas": "n iː ɡ a s a r v a d o",
+     "theta": 0,
+     "esperadas": 1
+    },
+    "cielo": {
+     "fonemas": "m i ɾ a θ j e n o",
+     "theta": 1,
+     "esperadas": 1
+    },
+    "plaza": {
+     "fonemas": "n i d a p u l a θ a",
+     "theta": 1,
+     "esperadas": 1
+    },
+    "cinco": {
+     "fonemas": "m i d a s i n k o",
+     "theta": 0,
+     "esperadas": 1
+    },
+    "azúcar": {
+     "fonemas": "m i d a a f u k a r",
+     "theta": 0,
+     "esperadas": 1
+    }
+   },
+   "theta_pct": 22.2,
+   "palabras_con_theta": 2,
+   "prosodia": {
+    "f0_mediana_hz": 95.8,
+    "tono_desv_st": 3.49,
+    "tono_rango_st": 9.4,
+    "duracion_s": 23.77
+   },
+   "transcripcion": "¿Sabías que puedes hacer un resumen de 100 correos en 5 minutos? Gracias a la inteligencia artificial, esto ya no cuesta nada. Quítela a Cloudy que ordene tus facturas y te diga cuáles hay que pagarle. Cerveza, zapatos, azúcar da igual lo que busques, lo encuentra al instante. Y lo mejor, no necesitas saber programar, solo escribir con calma lo que quieres. Comenta la palabra Cloudy y te mando la guía completa.",
+   "wer": 0.096,
+   "parecido_ref": 0.874,
+   "parecido_larga": 0.887,
+   "total_s": 68.4
   }
  },
  "avisos_medidor": {},
