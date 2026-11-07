@@ -28,6 +28,9 @@ Nunca dos reels seguidos para el mismo público, y como máximo 1 reel a la sema
 | Aficiones y tiendas pequeñas | catálogo, pedidos personalizados | PlaymoCustons |
 | Cualquier negocio con una idea | «¿y si tu idea fuera una app?» | demo a medida del equipo |
 
+**Producto estrella (orden del dueño 7/11 23:58):** AjReparacion Gestión se adapta a CUALQUIER tipo de negocio, no solo talleres. Su demo pública será AJ Sistema DEMO, que une la gestión, la web del negocio (de AJ Reparación web) con los pedidos de la web entrando en la gestión, y un centro de creación de páginas web enlazadas con la app del cliente. En proceso: no se enseña en reels hasta que esté publicada y funcionando. Cuando lo esté, se usa para muchos sectores distintos (tienda, peluquería, bar, academia, servicio técnico…).
+Todas las apps llevan la marca de agua de Neogest Lab y el fondo difuminado con el logo al hacer scroll, igual que AjReparacion Gestión.
+
 Reglas de la tabla:
 - **Solo funciones reales comprobadas en la app** (skill posts-apps-neogest). Antes de guionizar una app, abrirla y anotar qué hace de verdad. Si una app no está publicada o no funciona bien, no sale.
 - La regla antigua «MEDICATOR no se promociona nunca» era del canal de misterios y queda anulada. MEDICATOR sí se enseña, como organizador de citas y recordatorios: sin consejos médicos, sin prometer resultados de salud, con datos de ejemplo y el aviso «no sustituye a tu médico».
