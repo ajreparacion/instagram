@@ -339,3 +339,34 @@ La cadena actual (equipo/voz.json `cadena_voz`: paso alto 80 Hz, EQ, compresor, 
 
 ## Aviso de Calidad (7/11/2026 12:55)
 - En 013 y 014 la palabra clave del CTA final («Comenta CLAUDE/PROMPT») sale en rojo: segundo acento, contra «un solo acento cian». Pasarla a cian o subrayarla. En 014 el sello «MEJOR» tapa en parte las etiquetas de los invitados (Claude/ChatGPT). Los renders revisados son anteriores al cambio 19 (labios sincronizados, efectos de sonido): si se rerenderizan, hay que revisarlos de nuevo.
+
+## 7/11/2026 14:45 UTC (Mejora, ejecución programada · DIRECTIVA VIGENTE «voz sin seseo, música con ritmo»)
+### Cambio 20: voz sin seseo — letra griega θ en el texto de Chatterbox (`chatterbox.theta` = "griego_sin_inicial")
+- Prueba en GitHub Actions (CPU) con herramientas/prueba_seseo.py + .github/workflows/prueba_seseo.yml (a mano; no publica). Frases tipo reel con muchas c/z + 8 palabras sueltas (hace, gracias, cerveza, zapato, cielo, plaza, cinco, azúcar). Mide θ con un reconocedor de fonemas (wav2vec2-xlsr-53-espeak, **ruidoso**: al propio Piper de España solo le detecta 33 %), parecido con el dueño (Resemblyzer contra voz_dueno/referencia_usuario.wav), WER (Whisper small) y variación de tono. Muestras mp3 en la release «pruebas» (voz_<variante>.mp3 y palabras_<variante>.mp3).
+- Resultados (frases: 6; el JSON de la última ronda está en equipo/pruebas/prueba_seseo.json, las rondas previas solo aquí):
+
+| variante | θ (reconocida) | parecido | WER | tono (st) |
+|---|---|---|---|---|
+| Chatterbox actual (control, con seseo) | 0 % | 0,956 | 5,5 % | 3,8 |
+| Chatterbox con «th» (hace→hathe) | no medido | 0,953 | 15,1 % («gratias», «terveta») | 5,8 → descartado |
+| Chatterbox con θ griego en todo | 33 % (3/8 palabras) | 0,958 | 11,0 % | 6,7 |
+| **Chatterbox con θ griego sin la c inicial** | 22 % (2/8) | 0,959 | **6,8 %** | 7,1 |
+| Piper davefx (control de España, robótico) | 33 % | 0,66 | 6,8 % | 2,8 |
+| Piper → OpenVoice V2 (timbre del dueño) | 44 % | 0,87-0,89 | 8,2 % | 3,7 |
+| Piper expresivo → OpenVoice V2 | 22 % | 0,87-0,89 | 9,6 % | 3,5 |
+| Kokoro em_alex (sin conversión / con OpenVoice) | 11 % | 0,74 / 0,86 | 6,8 % | 3,6 / 3,8 |
+
+- Lectura: Kokoro y Chatterbox actual sesean (espeak/entrenamiento latino). Con la letra griega θ en el texto, Chatterbox (cuyo tokenizador incluye el griego) pronuncia θ en parte de las palabras (la c inicial de palabra sale como «t»: «terveza», «tinco»; por eso se deja como c, aunque eso la deja seseando: «cielo», «cinco», «cerveza» al principio) con el mismo parecido (≥ 0,85) y mejor expresividad que cualquier otra vía. Piper+OpenVoice consigue θ más estable pero con tono plano (< 4 st) y voz robótica que el dueño ya descartó, y Piper solo no se parece a él (0,66). Elegido: Chatterbox + θ griego sin la c inicial (cumple parecido ≥ 0,85, WER ≤ 10 %, tono ≥ 4 st; el «sin seseo» queda a medias).
+- Código: `voz_chatterbox.py` (`a_theta`, clave `theta` del lote; el texto original sigue para subtítulos/alineación) y `publicar_gh.py` (pasa `theta`). Copias previas: herramientas/versiones/voz_chatterbox.py_2026-11-07, publicar_gh.py_2026-11-07b, voz.json_2026-11-07c. Herramienta nueva herramientas/conv_openvoice.py (OpenVoice V2, MIT) por si se quiere la vía Piper+OpenVoice (variante `piper_ov` en prueba_seseo.py).
+- **Pendiente de oído humano**: la medida de θ es indirecta. Calidad/dueño: escuchar voz_cb_griego2.mp3 frente a voz_cb_actual.mp3 en la release «pruebas»; si suena peor (θ rara, «haste»), revertir.
+- Revertir: en equipo/voz.json `"theta": ""` (o restaurar herramientas/versiones/voz.json_2026-11-07c).
+- Siguientes ideas: forzar el acento de España con una referencia más larga donde el dueño diga muchas θ; probar Chatterbox con `language_id` «el» solo en las palabras con θ.
+
+### Cambio 21: música con ritmo y cortes al golpe en los modos dibujo y app (`hacer_reel.py`)
+- Motivo (directiva 7/11 13:49): «la música no resalta nada»; en dibujo/app no había ningún bombo ni percusión.
+- Copia previa: herramientas/versiones/hacer_reel.py_2026-11-07e.
+- `ajustar_rejilla`: elige tempo (94-124 bpm) y desfase de la rejilla para que cada corte de escena caiga en un pulso (mínimo error cuadrático); toda la música se desplaza por esa fase. Percusión sintética (`_golpe`): bombo en los tiempos 1 y 3 (más fuerte donde cae un corte), palmada en 2 y 4, hi-hat a corcheas con contratiempo y síncopa, relleno de cajas cada 4 compases; el colchón hace «pump» con el bombo. Suena ya en el gancho (a media fuerza) y la música sube de −29 a −26 LUFS (el ducking de publicar_gh.py la sigue hundiendo bajo la voz sin quitarla).
+- Medido (render local del ejemplo_guion_dibujo.json y del ejemplo_guion_app.json con vídeo sintético, sin voz): error de los cortes al pulso, media/máx.: dibujo 37→24 ms / 162→32 ms; app 53→9 ms / 176→13 ms. Fuerza del golpe en los pulsos (flujo espectral frente a la mediana): 3,6 → 6,7 (x1,9). Sonoridad −28,4 → −26,1 LUFS, pico −12,0 → −10,0 dBFS. Duración y fotogramas intactos; los modos misterio (36,9 s) y humano (45,5 s) rinden igual y su música no cambia.
+- Revertir: copiar herramientas/versiones/hacer_reel.py_2026-11-07e sobre herramientas/hacer_reel.py.
+- Pendiente: pistas con licencia (musica/LICENCIAS.md) si el dueño prefiere música real; comparar retención cuando haya 3-4 reels con esta música.
+- Cola: 014, 015 y 016 salen dentro de más de 3 h: `"renderizado": false` y ciclo lanzado para que se rehagan con voz θ y música con ritmo (013 ya pasó su hora y sigue sin aprobar: no se toca).
