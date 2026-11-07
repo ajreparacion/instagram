@@ -1,0 +1,6 @@
+{
+ "aprobado": true,
+ "nota": 80,
+ "fecha": "2026-11-07T12:55:00+01:00",
+ "comentario": "Render 7/11 10:29 UTC (Chatterbox, referencia=sí, voz del dueño). 1080x1920, 31,3 s, pico -2,1 dBFS, sin silencios >0,8 s. Movimiento medio 4,1/255 a 4 fps, ningún tramo quieto (mín. 1,1). Modo dibujo, gancho «¿TE CONTESTA FATAL?», sin logos, 1 emoji, sin muletillas, técnica (no menú) con fuentes oficiales de OpenAI y Anthropic. Menores: el sello «MEJOR» tapa en parte las etiquetas Claude/ChatGPT y la palabra clave del CTA sale en rojo (segundo acento); aviso a Mejora."
+}
