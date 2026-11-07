@@ -1,0 +1,103 @@
+{
+  "titulo": "Truco 016: las facturas se ordenan solas en Gmail",
+  "semilla": 1601,
+  "modo": "dibujo",
+  "musica": true,
+  "portada_texto": "Tu correo se ordena solo",
+  "escenas": [
+    {
+      "estilo": "gancho",
+      "duracion": 2.5,
+      "texto": "SE ORDENA SOLO",
+      "voz": "Tu correo se ordena *solo*. Gratis.",
+      "dibujo": {
+        "personajes": [
+          "paco"
+        ],
+        "accion": "sorprendido",
+        "objeto": "correo"
+      }
+    },
+    {
+      "estilo": "problema",
+      "duracion": 4.0,
+      "voz": "Paco pierde las facturas entre cien correos de publicidad.",
+      "dibujo": {
+        "personajes": [
+          "paco"
+        ],
+        "accion": "agobiado",
+        "objeto": "correo"
+      }
+    },
+    {
+      "estilo": "paso",
+      "duracion": 5.0,
+      "texto": "PASO 1",
+      "voz": "En Gmail, desde el ordenador, busca *factura*. Y pulsa el icono de opciones de búsqueda.",
+      "dibujo": {
+        "personajes": [
+          "bit",
+          "paco"
+        ],
+        "accion": "explica",
+        "objeto": "portatil",
+        "pantalla": [
+          "Buscar: factura",
+          "Mostrar opciones de búsqueda"
+        ]
+      }
+    },
+    {
+      "estilo": "paso",
+      "duracion": 5.0,
+      "texto": "PASO 2",
+      "voz": "Abajo, pulsa Crear filtro. Marca Aplicar la etiqueta, y elige Facturas.",
+      "dibujo": {
+        "personajes": [
+          "bit"
+        ],
+        "accion": "senala",
+        "objeto": "portatil",
+        "pantalla": [
+          "Crear filtro",
+          "Aplicar la etiqueta: Facturas",
+          "Saltar Recibidos (opcional)"
+        ]
+      }
+    },
+    {
+      "estilo": "resultado",
+      "duracion": 4.5,
+      "voz": "Otra vez Crear filtro, y listo. Cada factura nueva se va *sola* a su sitio.",
+      "dibujo": {
+        "personajes": [
+          "paco",
+          "bit"
+        ],
+        "accion": "celebra",
+        "objeto": "carpeta"
+      },
+      "sello": "HECHO"
+    },
+    {
+      "estilo": "cierre",
+      "duracion": 4.0,
+      "texto": "COMENTA «FILTRO»",
+      "voz": "Comenta *FILTRO* y te paso los pasos.",
+      "dibujo": {
+        "personajes": [
+          "bit",
+          "paco"
+        ],
+        "accion": "celebra",
+        "objeto": "nada"
+      },
+      "lista": [
+        "Busca «factura»",
+        "Crear filtro",
+        "Aplicar la etiqueta"
+      ]
+    }
+  ]
+}

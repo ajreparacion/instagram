@@ -73,7 +73,7 @@
       "palabra_clave": "GMAIL",
       "prueba_no_seguidores": true,
       "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null
+      "hecho": "Creador 7/11 10:00: cola/015_resumir_correo. CAMBIO: la ayuda oficial de Gmail (answer/16831098) dice que los resúmenes con IA en cuentas gratis solo están en EE. UU.; se sustituye por copiar el hilo en el chat gratis de la IA con un prompt. Palabra clave RESUMEN."
     },
     {
       "fecha": "2026-11-08",
@@ -87,7 +87,7 @@
       "palabra_clave": "FILTRO",
       "prueba_no_seguidores": false,
       "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null
+      "hecho": "Creador 7/11 10:00: cola/016_filtro_facturas (Mostrar opciones de búsqueda > Crear filtro > Aplicar la etiqueta > Crear filtro; solo desde el ordenador). Ayuda oficial es-419 + Genbeta para los rótulos de España."
     },
     {
       "fecha": "2026-11-09",
