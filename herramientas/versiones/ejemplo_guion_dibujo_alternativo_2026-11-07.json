@@ -1,0 +1,66 @@
+{
+ "titulo": "Truco 000: 3 trucos para que Claude te entienda a la primera",
+ "semilla": 2026,
+ "modo": "dibujo",
+ "musica": true,
+ "portada_texto": "3 trucos para que Claude te entienda",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "duracion": 3.3,
+   "texto": "3 trucos para que *Claude* te entienda a la primera",
+   "voz": "Tres trucos para que *Claude* te entienda a la primera.",
+   "personajes": ["paco:sorpresa", "bit:explica"],
+   "objeto": "bombilla"
+  },
+  {
+   "estilo": "problema",
+   "duracion": 3.4,
+   "texto": "EL PROBLEMA",
+   "voz": "Paco escribe *dos palabras*… y se enfada.",
+   "personajes": ["paco:agobiado"],
+   "pantalla": ["haz un correo"]
+  },
+  {
+   "estilo": "paso",
+   "duracion": 4.2,
+   "texto": "PASO 1",
+   "voz": "Uno: dile *para quién* es y *para qué*.",
+   "personajes": ["bit:senala"],
+   "pantalla": {"tipo": "movil", "texto": ["Correo para mi jefa", "pidiendo el viernes libre.", "Tono cercano."]},
+   "flecha": true
+  },
+  {
+   "estilo": "paso",
+   "duracion": 3.8,
+   "texto": "PASO 2",
+   "voz": "Dos: pégale *un ejemplo* que te guste.",
+   "personajes": ["bit:explica", "paco:escucha"],
+   "pizarra": {"lineas": ["Pega un ejemplo tuyo:", "«Hola Marta, te escribo porque…»"], "numerada": false}
+  },
+  {
+   "estilo": "paso",
+   "duracion": 4.2,
+   "texto": "PASO 3",
+   "voz": "Tres: pide el *formato*. Lista, tabla o tres líneas.",
+   "personajes": ["bit:senala"],
+   "pantalla": {"tipo": "portatil", "texto": ["Respóndeme en 3 puntos,", "máximo 2 líneas cada uno."]}
+  },
+  {
+   "estilo": "resultado",
+   "duracion": 3.2,
+   "voz": "Y listo: bien *a la primera*.",
+   "personajes": ["paco:celebra", "bit:celebra"],
+   "antes_despues": {"antes": "5 intentos", "despues": "1 intento"},
+   "sello": "HECHO",
+   "sello_t": 1.9
+  },
+  {
+   "estilo": "cierre",
+   "duracion": 3.6,
+   "voz": "Comenta *PROMPT* y te lo mando.",
+   "personajes": ["bit:saluda"],
+   "lista": ["Para quién y para qué", "Un ejemplo tuyo", "El formato que quieres"]
+  }
+ ]
+}
