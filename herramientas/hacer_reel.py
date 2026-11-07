@@ -704,7 +704,7 @@ def render_frame_humano(fi, sc, noise, rg):
 # Personajes fijos: "bit" (robot redondo blanco, cara-pantalla cian, parpadea y mueve la boca al hablar) y "paco"
 # (muneco de palo que se agobia). Por escena: "dibujo": {"personajes", "accion", "objeto", "pantalla", "invitados",
 # "pizarra", "flecha", "antes_despues"} + "texto" (rotulo arriba), "cifra", "lista", "sello" y subtitulos palabra a
-# palabra de la propia "voz" (palabra activa en cian, enfasis *asi* en rojo).
+# palabra de la propia "voz" (palabra activa y enfasis *asi* en cian: un unico acento).
 PAPEL = (248, 244, 232)
 TINTA = (28, 26, 24)
 CIAN = (0, 184, 217)
@@ -1120,7 +1120,7 @@ def dibujar_objeto(d, obj, pantalla, t, rng, cx=540, cy=OBJ_CY_DIB):
             trazo(d, [(cx - w / 2, icy - h / 2 + 30), (cx - w / 2, icy - h / 2), (cx - w / 2 + 150, icy - h / 2), (cx - w / 2 + 180, icy - h / 2 + 30)], rng, 10, TINTA, 2.0)
             # papel que entra en la carpeta
             k = ease_out((t - 0.4) / 0.8)
-            py = icy - h / 2 - 140 + 150 * k
+            py = icy - h / 2 - 50 + 60 * k   # entra desde mas abajo: no pisa el rotulo de arriba (Estratega 7/11)
             rect_mano(d, cx - 90, py, cx + 90, py + 180, rng, 7, relleno=(255, 255, 255), radio=6, amp=1.2)
             for j in range(3): trazo(d, [(cx - 60, py + 40 + j * 36), (cx + 50, py + 40 + j * 36)], rng, 5, (170, 170, 170), 0.8)
             d.polygon([(cx - w / 2 + 6, icy - h / 2 + 90), (cx + w / 2 - 6, icy - h / 2 + 90), (cx + w / 2 - 6, icy + h / 2 - 6), (cx - w / 2 + 6, icy + h / 2 - 6)], fill=CIAN_CLARO)
@@ -1287,7 +1287,7 @@ def preparar_dibujo(sc, spec, rng):
     else:
         wps = max(WPS_HUMANO, len(base.split()) / max(0.3, sc.dur * 0.8)); retardo = 0.12
     sc.con_objeto = bool(sc.objeto != "nada" or sc.cifra or sc.lista or sc.pizarra or sc.antes_despues)
-    estilo_sub = dict(fill=TINTA, stroke=PAPEL, activo=CIAN, enfasis=ROJO_ENFASIS,
+    estilo_sub = dict(fill=TINTA, stroke=PAPEL, activo=CIAN, enfasis=CIAN,   # un unico acento: enfasis en cian (Estratega 7/11)
                       cy=(SUB_CY_DIB if sc.con_objeto else 760), smax=(80 if sc.con_objeto else 100), smin=54)
     sc.sub = Subtitulos(base, wps, retardo, sc.dur, enfasis=enf, tiempos=tiempos, estilo=estilo_sub) if base else None
     sc.rotulo = rotulo_dibujo(texto, grande=(sc.estilo_d == "gancho")) if texto else None
