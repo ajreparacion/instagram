@@ -11,12 +11,12 @@
     "exageracion": 0.6,
     "cfg": 0.35,
     "temperatura": 0.75,
-    "referencia": "voces/referencia_usuario.wav",
+    "referencia": "voz_dueno/referencia_usuario.wav",
     "referencia_kokoro": "em_alex",
     "ganancia": 1.0,
     "semilla": 7,
     "max_s": 1500,
-    "_nota": "referencia = VOZ DEL DUEÑO (autorizada por él el 6/11/2026; confirmó que es la «voz A», reel del Proyecto ALCAYATA). Activada el 6/11 a las 20:20 tras la prueba voz_usuario.yml n.º 4: parecido con su voz 0,943 (Resemblyzer; Pocket de control 0,59), WER 0,135 voz sola / 0,144 mezcla (Pocket 0,144 / 0,163), variación de tono 5,3 st (Pocket 2,0). UTMOS bajo (1,87 frente a 3,86 de Pocket): hereda el sonido de móvil y la separación de música de la referencia; mejora si el dueño sube una nota de voz limpia. Si no existe el wav (release «voces»), se usa referencia_kokoro.",
+    "_nota": "referencia = VOZ DEL DUEÑO. Desde el 7/11/2026 12:45: nota de voz limpia grabada por él para el canal (voz_dueno/referencia_usuario.wav, 12,6 s, 24 kHz mono, -20 LUFS; versión larga de 28 s al lado). Señal/ruido ~43 dB, contenido hasta 8 kHz (la anterior, sacada de sus reels con Demucs, no pasaba de 4 kHz). Para volver a la anterior: 'referencia': 'voces/referencia_usuario.wav' (release «voces», sigue ahí) o restaurar herramientas/versiones/voz.json_2026-11-07.",
     "por_estilo": {
       "gancho": {
         "exageracion": 0.85,
