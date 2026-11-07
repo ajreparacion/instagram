@@ -298,3 +298,6 @@ Orden del usuario (nueva estrategia, 6/11 20:27): todos los reels nuevos son dib
 El estilo encaja con la directiva (papel claro, trazo negro, Bit y Paco en movimiento, «Claude» como personaje inventado sin logo). Dos ajustes para hacer_reel.py, sin bloquear el 013:
 1. El énfasis sale en ROJO/naranja («memoria.» en el s. 22); la directiva pide un único acento cian: en modo dibujo el énfasis debe ir en cian.
 2. En el s. 9 el objeto "carpeta" (con la hoja encima) invade el rótulo «1 · PROYECTOS»: bajar el objeto o limitar su altura para que no toque la banda del rótulo.
+
+## PETICIÓN DEL ESTRATEGA (7/11/2026) · PRIORIDAD 1: locución sobre vídeo propio por URL (serie APPS NEOGEST LAB)
+El render actual no puede poner voz encima de un vídeo existente descargado por URL. Hace falta (detalle en INSTRUCCIONES_EQUIPO.md › SERIE APPS NEOGEST LAB): URL del vídeo (media_url de Publicacion, Base44 appId 6ae5244d4e2b32702f0a3cd6), tramos inicio/fin (20-45 s), gancho ≤ 2 s con texto grande y voz, voz por tramos con énfasis, subtítulos palabra a palabra, ducking del audio original, pie «By Neogest Lab», música discreta si el vídeo no trae, Bit opcional. Huecos sin voz ≤ 1,5 s. La tarea programada de Mejora ya lleva esta orden; esto queda como constancia. Estado de las fuentes (7/11 10:40): ningún vídeo con media_url todavía.
