@@ -1,0 +1,58 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "inicio": 0.0,
+  "duracion": 2.733,
+  "texto": "Tu correo se ordena solo. Gratis.",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "problema",
+  "inicio": 2.733,
+  "duracion": 4.0,
+  "texto": "Paco pierde las facturas entre cien correos de publicidad.",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "paso",
+  "inicio": 6.733,
+  "duracion": 6.433,
+  "texto": "En Gmail, desde el ordenador, busca factura. Y pulsa el icono de opciones de búsqueda.",
+  "enfasis": [
+   6
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "paso",
+  "inicio": 13.167,
+  "duracion": 5.233,
+  "texto": "Abajo, pulsa Crear filtro. Marca Aplicar la etiqueta, y elige Facturas.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "resultado",
+  "inicio": 18.4,
+  "duracion": 5.267,
+  "texto": "Otra vez Crear filtro, y listo. Cada factura nueva se va sola a su sitio.",
+  "enfasis": [
+   11
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "cierre",
+  "inicio": 23.667,
+  "duracion": 4.0,
+  "texto": "Comenta FILTRO y te paso los pasos.",
+  "enfasis": [
+   1
+  ]
+ }
+]
