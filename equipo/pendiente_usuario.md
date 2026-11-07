@@ -18,5 +18,6 @@ El equipo hace todo lo demás solo. Estas tareas necesitan la identidad, los dat
    - **YouTube Shorts**: si quieres publicación cruzada, crea (o indica) un canal de YouTube y autoriza el acceso; el equipo prepara el resto.
 4. **(Opcional) Buzzfy, reels de prueba automáticos**: Buzzfy tiene el reparto de reels de prueba en pausa ("no se ha activado el compartir"). Se activa desde el panel de Buzzfy y puede requerir plan de pago. No es imprescindible: nuestro sistema ya publica reels de prueba por su cuenta desde el 5/11.
 5. **(7/11/2026)** Preguntas frecuentes del chat bloqueadas: Meta devuelve error 100/2534013 (página no vinculada a cuenta profesional de Instagram desde el token PAGE_TOKEN). Diagnóstico: workflow «Diagnóstico de vinculación (página ↔ Instagram)».
+   Actualización 7/11 14:15: la vinculación ya está bien (página 107316837808795 ↔ iafacil.trucos). Ahora Meta devuelve 200/2534041: «El propietario de la cuenta ha desactivado el acceso a los mensajes directos de Instagram». Falta activar en Instagram: Configuración > Mensajes y respuestas del story > Herramientas conectadas > «Permitir acceso a los mensajes». Después, relanzar «Bienvenida del chat (ice breakers)».
 
 Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11/2026).
