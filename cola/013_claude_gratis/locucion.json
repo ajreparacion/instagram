@@ -3,7 +3,7 @@
   "escena": 0,
   "estilo": "gancho",
   "inicio": 0.0,
-  "duracion": 5.833,
+  "duracion": 5.8,
   "texto": "Claude hace tres cosas gratis que casi nadie usa.",
   "enfasis": [
    2
@@ -12,16 +12,16 @@
  {
   "escena": 1,
   "estilo": "problema",
-  "inicio": 5.833,
-  "duracion": 3.0,
+  "inicio": 5.8,
+  "duracion": 4.5,
   "texto": "Paco cada día empieza de cero.",
   "enfasis": []
  },
  {
   "escena": 2,
   "estilo": "paso",
-  "inicio": 8.833,
-  "duracion": 5.133,
+  "inicio": 10.3,
+  "duracion": 5.0,
   "texto": "Uno: Proyectos. Subes tus documentos una vez y los usa en cada chat.",
   "enfasis": [
    1
@@ -30,16 +30,16 @@
  {
   "escena": 3,
   "estilo": "paso",
-  "inicio": 13.967,
-  "duracion": 5.9,
+  "inicio": 15.3,
+  "duracion": 5.8,
   "texto": "Dos: pídele una tabla o una plantilla y te la abre al lado.",
   "enfasis": []
  },
  {
   "escena": 4,
   "estilo": "paso",
-  "inicio": 19.867,
-  "duracion": 4.7,
+  "inicio": 21.1,
+  "duracion": 5.233,
   "texto": "Tres: la memoria. Recuerda lo importante entre chats.",
   "enfasis": [
    2
@@ -48,7 +48,7 @@
  {
   "escena": 5,
   "estilo": "cierre",
-  "inicio": 24.567,
+  "inicio": 26.333,
   "duracion": 5.0,
   "texto": "Comenta CLAUDE y te mando los pasos.",
   "enfasis": [
