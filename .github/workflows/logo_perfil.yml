@@ -1,0 +1,18 @@
+name: Foto de perfil Neogest Lab
+on:
+  workflow_dispatch:
+  push:
+    paths: [herramientas/logo_perfil.py]
+permissions:
+  contents: write
+jobs:
+  foto:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: pip install pillow && python herramientas/logo_perfil.py
+      - run: |
+          git config user.name "github-actions" && git config user.email "actions@github.com"
+          git add equipo/perfil_kit/*.jpg equipo/perfil_kit/logo_neogest_lab_oficial.png
+          git commit -m "Foto de perfil Neogest Lab" || exit 0
+          git pull --rebase && git push
