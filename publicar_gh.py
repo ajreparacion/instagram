@@ -62,7 +62,8 @@ ATRIBUCION_POCKET = "Voz: Kyutai Pocket TTS (CC BY 4.0)"
 ATRIBUCION_IA = "Voz generada por IA"
 ATRIBUCIONES = {"pocket": ATRIBUCION_POCKET, "chatterbox": ATRIBUCION_IA, "kokoro": ATRIBUCION_IA}
 MAX_RENDERS = 2
-GRACIA_SIN_CALIDAD = timedelta(hours=3)
+GRACIA_SIN_CALIDAD = timedelta(hours=3)  # ya no se usa (7/11/2026)
+NOTA_MINIMA = 90  # nota mínima de Calidad para publicar (7/11/2026)
 
 
 # ---------------------------------------------------------------- utilidades
@@ -927,10 +928,16 @@ def publicar_reel(cfg, video, post):
 
 
 def aprobado(carpeta, cuando, ahora):
+    # 7/11/2026 (orden del dueño: «hay que pasar todo por calidad, subir mucho más el listón»):
+    # nada sale sin el visto bueno explícito de Calidad y con nota mínima. Se acabó la gracia de 3 h.
     cal = leer_json(os.path.join(carpeta, "calidad.json"))
-    if cal is not None:
-        return bool(cal.get("aprobado"))
-    return ahora - cuando > GRACIA_SIN_CALIDAD  # si Calidad no pudo revisarlo, sale con 3 h de retraso
+    if cal is None:
+        return False
+    try:
+        nota = float(cal.get("nota", 0))
+    except (TypeError, ValueError):
+        nota = 0
+    return bool(cal.get("aprobado")) and nota >= NOTA_MINIMA
 
 
 def publicar_pendientes(cfg):
