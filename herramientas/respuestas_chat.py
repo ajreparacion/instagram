@@ -13,7 +13,7 @@ try:
 except (OSError, ValueError):
     VERSION = "v21.0"
 BASE = f"https://graph.facebook.com/{VERSION}"
-GUIA = os.environ.get("GUIA_URL") or "https://claude.ai/artifact/SuNe1SuoGcZKCLsuLR6AwC"
+GUIA = os.environ.get("GUIA_URL") or "https://ajreparacion.github.io/instagram/guia/"
 VENTANA_H = 23  # Instagram solo permite responder dentro de las 24 h siguientes al mensaje
 
 RESPUESTAS = {
