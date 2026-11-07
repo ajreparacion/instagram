@@ -310,7 +310,12 @@ class TextBlock:
 # el texto entero desde el primer fotograma; "texto" en las demas escenas = rotulo corto fijo arriba.
 # Musica discreta (-31 LUFS antes de la voz), sin lecho de tension, sin golpes ni subidas.
 # Con "modo" ausente o distinto, todo se comporta exactamente como antes.
-MODO = {"humano": False}
+MODO = {"humano": False, "dibujo": False}
+SEMILLA = {"v": 1}
+
+def modo_suave():
+    """Modos sin HUD ni tension (humano y dibujo): musica discreta, sin bombo ni golpes."""
+    return MODO["humano"] or MODO["dibujo"]
 AMARILLO = (255, 212, 0)
 WPS_HUMANO = 2.6          # palabras por segundo de la voz (misma cifra que usa main() para la duracion minima)
 CACHE_IMG = os.path.expanduser("~/.cache/expedientes/imagenes")
@@ -522,7 +527,9 @@ class Subtitulos:
     """Subtitulos palabra a palabra: grupo actual en grande, centrado, la palabra activa en amarillo,
     las palabras con enfasis en rojo. Con 'tiempos' (inicio real de cada palabra, en s desde el principio de
     la escena) van clavados a la voz; si no, al ritmo wps estimado."""
-    def __init__(self, texto, wps, delay, dur, entero=False, enfasis=(), tiempos=None):
+    def __init__(self, texto, wps, delay, dur, entero=False, enfasis=(), tiempos=None, estilo=None):
+        # estilo (modo dibujo): {"fill", "stroke", "activo", "enfasis", "cy", "smax", "smin"}; sin el, igual que siempre
+        self.estilo = estilo or {}
         self.grupos = trocear_subtitulos(texto)
         self.n = sum(len(g) for g in self.grupos)
         self.wps, self.delay, self.dur, self.entero = wps, delay, dur, entero
@@ -559,11 +566,15 @@ class Subtitulos:
             activo = -1
         else:
             texto = " ".join(self.grupos[gi])
-            f, size, lines = wrap_fit(texto, FUENTE_SUB, maxw=W - SAFE_L - SAFE_R - 40, maxlines=2, smax=112, smin=64)
+            f, size, lines = wrap_fit(texto, FUENTE_SUB, maxw=W - SAFE_L - SAFE_R - 40, maxlines=2,
+                                      smax=self.estilo.get("smax", 112), smin=self.estilo.get("smin", 64))
             activo = vis - 1
         lh = int(size * 1.18); total = len(lines) * lh
         im = Image.new("RGBA", (W, total + 60), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
         stroke = max(5, size // 12)
+        c_fill = self.estilo.get("fill", (255, 255, 255)); c_stroke = self.estilo.get("stroke", (0, 0, 0))
+        c_act = self.estilo.get("activo", AMARILLO); c_enf = self.estilo.get("enfasis", ROJO_ENFASIS)
+        if self.estilo: stroke = max(3, size // 18)
         space = self.probe.textlength(" ", font=f)
         idx = 0
         base_global = 0 if self.entero else self.starts[gi]
@@ -574,12 +585,12 @@ class Subtitulos:
             for j, w in enumerate(ws):
                 if not self.entero and idx > activo: break
                 if (base_global + idx) in self.enfasis:
-                    col = ROJO_ENFASIS            # palabra con enfasis: en rojo (tambien cuando es la activa)
+                    col = c_enf                   # palabra con enfasis: en rojo (tambien cuando es la activa)
                 else:
-                    col = AMARILLO if (not self.entero and idx == activo) else (255, 255, 255)
-                d.text((x, 30 + i * lh), w, font=f, fill=col + (255,), stroke_width=stroke, stroke_fill=(0, 0, 0, 255))
+                    col = c_act if (not self.entero and idx == activo) else c_fill
+                d.text((x, 30 + i * lh), w, font=f, fill=col + (255,), stroke_width=stroke, stroke_fill=c_stroke + (255,))
                 x += widths[j] + space; idx += 1
-        self.cache[key] = (im, int(TEXT_CY - total / 2) - 30)
+        self.cache[key] = (im, int(self.estilo.get("cy", TEXT_CY) - total / 2) - 30)
         return self.cache[key]
 
 def rotulo_humano(texto):
@@ -686,6 +697,697 @@ def render_frame_humano(fi, sc, noise, rg):
     np.clip(a, 0, 255, out=a)
     return a.astype(np.uint8)
 
+# ---------------------------------------------------------------- modo "dibujo"
+# "modo": "dibujo" en guion.json (DIRECTIVA VIGENTE de INSTRUCCIONES_EQUIPO.md, 6/11/2026: IA facil con dibujos
+# animados). Implementado por Mejora de produccion el 7/11/2026. Todo dibujado por codigo en CPU: papel claro con
+# textura, trazo negro grueso con temblor de dibujo a mano (line boil cada 4 fotogramas), un unico acento cian.
+# Personajes fijos: "bit" (robot redondo blanco, cara-pantalla cian, parpadea y mueve la boca al hablar) y "paco"
+# (muneco de palo que se agobia). Por escena: "dibujo": {"personajes", "accion", "objeto", "pantalla", "invitados",
+# "pizarra", "flecha", "antes_despues"} + "texto" (rotulo arriba), "cifra", "lista", "sello" y subtitulos palabra a
+# palabra de la propia "voz" (palabra activa en cian, enfasis *asi* en rojo).
+PAPEL = (248, 244, 232)
+TINTA = (28, 26, 24)
+CIAN = (0, 184, 217)
+CIAN_CLARO = (190, 236, 244)
+F_DIB = DJV + "DejaVuSans-Bold.ttf"
+F_DIB_C = DJV + "DejaVuSansCondensed-Bold.ttf"
+F_DIB_MONO = DJV + "DejaVuSansMono-Bold.ttf"
+SUB_CY_DIB = 1030          # centro de la banda de subtitulos (entre el objeto y los personajes)
+SUELO_DIB = 1500           # linea de suelo de los personajes
+OBJ_CY_DIB = 690           # centro del area del objeto / pizarra
+DIB_PREV = {"pers": set()} # personajes de la escena anterior (para la animacion de entrada)
+_papel = {}
+
+def papel_img(seed):
+    """Fondo de papel claro con textura suave (fija por semilla)."""
+    if seed not in _papel:
+        rg = np.random.default_rng(seed + 777)
+        low = Image.fromarray(np.clip(128 + rg.normal(0, 40, (H // 16, W // 16)), 0, 255).astype(np.uint8)).resize((W, H), Image.BILINEAR)
+        low = (np.asarray(low, dtype=np.float32) - 128) / 128 * 5.0
+        fino = rg.normal(0, 2.2, (H, W)).astype(np.float32)
+        yy, xx = np.mgrid[0:H, 0:W].astype(np.float32)
+        vig = 1 - 0.06 * (((xx - W / 2) / (W / 2)) ** 2 + ((yy - H / 2) / (H / 2)) ** 2)
+        base = np.array(PAPEL, np.float32)[None, None, :] * vig[:, :, None]
+        a = base + (low + fino)[:, :, None] * np.array([1.0, 0.9, 0.7], np.float32)
+        _papel[seed] = Image.fromarray(np.clip(a, 0, 255).astype(np.uint8))
+    return _papel[seed]
+
+def _wob(rng, amp): return rng.uniform(-amp, amp)
+
+def trazo(d, pts, rng, w=9, col=TINTA, amp=2.2, cerrado=False):
+    """Polilinea a mano alzada: puntos con temblor, trazo grueso con puntas redondas."""
+    p = [(x + _wob(rng, amp), y + _wob(rng, amp)) for x, y in pts]
+    if cerrado: p.append(p[0])
+    if len(p) >= 2: d.line(p, fill=col, width=w, joint="curve")
+    r = w / 2
+    for x, y in (p if len(p) <= 12 else [p[0], p[-1]]):
+        d.ellipse([x - r, y - r, x + r, y + r], fill=col)
+
+def puntos_elipse(cx, cy, rx, ry, n=36, a0=0.0, a1=2 * math.pi):
+    return [(cx + rx * math.cos(a0 + (a1 - a0) * i / n), cy + ry * math.sin(a0 + (a1 - a0) * i / n)) for i in range(n + 1)]
+
+def circulo(d, cx, cy, r, rng, w=9, relleno=None, col=TINTA, amp=2.0, ry=None):
+    ry = ry or r
+    pts = puntos_elipse(cx, cy, r, ry, 40)
+    if relleno is not None: d.polygon(pts, fill=relleno)
+    trazo(d, pts[:-1], rng, w, col, amp, cerrado=True)
+
+def rect_mano(d, x0, y0, x1, y1, rng, w=9, relleno=None, col=TINTA, amp=2.0, radio=0):
+    if radio > 0:
+        pts = []
+        for (cx, cy, a0) in [(x1 - radio, y0 + radio, -math.pi / 2), (x1 - radio, y1 - radio, 0),
+                             (x0 + radio, y1 - radio, math.pi / 2), (x0 + radio, y0 + radio, math.pi)]:
+            pts += puntos_elipse(cx, cy, radio, radio, 6, a0, a0 + math.pi / 2)
+    else:
+        pts = [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]
+    if relleno is not None: d.polygon(pts, fill=relleno)
+    trazo(d, pts, rng, w, col, amp, cerrado=True)
+
+def texto_mano(d, x, y, txt, f, rng, col=TINTA, anchor="la", amp=1.5):
+    """Texto con un ligero baile vertical por caracter (aire de rotulado a mano)."""
+    probe = d
+    if anchor.startswith("m"):
+        x = x - probe.textlength(txt, font=f) / 2
+    elif anchor.startswith("r"):
+        x = x - probe.textlength(txt, font=f)
+    va = anchor[1] if len(anchor) > 1 else "a"
+    for ch in txt:
+        d.text((x, y + _wob(rng, amp)), ch, font=f, fill=col, anchor="l" + va)
+        x += probe.textlength(ch, font=f)
+
+def flecha_mano(d, p0, p1, rng, w=9, col=CIAN, prog=1.0):
+    """Flecha dibujandose de p0 a p1 (prog 0-1)."""
+    if prog <= 0.02: return
+    x0, y0 = p0; x1, y1 = p1
+    xe, ye = x0 + (x1 - x0) * prog, y0 + (y1 - y0) * prog
+    ang = math.atan2(y1 - y0, x1 - x0)
+    # ligera curva: punto medio desplazado
+    mx, my = (x0 + xe) / 2 - 30 * math.sin(ang), (y0 + ye) / 2 + 30 * math.cos(ang)
+    trazo(d, [(x0, y0), (mx, my), (xe, ye)], rng, w, col, 2.0)
+    if prog > 0.85:
+        L = 34
+        for s in (-1, 1):
+            a = ang + math.pi + s * 0.5
+            trazo(d, [(xe, ye), (xe + L * math.cos(a), ye + L * math.sin(a))], rng, w, col, 1.5)
+
+def estrella(d, cx, cy, r, rng, col=CIAN, w=6):
+    for k in range(4):
+        a = k * math.pi / 4
+        trazo(d, [(cx - r * math.cos(a), cy - r * math.sin(a)), (cx + r * math.cos(a), cy + r * math.sin(a))], rng, w, col, 1.2)
+
+def check_mano(d, cx, cy, s, rng, col=CIAN, w=10, prog=1.0):
+    pts = [(cx - s, cy), (cx - s * 0.3, cy + s * 0.7), (cx + s, cy - s * 0.8)]
+    if prog < 1.0:
+        n = max(2, int(1 + 2 * prog))
+        pts = pts[:n] if n >= 3 else [pts[0], (pts[0][0] + (pts[1][0] - pts[0][0]) * min(1, prog * 2), pts[0][1] + (pts[1][1] - pts[0][1]) * min(1, prog * 2))]
+    trazo(d, pts, rng, w, col, 1.5)
+
+def cruz_mano(d, cx, cy, s, rng, col=ROJO_ENFASIS, w=10, prog=1.0):
+    trazo(d, [(cx - s, cy - s), (cx - s + 2 * s * min(1, prog * 2), cy - s + 2 * s * min(1, prog * 2))], rng, w, col, 1.5)
+    if prog > 0.5:
+        q = min(1, (prog - 0.5) * 2)
+        trazo(d, [(cx + s, cy - s), (cx + s - 2 * s * q, cy - s + 2 * s * q)], rng, w, col, 1.5)
+
+def ease_out(k): k = min(1.0, max(0.0, k)); return 1 - (1 - k) ** 3
+
+# ---- personajes
+def dibujar_bit(d, cx, base, t, rng, accion, habla, entrada=1.0, s=1.0):
+    """Bit: robot redondo blanco con cara-pantalla cian. base = y del suelo."""
+    resp = math.sin(t * 2.2)
+    cy = base - 150 * s + 3 * resp
+    r = 92 * s
+    if accion == "celebra": cy -= 22 * abs(math.sin(t * 6.5))
+    # ruedas / pies
+    for sx in (-1, 1):
+        circulo(d, cx + sx * 44 * s, base - 14 * s, 18 * s, rng, 7, relleno=(255, 255, 255))
+    # brazos (antes del cuerpo para que queden detras)
+    if accion in ("explica", "senala"):
+        ang_r = -1.05 + 0.12 * math.sin(t * 3.0)        # brazo derecho senalando arriba (al objeto)
+        ang_l = 0.55
+    elif accion == "celebra":
+        ang_r = -1.25 + 0.3 * math.sin(t * 7); ang_l = -1.25 - 0.3 * math.sin(t * 7)
+    elif accion == "sorprendido":
+        ang_r = -0.35; ang_l = -0.35
+    elif accion == "piensa":
+        ang_r = -0.9; ang_l = 0.6
+    else:
+        ang_r = 0.55 + 0.05 * resp; ang_l = 0.55 + 0.05 * resp
+    L = 78 * s
+    for sx, ang in ((1, ang_r), (-1, ang_l)):
+        x0, y0 = cx + sx * r * 0.85, cy + 10 * s
+        x1, y1 = x0 + sx * L * math.cos(ang), y0 + L * math.sin(ang)
+        trazo(d, [(x0, y0), (x1, y1)], rng, 9, TINTA, 2.0)
+        circulo(d, x1, y1, 13 * s, rng, 7, relleno=(255, 255, 255))
+    # antena
+    trazo(d, [(cx, cy - r + 4), (cx + 6 * s, cy - r - 36 * s)], rng, 8, TINTA, 1.5)
+    circulo(d, cx + 7 * s, cy - r - 46 * s, 11 * s, rng, 6, relleno=CIAN)
+    # cuerpo
+    circulo(d, cx, cy, r, rng, 10, relleno=(255, 255, 255), ry=r * (1 + 0.015 * resp))
+    # pantalla-cara
+    fx0, fy0, fx1, fy1 = cx - 62 * s, cy - 52 * s, cx + 62 * s, cy + 40 * s
+    rect_mano(d, fx0, fy0, fx1, fy1, rng, 7, relleno=CIAN, radio=18 * s, amp=1.2)
+    # ojos (parpadeo cada ~3,3 s)
+    parp = ((t + 0.9) % 3.3) < 0.13
+    ey = cy - 14 * s
+    for sx in (-1, 1):
+        ex = cx + sx * 26 * s
+        if accion == "sorprendido":
+            circulo(d, ex, ey, 13 * s, rng, 4, relleno=(255, 255, 255), col=(255, 255, 255), amp=0.8)
+            circulo(d, ex, ey, 5 * s, rng, 3, relleno=TINTA, col=TINTA, amp=0.5)
+        elif parp:
+            d.line([(ex - 11 * s, ey), (ex + 11 * s, ey)], fill=(255, 255, 255), width=int(5 * s))
+        elif accion == "celebra":   # ojos felices ^ ^
+            trazo(d, [(ex - 11 * s, ey + 5 * s), (ex, ey - 7 * s), (ex + 11 * s, ey + 5 * s)], rng, 6, (255, 255, 255), 0.8)
+        else:
+            d.ellipse([ex - 10 * s, ey - 10 * s, ex + 10 * s, ey + 10 * s], fill=(255, 255, 255))
+            d.ellipse([ex - 4 * s, ey - 4 * s, ex + 4 * s, ey + 4 * s], fill=TINTA)
+    # boca
+    my = cy + 18 * s
+    if habla:
+        ab = 4 + 12 * abs(math.sin(t * 17.0)) + 4 * abs(math.sin(t * 7.3))
+        d.ellipse([cx - 16 * s, my - ab * s / 2, cx + 16 * s, my + ab * s / 2 + 2], fill=(255, 255, 255))
+    elif accion == "sorprendido":
+        d.ellipse([cx - 10 * s, my - 10 * s, cx + 10 * s, my + 10 * s], fill=(255, 255, 255))
+    else:
+        trazo(d, [(cx - 16 * s, my - 2), (cx, my + 8 * s), (cx + 16 * s, my - 2)], rng, 6, (255, 255, 255), 0.8)
+    if habla:  # rayitas de voz junto a la boca
+        for i in range(2):
+            x = cx + 90 * s + i * 14 * s; a = 0.6 + 0.4 * abs(math.sin(t * 9 + i))
+            trazo(d, [(x, cy + 8 * s - 12 * a * s), (x, cy + 8 * s + 12 * a * s)], rng, 5, CIAN, 1.0)
+    if accion == "celebra":
+        for i in range(5):
+            r2 = random.Random(31 * i + 7)
+            ex = cx + (r2.uniform(130, 200) * r2.choice([-1, 1])) * s; ey = base - 180 * s - ((t * 70 + i * 60) % 170)
+            estrella(d, ex, ey, 10 + r2.uniform(0, 6), rng, CIAN, 5)
+
+def dibujar_paco(d, cx, base, t, rng, accion, habla, s=1.0):
+    """Paco: muneco de palo que se agobia con la tecnologia."""
+    bob = 2.5 * math.sin(t * 2.0)
+    salto = 24 * abs(math.sin(t * 6.5)) if accion == "celebra" else 0
+    tiembla = 2.0 * math.sin(t * 30) if accion == "agobiado" else 0
+    hy = base - 300 * s + bob - salto + tiembla * 0.3   # centro de la cabeza
+    cx = cx + tiembla
+    r = 44 * s
+    cuello = hy + r; cad = base - 120 * s - salto; hombros = cuello + 22 * s
+    # piernas
+    for sx in (-1, 1):
+        abre = 36 * s + (10 * s * abs(math.sin(t * 6.5)) if accion == "celebra" else 0)
+        trazo(d, [(cx, cad), (cx + sx * abre, base - salto)], rng, 10, TINTA, 2.0)
+        trazo(d, [(cx + sx * abre, base - salto), (cx + sx * (abre + 22 * s), base - salto)], rng, 9, TINTA, 1.5)
+    # tronco
+    trazo(d, [(cx, cuello), (cx, cad)], rng, 10, TINTA, 2.0)
+    # brazos
+    L = 95 * s
+    def brazo(sx, a1, a2=None, L1=None, Lt=None):
+        L = Lt or 95 * s
+        L1 = L1 or L * 0.55
+        x0, y0 = cx, hombros
+        x1, y1 = x0 + sx * L1 * math.cos(a1), y0 + L1 * math.sin(a1)
+        pts = [(x0, y0), (x1, y1)]
+        if a2 is not None:
+            pts.append((x1 + sx * (L - L1) * math.cos(a2), y1 + (L - L1) * math.sin(a2)))
+        trazo(d, pts, rng, 10, TINTA, 2.0)
+        circulo(d, pts[-1][0], pts[-1][1], 9 * s, rng, 6, relleno=(255, 255, 255))
+    if accion == "agobiado":       # manos a los lados de la cabeza
+        for sx in (-1, 1):
+            brazo(sx, -0.54, -1.77, L1=70 * s, Lt=131 * s)
+    elif accion == "celebra":
+        w = 0.35 * math.sin(t * 7)
+        brazo(1, -1.2 + w, -1.7 + w); brazo(-1, -1.2 - w, -1.7 - w)
+    elif accion == "sorprendido":
+        brazo(1, -0.6, -1.4); brazo(-1, -0.6, -1.4)
+    elif accion == "piensa":
+        brazo(1, -0.5, -2.0); brazo(-1, 1.1)
+    elif accion in ("senala",):
+        brazo(1, -0.75 + 0.08 * math.sin(t * 3), -0.75); brazo(-1, 1.1)
+    else:                           # escucha: brazos relajados, ligero balanceo
+        brazo(1, 1.15 + 0.05 * bob); brazo(-1, 1.15 - 0.05 * bob)
+    # cabeza
+    circulo(d, cx, hy, r, rng, 10, relleno=(255, 255, 255))
+    ey = hy - 8 * s
+    parp = ((t + 1.7) % 3.7) < 0.13
+    for sx in (-1, 1):
+        ex = cx + sx * 15 * s
+        if accion == "sorprendido":
+            circulo(d, ex, ey, 8 * s, rng, 4, relleno=(255, 255, 255), amp=0.6)
+            d.ellipse([ex - 3 * s, ey - 3 * s, ex + 3 * s, ey + 3 * s], fill=TINTA)
+        elif parp:
+            d.line([(ex - 6 * s, ey), (ex + 6 * s, ey)], fill=TINTA, width=int(4 * s))
+        elif accion == "celebra":
+            trazo(d, [(ex - 7 * s, ey + 3 * s), (ex, ey - 5 * s), (ex + 7 * s, ey + 3 * s)], rng, 5, TINTA, 0.6)
+        else:
+            d.ellipse([ex - 5 * s, ey - 5 * s, ex + 5 * s, ey + 5 * s], fill=TINTA)
+    if accion == "agobiado":   # cejas de agobio
+        for sx in (-1, 1):
+            trazo(d, [(cx + sx * 24 * s, ey - 20 * s), (cx + sx * 7 * s, ey - 14 * s)], rng, 5, TINTA, 0.8)
+    my = hy + 16 * s
+    if habla:
+        ab = 3 + 9 * abs(math.sin(t * 16.0))
+        d.ellipse([cx - 11 * s, my - ab * s / 2, cx + 11 * s, my + ab * s / 2 + 2], fill=TINTA)
+    elif accion == "agobiado":
+        trazo(d, [(cx - 14 * s, my + 2), (cx - 7 * s, my - 4), (cx, my + 2), (cx + 7 * s, my - 4), (cx + 14 * s, my + 2)], rng, 5, TINTA, 0.8)
+    elif accion == "sorprendido":
+        circulo(d, cx, my + 2, 7 * s, rng, 4, relleno=TINTA, amp=0.5)
+    elif accion in ("celebra",):
+        trazo(d, [(cx - 16 * s, my - 4), (cx, my + 10 * s), (cx + 16 * s, my - 4)], rng, 6, TINTA, 0.8)
+    else:
+        trazo(d, [(cx - 11 * s, my), (cx, my + 5 * s), (cx + 11 * s, my)], rng, 5, TINTA, 0.8)
+    # extras por accion
+    if accion == "agobiado":
+        for i, sx in enumerate((-1, 1)):   # gotas de sudor
+            gy = hy - 10 * s + ((t * 60 + i * 25) % 40)
+            gx = cx + sx * (r + 16 * s)
+            d.polygon([(gx, gy - 14 * s), (gx - 7 * s, gy + 2), (gx + 7 * s, gy + 2)], fill=CIAN)
+            d.ellipse([gx - 7 * s, gy - 4 * s, gx + 7 * s, gy + 9 * s], fill=CIAN)
+        for k in range(3):                  # rayitas de nervios
+            a = -2.2 + k * 0.5
+            trazo(d, [(cx + (r + 14 * s) * math.cos(a), hy + (r + 14 * s) * math.sin(a)),
+                      (cx + (r + 34 * s) * math.cos(a), hy + (r + 34 * s) * math.sin(a))], rng, 5, TINTA, 1.0)
+    elif accion == "sorprendido":
+        f = font(F_DIB, int(74 * s))
+        texto_mano(d, cx + r + 30 * s, hy - 60 * s - 6 * abs(math.sin(t * 5)), "!", f, rng, CIAN, "ma", 1.0)
+    elif accion == "piensa":
+        for i, (dx, dy, rr) in enumerate([(30, -70, 7), (52, -100, 11), (90, -150, 34)]):
+            circulo(d, cx + dx * s, hy + dy * s + 2 * math.sin(t * 2 + i), rr * s, rng, 6, relleno=(255, 255, 255), amp=1.0)
+        f = font(F_DIB, int(44 * s))
+        d.text((cx + 90 * s, hy - 150 * s), "?", font=f, fill=CIAN, anchor="mm")
+    elif accion == "celebra":
+        for i in range(5):
+            r2 = random.Random(17 * i + 3)
+            ex = cx + (r2.uniform(90, 170) * r2.choice([-1, 1])) * s; ey = base - 200 * s - ((t * 70 + i * 50) % 170)
+            estrella(d, ex, ey, 9 + r2.uniform(0, 6), rng, CIAN, 5)
+
+def dibujar_invitado(d, cx, cy, t, rng, nombre, s=1.0):
+    """Personaje generico inventado para ChatGPT / Claude / Gemini: blob redondeado con etiqueta de texto (sin logos)."""
+    bob = 4 * math.sin(t * 2.4 + len(nombre))
+    cy = cy + bob
+    w, h = 118 * s, 96 * s
+    rect_mano(d, cx - w / 2, cy - h / 2, cx + w / 2, cy + h / 2, rng, 8, relleno=(255, 255, 255), radio=30 * s)
+    # orejitas / antenas pequenas segun el nombre (para distinguirlos sin logos)
+    k = sum(ord(c) for c in nombre) % 3
+    if k == 0:
+        trazo(d, [(cx, cy - h / 2), (cx, cy - h / 2 - 22 * s)], rng, 6, TINTA, 1.2); circulo(d, cx, cy - h / 2 - 28 * s, 7 * s, rng, 5, relleno=CIAN)
+    elif k == 1:
+        for sx in (-1, 1): trazo(d, [(cx + sx * 30 * s, cy - h / 2), (cx + sx * 44 * s, cy - h / 2 - 22 * s)], rng, 6, TINTA, 1.2)
+    else:
+        for sx in (-1, 1): circulo(d, cx + sx * 40 * s, cy - h / 2 - 4 * s, 12 * s, rng, 6, relleno=(255, 255, 255))
+    parp = ((t + 2.3) % 4.1) < 0.12
+    for sx in (-1, 1):
+        ex = cx + sx * 24 * s; ey = cy - 10 * s
+        if parp: d.line([(ex - 7 * s, ey), (ex + 7 * s, ey)], fill=TINTA, width=4)
+        else: d.ellipse([ex - 6 * s, ey - 6 * s, ex + 6 * s, ey + 6 * s], fill=TINTA)
+    trazo(d, [(cx - 14 * s, cy + 16 * s), (cx, cy + 24 * s), (cx + 14 * s, cy + 16 * s)], rng, 5, TINTA, 0.8)
+    f = font(F_DIB_C, int(34 * s))
+    tw = d.textlength(nombre, font=f)
+    rect_mano(d, cx - tw / 2 - 16, cy + h / 2 + 10, cx + tw / 2 + 16, cy + h / 2 + 58 * s, rng, 5, relleno=CIAN, radio=12, amp=1.0)
+    d.text((cx, cy + h / 2 + 34 * s), nombre, font=f, fill=(255, 255, 255), anchor="mm")
+
+# ---- objetos y pantalla
+def _wrap(probe, txt, f, maxw, maxlines):
+    lines, cur = [], ""
+    for wd in str(txt).split():
+        t2 = (cur + " " + wd).strip()
+        if probe.textlength(t2, font=f) <= maxw: cur = t2
+        else:
+            if cur: lines.append(cur)
+            cur = wd
+    if cur: lines.append(cur)
+    return lines[:maxlines]
+
+def texto_tecleado(d, lineas, x, y, maxw, t, rng, f, t0=0.55, cps=30, maxlines=4, col=TINTA, lh=None):
+    """Lineas de texto que aparecen letra a letra (como tecleadas) con cursor parpadeante."""
+    probe = d
+    todas = []
+    for ln in lineas:
+        todas += _wrap(probe, ln, f, maxw, 3) or [""]
+    todas = todas[:maxlines]
+    n_tot = sum(len(l) for l in todas)
+    n = int(max(0.0, t - t0) * cps)
+    lh = lh or int(f.size * 1.35)
+    fin = n >= n_tot
+    cur_x, cur_y = x, y
+    for i, ln in enumerate(todas):
+        part = ln[:max(0, n)]; n -= len(ln)
+        if part: d.text((x, y + i * lh), part, font=f, fill=col)
+        cur_x = x + probe.textlength(part, font=f); cur_y = y + i * lh
+        if n < 0: break
+    if (not fin or int(t * 2.5) % 2 == 0) and t >= t0 - 0.3:
+        d.rectangle([cur_x + 3, cur_y + 2, cur_x + 7, cur_y + f.size + 2], fill=CIAN)
+    return fin
+
+def dibujar_objeto(d, obj, pantalla, t, rng, cx=540, cy=OBJ_CY_DIB):
+    """Dibuja el objeto de la escena (movil, portatil, chat, ...) con la "pantalla" tecleada dentro si la hay."""
+    if obj == "movil":
+        w, h = 360, 500; cy = cy - 30
+        rect_mano(d, cx - w / 2, cy - h / 2, cx + w / 2, cy + h / 2, rng, 10, relleno=(255, 255, 255), radio=46)
+        rect_mano(d, cx - w / 2 + 22, cy - h / 2 + 60, cx + w / 2 - 22, cy + h / 2 - 60, rng, 5, relleno=CIAN_CLARO, radio=10, amp=1.2)
+        trazo(d, [(cx - 30, cy - h / 2 + 32), (cx + 30, cy - h / 2 + 32)], rng, 6, TINTA, 1.0)
+        circulo(d, cx, cy + h / 2 - 30, 11, rng, 5, relleno=(255, 255, 255))
+        if pantalla:
+            texto_tecleado(d, pantalla, cx - w / 2 + 38, cy - h / 2 + 80, w - 76, t, rng, font(F_DIB_MONO, 28), maxlines=7)
+    elif obj == "portatil":
+        w, h = 660, 420
+        rect_mano(d, cx - w / 2, cy - h / 2 - 40, cx + w / 2, cy + h / 2 - 60, rng, 10, relleno=(255, 255, 255), radio=18)
+        rect_mano(d, cx - w / 2 + 24, cy - h / 2 - 16, cx + w / 2 - 24, cy + h / 2 - 84, rng, 5, relleno=CIAN_CLARO, radio=8, amp=1.2)
+        trazo(d, [(cx - w / 2 - 40, cy + h / 2 - 60), (cx + w / 2 + 40, cy + h / 2 - 60), (cx + w / 2 + 20, cy + h / 2 - 20), (cx - w / 2 - 20, cy + h / 2 - 20)], rng, 9, TINTA, 2.0, cerrado=True)
+        trazo(d, [(cx - 60, cy + h / 2 - 48), (cx + 60, cy + h / 2 - 48)], rng, 5, TINTA, 1.0)
+        if pantalla:
+            texto_tecleado(d, pantalla, cx - w / 2 + 44, cy - h / 2 + 8, w - 90, t, rng, font(F_DIB_MONO, 32), maxlines=5)
+    elif obj == "chat":
+        w, h = 700, 400; cx = cx - 40
+        x0, y0, x1, y1 = cx - w / 2, cy - h / 2 - 30, cx + w / 2, cy + h / 2 - 50
+        rect_mano(d, x0, y0, x1, y1, rng, 10, relleno=(255, 255, 255), radio=38)
+        # rabito del bocadillo hacia abajo-izquierda (hacia Paco)
+        d.polygon([(x0 + 150, y1 - 6), (x0 + 110, y1 + 70), (x0 + 240, y1 - 6)], fill=(255, 255, 255))
+        trazo(d, [(x0 + 150, y1 - 2), (x0 + 110, y1 + 70), (x0 + 240, y1 - 2)], rng, 10, TINTA, 2.0)
+        # cabecera del chat
+        trazo(d, [(x0 + 36, y0 + 64), (x1 - 36, y0 + 64)], rng, 5, CIAN, 1.0)
+        circulo(d, x0 + 58, y0 + 36, 12, rng, 5, relleno=CIAN)
+        if pantalla:
+            texto_tecleado(d, pantalla, x0 + 40, y0 + 90, w - 80, t, rng, font(F_DIB_MONO, 34), maxlines=5)
+    else:
+        # icono arriba + tarjeta de texto debajo si hay pantalla
+        icy = cy - 150 if pantalla else cy
+        if obj == "correo":
+            w, h = 360, 240
+            rect_mano(d, cx - w / 2, icy - h / 2, cx + w / 2, icy + h / 2, rng, 10, relleno=(255, 255, 255), radio=14)
+            trazo(d, [(cx - w / 2, icy - h / 2), (cx, icy + 20), (cx + w / 2, icy - h / 2)], rng, 9, TINTA, 2.0)
+            circulo(d, cx + w / 2 - 10, icy - h / 2 + 10, 26, rng, 6, relleno=CIAN)
+            d.text((cx + w / 2 - 10, icy - h / 2 + 10), "1", font=font(F_DIB, 34), fill=(255, 255, 255), anchor="mm")
+        elif obj == "calendario":
+            w, h = 340, 300
+            rect_mano(d, cx - w / 2, icy - h / 2, cx + w / 2, icy + h / 2, rng, 10, relleno=(255, 255, 255), radio=16)
+            d.rectangle([cx - w / 2 + 6, icy - h / 2 + 6, cx + w / 2 - 6, icy - h / 2 + 64], fill=CIAN)
+            for sx in (-1, 1): trazo(d, [(cx + sx * 90, icy - h / 2 - 30), (cx + sx * 90, icy - h / 2 + 30)], rng, 9, TINTA, 1.2)
+            for i in range(12):
+                gx = cx - 110 + (i % 4) * 73; gy = icy - 40 + (i // 4) * 70
+                d.ellipse([gx - 9, gy - 9, gx + 9, gy + 9], fill=(190, 190, 190))
+            sel = int(t * 1.5) % 12
+            circulo(d, cx - 110 + (sel % 4) * 73, icy - 40 + (sel // 4) * 70, 24, rng, 6, col=CIAN, amp=1.0)
+        elif obj == "lista":
+            w, h = 320, 380
+            rect_mano(d, cx - w / 2, icy - h / 2, cx + w / 2, icy + h / 2, rng, 10, relleno=(255, 255, 255), radio=12)
+            for i in range(3):
+                ly = icy - h / 2 + 70 + i * 105
+                rect_mano(d, cx - w / 2 + 34, ly - 24, cx - w / 2 + 82, ly + 24, rng, 6, relleno=(255, 255, 255), radio=8, amp=1.0)
+                trazo(d, [(cx - w / 2 + 110, ly), (cx + w / 2 - 40, ly)], rng, 6, (170, 170, 170), 1.0)
+                if t > 0.8 + i * 0.7:
+                    check_mano(d, cx - w / 2 + 58, ly, 16, rng, CIAN, 8, min(1.0, (t - 0.8 - i * 0.7) / 0.3))
+        elif obj == "reloj":
+            circulo(d, cx, icy, 150, rng, 10, relleno=(255, 255, 255))
+            for k in range(12):
+                a = k * math.pi / 6
+                trazo(d, [(cx + 125 * math.cos(a), icy + 125 * math.sin(a)), (cx + 140 * math.cos(a), icy + 140 * math.sin(a))], rng, 6, TINTA, 0.8)
+            am = -math.pi / 2 + t * 2.4; ah = -math.pi / 2 + t * 0.2
+            trazo(d, [(cx, icy), (cx + 70 * math.cos(ah), icy + 70 * math.sin(ah))], rng, 9, TINTA, 1.0)
+            trazo(d, [(cx, icy), (cx + 110 * math.cos(am), icy + 110 * math.sin(am))], rng, 7, CIAN, 1.0)
+            circulo(d, cx, icy, 10, rng, 5, relleno=TINTA)
+        elif obj == "bombilla":
+            on = t > 0.7
+            circulo(d, cx, icy - 30, 110, rng, 10, relleno=(255, 240, 150) if on else (255, 255, 255))
+            rect_mano(d, cx - 46, icy + 70, cx + 46, icy + 130, rng, 8, relleno=(255, 255, 255), radio=10)
+            trazo(d, [(cx - 30, icy + 100), (cx + 30, icy + 100)], rng, 5, TINTA, 0.8)
+            trazo(d, [(cx - 25, icy + 20), (cx - 10, icy + 70), (cx + 10, icy + 70), (cx + 25, icy + 20)], rng, 6, TINTA, 1.0)
+            if on:
+                k = min(1.0, (t - 0.7) / 0.3)
+                for j in range(8):
+                    a = j * math.pi / 4 + 0.2 * math.sin(t * 3)
+                    r0, r1 = 135, 135 + 45 * k
+                    trazo(d, [(cx + r0 * math.cos(a), icy - 30 + r0 * math.sin(a)), (cx + r1 * math.cos(a), icy - 30 + r1 * math.sin(a))], rng, 7, CIAN, 1.2)
+        elif obj == "carpeta":
+            w, h = 400, 280
+            rect_mano(d, cx - w / 2, icy - h / 2 + 30, cx + w / 2, icy + h / 2, rng, 10, relleno=CIAN_CLARO, radio=14)
+            trazo(d, [(cx - w / 2, icy - h / 2 + 30), (cx - w / 2, icy - h / 2), (cx - w / 2 + 150, icy - h / 2), (cx - w / 2 + 180, icy - h / 2 + 30)], rng, 10, TINTA, 2.0)
+            # papel que entra en la carpeta
+            k = ease_out((t - 0.4) / 0.8)
+            py = icy - h / 2 - 140 + 150 * k
+            rect_mano(d, cx - 90, py, cx + 90, py + 180, rng, 7, relleno=(255, 255, 255), radio=6, amp=1.2)
+            for j in range(3): trazo(d, [(cx - 60, py + 40 + j * 36), (cx + 50, py + 40 + j * 36)], rng, 5, (170, 170, 170), 0.8)
+            d.polygon([(cx - w / 2 + 6, icy - h / 2 + 90), (cx + w / 2 - 6, icy - h / 2 + 90), (cx + w / 2 - 6, icy + h / 2 - 6), (cx - w / 2 + 6, icy + h / 2 - 6)], fill=CIAN_CLARO)
+            trazo(d, [(cx - w / 2, icy - h / 2 + 90), (cx + w / 2, icy - h / 2 + 90), (cx + w / 2, icy + h / 2), (cx - w / 2, icy + h / 2)], rng, 10, TINTA, 2.0, cerrado=True)
+        if pantalla:
+            w, h = 740, 250
+            y0 = cy + 90
+            rect_mano(d, cx - w / 2, y0 - h / 2, cx + w / 2, y0 + h / 2, rng, 8, relleno=(255, 255, 255), radio=20)
+            texto_tecleado(d, pantalla, cx - w / 2 + 40, y0 - h / 2 + 36, w - 80, t, rng, font(F_DIB_MONO, 34), maxlines=4)
+
+def dibujar_pizarra(d, lineas, t, rng, numerada=False, cx=540, cy=OBJ_CY_DIB):
+    """Pizarra: texto o lista de pasos que se dibuja trazo a trazo (barrido por linea)."""
+    f = font(F_DIB_C, 46 if numerada else 52)
+    probe = d
+    todas = []
+    for ln in lineas:
+        ws = _wrap(probe, ln, f, 640 if numerada else 680, 2) or [""]
+        todas.append(ws)
+    nl = sum(len(x) for x in todas)
+    lh = 66; gap = 26
+    h = max(260, nl * lh + (len(todas) - 1) * gap + 90)
+    w = 800
+    y0 = cy - h / 2 + 10
+    rect_mano(d, cx - w / 2, y0, cx + w / 2, y0 + h, rng, 10, relleno=(255, 255, 255), radio=20)
+    # pinzas / marco superior
+    for sx in (-1, 1): circulo(d, cx + sx * 300, y0 + 2, 12, rng, 6, relleno=CIAN)
+    y = y0 + 48
+    paso = max(0.45, min(1.1, 0.55 * (len(todas) and 3.0 / len(todas))))
+    for i, ws in enumerate(todas):
+        k0 = (t - 0.35 - i * paso)
+        if k0 <= 0: break
+        if numerada:
+            kk = ease_out(k0 / 0.25)
+            circulo(d, cx - w / 2 + 62, y + 30, 26 * kk, rng, 6, relleno=CIAN)
+            if kk > 0.6:
+                d.text((cx - w / 2 + 62, y + 30), str(i + 1), font=font(F_DIB, 34), fill=(255, 255, 255), anchor="mm")
+        x = cx - w / 2 + (112 if numerada else 50)
+        for j, ln in enumerate(ws):
+            prog = min(1.0, max(0.0, (k0 - j * 0.3) / 0.35))
+            if prog <= 0: break
+            tw = probe.textlength(ln, font=f)
+            d.text((x, y + j * lh), ln, font=f, fill=TINTA)
+            cut = int((tw + 20) * prog)
+            if cut < tw + 20:   # la parte aun no dibujada se tapa con el blanco de la pizarra
+                d.rectangle([x + cut, y + j * lh - 4, x + tw + 24, y + j * lh + lh], fill=(255, 255, 255))
+            if prog < 1.0:   # punta del rotulador
+                d.ellipse([x + cut - 8, y + j * lh + lh - 14, x + cut + 8, y + j * lh + lh + 2], fill=CIAN)
+        y += len(ws) * lh + gap
+
+def dibujar_cifra(d, sc, t, rng, cx=540, cy=OBJ_CY_DIB):
+    parts = _cifra_parts(sc.cifra)
+    k = ease_out((t - 0.15) / 1.3)
+    if parts:
+        pre, val, post, sep = parts
+        cur = int(round(val * k))
+        txt = pre + ("{:,}".format(cur).replace(",", sep) if sep else str(cur)) + post
+    else:
+        txt = sc.cifra
+    size = 230
+    while size > 90 and d.textlength(sc.cifra, font=font(F_DIB, size)) > 880: size -= 8
+    f = font(F_DIB, size)
+    d.text((cx + 6, cy - 20 + 6), txt, font=f, anchor="mm", fill=CIAN_CLARO)
+    d.text((cx, cy - 20), txt, font=f, anchor="mm", fill=CIAN, stroke_width=6, stroke_fill=TINTA)
+    if sc.unidad:
+        texto_mano(d, cx, cy + size // 2 + 40, sc.unidad.upper()[:28], font(F_DIB_C, 54), rng, TINTA, "mm")
+    trazo(d, [(cx - 300, cy + size // 2 + 100), (cx + 300, cy + size // 2 + 100)], rng, 8, CIAN, 2.0)
+
+def dibujar_antes_despues(d, ad, t, rng, cx=540, cy=OBJ_CY_DIB):
+    """Dos tarjetas: ANTES (tachado en rojo) -> DESPUES (check cian)."""
+    antes = str(ad.get("antes", ""))[:40]; despues = str(ad.get("despues", ""))[:40]
+    w, h = 400, 300; gap = 60
+    f = font(F_DIB_C, 46); fe = font(F_DIB, 34)
+    for i, (lab, txt, x0) in enumerate((("ANTES", antes, cx - w - gap / 2), ("DESPUÉS", despues, cx + gap / 2))):
+        k = ease_out((t - 0.1 - i * 0.9) / 0.35)
+        if k <= 0: continue
+        y0 = cy - h / 2 + (1 - k) * 40
+        rect_mano(d, x0, y0, x0 + w, y0 + h, rng, 9, relleno=(255, 255, 255), radio=18)
+        d.rectangle([x0 + 6, y0 + 6, x0 + w - 6, y0 + 62], fill=CIAN if i else (200, 200, 200))
+        d.text((x0 + w / 2, y0 + 34), lab, font=fe, fill=(255, 255, 255) if i else TINTA, anchor="mm")
+        ls = _wrap(d, txt, f, w - 50, 3)
+        for j, ln in enumerate(ls):
+            d.text((x0 + w / 2, y0 + 110 + j * 56), ln, font=f, fill=TINTA, anchor="mm")
+        if i == 0 and t > 0.9:
+            cruz_mano(d, x0 + w / 2, y0 + h / 2 + 20, 70, rng, ROJO_ENFASIS, 12, min(1.0, (t - 0.9) / 0.4))
+        if i == 1 and t > 1.9:
+            check_mano(d, x0 + w - 70, y0 + h - 60, 32, rng, CIAN, 12, min(1.0, (t - 1.9) / 0.35))
+    if t > 0.8:
+        flecha_mano(d, (cx - 110, cy + h / 2 + 50), (cx + 110, cy + h / 2 + 50), rng, 9, CIAN, min(1.0, (t - 0.8) / 0.3))
+
+_sello_dib = {}
+def sello_dibujo_img(txt):
+    """Sello doodle: contorno y texto cian (rojo si es FALSO/NO), rotado, sobre el objeto."""
+    if txt not in _sello_dib:
+        col = ROJO_ENFASIS if (txt.startswith("FALS") or txt in ("NO", "MAL", "BULO", "MITO")) else CIAN
+        size = 150
+        probe = ImageDraw.Draw(Image.new("L", (4, 4)))
+        while size > 70 and probe.textlength(txt, font=font(F_DIB, size)) > 620: size -= 6
+        f = font(F_DIB, size); tw = int(probe.textlength(txt, font=f))
+        bw, bh = tw + 100, int(size * 1.25) + 50
+        im = Image.new("RGBA", (bw + 24, bh + 24), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+        rng = random.Random(len(txt))
+        rect_mano(d, 12, 12, bw + 12, bh + 12, rng, 12, relleno=PAPEL + (235,), col=col + (255,), radio=18, amp=2.5)
+        d.text(((bw + 24) // 2, (bh + 24) // 2), txt, font=f, fill=col + (255,), anchor="mm")
+        _sello_dib[txt] = im.rotate(-7, expand=True, resample=Image.BICUBIC)
+    return _sello_dib[txt]
+
+def rotulo_dibujo(texto, grande=False):
+    """Rotulo corto arriba con subrayado de rotulador cian (gancho: mas grande)."""
+    texto = texto.strip()
+    f, size, lines = wrap_fit(texto.upper(), F_DIB_C, maxw=W - 160, maxlines=2, smax=(104 if grande else 70), smin=44)
+    lh = int(size * 1.15)
+    im = Image.new("RGBA", (W, lh * len(lines) + 60), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+    rng = random.Random(len(texto))
+    probe = d
+    for i, ln in enumerate(lines):
+        tw = probe.textlength(ln, font=f); x0 = (W - tw) / 2; y = 20 + i * lh
+        # marcador cian detras (ligeramente inclinado)
+        d.polygon([(x0 - 14, y + size * 0.45), (x0 + tw + 14, y + size * 0.40), (x0 + tw + 10, y + size * 1.02), (x0 - 18, y + size * 1.06)], fill=CIAN + (110,))
+        d.text((x0, y), ln, font=f, fill=TINTA + (255,))
+    return im
+
+def hablando(sub, t):
+    """True si la voz esta diciendo algo en t (para mover la boca)."""
+    if sub is None or sub.n == 0: return False
+    if sub.tiempos is not None:
+        return any(ti - 0.05 <= t <= ti + 0.42 for ti in sub.tiempos)
+    return sub.delay < t < sub.delay + sub.n / max(0.5, sub.wps) + 0.15
+
+def preparar_dibujo(sc, spec, rng):
+    """Prepara una escena en modo dibujo: subtitulos, rotulo, personajes, objeto y recursos."""
+    sc.estilo_d = str(spec.get("estilo") or "paso").strip().lower()
+    dib = spec.get("dibujo") or {}
+    if not isinstance(dib, dict): dib = {}
+    pers = [str(p).strip().lower() for p in (dib.get("personajes") or [])]
+    sc.pers = [p for p in pers if p in ("bit", "paco")]
+    if not sc.pers and not dib and sc.estilo_d in ("gancho", "cierre"):
+        sc.pers = ["bit", "paco"]
+    sc.accion = str(dib.get("accion") or ("agobiado" if sc.estilo_d == "problema" else ("celebra" if sc.estilo_d in ("resultado", "cierre") else "explica"))).strip().lower()
+    sc.objeto = str(dib.get("objeto") or "nada").strip().lower()
+    sc.pantalla = [str(x) for x in (dib.get("pantalla") or [])][:4] if isinstance(dib.get("pantalla"), list) else ([str(dib["pantalla"])] if dib.get("pantalla") else [])
+    if sc.pantalla and sc.objeto == "nada": sc.objeto = "chat"
+    nombres = {"chatgpt": "ChatGPT", "claude": "Claude", "gemini": "Gemini", "copilot": "Copilot", "gmail": "Gmail"}
+    sc.invitados = [nombres.get(str(x).strip().lower(), str(x).strip()[:14]) for x in (dib.get("invitados") or []) if str(x).strip()][:2]
+    piz = dib.get("pizarra") or spec.get("pizarra")
+    sc.pizarra = ([str(x) for x in piz] if isinstance(piz, list) else ([str(piz)] if piz else []))[:4]
+    sc.flecha = dib.get("flecha") or spec.get("flecha")
+    ad = dib.get("antes_despues") or spec.get("antes_despues")
+    sc.antes_despues = ad if isinstance(ad, dict) else None
+    sc.entran = [p for p in sc.pers if p not in DIB_PREV["pers"]]
+    DIB_PREV["pers"] = set(sc.pers)
+    # subtitulos (misma logica que el modo humano: voz real si hay tiempos)
+    voz, enf_voz = parsear_enfasis(spec.get("voz") or "")
+    sub, enf_sub = parsear_enfasis(spec.get("subtitulos") or "")
+    texto, enf_txt = parsear_enfasis(spec.get("texto") or "")
+    base, enf = (sub, enf_sub) if sub else ((voz, enf_voz) if voz else ("", []))
+    dv = float(spec.get("_voz_dur") or 0)
+    tiempos = spec.get("_voz_palabras")
+    if tiempos and len(tiempos) == len(base.split()):
+        tiempos = [float(x) + 0.12 for x in tiempos]
+    else:
+        tiempos = None
+    if dv > 0.2:
+        wps = len(base.split()) / max(0.3, dv - 0.1); retardo = 0.12
+    else:
+        wps = max(WPS_HUMANO, len(base.split()) / max(0.3, sc.dur * 0.8)); retardo = 0.12
+    sc.con_objeto = bool(sc.objeto != "nada" or sc.cifra or sc.lista or sc.pizarra or sc.antes_despues)
+    estilo_sub = dict(fill=TINTA, stroke=PAPEL, activo=CIAN, enfasis=ROJO_ENFASIS,
+                      cy=(SUB_CY_DIB if sc.con_objeto else 760), smax=(80 if sc.con_objeto else 100), smin=54)
+    sc.sub = Subtitulos(base, wps, retardo, sc.dur, enfasis=enf, tiempos=tiempos, estilo=estilo_sub) if base else None
+    sc.rotulo = rotulo_dibujo(texto, grande=(sc.estilo_d == "gancho")) if texto else None
+    sc.habla_bit = "bit" in sc.pers
+    # camara: segmentos de ~3 s con encuadre distinto (corte dentro de escenas largas)
+    rc = random.Random(sc.idx * 13 + 5)
+    sc.cam = [(rc.choice([1.02, 1.04, 1.06]), rc.uniform(-14, 14), rc.uniform(-10, 10), rc.choice([1, -1])) for _ in range(int(sc.dur / 3.0) + 2)]
+
+def render_frame_dibujo(fi, sc, noise, rg, seed):
+    lf = fi - sc.start; t = lf / FPS
+    img = papel_img(seed).copy()
+    d = ImageDraw.Draw(img, "RGBA")
+    rng = random.Random(seed * 31 + sc.idx * 101 + fi // 4)   # temblor del trazo: cambia cada 4 fotogramas
+    # ---- area del objeto / pizarra (se "dibuja" con un barrido en los primeros 0,5 s)
+    capa = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dc = ImageDraw.Draw(capa, "RGBA")
+    if sc.antes_despues:
+        dibujar_antes_despues(dc, sc.antes_despues, t, rng)
+    elif sc.cifra:
+        dibujar_cifra(dc, sc, t, rng)
+    elif sc.lista:
+        dibujar_pizarra(dc, sc.lista, t, rng, numerada=True)
+    elif sc.pizarra:
+        dibujar_pizarra(dc, sc.pizarra, t, rng, numerada=False)
+    elif sc.objeto != "nada":
+        dibujar_objeto(dc, sc.objeto, sc.pantalla, t, rng)
+    for i, inv in enumerate(sc.invitados):
+        dibujar_invitado(dc, 950 - i * 170, 480, t, rng, inv, 0.8)
+    if sc.flecha and t > 0.4:
+        prog = min(1.0, (t - 0.4) / 0.4)
+        xr = {"movil": 705, "portatil": 870, "chat": 850, "nada": 600}.get(sc.objeto, 760)
+        x0 = min(1010, xr + 240)
+        flecha_mano(dc, (x0, 540), (xr + 45, 620), rng, 10, CIAN, prog)
+        if isinstance(sc.flecha, str) and prog >= 1.0:
+            texto_mano(dc, x0, 500, sc.flecha[:18], font(F_DIB_C, 40), rng, CIAN, "mm")
+    if t < 0.5:   # el objeto aparece dibujandose (barrido de arriba abajo)
+        a = np.asarray(capa.getchannel("A"), dtype=np.uint8).copy()
+        corte = 300 + int(1000 * ease_out(t / 0.5))
+        a[corte:, :] = 0
+        capa.putalpha(Image.fromarray(a))
+    img.paste(capa, (0, 0), capa)
+    # ---- rotulo
+    if sc.rotulo is not None:
+        k = ease_out(t / 0.3)
+        ro = sc.rotulo
+        if k < 1.0:
+            ro = ro.crop((0, 0, max(1, int(W * k)), ro.height))
+        img.paste(ro, (0, 170), ro)
+    # ---- personajes
+    habla = hablando(sc.sub, t)
+    esc = 1.0 if sc.con_objeto else 1.3
+    if len(sc.pers) == 2:
+        pos = {"paco": 300, "bit": 740} if sc.con_objeto else {"paco": 280, "bit": 770}
+    else:
+        pos = {p: 540 for p in sc.pers}
+    for p in sc.pers:
+        x = pos[p]
+        if p in sc.entran:
+            k = ease_out(t / 0.45)
+            x += (1 - k) * (-520 if p == "paco" else 520)
+        if p == "bit":
+            dibujar_bit(d, x, SUELO_DIB, t, rng, sc.accion if sc.accion in ("explica", "senala", "celebra", "sorprendido", "piensa") else "explica",
+                        habla and sc.habla_bit, s=esc)
+        else:
+            acc_p = sc.accion
+            if "bit" in sc.pers and acc_p in ("explica", "senala"): acc_p = "escucha"
+            dibujar_paco(d, x, SUELO_DIB, t, rng, acc_p, habla and not sc.habla_bit, s=esc)
+    # suelo
+    trazo(d, [(120, SUELO_DIB + 6), (960, SUELO_DIB + 2)], rng, 7, TINTA, 1.5)
+    # ---- subtitulos
+    if sc.sub is not None:
+        cp = sc.sub.capa(t)
+        if cp:
+            timg, ty = cp
+            img.paste(timg, (0, ty), timg)
+    # ---- sello
+    if sc.sello and t >= sc.sello_t:
+        st = sello_dibujo_img(sc.sello); k = min(1.0, (t - sc.sello_t) / 0.13)
+        if k < 1.0:
+            z = 2.0 - 1.0 * k
+            st = st.resize((int(st.width * z), int(st.height * z)))
+        if sc.con_objeto:
+            st = st.resize((int(st.width * 0.72), int(st.height * 0.72)))
+            img.paste(st, (700 - st.width // 2, 440 - st.height // 2), st)
+        else:
+            img.paste(st, (540 - st.width // 2, 640 - st.height // 2), st)
+    # ---- camara leve (zoom/paneo por segmentos de ~3 s)
+    seg = min(len(sc.cam) - 1, int(t / 3.0)); z0, dx, dy, sg = sc.cam[seg]
+    ts = t - seg * 3.0
+    z = z0 + 0.012 * sg * ts / 3.0
+    cw, ch = int(W / z), int(H / z)
+    cx = int((W - cw) / 2 + dx * ts / 3.0); cy = int((H - ch) / 2 + dy * ts / 3.0)
+    cx = max(0, min(W - cw, cx)); cy = max(0, min(H - ch, cy))
+    img = img.crop((cx, cy, cx + cw, cy + ch)).resize((W, H), Image.BILINEAR)
+    a = np.asarray(img, dtype=np.int16).copy()
+    a += noise[fi % 8] // 6
+    if lf < 2: a -= 10   # micro parpadeo en el corte
+    np.clip(a, 0, 255, out=a)
+    return a.astype(np.uint8)
+
+
 # ---------------------------------------------------------------- escena
 class Scene:
     def __init__(self, idx, sc, seed, title, nframes, start_frame):
@@ -717,6 +1419,8 @@ class Scene:
         self.sello_t = min(max(self.sello_t, 0.0), max(0.0, self.dur - 0.6))
         if MODO["humano"]:
             preparar_humano(self, sc, rng)
+        elif MODO["dibujo"]:
+            preparar_dibujo(self, sc, rng)
 
 def hud(d, scene, t_abs, date_s, title):
     f = font(MONO, 44); fs = font(MONO, 32)
@@ -781,6 +1485,8 @@ def render_frame(fi, scenes, noise, date_s, title, rg):
     sc = next(s for s in scenes if fi < s.start + s.nframes)
     if MODO["humano"]:
         return render_frame_humano(fi, sc, noise, rg)
+    if MODO["dibujo"]:
+        return render_frame_dibujo(fi, sc, noise, rg, SEMILLA["v"])
     lf = fi - sc.start; t = lf / FPS; ta = fi / FPS
     img = sc.bg.copy()
     d = ImageDraw.Draw(img, "RGBA")
@@ -897,6 +1603,11 @@ def lufs(st):
     finally:
         os.remove(f.name)
 
+PROGS_MAYOR = [  # modo dibujo: progresiones mayores, alegres (I-V-vi-IV, I-IV-V-IV, I-vi-IV-V)
+    [(0, "M"), (7, "M"), (9, "m"), (5, "M")],
+    [(0, "M"), (5, "M"), (7, "M"), (5, "M")],
+    [(0, "M"), (9, "m"), (5, "M"), (7, "M")],
+]
 PROGS = [  # (semitonos de la raiz, calidad) en tonalidad menor
     [(0, "m"), (8, "M"), (3, "M"), (10, "M")],   # i  VI III VII
     [(0, "m"), (5, "m"), (8, "M"), (7, "M")],    # i  iv VI  V
@@ -923,12 +1634,13 @@ def make_music(scenes, n, seed, gs, hook_end):
     rng = random.Random(seed * 7919 + 13)
     total = n / SR
     bpm = rng.uniform(70, 90); beat = 60.0 / bpm
+    if MODO["dibujo"]: bpm = rng.uniform(98, 110); beat = 60.0 / bpm   # dibujo: mas vivo
     cut0 = gs - CORTE_GIRO if (gs and gs >= 3.0) else None
     if gs and gs >= 3.0:  # que el giro caiga en un pulso
         b2 = gs / max(1, round(gs / beat))
         if 70 <= 60 / b2 <= 90: beat = b2
     key = rng.randrange(12); base = 38 + key
-    prog = rng.choice(PROGS); add9 = rng.random() < 0.5
+    prog = rng.choice(PROGS_MAYOR if MODO["dibujo"] else PROGS); add9 = rng.random() < 0.5
     box = rng.random() < 0.5
     tr1 = cut0
     tr0 = max(hook_end + 0.5, tr1 - 3.2) if cut0 else None
@@ -956,8 +1668,8 @@ def make_music(scenes, n, seed, gs, hook_end):
         k = int(math.ceil(ts / beat - 1e-6))
         while k * beat < te - 0.02:
             kicks.append((k * beat, 1.0 if k % 4 == 0 else 0.72)); k += 1
-    if MODO["humano"]:
-        tr0 = None            # modo humano: sin subida de tension ni bombo, solo colchon y arpegio
+    if modo_suave():
+        tr0 = None            # modo humano/dibujo: sin subida de tension ni bombo, solo colchon y arpegio
     elif cut0:
         kick_run(hook_end, cut0); kick_run(gs, total); kicks.append((gs, 1.5))
     else:
@@ -988,7 +1700,7 @@ def make_music(scenes, n, seed, gs, hook_end):
     tt = np.arange(n) / SR
     bass *= np.clip((tt - hook_end) / 1.0, 0, 1) * 0.55
     # filtro: oscuro en el gancho, abre hacia el giro
-    w = np.full(n, 0.15)
+    w = np.full(n, 0.55 if MODO["dibujo"] else 0.15)   # dibujo: colchon mas brillante
     if tr0: w[int(tr0 * SR):int(tr1 * SR)] = np.linspace(0.15, 1.0, int(tr1 * SR) - int(tr0 * SR))
     if cut0: w[int(gs * SR):] = 0.7
     padL = (lp_fft(padL, 850) * (1 - w) + lp_fft(padL, 2600) * w) * duck
@@ -1059,7 +1771,7 @@ def make_music(scenes, n, seed, gs, hook_end):
     if cut0:
         i0, i1 = int(cut0 * SR), int(gs * SR); r0 = int(0.006 * SR)
         cutg[i0:i0 + r0] = np.linspace(1, 0, r0); cutg[i0 + r0:i1] = 0.0
-    return L, R, cutg, dict(bpm=60 / beat, key=key, prog=PROGS.index(prog), box=box, cut=cut0, riser=tr0)
+    return L, R, cutg, dict(bpm=60 / beat, key=key, prog=(PROGS_MAYOR if MODO["dibujo"] else PROGS).index(prog), box=box, cut=cut0, riser=tr0)
 
 def make_audio(scenes, total, seed, musica=True):
     rg = np.random.default_rng(seed)
@@ -1110,8 +1822,14 @@ def make_audio(scenes, total, seed, musica=True):
             if j0 < n:
                 hL[j0:j1] += thud[:j1 - j0]; hR[j0:j1] += thud[:j1 - j0]
     fx = np.stack([bL + hL, bR + hR], 1)
-    if MODO["humano"]:
-        st = np.zeros_like(fx)            # modo humano: sin lecho de tension ni golpes
+    if modo_suave():
+        st = np.zeros_like(fx)            # modo humano/dibujo: sin lecho de tension ni golpes
+        if MODO["dibujo"]:                # dibujo: un "pop" suave en cada corte de escena
+            m = int(0.09 * SR); tp = np.arange(m) / SR
+            pop = np.sin(2 * np.pi * np.cumsum(620 - 300 * tp / 0.09) / SR) * np.exp(-tp * 45) * 0.22
+            for s in scenes[1:]:
+                i0 = int(s.start / FPS * SR); i1 = min(n, i0 + m)
+                st[i0:i1, 0] += pop[:i1 - i0]; st[i0:i1, 1] += pop[:i1 - i0]
     else:
         gfx = 10 ** ((-21 - lufs(fx)) / 20)
         st = fx * gfx
@@ -1119,8 +1837,8 @@ def make_audio(scenes, total, seed, musica=True):
     if musica:
         mus = np.stack([mL * cutg, mR * cutg], 1)
         lm0 = lufs(mus)
-        mus *= 10 ** (((-31 if MODO["humano"] else -24) - lm0) / 20)   # humano: musica discreta
-        if MODO["humano"] and hook_end < total - 2.0:
+        mus *= 10 ** (((-31 if MODO["humano"] else (-29 if MODO["dibujo"] else -24)) - lm0) / 20)   # humano/dibujo: musica discreta
+        if modo_suave() and hook_end < total - 2.0:
             # el gancho va a pelo (solo la voz): la musica entra en fundido de 0,8 s cuando termina la primera escena
             mus *= np.clip((t - hook_end + 0.2) / 0.8, 0.0, 1.0)[:, None]
         st = st + mus
@@ -1160,7 +1878,13 @@ def main():
             print("tiempos de voz no leidos (se usa la estimacion):", str(e)[:120])
     seed = int(g.get("semilla", 1)); title = g.get("titulo", "")
     musica = bool(g.get("musica", True))
-    MODO["humano"] = (g.get("modo") or "").strip().lower() == "humano"
+    modo = (g.get("modo") or "").strip().lower()
+    if modo not in ("", "humano", "dibujo"):   # guardia: un modo desconocido nunca se renderiza con otro estilo
+        sys.exit("modo desconocido en guion.json: %r (este generador conoce: humano, dibujo)" % modo)
+    MODO["humano"] = modo == "humano"
+    MODO["dibujo"] = modo == "dibujo"
+    SEMILLA["v"] = int(g.get("semilla", 1))
+    DIB_PREV["pers"] = set()
     esc = g["escenas"]
     bounds = [0]
     for i, e in enumerate(esc):
@@ -1201,6 +1925,9 @@ def main():
         w.setnchannels(2); w.setsampwidth(2); w.setframerate(SR); w.writeframes(pcm.tobytes())
     # portada
     cov = {"texto": g.get("portada_texto") or title, "estilo": "gancho", "duracion": 3}
+    if MODO["dibujo"]:
+        cov["dibujo"] = {"personajes": ["paco", "bit"], "accion": "sorprendido", "objeto": "nada"}
+        DIB_PREV["pers"] = {"paco", "bit"}
     cs = Scene(0, cov, seed, title, 90, 0)
     cimg = render_frame(60, [cs], noise, date_s, title, random.Random(1))
     Image.fromarray(cimg).save(os.path.splitext(out)[0] + "_portada.jpg", quality=90)

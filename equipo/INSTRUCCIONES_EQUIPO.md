@@ -50,19 +50,26 @@ Opcional en cualquier escena, para que la imagen PRUEBE el dato (sustituye al di
 - "fechas":[{"anio":"1872","texto":"zarpa"}, ...] (2-4 hitos, texto ≤ 20 caracteres): línea de tiempo que se va llenando.
 - "lista":["dato 1","dato 2","dato 3"] (máx. 3, ≤ 2 líneas cada uno): lista numerada que aparece punto a punto; úsala en el cierre como recapitulación guardable.
 
-### Modo "dibujo" (OBLIGATORIO para reels nuevos desde el 6/11/2026 20:27; lo implementa Mejora)
-Dibujos animados doodle sobre papel claro, trazo negro grueso y un único acento cian (#00B8D9 o similar). Sin fotos, sin vídeo real, sin logos de marcas. Subtítulos palabra a palabra como en el modo humano (texto = la propia "voz", énfasis en cian en vez de rojo) y voz de equipo/voz.json.
+### Modo "dibujo" (OBLIGATORIO para reels nuevos desde el 6/11/2026 20:27; IMPLEMENTADO en hacer_reel.py el 7/11/2026)
+Dibujos animados doodle sobre papel claro, trazo negro grueso con temblor de mano y un único acento cian (#00B8D9). Todo lo dibuja el código (nada de fotos, vídeo, logos ni imágenes ajenas). Subtítulos palabra a palabra sincronizados con la voz (texto = la propia "voz"; palabra activa en cian, énfasis *así* en rojo) y voz de equipo/voz.json. Ejemplo completo de 25 s: herramientas/ejemplo_guion_dibujo.json.
 {"titulo":"Truco NNN: ...","semilla":<entero>,"modo":"dibujo","musica":true,"portada_texto":"gancho de máx. 7 palabras",
  "escenas":[{"estilo":"gancho|problema|paso|resultado|cierre","duracion":3.0,"voz":"lo que digo, con *énfasis*",
-   "texto":"(opcional) rótulo corto arriba, p. ej. «PASO 1»",
+   "texto":"(opcional) rótulo corto arriba con subrayado cian, p. ej. «PASO 1» (en el gancho sale grande: máx. 2 líneas)",
    "dibujo":{"personajes":["paco","bit"],"accion":"agobiado|explica|senala|piensa|sorprendido|celebra",
-             "objeto":"movil|portatil|correo|calendario|lista|reloj|bombilla|chat|carpeta|nada",
-             "pantalla":["texto que se escribe dentro del móvil/portátil/chat, p. ej. el prompt", "máx. 3 líneas cortas"],
-             "invitados":["chatgpt"|"claude"|"gemini"]}}]}
-- Personajes: "paco" (muñeco de palo) y "bit" (robot redondo blanco, cara-pantalla cian, ojos que parpadean). "invitados" dibuja un personaje genérico inventado con una etiqueta de texto con su nombre (nunca su logo). El trazo se dibuja solo (efecto pizarra) y los personajes se mueven siempre algo (respiración, brazos, parpadeo): nada estático más de 1 s.
-- "pantalla": el texto aparece letra a letra como si se tecleara; es lo que hace guardable el reel (el prompt o el menú exacto, comprobado en la documentación oficial).
-- Siguen valiendo "cifra", "lista" (recapitulación final de máx. 3 pasos) y "sello" (p. ej. "GRATIS", "HECHO").
-- Hasta que Mejora lo tenga en hacer_reel.py, el Creador escribe ya los guiones en este formato y GitHub no debe publicar uno con "modo":"dibujo" renderizado en otro modo (Mejora: que el render se salte el reel si no conoce el modo).
+             "objeto":"movil|portatil|chat|correo|calendario|lista|reloj|bombilla|carpeta|nada",
+             "pantalla":["texto que se teclea letra a letra dentro del móvil/portátil/chat (o en una tarjeta bajo los demás objetos)", "máx. 3-4 líneas cortas"],
+             "invitados":["chatgpt"|"claude"|"gemini"],
+             "pizarra":["texto o pasos que se dibujan trazo a trazo en una pizarra (máx. 4 líneas)"],
+             "flecha":"aquí"  (o true: flecha cian que señala el objeto, con etiqueta opcional),
+             "antes_despues":{"antes":"1 hora leyendo correos","despues":"1 minuto"}}}]}
+- Personajes fijos (semilla fija, siempre iguales): "paco" (muñeco de palo que se agobia) y "bit" (robot redondo blanco, cara-pantalla cian, parpadea y mueve la boca mientras suena la voz). Si salen los dos, Paco a la izquierda y Bit a la derecha; entran deslizándose cuando aparecen por primera vez; respiran y se balancean en reposo. Acciones: Paco → agobiado (manos a la cabeza, sudor), piensa (bocadillo «?»), sorprendido («!»), celebra (salta, estrellas); Bit → explica/senala (brazo al objeto, rayitas de voz), sorprendido, celebra. Con Bit en escena la voz es de Bit (Paco escucha); sin Bit, habla Paco.
+- "invitados": personaje genérico inventado (blob con ojitos) con una etiqueta de texto con su nombre, arriba a la derecha. Nunca un logo.
+- Zona del objeto (y 390-1000) para UNO de estos, por prioridad: "antes_despues" › "cifra" › "lista" › "pizarra" › "objeto" (≠ nada). Aparece dibujándose (barrido) en 0,5 s. Si no hay ninguno, los personajes salen más grandes y los subtítulos suben.
+- "pantalla": se teclea a 30 caracteres/s desde los 0,55 s con cursor cian; cuenta los caracteres para que quepa en la duración (p. ej. 60 caracteres → escena de ≥ 3,5 s). Es lo que hace guardable el reel (prompt o menú exacto, comprobado en la documentación oficial).
+- Siguen valiendo "cifra" (+ "unidad"), "lista" (recapitulación final de máx. 3 pasos, numerada) y "sello" (p. ej. "GRATIS", "HECHO"; cae en la esquina superior derecha del objeto; en rojo si es FALSO/NO).
+- Cámara leve (zoom/paneo por tramos de ~3 s) y corte en cada escena; música mayor y viva a ~100-110 bpm, discreta, que entra tras la primera frase; un «pop» suave en cada corte.
+- Duración: el render alarga cada escena a lo que dure su voz real (+0,45 s). Con la voz del dueño (Chatterbox) salen ~0,5 s por palabra: para un reel de ≤ 35 s, máx. ~60 palabras de voz en total.
+- Un "modo" desconocido hace fallar el render a propósito (nunca se renderiza con otro estilo).
 
 ### Modo "humano" (EN DESUSO desde el 6/11/2026 20:27; se conserva la documentación para el énfasis y los subtítulos)
 Añade "modo":"humano" al guion. Entonces hacer_reel.py NO dibuja fondos generados ni HUD: cada escena lleva fotos reales con movimiento de cámara leve y subtítulos palabra a palabra sincronizados con la voz (estimada a ~2,6 palabras/s; el texto en pantalla es la propia "voz", así que "texto" solo hace falta en el gancho y en el cierre).
