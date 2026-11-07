@@ -1,7 +1,7 @@
 {
  "tipo": "reel",
  "texto": "Cómo resumir un correo larguísimo con ChatGPT, Gemini o Claude (gratis) 📩\n\n1. Copia el hilo entero del correo.\n2. Pégalo en el chat de la IA (vale la versión gratis).\n3. Debajo escribe: «Resúmelo en 3 puntos. ¿Qué me piden y para cuándo? Escríbeme una respuesta corta».\n\nRevisa la respuesta antes de enviarla y no pegues datos sensibles (DNI, cuentas, contraseñas, datos de otros).\n¿Y el botón de resumen de Gmail? Google lo da en cuentas de pago; en cuentas gratis, de momento, solo en EE. UU.\n\nComenta RESUMEN y te mando el prompt.\nSígueme para un truco al día.\n\nComprobado en: ayuda oficial de Gmail y guía de prompts de OpenAI (nov. 2026).\nVoz: narración generada.\n\n#inteligenciaartificial #chatgpt #gmail #trucos #productividad",
- "cuando": "2026-11-08T13:40:00+01:00",
+ "cuando": "2026-11-07T21:55:00+01:00",
  "palabra_clave": "RESUMEN",
  "respuesta": "Prompt: «Resúmeme este correo en 3 puntos. Dime qué me piden y para cuándo, y escríbeme una respuesta corta y amable.» Pega el hilo debajo. Sin datos sensibles.",
  "compartir_en_feed": true,
