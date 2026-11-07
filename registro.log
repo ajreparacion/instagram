@@ -112,3 +112,22 @@
 2026-11-07 14:00  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-07 14:43  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-07 14:58  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-07 15:43  Voz chatterbox no disponible en este render (Chatterbox falló: import torch | ModuleNotFoundError: No module named 'torch'); se prueba el siguiente
+2026-11-07 15:43  Voz kokoro no disponible en este render (Kokoro falló: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ | ModuleNotFoundError: No module named 'kokoro'); se prueba el siguiente
+2026-11-07 15:43  Voz pocket no disponible en este render (Pocket TTS falló: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ | ModuleNotFoundError: No module named 'pocket_tts'); se prueba el siguiente
+2026-11-07 15:43  Voz: silencios recortados por frase (s): [0.36, 0.15, 0.34, 0.36, 0.21, 0.26]
+2026-11-07 15:43  Voz: sin alineación por palabra (mport tardío: si falta, código != 0 y se sigue sin alineación
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'faster_whisper'
+); subtítulos a ritmo estimado
+2026-11-07 15:44  014_formula_prompt: renderizado con voz y subido a la release 'cola'
+2026-11-07 15:44  Voz chatterbox no disponible en este render (Chatterbox falló: import torch | ModuleNotFoundError: No module named 'torch'); se prueba el siguiente
+2026-11-07 15:44  Voz kokoro no disponible en este render (Kokoro falló: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^ | ModuleNotFoundError: No module named 'kokoro'); se prueba el siguiente
+2026-11-07 15:44  Voz pocket no disponible en este render (Pocket TTS falló: ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ | ModuleNotFoundError: No module named 'pocket_tts'); se prueba el siguiente
+2026-11-07 15:44  Voz: silencios recortados por frase (s): [0.25, 0.26, 0.34, 0.32, 0.29, 0.5]
+2026-11-07 15:44  Voz: sin alineación por palabra (mport tardío: si falta, código != 0 y se sigue sin alineación
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ModuleNotFoundError: No module named 'faster_whisper'
+); subtítulos a ritmo estimado
+2026-11-07 15:45  015_resumir_correo: renderizado con voz y subido a la release 'cola'
+2026-11-07 15:45  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
