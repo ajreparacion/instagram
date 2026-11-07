@@ -1,0 +1,102 @@
+name: Prueba de seseo (voz del dueño con c/z de España)
+
+# Solo a mano (Actions → Prueba de seseo → Run workflow). No publica nada en Instagram.
+# Compara Chatterbox (con y sin truco «th»), Kokoro y Piper, y la conversión de timbre OpenVoice V2 (MIT) a la voz del
+# dueño. Mide θ en palabras con c/z, parecido (Resemblyzer), WER (Whisper) y variación de tono.
+# Guarda equipo/pruebas/prueba_seseo.json y sube mp3 a la release "pruebas".
+on:
+  workflow_dispatch:
+    inputs:
+      variantes:
+        description: "Variantes separadas por comas (vacío = todas): piper,kokoro,piper_ov,kokoro_ov,cb_actual,cb_theta"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: prueba-seseo
+  cancel-in-progress: true
+
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Herramientas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg espeak-ng libsndfile1 > /dev/null
+          pip install --quiet numpy
+
+      - name: Caché de modelos
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/expedientes
+            ~/.cache/huggingface
+            ~/.cache/torch
+            ~/.cache/pip
+          key: prueba-seseo-v1-${{ hashFiles('herramientas/prueba_seseo.py') }}
+          restore-keys: |
+            prueba-seseo-v1-
+            prueba-voz-v2-
+            voz-v2-
+
+      - name: Kokoro, Whisper, fonemas, Resemblyzer y librosa (CPU)
+        run: |
+          pip install --quiet torch==2.5.1 torchaudio==2.5.1 --extra-index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet kokoro soundfile librosa faster-whisper transformers phonemizer resemblyzer
+          python3 -c "import kokoro, torch, transformers, resemblyzer, phonemizer; print('OK, torch', torch.__version__)"
+
+      - name: Chatterbox (CPU, entorno propio)
+        continue-on-error: true
+        run: |
+          python -m venv ~/.venvs/chatterbox
+          ~/.venvs/chatterbox/bin/pip install --quiet --upgrade pip
+          ~/.venvs/chatterbox/bin/pip install --quiet chatterbox-tts --extra-index-url https://download.pytorch.org/whl/cpu
+          ~/.venvs/chatterbox/bin/python -c "import chatterbox.mtl_tts, torch; print('chatterbox OK, torch', torch.__version__)"
+          echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
+
+      - name: OpenVoice V2 (CPU, entorno propio)
+        continue-on-error: true
+        run: |
+          python -m venv ~/.venvs/openvoice
+          ~/.venvs/openvoice/bin/pip install --quiet --upgrade pip
+          ~/.venvs/openvoice/bin/pip install --quiet torch==2.5.1 torchaudio==2.5.1 --extra-index-url https://download.pytorch.org/whl/cpu
+          ~/.venvs/openvoice/bin/pip install --quiet "numpy<2" "librosa==0.10.1" soundfile huggingface_hub scipy tqdm \
+            pydub inflect unidecode eng_to_ipa pypinyin cn2an jieba langid
+          ~/.venvs/openvoice/bin/pip install --quiet --no-deps git+https://github.com/myshell-ai/OpenVoice.git
+          ~/.venvs/openvoice/bin/python -c "import openvoice; print('openvoice instalado en', openvoice.__file__)"
+          echo "PYTHON_OPENVOICE=$HOME/.venvs/openvoice/bin/python" >> "$GITHUB_ENV"
+
+      - name: Prueba
+        env:
+          TZ: Europe/Madrid
+        run: python3 herramientas/prueba_seseo.py "${{ inputs.variantes }}"
+
+      - name: Subir mp3 a la release "pruebas"
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ls /tmp/prueba_seseo/salida/ || exit 0
+          gh release view pruebas >/dev/null 2>&1 || gh release create pruebas --title "Pruebas de producción" --notes "Vídeos de prueba de Mejora (no se publican)."
+          gh release upload pruebas /tmp/prueba_seseo/salida/* --clobber
+
+      - name: Guardar informe
+        if: always()
+        run: |
+          git config user.name "expedientes-bot"
+          git config user.email "expedientes-bot@users.noreply.github.com"
+          git add equipo/pruebas/prueba_seseo.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -q -m "Prueba de seseo automática $(date -u +%FT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 5; done
+          exit 1
