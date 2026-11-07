@@ -1,0 +1,106 @@
+{
+  "titulo": "Truco 015: resume un correo eterno con la IA",
+  "semilla": 1501,
+  "modo": "dibujo",
+  "musica": true,
+  "portada_texto": "¿40 correos sin leer?",
+  "escenas": [
+    {
+      "estilo": "gancho",
+      "duracion": 2.5,
+      "texto": "¿40 CORREOS SIN LEER?",
+      "voz": "¿Tienes *cuarenta* correos sin leer?",
+      "dibujo": {
+        "personajes": [
+          "paco"
+        ],
+        "accion": "agobiado",
+        "objeto": "correo"
+      }
+    },
+    {
+      "estilo": "problema",
+      "duracion": 4.5,
+      "voz": "Paco abre uno de veinte respuestas. Y no sabe ni qué le piden.",
+      "dibujo": {
+        "personajes": [
+          "paco"
+        ],
+        "accion": "agobiado",
+        "objeto": "correo"
+      }
+    },
+    {
+      "estilo": "paso",
+      "duracion": 4.5,
+      "texto": "PASO 1",
+      "voz": "Bit le dice: copia el hilo y pégalo en el chat de la IA. Vale la versión gratis.",
+      "dibujo": {
+        "personajes": [
+          "bit",
+          "paco"
+        ],
+        "accion": "explica",
+        "objeto": "chat",
+        "pantalla": [
+          "(pega aquí el correo)"
+        ],
+        "invitados": [
+          "chatgpt",
+          "gemini"
+        ]
+      }
+    },
+    {
+      "estilo": "paso",
+      "duracion": 5.0,
+      "texto": "PASO 2",
+      "voz": "Y debajo escribe: resúmelo en *tres puntos*, y dime qué tengo que contestar.",
+      "dibujo": {
+        "personajes": [
+          "bit"
+        ],
+        "accion": "senala",
+        "objeto": "chat",
+        "pantalla": [
+          "Resúmelo en 3 puntos.",
+          "¿Qué me piden y para cuándo?",
+          "Escríbeme una respuesta corta."
+        ]
+      }
+    },
+    {
+      "estilo": "resultado",
+      "duracion": 4.5,
+      "voz": "Diez segundos, y Paco ya sabe qué hacer. Eso sí: no pegues datos sensibles.",
+      "dibujo": {
+        "personajes": [
+          "paco",
+          "bit"
+        ],
+        "accion": "celebra",
+        "objeto": "chat"
+      },
+      "sello": "HECHO"
+    },
+    {
+      "estilo": "cierre",
+      "duracion": 4.0,
+      "texto": "COMENTA «RESUMEN»",
+      "voz": "Comenta *RESUMEN* y te mando el prompt.",
+      "dibujo": {
+        "personajes": [
+          "bit",
+          "paco"
+        ],
+        "accion": "celebra",
+        "objeto": "nada"
+      },
+      "lista": [
+        "Copia el hilo",
+        "Pégalo en la IA",
+        "Pide 3 puntos y respuesta"
+      ]
+    }
+  ]
+}
