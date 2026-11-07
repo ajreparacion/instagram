@@ -7,9 +7,9 @@
   "escenas": [
     {
       "estilo": "gancho",
-      "duracion": 3.5,
+      "duracion": 3.0,
       "texto": "3 COSAS GRATIS",
-      "voz": "Claude hace *tres* cosas gratis. Y casi nadie las usa.",
+      "voz": "Claude hace *tres* cosas gratis que casi nadie usa.",
       "dibujo": {
         "personajes": [
           "bit",
@@ -24,8 +24,8 @@
     },
     {
       "estilo": "problema",
-      "duracion": 3.5,
-      "voz": "Paco solo le hace preguntas sueltas. Y cada día empieza de cero.",
+      "duracion": 3.0,
+      "voz": "Paco cada día empieza de cero.",
       "dibujo": {
         "personajes": [
           "paco"
@@ -43,9 +43,9 @@
     },
     {
       "estilo": "paso",
-      "duracion": 6.5,
+      "duracion": 5.0,
       "texto": "1 · PROYECTOS",
-      "voz": "Uno: *Proyectos*. Subes tus documentos e instrucciones una vez y los tiene en cada chat. Gratis, hasta cinco.",
+      "voz": "Uno: *Proyectos*. Subes tus documentos una vez y los usa en cada chat.",
       "dibujo": {
         "personajes": [
           "bit",
@@ -62,9 +62,9 @@
     },
     {
       "estilo": "paso",
-      "duracion": 5.5,
+      "duracion": 4.5,
       "texto": "2 · TABLAS Y PLANTILLAS",
-      "voz": "Dos: pídele una tabla o una plantilla. Te la abre al lado, lista para usar.",
+      "voz": "Dos: pídele una tabla o una plantilla y te la abre al lado.",
       "dibujo": {
         "personajes": [
           "bit"
@@ -79,9 +79,9 @@
     },
     {
       "estilo": "paso",
-      "duracion": 6.0,
+      "duracion": 4.5,
       "texto": "3 · MEMORIA",
-      "voz": "Tres: la *memoria*. Recuerda lo importante entre chats. Está en Configuración, Tu Claude.",
+      "voz": "Tres: la *memoria*. Recuerda lo importante entre chats.",
       "dibujo": {
         "personajes": [
           "bit",
@@ -100,7 +100,7 @@
       "estilo": "cierre",
       "duracion": 5.0,
       "texto": "COMENTA «CLAUDE»",
-      "voz": "Paco ya no empieza de cero. Comenta *CLAUDE* y te mando los pasos.",
+      "voz": "Comenta *CLAUDE* y te mando los pasos.",
       "dibujo": {
         "personajes": [
           "paco",
