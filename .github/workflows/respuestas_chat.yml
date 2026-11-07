@@ -1,10 +1,10 @@
 name: Respuestas del chat (ice breakers)
 
-# Cada 15 minutos revisa los chats de Instagram y contesta a quien haya pulsado una de las
+# Cada 30 minutos revisa los chats de Instagram y contesta a quien haya pulsado una de las
 # 4 preguntas de bienvenida. Usa el secreto PAGE_TOKEN; no escribe nada en el repositorio.
 on:
   schedule:
-    - cron: "*/15 * * * *"
+    - cron: "*/30 * * * *"
   workflow_dispatch:
 
 permissions:
