@@ -1,28 +1,28 @@
 {
-  "tipo": "reel",
-  "texto": "Cómo resumir un correo larguísimo con ChatGPT, Gemini o Claude (gratis) 📩\n\n1. Copia el hilo entero del correo.\n2. Pégalo en el chat de la IA (vale la versión gratis).\n3. Debajo escribe: «Resúmelo en 3 puntos. ¿Qué me piden y para cuándo? Escríbeme una respuesta corta».\n\nRevisa la respuesta antes de enviarla y no pegues datos sensibles (DNI, cuentas, contraseñas, datos de otros).\n¿Y el botón de resumen de Gmail? Google lo da en cuentas de pago; en cuentas gratis, de momento, solo en EE. UU.\n\nComenta RESUMEN y te mando el prompt.\nSígueme para un truco al día.\n\nComprobado en: ayuda oficial de Gmail y guía de prompts de OpenAI (nov. 2026).\nVoz: narración generada.\n\n#inteligenciaartificial #chatgpt #gmail #trucos #productividad",
-  "cuando": "2026-11-08T13:40:00+01:00",
-  "palabra_clave": "RESUMEN",
-  "respuesta": "Prompt: «Resúmeme este correo en 3 puntos. Dime qué me piden y para cuándo, y escríbeme una respuesta corta y amable.» Pega el hilo debajo. Sin datos sensibles.",
-  "compartir_en_feed": true,
-  "portada_ms": 1200,
-  "prueba_no_seguidores": true,
-  "_fuentes": [
-    "https://support.google.com/mail/answer/16831098",
-    "https://support.google.com/mail/answer/14925782",
-    "https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt"
-  ],
-  "_comprobado": "7/11/2026: support.google.com/mail/answer/16831098: «availability is currently limited to the US for users with personal Gmail accounts without a paid plan» (resúmenes de conversación con IA, web/iOS/Android, en español con plan de pago). Por eso el truco no usa el botón de Gmail sino copiar el hilo en el chat gratis de la IA (técnica, sin menús que puedan cambiar).",
-  "_nota_creador": "Plan 8/11 13:40 (pregunta, prueba para no seguidores). Cambio de tema: el resumen de Gemini en Gmail no es gratis en España; se sustituye por resumir el hilo en el chat de la IA. Palabra clave RESUMEN en vez de GMAIL (más clara para el prompt que se manda).",
-  "_autoevaluacion": {
-    "gancho": 21,
-    "truco_valor": 20,
-    "retencion": 18,
-    "estilo": 13,
-    "cta_monetizacion": 9,
-    "total": 81
-  },
-  "motor_voz": "chatterbox",
-  "renderizado": "2026-11-07T15:10:13+00:00",
-  "asset": "015_resumir_correo.mp4"
+ "tipo": "reel",
+ "texto": "Cómo resumir un correo larguísimo con ChatGPT, Gemini o Claude (gratis) 📩\n\n1. Copia el hilo entero del correo.\n2. Pégalo en el chat de la IA (vale la versión gratis).\n3. Debajo escribe: «Resúmelo en 3 puntos. ¿Qué me piden y para cuándo? Escríbeme una respuesta corta».\n\nRevisa la respuesta antes de enviarla y no pegues datos sensibles (DNI, cuentas, contraseñas, datos de otros).\n¿Y el botón de resumen de Gmail? Google lo da en cuentas de pago; en cuentas gratis, de momento, solo en EE. UU.\n\nComenta RESUMEN y te mando el prompt.\nSígueme para un truco al día.\n\nComprobado en: ayuda oficial de Gmail y guía de prompts de OpenAI (nov. 2026).\nVoz: narración generada.\n\n#inteligenciaartificial #chatgpt #gmail #trucos #productividad",
+ "cuando": "2026-11-08T13:40:00+01:00",
+ "palabra_clave": "RESUMEN",
+ "respuesta": "Prompt: «Resúmeme este correo en 3 puntos. Dime qué me piden y para cuándo, y escríbeme una respuesta corta y amable.» Pega el hilo debajo. Sin datos sensibles.",
+ "compartir_en_feed": true,
+ "portada_ms": 1200,
+ "prueba_no_seguidores": true,
+ "_fuentes": [
+  "https://support.google.com/mail/answer/16831098",
+  "https://support.google.com/mail/answer/14925782",
+  "https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt"
+ ],
+ "_comprobado": "7/11/2026: support.google.com/mail/answer/16831098: «availability is currently limited to the US for users with personal Gmail accounts without a paid plan» (resúmenes de conversación con IA, web/iOS/Android, en español con plan de pago). Por eso el truco no usa el botón de Gmail sino copiar el hilo en el chat gratis de la IA (técnica, sin menús que puedan cambiar).",
+ "_nota_creador": "Plan 8/11 13:40 (pregunta, prueba para no seguidores). Cambio de tema: el resumen de Gemini en Gmail no es gratis en España; se sustituye por resumir el hilo en el chat de la IA. Palabra clave RESUMEN en vez de GMAIL (más clara para el prompt que se manda).",
+ "_autoevaluacion": {
+  "gancho": 21,
+  "truco_valor": 20,
+  "retencion": 18,
+  "estilo": 13,
+  "cta_monetizacion": 9,
+  "total": 81
+ },
+ "motor_voz": "chatterbox",
+ "renderizado": "2026-11-07T15:10:13+00:00",
+ "asset": "015_resumir_correo.mp4"
 }
