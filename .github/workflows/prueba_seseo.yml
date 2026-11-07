@@ -35,20 +35,6 @@ jobs:
           sudo apt-get install -y -qq ffmpeg espeak-ng libsndfile1 > /dev/null
           pip install --quiet numpy
 
-      - name: Caché de modelos
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.cache/expedientes
-            ~/.cache/huggingface
-            ~/.cache/torch
-            ~/.cache/pip
-          key: prueba-seseo-v2-${{ hashFiles('herramientas/prueba_seseo.py') }}
-          restore-keys: |
-            prueba-seseo-v2-
-            prueba-voz-v2-
-            voz-v2-
-
       - name: Kokoro, Whisper, fonemas, Resemblyzer y librosa (CPU)
         run: |
           pip install --quiet torch torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
