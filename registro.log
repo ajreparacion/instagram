@@ -146,3 +146,4 @@ ModuleNotFoundError: No module named 'faster_whisper'
 2026-11-07 18:08  016_filtro_facturas: renderizado con voz y subido a la release 'cola'
 2026-11-07 18:08  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-07 18:08  Estadísticas actualizadas (0 posts, 1604 seguidores)
+2026-11-07 20:39  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
