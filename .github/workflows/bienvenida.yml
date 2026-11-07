@@ -1,0 +1,20 @@
+name: Bienvenida del chat (ice breakers)
+
+# Solo a mano. Configura las 4 preguntas frecuentes del chat de Instagram (Graph API, messenger_profile).
+# Usa el secreto PAGE_TOKEN; no escribe nada en el repositorio.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  ice-breakers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configurar y comprobar
+        env:
+          PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+        run: python3 herramientas/bienvenida.py
