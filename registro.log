@@ -110,3 +110,4 @@
 2026-11-07 13:59  Voz: alineación palabra a palabra (small, 17.8 s): 6/6 frases
 2026-11-07 14:00  016_filtro_facturas: renderizado con voz y subido a la release 'cola'
 2026-11-07 14:00  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-07 14:43  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
