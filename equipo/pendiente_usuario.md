@@ -17,5 +17,6 @@ El equipo hace todo lo demás solo. Estas tareas necesitan la identidad, los dat
    - **Foto**: la cara de Bit (la prepara el equipo de diseño). **Destacadas**: `EMPIEZA`, `PROMPTS`, `CORREO`, `MÓVIL`, `GRATIS`, `APPS`.
    - **YouTube Shorts**: si quieres publicación cruzada, crea (o indica) un canal de YouTube y autoriza el acceso; el equipo prepara el resto.
 4. **(Opcional) Buzzfy, reels de prueba automáticos**: Buzzfy tiene el reparto de reels de prueba en pausa ("no se ha activado el compartir"). Se activa desde el panel de Buzzfy y puede requerir plan de pago. No es imprescindible: nuestro sistema ya publica reels de prueba por su cuenta desde el 5/11.
+5. **(7/11/2026)** Preguntas frecuentes del chat bloqueadas: Meta devuelve error 100/2534013 (página no vinculada a cuenta profesional de Instagram desde el token PAGE_TOKEN). Diagnóstico: workflow «Diagnóstico de vinculación (página ↔ Instagram)».
 
 Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11/2026).
