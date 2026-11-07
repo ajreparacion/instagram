@@ -3,6 +3,7 @@
 
 Compara formas de tener la voz del dueño con «c/z» de España (θ), sin seseo:
   cb_actual     Chatterbox es-es con la voz del dueño (lo que hay en producción) = control con seseo.
+  cb_griego     lo mismo, escribiendo θ (letra griega) donde España dice θ.
   cb_theta      lo mismo, pero el texto se escribe con «th» donde España dice θ (hace→hathe, gracias→grathias).
   kokoro        Kokoro em_alex (espeak-ng «es» = castellano) tal cual.
   kokoro_ov     Kokoro → OpenVoice V2 (timbre del dueño).
@@ -45,11 +46,14 @@ PALABRAS = {"hace": 1, "gracias": 1, "cerveza": 2, "zapato": 1, "cielo": 1, "pla
 PORTADOR = "Mira, {}."
 
 
-def a_theta(t):
-    """Escribe con «th» lo que en España suena θ: c ante e/i y z. (Truco para modelos que sesean.)"""
-    t = re.sub(r"c(?=[eiéí])", "th", t)
-    t = re.sub(r"C(?=[eiéí])", "Th", t)
-    t = t.replace("z", "th").replace("Z", "Th")
+def a_theta(t, modo="th"):
+    """Escribe de otra forma lo que en España suena θ (c ante e/i y z), para modelos que sesean.
+    modo "th": con «th» (hace → hathe). Medido el 7/11: WER 15 %, «gratias», «terveta»: no vale.
+    modo "griego": con la letra griega θ (hace → haθe); el tokenizador multilingüe de Chatterbox incluye el griego."""
+    t1, t2 = ("th", "Th") if modo == "th" else ("θ", "Θ")
+    t = re.sub(r"c(?=[eiéí])", t1, t)
+    t = re.sub(r"C(?=[eiéí])", t2, t)
+    t = t.replace("z", t1).replace("Z", t2)
     return t
 
 
@@ -105,12 +109,13 @@ def nombres_wav(carpeta):
 
 
 def sintetizar_chatterbox(carpeta, theta):
+    """theta: False | "th" | "griego" (ver a_theta)."""
     if not PY_CB:
         raise RuntimeError("sin entorno de Chatterbox (PYTHON_CHATTERBOX)")
     sw, pw = nombres_wav(carpeta)
     textos = textos_prueba()
     if theta:
-        textos = [a_theta(t) for t in textos]
+        textos = [a_theta(t, "th" if theta is True else theta) for t in textos]
     lote = {"modelo": "es-es", "idioma": "es", "exageracion": 0.65, "cfg": 0.45, "temperatura": 0.65,
             "referencia": REF, "ganancia": 1.0, "semilla": 7,
             "frases": [{"texto": t, "salida": s} for t, s in zip(textos, sw + pw)]}
@@ -336,7 +341,8 @@ def main():
     variante("piper_ov", con_ov("piper", sintetizar_piper))
     variante("kokoro_ov", con_ov("kokoro", sintetizar_kokoro))
     variante("cb_actual", lambda c: sintetizar_chatterbox(c, False))
-    variante("cb_theta", lambda c: sintetizar_chatterbox(c, True))
+    variante("cb_theta", lambda c: sintetizar_chatterbox(c, "th"))
+    variante("cb_griego", lambda c: sintetizar_chatterbox(c, "griego"))
 
     json.dump(informe, open(INFORME, "w"), ensure_ascii=False, indent=1)
     print(json.dumps({k: {x: v.get(x) for x in ("theta_pct", "parecido_ref", "wer", "error")}

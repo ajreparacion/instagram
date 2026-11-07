@@ -52,11 +52,17 @@ def main():
     raiz = snapshot_download("myshell-ai/OpenVoiceV2", allow_patterns=["converter/*"])
     cfg = os.path.join(raiz, "converter", "config.json")
     ckpt = os.path.join(raiz, "converter", "checkpoint.pth")
+    # OpenVoice importa wavmark (marca de agua) siempre; aqui se sustituye por un módulo vacío y se apaga la marca.
+    import types
+
+    class _Nada:
+        def to(self, *a, **k): return self
+        def eval(self): return self
+
+    sys.modules.setdefault("wavmark", types.SimpleNamespace(load_model=lambda *a, **k: _Nada()))
     TCC = importar_openvoice()
-    try:
-        conv = TCC(cfg, device="cpu", enable_watermark=False)
-    except TypeError:
-        conv = TCC(cfg, device="cpu")
+    conv = TCC(cfg, device="cpu")
+    conv.watermark_model = None
     conv.load_ckpt(ckpt)
     carga = time.time() - t0
     tgt = conv.extract_se([lote["referencia"]])
