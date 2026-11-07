@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
     inputs:
       variantes:
-        description: "Variantes separadas por comas (vacío = todas): piper,kokoro,piper_ov,kokoro_ov,cb_actual,cb_theta"
+        description: "Variantes separadas por comas (vacío = todas): piper,kokoro,piper_ov,kokoro_ov,cb_actual,cb_theta,cb_griego"
         default: ""
 
 permissions:
@@ -43,15 +43,15 @@ jobs:
             ~/.cache/huggingface
             ~/.cache/torch
             ~/.cache/pip
-          key: prueba-seseo-v1-${{ hashFiles('herramientas/prueba_seseo.py') }}
+          key: prueba-seseo-v2-${{ hashFiles('herramientas/prueba_seseo.py') }}
           restore-keys: |
-            prueba-seseo-v1-
+            prueba-seseo-v2-
             prueba-voz-v2-
             voz-v2-
 
       - name: Kokoro, Whisper, fonemas, Resemblyzer y librosa (CPU)
         run: |
-          pip install --quiet torch==2.5.1 torchaudio==2.5.1 --extra-index-url https://download.pytorch.org/whl/cpu
+          pip install --quiet torch torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
           pip install --quiet kokoro soundfile librosa faster-whisper transformers phonemizer resemblyzer
           python3 -c "import kokoro, torch, transformers, resemblyzer, phonemizer; print('OK, torch', torch.__version__)"
 
@@ -69,7 +69,7 @@ jobs:
         run: |
           python -m venv ~/.venvs/openvoice
           ~/.venvs/openvoice/bin/pip install --quiet --upgrade pip
-          ~/.venvs/openvoice/bin/pip install --quiet torch==2.5.1 torchaudio==2.5.1 --extra-index-url https://download.pytorch.org/whl/cpu
+          ~/.venvs/openvoice/bin/pip install --quiet torch torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
           ~/.venvs/openvoice/bin/pip install --quiet "numpy<2" "librosa==0.10.1" soundfile huggingface_hub scipy tqdm \
             pydub inflect unidecode eng_to_ipa pypinyin cn2an jieba langid
           ~/.venvs/openvoice/bin/pip install --quiet --no-deps git+https://github.com/myshell-ai/OpenVoice.git
