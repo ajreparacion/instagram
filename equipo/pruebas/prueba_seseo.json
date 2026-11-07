@@ -1,0 +1,174 @@
+{
+ "fecha": "2026-11-07 12:58 UTC",
+ "frases": [
+  "¿Sabías que puedes hacer un resumen de cien correos en cinco minutos?",
+  "Gracias a la inteligencia artificial, esto ya no cuesta nada.",
+  "Pídele a Claude que ordene tus facturas y te diga cuáles hay que pagar hoy.",
+  "Cerveza, zapatos, azúcar… da igual lo que busques: lo encuentra al instante.",
+  "Y lo mejor: no necesitas saber programar, solo escribir con calma lo que quieres.",
+  "Comenta la palabra CLAUDE y te mando la guía completa."
+ ],
+ "palabras": {
+  "hace": 1,
+  "gracias": 1,
+  "cerveza": 2,
+  "zapato": 1,
+  "cielo": 1,
+  "plaza": 1,
+  "cinco": 1,
+  "azúcar": 1
+ },
+ "variantes": {
+  "piper": {
+   "sintesis": {
+    "total_s": 3.7
+   },
+   "textos": [
+    "¿Sabías que puedes hacer un resumen de cien correos en cinco minutos?",
+    "Gracias a la inteligencia artificial, esto ya no cuesta nada.",
+    "Pídele a Claude que ordene tus facturas y te diga cuáles hay que pagar hoy.",
+    "Cerveza, zapatos, azúcar… da igual lo que busques: lo encuentra al instante.",
+    "Y lo mejor: no necesitas saber programar, solo escribir con calma lo que quieres.",
+    "Comenta la palabra CLAUDE y te mando la guía completa."
+   ],
+   "prosodia": {
+    "f0_mediana_hz": 123.5,
+    "tono_desv_st": 2.37,
+    "tono_rango_st": 5.8,
+    "duracion_s": 24.19
+   },
+   "transcripcion": "¿Sabías que puedes hacer un resumen de 100 correos en 5 minutos? Gracias a la inteligencia artificial, esto ya no cuesta nada. Pídile a Claudio que ordene tus facturas y te diga cuáles hay que parar hoy. Cerveza, zapatos, azúcar, da igual lo que busques, lo encuentra al instante. Y lo mejor, no necesitas saber programa, solo escribir con calma lo que quieres. Pomenta la palabra Claudio y te mando la guía completa.",
+   "wer": 0.11,
+   "parecido_ref": 0.674,
+   "parecido_larga": 0.676,
+   "total_s": 10.1
+  },
+  "kokoro": {
+   "error": "voz_kokoro.py falló: utils.py\", line 2423, in requires_backends\n    raise ImportError(\"\".join(failed))\nImportError: \nCustomAlbert requires PyTorch >= 2.6, but PyTorch was not found or an older version is installed.\nPlease install or upgrade PyTorch by following the instructions on the installation page:\nhttps://pytorch.org/get-started/locally/\nPlease note that you may need to restart your runtime after installation.\n\n",
+   "total_s": 2.4
+  },
+  "piper_ov": {
+   "error": "conv_openvoice.py falló: ramientas/conv_openvoice.py\", line 78, in <module>\n    main()\n  File \"/home/runner/work/instagram/instagram/herramientas/conv_openvoice.py\", line 59, in main\n    conv = TCC(cfg, device=\"cpu\")\n           ^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/runner/.venvs/openvoice/lib/python3.11/site-packages/openvoice/api.py\", line 106, in __init__\n    import wavmark\nModuleNotFoundError: No module named 'wavmark'\n",
+   "total_s": 5.5
+  },
+  "kokoro_ov": {
+   "error": "voz_kokoro.py falló: utils.py\", line 2423, in requires_backends\n    raise ImportError(\"\".join(failed))\nImportError: \nCustomAlbert requires PyTorch >= 2.6, but PyTorch was not found or an older version is installed.\nPlease install or upgrade PyTorch by following the instructions on the installation page:\nhttps://pytorch.org/get-started/locally/\nPlease note that you may need to restart your runtime after installation.\n\n",
+   "total_s": 2.3
+  },
+  "cb_actual": {
+   "sintesis": {
+    "modelo_usado": "es-es",
+    "referencia": true,
+    "avisos": [],
+    "carga_s": 54.0,
+    "frases_s": [
+     40.39,
+     33.66,
+     33.06,
+     37.63,
+     35.25,
+     30.77,
+     15.93,
+     16.59,
+     17.62,
+     17.11,
+     20.15,
+     22.29,
+     17.84,
+     23.51
+    ],
+    "total_s": 415.8,
+    "sample_rate": 24000,
+    "ajustes": {
+     "language_id": "es",
+     "exaggeration": 0.65,
+     "cfg_weight": 0.45,
+     "temperature": 0.65
+    }
+   },
+   "textos": [
+    "¿Sabías que puedes hacer un resumen de cien correos en cinco minutos?",
+    "Gracias a la inteligencia artificial, esto ya no cuesta nada.",
+    "Pídele a Claude que ordene tus facturas y te diga cuáles hay que pagar hoy.",
+    "Cerveza, zapatos, azúcar… da igual lo que busques: lo encuentra al instante.",
+    "Y lo mejor: no necesitas saber programar, solo escribir con calma lo que quieres.",
+    "Comenta la palabra CLAUDE y te mando la guía completa."
+   ],
+   "prosodia": {
+    "f0_mediana_hz": 88.4,
+    "tono_desv_st": 3.77,
+    "tono_rango_st": 10.1,
+    "duracion_s": 32.0
+   },
+   "transcripcion": "¿Sabías que puedes hacer un resumen de 100 correos en 5 minutos? Gracias a la Inteligencia Artificial, esto ya no cuesta nada. Pídele a Claude que ordene tus facturas y te diga cuál es hay que pagar hoy. Cerveza, zapatos, azúcar, da igual lo que busques, lo encuentra al instante. Y lo mejor, no necesitas saber programar, solo escribir con calma lo que quieres. Comenta la palabra Claude y te mando la guía completa.",
+   "wer": 0.055,
+   "parecido_ref": 0.956,
+   "parecido_larga": 0.963,
+   "total_s": 423.3
+  },
+  "cb_theta": {
+   "sintesis": {
+    "modelo_usado": "es-es",
+    "referencia": true,
+    "avisos": [
+     "frases regeneradas por duración anómala: [{'texto': 'Mira, thielo.', 'dur': 3.16, 'esperado': 1.91}]"
+    ],
+    "carga_s": 11.3,
+    "frases_s": [
+     32.47,
+     33.0,
+     35.47,
+     33.96,
+     34.63,
+     32.14,
+     14.96,
+     16.15,
+     21.29,
+     16.21,
+     42.61,
+     19.85,
+     15.94,
+     20.42
+    ],
+    "total_s": 380.4,
+    "sample_rate": 24000,
+    "ajustes": {
+     "language_id": "es",
+     "exaggeration": 0.65,
+     "cfg_weight": 0.45,
+     "temperature": 0.65
+    }
+   },
+   "textos": [
+    "¿Sabías que puedes hather un resumen de thien correos en thinco minutos?",
+    "Grathias a la inteligenthia artifithial, esto ya no cuesta nada.",
+    "Pídele a Claude que ordene tus facturas y te diga cuáles hay que pagar hoy.",
+    "Thervetha, thapatos, athúcar… da igual lo que busques: lo encuentra al instante.",
+    "Y lo mejor: no nethesitas saber programar, solo escribir con calma lo que quieres.",
+    "Comenta la palabra CLAUDE y te mando la guía completa."
+   ],
+   "prosodia": {
+    "f0_mediana_hz": 82.4,
+    "tono_desv_st": 5.76,
+    "tono_rango_st": 12.24,
+    "duracion_s": 31.64
+   },
+   "transcripcion": "¿Sabías que puedes hadar un resumen de 10 correos en 5 minutos? ¡Que gratias a la Inteligencia Artificial! Esto ya no cuesta nada. Mmm, pídele a Claude que ordene tus facturas y te diga cuáles hay que pagar hoy. Terveta, zapatos, a tu car, da igual lo que busques, lo encuentras al instante. Y lo mejor, no necesitas saber programar, solo escribir con calma lo que quieres. Comenta la palabra Claude y te mando la guía completa.",
+   "wer": 0.151,
+   "parecido_ref": 0.953,
+   "parecido_larga": 0.956,
+   "total_s": 387.9
+  }
+ },
+ "avisos_medidor": {
+  "fonemas": "ec2ForCTC requires PyTorch >= 2.6, but PyTorch was not found or an older version is installed.\nPlease install or upgrade PyTorch by following the instructions on the installation page:\nhttps://pytorch.org/get-started/locally/\nPlease note that you may need to restart your runtime after installation.\n"
+ },
+ "dueno_referencia": {
+  "prosodia": {
+   "f0_mediana_hz": 89.9,
+   "tono_desv_st": 4.79,
+   "tono_rango_st": 12.3,
+   "duracion_s": 28.13
+  }
+ }
+}
