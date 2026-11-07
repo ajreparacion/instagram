@@ -3,7 +3,7 @@
   "escena": 0,
   "estilo": "gancho",
   "inicio": 0.0,
-  "duracion": 3.633,
+  "duracion": 2.5,
   "texto": "¿Tienes cuarenta correos sin leer?",
   "enfasis": [
    1
@@ -12,7 +12,7 @@
  {
   "escena": 1,
   "estilo": "problema",
-  "inicio": 3.633,
+  "inicio": 2.5,
   "duracion": 4.5,
   "texto": "Paco abre uno de veinte respuestas. Y no sabe ni qué le piden.",
   "enfasis": []
@@ -20,16 +20,16 @@
  {
   "escena": 2,
   "estilo": "paso",
-  "inicio": 8.133,
-  "duracion": 6.0,
+  "inicio": 7.0,
+  "duracion": 5.6,
   "texto": "Bit le dice: copia el hilo y pégalo en el chat de la IA. Vale la versión gratis.",
   "enfasis": []
  },
  {
   "escena": 3,
   "estilo": "paso",
-  "inicio": 14.133,
-  "duracion": 5.633,
+  "inicio": 12.6,
+  "duracion": 5.0,
   "texto": "Y debajo escribe: resúmelo en tres puntos, y dime qué tengo que contestar.",
   "enfasis": [
    5,
@@ -39,15 +39,15 @@
  {
   "escena": 4,
   "estilo": "resultado",
-  "inicio": 19.767,
-  "duracion": 6.2,
+  "inicio": 17.6,
+  "duracion": 5.633,
   "texto": "Diez segundos, y Paco ya sabe qué hacer. Eso sí: no pegues datos sensibles.",
   "enfasis": []
  },
  {
   "escena": 5,
   "estilo": "cierre",
-  "inicio": 25.967,
+  "inicio": 23.233,
   "duracion": 4.0,
   "texto": "Comenta RESUMEN y te mando el prompt.",
   "enfasis": [
