@@ -884,6 +884,34 @@ def subir_y_esperar(cfg, cid, video, uri=None):
     esperar_contenedor(cfg, cid)
 
 
+class _SinRedireccion(urllib.request.HTTPRedirectHandler):
+    def redirect_request(self, *a, **k):
+        return None
+
+
+def url_directa_release(nombre):
+    """URL directa (firmada, sin redirección) del asset de la release 'cola'. Solo funciona con el repo PÚBLICO.
+    Instagram descarga el vídeo desde ahí con video_url. La firma dura minutos: se pide justo antes de usarla."""
+    repo = os.environ.get("GITHUB_REPOSITORY", "ajreparacion/instagram")
+    url = f"https://github.com/{repo}/releases/download/{RELEASE}/{urllib.parse.quote(nombre)}"
+    opener = urllib.request.build_opener(_SinRedireccion)
+    try:
+        opener.open(urllib.request.Request(url, method="HEAD"), timeout=60)
+        return url
+    except urllib.error.HTTPError as e:
+        if e.code in (301, 302, 303, 307, 308) and e.headers.get("Location"):
+            return e.headers["Location"]
+        raise ErrorAPI(f"el vídeo no es descargable desde la release ({e.code}); ¿el repositorio es privado?")
+
+
+def crear_contenedor_url(cfg, params, video):
+    p = {k: v for k, v in params.items() if k != "upload_type"}
+    p["video_url"] = url_directa_release(os.path.basename(video))
+    r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **p)
+    esperar_contenedor(cfg, r["id"])
+    return r["id"]
+
+
 def publicar_reel(cfg, video, post):
     params = {"media_type": "REELS", "upload_type": "resumable",
               "caption": con_atribucion(post.get("texto", ""), post.get("motor_voz")),
@@ -910,15 +938,29 @@ def publicar_reel(cfg, video, post):
         subir_y_esperar(cfg, cid, video, r.get("uri"))
     except ErrorAPI as e:
         if "trial_params" not in params:
-            raise
+            # 7/11/2026: en la nube la subida «resumable» falla siempre con ProcessingFailedError (010 y 014).
+            # Plan B: Instagram descarga el vídeo él mismo desde la release (video_url; necesita repo público).
+            log(f"subida directa fallida ({str(e)[-120:]}); se reintenta con video_url desde la release")
+            cid = crear_contenedor_url(cfg, params, video)
+            mid = api(cfg, f"{cfg['ig_user_id']}/media_publish", "POST", creation_id=cid)["id"]
+            enlace = ""
+            try:
+                enlace = api(cfg, mid, fields="permalink").get("permalink", "")
+            except ErrorAPI:
+                pass
+            return {"media_id": mid, "enlace": enlace, "prueba_no_seguidores": False, "metodo": "video_url"}
         # 6/11/2026: el 010 (reel de prueba) falló en la subida con «ProcessingFailedError: Request processing
         # failed». Si el contenedor de prueba no procesa el vídeo, se reintenta al momento como reel normal.
         log(f"reel de prueba: fallo al subir/procesar ({str(e)[-160:]}); se publica como reel normal")
         params.pop("trial_params")
         prueba = None
-        r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **params)
-        cid = r["id"]
-        subir_y_esperar(cfg, cid, video, r.get("uri"))
+        try:
+            r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **params)
+            cid = r["id"]
+            subir_y_esperar(cfg, cid, video, r.get("uri"))
+        except ErrorAPI as e2:
+            log(f"subida directa fallida ({str(e2)[-120:]}); se reintenta con video_url desde la release")
+            cid = crear_contenedor_url(cfg, params, video)
     mid = api(cfg, f"{cfg['ig_user_id']}/media_publish", "POST", creation_id=cid)["id"]
     enlace = ""
     try:
