@@ -310,12 +310,16 @@ class TextBlock:
 # el texto entero desde el primer fotograma; "texto" en las demas escenas = rotulo corto fijo arriba.
 # Musica discreta (-31 LUFS antes de la voz), sin lecho de tension, sin golpes ni subidas.
 # Con "modo" ausente o distinto, todo se comporta exactamente como antes.
-MODO = {"humano": False, "dibujo": False}
+MODO = {"humano": False, "dibujo": False, "app": False}
 SEMILLA = {"v": 1}
 
 def modo_suave():
     """Modos sin HUD ni tension (humano y dibujo): musica discreta, sin bombo ni golpes."""
-    return MODO["humano"] or MODO["dibujo"]
+    return MODO["humano"] or MODO["dibujo"] or MODO["app"]
+
+def modo_alegre():
+    """Musica mayor y viva (dibujo y app)."""
+    return MODO["dibujo"] or MODO["app"]
 AMARILLO = (255, 212, 0)
 WPS_HUMANO = 2.6          # palabras por segundo de la voz (misma cifra que usa main() para la duracion minima)
 CACHE_IMG = os.path.expanduser("~/.cache/expedientes/imagenes")
@@ -428,7 +432,10 @@ def sonda_video(path):
 class Clip:
     """Fotogramas de un clip de video ya encajados en el lienzo (algo mayor, como las fotos, para el zoom/paneo).
     Se extraen con ffmpeg a JPEG en una carpeta temporal; frame(i) devuelve el fotograma i (el ultimo si se acaba)."""
-    def __init__(self, path, inicio, dur, zoom_max=1.10):
+    def __init__(self, path, inicio, dur, zoom_max=1.10, velocidad=1.0, bucle=True, app=False):
+        # velocidad > 1 acelera el clip (modo app: el tramo dura lo que su voz); bucle=False congela el ultimo
+        # fotograma si el video se acaba; app=True encaja sin desenfoque (vertical a pantalla completa, apaisado a
+        # APP_VID_W de ancho para enmarcarlo sobre papel).
         self.ok = False
         info = sonda_video(path)
         if not info or info[0] < 16 or info[1] < 16: return
@@ -441,16 +448,21 @@ class Clip:
         if total > 0.5 and inicio >= total - 0.3: inicio = 0.0
         need = dur + 0.25
         vert = w / h < 0.62 * 1.25
-        encaje = ("scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d" % (tw, th, tw, th)) if vert else (
-            "split[a][b];[a]scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d,gblur=sigma=28,"
-            "eq=brightness=-0.28[bg];[b]scale=%d:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2" % (tw, th, tw, th, tw))
+        if app:
+            encaje = ("scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d" % (W, H, W, H)) if vert else ("scale=%d:-2" % APP_VID_W)
+        else:
+            encaje = ("scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d" % (tw, th, tw, th)) if vert else (
+                "split[a][b];[a]scale=%d:%d:force_original_aspect_ratio=increase,crop=%d:%d,gblur=sigma=28,"
+                "eq=brightness=-0.28[bg];[b]scale=%d:-2[fg];[bg][fg]overlay=(W-w)/2:(H-h)/2" % (tw, th, tw, th, tw))
+        vel = max(0.25, float(velocidad or 1.0))
+        ritmo = ("setpts=PTS/%.4f," % vel) if abs(vel - 1.0) > 0.001 else ""
         self.dir = tempfile.mkdtemp(prefix="clip_")
         CLIP_DIRS.append(self.dir)   # se borran al terminar (atexit)
         cmd = [FFMPEG, "-y", "-loglevel", "error"]
-        if total > 0.5 and total - inicio < need:   # clip corto: se repite en bucle para llenar la escena
+        if bucle and total > 0.5 and total - inicio < need * vel:   # clip corto: se repite en bucle para llenar la escena
             cmd += ["-stream_loop", "-1"]
-        cmd += ["-i", path, "-ss", "%.3f" % inicio, "-t", "%.3f" % need, "-an",
-                "-filter_complex", "[0:v]" + encaje + ",fps=%d,format=yuv420p[v]" % FPS, "-map", "[v]",
+        cmd += ["-i", path, "-ss", "%.3f" % inicio, "-t", "%.3f" % (need * vel), "-an",
+                "-filter_complex", "[0:v]" + encaje + "," + ritmo + "fps=%d,format=yuv420p[v]" % FPS, "-map", "[v]",
                 "-q:v", "3", os.path.join(self.dir, "f%05d.jpg")]
         try:
             subprocess.run(cmd, check=True, timeout=600, capture_output=True)
@@ -461,6 +473,8 @@ class Clip:
         self.n = len(self.files)
         self.ok = self.n >= 2
         self.last = (None, None)
+        if app and self.ok:
+            self.size = Image.open(self.files[0]).size
     def frame(self, i):
         i = max(0, min(i, self.n - 1))
         if self.last[0] != i:
@@ -562,7 +576,8 @@ class Subtitulos:
         if key in self.cache: return self.cache[key]
         if self.entero:
             texto = " ".join(" ".join(g) for g in self.grupos)
-            f, size, lines = wrap_fit(texto, FUENTE_SUB, maxw=W - SAFE_L - SAFE_R - 40, maxlines=3, smax=104, smin=56)
+            f, size, lines = wrap_fit(texto, FUENTE_SUB, maxw=W - SAFE_L - SAFE_R - 40, maxlines=3,
+                                      smax=self.estilo.get("smax_entero", 104), smin=56)
             activo = -1
         else:
             texto = " ".join(self.grupos[gi])
@@ -574,7 +589,7 @@ class Subtitulos:
         stroke = max(5, size // 12)
         c_fill = self.estilo.get("fill", (255, 255, 255)); c_stroke = self.estilo.get("stroke", (0, 0, 0))
         c_act = self.estilo.get("activo", AMARILLO); c_enf = self.estilo.get("enfasis", ROJO_ENFASIS)
-        if self.estilo: stroke = max(3, size // 18)
+        if self.estilo: stroke = max(3, size // int(self.estilo.get("grosor", 18)))
         space = self.probe.textlength(" ", font=f)
         idx = 0
         base_global = 0 if self.entero else self.starts[gi]
@@ -584,11 +599,16 @@ class Subtitulos:
             x = (W - (sum(widths) + space * (len(ws) - 1))) / 2
             for j, w in enumerate(ws):
                 if not self.entero and idx > activo: break
+                sw = stroke
                 if (base_global + idx) in self.enfasis:
                     col = c_enf                   # palabra con enfasis: en rojo (tambien cuando es la activa)
+                    if self.estilo.get("marca"):  # ...o, con "marca", tinta sobre un resaltado de rotulador cian
+                        d.rounded_rectangle([x - 10, 30 + i * lh + size * 0.06, x + widths[j] + 10, 30 + i * lh + size * 1.1],
+                                            10, fill=CIAN + (235,))
+                        sw = 0
                 else:
                     col = c_act if (not self.entero and idx == activo) else c_fill
-                d.text((x, 30 + i * lh), w, font=f, fill=col + (255,), stroke_width=stroke, stroke_fill=c_stroke + (255,))
+                d.text((x, 30 + i * lh), w, font=f, fill=col + (255,), stroke_width=sw, stroke_fill=c_stroke + (255,))
                 x += widths[j] + space; idx += 1
         self.cache[key] = (im, int(self.estilo.get("cy", TEXT_CY) - total / 2) - 30)
         return self.cache[key]
@@ -1065,6 +1085,10 @@ def dibujar_objeto(d, obj, pantalla, t, rng, cx=540, cy=OBJ_CY_DIB):
         circulo(d, x0 + 58, y0 + 36, 12, rng, 5, relleno=CIAN)
         if pantalla:
             texto_tecleado(d, pantalla, x0 + 40, y0 + 90, w - 80, t, rng, font(F_DIB_MONO, 34), maxlines=5)
+        else:   # chat sin "pantalla": puntos suspensivos animados (esta "escribiendo")
+            for i in range(3):
+                a = 0.5 + 0.5 * math.sin(t * 5.0 - i * 1.1)
+                circulo(d, cx - 60 + i * 60, cy - 10 - 10 * a, 13 + 4 * a, rng, 4, relleno=CIAN if a > 0.6 else CIAN_CLARO, col=TINTA, amp=0.8)
     else:
         # icono arriba + tarjeta de texto debajo si hay pantalla
         icy = cy - 150 if pantalla else cy
@@ -1287,7 +1311,7 @@ def preparar_dibujo(sc, spec, rng):
     else:
         wps = max(WPS_HUMANO, len(base.split()) / max(0.3, sc.dur * 0.8)); retardo = 0.12
     sc.con_objeto = bool(sc.objeto != "nada" or sc.cifra or sc.lista or sc.pizarra or sc.antes_despues)
-    estilo_sub = dict(fill=TINTA, stroke=PAPEL, activo=CIAN, enfasis=CIAN,   # un unico acento: enfasis en cian (Estratega 7/11)
+    estilo_sub = dict(fill=TINTA, stroke=PAPEL, activo=CIAN, enfasis=TINTA, marca=True,   # enfasis: resaltado cian (un solo acento)
                       cy=(SUB_CY_DIB if sc.con_objeto else 760), smax=(80 if sc.con_objeto else 100), smin=54)
     sc.sub = Subtitulos(base, wps, retardo, sc.dur, enfasis=enf, tiempos=tiempos, estilo=estilo_sub) if base else None
     sc.rotulo = rotulo_dibujo(texto, grande=(sc.estilo_d == "gancho")) if texto else None
@@ -1303,16 +1327,17 @@ def render_frame_dibujo(fi, sc, noise, rg, seed):
     rng = random.Random(seed * 31 + sc.idx * 101 + fi // 4)   # temblor del trazo: cambia cada 4 fotogramas
     # ---- area del objeto / pizarra (se "dibuja" con un barrido en los primeros 0,5 s)
     capa = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dc = ImageDraw.Draw(capa, "RGBA")
+    ocy = OBJ_CY_DIB + (40 if (sc.rotulo is not None and sc.rotulo.height > 170) else 0)   # rotulo de 2 lineas: objeto mas abajo
     if sc.antes_despues:
-        dibujar_antes_despues(dc, sc.antes_despues, t, rng)
+        dibujar_antes_despues(dc, sc.antes_despues, t, rng, cy=ocy)
     elif sc.cifra:
-        dibujar_cifra(dc, sc, t, rng)
+        dibujar_cifra(dc, sc, t, rng, cy=ocy)
     elif sc.lista:
-        dibujar_pizarra(dc, sc.lista, t, rng, numerada=True)
+        dibujar_pizarra(dc, sc.lista, t, rng, numerada=True, cy=ocy)
     elif sc.pizarra:
-        dibujar_pizarra(dc, sc.pizarra, t, rng, numerada=False)
+        dibujar_pizarra(dc, sc.pizarra, t, rng, numerada=False, cy=ocy)
     elif sc.objeto != "nada":
-        dibujar_objeto(dc, sc.objeto, sc.pantalla, t, rng)
+        dibujar_objeto(dc, sc.objeto, sc.pantalla, t, rng, cy=ocy)
     for i, inv in enumerate(sc.invitados):
         dibujar_invitado(dc, 950 - i * 170, 480, t, rng, inv, 0.8)
     if sc.flecha and t > 0.4:
@@ -1388,6 +1413,226 @@ def render_frame_dibujo(fi, sc, noise, rg, seed):
     return a.astype(np.uint8)
 
 
+# ---------------------------------------------------------------- modo "app"
+# "modo": "app" (7/11/2026, SERIE APPS NEOGEST LAB, orden del usuario): reutiliza un VIDEO PROPIO de demostracion
+# ("video": URL o ruta; p. ej. media_url de la entidad Publicacion de la app Base44 «Centro de Contenido Apps») con
+# LOCUCION durante todo el reel. Escenas: "gancho" (texto grande + voz, ~2 s), "tramo" (trozo del video
+# "clip": {"inicio", "fin"} con la voz narrando lo que se ve; el trozo se acelera hasta x1,75 para durar lo que la
+# voz: sin huecos) y "cierre" (papel, palabra clave, Bit). Bit opcional ("bit": true) en gancho y cierre. Pie
+# «By Neogest Lab» siempre. Audio original bajado ("volumen_original"; 0 = quitado) + ducking en publicar_gh.py; si
+# el video no trae sonido, musica discreta (la del modo dibujo). Subtitulos palabra a palabra de la propia "voz".
+# Video vertical: a pantalla completa. Apaisado: enmarcado a mano sobre papel (estilo dibujo).
+APP = {"path": None, "w": 0, "h": 0, "dur": 0.0, "vertical": True, "audio": False, "volumen": 0.5, "primer_inicio": 0.0}
+MAX_VEL_APP = 1.75
+APP_VID_W = 1000          # ancho del video apaisado enmarcado sobre papel
+APP_VID_CY = 800          # centro vertical del video apaisado
+SUB_CY_APP_V = 1330       # subtitulos sobre video vertical (por encima de la interfaz de Instagram)
+SUB_CY_APP_H = 1250       # subtitulos bajo el video apaisado
+
+def video_tiene_audio(path):
+    try:
+        r = subprocess.run([shutil.which("ffprobe") or "ffprobe", "-v", "error", "-select_streams", "a:0",
+                            "-show_entries", "stream=codec_type", "-of", "csv=p=0", path],
+                           capture_output=True, text=True, timeout=60)
+        return "audio" in (r.stdout or "")
+    except Exception:
+        return False
+
+def cargar_video_app(src):
+    """Descarga (con cache) y sondea el video propio del guion. Si falla, el render se detiene a proposito."""
+    path = descargar_video(src)
+    if not path: sys.exit("modo app: no se puede descargar o leer el video %r" % (src or "")[:140])
+    info = sonda_video(path)
+    if not info or info[2] <= 0.3: sys.exit("modo app: video ilegible o vacio: %s" % path)
+    w, h, dur = info
+    APP.update(path=path, w=w, h=h, dur=dur, vertical=(w / h < 0.62 * 1.25), audio=video_tiene_audio(path))
+    print("video app: %dx%d, %.1fs, %s, %s" % (w, h, dur, "vertical" if APP["vertical"] else "apaisado",
+                                              "con audio" if APP["audio"] else "sin audio"))
+    return APP
+
+def fotograma_video(path, t):
+    """Un fotograma (RGB) del video en el segundo t; None si falla."""
+    try:
+        r = subprocess.run([FFMPEG, "-v", "error", "-ss", "%.3f" % max(0.0, t), "-i", path, "-frames:v", "1",
+                            "-f", "image2pipe", "-vcodec", "png", "-"], capture_output=True, timeout=120)
+        import io
+        return Image.open(io.BytesIO(r.stdout)).convert("RGB") if r.stdout else None
+    except Exception as e:
+        print("fotograma no extraido:", str(e)[:100]); return None
+
+def audio_tramo(path, inicio, dur, vel, nsamp):
+    """Audio original de un tramo (estereo, SR), acelerado como el video. Ceros si no hay pista."""
+    out = np.zeros((max(0, nsamp), 2))
+    if not APP["audio"] or nsamp <= 0: return out
+    af = ("atempo=%.4f" % vel) if abs(vel - 1.0) > 0.01 else "anull"
+    r = subprocess.run([FFMPEG, "-v", "error", "-ss", "%.3f" % inicio, "-t", "%.3f" % (dur * vel + 0.3), "-i", path,
+                        "-vn", "-af", af, "-ac", "2", "-ar", str(SR), "-f", "f32le", "-"], capture_output=True)
+    a = np.frombuffer(r.stdout, "<f4").reshape(-1, 2).astype(np.float64) if r.stdout else np.zeros((0, 2))
+    k = min(len(a), nsamp); out[:k] = a[:k]
+    e = int(0.02 * SR)
+    if k > 2 * e:
+        out[:e] *= np.linspace(0, 1, e)[:, None]; out[k - e:k] *= np.linspace(1, 0, e)[:, None]
+    return out
+
+_app_cache = {}
+def banda_oscura():
+    """Degradado oscuro translucido tras el texto grande del gancho (video vertical)."""
+    if "banda" not in _app_cache:
+        yy = np.arange(H, dtype=np.float32)
+        a = np.clip(1 - np.abs(yy - 740) / 420, 0, 1) ** 0.8 * 165
+        arr = np.zeros((H, W, 4), np.uint8); arr[..., 3] = a.astype(np.uint8)[:, None]
+        _app_cache["banda"] = Image.fromarray(arr, "RGBA")
+    return _app_cache["banda"]
+
+def pie_neogest(d, vertical):
+    """Pie «By Neogest Lab» (firma de la marca) dentro de la zona segura, abajo a la derecha."""
+    f = font(DJV + "DejaVuSans-Bold.ttf", 30); fs = font(DJV + "DejaVuSans-Bold.ttf", 22)
+    txt = "By Neogest Lab"
+    tw = d.textlength(txt, font=f); y = 1548; x1 = W - SAFE_R
+    x0 = x1 - tw
+    if vertical:
+        d.text((x0, y), txt, font=f, fill=(255, 255, 255, 255), stroke_width=3, stroke_fill=(0, 0, 0, 220))
+    else:
+        d.text((x0, y), txt, font=f, fill=TINTA + (255,))
+    bx = x0 - 52
+    d.rounded_rectangle([bx, y - 2, bx + 40, y + 38], 9, fill=CIAN + (255,))
+    d.text((bx + 20, y + 18), "NL", font=fs, fill=(255, 255, 255, 255), anchor="mm")
+
+def enmarcar_apaisado(fr, seed, rng):
+    """Video apaisado sobre papel con marco dibujado a mano y sombra."""
+    img = papel_img(seed).copy(); d = ImageDraw.Draw(img, "RGBA")
+    fw, fh = fr.size
+    x0 = (W - fw) // 2; y0 = APP_VID_CY - fh // 2
+    d.rounded_rectangle([x0 + 10, y0 + 14, x0 + fw + 10, y0 + fh + 14], 12, fill=TINTA + (70,))
+    img.paste(fr, (x0, y0))
+    rect_mano(d, x0 - 6, y0 - 6, x0 + fw + 6, y0 + fh + 6, rng, 10, radio=14, amp=2.0)
+    return img
+
+def preparar_app(sc, spec, rng):
+    """Prepara una escena en modo app: tramo de video (acelerado a la voz), gancho, cierre, subtitulos y Bit."""
+    sc.estilo_a = str(spec.get("estilo") or "tramo").strip().lower()
+    if sc.estilo_a not in ("gancho", "tramo", "cierre"): sc.estilo_a = "tramo"
+    sc.bit = bool(spec.get("bit", sc.estilo_a == "cierre"))
+    sc.accion_bit = str(spec.get("accion") or ("celebra" if sc.estilo_a == "cierre" else "sorprendido")).strip().lower()
+    clip = spec.get("clip") if isinstance(spec.get("clip"), dict) else {}
+    ini = clip.get("inicio", spec.get("inicio")); fin = clip.get("fin", spec.get("fin"))
+    sc.clip = None; sc.still = None; sc.vel = 1.0; sc.ini = None
+    vert = APP["vertical"]
+    if sc.estilo_a != "cierre":
+        if ini is None and sc.estilo_a == "gancho":   # gancho sin tramo: fotograma fijo del primer tramo
+            st = fotograma_video(APP["path"], APP["primer_inicio"])
+            if st is not None:
+                if vert: sc.still = preparar_foto(st, 1.10)
+                else: sc.still = st.resize((APP_VID_W, max(2, int(st.height * APP_VID_W / st.width))), Image.LANCZOS)
+        if sc.still is None:
+            ini = max(0.0, min(float(ini if ini is not None else APP["primer_inicio"]), max(0.0, APP["dur"] - 0.5)))
+            largo = (min(float(fin), APP["dur"]) - ini) if fin is not None else sc.dur
+            vel = float(clip.get("velocidad") or spec.get("velocidad") or 0)
+            if vel <= 0: vel = min(MAX_VEL_APP, max(1.0, largo / max(0.3, sc.dur)))
+            sc.vel = min(2.0, max(0.5, vel))
+            sc.clip = Clip(APP["path"], ini, sc.dur, zoom_max=1.0, velocidad=sc.vel, bucle=False, app=True)
+            if not sc.clip.ok: sys.exit("modo app: no se pudo extraer el tramo %.1f-%s del video" % (ini, fin))
+            sc.ini = ini
+            if fin is not None and largo / sc.vel > sc.dur + 1.5:
+                print("aviso: el tramo %.1f-%.1f (x%.2f) dura mas que su voz; se corta en %.1f s" % (ini, float(fin), sc.vel, sc.dur))
+    # subtitulos (misma logica que el modo dibujo: voz real si hay tiempos)
+    voz, enf_voz = parsear_enfasis(spec.get("voz") or "")
+    texto, enf_txt = parsear_enfasis(spec.get("texto") or "")
+    dv = float(spec.get("_voz_dur") or 0)
+    tiempos = spec.get("_voz_palabras")
+    if tiempos and len(tiempos) == len(voz.split()):
+        tiempos = [float(x) + 0.12 for x in tiempos]
+    else:
+        tiempos = None
+    if dv > 0.2:
+        wps = len(voz.split()) / max(0.3, dv - 0.1)
+    else:
+        wps = max(WPS_HUMANO, len(voz.split()) / max(0.3, sc.dur * 0.8))
+    sobre_video = vert and sc.estilo_a != "cierre"
+    if sobre_video:
+        est = dict(fill=(255, 255, 255), stroke=(0, 0, 0), activo=CIAN, enfasis=TINTA, marca=True, grosor=11, cy=SUB_CY_APP_V, smax=96, smin=56)
+    else:
+        est = dict(fill=TINTA, stroke=PAPEL, activo=CIAN, enfasis=TINTA, marca=True, cy=(1330 if sc.estilo_a == "cierre" else SUB_CY_APP_H), smax=88, smin=54)
+    sc.sub = None; sc.grande = None; sc.rotulo = None
+    if sc.estilo_a == "gancho":
+        base, enf = (texto, enf_txt) if texto else (voz, enf_voz)
+        est_g = dict(est, cy=(720 if vert else 290), smax_entero=(112 if vert else 90))
+        sc.grande = Subtitulos(base, wps, 0.0, sc.dur, entero=True, enfasis=enf, estilo=est_g) if base else None
+    else:
+        sc.sub = Subtitulos(voz, wps, 0.12, sc.dur, enfasis=enf_voz, tiempos=tiempos, estilo=est) if voz else None
+        if texto:
+            sc.rotulo = rotulo_humano(texto) if sobre_video else rotulo_dibujo(texto, grande=(sc.estilo_a == "cierre"))
+
+def render_frame_app(fi, sc, noise, rg, seed):
+    lf = fi - sc.start; t = lf / FPS
+    rng = random.Random(seed * 31 + sc.idx * 101 + fi // 4)
+    vert = APP["vertical"]
+    sobre_video = vert and sc.estilo_a != "cierre" and (sc.clip is not None or sc.still is not None)
+    if sc.clip is not None:
+        fr = sc.clip.frame(lf)
+        if vert:
+            img = fr.crop((0, 0, W, H)).copy() if fr.size != (W, H) else fr.copy()
+        else:
+            img = enmarcar_apaisado(fr, seed, rng)
+    elif sc.still is not None:
+        if vert:   # zoom lento (Ken Burns) sobre el fotograma fijo
+            fw, fh = sc.still.size; z = 1.0 + 0.06 * min(1.0, t / 3.0)
+            cw, ch = min(fw, int(W * 1.10 / z)), min(fh, int(H * 1.10 / z))
+            cx = (fw - cw) // 2; cy = (fh - ch) // 2
+            img = sc.still.crop((cx, cy, cx + cw, cy + ch)).resize((W, H), Image.BILINEAR)
+        else:
+            img = enmarcar_apaisado(sc.still, seed, rng)
+    else:
+        img = papel_img(seed).copy()
+    d = ImageDraw.Draw(img, "RGBA")
+    # ---- gancho: texto grande (entra con un pequeno "pop")
+    if sc.grande is not None:
+        if sobre_video:
+            img.paste(banda_oscura(), (0, 0), banda_oscura())
+        cp = sc.grande.capa(t)
+        if cp:
+            timg, ty = cp
+            k = ease_out(t / 0.22); z = 0.82 + 0.18 * k
+            if z < 0.999:
+                tw2, th2 = int(timg.width * z), int(timg.height * z)
+                timg2 = timg.resize((tw2, th2), Image.BILINEAR)
+                img.paste(timg2, ((W - tw2) // 2, ty + (timg.height - th2) // 2), timg2)
+            else:
+                img.paste(timg, (0, ty), timg)
+    # ---- rotulo (tramo / cierre)
+    if sc.rotulo is not None:
+        k = ease_out(t / 0.3); ro = sc.rotulo
+        if k < 1.0: ro = ro.crop((0, 0, max(1, int(W * k)), ro.height))
+        img.paste(ro, (0, 170 if not sobre_video else 200), ro)
+    # ---- Bit (gancho: abajo a la derecha sobre un circulo de papel; cierre: en el centro celebrando)
+    if sc.bit and sc.estilo_a in ("gancho", "cierre"):
+        habla = hablando(sc.sub, t) if sc.sub is not None else (t < max(0.6, sc.dur - 0.4))
+        capa = Image.new("RGBA", (W, H), (0, 0, 0, 0)); dc = ImageDraw.Draw(capa, "RGBA")
+        if sc.estilo_a == "cierre":
+            k = ease_out(t / 0.45)
+            cx = 540; base = 1140
+            dibujar_bit(dc, cx, base - int((1 - k) * 60), t, rng, sc.accion_bit if sc.accion_bit in ("celebra", "explica", "sorprendido", "senala") else "celebra", habla, s=1.0)
+            trazo(dc, [(300, base + 6), (780, base + 2)], rng, 7, TINTA, 1.5)
+        else:
+            k = ease_out(t / 0.45); s = 0.62
+            cx = 880 + int((1 - k) * 420); base = (1400 if vert else 1465)
+            circulo(dc, cx, base - 130 * s, 190 * s, rng, 7, relleno=PAPEL, amp=2.5)
+            dibujar_bit(dc, cx, base, t, rng, sc.accion_bit if sc.accion_bit in ("celebra", "explica", "sorprendido", "senala") else "sorprendido", habla, s=s)
+        img.paste(capa, (0, 0), capa)
+    # ---- subtitulos palabra a palabra
+    if sc.sub is not None:
+        cp = sc.sub.capa(t)
+        if cp:
+            timg, ty = cp
+            img.paste(timg, (0, ty), timg)
+    pie_neogest(d, sobre_video)
+    a = np.asarray(img, dtype=np.int16).copy()
+    a += noise[fi % 8] // 8
+    if lf < 3: a += int(10 * (3 - lf))   # parpadeo minimo en el corte
+    np.clip(a, 0, 255, out=a)
+    return a.astype(np.uint8)
+
+
 # ---------------------------------------------------------------- escena
 class Scene:
     def __init__(self, idx, sc, seed, title, nframes, start_frame):
@@ -1421,6 +1666,8 @@ class Scene:
             preparar_humano(self, sc, rng)
         elif MODO["dibujo"]:
             preparar_dibujo(self, sc, rng)
+        elif MODO["app"]:
+            preparar_app(self, sc, rng)
 
 def hud(d, scene, t_abs, date_s, title):
     f = font(MONO, 44); fs = font(MONO, 32)
@@ -1487,6 +1734,8 @@ def render_frame(fi, scenes, noise, date_s, title, rg):
         return render_frame_humano(fi, sc, noise, rg)
     if MODO["dibujo"]:
         return render_frame_dibujo(fi, sc, noise, rg, SEMILLA["v"])
+    if MODO["app"]:
+        return render_frame_app(fi, sc, noise, rg, SEMILLA["v"])
     lf = fi - sc.start; t = lf / FPS; ta = fi / FPS
     img = sc.bg.copy()
     d = ImageDraw.Draw(img, "RGBA")
@@ -1634,13 +1883,13 @@ def make_music(scenes, n, seed, gs, hook_end):
     rng = random.Random(seed * 7919 + 13)
     total = n / SR
     bpm = rng.uniform(70, 90); beat = 60.0 / bpm
-    if MODO["dibujo"]: bpm = rng.uniform(98, 110); beat = 60.0 / bpm   # dibujo: mas vivo
+    if modo_alegre(): bpm = rng.uniform(98, 110); beat = 60.0 / bpm   # dibujo/app: mas vivo
     cut0 = gs - CORTE_GIRO if (gs and gs >= 3.0) else None
     if gs and gs >= 3.0:  # que el giro caiga en un pulso
         b2 = gs / max(1, round(gs / beat))
         if 70 <= 60 / b2 <= 90: beat = b2
     key = rng.randrange(12); base = 38 + key
-    prog = rng.choice(PROGS_MAYOR if MODO["dibujo"] else PROGS); add9 = rng.random() < 0.5
+    prog = rng.choice(PROGS_MAYOR if modo_alegre() else PROGS); add9 = rng.random() < 0.5
     box = rng.random() < 0.5
     tr1 = cut0
     tr0 = max(hook_end + 0.5, tr1 - 3.2) if cut0 else None
@@ -1700,7 +1949,7 @@ def make_music(scenes, n, seed, gs, hook_end):
     tt = np.arange(n) / SR
     bass *= np.clip((tt - hook_end) / 1.0, 0, 1) * 0.55
     # filtro: oscuro en el gancho, abre hacia el giro
-    w = np.full(n, 0.55 if MODO["dibujo"] else 0.15)   # dibujo: colchon mas brillante
+    w = np.full(n, 0.55 if modo_alegre() else 0.15)   # dibujo/app: colchon mas brillante
     if tr0: w[int(tr0 * SR):int(tr1 * SR)] = np.linspace(0.15, 1.0, int(tr1 * SR) - int(tr0 * SR))
     if cut0: w[int(gs * SR):] = 0.7
     padL = (lp_fft(padL, 850) * (1 - w) + lp_fft(padL, 2600) * w) * duck
@@ -1771,7 +2020,7 @@ def make_music(scenes, n, seed, gs, hook_end):
     if cut0:
         i0, i1 = int(cut0 * SR), int(gs * SR); r0 = int(0.006 * SR)
         cutg[i0:i0 + r0] = np.linspace(1, 0, r0); cutg[i0 + r0:i1] = 0.0
-    return L, R, cutg, dict(bpm=60 / beat, key=key, prog=(PROGS_MAYOR if MODO["dibujo"] else PROGS).index(prog), box=box, cut=cut0, riser=tr0)
+    return L, R, cutg, dict(bpm=60 / beat, key=key, prog=(PROGS_MAYOR if modo_alegre() else PROGS).index(prog), box=box, cut=cut0, riser=tr0)
 
 def make_audio(scenes, total, seed, musica=True):
     rg = np.random.default_rng(seed)
@@ -1779,6 +2028,23 @@ def make_audio(scenes, total, seed, musica=True):
     gs = next((s.start / FPS for s in scenes if s.style == "giro"), None)
     hook_end = scenes[0].nframes / FPS
     cutg = np.ones(n)
+    orig = None
+    if MODO["app"]:   # audio original del video propio, por tramos (acelerado como el video), bajo la voz
+        orig = np.zeros((n, 2))
+        if APP["audio"] and APP["volumen"] > 0:
+            for s in scenes:
+                if getattr(s, "clip", None) is None or getattr(s, "ini", None) is None: continue
+                i0 = int(s.start / FPS * SR); k = min(int(s.nframes / FPS * SR), n - i0)
+                if k > 0: orig[i0:i0 + k] += audio_tramo(APP["path"], s.ini, s.nframes / FPS, s.vel, k)
+        lo = lufs(orig) if np.abs(orig).max() > 1e-4 else -99.0
+        if musica is None:   # sin "musica" en el guion: musica solo si el video no trae sonido util
+            musica = lo < -45.0
+            print("audio original: %.1f LUFS -> %s" % (lo, "musica discreta" if musica else "sin musica (el video ya suena)"))
+        if lo > -60:
+            orig *= 10 ** ((-24.0 - lo) / 20) * APP["volumen"]   # -24 LUFS x volumen_original (0,5 = -30 LUFS)
+        else:
+            orig = None
+    musica = bool(musica)
     if musica:
         mL, mR, cutg, info = make_music(scenes, n, seed, gs, hook_end)
         print("musica:", info)
@@ -1824,7 +2090,7 @@ def make_audio(scenes, total, seed, musica=True):
     fx = np.stack([bL + hL, bR + hR], 1)
     if modo_suave():
         st = np.zeros_like(fx)            # modo humano/dibujo: sin lecho de tension ni golpes
-        if MODO["dibujo"]:                # dibujo: un "pop" suave en cada corte de escena
+        if modo_alegre():                 # dibujo/app: un "pop" suave en cada corte de escena
             m = int(0.09 * SR); tp = np.arange(m) / SR
             pop = np.sin(2 * np.pi * np.cumsum(620 - 300 * tp / 0.09) / SR) * np.exp(-tp * 45) * 0.22
             for s in scenes[1:]:
@@ -1834,10 +2100,12 @@ def make_audio(scenes, total, seed, musica=True):
         gfx = 10 ** ((-21 - lufs(fx)) / 20)
         st = fx * gfx
     lm = None
+    if orig is not None:
+        st = st + orig
     if musica:
         mus = np.stack([mL * cutg, mR * cutg], 1)
         lm0 = lufs(mus)
-        mus *= 10 ** (((-31 if MODO["humano"] else (-29 if MODO["dibujo"] else -24)) - lm0) / 20)   # humano/dibujo: musica discreta
+        mus *= 10 ** (((-31 if MODO["humano"] else (-29 if modo_alegre() else -24)) - lm0) / 20)   # humano/dibujo/app: musica discreta
         if modo_suave() and hook_end < total - 2.0:
             # el gancho va a pelo (solo la voz): la musica entra en fundido de 0,8 s cuando termina la primera escena
             mus *= np.clip((t - hook_end + 0.2) / 0.8, 0.0, 1.0)[:, None]
@@ -1879,16 +2147,30 @@ def main():
     seed = int(g.get("semilla", 1)); title = g.get("titulo", "")
     musica = bool(g.get("musica", True))
     modo = (g.get("modo") or "").strip().lower()
-    if modo not in ("", "humano", "dibujo"):   # guardia: un modo desconocido nunca se renderiza con otro estilo
-        sys.exit("modo desconocido en guion.json: %r (este generador conoce: humano, dibujo)" % modo)
+    if modo not in ("", "humano", "dibujo", "app"):   # guardia: un modo desconocido nunca se renderiza con otro estilo
+        sys.exit("modo desconocido en guion.json: %r (este generador conoce: humano, dibujo, app)" % modo)
     MODO["humano"] = modo == "humano"
     MODO["dibujo"] = modo == "dibujo"
+    MODO["app"] = modo == "app"
+    if MODO["app"]:
+        cargar_video_app(str(g.get("video") or ""))
+        APP["volumen"] = max(0.0, min(1.5, float(g.get("volumen_original", 0.5))))
+        if "musica" not in g: musica = None   # automatico: segun si el video trae sonido
+        for e in g["escenas"]:
+            c = e.get("clip") if isinstance(e.get("clip"), dict) else {}
+            ini = c.get("inicio", e.get("inicio"))
+            if ini is not None and (e.get("estilo") or "tramo") != "cierre":
+                APP["primer_inicio"] = max(0.0, float(ini)); break
     SEMILLA["v"] = int(g.get("semilla", 1))
     DIB_PREV["pers"] = set()
     esc = g["escenas"]
     bounds = [0]
     for i, e in enumerate(esc):
         d = float(e.get("duracion", 3.0))
+        if MODO["app"] and "duracion" not in e:   # app: sin "duracion", el tramo dura lo que su clip (o 1,8 s el gancho)
+            c = e.get("clip") if isinstance(e.get("clip"), dict) else {}
+            ini, fin = c.get("inicio", e.get("inicio")), c.get("fin", e.get("fin"))
+            d = 1.8 if (e.get("estilo") == "gancho") else (max(0.5, float(fin) - float(ini)) if (ini is not None and fin is not None) else 3.0)
         voz = parsear_enfasis(e.get("voz") or "")[0]
         if voz:  # duracion minima para que el narrador termine
             if i in tiempos and tiempos[i] > 0.2:
@@ -1928,6 +2210,8 @@ def main():
     if MODO["dibujo"]:
         cov["dibujo"] = {"personajes": ["paco", "bit"], "accion": "sorprendido", "objeto": "nada"}
         DIB_PREV["pers"] = {"paco", "bit"}
+    if MODO["app"]:
+        cov["bit"] = True
     cs = Scene(0, cov, seed, title, 90, 0)
     cimg = render_frame(60, [cs], noise, date_s, title, random.Random(1))
     Image.fromarray(cimg).save(os.path.splitext(out)[0] + "_portada.jpg", quality=90)

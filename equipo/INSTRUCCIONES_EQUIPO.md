@@ -9,6 +9,7 @@ Sustituye por completo a «HUMANIZAR AL MÁXIMO» y al enfoque de misterios. Man
 - Reel vertical de 20-35 s. Primeros 2 s: gancho de pregunta («¿Sabías que Gmail…?»), número («3 trucos…») o mini historia / antes-después («Paco tardaba una hora en…»); es lo que mejor funciona en cuentas pequeñas según el informe Buzzfy «AI & tech» de 6/11. Un truco o una lista de máx. 3, paso a paso, comprobado en la documentación oficial actual (centro de ayuda de OpenAI, Anthropic, Google, Apple, Microsoft…): nunca inventes funciones, precios ni nombres de menús; si una función depende del plan, del país o del idioma, se dice («en la versión gratis», «si te aparece»).
 - Cierre: «Sígueme para un truco al día» o palabra clave en comentarios que envía por DM la guía o el prompt (campo "respuesta" de post.json, que lleva el prompt o los pasos de verdad, no un «te lo mando luego»).
 - Voz cercana de España, como explicándoselo a un amigo, con las marcas de énfasis *así* (ver «ÉNFASIS»). Frases cortas, sin muletillas de IA («sumérgete», «descubre», «en este vídeo», «revoluciona»), máx. 2 emojis en el post. La voz sintética se sigue declarando en el texto del post («Voz: narración generada») mientras no sea la del dueño.
+- SERIE APPS NEOGEST LAB (orden del usuario, 7/11/2026 11:01): la cuenta promociona las apps del usuario con sus vídeos de demostración ya grabados (media_url de la entidad Publicacion de la app Base44 «Centro de Contenido Apps», appId 6ae5244d4e2b32702f0a3cd6), en "modo":"app" (ver más abajo): locución durante TODO el reel, gancho de ≤ 2 s con texto grande, 20-45 s, cierre con palabra clave y Bit opcional. Convive con el modo dibujo (trucos de IA).
 - Monetización (objetivo principal): alcance a no seguidores (reels de prueba, "prueba_no_seguidores"), palabra clave → DM, enlaces de afiliado solo de herramientas con programa oficial y avisando «enlace de afiliado», promoción de las apps de Neogest Lab cuando encaje (solo funciones reales comprobadas en la app), y preparar la publicación cruzada en YouTube Shorts (mismo vídeo 1080x1920 < 60 s).
 
 ## SERIE APPS NEOGEST LAB (orden del usuario 7/11/2026 11:01)
@@ -21,7 +22,7 @@ Sustituye por completo a «HUMANIZAR AL MÁXIMO» y al enfoque de misterios. Man
 - Texto del post: dice claramente que es «nuestra app», solo hechos_verificados, CTA = cta_principal, enlace en el perfil; la «respuesta» por DM sin enlaces.
 - Excluidas: GPS Andaluz hasta que tenga voces grabadas publicadas; AjReparacion Gestión original y AJ Sistema DEMO; MEDICATOR sin ninguna afirmación de salud. Prioridad: Gestión Integral 7D (métrica: clics al enlace y altas en su prueba gratuita).
 - Frecuencia: 1 reel de app al día en la franja de las 20:40 mientras haya vídeos aprobados; la de las 13:40 sigue siendo truco de IA en dibujo (prueba para no seguidores). Sin vídeo aprobado, las 20:40 siguen con el truco del plan.
-- Formato de render (vídeo propio por URL con voz encima): lo implementa y documenta aquí Mejora de producción (tarea prioritaria en mejoras.md).
+- Formato de render (vídeo propio por URL con voz encima): HECHO el 7/11/2026 por Mejora → guion.json con "modo":"app" (ver «Modo "app"» más abajo y herramientas/ejemplo_guion_app.json).
 
 ## Contexto
 - Cuenta de Instagram @nosabesloquehasvisto (nombre visible propuesto «IA Fácil · Trucos que no sabías», ver equipo/perfil_propuesto.md). Dueño: el usuario (Neogest Lab). Ha dado control total y autorización para trabajar de forma 100 % autónoma. OBJETIVO PRINCIPAL: MONETIZAR. El crecimiento y la viralidad son el medio. El usuario ha dado control y permisos absolutos.
@@ -82,6 +83,23 @@ Dibujos animados doodle sobre papel claro, trazo negro grueso con temblor de man
 - Cámara leve (zoom/paneo por tramos de ~3 s) y corte en cada escena; música mayor y viva a ~100-110 bpm, discreta, que entra tras la primera frase; un «pop» suave en cada corte.
 - Duración: el render alarga cada escena a lo que dure su voz real (+0,45 s). Con la voz del dueño (Chatterbox) salen ~0,5 s por palabra: para un reel de ≤ 35 s, máx. ~60 palabras de voz en total.
 - Un "modo" desconocido hace fallar el render a propósito (nunca se renderiza con otro estilo).
+
+### Modo "app" (SERIE APPS NEOGEST LAB, orden del usuario 7/11/2026 11:01; IMPLEMENTADO en hacer_reel.py el 7/11/2026)
+Reutiliza un VÍDEO PROPIO de demostración de una app del usuario (ya grabado) con LOCUCIÓN durante todo el reel. Ejemplo completo: herramientas/ejemplo_guion_app.json. Mismo flujo que el modo dibujo (voz primero, subtítulos palabra a palabra con la propia "voz", voz de equipo/voz.json, ducking en la mezcla) y mismo post.json.
+{"titulo":"Apps NNN: ...","semilla":<entero>,"modo":"app",
+ "video":"<media_url de la entidad Publicacion de la app Base44 «Centro de Contenido Apps» (appId 6ae5244d4e2b32702f0a3cd6), o ruta relativa a la carpeta del reel>",
+ "volumen_original":0.5, "musica":(opcional; sin ella: automático), "portada_texto":"gancho de máx. 7 palabras",
+ "escenas":[
+  {"estilo":"gancho","bit":true,"texto":"¿Todavía apuntas las tareas *a mano*?","voz":"la misma frase (máx. ~4 palabras de voz para que dure ≤ 2 s)"},
+  {"estilo":"tramo","clip":{"inicio":0.5,"fin":5.0},"texto":"(opcional) rótulo corto arriba","voz":"lo que se ve en ese tramo, con *énfasis*"},
+  {"estilo":"tramo","clip":{"inicio":5.0,"fin":10.0},"voz":"..."},
+  {"estilo":"cierre","bit":true,"texto":"Comenta «PALABRA»","voz":"Comenta *palabra* y te mando el enlace. Sígueme para más apps."}]}
+- "video": obligatorio. Si no se puede descargar o leer, el render falla a propósito (no sale nada roto). Vertical (9:16) → a pantalla completa; apaisado → enmarcado a mano sobre papel (estilo dibujo), con el texto arriba y los subtítulos debajo.
+- "tramo": `clip.inicio`/`clip.fin` en segundos del vídeo original (quédate con lo mejor: 3-5 tramos para un reel de 20-45 s). Cada tramo dura lo que su "voz" (+0,45 s): si el trozo es más largo que la voz se ACELERA (hasta x1,75; más allá se corta por el final) para que no haya huecos; si es más corto, sigue a velocidad real más allá de "fin" (o congela el último fotograma). "velocidad" opcional (0,5-2) fuerza una velocidad. Sin "fin", el tramo toma lo que dure la voz desde "inicio".
+- "gancho": texto grande (énfasis *así* con resaltado cian) + voz; sin "clip" usa un fotograma fijo del primer tramo con zoom lento. "bit": true añade a Bit (robot) sorprendido abajo a la derecha (también en el cierre, celebrando; "accion": sorprendido|explica|senala|celebra).
+- "cierre": papel claro, "texto" como rótulo grande con marcador cian (pon ahí la palabra clave: «Comenta "PALABRA"»), Bit y subtítulos de la voz. La palabra clave tiene que coincidir con "palabra_clave" de post.json.
+- Audio: el audio original del vídeo se normaliza a −24 LUFS y se multiplica por "volumen_original" (0,5 por defecto → −30 LUFS; 0 = se quita) y la mezcla lo hunde bajo la voz (ducking). Sin "musica" en el guion: música discreta (la del modo dibujo) solo si el vídeo no trae sonido; "musica": true/false la fuerza. Pie «By Neogest Lab» en todas las escenas; «pop» suave en cada corte.
+- Salida 1080x1920 H.264+AAC < 60 s (vale para YouTube Shorts). Voz del dueño: ~0,5 s por palabra → máx. ~70 palabras para 35 s. La voz tiene que narrar lo que se ve EN ESE tramo (nada de funciones que no salgan en el vídeo).
 
 ### Modo "humano" (EN DESUSO desde el 6/11/2026 20:27; se conserva la documentación para el énfasis y los subtítulos)
 Añade "modo":"humano" al guion. Entonces hacer_reel.py NO dibuja fondos generados ni HUD: cada escena lleva fotos reales con movimiento de cámara leve y subtítulos palabra a palabra sincronizados con la voz (estimada a ~2,6 palabras/s; el texto en pantalla es la propia "voz", así que "texto" solo hace falta en el gancho y en el cierre).
