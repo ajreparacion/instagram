@@ -8,9 +8,9 @@
   "chatterbox": {
     "modelo": "es-es",
     "idioma": "es",
-    "exageracion": 0.6,
-    "cfg": 0.35,
-    "temperatura": 0.75,
+    "exageracion": 0.45,
+    "cfg": 0.55,
+    "temperatura": 0.6,
     "referencia": "voz_dueno/referencia_usuario.wav",
     "referencia_kokoro": "em_alex",
     "ganancia": 1.0,
@@ -19,18 +19,18 @@
     "_nota": "referencia = VOZ DEL DUEÑO. Desde el 7/11/2026 12:45: nota de voz limpia grabada por él para el canal (voz_dueno/referencia_usuario.wav, 12,6 s, 24 kHz mono, -20 LUFS; versión larga de 28 s al lado). Señal/ruido ~43 dB, contenido hasta 8 kHz (la anterior, sacada de sus reels con Demucs, no pasaba de 4 kHz). Para volver a la anterior: 'referencia': 'voces/referencia_usuario.wav' (release «voces», sigue ahí) o restaurar herramientas/versiones/voz.json_2026-11-07.",
     "por_estilo": {
       "gancho": {
-        "exageracion": 0.85,
-        "cfg": 0.3
+        "exageracion": 0.55,
+        "cfg": 0.5
       },
       "giro": {
-        "exageracion": 0.8,
-        "cfg": 0.3
+        "exageracion": 0.5,
+        "cfg": 0.5
       },
       "cierre": {
-        "exageracion": 0.7
+        "exageracion": 0.5
       }
     },
-    "_nota_por_estilo": "6/11: gancho y giro con más intensidad (exageracion 0,8-0,85, cfg 0,3) que el resto (0,6 / 0,35). Petición del usuario: falta gancho y énfasis."
+    "_nota_por_estilo": "7/11 13:10: el dueño oye clipeos, acento latino al empezar que luego cambia y silencios. Causa probable: exageración alta (0,8-0,85) y cfg bajo (0,3), que distorsionan y alejan la voz de la referencia. Se baja la exageración (0,45-0,55), se sube cfg (0,5-0,55) y la temperatura (0,6), y se recortan restos de baja intensidad al final de cada frase (recorte.umbral_db -32). Revertir: herramientas/versiones/voz.json_2026-11-07b."
   },
   "kokoro": {
     "voz": "em_alex",
@@ -64,7 +64,7 @@
   "cadena_voz": "highpass=f=80,equalizer=f=300:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=3,acompressor=threshold=0.08:ratio=3:attack=2:release=120:makeup=3.2,deesser=i=0.4,alimiter=limit=0.62:attack=1:release=40:level=false",
   "recorte": {
     "activo": true,
-    "umbral_db": -40,
+    "umbral_db": -32,
     "margen_ms": 120,
     "pausa_larga_s": 9.0,
     "pausa_max_s": 0.6,
