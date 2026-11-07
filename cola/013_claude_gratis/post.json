@@ -1,7 +1,7 @@
 {
  "tipo": "reel",
  "texto": "Cómo usar Claude gratis: 3 cosas que casi nadie usa 👇\n\n1. Proyectos: subes tus documentos e instrucciones una vez y Claude los tiene en cada chat del proyecto. En el plan gratis, hasta 5.\n2. Pídele una tabla, una plantilla o una mini app: te la abre en una ventana al lado del chat (Anthropic los llama «artefactos»).\n3. Memoria: recuerda lo importante entre chats. Se gestiona en Configuración > Tu Claude > «Generar memoria a partir de chats».\n\nOjo: no le pegues datos sensibles (contraseñas, DNI, datos bancarios).\n\nComenta CLAUDE y te mando los pasos por mensaje.\nSígueme para un truco al día.\n\nComprobado en: ayuda oficial de Anthropic y claude.com/pricing (nov. 2026). Los menús pueden cambiar según la versión de la app.\nVoz: narración generada.\n\n#inteligenciaartificial #claude #trucos #productividad #ia",
- "cuando": "2026-11-08T20:40:00+01:00",
+ "cuando": "2026-11-07T22:00:00+01:00",
  "palabra_clave": "CLAUDE",
  "respuesta": "1) Barra lateral > Proyectos: sube docs e instrucciones (gratis hasta 5). 2) Pide «hazme una tabla de…» y se abre al lado. 3) Configuración > Tu Claude > Generar memoria a partir de chats.",
  "compartir_en_feed": true,

@@ -1,28 +1,28 @@
 {
-  "tipo": "reel",
-  "texto": "Si ChatGPT te contesta fatal, prueba este prompt de 4 piezas ✍️\n\nEn vez de «hazme un correo», dile:\n1. Quién eres: «Tengo un bar en Valencia».\n2. Qué quieres: «Escribe un correo pidiendo presupuesto de café».\n3. Para quién: «Es para un proveedor nuevo».\n4. En qué formato: «Tono amable, máximo 5 líneas».\n\nVale igual para ChatGPT, Claude y Gemini. Revisa siempre lo que te dé antes de enviarlo y no le pegues datos sensibles.\n\nComenta PROMPT y te mando la plantilla lista para copiar.\nSígueme para un truco al día.\n\nComprobado en: guías oficiales de prompts de OpenAI y Anthropic (nov. 2026).\nVoz: narración generada.\n\n#inteligenciaartificial #chatgpt #prompts #trucos #productividad",
-  "cuando": "2026-11-07T20:40:00+01:00",
-  "palabra_clave": "PROMPT",
-  "respuesta": "Plantilla: «Soy [quién eres]. Quiero [qué necesitas]. Es para [quién lo leerá]. Formato: [tono, largo, lista o tabla].» Rellénala y pégala en ChatGPT, Claude o Gemini. Revisa antes de enviar.",
-  "compartir_en_feed": true,
-  "portada_ms": 1500,
-  "prueba_no_seguidores": false,
-  "_fuentes": [
-    "https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt",
-    "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
-  ],
-  "_comprobado": "6/11/2026: OpenAI «Give ChatGPT a persona… responses tailored to specific audiences», «provide enough context»; Anthropic «Being specific about the output you want can help enhance results», «Providing context or motivation behind your instructions», «Be specific about the output format and constraints you want». La guía de Google (Persona, Tarea, Contexto, Formato) no se pudo leer (detrás de un formulario): no se cita.",
-  "_nota_creador": "Plan 7/11 20:40, gancho_tipo historia (antes/después). No es una función de producto, es una técnica: sin menús que puedan cambiar.",
-  "_autoevaluacion": {
-    "gancho": 21,
-    "truco_valor": 21,
-    "retencion": 18,
-    "estilo": 13,
-    "cta_monetizacion": 9,
-    "total": 82
-  },
-  "motor_voz": "chatterbox",
-  "renderizado": "2026-11-07T15:03:35+00:00",
-  "asset": "014_formula_prompt.mp4",
-  "_intentos": 1
+ "tipo": "reel",
+ "texto": "Si ChatGPT te contesta fatal, prueba este prompt de 4 piezas ✍️\n\nEn vez de «hazme un correo», dile:\n1. Quién eres: «Tengo un bar en Valencia».\n2. Qué quieres: «Escribe un correo pidiendo presupuesto de café».\n3. Para quién: «Es para un proveedor nuevo».\n4. En qué formato: «Tono amable, máximo 5 líneas».\n\nVale igual para ChatGPT, Claude y Gemini. Revisa siempre lo que te dé antes de enviarlo y no le pegues datos sensibles.\n\nComenta PROMPT y te mando la plantilla lista para copiar.\nSígueme para un truco al día.\n\nComprobado en: guías oficiales de prompts de OpenAI y Anthropic (nov. 2026).\nVoz: narración generada.\n\n#inteligenciaartificial #chatgpt #prompts #trucos #productividad",
+ "cuando": "2026-11-07T22:00:00+01:00",
+ "palabra_clave": "PROMPT",
+ "respuesta": "Plantilla: «Soy [quién eres]. Quiero [qué necesitas]. Es para [quién lo leerá]. Formato: [tono, largo, lista o tabla].» Rellénala y pégala en ChatGPT, Claude o Gemini. Revisa antes de enviar.",
+ "compartir_en_feed": true,
+ "portada_ms": 1500,
+ "prueba_no_seguidores": false,
+ "_fuentes": [
+  "https://help.openai.com/en/articles/10032626-prompt-engineering-best-practices-for-chatgpt",
+  "https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/claude-prompting-best-practices"
+ ],
+ "_comprobado": "6/11/2026: OpenAI «Give ChatGPT a persona… responses tailored to specific audiences», «provide enough context»; Anthropic «Being specific about the output you want can help enhance results», «Providing context or motivation behind your instructions», «Be specific about the output format and constraints you want». La guía de Google (Persona, Tarea, Contexto, Formato) no se pudo leer (detrás de un formulario): no se cita.",
+ "_nota_creador": "Plan 7/11 20:40, gancho_tipo historia (antes/después). No es una función de producto, es una técnica: sin menús que puedan cambiar.",
+ "_autoevaluacion": {
+  "gancho": 21,
+  "truco_valor": 21,
+  "retencion": 18,
+  "estilo": 13,
+  "cta_monetizacion": 9,
+  "total": 82
+ },
+ "motor_voz": "chatterbox",
+ "renderizado": "2026-11-07T15:03:35+00:00",
+ "asset": "014_formula_prompt.mp4",
+ "_intentos": 1
 }

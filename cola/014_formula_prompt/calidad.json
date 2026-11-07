@@ -1,5 +1,5 @@
 {
- "aprobado": false,
+ "aprobado": true,
  "nota": 90,
  "fecha": "2026-11-07T19:40:00+01:00",
  "comentario": "Pasada de tarde 7/11 (directiva de las 13:49). Técnica OK en el render revisado: 1080x1920 H.264+AAC, pico ≈ -1,9 dBFS, sin silencios > 0,6 s (silencedetect -40 dB), sonoridad ≈ -13 LUFS. Fotogramas revisados: papel claro, trazo negro, acento cian, sin logos, texto legible y dentro de zona segura. Contenido correcto y con fuentes oficiales (OpenAI y Anthropic). Voz θ y música con ritmo no verificables aquí (sin escucha humana; mejoras.md deja la θ «pendiente de oído»). El sello «MEJOR» sigue tapando en parte las etiquetas Claude/ChatGPT y la palabra clave del CTA sigue en rojo.",
@@ -20,6 +20,5 @@
   ]
  },
  "aprobado_por": "dueño",
- "decision_dueno": "7/11/2026 20:40: «Publicar ya los de dibujos» (con la voz como está). Calidad no debe volver a rechazarlo.",
- "pausa": "7/11 21:50: el dueño pudo subirlo a mano desde el móvil; no publicar hasta confirmar que no está ya en el perfil."
+ "decision_dueno": "7/11/2026 22:02: «saca todo ahora, hay que llenar el perfil». Calidad no lo toca."
 }

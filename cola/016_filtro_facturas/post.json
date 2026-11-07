@@ -1,27 +1,27 @@
 {
-  "tipo": "reel",
-  "texto": "Cómo ordenar Gmail automáticamente con un filtro (gratis, sin IA) 🗂️\n\nDesde el ordenador:\n1. Busca «factura» en Gmail y pulsa el icono «Mostrar opciones de búsqueda».\n2. Abajo, «Crear filtro».\n3. Marca «Aplicar la etiqueta» y elige «Facturas» (créala antes si no la tienes). Si además marcas «Saltar Recibidos», ni las verás pasar por la bandeja.\n4. Pulsa otra vez «Crear filtro».\n\nSirve para cualquier cosa: «pedido», «newsletter», el nombre de tu jefe…\n\nComenta FILTRO y te paso los pasos.\nSígueme para un truco al día.\n\nComprobado en: ayuda oficial de Gmail (nov. 2026).\nVoz: narración generada.\n\n#gmail #trucos #productividad #organizacion #correo",
-  "cuando": "2026-11-08T20:40:00+01:00",
-  "palabra_clave": "FILTRO",
-  "respuesta": "Gmail en el ordenador: busca «factura» > Mostrar opciones de búsqueda > Crear filtro > Aplicar la etiqueta: Facturas (y Saltar Recibidos si quieres) > Crear filtro.",
-  "compartir_en_feed": true,
-  "portada_ms": 1200,
-  "prueba_no_seguidores": false,
-  "_fuentes": [
-    "https://support.google.com/mail/answer/6579?hl=es-419",
-    "https://www.genbeta.com/a-fondo/cada-vez-tenemos-suscripciones-gmail-asi-puedes-filtrar-correo-para-tener-bandeja-entrada-limpia"
-  ],
-  "_comprobado": "7/11/2026: ayuda oficial (es-419): «En tu computadora, puedes administrar los correos… con los filtros», «haz clic en Mostrar opciones de búsqueda», «haz clic en Crear filtro» (dos veces). Los rótulos de acción «Aplicar la etiqueta» y «Saltar Recibidos» no salen en esa página; se toman de Genbeta (español de España). La página oficial no habla de crear filtros en la app del móvil: por eso se dice «desde el ordenador».",
-  "_nota_creador": "Plan 8/11 20:40 (historia antes/después, reel normal en el feed).",
-  "_autoevaluacion": {
-    "gancho": 20,
-    "truco_valor": 21,
-    "retencion": 18,
-    "estilo": 13,
-    "cta_monetizacion": 9,
-    "total": 81
-  },
-  "motor_voz": "chatterbox",
-  "renderizado": "2026-11-07T17:08:31+00:00",
-  "asset": "016_filtro_facturas.mp4"
+ "tipo": "reel",
+ "texto": "Cómo ordenar Gmail automáticamente con un filtro (gratis, sin IA) 🗂️\n\nDesde el ordenador:\n1. Busca «factura» en Gmail y pulsa el icono «Mostrar opciones de búsqueda».\n2. Abajo, «Crear filtro».\n3. Marca «Aplicar la etiqueta» y elige «Facturas» (créala antes si no la tienes). Si además marcas «Saltar Recibidos», ni las verás pasar por la bandeja.\n4. Pulsa otra vez «Crear filtro».\n\nSirve para cualquier cosa: «pedido», «newsletter», el nombre de tu jefe…\n\nComenta FILTRO y te paso los pasos.\nSígueme para un truco al día.\n\nComprobado en: ayuda oficial de Gmail (nov. 2026).\nVoz: narración generada.\n\n#gmail #trucos #productividad #organizacion #correo",
+ "cuando": "2026-11-07T22:00:00+01:00",
+ "palabra_clave": "FILTRO",
+ "respuesta": "Gmail en el ordenador: busca «factura» > Mostrar opciones de búsqueda > Crear filtro > Aplicar la etiqueta: Facturas (y Saltar Recibidos si quieres) > Crear filtro.",
+ "compartir_en_feed": true,
+ "portada_ms": 1200,
+ "prueba_no_seguidores": false,
+ "_fuentes": [
+  "https://support.google.com/mail/answer/6579?hl=es-419",
+  "https://www.genbeta.com/a-fondo/cada-vez-tenemos-suscripciones-gmail-asi-puedes-filtrar-correo-para-tener-bandeja-entrada-limpia"
+ ],
+ "_comprobado": "7/11/2026: ayuda oficial (es-419): «En tu computadora, puedes administrar los correos… con los filtros», «haz clic en Mostrar opciones de búsqueda», «haz clic en Crear filtro» (dos veces). Los rótulos de acción «Aplicar la etiqueta» y «Saltar Recibidos» no salen en esa página; se toman de Genbeta (español de España). La página oficial no habla de crear filtros en la app del móvil: por eso se dice «desde el ordenador».",
+ "_nota_creador": "Plan 8/11 20:40 (historia antes/después, reel normal en el feed).",
+ "_autoevaluacion": {
+  "gancho": 20,
+  "truco_valor": 21,
+  "retencion": 18,
+  "estilo": 13,
+  "cta_monetizacion": 9,
+  "total": 81
+ },
+ "motor_voz": "chatterbox",
+ "renderizado": "2026-11-07T17:08:31+00:00",
+ "asset": "016_filtro_facturas.mp4"
 }
