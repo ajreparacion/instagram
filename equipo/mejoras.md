@@ -293,3 +293,8 @@ Orden del usuario (nueva estrategia, 6/11 20:27): todos los reels nuevos son dib
 - Pendiente (siguientes ejecuciones): voz de Paco distinta de la de Bit, más acciones (teclear, mirar el móvil), transiciones dibujadas entre escenas, y comparar retención en estadisticas.json cuando haya 3-4 reels publicados en dibujo.
 - 7/11 10:35 · Comprobado en GitHub Actions (ciclo n.º 20, lanzado a mano a las 10:12): 013_claude_gratis renderizado en modo dibujo con la voz del dueño, **29,5 s** (antes 38,7 s), pico −2,1 dBFS; 014_formula_prompt 31,3 s. 9 fotogramas revisados de la release «cola»: papel, Bit y Paco, pantallas tecleadas, lista final; nada del estilo de misterio. Horas intactas: 013 a las 13:40 (reel de prueba) y 014 a las 20:40. Pendiente de calidad.json (Calidad, 12:51); sin él, publicar_gh.py lo saca 3 h después.
 - Detalle para la siguiente ejecución: en 014 el rótulo del gancho a dos líneas roza el bocadillo del chat (bajar el objeto ~40 px cuando el rótulo tiene 2 líneas) y un "chat" sin "pantalla" sale vacío (poner unos puntos suspensivos animados).
+
+## Revisión del Estratega del primer render en dibujo (7/11/2026 10:15, 013_claude_gratis, 29,5 s)
+El estilo encaja con la directiva (papel claro, trazo negro, Bit y Paco en movimiento, «Claude» como personaje inventado sin logo). Dos ajustes para hacer_reel.py, sin bloquear el 013:
+1. El énfasis sale en ROJO/naranja («memoria.» en el s. 22); la directiva pide un único acento cian: en modo dibujo el énfasis debe ir en cian.
+2. En el s. 9 el objeto "carpeta" (con la hoja encima) invade el rótulo «1 · PROYECTOS»: bajar el objeto o limitar su altura para que no toque la banda del rótulo.
