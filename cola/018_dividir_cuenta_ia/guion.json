@@ -1,0 +1,45 @@
+{
+ "titulo": "Casos 018: dividir la cuenta del bar con una web hecha por IA",
+ "semilla": 1718,
+ "modo": "app",
+ "video": "demo.mp4",
+ "volumen_original": 0,
+ "musica": true,
+ "portada_texto": "¿Cuánto toca pagar a cada uno?",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "texto": "¿Cuánto toca pagar a *cada uno*?",
+   "voz": "¿Cuánto toca pagar a *cada uno*?"
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 2.7,
+    "fin": 7.92
+   },
+   "voz": "Se lo pedí a una IA con *un solo mensaje*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 8.64,
+    "fin": 14.06
+   },
+   "voz": "Pongo el total, somos cuatro y dejamos *cinco por ciento* de propina."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 14.06,
+    "fin": 16.89
+   },
+   "voz": "Veintidós con sesenta y ocho cada uno. Si llega otro, *se recalcula*."
+  },
+  {
+   "estilo": "cierre",
+   "texto": "Comenta «CUENTA»",
+   "voz": "Comenta *cuenta* y te paso el mensaje. Sígueme para más."
+  }
+ ]
+}

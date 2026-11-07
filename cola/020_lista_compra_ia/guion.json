@@ -1,0 +1,45 @@
+{
+ "titulo": "Casos 020: lista de la compra que se ordena sola, web hecha por IA",
+ "semilla": 1720,
+ "modo": "app",
+ "video": "demo.mp4",
+ "volumen_original": 0,
+ "musica": true,
+ "portada_texto": "Tu lista de la compra, ordenada sola",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "texto": "Tu lista de la compra, *ordenada sola*",
+   "voz": "Tu lista de la compra, *ordenada sola*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 2.71,
+    "fin": 7.5
+   },
+   "voz": "Se lo pedí a una IA con *este mensaje*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 8.22,
+    "fin": 14.07
+   },
+   "voz": "Pego la lista desordenada y le doy a *ordenar*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 14.07,
+    "fin": 17.76
+   },
+   "voz": "Sale agrupada por secciones, y voy *tachando* lo que meto en el carro."
+  },
+  {
+   "estilo": "cierre",
+   "texto": "Comenta «COMPRA»",
+   "voz": "Comenta *compra* y te paso el mensaje. Sígueme para más."
+  }
+ ]
+}

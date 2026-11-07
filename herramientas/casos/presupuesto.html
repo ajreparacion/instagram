@@ -1,0 +1,66 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Presupuesto</title>
+<style>
+:root{--bg:#E6F1F4;--card:#fff;--ink:#14212B;--mut:#5B6B77;--acc:#00B8D9;--accd:#008FAB;--line:#DCE6EB}
+*{box-sizing:border-box;margin:0;font-family:Poppins,Inter,Arial,sans-serif}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg);color:var(--ink)}
+.view{position:absolute;left:70px;top:750px;width:940px;opacity:0;transform:translateY(calc(-50% + 24px));transition:opacity .35s,transform .35s;pointer-events:none}
+.view.on{opacity:1;transform:translateY(-50%);pointer-events:auto}
+.card{background:var(--card);border-radius:44px;padding:48px;box-shadow:0 18px 50px rgba(20,33,43,.10)}
+.chip{display:inline-block;background:var(--acc);color:#fff;font-weight:700;font-size:30px;padding:8px 26px;border-radius:40px;margin-bottom:26px}
+h2{font-size:54px;font-weight:700;margin-bottom:26px}
+label{display:block;font-size:30px;color:var(--mut);font-weight:500;margin-bottom:8px}
+input,textarea,select{width:100%;font-size:42px;padding:16px 22px;border:3px solid var(--line);border-radius:22px;color:var(--ink);background:#fff;outline:none}
+input:focus,textarea:focus,select:focus{border-color:var(--acc)}
+button{font-size:40px;font-weight:600;border:0;border-radius:26px;padding:20px 38px;background:var(--acc);color:#fff}
+button.sec{background:#EAF0F3;color:var(--ink)}
+.big{font-size:96px;font-weight:700;color:var(--accd);line-height:1.05}
+.row{display:flex;gap:18px;align-items:center}
+#cur{position:fixed;left:0;top:0;width:60px;height:60px;z-index:99;pointer-events:none;opacity:0;transition:opacity .2s}
+#cur svg{filter:drop-shadow(0 3px 5px rgba(0,0,0,.35))}
+.rip{position:fixed;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;border:5px solid var(--acc);z-index:98;pointer-events:none;animation:rip .5s ease-out forwards}
+@keyframes rip{to{transform:scale(3);opacity:0}}
+.caret::after{content:"";display:inline-block;width:5px;height:1em;background:var(--acc);margin-left:3px;vertical-align:-6px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+
+.ln{display:grid;grid-template-columns:1fr 120px 190px;gap:14px;margin-bottom:16px}
+.ln input{font-size:36px;padding:14px 18px}
+.hd{display:grid;grid-template-columns:1fr 120px 190px;gap:14px;font-size:28px;color:var(--mut);margin-bottom:8px}
+.tot{margin-top:24px;border-top:3px solid var(--line);padding-top:24px}
+.tr{display:flex;justify-content:space-between;align-items:center;font-size:40px;margin-bottom:12px}
+.tr select{width:230px;font-size:38px;padding:10px 16px}
+
+</style></head><body>
+<div id="vp" class="view"><div class="card"><span class="chip">Mi mensaje a la IA</span>
+<div id="ptxt" class="caret" style="font-size:46px;line-height:1.38;font-weight:500;min-height:420px"></div>
+<div class="row" style="justify-content:flex-end;margin-top:10px"><button id="send">Enviar &rarr;</button></div></div></div>
+<div id="vt" class="view"><div class="card">
+<h2>Presupuesto</h2>
+<div class="hd"><span>Concepto</span><span>Uds.</span><span>Precio €</span></div>
+<div id="lines"></div>
+<button class="sec" id="add" style="margin-top:6px;font-size:34px;padding:14px 28px">+ Línea</button>
+<div class="tot">
+ <div class="tr"><span>Base</span><b id="base">0,00 €</b></div>
+ <div class="tr"><span>IVA</span><select id="iva"><option value="21">21 %</option><option value="10">10 %</option><option value="4">4 %</option></select><b id="ivaimp">0,00 €</b></div>
+ <div class="tr" style="margin-top:22px"><span style="font-weight:600">Total</span><span class="big" id="total">0,00 €</span></div>
+</div></div></div>
+<div id="cur"><svg width="60" height="60" viewBox="0 0 24 24"><path d="M3 2l7.5 19 2.7-7.8L21 10.5z" fill="#fff" stroke="#14212B" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+<script>
+const $=s=>document.querySelector(s);
+const eur=c=>(c/100).toFixed(2).replace('.',',')+' €';
+document.addEventListener('mousemove',e=>{const c=$('#cur');c.style.opacity=1;c.style.transform='translate('+(e.clientX-6)+'px,'+(e.clientY-4)+'px)'});
+document.addEventListener('mousedown',e=>{const r=document.createElement('div');r.className='rip';r.style.left=e.clientX+'px';r.style.top=e.clientY+'px';document.body.appendChild(r);setTimeout(()=>r.remove(),600)});
+window.showPrompt=()=>{$('#vt').classList.remove('on');$('#vp').classList.add('on')};
+window.showTool=()=>{$('#vp').classList.remove('on');$('#vt').classList.add('on')};
+window.setPrompt=t=>{$('#ptxt').textContent=t};
+
+const num=v=>{v=String(v||'').replace(',','.').replace(/[^0-9.]/g,'');return parseFloat(v)||0};
+function addLine(c,u,p){const d=document.createElement('div');d.className='ln';d.innerHTML='<input placeholder="Concepto" value="'+(c||'')+'"><input inputmode="decimal" placeholder="1" value="'+(u||'')+'"><input inputmode="decimal" placeholder="0,00" value="'+(p||'')+'">';d.querySelectorAll('input').forEach(i=>i.addEventListener('input',calc));$('#lines').appendChild(d);calc()}
+function calc(){let b=0;document.querySelectorAll('.ln').forEach(l=>{const i=l.querySelectorAll('input');b+=Math.round(num(i[1].value)*num(i[2].value)*100)});
+const iva=Math.round(b*num($('#iva').value)/100);$('#base').textContent=eur(b);$('#ivaimp').textContent=eur(iva);$('#total').textContent=eur(b+iva)}
+$('#iva').addEventListener('change',calc);$('#add').addEventListener('click',()=>addLine());
+window.reset=()=>{$('#lines').innerHTML='';$('#iva').value='21';addLine();addLine()};
+window.preset=()=>{$('#lines').innerHTML='';$('#iva').value='21';addLine('Cambiar grifo cocina','1','85');addLine('Material de fontanería','1','32');addLine('Desplazamiento','1','15')};
+window.reset();
+
+</script></body></html>

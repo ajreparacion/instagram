@@ -1,0 +1,65 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dividir la cuenta</title>
+<style>
+:root{--bg:#E6F1F4;--card:#fff;--ink:#14212B;--mut:#5B6B77;--acc:#00B8D9;--accd:#008FAB;--line:#DCE6EB}
+*{box-sizing:border-box;margin:0;font-family:Poppins,Inter,Arial,sans-serif}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg);color:var(--ink)}
+.view{position:absolute;left:70px;top:750px;width:940px;opacity:0;transform:translateY(calc(-50% + 24px));transition:opacity .35s,transform .35s;pointer-events:none}
+.view.on{opacity:1;transform:translateY(-50%);pointer-events:auto}
+.card{background:var(--card);border-radius:44px;padding:48px;box-shadow:0 18px 50px rgba(20,33,43,.10)}
+.chip{display:inline-block;background:var(--acc);color:#fff;font-weight:700;font-size:30px;padding:8px 26px;border-radius:40px;margin-bottom:26px}
+h2{font-size:54px;font-weight:700;margin-bottom:26px}
+label{display:block;font-size:30px;color:var(--mut);font-weight:500;margin-bottom:8px}
+input,textarea,select{width:100%;font-size:42px;padding:16px 22px;border:3px solid var(--line);border-radius:22px;color:var(--ink);background:#fff;outline:none}
+input:focus,textarea:focus,select:focus{border-color:var(--acc)}
+button{font-size:40px;font-weight:600;border:0;border-radius:26px;padding:20px 38px;background:var(--acc);color:#fff}
+button.sec{background:#EAF0F3;color:var(--ink)}
+.big{font-size:96px;font-weight:700;color:var(--accd);line-height:1.05}
+.row{display:flex;gap:18px;align-items:center}
+#cur{position:fixed;left:0;top:0;width:60px;height:60px;z-index:99;pointer-events:none;opacity:0;transition:opacity .2s}
+#cur svg{filter:drop-shadow(0 3px 5px rgba(0,0,0,.35))}
+.rip{position:fixed;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;border:5px solid var(--acc);z-index:98;pointer-events:none;animation:rip .5s ease-out forwards}
+@keyframes rip{to{transform:scale(3);opacity:0}}
+.caret::after{content:"";display:inline-block;width:5px;height:1em;background:var(--acc);margin-left:3px;vertical-align:-6px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+
+.chips{display:flex;gap:16px}
+.chips button{flex:1;background:#EAF0F3;color:var(--ink)}
+.chips button.on{background:var(--acc);color:#fff}
+.step{display:flex;align-items:center;justify-content:space-between;background:#F3F7F9;border-radius:26px;padding:12px 18px}
+.step button{width:92px;height:92px;padding:0;font-size:56px;line-height:1}
+.step b{font-size:64px}
+.res{margin-top:34px;background:#EAF7FA;border-radius:34px;padding:36px;text-align:center}
+.res small{display:block;font-size:34px;color:var(--mut);margin-top:10px}
+
+</style></head><body>
+<div id="vp" class="view"><div class="card"><span class="chip">Mi mensaje a la IA</span>
+<div id="ptxt" class="caret" style="font-size:46px;line-height:1.38;font-weight:500;min-height:420px"></div>
+<div class="row" style="justify-content:flex-end;margin-top:10px"><button id="send">Enviar &rarr;</button></div></div></div>
+<div id="vt" class="view"><div class="card">
+<h2>Dividir la cuenta</h2>
+<label>Total de la cuenta (€)</label><input id="tot" inputmode="decimal" placeholder="0,00" style="margin-bottom:28px">
+<label>Personas</label><div class="step" style="margin-bottom:28px"><button class="sec" id="men">−</button><b id="pers">2</b><button id="mas">+</button></div>
+<label>Propina</label><div class="chips" id="chips"><button data-p="0" class="on">0 %</button><button data-p="5">5 %</button><button data-p="10">10 %</button></div>
+<div class="res"><div style="font-size:34px;color:var(--mut)">Cada uno paga</div><div class="big" id="cada">0,00 €</div><small id="conp">Total con propina: 0,00 €</small></div></div></div>
+<div id="cur"><svg width="60" height="60" viewBox="0 0 24 24"><path d="M3 2l7.5 19 2.7-7.8L21 10.5z" fill="#fff" stroke="#14212B" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+<script>
+const $=s=>document.querySelector(s);
+const eur=c=>(c/100).toFixed(2).replace('.',',')+' €';
+document.addEventListener('mousemove',e=>{const c=$('#cur');c.style.opacity=1;c.style.transform='translate('+(e.clientX-6)+'px,'+(e.clientY-4)+'px)'});
+document.addEventListener('mousedown',e=>{const r=document.createElement('div');r.className='rip';r.style.left=e.clientX+'px';r.style.top=e.clientY+'px';document.body.appendChild(r);setTimeout(()=>r.remove(),600)});
+window.showPrompt=()=>{$('#vt').classList.remove('on');$('#vp').classList.add('on')};
+window.showTool=()=>{$('#vp').classList.remove('on');$('#vt').classList.add('on')};
+window.setPrompt=t=>{$('#ptxt').textContent=t};
+
+let P=2,TIP=0;
+const num=v=>{v=String(v||'').replace(',','.').replace(/[^0-9.]/g,'');return parseFloat(v)||0};
+function calc(){const t=Math.round(num($('#tot').value)*100);const con=Math.round(t*(100+TIP)/100);$('#pers').textContent=P;$('#cada').textContent=eur(Math.round(con/P));$('#conp').textContent='Total con propina: '+eur(con);
+document.querySelectorAll('#chips button').forEach(b=>b.classList.toggle('on',+b.dataset.p===TIP))}
+$('#tot').addEventListener('input',calc);$('#mas').addEventListener('click',()=>{P=Math.min(30,P+1);calc()});$('#men').addEventListener('click',()=>{P=Math.max(1,P-1);calc()});
+document.querySelectorAll('#chips button').forEach(b=>b.addEventListener('click',()=>{TIP=+b.dataset.p;calc()}));
+window.reset=()=>{$('#tot').value='';P=2;TIP=0;calc()};
+window.preset=()=>{$('#tot').value='86,40';P=4;TIP=5;calc()};
+window.reset();
+
+</script></body></html>
