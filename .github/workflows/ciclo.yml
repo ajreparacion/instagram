@@ -75,6 +75,16 @@ jobs:
           fi
           pip install --quiet pillow numpy
 
+      - name: Playwright (solo si un reel pendiente lleva grabacion.json)
+        if: steps.trabajo.outputs.cola == 'si'
+        run: |
+          nec=no
+          for f in cola/*/grabacion.json; do [ -f "$f" ] && ! grep -q '"renderizado"' "$(dirname "$f")/post.json" && nec=si; done
+          if [ "$nec" = si ]; then
+            pip install --quiet playwright
+            python3 -m playwright install --with-deps chromium > /dev/null
+          fi
+
       - name: Caché de la voz (Piper)
         if: steps.trabajo.outputs.cola == 'si'
         uses: actions/cache@v4

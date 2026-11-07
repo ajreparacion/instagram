@@ -1,0 +1,72 @@
+{
+ "dispositivo": "movil",
+ "fondo": "#DDEBF7",
+ "url": "demo_tareas.html",
+ "pasos": [
+  {
+   "accion": "esperar",
+   "seg": 0.8
+  },
+  {
+   "accion": "clic",
+   "selector": "#p"
+  },
+  {
+   "accion": "escribir",
+   "selector": "#p",
+   "texto": "Llamar al dentista\nPreparar la reunión\nComprar pan",
+   "cps": 16
+  },
+  {
+   "accion": "zoom",
+   "selector": "#go",
+   "nivel": 1.8,
+   "seg": 0.7
+  },
+  {
+   "accion": "clic",
+   "selector": "#go"
+  },
+  {
+   "accion": "esperar",
+   "seg": 0.4
+  },
+  {
+   "accion": "zoom",
+   "nivel": 1.0,
+   "seg": 0.6
+  },
+  {
+   "accion": "clic",
+   "selector": "#lista li:nth-child(1)"
+  },
+  {
+   "accion": "clic",
+   "selector": "#lista li:nth-child(2)"
+  },
+  {
+   "accion": "zoom",
+   "x": 195,
+   "y": 330,
+   "nivel": 1.35,
+   "seg": 0.7
+  },
+  {
+   "accion": "clic",
+   "selector": "#lista li:nth-child(3)"
+  },
+  {
+   "accion": "esperar",
+   "seg": 0.9
+  },
+  {
+   "accion": "zoom",
+   "nivel": 1.0,
+   "seg": 0.6
+  },
+  {
+   "accion": "esperar",
+   "seg": 0.4
+  }
+ ]
+}
