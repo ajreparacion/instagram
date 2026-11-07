@@ -92,3 +92,12 @@
 2026-11-07 13:02  Voz: alineación palabra a palabra (small, 17.5 s): 6/6 frases
 2026-11-07 13:03  014_formula_prompt: renderizado con voz y subido a la release 'cola'
 2026-11-07 13:03  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-07 13:29  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 6 frases en 309 s
+2026-11-07 13:29  Voz: silencios recortados por frase (s): [1.14, 0.04, 0.06, 0, 0, 0]
+2026-11-07 13:29  Voz: alineación palabra a palabra (small, 17.7 s): 6/6 frases
+2026-11-07 13:30  013_claude_gratis: renderizado con voz y subido a la release 'cola'
+2026-11-07 13:35  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 6 frases en 305 s
+2026-11-07 13:35  Voz: silencios recortados por frase (s): [0, 1.38, 0.04, 0.22, 0.18, 0.58]
+2026-11-07 13:36  Voz: alineación palabra a palabra (small, 18.1 s): 6/6 frases
+2026-11-07 13:37  014_formula_prompt: renderizado con voz y subido a la release 'cola'
+2026-11-07 13:37  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
