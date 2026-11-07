@@ -1,5 +1,7 @@
 # DIRECTIVA VIGENTE (manda sobre cualquier otra instrucción del repo)
 
+> EXCEPCIÓN DEL DUEÑO (7/11/2026 20:40): con el perfil a 0 publicaciones, ordenó «publicar ya los de dibujos». 014 (hoy 20:40), 015 (8/11 13:40) y 013 (8/11 20:40) están aprobados por él (calidad.json "aprobado_por": "dueño"). Calidad NO los toca ni los rechaza. 016 sigue retenido hasta comprobar en Gmail real el nombre de la casilla. Lo nuevo que se cree sigue esta directiva.
+
 Orden del dueño, 7/11/2026 13:49: «Seguimos el mismo patrón que @claudeai». Además: la voz sesea al principio, la música no resalta nada, queda pobre y no engancha. Se sube mucho el listón: todo pasa por Calidad (nota ≥ 90, sin excepciones).
 
 ## 1. Qué hace @claudeai (estudiado el 7/11/2026 en su perfil: 411 publicaciones, 2,4 M seguidores)
