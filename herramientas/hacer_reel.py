@@ -729,8 +729,10 @@ PAPEL = (248, 244, 232)
 TINTA = (28, 26, 24)
 CIAN = (0, 184, 217)
 CIAN_CLARO = (190, 236, 244)
-F_DIB = DJV + "DejaVuSans-Bold.ttf"
-F_DIB_C = DJV + "DejaVuSansCondensed-Bold.ttf"
+# 7/11 (Mejora, 2.ª sesion): letra redondeada Poppins (OFL, en ./fonts) para rotulos, pizarra, lista y paneles;
+# si falta la fuente, DejaVu como antes. Los subtitulos siguen con FUENTE_SUB (legibilidad).
+F_DIB = find_font(["Poppins-Bold.ttf", DJV + "DejaVuSans-Bold.ttf"])
+F_DIB_C = find_font(["Poppins-Bold.ttf", DJV + "DejaVuSansCondensed-Bold.ttf"])
 F_DIB_MONO = DJV + "DejaVuSansMono-Bold.ttf"
 SUB_CY_DIB = 1030          # centro de la banda de subtitulos (entre el objeto y los personajes)
 SUELO_DIB = 1500           # linea de suelo de los personajes
