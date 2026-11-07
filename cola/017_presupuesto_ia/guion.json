@@ -1,0 +1,53 @@
+{
+ "titulo": "Casos 017: un presupuesto con IVA hecho por una IA",
+ "semilla": 1717,
+ "modo": "app",
+ "video": "demo.mp4",
+ "volumen_original": 0,
+ "musica": true,
+ "portada_texto": "Este presupuesto lo hizo una IA",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "texto": "Este presupuesto lo hizo *una IA*",
+   "voz": "Este presupuesto lo hizo *una IA*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 2.7,
+    "fin": 8.01
+   },
+   "voz": "Le pedí esto a una IA, con *un solo mensaje*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 8.73,
+    "fin": 16.71
+   },
+   "voz": "Y esto es lo que salió. Escribo el concepto, las unidades y el precio, y *suma solo*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 16.71,
+    "fin": 21.78
+   },
+   "voz": "Añado otra línea y el total se actualiza *al momento*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 21.78,
+    "fin": 24.61
+   },
+   "voz": "Cambio el IVA y lo *recalcula*."
+  },
+  {
+   "estilo": "cierre",
+   "texto": "Comenta «PRESUPUESTO»",
+   "voz": "Comenta *presupuesto* y te paso el mensaje. Sígueme para más."
+  }
+ ]
+}

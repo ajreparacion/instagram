@@ -1,0 +1,6 @@
+{
+ "presupuesto": {"prompt": "Hazme una página web en un solo archivo HTML para hacer presupuestos: líneas con concepto, cantidad y precio, un selector de IVA y el total calculado solo."},
+ "cuenta": {"prompt": "Hazme una página web en un solo archivo HTML para dividir la cuenta del bar: importe total, número de personas, propina en porcentaje y lo que paga cada uno."},
+ "suscripciones": {"prompt": "Hazme una página web en un solo archivo HTML donde apunte mis suscripciones con su precio al mes y me diga cuánto pago al año. Que pueda quitar una y ver cuánto ahorro."},
+ "compra": {"prompt": "Hazme una página web en un solo archivo HTML: pego mi lista de la compra desordenada y la agrupa por secciones del súper (fruta, lácteos, limpieza…) con casillas para tachar."}
+}

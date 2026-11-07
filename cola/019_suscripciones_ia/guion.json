@@ -1,0 +1,45 @@
+{
+ "titulo": "Casos 019: cuánto pagas al año en suscripciones, con una web hecha por IA",
+ "semilla": 1719,
+ "modo": "app",
+ "video": "demo.mp4",
+ "volumen_original": 0,
+ "musica": true,
+ "portada_texto": "¿Cuánto pagas al año en suscripciones?",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "texto": "¿Cuánto pagas al año en *suscripciones*?",
+   "voz": "¿Cuánto pagas al año en *suscripciones*?"
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 2.7,
+    "fin": 7.37
+   },
+   "voz": "Le pedí a una IA esta pequeña web. *Mira el mensaje*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 8.09,
+    "fin": 18.59
+   },
+   "voz": "Apunto tres: streaming, música y gimnasio, con lo que pago *al mes*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 18.59,
+    "fin": 22.44
+   },
+   "voz": "Quito el gimnasio y me dice *cuánto ahorro* al año."
+  },
+  {
+   "estilo": "cierre",
+   "texto": "Comenta «SUSCRIPCIONES»",
+   "voz": "Comenta *suscripciones* y te paso el mensaje. Sígueme para más."
+  }
+ ]
+}
