@@ -17,3 +17,5 @@
 ## Serie APPS NEOGEST LAB (desde el 7/11/2026)
 - Franja de las 20:40: 1 reel de app al día si hay vídeo fuente (Publicacion con media_url, reel, instagram, estado distinto de programada/publicada) de una app «activo». Reglas completas en INSTRUCCIONES_EQUIPO.md › SERIE APPS NEOGEST LAB. Mira fotogramas del vídeo antes de escribir la voz; solo hechos_verificados; «nuestra app»; locución en todo el reel; 20-45 s. Al meterlo en cola/, estado «programada» en Base44.
 - Si el render de vídeo propio aún no existe, prepara la carpeta con el guion de voz por tramos y "renderizado": false, y anótalo en mejoras.md. Nunca publiques un reel de app sin voz. Sin vídeo fuente, las 20:40 siguen con el truco del plan.
+
+> NUEVO (7/11/2026, orden del usuario): lee equipo/formulas_ganadoras_ia.md. Cada reel nuevo sigue una fórmula F1-F8 (anótala en post.json como "formula":"F3"), con gancho entero en el primer fotograma, voz desde el s. 0, ≥ 1/3 de los reels de ≤ 20 s y sin copiar ningún texto de referencia.

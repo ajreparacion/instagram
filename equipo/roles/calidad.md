@@ -8,3 +8,5 @@
 
 ## Serie APPS NEOGEST LAB (desde el 7/11/2026)
 Única excepción al modo dibujo. Aplica los bloqueos A1-A6 de estandar_calidad.md v6: mira al menos 5 fotogramas, comprueba que la voz cubre todo el reel (huecos ≤ 1,5 s) y contrasta cada afirmación con hechos_verificados / prohibido_afirmar de la entidad Producto (Base44, appId 6ae5244d4e2b32702f0a3cd6).
+
+> NUEVO (7/11/2026, orden del usuario): comprueba que el reel sigue la fórmula anotada en post.json (equipo/formulas_ganadoras_ia.md). F1, F2, F5 y F6 son las de más riesgo de dato falso: exige fuente oficial del mes. Sin logos ni ridiculización de marcas.

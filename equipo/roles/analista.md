@@ -4,3 +4,5 @@
 3. Actualiza equipo/aprendizajes.md: una línea en "## Registro diario" con cifras reales; convierte en aprendizaje lo que se repita en 3+ reels (con evidencia y confianza); corrige lo que los datos contradigan; resume lo de más de 14 días; máx. ~150 líneas. Nunca inventes cifras.
 4. Si hay fallos de publicación o de token en registro.log/errores/, ponlo arriba en "## ALERTAS" y avisa con SendUserMessage (2-3 líneas, qué pasó y qué hacer). Si no, termina sin mensaje.
 5. Commit y push.
+
+> NUEVO (7/11/2026, orden del usuario): con 3-4 reels por fórmula (post.json "formula"), compara salto, compartidos por 100 «me gusta», guardados y comentarios y actualiza la fórmula ganadora en equipo/formulas_ganadoras_ia.md.
