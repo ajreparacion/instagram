@@ -1931,11 +1931,57 @@ def saw_voice(f, n, ph0):
 CORTE_GIRO = 0.5
 
 
+def ajustar_rejilla(cortes, beat0, lo=94.0, hi=124.0):
+    """Cortes AL GOLPE (modo dibujo/app): elige el tempo (lo-hi bpm, paso 0,1) y el desfase de la rejilla de pulsos
+    para que cada corte de escena caiga lo mas cerca posible de un pulso (minimo error cuadratico medio).
+    Devuelve (beat_s, fase_s, info) con el error medio/maximo en ms antes (beat0, fase 0) y despues."""
+    c = np.asarray([x for x in cortes if x > 0.2], dtype=np.float64)
+    def dist(b, fase):
+        return np.abs(((c[None, :] - fase[:, None] + b / 2) % b) - b / 2)
+    f0 = np.zeros(1)
+    d0 = dist(beat0, f0)[0] if len(c) else np.zeros(1)
+    info = {"antes_ms": round(float(d0.mean()) * 1000, 1), "antes_max_ms": round(float(d0.max()) * 1000, 1)}
+    if len(c) < 2:
+        info.update(despues_ms=info["antes_ms"], despues_max_ms=info["antes_max_ms"])
+        return beat0, 0.0, info
+    mejor = (1e9, beat0, 0.0)
+    for bpm in np.arange(lo, hi + 1e-6, 0.1):
+        b = 60.0 / bpm
+        fases = np.arange(0.0, b, 0.004)
+        d = dist(b, fases)
+        e = np.sqrt((d ** 2).mean(axis=1))
+        i = int(np.argmin(e))
+        if e[i] < mejor[0] - 1e-9: mejor = (float(e[i]), b, float(fases[i]))
+    _, b, fase = mejor
+    d1 = dist(b, np.asarray([fase]))[0]
+    info.update(despues_ms=round(float(d1.mean()) * 1000, 1), despues_max_ms=round(float(d1.max()) * 1000, 1))
+    return b, fase, info
+
+def _golpe(tipo, rg, v=1.0):
+    """Percusion sintetica de los modos dibujo/app (clap, hat, caja)."""
+    if tipo == "clap":
+        m = int(0.22 * SR); t = np.arange(m) / SR
+        x = lp_fft(rg.standard_normal(m), 6500, 2) - lp_fft(rg.standard_normal(m), 1100, 2)
+        env = np.exp(-t * 24)
+        for d, a in ((0.011, 0.75), (0.022, 0.55)):
+            env = env + a * np.exp(-np.maximum(t - d, 0) * 24) * (t > d)
+        return (x * env * 1.05 + 0.35 * np.sin(2 * np.pi * 185 * t) * np.exp(-t * 28)) * v
+    if tipo == "hat":
+        m = int(0.07 * SR); t = np.arange(m) / SR
+        x = rg.standard_normal(m); x = x - lp_fft(x, 7500, 2)
+        return x * np.exp(-t * 75) * 0.55 * v
+    m = int(0.16 * SR); t = np.arange(m) / SR   # caja (relleno)
+    x = lp_fft(rg.standard_normal(m), 5200, 2) - lp_fft(rg.standard_normal(m), 900, 2)
+    return (x * np.exp(-t * 32) * 0.9 + 0.5 * np.sin(2 * np.pi * 210 * t) * np.exp(-t * 38)) * v
+
 def make_music(scenes, n, seed, gs, hook_end):
     rng = random.Random(seed * 7919 + 13)
     total = n / SR
     bpm = rng.uniform(70, 90); beat = 60.0 / bpm
     if modo_alegre(): bpm = rng.uniform(98, 110); beat = 60.0 / bpm   # dibujo/app: mas vivo
+    fase = 0.0; rejilla = None
+    if modo_alegre():   # tempo y fase de la rejilla elegidos para que los cortes caigan en un pulso
+        beat, fase, rejilla = ajustar_rejilla([s.start / FPS for s in scenes[1:]], beat)
     cut0 = gs - CORTE_GIRO if (gs and gs >= 3.0) else None
     if gs and gs >= 3.0:  # que el giro caiga en un pulso
         b2 = gs / max(1, round(gs / beat))
@@ -1969,8 +2015,19 @@ def make_music(scenes, n, seed, gs, hook_end):
         k = int(math.ceil(ts / beat - 1e-6))
         while k * beat < te - 0.02:
             kicks.append((k * beat, 1.0 if k % 4 == 0 else 0.72)); k += 1
-    if modo_suave():
-        tr0 = None            # modo humano/dibujo: sin subida de tension ni bombo, solo colchon y arpegio
+    acentos = set()
+    if modo_alegre():
+        # dibujo/app: bombo en los tiempos 1 y 3 de cada compas (mas fuerte donde cae un corte de escena); la caja, el
+        # hi-hat y los rellenos se anaden despues de desplazar la rejilla por `fase`. Suena desde el segundo 0.
+        tr0 = None
+        acentos = {int(round((s.start / FPS - fase) / beat)) for s in scenes[1:]}
+        k = 0
+        while k * beat < total - fase - 0.02:
+            if k % 4 in (0, 2) or k in acentos:
+                kicks.append((k * beat, (1.0 if k % 4 == 0 else 0.85) * (1.3 if k in acentos else 1.0)))
+            k += 1
+    elif modo_suave():
+        tr0 = None            # modo humano: sin subida de tension ni bombo, solo colchon y arpegio
     elif cut0:
         kick_run(hook_end, cut0); kick_run(gs, total); kicks.append((gs, 1.5))
     else:
@@ -2049,7 +2106,7 @@ def make_music(scenes, n, seed, gs, hook_end):
     kw += 0.12 * np.random.default_rng(seed).standard_normal(m) * np.exp(-tk_ * 400)
     kick = np.zeros(n)
     for tkk, v in kicks: add_at(kick, kw * v, tkk)
-    kick *= 1.1
+    kick *= 0.62 if modo_alegre() else 1.1
     # ---- SUBIDA DE TENSION
     riser = np.zeros(n)
     if tr0:
@@ -2068,11 +2125,35 @@ def make_music(scenes, n, seed, gs, hook_end):
     sendL = padL * 0.5 + arpL * 0.9 + riser * 0.4
     sendR = padR * 0.5 + arpR * 0.9 + riser * 0.4
     L = dryL + 0.9 * reverb(sendL); R = dryR + 0.9 * reverb(sendR, True)
+    if modo_alegre():
+        sh = int(round(fase * SR))   # toda la musica (colchon, arpegio, bombo) se desplaza a la rejilla de los cortes
+        if sh > 0:
+            L = np.concatenate([np.zeros(sh), L])[:n]; R = np.concatenate([np.zeros(sh), R])[:n]
+        rg = np.random.default_rng(seed + 77)
+        bl = np.zeros(n); br = np.zeros(n)
+        nb = int((total - fase) / beat) + 1
+        for k in range(nb):
+            tb = fase + k * beat
+            comp, pos = k // 4, k % 4
+            relleno = (comp % 4 == 3 and pos == 3)          # cada 4 compases, relleno de cajas antes del siguiente
+            if pos in (1, 3) and not relleno:
+                add_at(bl, _golpe("clap", rg, 0.8 + (0.35 if k in acentos else 0.0)), tb)
+                add_at(br, _golpe("clap", rg, 0.8 + (0.35 if k in acentos else 0.0)), tb)
+            if relleno:
+                for j in range(4):
+                    v = 0.5 + 0.18 * j
+                    add_at(bl, _golpe("caja", rg, v), tb + j * beat / 4); add_at(br, _golpe("caja", rg, v), tb + j * beat / 4)
+            for j, (dt, v) in enumerate(((0.0, 0.32), (0.5, 0.62))):      # hi-hat a corcheas, el contratiempo mas fuerte
+                if relleno and j == 1: continue
+                add_at(bl, _golpe("hat", rg, v), tb + dt * beat); add_at(br, _golpe("hat", rg, v * 0.85), tb + dt * beat + 0.004)
+            if pos == 2:                                    # sincopa suave antes del tiempo 4 (da balanceo)
+                add_at(bl, _golpe("hat", rg, 0.9), tb + 0.75 * beat)
+        L = L + 0.42 * bl; R = R + 0.42 * br
     cutg = np.ones(n)
     if cut0:
         i0, i1 = int(cut0 * SR), int(gs * SR); r0 = int(0.006 * SR)
         cutg[i0:i0 + r0] = np.linspace(1, 0, r0); cutg[i0 + r0:i1] = 0.0
-    return L, R, cutg, dict(bpm=60 / beat, key=key, prog=(PROGS_MAYOR if modo_alegre() else PROGS).index(prog), box=box, cut=cut0, riser=tr0)
+    return L, R, cutg, dict(bpm=round(60 / beat, 2), fase_ms=round(fase * 1000), cortes_al_golpe=rejilla, key=key, prog=(PROGS_MAYOR if modo_alegre() else PROGS).index(prog), box=box, cut=cut0, riser=tr0)
 
 def sfx_dibujo(tipo, dur, rg):
     """Efectos de sonido del modo dibujo, generados por codigo y discretos (amplitud < 0,16; la voz los hunde en la
@@ -2198,10 +2279,10 @@ def make_audio(scenes, total, seed, musica=True):
     if musica:
         mus = np.stack([mL * cutg, mR * cutg], 1)
         lm0 = lufs(mus)
-        mus *= 10 ** (((-31 if MODO["humano"] else (-29 if modo_alegre() else -24)) - lm0) / 20)   # humano/dibujo/app: musica discreta
+        mus *= 10 ** (((-31 if MODO["humano"] else (-26 if modo_alegre() else -24)) - lm0) / 20)   # humano/dibujo/app: musica discreta
         if modo_suave() and hook_end < total - 2.0:
             # el gancho va a pelo (solo la voz): la musica entra en fundido de 0,8 s cuando termina la primera escena
-            mus *= np.clip((t - hook_end + 0.2) / 0.8, 0.0, 1.0)[:, None]
+            mus *= np.clip((t - hook_end + 0.2) / 0.8, 0.5 if modo_alegre() else 0.0, 1.0)[:, None]   # dibujo/app: ya suena en el gancho (a media fuerza)
         st = st + mus
     fade = np.minimum(1, np.minimum(t / 0.3, (total - t) / 0.9))
     st *= fade[:, None]

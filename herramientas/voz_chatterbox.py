@@ -4,7 +4,7 @@
 Uso: python3 voz_chatterbox.py lote.json
   lote.json = {"modelo": "es-es" | "multilingue", "idioma": "es",
                "exageracion": 0.6, "cfg": 0.35, "temperatura": 0.75, "referencia": "/ruta/voz_ref.wav" | null,
-               "ganancia": 1.0, "semilla": 1518,
+               "ganancia": 1.0, "semilla": 1518, "theta": "" | "griego" | "griego_sin_inicial",
                "frases": [{"texto": "...", "salida": "/ruta/voz0.wav"}, ...]}
 
 - "modelo": "es-es" carga el afinado para español de España (Hugging Face ResembleAI/Chatterbox-Multilingual-es-es,
@@ -28,6 +28,18 @@ import wave
 import numpy as np
 
 REPO_ES = "ResembleAI/Chatterbox-Multilingual-es-es"
+
+
+def a_theta(t, modo):
+    """Contra el seseo (7/11/2026): Chatterbox dice «s» donde España dice «z» / «c» ante e, i. Escribiendo esa letra
+    como la griega θ el modelo (su tokenizador incluye el griego) sí pronuncia la θ. modo "griego": todas;
+    "griego_sin_inicial": se deja la «c» al principio de palabra (cerveza, cinco), que sale como «t»."""
+    if not modo:
+        return t
+    ini = "(?<=[\\wáéíóúñ])" if modo == "griego_sin_inicial" else ""
+    t = re.sub(ini + "c(?=[eiéí])", "θ", t)
+    t = re.sub(ini + "C(?=[eiéí])", "Θ", t)
+    return t.replace("z", "θ").replace("Z", "Θ")
 
 
 def cargar(modelo_pedido, device="cpu"):
@@ -117,7 +129,7 @@ def main():
         x = None
         for intento in range(3):
             with torch.inference_mode():
-                wav = modelo.generate(f["texto"], **kwf)
+                wav = modelo.generate(a_theta(f["texto"], lote.get("theta")), **kwf)
             x = a_numpy(wav)
             dur = x.size / sr
             if x.size >= sr * 0.2 and np.isfinite(x).all() and dur <= esperado * 1.6:
@@ -140,6 +152,7 @@ def main():
         avisos.append(f"frases regeneradas por duración anómala: {reintentos}")
     print(json.dumps({"modelo_usado": usado, "referencia": bool(ref), "avisos": avisos, "carga_s": round(carga, 1),
                       "frases_s": tiempos, "total_s": round(time.time() - t0, 1), "sample_rate": sr,
+                      "theta": lote.get("theta") or None,
                       "ajustes": {k: v for k, v in kw.items() if k != "audio_prompt_path"}}, ensure_ascii=False))
 
 

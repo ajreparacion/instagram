@@ -293,7 +293,8 @@ def sintetizar_chatterbox(textos, salidas, trabajo, aj, estilos=None):
                             {"modelo": cb.get("modelo", "es-es"), "idioma": cb.get("idioma", "es"),
                              "exageracion": cb.get("exageracion", 0.5), "cfg": cb.get("cfg", 0.5),
                              "temperatura": cb.get("temperatura", 0.8), "referencia": ref if ref and os.path.exists(ref) else None,
-                             "ganancia": cb.get("ganancia", 1.0), "semilla": cb.get("semilla")},
+                             "ganancia": cb.get("ganancia", 1.0), "semilla": cb.get("semilla"),
+                             "theta": cb.get("theta") or ""},
                             textos, salidas, trabajo, cb.get("max_s", 1500),
                             extras=ajustes_por_estilo(cb, estilos, ("exageracion", "cfg", "temperatura")))
     log(f"Voz con Chatterbox ({info.get('modelo_usado', '?')}, referencia={'sí' if info.get('referencia') else 'integrada'}, "
