@@ -1,0 +1,28 @@
+{
+ "aprobado": true,
+ "nota": 91,
+ "aprobado_por": "revisión del agente del modo presentador (8/11/2026, render 21:48 UTC)",
+ "puntuacion": {
+  "gancho": "22/25: pregunta con problema real legible desde el fotograma 0 (¿AÚN LO COPIAS A MANO?, 5 palabras; la voz dice 9), Nea y Bit en movimiento desde el principio, voz en el primer segundo, énfasis en «a mano»",
+  "claridad": "21/25: 33,4 s con corte cada 2-4 s; un solo flujo (presupuesto → pedido → albarán → factura → enlace de pago); el zoom llega a los botones «Aceptado», «Servir y generar albarán» y «Emitir factura», pero la letra de las capturas sigue siendo pequeña en el móvil; tarjeta resumen al final",
+  "guardar_compartir": "19/20: útil para autónomos y pymes, tarjeta con checks y «guárdalo», CTA «Comenta APP»",
+  "exactitud": "15/15: «De pago, con precio por usuario» (lo dice la web pública de la app), «Comprobado en la demo (8/11/2026)», Bizum solo «si lo tienes activo»",
+  "texto_post": "14/15: primera línea con la cadena de documentos y «Excel», 4 líneas y 5 hashtags, portada a 1,2 s con el titular y Bit"
+ },
+ "revision": [
+  "bloqueos A1-A6 revisados: todo está en hechos_verificados de «gestion-integral-7d»; nada de prohibido_afirmar (ni Verifactu, ni contabilidad, ni agentes que actúan solos, ni tiendas de apps); capturas de la demo con datos de ejemplo y rótulo; dice «nuestra app»; 33,4 s",
+  "18 fotogramas revisados (hoja cada 2 s), 9 fotogramas de zoom y 11 de control en control/: texto clave entre y=150 y y=1450",
+  "movimiento: 30 cortes detectados, 0 % de fotogramas quietos, plano quieto más largo 0,0 s",
+  "audio medido con ffmpeg ebur128: -14,2 LUFS integrados, pico real -1,3 dBTP, LRA 2,2 LU; voz 5,9 LU por encima de la música mientras se habla (ponderación K), ducking 3,7 dB (máximo 5); voz Chatterbox con la referencia del dueño, acelerada x1,12",
+  "1080x1920, 30 fps, H.264 + AAC; Montserrat + Anton, firma «By Neogest Lab» y logo NL en el cierre",
+  "AVISO: el agente no puede escuchar el audio; la nota da por buena la voz porque sale de la misma tubería que los reels ya publicados. Conviene que el dueño o Calidad lo escuche antes del 12/11 14:40."
+ ],
+ "audio": {
+  "lufs_integrados": -14.2,
+  "pico_real_dbtp": -1.3,
+  "lra_lu": 2.2,
+  "voz_sobre_musica_lu": 5.9,
+  "ducking_db": 3.7,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ }
+}
