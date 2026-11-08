@@ -6,9 +6,9 @@
  "respuesta": "¡Hola! La demo de MEDICATOR está en el enlace de nuestro perfil: ahí la ves en 60 segundos y puedes pedir acceso 😊",
  "compartir_en_feed": true,
  "portada_ms": 1200,
- "renderizado": "2026-11-08T20:56:08+00:00",
+ "renderizado": "2026-11-08T21:13:01+00:00",
  "asset": "301_medicator_presentador.mp4",
- "duracion_s": 39.3,
+ "duracion_s": 35.5,
  "formato": "modo presentador (Nea y Bit en 3D con three.js + Remotion, titulares, subtítulos palabra a palabra, capturas reales de la demo, música y efectos generados por código)",
  "musica": {
   "estilo": "pop",
@@ -19,7 +19,7 @@
  "audio": {
   "lufs_integrados": -14.2,
   "pico_real_dbtp": -1.6,
-  "lra_lu": 2.0,
+  "lra_lu": 1.8,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
  "app": "MEDICATOR",
