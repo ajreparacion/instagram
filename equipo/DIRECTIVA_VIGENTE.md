@@ -62,3 +62,9 @@ Reglas de la tabla:
 - **MEJORA**: página de apps y enlace (§6), plantilla «Una idea, una app» en hacer_reel.py, automatización de la palabra clave APP/IDEA en DM si las herramientas conectadas lo permiten (si no, apuntarlo en pendiente_usuario.md).
 - **ANALISTA**: medir por público (qué sector da más DMs y toques al enlace) y avisar al Estratega cada semana.
 - **CALIDAD**: esta directiva y estandar_calidad.md; nota ≥ 90 o no sale. Rechazo automático si aparece una función que la app no tiene, un cliente o testimonio inventado o dos reels seguidos del mismo público.
+
+## 8. Escaparate y acceso (orden del dueño 8/11/2026 12:10)
+- Las apps NO se dejan usar libremente: el público ve una demo tipo vídeo y un paseo en formato historias en https://centro-de-contenido-apps-2f0a3cd6.base44.app/demo (en construcción; se activa cuando el dueño publique) y, para usarlas, SOLICITA ACCESO en /solicitar.
+- Cierre de los reels y textos de los posts: «Mira en 60 segundos lo que haría por tu negocio · enlace en el perfil» o «Comenta APP y te paso la demo». Nunca prometer acceso libre ni dar usuarios o PIN.
+- Los reels se graban desde la demo con sesión del equipo; en pantalla nunca aparecen PIN, contraseñas ni emails.
+- Enlace profundo por público: /demo?sector=bar, /demo?sector=peluqueria, etc. Usar el del público del reel.
