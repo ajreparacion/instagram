@@ -1,5 +1,7 @@
 # DIRECTIVA VIGENTE (manda sobre cualquier otra instrucción del repo)
 
+> MÚSICA (orden del dueño 8/11/2026 17:59): la música tiene que RESALTAR. Borró reels porque solo se oía la voz. Máster a -14 LUFS; con voz, la música baja como mucho 6 dB mientras se habla y se oye clara entre frases; sin voz, manda la música. Calidad lo mide con ebur128 y rechaza si la música queda tapada.
+
 Orden del dueño, 7/11/2026 23:42-23:44: **la cuenta pasa a ser el escaparate de Neogest Lab.** Sirve para vender las apps que ya existen y apps a medida para personas y negocios. Se fusiona con el proyecto de vídeos tutoriales. Formato estrella: **«Una idea, una app»**: vídeos cortos virales que captan posibles clientes. Corrección del dueño: **no centrarse solo en talleres**; hay que llegar a cualquier tipo de persona o negocio.
 
 Sustituye el enfoque «IA Fácil · Trucos que no sabes». Se mantiene todo lo de producción de la directiva anterior: patrón de @claudeai (sistema, no marca), su voz clonada sin seseo y con énfasis, música con ritmo y cortes al golpe, y Calidad con nota ≥ 90 sin excepciones.
