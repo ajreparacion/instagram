@@ -18,6 +18,7 @@ El equipo hace todo lo demás solo. Estas tareas necesitan la identidad, los dat
 4. **(Opcional) Buzzfy, reels de prueba automáticos**: Buzzfy tiene el reparto de reels de prueba en pausa ("no se ha activado el compartir"). Se activa desde el panel de Buzzfy y puede requerir plan de pago. No es imprescindible: nuestro sistema ya publica reels de prueba por su cuenta desde el 5/11.
 5. **(7/11/2026)** Preguntas frecuentes del chat bloqueadas: Meta devuelve error 100/2534013 (página no vinculada a cuenta profesional de Instagram desde el token PAGE_TOKEN). Diagnóstico: workflow «Diagnóstico de vinculación (página ↔ Instagram)».
    Actualización 7/11 14:15: la vinculación ya está bien (página 107316837808795 ↔ iafacil.trucos). Ahora Meta devuelve 200/2534041: «El propietario de la cuenta ha desactivado el acceso a los mensajes directos de Instagram». Falta activar en Instagram: Configuración > Mensajes y respuestas del story > Herramientas conectadas > «Permitir acceso a los mensajes». Después, relanzar «Bienvenida del chat (ice breakers)».
+   Resuelto 7/11 20:45 UTC: ice breakers configuradas y VERIFICADAS (4 preguntas). 8/11: el PAGE_TOKEN renovado es de usuario y los scripts del chat fallaban con 100/33; corregido con herramientas/token_pagina.py.
 
 Hecho: token PAGE_TOKEN renovado por el dueño el 8/11/2026 (comprobado: el ciclo de las 11:41 UTC volvió a leer estadísticas).
 Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11/2026).

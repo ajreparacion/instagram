@@ -9,9 +9,13 @@ TOKEN = os.environ.get("PAGE_TOKEN", "")
 if not TOKEN:
     sys.exit("Falta el secreto PAGE_TOKEN en el repositorio.")
 try:
-    VERSION = json.load(open("equipo/config_publico.json", encoding="utf-8")).get("version") or "v21.0"
+    _CFG = json.load(open("equipo/config_publico.json", encoding="utf-8"))
 except (OSError, ValueError):
-    VERSION = "v21.0"
+    _CFG = {}
+VERSION = _CFG.get("version") or "v21.0"
+# messenger_profile y me/messages exigen token de PÁGINA; si PAGE_TOKEN es de usuario, se convierte.
+from token_pagina import token_de_pagina
+TOKEN = token_de_pagina(TOKEN, VERSION, _CFG.get("page_id"))
 BASE = f"https://graph.facebook.com/{VERSION}"
 GUIA = os.environ.get("GUIA_URL") or "https://ajreparacion.github.io/guia-prompts/"
 VENTANA_H = 23  # Instagram solo permite responder dentro de las 24 h siguientes al mensaje
