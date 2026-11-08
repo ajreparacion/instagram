@@ -1,95 +1,168 @@
 {
-  "actualizado": "2026-11-08T11:41:00+00:00",
+  "actualizado": "2026-11-08T17:58:26+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1603,
     "follows_count": 176,
-    "media_count": 4,
+    "media_count": 9,
     "username": "neogestlab"
   },
   "posts": [
     {
-      "id": "18015411647992201",
-      "caption": "Cómo ordenar Gmail automáticamente con un filtro (gratis, sin IA) 🗂️\n\nDesde el ordenador:\n1. Busca «factura» en Gmail y pulsa el icono «Mostrar opciones de búsqueda».\n2. Abajo, «Crear filtro».\n3. Marca «Aplicar la etiqueta» y elige «Facturas» (créala antes si no la tienes). Si además marcas «Saltar Recibidos», ni las verás pasar por la bandeja.\n4. Pulsa otra vez «Crear filtro».\n\nSirve para cualquier cosa: «pedido», «newsletter», el nombre de tu jefe…\n\nComenta FILTRO y te paso los pasos.\nSígueme para un truco al día.\n\nComprobado en: ayuda oficial de Gmail (nov. 2026).\nVoz: narración generada.\n\n#gmail #trucos #productividad #organizacion #correo\n\nVoz generada por IA",
+      "id": "18230867386335197",
+      "caption": "De la ruta del día a la factura cobrada 🚗\nGestión Integral 7D ordena tus visitas, lleva tus clientes por ranking ABC y pasa del presupuesto al pedido, al albarán y a la factura con enlace de pago.\nCapturas reales de la demo. Pide la tuya en el enlace del perfil o escríbeme IDEA por privado.\n\n#comerciales #pymes #ventas #facturacion #apps #neogestlab",
       "comments_count": 0,
-      "like_count": 4,
+      "like_count": 0,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
-      "permalink": "https://www.instagram.com/reel/DfdG9kWDaSP/",
-      "timestamp": "2026-11-07T21:07:06+0000",
+      "permalink": "https://www.instagram.com/reel/DffUzH3ALoA/",
+      "timestamp": "2026-11-08T17:46:49+0000",
       "metricas": {
-        "reach": 119,
-        "views": 139,
-        "saved": 2,
-        "shares": 0,
-        "comments": 0,
-        "likes": 4,
-        "total_interactions": 8,
-        "ig_reels_avg_watch_time": 6372,
-        "ig_reels_video_view_total_time": 809258
-      }
-    },
-    {
-      "id": "18114456071177223",
-      "caption": "Si ChatGPT te contesta fatal, prueba este prompt de 4 piezas ✍️\n\nEn vez de «hazme un correo», dile:\n1. Quién eres: «Tengo un bar en Valencia».\n2. Qué quieres: «Escribe un correo pidiendo presupuesto de café».\n3. Para quién: «Es para un proveedor nuevo».\n4. En qué formato: «Tono amable, máximo 5 líneas».\n\nVale igual para ChatGPT, Claude y Gemini. Revisa siempre lo que te dé antes de enviarlo y no le pegues datos sensibles.\n\nComenta PROMPT y te mando la plantilla lista para copiar.\nSígueme para un truco al día.\n\nComprobado en: guías oficiales de prompts de OpenAI y Anthropic (nov. 2026).\nVoz: narración generada.\n\n#inteligenciaartificial #chatgpt #prompts #trucos #productividad\n\nVoz generada por IA",
-      "comments_count": 0,
-      "like_count": 4,
-      "media_product_type": "REELS",
-      "media_type": "VIDEO",
-      "permalink": "https://www.instagram.com/reel/DfdGy95jRt_/",
-      "timestamp": "2026-11-07T21:05:40+0000",
-      "metricas": {
-        "reach": 117,
-        "views": 146,
+        "reach": 0,
+        "views": 0,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 4,
-        "total_interactions": 4,
-        "ig_reels_avg_watch_time": 7887,
-        "ig_reels_video_view_total_time": 985912
+        "likes": 0,
+        "total_interactions": 0,
+        "ig_reels_avg_watch_time": 0,
+        "ig_reels_video_view_total_time": 0
       }
     },
     {
-      "id": "17980873539135416",
-      "caption": "Cómo usar Claude gratis: 3 cosas que casi nadie usa 👇\n\n1. Proyectos: subes tus documentos e instrucciones una vez y Claude los tiene en cada chat del proyecto. En el plan gratis, hasta 5.\n2. Pídele una tabla, una plantilla o una mini app: te la abre en una ventana al lado del chat (Anthropic los llama «artefactos»).\n3. Memoria: recuerda lo importante entre chats. Se gestiona en Configuración > Tu Claude > «Generar memoria a partir de chats».\n\nOjo: no le pegues datos sensibles (contraseñas, DNI, datos bancarios).\n\nComenta CLAUDE y te mando los pasos por mensaje.\nSígueme para un truco al día.\n\nComprobado en: ayuda oficial de Anthropic y claude.com/pricing (nov. 2026). Los menús pueden cambiar según la versión de la app.\nVoz: narración generada.\n\n#inteligenciaartificial #claude #trucos #productividad #ia\n\nVoz generada por IA",
+      "id": "18047708876823947",
+      "caption": "5 tareas pesadas que ChatGPT, Claude o Gemini hacen por ti (prompts incluidos).\nMenú de cenas de la semana y lista de la compra por secciones.\nResumir la circular del cole o de la comunidad y decirte qué hacer y para cuándo, sin pegar datos personales.\nResponder un mensaje difícil con educación.\nPasar a texto la foto de una receta o un tíquet.\nRepartir las tareas de la semana según tus horas libres.\nGuárdalo para el domingo 🗓️ ¿Y una app hecha para tu casa? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #organizacion #hogar #productividad #neogestlab",
       "comments_count": 0,
-      "like_count": 3,
-      "media_product_type": "REELS",
-      "media_type": "VIDEO",
-      "permalink": "https://www.instagram.com/reel/DfdGnytjhpq/",
-      "timestamp": "2026-11-07T21:04:09+0000",
+      "like_count": 0,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/DffSjjIFyw1/",
+      "timestamp": "2026-11-08T17:26:43+0000",
       "metricas": {
-        "reach": 117,
-        "views": 135,
-        "saved": 3,
+        "reach": 1,
+        "views": 2,
+        "saved": 0,
         "shares": 0,
-        "comments": 0,
-        "likes": 3,
-        "total_interactions": 7,
-        "ig_reels_avg_watch_time": 7452,
-        "ig_reels_video_view_total_time": 894320
+        "total_interactions": 0
       }
     },
     {
-      "id": "18119170952012543",
-      "caption": "Cómo resumir un correo larguísimo con ChatGPT, Gemini o Claude (gratis) 📩\n\n1. Copia el hilo entero del correo.\n2. Pégalo en el chat de la IA (vale la versión gratis).\n3. Debajo escribe: «Resúmelo en 3 puntos. ¿Qué me piden y para cuándo? Escríbeme una respuesta corta».\n\nRevisa la respuesta antes de enviarla y no pegues datos sensibles (DNI, cuentas, contraseñas, datos de otros).\n¿Y el botón de resumen de Gmail? Google lo da en cuentas de pago; en cuentas gratis, de momento, solo en EE. UU.\n\nComenta RESUMEN y te mando el prompt.\nSígueme para un truco al día.\n\nComprobado en: ayuda oficial de Gmail y guía de prompts de OpenAI (nov. 2026).\nVoz: narración generada.\n\n#inteligenciaartificial #chatgpt #gmail #trucos #productividad\n\nVoz generada por IA",
+      "id": "17892903792456559",
+      "caption": "5 tareas pesadas que ChatGPT, Claude o Gemini hacen por ti (prompts incluidos).\nMenú de cenas de la semana y lista de la compra por secciones.\nResumir la circular del cole o de la comunidad y decirte qué hacer y para cuándo, sin pegar datos personales.\nResponder un mensaje difícil con educación.\nPasar a texto la foto de una receta o un tíquet.\nRepartir las tareas de la semana según tus horas libres.\nGuárdalo para el domingo 🗓️ ¿Y una app hecha para tu casa? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #organizacion #hogar #productividad #neogestlab",
       "comments_count": 0,
-      "like_count": 3,
-      "media_product_type": "REELS",
-      "media_type": "VIDEO",
-      "permalink": "https://www.instagram.com/reel/DfdFrhTob5G/",
-      "timestamp": "2026-11-07T20:55:56+0000",
+      "like_count": 0,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/DffQZfmE7I6/",
+      "timestamp": "2026-11-08T17:07:54+0000",
       "metricas": {
-        "reach": 109,
-        "views": 143,
+        "reach": 2,
+        "views": 7,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 0
+      }
+    },
+    {
+      "id": "18312809329305009",
+      "caption": "¿Pasas los presupuestos al Excel por la noche?\nSi trabajas en reformas o instalaciones, conoces el bucle: libreta, Excel y factura a mano.\nGestión Integral 7D, nuestra app, une presupuesto, pedido, albarán y factura, y cada paso hereda líneas, IVA y retención.\nPresupuestos y facturas en PDF con tus datos fiscales y los del cliente.\nCada factura puede llevar su enlace de pago: tarjeta, TPV Redsys (con Bizum si está activo) o transferencia.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🛠️\n\n#autonomos #reformas #facturacion #pymes #apps #neogestlab",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/Dfe-iOFD7dQ/",
+      "timestamp": "2026-11-08T14:31:49+0000",
+      "metricas": {
+        "reach": 4,
+        "views": 23,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 1
+      }
+    },
+    {
+      "id": "18109693957963893",
+      "caption": "Deja de pedirle así las cosas a la IA.\nSi ChatGPT, Claude o Gemini te contestan regular, casi siempre es por el mensaje:\n1. Dale contexto: para quién es, qué pasa y qué tono quieres.\n2. Dile el formato: tabla, 3 puntos o menos de 100 palabras.\n3. No te quedes con la primera respuesta: pide «más corto» o «3 versiones».\n4. Pídele que te haga preguntas antes de responder.\n5. Comprueba datos, fechas y cifras, porque puede equivocarse.\nGuárdalo para tu próximo prompt 📌 Y si quieres una app para tu negocio, escríbeme IDEA por privado.\n\n#inteligenciaartificial #ia #prompts #productividad #neogestlab",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/Dfe-VhUj8LS/",
+      "timestamp": "2026-11-08T14:30:04+0000",
+      "metricas": {
+        "reach": 6,
+        "views": 17,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 1
+      }
+    },
+    {
+      "id": "17915734986471387",
+      "caption": "¿Pasas los presupuestos al Excel por la noche?\nSi trabajas en reformas o instalaciones, conoces el bucle: libreta, Excel y factura a mano.\nGestión Integral 7D, nuestra app, une presupuesto, pedido, albarán y factura, y cada paso hereda líneas, IVA y retención.\nPresupuestos y facturas en PDF con tus datos fiscales y los del cliente.\nCada factura puede llevar su enlace de pago: tarjeta, TPV Redsys (con Bizum si está activo) o transferencia.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🛠️\n\n#autonomos #reformas #facturacion #pymes #apps #neogestlab",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/Dfe8Sb1n_cY/",
+      "timestamp": "2026-11-08T14:12:01+0000",
+      "metricas": {
+        "reach": 12,
+        "views": 23,
         "saved": 0,
         "shares": 1,
-        "comments": 0,
-        "likes": 3,
-        "total_interactions": 5,
-        "ig_reels_avg_watch_time": 6522,
-        "ig_reels_video_view_total_time": 795749
+        "total_interactions": 3
+      }
+    },
+    {
+      "id": "18032685833879685",
+      "caption": "Deja de pedirle así las cosas a la IA.\nSi ChatGPT, Claude o Gemini te contestan regular, casi siempre es por el mensaje:\n1. Dale contexto: para quién es, qué pasa y qué tono quieres.\n2. Dile el formato: tabla, 3 puntos o menos de 100 palabras.\n3. No te quedes con la primera respuesta: pide «más corto» o «3 versiones».\n4. Pídele que te haga preguntas antes de responder.\n5. Comprueba datos, fechas y cifras, porque puede equivocarse.\nGuárdalo para tu próximo prompt 📌 Y si quieres una app para tu negocio, escríbeme IDEA por privado.\n\n#inteligenciaartificial #ia #prompts #productividad #neogestlab",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/Dfe8MyWjzSv/",
+      "timestamp": "2026-11-08T14:11:13+0000",
+      "metricas": {
+        "reach": 16,
+        "views": 24,
+        "saved": 0,
+        "shares": 1,
+        "total_interactions": 3
+      }
+    },
+    {
+      "id": "18129996250867967",
+      "caption": "¿Pasas los presupuestos al Excel por la noche?\nSi trabajas en reformas o instalaciones, conoces el bucle: libreta, Excel y factura a mano.\nGestión Integral 7D, nuestra app, une presupuesto, pedido, albarán y factura, y cada paso hereda líneas, IVA y retención.\nPresupuestos y facturas en PDF con tus datos fiscales y los del cliente.\nCada factura puede llevar su enlace de pago: tarjeta, TPV Redsys (con Bizum si está activo) o transferencia.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🛠️\n\n#autonomos #reformas #facturacion #pymes #apps #neogestlab",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/Dfe7vqnIW5Q/",
+      "timestamp": "2026-11-08T14:07:15+0000",
+      "metricas": {
+        "reach": 3,
+        "views": 11,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 1
+      }
+    },
+    {
+      "id": "18272809153306491",
+      "caption": "Deja de pedirle así las cosas a la IA.\nSi ChatGPT, Claude o Gemini te contestan regular, casi siempre es por el mensaje:\n1. Dale contexto: para quién es, qué pasa y qué tono quieres.\n2. Dile el formato: tabla, 3 puntos o menos de 100 palabras.\n3. No te quedes con la primera respuesta: pide «más corto» o «3 versiones».\n4. Pídele que te haga preguntas antes de responder.\n5. Comprueba datos, fechas y cifras, porque puede equivocarse.\nGuárdalo para tu próximo prompt 📌 Y si quieres una app para tu negocio, escríbeme IDEA por privado.\n\n#inteligenciaartificial #ia #prompts #productividad #neogestlab",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/Dfe7qRLIKe6/",
+      "timestamp": "2026-11-08T14:06:32+0000",
+      "metricas": {
+        "reach": 3,
+        "views": 9,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 2
       }
     }
   ],
@@ -120,6 +193,10 @@
     },
     {
       "fecha": "2026-11-08T11:41+00:00",
+      "seguidores": 1603
+    },
+    {
+      "fecha": "2026-11-08T17:58+00:00",
       "seguidores": 1603
     }
   ]
