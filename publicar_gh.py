@@ -1023,13 +1023,33 @@ def publicar_carrusel(cfg, carpeta, post):
     # pública jsDelivr del repo público, fijada al commit del ciclo para que no sirva una versión vieja.
     ref = os.environ.get("GITHUB_SHA") or rama
     urls = [f"https://cdn.jsdelivr.net/gh/{repo}@{ref}/{urllib.parse.quote(carpeta_rel)}/slides/{urllib.parse.quote(f)}" for f in imgs]
+    # Diagnóstico: comprobar desde el runner que la primera imagen se descarga como JPEG.
+    try:
+        with urllib.request.urlopen(urllib.request.Request(urls[0], headers={"User-Agent": "facebookexternalhit/1.1"}), timeout=60) as r0:
+            log(f"imagen de prueba {urls[0]} -> {r0.status} {r0.headers.get('Content-Type')} {len(r0.read())} bytes")
+    except Exception as e0:
+        log(f"imagen de prueba {urls[0]} -> no se descarga: {e0}")
+
+    def contenedor_imagen(u, **extra):
+        try:
+            return api(cfg, f"{cfg['ig_user_id']}/media", "POST", image_url=u, **extra)["id"]
+        except ErrorAPI as e1:
+            # Plan B: subir la imagen a la release 'cola' y pasar a Instagram la URL directa firmada.
+            nombre = f"{os.path.basename(carpeta)}__{os.path.basename(urllib.parse.unquote(u))}"
+            local = os.path.join(carpeta, "slides", os.path.basename(urllib.parse.unquote(u)))
+            log(f"image_url rechazada ({str(e1)[:80]}); se prueba desde la release como {nombre}")
+            copia = os.path.join("/tmp", nombre)
+            shutil.copyfile(local, copia)
+            gh("release", "upload", RELEASE, copia, "--clobber")
+            return api(cfg, f"{cfg['ig_user_id']}/media", "POST", image_url=url_directa_release(nombre), **extra)["id"]
+
     if len(urls) == 1:
-        r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", image_url=urls[0], caption=post.get("texto", ""))
+        r = {"id": contenedor_imagen(urls[0], caption=post.get("texto", ""))}
         cid = r["id"]
     else:
         hijos = []
         for u in urls:
-            h = api(cfg, f"{cfg['ig_user_id']}/media", "POST", image_url=u, is_carousel_item="true")["id"]
+            h = contenedor_imagen(u, is_carousel_item="true")
             esperar_contenedor(cfg, h, max_seg=300)
             hijos.append(h)
         cid = api(cfg, f"{cfg['ig_user_id']}/media", "POST", media_type="CAROUSEL",
