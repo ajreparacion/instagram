@@ -525,14 +525,14 @@ def historia_capas(app, caps, h, idx):
         f, ls = ajustar(h["titulo"], "ExtraBold", SW - 2 * x, 3, 92, 62)
         _, d = C.nueva(0.4)
         y = dibujar_lineas(d, x, SAFE_T + 110, ls, f, BLANCO, h.get("destacar"), alto=1.1)
-        caja_top = SAFE_B - 300
+        caja_top = SAFE_B - 340
         movil = movil_fundido(cap, y + 46, caja_top - 30, ancho=500)
         _, d = C.nueva(1.3)
-        d.rounded_rectangle((x, caja_top, SW - x, caja_top + 200), 36, fill=(40, 26, 56), outline=ACENTO, width=4)
+        d.rounded_rectangle((x, caja_top, SW - x, caja_top + 190), 36, fill=(40, 26, 56), outline=ACENTO, width=4)
         ft, lst = ajustar(h["texto"], "Bold", SW - 2 * x - 160, 2, 42, 32)
-        yy = caja_top + 100 - len(lst) * int(ft.size * 1.3) // 2
+        yy = caja_top + 95 - len(lst) * int(ft.size * 1.3) // 2
         dibujar_lineas(d, x + 44, yy, lst, ft, BLANCO, alto=1.3)
-        flecha(d, SW - x - 70, caja_top + 60, 60, ACENTO, dir="abajo", grosor=7)
+        flecha(d, SW - x - 70, caja_top + 55, 60, ACENTO, dir="abajo", grosor=7)
     im, d = C.nueva(1.7)
     if app.get("aviso"):
         fa = fnt(26, "SemiBold")
