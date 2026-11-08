@@ -100,5 +100,55 @@ def paso_compra(pg, clk, tipo, mv, wait, T):
     m["tachado"] = T()
     return m
 
+def paso_plato(pg, clk, tipo, mv, wait, T):
+    m = {}
+    L = lambda i, j: ".ln:nth-child(%d) input:nth-child(%d)" % (i, j)
+    tipo(L(1, 1), "Huevos", 55); tipo(L(1, 2), "2,40", 90)
+    tipo(L(2, 1), "Patatas", 55); tipo(L(2, 2), "1,20", 90)
+    tipo(L(3, 1), "Cebolla", 55); tipo(L(3, 2), "0,40", 90)
+    clk("#add"); tipo(L(4, 1), "Aceite", 55); tipo(L(4, 2), "0,80", 90)
+    wait(500); m["ingredientes"] = T()
+    for _ in range(3): clk("#mas", steps=14)
+    wait(700); m["raciones"] = T()
+    assert pg.inner_text("#cr") == "1,20 €" and pg.inner_text("#pv") == "4,00 €", (pg.inner_text("#cr"), pg.inner_text("#pv"))
+    wait(600); clk('#chips button[data-p="35"]', steps=18); wait(1100)
+    m["objetivo35"] = T(); assert pg.inner_text("#pv") == "3,43 €", pg.inner_text("#pv"); wait(2600)
+    return m
+
+def paso_pedidos(pg, clk, tipo, mv, wait, T):
+    m = {}
+    for c, a in (("Marta", "Taza con nombre"), ("Luis", "Llavero de madera"), ("Ana", "Caja de regalo")):
+        tipo("#cli", c, 55); tipo("#art", a, 45); clk("#add", steps=16)
+    wait(600); m["tres"] = T()
+    assert pg.inner_text("#c0") == "3"
+    clk(".it:nth-child(1) .st", steps=20); wait(350); clk(".it:nth-child(1) .st", steps=4); wait(500)
+    clk(".it:nth-child(2) .st", steps=18); wait(1100)
+    m["estados"] = T()
+    assert [pg.inner_text("#c%d" % k) for k in range(3)] == ["1", "1", "1"], [pg.inner_text("#c%d" % k) for k in range(3)]
+    wait(2600)
+    return m
+
+def paso_citas(pg, clk, tipo, mv, wait, T):
+    m = {}
+    for t, d in (("Abuelo: peluquería", "18"), ("Abuela: dentista", "12"), ("Mamá: revisión del coche", "15")):
+        tipo("#txt", t, 45); tipo("#dia", d, 90); clk("#add", steps=16)
+    wait(900); m["tres"] = T()
+    primero = pg.locator(".it").first.inner_text()
+    assert "Abuela" in primero and "MAÑANA" in primero and pg.locator(".it").count() == 3, primero
+    wait(3200)
+    return m
+
+def paso_semana(pg, clk, tipo, mv, wait, T):
+    m = {}
+    for k, t in ((1, "Truco rápido"), (3, "Detrás de cámaras"), (4, "Pregunta a la comunidad")):
+        tipo(".dia:nth-child(%d) input" % k, t, 45)
+    wait(500); m["tres"] = T()
+    assert [pg.inner_text(i) for i in ("#pl", "#pu", "#li")] == ["3", "0", "4"]
+    clk(".dia:nth-child(1) .ck", steps=18); wait(400); clk(".dia:nth-child(3) .ck", steps=18); wait(1100)
+    m["publicados"] = T()
+    assert [pg.inner_text(i) for i in ("#pl", "#pu", "#li")] == ["3", "2", "4"]
+    wait(2600)
+    return m
+
 if __name__ == "__main__":
     run(sys.argv[1], sys.argv[2])

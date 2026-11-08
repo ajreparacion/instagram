@@ -121,6 +121,111 @@ window.preset=()=>{$('#txt').value='leche, papel higiénico, manzanas, pan, dete
 window.reset();
 """)
 
+
+# ---------------------------------------------------------------- 5. plato (hosteleria)
+T["plato"] = dict(titulo="Coste del plato", css="""
+.ln{display:grid;grid-template-columns:1fr 210px;gap:14px;margin-bottom:14px}
+.ln input{font-size:36px;padding:14px 18px}
+.hd{display:grid;grid-template-columns:1fr 210px;gap:14px;font-size:28px;color:var(--mut);margin-bottom:8px}
+.step{display:flex;align-items:center;justify-content:space-between;background:#F3F7F9;border-radius:26px;padding:10px 18px}
+.step button{width:84px;height:84px;padding:0;font-size:54px;line-height:1}
+.step b{font-size:58px}
+.chips{display:flex;gap:14px}.chips button{flex:1;background:#EAF0F3;color:var(--ink);padding:16px 0}.chips button.on{background:var(--acc);color:#fff}
+.res{display:flex;gap:18px;margin-top:26px}.res div{flex:1;background:#EAF7FA;border-radius:30px;padding:24px;text-align:center}
+.res span{display:block;font-size:28px;color:var(--mut)}.res b{font-size:62px;color:var(--accd)}
+""", body="""
+<h2>Coste del plato</h2>
+<div class="hd"><span>Ingrediente</span><span>Coste €</span></div>
+<div id="lines"></div>
+<button class="sec" id="add" style="font-size:32px;padding:12px 26px;margin-bottom:22px">+ Ingrediente</button>
+<div class="row" style="gap:22px;margin-bottom:18px"><div style="flex:1"><label>Raciones</label><div class="step"><button class="sec" id="men">−</button><b id="rac">1</b><button id="mas">+</button></div></div>
+<div style="flex:1"><label>Coste objetivo</label><div class="chips" id="chips"><button data-p="30" class="on">30 %</button><button data-p="35">35 %</button></div></div></div>
+<div class="res"><div><span>Coste por ración</span><b id="cr">0,00 €</b></div><div><span>Vender a (sin IVA)</span><b id="pv">0,00 €</b></div></div>""", js="""
+const num=v=>{v=String(v||'').replace(',','.').replace(/[^0-9.]/g,'');return parseFloat(v)||0};
+let R=1,OBJ=30;
+function addLine(n,c){const d=document.createElement('div');d.className='ln';d.innerHTML='<input placeholder="Ingrediente" value="'+(n||'')+'"><input inputmode="decimal" placeholder="0,00" value="'+(c||'')+'">';d.querySelectorAll('input').forEach(i=>i.addEventListener('input',calc));$('#lines').appendChild(d);calc()}
+function calc(){let t=0;document.querySelectorAll('.ln').forEach(l=>{t+=Math.round(num(l.querySelectorAll('input')[1].value)*100)});
+const cr=Math.round(t/R);$('#rac').textContent=R;$('#cr').textContent=eur(cr);$('#pv').textContent=eur(Math.round(cr*100/OBJ));
+document.querySelectorAll('#chips button').forEach(b=>b.classList.toggle('on',+b.dataset.p===OBJ))}
+$('#add').addEventListener('click',()=>addLine());$('#mas').addEventListener('click',()=>{R=Math.min(40,R+1);calc()});$('#men').addEventListener('click',()=>{R=Math.max(1,R-1);calc()});
+document.querySelectorAll('#chips button').forEach(b=>b.addEventListener('click',()=>{OBJ=+b.dataset.p;calc()}));
+window.reset=()=>{$('#lines').innerHTML='';R=1;OBJ=30;addLine();addLine();addLine()};
+window.preset=()=>{$('#lines').innerHTML='';R=4;OBJ=30;addLine('Huevos','2,40');addLine('Patatas','1,20');addLine('Cebolla','0,40');addLine('Aceite','0,80')};
+window.reset();
+""")
+
+# ---------------------------------------------------------------- 6. pedidos (tienda pequena)
+T["pedidos"] = dict(titulo="Mis pedidos", css="""
+.f{display:grid;grid-template-columns:260px 1fr;gap:14px;margin-bottom:14px}
+.f input{font-size:38px}
+.it{display:flex;align-items:center;gap:18px;background:#F3F7F9;border-radius:24px;padding:18px 24px;margin-bottom:12px;font-size:38px}
+.it .n{flex:1;font-weight:500}.it .n small{display:block;font-size:28px;color:var(--mut);font-weight:400}
+.st{border:0;border-radius:40px;padding:10px 26px;font-size:30px;font-weight:700;color:#fff;min-width:220px;text-align:center}
+.s0{background:#E8A33D}.s1{background:var(--acc)}.s2{background:#3DAA6D}
+.sum{display:flex;gap:14px;margin-top:18px}.sum div{flex:1;background:#EAF7FA;border-radius:26px;padding:18px;text-align:center}
+.sum span{display:block;font-size:26px;color:var(--mut)}.sum b{font-size:58px;color:var(--accd)}
+""", body="""
+<h2>Mis pedidos</h2>
+<div class="f"><input id="cli" placeholder="Cliente"><input id="art" placeholder="Qué ha pedido"></div>
+<button id="add" style="width:100%;margin-bottom:20px">Añadir pedido</button>
+<div id="lista" style="min-height:330px"></div>
+<div class="sum"><div><span>Pendientes</span><b id="c0">0</b></div><div><span>Hechos</span><b id="c1">0</b></div><div><span>Entregados</span><b id="c2">0</b></div></div>""", js="""
+const ET=['Pendiente','Hecho','Entregado'];let P=[];
+function draw(){const L=$('#lista');L.innerHTML='';P.forEach((p,i)=>{const d=document.createElement('div');d.className='it';d.innerHTML='<span class="n"><span class="nm"></span><small class="ar"></small></span><button class="st s'+p.e+'">'+ET[p.e]+'</button>';d.querySelector('.nm').textContent=p.c;d.querySelector('.ar').textContent=p.a;d.querySelector('.st').addEventListener('click',()=>{p.e=(p.e+1)%3;draw()});L.appendChild(d)});
+for(let k=0;k<3;k++)$('#c'+k).textContent=P.filter(p=>p.e===k).length}
+$('#add').addEventListener('click',()=>{if(!$('#cli').value.trim()||!$('#art').value.trim())return;P.push({c:$('#cli').value.trim(),a:$('#art').value.trim(),e:0});$('#cli').value='';$('#art').value='';draw()});
+window.reset=()=>{P=[];$('#cli').value='';$('#art').value='';draw()};
+window.preset=()=>{P=[{c:'Marta',a:'Taza con nombre',e:2},{c:'Luis',a:'Llavero de madera',e:1},{c:'Ana',a:'Caja de regalo',e:0}];draw()};
+window.reset();
+""")
+
+# ---------------------------------------------------------------- 7. citas (familia)
+T["citas"] = dict(titulo="Citas de la familia", css="""
+.hoy{font-size:30px;color:var(--mut);margin:-14px 0 20px}
+.f{display:grid;grid-template-columns:1fr 170px;gap:14px;margin-bottom:14px}
+.f input{font-size:38px}
+.it{display:flex;align-items:center;gap:18px;background:#F3F7F9;border-radius:24px;padding:20px 26px;margin-bottom:12px;font-size:40px}
+.it .d{min-width:130px;text-align:center;background:#fff;border:3px solid var(--line);border-radius:20px;padding:6px 0;font-weight:700;color:var(--accd);font-size:34px;line-height:1.1}
+.it .d small{display:block;font-size:22px;color:var(--mut);font-weight:500}
+.it .n{flex:1;font-weight:500}
+.it .m{background:var(--acc);color:#fff;font-size:26px;font-weight:700;border-radius:30px;padding:8px 20px}
+.it.man{background:#EAF7FA;border:3px solid var(--acc)}
+""", body="""
+<h2>Citas de la familia</h2>
+<div class="hoy">Hoy: 11 de noviembre</div>
+<div class="f"><input id="txt" placeholder="Quién y qué cita"><input id="dia" inputmode="numeric" placeholder="Día"></div>
+<button id="add" style="width:100%;margin-bottom:20px">Apuntar cita</button>
+<div id="lista" style="min-height:380px"></div>""", js="""
+const HOY=11;let C=[];
+function draw(){const L=$('#lista');L.innerHTML='';C.slice().sort((a,b)=>a.d-b.d).forEach(c=>{const man=c.d===HOY+1;const d=document.createElement('div');d.className='it'+(man?' man':'');d.innerHTML='<span class="d"><small>nov</small>'+c.d+'</span><span class="n"></span>'+(man?'<span class="m">MAÑANA</span>':'');d.querySelector('.n').textContent=c.t;L.appendChild(d)})}
+$('#add').addEventListener('click',()=>{const d=parseInt($('#dia').value,10);if(!$('#txt').value.trim()||!(d>=1&&d<=30))return;C.push({t:$('#txt').value.trim(),d:d});$('#txt').value='';$('#dia').value='';draw()});
+window.reset=()=>{C=[];$('#txt').value='';$('#dia').value='';draw()};
+window.preset=()=>{C=[{t:'Abuela: dentista',d:12},{t:'Mamá: revisión del coche',d:15},{t:'Abuelo: peluquería',d:18}];draw()};
+window.reset();
+""")
+
+# ---------------------------------------------------------------- 8. semana (creadores)
+T["semana"] = dict(titulo="Mi semana de contenido", css="""
+.dia{display:grid;grid-template-columns:110px 1fr 70px;gap:14px;align-items:center;margin-bottom:10px}
+.dia b{font-size:34px;color:var(--accd)}
+.dia input{font-size:34px;padding:12px 18px}
+.ck{width:62px;height:62px;border-radius:18px;border:4px solid var(--line);background:#fff;color:#fff;font-size:42px;line-height:54px;text-align:center;font-weight:700}
+.ck.on{background:var(--acc);border-color:var(--acc)}
+.sum{display:flex;gap:16px;margin-top:20px}.sum div{flex:1;background:#EAF7FA;border-radius:26px;padding:18px;text-align:center}
+.sum span{display:block;font-size:26px;color:var(--mut)}.sum b{font-size:56px;color:var(--accd)}
+""", body="""
+<h2>Mi semana de contenido</h2>
+<div id="dias"></div>
+<div class="sum"><div><span>Planificados</span><b id="pl">0</b></div><div><span>Publicados</span><b id="pu">0</b></div><div><span>Días libres</span><b id="li">7</b></div></div>""", js="""
+const D=['Lun','Mar','Mié','Jue','Vie','Sáb','Dom'];let OK=[0,0,0,0,0,0,0];
+function calc(){const ins=document.querySelectorAll('.dia input');let pl=0,pu=0;ins.forEach((i,k)=>{const t=i.value.trim()!=='';if(t)pl++;if(t&&OK[k])pu++;document.querySelectorAll('.ck')[k].classList.toggle('on',!!OK[k]);document.querySelectorAll('.ck')[k].textContent=OK[k]?'✓':''});
+$('#pl').textContent=pl;$('#pu').textContent=pu;$('#li').textContent=7-pl}
+function build(v){const w=$('#dias');w.innerHTML='';D.forEach((n,k)=>{const d=document.createElement('div');d.className='dia';d.innerHTML='<b>'+n+'</b><input placeholder="Idea del día" value="'+((v&&v[k])||'')+'"><span class="ck"></span>';d.querySelector('input').addEventListener('input',calc);d.querySelector('.ck').addEventListener('click',()=>{OK[k]=OK[k]?0:1;calc()});w.appendChild(d)});calc()}
+window.reset=()=>{OK=[0,0,0,0,0,0,0];build()};
+window.preset=()=>{OK=[1,0,1,0,0,0,0];build(['Truco rápido','','Detrás de cámaras','Pregunta a la comunidad'])};
+window.reset();
+""")
+
 for k, v in T.items():
     h = base.replace("__TITULO__", v["titulo"]).replace("__CSS__", v["css"]).replace("__BODY__", v["body"]).replace("__JS__", v["js"])
     open(os.path.join(HERE, k + ".html"), "w", encoding="utf-8").write(h)

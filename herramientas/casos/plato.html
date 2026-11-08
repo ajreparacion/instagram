@@ -1,0 +1,70 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Coste del plato</title>
+<style>
+:root{--bg:#E6F1F4;--card:#fff;--ink:#14212B;--mut:#5B6B77;--acc:#00B8D9;--accd:#008FAB;--line:#DCE6EB}
+*{box-sizing:border-box;margin:0;font-family:Poppins,Inter,Arial,sans-serif}
+html,body{width:1080px;height:1920px;overflow:hidden;background:var(--bg);color:var(--ink)}
+.view{position:absolute;left:70px;top:750px;width:940px;opacity:0;transform:translateY(calc(-50% + 24px));transition:opacity .35s,transform .35s;pointer-events:none}
+.view.on{opacity:1;transform:translateY(-50%);pointer-events:auto}
+.card{background:var(--card);border-radius:44px;padding:48px;box-shadow:0 18px 50px rgba(20,33,43,.10)}
+.chip{display:inline-block;background:var(--acc);color:#fff;font-weight:700;font-size:30px;padding:8px 26px;border-radius:40px;margin-bottom:26px}
+h2{font-size:54px;font-weight:700;margin-bottom:26px}
+label{display:block;font-size:30px;color:var(--mut);font-weight:500;margin-bottom:8px}
+input,textarea,select{width:100%;font-size:42px;padding:16px 22px;border:3px solid var(--line);border-radius:22px;color:var(--ink);background:#fff;outline:none}
+input:focus,textarea:focus,select:focus{border-color:var(--acc)}
+button{font-size:40px;font-weight:600;border:0;border-radius:26px;padding:20px 38px;background:var(--acc);color:#fff}
+button.sec{background:#EAF0F3;color:var(--ink)}
+.big{font-size:96px;font-weight:700;color:var(--accd);line-height:1.05}
+.row{display:flex;gap:18px;align-items:center}
+#cur{position:fixed;left:0;top:0;width:60px;height:60px;z-index:99;pointer-events:none;opacity:0;transition:opacity .2s}
+#cur svg{filter:drop-shadow(0 3px 5px rgba(0,0,0,.35))}
+.rip{position:fixed;width:30px;height:30px;margin:-15px 0 0 -15px;border-radius:50%;border:5px solid var(--acc);z-index:98;pointer-events:none;animation:rip .5s ease-out forwards}
+@keyframes rip{to{transform:scale(3);opacity:0}}
+.caret::after{content:"";display:inline-block;width:5px;height:1em;background:var(--acc);margin-left:3px;vertical-align:-6px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+
+.ln{display:grid;grid-template-columns:1fr 210px;gap:14px;margin-bottom:14px}
+.ln input{font-size:36px;padding:14px 18px}
+.hd{display:grid;grid-template-columns:1fr 210px;gap:14px;font-size:28px;color:var(--mut);margin-bottom:8px}
+.step{display:flex;align-items:center;justify-content:space-between;background:#F3F7F9;border-radius:26px;padding:10px 18px}
+.step button{width:84px;height:84px;padding:0;font-size:54px;line-height:1}
+.step b{font-size:58px}
+.chips{display:flex;gap:14px}.chips button{flex:1;background:#EAF0F3;color:var(--ink);padding:16px 0}.chips button.on{background:var(--acc);color:#fff}
+.res{display:flex;gap:18px;margin-top:26px}.res div{flex:1;background:#EAF7FA;border-radius:30px;padding:24px;text-align:center}
+.res span{display:block;font-size:28px;color:var(--mut)}.res b{font-size:62px;color:var(--accd)}
+
+</style></head><body>
+<div id="vp" class="view"><div class="card"><span class="chip">Mi mensaje a la IA</span>
+<div id="ptxt" class="caret" style="font-size:46px;line-height:1.38;font-weight:500;min-height:420px"></div>
+<div class="row" style="justify-content:flex-end;margin-top:10px"><button id="send">Enviar &rarr;</button></div></div></div>
+<div id="vt" class="view"><div class="card">
+<h2>Coste del plato</h2>
+<div class="hd"><span>Ingrediente</span><span>Coste €</span></div>
+<div id="lines"></div>
+<button class="sec" id="add" style="font-size:32px;padding:12px 26px;margin-bottom:22px">+ Ingrediente</button>
+<div class="row" style="gap:22px;margin-bottom:18px"><div style="flex:1"><label>Raciones</label><div class="step"><button class="sec" id="men">−</button><b id="rac">1</b><button id="mas">+</button></div></div>
+<div style="flex:1"><label>Coste objetivo</label><div class="chips" id="chips"><button data-p="30" class="on">30 %</button><button data-p="35">35 %</button></div></div></div>
+<div class="res"><div><span>Coste por ración</span><b id="cr">0,00 €</b></div><div><span>Vender a (sin IVA)</span><b id="pv">0,00 €</b></div></div></div></div>
+<div id="cur"><svg width="60" height="60" viewBox="0 0 24 24"><path d="M3 2l7.5 19 2.7-7.8L21 10.5z" fill="#fff" stroke="#14212B" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+<script>
+const $=s=>document.querySelector(s);
+const eur=c=>(c/100).toFixed(2).replace('.',',')+' €';
+document.addEventListener('mousemove',e=>{const c=$('#cur');c.style.opacity=1;c.style.transform='translate('+(e.clientX-6)+'px,'+(e.clientY-4)+'px)'});
+document.addEventListener('mousedown',e=>{const r=document.createElement('div');r.className='rip';r.style.left=e.clientX+'px';r.style.top=e.clientY+'px';document.body.appendChild(r);setTimeout(()=>r.remove(),600)});
+window.showPrompt=()=>{$('#vt').classList.remove('on');$('#vp').classList.add('on')};
+window.showTool=()=>{$('#vp').classList.remove('on');$('#vt').classList.add('on')};
+window.setPrompt=t=>{$('#ptxt').textContent=t};
+
+const num=v=>{v=String(v||'').replace(',','.').replace(/[^0-9.]/g,'');return parseFloat(v)||0};
+let R=1,OBJ=30;
+function addLine(n,c){const d=document.createElement('div');d.className='ln';d.innerHTML='<input placeholder="Ingrediente" value="'+(n||'')+'"><input inputmode="decimal" placeholder="0,00" value="'+(c||'')+'">';d.querySelectorAll('input').forEach(i=>i.addEventListener('input',calc));$('#lines').appendChild(d);calc()}
+function calc(){let t=0;document.querySelectorAll('.ln').forEach(l=>{t+=Math.round(num(l.querySelectorAll('input')[1].value)*100)});
+const cr=Math.round(t/R);$('#rac').textContent=R;$('#cr').textContent=eur(cr);$('#pv').textContent=eur(Math.round(cr*100/OBJ));
+document.querySelectorAll('#chips button').forEach(b=>b.classList.toggle('on',+b.dataset.p===OBJ))}
+$('#add').addEventListener('click',()=>addLine());$('#mas').addEventListener('click',()=>{R=Math.min(40,R+1);calc()});$('#men').addEventListener('click',()=>{R=Math.max(1,R-1);calc()});
+document.querySelectorAll('#chips button').forEach(b=>b.addEventListener('click',()=>{OBJ=+b.dataset.p;calc()}));
+window.reset=()=>{$('#lines').innerHTML='';R=1;OBJ=30;addLine();addLine();addLine()};
+window.preset=()=>{$('#lines').innerHTML='';R=4;OBJ=30;addLine('Huevos','2,40');addLine('Patatas','1,20');addLine('Cebolla','0,40');addLine('Aceite','0,80')};
+window.reset();
+
+</script></body></html>
