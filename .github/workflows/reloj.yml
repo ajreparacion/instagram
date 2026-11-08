@@ -1,0 +1,45 @@
+name: Reloj (lanza el ciclo cada 15 min)
+
+# El horario (cron) de GitHub se retrasa o se salta ejecuciones (8/11/2026: ninguna en casi 3 h).
+# Este reloj vive dentro de Actions, sin ningún ordenador encendido: durante ~5 h 45 min lanza
+# «Ciclo Instagram» cada 15 minutos (si no hay uno en marcha o en espera) y al final se relanza a sí mismo.
+# Repo público: los minutos de Actions son gratis.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "5 */6 * * *"   # respaldo por si la cadena se rompe
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: reloj-instagram
+  cancel-in-progress: false
+
+jobs:
+  reloj:
+    runs-on: ubuntu-latest
+    timeout-minutes: 355
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      REPO: ${{ github.repository }}
+    steps:
+      - name: Lanzar el ciclo cada 15 minutos
+        run: |
+          fin=$(( $(date +%s) + 345*60 ))
+          while [ "$(date +%s)" -lt "$fin" ]; do
+            activos=$(gh run list -R "$REPO" -w ciclo.yml -L 5 --json status \
+              --jq '[.[] | select(.status=="in_progress" or .status=="queued" or .status=="pending" or .status=="waiting")] | length' || echo 0)
+            if [ "${activos:-0}" = "0" ]; then
+              echo "$(TZ=Europe/Madrid date '+%F %H:%M') lanzo el ciclo"
+              gh workflow run ciclo.yml -R "$REPO" --ref main || echo "no se pudo lanzar"
+            else
+              echo "$(TZ=Europe/Madrid date '+%F %H:%M') ya hay un ciclo en marcha o en espera"
+            fi
+            sleep 900
+          done
+      - name: Relanzar el reloj
+        if: always()
+        run: gh workflow run reloj.yml -R "$REPO" --ref main
