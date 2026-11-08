@@ -1,0 +1,17 @@
+{
+ "tipo": "reel",
+ "texto": "Pulsa. Que hable la máquina 😂\nInsultator: frases con humor que salen en grande y se leen en voz alta, por categorías, con favoritos y un Loop Studio con 10 bases rítmicas.\nEstá en fase de pruebas. ¿Una app así para tu grupo o tu negocio? Escríbeme IDEA por privado.\n\n#humor #risas #ocio #apps #neogestlab",
+ "cuando": "2026-11-10T18:10:00+01:00",
+ "renderizado": "2026-11-08T12:41:01+00:00",
+ "asset": "205_insultator_reel.mp4",
+ "portada_ms": 2900,
+ "compartir_en_feed": true,
+ "duracion_s": 32.5,
+ "formato": "presentación (capturas reales con Ken Burns, música y efectos; sin voz)",
+ "app": "Insultator",
+ "publico": "Ocio y humor",
+ "fuentes": [
+  "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Insultator»: demo[] (capturas reales de la demo y sus textos), hechos_verificados y prohibido_afirmar (consulta 8/11/2026)."
+ ],
+ "origen": "herramientas/demo_app.py"
+}

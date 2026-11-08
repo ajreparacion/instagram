@@ -1,0 +1,13 @@
+{
+ "tipo": "carrusel",
+ "texto": "¿Tienes letras pero no tienes estudio? 🎤\nStudio Beats PRO te lleva de la idea a la canción en 4 pasos.\n1. Eliges estilo, tono y modo y sale la base: batería, bajo, acordes y melodía.\n2. Grabas tu voz encima, con cuenta atrás y metrónomo.\n3. «Terminar canción» afina, mezcla y masteriza en un clic.\n4. La descargas en MP3 a 320 kbps (en modo Pro, también WAV, FLAC y stems).\nEstá en fase de pruebas: pide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#musica #productormusical #beats #cantantes #apps #neogestlab",
+ "cuando": "2026-11-09T19:10:00+01:00",
+ "renderizado": "no aplica (carrusel)",
+ "diapositivas": 8,
+ "app": "Studio Beats PRO",
+ "publico": "Música y creadores",
+ "fuentes": [
+  "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Studio Beats PRO»: demo[] (capturas reales de la demo y sus textos), hechos_verificados y prohibido_afirmar (consulta 8/11/2026)."
+ ],
+ "origen": "herramientas/demo_app.py"
+}

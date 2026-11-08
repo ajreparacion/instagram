@@ -1,0 +1,17 @@
+{
+ "tipo": "reel",
+ "texto": "Que tus clientes sepan «cómo va lo suyo» sin llamarte 📞\nAJ Sistema: web para tus clientes con solicitudes, consulta de estado y pedidos, y tu panel para gestionarlo todo.\nCapturas de la demo con datos ficticios. Te lo adaptamos a medida a cualquier negocio.\nPide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#autonomos #pymes #negocios #atencionalcliente #apps #neogestlab",
+ "cuando": "2026-11-09T18:10:00+01:00",
+ "renderizado": "2026-11-08T12:40:10+00:00",
+ "asset": "204_aj_sistema_taller_reel.mp4",
+ "portada_ms": 2900,
+ "compartir_en_feed": true,
+ "duracion_s": 28.5,
+ "formato": "presentación (capturas reales con Ken Burns, música y efectos; sin voz)",
+ "app": "AJ Sistema",
+ "publico": "Autónomos y negocios de servicio",
+ "fuentes": [
+  "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «AJ Sistema»: demo[] (capturas reales de la demo y sus textos), hechos_verificados y prohibido_afirmar (consulta 8/11/2026)."
+ ],
+ "origen": "herramientas/demo_app.py"
+}
