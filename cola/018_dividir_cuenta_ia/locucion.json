@@ -15,7 +15,7 @@
   "estilo": "tramo",
   "inicio": 5.1,
   "duracion": 5.233,
-  "texto": "Se lo pedí a una IA con un solo mensaje.",
+  "texto": "Se lo pedí a una IA con un solo mensaje: total, personas y propina.",
   "enfasis": [
    7,
    8,
@@ -38,7 +38,7 @@
   "escena": 3,
   "estilo": "tramo",
   "inicio": 15.767,
-  "duracion": 6.133,
+  "duracion": 4.767,
   "texto": "Veintidós con sesenta y ocho cada uno. Si llega otro, se recalcula.",
   "enfasis": [
    10,
@@ -48,11 +48,11 @@
  {
   "escena": 4,
   "estilo": "cierre",
-  "inicio": 21.9,
-  "duracion": 4.533,
-  "texto": "Comenta cuenta y te paso el mensaje. Sígueme para más.",
+  "inicio": 20.533,
+  "duracion": 5.167,
+  "texto": "¿Tienes una idea para tu negocio? Escríbeme idea por privado.",
   "enfasis": [
-   1
+   7
   ]
  }
 ]

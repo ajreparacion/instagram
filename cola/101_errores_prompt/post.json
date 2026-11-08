@@ -9,5 +9,5 @@
     "Técnicas de redacción de prompts recogidas en las guías públicas de OpenAI (Prompt engineering), Anthropic (Prompt engineering overview) y Google (guía de prompts de Gemini): dar contexto, indicar formato, iterar y comprobar las respuestas. No se citan menús, botones ni precios.",
     "Aviso de que la IA puede cometer errores: ChatGPT, Claude y Gemini lo muestran en su propia interfaz."
   ],
-  "_intentos": 1
+  "_intentos": 2
 }
