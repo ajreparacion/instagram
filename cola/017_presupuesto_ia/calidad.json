@@ -1,12 +1,10 @@
 {
  "aprobado": false,
- "nota": 66,
- "fecha": "2026-11-08T11:50:00Z",
+ "nota": 84,
+ "fecha": "2026-11-08T18:33Z",
  "motivos": [
-  "A2: gancho 'Este presupuesto lo hizo una IA' sin pregunta, número ni antes/después.",
-  "A1: huecos de voz de 2-2,5 s (escenas 2, 3 y 5).",
-  "Directiva §2: el cierre ('Comenta presupuesto… Sígueme') y el texto del post no son de Neogest Lab; sin público ni formato.",
-  "Voz θ pendiente de oído."
+  "A1: hueco de voz de 1,55 s (16,3-17,85 s) en la escena 2, rozando el límite de 1,5 s.",
+  "Voz clonada con θ sin validar de oído por el dueño (Calidad no puede evaluar el seseo): techo 88 hasta que la valide (peticiones_mejora.md, punto 4)."
  ],
- "como_arreglarlo": "Guion y post reescritos por Calidad (gancho en pregunta, voz que cubre, cierre IDEA, público Autónomos); re-render lanzado."
+ "como_arreglarlo": "Guion corregido (la escena 2 añade «y sin calculadora»); se quita «renderizado» para que se rehaga. Se revisa en la siguiente pasada. Sale mañana 13:40."
 }

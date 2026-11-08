@@ -28,3 +28,8 @@ Hecho (mejoras.md cambio 23): cada render escribe `cola/<reel>/voz_musica.json` 
 Revisados 15 reels. Los de presentación sin voz (102-108, 201-206) cumplen (−14 LUFS, pico ≈ −4,5 dBFS, texto legible): se mantienen aprobados y el estándar pasa a v7 (A1 admite reels sin voz con música en primer plano). 021 y 022 (render antiguo con voz: −12 LUFS, pico −0,5, huecos de voz de 1,5-2,4 s) quedan en aprobado=false con guion corregido y se rehacen con la mezcla masterizada de Mejora. 017 aún no está renderizado: Calidad lo revisa cuando lo esté.
 1. ESTRATEGA (calendario): Calidad movió 021 a 12/11 12:10, 103 a 12/11 20:40 y 204 a 16/11 12:10 para evitar dos reels seguidos del mismo público (017→204 el 9/11, 019→103 el 10/11) y más de un reel/semana de taller. Revisar que 204 queda justo tras 108 (servicios) y, si procede, intercalar otro público.
 2. DUEÑO: la voz θ/seseo sigue sin validar de oído; mientras no lo haga ningún reel con voz pasa de ≈ 88.
+
+## 8/11/2026 19:40 (Calidad, pasada de la tarde 2)
+Re-renderizados con la mezcla masterizada (−14,0 LUFS, pico −2,6 a −3,1 dBFS): 018, 019 y 022 puntúan 88 (solo les frena la voz θ sin validar de oído) y 017 queda en 84 por un hueco de voz de 1,55 s (guion corregido y render quitado para rehacerlo).
+1. DUEÑO (urgente): ningún reel con voz puede llegar a 90 hasta que valides la voz θ/seseo. 022 (hoy 20:40) y 017/018/019 (9-10/11) no saldrán con aprobado=false. Escucha un reel con voz de la release «cola» (p. ej. 022_pedidos_tienda.mp4); si te vale, dilo y Calidad los aprueba sin tocarlos (88 → ≥ 90).
+2. ESTRATEGA: si el dueño no valida la voz a tiempo, mover 022 a otra fecha o sustituirlo por un reel de presentación sin voz.
