@@ -135,3 +135,9 @@ Añade "modo":"humano" al guion. Entonces hacer_reel.py NO dibuja fondos generad
 
 ## Fórmulas ganadoras (orden del usuario, 7/11/2026)
 Todos los roles leen equipo/formulas_ganadoras_ia.md: ocho fórmulas F1-F8 sacadas del nicho IA y tecnología (solo estructuras, nada copiado), escalera de monetización y tareas por rol. Los reels nuevos llevan en post.json "formula":"F1".."F8".
+
+## Chat de Instagram: preguntas frecuentes y respuestas (orden del dueño, 7/11/2026)
+- Las 4 «preguntas frecuentes» (ice breakers) se configuran a mano con el workflow «Bienvenida del chat (ice breakers)» (herramientas/bienvenida.py): «¿Qué vas a enseñarme?», «Quiero la guía de prompts gratis», «¿Cómo uso Claude o ChatGPT gratis?», «Quiero proponerte un tema». Quedan guardadas en Meta; no hace falta relanzarlo salvo para cambiarlas.
+- Las contesta el workflow «Respuestas del chat» cada 30 min (herramientas/respuestas_chat.py). Los textos viven SOLO en ese script (RESPUESTAS); para cambiarlos se edita ahí. Enlace de la guía: GUIA_URL o https://ajreparacion.github.io/guia-prompts/ (no inventar otras URL).
+- Token: los dos scripts usan herramientas/token_pagina.py. Si PAGE_TOKEN es de usuario (lo normal tras renovarlo), sacan solos el token de la página 107316837808795. Si falla con 190/463, el token ha caducado: avisar en equipo/pendiente_usuario.md.
+- Tono de cualquier texto nuevo: breve, cercano, español de España; nunca pedir datos personales.
