@@ -308,7 +308,7 @@ def _lufs_array(x, trabajo, nombre):
     return v + 20 * np.log10(escala)
 
 
-def master(entrada, salida, objetivo=-14.0, pico=-1.5):
+def master(entrada, salida, objetivo=-14.0, pico=-2.0):
     r = subprocess.run(["ffmpeg", "-hide_banner", "-i", entrada, "-af",
                         f"loudnorm=I={objetivo}:TP={pico}:LRA=11:print_format=json", "-f", "null", "-"],
                        capture_output=True, text=True)

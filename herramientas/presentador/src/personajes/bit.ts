@@ -73,8 +73,10 @@ export class Bit {
     const clave = `${cara}|${parpadeo.toFixed(2)}|${habla.toFixed(2)}`;
     if (clave === this.ultimaCara) return;
     this.ultimaCara = clave;
-    const g = this.lienzo.getContext("2d")!;
+    const g = this.lienzo.getContext("2d", { willReadFrequently: true })!;
     const W = this.lienzo.width, H = this.lienzo.height;
+    g.shadowBlur = 0;
+    g.shadowColor = "transparent";
     g.clearRect(0, 0, W, H);
     const rr = (x: number, y: number, w: number, h: number, r: number) => {
       g.beginPath();
@@ -106,8 +108,6 @@ export class Bit {
     g.lineCap = "round";
     g.lineJoin = "round";
     g.lineWidth = 18;
-    g.shadowColor = "rgba(255,255,255,0.8)";
-    g.shadowBlur = 12;
     const ex = [W * 0.33, W * 0.67], ey = H * 0.43;
     const arco = (x: number, arriba: boolean) => { g.beginPath(); g.arc(x, ey + (arriba ? 16 : -10), 32, arriba ? Math.PI * 1.12 : Math.PI * 0.12, arriba ? Math.PI * 1.88 : Math.PI * 0.88); g.stroke(); };
     const ojo = (x: number) => {
