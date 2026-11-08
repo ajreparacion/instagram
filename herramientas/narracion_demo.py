@@ -73,6 +73,10 @@ def normalizar_a_mp3(entrada, salida, objetivo, filtros_previos="", fades=(0.005
 # ───────────────────────────── voz ─────────────────────────────
 def voz():
     clips = json.load(open(GUION, encoding="utf-8"))["clips"]
+    solo = [x.strip() for x in (os.environ.get("SOLO_IDS") or "").split(",") if x.strip()]
+    if solo:  # regenerar solo esos clips; el resto se queda como está en demo_audio/
+        clips = [c for c in clips if c["id"] in solo]
+        print("solo clips:", [c["id"] for c in clips])
     cfg = json.load(open(VOZ_JSON, encoding="utf-8"))
     cb = cfg["chatterbox"]
     os.makedirs(TRABAJO, exist_ok=True)
