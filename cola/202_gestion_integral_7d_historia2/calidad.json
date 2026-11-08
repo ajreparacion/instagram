@@ -1,5 +1,5 @@
 {
- "aprobado": true,
+ "aprobado": false,
  "nota": 92,
  "aprobado_por": "revisión del agente de demos (8/11)",
  "revision": [
@@ -9,5 +9,6 @@
   "capturas reales de la demo, nítidas (780 px reducidas, sin reescalar hacia arriba) y sin bordes raros",
   "Montserrat, firma «By Neogest Lab» y logo NL original (recorte circular)",
   "español de España, sin erratas"
- ]
+ ],
+ "nota_pausa": "En conversión a vídeo con música (orden del dueño 8/11 17:59); se vuelve a aprobar al revisar el vídeo."
 }
