@@ -224,3 +224,20 @@ ModuleNotFoundError: No module named 'faster_whisper'
 2026-11-08 14:04  101_errores_prompt: publicando…
 2026-11-08 14:04  101_errores_prompt: fallo al publicar 2/3: Only photo or video can be accepted as media type. (código 9004, subcódigo 2207052)
 2026-11-08 14:04  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 14:24  101_errores_prompt: publicando…
+2026-11-08 14:24  imagen de prueba https://cdn.jsdelivr.net/gh/ajreparacion/instagram@3babe7a4b9f0938c68620460dccb911d5bbc8204/cola/101_errores_prompt/slides/01.jpg -> no se descarga: HTTP Error 404: Not Found
+2026-11-08 14:24  image_url rechazada (Only photo or video can be accepted as media type. (código 9004, subcódigo 22070); se prueba desde la release como 101_errores_prompt__01.jpg
+2026-11-08 14:24  101_errores_prompt: fallo al publicar 1/3: el vídeo no es descargable desde la release (404); ¿el repositorio es privado?
+2026-11-08 14:34  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 5 frases en 588 s
+2026-11-08 14:34  Voz: silencios recortados por frase (s): [0.28, 0.02, 0, 1.08, 0]
+2026-11-08 14:34  Voz: alineación palabra a palabra (small, 24.5 s): 5/5 frases
+2026-11-08 14:35  019_suscripciones_ia: renderizado con voz y subido a la release 'cola'
+2026-11-08 14:41  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 5 frases en 365 s
+2026-11-08 14:41  Voz: silencios recortados por frase (s): [0, 0.24, 0, 0.26, 0.5]
+2026-11-08 14:41  Voz: alineación palabra a palabra (small, 18.9 s): 5/5 frases
+2026-11-08 14:42  023_citas_familia: renderizado con voz y subido a la release 'cola'
+2026-11-08 14:42  101_errores_prompt: publicando…
+2026-11-08 14:42  imagen de prueba https://cdn.jsdelivr.net/gh/ajreparacion/instagram@3babe7a4b9f0938c68620460dccb911d5bbc8204/cola/101_errores_prompt/slides/01.jpg -> no se descarga: HTTP Error 404: Not Found
+2026-11-08 14:42  image_url rechazada (Only photo or video can be accepted as media type. (código 9004, subcódigo 22070); se prueba desde la release como 101_errores_prompt__01.jpg
+2026-11-08 14:42  101_errores_prompt: fallo al publicar 2/3: el vídeo no es descargable desde la release (404); ¿el repositorio es privado?
+2026-11-08 14:42  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)

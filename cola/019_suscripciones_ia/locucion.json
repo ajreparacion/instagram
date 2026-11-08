@@ -25,18 +25,20 @@
   "escena": 2,
   "estilo": "tramo",
   "inicio": 7.4,
-  "duracion": 10.5,
-  "texto": "Apunto tres: streaming, música y gimnasio, con lo que pago al mes.",
+  "duracion": 11.3,
+  "texto": "Apunto tres: streaming, música y gimnasio, con lo que pago al mes. Fíjate cómo la web suma sola cada precio y me dice lo que gasto al año, sin sacar la calculadora.",
   "enfasis": [
    10,
-   11
+   11,
+   26,
+   27
   ]
  },
  {
   "escena": 3,
   "estilo": "tramo",
-  "inicio": 17.9,
-  "duracion": 4.167,
+  "inicio": 18.7,
+  "duracion": 3.867,
   "texto": "Quito el gimnasio y me dice cuánto ahorro al año.",
   "enfasis": [
    6,
@@ -46,11 +48,11 @@
  {
   "escena": 4,
   "estilo": "cierre",
-  "inicio": 22.067,
-  "duracion": 5.633,
-  "texto": "Comenta suscripciones y te paso el mensaje. Sígueme para más.",
+  "inicio": 22.567,
+  "duracion": 6.7,
+  "texto": "¿Y si tu idea fuera una app? Escríbeme idea por privado y te cuento cómo sería.",
   "enfasis": [
-   1
+   8
   ]
  }
 ]

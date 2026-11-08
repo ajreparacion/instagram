@@ -1,12 +1,13 @@
 {
- "tipo": "carrusel",
- "texto": "Deja de pedirle así las cosas a la IA.\nSi ChatGPT, Claude o Gemini te contestan regular, casi siempre es por el mensaje:\n1. Dale contexto: para quién es, qué pasa y qué tono quieres.\n2. Dile el formato: tabla, 3 puntos o menos de 100 palabras.\n3. No te quedes con la primera respuesta: pide «más corto» o «3 versiones».\n4. Pídele que te haga preguntas antes de responder.\n5. Comprueba datos, fechas y cifras, porque puede equivocarse.\nGuárdalo para tu próximo prompt 📌 Y si quieres una app para tu negocio, escríbeme IDEA por privado.\n\n#inteligenciaartificial #ia #prompts #productividad #neogestlab",
- "cuando": "2026-11-08T12:40:00+01:00",
- "renderizado": "no aplica (carrusel)",
- "publico": "Público general que usa IA (ChatGPT, Claude o Gemini)",
- "app": null,
- "fuentes": [
-  "Técnicas de redacción de prompts recogidas en las guías públicas de OpenAI (Prompt engineering), Anthropic (Prompt engineering overview) y Google (guía de prompts de Gemini): dar contexto, indicar formato, iterar y comprobar las respuestas. No se citan menús, botones ni precios.",
-  "Aviso de que la IA puede cometer errores: ChatGPT, Claude y Gemini lo muestran en su propia interfaz."
- ]
+  "tipo": "carrusel",
+  "texto": "Deja de pedirle así las cosas a la IA.\nSi ChatGPT, Claude o Gemini te contestan regular, casi siempre es por el mensaje:\n1. Dale contexto: para quién es, qué pasa y qué tono quieres.\n2. Dile el formato: tabla, 3 puntos o menos de 100 palabras.\n3. No te quedes con la primera respuesta: pide «más corto» o «3 versiones».\n4. Pídele que te haga preguntas antes de responder.\n5. Comprueba datos, fechas y cifras, porque puede equivocarse.\nGuárdalo para tu próximo prompt 📌 Y si quieres una app para tu negocio, escríbeme IDEA por privado.\n\n#inteligenciaartificial #ia #prompts #productividad #neogestlab",
+  "cuando": "2026-11-08T12:40:00+01:00",
+  "renderizado": "no aplica (carrusel)",
+  "publico": "Público general que usa IA (ChatGPT, Claude o Gemini)",
+  "app": null,
+  "fuentes": [
+    "Técnicas de redacción de prompts recogidas en las guías públicas de OpenAI (Prompt engineering), Anthropic (Prompt engineering overview) y Google (guía de prompts de Gemini): dar contexto, indicar formato, iterar y comprobar las respuestas. No se citan menús, botones ni precios.",
+    "Aviso de que la IA puede cometer errores: ChatGPT, Claude y Gemini lo muestran en su propia interfaz."
+  ],
+  "_intentos": 2
 }
