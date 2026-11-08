@@ -2,8 +2,23 @@
  "tipo": "historia",
  "texto": "",
  "cuando": "2026-11-09T15:30:00+01:00",
- "renderizado": "no aplica (historia)",
+ "renderizado": "2026-11-08T17:20:48+00:00",
+ "asset": "204_aj_sistema_taller_historia1.mp4",
+ "medio": "video",
+ "duracion_s": 10.0,
  "formato": "sabias",
+ "musica": {
+  "estilo": "disco",
+  "bpm": 120.0,
+  "tono": -2,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -13.9,
+  "pico_real_dbtp": -4.8,
+  "lra_lu": 0.1,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
  "app": "AJ Sistema",
  "publico": "Autónomos y negocios de servicio",
  "fuentes": [

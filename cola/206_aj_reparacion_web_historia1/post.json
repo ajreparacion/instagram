@@ -2,8 +2,23 @@
  "tipo": "historia",
  "texto": "",
  "cuando": "2026-11-10T09:30:00+01:00",
- "renderizado": "no aplica (historia)",
+ "renderizado": "2026-11-08T17:23:27+00:00",
+ "asset": "206_aj_reparacion_web_historia1.mp4",
+ "medio": "video",
+ "duracion_s": 9.8,
  "formato": "sabias",
+ "musica": {
+  "estilo": "funk",
+  "bpm": 110.0,
+  "tono": -4,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -13.9,
+  "pico_real_dbtp": -3.6,
+  "lra_lu": 0.3,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
  "app": "AJ Web",
  "publico": "Cualquier negocio",
  "fuentes": [

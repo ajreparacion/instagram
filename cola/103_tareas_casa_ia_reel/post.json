@@ -1,0 +1,32 @@
+{
+ "tipo": "reel",
+ "texto": "5 tareas pesadas que ChatGPT, Claude o Gemini hacen por ti (prompts incluidos).\nMenú de cenas de la semana y lista de la compra por secciones.\nResumir la circular del cole o de la comunidad y decirte qué hacer y para cuándo, sin pegar datos personales.\nResponder un mensaje difícil con educación.\nPasar a texto la foto de una receta o un tíquet.\nRepartir las tareas de la semana según tus horas libres.\nGuárdalo para el domingo 🗓️ ¿Y una app hecha para tu casa? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #organizacion #hogar #productividad #neogestlab",
+ "cuando": "2026-11-10T16:10:00+01:00",
+ "renderizado": "2026-11-08T17:24:53+00:00",
+ "asset": "103_tareas_casa_ia_reel.mp4",
+ "portada_ms": 1500,
+ "compartir_en_feed": true,
+ "duracion_s": 29.0,
+ "formato": "versión reel del carrusel (diapositivas animadas, música en primer plano y efectos; sin voz)",
+ "app": null,
+ "publico": "Hogar y familias",
+ "fuentes": [
+  "Diapositivas del carrusel 103_tareas_casa_ia (aprobado por Calidad); mismo contenido.",
+  "Técnicas de redacción de prompts recogidas en las guías públicas de OpenAI (Prompt engineering), Anthropic (Prompt engineering overview) y Google (guía de prompts de Gemini): dar contexto, indicar formato, iterar y comprobar las respuestas. No se citan menús, botones ni precios.",
+  "Subir imágenes al chat: ChatGPT, Claude y Gemini aceptan imágenes en sus apps y webs (centros de ayuda oficiales de OpenAI, Anthropic y Google)."
+ ],
+ "carrusel": "103_tareas_casa_ia",
+ "musica": {
+  "estilo": "disco",
+  "bpm": 120.0,
+  "tono": -1,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -14.0,
+  "pico_real_dbtp": -4.3,
+  "lra_lu": 0.1,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
+ "origen": "herramientas/demo_app.py"
+}

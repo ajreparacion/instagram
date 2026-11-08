@@ -2,8 +2,23 @@
  "tipo": "historia",
  "texto": "",
  "cuando": "2026-11-11T21:30:00+01:00",
- "renderizado": "no aplica (historia)",
+ "renderizado": "2026-11-08T17:22:22+00:00",
+ "asset": "205_insultator_historia2.mp4",
+ "medio": "video",
+ "duracion_s": 9.6,
  "formato": "antes_despues",
+ "musica": {
+  "estilo": "funk",
+  "bpm": 113.0,
+  "tono": -3,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -13.9,
+  "pico_real_dbtp": -5.5,
+  "lra_lu": 0.3,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
  "app": "Insultator",
  "publico": "Ocio y humor",
  "fuentes": [
