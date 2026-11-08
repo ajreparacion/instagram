@@ -2,3 +2,8 @@ __pycache__/
 .claude/
 voces/
 herramientas/demos/
+herramientas/presentador/node_modules/
+herramientas/presentador/public/capturas/
+herramientas/presentador/public/fonts/
+herramientas/presentador/public/marca/
+herramientas/presentador/out/

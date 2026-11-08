@@ -1,0 +1,146 @@
+name: Modo presentador (reel con presentadora y Bit)
+
+# Renderiza un reel del «modo presentador» a partir de un guion de cola/ (herramientas/presentador/, ver
+# equipo/INSTRUCCIONES_EQUIPO.md, «Modo presentador»): presentadora 3D y Bit en three.js dentro de Remotion,
+# titulares, subtítulos palabra a palabra, maquetas de móvil/terminal, capturas reales del Centro de Contenido Apps,
+# voz del dueño (equipo/voz.json), música y efectos generados por código y máster a -14 LUFS.
+# Todo en CPU (SwiftShader). Técnica basada en «claude-animated-shorts» de Mr omi (MIT, ver
+# herramientas/presentador/CREDITOS.md). Con «subir», el MP4 va a la release «cola» y se escribe post.json con
+# "renderizado"; NO publica: lo publica el ciclo cuando hay calidad.json aprobado (nota >= 90).
+on:
+  workflow_dispatch:
+    inputs:
+      guion:
+        description: "Ruta del guion (p. ej. cola/301_medicator_presentador/guion.json)"
+        type: string
+        default: ""
+      voz:
+        description: "Locución con la voz del dueño (si falla, sale sin voz y se avisa)"
+        type: boolean
+        default: true
+      subir:
+        description: "Subir el MP4 a la release «cola» y escribir post.json"
+        type: boolean
+        default: true
+      dependencias:
+        description: "Solo instalar las dependencias de Node y dejarlas como artefacto (pruebas)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: presentador-${{ inputs.guion }}
+  cancel-in-progress: false
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Caché de npm
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: npm-presentador-${{ hashFiles('herramientas/presentador/package.json', 'herramientas/presentador/package-lock.json') }}
+          restore-keys: npm-presentador-
+
+      - name: Dependencias de Node (Remotion, three.js)
+        working-directory: herramientas/presentador
+        run: |
+          if [ -f package-lock.json ]; then npm ci --no-audit --no-fund; else npm install --no-audit --no-fund; fi
+          npx remotion versions || true
+
+      - name: Exportar dependencias (solo pruebas)
+        if: ${{ inputs.dependencias }}
+        working-directory: herramientas/presentador
+        run: tar czf /tmp/deps_presentador.tgz node_modules package-lock.json
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ inputs.dependencias }}
+        with:
+          name: deps-presentador
+          path: /tmp/deps_presentador.tgz
+          retention-days: 2
+
+      - name: Herramientas de audio y vídeo
+        if: ${{ !inputs.dependencias }}
+        run: |
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=20"
+          if ! command -v ffmpeg >/dev/null; then
+            for i in 1 2 3; do
+              sudo timeout 180 apt-get $APT update -qq && sudo timeout 180 apt-get $APT install -y -qq ffmpeg > /dev/null && break
+              sleep 10
+            done
+          fi
+          pip install --quiet numpy scipy pillow
+          # Tipografía condensada de los titulares (Anton, SIL OFL) junto a Montserrat (marca)
+          mkdir -p herramientas/presentador/public/fonts
+          curl -fsSL -o herramientas/presentador/public/fonts/Anton-Regular.ttf \
+            https://github.com/google/fonts/raw/main/ofl/anton/Anton-Regular.ttf || echo "Sin Anton: se usa Montserrat"
+          cd herramientas/presentador && npx remotion browser ensure
+
+      - name: Python 3.11 (voz)
+        if: ${{ !inputs.dependencias && inputs.voz }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Caché de modelos de voz
+        if: ${{ !inputs.dependencias && inputs.voz }}
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            ~/.cache/pip
+          key: voz-v2-${{ hashFiles('equipo/voz.json') }}
+          restore-keys: voz-v2-
+
+      - name: Voz Chatterbox + alineación (CPU)
+        if: ${{ !inputs.dependencias && inputs.voz }}
+        continue-on-error: true
+        run: |
+          pip install --quiet numpy scipy pillow faster-whisper
+          python -m venv ~/.venvs/chatterbox
+          ~/.venvs/chatterbox/bin/pip install --quiet --upgrade pip
+          ~/.venvs/chatterbox/bin/pip install --quiet chatterbox-tts --extra-index-url https://download.pytorch.org/whl/cpu
+          ~/.venvs/chatterbox/bin/python -c "import chatterbox.mtl_tts, torch; print('chatterbox OK, torch', torch.__version__)"
+          echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
+
+      - name: Renderizar
+        if: ${{ !inputs.dependencias }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TZ: Europe/Madrid
+        run: |
+          pip install --quiet numpy scipy pillow
+          OPC=""
+          [ "${{ inputs.voz }}" = "true" ] || OPC="$OPC --sin-voz"
+          [ "${{ inputs.subir }}" = "true" ] && OPC="$OPC --subir"
+          python3 herramientas/presentador/preparar.py "${{ inputs.guion }}" $OPC
+
+      - uses: actions/upload-artifact@v4
+        if: ${{ !inputs.dependencias && always() }}
+        with:
+          name: presentador-resultado
+          path: /tmp/presentador_salida/
+          retention-days: 5
+          if-no-files-found: ignore
+
+      - name: Guardar cambios
+        if: ${{ !inputs.dependencias }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          D=$(dirname "${{ inputs.guion }}")
+          git add "$D"
+          git commit -q -m "Modo presentador: $(basename "$D") $(date -u +%FT%H:%MZ)" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done
+          exit 1
