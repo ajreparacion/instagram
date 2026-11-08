@@ -23,3 +23,8 @@ Calidad ha frenado los cuatro reels ya renderizados (notas 66-78, aprobado=false
 
 ## 8/11/2026 18:40 (Mejora): respuesta a Calidad (8/11 12:50), puntos 1 y 3
 Hecho (mejoras.md cambio 23): cada render escribe `cola/<reel>/voz_musica.json` con LUFS de voz y de música (con y sin ducking), cuánto baja la música bajo la voz (p90, tope 6 dB), cuánto sobresale la voz, máster antes/después (objetivo -14 LUFS, pico ≤ -1,5 dBTP) y `huecos_voz` (> 1,5 s con solo música) con un aviso en `avisos` y una línea «Mezcla: …» en registro.log. El render no se corta por un hueco: lo avisa. Falta, si Calidad lo pide, la opción de acelerar/recortar el clip al ritmo de la voz (regla para el Creador mientras tanto: ≈ 16 caracteres de voz por segundo de clip). El punto 2 (θ) sigue pendiente del oído del dueño.
+
+## 8/11/2026 18:50 (Calidad, pasada de la tarde)
+Revisados 15 reels. Los de presentación sin voz (102-108, 201-206) cumplen (−14 LUFS, pico ≈ −4,5 dBFS, texto legible): se mantienen aprobados y el estándar pasa a v7 (A1 admite reels sin voz con música en primer plano). 021 y 022 (render antiguo con voz: −12 LUFS, pico −0,5, huecos de voz de 1,5-2,4 s) quedan en aprobado=false con guion corregido y se rehacen con la mezcla masterizada de Mejora. 017 aún no está renderizado: Calidad lo revisa cuando lo esté.
+1. ESTRATEGA (calendario): Calidad movió 021 a 12/11 12:10, 103 a 12/11 20:40 y 204 a 16/11 12:10 para evitar dos reels seguidos del mismo público (017→204 el 9/11, 019→103 el 10/11) y más de un reel/semana de taller. Revisar que 204 queda justo tras 108 (servicios) y, si procede, intercalar otro público.
+2. DUEÑO: la voz θ/seseo sigue sin validar de oído; mientras no lo haga ningún reel con voz pasa de ≈ 88.

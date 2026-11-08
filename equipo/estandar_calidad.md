@@ -44,7 +44,7 @@ Versión 6 (7/11/2026, serie de apps). Versión 5 (6/11/2026 20:35, Estratega, p
 
 ## Serie APPS NEOGEST LAB (v6, orden del usuario 7/11/2026)
 Excepción de estilo: la imagen es la demo de la app (no modo dibujo), 20-45 s, pie «By Neogest Lab»; Bit opcional en gancho o cierre. Se revisan al menos 5 fotogramas y el audio. Bloqueos propios (si falla uno, no se publica):
-A1. Sin locución durante todo el reel o con huecos sin voz de más de 1,5 s.
+A1. Reel que declara locución pero tiene huecos sin voz de más de 1,5 s. (v7: un reel de presentación sin ninguna voz, con música en primer plano a −14 LUFS y texto en pantalla, es válido por la orden del dueño del 8/11 17:59 «la música tiene que resaltar»; si lleva voz, se aplica el límite de 1,5 s.)
 A2. Gancho flojo en los 2 primeros segundos (sin problema real del público, sin pregunta, número ni antes/después).
 A3. Cualquier afirmación (voz, rótulos o texto) fuera de hechos_verificados de la entidad Producto o dentro de prohibido_afirmar.
 A4. Datos reales de clientes en pantalla (nombres, teléfonos, matrículas, importes de terceros).
@@ -58,6 +58,7 @@ El resto de la puntuación (100 puntos, mínimo 75) se aplica igual, cambiando �
 - Números escritos con letra en la voz.
 
 ## Registro de cambios
+- v7, 8/11/2026 18:50: A1 admite reels de presentación sin voz con música en primer plano (orden del dueño 8/11 17:59); con voz, huecos ≤ 1,5 s.
 - v6, 7/11/2026: excepción y bloqueos de la serie APPS NEOGEST LAB (orden del usuario 7/11 11:01).
 - v5, 6/11/2026 20:35: cambio de temática y formato por orden del usuario (IA fácil, modo dibujo con Bit y Paco). Se quitan el vídeo/foto real obligatorio, las fuentes de misterio y las reglas de remasters; se añaden la comprobación en documentación oficial, el veto a logos y el estilo doodle.
 - v1-v4 (5-6/11/2026): estándar de misterios reales; ver el historial de git.
