@@ -1,0 +1,12 @@
+{
+ "tipo": "carrusel",
+ "texto": "5 tareas pesadas que ChatGPT, Claude o Gemini hacen por ti (prompts incluidos).\nMenú de cenas de la semana y lista de la compra por secciones.\nResumir la circular del cole o de la comunidad y decirte qué hacer y para cuándo, sin pegar datos personales.\nResponder un mensaje difícil con educación.\nPasar a texto la foto de una receta o un tíquet.\nRepartir las tareas de la semana según tus horas libres.\nGuárdalo para el domingo 🗓️ ¿Y una app hecha para tu casa? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #organizacion #hogar #productividad #neogestlab",
+ "cuando": "2026-11-08T17:10:00+01:00",
+ "renderizado": "no aplica (carrusel)",
+ "publico": "Hogar y familias",
+ "app": null,
+ "fuentes": [
+  "Técnicas de redacción de prompts recogidas en las guías públicas de OpenAI (Prompt engineering), Anthropic (Prompt engineering overview) y Google (guía de prompts de Gemini): dar contexto, indicar formato, iterar y comprobar las respuestas. No se citan menús, botones ni precios.",
+  "Subir imágenes al chat: ChatGPT, Claude y Gemini aceptan imágenes en sus apps y webs (centros de ayuda oficiales de OpenAI, Anthropic y Google)."
+ ]
+}

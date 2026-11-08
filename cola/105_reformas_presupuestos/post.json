@@ -1,0 +1,11 @@
+{
+ "tipo": "carrusel",
+ "texto": "¿Pasas los presupuestos al Excel por la noche?\nSi trabajas en reformas o instalaciones, conoces el bucle: libreta, Excel y factura a mano.\nGestión Integral 7D, nuestra app, une presupuesto, pedido, albarán y factura, y cada paso hereda líneas, IVA y retención.\nPresupuestos y facturas en PDF con tus datos fiscales y los del cliente.\nCada factura puede llevar su enlace de pago: tarjeta, TPV Redsys (con Bizum si está activo) o transferencia.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🛠️\n\n#autonomos #reformas #facturacion #pymes #apps #neogestlab",
+ "cuando": "2026-11-08T12:40:00+01:00",
+ "renderizado": "no aplica (carrusel)",
+ "publico": "Autónomos de reformas e instalaciones",
+ "app": "Gestión Integral 7D",
+ "fuentes": [
+  "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Gestión Integral 7D» (estado activo, actualizada 8/11/2026): hechos_verificados (cadena presupuesto → pedido → albarán → factura con IVA por línea y retención; PDF con datos fiscales de empresa y cliente; enlace de pago Stripe / Redsys con Bizum si está activo / transferencia con IBAN) y eslogan."
+ ]
+}

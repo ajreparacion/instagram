@@ -1,0 +1,12 @@
+{
+ "tipo": "carrusel",
+ "texto": "¿Tu negocio aún no usa IA? Empieza por aquí.\nResponder reseñas negativas con empatía y sin excusas.\nTextos cortos para redes y carteles: la oferta de la semana, el horario de festivos.\nPreguntas frecuentes con respuesta a partir de tus horarios, precios y normas.\nEmails que cuestan, como pedir a un proveedor que mantenga el precio.\nLa regla: nada de contraseñas, datos bancarios ni datos de clientes, y revisa siempre antes de publicar.\nGuárdalo y compártelo con tu equipo 💼 ¿Y una app a medida para tu negocio? Escríbeme IDEA por privado.\n\n#pymes #autonomos #inteligenciaartificial #negocios #neogestlab",
+ "cuando": "2026-11-09T22:10:00+01:00",
+ "renderizado": "no aplica (carrusel)",
+ "publico": "Pequeños negocios y autónomos de cualquier sector",
+ "app": null,
+ "fuentes": [
+  "Técnicas de redacción de prompts recogidas en las guías públicas de OpenAI (Prompt engineering), Anthropic (Prompt engineering overview) y Google (guía de prompts de Gemini): dar contexto, indicar formato, iterar y comprobar las respuestas. No se citan menús, botones ni precios.",
+  "Aviso de que la IA puede cometer errores: ChatGPT, Claude y Gemini lo muestran en su propia interfaz."
+ ]
+}
