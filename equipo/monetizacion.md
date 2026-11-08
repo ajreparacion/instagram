@@ -1,66 +1,55 @@
-# Monetización de @nosabesloquehasvisto: plan por fases
+# Monetización de @neogestlab (Neogest Lab · escaparate de apps)
 
-Analista de monetización. Versión 4 (plan): 6/11/2026 12:00 h, ejecución extra pedida por el usuario («tenemos que monetizar»). Sustituye a la v3 de hoy. Próxima revisión: domingo 8/11.
-Regla: lo que no he leído en una fuente se marca "NO VERIFICADO" o "no consta". Sin gasto ni promociones sin visto bueno del usuario.
+Analista de monetización. Versión 5: 8/11/2026 19:20 CET (domingo). Sustituye a la v4 (plan por fases de afiliados/misterios), archivada en `monetizacion_v4_archivo.md` (tabla de vías de Instagram y afiliados de Amazon, aún útil como referencia). Rige DIRECTIVA_VIGENTE.md (no se toca).
+Regla: lo que no he leído en una fuente se marca "no consta". Sin gasto ni promociones sin visto bueno del dueño.
 
 ## 0. Resumen ejecutivo
-- Hoy: 1.605 seguidores, neto -13 en 28 días, 49 cuentas alcanzadas en 30 días (27 no seguidores), 0 clics en el enlace (apunta a TikTok). Ingresos: 0 €. No se cumple ningún umbral de pago verificado.
-- Única vía con requisitos de entrada cumplidos y leídos en fuente oficial: **Afiliados de Amazon.es** (perfil de Instagram válido como sitio; orientativo ≥500 seguidores y ≥10 publicaciones; exige 3 ventas cualificadas en 180 días).
-- Vía sin requisitos de plataforma: **tráfico a las apps propias de Neogest Lab** (Base44) desde la página de enlaces; depende solo de nuestro alcance y de que la app encaje.
-- Las herramientas de Instagram (regalos, suscripciones, bonificaciones, marcas) dependen de umbrales de seguidores que no hemos podido leer en oficial (ver §2) y de un alcance que hoy no existe. El cuello de botella es la **distribución**: hasta que un reel supere los 300-500 de alcance a no seguidores, ninguna vía produce.
-- Orden: Fase 0 (fundamentos, esta semana) → Fase 1 (afiliados + apps, hasta 5.000) → Fase 2 (regalos + marcas, 5.000-10.000) → Fase 3 (suscripciones + marketplace, 10.000+).
+- El embudo de la directiva (palabra clave → DM → clic al enlace → interés en apps a medida / Gestión Integral 7D) está **a cero en lo medible y ciego en lo demás**: 0 clics al enlace, 0 comentarios, 4 visitas al perfil en 7 días, y los DMs no se pueden leer (permiso de mensajes sin verificar en Buzzfy, sin webhooks, automatizaciones solo en plan MAX).
+- Cuello de botella: **del alcance a la visita al perfil**. 445 cuentas no seguidoras alcanzadas → 4 visitas al perfil (0,9 %) → 0 clics. Antes del enlace falla el gancho de cierre, no la página.
+- Hallazgo de riesgo: los carruseles de hoy salieron **duplicados** (101 ×3 y 105 ×3 en 15:06-15:31 CET) y aun así alcanzan 3-12 cuentas cada uno. Los reels, en cambio, daban ~115 de alcance por pieza.
+- Ingresos: 0 €. No hay plan de pago de ninguna app documentado (pendiente del dueño).
 
-## 1. Estado real (6/11/2026 11:40 h, Buzzfy/estadisticas.json)
-- Cuenta BUSINESS, 809 publicaciones, 1.605 seguidores; 7/10-3/11: +10 / -23 (-0,46/día). Audiencia: España 32 %, México 14 %, Chile 14 %, Argentina 12 %; 73 % hombres; 25-54 años 86 %.
-- 30 días: alcance 49, 81 reproducciones, 12 interacciones, 2 compartidos, 0 guardados, 3 visitas al perfil, 0 clics.
-- Reel 001 (5/11): alcance 21 (0,13 veces la mediana de 156), visualización media 13,8 s (1,64 veces la mediana de 8,4 s), salto 57 %. Retiene; no se distribuye.
-- Producción: 002 aprobado (sale hoy 20:40); 003/005 rechazados por metraje ajeno con marcas de agua y ya reconvertidos a reel nuevo (010, 011); colchón 006-009 en cola. Primer reel de prueba para no seguidores se retrasa a la próxima tanda.
-- Cuenta publicitaria 966846446095574: sin método de pago; no se gasta nada.
+## 1. Embudo medido (Buzzfy, 1-8/11/2026 17:18 UTC; los datos tardan hasta 48 h)
+| Etapa | Dato | Lectura |
+|---|---|---|
+| Alcance | 468 cuentas (445 no seguidoras = 95 %); reels 459, carruseles 15, historias 6, posts 2 | Se distribuye a desconocidos, que es lo que se busca |
+| Reproducciones | 715 (550 de no seguidores) | Los 6 carruseles de hoy suman solo 97 |
+| Señales de interés | 44 interacciones: 25 me gusta, 5 guardados, 4 compartidos, 6 reposts, 0 comentarios | Guardados y compartidos existen pero son poquitos |
+| Visitas al perfil | 4 | Etapa más débil del embudo |
+| Clics al enlace (`/demo`) | 0 (linkTaps 0, websiteClicks 0) | Sin tráfico a la demo |
+| Palabra clave en comentarios | 0 comentarios en los 7 posts actuales | Nadie escribe APP/IDEA en público |
+| DMs con intención (IDEA, APP, «¿cuánto cuesta?») | **no medible** | `ig_inbox` falla por permiso; respondidos.json vacío |
+| Solicitudes en /solicitar (apps a medida, 7D) | **no medible desde aquí** | Base44 devuelve 403 al proxy; lo ve el dueño en /panel/solicitudes |
+| Seguidores | 1.603; netos -2 (1-5/11; 6 y 7/11 pendientes) | Sin cambio de tendencia |
 
-## 2. Vías de ingresos: requisito, estado, lo que falta y qué contenido acelera
-| Vía | Requisito leído (fuente, fecha) | Estado hoy | Umbral que falta | Contenido que acelera |
-|---|---|---|---|---|
-| Bonificaciones de reels | "Limitadas en el tiempo y solo por invitación" (creators.instagram.com/earn-money/bonuses, 6/11/2026); 2023-24 solo EE. UU., Corea, Japón (about.fb.com, 6/11/2023-3/4/2024) | No disponible ni solicitable; España no consta | Invitación de Meta | Nada que hacer; el volumen de reproducciones es lo que invita |
-| Regalos (Gifts) | Meta 2023: profesional, +18, normas de socios, **5.000 seguidores**, 33 países sin España. Tercero 10/2026 (lilachbullock.com, 26/10/2026): **500 seguidores**, España incluida | **DISCREPANCIA sin resolver**; solo lo ve el dueño en Panel profesional > Monetización | 0 o 3.395 seguidores según la fuente | Reels con espectadores fieles que repiten (serie numerada, Parte 2) |
-| Suscripciones | España en la lista oficial desde 20/9/2023 (creators.instagram.com/blog); cifra de seguidores no publicada; terceros dicen 10.000 (Metricool 1/2026) o "requisitos de participación" (Lilach 10/2026); la ayuda habla de "Meta Verified creator subscriptions" (solo título) | País OK; umbral NO VERIFICADO | ~8.395 seguidores si son 10.000 | Contenido exclusivo sostenible (expedientes extendidos, fuentes completas) |
-| Contenido de marca / marketplace | Etiqueta de Colaboración pagada obligatoria (creators.instagram.com/earn-money/creator-marketplace, 6/11/2026); requisitos de seguidores y países no legibles | Sin marcas interesadas con 49 de alcance | En la práctica 5.000+ seguidores y reels de 5.000+ de alcance | Reels con compartidos y guardados altos (prueba social para el kit de medios) |
-| Afiliados Amazon.es | Perfil de Instagram válido como sitio (URL exacta, público); "cantidad considerable de seguidores (en la mayoría de los casos, al menos 500)" y ≥10 publicaciones; **3 ventas cualificadas en 180 días** o no se aprueba; pago ~60 días tras fin de mes, mínimo 25 € transferencia; frase legal obligatoria (afiliados.amazon.es/help/node/topic/G8TW5AE9XL2VX9VM y /help/operating/policies, 6/11/2026) | **Requisitos de entrada cumplidos**; falta el alta del usuario | 0 seguidores; faltan clics (hoy 0) | Expedientes basados en un libro concreto (Waller 1518, Mary Celeste, Emúes) + CTA "fuentes y libros en el enlace" |
-| Apps propias (Neogest Lab, Base44) | Ninguno de plataforma; transparencia (decir que son nuestras) | Página de enlaces existe (Expedientes Imposibles, Base44) pero la bio apunta a TikTok | 0; falta tráfico y encaje | Reels donde la app resuelve algo del vídeo (ver §4) |
-| Suscripciones de Facebook | 10.000 seguidores o 250 espectadores recurrentes + 50.000 interacciones o 180.000 min en 60 días (creators.facebook.com/tools/subscriptions, 5/11/2026) | Lejísimos | Todo | No priorizar |
-| Norma transversal: originalidad | Si la mayoría de lo publicado en 30 días es obra ajena sin transformación material, la cuenta deja de recomendarse a no seguidores; marca de agua o crédito no bastan (creators.instagram.com/blog/rewarding-original-creators-on-instagram, 30/4/2026; petapixel.com 30/4/2026) | Cumplida tras rechazar 003/005 | — | Todo generado por nosotros; remasters solo con metraje 100 % propio |
-| IA / voz sintética | No consta ninguna norma en lo leído | Sin riesgo conocido | — | Registrar en calidad.json; marcar "con IA" si la API lo permite |
-Las páginas de help.instagram.com solo devuelven la cabecera a herramientas automáticas: los umbrales oficiales se confirman en el Panel profesional (acción del dueño, 2 minutos, la de más valor del plan).
+Estado del perfil leído hoy: bio y enlace ya son los de Neogest Lab (enlace `…/demo`), pero el **nombre visible sigue siendo «IA Fácil · Trucos que no sabes»** y no «Neogest Lab · Apps a medida». 7 publicaciones en la cuadrícula; los reels 001 y 013-016 ya no existen en el perfil (el dueño borró reels por la música), así que las cifras de reels son de piezas retiradas.
 
-## 3. Qué contenido acerca a monetizar (datos propios y del nicho)
-- Propios: la visualización media predice reproducciones (200 reels; ≥18 s → mediana 1.665; confianza alta). Reels con algún compartido: alcance mediano +27 % (19 reels; confianza baja-media). Lo más compartido: animales y "lo que sabes está mal" (confianza media). Guardados ≈ 0: falta motivo para guardar.
-- Nicho (Buzzfy, informe Entertainment 8/10/2026, 110 reels; el de "misterios reales" requiere plan MAX, no contratado): en cuentas pequeñas la banda de duración con más reproducciones es **20-45 s**; los ganchos de "secreto/curiosidad" y "arranque de historia" tienen la mediana de reproducciones más alta entre las pequeñas (25,6 M, pocos casos); el 93 % de los virales **no lleva CTA** en el gancho, así que el CTA va al final; primer corte a ~5 s. Es un nicho vecino (entretenimiento, mucho gaming): orientativo, no concluyente.
-- Síntesis: gancho "secreto + año + hecho concreto" en < 2 s, giro antes del segundo 15, 20-45 s, CTA solo al cierre, 1 de cada 3 de animales/naturaleza, y siempre un libro o documental real como fuente (que luego es el enlace de afiliado).
+## 2. Por público y por producto: todavía no hay muestra
+- Solo han salido dos temas con la nueva línea: **autónomos/reformas (105, Gestión Integral 7D)** y **trucos de IA genéricos (101)**, cada uno ×3 en el mismo día, todos con menos de 3,2 h. Alcance 3-12, 1 compartido en cada tema, 0 guardados, 1 visita al perfil. Es PROVISIONAL (hasta 48 h) y demasiado pequeño para elegir sector.
+- Interés en **apps a medida**: no consta ningún DM «IDEA» ni solicitud. Interés en **Gestión Integral 7D**: 1 compartido en 105 (cuenta a revisar a las 48 h), nada más.
+- No se ha probado todavía hostelería, hogar, mayores (MEDICATOR), música ni ocio (directiva §3). Sin esos datos no se puede decir qué sector da más DMs.
+- Comparación de formato (dato real de la semana): reels 459 de alcance en total frente a 15 de carruseles. Los carruseles publicados hoy no sustituyen a los reels para captar.
 
-## 4. Tráfico a las apps de Neogest Lab (Base44)
-- Apps del usuario (lista real del 6/11): Expedientes Imposibles (página de enlaces del canal), GPS Andaluz, Insultator, Studio Beats PRO / Beats Studio, MEDICATOR, GH PLUS · Gestión Hogar, CajaSegura IA, Gestión Integral 7D, AjReparacion Gestión, PlaymoCustons, Centro de Contenido Apps. Si alguna tiene precio o plan de pago: **no consta** en el repo; sin eso solo se puede medir tráfico, no ingresos.
-- Encaje con misterios reales: ninguna es temática. Las que admiten un guiño honesto son **Insultator** (soundboard; humor, un ¿REAL O FALSO? "lo que dijo X nunca lo dijo" puede cerrar con un sonido) y **GPS Andaluz** (voces andaluzas; expedientes de misterios ocurridos en Andalucía). MEDICATOR y las de gestión no encajan y no se promocionan aquí (nada de salud, regla del equipo).
-- Cómo: la página Expedientes Imposibles pasa a ser el hub único del enlace de la bio: arriba "Fuentes y libros de esta semana" (afiliado cuando haya ID, con la frase legal), debajo "Apps gratuitas de Neogest Lab" con botón por app y texto "son nuestras". Máx. 1 post de cada 10 menciona una app, siempre al final y declarando que es propia. Medición: clics en el enlace (Buzzfy linkTaps) y, si Base44 lo permite, un parámetro ?ref=ig por botón (lo monta Mejora, sin gastar créditos del builder).
+## 3. Qué no se puede medir y qué hace falta
+| Hueco | Causa | Arreglo |
+|---|---|---|
+| DMs y palabras clave | Permiso de mensajes de Buzzfy sin verificar (enlace de reconexión: buzzfy.co/connect/instagram?feature=messaging); webhooks sin suscribir; la prueba de Buzzfy vence el 8/11 18:04 UTC y automatizaciones/respuestas son MAX | Opción A: el dueño reconecta con «mensajes» marcado. Opción B (gratis): contar hilos con APP/IDEA en `respuestas_chat.py` (PAGE_TOKEN ya lee mensajes) y guardarlos en `equipo/kpi_embudo.json` |
+| Origen de cada solicitud | `/solicitar` no distingue de qué reel o sector viene | Campo «sector»/«ref» en el formulario y enlace de bio `…/demo?sector=X&ref=ig` (lo monta Mejora con código, no con el builder) |
+| Clics por sector | Un solo enlace en el perfil | Cambiar el enlace según el reel que se fije/impulse, o medir por `/demo?sector=` en Base44 |
+| Ingresos | Ninguna app con plan de pago conocido | Pregunta al dueño (pendiente_usuario.md 3b) |
 
-## 5. Fases, hitos y criterios de paso
-- **Fase 0 · Fundamentos (6-16/11)**. Equipo: 1 reel nuevo al día + ¿REAL O FALSO? martes/viernes como reel nuevo (sin metraje ajeno); reels de prueba para no seguidores en los ¿REAL O FALSO?; hub de enlaces con fuentes y apps; línea "📚 Fuentes y libros en el enlace del perfil" en cada post. Usuario: Panel profesional > Monetización (anotar herramientas y requisitos), alta en Afiliados y pasar el ID, cambiar el enlace de la bio al hub. Hito de salida: 10 reels medidos a 48 h, enlace activo, ID de afiliado. Decisión del 16/11: si la mediana de alcance de los 10 sigue < 100, el Estratega cambia gancho/tema (más animales y "¿REAL O FALSO?") antes que la duración.
-- **Fase 1 · Primeros euros (hasta 5.000 seguidores)**. Afiliados: 3 ventas en 180 días (hace falta ≈ 150-300 clics al 1-2 % de conversión; con 0 clics hoy, es la métrica a mover). Apps: clics por botón. Regalos si el Panel los muestra disponibles (CTA solo en reels > 300 de alcance). KPI: alcance a no seguidores/reel, compartidos/reel, clics/semana, seguidores netos/día. Objetivo mínimo de fase: +5 netos/día sostenidos y 20 clics/semana.
-- **Fase 2 · Marcas (5.000-10.000)**. Kit de medios con los 3 mejores reels (alcance, compartidos, retención, audiencia por país); contacto con editoriales de misterio, podcasts, museos, escape rooms; siempre etiqueta de Colaboración pagada; precios solo con el visto bueno del usuario.
-- **Fase 3 · Plataforma (10.000+)**. Suscripciones con contenido exclusivo (expediente extendido semanal), marketplace de creadores, insignias si hubiera directos.
-- Estimación de plazos (seguidores que faltan ÷ netos/día; hoy -0,46/día): +5/día → 5.000 en 679 días (≈ 9/2028); +15/día → 226 días (≈ 6/2027); +30/día → 113 días (≈ 3/2027). Si Regalos fuera 500 (tercero), el requisito de seguidores ya estaría cumplido pero los ingresos serían ≈ 0 con 20-50 espectadores por reel. Se recalcula cada domingo con datos reales.
+## 4. Recomendaciones para el Estratega (acciones concretas, en orden)
+1. **Parar los duplicados antes de publicar más.** Pedir a Mejora que `publicar_gh.py` compruebe en Instagram (o en el registro) si la pieza ya salió antes de reintentar tras un fallo 2/3, y que el dueño borre 4 de los 6 carruseles repetidos (dejar 1 de 101 y 1 de 105). Tres copias del mismo post en 25 min dañan la imagen de la cuenta y reparten el alcance.
+2. **Reels para captar, carruseles para dar confianza.** Con los datos de la semana (459 vs 15 de alcance), poner en `plan.json` los reels «Una idea, una app» en los huecos de 13:40 y 20:40 y dejar los carruseles como máximo 1 al día, a otra hora, sin repetir tema.
+3. **Un solo CTA por pieza y por público, y medible:** reel de negocio → «Comenta APP» (se cuenta en comentarios, que sí leemos); reel de apps a medida → «Escríbeme IDEA por privado»; hogar/mayores → «enlace en el perfil». Registrar en plan.json qué palabra lleva cada pieza para poder cruzarla con los DMs.
+4. **Probar un sector por reel en 7 días y decidir con regla fija:** hostelería, hogar, mayores, autónomos (7D), música y «a medida», sin repetir seguidos (§3). Decisión a las 48 h con lo que exista: guardados + compartidos + visitas al perfil por cada 100 de alcance, y DMs/comentarios cuando el contador funcione. El que supere a los demás en dos mediciones pasa a ser el 60 % de «Una idea, una app».
+5. **Arreglar el paso reel → perfil:** que el último segundo y la última diapositiva digan en grande «Enlace en el perfil · Neogest Lab» y que el nombre visible del perfil pase a «Neogest Lab · Apps a medida» (hoy no cuadra con el contenido: pendiente_usuario.md 3c). Medir visitas al perfil por pieza (`ig_post_stats`, carruseles e historias lo dan; reels no) y objetivo mínimo: 3 visitas por cada 100 de alcance (hoy 0,9).
 
-## 6. Tareas por rol (vinculantes hasta la próxima revisión; copia en aprendizajes.md)
-1. **Estratega** (lunes 9/11): asignar a cada expediente de plan.json un campo "fuente_libro" (título real citado en el post) para que el hub tenga qué enlazar; mantener 1 de cada 3 de animales/naturaleza; marcar como máximo 1 de cada 10 posts con "app_propia": "Insultator" o "GPS Andaluz" solo si el tema lo permite; KPI semanal = alcance a no seguidores y seguidores netos; decisión del 16/11 según §5.
-2. **Creador**: duración objetivo 20-45 s salvo experimento del Estratega; gancho "secreto + año + hecho" en < 2 s sin CTA; giro antes del segundo 15; cierre con "Envíaselo a quien no se lo crea" + "Sigue para el Expediente NNN"; en el texto del post, tras "Fuentes:", la línea "📚 Fuentes y libros en el enlace del perfil"; nunca "guarda el enlace" (prohibido por Amazon); si el post menciona una app, decir "nuestra app" y ponerlo al final.
-3. **Calidad**: mantener el bloqueo de contenido ajeno; rechazar CTA cebo; comprobar la frase de afiliado cuando haya enlaces de Amazon; registrar voz de IA en calidad.json.
-4. **Remasterizador**: solo originales con metraje 100 % propio (comprobar fotogramas); si hay marcas, reel nuevo.
-5. **Mejora**: hub Expedientes Imposibles con secciones "Fuentes y libros" y "Apps de Neogest Lab" (sin builder AI de Base44, editando código); parámetro ?ref=ig por botón si es viable; guardar en estadisticas.json alcance de no seguidores y cambio diario de seguidores; conservar guion.json al publicar; comprobar marcado "con IA" en la API.
+## 5. Vías de ingresos (resumen; el detalle con fuentes está en monetizacion_v4_archivo.md)
+- Hoy la única vía realista es **captar clientes para las apps de Neogest Lab** (apps a medida, Gestión Integral 7D y las demás): no depende de umbrales de Instagram, solo del embudo de arriba.
+- Herramientas de Instagram (regalos, suscripciones, marcas): umbrales sin confirmar y alcance insuficiente; no priorizar. Afiliados de Amazon: encajaban con misterios, no con esta línea; no se activan.
+- **Promoción de 10 €** (regla del dueño, 8/11/2026): solo se promociona una pieza que ya funciona orgánicamente a las 48-72 h (alcance ≥ 3 × la mediana y ≥ 500 cuentas, + compartidos ≥ 1 % o guardados ≥ 2 %, + retención). Hoy ninguna pieza lo cumple y la cuenta publicitaria 966846446095574 no tiene método de pago ni Instagram vinculado. No se gasta nada. Si algo cumple en la próxima revisión, aviso al dueño por notificación.
 
-## Promoción de 10 € (actualizado 8/11/2026, Monetización)
-- **Regla del dueño (8/11/2026): solo se promociona una publicación que ya funciona orgánicamente; antes, no.** "Funciona" = a las 48-72 h de publicarse cumple las 3 condiciones: (1) alcance al menos 3 veces la mediana de los últimos reels de la cuenta y al menos 500 cuentas; (2) al menos 1 señal fuerte: compartidos ≥ 1 % del alcance o guardados ≥ 2 % del alcance; (3) retención: menos del 50 % de saltos o tiempo medio ≥ 40 % de la duración. Si ninguna la cumple, no se gasta nada. Tope: 10 € en total, 2 €/día durante 5 días, objetivo visitas al perfil. Nunca se activa sin el visto bueno del dueño.
-- Estado 8/11: NINGÚN reel cumple la regla, así que no se promociona. 013-016 (7/11, ~14 h): alcance 108-119, 0-1 compartidos, guardados 0-3, saltos 55-72 %. Queda anulada la propuesta anterior de promocionar 013 «Claude gratis».
-- Bloqueos técnicos aunque uno funcione: la cuenta publicitaria 966846446095574 no tiene método de pago ni la cuenta de Instagram vinculada (comprobado el 8/11). Si se lanza desde la app: Promocionar > Más visitas al perfil > España, México, Argentina, Chile y Colombia, 25-54 años > 2 €/día durante 5 días.
-- Aviso: 013 y 015 salieron con "prueba_no_seguidores": true, pero Buzzfy los ve en la cuadrícula del perfil; no está claro que Instagram los tratara como reels de prueba. Comparar su alcance a no seguidores a las 48 h.
-- Token PAGE_TOKEN: caducó el 7/11 22:00 UTC y el dueño lo renovó el 8/11; el ciclo de las 11:41 UTC ya lee estadísticas (4 posts, 1.603 seguidores).
-
-## Pendiente del usuario (detalle en pendiente_usuario.md)
-1) Panel profesional > Monetización: anotar qué herramientas aparecen y con qué requisito (resuelve regalos 500/5.000 y España). 2) Alta en afiliados.amazon.es con la URL exacta del perfil y pasar el ID. 3) Cambiar el enlace de la bio al hub. 4) Decir si alguna app tiene plan de pago (para medir ingresos, no solo clics). 5) Promoción (máx. 10 €): solo cuando un reel cumpla la regla de "funciona"; hará falta método de pago y vincular Instagram a la cuenta publicitaria. El equipo no gasta ni confirma promociones sin su visto bueno.
+## 6. Pendiente del dueño (lo que solo él puede ver o hacer)
+1) Contar cuántos DMs con IDEA/APP/precio ha recibido desde el 7/11 y cuántas solicitudes hay en /panel/solicitudes (yo no los puedo leer). 2) Reconectar Buzzfy con permiso de mensajes o decidir si seguir con su plan (prueba vencida el 8/11). 3) Borrar los carruseles duplicados. 4) Cambiar el nombre visible del perfil. 5) Decir si alguna app tiene plan de pago.
+Próxima revisión: domingo 15/11/2026, con las piezas de esta semana ya a 48 h.
