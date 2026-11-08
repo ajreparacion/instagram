@@ -1,0 +1,49 @@
+{
+ "titulo": "Una idea, una app 022: pedidos de una tienda pequeña",
+ "semilla": 1722,
+ "modo": "app",
+ "video": "demo.mp4",
+ "volumen_original": 0,
+ "musica": true,
+ "portada_texto": "¿Llevas los pedidos de memoria?",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "texto": "¿Llevas los pedidos *de memoria*?",
+   "voz": "¿Llevas los pedidos *de memoria*?",
+   "clip": {
+    "inicio": 0.0,
+    "fin": 2.5
+   }
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 2.7,
+    "fin": 7.6
+   },
+   "voz": "Le pedí a una IA esta app de pedidos, con *un solo mensaje*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 8.3,
+    "fin": 18.4
+   },
+   "voz": "Apunto el cliente y lo que ha pedido. Tres pedidos, *tres líneas*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 18.4,
+    "fin": 25.0
+   },
+   "voz": "Toco el estado: *pendiente, hecho, entregado*, y los contadores se actualizan solos."
+  },
+  {
+   "estilo": "cierre",
+   "texto": "Escríbeme «IDEA»",
+   "voz": "¿Tienes una tienda y una idea? Escríbeme *idea* por privado."
+  }
+ ]
+}

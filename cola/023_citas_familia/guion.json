@@ -1,0 +1,49 @@
+{
+ "titulo": "Una idea, una app 023: citas de la familia y de los abuelos",
+ "semilla": 1723,
+ "modo": "app",
+ "video": "demo.mp4",
+ "volumen_original": 0,
+ "musica": true,
+ "portada_texto": "¿Las citas de los abuelos, en un papel?",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "texto": "¿Las citas de los abuelos, *en un papel*?",
+   "voz": "¿Las citas de los abuelos, *en un papel*?",
+   "clip": {
+    "inicio": 0.0,
+    "fin": 2.5
+   }
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 2.7,
+    "fin": 8.0
+   },
+   "voz": "Le pedí a una IA esta agenda, con *un solo mensaje*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 8.7,
+    "fin": 19.5
+   },
+   "voz": "Apunto quién tiene cita y qué día, *sin ordenarlas*, tal como me vienen."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 19.5,
+    "fin": 22.7
+   },
+   "voz": "Se ordena sola y me marca la de *mañana*."
+  },
+  {
+   "estilo": "cierre",
+   "texto": "Escríbeme «IDEA»",
+   "voz": "¿Tienes una idea para ayudar en casa? Escríbeme *idea* por privado."
+  }
+ ]
+}

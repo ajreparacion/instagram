@@ -1,6 +1,26 @@
 {
- "presupuesto": {"prompt": "Hazme una página web en un solo archivo HTML para hacer presupuestos: líneas con concepto, cantidad y precio, un selector de IVA y el total calculado solo."},
- "cuenta": {"prompt": "Hazme una página web en un solo archivo HTML para dividir la cuenta del bar: importe total, número de personas, propina en porcentaje y lo que paga cada uno."},
- "suscripciones": {"prompt": "Hazme una página web en un solo archivo HTML donde apunte mis suscripciones con su precio al mes y me diga cuánto pago al año. Que pueda quitar una y ver cuánto ahorro."},
- "compra": {"prompt": "Hazme una página web en un solo archivo HTML: pego mi lista de la compra desordenada y la agrupa por secciones del súper (fruta, lácteos, limpieza…) con casillas para tachar."}
+ "presupuesto": {
+  "prompt": "Hazme una página web en un solo archivo HTML para hacer presupuestos: líneas con concepto, cantidad y precio, un selector de IVA y el total calculado solo."
+ },
+ "cuenta": {
+  "prompt": "Hazme una página web en un solo archivo HTML para dividir la cuenta del bar: importe total, número de personas, propina en porcentaje y lo que paga cada uno."
+ },
+ "suscripciones": {
+  "prompt": "Hazme una página web en un solo archivo HTML donde apunte mis suscripciones con su precio al mes y me diga cuánto pago al año. Que pueda quitar una y ver cuánto ahorro."
+ },
+ "compra": {
+  "prompt": "Hazme una página web en un solo archivo HTML: pego mi lista de la compra desordenada y la agrupa por secciones del súper (fruta, lácteos, limpieza…) con casillas para tachar."
+ },
+ "plato": {
+  "prompt": "Hazme una página web en un solo archivo HTML para calcular el coste de un plato: ingredientes con su coste, número de raciones y a qué precio venderlo según el coste objetivo."
+ },
+ "pedidos": {
+  "prompt": "Hazme una página web en un solo archivo HTML para apuntar los pedidos de mi tienda: cliente, qué ha pedido y su estado (pendiente, hecho, entregado), con el recuento de cada uno."
+ },
+ "citas": {
+  "prompt": "Hazme una página web en un solo archivo HTML para apuntar las citas de la familia: quién, qué y qué día, ordenadas por fecha y avisando de la que es mañana."
+ },
+ "semana": {
+  "prompt": "Hazme una página web en un solo archivo HTML con la semana de lunes a domingo: apunto qué publicar cada día, marco lo ya publicado y me cuenta los días libres."
+ }
 }
