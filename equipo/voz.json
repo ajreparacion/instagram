@@ -88,5 +88,13 @@
     "_nota": "palabras entre *asteriscos*: +3 dB con rampas de 60 ms (sin escalón); pausa_ms 0 = sin respiro insertado (se oía como corte). En los subtítulos salen en rojo."
   },
   "volumen_musica": 1.9,
-  "_nota_mezcla": "8/11/2026: el dueño borró reels porque la música no se oía. Música +5,6 dB (volumen_musica 1,9), ducking suave (ratio 2, umbral 0,08: baja como mucho ~6 dB bajo la voz), voz 1,1, limitador 0,89. Revertir: herramientas/versiones/voz.json_2026-11-08e."
+  "_nota_mezcla": "8/11/2026: el dueño borró reels porque la música no se oía. Música +5,6 dB (volumen_musica 1,9), ducking suave (ratio 2, umbral 0,08: baja como mucho ~6 dB bajo la voz), voz 1,1, limitador 0,89. Revertir: herramientas/versiones/voz.json_2026-11-08e.",
+  "master": {
+    "activo": true,
+    "lufs": -14.0,
+    "pico_db": -1.5,
+    "_nota": "8/11/2026 (Mejora): máster a -14 LUFS con loudnorm en 2 pasadas (lineal) y pico real <= -1,5 dBTP (queda <= -1 tras el AAC). Se mide en cada render: cola/<reel>/voz_musica.json. Revertir: master.activo false o herramientas/versiones/voz.json_2026-11-08f."
+  },
+  "duck_max_db": 6.0,
+  "hueco_voz_max_s": 1.5
 }

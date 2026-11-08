@@ -761,9 +761,9 @@ def realce_enfasis(tramo, aj):
     return out
 
 
-def _mezclar_voz(video, tramos, wavs, aj, cadena, trabajo):
-    # cadena (equipo/voz.json "cadena_voz"): filtros ffmpeg sobre cada frase de la voz, p. ej.
-    # paso alto + EQ de presencia + compresor + de-esser. Vacía = voz de Piper sin procesar.
+def _grafo_voz(video, tramos, wavs, aj, cadena):
+    """Entradas y filtros ffmpeg de la voz (cada frase con su cadena, énfasis, tempo y retardo) hasta [vox][key].
+    cadena (equipo/voz.json "cadena_voz"): paso alto + EQ de presencia + compresor + de-esser. Vacía = voz sin procesar."""
     entradas, filtros, etiquetas = ["-i", video], [], []
     for i, (t, (wav, d)) in enumerate(zip(tramos, wavs)):
         hueco = max(float(t.get("duracion", d)) - 0.15, 0.5)
@@ -775,19 +775,193 @@ def _mezclar_voz(video, tramos, wavs, aj, cadena, trabajo):
         filtros.append(f"[{i + 1}:a]aresample=44100,{proc}atempo={tempo:.3f},adelay={ms}|{ms},volume={aj['volumen_voz']}[v{i}]")
         etiquetas.append(f"[v{i}]")
     filtros.append(f"{''.join(etiquetas)}amix=inputs={len(etiquetas)}:normalize=0,pan=stereo|c0=c0|c1=c0,apad,asplit=2[vox][key]")
-    # 8/11/2026 (dueño: «la música tiene que resaltar», borró reels porque solo se oía la voz):
-    # la música sube (volumen_musica) y el ducking es suave (como mucho ~6 dB bajo la voz).
+    return entradas, filtros
+
+
+def _filtros_fondo(aj, ratio):
+    """Música (volumen_musica) con ducking suave bajo la voz (8/11/2026, dueño: «la música tiene que resaltar»)."""
     vm = float(aj.get("volumen_musica", 1.0))
-    filtros.append(f"[0:a]volume={vm}[mus]")
-    filtros.append(f"[mus][key]sidechaincompress=threshold={aj['umbral_duck']}:ratio={aj['ratio_duck']}:attack=30:release=400:makeup=1[fondo]")
+    return [f"[0:a]volume={vm}[mus]",
+            f"[mus][key]sidechaincompress=threshold={aj['umbral_duck']}:ratio={ratio:.3f}:attack=30:release=400:makeup=1[fondo]"]
+
+
+def _lufs_pico(ruta, crudo=False):
+    """(LUFS integrados, pico dBFS) de un audio/vídeo con ebur128; crudo=True para f32le estéreo 44,1 kHz sin cabecera."""
+    pre = ["-f", "f32le", "-ar", "44100", "-ac", "2"] if crudo else []
+    r = subprocess.run(["ffmpeg", "-nostats", *pre, "-i", ruta, "-vn", "-af", "ebur128=peak=true", "-f", "null", "-"],
+                       capture_output=True, text=True, timeout=300)
+    fin = r.stderr.split("Summary:")[-1]
+    import re
+    i = re.search(r"I:\s+(-?\d+\.?\d*) LUFS", fin)
+    pk = re.search(r"Peak:\s+(-?\d+\.?\d*) dBFS", fin)
+    return (float(i.group(1)) if i else None, float(pk.group(1)) if pk else None)
+
+
+def _duracion_media(ruta):
+    r = subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", ruta],
+                       capture_output=True, text=True, timeout=60)
+    return float(r.stdout.strip())
+
+
+def _extraer_pistas(video, entradas, filtros_voz, aj, ratio, dur, trabajo):
+    """Escribe tres pistas f32le (voz, música sin ducking, música con ducking) para medir la mezcla. Devuelve las rutas."""
+    rutas = {k: os.path.join(trabajo, f"pista_{k}.raw") for k in ("vox", "mus", "fondo")}
+    f = filtros_voz + [f"[0:a]volume={float(aj.get('volumen_musica', 1.0))},asplit=2[mus][musr]",
+                       f"[mus][key]sidechaincompress=threshold={aj['umbral_duck']}:ratio={ratio:.3f}:attack=30:release=400:makeup=1[fondo]"]
+    cmd = ["ffmpeg", "-y", *entradas, "-filter_complex", ";".join(f), "-t", f"{dur:.3f}"]
+    for etq, k in (("vox", "vox"), ("musr", "mus"), ("fondo", "fondo")):
+        cmd += ["-map", f"[{etq}]", "-f", "f32le", "-ac", "2", "-ar", "44100", rutas[k]]
+    r = subprocess.run(cmd, capture_output=True, timeout=600)
+    if r.returncode != 0:
+        raise ErrorAPI(f"ffmpeg falló al extraer las pistas: {r.stderr.decode(errors='replace')[-300:]}")
+    return rutas
+
+
+def _analizar_pistas(rutas, hueco_max):
+    """Mide por fotogramas de 50 ms: cuánto baja la música mientras habla la voz (percentil 90), cuánto sobresale la voz
+    sobre la música, nivel de la música entre frases y huecos de voz mayores que `hueco_max` segundos."""
+    import numpy as np
+    hop = 2205
+    def rms_db(ruta):
+        x = np.fromfile(ruta, dtype="<f4").reshape(-1, 2).mean(axis=1)
+        n = len(x) // hop
+        r = np.sqrt((x[:n * hop].reshape(n, hop) ** 2).mean(axis=1) + 1e-12)
+        return 20 * np.log10(r)
+    v, m, f = rms_db(rutas["vox"]), rms_db(rutas["mus"]), rms_db(rutas["fondo"])
+    n = min(len(v), len(m), len(f))
+    v, m, f = v[:n], m[:n], f[:n]
+    habla = v > -45.0
+    # una pausa corta dentro de la frase (< 0,3 s) sigue contando como voz
+    cerrado = habla.copy(); idx = np.flatnonzero(habla)
+    for a, b in zip(idx[:-1], idx[1:]):
+        if 1 < b - a <= 6:
+            cerrado[a:b] = True
+    util = cerrado & (m > -60.0)
+    out = {"duracion_s": round(n * 0.05, 2), "voz_activa_pct": round(100.0 * float(cerrado.mean()), 1)}
+    if util.sum() >= 10:
+        bajada = m[util] - f[util]
+        out["bajada_musica_p90_db"] = round(float(np.percentile(bajada, 90)), 2)
+        out["bajada_musica_mediana_db"] = round(float(np.median(bajada)), 2)
+        out["voz_sobre_musica_db"] = round(float(np.median(v[util] - f[util])), 2)
+    libre = ~cerrado & (m > -60.0)
+    if libre.sum() >= 10:
+        out["musica_entre_frases_db"] = round(float(np.median(f[libre])), 1)
+        if util.sum() >= 10:
+            out["musica_en_voz_db"] = round(float(np.median(f[util])), 1)
+    huecos, ini = [], None
+    for i, h in enumerate(list(cerrado) + [True]):
+        if not h and ini is None:
+            ini = i
+        elif h and ini is not None:
+            if (i - ini) * 0.05 > hueco_max:
+                huecos.append([round(ini * 0.05, 2), round(i * 0.05, 2)])
+            ini = None
+    out["huecos_voz"] = huecos
+    return out
+
+
+def _ajustar_ducking(video, entradas, filtros_voz, aj, dur, trabajo, informe):
+    """Mide el ducking real y, si la música baja más de `duck_max_db` (6 dB, directiva 8/11) bajo la voz, suaviza el
+    ratio y vuelve a medir (hasta 2 veces). Devuelve el ratio a usar y rellena `informe`."""
+    ratio = float(aj["ratio_duck"])
+    tope = float(aj.get("duck_max_db", 6.0))
+    hueco_max = float(aj.get("hueco_voz_max_s", 1.5))
+    for intento in range(3):
+        rutas = _extraer_pistas(video, entradas, filtros_voz, aj, ratio, dur, trabajo)
+        res = _analizar_pistas(rutas, hueco_max)
+        p90 = res.get("bajada_musica_p90_db")
+        if p90 is None or p90 <= tope or ratio <= 1.05 or intento == 2:
+            break
+        k = (1.0 - 1.0 / ratio) * tope / p90          # la reducción de ganancia crece con (1 - 1/ratio)
+        nuevo = max(1.05, 1.0 / (1.0 - k))
+        informe.setdefault("ajustes_ducking", []).append({"ratio": round(ratio, 3), "bajada_p90_db": p90, "ratio_nuevo": round(nuevo, 3)})
+        ratio = nuevo
+    informe.update(res)
+    informe["ratio_duck_usado"] = round(ratio, 3)
+    informe["voz_lufs"] = _lufs_pico(rutas["vox"], crudo=True)[0]
+    informe["musica_lufs"] = _lufs_pico(rutas["mus"], crudo=True)[0]
+    informe["musica_con_ducking_lufs"] = _lufs_pico(rutas["fondo"], crudo=True)[0]
+    for r in rutas.values():
+        try: os.remove(r)
+        except OSError: pass
+    return ratio
+
+
+def _masterizar(video, entradas, filtros, aj, salida, dur, trabajo, informe):
+    """Máster a `master.lufs` (-14 LUFS, directiva 8/11): mezcla a wav float, loudnorm en dos pasadas (lineal) y pico
+    real ≤ `master.pico_db`; un solo AAC al final. Devuelve True si escribió `salida`."""
+    cfg = aj.get("master") if isinstance(aj.get("master"), dict) else {}
+    objetivo, pico = float(cfg.get("lufs", -14.0)), float(cfg.get("pico_db", -1.0))
+    wav = os.path.join(trabajo, "mezcla_previa.wav")
+    r = subprocess.run(["ffmpeg", "-y", *entradas, "-filter_complex", ";".join(filtros), "-map", "[a]", "-t", f"{dur:.3f}",
+                        "-c:a", "pcm_f32le", wav], capture_output=True, timeout=600)
+    if r.returncode != 0:
+        raise ErrorAPI(f"ffmpeg falló en la mezcla previa: {r.stderr.decode(errors='replace')[-300:]}")
+    ln = f"loudnorm=I={objetivo}:TP={pico}:LRA=11"
+    r = subprocess.run(["ffmpeg", "-nostats", "-i", wav, "-af", ln + ":print_format=json", "-f", "null", "-"],
+                       capture_output=True, text=True, timeout=300)
+    m = json.loads(r.stderr[r.stderr.rindex("{"):r.stderr.rindex("}") + 1])
+    informe["master"] = {"objetivo_lufs": objetivo, "antes_lufs": float(m["input_i"]), "antes_pico_dbtp": float(m["input_tp"])}
+    lim = round(10 ** (pico / 20), 4)
+    af = (f"{ln}:measured_I={m['input_i']}:measured_TP={m['input_tp']}:measured_LRA={m['input_lra']}:"
+          f"measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true,aresample=44100,"
+          f"alimiter=limit={lim}:level=false")
+    r = subprocess.run(["ffmpeg", "-y", "-i", video, "-i", wav, "-af", af, "-map", "0:v", "-map", "1:a", "-c:v", "copy",
+                        "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", "-shortest", salida],
+                       capture_output=True, timeout=600)
+    try: os.remove(wav)
+    except OSError: pass
+    if r.returncode != 0:
+        raise ErrorAPI(f"ffmpeg falló en el máster: {r.stderr.decode(errors='replace')[-300:]}")
+    i, pk = _lufs_pico(salida)
+    informe["master"].update({"despues_lufs": i, "despues_pico_dbfs": pk})
+    return True
+
+
+def _mezclar_voz(video, tramos, wavs, aj, cadena, trabajo):
+    entradas, filtros_voz = _grafo_voz(video, tramos, wavs, aj, cadena)
+    ratio = float(aj["ratio_duck"])
+    informe = {"fecha": datetime.now(timezone.utc).isoformat(timespec="seconds"), "avisos": []}
+    dur = None
+    # 8/11/2026 (Mejora): se mide la mezcla (voz, música, ducking, huecos) y se corrige antes de dar el reel por bueno.
+    try:
+        dur = _duracion_media(video)
+        ratio = _ajustar_ducking(video, entradas, filtros_voz, aj, dur, trabajo, informe)
+    except Exception as e:
+        informe["avisos"].append(f"medición de la mezcla no disponible ({str(e)[-120:]})")
+        log(f"Mezcla: medición no disponible ({str(e)[-120:]}); se mezcla como antes")
+    filtros = filtros_voz + _filtros_fondo(aj, ratio)
     filtros.append(f"[fondo][vox]amix=inputs=2:duration=first:normalize=0,alimiter=limit={aj['limite']}:level=false[a]")
     salida = os.path.join(trabajo, "con_voz.mp4")
-    r = subprocess.run(["ffmpeg", "-y", *entradas, "-filter_complex", ";".join(filtros),
-                        "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
-                        "-movflags", "+faststart", "-shortest", salida], capture_output=True, timeout=600)
-    if r.returncode != 0:
-        raise ErrorAPI(f"ffmpeg falló al mezclar la voz: {r.stderr.decode(errors='replace')[-400:]}")
+    cfg = aj.get("master") if isinstance(aj.get("master"), dict) else {}
+    hecho = False
+    if dur and cfg.get("activo", True):
+        try:
+            hecho = _masterizar(video, entradas, filtros, aj, salida, dur, trabajo, informe)
+        except Exception as e:
+            informe["avisos"].append(f"máster no aplicado ({str(e)[-120:]})")
+            log(f"Mezcla: máster a -14 LUFS no aplicado ({str(e)[-160:]}); se mezcla como antes")
+    if not hecho:
+        r = subprocess.run(["ffmpeg", "-y", *entradas, "-filter_complex", ";".join(filtros),
+                            "-map", "0:v", "-map", "[a]", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
+                            "-movflags", "+faststart", "-shortest", salida], capture_output=True, timeout=600)
+        if r.returncode != 0:
+            raise ErrorAPI(f"ffmpeg falló al mezclar la voz: {r.stderr.decode(errors='replace')[-400:]}")
     os.replace(salida, video)
+    if informe.get("voz_sobre_musica_db") is not None and informe["voz_sobre_musica_db"] < 2.0:
+        informe["avisos"].append(f"la voz solo sobresale {informe['voz_sobre_musica_db']} dB sobre la música mientras habla (revisar inteligibilidad)")
+    if informe.get("huecos_voz"):
+        informe["avisos"].append(f"huecos de voz > {aj.get('hueco_voz_max_s', 1.5)} s (solo suena la música): {informe['huecos_voz']}")
+    mst = informe.get("master") or {}
+    log("Mezcla: voz {} LUFS, música {} LUFS (con ducking {}), la música baja {} dB (p90) bajo la voz, ratio {}; "
+        "máster {} -> {} LUFS, pico {} dBFS; huecos de voz: {}".format(
+            informe.get("voz_lufs"), informe.get("musica_lufs"), informe.get("musica_con_ducking_lufs"),
+            informe.get("bajada_musica_p90_db"), informe.get("ratio_duck_usado"), mst.get("antes_lufs"),
+            mst.get("despues_lufs"), mst.get("despues_pico_dbfs"), informe.get("huecos_voz")))
+    try:
+        escribir_json(os.path.join(trabajo, "voz_musica.json"), informe)
+    except Exception:
+        pass
 
 
 # ---------------------------------------------------------------- render
@@ -843,6 +1017,8 @@ def renderizar(cfg, carpeta, post):
         motor = renderizar_guion(guion, video, trabajo)
         if os.path.exists(locucion):
             shutil.copy(locucion, os.path.join(carpeta, "locucion.json"))
+        if os.path.exists(os.path.join(trabajo, "voz_musica.json")):   # LUFS de voz y música por reel (para Calidad)
+            shutil.copy(os.path.join(trabajo, "voz_musica.json"), os.path.join(carpeta, "voz_musica.json"))
         if motor:
             post["motor_voz"] = motor
     else:
@@ -852,6 +1028,8 @@ def renderizar(cfg, carpeta, post):
         if os.path.exists(locucion):
             shutil.copy(locucion, os.path.join(carpeta, "locucion.json"))
             motor = anadir_voz(video, locucion, trabajo)
+            if os.path.exists(os.path.join(trabajo, "voz_musica.json")):
+                shutil.copy(os.path.join(trabajo, "voz_musica.json"), os.path.join(carpeta, "voz_musica.json"))
             if motor:
                 post["motor_voz"] = motor
     asset = os.path.join(trabajo, f"{nombre}.mp4")
