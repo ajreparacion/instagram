@@ -29,6 +29,7 @@ GUION = os.path.join(BASE, "herramientas", "demo_narracion.json")
 VOZ_JSON = os.path.join(BASE, "equipo", "voz.json")
 VOZ_CB = os.path.join(BASE, "herramientas", "voz_chatterbox.py")
 PY_CB = os.environ.get("PYTHON_CHATTERBOX") or sys.executable
+REFERENCIA_DEMO = os.path.join(BASE, "voz_dueno", "referencia_demo_8nov_41-54s.wav")
 LUFS_VOZ = -16.0
 LUFS_MUSICA = -26.0
 
@@ -76,7 +77,9 @@ def voz():
     cb = cfg["chatterbox"]
     os.makedirs(TRABAJO, exist_ok=True)
     os.makedirs(SALIDA, exist_ok=True)
-    ref = cb.get("referencia")
+    # Referencia propia de la demo (8/11/2026): tramo 41,26-54,13 s (12,9 s, el más limpio y expresivo) de la nota de voz
+    # larga voz_dueno/referencia_usuario_8nov.wav (83 s). Si falta, la de equipo/voz.json.
+    ref = REFERENCIA_DEMO if os.path.exists(REFERENCIA_DEMO) else cb.get("referencia")
     if ref and not os.path.isabs(ref):
         ref = os.path.join(BASE, ref)
     if not (ref and os.path.exists(ref)):
