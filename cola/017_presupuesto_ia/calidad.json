@@ -1,0 +1,12 @@
+{
+ "aprobado": false,
+ "nota": 66,
+ "fecha": "2026-11-08T11:50:00Z",
+ "motivos": [
+  "A2: gancho 'Este presupuesto lo hizo una IA' sin pregunta, número ni antes/después.",
+  "A1: huecos de voz de 2-2,5 s (escenas 2, 3 y 5).",
+  "Directiva §2: el cierre ('Comenta presupuesto… Sígueme') y el texto del post no son de Neogest Lab; sin público ni formato.",
+  "Voz θ pendiente de oído."
+ ],
+ "como_arreglarlo": "Guion y post reescritos por Calidad (gancho en pregunta, voz que cubre, cierre IDEA, público Autónomos); re-render lanzado."
+}

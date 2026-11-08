@@ -1,0 +1,10 @@
+{
+ "aprobado": false,
+ "nota": 77,
+ "fecha": "2026-11-08T11:50:00Z",
+ "motivos": [
+  "A1: escena 3 (10,5-20,6 s) con unos 5 s sin voz tras 'tres líneas'.",
+  "Voz: θ/seseo pendiente de oído."
+ ],
+ "como_arreglarlo": "Guion corregido por Calidad (se nombran los tres pedidos) y re-render lanzado."
+}

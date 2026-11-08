@@ -1,0 +1,11 @@
+{
+ "aprobado": false,
+ "nota": 72,
+ "fecha": "2026-11-08T11:50:00Z",
+ "motivos": [
+  "A1: hueco de voz de ~2,3 s en la escena 2 (envío del mensaje).",
+  "Directiva §2: cierre 'Comenta cuenta… Sígueme' y texto del post no son de Neogest Lab; sin público ni formato.",
+  "Voz θ pendiente de oído."
+ ],
+ "como_arreglarlo": "Voz ampliada, cierre IDEA y post de Neogest Lab; re-render lanzado."
+}

@@ -18,7 +18,7 @@
     "inicio": 2.7,
     "fin": 7.92
    },
-   "voz": "Se lo pedí a una IA con *un solo mensaje*."
+   "voz": "Se lo pedí a una IA con *un solo mensaje*: total, personas y propina."
   },
   {
    "estilo": "tramo",
@@ -38,8 +38,8 @@
   },
   {
    "estilo": "cierre",
-   "texto": "Comenta «CUENTA»",
-   "voz": "Comenta *cuenta* y te paso el mensaje. Sígueme para más."
+   "texto": "Escríbeme «IDEA»",
+   "voz": "¿Tienes una idea para tu negocio? Escríbeme *idea* por privado."
   }
  ]
 }
