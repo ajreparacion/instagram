@@ -105,7 +105,7 @@ def fondo(w, h, semilla=0, brillo=None):
         g = np.clip(1 - d, 0, 1) ** 2 * k
         img += g[..., None] * (np.array(ACENTO, np.float32) - img) * 0.5
     rng = np.random.default_rng(semilla)
-    img += rng.normal(0, 1.2, img.shape[:2])[..., None]
+    img += rng.normal(0, 0.6, img.shape[:2])[..., None]
     return Image.fromarray(np.clip(img, 0, 255).astype(np.uint8), "RGB")
 
 
@@ -419,7 +419,7 @@ def carrusel(app, caps, carpeta):
     shutil.rmtree(d, ignore_errors=True)
     os.makedirs(d)
     for i, s in enumerate(slides, 1):
-        s.convert("RGB").save(os.path.join(d, f"{i:02d}.jpg"), quality=93, subsampling=0, optimize=True)
+        s.convert("RGB").save(os.path.join(d, f"{i:02d}.jpg"), quality=88, subsampling=2, optimize=True)
     return n
 
 
@@ -898,7 +898,7 @@ def generar(c, slugs, reel=True, subir=False):
             d = os.path.join(carpeta, "slides")
             shutil.rmtree(d, ignore_errors=True)
             os.makedirs(d)
-            historia(app, caps, h, k).convert("RGB").save(os.path.join(d, "01.jpg"), quality=93, subsampling=0)
+            historia(app, caps, h, k).convert("RGB").save(os.path.join(d, "01.jpg"), quality=88, subsampling=2, optimize=True)
             escribir_post(carpeta, dict(tipo="historia", texto="", cuando=h["cuando"], renderizado="no aplica (historia)",
                                         formato=h["tipo"], **comun))
             print(f"{nom}: historia «{h['tipo']}»")

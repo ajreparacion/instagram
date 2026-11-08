@@ -885,6 +885,7 @@ def mover(carpeta, destino, resultado):
     if os.path.exists(final):
         final += "_" + datetime.now().strftime("%H%M%S")
     shutil.move(carpeta, final)
+    return final
 
 
 def esperar_contenedor(cfg, cid, max_seg=900):
@@ -1043,6 +1044,13 @@ def publicar_carrusel(cfg, carpeta, post):
     return {"media_id": mid, "enlace": enlace, "tipo": "carrusel" if len(urls) > 1 else "imagen", "imagenes": len(urls)}
 
 
+def quitar_imagenes(carpeta):
+    """Tras publicar, las imágenes salen del árbol (quedan en el historial de git): jsDelivr solo sirve repos
+    de hasta 50 MB y mide el árbol entero del commit, así que publicados/ no debe ir acumulando JPG (8/11/2026)."""
+    shutil.rmtree(os.path.join(carpeta, "slides"), ignore_errors=True)
+    shutil.rmtree(os.path.join(carpeta, "control"), ignore_errors=True)
+
+
 def publicar_historia(cfg, carpeta, post):
     """Historia (8/11/2026): "tipo": "historia". Imagen = primer JPG de <carpeta>/slides/ (servido por jsDelivr fijado
     al commit, como los carruseles); vídeo = post["asset"] de la release 'cola' (video_url). Instagram no admite texto
@@ -1089,7 +1097,7 @@ def publicar_pendientes(cfg):
             try:
                 res = publicar_historia(cfg, carpeta, post)
                 res["publicado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-                mover(carpeta, PUBLICADOS, res)
+                quitar_imagenes(mover(carpeta, PUBLICADOS, res))
                 log(f"{nombre}: historia publicada ({res.get('media_id')})")
             except Exception as e:
                 intentos = post.get("_intentos", 0) + 1
@@ -1105,7 +1113,7 @@ def publicar_pendientes(cfg):
             if post.get("tipo") in ("carrusel", "imagen"):
                 res = publicar_carrusel(cfg, carpeta, post)
                 res["publicado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-                mover(carpeta, PUBLICADOS, res)
+                quitar_imagenes(mover(carpeta, PUBLICADOS, res))
                 log(f"{nombre}: publicado {res.get('enlace')}")
                 continue
             gh("release", "download", RELEASE, "-p", post["asset"], "-D", trabajo, "--clobber")
