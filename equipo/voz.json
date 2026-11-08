@@ -60,10 +60,10 @@
   "lentitud": 1.08,
   "variacion": 0.667,
   "ruido": 0.8,
-  "volumen_voz": 1.25,
-  "umbral_duck": 0.04,
-  "ratio_duck": 3,
-  "limite": 0.78,
+  "volumen_voz": 1.1,
+  "umbral_duck": 0.08,
+  "ratio_duck": 2,
+  "limite": 0.89,
   "cadena_voz": "highpass=f=80,equalizer=f=300:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=3,acompressor=threshold=0.08:ratio=3:attack=2:release=120:makeup=3.2,deesser=i=0.4,alimiter=limit=0.62:attack=1:release=40:level=false",
   "recorte": {
     "activo": true,
@@ -86,5 +86,7 @@
     "pausa_ms": 0,
     "db_previo": -1.5,
     "_nota": "palabras entre *asteriscos*: +3 dB con rampas de 60 ms (sin escalón); pausa_ms 0 = sin respiro insertado (se oía como corte). En los subtítulos salen en rojo."
-  }
+  },
+  "volumen_musica": 1.9,
+  "_nota_mezcla": "8/11/2026: el dueño borró reels porque la música no se oía. Música +5,6 dB (volumen_musica 1,9), ducking suave (ratio 2, umbral 0,08: baja como mucho ~6 dB bajo la voz), voz 1,1, limitador 0,89. Revertir: herramientas/versiones/voz.json_2026-11-08e."
 }
