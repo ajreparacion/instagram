@@ -1,39 +1,39 @@
 {
- "generado": "2026-11-08T20:53:04+00:00",
- "duracion_s": 36.92,
- "fotogramas": 1108,
+ "generado": "2026-11-08T21:11:10+00:00",
+ "duracion_s": 33.42,
+ "fotogramas": 1003,
  "resolucion": "1080x1920",
  "fps": 30,
- "tiempo_voz_s": 339,
- "tiempo_render_s": 153,
- "tiempo_total_s": 504,
+ "tiempo_voz_s": 385,
+ "tiempo_render_s": 175,
+ "tiempo_total_s": 572,
  "voz": "chatterbox",
  "audio": {
   "musica_bajo_voz_db": -2.5,
-  "ducking_db": 3.6,
+  "ducking_db": 3.7,
   "ducking_max_db": 5.0,
   "lufs_integrados": -14.1,
-  "pico_real_dbtp": -2.0,
-  "lra_lu": 2.6,
+  "pico_real_dbtp": -1.9,
+  "lra_lu": 2.2,
   "medido_con": "ffmpeg ebur128=peak=true",
   "final": {
-   "lufs_integrados": -14.1,
-   "pico_real_dbtp": -1.7,
-   "lra_lu": 2.6,
+   "lufs_integrados": -14.2,
+   "pico_real_dbtp": -1.6,
+   "lra_lu": 2.2,
    "medido_con": "ffmpeg ebur128=peak=true"
   }
  },
  "movimiento": {
-  "diferencia_media": 6.17,
+  "diferencia_media": 6.56,
   "fotogramas_quietos_pct": 0.0,
   "plano_quieto_max_s": 0.0,
-  "cortes_detectados": 27,
+  "cortes_detectados": 30,
   "medido_con": "ffmpeg 10 fps 108x192, |diferencia| media por fotograma"
  },
  "escenas": [
   {
    "a_s": 0.0,
-   "b_s": 3.93,
+   "b_s": 3.47,
    "fondo": "azul",
    "plano": "medio",
    "presentador": "encoge",
@@ -41,8 +41,8 @@
    "elemento": null
   },
   {
-   "a_s": 3.93,
-   "b_s": 5.87,
+   "a_s": 3.47,
+   "b_s": 5.23,
    "fondo": "verde",
    "plano": "primer",
    "presentador": "idea",
@@ -50,8 +50,8 @@
    "elemento": null
   },
   {
-   "a_s": 5.87,
-   "b_s": 9.27,
+   "a_s": 5.23,
+   "b_s": 8.33,
    "fondo": "morado",
    "plano": "abajo",
    "presentador": "explica",
@@ -59,8 +59,8 @@
    "elemento": "captura"
   },
   {
-   "a_s": 9.27,
-   "b_s": 11.97,
+   "a_s": 8.33,
+   "b_s": 10.77,
    "fondo": "cian",
    "plano": "abajo",
    "presentador": "pulgar",
@@ -68,8 +68,8 @@
    "elemento": "captura"
   },
   {
-   "a_s": 11.97,
-   "b_s": 15.37,
+   "a_s": 10.77,
+   "b_s": 13.83,
    "fondo": "magenta",
    "plano": "abajo",
    "presentador": "senala_arriba",
@@ -77,8 +77,8 @@
    "elemento": "captura"
   },
   {
-   "a_s": 15.37,
-   "b_s": 20.77,
+   "a_s": 13.83,
+   "b_s": 18.7,
    "fondo": "negro",
    "plano": "abajo",
    "presentador": "explica",
@@ -86,8 +86,8 @@
    "elemento": "captura"
   },
   {
-   "a_s": 20.77,
-   "b_s": 27.67,
+   "a_s": 18.7,
+   "b_s": 24.9,
    "fondo": "cian",
    "plano": "medio",
    "presentador": "presenta",
@@ -95,8 +95,8 @@
    "elemento": null
   },
   {
-   "a_s": 27.67,
-   "b_s": 33.97,
+   "a_s": 24.9,
+   "b_s": 30.67,
    "fondo": "negro",
    "plano": "abajo",
    "presentador": "manos",
@@ -104,8 +104,8 @@
    "elemento": "tarjeta"
   },
   {
-   "a_s": 33.97,
-   "b_s": 36.93,
+   "a_s": 30.67,
+   "b_s": 33.43,
    "fondo": "rojo",
    "plano": "abajo",
    "presentador": "saluda",
