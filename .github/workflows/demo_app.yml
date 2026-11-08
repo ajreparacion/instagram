@@ -2,7 +2,8 @@ name: Demos de apps (carruseles, historias y reels)
 
 # Descarga las capturas REALES de demo del Centro de Contenido Apps (*.base44.app solo es accesible desde aquí)
 # y genera en cola/ el carrusel, las historias y el reel de presentación de cada app (herramientas/demo_app.py,
-# textos en herramientas/demo_apps.json). Los reels se suben a la release «cola». No publica nada: lo hace el
+# textos en herramientas/demo_apps.json). Las capturas quedan en herramientas/demos/, fuera de git (.gitignore),
+# para no pasar de los 50 MB por repo que sirve jsDelivr (las imágenes de carruseles e historias van por jsDelivr). Los reels se suben a la release «cola». No publica nada: lo hace el
 # ciclo cuando la pieza tiene su calidad.json aprobado. Creado por el agente de demos el 8/11/2026.
 on:
   workflow_dispatch:
@@ -59,7 +60,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
-          git add herramientas/demos cola
+          git add cola
           git commit -q -m "Demos de apps: capturas y piezas $(date -u +%FT%H:%MZ)" || exit 0
           for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done
           exit 1
