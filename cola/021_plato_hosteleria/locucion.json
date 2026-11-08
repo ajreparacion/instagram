@@ -27,18 +27,20 @@
   "estilo": "tramo",
   "inicio": 7.833,
   "duracion": 10.5,
-  "texto": "Pongo cada ingrediente con lo que cuesta: huevos, patatas, cebolla y aceite.",
+  "texto": "Pongo cada ingrediente con lo que cuesta: huevos, patatas, cebolla y aceite. Mira cómo sube el coste por ración con cada ingrediente que añado, al momento.",
   "enfasis": [
    4,
    5,
-   6
+   6,
+   24,
+   25
   ]
  },
  {
   "escena": 3,
   "estilo": "tramo",
   "inicio": 18.333,
-  "duracion": 4.367,
+  "duracion": 5.1,
   "texto": "Cuatro raciones y me dice a cuánto sale cada una.",
   "enfasis": [
    5,
@@ -49,8 +51,8 @@
  {
   "escena": 4,
   "estilo": "tramo",
-  "inicio": 22.7,
-  "duracion": 4.1,
+  "inicio": 23.433,
+  "duracion": 5.233,
   "texto": "Cambio el porcentaje y recalcula el precio de venta.",
   "enfasis": [
    4
@@ -59,8 +61,8 @@
  {
   "escena": 5,
   "estilo": "cierre",
-  "inicio": 26.8,
-  "duracion": 4.033,
+  "inicio": 28.667,
+  "duracion": 5.3,
   "texto": "¿Tienes una idea para tu negocio? Escríbeme idea por privado.",
   "enfasis": [
    7

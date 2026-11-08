@@ -27,17 +27,17 @@
   "estilo": "tramo",
   "inicio": 10.5,
   "duracion": 10.1,
-  "texto": "Apunto el cliente y lo que ha pedido. Tres pedidos, tres líneas.",
+  "texto": "Apunto el cliente y lo que ha pedido. Marta quiere una taza con nombre, Luis un llavero de madera y Ana una caja de regalo. Tres pedidos, tres líneas.",
   "enfasis": [
-   10,
-   11
+   27,
+   28
   ]
  },
  {
   "escena": 3,
   "estilo": "tramo",
   "inicio": 20.6,
-  "duracion": 6.8,
+  "duracion": 6.6,
   "texto": "Toco el estado: pendiente, hecho, entregado, y los contadores se actualizan solos.",
   "enfasis": [
    3,
@@ -48,8 +48,8 @@
  {
   "escena": 4,
   "estilo": "cierre",
-  "inicio": 27.4,
-  "duracion": 4.467,
+  "inicio": 27.2,
+  "duracion": 4.233,
   "texto": "¿Tienes una tienda y una idea? Escríbeme idea por privado.",
   "enfasis": [
    7
