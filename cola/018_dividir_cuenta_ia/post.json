@@ -1,22 +1,25 @@
 {
- "tipo": "reel",
- "texto": "¿Cuánto paga cada uno en la cuenta del bar? Esta mini web la ha hecho una IA con un solo mensaje: pones el total, las personas y la propina, y te dice lo que toca a cada uno.\n1. Copia el mensaje del vídeo (comenta CUENTA y te lo mando).\n2. Pégalo en Claude, ChatGPT o Gemini.\n3. Guarda el código como cuenta.html y ábrelo en el navegador.\n\nEl resultado puede variar según la IA. Comprueba la cuenta con la calculadora de tu móvil la primera vez.\nGrabado en pantalla funcionando (datos de ejemplo).\nVoz: narración generada.\n\n#inteligenciaartificial #claude #chatgpt #trucos #amigos #productividad",
- "cuando": "2026-11-09T20:40:00+01:00",
- "palabra_clave": "CUENTA",
- "respuesta": "Pégalo en tu IA: «Hazme una página web en un solo archivo HTML para dividir la cuenta del bar: importe total, número de personas, propina en porcentaje y lo que paga cada uno.»",
- "compartir_en_feed": true,
- "portada_ms": 300,
- "prueba_no_seguidores": false,
- "formula": "F5",
- "_fuentes": [],
- "_comprobado": "7/11/2026: la herramienta de la grabación es una página HTML real (herramientas/casos/cuenta.html) y se grabó funcionando con Playwright (herramientas/grabar_caso.py), con comprobaciones automáticas de los importes que salen en pantalla. No se afirma nada sobre menús ni funciones de ninguna IA ni de ninguna app de terceros.",
- "_nota_creador": "Directiva 7/11 13:49: caso real grabado funcionando. Las apps de Neogest Lab (base44.app) no se pueden abrir desde la sesión del Creador (el proxy las bloquea), así que el caso es una mini web construida por el Creador con IA y grabada de verdad. El mensaje que se ve en pantalla es la «respuesta» que se manda por DM. Datos de ejemplo, sin marcas ni clientes. Calidad: el pie «By Neogest Lab» lo pone el modo app; revisar si encaja (no es una app publicada de Neogest Lab) y que el vídeo no lleva audio propio.",
- "_autoevaluacion": {
-  "gancho": 21,
-  "truco_valor": 18,
-  "retencion": 18,
-  "estilo": 14,
-  "cta_monetizacion": 9,
-  "total": 80
- }
+  "tipo": "reel",
+  "texto": "¿Cuánto paga cada uno en la cuenta del bar? Esta mini web la ha hecho una IA con un solo mensaje: pones el total, las personas y la propina, y te dice lo que toca a cada uno.\n1. Copia el mensaje del vídeo (comenta CUENTA y te lo mando).\n2. Pégalo en Claude, ChatGPT o Gemini.\n3. Guarda el código como cuenta.html y ábrelo en el navegador.\n\nEl resultado puede variar según la IA. Comprueba la cuenta con la calculadora de tu móvil la primera vez.\nGrabado en pantalla funcionando (datos de ejemplo).\nVoz: narración generada.\n\n#inteligenciaartificial #claude #chatgpt #trucos #amigos #productividad",
+  "cuando": "2026-11-09T20:40:00+01:00",
+  "palabra_clave": "CUENTA",
+  "respuesta": "Pégalo en tu IA: «Hazme una página web en un solo archivo HTML para dividir la cuenta del bar: importe total, número de personas, propina en porcentaje y lo que paga cada uno.»",
+  "compartir_en_feed": true,
+  "portada_ms": 300,
+  "prueba_no_seguidores": false,
+  "formula": "F5",
+  "_fuentes": [],
+  "_comprobado": "7/11/2026: la herramienta de la grabación es una página HTML real (herramientas/casos/cuenta.html) y se grabó funcionando con Playwright (herramientas/grabar_caso.py), con comprobaciones automáticas de los importes que salen en pantalla. No se afirma nada sobre menús ni funciones de ninguna IA ni de ninguna app de terceros.",
+  "_nota_creador": "Directiva 7/11 13:49: caso real grabado funcionando. Las apps de Neogest Lab (base44.app) no se pueden abrir desde la sesión del Creador (el proxy las bloquea), así que el caso es una mini web construida por el Creador con IA y grabada de verdad. El mensaje que se ve en pantalla es la «respuesta» que se manda por DM. Datos de ejemplo, sin marcas ni clientes. Calidad: el pie «By Neogest Lab» lo pone el modo app; revisar si encaja (no es una app publicada de Neogest Lab) y que el vídeo no lleva audio propio.",
+  "_autoevaluacion": {
+    "gancho": 21,
+    "truco_valor": 18,
+    "retencion": 18,
+    "estilo": 14,
+    "cta_monetizacion": 9,
+    "total": 80
+  },
+  "motor_voz": "chatterbox",
+  "renderizado": "2026-11-08T01:06:11+00:00",
+  "asset": "018_dividir_cuenta_ia.mp4"
 }
