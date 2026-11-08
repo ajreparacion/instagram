@@ -121,7 +121,7 @@ def preparar_publico(publico):
 
 
 # ---------------------------------------------------------------- voz
-def generar_voz(textos, estilos, enfasis, trabajo, avisos):
+def generar_voz(textos, estilos, enfasis, trabajo, avisos, velocidad=1.0):
     """Voz del dueño con la misma tubería que publicar_gh.py. Devuelve (wavs procesados, palabras, motor) o None."""
     sys.path.insert(0, BASE)
     try:
@@ -143,12 +143,16 @@ def generar_voz(textos, estilos, enfasis, trabajo, avisos):
     for i, ((w, _), tr) in enumerate(zip(wavs, tramos)):
         p = os.path.join(trabajo, f"voz_cadena_{i}.wav")
         cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", w]
-        if cadena:
-            cmd += ["-af", cadena]
+        filtros = ([f"atempo={velocidad:.3f}"] if abs(velocidad - 1) > 0.005 else []) + ([cadena] if cadena else [])
+        if filtros:
+            cmd += ["-af", ",".join(filtros)]
         cmd += ["-ac", "1", "-ar", str(audio.SR), p]
         subprocess.run(cmd, check=True)
         salida.append(p)
-        palabras.append(tr.get("palabras"))
+        pal = tr.get("palabras")
+        if pal and abs(velocidad - 1) > 0.005:  # la voz acelerada adelanta cada palabra en la misma proporción
+            pal = [[round(x / velocidad, 3), round(y / velocidad, 3)] for x, y in pal]
+        palabras.append(pal)
     return salida, palabras, motor
 
 
@@ -399,7 +403,8 @@ def main():
     voz = None
     if not args.sin_voz and guion.get("voz", True):
         idx = [i for i, t in enumerate(textos) if t]
-        res = generar_voz([textos[i] for i in idx], [estilos[i] for i in idx], [enfasis[i] for i in idx], trabajo, avisos)
+        res = generar_voz([textos[i] for i in idx], [estilos[i] for i in idx], [enfasis[i] for i in idx], trabajo, avisos,
+                          float(guion.get("velocidad_voz", 1.12)))
         if res:
             wavs = [None] * len(textos)
             pals = [None] * len(textos)
