@@ -55,5 +55,12 @@ Las páginas de help.instagram.com solo devuelven la cabecera a herramientas aut
 4. **Remasterizador**: solo originales con metraje 100 % propio (comprobar fotogramas); si hay marcas, reel nuevo.
 5. **Mejora**: hub Expedientes Imposibles con secciones "Fuentes y libros" y "Apps de Neogest Lab" (sin builder AI de Base44, editando código); parámetro ?ref=ig por botón si es viable; guardar en estadisticas.json alcance de no seguidores y cambio diario de seguidores; conservar guion.json al publicar; comprobar marcado "con IA" en la API.
 
+## Promoción de 10 € (revisión 8/11/2026 12:00, Monetización)
+- Bloqueada: la cuenta publicitaria 966846446095574 sigue sin método de pago y sin la cuenta de Instagram vinculada (comprobado hoy con la API de anuncios). No se ha gastado nada.
+- Reel elegido (Buzzfy, 14 h, datos provisionales): **013 «Cómo usar Claude gratis»** (https://www.instagram.com/reel/DfdGnytjhpq/): alcance 117, 7,5 s de media, 3 guardados (2,6 %, el mejor de los cuatro). Alternativas: 014 prompt de 4 piezas (7,9 s, menos saltos: 54,5 %, 0 guardados), 016 filtro Gmail (2 guardados), 015 resumir correo (1 compartido, 71,8 % de saltos). 001 (baile) ya no existe en la cuenta.
+- Ajustes si el dueño lo lanza desde la app: Promocionar > Más visitas al perfil > público propio: España, México, Argentina, Chile y Colombia, 25-54 años > 2 €/día durante 5 días (10 € en total). Si el equipo puede lanzarlo (pago + vinculación), primero se enseña el plan y no se activa sin su visto bueno.
+- Aviso: los reels 013 y 015 salieron con "prueba_no_seguidores": true, pero Buzzfy los ve en la cuadrícula del perfil; no está claro que Instagram los tratara como reels de prueba. Comparar su alcance a no seguidores a las 48 h.
+- URGENTE para todo el sistema: el token PAGE_TOKEN caducó el 7/11 a las 22:00 UTC (registro.log: código 190/463). Sin token nuevo, no se publica, no se responden comentarios ni se leen estadísticas (los reels de hoy, 021 a las 13:40 y 022 a las 20:40, fallarán).
+
 ## Pendiente del usuario (detalle en pendiente_usuario.md)
 1) Panel profesional > Monetización: anotar qué herramientas aparecen y con qué requisito (resuelve regalos 500/5.000 y España). 2) Alta en afiliados.amazon.es con la URL exacta del perfil y pasar el ID. 3) Cambiar el enlace de la bio al hub. 4) Decir si alguna app tiene plan de pago (para medir ingresos, no solo clics). 5) Solo si quiere el impulso de 10 €: método de pago en la cuenta publicitaria. El equipo no gasta ni confirma promociones sin su visto bueno.
