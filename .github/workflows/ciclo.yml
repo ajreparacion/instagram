@@ -7,6 +7,8 @@ on:
   schedule:
     - cron: "17,47 11-22 * * *"
     - cron: "17 7 * * *"
+    # 9:47 de España: historias de las 9:30 (agente de demos, 8/11/2026)
+    - cron: "47 8 * * *"
   workflow_dispatch:
     inputs:
       forzar_estadisticas:

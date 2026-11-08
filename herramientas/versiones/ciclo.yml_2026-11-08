@@ -1,0 +1,168 @@
+name: Ciclo Instagram
+
+# Cada 30 minutos de 12:17 a 23:47 (hora de España en invierno) y una vez por la mañana.
+# Minutos 17 y 47 a propósito: GitHub retrasa o se salta muchas ejecuciones programadas en
+# las horas en punto y a las y cinco, que es cuando más repositorios las piden.
+on:
+  schedule:
+    - cron: "17,47 11-22 * * *"
+    - cron: "17 7 * * *"
+  workflow_dispatch:
+    inputs:
+      forzar_estadisticas:
+        description: "Actualizar estadísticas ahora"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ciclo-instagram
+  cancel-in-progress: false
+
+jobs:
+  ciclo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: ¿Hay trabajo?
+        id: trabajo
+        run: |
+          # Evita gastar minutos: solo instala herramientas si hay algo en cola/
+          if ls cola/*/post.json >/dev/null 2>&1; then echo "cola=si" >> "$GITHUB_OUTPUT"; else echo "cola=no" >> "$GITHUB_OUTPUT"; fi
+          # Motores de voz (equipo/voz.json "motor" + "respaldo") solo si hay algún reel sin renderizar.
+          # Chatterbox (pesado) solo si es el motor principal; Pocket y Kokoro (ligeros) también como respaldo.
+          pendiente=no
+          for f in cola/*/post.json; do [ -f "$f" ] && ! grep -q '"renderizado"' "$f" && pendiente=si; done
+          python3 - "$pendiente" >> "$GITHUB_OUTPUT" <<'EOF'
+          import json, sys
+          aj = json.load(open("equipo/voz.json"))
+          principal = str(aj.get("motor", "piper")).lower()
+          cadena = [principal] + [str(m).lower() for m in aj.get("respaldo") or []]
+          pend = sys.argv[1] == "si"
+          print("chatterbox=" + ("si" if pend and principal == "chatterbox" else "no"))
+          print("kokoro=" + ("si" if pend and "kokoro" in cadena else "no"))
+          print("pocket=" + ("si" if pend and "pocket" in cadena else "no"))
+          print("ml=" + ("si" if pend and (set(cadena) & {"chatterbox", "kokoro", "pocket"}) else "no"))
+          EOF
+
+      - name: Python 3.11 (motores de voz neuronales)
+        if: steps.trabajo.outputs.ml == 'si'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Herramientas de vídeo
+        if: steps.trabajo.outputs.cola == 'si'
+        timeout-minutes: 12
+        run: |
+          # El espejo de apt a veces se cuelga y bloqueaba el ciclo hasta 60 min:
+          # cada intento tiene un tope de 3 min y se reintenta hasta 3 veces.
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=20 -o Acquire::https::Timeout=20"
+          if ! command -v ffmpeg >/dev/null || [ ! -d /usr/share/fonts/truetype/dejavu ]; then
+            ok=no
+            for i in 1 2 3; do
+              if sudo timeout 180 apt-get $APT update -qq && \
+                 sudo timeout 180 apt-get $APT install -y -qq ffmpeg fonts-dejavu-core > /dev/null; then
+                ok=si; break
+              fi
+              echo "apt intento $i fallido o colgado; reintento en 10 s"; sleep 10
+            done
+            [ "$ok" = si ] || { echo "No se pudo instalar ffmpeg"; exit 1; }
+          fi
+          pip install --quiet pillow numpy
+
+      - name: Playwright (solo si un reel pendiente lleva grabacion.json)
+        if: steps.trabajo.outputs.cola == 'si'
+        run: |
+          nec=no
+          for f in cola/*/grabacion.json; do [ -f "$f" ] && ! grep -q '"renderizado"' "$(dirname "$f")/post.json" && nec=si; done
+          if [ "$nec" = si ]; then
+            pip install --quiet playwright
+            python3 -m playwright install --with-deps chromium > /dev/null
+          fi
+
+      - name: Caché de la voz (Piper)
+        if: steps.trabajo.outputs.cola == 'si'
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/expedientes
+          key: piper-${{ hashFiles('equipo/voz.json') }}
+          restore-keys: piper-
+
+      - name: Caché de modelos de voz (Pocket TTS, Kokoro, Chatterbox) y de pip
+        if: steps.trabajo.outputs.ml == 'si'
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            ~/.cache/pocket_tts
+            ~/.cache/pip
+          key: voz-v2-${{ hashFiles('equipo/voz.json') }}
+          restore-keys: |
+            voz-v2-
+            pocket-v1-
+
+      - name: Voz Pocket TTS (CPU)
+        if: steps.trabajo.outputs.pocket == 'si'
+        # Si falla la instalación, publicar_gh.py pasa al siguiente motor de respaldo (al final, Piper).
+        continue-on-error: true
+        run: pip install --quiet pocket-tts --extra-index-url https://download.pytorch.org/whl/cpu
+
+      - name: Alineación de la voz por palabra (faster-whisper, CPU)
+        if: steps.trabajo.outputs.ml == 'si'
+        # Subtítulos clavados a la voz y énfasis (*palabra*). Si falla, publicar_gh.py sigue con la estimación.
+        continue-on-error: true
+        run: pip install --quiet faster-whisper
+
+      - name: Voz Kokoro (CPU)
+        if: steps.trabajo.outputs.kokoro == 'si'
+        continue-on-error: true
+        run: |
+          sudo timeout 180 apt-get -o Acquire::Retries=3 -o Acquire::http::Timeout=20 install -y -qq espeak-ng > /dev/null
+          pip install --quiet kokoro soundfile --extra-index-url https://download.pytorch.org/whl/cpu
+
+      - name: Voz Chatterbox (CPU, entorno propio)
+        if: steps.trabajo.outputs.chatterbox == 'si'
+        # Chatterbox fija torch 2.6 y transformers 4.46: va en su propio venv para no romper Pocket/Kokoro.
+        continue-on-error: true
+        run: |
+          python -m venv ~/.venvs/chatterbox
+          ~/.venvs/chatterbox/bin/pip install --quiet --upgrade pip
+          ~/.venvs/chatterbox/bin/pip install --quiet chatterbox-tts --extra-index-url https://download.pytorch.org/whl/cpu
+          ~/.venvs/chatterbox/bin/python -c "import chatterbox.mtl_tts, torch; print('chatterbox OK, torch', torch.__version__)"
+          echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
+
+      - name: Voz del dueño (referencia de Chatterbox, release «voces»)
+        if: steps.trabajo.outputs.chatterbox == 'si'
+        # Autorizada por el dueño el 6/11/2026 (su voz, sacada de sus reels de Mr. Empírico). voces/ está en .gitignore.
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p voces
+          gh release download voces -p referencia_usuario.wav -D voces --clobber && ls -la voces/ || echo "Sin referencia: Chatterbox usa su voz integrada"
+
+      - name: Ciclo
+        env:
+          PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+          FORZAR_ESTADISTICAS: ${{ inputs.forzar_estadisticas && '1' || '' }}
+          TZ: Europe/Madrid
+        run: python3 publicar_gh.py ciclo
+
+      - name: Guardar cambios
+        run: |
+          git config user.name "expedientes-bot"
+          git config user.email "expedientes-bot@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then echo "Sin cambios"; exit 0; fi
+          git commit -q -m "Ciclo automático $(date -u +%FT%H:%MZ)"
+          for i in 1 2 3; do
+            git pull --rebase -q && git push -q && exit 0
+            sleep 5
+          done
+          exit 1
