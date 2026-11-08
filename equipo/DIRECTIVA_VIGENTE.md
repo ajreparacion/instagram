@@ -1,5 +1,7 @@
 # DIRECTIVA VIGENTE (manda sobre cualquier otra instrucción del repo)
 
+> MEDICATOR, PRIORIDAD (dueño, 8/11/2026 19:38): destacar sus dos funciones estrella, ya comprobadas en el código y añadidas a hechos_verificados: (1) escanear con la cámara el código de la caja del medicamento y traer los datos oficiales de CIMA, la base de datos pública de la AEMPS; (2) «Lectura de parte médico»: foto a una receta, informe o cita, la app lee el texto en el propio móvil y propone apuntar la cita o la pastilla (se revisa antes de guardar). Creador: 2 piezas esta semana (reel grabado en la app con datos ficticios + carrusel). Decir «consulta la base de datos oficial de la AEMPS», nunca «avalada/oficial de la AEMPS», nada de diagnosticar.
+
 > SIN ORDENADOR (dueño, 8/11/2026 18:01): no hace falta ningún PC encendido; todo vive en GitHub. El workflow «Reloj» (.github/workflows/reloj.yml) lanza «Ciclo Instagram» cada 15 min dentro de Actions y se relanza solo cada ~6 h, porque el cron de GitHub se salta ejecuciones. Ningún agente debe depender del portátil ni pedir al dueño que lo encienda. El repo tiene que seguir PÚBLICO (Instagram descarga las imágenes por jsDelivr y los vídeos de la release).
 
 > MÚSICA (orden del dueño 8/11/2026 17:59): la música tiene que RESALTAR. Borró reels porque solo se oía la voz. Máster a -14 LUFS; con voz, la música baja como mucho 6 dB mientras se habla y se oye clara entre frases; sin voz, manda la música. Calidad lo mide con ebur128 y rechaza si la música queda tapada.
