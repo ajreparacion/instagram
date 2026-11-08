@@ -861,7 +861,7 @@ def renderizar(cfg, carpeta, post):
 def renderizar_pendientes(cfg):
     hechos = 0
     for _, carpeta, post in carpetas_cola():
-        if post.get("renderizado") or hechos >= MAX_RENDERS:
+        if post.get("renderizado") or post.get("tipo") in ("carrusel", "imagen") or hechos >= MAX_RENDERS:
             continue
         nombre = os.path.basename(carpeta)
         try:
@@ -1009,10 +1009,41 @@ def aprobado(carpeta, cuando, ahora):
     return bool(cal.get("aprobado")) and nota >= NOTA_MINIMA
 
 
+def publicar_carrusel(cfg, carpeta, post):
+    """Publica una imagen o un carrusel (2-10 imágenes JPG en <carpeta>/slides/, en orden alfabético).
+    Instagram descarga cada imagen desde raw.githubusercontent.com (el repo es público)."""
+    repo = os.environ.get("GITHUB_REPOSITORY", "ajreparacion/instagram")
+    rama = os.environ.get("GITHUB_REF_NAME", "main")
+    carpeta_rel = os.path.relpath(carpeta, os.path.dirname(os.path.abspath(__file__)))
+    imgs = sorted(f for f in os.listdir(os.path.join(carpeta, "slides")) if f.lower().endswith((".jpg", ".jpeg")))[:10]
+    if not imgs:
+        raise ErrorAPI("el carrusel no tiene imágenes en slides/")
+    urls = [f"https://raw.githubusercontent.com/{repo}/{rama}/{urllib.parse.quote(carpeta_rel)}/slides/{urllib.parse.quote(f)}" for f in imgs]
+    if len(urls) == 1:
+        r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", image_url=urls[0], caption=post.get("texto", ""))
+        cid = r["id"]
+    else:
+        hijos = []
+        for u in urls:
+            h = api(cfg, f"{cfg['ig_user_id']}/media", "POST", image_url=u, is_carousel_item="true")["id"]
+            esperar_contenedor(cfg, h, max_seg=300)
+            hijos.append(h)
+        cid = api(cfg, f"{cfg['ig_user_id']}/media", "POST", media_type="CAROUSEL",
+                  children=",".join(hijos), caption=post.get("texto", ""))["id"]
+    esperar_contenedor(cfg, cid, max_seg=300)
+    mid = api(cfg, f"{cfg['ig_user_id']}/media_publish", "POST", creation_id=cid)["id"]
+    enlace = ""
+    try:
+        enlace = api(cfg, mid, fields="permalink").get("permalink", "")
+    except ErrorAPI:
+        pass
+    return {"media_id": mid, "enlace": enlace, "tipo": "carrusel" if len(urls) > 1 else "imagen", "imagenes": len(urls)}
+
+
 def publicar_pendientes(cfg):
     ahora = datetime.now(timezone.utc)
     for cuando, carpeta, post in carpetas_cola():
-        if cuando > ahora or not post.get("renderizado"):
+        if cuando > ahora or not (post.get("renderizado") or post.get("tipo") in ("carrusel", "imagen")):
             continue
         nombre = os.path.basename(carpeta)
         if ahora - cuando > timedelta(hours=36):
@@ -1026,6 +1057,12 @@ def publicar_pendientes(cfg):
         shutil.rmtree(trabajo, ignore_errors=True)
         os.makedirs(trabajo)
         try:
+            if post.get("tipo") in ("carrusel", "imagen"):
+                res = publicar_carrusel(cfg, carpeta, post)
+                res["publicado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+                mover(carpeta, PUBLICADOS, res)
+                log(f"{nombre}: publicado {res.get('enlace')}")
+                continue
             gh("release", "download", RELEASE, "-p", post["asset"], "-D", trabajo, "--clobber")
             res = publicar_reel(cfg, os.path.join(trabajo, post["asset"]), post)
             res["publicado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
