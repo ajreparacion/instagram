@@ -1,0 +1,53 @@
+# Puente privado de archivos: equipo de Instagram → Centro de Contenido Apps (Base44).
+# Envía los archivos listados en equipo/puente_centro/pedido.json a la función privada
+# «puenteArchivo» del Centro, que los guarda como archivos PRIVADOS (solo admin).
+# Necesita el secreto de Actions PUENTE_TOKEN (el mismo valor que el secreto PUENTE_TOKEN del Centro).
+# By Neogest Lab
+name: Puente al Centro
+
+on:
+  push:
+    paths:
+      - 'equipo/puente_centro/pedido.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: puente-centro
+  cancel-in-progress: false
+
+jobs:
+  enviar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enviar archivos al Centro
+        env:
+          PUENTE_TOKEN: ${{ secrets.PUENTE_TOKEN }}
+        run: |
+          if [ -z "$PUENTE_TOKEN" ]; then echo "Falta el secreto PUENTE_TOKEN"; exit 1; fi
+          python3 - <<'EOF'
+          import base64, json, os, urllib.request
+          URL = "https://base44.app/api/apps/6ae5244d4e2b32702f0a3cd6/functions/puenteArchivo"
+          pedido = json.load(open("equipo/puente_centro/pedido.json"))
+          fallos = 0
+          for a in pedido.get("archivos", []):
+              ruta = a["ruta"]
+              if ".." in ruta or ruta.startswith("/"):
+                  print("Ruta no permitida:", ruta); fallos += 1; continue
+              datos = open(ruta, "rb").read()
+              cuerpo = json.dumps({"nombre": a.get("nombre") or os.path.basename(ruta),
+                                   "base64": base64.b64encode(datos).decode(),
+                                   "nota": a.get("nota", "")}).encode()
+              req = urllib.request.Request(URL, data=cuerpo, method="POST", headers={
+                  "Content-Type": "application/json", "X-Puente-Token": os.environ["PUENTE_TOKEN"]})
+              try:
+                  with urllib.request.urlopen(req, timeout=120) as r:
+                      print(ruta, "→", r.status, r.read()[:200].decode())
+              except Exception as e:
+                  print(ruta, "→ ERROR", str(e)[:200]); fallos += 1
+          raise SystemExit(1 if fallos else 0)
+          EOF
