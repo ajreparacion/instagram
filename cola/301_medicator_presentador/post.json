@@ -1,14 +1,14 @@
 {
  "tipo": "reel",
- "texto": "Para quien cuida de sus padres 💊\nMEDICATOR enseña la pastilla que toca ahora con letra grande, en el modo «Muy fácil» lee las pantallas en voz alta, guarda las citas en un calendario y tiene un botón para llamar al familiar con un toque.\nDemo con datos de ejemplo. Organiza; no sustituye a tu médico.\nComenta APP y te paso la demo.\n\n#mayores #cuidadores #organizacion #apps #neogestlab\n\nVoz: generada a partir de la voz del autor.",
+ "texto": "App para que tus padres no se líen con las pastillas 💊\nMEDICATOR, nuestra app, enseña la pastilla que toca ahora con letra grande, en el modo «Muy fácil» lee las pantallas en voz alta, guarda las citas en un calendario y tiene un botón para llamar al familiar con un toque.\nComprobado en la demo de la app con datos de ejemplo (8/11/2026). Acceso por solicitud. Organiza; no sustituye a tu médico.\nComenta APP y te paso la demo.\n\n#mayores #cuidadores #organizacion #apps #neogestlab\n\nVoz: generada a partir de la voz del autor.",
  "cuando": "2026-11-11T14:40:00+01:00",
  "palabra_clave": "APP",
  "respuesta": "¡Hola! La demo de MEDICATOR está en el enlace de nuestro perfil: ahí la ves en 60 segundos y puedes pedir acceso 😊",
  "compartir_en_feed": true,
  "portada_ms": 1200,
- "renderizado": "2026-11-08T20:40:43+00:00",
+ "renderizado": "2026-11-08T20:56:08+00:00",
  "asset": "301_medicator_presentador.mp4",
- "duracion_s": 39.5,
+ "duracion_s": 39.3,
  "formato": "modo presentador (Nea y Bit en 3D con three.js + Remotion, titulares, subtítulos palabra a palabra, capturas reales de la demo, música y efectos generados por código)",
  "musica": {
   "estilo": "pop",
@@ -17,9 +17,9 @@
   "origen": "generada por código (sin licencias de terceros)"
  },
  "audio": {
-  "lufs_integrados": -14.1,
-  "pico_real_dbtp": -1.0,
-  "lra_lu": 2.4,
+  "lufs_integrados": -14.2,
+  "pico_real_dbtp": -1.6,
+  "lra_lu": 2.0,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
  "app": "MEDICATOR",

@@ -1,33 +1,33 @@
 {
- "generado": "2026-11-08T20:40:41+00:00",
- "duracion_s": 39.5,
- "fotogramas": 1185,
+ "generado": "2026-11-08T20:56:03+00:00",
+ "duracion_s": 39.32,
+ "fotogramas": 1180,
  "resolucion": "1080x1920",
  "fps": 30,
- "tiempo_voz_s": 498,
- "tiempo_render_s": 272,
- "tiempo_total_s": 787,
+ "tiempo_voz_s": 419,
+ "tiempo_render_s": 216,
+ "tiempo_total_s": 649,
  "voz": "chatterbox",
  "audio": {
-  "musica_bajo_voz_db": -2.8,
+  "musica_bajo_voz_db": -2.5,
   "ducking_db": 3.6,
   "ducking_max_db": 5.0,
   "lufs_integrados": -14.1,
   "pico_real_dbtp": -1.9,
-  "lra_lu": 2.4,
+  "lra_lu": 2.0,
   "medido_con": "ffmpeg ebur128=peak=true",
   "final": {
-   "lufs_integrados": -14.1,
-   "pico_real_dbtp": -1.0,
-   "lra_lu": 2.4,
+   "lufs_integrados": -14.2,
+   "pico_real_dbtp": -1.6,
+   "lra_lu": 2.0,
    "medido_con": "ffmpeg ebur128=peak=true"
   }
  },
  "movimiento": {
-  "diferencia_media": 6.99,
+  "diferencia_media": 6.55,
   "fotogramas_quietos_pct": 0.0,
   "plano_quieto_max_s": 0.0,
-  "cortes_detectados": 37,
+  "cortes_detectados": 31,
   "medido_con": "ffmpeg 10 fps 108x192, |diferencia| media por fotograma"
  },
  "escenas": [
@@ -51,7 +51,7 @@
   },
   {
    "a_s": 5.27,
-   "b_s": 10.53,
+   "b_s": 9.87,
    "fondo": "morado",
    "plano": "abajo",
    "presentador": "explica",
@@ -59,8 +59,8 @@
    "elemento": "captura"
   },
   {
-   "a_s": 10.53,
-   "b_s": 14.0,
+   "a_s": 9.87,
+   "b_s": 13.87,
    "fondo": "cian",
    "plano": "abajo",
    "presentador": "pulgar",
@@ -68,8 +68,8 @@
    "elemento": "captura"
   },
   {
-   "a_s": 14.0,
-   "b_s": 18.83,
+   "a_s": 13.87,
+   "b_s": 19.03,
    "fondo": "negro",
    "plano": "medio",
    "presentador": "idea",
@@ -77,8 +77,8 @@
    "elemento": null
   },
   {
-   "a_s": 18.83,
-   "b_s": 21.3,
+   "a_s": 19.03,
+   "b_s": 22.57,
    "fondo": "verde",
    "plano": "primer",
    "presentador": "explica",
@@ -86,8 +86,8 @@
    "elemento": null
   },
   {
-   "a_s": 21.3,
-   "b_s": 26.33,
+   "a_s": 22.57,
+   "b_s": 28.07,
    "fondo": "magenta",
    "plano": "abajo",
    "presentador": "senala_arriba",
@@ -95,8 +95,8 @@
    "elemento": "captura"
   },
   {
-   "a_s": 26.33,
-   "b_s": 29.83,
+   "a_s": 28.07,
+   "b_s": 32.57,
    "fondo": "morado",
    "plano": "medio",
    "presentador": "movil",
@@ -104,17 +104,8 @@
    "elemento": null
   },
   {
-   "a_s": 29.83,
-   "b_s": 32.93,
-   "fondo": "cian",
-   "plano": "abajo",
-   "presentador": "presenta",
-   "bit": "sorpresa",
-   "elemento": "captura"
-  },
-  {
-   "a_s": 32.93,
-   "b_s": 36.57,
+   "a_s": 32.57,
+   "b_s": 36.17,
    "fondo": "negro",
    "plano": "abajo",
    "presentador": "manos",
@@ -122,8 +113,8 @@
    "elemento": "tarjeta"
   },
   {
-   "a_s": 36.57,
-   "b_s": 39.5,
+   "a_s": 36.17,
+   "b_s": 39.33,
    "fondo": "rojo",
    "plano": "abajo",
    "presentador": "saluda",
