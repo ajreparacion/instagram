@@ -90,6 +90,10 @@ class ErrorAPI(Exception):
     pass
 
 
+class SinURLPublica(ErrorAPI):
+    """La imagen no es accesible desde fuera (p. ej. repo privado): no se gasta intento, se reintenta en otra pasada."""
+
+
 def peticion(url, metodo="GET", datos=None, cabeceras=None, cuerpo=None, timeout=120):
     cab = dict(cabeceras or {})
     if datos is not None:
@@ -1023,6 +1027,7 @@ def publicar_carrusel(cfg, carpeta, post):
     # pública jsDelivr del repo público, fijada al commit del ciclo para que no sirva una versión vieja.
     ref = os.environ.get("GITHUB_SHA") or rama
     urls = [f"https://cdn.jsdelivr.net/gh/{repo}@{ref}/{urllib.parse.quote(carpeta_rel)}/slides/{urllib.parse.quote(f)}" for f in imgs]
+    comprobar_url_publica(urls[0])
     # Diagnóstico: comprobar desde el runner que la primera imagen se descarga como JPEG.
     try:
         with urllib.request.urlopen(urllib.request.Request(urls[0], headers={"User-Agent": "facebookexternalhit/1.1"}), timeout=60) as r0:
@@ -1064,6 +1069,19 @@ def publicar_carrusel(cfg, carpeta, post):
     return {"media_id": mid, "enlace": enlace, "tipo": "carrusel" if len(urls) > 1 else "imagen", "imagenes": len(urls)}
 
 
+def comprobar_url_publica(url):
+    """Instagram descarga las imágenes él mismo: si la URL no da una imagen (repo privado, CDN caída), no se intenta."""
+    try:
+        r = urllib.request.urlopen(urllib.request.Request(url, headers={"Range": "bytes=0-15"}), timeout=60)
+        tipo = r.headers.get("Content-Type", "")
+    except urllib.error.HTTPError as e:
+        raise SinURLPublica(f"la imagen no es pública ({e.code} en {url.split('/gh/')[-1][:80]}); ¿el repositorio es privado?")
+    except Exception as e:
+        raise SinURLPublica(f"no se pudo comprobar la imagen ({e})")
+    if not tipo.startswith("image/"):
+        raise SinURLPublica(f"la URL de la imagen no devuelve una imagen ({tipo})")
+
+
 def quitar_imagenes(carpeta):
     """Tras publicar, las imágenes salen del árbol (quedan en el historial de git): jsDelivr solo sirve repos
     de hasta 50 MB y mide el árbol entero del commit, así que publicados/ no debe ir acumulando JPG (8/11/2026)."""
@@ -1082,6 +1100,7 @@ def publicar_historia(cfg, carpeta, post):
     imgs = sorted(f for f in os.listdir(sl) if f.lower().endswith((".jpg", ".jpeg"))) if os.path.isdir(sl) else []
     if imgs:
         url = f"https://cdn.jsdelivr.net/gh/{repo}@{ref}/{urllib.parse.quote(carpeta_rel)}/slides/{urllib.parse.quote(imgs[0])}"
+        comprobar_url_publica(url)
         r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", media_type="STORIES", image_url=url)
         esperar_contenedor(cfg, r["id"], max_seg=300)
     elif post.get("asset"):
@@ -1098,6 +1117,7 @@ def publicar_historia(cfg, carpeta, post):
 
 def publicar_pendientes(cfg):
     ahora = datetime.now(timezone.utc)
+    sin_cdn = None  # si las imágenes no son públicas, carruseles e historias esperan sin gastar intentos
     for cuando, carpeta, post in carpetas_cola():
         if cuando > ahora or not (post.get("renderizado") or post.get("tipo") in ("carrusel", "imagen", "historia")):
             continue
@@ -1107,6 +1127,8 @@ def publicar_pendientes(cfg):
             log(f"{nombre}: caducado, movido a errores/")
             continue
         if not aprobado(carpeta, cuando, ahora):
+            continue
+        if sin_cdn and post.get("tipo") in ("carrusel", "imagen", "historia"):
             continue
         log(f"{nombre}: publicando…")
         trabajo = os.path.join("/tmp", "pub_" + nombre)
@@ -1119,6 +1141,9 @@ def publicar_pendientes(cfg):
                 res["publicado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
                 quitar_imagenes(mover(carpeta, PUBLICADOS, res))
                 log(f"{nombre}: historia publicada ({res.get('media_id')})")
+            except SinURLPublica as e:
+                sin_cdn = str(e)
+                log(f"{nombre}: espera sin gastar intento (y el resto de carruseles e historias de esta pasada): {e}")
             except Exception as e:
                 intentos = post.get("_intentos", 0) + 1
                 post["_intentos"] = intentos
@@ -1142,6 +1167,10 @@ def publicar_pendientes(cfg):
             mover(carpeta, PUBLICADOS, res)
             gh("release", "delete-asset", RELEASE, post["asset"], "-y", check=False)
             log(f"{nombre}: publicado {res.get('enlace')}")
+        except SinURLPublica as e:
+            sin_cdn = str(e)
+            log(f"{nombre}: espera sin gastar intento (y el resto de carruseles e historias de esta pasada): {e}")
+            continue
         except Exception as e:
             intentos = post.get("_intentos", 0) + 1
             post["_intentos"] = intentos
