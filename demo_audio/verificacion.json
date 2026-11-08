@@ -1,8 +1,8 @@
 {
  "intro": {
-  "esperado": "¿Y si tu negocio hiciera solo las tareas pesadas? Elige tu tipo de negocio.",
-  "oido": "y si tu negocio gira solo las tareas pesadas, elige tu tipo de negocio.",
-  "similitud": 0.929
+  "esperado": "Imagina que las tareas pesadas de tu negocio se hacen solas. Elige tu tipo de negocio.",
+  "oido": "Imagina que las tareas pesadas de tu negocio se hacen solas, elige tu tipo de negocio.",
+  "similitud": 1.0
  },
  "web_3": {
   "esperado": "Y un asistente con IA que responde con la información de tu web.",
@@ -15,9 +15,9 @@
   "similitud": 0.889
  },
  "gestion_3": {
-  "esperado": "Mandas el presupuesto por email, con un enlace para aceptarlo.",
-  "oido": "Mándase el presupuesto por email con un enlace para aceptarlo.",
-  "similitud": 0.9
+  "esperado": "Envías el presupuesto por email, con un enlace para aceptarlo.",
+  "oido": "Envías el presupuesto por email con un enlace para aceptarlo.",
+  "similitud": 1.0
  },
  "final": {
   "esperado": "¿Y si tu idea fuera una app? La hacemos a medida. Solicita acceso.",
