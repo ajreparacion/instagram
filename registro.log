@@ -164,3 +164,17 @@ ModuleNotFoundError: No module named 'faster_whisper'
 2026-11-07 22:06  016_filtro_facturas: publicando…
 2026-11-07 22:07  016_filtro_facturas: publicado https://www.instagram.com/reel/DfdG9kWDaSP/
 2026-11-07 22:07  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 01:55  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 6 frases en 554 s
+2026-11-08 01:55  Voz: silencios recortados por frase (s): [0, 0.24, 0.2, 0.26, 0.76, 0]
+2026-11-08 01:56  Voz: alineación palabra a palabra (small, 31.7 s): 6/6 frases
+2026-11-08 01:57  017_presupuesto_ia: renderizado con voz y subido a la release 'cola'
+2026-11-08 02:04  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 5 frases en 437 s
+2026-11-08 02:04  Voz: silencios recortados por frase (s): [0, 0.28, 0.1, 0.02, 0.36]
+2026-11-08 02:05  Voz: alineación palabra a palabra (small, 36.8 s): 4/5 frases
+2026-11-08 02:06  018_dividir_cuenta_ia: renderizado con voz y subido a la release 'cola'
+2026-11-08 02:06  001_baile_1518: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Saturday, 07-Nov-26 17:06:11 PST. (código 190, subcódigo 463)
+2026-11-08 02:06  013_claude_gratis: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Saturday, 07-Nov-26 17:06:11 PST. (código 190, subcódigo 463)
+2026-11-08 02:06  014_formula_prompt: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Saturday, 07-Nov-26 17:06:11 PST. (código 190, subcódigo 463)
+2026-11-08 02:06  015_resumir_correo: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Saturday, 07-Nov-26 17:06:11 PST. (código 190, subcódigo 463)
+2026-11-08 02:06  016_filtro_facturas: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Saturday, 07-Nov-26 17:06:11 PST. (código 190, subcódigo 463)
+2026-11-08 02:06  Error en estadísticas: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Saturday, 07-Nov-26 17:06:11 PST. (código 190, subcódigo 463)
