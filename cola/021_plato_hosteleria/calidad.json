@@ -1,0 +1,10 @@
+{
+ "aprobado": false,
+ "nota": 78,
+ "fecha": "2026-11-08T11:50:00Z",
+ "motivos": [
+  "A1: escena 3 (7,8-18,3 s) con unos 5-6 s sin voz (la frase acaba hacia el 12,5 s) y música sola; el estándar admite huecos ≤ 1,5 s.",
+  "Voz: el seseo/θ sigue «a medias» y pendiente del oído del dueño; no se puede puntuar ≥ 90 en voz."
+ ],
+ "como_arreglarlo": "Guion corregido por Calidad (frase añadida en la escena 3) y re-render lanzado; se revisa en la siguiente pasada."
+}
