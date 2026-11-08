@@ -241,3 +241,18 @@ ModuleNotFoundError: No module named 'faster_whisper'
 2026-11-08 14:42  image_url rechazada (Only photo or video can be accepted as media type. (código 9004, subcódigo 22070); se prueba desde la release como 101_errores_prompt__01.jpg
 2026-11-08 14:42  101_errores_prompt: fallo al publicar 2/3: el vídeo no es descargable desde la release (404); ¿el repositorio es privado?
 2026-11-08 14:42  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 15:10  101_errores_prompt: publicando…
+2026-11-08 15:10  imagen de prueba https://cdn.jsdelivr.net/gh/ajreparacion/instagram@5cca6c4fa18e0a84f7f7f1dd637a26036e169964/cola/101_errores_prompt/slides/01.jpg -> 200 image/jpeg 157915 bytes
+2026-11-08 15:11  101_errores_prompt: publicado https://www.instagram.com/p/Dfe8MyWjzSv/
+2026-11-08 15:11  105_reformas_presupuestos: publicando…
+2026-11-08 15:11  imagen de prueba https://cdn.jsdelivr.net/gh/ajreparacion/instagram@5cca6c4fa18e0a84f7f7f1dd637a26036e169964/cola/105_reformas_presupuestos/slides/01.jpg -> 200 image/jpeg 158594 bytes
+2026-11-08 15:12  105_reformas_presupuestos: publicado https://www.instagram.com/p/Dfe8Sb1n_cY/
+2026-11-08 15:17  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 5 frases en 313 s
+2026-11-08 15:17  Voz: silencios recortados por frase (s): [0.28, 0.16, 1.5, 1.42, 0.04]
+2026-11-08 15:17  Voz: alineación palabra a palabra (small, 21.7 s): 5/5 frases
+2026-11-08 15:18  020_lista_compra_ia: renderizado con voz y subido a la release 'cola'
+2026-11-08 15:22  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 5 frases en 225 s
+2026-11-08 15:22  Voz: silencios recortados por frase (s): [0, 0.04, 0.12, 0.28, 0.18]
+2026-11-08 15:22  Voz: alineación palabra a palabra (small, 14.2 s): 5/5 frases
+2026-11-08 15:22  024_semana_contenido: renderizado con voz y subido a la release 'cola'
+2026-11-08 15:22  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
