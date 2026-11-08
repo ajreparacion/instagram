@@ -1018,7 +1018,10 @@ def publicar_carrusel(cfg, carpeta, post):
     imgs = sorted(f for f in os.listdir(os.path.join(carpeta, "slides")) if f.lower().endswith((".jpg", ".jpeg")))[:10]
     if not imgs:
         raise ErrorAPI("el carrusel no tiene imágenes en slides/")
-    urls = [f"https://raw.githubusercontent.com/{repo}/{rama}/{urllib.parse.quote(carpeta_rel)}/slides/{urllib.parse.quote(f)}" for f in imgs]
+    # raw.githubusercontent no le vale a Instagram («Only photo or video can be accepted»): se usa la CDN
+    # pública jsDelivr del repo público, fijada al commit del ciclo para que no sirva una versión vieja.
+    ref = os.environ.get("GITHUB_SHA") or rama
+    urls = [f"https://cdn.jsdelivr.net/gh/{repo}@{ref}/{urllib.parse.quote(carpeta_rel)}/slides/{urllib.parse.quote(f)}" for f in imgs]
     if len(urls) == 1:
         r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", image_url=urls[0], caption=post.get("texto", ""))
         cid = r["id"]
