@@ -26,8 +26,8 @@
   "escena": 2,
   "estilo": "tramo",
   "inicio": 9.7,
-  "duracion": 8.0,
-  "texto": "Y esto es lo que salió. Escribo el concepto, las unidades y el precio, y suma solo, sin hacer cuentas.",
+  "duracion": 8.633,
+  "texto": "Y esto es lo que salió. Escribo el concepto, las unidades y el precio, y suma solo, sin hacer cuentas y sin calculadora.",
   "enfasis": [
    15,
    16
@@ -36,8 +36,8 @@
  {
   "escena": 3,
   "estilo": "tramo",
-  "inicio": 17.7,
-  "duracion": 5.1,
+  "inicio": 18.333,
+  "duracion": 5.633,
   "texto": "Añado otra línea y el total se actualiza al momento, con su IVA.",
   "enfasis": [
    8,
@@ -47,8 +47,8 @@
  {
   "escena": 4,
   "estilo": "tramo",
-  "inicio": 22.8,
-  "duracion": 5.633,
+  "inicio": 23.967,
+  "duracion": 5.267,
   "texto": "Cambio el IVA del veintiuno al diez por ciento y lo recalcula.",
   "enfasis": [
    11
@@ -57,8 +57,8 @@
  {
   "escena": 5,
   "estilo": "cierre",
-  "inicio": 28.433,
-  "duracion": 5.0,
+  "inicio": 29.233,
+  "duracion": 4.433,
   "texto": "¿Tienes una idea para tu negocio? Escríbeme idea por privado.",
   "enfasis": [
    7
