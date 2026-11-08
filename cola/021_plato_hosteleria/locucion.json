@@ -40,8 +40,8 @@
   "escena": 3,
   "estilo": "tramo",
   "inicio": 18.333,
-  "duracion": 5.1,
-  "texto": "Cuatro raciones y me dice a cuánto sale cada una.",
+  "duracion": 5.833,
+  "texto": "Cuatro raciones y me dice a cuánto sale cada una. Así sé a qué precio venderla.",
   "enfasis": [
    5,
    6,
@@ -51,9 +51,9 @@
  {
   "escena": 4,
   "estilo": "tramo",
-  "inicio": 23.433,
-  "duracion": 5.233,
-  "texto": "Cambio el porcentaje y recalcula el precio de venta.",
+  "inicio": 24.167,
+  "duracion": 6.267,
+  "texto": "Cambio el porcentaje y recalcula el precio de venta, sin hacer ni una cuenta.",
   "enfasis": [
    4
   ]
@@ -61,8 +61,8 @@
  {
   "escena": 5,
   "estilo": "cierre",
-  "inicio": 28.667,
-  "duracion": 5.3,
+  "inicio": 30.433,
+  "duracion": 4.567,
   "texto": "¿Tienes una idea para tu negocio? Escríbeme idea por privado.",
   "enfasis": [
    7
