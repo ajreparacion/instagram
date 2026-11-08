@@ -1,0 +1,14 @@
+{
+ "aprobado": true,
+ "nota": 92,
+ "aprobado_por": "revisión del agente de demos (8/11)",
+ "revision": [
+  "historia 1080x1920 con zonas seguras (nada importante en los 250 px de arriba ni en la franja de responder)",
+  "formato «sabias» legible de un vistazo",
+  "datos fieles a demo[] y hechos_verificados del Producto; nada de prohibido_afirmar",
+  "capturas reales de la demo, nítidas (780 px reducidas, sin reescalar hacia arriba) y sin bordes raros",
+  "Montserrat, firma «By Neogest Lab» y logo NL original (recorte circular)",
+  "español de España, sin erratas",
+  "cero afirmaciones de salud: solo organizar pastillas, citas y hoja para el médico; aviso «no sustituye a tu médico»"
+ ]
+}
