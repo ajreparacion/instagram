@@ -272,3 +272,24 @@ ModuleNotFoundError: No module named 'faster_whisper'
 2026-11-08 18:20  014_formula_prompt: no se pudieron leer comentarios: Unsupported get request. Object with ID '18114456071177223' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-08 18:20  015_resumir_correo: no se pudieron leer comentarios: Unsupported get request. Object with ID '18119170952012543' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-08 18:20  016_filtro_facturas: no se pudieron leer comentarios: Unsupported get request. Object with ID '18015411647992201' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 18:44  201_medicator_historia1: publicando…
+2026-11-08 18:45  201_medicator_historia1: historia publicada (18110402690576073)
+2026-11-08 18:45  202_gestion_integral_7d_reel: publicando…
+2026-11-08 18:46  subida directa fallida (:{"retriable":false,"type":"ProcessingFailedError","message":"Request processing failed"}} (código None, subcódigo None)); se reintenta con video_url desde la release
+2026-11-08 18:46  202_gestion_integral_7d_reel: publicado https://www.instagram.com/reel/DffUzH3ALoA/
+2026-11-08 18:51  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 5 frases en 278 s
+2026-11-08 18:51  Voz: silencios recortados por frase (s): [0.3, 0.44, 0.38, 0.26, 0.24]
+2026-11-08 18:51  Voz: alineación palabra a palabra (small, 11.5 s): 5/5 frases
+2026-11-08 18:52  Mezcla: voz -12.6 LUFS, música -12.6 LUFS (con ducking -15.4), la música baja 6.0 dB (p90) bajo la voz, ratio 1.647; máster -11.7 -> -14.0 LUFS, pico -3.0 dBFS; huecos de voz: []
+2026-11-08 18:52  022_pedidos_tienda: renderizado con voz y subido a la release 'cola'
+2026-11-08 18:57  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 6 frases en 288 s
+2026-11-08 18:57  Voz: silencios recortados por frase (s): [0.26, 0, 0.36, 1.32, 0, 0]
+2026-11-08 18:57  Voz: alineación palabra a palabra (small, 14.2 s): 6/6 frases
+2026-11-08 18:58  Mezcla: voz -12.7 LUFS, música -12.4 LUFS (con ducking -15.3), la música baja 6.0 dB (p90) bajo la voz, ratio 1.706; máster -11.78 -> -14.0 LUFS, pico -3.1 dBFS; huecos de voz: [[16.3, 17.85]]
+2026-11-08 18:58  017_presupuesto_ia: renderizado con voz y subido a la release 'cola'
+2026-11-08 18:58  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 18:58  013_claude_gratis: no se pudieron leer comentarios: Unsupported get request. Object with ID '17980873539135416' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 18:58  014_formula_prompt: no se pudieron leer comentarios: Unsupported get request. Object with ID '18114456071177223' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 18:58  015_resumir_correo: no se pudieron leer comentarios: Unsupported get request. Object with ID '18119170952012543' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 18:58  016_filtro_facturas: no se pudieron leer comentarios: Unsupported get request. Object with ID '18015411647992201' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 18:58  Estadísticas actualizadas (9 posts, 1603 seguidores)
