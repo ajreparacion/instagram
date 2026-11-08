@@ -1,0 +1,65 @@
+name: Demos de apps (carruseles, historias y reels)
+
+# Descarga las capturas REALES de demo del Centro de Contenido Apps (*.base44.app solo es accesible desde aquí)
+# y genera en cola/ el carrusel, las historias y el reel de presentación de cada app (herramientas/demo_app.py,
+# textos en herramientas/demo_apps.json). Los reels se suben a la release «cola». No publica nada: lo hace el
+# ciclo cuando la pieza tiene su calidad.json aprobado. Creado por el agente de demos el 8/11/2026.
+on:
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: "Slugs separados por espacios o comas (vacío o «todas» = todas las apps de demo_apps.json)"
+        type: string
+        default: "todas"
+      solo_descargar:
+        description: "Solo descargar las capturas (sin generar piezas)"
+        type: boolean
+        default: false
+      reel:
+        description: "Generar también el reel de presentación"
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+
+concurrency:
+  group: demo-app
+  cancel-in-progress: false
+
+jobs:
+  demos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - name: Herramientas
+        run: |
+          APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=20"
+          if ! command -v ffmpeg >/dev/null; then
+            for i in 1 2 3; do
+              sudo timeout 180 apt-get $APT update -qq && sudo timeout 180 apt-get $APT install -y -qq ffmpeg > /dev/null && break
+              sleep 10
+            done
+          fi
+          pip install --quiet pillow numpy
+      - name: Descargar capturas de demo
+        run: |
+          S="${{ inputs.slugs }}"; [ -z "$S" ] && S=todas
+          python3 herramientas/demo_app.py descargar $S
+      - name: Generar piezas
+        if: ${{ !inputs.solo_descargar }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          S="${{ inputs.slugs }}"; [ -z "$S" ] && S=todas
+          OPC="--subir"; [ "${{ inputs.reel }}" = "true" ] || OPC="--sin-reel"
+          python3 herramientas/demo_app.py generar $S $OPC
+      - name: Guardar cambios
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add herramientas/demos cola
+          git commit -q -m "Demos de apps: capturas y piezas $(date -u +%FT%H:%MZ)" || exit 0
+          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done
+          exit 1
