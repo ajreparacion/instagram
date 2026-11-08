@@ -72,9 +72,9 @@
     "tipo": "captura",
     "imagen": "/demos/gestion-integral-7d/4.webp?v=2",
     "zoom": [
-     0.5,
-     0.55,
-     1.5
+     0.25,
+     0.86,
+     1.75
     ],
     "etiqueta": "Presupuesto → pedido"
    }
@@ -89,9 +89,9 @@
     "tipo": "captura",
     "imagen": "/demos/gestion-integral-7d/5.webp?v=2",
     "zoom": [
-     0.5,
      0.3,
-     1.2
+     0.8,
+     1.6
     ],
     "etiqueta": "Pedido → albarán"
    }
@@ -106,9 +106,9 @@
     "tipo": "captura",
     "imagen": "/demos/gestion-integral-7d/5.webp?v=2",
     "zoom": [
-     0.5,
-     0.6,
-     1.45
+     0.3,
+     0.86,
+     1.65
     ],
     "etiqueta": "Albarán → factura"
    }
