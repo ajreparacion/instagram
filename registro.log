@@ -256,3 +256,19 @@ ModuleNotFoundError: No module named 'faster_whisper'
 2026-11-08 15:22  Voz: alineación palabra a palabra (small, 14.2 s): 5/5 frases
 2026-11-08 15:22  024_semana_contenido: renderizado con voz y subido a la release 'cola'
 2026-11-08 15:22  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 18:05  103_tareas_casa_ia: publicando…
+2026-11-08 18:05  imagen de prueba https://cdn.jsdelivr.net/gh/ajreparacion/instagram@d900d56883dbcde4d884bd80023e457c1cf4c5bb/cola/103_tareas_casa_ia/slides/01.jpg -> 200 image/jpeg 141070 bytes
+2026-11-08 18:07  103_tareas_casa_ia: publicado https://www.instagram.com/p/DffQZfmE7I6/
+2026-11-08 18:13  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 5 frases en 333 s
+2026-11-08 18:13  Voz: silencios recortados por frase (s): [0, 0, 0.16, 0.26, 0.28]
+2026-11-08 18:13  Voz: alineación palabra a palabra (small, 18.4 s): 5/5 frases
+2026-11-08 18:14  022_pedidos_tienda: renderizado con voz y subido a la release 'cola'
+2026-11-08 18:19  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 6 frases en 301 s
+2026-11-08 18:19  Voz: silencios recortados por frase (s): [0.26, 0, 0.36, 1.32, 0, 0]
+2026-11-08 18:19  Voz: alineación palabra a palabra (small, 12.8 s): 6/6 frases
+2026-11-08 18:20  017_presupuesto_ia: renderizado con voz y subido a la release 'cola'
+2026-11-08 18:20  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 18:20  013_claude_gratis: no se pudieron leer comentarios: Unsupported get request. Object with ID '17980873539135416' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 18:20  014_formula_prompt: no se pudieron leer comentarios: Unsupported get request. Object with ID '18114456071177223' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 18:20  015_resumir_correo: no se pudieron leer comentarios: Unsupported get request. Object with ID '18119170952012543' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 18:20  016_filtro_facturas: no se pudieron leer comentarios: Unsupported get request. Object with ID '18015411647992201' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
