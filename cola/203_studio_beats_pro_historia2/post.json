@@ -1,0 +1,13 @@
+{
+ "tipo": "historia",
+ "texto": "",
+ "cuando": "2026-11-11T09:30:00+01:00",
+ "renderizado": "no aplica (historia)",
+ "formato": "antes_despues",
+ "app": "Studio Beats PRO",
+ "publico": "Música y creadores",
+ "fuentes": [
+  "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Studio Beats PRO»: demo[] (capturas reales de la demo y sus textos), hechos_verificados y prohibido_afirmar (consulta 8/11/2026)."
+ ],
+ "origen": "herramientas/demo_app.py"
+}
