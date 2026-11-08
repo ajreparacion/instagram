@@ -1231,8 +1231,10 @@ def ciclo():
     cfg = cargar_config()
     for d in (COLA, PUBLICADOS, REVISION, ERRORES, ORIGINALES):
         os.makedirs(d, exist_ok=True)
-    pasos = [("renderizar", renderizar_pendientes), ("publicar", publicar_pendientes),
-             ("comentarios", responder_comentarios)]
+    # 8/11/2026: primero se publica lo que ya toca y después se renderiza (renderizar tarda minutos por reel
+    # y retrasaba las publicaciones); al final otra pasada de publicar por si algo se renderizó con hora pasada.
+    pasos = [("publicar", publicar_pendientes), ("renderizar", renderizar_pendientes),
+             ("publicar", publicar_pendientes), ("comentarios", responder_comentarios)]
     if estadisticas_viejas() or os.environ.get("FORZAR_ESTADISTICAS"):
         pasos.append(("estadísticas", actualizar_estadisticas))
     for nombre, paso in pasos:
