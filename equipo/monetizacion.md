@@ -60,7 +60,7 @@ Las páginas de help.instagram.com solo devuelven la cabecera a herramientas aut
 - Estado 8/11: NINGÚN reel cumple la regla, así que no se promociona. 013-016 (7/11, ~14 h): alcance 108-119, 0-1 compartidos, guardados 0-3, saltos 55-72 %. Queda anulada la propuesta anterior de promocionar 013 «Claude gratis».
 - Bloqueos técnicos aunque uno funcione: la cuenta publicitaria 966846446095574 no tiene método de pago ni la cuenta de Instagram vinculada (comprobado el 8/11). Si se lanza desde la app: Promocionar > Más visitas al perfil > España, México, Argentina, Chile y Colombia, 25-54 años > 2 €/día durante 5 días.
 - Aviso: 013 y 015 salieron con "prueba_no_seguidores": true, pero Buzzfy los ve en la cuadrícula del perfil; no está claro que Instagram los tratara como reels de prueba. Comparar su alcance a no seguidores a las 48 h.
-- URGENTE para todo el sistema: el token PAGE_TOKEN caducó el 7/11 a las 22:00 UTC (código 190/463). Sin token nuevo no se publica, ni se responden comentarios, ni se leen estadísticas.
+- Token PAGE_TOKEN: caducó el 7/11 22:00 UTC y el dueño lo renovó el 8/11; el ciclo de las 11:41 UTC ya lee estadísticas (4 posts, 1.603 seguidores).
 
 ## Pendiente del usuario (detalle en pendiente_usuario.md)
 1) Panel profesional > Monetización: anotar qué herramientas aparecen y con qué requisito (resuelve regalos 500/5.000 y España). 2) Alta en afiliados.amazon.es con la URL exacta del perfil y pasar el ID. 3) Cambiar el enlace de la bio al hub. 4) Decir si alguna app tiene plan de pago (para medir ingresos, no solo clics). 5) Promoción (máx. 10 €): solo cuando un reel cumpla la regla de "funciona"; hará falta método de pago y vincular Instagram a la cuenta publicitaria. El equipo no gasta ni confirma promociones sin su visto bueno.

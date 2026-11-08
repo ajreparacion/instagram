@@ -2,8 +2,6 @@
 
 El equipo hace todo lo demás solo. Estas tareas necesitan la identidad, los datos fiscales o el acceso al perfil del usuario. Ordenadas por impacto en la monetización. Lo mantiene el Estratega.
 
-0a. **URGENTE (8/11/2026, Monetización): renovar el token PAGE_TOKEN.** Caducó el 7/11/2026 a las 22:00 UTC (registro.log: «Session has expired», código 190, subcódigo 463). Sin él GitHub Actions no publica, no responde comentarios y no lee estadísticas. Genera un token de página nuevo (mejor de larga duración) y guárdalo en GitHub > ajreparacion/instagram > Settings > Secrets and variables > Actions > PAGE_TOKEN.
-
 0. **Tu voz: AUTORIZADO y en marcha (6/11/2026)**. Tu mensaje: «los vídeos subidos son todos míos, soy yo el protagonista, clona mi voz de esos vídeos de Mr. Empírico». Con eso el equipo saca tu voz de los reels del podcast Empírico (workflow «Voz del dueño», herramientas/voz_usuario.py): separa la voz de la música, se queda con TU voz (confirmaste el 6/11 que eres la «voz A», la del reel del Proyecto ALCAYATA; la de Mr. Tartaria no es tuya y no se usa) y crea una referencia de ~11 s (release privada «voces», nunca en el historial de git) para que Chatterbox lea los guiones con tu voz. Se usa solo tu voz y solo para esta cuenta; si algún día quieres retirarla, basta con decirlo y se borra la release «voces».
    Lo que todavía mejoraría el resultado (opcional): una nota de voz de 30-60 s con tu voz normal (no la del personaje), sin música, subida a la release «voces» como referencia_usuario.wav. Y, mejor aún, un clip de 5-10 s a cámara para abrir o cerrar el reel.
    Honestidad: aunque sea tu voz, el audio sigue siendo generado, así que los posts llevan «Voz: generada a partir de la voz del autor» (Meta exige marcar audio realista generado y la ley europea de IA obliga desde el 2/8/2026).
@@ -21,6 +19,7 @@ El equipo hace todo lo demás solo. Estas tareas necesitan la identidad, los dat
 5. **(7/11/2026)** Preguntas frecuentes del chat bloqueadas: Meta devuelve error 100/2534013 (página no vinculada a cuenta profesional de Instagram desde el token PAGE_TOKEN). Diagnóstico: workflow «Diagnóstico de vinculación (página ↔ Instagram)».
    Actualización 7/11 14:15: la vinculación ya está bien (página 107316837808795 ↔ iafacil.trucos). Ahora Meta devuelve 200/2534041: «El propietario de la cuenta ha desactivado el acceso a los mensajes directos de Instagram». Falta activar en Instagram: Configuración > Mensajes y respuestas del story > Herramientas conectadas > «Permitir acceso a los mensajes». Después, relanzar «Bienvenida del chat (ice breakers)».
 
+Hecho: token PAGE_TOKEN renovado por el dueño el 8/11/2026 (comprobado: el ciclo de las 11:41 UTC volvió a leer estadísticas).
 Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11/2026).
 
 6. **(8/11/2026, Creador) Permitir `*.base44.app` en los dominios de salida de las sesiones del equipo.** Hoy el proxy devuelve 403 a las apps de Neogest Lab y por eso los reels «Una idea, una app» usan prototipos hechos con IA en vez de la app real funcionando (lo que pide la directiva). Con el dominio habilitado (o con vídeos de pantalla de cada app subidos como media_url en «Publicacion»), el Creador graba las apps reales con la plantilla de grabar_pantalla.py. Inventario en equipo/catalogo_apps.md.
