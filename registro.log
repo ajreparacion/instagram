@@ -178,3 +178,17 @@ ModuleNotFoundError: No module named 'faster_whisper'
 2026-11-08 02:06  015_resumir_correo: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Saturday, 07-Nov-26 17:06:11 PST. (código 190, subcódigo 463)
 2026-11-08 02:06  016_filtro_facturas: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Saturday, 07-Nov-26 17:06:11 PST. (código 190, subcódigo 463)
 2026-11-08 02:06  Error en estadísticas: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Saturday, 07-Nov-26 17:06:11 PST. (código 190, subcódigo 463)
+2026-11-08 12:11  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 6 frases en 368 s
+2026-11-08 12:11  Voz: silencios recortados por frase (s): [0.26, 0.02, 0.7, 0.02, 0.14, 0.18]
+2026-11-08 12:12  Voz: alineación palabra a palabra (small, 22.9 s): 6/6 frases
+2026-11-08 12:13  021_plato_hosteleria: renderizado con voz y subido a la release 'cola'
+2026-11-08 12:18  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 5 frases en 295 s
+2026-11-08 12:18  Voz: silencios recortados por frase (s): [0, 0, 0.16, 0.26, 0.28]
+2026-11-08 12:18  Voz: alineación palabra a palabra (small, 15.9 s): 5/5 frases
+2026-11-08 12:19  022_pedidos_tienda: renderizado con voz y subido a la release 'cola'
+2026-11-08 12:19  001_baile_1518: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Sunday, 08-Nov-26 03:19:08 PST. (código 190, subcódigo 463)
+2026-11-08 12:19  013_claude_gratis: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Sunday, 08-Nov-26 03:19:08 PST. (código 190, subcódigo 463)
+2026-11-08 12:19  014_formula_prompt: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Sunday, 08-Nov-26 03:19:08 PST. (código 190, subcódigo 463)
+2026-11-08 12:19  015_resumir_correo: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Sunday, 08-Nov-26 03:19:08 PST. (código 190, subcódigo 463)
+2026-11-08 12:19  016_filtro_facturas: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Sunday, 08-Nov-26 03:19:08 PST. (código 190, subcódigo 463)
+2026-11-08 12:19  Error en estadísticas: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Sunday, 08-Nov-26 03:19:08 PST. (código 190, subcódigo 463)
