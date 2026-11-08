@@ -6,6 +6,10 @@ name: Narración y música del escaparate /demo
 on:
   workflow_dispatch:
     inputs:
+      solo_ids:
+        description: "ids de clips separados por comas para regenerar solo esos (vacío = todos)"
+        required: false
+        default: ""
       solo_musica:
         description: "true = solo regenerar la música (sin voz)"
         default: "false"
@@ -67,6 +71,7 @@ jobs:
         if: ${{ inputs.solo_musica != 'true' }}
         env:
           TZ: Europe/Madrid
+          SOLO_IDS: ${{ inputs.solo_ids }}
         run: python3 herramientas/narracion_demo.py voz
 
       - name: Duraciones y comprobación con Whisper
