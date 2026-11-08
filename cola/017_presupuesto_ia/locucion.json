@@ -3,19 +3,19 @@
   "escena": 0,
   "estilo": "gancho",
   "inicio": 0.0,
-  "duracion": 3.833,
-  "texto": "Este presupuesto lo hizo una IA.",
+  "duracion": 2.567,
+  "texto": "¿Haces los presupuestos a mano?",
   "enfasis": [
-   4,
-   5
+   3,
+   4
   ]
  },
  {
   "escena": 1,
   "estilo": "tramo",
-  "inicio": 3.833,
-  "duracion": 5.333,
-  "texto": "Le pedí esto a una IA, con un solo mensaje.",
+  "inicio": 2.567,
+  "duracion": 7.133,
+  "texto": "Le pedí esto a una IA, con un solo mensaje: líneas con concepto, precio e IVA.",
   "enfasis": [
    7,
    8,
@@ -25,9 +25,9 @@
  {
   "escena": 2,
   "estilo": "tramo",
-  "inicio": 9.167,
+  "inicio": 9.7,
   "duracion": 8.0,
-  "texto": "Y esto es lo que salió. Escribo el concepto, las unidades y el precio, y suma solo.",
+  "texto": "Y esto es lo que salió. Escribo el concepto, las unidades y el precio, y suma solo, sin hacer cuentas.",
   "enfasis": [
    15,
    16
@@ -36,9 +36,9 @@
  {
   "escena": 3,
   "estilo": "tramo",
-  "inicio": 17.167,
+  "inicio": 17.7,
   "duracion": 5.1,
-  "texto": "Añado otra línea y el total se actualiza al momento.",
+  "texto": "Añado otra línea y el total se actualiza al momento, con su IVA.",
   "enfasis": [
    8,
    9
@@ -47,21 +47,21 @@
  {
   "escena": 4,
   "estilo": "tramo",
-  "inicio": 22.267,
-  "duracion": 4.467,
-  "texto": "Cambio el IVA y lo recalcula.",
+  "inicio": 22.8,
+  "duracion": 5.633,
+  "texto": "Cambio el IVA del veintiuno al diez por ciento y lo recalcula.",
   "enfasis": [
-   5
+   11
   ]
  },
  {
   "escena": 5,
   "estilo": "cierre",
-  "inicio": 26.733,
-  "duracion": 5.033,
-  "texto": "Comenta presupuesto y te paso el mensaje. Sígueme para más.",
+  "inicio": 28.433,
+  "duracion": 5.0,
+  "texto": "¿Tienes una idea para tu negocio? Escríbeme idea por privado.",
   "enfasis": [
-   1
+   7
   ]
  }
 ]
