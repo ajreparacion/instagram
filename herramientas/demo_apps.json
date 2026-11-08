@@ -56,14 +56,26 @@
      "titulo": "MEDICATOR te prepara la hoja para el médico",
      "destacar": "hoja",
      "texto": "Con tus medicinas, alergias, próximas citas y las preguntas que quieras hacer.",
-     "cuando": "2026-11-08T15:30:00+01:00"
+     "cuando": "2026-11-08T15:30:00+01:00",
+     "musica": {
+      "estilo": "house",
+      "bpm": 122,
+      "tono": -5,
+      "prog": 0
+     }
     },
     {
      "tipo": "antes_despues",
      "captura": 1,
      "antes": "Las pastillas en un papel en la nevera y las citas en una libreta.",
      "despues": "La pastilla que toca, a su hora, y las citas con letra grande.",
-     "cuando": "2026-11-10T15:30:00+01:00"
+     "cuando": "2026-11-10T15:30:00+01:00",
+     "musica": {
+      "estilo": "house",
+      "bpm": 125,
+      "tono": 1,
+      "prog": 1
+     }
     },
     {
      "tipo": "pregunta",
@@ -71,12 +83,23 @@
      "titulo": "¿A tus padres les vendría bien?",
      "destacar": "padres",
      "texto": "Respóndeme a esta historia y te enseño la demo.",
-     "cuando": "2026-11-12T15:30:00+01:00"
+     "cuando": "2026-11-12T15:30:00+01:00",
+     "musica": {
+      "estilo": "house",
+      "bpm": 128,
+      "tono": -5,
+      "prog": 2
+     }
     }
    ],
    "publico": "Mayores y quien los cuida",
    "cuando_carrusel": "2026-11-08T19:10:00+01:00",
-   "cuando_reel": "2026-11-09T12:10:00+01:00"
+   "cuando_reel": "2026-11-09T12:10:00+01:00",
+   "musica": {
+    "estilo": "pop",
+    "tono": 3,
+    "bpm": 108
+   }
   },
   {
    "slug": "gestion-integral-7d",
@@ -133,14 +156,26 @@
      "titulo": "Gestión Integral 7D ordena tus visitas del día",
      "destacar": "visitas",
      "texto": "Por carretera, desde tu posición y con la hora prevista de llegada a cada cliente.",
-     "cuando": "2026-11-08T21:30:00+01:00"
+     "cuando": "2026-11-08T21:30:00+01:00",
+     "musica": {
+      "estilo": "pop",
+      "bpm": 104,
+      "tono": 0,
+      "prog": 0
+     }
     },
     {
      "tipo": "antes_despues",
      "captura": 4,
      "antes": "Presupuesto en un documento, pedido en Excel y factura a mano.",
      "despues": "Presupuesto, pedido, albarán y factura, sin volver a teclear.",
-     "cuando": "2026-11-10T21:30:00+01:00"
+     "cuando": "2026-11-10T21:30:00+01:00",
+     "musica": {
+      "estilo": "pop",
+      "bpm": 107,
+      "tono": 6,
+      "prog": 1
+     }
     },
     {
      "tipo": "pregunta",
@@ -148,12 +183,23 @@
      "titulo": "¿Cuántas visitas haces al día?",
      "destacar": "visitas",
      "texto": "Respóndeme a esta historia y te enseño la demo.",
-     "cuando": "2026-11-12T21:30:00+01:00"
+     "cuando": "2026-11-12T21:30:00+01:00",
+     "musica": {
+      "estilo": "pop",
+      "bpm": 110,
+      "tono": 0,
+      "prog": 2
+     }
     }
    ],
    "publico": "Comerciales y pymes",
    "cuando_carrusel": "2026-11-12T19:10:00+01:00",
-   "cuando_reel": "2026-11-08T18:10:00+01:00"
+   "cuando_reel": "2026-11-08T18:10:00+01:00",
+   "musica": {
+    "estilo": "house",
+    "tono": 0,
+    "bpm": 124
+   }
   },
   {
    "slug": "studio-beats-pro",
@@ -210,14 +256,26 @@
      "titulo": "Studio Beats PRO mezcla y masteriza en un clic",
      "destacar": "clic",
      "texto": "Y te enseña el volumen final en LUFS. Después retocas voz, ambiente y graves.",
-     "cuando": "2026-11-09T09:30:00+01:00"
+     "cuando": "2026-11-09T09:30:00+01:00",
+     "musica": {
+      "estilo": "dembow",
+      "bpm": 94,
+      "tono": 5,
+      "prog": 0
+     }
     },
     {
      "tipo": "antes_despues",
      "captura": 2,
      "antes": "La letra en el móvil y ningún sitio donde grabarla.",
      "despues": "Base, voz, mezcla y master en 4 pasos.",
-     "cuando": "2026-11-11T09:30:00+01:00"
+     "cuando": "2026-11-11T09:30:00+01:00",
+     "musica": {
+      "estilo": "dembow",
+      "bpm": 97,
+      "tono": -1,
+      "prog": 1
+     }
     },
     {
      "tipo": "pregunta",
@@ -225,12 +283,23 @@
      "titulo": "¿Te animas a grabar tu canción?",
      "destacar": "canción",
      "texto": "Respóndeme a esta historia y te enseño la demo.",
-     "cuando": "2026-11-13T09:30:00+01:00"
+     "cuando": "2026-11-13T09:30:00+01:00",
+     "musica": {
+      "estilo": "dembow",
+      "bpm": 100,
+      "tono": 5,
+      "prog": 2
+     }
     }
    ],
    "publico": "Música y creadores",
    "cuando_carrusel": "2026-11-09T19:10:00+01:00",
-   "cuando_reel": "2026-11-10T12:10:00+01:00"
+   "cuando_reel": "2026-11-10T12:10:00+01:00",
+   "musica": {
+    "estilo": "trap",
+    "tono": -2,
+    "bpm": 140
+   }
   },
   {
    "slug": "aj-sistema-taller",
@@ -282,14 +351,26 @@
      "titulo": "Con AJ Sistema tus clientes ven cómo va lo suyo",
      "destacar": "clientes",
      "texto": "Con su número y su teléfono, sin llamarte. Y aceptan el presupuesto desde ahí.",
-     "cuando": "2026-11-09T15:30:00+01:00"
+     "cuando": "2026-11-09T15:30:00+01:00",
+     "musica": {
+      "estilo": "disco",
+      "bpm": 120,
+      "tono": -2,
+      "prog": 0
+     }
     },
     {
      "tipo": "antes_despues",
      "captura": 2,
      "antes": "Llamadas y mensajes para preguntar «¿cómo va lo mío?».",
      "despues": "El cliente envía su solicitud y la consulta en tu web cuando quiera.",
-     "cuando": "2026-11-11T15:30:00+01:00"
+     "cuando": "2026-11-11T15:30:00+01:00",
+     "musica": {
+      "estilo": "disco",
+      "bpm": 123,
+      "tono": 4,
+      "prog": 1
+     }
     },
     {
      "tipo": "pregunta",
@@ -297,12 +378,23 @@
      "titulo": "¿Cuántas llamadas así recibes al día?",
      "destacar": "llamadas",
      "texto": "Respóndeme a esta historia y te enseño la demo.",
-     "cuando": "2026-11-13T15:30:00+01:00"
+     "cuando": "2026-11-13T15:30:00+01:00",
+     "musica": {
+      "estilo": "disco",
+      "bpm": 126,
+      "tono": -2,
+      "prog": 2
+     }
     }
    ],
    "publico": "Autónomos y negocios de servicio",
    "cuando_carrusel": "2026-11-10T19:10:00+01:00",
-   "cuando_reel": "2026-11-09T18:10:00+01:00"
+   "cuando_reel": "2026-11-09T18:10:00+01:00",
+   "musica": {
+    "estilo": "disco",
+    "tono": 5,
+    "bpm": 118
+   }
   },
   {
    "slug": "insultator",
@@ -359,14 +451,26 @@
      "titulo": "Insultator tiene su propio Loop Studio",
      "destacar": "Loop",
      "texto": "10 bases rítmicas (hip-hop, reguetón, techno…) para mezclar frases con ritmo.",
-     "cuando": "2026-11-09T21:30:00+01:00"
+     "cuando": "2026-11-09T21:30:00+01:00",
+     "musica": {
+      "estilo": "trap",
+      "bpm": 136,
+      "tono": 3,
+      "prog": 0
+     }
     },
     {
      "tipo": "antes_despues",
      "captura": 1,
      "antes": "Silencio incómodo en el grupo.",
      "despues": "Un botón y zasca, en voz alta.",
-     "cuando": "2026-11-11T21:30:00+01:00"
+     "cuando": "2026-11-11T21:30:00+01:00",
+     "musica": {
+      "estilo": "trap",
+      "bpm": 139,
+      "tono": -3,
+      "prog": 1
+     }
     },
     {
      "tipo": "pregunta",
@@ -374,12 +478,23 @@
      "titulo": "¿Sarcástico o humor negro?",
      "destacar": "humor",
      "texto": "Respóndeme con tu favorito.",
-     "cuando": "2026-11-13T21:30:00+01:00"
+     "cuando": "2026-11-13T21:30:00+01:00",
+     "musica": {
+      "estilo": "trap",
+      "bpm": 142,
+      "tono": 3,
+      "prog": 2
+     }
     }
    ],
    "publico": "Ocio y humor",
    "cuando_carrusel": "2026-11-11T19:10:00+01:00",
-   "cuando_reel": "2026-11-10T18:10:00+01:00"
+   "cuando_reel": "2026-11-10T18:10:00+01:00",
+   "musica": {
+    "estilo": "dembow",
+    "tono": 1,
+    "bpm": 96
+   }
   },
   {
    "slug": "aj-reparacion-web",
@@ -426,14 +541,26 @@
      "titulo": "AJ Web incluye un portal para tus clientes",
      "destacar": "portal",
      "texto": "Cada uno ve sus encargos, el detalle de cada uno y sus facturas.",
-     "cuando": "2026-11-10T09:30:00+01:00"
+     "cuando": "2026-11-10T09:30:00+01:00",
+     "musica": {
+      "estilo": "funk",
+      "bpm": 110,
+      "tono": -4,
+      "prog": 0
+     }
     },
     {
      "tipo": "antes_despues",
      "captura": 1,
      "antes": "Una web que solo enseña tu teléfono.",
      "despues": "Una web donde tus clientes piden, consultan y siguen sus pedidos.",
-     "cuando": "2026-11-12T09:30:00+01:00"
+     "cuando": "2026-11-12T09:30:00+01:00",
+     "musica": {
+      "estilo": "funk",
+      "bpm": 113,
+      "tono": 2,
+      "prog": 1
+     }
     },
     {
      "tipo": "pregunta",
@@ -441,12 +568,81 @@
      "titulo": "¿Qué te gustaría que hiciera tu web?",
      "destacar": "web",
      "texto": "Respóndeme a esta historia y te digo cómo sería.",
-     "cuando": "2026-11-14T09:30:00+01:00"
+     "cuando": "2026-11-14T09:30:00+01:00",
+     "musica": {
+      "estilo": "funk",
+      "bpm": 116,
+      "tono": -4,
+      "prog": 2
+     }
     }
    ],
    "publico": "Cualquier negocio",
    "cuando_carrusel": "2026-11-13T19:10:00+01:00",
-   "cuando_reel": "2026-11-11T12:10:00+01:00"
+   "cuando_reel": "2026-11-11T12:10:00+01:00",
+   "musica": {
+    "estilo": "funk",
+    "tono": -3,
+    "bpm": 114
+   }
+  }
+ ],
+ "reels_carrusel": [
+  {
+   "carpeta": "103_tareas_casa_ia",
+   "cuando": "2026-11-10T16:10:00+01:00",
+   "musica": {
+    "estilo": "disco",
+    "tono": -1,
+    "bpm": 120
+   }
+  },
+  {
+   "carpeta": "106_comerciales_ruta",
+   "cuando": "2026-11-11T16:10:00+01:00",
+   "musica": {
+    "estilo": "dembow",
+    "tono": -4,
+    "bpm": 98
+   }
+  },
+  {
+   "carpeta": "102_formula_prompt",
+   "cuando": "2026-11-12T16:10:00+01:00",
+   "musica": {
+    "estilo": "pop",
+    "tono": 2,
+    "bpm": 112
+   },
+   "texto": "Con esta fórmula la IA por fin te entiende.\nUn buen prompt tiene 4 piezas, en este orden:\nRol: «Actúa como asesor de marketing para pequeños negocios».\nContexto: quién eres, qué pasa y para quién es.\nTarea: un verbo claro y una sola cosa cada vez.\nFormato: tabla, lista, email o número de líneas.\nGuárdalo: el ejemplo completo sale al final del vídeo, listo para cambiar los datos ✍️ ¿Tienes una idea para tu negocio? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #prompts #ia #pymes #neogestlab"
+  },
+  {
+   "carpeta": "107_catalogo_stock",
+   "cuando": "2026-11-13T16:10:00+01:00",
+   "musica": {
+    "estilo": "trap",
+    "tono": 1,
+    "bpm": 142
+   }
+  },
+  {
+   "carpeta": "104_ia_negocio",
+   "cuando": "2026-11-14T16:10:00+01:00",
+   "musica": {
+    "estilo": "house",
+    "tono": 4,
+    "bpm": 126
+   }
+  },
+  {
+   "carpeta": "108_cobrar_facturas",
+   "cuando": "2026-11-15T16:10:00+01:00",
+   "musica": {
+    "estilo": "funk",
+    "tono": -2,
+    "bpm": 106,
+    "prog": 1
+   }
   }
  ]
 }

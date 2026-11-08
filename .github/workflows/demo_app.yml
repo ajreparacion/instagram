@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
     inputs:
       slugs:
-        description: "Slugs separados por espacios o comas (vacío o «todas» = todas las apps de demo_apps.json)"
+        description: "Slugs separados por espacios o comas (vacío o «todas» = todas; «ninguna» = solo reels de carrusel)"
         type: string
         default: "todas"
       solo_descargar:
@@ -20,6 +20,14 @@ on:
         description: "Generar también el reel de presentación"
         type: boolean
         default: true
+      historias:
+        description: "Generar las historias (vídeo con música)"
+        type: boolean
+        default: true
+      carruseles:
+        description: "Versión reel con música de carruseles ya aprobados (carpetas de cola/, «todos» o «ninguno»)"
+        type: string
+        default: "ninguno"
 
 permissions:
   contents: write
@@ -34,6 +42,8 @@ jobs:
     timeout-minutes: 45
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # reels de carruseles ya publicados: sus diapositivas salen del historial
       - name: Herramientas
         run: |
           APT="-o Acquire::Retries=3 -o Acquire::http::Timeout=20"
@@ -54,8 +64,12 @@ jobs:
           GH_TOKEN: ${{ github.token }}
         run: |
           S="${{ inputs.slugs }}"; [ -z "$S" ] && S=todas
-          OPC="--subir"; [ "${{ inputs.reel }}" = "true" ] || OPC="--sin-reel"
-          python3 herramientas/demo_app.py generar $S $OPC
+          OPC="--subir"
+          [ "${{ inputs.reel }}" = "true" ] || OPC="$OPC --sin-reel"
+          [ "${{ inputs.historias }}" = "true" ] || OPC="$OPC --sin-historias"
+          if [ "$S" != "ninguna" ]; then python3 herramientas/demo_app.py generar $S $OPC; fi
+          C="${{ inputs.carruseles }}"
+          if [ -n "$C" ] && [ "$C" != "ninguno" ]; then python3 herramientas/demo_app.py reels_carrusel $C --subir; fi
       - name: Guardar cambios
         run: |
           git config user.name "github-actions[bot]"
