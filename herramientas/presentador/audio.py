@@ -405,6 +405,22 @@ def mezclar(voz, mus, sfx, trabajo, salida, duck_db=5.0, voz_lufs=-16.0, mus_luf
     if np.abs(v).max() == 0:
         m *= 10 ** (2.0 / 20)  # sin voz manda la música
     m *= duck[:, None]
+    # equilibrio voz/música medido con ponderación K (LUFS) solo donde se habla: la voz tiene que quedar
+    # entre 4 y 8 LU por encima de la música (se oye clara y la música sigue resaltando, orden del dueño 8/11)
+    hab0 = g > 0.6
+    if hab0.sum() > SR * 2:
+        lv = _lufs_array(v[hab0], trabajo, "voz_hab")
+        lm = _lufs_array(m.mean(axis=1)[hab0], trabajo, "mus_hab")
+        dif = lv - lm
+        ajuste = 0.0
+        if dif < 4.0:
+            ajuste = dif - 4.0
+        elif dif > 8.0:
+            ajuste = dif - 8.0
+        if ajuste:
+            m *= 10 ** (ajuste / 20)
+        inf["voz_sobre_musica_lu"] = round(dif - ajuste, 1)
+        inf["ajuste_musica_db"] = round(ajuste, 1)
     sf = sfx * (10 ** ((mus_lufs + sfx_rel_db - _lufs_array(sfx.mean(axis=1) + 1e-9, trabajo, "sfx")) / 20)) if np.abs(sfx).max() > 0 else sfx
     mezcla = m + sf + v[:, None]
     crudo = os.path.join(trabajo, "mezcla_cruda.wav")
