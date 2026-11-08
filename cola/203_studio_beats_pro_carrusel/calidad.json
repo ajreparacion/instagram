@@ -1,0 +1,14 @@
+{
+ "aprobado": true,
+ "nota": 94,
+ "aprobado_por": "revisión del agente de demos (8/11)",
+ "revision": [
+  "8 diapositivas 1080x1350 revisadas una a una: gancho grande en la 1, un paso por diapositiva con su captura en marco de móvil, cierre suave con IDEA y logo",
+  "texto sin cortes ni solapes, contraste alto sobre fondo morado oscuro",
+  "texto del post: gancho en la 1.ª línea, valor, CTA suave, máx. 2 emojis, 4-6 hashtags con #neogestlab",
+  "datos fieles a demo[] y hechos_verificados del Producto; nada de prohibido_afirmar",
+  "capturas reales de la demo, nítidas (780 px reducidas, sin reescalar hacia arriba) y sin bordes raros",
+  "Montserrat, firma «By Neogest Lab» y logo NL original (recorte circular)",
+  "español de España, sin erratas"
+ ]
+}

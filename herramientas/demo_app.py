@@ -552,6 +552,20 @@ def pegar_alfa(lienzo, capa, x, y, alfa):
     lienzo.paste(capa, (int(x), int(y)), capa)
 
 
+def chip_paso(texto, aviso=""):
+    """«PASO n DE N» y, si la app lo pide, la insignia «Demo con datos ficticios» a la derecha."""
+    capa = Image.new("RGBA", (SW - 180, 60), (0, 0, 0, 0))
+    d = ImageDraw.Draw(capa)
+    d.text((0, 6), texto, font=fnt(30, "ExtraBold"), fill=ACENTO)
+    if aviso:
+        f = fnt(26, "SemiBold")
+        w = f.getlength(aviso)
+        x = SW - 180 - w - 40
+        d.rounded_rectangle((x, 0, x + w + 38, 50), 25, fill=(34, 26, 48, 255), outline=(120, 106, 148, 255), width=2)
+        d.text((x + 19, 9), aviso, font=f, fill=GRIS)
+    return capa
+
+
 class Escena:
     def __init__(self, tipo, dur, **kw):
         self.tipo, self.dur = tipo, dur
@@ -596,7 +610,7 @@ def preparar_reel(app, caps):
         esc = mv.sw / cap.width
         sobra = max(0.0, cap.height - mv.sh / esc)
         escenas.append(Escena("paso", T_PASO, tit=tit, lin=lin, y_tit=y_tit, y_lin=y_lin, y_mov=y_mov, movil=mv, cap=cap,
-                              chip=capa_texto([[f"PASO {i + 1} DE {n}"]], fnt(30, "ExtraBold"), ACENTO, ancho=SW),
+                              chip=chip_paso(f"PASO {i + 1} DE {n}", app.get("aviso", "") if app.get("aviso", "").startswith("Demo") else ""),
                               pan=min(sobra, 260.0) * (1 if i % 2 == 0 else 0.6), cx=0.5,
                               zoom=(1.0, 1.07) if i % 2 == 0 else (1.07, 1.0),
                               fondo=fondo(SW, SH, 20 + i, brillo=(540, 1200, 650, 0.5))))
@@ -649,7 +663,7 @@ def frame_escena(sc, t, app):
         sc.movil.pegar(im, SW // 2, sc.y_mov + (1 - a) * 120, sc.cap, alfa=min(1, 0.3 + a),
                        zoom=z, desplaz=sc.pan * ease(max(0, (t - 0.8) / (sc.dur - 1.0))), cx=sc.cx,
                        filtro=Image.BILINEAR)
-        pegar_alfa(im, sc.chip, 90, 252, ease(t / 0.25))
+        pegar_alfa(im, sc.chip, 90, 246, ease(t / 0.25))
         a1 = ease((t - 0.12) / 0.35)
         pegar_alfa(im, sc.tit, 90 + (1 - a1) * 70, sc.y_tit, a1)
         a2 = ease((t - 0.35) / 0.35)
