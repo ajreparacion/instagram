@@ -6,7 +6,7 @@
  "respuesta": "¡Hola! La demo de Gestión Integral 7D está en el enlace de nuestro perfil: mira en 60 segundos lo que haría por tu negocio 😊",
  "compartir_en_feed": true,
  "portada_ms": 1200,
- "renderizado": "2026-11-08T20:21:56+00:00",
+ "renderizado": "2026-11-08T20:39:29+00:00",
  "asset": "302_gestion_integral_7d_presentador.mp4",
  "duracion_s": 43.3,
  "formato": "modo presentador (Nea y Bit en 3D con three.js + Remotion, titulares, subtítulos palabra a palabra, capturas reales de la demo, música y efectos generados por código)",
@@ -18,8 +18,8 @@
  },
  "audio": {
   "lufs_integrados": -14.1,
-  "pico_real_dbtp": -1.0,
-  "lra_lu": 1.9,
+  "pico_real_dbtp": -1.2,
+  "lra_lu": 1.8,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
  "app": "Gestión Integral 7D",
