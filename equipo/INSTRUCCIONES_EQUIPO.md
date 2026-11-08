@@ -126,6 +126,7 @@ Formato del guion (ejemplos completos: `cola/301_medicator_presentador/guion.jso
              "presentador":"preocupada","expresion":"preocupada","bit":"entra","bit_cara":"sorpresa","plano":"medio","flash":true}, ...]}
 ```
 Campos de cada escena (una frase de voz por escena, 2-4 s; las escenas de más de 3,6 s se parten solas con un subcorte de cámara y fondo):
+- "velocidad_voz" (en la raíz del guion, por defecto 1,12): acelera la voz sin cambiar el tono para que el ritmo se parezca al de la referencia.
 - "voz": lo que dice la voz del dueño; *asteriscos* = énfasis (más fuerte y palabra en azul). "clave": ["palabra"] para colorear sin subir el volumen. "estilo_voz": gancho|giro|cierre (opcional).
 - "titular": texto en mayúsculas, "|" separa líneas (máx. ~13 letras por línea); "estilo_titular": amarillo | cian | rosa | blanco | sello (sello = rojo con golpe y sacudida). Un titular cada 2-3 escenas, no en todas.
 - "fondo": verde | magenta | morado | cian | rojo | negro | azul | turquesa | rosa (nunca dos seguidos iguales; evita amarillo y naranja: la sudadera es amarilla). "fondo2" opcional para el subcorte.
