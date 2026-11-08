@@ -1,0 +1,15 @@
+{
+ "aprobado": true,
+ "nota": 91,
+ "aprobado_por": "revisión del agente de demos (8/11)",
+ "revision": [
+  "reel 1080x1920, 30 fps, H.264 + AAC, 24.5 s; fotogramas revisados (gancho, pasos, transición y cierre)",
+  "Ken Burns suave, transiciones al compás de 120 BPM, whoosh/pop/ding y música sintetizada propia (sin licencias de terceros); sonoridad ≈ -12 LUFS",
+  "sin voz (la tubería de voz no se reutiliza aquí de forma fiable): textos en pantalla y post con CTA suave",
+  "datos fieles a demo[] y hechos_verificados del Producto; nada de prohibido_afirmar",
+  "capturas reales de la demo, nítidas (780 px reducidas, sin reescalar hacia arriba) y sin bordes raros",
+  "Montserrat, firma «By Neogest Lab» y logo NL original (recorte circular)",
+  "español de España, sin erratas",
+  "se indica que es la demo con datos ficticios y que se adapta a medida a cualquier negocio"
+ ]
+}
