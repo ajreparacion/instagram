@@ -1,13 +1,25 @@
 {
  "tipo": "reel",
  "texto": "De la ruta del día a la factura cobrada 🚗\nGestión Integral 7D ordena tus visitas, lleva tus clientes por ranking ABC y pasa del presupuesto al pedido, al albarán y a la factura con enlace de pago.\nCapturas reales de la demo. Pide la tuya en el enlace del perfil o escríbeme IDEA por privado.\n\n#comerciales #pymes #ventas #facturacion #apps #neogestlab",
- "cuando": "2026-11-08T21:10:00+01:00",
- "renderizado": "2026-11-08T12:37:11+00:00",
+ "cuando": "2026-11-08T18:10:00+01:00",
+ "renderizado": "2026-11-08T17:19:12+00:00",
  "asset": "202_gestion_integral_7d_reel.mp4",
- "portada_ms": 2900,
+ "portada_ms": 2709,
  "compartir_en_feed": true,
- "duracion_s": 32.5,
- "formato": "presentación (capturas reales con Ken Burns, música y efectos; sin voz)",
+ "duracion_s": 31.5,
+ "formato": "presentación (capturas reales con Ken Burns, música en primer plano y efectos; sin voz)",
+ "musica": {
+  "estilo": "house",
+  "bpm": 124.0,
+  "tono": 0,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -14.0,
+  "pico_real_dbtp": -4.1,
+  "lra_lu": 0.3,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
  "app": "Gestión Integral 7D",
  "publico": "Comerciales y pymes",
  "fuentes": [

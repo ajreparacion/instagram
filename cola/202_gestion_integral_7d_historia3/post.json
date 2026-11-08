@@ -2,8 +2,23 @@
  "tipo": "historia",
  "texto": "",
  "cuando": "2026-11-12T21:30:00+01:00",
- "renderizado": "no aplica (historia)",
+ "renderizado": "2026-11-08T17:18:35+00:00",
+ "asset": "202_gestion_integral_7d_historia3.mp4",
+ "medio": "video",
+ "duracion_s": 9.5,
  "formato": "pregunta",
+ "musica": {
+  "estilo": "disco",
+  "bpm": 126.0,
+  "tono": 0,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -13.9,
+  "pico_real_dbtp": -4.8,
+  "lra_lu": 0.4,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
  "app": "Gestión Integral 7D",
  "publico": "Comerciales y pymes",
  "fuentes": [

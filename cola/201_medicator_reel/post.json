@@ -2,12 +2,24 @@
  "tipo": "reel",
  "texto": "Pastillas y citas, con letra grande 💊\nMEDICATOR enseña la pastilla que toca ahora, guarda las citas en un calendario y prepara la hoja para el médico y la lista para la farmacia.\nCapturas de la demo con datos de ejemplo. Organiza; no sustituye a tu médico.\nPide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#mayores #cuidadores #organizacion #apps #neogestlab",
  "cuando": "2026-11-09T12:10:00+01:00",
- "renderizado": "2026-11-08T12:36:19+00:00",
+ "renderizado": "2026-11-08T17:17:48+00:00",
  "asset": "201_medicator_reel.mp4",
- "portada_ms": 2900,
+ "portada_ms": 3111,
  "compartir_en_feed": true,
- "duracion_s": 32.5,
- "formato": "presentación (capturas reales con Ken Burns, música y efectos; sin voz)",
+ "duracion_s": 32.8,
+ "formato": "presentación (capturas reales con Ken Burns, música en primer plano y efectos; sin voz)",
+ "musica": {
+  "estilo": "pop",
+  "bpm": 108.0,
+  "tono": 3,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -14.0,
+  "pico_real_dbtp": -4.6,
+  "lra_lu": 1.0,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
  "app": "MEDICATOR",
  "publico": "Mayores y quien los cuida",
  "fuentes": [

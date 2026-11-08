@@ -1,0 +1,31 @@
+{
+ "tipo": "reel",
+ "texto": "Con esta fórmula la IA por fin te entiende.\nUn buen prompt tiene 4 piezas, en este orden:\nRol: «Actúa como asesor de marketing para pequeños negocios».\nContexto: quién eres, qué pasa y para quién es.\nTarea: un verbo claro y una sola cosa cada vez.\nFormato: tabla, lista, email o número de líneas.\nGuárdalo: el ejemplo completo sale al final del vídeo, listo para cambiar los datos ✍️ ¿Tienes una idea para tu negocio? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #prompts #ia #pymes #neogestlab",
+ "cuando": "2026-11-12T16:10:00+01:00",
+ "renderizado": "2026-11-08T17:25:51+00:00",
+ "asset": "102_formula_prompt_reel.mp4",
+ "portada_ms": 1500,
+ "compartir_en_feed": true,
+ "duracion_s": 27.3,
+ "formato": "versión reel del carrusel (diapositivas animadas, música en primer plano y efectos; sin voz)",
+ "app": null,
+ "publico": "Público general y pequeños negocios que empiezan con la IA",
+ "fuentes": [
+  "Diapositivas del carrusel 102_formula_prompt (aprobado por Calidad); mismo contenido.",
+  "Técnicas de redacción de prompts recogidas en las guías públicas de OpenAI (Prompt engineering), Anthropic (Prompt engineering overview) y Google (guía de prompts de Gemini): dar contexto, indicar formato, iterar y comprobar las respuestas. No se citan menús, botones ni precios."
+ ],
+ "carrusel": "102_formula_prompt",
+ "musica": {
+  "estilo": "pop",
+  "bpm": 112.0,
+  "tono": 2,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -14.0,
+  "pico_real_dbtp": -4.3,
+  "lra_lu": 0.8,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
+ "origen": "herramientas/demo_app.py"
+}

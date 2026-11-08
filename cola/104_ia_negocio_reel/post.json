@@ -1,0 +1,32 @@
+{
+ "tipo": "reel",
+ "texto": "¿Tu negocio aún no usa IA? Empieza por aquí.\nResponder reseñas negativas con empatía y sin excusas.\nTextos cortos para redes y carteles: la oferta de la semana, el horario de festivos.\nPreguntas frecuentes con respuesta a partir de tus horarios, precios y normas.\nEmails que cuestan, como pedir a un proveedor que mantenga el precio.\nLa regla: nada de contraseñas, datos bancarios ni datos de clientes, y revisa siempre antes de publicar.\nGuárdalo y compártelo con tu equipo 💼 ¿Y una app a medida para tu negocio? Escríbeme IDEA por privado.\n\n#pymes #autonomos #inteligenciaartificial #negocios #neogestlab",
+ "cuando": "2026-11-14T16:10:00+01:00",
+ "renderizado": "2026-11-08T17:26:49+00:00",
+ "asset": "104_ia_negocio_reel.mp4",
+ "portada_ms": 1500,
+ "compartir_en_feed": true,
+ "duracion_s": 27.6,
+ "formato": "versión reel del carrusel (diapositivas animadas, música en primer plano y efectos; sin voz)",
+ "app": null,
+ "publico": "Pequeños negocios y autónomos de cualquier sector",
+ "fuentes": [
+  "Diapositivas del carrusel 104_ia_negocio (aprobado por Calidad); mismo contenido.",
+  "Técnicas de redacción de prompts recogidas en las guías públicas de OpenAI (Prompt engineering), Anthropic (Prompt engineering overview) y Google (guía de prompts de Gemini): dar contexto, indicar formato, iterar y comprobar las respuestas. No se citan menús, botones ni precios.",
+  "Aviso de que la IA puede cometer errores: ChatGPT, Claude y Gemini lo muestran en su propia interfaz."
+ ],
+ "carrusel": "104_ia_negocio",
+ "musica": {
+  "estilo": "house",
+  "bpm": 126.0,
+  "tono": 4,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -14.0,
+  "pico_real_dbtp": -4.5,
+  "lra_lu": 0.3,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
+ "origen": "herramientas/demo_app.py"
+}

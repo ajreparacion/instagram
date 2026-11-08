@@ -2,8 +2,23 @@
  "tipo": "historia",
  "texto": "",
  "cuando": "2026-11-11T09:30:00+01:00",
- "renderizado": "no aplica (historia)",
+ "renderizado": "2026-11-08T17:19:43+00:00",
+ "asset": "203_studio_beats_pro_historia2.mp4",
+ "medio": "video",
+ "duracion_s": 9.8,
  "formato": "antes_despues",
+ "musica": {
+  "estilo": "disco",
+  "bpm": 123.0,
+  "tono": -1,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -13.9,
+  "pico_real_dbtp": -4.2,
+  "lra_lu": 0.3,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
  "app": "Studio Beats PRO",
  "publico": "Música y creadores",
  "fuentes": [

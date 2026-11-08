@@ -1,0 +1,31 @@
+{
+ "tipo": "reel",
+ "texto": "¿Improvisas cada día tu ruta de visitas?\nPara comerciales y distribuidores que pasan el día de cliente en cliente.\nEn Gestión Integral 7D, nuestra app, «Mi día» ordena tus paradas por carretera con la hora prevista de llegada (si el servicio de rutas falla, las ordena en línea recta y te avisa).\nCada visita queda registrada con llegada, salida y distancia a la ubicación del cliente.\nTu cartera, con ranking ABC.\nLos agentes IA solo proponen acciones: tú decides si las apruebas.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🚐\n\n#comerciales #distribucion #ventas #pymes #neogestlab",
+ "cuando": "2026-11-11T16:10:00+01:00",
+ "renderizado": "2026-11-08T17:25:23+00:00",
+ "asset": "106_comerciales_ruta_reel.mp4",
+ "portada_ms": 1500,
+ "compartir_en_feed": true,
+ "duracion_s": 26.9,
+ "formato": "versión reel del carrusel (diapositivas animadas, música en primer plano y efectos; sin voz)",
+ "app": "Gestión Integral 7D",
+ "publico": "Comerciales y distribuidores que visitan clientes (bares, tiendas, empresas)",
+ "fuentes": [
+  "Diapositivas del carrusel 106_comerciales_ruta (aprobado por Calidad); mismo contenido.",
+  "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Gestión Integral 7D» (estado activo, actualizada 8/11/2026): hechos_verificados («Mi día» con paradas ordenadas por carretera y hora prevista, con aviso y orden en línea recta si falla el servicio de rutas; control de visitas con hora del servidor y distancia; cartera con ranking ABC; agentes IA que proponen acciones que el usuario aprueba o rechaza)."
+ ],
+ "carrusel": "106_comerciales_ruta",
+ "musica": {
+  "estilo": "dembow",
+  "bpm": 98.0,
+  "tono": -4,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -14.0,
+  "pico_real_dbtp": -4.6,
+  "lra_lu": 0.5,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
+ "origen": "herramientas/demo_app.py"
+}

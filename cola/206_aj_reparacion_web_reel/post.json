@@ -2,12 +2,24 @@
  "tipo": "reel",
  "texto": "Una web que no solo enseña tu teléfono 💻\nCon AJ Web tus clientes te envían solicitudes, consultan sus encargos, te piden material y tienen su propio portal con sus facturas.\nDemo con datos ficticios. Te la adaptamos a medida a cualquier negocio.\nPide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#pequenonegocio #emprendedores #paginaweb #pymes #apps #neogestlab",
  "cuando": "2026-11-11T12:10:00+01:00",
- "renderizado": "2026-11-08T12:45:50+00:00",
+ "renderizado": "2026-11-08T17:24:22+00:00",
  "asset": "206_aj_reparacion_web_reel.mp4",
- "portada_ms": 2900,
+ "portada_ms": 2947,
  "compartir_en_feed": true,
- "duracion_s": 24.5,
- "formato": "presentación (capturas reales con Ken Burns, música y efectos; sin voz)",
+ "duracion_s": 25.8,
+ "formato": "presentación (capturas reales con Ken Burns, música en primer plano y efectos; sin voz)",
+ "musica": {
+  "estilo": "funk",
+  "bpm": 114.0,
+  "tono": -3,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -13.9,
+  "pico_real_dbtp": -4.3,
+  "lra_lu": 0.3,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
  "app": "AJ Web",
  "publico": "Cualquier negocio",
  "fuentes": [

@@ -2,8 +2,23 @@
  "tipo": "historia",
  "texto": "",
  "cuando": "2026-11-09T09:30:00+01:00",
- "renderizado": "no aplica (historia)",
+ "renderizado": "2026-11-08T17:19:29+00:00",
+ "asset": "203_studio_beats_pro_historia1.mp4",
+ "medio": "video",
+ "duracion_s": 10.2,
  "formato": "sabias",
+ "musica": {
+  "estilo": "dembow",
+  "bpm": 94.0,
+  "tono": 5,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -13.9,
+  "pico_real_dbtp": -4.4,
+  "lra_lu": 0.5,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
  "app": "Studio Beats PRO",
  "publico": "Música y creadores",
  "fuentes": [

@@ -2,12 +2,24 @@
  "tipo": "reel",
  "texto": "Tu canción en 4 pasos 🎤\nBase, voz, mezcla y master con Studio Beats PRO: eliges estilo, grabas encima y «Terminar canción» la deja lista para descargar.\nEstá en fase de pruebas: pide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#musica #productormusical #beats #cantantes #apps #neogestlab",
  "cuando": "2026-11-10T12:10:00+01:00",
- "renderizado": "2026-11-08T12:39:26+00:00",
+ "renderizado": "2026-11-08T17:20:32+00:00",
  "asset": "203_studio_beats_pro_reel.mp4",
- "portada_ms": 2900,
+ "portada_ms": 2400,
  "compartir_en_feed": true,
- "duracion_s": 32.5,
- "formato": "presentación (capturas reales con Ken Burns, música y efectos; sin voz)",
+ "duracion_s": 27.9,
+ "formato": "presentación (capturas reales con Ken Burns, música en primer plano y efectos; sin voz)",
+ "musica": {
+  "estilo": "trap",
+  "bpm": 140.0,
+  "tono": -2,
+  "origen": "generada por código (sin licencias de terceros)"
+ },
+ "audio": {
+  "lufs_integrados": -13.9,
+  "pico_real_dbtp": -5.0,
+  "lra_lu": 0.7,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
  "app": "Studio Beats PRO",
  "publico": "Música y creadores",
  "fuentes": [
