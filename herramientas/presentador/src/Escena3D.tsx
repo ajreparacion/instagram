@@ -38,7 +38,7 @@ const ritmoEn = (e: Escena, f: number) => {
 function estadoPresentadora(plan: Plan, f: number): EstadoPresentadora {
   const i = escenaEn(plan, f);
   const e = plan.escenas[i];
-  const prev = i > 0 ? plan.escenas[i - 1] : { ...e, presentador: "manos" };
+  const prev = i > 0 ? plan.escenas[i - 1] : e;
   const t = (f - e.a) / 30;
   const tg = f / 30;
   const boca = plan.boca[f] ?? 0;
@@ -85,14 +85,14 @@ function estadoBit(plan: Plan, f: number): EstadoBit {
   const pres = e.presentador;
   const ladoBit = (e.lado > 0 && ["senala", "senala_arriba", "saluda", "presenta", "idea", "pulgar"].includes(pres)) ? -1 : 1;
   const base = new THREE.Vector3(ladoBit * 0.31, 1.9, 0.16);
-  if (plano === "primer") base.set(ladoBit * 0.215, 2.03, 0.26);
+  if (plano === "primer") base.set(ladoBit * 0.205, 1.98, 0.3);
   if (plano === "lejos") base.set(ladoBit * 0.4, 1.86, 0.12);
   if (plano === "abajo") base.set(ladoBit * 0.31, 1.98, 0.18);
   const est: EstadoBit = {
     visible: accion !== "oculto",
     pos: base.clone(),
-    escala: plano === "primer" ? 0.064 : 0.085,
-    giroY: -ladoBit * 0.35 + 0.15 * Math.sin(tg * 1.3),
+    escala: plano === "primer" ? 0.06 : 0.085,
+    giroY: -ladoBit * 0.12 + 0.1 * Math.sin(tg * 1.3),
     giroZ: 0.12 * Math.sin(tg * 2.2),
     giroX: 0.05 * Math.sin(tg * 1.7),
     aplasta: 0,
@@ -146,7 +146,7 @@ function estadoBit(plan: Plan, f: number): EstadoBit {
       break;
     case "senala":
       est.manos = ladoBit > 0 ? [0.45, 0] : [0, 0.45];
-      est.giroY = -ladoBit * 0.7;
+      est.giroY = -ladoBit * 0.4;
       break;
     case "saluda":
       est.manos = [0, 0.55 + 0.25 * Math.sin(t * 12)];
@@ -198,7 +198,10 @@ class Mundo {
     dist *= 1 - 0.045 * suave((f - e.a) / dur);
     dist *= 1 - 0.04 * ritmoEn(e, f);
     // entrada de cada plano con un pequeño empujón (corte con energía)
-    dist *= 1 + 0.035 * (1 - salidaAtras(clamp((f - e.a) / 7), 1.2));
+    const trasSub = e.sub !== undefined && f >= e.sub;
+    const fEntrada = trasSub ? e.sub! : e.a;
+    dist *= 1 + 0.035 * (1 - salidaAtras(clamp((f - fEntrada) / 7), 1.2));
+    if (trasSub) dist *= 0.93;
     const mira = new THREE.Vector3(...P.mira);
     let sx = 0, sy = 0;
     for (const g of e.golpes ?? []) {
@@ -209,7 +212,7 @@ class Mundo {
         sy += (d % 2 ? 1 : -1) * a * 0.6;
       }
     }
-    const giro = e.giro || 0;
+    const giro = trasSub ? (e.giro >= 0 ? -1 : 1) * (Math.abs(e.giro) * 0.7 + 0.12) : e.giro || 0;
     cam.fov = FOV;
     cam.position.set(mira.x + Math.sin(giro) * dist + sx, mira.y + 0.06 + sy, mira.z + Math.cos(giro) * dist);
     cam.lookAt(mira.x + sx, mira.y + sy, mira.z);

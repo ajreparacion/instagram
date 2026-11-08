@@ -38,6 +38,8 @@ ORIGEN = "https://centro-de-contenido-apps-2f0a3cd6.base44.app"
 RELEASE = "cola"
 SALIDA = "/tmp/presentador_salida"
 GIROS = [0.0, 0.2, -0.16, 0.08, -0.22, 0.14, -0.07, 0.24, -0.12]
+SEGUNDO_FONDO = {"magenta": "morado", "verde": "turquesa", "morado": "magenta", "cian": "azul", "rojo": "magenta",
+                 "negro": "morado", "azul": "cian", "turquesa": "verde", "naranja": "rojo", "rosa": "morado", "amarillo": "naranja"}
 ELEMENTOS_ARRIBA = {"captura", "terminal", "movil", "tarjeta", "cierre"}
 EXPRESION_POR_POSE = {"preocupada": "preocupada", "sorpresa": "sorpresa", "celebra": "risa", "piensa": "piensa",
                       "saluda": "feliz", "encoge": "seria", "pulgar": "guino"}
@@ -178,6 +180,14 @@ def construir_plan(guion, durs_voz, palabras_voz):
         for k, (w, (pa, pb)) in enumerate(zip(texto.split(), tiempos)):
             pals.append({"t": w, "a": round((ini + pre + pa) * FPS), "b": round((ini + pre + pb) * FPS),
                          "clave": k in enf or normal(w) in claves})
+        # subcorte: en frases largas se cambia de cámara y de fondo a mitad (cortes cada 2-4 s, como la referencia)
+        sub_f = None
+        tipo_el = (esc.get("elemento") or {}).get("tipo")
+        if d > 3.6 and len(pals) >= 4 and esc.get("subcorte", tipo_el not in ("tarjeta", "cierre", "terminal", "movil")):
+            medio = (a + b) / 2
+            cand = [w["a"] for w in pals[1:] if w["a"] - a > 1.3 * FPS and b - w["a"] > 1.2 * FPS]
+            if cand:
+                sub_f = min(cand, key=lambda x: abs(x - medio)) - 1
         el_g = esc.get("elemento")
         tipo = (el_g or {}).get("tipo")
         plano = esc.get("plano") or ("abajo" if tipo in ELEMENTOS_ARRIBA else "medio")
@@ -190,13 +200,19 @@ def construir_plan(guion, durs_voz, palabras_voz):
         }
         if esc.get("bit_cara"):
             e["bit_cara"] = esc["bit_cara"]
+        if sub_f:
+            e["sub"] = sub_f
+            vecinos = {e["fondo"], guion["escenas"][i + 1].get("fondo", "morado") if i + 1 < n else ""}
+            opciones = [SEGUNDO_FONDO.get(e["fondo"], "morado"), "morado", "magenta", "cian", "verde", "azul", "turquesa"]
+            e["fondo2"] = esc.get("fondo2") or next(c for c in opciones if c not in vecinos)
+            eventos.append((sub_f / FPS, "whoosh", 0.4))
         if tipo == "broll":
             e["oculto"] = True
         # titular
         if esc.get("titular"):
             e["titular"] = esc["titular"]
             e["titular_estilo"] = esc.get("estilo_titular", "amarillo")
-            e["titular_f"] = a + (1 if i == 0 else 2)
+            e["titular_f"] = a + (0 if i == 0 else 2)
             nl = len(esc["titular"].split("|")) if "|" in esc["titular"] else max(1, len(esc["titular"]) // 13 + 1)
             if e["titular_estilo"] == "sello":
                 e["golpes"].append(e["titular_f"] + 5)

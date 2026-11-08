@@ -46,8 +46,10 @@ const Captura: React.FC<{ el: Elemento; e: Escena; f: number; conTitular: boolea
   const top = conTitular ? 300 : 150;
   const h = conTitular ? 760 : 900;
   const w = Math.round(h * 0.49);
+  const sc = e.sub !== undefined && f >= e.sub ? 1.0 + 0.07 * salidaAtras(clamp((f - e.sub) / 6), 2.5) : 1;
+  const ladeo = e.sub !== undefined && f >= e.sub ? -2.5 : 1.5;
   return (
-    <div style={{ position: "absolute", top, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 14, transform: `translateY(${(1 - k) * 900}px) rotate(${(1 - k) * 8 + 1.5 * Math.sin(f / 20)}deg)` }}>
+    <div style={{ position: "absolute", top, left: 0, right: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 14, transformOrigin: "50% 0%", transform: `translateY(${(1 - k) * 900}px) rotate(${(1 - k) * 8 + ladeo + 0.8 * Math.sin(f / 20)}deg) scale(${sc})` }}>
       <MarcoMovil w={w} h={h}>
         {el.src ? (
           <Img

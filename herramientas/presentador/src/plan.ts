@@ -37,6 +37,8 @@ export type Escena = {
   flash?: number; // fotograma del destello blanco
   golpes?: number[]; // fotogramas de sacudida (sello, impacto)
   oculto?: boolean; // presentadora fuera de plano (b-roll a pantalla completa)
+  sub?: number; // subcorte a mitad de una escena larga (otra cámara y otro fondo, misma frase)
+  fondo2?: string;
 };
 export type Plan = {
   frames: number;
