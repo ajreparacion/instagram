@@ -263,10 +263,12 @@ class Movil:
 
     def vista(self, cap, zoom=1.0, desplaz=0.0, cx=0.5, filtro=Image.LANCZOS):
         """Recorte de la captura que cabe en la pantalla. zoom>=1 acerca; desplaz en px de la captura."""
+        zoom = max(1.0, zoom)
         esc = self.sw / cap.width * zoom
         rw, rh = self.sw / esc, self.sh / esc
         x0 = (cap.width - rw) * cx
         y0 = max(0.0, min(desplaz, cap.height - rh))
+        x0 = max(0.0, x0)
         if rh > cap.height:  # captura más baja que la pantalla: se centra sobre fondo blanco
             lienzo = Image.new("RGB", (self.sw, self.sh), cap.getpixel((5, cap.height - 5)))
             im = cap.resize((self.sw, int(cap.height * self.sw / cap.width)), filtro)
@@ -955,7 +957,7 @@ def audio_pieza(cortes, total, mus, entradas=(), whoosh_inicio=False):
                 _poner(H, hh, t0 + 3.5 * beat + r * beat / 12, 0.3)
         # --- bajo
         if estilo == "trap":
-            for p, du in (([0, 1.75, 2.5], [1.6, 0.7, 1.4]) if c % 2 == 0 else ([0, 0.75, 2.5, 3.25], [0.7, 1.6, 0.7, 0.7])):
+            for p, du in zip(*(([0, 1.75, 2.5], [1.6, 0.7, 1.4]) if c % 2 == 0 else ([0, 0.75, 2.5, 3.25], [0.7, 1.6, 0.7, 0.7]))):
                 _poner(B, nota_bajo(rb + 12, du * beat, "808"), t0 + p * beat, 0.9)
         elif estilo == "dembow":
             for p in (0, 1.5, 2, 3.5):

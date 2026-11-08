@@ -71,8 +71,8 @@
      "despues": "La pastilla que toca, a su hora, y las citas con letra grande.",
      "cuando": "2026-11-10T15:30:00+01:00",
      "musica": {
-      "estilo": "house",
-      "bpm": 125,
+      "estilo": "pop",
+      "bpm": 107,
       "tono": 1,
       "prog": 1
      }
@@ -85,8 +85,8 @@
      "texto": "Respóndeme a esta historia y te enseño la demo.",
      "cuando": "2026-11-12T15:30:00+01:00",
      "musica": {
-      "estilo": "house",
-      "bpm": 128,
+      "estilo": "dembow",
+      "bpm": 100,
       "tono": -5,
       "prog": 2
      }
@@ -171,8 +171,8 @@
      "despues": "Presupuesto, pedido, albarán y factura, sin volver a teclear.",
      "cuando": "2026-11-10T21:30:00+01:00",
      "musica": {
-      "estilo": "pop",
-      "bpm": 107,
+      "estilo": "dembow",
+      "bpm": 97,
       "tono": 6,
       "prog": 1
      }
@@ -185,8 +185,8 @@
      "texto": "Respóndeme a esta historia y te enseño la demo.",
      "cuando": "2026-11-12T21:30:00+01:00",
      "musica": {
-      "estilo": "pop",
-      "bpm": 110,
+      "estilo": "disco",
+      "bpm": 126,
       "tono": 0,
       "prog": 2
      }
@@ -271,8 +271,8 @@
      "despues": "Base, voz, mezcla y master en 4 pasos.",
      "cuando": "2026-11-11T09:30:00+01:00",
      "musica": {
-      "estilo": "dembow",
-      "bpm": 97,
+      "estilo": "disco",
+      "bpm": 123,
       "tono": -1,
       "prog": 1
      }
@@ -285,8 +285,8 @@
      "texto": "Respóndeme a esta historia y te enseño la demo.",
      "cuando": "2026-11-13T09:30:00+01:00",
      "musica": {
-      "estilo": "dembow",
-      "bpm": 100,
+      "estilo": "trap",
+      "bpm": 142,
       "tono": 5,
       "prog": 2
      }
@@ -366,8 +366,8 @@
      "despues": "El cliente envía su solicitud y la consulta en tu web cuando quiera.",
      "cuando": "2026-11-11T15:30:00+01:00",
      "musica": {
-      "estilo": "disco",
-      "bpm": 123,
+      "estilo": "trap",
+      "bpm": 139,
       "tono": 4,
       "prog": 1
      }
@@ -380,8 +380,8 @@
      "texto": "Respóndeme a esta historia y te enseño la demo.",
      "cuando": "2026-11-13T15:30:00+01:00",
      "musica": {
-      "estilo": "disco",
-      "bpm": 126,
+      "estilo": "funk",
+      "bpm": 116,
       "tono": -2,
       "prog": 2
      }
@@ -466,8 +466,8 @@
      "despues": "Un botón y zasca, en voz alta.",
      "cuando": "2026-11-11T21:30:00+01:00",
      "musica": {
-      "estilo": "trap",
-      "bpm": 139,
+      "estilo": "funk",
+      "bpm": 113,
       "tono": -3,
       "prog": 1
      }
@@ -480,8 +480,8 @@
      "texto": "Respóndeme con tu favorito.",
      "cuando": "2026-11-13T21:30:00+01:00",
      "musica": {
-      "estilo": "trap",
-      "bpm": 142,
+      "estilo": "house",
+      "bpm": 128,
       "tono": 3,
       "prog": 2
      }
@@ -556,8 +556,8 @@
      "despues": "Una web donde tus clientes piden, consultan y siguen sus pedidos.",
      "cuando": "2026-11-12T09:30:00+01:00",
      "musica": {
-      "estilo": "funk",
-      "bpm": 113,
+      "estilo": "house",
+      "bpm": 125,
       "tono": 2,
       "prog": 1
      }
@@ -570,8 +570,8 @@
      "texto": "Respóndeme a esta historia y te digo cómo sería.",
      "cuando": "2026-11-14T09:30:00+01:00",
      "musica": {
-      "estilo": "funk",
-      "bpm": 116,
+      "estilo": "pop",
+      "bpm": 110,
       "tono": -4,
       "prog": 2
      }
