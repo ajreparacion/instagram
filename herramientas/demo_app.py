@@ -446,42 +446,65 @@ def pie_marca(im, y=SAFE_B - 70):
     d.text((x + diam + 18, y + 16), t, font=f, fill=BLANCO)
 
 
-def movil_fundido(im, cap, top, bottom, ancho=560, cx=SW // 2):
-    """Móvil que se corta en 'bottom' con fundido al fondo (para historias)."""
-    alto_pant = 1500
-    mv = Movil(ancho, alto_pant, bisel=17)
-    capa = Image.new("RGBA", im.size, (0, 0, 0, 0))
+def movil_fundido(cap, top, bottom, ancho=560, cx=SW // 2):
+    """Capa RGBA (tamaño historia) con el móvil, cortado en 'bottom' con fundido al fondo."""
+    mv = Movil(ancho, 1500, bisel=17)
+    capa = Image.new("RGBA", (SW, SH), (0, 0, 0, 0))
     mv.pegar(capa, cx, top, cap)
-    # fundido de los últimos 170 px
     a = np.array(capa.getchannel("A"), np.float32)
-    ys = np.arange(im.height, dtype=np.float32)[:, None]
+    ys = np.arange(SH, dtype=np.float32)[:, None]
     k = np.clip((bottom - ys) / 170.0, 0, 1)
     capa.putalpha(Image.fromarray((a * k).astype(np.uint8)))
-    im.paste(capa, (0, 0), capa)
+    return capa
 
 
-def historia(app, caps, h, idx):
-    im = fondo(SW, SH, 300 + idx, brillo=(540, 1350, 650, 0.5))
-    d = ImageDraw.Draw(im)
+class Capas:
+    """Elementos de la historia en capas separadas (para animarlos en el vídeo). t = segundo de entrada."""
+
+    def __init__(self):
+        self.lista = []
+
+    def nueva(self, t):
+        im = Image.new("RGBA", (SW, SH), (0, 0, 0, 0))
+        self.lista.append([im, t])
+        return im, ImageDraw.Draw(im)
+
+    def recortadas(self):
+        salida = []
+        for im, t in self.lista:
+            bb = im.getbbox()
+            if bb:
+                salida.append((im.crop(bb), bb[0], bb[1], t))
+        return salida
+
+
+def historia_capas(app, caps, h, idx):
+    """Devuelve (fondo, móvil RGBA, [(capa, x, y, t_entrada)]) de una historia."""
+    fondo_im = fondo(SW, SH, 300 + idx, brillo=(540, 1350, 650, 0.5))
+    C = Capas()
     x = 90
     fp = fnt(30, "ExtraBold")
     cap = caps[h["captura"] - 1]
     if h["tipo"] == "sabias":
+        _, d = C.nueva(0.15)
         pastilla(d, x, SAFE_T + 20, "¿SABÍAS QUE…?", fp)
         f, ls = ajustar(h["titulo"], "ExtraBold", SW - 2 * x, 4, 82, 58)
+        _, d = C.nueva(0.4)
         y = dibujar_lineas(d, x, SAFE_T + 110, ls, f, BLANCO, h.get("destacar"), alto=1.1)
         ft, lst = ajustar(h["texto"], "Medium", SW - 2 * x, 3, 40, 32)
+        _, d = C.nueva(0.9)
         y = dibujar_lineas(d, x, y + 30, lst, ft, GRIS, alto=1.35)
-        movil_fundido(im, cap, y + 50, SAFE_B - 140)
+        movil = movil_fundido(cap, y + 50, SAFE_B - 140)
     elif h["tipo"] == "antes_despues":
+        _, d = C.nueva(0.15)
         pastilla(d, x, SAFE_T + 20, "ANTES / DESPUÉS", fp)
-        fn = fnt(46, "ExtraBold")
-        d.text((x, SAFE_T + 104), f"Con {app['nombre']}", font=fn, fill=BLANCO)
+        d.text((x, SAFE_T + 104), f"Con {app['nombre']}", font=fnt(46, "ExtraBold"), fill=BLANCO)
         y = SAFE_T + 184
         ftx = fnt(36, "SemiBold")
-        for etiqueta, texto, col, borde, icono in (
+        for k, (etiqueta, texto, col, borde, icono) in enumerate((
                 ("ANTES", h["antes"], GRIS, (110, 98, 130), "cruz"),
-                ("DESPUÉS", h["despues"], BLANCO, ACENTO, "check")):
+                ("DESPUÉS", h["despues"], BLANCO, ACENTO, "check"))):
+            _, d = C.nueva(0.5 + k * 0.9)
             ls = palabras_lineas(texto, ftx, SW - 2 * x - 150)
             alto = 70 + len(ls) * int(36 * 1.3) + 26
             d.rounded_rectangle((x, y, SW - x, y + alto), 30, fill=(30, 22, 44) if icono == "cruz" else (52, 30, 66),
@@ -493,35 +516,73 @@ def historia(app, caps, h, idx):
             texto_espaciado(d, x + 122, y + 24, etiqueta, fnt(24, "ExtraBold"), borde if icono == "cruz" else ACENTO, esp=3)
             dibujar_lineas(d, x + 122, y + 62, ls, ftx, col, alto=1.3)
             y += alto + 24
-        movil_fundido(im, cap, y + 30, SAFE_B - 140, ancho=520)
+        movil = movil_fundido(cap, y + 30, SAFE_B - 140, ancho=520)
     else:  # pregunta
+        _, d = C.nueva(0.15)
         pastilla(d, x, SAFE_T + 20, "PREGUNTA RÁPIDA", fp)
         f, ls = ajustar(h["titulo"], "ExtraBold", SW - 2 * x, 3, 92, 62)
+        _, d = C.nueva(0.4)
         y = dibujar_lineas(d, x, SAFE_T + 110, ls, f, BLANCO, h.get("destacar"), alto=1.1)
         caja_top = SAFE_B - 300
-        movil_fundido(im, cap, y + 46, caja_top - 30, ancho=500)
-        d = ImageDraw.Draw(im)
+        movil = movil_fundido(cap, y + 46, caja_top - 30, ancho=500)
+        _, d = C.nueva(1.3)
         d.rounded_rectangle((x, caja_top, SW - x, caja_top + 200), 36, fill=(40, 26, 56), outline=ACENTO, width=4)
         ft, lst = ajustar(h["texto"], "Bold", SW - 2 * x - 160, 2, 42, 32)
         yy = caja_top + 100 - len(lst) * int(ft.size * 1.3) // 2
         dibujar_lineas(d, x + 44, yy, lst, ft, BLANCO, alto=1.3)
         flecha(d, SW - x - 70, caja_top + 60, 60, ACENTO, dir="abajo", grosor=7)
+    im, d = C.nueva(1.7)
     if app.get("aviso"):
-        d = ImageDraw.Draw(im)
         fa = fnt(26, "SemiBold")
         d.text((SW / 2 - fa.getlength(app["aviso"]) / 2, SAFE_B - 118), app["aviso"], font=fa, fill=GRIS_OSC)
     pie_marca(im)
+    return fondo_im, movil, C.recortadas()
+
+
+def historia(app, caps, h, idx):
+    """Imagen fija de la historia (portada de control del vídeo)."""
+    fondo_im, movil, capas = historia_capas(app, caps, h, idx)
+    im = fondo_im.copy()
+    im.paste(movil, (0, 0), movil)
+    for capa, x, y, _ in capas:
+        im.paste(capa, (x, y), capa)
     return im
+
+
+def video_historia(app, caps, h, idx, salida, trabajo, mus):
+    """Historia en vídeo (8-12 s, 30 fps): zoom suave, textos que entran animados, móvil que sube, música y efectos."""
+    fondo_im, movil, capas = historia_capas(app, caps, h, idx)
+    beat = 60.0 / mus["bpm"]
+    total = beat * max(4, round(10.0 / beat / 2) * 2)
+    entradas = sorted({round(t, 2) for _, _, _, t in capas} | {0.55})
+    wav = os.path.join(trabajo, "audio.wav")
+    escribir_wav(wav, audio_pieza([0.0], total, mus, entradas=entradas, whoosh_inicio=True))
+    masterizar(wav, trabajo)
+    mb = movil.getbbox()
+    mov = movil.crop(mb)
+
+    def cuadro(t):
+        im = fondo_im.copy()
+        a = ease((t - 0.55) / 0.6)
+        if a > 0:
+            dy = (1 - a) * 260 - 30 * (t / total)
+            pegar_alfa(im, mov, mb[0], mb[1] + dy, min(1.0, a * 1.3))
+        for capa, x, y, t0 in capas:
+            k = ease((t - t0) / 0.4)
+            pegar_alfa(im, capa, x, y + (1 - k) * 46, k)
+        z = 1.0 + 0.035 * (t / total)
+        if z > 1.001:
+            w2, h2 = int(SW * z), int(SH * z)
+            im = im.resize((w2, h2), Image.BILINEAR).crop(((w2 - SW) // 2, (h2 - SH) // 2, (w2 - SW) // 2 + SW, (h2 - SH) // 2 + SH))
+        return im
+
+    codificar(cuadro, total, wav, salida)
+    return total
 
 
 # ------------------------------------------------------------------ reel de presentación 1080x1920
 FPS = 30
 SR = 44100
-BPM = 120
-COMPAS = 4 * 60 / BPM          # 2 s
-T_GANCHO = 2 * COMPAS          # 4 s
-T_PASO = 2 * COMPAS            # 4 s
-T_CIERRE = 2.25 * COMPAS       # 4,5 s
 T_TRANS = 0.3
 
 
@@ -572,7 +633,7 @@ class Escena:
         self.__dict__.update(kw)
 
 
-def preparar_reel(app, caps):
+def preparar_reel(app, caps, dur):
     x = 90
     escenas = []
     # gancho
@@ -588,7 +649,7 @@ def preparar_reel(app, caps):
             cx += f.getlength(p + " ")
     y_fin = y + len(ls) * lh
     fs, lss = ajustar(app["gancho_sub"], "Medium", SW - 2 * x, 2, 42, 32)
-    escenas.append(Escena("gancho", T_GANCHO, palabras=palabras,
+    escenas.append(Escena("gancho", dur["gancho"], palabras=palabras,
                           etiqueta=capa_texto([[app["etiqueta"].upper()]], fnt(32, "Bold"), ACENTO, ancho=SW),
                           sub=capa_texto(lss, fs, GRIS, alto=1.32), y_sub=y_fin + 24,
                           movil=Movil(560, 1300, bisel=17), cap=caps[app["portada"] - 1],
@@ -609,7 +670,7 @@ def preparar_reel(app, caps):
         # paneo vertical: baja por la pantalla si la captura es más alta que lo que se ve
         esc = mv.sw / cap.width
         sobra = max(0.0, cap.height - mv.sh / esc)
-        escenas.append(Escena("paso", T_PASO, tit=tit, lin=lin, y_tit=y_tit, y_lin=y_lin, y_mov=y_mov, movil=mv, cap=cap,
+        escenas.append(Escena("paso", dur["paso"], tit=tit, lin=lin, y_tit=y_tit, y_lin=y_lin, y_mov=y_mov, movil=mv, cap=cap,
                               chip=chip_paso(f"PASO {i + 1} DE {n}", app.get("aviso", "") if app.get("aviso", "").startswith("Demo") else ""),
                               pan=min(sobra, 260.0) * (1 if i % 2 == 0 else 0.6), cx=0.5,
                               zoom=(1.0, 1.07) if i % 2 == 0 else (1.07, 1.0),
@@ -638,7 +699,7 @@ def preparar_reel(app, caps):
     y_tit = 360
     y_sub = y_tit + tit.height + 6
     y_caja = y_sub + sub.height + 30
-    escenas.append(Escena("cierre", T_CIERRE, tit=tit, sub=sub, caja=caja, firma=firma, y_tit=y_tit, y_sub=y_sub,
+    escenas.append(Escena("cierre", dur["cierre"], tit=tit, sub=sub, caja=caja, firma=firma, y_tit=y_tit, y_sub=y_sub,
                           y_caja=y_caja, y_logo=max(y_caja + 190, 1020),
                           fondo=fondo(SW, SH, 99, brillo=(540, 1150, 600, 0.6))))
     return escenas
@@ -690,25 +751,20 @@ def tiempos(escenas):
     return cortes, t
 
 
-def render_video(app, caps, salida, trabajo):
-    escenas = preparar_reel(app, caps)
+def render_video(app, caps, salida, trabajo, mus):
+    dur = duraciones(mus["bpm"], len(app["pasos"]))
+    escenas = preparar_reel(app, caps, dur)
     cortes, total = tiempos(escenas)
     wav = os.path.join(trabajo, "audio.wav")
-    escribir_wav(wav, audio_reel(cortes, total, semilla=sum(map(ord, app["slug"]))))
-    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{SW}x{SH}",
-           "-r", str(FPS), "-i", "-", "-i", wav, "-c:v", "libx264", "-preset", "medium", "-crf", "19",
-           "-pix_fmt", "yuv420p", "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", str(SR),
-           "-shortest", "-movflags", "+faststart", salida]
-    p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
-    nf = int(round(total * FPS))
+    escribir_wav(wav, audio_pieza(cortes, total, mus, entradas=[c + 0.18 for c in cortes[1:]] + [cortes[-1] + 0.75]))
+    masterizar(wav, trabajo)
     nt = int(T_TRANS * FPS)
-    for fi in range(nf):
-        t = fi / FPS
+
+    def cuadro(t):
         i = max(j for j, c in enumerate(cortes) if c <= t + 1e-9)
         sc = escenas[i]
         tl = t - cortes[i]
         fr = frame_escena(sc, tl, app)
-        # transición de empuje: la escena anterior sale por la izquierda durante T_TRANS
         if i > 0 and tl < T_TRANS:
             e = ease(tl / T_TRANS)
             prev = frame_escena(escenas[i - 1], escenas[i - 1].dur, app)
@@ -717,14 +773,55 @@ def render_video(app, caps, salida, trabajo):
             comp.paste(prev, (-dx, 0))
             comp.paste(fr, (SW - dx, 0))
             fr = comp
-        p.stdin.write(fr.tobytes())
+        return fr
+
+    codificar(cuadro, total, wav, salida)
+    return total, dur
+
+
+def duraciones(bpm, n_pasos, max_total=33.0):
+    """Escenas en número entero de pulsos (los cortes caen en el golpe)."""
+    beat = 60.0 / bpm
+    for bp in (8, 7, 6, 5, 4):
+        total = (8 + bp * n_pasos + 9) * beat
+        if total <= max_total:
+            return {"gancho": 8 * beat, "paso": bp * beat, "cierre": 9 * beat}
+    return {"gancho": 6 * beat, "paso": 4 * beat, "cierre": 8 * beat}
+
+
+def codificar(cuadro, total, wav, salida):
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{SW}x{SH}",
+           "-r", str(FPS), "-i", "-", "-i", wav, "-c:v", "libx264", "-preset", "medium", "-crf", "19",
+           "-pix_fmt", "yuv420p", "-profile:v", "high", "-c:a", "aac", "-b:a", "192k", "-ar", str(SR),
+           "-shortest", "-movflags", "+faststart", salida]
+    p = subprocess.Popen(cmd, stdin=subprocess.PIPE)
+    for fi in range(int(round(total * FPS))):
+        p.stdin.write(cuadro(fi / FPS).convert("RGB").tobytes())
     p.stdin.close()
     if p.wait() != 0:
-        raise RuntimeError("ffmpeg falló al crear el reel")
-    return total
+        raise RuntimeError("ffmpeg falló al crear el vídeo")
 
 
-# ------------------------------------------------------------------ audio: música con ritmo y efectos
+# ------------------------------------------------------------------ música (generada por código, sin licencias)
+# Cada pieza lleva su propia pista: estilo, tempo y tono distintos (orden del dueño 8/11: que no suenen igual y
+# que la música RESALTE: primer plano, con pegada, máster a -14 LUFS integrados).
+ESTILOS = {
+    # bpm por defecto, modo (m/M), progresiones posibles (grados en semitonos desde la tónica)
+    "house": (124, "m", [[0, 8, 3, 10], [0, 5, 8, 7]]),
+    "pop": (110, "M", [[0, 7, 9, 5], [0, 9, 5, 7]]),
+    "disco": (118, "m", [[0, 10, 8, 7], [0, 5, 10, 3]]),
+    "dembow": (96, "m", [[0, 8, 3, 10], [0, 10, 8, 10]]),
+    "trap": (140, "m", [[0, 8, 5, 7], [0, 3, 8, 7]]),
+    "funk": (112, "m", [[0, 5, 0, 7], [0, 10, 5, 7]]),
+}
+CALIDADES = {0: "m", 3: "M", 5: "m", 7: "M", 8: "M", 10: "M", 9: "m", 2: "m"}
+
+
+def musica_de(estilo, tono=0, bpm=None, prog=0):
+    b, modo, progs = ESTILOS[estilo]
+    return {"estilo": estilo, "bpm": float(bpm or b), "tono": int(tono), "prog": progs[prog % len(progs)], "modo": modo}
+
+
 def _lp(x, fc):
     X = np.fft.rfft(x)
     f = np.fft.rfftfreq(len(x), 1 / SR)
@@ -736,102 +833,195 @@ def _hp(x, fc):
     return x - _lp(x, fc)
 
 
-def _saw(fr, n, rng):
-    t = np.arange(n) / SR
-    ph = rng.uniform(0, 1)
-    return 2 * ((t * fr + ph) % 1) - 1
-
-
 def _hz(m):
     return 440 * 2 ** ((m - 69) / 12)
 
 
 def _poner(buf, sig, t0, g=1.0):
-    i = int(t0 * SR)
+    i = int(round(t0 * SR))
     if i >= len(buf) or i + len(sig) <= 0:
         return
     a, b = max(0, i), min(len(buf), i + len(sig))
     buf[a:b] += sig[a - i:b - i] * g
 
 
-def audio_reel(cortes, total, semilla=0):
-    rng = np.random.default_rng(semilla)
-    n = int((total + 0.5) * SR)
-    beat = 60 / BPM
-    kick_bus, perc, bajo, pad, arp, sfx = (np.zeros(n) for _ in range(6))
-    # acordes vi-IV-I-V (La menor, Fa, Do, Sol), uno por compás
-    acordes = [(57, 60, 64), (53, 57, 60), (48, 52, 55), (55, 59, 62)]
-    nb = int(total / beat) + 2
-    # bombo
-    tk = np.arange(int(0.35 * SR)) / SR
-    fk = 45 + 75 * np.exp(-tk / 0.035)
-    kick = np.sin(2 * np.pi * np.cumsum(fk) / SR) * np.exp(-tk / 0.16)
-    kick[:60] += np.linspace(0.6, 0, 60) * rng.uniform(-1, 1, 60)
-    ruido = rng.uniform(-1, 1, int(0.25 * SR))
-    palmada = _hp(_lp(ruido, 2600), 900) * np.exp(-np.arange(len(ruido)) / SR / 0.06)
-    hat = _hp(rng.uniform(-1, 1, int(0.06 * SR)), 7000) * np.exp(-np.arange(int(0.06 * SR)) / SR / 0.015)
-    for b in range(nb):
-        t0 = b * beat
-        _poner(kick_bus, kick, t0, 0.95)
-        if b % 2 == 1:
-            _poner(perc, palmada, t0, 0.55)
-        _poner(perc, hat, t0 + beat / 2, 0.35)
-        if b % 4 == 3:
-            _poner(perc, hat, t0 + beat * 0.75, 0.2)
-    # bajo (corcheas a contratiempo + tierra en el 1) y arpegio en semicorcheas
-    for c in range(int(total / COMPAS) + 2):
-        ac = acordes[c % 4]
-        raiz = ac[0] - 24 if ac[0] >= 52 else ac[0] - 12
-        for k in range(8):
-            t0 = c * COMPAS + k * beat / 2
-            if k % 2 == 1 or k == 0:
-                m = int(0.22 * SR)
-                s = (_saw(_hz(raiz), m, rng) * 0.5 + np.sin(2 * np.pi * _hz(raiz) * np.arange(m) / SR))
-                s *= np.minimum(1, np.arange(m) / 200) * np.exp(-np.arange(m) / SR / 0.12)
-                _poner(bajo, s, t0, 0.5)
-        for k in range(16):
-            m = int(0.18 * SR)
-            nota = ac[k % 3] + (12 if (k // 3) % 2 == 0 else 24)
-            tt = np.arange(m) / SR
-            s = (np.sin(2 * np.pi * _hz(nota) * tt) + 0.3 * np.sin(4 * np.pi * _hz(nota) * tt)) * np.exp(-tt / 0.07)
-            _poner(arp, s, c * COMPAS + k * beat / 4, 0.12 if c > 0 else 0.07)
-        m = int(COMPAS * SR)
-        s = sum(_saw(_hz(no) * dt, m, rng) for no in ac for dt in (0.997, 1.003))
-        env = np.minimum(1, np.arange(m) / (0.05 * SR)) * np.minimum(1, (m - np.arange(m)) / (0.08 * SR))
-        _poner(pad, s * env, c * COMPAS, 0.06)
-    bajo = _lp(bajo, 420)
-    pad = _lp(pad, 1700)
-    # bombeo (sidechain) del pad y el bajo con el bombo
-    tt = np.arange(n) / SR
-    fase = (tt % beat)
-    duck = 1 - 0.55 * np.exp(-fase / 0.09)
-    musica = kick_bus + perc + bajo * duck + pad * duck + _lp(arp, 5000)
-    # efectos: whoosh en cada corte, pop cuando entra el título, ding con el logo
-    for c in cortes[1:]:
+def _env(n, ataque=0.004, caida=0.2):
+    t = np.arange(n) / SR
+    return np.minimum(1, t / ataque) * np.exp(-t / caida)
+
+
+def _saw(fr, n, ph=0.0):
+    t = np.arange(n) / SR
+    return 2 * ((t * fr + ph) % 1) - 1
+
+
+def _sq(fr, n):
+    t = np.arange(n) / SR
+    return np.sign(np.sin(2 * np.pi * fr * t))
+
+
+def _acorde(raiz, grado, modo):
+    q = CALIDADES.get(grado % 12, "M") if modo == "m" else {0: "M", 5: "M", 7: "M", 9: "m", 2: "m", 4: "m"}.get(grado % 12, "M")
+    r = raiz + grado
+    while r > raiz + 6:
+        r -= 12
+    return [r, r + (3 if q == "m" else 4), r + 7]
+
+
+def audio_pieza(cortes, total, mus, entradas=(), whoosh_inicio=False):
+    estilo, bpm = mus["estilo"], mus["bpm"]
+    rng = np.random.default_rng(int(bpm * 7 + mus["tono"] * 31 + len(estilo)))
+    beat = 60.0 / bpm
+    bar = 4 * beat
+    n = int((total + 1.0) * SR)
+    raiz = 57 + mus["tono"]            # La3 + tono
+    prog = mus["prog"]
+    K, S, H, B, C, L = (np.zeros(n) for _ in range(6))
+    # --- sonidos
+    tk = np.arange(int(0.45 * SR)) / SR
+    kick = np.sin(2 * np.pi * np.cumsum(50 + 130 * np.exp(-tk / 0.028)) / SR) * np.exp(-tk / 0.20)
+    kick[:90] += np.linspace(1, 0, 90) * rng.uniform(-0.7, 0.7, 90)
+    kick = np.tanh(kick * 2.2)
+    rn = rng.uniform(-1, 1, int(0.3 * SR))
+    tn = np.arange(len(rn)) / SR
+    snare = _hp(_lp(rn, 7000), 1500) * np.exp(-tn / 0.09) * 0.9 + np.sin(2 * np.pi * 185 * tn) * np.exp(-tn / 0.05) * 0.6
+    clap = np.zeros(int(0.35 * SR))
+    for k, d0 in enumerate((0.0, 0.009, 0.018)):
+        seg = _hp(_lp(rng.uniform(-1, 1, int(0.3 * SR)), 3500), 900) * np.exp(-np.arange(int(0.3 * SR)) / SR / (0.012 if k < 2 else 0.11))
+        _poner(clap, seg, d0)
+    hh = _hp(rng.uniform(-1, 1, int(0.05 * SR)), 8000) * np.exp(-np.arange(int(0.05 * SR)) / SR / 0.012)
+    oh = _hp(rng.uniform(-1, 1, int(0.25 * SR)), 7000) * np.exp(-np.arange(int(0.25 * SR)) / SR / 0.09)
+
+    def nota_bajo(m, dur, tipo="saw"):
+        k = int(dur * SR)
+        f = _hz(m)
+        if tipo == "808":
+            t = np.arange(k) / SR
+            s = np.sin(2 * np.pi * np.cumsum(f * (1 + 0.6 * np.exp(-t / 0.03))) / SR)
+            return np.tanh(s * 2.0) * np.minimum(1, t / 0.005) * np.exp(-t / max(0.25, dur))
+        s = _saw(f, k) * 0.6 + np.sin(2 * np.pi * f * np.arange(k) / SR)
+        return s * _env(k, 0.003, dur * 0.6)
+
+    def pluck(m, dur=0.22):
+        k = int(dur * SR)
+        t = np.arange(k) / SR
+        f = _hz(m)
+        return (np.sin(2 * np.pi * f * t) + 0.5 * np.sin(4 * np.pi * f * t) + 0.25 * _sq(f, k) * np.exp(-t / 0.02)) * np.exp(-t / 0.09)
+
+    nb = int(total / bar) + 2
+    for c in range(nb):
+        t0 = c * bar
+        ac = _acorde(raiz, prog[c % len(prog)], mus["modo"])
+        rb = ac[0] - 24
+        intro = c == 0 and cortes and len(cortes) > 1   # primer compás un poco más ligero en los reels
+        # --- batería por estilo
+        if estilo in ("house", "disco"):
+            for b4 in range(4):
+                _poner(K, kick, t0 + b4 * beat, 1.0)
+                _poner(H, oh, t0 + (b4 + 0.5) * beat, 0.55 if estilo == "disco" else 0.4)
+                for s16 in (0.25, 0.75):
+                    _poner(H, hh, t0 + (b4 + s16) * beat, 0.3)
+            for b4 in (1, 3):
+                _poner(S, clap, t0 + b4 * beat, 0.9)
+        elif estilo in ("pop", "funk"):
+            pat = [0, 1.5, 2, 2.75] if estilo == "pop" else [0, 0.75, 1.75, 2.5, 3.25]
+            for p in pat:
+                _poner(K, kick, t0 + p * beat, 1.0)
+            for b4 in (1, 3):
+                _poner(S, snare, t0 + b4 * beat, 1.0)
+                _poner(S, clap, t0 + b4 * beat, 0.4)
+            for e in range(8):
+                _poner(H, hh, t0 + e * beat / 2, 0.45 if e % 2 else 0.3)
+            if estilo == "funk":
+                for e in range(16):
+                    if e % 4 == 3:
+                        _poner(H, hh, t0 + e * beat / 4, 0.25)
+        elif estilo == "dembow":
+            for b4 in range(4):
+                _poner(K, kick, t0 + b4 * beat, 1.0)
+                _poner(S, snare, t0 + (b4 + 0.75) * beat, 0.85)
+                if b4 % 2 == 1:
+                    _poner(S, snare, t0 + (b4 + 0.5) * beat, 0.75)
+                _poner(H, hh, t0 + (b4 + 0.5) * beat, 0.35)
+                _poner(H, hh, t0 + b4 * beat, 0.25)
+        elif estilo == "trap":
+            for p in ([0, 1.75, 2.5] if c % 2 == 0 else [0, 0.75, 2.5, 3.25]):
+                _poner(K, kick, t0 + p * beat, 0.9)
+            _poner(S, clap, t0 + 2 * beat, 1.0)
+            _poner(S, snare, t0 + 2 * beat, 0.7)
+            for e in range(8):
+                _poner(H, hh, t0 + e * beat / 2, 0.4)
+            for r in range(6):          # redoble de charles al final del compás
+                _poner(H, hh, t0 + 3.5 * beat + r * beat / 12, 0.3)
+        # --- bajo
+        if estilo == "trap":
+            for p, du in (([0, 1.75, 2.5], [1.6, 0.7, 1.4]) if c % 2 == 0 else ([0, 0.75, 2.5, 3.25], [0.7, 1.6, 0.7, 0.7])):
+                _poner(B, nota_bajo(rb + 12, du * beat, "808"), t0 + p * beat, 0.9)
+        elif estilo == "dembow":
+            for p in (0, 1.5, 2, 3.5):
+                _poner(B, nota_bajo(rb + 12, 0.45 * beat, "808"), t0 + p * beat, 0.8)
+        elif estilo == "disco":
+            for e in range(8):
+                _poner(B, nota_bajo(rb + (12 if e % 2 else 0), 0.45 * beat), t0 + e * beat / 2, 0.55)
+        elif estilo == "house":
+            for b4 in range(4):
+                _poner(B, nota_bajo(rb, 0.4 * beat), t0 + (b4 + 0.5) * beat, 0.6)
+        else:  # pop / funk
+            pat = [0, 0.75, 1.5, 2, 2.75, 3.5] if estilo == "funk" else [0, 0.5, 1.5, 2, 2.5, 3.5]
+            for p in pat:
+                _poner(B, nota_bajo(rb + (12 if (estilo == "funk" and p in (0.75, 2.75)) else 0), 0.4 * beat), t0 + p * beat, 0.6)
+        # --- acordes (stabs con pegada) y melodía
+        k = int(bar * SR)
+        if estilo in ("house", "disco", "funk"):
+            stab_pos = [0.5, 1.5, 2.5, 3.5] if estilo != "funk" else [0.25, 1.25, 2.0, 3.25]
+            for p in stab_pos:
+                kk = int(0.22 * SR)
+                s = sum(_saw(_hz(m + 12) * dt, kk) for m in ac for dt in (0.996, 1.004))
+                _poner(C, s * _env(kk, 0.002, 0.08), t0 + p * beat, 0.16)
+        else:
+            s = sum(_saw(_hz(m + 12) * dt, k) for m in ac for dt in (0.995, 1.005))
+            env = np.minimum(1, np.arange(k) / (0.03 * SR)) * np.minimum(1, (k - np.arange(k)) / (0.06 * SR))
+            _poner(C, s * env, t0, 0.07)
+        if not intro:
+            escala = [ac[0] + 24, ac[1] + 24, ac[2] + 24, ac[0] + 36]
+            paso = 0.5 if estilo in ("trap", "dembow") else 0.25
+            figura = rng.permutation(4)
+            for e in range(int(4 / paso)):
+                if estilo in ("trap", "dembow") and e % 3 == 2:
+                    continue
+                _poner(L, pluck(escala[figura[e % 4]]), t0 + e * paso * beat, 0.16 if paso == 0.25 else 0.22)
+    # --- mezcla: bombeo de acordes/bajo con el bombo (no en trap)
+    t = np.arange(n) / SR
+    if estilo != "trap":
+        duck = 1 - 0.5 * np.exp(-((t % beat)) / 0.10)
+    else:
+        duck = np.ones(n)
+    B = _lp(B, 900 if estilo in ("trap", "dembow") else 650)
+    C = _lp(C, 3200)
+    musica = K * 1.0 + S * 0.75 + H * 0.5 + B * duck * 0.9 + C * duck + _lp(L, 6500)
+    # --- efectos (suaves: la música manda)
+    sfx = np.zeros(n)
+    for c in list(cortes[1:]) + ([0.0] if whoosh_inicio else []):
         m = int(0.5 * SR)
         r = rng.uniform(-1, 1, m)
         env = np.concatenate([np.linspace(0, 1, int(0.32 * SR)) ** 2, np.exp(-np.arange(m - int(0.32 * SR)) / SR / 0.06)])
-        w = _hp(_lp(r, 3500), 400) * env
-        _poner(sfx, w, c - 0.32, 0.55)
-        tp = np.arange(int(0.09 * SR)) / SR
-        pop = np.sin(2 * np.pi * np.cumsum(900 - 4500 * tp) / SR) * np.exp(-tp / 0.025)
-        _poner(sfx, pop, c + 0.18, 0.35)
-    tg = np.arange(int(0.9 * SR)) / SR
-    ding = (np.sin(2 * np.pi * 1318.5 * tg) + 0.4 * np.sin(2 * np.pi * 1975.5 * tg)) * np.exp(-tg / 0.25)
-    _poner(sfx, ding, cortes[-1] + 0.75, 0.22)
-    # impacto inicial
-    tg = np.arange(int(0.8 * SR)) / SR
-    _poner(sfx, _lp(rng.uniform(-1, 1, len(tg)), 6000) * np.exp(-tg / 0.18), 0.0, 0.3)
-    musica = musica / (np.sqrt(np.mean(musica ** 2)) + 1e-9) * 0.16
-    mezcla = musica + sfx * 0.9
-    # fundido final y limitador suave
+        _poner(sfx, _hp(_lp(r, 4000), 500) * env, max(0.0, c - 0.32), 0.5)
+    for e in entradas:
+        tp = np.arange(int(0.08 * SR)) / SR
+        _poner(sfx, np.sin(2 * np.pi * np.cumsum(1100 - 5000 * tp) / SR) * np.exp(-tp / 0.02), e, 0.35)
+    # estéreo: acordes/melodía abiertos, bombo y bajo al centro
+    ancho = np.roll(C * duck + _lp(L, 6500), int(0.011 * SR))
+    izq = musica + sfx * 0.8 + 0.25 * (ancho - (C * duck + _lp(L, 6500)))
+    der = musica + sfx * 0.8 - 0.25 * (ancho - (C * duck + _lp(L, 6500)))
+    est = np.stack([izq, der], axis=1)
+    est /= (np.max(np.abs(est)) + 1e-9)
+    est = np.tanh(est * 1.4) / np.tanh(1.4)          # pegada: saturación suave
     fin = int(total * SR)
-    mezcla[fin - int(1.2 * SR):fin] *= np.linspace(1, 0, int(1.2 * SR)) ** 1.5
-    mezcla[fin:] = 0
-    mezcla = np.tanh(mezcla * 1.6) / np.tanh(1.6)
-    mezcla *= 0.89 / (np.max(np.abs(mezcla)) + 1e-9)
-    est = np.stack([mezcla, np.roll(mezcla, 9) * 0.98 + _lp(arp, 5000) * 0.0], axis=1)
-    return est[:fin]
+    est = est[:fin]
+    caida = int(0.6 * SR)
+    est[-caida:] *= np.linspace(1, 0, caida)[:, None] ** 1.5
+    est[:int(0.01 * SR)] *= np.linspace(0, 1, int(0.01 * SR))[:, None]
+    return est * 0.9
 
 
 def escribir_wav(ruta, est):
@@ -842,6 +1032,130 @@ def escribir_wav(ruta, est):
         w.setsampwidth(2)
         w.setframerate(SR)
         w.writeframes(datos)
+
+
+def masterizar(wav, trabajo, objetivo=-14.0, pico=-1.0):
+    """Máster a -14 LUFS integrados y pico real ≤ -1 dBTP (loudnorm de ffmpeg en dos pasadas, modo lineal)."""
+    r = subprocess.run(["ffmpeg", "-hide_banner", "-i", wav, "-af",
+                        f"loudnorm=I={objetivo}:TP={pico}:LRA=11:print_format=json", "-f", "null", "-"],
+                       capture_output=True, text=True)
+    txt = r.stderr[r.stderr.rindex("{"):r.stderr.rindex("}") + 1]
+    m = json.loads(txt)
+    salida = os.path.join(trabajo, "master.wav")
+    filtro = (f"loudnorm=I={objetivo}:TP={pico}:LRA=11:measured_I={m['input_i']}:measured_TP={m['input_tp']}:"
+              f"measured_LRA={m['input_lra']}:measured_thresh={m['input_thresh']}:offset={m['target_offset']}:linear=true")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", wav, "-af", filtro, "-ar", str(SR), salida], check=True)
+    os.replace(salida, wav)
+
+
+def medir(video):
+    """Sonoridad integrada (LUFS) y pico real (dBTP) del vídeo final, con ebur128 de ffmpeg."""
+    r = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", video, "-af", "ebur128=peak=true", "-f", "null", "-"],
+                       capture_output=True, text=True)
+    res = r.stderr[r.stderr.rindex("Summary:"):]
+    import re
+    i = float(re.search(r"I:\s+(-?[\d.]+) LUFS", res).group(1))
+    tp = float(re.search(r"Peak:\s+(-?[\d.]+) dBFS", res).group(1))
+    lra = float(re.search(r"LRA:\s+(-?[\d.]+) LU", res).group(1))
+    return {"lufs_integrados": i, "pico_real_dbtp": tp, "lra_lu": lra, "medido_con": "ffmpeg ebur128=peak=true"}
+
+
+# ------------------------------------------------------------------ reel a partir de un carrusel ya aprobado
+def slides_de(carpeta):
+    for base in ("cola", "publicados"):
+        d = os.path.join(BASE, base, carpeta, "slides")
+        if os.path.isdir(d) and any(f.endswith(".jpg") for f in os.listdir(d)):
+            return [Image.open(os.path.join(d, f)).convert("RGB") for f in sorted(os.listdir(d)) if f.endswith(".jpg")]
+    # ya publicado (slides/ borradas del árbol): se sacan del historial de git
+    ruta = f"cola/{carpeta}/slides"
+    sha = subprocess.run(["git", "log", "-1", "--format=%H", "--", ruta + "/01.jpg"], cwd=BASE, capture_output=True,
+                         text=True).stdout.strip()
+    if not sha:
+        raise SystemExit(f"{carpeta}: no encuentro sus diapositivas")
+    nombres = subprocess.run(["git", "ls-tree", "--name-only", sha, ruta + "/"], cwd=BASE, capture_output=True,
+                             text=True).stdout.split()
+    import io
+    out = []
+    for nme in sorted(x for x in nombres if x.endswith(".jpg")):
+        datos = subprocess.run(["git", "show", f"{sha}:{nme}"], cwd=BASE, capture_output=True).stdout
+        out.append(Image.open(io.BytesIO(datos)).convert("RGB"))
+    return out
+
+
+def video_carrusel(slides, salida, trabajo, mus, max_total=30.0):
+    beat = 60.0 / mus["bpm"]
+    n = len(slides)
+    for bp in (8, 7, 6, 5, 4):
+        if (bp * n + 2) * beat <= max_total:
+            break
+    durs = [bp * beat] * n
+    durs[0] += 2 * beat        # el gancho, un poco más
+    cortes = [sum(durs[:i]) for i in range(n)]
+    total = sum(durs)
+    wav = os.path.join(trabajo, "audio.wav")
+    escribir_wav(wav, audio_pieza(cortes, total, mus, entradas=[c + 0.3 for c in cortes]))
+    masterizar(wav, trabajo)
+    esc = 0.9
+    cw, ch = int(1080 * esc), int(1350 * esc)
+    x0, y0 = (SW - cw) // 2, 255
+    # fondo: la portada del carrusel ampliada, desenfocada y oscurecida (mismos colores que el carrusel)
+    portada = slides[0].resize((int(1350 * SW / 1080 * 1.45), int(SH * 1.0)), Image.BILINEAR)
+    portada = portada.crop(((portada.width - SW) // 2, 0, (portada.width - SW) // 2 + SW, SH))
+    fondo_im = Image.blend(portada.filter(ImageFilter.GaussianBlur(48)), Image.new("RGB", (SW, SH), (8, 6, 12)), 0.55)
+    # sombra y esquinas redondeadas de la tarjeta
+    sm = Image.new("L", (SW, SH), 0)
+    ImageDraw.Draw(sm).rounded_rectangle((x0 + 8, y0 + 30, x0 + cw - 8, y0 + ch + 26), 40, fill=170)
+    fondo_im.paste(Image.new("RGB", (SW, SH), (6, 3, 12)), (0, 0), sm.filter(ImageFilter.GaussianBlur(30)))
+    mascara = mascara_redondeada(cw, ch, 36)
+    corte_txt = int(ch * 0.47)
+    fh = fnt(30, "Bold")
+
+    def tarjeta(i, t, z=True):
+        im = slides[i]
+        k = 1.0 + (0.045 * min(1.0, t / durs[i]) if z else 0.0)
+        rw, rh = 1080 / k, 1350 / k
+        bx = (1080 - rw) / 2
+        by = (1350 - rh) * 0.35
+        card = im.resize((cw, ch), Image.BILINEAR, box=(bx, by, bx + rw, by + rh))
+        # «textos animados»: la franja de arriba (titulares) entra con fundido y subida
+        a = ease((t - 0.08) / 0.45)
+        if a < 0.999:
+            arriba = card.crop((0, 0, cw, corte_txt))
+            base = card.copy()
+            base.paste(card.crop((6, 0, 7, corte_txt)).resize((cw, corte_txt)), (0, 0))   # fondo sin texto
+            base.paste(arriba, (0, int((1 - a) * 40)), Image.new("L", arriba.size, int(255 * a)))
+            card = base
+        return card
+
+    def cuadro(t):
+        i = max(j for j, c in enumerate(cortes) if c <= t + 1e-9)
+        tl = t - cortes[i]
+        im = fondo_im.copy()
+        d = ImageDraw.Draw(im)
+        # cabecera: @neogestlab y contador que salta en cada corte
+        d.text((x0, 180), "@neogestlab", font=fh, fill=GRIS)
+        s = ease_back(tl / 0.3)
+        txt = f"{i + 1:02d}/{n:02d}"
+        ft = fnt(max(8, int(30 * (0.6 + 0.4 * s))), "ExtraBold")
+        d.text((x0 + cw - ft.getlength(txt), 180 + (30 - ft.size) / 2), txt, font=ft, fill=ACENTO)
+        actual = tarjeta(i, tl)
+        if i > 0 and tl < T_TRANS:
+            e = ease(tl / T_TRANS)
+            prev = tarjeta(i - 1, durs[i - 1])
+            dx = int((cw + 80) * e)
+            im.paste(prev, (x0 - dx, y0), mascara)
+            im.paste(actual, (x0 + cw + 80 - dx, y0), mascara)
+        else:
+            im.paste(actual, (x0, y0), mascara)
+        # barra de progreso
+        yb = y0 + ch + 34
+        d = ImageDraw.Draw(im)
+        d.rounded_rectangle((x0, yb, x0 + cw, yb + 8), 4, fill=(70, 58, 90))
+        d.rounded_rectangle((x0, yb, x0 + int(cw * min(1.0, t / total)), yb + 8), 4, fill=ACENTO)
+        return im
+
+    codificar(cuadro, total, wav, salida)
+    return total
 
 
 # ------------------------------------------------------------------ cola
@@ -872,7 +1186,27 @@ def escribir_post(carpeta, datos):
     os.replace(ruta + ".tmp", ruta)
 
 
-def generar(c, slugs, reel=True, subir=False):
+def subir_release(video):
+    if subprocess.run(["gh", "release", "view", RELEASE], capture_output=True).returncode != 0:
+        subprocess.run(["gh", "release", "create", RELEASE, "--title", "Vídeos en cola", "--notes",
+                        "Vídeos renderizados pendientes de publicar. Se borran solos al publicarse."], check=True)
+    subprocess.run(["gh", "release", "upload", RELEASE, video, "--clobber"], check=True)
+
+
+def fotogramas_control(video, carpeta, momentos):
+    control = os.path.join(carpeta, "control")
+    shutil.rmtree(control, ignore_errors=True)
+    os.makedirs(control)
+    for etiqueta, t in momentos:
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{max(0.0, t):.2f}", "-i", video, "-frames:v", "1",
+                        "-vf", "scale=540:-1", "-q:v", "4", os.path.join(control, f"{etiqueta}.jpg")], check=True)
+
+
+def resumen_musica(mus):
+    return {"estilo": mus["estilo"], "bpm": mus["bpm"], "tono": mus["tono"], "origen": "generada por código (sin licencias de terceros)"}
+
+
+def generar(c, slugs, reel=True, historias=True, subir=False):
     for app in apps_pedidas(c, slugs):
         caps = cargar_capturas(app["slug"])
         if len(caps) != len(app["pasos"]):
@@ -880,7 +1214,7 @@ def generar(c, slugs, reel=True, subir=False):
         base = f"{app['numero']}_{app['slug'].replace('-', '_')}"
         comun = {"app": app["nombre"], "publico": app["publico"], "fuentes": [FUENTES_TXT.format(n=app["nombre"])],
                  "origen": "herramientas/demo_app.py"}
-        # carrusel
+        # carrusel (imágenes: la API no permite música en carruseles)
         nom = base + "_carrusel"
         if not ya_publicado(nom):
             carpeta = os.path.join(COLA, nom)
@@ -889,48 +1223,104 @@ def generar(c, slugs, reel=True, subir=False):
             escribir_post(carpeta, dict(tipo="carrusel", texto=app["texto_carrusel"], cuando=app["cuando_carrusel"],
                                         renderizado="no aplica (carrusel)", diapositivas=n, **comun))
             print(f"{nom}: carrusel de {n} diapositivas")
-        # historias
+        # historias en vídeo con música
         for k, h in enumerate(app["historias"], 1):
             nom = f"{base}_historia{k}"
-            if ya_publicado(nom):
+            if not historias or ya_publicado(nom):
                 continue
             carpeta = os.path.join(COLA, nom)
-            d = os.path.join(carpeta, "slides")
-            shutil.rmtree(d, ignore_errors=True)
-            os.makedirs(d)
-            historia(app, caps, h, k).convert("RGB").save(os.path.join(d, "01.jpg"), quality=88, subsampling=2, optimize=True)
-            escribir_post(carpeta, dict(tipo="historia", texto="", cuando=h["cuando"], renderizado="no aplica (historia)",
-                                        formato=h["tipo"], **comun))
-            print(f"{nom}: historia «{h['tipo']}»")
-        # reel
+            os.makedirs(carpeta, exist_ok=True)
+            trabajo = os.path.join("/tmp", "demo_" + nom)
+            shutil.rmtree(trabajo, ignore_errors=True)
+            os.makedirs(trabajo)
+            mus = musica_de(**h["musica"])
+            video = os.path.join(trabajo, nom + ".mp4")
+            total = video_historia(app, caps, h, k, video, trabajo, mus)
+            audio = medir(video)
+            fotogramas_control(video, carpeta, (("entrada", 0.6), ("completa", total - 1.0)))
+            shutil.rmtree(os.path.join(carpeta, "slides"), ignore_errors=True)
+            print(f"{nom}: historia «{h['tipo']}» en vídeo de {total:.1f} s, {mus['estilo']} {mus['bpm']:.0f} BPM, "
+                  f"{audio['lufs_integrados']} LUFS / {audio['pico_real_dbtp']} dBTP")
+            if subir:
+                subir_release(video)
+                escribir_post(carpeta, dict(tipo="historia", texto="", cuando=h["cuando"],
+                                            renderizado=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                                            asset=nom + ".mp4", medio="video", duracion_s=round(total, 1),
+                                            formato=h["tipo"], musica=resumen_musica(mus), audio=audio, **comun))
+            else:
+                shutil.copy(video, os.path.join("/tmp", nom + ".mp4"))
+        # reel de presentación
         nom = base + "_reel"
         if reel and not ya_publicado(nom):
             trabajo = os.path.join("/tmp", "demo_" + nom)
             shutil.rmtree(trabajo, ignore_errors=True)
             os.makedirs(trabajo)
+            mus = musica_de(**app["musica"])
             video = os.path.join(trabajo, nom + ".mp4")
-            total = render_video(app, caps, video, trabajo)
-            print(f"{nom}: reel de {total:.1f} s -> {video}")
-            # fotogramas de control (para revisar sin descargar el vídeo)
-            control = os.path.join(COLA, nom, "control")
-            os.makedirs(control, exist_ok=True)
-            for etiqueta, t in (("gancho", 2.6), ("paso", T_GANCHO + T_PASO * 1.6), ("cierre", total - 1.0)):
-                jpg = os.path.join(control, f"{etiqueta}.jpg")
-                subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{t:.2f}", "-i", video, "-frames:v", "1",
-                                "-vf", "scale=540:-1", "-q:v", "3", jpg], check=True)
+            total, dur = render_video(app, caps, video, trabajo, mus)
+            audio = medir(video)
+            fotogramas_control(video, os.path.join(COLA, nom), (("gancho", dur["gancho"] * 0.7),
+                                                               ("paso", dur["gancho"] + dur["paso"] * 1.6),
+                                                               ("cierre", total - 1.0)))
+            print(f"{nom}: reel de {total:.1f} s, {mus['estilo']} {mus['bpm']:.0f} BPM, "
+                  f"{audio['lufs_integrados']} LUFS / {audio['pico_real_dbtp']} dBTP")
             if subir:
-                if subprocess.run(["gh", "release", "view", RELEASE], capture_output=True).returncode != 0:
-                    subprocess.run(["gh", "release", "create", RELEASE, "--title", "Vídeos en cola", "--notes",
-                                    "Vídeos renderizados pendientes de publicar. Se borran solos al publicarse."], check=True)
-                subprocess.run(["gh", "release", "upload", RELEASE, video, "--clobber"], check=True)
+                subir_release(video)
                 escribir_post(os.path.join(COLA, nom), dict(
                     tipo="reel", texto=app["texto_reel"], cuando=app["cuando_reel"],
                     renderizado=datetime.now(timezone.utc).isoformat(timespec="seconds"), asset=nom + ".mp4",
-                    portada_ms=2900, compartir_en_feed=True, duracion_s=round(total, 1),
-                    formato="presentación (capturas reales con Ken Burns, música y efectos; sin voz)", **comun))
-                print(f"{nom}: subido a la release '{RELEASE}'")
+                    portada_ms=int(dur["gancho"] * 700), compartir_en_feed=True, duracion_s=round(total, 1),
+                    formato="presentación (capturas reales con Ken Burns, música en primer plano y efectos; sin voz)",
+                    musica=resumen_musica(mus), audio=audio, **comun))
             else:
                 shutil.copy(video, os.path.join("/tmp", nom + ".mp4"))
+
+
+def leer_post(carpeta):
+    for base in ("cola", "publicados"):
+        p = os.path.join(BASE, base, carpeta, "post.json")
+        if os.path.exists(p):
+            with open(p, encoding="utf-8") as f:
+                return json.load(f)
+    return {}
+
+
+def reels_carrusel(c, carpetas, subir=False):
+    """Versión reel (con música) de carruseles ya aprobados: sus diapositivas animadas, sin cambiar el contenido."""
+    for item in c.get("reels_carrusel", []):
+        if carpetas and carpetas != ["todos"] and item["carpeta"] not in carpetas:
+            continue
+        nom = item["carpeta"] + "_reel"
+        if ya_publicado(nom):
+            continue
+        slides = slides_de(item["carpeta"])
+        post_car = leer_post(item["carpeta"])
+        trabajo = os.path.join("/tmp", "demo_" + nom)
+        shutil.rmtree(trabajo, ignore_errors=True)
+        os.makedirs(trabajo)
+        mus = musica_de(**item["musica"])
+        video = os.path.join(trabajo, nom + ".mp4")
+        total = video_carrusel(slides, video, trabajo, mus)
+        audio = medir(video)
+        carpeta = os.path.join(COLA, nom)
+        os.makedirs(carpeta, exist_ok=True)
+        beat = 60.0 / mus["bpm"]
+        fotogramas_control(video, carpeta, (("gancho", 1.6), ("medio", total / 2 + 0.6), ("cierre", total - 1.0)))
+        print(f"{nom}: reel de {total:.1f} s ({len(slides)} diapositivas), {mus['estilo']} {mus['bpm']:.0f} BPM, "
+              f"{audio['lufs_integrados']} LUFS / {audio['pico_real_dbtp']} dBTP")
+        if subir:
+            subir_release(video)
+            escribir_post(carpeta, dict(
+                tipo="reel", texto=item.get("texto") or post_car.get("texto", ""), cuando=item["cuando"],
+                renderizado=datetime.now(timezone.utc).isoformat(timespec="seconds"), asset=nom + ".mp4",
+                portada_ms=1500, compartir_en_feed=True, duracion_s=round(total, 1),
+                formato="versión reel del carrusel (diapositivas animadas, música en primer plano y efectos; sin voz)",
+                app=post_car.get("app"), publico=post_car.get("publico"),
+                fuentes=[f"Diapositivas del carrusel {item['carpeta']} (aprobado por Calidad); mismo contenido."] +
+                        list(post_car.get("fuentes") or []),
+                carrusel=item["carpeta"], musica=resumen_musica(mus), audio=audio, origen="herramientas/demo_app.py"))
+        else:
+            shutil.copy(video, os.path.join("/tmp", nom + ".mp4"))
 
 
 # ------------------------------------------------------------------ principal
@@ -943,7 +1333,10 @@ def main():
     if orden == "descargar":
         descargar(c, slugs)
     elif orden == "generar":
-        generar(c, slugs, reel="--sin-reel" not in opciones, subir="--subir" in opciones)
+        generar(c, slugs, reel="--sin-reel" not in opciones, historias="--sin-historias" not in opciones,
+                subir="--subir" in opciones)
+    elif orden == "reels_carrusel":
+        reels_carrusel(c, slugs, subir="--subir" in opciones)
     else:
         sys.exit(f"orden desconocida: {orden}")
 

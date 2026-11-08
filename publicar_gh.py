@@ -1102,6 +1102,8 @@ def publicar_historia(cfg, carpeta, post):
     carpeta_rel = os.path.relpath(carpeta, os.path.dirname(os.path.abspath(__file__)))
     sl = os.path.join(carpeta, "slides")
     imgs = sorted(f for f in os.listdir(sl) if f.lower().endswith((".jpg", ".jpeg"))) if os.path.isdir(sl) else []
+    if post.get("asset"):
+        imgs = []   # historia en vídeo con música (8/11/2026): manda el vídeo de la release aunque haya imágenes
     if imgs:
         url = f"https://cdn.jsdelivr.net/gh/{repo}@{ref}/{urllib.parse.quote(carpeta_rel)}/slides/{urllib.parse.quote(imgs[0])}"
         comprobar_url_publica(url)
