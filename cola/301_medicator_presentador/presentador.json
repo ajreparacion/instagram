@@ -1,0 +1,135 @@
+{
+ "generado": "2026-11-08T20:19:49+00:00",
+ "duracion_s": 39.5,
+ "fotogramas": 1185,
+ "resolucion": "1080x1920",
+ "fps": 30,
+ "tiempo_voz_s": 561,
+ "tiempo_render_s": 228,
+ "tiempo_total_s": 804,
+ "voz": "chatterbox",
+ "audio": {
+  "musica_bajo_voz_db": -2.8,
+  "ducking_db": 3.6,
+  "ducking_max_db": 5.0,
+  "lufs_integrados": -14.0,
+  "pico_real_dbtp": -1.4,
+  "lra_lu": 2.7,
+  "medido_con": "ffmpeg ebur128=peak=true",
+  "final": {
+   "lufs_integrados": -14.1,
+   "pico_real_dbtp": -0.8,
+   "lra_lu": 2.7,
+   "medido_con": "ffmpeg ebur128=peak=true"
+  }
+ },
+ "movimiento": {
+  "diferencia_media": 6.92,
+  "fotogramas_quietos_pct": 0.0,
+  "plano_quieto_max_s": 0.0,
+  "cortes_detectados": 37,
+  "medido_con": "ffmpeg 10 fps 108x192, |diferencia| media por fotograma"
+ },
+ "escenas": [
+  {
+   "a_s": 0.0,
+   "b_s": 2.63,
+   "fondo": "magenta",
+   "plano": "medio",
+   "presentador": "preocupada",
+   "bit": "entra",
+   "elemento": null
+  },
+  {
+   "a_s": 2.63,
+   "b_s": 5.27,
+   "fondo": "verde",
+   "plano": "primer",
+   "presentador": "senala",
+   "bit": "salta",
+   "elemento": null
+  },
+  {
+   "a_s": 5.27,
+   "b_s": 10.53,
+   "fondo": "morado",
+   "plano": "abajo",
+   "presentador": "explica",
+   "bit": "flota",
+   "elemento": "captura"
+  },
+  {
+   "a_s": 10.53,
+   "b_s": 14.0,
+   "fondo": "cian",
+   "plano": "abajo",
+   "presentador": "pulgar",
+   "bit": "asiente",
+   "elemento": "captura"
+  },
+  {
+   "a_s": 14.0,
+   "b_s": 18.83,
+   "fondo": "negro",
+   "plano": "medio",
+   "presentador": "idea",
+   "bit": "gira",
+   "elemento": null
+  },
+  {
+   "a_s": 18.83,
+   "b_s": 21.3,
+   "fondo": "verde",
+   "plano": "primer",
+   "presentador": "explica",
+   "bit": "corazon",
+   "elemento": null
+  },
+  {
+   "a_s": 21.3,
+   "b_s": 26.33,
+   "fondo": "magenta",
+   "plano": "abajo",
+   "presentador": "senala_arriba",
+   "bit": "flota",
+   "elemento": "captura"
+  },
+  {
+   "a_s": 26.33,
+   "b_s": 29.83,
+   "fondo": "morado",
+   "plano": "medio",
+   "presentador": "movil",
+   "bit": "saluda",
+   "elemento": null
+  },
+  {
+   "a_s": 29.83,
+   "b_s": 32.93,
+   "fondo": "cian",
+   "plano": "abajo",
+   "presentador": "presenta",
+   "bit": "sorpresa",
+   "elemento": "captura"
+  },
+  {
+   "a_s": 32.93,
+   "b_s": 36.57,
+   "fondo": "negro",
+   "plano": "abajo",
+   "presentador": "manos",
+   "bit": "flota",
+   "elemento": "tarjeta"
+  },
+  {
+   "a_s": 36.57,
+   "b_s": 39.5,
+   "fondo": "rojo",
+   "plano": "abajo",
+   "presentador": "saluda",
+   "bit": "celebra",
+   "elemento": "cierre"
+  }
+ ],
+ "avisos": []
+}
