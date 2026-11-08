@@ -1,14 +1,16 @@
 {
- "generado": "2026-11-08T21:11:10+00:00",
+ "generado": "2026-11-08T21:28:03+00:00",
  "duracion_s": 33.42,
  "fotogramas": 1003,
  "resolucion": "1080x1920",
  "fps": 30,
- "tiempo_voz_s": 385,
- "tiempo_render_s": 175,
- "tiempo_total_s": 572,
+ "tiempo_voz_s": 319,
+ "tiempo_render_s": 247,
+ "tiempo_total_s": 583,
  "voz": "chatterbox",
  "audio": {
+  "voz_sobre_musica_lu": 5.9,
+  "ajuste_musica_db": 0.0,
   "musica_bajo_voz_db": -2.5,
   "ducking_db": 3.7,
   "ducking_max_db": 5.0,
@@ -18,13 +20,13 @@
   "medido_con": "ffmpeg ebur128=peak=true",
   "final": {
    "lufs_integrados": -14.2,
-   "pico_real_dbtp": -1.6,
+   "pico_real_dbtp": -1.4,
    "lra_lu": 2.2,
    "medido_con": "ffmpeg ebur128=peak=true"
   }
  },
  "movimiento": {
-  "diferencia_media": 6.56,
+  "diferencia_media": 6.55,
   "fotogramas_quietos_pct": 0.0,
   "plano_quieto_max_s": 0.0,
   "cortes_detectados": 30,
