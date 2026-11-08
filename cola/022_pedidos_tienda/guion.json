@@ -10,7 +10,7 @@
   {
    "estilo": "gancho",
    "texto": "¿Llevas los pedidos *de memoria*?",
-   "voz": "¿Llevas los pedidos *de memoria*?",
+   "voz": "¿Llevas los pedidos *de memoria*? Mira lo que hace esta app.",
    "clip": {
     "inicio": 0.0,
     "fin": 2.5

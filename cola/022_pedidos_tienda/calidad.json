@@ -1,10 +1,12 @@
 {
  "aprobado": false,
- "nota": 77,
- "fecha": "2026-11-08T11:50:00Z",
+ "nota": 84,
+ "fecha": "2026-11-08T17:34Z",
  "motivos": [
-  "A1: escena 3 (10,5-20,6 s) con unos 5 s sin voz tras 'tres líneas'.",
-  "Voz: θ/seseo pendiente de oído."
+  "A1: hueco de voz de ≈ 2,4 s en el gancho (frase de 2 s en una escena de 4,4 s).",
+  "Audio del render antiguo: −12,1 LUFS y pico −0,5 dBFS (la mezcla masterizada de Mejora, −14 LUFS, aún no se ha aplicado a este render).",
+  "Voz: seseo/θ sin validar de oído (techo ≈ 88).",
+  "Gancho legible en pregunta, cierre IDEA correcto, subtítulos palabra a palabra, demo grabada funcionando con datos de ejemplo, sin clientes, marcas ni logos."
  ],
- "como_arreglarlo": "Guion corregido por Calidad (se nombran los tres pedidos) y re-render lanzado."
+ "como_arreglarlo": "Guion corregido (el gancho añade «Mira lo que hace esta app.»); se quita «renderizado» para que se rehaga con la mezcla nueva. Se revisa en la siguiente pasada."
 }

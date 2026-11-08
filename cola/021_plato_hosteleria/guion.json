@@ -38,7 +38,7 @@
     "inicio": 18.7,
     "fin": 22.4
    },
-   "voz": "Cuatro raciones y me dice *a cuánto sale* cada una."
+   "voz": "Cuatro raciones y me dice *a cuánto sale* cada una. Así sé a qué precio venderla."
   },
   {
    "estilo": "tramo",
@@ -46,7 +46,7 @@
     "inicio": 22.4,
     "fin": 26.3
    },
-   "voz": "Cambio el porcentaje y *recalcula* el precio de venta."
+   "voz": "Cambio el porcentaje y *recalcula* el precio de venta, sin hacer ni una cuenta."
   },
   {
    "estilo": "cierre",
