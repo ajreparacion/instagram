@@ -1,0 +1,189 @@
+{
+ "_nota": "Textos sacados de la entidad Producto del Centro de Contenido Apps (demo[], hechos_verificados, prohibido_afirmar), reescritos para Instagram sin cambiar su sentido. 8/11/2026, agente de demos. Excluidas: GPS Andaluz (sin voces propias), Expedientes Imposibles, copias y plantillas.",
+ "apps": [
+  {
+   "slug": "medicator",
+   "nombre": "MEDICATOR",
+   "estado": "beta",
+   "numero": 110,
+   "etiqueta": "Para mayores y quien los cuida",
+   "gancho": "¿Ya te tomaste la pastilla o no?",
+   "gancho_destacar": "pastilla",
+   "gancho_sub": "Pastillas, citas y hoja para el médico, con letra grande.",
+   "portada": 1,
+   "aviso": "Organiza. No sustituye a tu médico.",
+   "pasos": [
+    {"imagen": "/demos/medicator/1.webp", "titulo": "Tu pastilla, a su hora", "linea": "Ves la que toca ahora, cuánto y a qué hora, y la apuntas con un botón grande."},
+    {"imagen": "/demos/medicator/2.webp", "titulo": "Todas las del día", "linea": "Por mañana, mediodía, tarde y noche: tomada, ahora o más tarde."},
+    {"imagen": "/demos/medicator/3.webp", "titulo": "Calendario con letra grande", "linea": "Tocas un día y ves sus citas y sus pastillas, o apuntas una cita nueva."},
+    {"imagen": "/demos/medicator/4.webp", "titulo": "La cita, con todo", "linea": "Médico, centro, planta, si es en ayunas y qué llevar, con botón «Cómo llegar»."},
+    {"imagen": "/demos/medicator/5.webp", "titulo": "Hoja para el médico", "linea": "Apuntas tus preguntas y sale tu hoja con alergias, medicinas y citas."},
+    {"imagen": "/demos/medicator/6.webp", "titulo": "Lista para la farmacia", "linea": "Cuenta las pastillas que quedan y marca las que hay que pedir ya."}
+   ],
+   "cierre": "¿La quieres para ti o para tus padres?",
+   "cierre_destacar": "padres",
+   "cierre_sub": "Está en fase de pruebas. Pide la demo: enlace en el perfil.",
+   "texto_carrusel": "¿Ya te tomaste la pastilla o no? 💊\nMEDICATOR organiza las pastillas y las citas médicas con letra grande, pensada para mayores y para quien los cuida.\nAl abrirla ves la pastilla que toca ahora y la apuntas con un botón grande.\nLas citas van en un calendario: médico, centro, planta, si es en ayunas y qué llevar.\nPrepara una hoja con tus medicinas, alergias y preguntas para el médico, y una lista para la farmacia.\nCapturas de la demo con datos de ejemplo. Organiza; no sustituye a tu médico ni a tu farmacéutico.\n¿La quieres para ti o para tus padres? Pide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#mayores #cuidadores #organizacion #apps #neogestlab",
+   "texto_reel": "Pastillas y citas, con letra grande 💊\nMEDICATOR enseña la pastilla que toca ahora, guarda las citas en un calendario y prepara la hoja para el médico y la lista para la farmacia.\nCapturas de la demo con datos de ejemplo. Organiza; no sustituye a tu médico.\nPide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#mayores #cuidadores #organizacion #apps #neogestlab",
+   "historias": [
+    {"tipo": "sabias", "captura": 5, "titulo": "MEDICATOR te prepara la hoja para el médico", "destacar": "hoja", "texto": "Con tus medicinas, alergias, próximas citas y las preguntas que quieras hacer."},
+    {"tipo": "antes_despues", "captura": 1, "antes": "Las pastillas en un papel en la nevera y las citas en una libreta.", "despues": "La pastilla que toca, a su hora, y las citas con letra grande."},
+    {"tipo": "pregunta", "captura": 3, "titulo": "¿A tus padres les vendría bien?", "destacar": "padres", "texto": "Respóndeme a esta historia y te enseño la demo."}
+   ],
+   "publico": "Mayores y quien los cuida",
+   "hashtags_reel": ""
+  },
+  {
+   "slug": "gestion-integral-7d",
+   "nombre": "Gestión Integral 7D",
+   "estado": "activo",
+   "numero": 111,
+   "etiqueta": "Para comerciales y pymes",
+   "gancho": "¿Tu ruta de visitas sigue en papel?",
+   "gancho_destacar": "papel",
+   "gancho_sub": "Clientes, ruta, presupuestos y facturas en una sola app.",
+   "portada": 3,
+   "aviso": "",
+   "pasos": [
+    {"imagen": "/demos/gestion-integral-7d/1.webp", "titulo": "Su web, lista para pedir demo", "linea": "Explica para quién es y qué hace, y desde ahí pides la demo o entras al panel."},
+    {"imagen": "/demos/gestion-integral-7d/2.webp?v=2", "titulo": "Clientes con ranking ABC", "linea": "Cada comercial ve sus clientes por ranking, con contacto, ubicación y última visita."},
+    {"imagen": "/demos/gestion-integral-7d/3.webp?v=2", "titulo": "Tu ruta del día", "linea": "«Mi día» ordena las visitas por carretera desde tu posición, con hora prevista de llegada."},
+    {"imagen": "/demos/gestion-integral-7d/4.webp?v=2", "titulo": "Del presupuesto al pedido", "linea": "Líneas, IVA y margen. Si el cliente acepta, pasa a pedido con un clic."},
+    {"imagen": "/demos/gestion-integral-7d/5.webp?v=2", "titulo": "Albarán y factura", "linea": "Al servirlo genera el albarán, descuenta stock y factura con las mismas líneas."},
+    {"imagen": "/demos/gestion-integral-7d/6.webp?v=2", "titulo": "PDF y enlace de pago", "linea": "Factura en PDF con tu marca y enlace para pagar con tarjeta, Bizum o transferencia."}
+   ],
+   "cierre": "¿La quieres para tu negocio?",
+   "cierre_destacar": "negocio",
+   "cierre_sub": "Pide la demo: enlace en el perfil.",
+   "texto_carrusel": "¿Tu ruta de visitas sigue en papel? 🚗\nGestión Integral 7D es nuestra app para comerciales y pymes que venden en la calle.\nClientes clasificados A, B y C, con su ubicación y la fecha de la última visita.\n«Mi día» ordena tus visitas por carretera y te da la hora prevista de llegada.\nPresupuesto, pedido, albarán y factura heredando líneas e IVA, sin volver a teclear.\nFactura en PDF con tus datos y enlace de pago: tarjeta, Bizum o transferencia.\nCapturas reales de la demo. Pide la tuya en el enlace del perfil o escríbeme IDEA por privado.\n\n#comerciales #pymes #ventas #facturacion #apps #neogestlab",
+   "texto_reel": "De la ruta del día a la factura cobrada 🚗\nGestión Integral 7D ordena tus visitas, lleva tus clientes por ranking ABC y pasa del presupuesto al pedido, al albarán y a la factura con enlace de pago.\nCapturas reales de la demo. Pide la tuya en el enlace del perfil o escríbeme IDEA por privado.\n\n#comerciales #pymes #ventas #facturacion #apps #neogestlab",
+   "historias": [
+    {"tipo": "sabias", "captura": 3, "titulo": "Gestión Integral 7D ordena tus visitas del día", "destacar": "visitas", "texto": "Por carretera, desde tu posición y con la hora prevista de llegada a cada cliente."},
+    {"tipo": "antes_despues", "captura": 4, "antes": "Presupuesto en un documento, pedido en Excel y factura a mano.", "despues": "Presupuesto, pedido, albarán y factura, sin volver a teclear."},
+    {"tipo": "pregunta", "captura": 2, "titulo": "¿Cuántas visitas haces al día?", "destacar": "visitas", "texto": "Respóndeme a esta historia y te enseño la demo."}
+   ],
+   "publico": "Comerciales y pymes"
+  },
+  {
+   "slug": "studio-beats-pro",
+   "nombre": "Studio Beats PRO",
+   "estado": "beta",
+   "numero": 112,
+   "etiqueta": "Para quien hace música",
+   "gancho": "¿Tienes letras pero no tienes estudio?",
+   "gancho_destacar": "estudio",
+   "gancho_sub": "Beat, voz, mezcla y master: tu canción en 4 pasos.",
+   "portada": 2,
+   "aviso": "",
+   "pasos": [
+    {"imagen": "/demos/studio-beats-pro/1.webp", "titulo": "Haz tu canción hoy", "linea": "Creas tu cuenta y entras al estudio guiado en 4 pasos."},
+    {"imagen": "/demos/studio-beats-pro/2.webp", "titulo": "Paso 1: la base", "linea": "Eliges estilo, tono y modo: batería, bajo, acordes y melodía al momento."},
+    {"imagen": "/demos/studio-beats-pro/3.webp?v=2", "titulo": "Paso 2: tu voz", "linea": "Cuenta atrás con metrónomo y cantas encima del beat. Repites las tomas que quieras."},
+    {"imagen": "/demos/studio-beats-pro/4.webp?v=2", "titulo": "Paso 3: suena profesional", "linea": "«Terminar canción» afina, mezcla y masteriza en un clic, y mide el volumen en LUFS."},
+    {"imagen": "/demos/studio-beats-pro/5.webp?v=2", "titulo": "Paso 4: escucha y descarga", "linea": "MP3 a 320 kbps o compártela desde el móvil. En modo Pro, WAV, FLAC y stems."},
+    {"imagen": "/demos/studio-beats-pro/6.webp", "titulo": "Y además, Beat Creator", "linea": "Programa la batería paso a paso con kits y patrones euclidianos."}
+   ],
+   "cierre": "¿Tu primera canción, hoy?",
+   "cierre_destacar": "canción",
+   "cierre_sub": "Está en fase de pruebas. Pide la demo: enlace en el perfil.",
+   "texto_carrusel": "¿Tienes letras pero no tienes estudio? 🎤\nStudio Beats PRO te lleva de la idea a la canción en 4 pasos.\n1. Eliges estilo, tono y modo y sale la base: batería, bajo, acordes y melodía.\n2. Grabas tu voz encima, con cuenta atrás y metrónomo.\n3. «Terminar canción» afina, mezcla y masteriza en un clic.\n4. La descargas en MP3 a 320 kbps (en modo Pro, también WAV, FLAC y stems).\nEstá en fase de pruebas: pide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#musica #productormusical #beats #cantantes #apps #neogestlab",
+   "texto_reel": "Tu canción en 4 pasos 🎤\nBase, voz, mezcla y master con Studio Beats PRO: eliges estilo, grabas encima y «Terminar canción» la deja lista para descargar.\nEstá en fase de pruebas: pide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#musica #productormusical #beats #cantantes #apps #neogestlab",
+   "historias": [
+    {"tipo": "sabias", "captura": 4, "titulo": "Studio Beats PRO mezcla y masteriza en un clic", "destacar": "clic", "texto": "Y te enseña el volumen final en LUFS. Después retocas voz, ambiente y graves."},
+    {"tipo": "antes_despues", "captura": 2, "antes": "La letra en el móvil y ningún sitio donde grabarla.", "despues": "Base, voz, mezcla y master en 4 pasos."},
+    {"tipo": "pregunta", "captura": 3, "titulo": "¿Te animas a grabar tu canción?", "destacar": "canción", "texto": "Respóndeme a esta historia y te enseño la demo."}
+   ],
+   "publico": "Música y creadores"
+  },
+  {
+   "slug": "aj-sistema-taller",
+   "nombre": "AJ Sistema",
+   "estado": "beta",
+   "numero": 113,
+   "etiqueta": "Para negocios con clientes",
+   "gancho": "¿Te llaman mil veces preguntando «cómo va»?",
+   "gancho_destacar": "llaman",
+   "gancho_sub": "Web para tus clientes y panel de gestión, a medida de tu negocio.",
+   "portada": 3,
+   "aviso": "Demo con datos ficticios",
+   "pasos": [
+    {"imagen": "/demos/aj-sistema-taller/1.webp?v=3", "titulo": "Tu web para clientes", "linea": "Tus servicios, cómo trabajas y desde dónde pedir o consultar lo suyo."},
+    {"imagen": "/demos/aj-sistema-taller/2.webp?v=3", "titulo": "Solicitudes online", "linea": "El cliente describe lo que necesita y adjunta fotos. Recibe un código y tú lo tienes todo."},
+    {"imagen": "/demos/aj-sistema-taller/4.webp?v=3", "titulo": "Consulta de estado", "linea": "Con su número y su teléfono ve en qué paso está y acepta o rechaza el presupuesto."},
+    {"imagen": "/demos/aj-sistema-taller/5.webp?v=3", "titulo": "Pedidos de material", "linea": "Te piden material desde la web y siguen el pedido hasta recogerlo."},
+    {"imagen": "/demos/aj-sistema-taller/6.webp?v=2", "titulo": "Tu panel de gestión", "linea": "Tu equipo ve todos los trabajos y los filtra por estado."}
+   ],
+   "cierre": "¿Lo quieres para tu negocio?",
+   "cierre_destacar": "negocio",
+   "cierre_sub": "Te lo adaptamos a medida, no solo para talleres. Pide la demo: enlace en el perfil.",
+   "texto_carrusel": "¿Te llaman mil veces preguntando «cómo va lo mío»? 📞\nAJ Sistema une una web para tus clientes y tu panel de gestión.\nTus clientes envían su solicitud con fotos y reciben un código.\nCon su número y su teléfono consultan en qué paso está y aceptan o rechazan el presupuesto sin llamarte.\nTambién te piden material desde la web y siguen el pedido.\nLas capturas son de la demo, con datos ficticios de un servicio técnico: te lo adaptamos a medida a cualquier negocio, no solo a talleres.\n¿Lo quieres para el tuyo? Pide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#autonomos #pymes #negocios #atencionalcliente #apps #neogestlab",
+   "texto_reel": "Que tus clientes sepan «cómo va lo suyo» sin llamarte 📞\nAJ Sistema: web para tus clientes con solicitudes, consulta de estado y pedidos, y tu panel para gestionarlo todo.\nCapturas de la demo con datos ficticios. Te lo adaptamos a medida a cualquier negocio.\nPide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#autonomos #pymes #negocios #atencionalcliente #apps #neogestlab",
+   "historias": [
+    {"tipo": "sabias", "captura": 3, "titulo": "Con AJ Sistema tus clientes ven cómo va lo suyo", "destacar": "clientes", "texto": "Con su número y su teléfono, sin llamarte. Y aceptan el presupuesto desde ahí."},
+    {"tipo": "antes_despues", "captura": 2, "antes": "Llamadas y mensajes para preguntar «¿cómo va lo mío?».", "despues": "El cliente envía su solicitud y la consulta en tu web cuando quiera."},
+    {"tipo": "pregunta", "captura": 5, "titulo": "¿Cuántas llamadas así recibes al día?", "destacar": "llamadas", "texto": "Respóndeme a esta historia y te enseño la demo."}
+   ],
+   "publico": "Autónomos y negocios de servicio"
+  },
+  {
+   "slug": "insultator",
+   "nombre": "Insultator",
+   "estado": "beta",
+   "numero": 114,
+   "etiqueta": "Para reírse con los amigos",
+   "gancho": "Tu grupo necesita un botón de zasca",
+   "gancho_destacar": "zasca",
+   "gancho_sub": "Pulsa. Que hable la máquina.",
+   "portada": 2,
+   "aviso": "",
+   "pasos": [
+    {"imagen": "/demos/insultator/1.webp", "titulo": "Zasca aleatorio", "linea": "Pulsas y sale una frase al azar, leída en voz alta. Con «Silenciar» la cortas."},
+    {"imagen": "/demos/insultator/2.webp", "titulo": "Último lanzamiento", "linea": "La frase sale en grande, con botones para repetirla o compartirla."},
+    {"imagen": "/demos/insultator/3.webp", "titulo": "Por categorías", "linea": "Sarcásticos, absurdos, dramáticos, humor negro… y tus favoritos."},
+    {"imagen": "/demos/insultator/4.webp", "titulo": "Busca y guarda", "linea": "Encuentra una frase con el buscador y márcala con la estrella."},
+    {"imagen": "/demos/insultator/5.webp", "titulo": "Volumen y atajos", "linea": "Cada botón con su volumen y su tecla. Escape para el audio."},
+    {"imagen": "/demos/insultator/6.webp", "titulo": "Loop Studio", "linea": "Eliges tempo y una de las 10 bases rítmicas para mezclar frases con ritmo."}
+   ],
+   "cierre": "¿Te imaginas tu propia app así?",
+   "cierre_destacar": "app",
+   "cierre_sub": "Está en fase de pruebas. Pide la demo: enlace en el perfil.",
+   "texto_carrusel": "Tu grupo necesita un botón de zasca 😂\nInsultator es un panel de frases con humor: pulsas un botón y la frase sale en grande y se lee en voz alta.\n«Zasca aleatorio» elige una al azar, sin repetir la anterior.\nCategorías como sarcásticos, absurdos, dramáticos o humor negro, con buscador y favoritos.\nY Loop Studio: 10 bases rítmicas para mezclar frases con ritmo.\nEstá en fase de pruebas. ¿Te imaginas una app así para tu grupo o tu negocio? Escríbeme IDEA por privado.\n\n#humor #risas #ocio #apps #neogestlab",
+   "texto_reel": "Pulsa. Que hable la máquina 😂\nInsultator: frases con humor que salen en grande y se leen en voz alta, por categorías, con favoritos y un Loop Studio con 10 bases rítmicas.\nEstá en fase de pruebas. ¿Una app así para tu grupo o tu negocio? Escríbeme IDEA por privado.\n\n#humor #risas #ocio #apps #neogestlab",
+   "historias": [
+    {"tipo": "sabias", "captura": 6, "titulo": "Insultator tiene su propio Loop Studio", "destacar": "Loop", "texto": "10 bases rítmicas (hip-hop, reguetón, techno…) para mezclar frases con ritmo."},
+    {"tipo": "antes_despues", "captura": 1, "antes": "Silencio incómodo en el grupo.", "despues": "Un botón y zasca, en voz alta."},
+    {"tipo": "pregunta", "captura": 3, "titulo": "¿Sarcástico o humor negro?", "destacar": "humor", "texto": "Respóndeme con tu favorito."}
+   ],
+   "publico": "Ocio y humor"
+  },
+  {
+   "slug": "aj-reparacion-web",
+   "nombre": "AJ Web",
+   "estado": "beta",
+   "numero": 115,
+   "etiqueta": "Para cualquier negocio",
+   "gancho": "Tu web debería trabajar por ti",
+   "gancho_destacar": "trabajar",
+   "gancho_sub": "Solicitudes, pedidos y portal de clientes, a medida.",
+   "portada": 1,
+   "aviso": "Demo con datos ficticios",
+   "pasos": [
+    {"imagen": "/demos/aj-reparacion-web/1.webp?v=3", "titulo": "Tu portada", "linea": "Qué ofreces, dónde estás y tu horario, con accesos a lo que más usan."},
+    {"imagen": "/demos/aj-reparacion-web/3.webp?v=3", "titulo": "Solicitudes y consulta", "linea": "El cliente te envía su solicitud o mira en qué punto está su encargo."},
+    {"imagen": "/demos/aj-reparacion-web/4.webp?v=3", "titulo": "Pedidos de material", "linea": "Te piden productos desde la web y después consultan el estado del pedido."},
+    {"imagen": "/demos/aj-reparacion-web/6.webp?v=3", "titulo": "Portal de clientes", "linea": "Cada cliente ve sus encargos, el detalle de cada uno y sus facturas."}
+   ],
+   "cierre": "¿La quieres para tu negocio?",
+   "cierre_destacar": "negocio",
+   "cierre_sub": "Te la adaptamos a medida. Pide la demo: enlace en el perfil.",
+   "texto_carrusel": "Tu web debería trabajar por ti 💻\nAJ Web es una web de servicio que te adaptamos a medida, para cualquier tipo de negocio.\nTus clientes ven qué ofreces, dónde estás y tu horario.\nTe envían solicitudes y consultan en qué punto está su encargo.\nTe piden productos o material y siguen el pedido.\nY cada cliente tiene su portal con sus encargos y sus facturas.\nCapturas de la versión de demostración, con datos ficticios. ¿La quieres para tu negocio? Pide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#pequenonegocio #emprendedores #paginaweb #pymes #apps #neogestlab",
+   "texto_reel": "Una web que no solo enseña tu teléfono 💻\nCon AJ Web tus clientes te envían solicitudes, consultan sus encargos, te piden material y tienen su propio portal con sus facturas.\nDemo con datos ficticios. Te la adaptamos a medida a cualquier negocio.\nPide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#pequenonegocio #emprendedores #paginaweb #pymes #apps #neogestlab",
+   "historias": [
+    {"tipo": "sabias", "captura": 4, "titulo": "AJ Web incluye un portal para tus clientes", "destacar": "portal", "texto": "Cada uno ve sus encargos, el detalle de cada uno y sus facturas."},
+    {"tipo": "antes_despues", "captura": 1, "antes": "Una web que solo enseña tu teléfono.", "despues": "Una web donde tus clientes piden, consultan y siguen sus pedidos."},
+    {"tipo": "pregunta", "captura": 2, "titulo": "¿Qué te gustaría que hiciera tu web?", "destacar": "web", "texto": "Respóndeme a esta historia y te digo cómo sería."}
+   ],
+   "publico": "Cualquier negocio"
+  }
+ ]
+}
