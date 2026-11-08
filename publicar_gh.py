@@ -775,7 +775,11 @@ def _mezclar_voz(video, tramos, wavs, aj, cadena, trabajo):
         filtros.append(f"[{i + 1}:a]aresample=44100,{proc}atempo={tempo:.3f},adelay={ms}|{ms},volume={aj['volumen_voz']}[v{i}]")
         etiquetas.append(f"[v{i}]")
     filtros.append(f"{''.join(etiquetas)}amix=inputs={len(etiquetas)}:normalize=0,pan=stereo|c0=c0|c1=c0,apad,asplit=2[vox][key]")
-    filtros.append(f"[0:a][key]sidechaincompress=threshold={aj['umbral_duck']}:ratio={aj['ratio_duck']}:attack=15:release=350[fondo]")
+    # 8/11/2026 (dueño: «la música tiene que resaltar», borró reels porque solo se oía la voz):
+    # la música sube (volumen_musica) y el ducking es suave (como mucho ~6 dB bajo la voz).
+    vm = float(aj.get("volumen_musica", 1.0))
+    filtros.append(f"[0:a]volume={vm}[mus]")
+    filtros.append(f"[mus][key]sidechaincompress=threshold={aj['umbral_duck']}:ratio={aj['ratio_duck']}:attack=30:release=400:makeup=1[fondo]")
     filtros.append(f"[fondo][vox]amix=inputs=2:duration=first:normalize=0,alimiter=limit={aj['limite']}:level=false[a]")
     salida = os.path.join(trabajo, "con_voz.mp4")
     r = subprocess.run(["ffmpeg", "-y", *entradas, "-filter_complex", ";".join(filtros),
