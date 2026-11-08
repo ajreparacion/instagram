@@ -1,14 +1,19 @@
 {
- "aprobado": false,
+ "aprobado": true,
  "nota": 92,
  "aprobado_por": "revisión del agente de demos (8/11)",
  "revision": [
-  "historia 1080x1920 con zonas seguras (nada importante en los 250 px de arriba ni en la franja de responder)",
-  "formato «pregunta» legible de un vistazo",
-  "datos fieles a demo[] y hechos_verificados del Producto; nada de prohibido_afirmar",
-  "capturas reales de la demo, nítidas (780 px reducidas, sin reescalar hacia arriba) y sin bordes raros",
-  "Montserrat, firma «By Neogest Lab» y logo NL original (recorte circular)",
-  "español de España, sin erratas"
+  "historia en vídeo de 10.1 s: textos que entran animados, móvil que sube, zoom suave, whoosh/pop suaves",
+  "zonas seguras respetadas; formato «pregunta»; datos fieles a demo[] y hechos_verificados",
+  "música en primer plano todo el tiempo (sin voz): trap a 142 BPM, tono +5, generada por código (sin licencias de terceros)",
+  "máster medido con ffmpeg ebur128: -13.8 LUFS integrados, pico -5.7 dBTP, LRA 0.5 LU (objetivo -14 LUFS)",
+  "1080x1920, 30 fps, H.264 + AAC 192 kbps; fotogramas de control revisados (control/)",
+  "Montserrat, firma «By Neogest Lab» y logo NL original; español de España sin erratas"
  ],
- "nota_pausa": "En conversión a vídeo con música (orden del dueño 8/11 17:59); se vuelve a aprobar al revisar el vídeo."
+ "audio": {
+  "lufs_integrados": -13.8,
+  "pico_real_dbtp": -5.7,
+  "lra_lu": 0.5,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ }
 }

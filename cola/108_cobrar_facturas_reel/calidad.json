@@ -1,0 +1,20 @@
+{
+ "aprobado": true,
+ "nota": 91,
+ "aprobado_por": "revisión del agente de demos (8/11)",
+ "revision": [
+  "versión reel (28.9 s) del carrusel 108_cobrar_facturas ya aprobado: mismas diapositivas, Ken Burns, transiciones de deslizamiento al compás, titulares que entran animados, contador y barra de progreso",
+  "texto del post = el del carrusel (adaptado si citaba una diapositiva)",
+  "programado al menos 1 día después de su carrusel",
+  "música en primer plano todo el tiempo (sin voz): funk a 106 BPM, tono -2, generada por código (sin licencias de terceros)",
+  "máster medido con ffmpeg ebur128: -13.9 LUFS integrados, pico -4.8 dBTP, LRA 0.4 LU (objetivo -14 LUFS)",
+  "1080x1920, 30 fps, H.264 + AAC 192 kbps; fotogramas de control revisados (control/)",
+  "Montserrat, firma «By Neogest Lab» y logo NL original; español de España sin erratas"
+ ],
+ "audio": {
+  "lufs_integrados": -13.9,
+  "pico_real_dbtp": -4.8,
+  "lra_lu": 0.4,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ }
+}
