@@ -138,6 +138,12 @@ jobs:
             --title "Pruebas del modo presentador" --notes "Archivos temporales de pruebas (se pueden borrar)."
           for f in /tmp/presentador_salida/*.mp4; do [ -f "$f" ] && gh release upload presentador-pruebas "$f" --clobber; done; true
 
+      - name: Limpiar la release temporal de pruebas
+        if: ${{ !inputs.dependencias && inputs.subir }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release delete presentador-pruebas -y --cleanup-tag 2>/dev/null || true
+
       - name: Guardar cambios
         if: ${{ !inputs.dependencias }}
         run: |
