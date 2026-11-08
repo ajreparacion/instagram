@@ -1,0 +1,26 @@
+name: Prueba CDN de imágenes (diagnóstico)
+
+# Diagnóstico (agente de demos, 8/11/2026): qué devuelven las CDN que sirven los JPG de carruseles e historias a
+# Instagram. No publica nada.
+on:
+  workflow_dispatch:
+    inputs:
+      ruta:
+        description: "Ruta del JPG dentro del repo"
+        type: string
+        default: "cola/201_medicator_carrusel/slides/01.jpg"
+
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cabeceras
+        run: |
+          R="${{ inputs.ruta }}"; S="${{ github.sha }}"; REPO="${{ github.repository }}"
+          for u in "https://cdn.jsdelivr.net/gh/$REPO@$S/$R" "https://cdn.jsdelivr.net/gh/$REPO@main/$R" \
+                   "https://raw.githubusercontent.com/$REPO/$S/$R" "https://cdn.statically.io/gh/$REPO/$S/$R" \
+                   "https://rawcdn.githack.com/$REPO/$S/$R"; do
+            echo "=== $u"
+            curl -sS -L -o /tmp/f -D - "$u" | grep -iE "^HTTP|content-type|content-length|x-served|server" || true
+            head -c 120 /tmp/f | xxd | head -3
+          done
