@@ -1,0 +1,180 @@
+{
+ "_nota": "Guion de narración del escaparate /demo (Centro de Contenido Apps). Un clip por paso de APPS en demoData.js (id = <app>_<n paso>). Texto neutro, vale para cualquier sector. Voz del dueño (autorizada) con Chatterbox, config de equipo/voz.json.",
+ "clips": [
+  {
+   "id": "intro",
+   "estilo": "gancho",
+   "texto": "¿Y si tu negocio hiciera solo las tareas pesadas? Elige tu tipo de negocio."
+  },
+  {
+   "id": "gestion_0",
+   "texto": "Te entra un pedido o una reserva desde tu web."
+  },
+  {
+   "id": "gestion_1",
+   "texto": "Lo ves en tu panel, con su estado."
+  },
+  {
+   "id": "gestion_2",
+   "texto": "Cambias el estado y avisas a tu cliente por WhatsApp."
+  },
+  {
+   "id": "gestion_3",
+   "texto": "Mandas el presupuesto por email, con un enlace para aceptarlo."
+  },
+  {
+   "id": "gestion_4",
+   "texto": "Y tu cliente consulta su estado sin tener que llamarte."
+  },
+  {
+   "id": "gestion_5",
+   "texto": "Así funciona en un negocio real."
+  },
+  {
+   "id": "web_0",
+   "texto": "Reservas con calendario: tu cliente elige día y hora."
+  },
+  {
+   "id": "web_1",
+   "texto": "Un catálogo con carrito: pide sin llamarte."
+  },
+  {
+   "id": "web_2",
+   "texto": "Con seguimiento, para que vea cómo va su pedido."
+  },
+  {
+   "id": "web_3",
+   "texto": "Y un asistente con IA que responde con la información de tu web."
+  },
+  {
+   "id": "acciones_0",
+   "texto": "Recordatorio por WhatsApp, con el mensaje ya escrito."
+  },
+  {
+   "id": "acciones_1",
+   "texto": "Un resumen del día con IA: qué urge y qué cobrar."
+  },
+  {
+   "id": "acciones_2",
+   "texto": "Pides reseñas y recuerdas los cobros pendientes."
+  },
+  {
+   "id": "acciones_3",
+   "texto": "Exportas el mes para tu gestoría, en CSV o Excel."
+  },
+  {
+   "id": "acciones_4",
+   "texto": "Y reactivas a quien lleva noventa días sin venir."
+  },
+  {
+   "id": "medicator_0",
+   "texto": "Tu pastilla de ahora, con un botón bien grande."
+  },
+  {
+   "id": "medicator_1",
+   "texto": "Las citas, en un calendario con letra grande."
+  },
+  {
+   "id": "medicator_2",
+   "texto": "Tu hoja para el médico, lista para imprimir o enviar."
+  },
+  {
+   "id": "medicator_3",
+   "texto": "Y la lista para la farmacia, con lo que te queda."
+  },
+  {
+   "id": "gh_0",
+   "texto": "Tu saldo y el dinero disponible del mes."
+  },
+  {
+   "id": "gh_1",
+   "texto": "Los gastos fijos generan sus pagos solos."
+  },
+  {
+   "id": "gh_2",
+   "texto": "Te avisa de los pagos vencidos y de los próximos."
+  },
+  {
+   "id": "gh_3",
+   "texto": "Importas el extracto del banco y compartís el hogar."
+  },
+  {
+   "id": "studio_0",
+   "texto": "Eliges estilo y tono, y genera la base."
+  },
+  {
+   "id": "studio_1",
+   "texto": "Grabas tu voz encima, con cuenta atrás."
+  },
+  {
+   "id": "studio_2",
+   "texto": "Con «Terminar canción», mezcla y máster en un clic."
+  },
+  {
+   "id": "studio_3",
+   "texto": "Míralo en vídeo."
+  },
+  {
+   "id": "gps_0",
+   "texto": "Busca tu destino en el mapa."
+  },
+  {
+   "id": "gps_1",
+   "texto": "Tres niveles de acento: Flojito, Normal o Papas."
+  },
+  {
+   "id": "gps_2",
+   "texto": "Guarda tus sitios con una estrella."
+  },
+  {
+   "id": "gps_3",
+   "texto": "Y elige mapa: predeterminado, de relieve o nocturno."
+  },
+  {
+   "id": "insultator_0",
+   "texto": "Pulsas, y habla la máquina."
+  },
+  {
+   "id": "insultator_1",
+   "texto": "Busca por frase, por categoría o por pack."
+  },
+  {
+   "id": "insultator_2",
+   "texto": "Favoritos con estrella y volumen para cada botón."
+  },
+  {
+   "id": "insultator_3",
+   "texto": "Y un atajo de teclado para cada frase."
+  },
+  {
+   "id": "g7d_0",
+   "texto": "Tus clientes, clasificados en A, B o C."
+  },
+  {
+   "id": "g7d_1",
+   "texto": "Tu ruta del día, ordenada por carretera."
+  },
+  {
+   "id": "g7d_2",
+   "texto": "Pasas el presupuesto a pedido con un clic."
+  },
+  {
+   "id": "g7d_3",
+   "texto": "Albarán y factura heredan las líneas."
+  },
+  {
+   "id": "g7d_4",
+   "texto": "Factura en PDF, con enlace de pago."
+  },
+  {
+   "id": "cierre",
+   "estilo": "cierre",
+   "texto": "Pruébala en tu negocio: solicita acceso."
+  },
+  {
+   "id": "final",
+   "estilo": "cierre",
+   "texto": "¿Y si tu idea fuera una app? La hacemos a medida. Solicita acceso."
+  }
+ ]
+}
