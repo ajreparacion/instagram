@@ -1,0 +1,13 @@
+{
+ "tipo": "carrusel",
+ "texto": "¿Ya te tomaste la pastilla o no? 💊\nMEDICATOR organiza las pastillas y las citas médicas con letra grande, pensada para mayores y para quien los cuida.\nAl abrirla ves la pastilla que toca ahora y la apuntas con un botón grande.\nLas citas van en un calendario: médico, centro, planta, si es en ayunas y qué llevar.\nPrepara una hoja con tus medicinas, alergias y preguntas para el médico, y una lista para la farmacia.\nCapturas de la demo con datos de ejemplo. Organiza; no sustituye a tu médico ni a tu farmacéutico.\n¿La quieres para ti o para tus padres? Pide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#mayores #cuidadores #organizacion #apps #neogestlab",
+ "cuando": "2026-11-08T19:10:00+01:00",
+ "renderizado": "no aplica (carrusel)",
+ "diapositivas": 8,
+ "app": "MEDICATOR",
+ "publico": "Mayores y quien los cuida",
+ "fuentes": [
+  "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «MEDICATOR»: demo[] (capturas reales de la demo y sus textos), hechos_verificados y prohibido_afirmar (consulta 8/11/2026)."
+ ],
+ "origen": "herramientas/demo_app.py"
+}
