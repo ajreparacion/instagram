@@ -1,0 +1,58 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "inicio": 0.0,
+  "duracion": 4.433,
+  "texto": "¿Llevas los pedidos de memoria?",
+  "enfasis": [
+   3,
+   4
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "tramo",
+  "inicio": 4.433,
+  "duracion": 6.067,
+  "texto": "Le pedí a una IA esta app de pedidos, con un solo mensaje.",
+  "enfasis": [
+   10,
+   11,
+   12
+  ]
+ },
+ {
+  "escena": 2,
+  "estilo": "tramo",
+  "inicio": 10.5,
+  "duracion": 10.1,
+  "texto": "Apunto el cliente y lo que ha pedido. Tres pedidos, tres líneas.",
+  "enfasis": [
+   10,
+   11
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "tramo",
+  "inicio": 20.6,
+  "duracion": 6.8,
+  "texto": "Toco el estado: pendiente, hecho, entregado, y los contadores se actualizan solos.",
+  "enfasis": [
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "cierre",
+  "inicio": 27.4,
+  "duracion": 4.467,
+  "texto": "¿Tienes una tienda y una idea? Escríbeme idea por privado.",
+  "enfasis": [
+   7
+  ]
+ }
+]
