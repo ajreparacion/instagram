@@ -109,6 +109,34 @@ Para reels de la directiva (resultado real funcionando sobre fondo plano suave, 
 - Los tiempos de cada paso no los marca la voz: haz que cada tramo del guion cubra el momento de la grabación que narra (el tramo se acelera hasta x1,75 para durar lo que su voz). Un solo caso por reel, 20-35 s.
 - Solo se graba lo real: la página tiene que hacer de verdad lo que se enseña. Sesiones de cuentas (Gmail...) solo de cuentas de prueba con datos de prueba; nunca credenciales en el repo (usa un secret y la variable PANTALLA_SESION).
 
+### Modo "presentador" (IMPLEMENTADO el 8/11/2026; formato del reel de referencia del dueño, «la idea para vídeos en general»)
+Reel con la presentadora **Nea** (personaje 3D original de Neogest Lab: gafas, moño, sudadera amarilla con el NL) y **Bit** (robot blanco con pantalla-cara cian) sobre fondos planos saturados que cambian en cada corte, titulares enormes (Anton), subtítulos palabra a palabra en caja blanca con la palabra clave en azul, capturas reales de la demo en un móvil, tarjeta resumen con checks y pegatina «guárdalo» y cierre con el logo NL. Lo renderiza `herramientas/presentador/` (Remotion + three.js en CPU, técnica de «claude-animated-shorts» de Mr omi, MIT: ver CREDITOS.md) con el workflow **«Modo presentador»** (`.github/workflows/presentador.yml`), NO el ciclo. En este modo Bit acompaña todo el reel, como el ayudante del vídeo de referencia (la regla de «Bit 3 s como máximo» de la directiva es de los reels de grabación de pantalla).
+Cómo hacer uno (Creador, a diario):
+1. Hechos: solo `hechos_verificados` del Producto (Centro de Contenido Apps, appId 6ae5244d4e2b32702f0a3cd6) y nada de `prohibido_afirmar`. Las capturas son las de `demo[].imagen` (se descargan solas dentro de Actions).
+2. Crea `cola/NNN_<app>_presentador/guion.json` SIN post.json (el post va dentro del guion; el workflow escribe post.json con "renderizado" al terminar, y así el ciclo no intenta renderizarlo).
+3. Lanza el workflow «Modo presentador» con `guion` = esa ruta, `voz` = sí, `subir` = sí (API: `gh api -X POST repos/ajreparacion/instagram/actions/workflows/presentador.yml/dispatches -f ref=main -f 'inputs[guion]=cola/NNN_.../guion.json' -f 'inputs[voz]=true' -f 'inputs[subir]=true'`). Tarda ~12 min (voz ~6 min, render ~5 min).
+4. Haz `git pull` y revisa `cola/NNN_.../control/*.jpg` (fotograma del gancho, uno por escena y el cierre) y `presentador.json` (duración, LUFS, ducking, movimiento, avisos). El MP4 está en la release «cola». Calidad escribe calidad.json (nota ≥ 90) y el ciclo lo publica a su hora.
+Formato del guion (ejemplos completos: `cola/301_medicator_presentador/guion.json` y `cola/302_gestion_integral_7d_presentador/guion.json`):
+```
+{"modo":"presentador","titulo":"...","app":"MEDICATOR","slug":"medicator","publico":"Mayores y quien los cuida",
+ "semilla":31,"acento":"#1f5bff","musica":{"estilo":"pop|house|funk|electro","bpm":116,"tono":2},
+ "fuentes":["Centro de Contenido Apps ... (consulta DD/MM)"],
+ "post":{"tipo":"reel","texto":"...","cuando":"AAAA-MM-DDTHH:MM:00+01:00","palabra_clave":"APP","respuesta":"...","compartir_en_feed":true,"portada_ms":1200},
+ "escenas":[{"voz":"Mi madre no sabe usar el *móvil*…","titular":"MI MADRE|Y EL MÓVIL","estilo_titular":"amarillo","fondo":"magenta",
+             "presentador":"preocupada","expresion":"preocupada","bit":"entra","bit_cara":"sorpresa","plano":"medio","flash":true}, ...]}
+```
+Campos de cada escena (una frase de voz por escena, 2-4 s; las escenas de más de 3,6 s se parten solas con un subcorte de cámara y fondo):
+- "voz": lo que dice la voz del dueño; *asteriscos* = énfasis (más fuerte y palabra en azul). "clave": ["palabra"] para colorear sin subir el volumen. "estilo_voz": gancho|giro|cierre (opcional).
+- "titular": texto en mayúsculas, "|" separa líneas (máx. ~13 letras por línea); "estilo_titular": amarillo | cian | rosa | blanco | sello (sello = rojo con golpe y sacudida). Un titular cada 2-3 escenas, no en todas.
+- "fondo": verde | magenta | morado | cian | rojo | negro | azul | turquesa | rosa (nunca dos seguidos iguales; evita amarillo y naranja: la sudadera es amarilla). "fondo2" opcional para el subcorte.
+- "presentador" (pose): manos | reposo | explica | presenta | senala | senala_arriba | idea | saluda | celebra | sorpresa | encoge | pulgar | piensa | preocupada | movil. "lado": 1 o -1 (mano que gesticula y hacia dónde señala). "expresion": feliz | habla | sorpresa | preocupada | piensa | guino | risa | seria.
+- "bit": flota | entra | sale | salta | celebra | gira | sorpresa | asiente | senala | saluda | corazon | asoma | oculto. "bit_cara": feliz | normal | sorpresa | corazon | estrella | guino | piensa | triste | risa.
+- "plano": medio | primer | lejos | abajo (con maqueta, abajo es automático: la presentadora asoma por debajo).
+- "elemento" (opcional): {"tipo":"captura","imagen":"/demos/<slug>/N.webp","zoom":[x,y,escala],"etiqueta":"Demo con datos de ejemplo"} · {"tipo":"broll","imagen":...} (a pantalla completa; tapa a la presentadora y a Bit) · {"tipo":"terminal","lineas":["..."]} · {"tipo":"movil","titulo":"Mamá","mensajes":[{"de":"otro|yo","texto":"..."}]} · {"tipo":"tarjeta","titulo":"...","items":["≤ 32 letras", "..."],"pegatina":"guárdalo","chip":"..."} · {"tipo":"cierre","chip":"Demo en el enlace del perfil"}.
+- "flash": true = destello blanco y golpe al acabar la escena (úsalo al final del gancho). "extra": segundos de más (tarjeta 1,2; cierre 0,9). "min": duración mínima.
+Estructura que funciona (la de los pilotos): gancho con titular y Bit entrando (≤ 3 s) → giro con sello → 4-6 escenas de funciones reales con captura y zoom al botón → titular de beneficio → tarjeta «guárdalo» → cierre «Comenta APP» con logo. 30-40 s, 10-12 escenas. Música y efectos salen solos (whoosh en cada corte, pop en titulares, ding en los checks); máster a -14 LUFS con la música bajando como mucho 5 dB bajo la voz.
+Prueba en local sin voz ni capturas (solo para mirar el look): `python3 herramientas/presentador/preparar.py <guion> --sin-voz --sin-capturas --solo-plan` y `node fotogramas.mjs /tmp/presentador_<carpeta>/props.json /tmp/f_ 30,200,400 0.5 <chrome>` desde herramientas/presentador (necesita node_modules).
+
 ### Modo "humano" (EN DESUSO desde el 6/11/2026 20:27; se conserva la documentación para el énfasis y los subtítulos)
 Añade "modo":"humano" al guion. Entonces hacer_reel.py NO dibuja fondos generados ni HUD: cada escena lleva fotos reales con movimiento de cámara leve y subtítulos palabra a palabra sincronizados con la voz (estimada a ~2,6 palabras/s; el texto en pantalla es la propia "voz", así que "texto" solo hace falta en el gancho y en el cierre).
 {"titulo":"...","semilla":<entero>,"modo":"humano","musica":true,"portada_texto":"gancho de máx. 8 palabras",
