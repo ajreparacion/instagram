@@ -861,7 +861,7 @@ def renderizar(cfg, carpeta, post):
 def renderizar_pendientes(cfg):
     hechos = 0
     for _, carpeta, post in carpetas_cola():
-        if post.get("renderizado") or post.get("tipo") in ("carrusel", "imagen") or hechos >= MAX_RENDERS:
+        if post.get("renderizado") or post.get("tipo") in ("carrusel", "imagen", "historia") or hechos >= MAX_RENDERS:
             continue
         nombre = os.path.basename(carpeta)
         try:
@@ -1043,10 +1043,35 @@ def publicar_carrusel(cfg, carpeta, post):
     return {"media_id": mid, "enlace": enlace, "tipo": "carrusel" if len(urls) > 1 else "imagen", "imagenes": len(urls)}
 
 
+def publicar_historia(cfg, carpeta, post):
+    """Historia (8/11/2026): "tipo": "historia". Imagen = primer JPG de <carpeta>/slides/ (servido por jsDelivr fijado
+    al commit, como los carruseles); vídeo = post["asset"] de la release 'cola' (video_url). Instagram no admite texto
+    en las historias por API: el texto va dentro de la imagen."""
+    repo = os.environ.get("GITHUB_REPOSITORY", "ajreparacion/instagram")
+    ref = os.environ.get("GITHUB_SHA") or os.environ.get("GITHUB_REF_NAME", "main")
+    carpeta_rel = os.path.relpath(carpeta, os.path.dirname(os.path.abspath(__file__)))
+    sl = os.path.join(carpeta, "slides")
+    imgs = sorted(f for f in os.listdir(sl) if f.lower().endswith((".jpg", ".jpeg"))) if os.path.isdir(sl) else []
+    if imgs:
+        url = f"https://cdn.jsdelivr.net/gh/{repo}@{ref}/{urllib.parse.quote(carpeta_rel)}/slides/{urllib.parse.quote(imgs[0])}"
+        r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", media_type="STORIES", image_url=url)
+        esperar_contenedor(cfg, r["id"], max_seg=300)
+    elif post.get("asset"):
+        r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", media_type="STORIES",
+                video_url=url_directa_release(post["asset"]))
+        esperar_contenedor(cfg, r["id"])
+    else:
+        raise ErrorAPI("la historia no tiene imagen en slides/ ni 'asset' de vídeo")
+    mid = api(cfg, f"{cfg['ig_user_id']}/media_publish", "POST", creation_id=r["id"])["id"]
+    if post.get("asset") and not imgs:
+        gh("release", "delete-asset", RELEASE, post["asset"], "-y", check=False)
+    return {"media_id": mid, "tipo": "historia", "medio": "imagen" if imgs else "video"}
+
+
 def publicar_pendientes(cfg):
     ahora = datetime.now(timezone.utc)
     for cuando, carpeta, post in carpetas_cola():
-        if cuando > ahora or not (post.get("renderizado") or post.get("tipo") in ("carrusel", "imagen")):
+        if cuando > ahora or not (post.get("renderizado") or post.get("tipo") in ("carrusel", "imagen", "historia")):
             continue
         nombre = os.path.basename(carpeta)
         if ahora - cuando > timedelta(hours=36):
@@ -1059,6 +1084,23 @@ def publicar_pendientes(cfg):
         trabajo = os.path.join("/tmp", "pub_" + nombre)
         shutil.rmtree(trabajo, ignore_errors=True)
         os.makedirs(trabajo)
+        if post.get("tipo") == "historia":
+            # Las historias no cuentan para el límite de una publicación por pasada ni bloquean la cola.
+            try:
+                res = publicar_historia(cfg, carpeta, post)
+                res["publicado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+                mover(carpeta, PUBLICADOS, res)
+                log(f"{nombre}: historia publicada ({res.get('media_id')})")
+            except Exception as e:
+                intentos = post.get("_intentos", 0) + 1
+                post["_intentos"] = intentos
+                escribir_json(os.path.join(carpeta, "post.json"), post)
+                log(f"{nombre}: fallo al publicar la historia {intentos}/3: {e}")
+                if intentos >= 3:
+                    mover(carpeta, ERRORES, {"error": str(e), "intentos": intentos})
+            finally:
+                shutil.rmtree(trabajo, ignore_errors=True)
+            continue
         try:
             if post.get("tipo") in ("carrusel", "imagen"):
                 res = publicar_carrusel(cfg, carpeta, post)
