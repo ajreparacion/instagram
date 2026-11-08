@@ -146,5 +146,6 @@ jobs:
           D=$(dirname "${{ inputs.guion }}")
           git add "$D"
           git commit -q -m "Modo presentador: $(basename "$D") $(date -u +%FT%H:%MZ)" || exit 0
+          git stash -u -q || true   # registro.log y demás restos del render no se suben desde aquí
           for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done
           exit 1

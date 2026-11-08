@@ -28,8 +28,8 @@ const aclarar = (hex: string, k: number) => {
   return `rgb(${f(r)},${f(g)},${f(b)})`;
 };
 
-const Fondo: React.FC<{ e: Escena }> = ({ e }) => {
-  const c = colorFondo(e.fondo);
+const Fondo: React.FC<{ e: Escena; f: number }> = ({ e, f }) => {
+  const c = colorFondo(e.sub !== undefined && f >= e.sub && e.fondo2 ? e.fondo2 : e.fondo);
   return (
     <AbsoluteFill
       style={{
@@ -186,7 +186,7 @@ export const Reel: React.FC<{ plan: Plan }> = ({ plan }) => {
   const ySub = e.elemento?.tipo === "broll" ? 1440 : e.plano === "abajo" ? 1150 : e.plano === "primer" ? 1350 : 1170;
   return (
     <AbsoluteFill style={{ background: "#000" }}>
-      <Fondo e={e} />
+      <Fondo e={e} f={f} />
       <Escena3D plan={plan} />
       {e.elemento ? <ElementoVista el={e.elemento} e={e} f={f} plan={plan} conTitular={!!e.titular} /> : null}
       <Titular e={e} f={f} arriba={arriba} />
