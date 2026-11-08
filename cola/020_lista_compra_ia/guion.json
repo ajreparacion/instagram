@@ -5,12 +5,12 @@
  "video": "demo.mp4",
  "volumen_original": 0,
  "musica": true,
- "portada_texto": "Tu lista de la compra, ordenada sola",
+ "portada_texto": "¿Tu lista de la compra es un caos?",
  "escenas": [
   {
    "estilo": "gancho",
-   "texto": "Tu lista de la compra, *ordenada sola*",
-   "voz": "Tu lista de la compra, *ordenada sola*."
+   "texto": "¿Tu lista de la compra es un *caos*?",
+   "voz": "¿Tu lista de la compra es un *caos*?"
   },
   {
    "estilo": "tramo",
@@ -18,7 +18,7 @@
     "inicio": 2.71,
     "fin": 7.5
    },
-   "voz": "Se lo pedí a una IA con *este mensaje*."
+   "voz": "Se lo pedí a una IA con *un solo mensaje*, que es este que ves."
   },
   {
    "estilo": "tramo",
@@ -26,7 +26,7 @@
     "inicio": 8.22,
     "fin": 14.07
    },
-   "voz": "Pego la lista desordenada y le doy a *ordenar*."
+   "voz": "Pego la lista tal cual, toda desordenada, y le doy a *ordenar por secciones*. Así de fácil."
   },
   {
    "estilo": "tramo",
@@ -38,8 +38,8 @@
   },
   {
    "estilo": "cierre",
-   "texto": "Comenta «COMPRA»",
-   "voz": "Comenta *compra* y te paso el mensaje. Sígueme para más."
+   "texto": "Escríbeme «IDEA»",
+   "voz": "¿Y si tu idea fuera una app? Escríbeme *idea* por privado y te cuento cómo sería."
   }
  ]
 }

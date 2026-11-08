@@ -1,0 +1,11 @@
+{
+ "aprobado": false,
+ "nota": 71,
+ "fecha": "2026-11-08T12:00:00Z",
+ "motivos": [
+  "A1: escena 2 (7,4-17,9 s) con unos 6 s sin voz (la frase acaba hacia el 11 s), solo música.",
+  "Directiva §2 y §5: cierre «Comenta SUSCRIPCIONES… te paso el mensaje» y texto del post («Pégalo en Claude, ChatGPT o Gemini») no son de Neogest Lab; sin público ni formato.",
+  "Voz θ pendiente de oído; no se puede puntuar ≥ 90 en voz."
+ ],
+ "como_arreglarlo": "Guion (voz de la escena 2 alargada, cierre IDEA) y post (texto Neogest Lab, público Hogar y familias) corregidos por Calidad; re-render lanzado. Imagen y datos correctos (53,88 € al mes, 646,56 € al año, ahorro 358,80 €)."
+}

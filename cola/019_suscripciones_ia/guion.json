@@ -26,7 +26,7 @@
     "inicio": 8.09,
     "fin": 18.59
    },
-   "voz": "Apunto tres: streaming, música y gimnasio, con lo que pago *al mes*."
+   "voz": "Apunto tres: streaming, música y gimnasio, con lo que pago *al mes*. Fíjate cómo la web suma sola cada precio y me dice lo que gasto *al año*, sin sacar la calculadora."
   },
   {
    "estilo": "tramo",
@@ -38,8 +38,8 @@
   },
   {
    "estilo": "cierre",
-   "texto": "Comenta «SUSCRIPCIONES»",
-   "voz": "Comenta *suscripciones* y te paso el mensaje. Sígueme para más."
+   "texto": "Escríbeme «IDEA»",
+   "voz": "¿Y si tu idea fuera una app? Escríbeme *idea* por privado y te cuento cómo sería."
   }
  ]
 }
