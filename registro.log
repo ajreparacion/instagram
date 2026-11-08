@@ -192,3 +192,13 @@ ModuleNotFoundError: No module named 'faster_whisper'
 2026-11-08 12:19  015_resumir_correo: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Sunday, 08-Nov-26 03:19:08 PST. (código 190, subcódigo 463)
 2026-11-08 12:19  016_filtro_facturas: no se pudieron leer comentarios: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Sunday, 08-Nov-26 03:19:08 PST. (código 190, subcódigo 463)
 2026-11-08 12:19  Error en estadísticas: Error validating access token: Session has expired on Saturday, 07-Nov-26 14:00:00 PST. The current time is Sunday, 08-Nov-26 03:19:08 PST. (código 190, subcódigo 463)
+2026-11-08 12:31  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 5 frases en 505 s
+2026-11-08 12:31  Voz: silencios recortados por frase (s): [0.28, 0.02, 0.18, 0.1, 0.22]
+2026-11-08 12:32  Voz: alineación palabra a palabra (small, 23.3 s): 4/5 frases
+2026-11-08 12:32  019_suscripciones_ia: renderizado con voz y subido a la release 'cola'
+2026-11-08 12:39  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 5 frases en 423 s
+2026-11-08 12:39  Voz: silencios recortados por frase (s): [0.08, 0.14, 0, 0.12, 0.84]
+2026-11-08 12:40  Voz: alineación palabra a palabra (small, 18.1 s): 5/5 frases
+2026-11-08 12:40  020_lista_compra_ia: renderizado con voz y subido a la release 'cola'
+2026-11-08 12:40  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-08 12:41  Estadísticas actualizadas (4 posts, 1603 seguidores)
