@@ -76,14 +76,27 @@ jobs:
           if [ "${{ inputs.solo_musica }}" != "true" ]; then python3 herramientas/narracion_demo.py verificar || true; fi
           cat demo_audio/duraciones.json | head -60
 
+      - name: Copia de seguridad (artefacto)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo_audio
+          path: demo_audio
+          retention-days: 14
+
       - name: Subir demo_audio al repo
         if: always()
         run: |
           git config user.name "expedientes-bot"
           git config user.email "expedientes-bot@users.noreply.github.com"
-          git checkout -- registro.log 2>/dev/null || true
           git add demo_audio
           if git diff --cached --quiet; then echo "sin cambios"; exit 0; fi
           git commit -q -m "Narración y música del /demo $(date -u +%FT%H:%MZ)"
-          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 5; done
+          # los scripts pueden haber tocado otros ficheros seguidos (p. ej. registro.log): se descartan antes del pull
+          git checkout -- . 2>/dev/null || true
+          for i in 1 2 3 4; do
+            git pull --rebase -q && git push -q && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep 6
+          done
           exit 1
