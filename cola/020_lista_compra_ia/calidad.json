@@ -1,0 +1,13 @@
+{
+ "aprobado": false,
+ "nota": 70,
+ "fecha": "2026-11-08T12:00:00Z",
+ "motivos": [
+  "A2: gancho «Tu lista de la compra, ordenada sola» sin pregunta, número ni antes/después.",
+  "A1: huecos de voz de 2-3 s (escenas 1 y 2) con solo música.",
+  "Directiva §3: 019 y 020 eran seguidos y del mismo público (Hogar y familias).",
+  "Directiva §2 y §5: cierre y texto del post no son de Neogest Lab.",
+  "Voz θ pendiente de oído."
+ ],
+ "como_arreglarlo": "Gancho en pregunta, voz alargada, cierre IDEA y texto Neogest Lab aplicados por Calidad; 020 pasa al 11/11 13:40 y 023 al 10/11 20:40 para no repetir público seguido; re-render lanzado."
+}
