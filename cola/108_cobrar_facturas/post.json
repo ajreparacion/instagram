@@ -1,0 +1,11 @@
+{
+ "tipo": "carrusel",
+ "texto": "Factura enviada. ¿Y el cobro?\nSi tienes una pyme o eres autónomo de servicios, cobrar no debería ser otro trabajo.\nEn Gestión Integral 7D, nuestra app, cada factura puede llevar su enlace de pago: tarjeta con Stripe, TPV Redsys (con Bizum si está activo) o transferencia con IBAN.\nLas facturas salen en PDF con tus datos fiscales y los del cliente.\nY los agentes IA solo proponen acciones: tú las apruebas o las rechazas.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 💶\n\n#autonomos #pymes #facturacion #cobros #neogestlab",
+ "cuando": "2026-11-10T11:10:00+01:00",
+ "renderizado": "no aplica (carrusel)",
+ "publico": "Pymes y autónomos de servicios que facturan a otras empresas",
+ "app": "Gestión Integral 7D",
+ "fuentes": [
+  "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Gestión Integral 7D» (estado activo, actualizada 8/11/2026): hechos_verificados (enlace de pago por factura con Stripe, TPV Redsys con Bizum si está activo o transferencia con IBAN; PDF con datos fiscales; herencia de líneas, IVA y retención; agentes IA que solo proponen) y eslogan."
+ ]
+}
