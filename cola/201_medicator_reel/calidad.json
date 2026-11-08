@@ -1,15 +1,20 @@
 {
  "aprobado": true,
- "nota": 91,
+ "nota": 92,
  "aprobado_por": "revisión del agente de demos (8/11)",
  "revision": [
-  "reel 1080x1920, 30 fps, H.264 + AAC, 32.5 s; fotogramas revisados (gancho, pasos, transición y cierre)",
-  "Ken Burns suave, transiciones al compás de 120 BPM, whoosh/pop/ding y música sintetizada propia (sin licencias de terceros); sonoridad ≈ -12 LUFS",
-  "sin voz (la tubería de voz no se reutiliza aquí de forma fiable): textos en pantalla y post con CTA suave",
-  "datos fieles a demo[] y hechos_verificados del Producto; nada de prohibido_afirmar",
-  "capturas reales de la demo, nítidas (780 px reducidas, sin reescalar hacia arriba) y sin bordes raros",
-  "Montserrat, firma «By Neogest Lab» y logo NL original (recorte circular)",
-  "español de España, sin erratas",
-  "cero afirmaciones de salud: solo organizar pastillas, citas y hoja para el médico; aviso «no sustituye a tu médico»"
- ]
+  "reel de presentación de 32.8 s: capturas reales con Ken Burns, cortes en el golpe, textos animados, whoosh/pop/ding",
+  "datos fieles a demo[] y hechos_verificados; nada de prohibido_afirmar",
+  "cero afirmaciones de salud; aviso «no sustituye a tu médico»",
+  "música en primer plano todo el tiempo (sin voz): pop a 108 BPM, tono +3, generada por código (sin licencias de terceros)",
+  "máster medido con ffmpeg ebur128: -14.0 LUFS integrados, pico -4.6 dBTP, LRA 1.0 LU (objetivo -14 LUFS)",
+  "1080x1920, 30 fps, H.264 + AAC 192 kbps; fotogramas de control revisados (control/)",
+  "Montserrat, firma «By Neogest Lab» y logo NL original; español de España sin erratas"
+ ],
+ "audio": {
+  "lufs_integrados": -14.0,
+  "pico_real_dbtp": -4.6,
+  "lra_lu": 1.0,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ }
 }
