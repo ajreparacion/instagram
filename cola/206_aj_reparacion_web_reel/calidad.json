@@ -1,7 +1,11 @@
 {
  "aprobado": true,
  "nota": 90,
- "comentario": "5 fotogramas revisados: web y portal de AJ Reparación con «Demo con datos ficticios» y teléfono 600 000 000; cierre IDEA; público «cualquier negocio». ffprobe 1080x1920 30 fps H.264+AAC; ebur128 ≈ -14 LUFS, pico < -4,5 dBFS, 0 silencios > 1,2 s. Descuentos: texto pequeño en el móvil, sin voz. Es el único reel de servicio técnico de la semana (límite 1).",
- "fecha": "2026-11-09T11:55Z",
- "revisado_por": "agente de CALIDAD (9/11, pasada de las 12:51)"
+ "comentario": "Re-render del 9/11 17:53Z revisado (la aprobación de las 11:55 caducaba por el bloqueo 9). 9 fotogramas: web y portal de AJ Reparación con «Demo con datos ficticios» y teléfono 600 000 000; cierre IDEA; público «cualquier negocio». ffprobe 1080x1920 30 fps H.264+AAC, 25,8 s; ebur128 -13,9 LUFS, pico -5,0 dBFS, 0 silencios > 1,2 s. Descuentos: texto pequeño en el móvil, sin voz. Único reel de servicio técnico de la semana (límite 1).",
+ "audio": {
+  "lufs": -13.9,
+  "pico_dbfs": -5.0
+ },
+ "fecha": "2026-11-09T18:33Z",
+ "revisado_por": "agente de CALIDAD (9/11, pasada de la tarde)"
 }
