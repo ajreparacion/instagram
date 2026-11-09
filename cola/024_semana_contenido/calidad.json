@@ -1,0 +1,11 @@
+{
+ "aprobado": false,
+ "nota": 88,
+ "fecha": "2026-11-09T18:33Z",
+ "motivos": [
+  "Voz clonada con θ sin validar de oído por el dueño (Calidad no puede evaluar el seseo): techo 88 hasta que la valide (directiva §9, pendiente_usuario.md punto 7).",
+  "Demo HTML real grabada funcionando (8 fotogramas revisados): contadores coherentes con lo escrito (3 planificados, 2 publicados, 4 libres de 7 días). Cierre IDEA, firma By Neogest Lab, texto del post con aviso de datos de ejemplo, sin marcas ni clientes. ffprobe 1080x1920 30 fps H.264+AAC, 24,1 s; ebur128 -14,0 LUFS, pico -3,0 dBFS, 0 silencios > 1,2 s; voz contigua sin huecos > 1,5 s. Sin reel del mismo público adyacente (018 y 020 en medio)."
+ ],
+ "como_arreglarlo": "Aprobable (≥ 90) en cuanto el dueño valide la voz θ, sin tocar el reel.",
+ "revisado_por": "agente de CALIDAD (9/11, pasada de la tarde)"
+}
