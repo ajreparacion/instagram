@@ -16,32 +16,56 @@
     {
      "imagen": "/demos/medicator/1.webp",
      "titulo": "Tu pastilla, a su hora",
-     "linea": "Ves la que toca ahora, cuánto y a qué hora, y la apuntas con un botón grande."
+     "linea": "Ves la que toca ahora, cuánto y a qué hora, y la apuntas con un botón grande.",
+     "zona": [
+      0.7,
+      0.38
+     ]
     },
     {
      "imagen": "/demos/medicator/2.webp",
      "titulo": "Todas las del día",
-     "linea": "Por mañana, mediodía, tarde y noche: tomada, ahora o más tarde."
+     "linea": "Por mañana, mediodía, tarde y noche: tomada, ahora o más tarde.",
+     "zona": [
+      0.62,
+      0.3
+     ]
     },
     {
      "imagen": "/demos/medicator/3.webp",
      "titulo": "Calendario con letra grande",
-     "linea": "Tocas un día y ves sus citas y sus pastillas, o apuntas una cita nueva."
+     "linea": "Tocas un día y ves sus citas y sus pastillas, o apuntas una cita nueva.",
+     "zona": [
+      0.35,
+      0.34
+     ]
     },
     {
      "imagen": "/demos/medicator/4.webp",
      "titulo": "La cita, con todo",
-     "linea": "Médico, centro, planta, si es en ayunas y qué llevar, con botón «Cómo llegar»."
+     "linea": "Médico, centro, planta, si es en ayunas y qué llevar, con botón «Cómo llegar».",
+     "zona": [
+      0.34,
+      0.34
+     ]
     },
     {
      "imagen": "/demos/medicator/5.webp",
      "titulo": "Hoja para el médico",
-     "linea": "Apuntas tus preguntas y sale tu hoja con alergias, medicinas y citas."
+     "linea": "Apuntas tus preguntas y sale tu hoja con alergias, medicinas y citas.",
+     "zona": [
+      0.4,
+      0.34
+     ]
     },
     {
      "imagen": "/demos/medicator/6.webp",
      "titulo": "Lista para la farmacia",
-     "linea": "Cuenta las pastillas que quedan y marca las que hay que pedir ya."
+     "linea": "Cuenta las pastillas que quedan y marca las que hay que pedir ya.",
+     "zona": [
+      0.42,
+      0.34
+     ]
     }
    ],
    "cierre": "¿La quieres para ti o para tus padres?",
@@ -75,7 +99,8 @@
       "bpm": 107,
       "tono": 1,
       "prog": 1
-     }
+     },
+     "zona": 0.46
     },
     {
      "tipo": "pregunta",
@@ -216,32 +241,56 @@
     {
      "imagen": "/demos/studio-beats-pro/1.webp",
      "titulo": "Haz tu canción hoy",
-     "linea": "Creas tu cuenta y entras al estudio guiado en 4 pasos."
+     "linea": "Creas tu cuenta y entras al estudio guiado en 4 pasos.",
+     "zona": [
+      0.285,
+      0.27
+     ]
     },
     {
      "imagen": "/demos/studio-beats-pro/2.webp",
      "titulo": "Paso 1: la base",
-     "linea": "Eliges estilo, tono y modo: batería, bajo, acordes y melodía al momento."
+     "linea": "Eliges estilo, tono y modo: batería, bajo, acordes y melodía al momento.",
+     "zona": [
+      0.66,
+      0.26
+     ]
     },
     {
      "imagen": "/demos/studio-beats-pro/3.webp?v=2",
      "titulo": "Paso 2: tu voz",
-     "linea": "Cuenta atrás con metrónomo y cantas encima del beat. Repites las tomas que quieras."
+     "linea": "Cuenta atrás con metrónomo y cantas encima del beat. Repites las tomas que quieras.",
+     "zona": [
+      0.48,
+      0.24
+     ]
     },
     {
      "imagen": "/demos/studio-beats-pro/4.webp?v=2",
      "titulo": "Paso 3: suena profesional",
-     "linea": "«Terminar canción» afina, mezcla y masteriza en un clic, y mide el volumen en LUFS."
+     "linea": "«Terminar canción» afina, mezcla y masteriza en un clic, y mide el volumen en LUFS.",
+     "zona": [
+      0.36,
+      0.26
+     ]
     },
     {
      "imagen": "/demos/studio-beats-pro/5.webp?v=2",
      "titulo": "Paso 4: escucha y descarga",
-     "linea": "MP3 a 320 kbps o compártela desde el móvil. En modo Pro, WAV, FLAC y stems."
+     "linea": "MP3 a 320 kbps o compártela desde el móvil. En modo Pro, WAV, FLAC y stems.",
+     "zona": [
+      0.5,
+      0.26
+     ]
     },
     {
      "imagen": "/demos/studio-beats-pro/6.webp",
      "titulo": "Y además, Beat Creator",
-     "linea": "Programa la batería paso a paso con kits y patrones euclidianos."
+     "linea": "Programa la batería paso a paso con kits y patrones euclidianos.",
+     "zona": [
+      0.2,
+      0.26
+     ]
     }
    ],
    "cierre": "¿Tu primera canción, hoy?",
@@ -511,22 +560,38 @@
     {
      "imagen": "/demos/aj-reparacion-web/1.webp?v=3",
      "titulo": "Tu portada",
-     "linea": "Qué ofreces, dónde estás y tu horario, con accesos a lo que más usan."
+     "linea": "Qué ofreces, dónde estás y tu horario, con accesos a lo que más usan.",
+     "zona": [
+      0.3,
+      0.31
+     ]
     },
     {
      "imagen": "/demos/aj-reparacion-web/3.webp?v=3",
      "titulo": "Solicitudes y consulta",
-     "linea": "El cliente te envía su solicitud o mira en qué punto está su encargo."
+     "linea": "El cliente te envía su solicitud o mira en qué punto está su encargo.",
+     "zona": [
+      0.66,
+      0.28
+     ]
     },
     {
      "imagen": "/demos/aj-reparacion-web/4.webp?v=3",
      "titulo": "Pedidos de material",
-     "linea": "Te piden productos desde la web y después consultan el estado del pedido."
+     "linea": "Te piden productos desde la web y después consultan el estado del pedido.",
+     "zona": [
+      0.28,
+      0.34
+     ]
     },
     {
      "imagen": "/demos/aj-reparacion-web/6.webp?v=3",
      "titulo": "Portal de clientes",
-     "linea": "Cada cliente ve sus encargos, el detalle de cada uno y sus facturas."
+     "linea": "Cada cliente ve sus encargos, el detalle de cada uno y sus facturas.",
+     "zona": [
+      0.57,
+      0.4
+     ]
     }
    ],
    "cierre": "¿La quieres para tu negocio?",
@@ -560,7 +625,8 @@
       "bpm": 125,
       "tono": 2,
       "prog": 1
-     }
+     },
+     "zona": 0.2
     },
     {
      "tipo": "pregunta",

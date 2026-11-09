@@ -4,7 +4,9 @@
 
 Uso (lo lanza .github/workflows/demo_app.yml, que es quien tiene acceso a *.base44.app):
   python3 herramientas/demo_app.py descargar [slug ...]   -> herramientas/demos/<slug>/NN.png
-  python3 herramientas/demo_app.py generar   [slug ...] [--sin-reel] [--subir]
+  python3 herramientas/demo_app.py generar   [slug ...] [--sin-reel] [--subir] [--solo=carpeta1,carpeta2]
+        (--solo: regenera solo esas piezas, p. ej. 203_studio_beats_pro_reel; la hora "cuando" de un post.json ya
+         existente no se pisa)
         -> cola/<NNN>_demo_<slug>_carrusel/ (slides 1080x1350)
            cola/<NNN>_demo_<slug>_historia_<k>/ (1080x1920, "tipo": "historia")
            cola/<NNN>_demo_<slug>_reel/ (slideshow 1080x1920 con música y efectos; con --subir va a la release 'cola')
@@ -15,6 +17,7 @@ de cada Producto; nada inventado). Nunca pisa un calidad.json existente: la revi
 """
 import json
 import math
+import re
 import os
 import shutil
 import subprocess
@@ -261,18 +264,21 @@ class Movil:
         self.mascara = mascara_redondeada(self.sw, self.sh, self.R)
         self.tam = (W, H)
 
-    def vista(self, cap, zoom=1.0, desplaz=0.0, cx=0.5, filtro=Image.LANCZOS):
-        """Recorte de la captura que cabe en la pantalla. zoom>=1 acerca; desplaz en px de la captura."""
+    def vista(self, cap, zoom=1.0, desplaz=0.0, cx=0.5, filtro=Image.LANCZOS, cy=None):
+        """Recorte de la captura que cabe en la pantalla. zoom>=1 acerca; desplaz en px de la captura (borde superior
+        de lo que se ve); cy (0-1, opcional) centra el recorte en esa altura de la captura y manda sobre desplaz."""
         zoom = max(1.0, zoom)
         esc = self.sw / cap.width * zoom
         rw, rh = self.sw / esc, self.sh / esc
         x0 = (cap.width - rw) * cx
+        if cy is not None:
+            desplaz = cy * cap.height - rh / 2
         y0 = max(0.0, min(desplaz, cap.height - rh))
         x0 = max(0.0, x0)
-        if rh > cap.height:  # captura más baja que la pantalla: se centra sobre fondo blanco
+        if rh > cap.height:  # captura más baja que la pantalla: se ve entera sobre el color del pie (o desde 'desplaz')
             lienzo = Image.new("RGB", (self.sw, self.sh), cap.getpixel((5, cap.height - 5)))
             im = cap.resize((self.sw, int(cap.height * self.sw / cap.width)), filtro)
-            lienzo.paste(im, (0, 0))
+            lienzo.paste(im, (0, -int(max(0.0, desplaz) * self.sw / cap.width)))
             return lienzo
         return cap.resize((self.sw, self.sh), filtro, box=(x0, y0, x0 + rw, y0 + rh))
 
@@ -448,11 +454,13 @@ def pie_marca(im, y=SAFE_B - 70):
     d.text((x + diam + 18, y + 16), t, font=f, fill=BLANCO)
 
 
-def movil_fundido(cap, top, bottom, ancho=560, cx=SW // 2):
-    """Capa RGBA (tamaño historia) con el móvil, cortado en 'bottom' con fundido al fondo."""
+def movil_fundido(cap, top, bottom, ancho=560, cx=SW // 2, zona=None):
+    """Capa RGBA (tamaño historia) con el móvil, cortado en 'bottom' con fundido al fondo.
+    zona (0-1, opcional): altura de la captura donde empieza lo que se ve (zoom intencionado a una tarjeta completa,
+    en vez de enseñar siempre el principio de la captura con el botón cortado)."""
     mv = Movil(ancho, 1500, bisel=17)
     capa = Image.new("RGBA", (SW, SH), (0, 0, 0, 0))
-    mv.pegar(capa, cx, top, cap)
+    mv.pegar(capa, cx, top, cap, desplaz=(zona or 0.0) * cap.height)
     a = np.array(capa.getchannel("A"), np.float32)
     ys = np.arange(SH, dtype=np.float32)[:, None]
     k = np.clip((bottom - ys) / 170.0, 0, 1)
@@ -496,7 +504,7 @@ def historia_capas(app, caps, h, idx):
         ft, lst = ajustar(h["texto"], "Medium", SW - 2 * x, 3, 40, 32)
         _, d = C.nueva(0.9)
         y = dibujar_lineas(d, x, y + 30, lst, ft, GRIS, alto=1.35)
-        movil = movil_fundido(cap, y + 50, SAFE_B - 140)
+        movil = movil_fundido(cap, y + 50, SAFE_B - 140, zona=h.get("zona"))
     elif h["tipo"] == "antes_despues":
         _, d = C.nueva(0.15)
         pastilla(d, x, SAFE_T + 20, "ANTES / DESPUÉS", fp)
@@ -518,7 +526,7 @@ def historia_capas(app, caps, h, idx):
             texto_espaciado(d, x + 122, y + 24, etiqueta, fnt(24, "ExtraBold"), borde if icono == "cruz" else ACENTO, esp=3)
             dibujar_lineas(d, x + 122, y + 62, ls, ftx, col, alto=1.3)
             y += alto + 24
-        movil = movil_fundido(cap, y + 30, SAFE_B - 140, ancho=520)
+        movil = movil_fundido(cap, y + 30, SAFE_B - 140, ancho=520, zona=h.get("zona"))
     else:  # pregunta
         _, d = C.nueva(0.15)
         pastilla(d, x, SAFE_T + 20, "PREGUNTA RÁPIDA", fp)
@@ -526,7 +534,7 @@ def historia_capas(app, caps, h, idx):
         _, d = C.nueva(0.4)
         y = dibujar_lineas(d, x, SAFE_T + 110, ls, f, BLANCO, h.get("destacar"), alto=1.1)
         caja_top = SAFE_B - 340
-        movil = movil_fundido(cap, y + 46, caja_top - 30, ancho=500)
+        movil = movil_fundido(cap, y + 46, caja_top - 30, ancho=500, zona=h.get("zona"))
         _, d = C.nueva(1.3)
         d.rounded_rectangle((x, caja_top, SW - x, caja_top + 190), 36, fill=(40, 26, 56), outline=ACENTO, width=4)
         ft, lst = ajustar(h["texto"], "Bold", SW - 2 * x - 160, 2, 42, 32)
@@ -635,6 +643,35 @@ class Escena:
         self.__dict__.update(kw)
 
 
+LUPA_W = SW - 120       # ancho de la lupa (franja de la captura a todo el ancho, sin recortar los lados)
+LUPA_H_MAX = 800        # alto máximo: no tapa el texto de arriba
+LUPA_BASE = 1640        # borde inferior (igual que el del móvil)
+
+
+def lupa_zona(cap, cy, hz):
+    """Lupa de una franja de la captura (petición de Calidad 9/11: letra pequeña dentro del móvil). La captura se ve
+    ENTERA en el móvil; durante la escena aparece esta tarjeta con la franja que explica el texto, a todo el ancho de
+    la captura (nunca se cortan palabras por los lados), y un recuadro en el móvil marca de dónde sale.
+    Devuelve (RGBA de la tarjeta, (cy, hz) ya ajustados)."""
+    esc = LUPA_W / cap.width
+    hz = min(max(0.15, hz), LUPA_H_MAX / (cap.height * esc))
+    cy = min(max(cy, hz / 2), 1 - hz / 2)
+    y0 = int(round((cy - hz / 2) * cap.height)); y1 = int(round((cy + hz / 2) * cap.height))
+    tira = cap.crop((0, y0, cap.width, y1)).resize((LUPA_W, int((y1 - y0) * esc)), Image.LANCZOS)
+    b = 6; r = 34; sombra = 40
+    W2, H2 = tira.width + 2 * b + 2 * sombra, tira.height + 2 * b + 2 * sombra
+    capa = Image.new("RGBA", (W2, H2), (0, 0, 0, 0))
+    sm = Image.new("L", (W2, H2), 0)
+    ImageDraw.Draw(sm).rounded_rectangle((sombra + 8, sombra + 20, W2 - sombra - 8, H2 - sombra + 12), r + b, fill=170)
+    sm = sm.filter(ImageFilter.GaussianBlur(sombra * 0.5))
+    capa.paste(Image.new("RGBA", (W2, H2), (5, 3, 10, 255)), (0, 0), sm)
+    cuerpo = Image.new("RGBA", (tira.width + 2 * b, tira.height + 2 * b), (0, 0, 0, 0))
+    cuerpo.paste(Image.new("RGBA", cuerpo.size, ACENTO + (255,)), (0, 0), mascara_redondeada(cuerpo.width, cuerpo.height, r + b))
+    cuerpo.paste(tira, (b, b), mascara_redondeada(tira.width, tira.height, r))
+    capa.alpha_composite(cuerpo, (sombra, sombra))
+    return capa, (cy, hz)
+
+
 def preparar_reel(app, caps, dur):
     x = 90
     escenas = []
@@ -658,8 +695,20 @@ def preparar_reel(app, caps, dur):
                           y_movil=y_fin + 60 + len(lss) * int(fs.size * 1.32),
                           fondo=fondo(SW, SH, 7, brillo=(540, 1500, 700, 0.6))))
     n = len(app["pasos"])
+    # Una sola numeración (petición de Calidad 9/11, 203): si los titulares de la app ya dicen «Paso k: …», el rótulo
+    # pasa a «PASO k DE T» con ese mismo k (T = el mayor k) y el titular pierde el prefijo; el resto de escenas llevan
+    # el nombre de la app en el rótulo. Las apps sin «Paso k» en los titulares no cambian.
+    num_titular = [re.match(r"^\s*paso\s+(\d+)\s*[:.\-–]\s*(.+)$", p["titulo"], re.I) for p in app["pasos"]]
+    total_titular = max([int(m.group(1)) for m in num_titular if m] or [0])
     for i, p in enumerate(app["pasos"]):
-        ft, lst = ajustar(p["titulo"], "ExtraBold", SW - 2 * x, 2, 80, 58)
+        m_num = num_titular[i]
+        if m_num:
+            titulo = m_num.group(2)[:1].upper() + m_num.group(2)[1:]
+            rotulo = f"PASO {int(m_num.group(1))} DE {total_titular}"
+        else:
+            titulo = p["titulo"]
+            rotulo = app["nombre"].upper() if total_titular else f"PASO {i + 1} DE {n}"
+        ft, lst = ajustar(titulo, "ExtraBold", SW - 2 * x, 2, 80, 58)
         fl, lsl = ajustar(p["linea"], "Medium", SW - 2 * x, 3, 40, 32)
         tit = capa_texto(lst, ft, BLANCO, alto=1.08)
         lin = capa_texto(lsl, fl, GRIS, alto=1.3)
@@ -668,15 +717,19 @@ def preparar_reel(app, caps, dur):
         y_mov = y_lin + int(fl.size * 1.3) * len(lsl) + 46
         alto_pant = 1640 - y_mov - 34
         cap = caps[i]
-        mv = Movil(600, alto_pant, bisel=18)
-        # paneo vertical: baja por la pantalla si la captura es más alta que lo que se ve
-        esc = mv.sw / cap.width
-        sobra = max(0.0, cap.height - mv.sh / esc)
+        # Encuadre (petición de Calidad 9/11, 201/203/206): la pantalla del móvil tiene la proporción de la captura, así
+        # que se ve ENTERA (título y botón incluidos) al entrar; después un zoom suave y deliberado a la zona que explica
+        # el texto ("zona": [altura 0-1, zoom] en demo_apps.json) para que la letra se lea grande. Sin "zona", se queda entera.
+        r = cap.height / cap.width
+        sw = int(max(400, min(620, alto_pant / r)))
+        sh = min(alto_pant, int(round(sw * r)))
+        mv = Movil(sw, sh, bisel=18)
+        zona, lupa = p.get("zona"), None
+        if zona:  # "zona": [altura del centro 0-1, fracción de altura 0-1] -> lupa a todo el ancho con esa franja
+            lupa, zona = lupa_zona(cap, float(zona[0]), float(zona[1]))
         escenas.append(Escena("paso", dur["paso"], tit=tit, lin=lin, y_tit=y_tit, y_lin=y_lin, y_mov=y_mov, movil=mv, cap=cap,
-                              chip=chip_paso(f"PASO {i + 1} DE {n}", app.get("aviso", "") if app.get("aviso", "").startswith("Demo") else ""),
-                              pan=min(sobra, 260.0) * (1 if i % 2 == 0 else 0.6), cx=0.5,
-                              zoom=(1.0, 1.07) if i % 2 == 0 else (1.07, 1.0),
-                              fondo=fondo(SW, SH, 20 + i, brillo=(540, 1200, 650, 0.5))))
+                              chip=chip_paso(rotulo, app.get("aviso", "") if app.get("aviso", "").startswith("Demo") else ""),
+                              zona=zona, lupa=lupa, fondo=fondo(SW, SH, 20 + i, brillo=(540, 1200, 650, 0.5))))
     # cierre
     fc, lsc = ajustar(app["cierre"], "ExtraBold", SW - 2 * x, 3, 100, 70)
     fs2, lss2 = ajustar(app["cierre_sub"], "Medium", SW - 2 * x - 40, 3, 42, 32)
@@ -720,12 +773,23 @@ def frame_escena(sc, t, app):
                            zoom=1.0 + 0.04 * (t / sc.dur), desplaz=0, filtro=Image.BILINEAR)
         pegar_alfa(im, sc.sub, 90, sc.y_sub, ease((t - 1.1) / 0.4))
     elif sc.tipo == "paso":
-        k = t / sc.dur
         a = ease(t / 0.45)
-        z = sc.zoom[0] + (sc.zoom[1] - sc.zoom[0]) * k
-        sc.movil.pegar(im, SW // 2, sc.y_mov + (1 - a) * 120, sc.cap, alfa=min(1, 0.3 + a),
-                       zoom=z, desplaz=sc.pan * ease(max(0, (t - 0.8) / (sc.dur - 1.0))), cx=sc.cx,
-                       filtro=Image.BILINEAR)
+        mv = sc.movil
+        mv.pegar(im, SW // 2, sc.y_mov + (1 - a) * 120, sc.cap, alfa=min(1, 0.3 + a), filtro=Image.LANCZOS)
+        if sc.zona and sc.lupa is not None:
+            cy, hz = sc.zona
+            k_r = ease((t - 0.9) / 0.3)
+            if k_r > 0:  # recuadro en el móvil: de dónde sale la lupa
+                esc = mv.sw / sc.cap.width
+                x0 = SW // 2 - mv.bw // 2 + mv.b; y0 = sc.y_mov + mv.b
+                rect = (x0 + 6, y0 + (cy - hz / 2) * sc.cap.height * esc, x0 + mv.sw - 6, y0 + (cy + hz / 2) * sc.cap.height * esc)
+                ov = Image.new("RGBA", im.size, (0, 0, 0, 0))
+                ImageDraw.Draw(ov).rounded_rectangle(rect, 14, outline=ACENTO + (int(255 * k_r),), width=5)
+                im.paste(ov, (0, 0), ov)
+            k_l = ease_back((t - 1.1) / 0.45, 1.2)
+            if k_l > 0:
+                lw, lh = sc.lupa.size
+                pegar_alfa(im, sc.lupa, (SW - lw) // 2, LUPA_BASE - lh + 40 + (1 - min(1.0, k_l)) * 90, min(1.0, ease((t - 1.1) / 0.3)))
         pegar_alfa(im, sc.chip, 90, 246, ease(t / 0.25))
         a1 = ease((t - 0.12) / 0.35)
         pegar_alfa(im, sc.tit, 90 + (1 - a1) * 70, sc.y_tit, a1)
@@ -1183,6 +1247,8 @@ def escribir_post(carpeta, datos):
     for k in ("_intentos",):
         if k in previo:
             datos[k] = previo[k]
+    if previo.get("cuando"):   # la hora de publicación que ya esté en la cola manda (Calidad/Estratega la mueven en post.json)
+        datos["cuando"] = previo["cuando"]
     with open(ruta + ".tmp", "w", encoding="utf-8") as f:
         json.dump(datos, f, ensure_ascii=False, indent=1)
     os.replace(ruta + ".tmp", ruta)
@@ -1208,7 +1274,7 @@ def resumen_musica(mus):
     return {"estilo": mus["estilo"], "bpm": mus["bpm"], "tono": mus["tono"], "origen": "generada por código (sin licencias de terceros)"}
 
 
-def generar(c, slugs, reel=True, historias=True, subir=False):
+def generar(c, slugs, reel=True, historias=True, subir=False, solo=None):
     for app in apps_pedidas(c, slugs):
         caps = cargar_capturas(app["slug"])
         if len(caps) != len(app["pasos"]):
@@ -1218,7 +1284,7 @@ def generar(c, slugs, reel=True, historias=True, subir=False):
                  "origen": "herramientas/demo_app.py"}
         # carrusel (imágenes: la API no permite música en carruseles)
         nom = base + "_carrusel"
-        if not ya_publicado(nom):
+        if not ya_publicado(nom) and (not solo or nom in solo):
             carpeta = os.path.join(COLA, nom)
             os.makedirs(carpeta, exist_ok=True)
             n = carrusel(app, caps, carpeta)
@@ -1228,7 +1294,7 @@ def generar(c, slugs, reel=True, historias=True, subir=False):
         # historias en vídeo con música
         for k, h in enumerate(app["historias"], 1):
             nom = f"{base}_historia{k}"
-            if not historias or ya_publicado(nom):
+            if not historias or ya_publicado(nom) or (solo and nom not in solo):
                 continue
             carpeta = os.path.join(COLA, nom)
             os.makedirs(carpeta, exist_ok=True)
@@ -1253,7 +1319,7 @@ def generar(c, slugs, reel=True, historias=True, subir=False):
                 shutil.copy(video, os.path.join("/tmp", nom + ".mp4"))
         # reel de presentación
         nom = base + "_reel"
-        if reel and not ya_publicado(nom):
+        if reel and not ya_publicado(nom) and (not solo or nom in solo):
             trabajo = os.path.join("/tmp", "demo_" + nom)
             shutil.rmtree(trabajo, ignore_errors=True)
             os.makedirs(trabajo)
@@ -1335,8 +1401,9 @@ def main():
     if orden == "descargar":
         descargar(c, slugs)
     elif orden == "generar":
+        solo = {x for o in opciones if o.startswith("--solo=") for x in o[7:].replace(",", " ").split() if x}
         generar(c, slugs, reel="--sin-reel" not in opciones, historias="--sin-historias" not in opciones,
-                subir="--subir" in opciones)
+                subir="--subir" in opciones, solo=solo or None)
     elif orden == "reels_carrusel":
         reels_carrusel(c, slugs, subir="--subir" in opciones)
     else:

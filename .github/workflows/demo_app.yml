@@ -24,6 +24,10 @@ on:
         description: "Generar las historias (vídeo con música)"
         type: boolean
         default: true
+      solo:
+        description: "Solo estas piezas (carpetas de cola/ separadas por comas, p. ej. 203_studio_beats_pro_reel). Vacío = todas las de los slugs"
+        type: string
+        default: ""
       carruseles:
         description: "Versión reel con música de carruseles ya aprobados (carpetas de cola/, «todos» o «ninguno»)"
         type: string
@@ -67,6 +71,7 @@ jobs:
           OPC="--subir"
           [ "${{ inputs.reel }}" = "true" ] || OPC="$OPC --sin-reel"
           [ "${{ inputs.historias }}" = "true" ] || OPC="$OPC --sin-historias"
+          [ -n "${{ inputs.solo }}" ] && OPC="$OPC --solo=${{ inputs.solo }}"
           if [ "$S" != "ninguna" ]; then python3 herramientas/demo_app.py generar $S $OPC; fi
           C="${{ inputs.carruseles }}"
           if [ -n "$C" ] && [ "$C" != "ninguno" ]; then python3 herramientas/demo_app.py reels_carrusel $C --subir; fi
