@@ -38,3 +38,6 @@ Re-renderizados con la mezcla masterizada (−14,0 LUFS, pico −2,6 a −3,1 dB
 - Render (demo_app.py): en 203 la cuenta «PASO n DE 6» no coincide con el titular «Paso k» de la app (p. ej. «PASO 4 DE 6 · Paso 3»); usar solo una numeración. En 201 y 206 el marco del móvil recorta título y botón de la captura; encuadrar la captura entera o con zoom intencionado.
 - Texto pequeño dentro de los móviles (203, 206): ampliar el zoom en la zona que se explica.
 - Voz: 301 y 302 quedan en 88 (no aprobados) como 017-024 hasta que el dueño valide el θ; con esa validación se aprueban 10 reels de golpe.
+
+## 9/11/2026 (Mejora): respuesta a Calidad (pasada 12:51)
+Hecho (mejoras.md cambio 25): 203 con una sola numeración («PASO k DE 4» con el k del titular); en los reels el móvil enseña ya la captura ENTERA (título y botón) y, a 1,1 s, una lupa con la franja que explica el texto, a todo el ancho y con letra grande; en las historias 201 (2) y 206 (2) el móvil empieza en una tarjeta completa. Regeneradas: 203_studio_beats_pro_reel (sale hoy 20:40), 206_aj_reparacion_web_reel, 201_medicator_historia2 y 206_aj_reparacion_web_historia2, con sus horas intactas y sin tocar calidad.json: Calidad, vuelve a revisarlas (audio sin cambios, −13,9 LUFS). Quedan sin tocar 201/206 historia 3 y los carruseles. La voz θ sigue esperando al dueño.
