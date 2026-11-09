@@ -1,62 +1,83 @@
 {
-  "actualizado": "2026-11-09T12:06:12+00:00",
+  "actualizado": "2026-11-09T18:07:43+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1603,
     "follows_count": 176,
-    "media_count": 12,
+    "media_count": 13,
     "username": "neogestlab"
   },
   "posts": [
     {
+      "id": "17865814698695210",
+      "caption": "Pastillas y citas, con letra grande 💊\nMEDICATOR enseña la pastilla que toca ahora, guarda las citas en un calendario y prepara la hoja para el médico y la lista para la farmacia.\nCapturas de la demo con datos de ejemplo. Organiza; no sustituye a tu médico.\nPide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#mayores #cuidadores #organizacion #apps #neogestlab",
+      "comments_count": 0,
+      "like_count": 3,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfhX2RRgesw/",
+      "timestamp": "2026-11-09T12:51:39+0000",
+      "metricas": {
+        "reach": 5,
+        "views": 7,
+        "saved": 0,
+        "shares": 1,
+        "comments": 0,
+        "likes": 3,
+        "total_interactions": 7,
+        "ig_reels_avg_watch_time": 6971,
+        "ig_reels_video_view_total_time": 48800
+      }
+    },
+    {
       "id": "17975553504173968",
       "caption": "Con esta fórmula la IA por fin te entiende.\nUn buen prompt tiene 4 piezas, en este orden:\nRol: «Actúa como asesor de marketing para pequeños negocios».\nContexto: quién eres, qué pasa y para quién es.\nTarea: un verbo claro y una sola cosa cada vez.\nFormato: tabla, lista, email o número de líneas.\nGuárdalo: el ejemplo completo está en la diapositiva 6, listo para cambiar los datos ✍️ ¿Tienes una idea para tu negocio? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #prompts #ia #pymes #neogestlab",
       "comments_count": 0,
-      "like_count": 1,
+      "like_count": 2,
       "media_product_type": "FEED",
       "media_type": "CAROUSEL_ALBUM",
       "permalink": "https://www.instagram.com/p/DfhG07DFzQm/",
       "timestamp": "2026-11-09T10:22:43+0000",
       "metricas": {
-        "reach": 4,
-        "views": 9,
+        "reach": 6,
+        "views": 14,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 2
+        "total_interactions": 4
       }
     },
     {
       "id": "18009506007004960",
       "caption": "¿Improvisas cada día tu ruta de visitas?\nPara comerciales y distribuidores que pasan el día de cliente en cliente.\nEn Gestión Integral 7D, nuestra app, «Mi día» ordena tus paradas por carretera con la hora prevista de llegada (si el servicio de rutas falla, las ordena en línea recta y te avisa).\nCada visita queda registrada con llegada, salida y distancia a la ubicación del cliente.\nTu cartera, con ranking ABC.\nLos agentes IA solo proponen acciones: tú decides si las apruebas.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🚐\n\n#comerciales #distribucion #ventas #pymes #neogestlab",
       "comments_count": 0,
-      "like_count": 1,
+      "like_count": 2,
       "media_product_type": "FEED",
       "media_type": "CAROUSEL_ALBUM",
       "permalink": "https://www.instagram.com/p/Dffsx71mBtI/",
       "timestamp": "2026-11-08T21:15:54+0000",
       "metricas": {
-        "reach": 17,
-        "views": 45,
+        "reach": 22,
+        "views": 53,
         "saved": 0,
         "shares": 1,
-        "total_interactions": 3
+        "total_interactions": 5
       }
     },
     {
       "id": "18349307488255378",
       "caption": "¿Ya te tomaste la pastilla o no? 💊\nMEDICATOR organiza las pastillas y las citas médicas con letra grande, pensada para mayores y para quien los cuida.\nAl abrirla ves la pastilla que toca ahora y la apuntas con un botón grande.\nLas citas van en un calendario: médico, centro, planta, si es en ayunas y qué llevar.\nPrepara una hoja con tus medicinas, alergias y preguntas para el médico, y una lista para la farmacia.\nCapturas de la demo con datos de ejemplo. Organiza; no sustituye a tu médico ni a tu farmacéutico.\n¿La quieres para ti o para tus padres? Pide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#mayores #cuidadores #organizacion #apps #neogestlab",
       "comments_count": 0,
-      "like_count": 2,
+      "like_count": 3,
       "media_product_type": "FEED",
       "media_type": "CAROUSEL_ALBUM",
       "permalink": "https://www.instagram.com/p/DffYnNFFwz9/",
       "timestamp": "2026-11-08T18:19:39+0000",
       "metricas": {
-        "reach": 14,
-        "views": 33,
+        "reach": 18,
+        "views": 41,
         "saved": 0,
         "shares": 3,
-        "total_interactions": 7
+        "total_interactions": 9
       }
     },
     {
@@ -107,8 +128,8 @@
       "permalink": "https://www.instagram.com/p/DffQZfmE7I6/",
       "timestamp": "2026-11-08T17:07:54+0000",
       "metricas": {
-        "reach": 12,
-        "views": 39,
+        "reach": 19,
+        "views": 50,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -141,8 +162,8 @@
       "permalink": "https://www.instagram.com/p/Dfe-VhUj8LS/",
       "timestamp": "2026-11-08T14:30:04+0000",
       "metricas": {
-        "reach": 9,
-        "views": 24,
+        "reach": 10,
+        "views": 25,
         "saved": 0,
         "shares": 0,
         "total_interactions": 1
@@ -158,8 +179,8 @@
       "permalink": "https://www.instagram.com/p/Dfe8Sb1n_cY/",
       "timestamp": "2026-11-08T14:12:01+0000",
       "metricas": {
-        "reach": 24,
-        "views": 49,
+        "reach": 26,
+        "views": 52,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -175,8 +196,8 @@
       "permalink": "https://www.instagram.com/p/Dfe8MyWjzSv/",
       "timestamp": "2026-11-08T14:11:13+0000",
       "metricas": {
-        "reach": 25,
-        "views": 45,
+        "reach": 26,
+        "views": 48,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -210,7 +231,7 @@
       "timestamp": "2026-11-08T14:06:32+0000",
       "metricas": {
         "reach": 11,
-        "views": 27,
+        "views": 29,
         "saved": 0,
         "shares": 0,
         "total_interactions": 2
@@ -260,6 +281,10 @@
     },
     {
       "fecha": "2026-11-09T12:06+00:00",
+      "seguidores": 1603
+    },
+    {
+      "fecha": "2026-11-09T18:07+00:00",
       "seguidores": 1603
     }
   ]
