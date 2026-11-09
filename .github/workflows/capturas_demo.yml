@@ -1,0 +1,50 @@
+name: Capturas de demo (medir y ver)
+
+# Solo a mano. Descarga las capturas reales del Centro de Contenido Apps (*.base44.app solo es accesible desde Actions),
+# escribe sus medidas y una hoja de contactos por app y lo sube a la release "pruebas" (capturas_<slug>.png y
+# capturas_medidas.json). No toca cola/ ni publica nada. Lo usa Mejora para encuadrar bien el móvil de los reels.
+on:
+  workflow_dispatch:
+    inputs:
+      slugs:
+        description: "Slugs separados por espacios"
+        default: "medicator studio-beats-pro aj-reparacion-web"
+
+permissions:
+  contents: write
+
+jobs:
+  capturas:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install --quiet pillow numpy
+      - name: Descargar y medir
+        run: |
+          python3 herramientas/demo_app.py descargar ${{ inputs.slugs }}
+          mkdir -p /tmp/capt
+          python3 - <<'PY'
+          import os, json
+          from PIL import Image
+          D = "herramientas/demos"; med = {}
+          for slug in sorted(os.listdir(D)):
+              fs = sorted(f for f in os.listdir(os.path.join(D, slug)) if f.endswith(".png"))
+              ims = [Image.open(os.path.join(D, slug, f)).convert("RGB") for f in fs]
+              med[slug] = [{"n": f, "ancho": im.width, "alto": im.height, "alto_sobre_ancho": round(im.height / im.width, 3)} for f, im in zip(fs, ims)]
+              h = 900; ts = [im.resize((max(1, int(im.width * h / im.height)), h)) for im in ims]
+              hoja = Image.new("RGB", (sum(t.width for t in ts) + 10 * (len(ts) + 1), h + 20), (40, 40, 40)); x = 10
+              for t in ts: hoja.paste(t, (x, 10)); x += t.width + 10
+              hoja.save("/tmp/capt/capturas_%s.png" % slug)
+          json.dump(med, open("/tmp/capt/capturas_medidas.json", "w"), indent=1)
+          print(json.dumps(med, indent=1))
+          PY
+      - name: Subir a la release "pruebas"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view pruebas >/dev/null 2>&1 || gh release create pruebas --title "Pruebas de producción" --notes "Vídeos de prueba de Mejora (no se publican)."
+          gh release upload pruebas /tmp/capt/* --clobber
