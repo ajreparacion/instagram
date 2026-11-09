@@ -1,13 +1,30 @@
 {
-  "actualizado": "2026-11-09T06:05:12+00:00",
+  "actualizado": "2026-11-09T12:06:12+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1603,
     "follows_count": 176,
-    "media_count": 11,
+    "media_count": 12,
     "username": "neogestlab"
   },
   "posts": [
+    {
+      "id": "17975553504173968",
+      "caption": "Con esta fórmula la IA por fin te entiende.\nUn buen prompt tiene 4 piezas, en este orden:\nRol: «Actúa como asesor de marketing para pequeños negocios».\nContexto: quién eres, qué pasa y para quién es.\nTarea: un verbo claro y una sola cosa cada vez.\nFormato: tabla, lista, email o número de líneas.\nGuárdalo: el ejemplo completo está en la diapositiva 6, listo para cambiar los datos ✍️ ¿Tienes una idea para tu negocio? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #prompts #ia #pymes #neogestlab",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/DfhG07DFzQm/",
+      "timestamp": "2026-11-09T10:22:43+0000",
+      "metricas": {
+        "reach": 4,
+        "views": 9,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 2
+      }
+    },
     {
       "id": "18009506007004960",
       "caption": "¿Improvisas cada día tu ruta de visitas?\nPara comerciales y distribuidores que pasan el día de cliente en cliente.\nEn Gestión Integral 7D, nuestra app, «Mi día» ordena tus paradas por carretera con la hora prevista de llegada (si el servicio de rutas falla, las ordena en línea recta y te avisa).\nCada visita queda registrada con llegada, salida y distancia a la ubicación del cliente.\nTu cartera, con ranking ABC.\nLos agentes IA solo proponen acciones: tú decides si las apruebas.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🚐\n\n#comerciales #distribucion #ventas #pymes #neogestlab",
@@ -18,8 +35,8 @@
       "permalink": "https://www.instagram.com/p/Dffsx71mBtI/",
       "timestamp": "2026-11-08T21:15:54+0000",
       "metricas": {
-        "reach": 10,
-        "views": 30,
+        "reach": 17,
+        "views": 45,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -35,8 +52,8 @@
       "permalink": "https://www.instagram.com/p/DffYnNFFwz9/",
       "timestamp": "2026-11-08T18:19:39+0000",
       "metricas": {
-        "reach": 12,
-        "views": 30,
+        "reach": 14,
+        "views": 33,
         "saved": 0,
         "shares": 3,
         "total_interactions": 7
@@ -73,8 +90,8 @@
       "permalink": "https://www.instagram.com/p/DffSjjIFyw1/",
       "timestamp": "2026-11-08T17:26:43+0000",
       "metricas": {
-        "reach": 5,
-        "views": 12,
+        "reach": 7,
+        "views": 14,
         "saved": 0,
         "shares": 0,
         "total_interactions": 3
@@ -90,8 +107,8 @@
       "permalink": "https://www.instagram.com/p/DffQZfmE7I6/",
       "timestamp": "2026-11-08T17:07:54+0000",
       "metricas": {
-        "reach": 10,
-        "views": 35,
+        "reach": 12,
+        "views": 39,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -141,8 +158,8 @@
       "permalink": "https://www.instagram.com/p/Dfe8Sb1n_cY/",
       "timestamp": "2026-11-08T14:12:01+0000",
       "metricas": {
-        "reach": 22,
-        "views": 43,
+        "reach": 24,
+        "views": 49,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -159,7 +176,7 @@
       "timestamp": "2026-11-08T14:11:13+0000",
       "metricas": {
         "reach": 25,
-        "views": 43,
+        "views": 45,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -175,8 +192,8 @@
       "permalink": "https://www.instagram.com/p/Dfe7vqnIW5Q/",
       "timestamp": "2026-11-08T14:07:15+0000",
       "metricas": {
-        "reach": 4,
-        "views": 17,
+        "reach": 6,
+        "views": 25,
         "saved": 0,
         "shares": 0,
         "total_interactions": 1
@@ -192,8 +209,8 @@
       "permalink": "https://www.instagram.com/p/Dfe7qRLIKe6/",
       "timestamp": "2026-11-08T14:06:32+0000",
       "metricas": {
-        "reach": 9,
-        "views": 20,
+        "reach": 11,
+        "views": 27,
         "saved": 0,
         "shares": 0,
         "total_interactions": 2
@@ -239,6 +256,10 @@
     },
     {
       "fecha": "2026-11-09T06:05+00:00",
+      "seguidores": 1603
+    },
+    {
+      "fecha": "2026-11-09T12:06+00:00",
       "seguidores": 1603
     }
   ]
