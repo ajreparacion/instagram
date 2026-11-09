@@ -1,263 +1,245 @@
 {
-  "semana": "2026-11-07 a 2026-11-13",
-  "creado_por": "Estratega, viernes 6/11/2026 20:35, ejecución extraordinaria por la NUEVA ESTRATEGIA del usuario (6/11 20:27): IA y automatizaciones fáciles, formato dibujo doodle con Bit y Paco. Sustituye por completo al plan de misterios; lo que había en cola/ y revision/ está en descartados/.",
-  "objetivo": "Reposicionar la cuenta en IA fácil y conseguir que al menos 1 reel llegue a 300 cuentas no seguidoras antes del viernes 13/11, con 2 reels al día. Medio: temas con mucha búsqueda, gancho en 2 s, truco comprobado y guardable, palabra clave → DM.",
-  "punto_de_partida": "1.605 seguidores; últimos 7 días alcance 22 (14 no seguidores), 1 interacción, 0 compartidos, 0 clics (Buzzfy, 6/11). Público ES 32 %, MX 14 %, CL 14 %, AR 12 %; 25-54 años. La audiencia actual vino por misterio/humor: por eso los reels de las 13:40 salen como reels de prueba para no seguidores.",
-  "formato": "modo dibujo (INSTRUCCIONES_EQUIPO.md): Bit enseña, Paco se agobia; papel claro, trazo negro, acento cian; 20-35 s; 5-7 escenas: gancho (≤ 2 s), problema, 1-3 pasos con «pantalla», resultado, cierre con palabra clave o «Sígueme para un truco al día».",
-  "series": {
-    "truco_del_dia": {
-      "activa": true,
-      "nombre": "Truco NNN"
-    },
-    "realofalso": {
-      "activa": false,
-      "motivo": "Desactivada por orden del usuario 6/11/2026 20:27."
-    },
-    "expedientes": {
-      "activa": false,
-      "motivo": "Fin del enfoque de misterios (6/11/2026)."
-    },
-    "remasters": {
-      "activa": false,
-      "motivo": "Los reels antiguos no encajan con la temática."
-    }
+ "semana": "2026-11-09 a 2026-11-16",
+ "creado_por": "Estratega, lunes 9/11/2026 10:30. Sustituye al plan del 6/11 (IA fácil con Bit y Paco). Sigue DIRECTIVA_VIGENTE.md: escaparate de Neogest Lab, 2 reels al día (13:40 y 20:40), mezcla 60/25/15 y rotación de públicos.",
+ "objetivo": "Que los reels lleguen a no seguidores sin perder el foco comercial. Metas de la semana: (1) mediana de alcance a no seguidores ≥ 50 por reel a las 48 h (hoy: reels de valor ~115 de alcance, reels de apps 5-12), (2) ≥ 3 DMs con intención (APP/IDEA/precio) y ≥ 5 toques al enlace, (3) seguidores netos ≥ 0.",
+ "punto_de_partida": "Datos 2-9/11 (Buzzfy, 7 días): alcance cuenta 484 (450 no seguidores; 461 por reels que ya no están en el perfil, ~90 por pieza); carruseles 34; historias 19. 1.603 seguidores (-5 netos del 30/10 al 6/11). Reel de app del 8/11 (Gestión Integral): alcance 5, visualización media 13,6 s. Carruseles de app 10-12 de alcance; los de valor de IA 22-25. Enlace: 2 clics, 0 toques; 0 comentarios.",
+ "reglas_de_cadencia": {
+  "feed_max_al_dia": "3 (2 reels a las 13:40 y 20:40 + 1 carrusel a las 17:10). Historias aparte (09:30, 15:30, 21:30).",
+  "sin_duplicados": "Prohibido republicar un texto ya publicado (8/11: «presupuestos» y «prompts» salieron ×3 en 3 h y todos rindieron peor). Mejora debe bloquearlo en publicar_gh.py.",
+  "mismo_producto": "Carrusel y reel del mismo producto o tema, con ≥ 24 h entre ambos.",
+  "rotacion": "Nunca dos reels seguidos del mismo público; máx. 1 reel/semana de talleres o servicios técnicos (esta semana: 204 el lunes 16).",
+  "calidad": "Nota ≥ 90 o no sale. Los prototipos 017-024 están a 70-88 por la voz θ sin validar de oído por el dueño: sus huecos no se rellenan con nada por debajo de 90."
+ },
+ "horas": {
+  "13:40": "reel (franja de valor y reels de prueba para no seguidores cuando toque)",
+  "17:10": "1 carrusel",
+  "20:40": "reel (pico de seguidores conectados: 20:00-22:00)"
+ },
+ "mezcla_semana": {
+  "Una idea, una app": "9 de 16 reels (56 %)",
+  "Así se hace": "5 (31 %)",
+  "¿Y si tu idea fuera una app?": "2 (13 %)",
+  "nota": "En cola hay pocos reels de valor aprobados (102, 103, 104); el Creador debe producir más «Así se hace» con la cola completa."
+ },
+ "experimento": {
+  "nombre": "Valor primero vs app directa",
+  "como": "Los reels de «Así se hace»/valor (102, 103, 104, 019, 018) frente a los de «Una idea, una app» (resto). Métrica: mediana de alcance a no seguidores a 48 h por reel, más compartidos + guardados y DMs/toques al enlace. Hipótesis: el valor llega a más gente, la app convierte mejor. Cada reel lleva «serie» en este plan.",
+  "decision": "Lunes 16/11, 10:13: si valor ≥ 2× app en alcance y las apps no ganan en DMs o toques, subir «Así se hace» al 40 % dentro de lo que permite la directiva (la hará el Estratega); si no hay 3+ reels medibles por brazo, se repite."
+ },
+ "dias": [
+  {
+   "fecha": "2026-11-09",
+   "hora": "13:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Una idea, una app",
+   "publico": "Mayores y quien los cuida",
+   "app": "MEDICATOR",
+   "cola": "201_medicator_reel",
+   "aprobado_calidad": true,
+   "nota": "Prioridad del dueño 8/11 (pieza 1 de 2 de la semana; el carrusel ya salió el 8/11)."
   },
-  "horas": {
-    "13:40": "reel de prueba para no seguidores (prueba_no_seguidores: true)",
-    "20:40": "SERIE APPS NEOGEST LAB (Gestión Integral 7D primero) cuando haya vídeo fuente con media_url y aprobado; si no, el truco del plan en dibujo, reel normal compartido en el feed."
+  {
+   "fecha": "2026-11-09",
+   "hora": "20:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Una idea, una app",
+   "publico": "Música y creadores",
+   "app": "Studio Beats PRO",
+   "cola": "203_studio_beats_pro_reel",
+   "aprobado_calidad": true
   },
-  "experimento": {
-    "nombre": "Tipo de gancho: pregunta vs número vs mini historia",
-    "como": "Cada entrada lleva gancho_tipo (pregunta 5, número 4, historia 5). Métrica: salto (skip_rate) y alcance a no seguidores a 48 h; desempate: compartidos + guardados.",
-    "decision": "El lunes 16/11 el Estratega fija el tipo ganador (menor mediana de salto) para el 60 % de la semana siguiente."
+  {
+   "fecha": "2026-11-10",
+   "hora": "13:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Así se hace",
+   "publico": "Público general y pequeños negocios",
+   "app": "(valor: fórmula de prompt)",
+   "cola": "102_formula_prompt_reel",
+   "aprobado_calidad": true,
+   "nota": "Franja de valor: prueba para no seguidores."
   },
-  "dias": [
-    {
-      "fecha": "2026-11-07",
-      "hora": "13:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "numero",
-      "tema": "Cómo usar Claude (búsqueda alta: «cómo usar Claude»)",
-      "gancho": "3 cosas que Claude hace gratis y casi nadie usa",
-      "contenido": "Lista de 3 funciones de Claude en el plan gratis (candidatas: Proyectos, Artefactos, memoria; según Tom's Guide y TechRadar pasaron al plan gratis en 2026; confirmar en support.claude.com). Paco usa la IA solo para preguntar; Bit le enseña las 3.",
-      "palabra_clave": "CLAUDE",
-      "prueba_no_seguidores": true,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": "Creador 6/11 23:30: cola/013_claude_gratis (Proyectos hasta 5, tablas/plantillas al lado = artefactos, memoria). Confirmado en claude.com/pricing y support.claude.com. Pendiente de render en modo dibujo."
-    },
-    {
-      "fecha": "2026-11-07",
-      "hora": "20:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "historia",
-      "tema": "Prompts (búsqueda alta: «prompts»)",
-      "gancho": "Si ChatGPT te contesta fatal, es por esto",
-      "contenido": "Antes/después: Paco escribe «hazme un correo» y sale un churro; Bit le enseña la fórmula de 4 piezas (quién eres / qué quieres / para quién / en qué formato) y el resultado mejora. En «pantalla» el prompt completo. Vale para ChatGPT, Claude y Gemini.",
-      "palabra_clave": "PROMPT",
-      "prueba_no_seguidores": false,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": "Creador 6/11 23:30: cola/014_formula_prompt (quién eres / qué quieres / para quién / formato). Base: guías oficiales de OpenAI y Anthropic. Pendiente de render en modo dibujo.",
-      "respuesta_idea": "Plantilla de las 4 piezas lista para copiar"
-    },
-    {
-      "fecha": "2026-11-08",
-      "hora": "13:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "pregunta",
-      "tema": "Automatizar el correo (búsqueda alta)",
-      "gancho": "¿Tienes 40 correos sin leer? Mira esto",
-      "contenido": "Resumir un hilo largo de Gmail con Gemini en un toque (Google lo anunció gratis en enero de 2026 según iPhone in Canada y Xataka Android; confirmar en support.google.com si llega a cuentas gratuitas en España y en español). Alternativa si no: «Escríbeme» / respuestas inteligentes.",
-      "palabra_clave": "GMAIL",
-      "prueba_no_seguidores": true,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": "Creador 7/11 10:00: cola/015_resumir_correo. CAMBIO: la ayuda oficial de Gmail (answer/16831098) dice que los resúmenes con IA en cuentas gratis solo están en EE. UU.; se sustituye por copiar el hilo en el chat gratis de la IA con un prompt. Palabra clave RESUMEN."
-    },
-    {
-      "fecha": "2026-11-08",
-      "hora": "20:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "historia",
-      "tema": "Automatizar el correo gratis sin IA",
-      "gancho": "Tu correo se puede ordenar solo. Gratis.",
-      "contenido": "Filtros de Gmail: buscar «factura» → Crear filtro → Aplicar etiqueta «Facturas» y saltar la bandeja. 3 pasos con los nombres exactos del menú (comprobar en support.google.com/mail). Paco agobiado con la bandeja; al final, bandeja limpia.",
-      "palabra_clave": "FILTRO",
-      "prueba_no_seguidores": false,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": "Creador 7/11 10:00: cola/016_filtro_facturas (Mostrar opciones de búsqueda > Crear filtro > Aplicar la etiqueta > Crear filtro; solo desde el ordenador). Ayuda oficial es-419 + Genbeta para los rótulos de España."
-    },
-    {
-      "fecha": "2026-11-09",
-      "hora": "13:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "numero",
-      "tema": "IA gratis (búsqueda alta: «IA gratis»)",
-      "gancho": "No pagues por una IA hasta ver esto",
-      "contenido": "3 IA que se pueden usar gratis hoy y para qué es mejor cada una (ChatGPT, Claude, Gemini como personajes inventados con su nombre). Límites del plan gratis según cada página oficial de precios; sin cifras que no se puedan comprobar.",
-      "palabra_clave": "GRATIS",
-      "prueba_no_seguidores": true,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null
-    },
-    {
-      "fecha": "2026-11-09",
-      "hora": "20:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "historia",
-      "tema": "Estudios",
-      "gancho": "Haz una foto a tus apuntes y mira",
-      "contenido": "Foto de apuntes → la IA hace un resumen y 5 preguntas tipo test. Prompt exacto en «pantalla». Comprobar que la versión gratis de la app elegida admite imágenes.",
-      "palabra_clave": "APUNTES",
-      "prueba_no_seguidores": false,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null
-    },
-    {
-      "fecha": "2026-11-10",
-      "hora": "13:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "pregunta",
-      "tema": "Estudios y trabajo: NotebookLM",
-      "gancho": "¿Y si tu PDF de 50 páginas fuera un podcast?",
-      "contenido": "NotebookLM de Google: subir un PDF → «Resumen de audio». Confirmar en support.google.com/notebooklm el nombre del botón en español, que es gratis y que habla en español.",
-      "palabra_clave": "PODCAST",
-      "prueba_no_seguidores": true,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null
-    },
-    {
-      "fecha": "2026-11-10",
-      "hora": "20:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "historia",
-      "tema": "Casa y trámites",
-      "gancho": "Paco llevaba tres semanas esperando un reembolso",
-      "contenido": "La IA redacta una reclamación educada y firme a partir de 3 datos (qué compraste, qué pasó, qué quieres). Aviso: revisa los datos antes de enviar y no pegues datos sensibles. Sin consejo legal.",
-      "palabra_clave": "RECLAMA",
-      "prueba_no_seguidores": false,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null
-    },
-    {
-      "fecha": "2026-11-11",
-      "hora": "13:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "pregunta",
-      "tema": "Móvil: Google Lens",
-      "gancho": "¿Sabías que tu cámara copia texto?",
-      "contenido": "Google Lens (Android y app de Google en iPhone): apuntar a un cartel o un papel → copiar texto o traducir. iPhone sin Google: Texto en vivo. Nombres de botones según la ayuda oficial.",
-      "palabra_clave": "LENS",
-      "prueba_no_seguidores": true,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null
-    },
-    {
-      "fecha": "2026-11-11",
-      "hora": "20:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "numero",
-      "tema": "Cómo usar ChatGPT/Claude mejor",
-      "gancho": "Deja de explicarle a la IA lo mismo cada día",
-      "contenido": "Instrucciones personalizadas / Proyectos: se le dice una vez quién eres y cómo quieres las respuestas. Rutas exactas de ChatGPT y Claude según su ayuda oficial.",
-      "palabra_clave": "PERFIL",
-      "prueba_no_seguidores": false,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null
-    },
-    {
-      "fecha": "2026-11-12",
-      "hora": "13:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "historia",
-      "tema": "Casa",
-      "gancho": "Menú de la semana y lista de la compra en 30 segundos",
-      "contenido": "Prompt: personas, presupuesto, lo que hay en la nevera → menú y lista agrupada por pasillos. Sin dietas ni consejos de salud.",
-      "palabra_clave": "MENU",
-      "prueba_no_seguidores": true,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null,
-      "app_propia": "GH PLUS · Gestión Hogar solo si de verdad guarda listas o menús (comprobar en la app antes de citarla; si no, nada)"
-    },
-    {
-      "fecha": "2026-11-12",
-      "hora": "20:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "pregunta",
-      "tema": "Automatizaciones gratis en el móvil",
-      "gancho": "Tu móvil puede hacer esto solo",
-      "contenido": "Automatización: al llegar al trabajo se activa No molestar (iPhone: Atajos > Automatización; Android: Modos y rutinas / Rutinas de Google). Comprobar nombres de menús en la ayuda de Apple y Google; si cambia por marca, decirlo.",
-      "palabra_clave": "ATAJO",
-      "prueba_no_seguidores": false,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null
-    },
-    {
-      "fecha": "2026-11-13",
-      "hora": "13:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "numero",
-      "tema": "Trabajo: prompts (búsqueda alta)",
-      "gancho": "3 prompts que te ahorran una hora en el trabajo",
-      "contenido": "Resumir una reunión, convertir notas en un correo, pasar datos sueltos a tabla. Los 3 prompts en «pantalla» y completos en la respuesta por DM.",
-      "palabra_clave": "PROMPTS",
-      "prueba_no_seguidores": true,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null
-    },
-    {
-      "fecha": "2026-11-13",
-      "hora": "20:40",
-      "tipo": "nuevo",
-      "modo": "dibujo",
-      "gancho_tipo": "pregunta",
-      "tema": "Comparativa (búsqueda alta: «ChatGPT o Claude o Gemini»)",
-      "gancho": "¿ChatGPT, Claude o Gemini? Depende de esto",
-      "contenido": "Para qué va mejor cada uno en tareas normales, solo con lo que digan sus páginas oficiales y pruebas propias descritas con honestidad. Cierre: «¿Parte 2 con prompts para cada uno? Comenta IA».",
-      "palabra_clave": "IA",
-      "prueba_no_seguidores": false,
-      "verificar": "Verificar en la ayuda oficial antes de escribir; si no existe así en España o en la versión gratis, cambiar el paso o el tema.",
-      "hecho": null,
-      "parte2_si": "≥ 5 comentarios con IA o compartidos ≥ 3 a 48 h"
-    }
-  ],
-  "kpi_semana": {
-    "principal": "Al menos 1 reel con alcance ≥ 300 (no seguidores).",
-    "segundo": "Mediana de salto < 55 %.",
-    "tercero": "≥ 10 comentarios con palabra clave en la semana (DM enviados) y seguidores netos ≥ 0."
+  {
+   "fecha": "2026-11-10",
+   "hora": "20:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Una idea, una app",
+   "publico": "Cualquier negocio",
+   "app": "AjReparacion Gestión / web",
+   "cola": "206_aj_reparacion_web_reel",
+   "aprobado_calidad": true
   },
-  "monetizacion": {
-    "palabra_clave_dm": "Todos los reels: la respuesta lleva el prompt o los pasos de verdad (máx. 200 caracteres, sin enlaces).",
-    "afiliados": "Solo herramientas con programa oficial de afiliados comprobado por Monetización (equipo/monetizacion.md) y con «enlace de afiliado» en el texto. ChatGPT, Claude y Gemini: no consta programa de afiliados; no se enlazan como afiliado.",
-    "apps_neogest": "Serie propia en la franja de las 20:40 (ver serie_apps). En los trucos de IA, mención a una app solo si la función existe de verdad.",
-    "youtube_shorts": "Preparar la publicación cruzada: mismo vídeo y título = gancho; Monetización/Mejora documentan qué falta (canal y permiso del dueño) en pendiente_usuario.md."
+  {
+   "fecha": "2026-11-11",
+   "hora": "13:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Así se hace",
+   "publico": "Hogar y familias",
+   "app": "(valor: tareas de casa con IA)",
+   "cola": "103_tareas_casa_ia_reel",
+   "aprobado_calidad": true,
+   "nota": "Prueba para no seguidores."
   },
-  "notas_para_el_equipo": [
-    "Números de truco: el Creador usa el siguiente libre según cola/, publicados/, revision/, errores/ y descartados/.",
-    "MEJORA: prioridad absoluta, modo dibujo en hacer_reel.py antes del sábado 7/11 11:00; si no llega, el render no debe publicar guiones en modo dibujo con el estilo antiguo.",
-    "CREADOR: puede dejar en cola hasta 2 reels por delante. Si un truco no se confirma en la documentación oficial, cambia el tema por otro de la misma categoría y lo anota en \"hecho\".",
-    "Fuentes de las notas de este plan (solo orientativas, no sustituyen a la ayuda oficial): Tom's Guide y TechRadar (Claude gratis: Proyectos, Artefactos, apps), iPhone in Canada 8/1/2026 y Xataka Android (Gemini en Gmail gratis), TechRepublic/Engadget «What is free on ChatGPT in 2026»."
-  ],
-  "serie_apps": {
-    "activa": true,
-    "orden": "usuario 7/11/2026 11:01",
-    "reglas": "INSTRUCCIONES_EQUIPO.md › SERIE APPS NEOGEST LAB",
-    "apps_permitidas_7_11": [
-      "gestion-integral-7d (único producto en estado «activo»; CTA «Pide la demo y prueba 30 días sin tarjeta»)"
-    ],
-    "videos_fuente_7_11": "Ninguno: las 2 Publicacion de reel (gestion-integral-7d y gps-andaluz) están en borrador y sin media_url. Falta que el usuario suba los vídeos.",
-    "bloqueo_tecnico": "El render aún no pone locución sobre un vídeo propio por URL; Mejora de producción lo está implementando (mejoras.md).",
-    "metrica": "clics al enlace del perfil y altas en la prueba gratuita de Gestión Integral 7D"
+  {
+   "fecha": "2026-11-11",
+   "hora": "20:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Una idea, una app",
+   "publico": "Mayores y quien los cuida",
+   "app": "MEDICATOR",
+   "cola": "301_medicator_presentador",
+   "aprobado_calidad": true,
+   "nota": "Pieza 2 de 2 de MEDICATOR. Formato presentador (Nea y Bit): aquí se mide si aporta frente a la captura."
+  },
+  {
+   "fecha": "2026-11-12",
+   "hora": "13:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Así se hace",
+   "publico": "Pequeños negocios y autónomos",
+   "app": "(valor: IA para el negocio)",
+   "cola": "104_ia_negocio_reel",
+   "aprobado_calidad": true,
+   "nota": "Prueba para no seguidores."
+  },
+  {
+   "fecha": "2026-11-12",
+   "hora": "20:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Una idea, una app",
+   "publico": "Ocio y humor",
+   "app": "Insultator",
+   "cola": "205_insultator_reel",
+   "aprobado_calidad": true
+  },
+  {
+   "fecha": "2026-11-13",
+   "hora": "13:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Una idea, una app",
+   "publico": "Tiendas, almacenes y mayoristas",
+   "app": "Gestión Integral 7D",
+   "cola": "107_catalogo_stock_reel",
+   "aprobado_calidad": true
+  },
+  {
+   "fecha": "2026-11-13",
+   "hora": "20:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Una idea, una app",
+   "publico": "Comerciales y pymes",
+   "app": "Gestión Integral 7D",
+   "cola": "302_gestion_integral_7d_presentador",
+   "aprobado_calidad": true,
+   "nota": "Formato presentador."
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "13:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Así se hace",
+   "publico": "Hogar y familias",
+   "app": "(valor: suscripciones con IA)",
+   "cola": "019_suscripciones_ia",
+   "aprobado_calidad": false,
+   "nota": "PROTOTIPO: sale solo si Calidad lo aprueba (≥ 90); hoy topado a 88 por la voz θ sin validar. Si a las 12:00 no está aprobado, el Creador pone el 106 reel o un valor nuevo aprobado."
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "20:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "¿Y si tu idea fuera una app?",
+   "publico": "Aficiones y tiendas pequeñas",
+   "app": "prototipo a medida",
+   "cola": "022_pedidos_tienda",
+   "aprobado_calidad": false,
+   "nota": "PROTOTIPO, mismas condiciones que 019. Se dice que es una demo."
+  },
+  {
+   "fecha": "2026-11-15",
+   "hora": "13:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Una idea, una app",
+   "publico": "Pymes y autónomos de servicios",
+   "app": "Gestión Integral 7D",
+   "cola": "108_cobrar_facturas_reel",
+   "aprobado_calidad": true
+  },
+  {
+   "fecha": "2026-11-15",
+   "hora": "20:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "¿Y si tu idea fuera una app?",
+   "publico": "Hostelería y comercio",
+   "app": "prototipo a medida",
+   "cola": "021_plato_hosteleria",
+   "aprobado_calidad": false,
+   "nota": "PROTOTIPO, mismas condiciones que 019 (nota 83)."
+  },
+  {
+   "fecha": "2026-11-16",
+   "hora": "13:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Una idea, una app",
+   "publico": "Autónomos y servicios técnicos",
+   "app": "AJ Sistema DEMO",
+   "cola": "204_aj_sistema_taller_reel",
+   "aprobado_calidad": true,
+   "nota": "ÚNICO reel de talleres/servicios de la semana (regla de §3)."
+  },
+  {
+   "fecha": "2026-11-16",
+   "hora": "20:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Así se hace",
+   "publico": "Ocio, humor y viajes",
+   "app": "(valor: dividir una cuenta con IA)",
+   "cola": "018_dividir_cuenta_ia",
+   "aprobado_calidad": false,
+   "nota": "PROTOTIPO, mismas condiciones que 019."
   }
+ ],
+ "carruseles": {
+  "10/11": "108_cobrar_facturas",
+  "11/11": "204_aj_sistema_taller_carrusel",
+  "12/11": "206_aj_reparacion_web_carrusel",
+  "13/11": "203_studio_beats_pro_carrusel",
+  "14/11": "205_insultator_carrusel",
+  "15/11": "202_gestion_integral_7d_carrusel",
+  "16/11": "104_ia_negocio",
+  "17/11": "107_catalogo_stock",
+  "hecho": "102_formula_prompt hoy 11:10 (valor)"
+ },
+ "kpi_semana": {
+  "principal": "Mediana de alcance a no seguidores ≥ 50 por reel a 48 h (n ≥ 6).",
+  "segundo": "≥ 3 DMs con intención y ≥ 5 toques al enlace.",
+  "tercero": "Seguidores netos ≥ 0 y 0 duplicados publicados."
+ },
+ "pendientes_dueño": [
+  "Validar de oído la voz (θ/seseo): desbloquea 8 prototipos (017-024) y las 4 piezas de este plan marcadas PROTOTIPO.",
+  "Analizar su vídeo de referencia (reel DfXjcjiNW8k): no está en la biblioteca de Buzzfy; sin acceso al reel desde aquí. Si puede, que lo suba como vídeo a la release o describa en 3 frases qué le gusta (ritmo, gancho, audio).",
+  "Cambiar el nombre visible del perfil a «Neogest Lab · Apps a medida» (usuario, bio y enlace ya están bien; el nombre aún es «IA Fácil · Trucos que no sabes»)."
+ ],
+ "notas_para_el_equipo": [
+  "CREADOR: la cola cubre hasta el 19/11, pero casi todo es app. Prioridad: 3-4 reels «Así se hace» o «A medida» de calidad ≥ 90 (el valor llega a más gente) y 1 «Así se hace» para el sábado 14 si el 019 no se aprueba.",
+  "CALIDAD: 3 de las 4 piezas PROTOTIPO tienen hueco fijo; revísalas 24 h antes y avisa si no llegan a 90.",
+  "ANALISTA: informe por público y por brazo del experimento; usar ig_post_stats (Buzzfy) con los media_id, no solo estadisticas.json.",
+  "MEJORA: bloquear republicar un texto ya publicado; revisar que la cuenta correcta es @neogestlab (config_publico.json aún dice nosabesloquehasvisto)."
+ ]
 }

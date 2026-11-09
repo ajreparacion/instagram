@@ -1,7 +1,7 @@
 {
   "tipo": "reel",
   "texto": "Planificar la semana de contenido sin improvisar: este planificador lo ha hecho una IA con un mensaje. Apuntas una idea por día de lunes a domingo, marcas lo ya publicado y te cuenta cuántos días llevas planificados, publicados y libres.\nEs una demo con datos de ejemplo, grabada funcionando. En Neogest Lab hacemos apps así, a medida.\n¿Tienes una idea para tu proyecto? Escríbeme IDEA por privado y te digo cómo sería tu app.\nVoz: generada a partir de la voz del autor.\n\n#creadoresdecontenido #contenido #organizacion #apps #neogestlab",
-  "cuando": "2026-11-11T20:40:00+01:00",
+  "cuando": "2026-11-19T13:40:00+01:00",
   "palabra_clave": "IDEA",
   "respuesta": "Cuéntame tu idea y para quién es, y te digo cómo sería tu app. Para probar la demo, pídele a una IA: «Página web en un solo HTML con la semana de lunes a domingo para planificar y marcar lo publicado»",
   "compartir_en_feed": true,

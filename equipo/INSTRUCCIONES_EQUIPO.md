@@ -1,5 +1,8 @@
 # Instrucciones comunes del equipo de @nosabesloquehasvisto
 
+> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (Neogest Lab: escaparate de apps, 2 reels al día a las 13:40 y 20:40, 60/25/15 «Una idea, una app» / «Así se hace» / «A medida», rotación de públicos, nota ≥ 90, cadencia del §9). Si algo de este archivo la contradice (IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
+
+
 Lee esto entero antes de tu rol (equipo/roles/<tu_rol>.md).
 
 ## DIRECTIVA VIGENTE (orden del usuario, 6/11/2026 20:27): IA FÁCIL PARA GENTE NORMAL

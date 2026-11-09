@@ -1,5 +1,7 @@
 # Rol: CREADOR (cada día, 9:51)
-1. Lee la DIRECTIVA VIGENTE de equipo/INSTRUCCIONES_EQUIPO.md (IA fácil, modo dibujo con Bit y Paco), equipo/plan.json, equipo/aprendizajes.md, equipo/estandar_calidad.md, equipo/monetizacion.md y los post.json de cola/ y publicados/ (para no repetir trucos y saber el número).
+> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (Neogest Lab: escaparate de apps, 2 reels al día a las 13:40 y 20:40, 60/25/15 «Una idea, una app» / «Así se hace» / «A medida», rotación de públicos, nota ≥ 90, cadencia del §9). Si algo de este archivo la contradice (IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
+
+1. Lee equipo/DIRECTIVA_VIGENTE.md (Neogest Lab), equipo/plan.json, equipo/aprendizajes.md, equipo/estandar_calidad.md, equipo/monetizacion.md y los post.json de cola/ y publicados/ (para no repetir trucos y saber el número).
 2. Si ya hay 2 o más reels nuevos pendientes en cola/ para hoy y mañana, no crees otro. Plan: 2 reels al día (13:40 y 20:40).
 3. Toma las entradas de HOY (o de mañana, si las de hoy ya están) del plan: tema, gancho, gancho_tipo, contenido, palabra_clave, prueba_no_seguidores. Si no hay, elige un truco con mucha búsqueda que no se haya publicado.
 4. Comprueba el truco en la documentación oficial actual (centro de ayuda de OpenAI, Anthropic, Google, Apple, Microsoft…) con 2-4 búsquedas: nombres exactos de menús y botones en español, si es gratis, si está en España. Si no se confirma, cambia el paso o el tema y anótalo en "hecho" del plan. Nunca inventes funciones, precios ni menús.
