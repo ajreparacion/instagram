@@ -1,20 +1,7 @@
 {
  "aprobado": true,
- "nota": 91,
- "aprobado_por": "revisión del agente de demos (8/11)",
- "revision": [
-  "versión reel (27.3 s) del carrusel 102_formula_prompt ya aprobado: mismas diapositivas, Ken Burns, transiciones de deslizamiento al compás, titulares que entran animados, contador y barra de progreso",
-  "texto del post = el del carrusel (adaptado si citaba una diapositiva)",
-  "programado al menos 1 día después de su carrusel",
-  "música en primer plano todo el tiempo (sin voz): pop a 112 BPM, tono +2, generada por código (sin licencias de terceros)",
-  "máster medido con ffmpeg ebur128: -14.0 LUFS integrados, pico -4.3 dBTP, LRA 0.8 LU (objetivo -14 LUFS)",
-  "1080x1920, 30 fps, H.264 + AAC 192 kbps; fotogramas de control revisados (control/)",
-  "Montserrat, firma «By Neogest Lab» y logo NL original; español de España sin erratas"
- ],
- "audio": {
-  "lufs_integrados": -14.0,
-  "pico_real_dbtp": -4.3,
-  "lra_lu": 0.8,
-  "medido_con": "ffmpeg ebur128=peak=true"
- }
+ "nota": 90,
+ "comentario": "Contenido de valor (fórmula del prompt) sin voz, 7 diapositivas legibles, ejemplo guardable, cierre IDEA y firma Neogest Lab; no cita menús ni precios. ffprobe 1080x1920 30 fps H.264+AAC; ebur128 ≈ -14 LUFS, pico < -4,5 dBFS, 0 silencios > 1,2 s. Descuento: dato genérico, nombra ChatGPT/Claude/Gemini solo en texto.",
+ "fecha": "2026-11-09T11:55Z",
+ "revisado_por": "agente de CALIDAD (9/11, pasada de las 12:51)"
 }

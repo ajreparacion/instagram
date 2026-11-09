@@ -1,20 +1,7 @@
 {
  "aprobado": true,
- "nota": 92,
- "aprobado_por": "revisión del agente de demos (8/11)",
- "revision": [
-  "reel de presentación de 25.8 s: capturas reales con Ken Burns, cortes en el golpe, textos animados, whoosh/pop/ding",
-  "datos fieles a demo[] y hechos_verificados; nada de prohibido_afirmar",
-  "se indica demo con datos ficticios y adaptación a medida a cualquier negocio",
-  "música en primer plano todo el tiempo (sin voz): funk a 114 BPM, tono -3, generada por código (sin licencias de terceros)",
-  "máster medido con ffmpeg ebur128: -13.9 LUFS integrados, pico -4.3 dBTP, LRA 0.3 LU (objetivo -14 LUFS)",
-  "1080x1920, 30 fps, H.264 + AAC 192 kbps; fotogramas de control revisados (control/)",
-  "Montserrat, firma «By Neogest Lab» y logo NL original; español de España sin erratas"
- ],
- "audio": {
-  "lufs_integrados": -13.9,
-  "pico_real_dbtp": -4.3,
-  "lra_lu": 0.3,
-  "medido_con": "ffmpeg ebur128=peak=true"
- }
+ "nota": 90,
+ "comentario": "5 fotogramas revisados: web y portal de AJ Reparación con «Demo con datos ficticios» y teléfono 600 000 000; cierre IDEA; público «cualquier negocio». ffprobe 1080x1920 30 fps H.264+AAC; ebur128 ≈ -14 LUFS, pico < -4,5 dBFS, 0 silencios > 1,2 s. Descuentos: texto pequeño en el móvil, sin voz. Es el único reel de servicio técnico de la semana (límite 1).",
+ "fecha": "2026-11-09T11:55Z",
+ "revisado_por": "agente de CALIDAD (9/11, pasada de las 12:51)"
 }

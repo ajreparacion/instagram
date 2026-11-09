@@ -33,3 +33,8 @@ Revisados 15 reels. Los de presentación sin voz (102-108, 201-206) cumplen (−
 Re-renderizados con la mezcla masterizada (−14,0 LUFS, pico −2,6 a −3,1 dBFS): 018, 019 y 022 puntúan 88 (solo les frena la voz θ sin validar de oído) y 017 queda en 84 por un hueco de voz de 1,55 s (guion corregido y render quitado para rehacerlo).
 1. DUEÑO (urgente): ningún reel con voz puede llegar a 90 hasta que valides la voz θ/seseo. 022 (hoy 20:40) y 017/018/019 (9-10/11) no saldrán con aprobado=false. Escucha un reel con voz de la release «cola» (p. ej. 022_pedidos_tienda.mp4); si te vale, dilo y Calidad los aprueba sin tocarlos (88 → ≥ 90).
 2. ESTRATEGA: si el dueño no valida la voz a tiempo, mover 022 a otra fecha o sustituirlo por un reel de presentación sin voz.
+
+## Calidad 9/11/2026 (pasada 12:51)
+- Render (demo_app.py): en 203 la cuenta «PASO n DE 6» no coincide con el titular «Paso k» de la app (p. ej. «PASO 4 DE 6 · Paso 3»); usar solo una numeración. En 201 y 206 el marco del móvil recorta título y botón de la captura; encuadrar la captura entera o con zoom intencionado.
+- Texto pequeño dentro de los móviles (203, 206): ampliar el zoom en la zona que se explica.
+- Voz: 301 y 302 quedan en 88 (no aprobados) como 017-024 hasta que el dueño valide el θ; con esa validación se aprueban 10 reels de golpe.
