@@ -1,20 +1,11 @@
 {
  "aprobado": true,
- "nota": 92,
- "aprobado_por": "revisión del agente de demos (8/11)",
- "revision": [
-  "reel de presentación de 32.8 s: capturas reales con Ken Burns, cortes en el golpe, textos animados, whoosh/pop/ding",
-  "datos fieles a demo[] y hechos_verificados; nada de prohibido_afirmar",
-  "cero afirmaciones de salud; aviso «no sustituye a tu médico»",
-  "música en primer plano todo el tiempo (sin voz): pop a 108 BPM, tono +3, generada por código (sin licencias de terceros)",
-  "máster medido con ffmpeg ebur128: -14.0 LUFS integrados, pico -4.6 dBTP, LRA 1.0 LU (objetivo -14 LUFS)",
-  "1080x1920, 30 fps, H.264 + AAC 192 kbps; fotogramas de control revisados (control/)",
-  "Montserrat, firma «By Neogest Lab» y logo NL original; español de España sin erratas"
- ],
+ "nota": 90,
+ "comentario": "Reel de presentación sin voz (v7/A1) con música en primer plano. 8 fotogramas revisados. Todo lo que se ve coincide con hechos_verificados de MEDICATOR; nada de prohibido_afirmar (sin cámara/CIMA, sin precio, sin diagnóstico); aviso «no sustituye a tu médico» y datos de ejemplo. ffprobe 1080x1920 30 fps H.264+AAC; ebur128 ≈ -14 LUFS, pico < -4,5 dBFS, 0 silencios > 1,2 s. Descuentos: sin voz, recortes de la captura (título y botón cortados en el marco del móvil), primera línea del post poco buscable.",
  "audio": {
-  "lufs_integrados": -14.0,
-  "pico_real_dbtp": -4.6,
-  "lra_lu": 1.0,
-  "medido_con": "ffmpeg ebur128=peak=true"
- }
+  "lufs": -14.0,
+  "pico_dbfs": -4.6
+ },
+ "fecha": "2026-11-09T11:55Z",
+ "revisado_por": "agente de CALIDAD (9/11, pasada de las 12:51)"
 }
