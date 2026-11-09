@@ -19,6 +19,9 @@
 Archivo compartido del equipo. Lo actualiza el Analista cada noche. Lo leen el Estratega, el Creador y el Remasterizador antes de trabajar.
 Regla: cada aprendizaje lleva evidencia y confianza (alta/media/baja). Sin evidencia es "hipótesis".
 
+## ALERTAS
+- 9/11/2026 (Analista): 013-016 (publicados 7/11) y 001 BAILE (5/11) no aparecen en estadisticas.json, y el ciclo no puede leer sus comentarios («Object does not exist», registro.log 22:22-23:22). Sin cifras no hay medición de esos reels. Revisar el token o los permisos de la API de estadísticas, o pedir las cifras con ig_post_stats (Buzzfy). No es caída brusca de seguidores (1.603, -2 desde el 7/11).
+
 ## Punto de partida (5/11/2026)
 - Cuenta: 1.605 seguidores, 808 publicaciones. Interacción reciente muy baja: 1-18 likes y 0-2 comentarios por reel (últimos 30). Confianza: alta (datos de la API).
 - Desde el 5/11/2026 21:30 hay métricas completas (alcance, reproducciones, guardados, compartidos, tiempo medio de visualización en ms). Ejemplo real: reel del koala (25/10/2026) alcance 30, 41 reproducciones, 2 compartidos, 11,5 s de visualización media; reel del 26/09/2025 alcance 209 pero solo 2,6 s de media (el gancho no retenía). Confianza: alta.
@@ -97,6 +100,8 @@ Regla: cada aprendizaje lleva evidencia y confianza (alta/media/baja). Sin evide
 - Hipótesis (baja, 1 muestra por tema): los carruseles con lista numerada y consejo práctico de IA llegan más que el resto; el público general y los autónomos de reformas responden algo. Los reels 001, 013-016 no cuentan (ver ALERTAS).
 - Repetición: el mismo texto se publicó 2-3 veces en unas 3 h («presupuestos» ×3, «prompts» ×3, «tareas» ×2). Dilución y riesgo de spam.
 - Recomendación para el Estratega: no cambiar hora ni fórmula; bloquear la republicación de un texto ya publicado; contar reels solo tras comprobar su permalink. Reevaluar con 3+ reels reales. Confianza: alta.
+
+- 9/11/2026 (noche, Analista) · Medibles: 2 reels y 11 carruseles/posts (estadisticas.json, 18:07 UTC). Reel MEDICATOR «Pastillas y citas» (12:51): alcance 5, 7 reproducciones, 3 likes, 1 compartido, 0 guardados, visualización media 6,97 s. Reel «De la ruta del día a la factura cobrada» (8/11 17:46): alcance 5, 13,6 s de media, 1 like, 0 compartidos. Retención (6,9-13,6 s) y compartidos aceptables, pero la distribución a no seguidores es mínima en los dos (alcance 5 frente a una mediana de 11 en las 13 publicaciones; los carruseles de prompts y presupuestos llegan a 18-26). Recomendación para el Estratega: no cambiar la mezcla ni la hora todavía; probar «Una idea, una app» en formato carrusel con prueba a no seguidores para comparar distribución con el reel del mismo tema (≥24 h de separación) y reevaluar con 3+ reels medibles. Confianza: baja (2 reels, 1 de ellos sin cifras de 013-016).
 
 ## Propuesta de hora (Analista, 6/11/2026; la fija el Estratega)
 - Datos (ig_best_times, Europe/Madrid, 27 días): seguidores conectados por hora: pico 20:00 (457), 21:00 (452), 19:00 (448), 18:00 (442), 22:00 (436), 23:00 (418), 00:00 (394); valle 8:00-9:00 (187-189); 13:00 353, 16:00 421. Buzzfy recomienda 20:00-22:00.
