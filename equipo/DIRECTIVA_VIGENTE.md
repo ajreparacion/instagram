@@ -1,6 +1,6 @@
 # DIRECTIVA VIGENTE (manda sobre cualquier otra instrucción del repo)
 
-> REFERENCIA DE VÍDEO DEL DUEÑO (8/11/2026 20:10): «esta es la idea para vídeos en general» → https://www.instagram.com/reel/DfXjcjiNW8k/ . Pendiente de analizar su formato (ritmo, gancho, estilo visual, audio) y copiar el sistema, no el contenido.
+> REFERENCIA DE VÍDEO DEL DUEÑO (8/11/2026 20:10): «esta es la idea para vídeos en general» → https://www.instagram.com/reel/DfXjcjiNW8k/ . Pendiente de analizar su formato (ritmo, gancho, estilo visual, audio) y copiar el sistema, no el contenido. Estratega 9/11: el reel no está en la biblioteca de Buzzfy y desde las sesiones del equipo no se puede abrir; se necesita que el dueño lo suba como vídeo o describa lo que le gusta (ítem en pendiente_usuario.md).
 
 > MEDICATOR, PRIORIDAD (dueño, 8/11/2026 19:38): destacar sus dos funciones estrella, ya comprobadas en el código y añadidas a hechos_verificados: (1) escanear con la cámara el código de la caja del medicamento y traer los datos oficiales de CIMA, la base de datos pública de la AEMPS; (2) «Lectura de parte médico»: foto a una receta, informe o cita, la app lee el texto en el propio móvil y propone apuntar la cita o la pastilla (se revisa antes de guardar). Creador: 2 piezas esta semana (reel grabado en la app con datos ficticios + carrusel). Inventario completo ya en hechos_verificados (41 frases, 8/11). Ganchos propuestos: «Mi madre no sabe usar el móvil… y esta app le habla» (modo Muy fácil, voz, botón llamar al familiar); «Hazle una foto al papel del médico y mira lo que pasa»; «Escanea la caja y te dice si ya la tomas» (CIMA + aviso si repite componente + alerta de alergia); «Salud de la mujer» opcional (regla, síntomas, menopausia, anticonceptiva por ciclos; sin promesas médicas, previsión orientativa); «Llega a la consulta con las preguntas hechas» (hoja para el médico). NO anunciar: modo cuidador (aparcado), APK o tiendas, IA generativa, detección de interacciones, avisos push garantizados. Decir «consulta la base de datos oficial de la AEMPS», nunca «avalada/oficial de la AEMPS», nada de diagnosticar.
 
@@ -76,3 +76,11 @@ Reglas de la tabla:
 - Cierre de los reels y textos de los posts: «Mira en 60 segundos lo que haría por tu negocio · enlace en el perfil» o «Comenta APP y te paso la demo». Nunca prometer acceso libre ni dar usuarios o PIN.
 - Los reels se graban desde la demo con sesión del equipo; en pantalla nunca aparecen PIN, contraseñas ni emails.
 - Enlace profundo por público: /demo?sector=bar, /demo?sector=peluqueria, etc. Usar el del público del reel.
+
+## 9. Cadencia y control de calidad de la semana (Estratega, 9/11/2026; motivo: datos 2-9/11)
+- Datos: los reels que ya no están en el perfil sumaron ~460 de alcance en 7 días (~90 por pieza, 450 de no seguidores); los reels y carruseles de apps de Neogest Lab alcanzan 5-12 cuentas; seguidores -5 netos (30/10-6/11). El valor llega; la venta directa, de momento, no. Por eso no se cambia el 60/25/15 del dueño, pero cada semana hay que cumplir el 25 % de «Así se hace» y medir «valor vs app» (plan.json › experimento). El lunes 16/11 se decide con cifras.
+- Feed: máximo 3 publicaciones al día (2 reels a las 13:40 y 20:40, y 1 carrusel a las 17:10). Historias aparte. El 8/11 salieron 11 en un día y cuatro textos repetidos 2-3 veces; eso diluye y puede pasar por spam.
+- Prohibido republicar un texto ya publicado. Carrusel y reel del mismo producto o tema, con ≥ 24 h de separación.
+- Mezcla de la cola: no dejar que lo aprobado sea más del 60 % de apps. El Creador produce «Así se hace» y «A medida» hasta equilibrarlo.
+- Ninguna pieza por debajo de 90 sale, incluidos los prototipos 017-024 hasta que el dueño valide la voz (θ/seseo).
+- Perfil: usuario, bio y enlace ya están puestos (comprobado 9/11); falta solo el nombre visible «Neogest Lab · Apps a medida».

@@ -1,4 +1,6 @@
 # Rol: EDITOR DEL CANAL (domingos 18:17 y cuando se lance a mano; necesita el ordenador del dueño)
+> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (Neogest Lab: escaparate de apps, 2 reels al día a las 13:40 y 20:40, 60/25/15 «Una idea, una app» / «Así se hace» / «A medida», rotación de públicos, nota ≥ 90, cadencia del §9). Si algo de este archivo la contradice (IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
+
 Creado el 7/11/2026 por orden del usuario: «un agente que edite el canal, ponga vídeos en privado y deje el canal perfecto». La API de Instagram no permite cambiar nombre, bio ni archivar publicaciones, así que este rol trabaja en el Chrome del dueño (Claude in Chrome, sesión de Instagram ya iniciada) desde una tarea programada que requiere su ordenador.
 
 1. Lee equipo/INSTRUCCIONES_EQUIPO.md (DIRECTIVA VIGENTE), equipo/perfil_propuesto.md y el punto 3c de equipo/pendiente_usuario.md.

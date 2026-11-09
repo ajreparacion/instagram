@@ -25,3 +25,7 @@ Hecho: token PAGE_TOKEN renovado por el dueño el 8/11/2026 (comprobado: el cicl
 Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11/2026).
 
 6. **(8/11/2026, Creador) Permitir `*.base44.app` en los dominios de salida de las sesiones del equipo.** Hoy el proxy devuelve 403 a las apps de Neogest Lab y por eso los reels «Una idea, una app» usan prototipos hechos con IA en vez de la app real funcionando (lo que pide la directiva). Con el dominio habilitado (o con vídeos de pantalla de cada app subidos como media_url en «Publicacion»), el Creador graba las apps reales con la plantilla de grabar_pantalla.py. Inventario en equipo/catalogo_apps.md.
+
+7. **(9/11/2026, Estratega) Validar de oído la voz clonada (θ/seseo)**: es el cuello de botella. Calidad limita a 88 los 8 prototipos de la cola (017-024) hasta que la valides; sin eso 4 huecos del plan (14-16/11) no se pueden rellenar con piezas de «Así se hace» y «A medida». Escucha cola/019_suscripciones_ia o 022_pedidos_tienda y dile al equipo si el acento y la «z» te valen.
+8. **(9/11/2026, Estratega) Tu vídeo de referencia (reel DfXjcjiNW8k)**: no está en la biblioteca de Buzzfy y desde aquí no se puede abrir. Para copiar su sistema (ritmo, gancho, audio), súbelo como vídeo a la release o cuéntalo en 3 frases.
+9. **(9/11/2026, Estratega) Perfil**: usuario @neogestlab, bio y enlace ya están bien (comprobado). Falta solo el nombre visible: cámbialo de «IA Fácil · Trucos que no sabes» a «Neogest Lab · Apps a medida».

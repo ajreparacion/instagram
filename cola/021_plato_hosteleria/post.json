@@ -1,7 +1,7 @@
 {
   "tipo": "reel",
   "texto": "Calcular el precio de un plato sin hacer números a ojo: esta calculadora para hostelería la ha hecho una IA con un mensaje. Pones cada ingrediente con su coste y las raciones, y te dice lo que cuesta cada ración y a cuánto venderla (sin IVA) según el coste que buscas: coste por ración dividido entre ese porcentaje.\nEs una demo con datos de ejemplo, grabada funcionando. En Neogest Lab hacemos apps así, a medida.\n¿Tienes una idea para tu negocio? Escríbeme IDEA por privado y te digo cómo sería tu app.\nVoz: generada a partir de la voz del autor.\n\n#hosteleria #restaurantes #pymes #apps #neogestlab",
-  "cuando": "2026-11-12T12:10:00+01:00",
+  "cuando": "2026-11-15T20:40:00+01:00",
   "palabra_clave": "IDEA",
   "respuesta": "Cuéntame tu idea y para quién es, y te digo cómo sería tu app. Para probar esta demo, pídele a una IA: «Página web en un solo HTML para calcular el coste de un plato y su precio de venta»",
   "compartir_en_feed": true,
