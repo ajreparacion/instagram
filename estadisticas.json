@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-09T00:04:24+00:00",
+  "actualizado": "2026-11-09T06:05:12+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1603,
@@ -18,11 +18,11 @@
       "permalink": "https://www.instagram.com/p/Dffsx71mBtI/",
       "timestamp": "2026-11-08T21:15:54+0000",
       "metricas": {
-        "reach": 9,
-        "views": 25,
+        "reach": 10,
+        "views": 30,
         "saved": 0,
-        "shares": 0,
-        "total_interactions": 2
+        "shares": 1,
+        "total_interactions": 3
       }
     },
     {
@@ -35,8 +35,8 @@
       "permalink": "https://www.instagram.com/p/DffYnNFFwz9/",
       "timestamp": "2026-11-08T18:19:39+0000",
       "metricas": {
-        "reach": 11,
-        "views": 26,
+        "reach": 12,
+        "views": 30,
         "saved": 0,
         "shares": 3,
         "total_interactions": 7
@@ -52,32 +52,32 @@
       "permalink": "https://www.instagram.com/reel/DffUzH3ALoA/",
       "timestamp": "2026-11-08T17:46:49+0000",
       "metricas": {
-        "reach": 3,
-        "views": 7,
+        "reach": 5,
+        "views": 10,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 20062,
-        "ig_reels_video_view_total_time": 100314
+        "ig_reels_avg_watch_time": 13575,
+        "ig_reels_video_view_total_time": 108605
       }
     },
     {
       "id": "18047708876823947",
       "caption": "5 tareas pesadas que ChatGPT, Claude o Gemini hacen por ti (prompts incluidos).\nMenú de cenas de la semana y lista de la compra por secciones.\nResumir la circular del cole o de la comunidad y decirte qué hacer y para cuándo, sin pegar datos personales.\nResponder un mensaje difícil con educación.\nPasar a texto la foto de una receta o un tíquet.\nRepartir las tareas de la semana según tus horas libres.\nGuárdalo para el domingo 🗓️ ¿Y una app hecha para tu casa? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #organizacion #hogar #productividad #neogestlab",
       "comments_count": 0,
-      "like_count": 1,
+      "like_count": 2,
       "media_product_type": "FEED",
       "media_type": "CAROUSEL_ALBUM",
       "permalink": "https://www.instagram.com/p/DffSjjIFyw1/",
       "timestamp": "2026-11-08T17:26:43+0000",
       "metricas": {
-        "reach": 3,
-        "views": 6,
+        "reach": 5,
+        "views": 12,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 2
+        "total_interactions": 3
       }
     },
     {
@@ -90,8 +90,8 @@
       "permalink": "https://www.instagram.com/p/DffQZfmE7I6/",
       "timestamp": "2026-11-08T17:07:54+0000",
       "metricas": {
-        "reach": 9,
-        "views": 29,
+        "reach": 10,
+        "views": 35,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -108,7 +108,7 @@
       "timestamp": "2026-11-08T14:31:49+0000",
       "metricas": {
         "reach": 5,
-        "views": 26,
+        "views": 27,
         "saved": 0,
         "shares": 0,
         "total_interactions": 1
@@ -124,8 +124,8 @@
       "permalink": "https://www.instagram.com/p/Dfe-VhUj8LS/",
       "timestamp": "2026-11-08T14:30:04+0000",
       "metricas": {
-        "reach": 8,
-        "views": 19,
+        "reach": 9,
+        "views": 24,
         "saved": 0,
         "shares": 0,
         "total_interactions": 1
@@ -141,8 +141,8 @@
       "permalink": "https://www.instagram.com/p/Dfe8Sb1n_cY/",
       "timestamp": "2026-11-08T14:12:01+0000",
       "metricas": {
-        "reach": 20,
-        "views": 39,
+        "reach": 22,
+        "views": 43,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -158,8 +158,8 @@
       "permalink": "https://www.instagram.com/p/Dfe8MyWjzSv/",
       "timestamp": "2026-11-08T14:11:13+0000",
       "metricas": {
-        "reach": 23,
-        "views": 38,
+        "reach": 25,
+        "views": 43,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -176,7 +176,7 @@
       "timestamp": "2026-11-08T14:07:15+0000",
       "metricas": {
         "reach": 4,
-        "views": 14,
+        "views": 17,
         "saved": 0,
         "shares": 0,
         "total_interactions": 1
@@ -192,8 +192,8 @@
       "permalink": "https://www.instagram.com/p/Dfe7qRLIKe6/",
       "timestamp": "2026-11-08T14:06:32+0000",
       "metricas": {
-        "reach": 8,
-        "views": 16,
+        "reach": 9,
+        "views": 20,
         "saved": 0,
         "shares": 0,
         "total_interactions": 2
@@ -235,6 +235,10 @@
     },
     {
       "fecha": "2026-11-09T00:04+00:00",
+      "seguidores": 1603
+    },
+    {
+      "fecha": "2026-11-09T06:05+00:00",
       "seguidores": 1603
     }
   ]
