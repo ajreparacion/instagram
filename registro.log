@@ -1,10 +1,3 @@
-2026-11-06 16:02  Estadísticas actualizadas (30 posts, 1605 seguidores)
-2026-11-06 18:37  Voz con Pocket TTS (spanish/lola): 9 frases en 16 s
-2026-11-06 18:37  Voz: silencios recortados por frase (s): [0.78, 0.22, 0.28, 0.38, 0.7, 0.74, 1.86, 0.22, 0.16]
-2026-11-06 18:37  006_realofalso_18074579041723896: renderizado con voz y subido a la release 'cola'
-2026-11-06 18:39  Voz con Pocket TTS (spanish/lola): 9 frases en 16 s
-2026-11-06 18:39  Voz: silencios recortados por frase (s): [1.06, 0.52, 0.74, 0.32, 0.52, 0.52, 0.1, 1.72, 0.16]
-2026-11-06 18:39  007_realofalso_18057952754210907: renderizado con voz y subido a la release 'cola'
 2026-11-06 19:17  Voz con Pocket TTS (spanish/lola): 9 frases en 15 s
 2026-11-06 19:17  Voz: silencios recortados por frase (s): [0.34, 0.12, 0.94, 0.1, 0.74, 0.62, 0.86, 0.26, 0.3]
 2026-11-06 19:18  006_realofalso_18074579041723896: renderizado con voz y subido a la release 'cola'
@@ -598,3 +591,10 @@ ModuleNotFoundError: No module named 'faster_whisper'
 2026-11-09 09:20  014_formula_prompt: no se pudieron leer comentarios: Unsupported get request. Object with ID '18114456071177223' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-09 09:20  015_resumir_correo: no se pudieron leer comentarios: Unsupported get request. Object with ID '18119170952012543' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-09 09:20  016_filtro_facturas: no se pudieron leer comentarios: Unsupported get request. Object with ID '18015411647992201' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-09 09:35  203_studio_beats_pro_historia1: publicando…
+2026-11-09 09:36  203_studio_beats_pro_historia1: historia publicada (18061434770560237)
+2026-11-09 09:36  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-09 09:36  013_claude_gratis: no se pudieron leer comentarios: Unsupported get request. Object with ID '17980873539135416' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-09 09:36  014_formula_prompt: no se pudieron leer comentarios: Unsupported get request. Object with ID '18114456071177223' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-09 09:36  015_resumir_correo: no se pudieron leer comentarios: Unsupported get request. Object with ID '18119170952012543' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
+2026-11-09 09:36  016_filtro_facturas: no se pudieron leer comentarios: Unsupported get request. Object with ID '18015411647992201' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
