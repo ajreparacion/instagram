@@ -410,3 +410,8 @@ La cadena actual (equipo/voz.json `cadena_voz`: paso alto 80 Hz, EQ, compresor, 
 - Copias previas: herramientas/versiones/publicar_gh.py_2026-11-08f y voz.json_2026-11-08f. Revertir: `"master": {"activo": false}` y `"duck_max_db": 99` en equipo/voz.json (mezcla como antes), o copiar esas dos copias sobre publicar_gh.py y equipo/voz.json.
 - Voz (prioridad 1): SIN CAMBIOS a propósito. El θ sigue «pendiente de oído humano» (cambio 20) y no hay forma de medir mejora real sin que el dueño escuche; tocarla sin datos sería a ciegas. Siguiente prueba pendiente: Chatterbox con `language_id` «el» solo en palabras con θ (ver cambio 20).
 - Cola: 017 (sale el 9/11 13:40, más de 3 h) vuelve a rendirse: se le quita `renderizado`, `asset` y `motor_voz` (NO basta con `"renderizado": false`: ciclo.yml solo mira si la clave existe) para que salga con el máster. 022 (20:40 de hoy, < 3 h) y 021 (ya pasó su hora) no se tocan; 018, 019, 020, 023 y 024 aún no estaban renderizados y saldrán con la mezcla nueva.
+
+## Creador 9/11/2026 (ejecución programada): sin reels nuevos, la cola ya está llena
+- cola/ tiene 21 reels hasta el 16/11: 12 aprobados (≥ 90) y 9 pendientes de nota (017-024 y 022 con la hora ya pasada). Mínimo de 4 cubierto de sobra; no se crea nada para no gastar.
+- Los prototipos 017-022 están topados a 88 por la voz θ sin validar de oído (ver calidad.json), así que crear más del mismo tipo no ayuda. Cuello de botella real: validación de la voz por el dueño y acceso a *.base44.app para grabar las apps reales.
+- 022_pedidos_tienda tiene cuando 8/11 20:40 (pasada): Estratega/Calidad deben reprogramarla.
