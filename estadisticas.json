@@ -1,66 +1,100 @@
 {
-  "actualizado": "2026-11-08T17:58:26+00:00",
+  "actualizado": "2026-11-09T00:04:24+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1603,
     "follows_count": 176,
-    "media_count": 9,
+    "media_count": 11,
     "username": "neogestlab"
   },
   "posts": [
     {
+      "id": "18009506007004960",
+      "caption": "¿Improvisas cada día tu ruta de visitas?\nPara comerciales y distribuidores que pasan el día de cliente en cliente.\nEn Gestión Integral 7D, nuestra app, «Mi día» ordena tus paradas por carretera con la hora prevista de llegada (si el servicio de rutas falla, las ordena en línea recta y te avisa).\nCada visita queda registrada con llegada, salida y distancia a la ubicación del cliente.\nTu cartera, con ranking ABC.\nLos agentes IA solo proponen acciones: tú decides si las apruebas.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🚐\n\n#comerciales #distribucion #ventas #pymes #neogestlab",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/Dffsx71mBtI/",
+      "timestamp": "2026-11-08T21:15:54+0000",
+      "metricas": {
+        "reach": 9,
+        "views": 25,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 2
+      }
+    },
+    {
+      "id": "18349307488255378",
+      "caption": "¿Ya te tomaste la pastilla o no? 💊\nMEDICATOR organiza las pastillas y las citas médicas con letra grande, pensada para mayores y para quien los cuida.\nAl abrirla ves la pastilla que toca ahora y la apuntas con un botón grande.\nLas citas van en un calendario: médico, centro, planta, si es en ayunas y qué llevar.\nPrepara una hoja con tus medicinas, alergias y preguntas para el médico, y una lista para la farmacia.\nCapturas de la demo con datos de ejemplo. Organiza; no sustituye a tu médico ni a tu farmacéutico.\n¿La quieres para ti o para tus padres? Pide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#mayores #cuidadores #organizacion #apps #neogestlab",
+      "comments_count": 0,
+      "like_count": 2,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/DffYnNFFwz9/",
+      "timestamp": "2026-11-08T18:19:39+0000",
+      "metricas": {
+        "reach": 11,
+        "views": 26,
+        "saved": 0,
+        "shares": 3,
+        "total_interactions": 7
+      }
+    },
+    {
       "id": "18230867386335197",
       "caption": "De la ruta del día a la factura cobrada 🚗\nGestión Integral 7D ordena tus visitas, lleva tus clientes por ranking ABC y pasa del presupuesto al pedido, al albarán y a la factura con enlace de pago.\nCapturas reales de la demo. Pide la tuya en el enlace del perfil o escríbeme IDEA por privado.\n\n#comerciales #pymes #ventas #facturacion #apps #neogestlab",
       "comments_count": 0,
-      "like_count": 0,
+      "like_count": 1,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DffUzH3ALoA/",
       "timestamp": "2026-11-08T17:46:49+0000",
       "metricas": {
-        "reach": 0,
-        "views": 0,
+        "reach": 3,
+        "views": 7,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 0,
-        "total_interactions": 0,
-        "ig_reels_avg_watch_time": 0,
-        "ig_reels_video_view_total_time": 0
+        "likes": 1,
+        "total_interactions": 2,
+        "ig_reels_avg_watch_time": 20062,
+        "ig_reels_video_view_total_time": 100314
       }
     },
     {
       "id": "18047708876823947",
       "caption": "5 tareas pesadas que ChatGPT, Claude o Gemini hacen por ti (prompts incluidos).\nMenú de cenas de la semana y lista de la compra por secciones.\nResumir la circular del cole o de la comunidad y decirte qué hacer y para cuándo, sin pegar datos personales.\nResponder un mensaje difícil con educación.\nPasar a texto la foto de una receta o un tíquet.\nRepartir las tareas de la semana según tus horas libres.\nGuárdalo para el domingo 🗓️ ¿Y una app hecha para tu casa? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #organizacion #hogar #productividad #neogestlab",
       "comments_count": 0,
-      "like_count": 0,
+      "like_count": 1,
       "media_product_type": "FEED",
       "media_type": "CAROUSEL_ALBUM",
       "permalink": "https://www.instagram.com/p/DffSjjIFyw1/",
       "timestamp": "2026-11-08T17:26:43+0000",
       "metricas": {
-        "reach": 1,
-        "views": 2,
+        "reach": 3,
+        "views": 6,
         "saved": 0,
         "shares": 0,
-        "total_interactions": 0
+        "total_interactions": 2
       }
     },
     {
       "id": "17892903792456559",
       "caption": "5 tareas pesadas que ChatGPT, Claude o Gemini hacen por ti (prompts incluidos).\nMenú de cenas de la semana y lista de la compra por secciones.\nResumir la circular del cole o de la comunidad y decirte qué hacer y para cuándo, sin pegar datos personales.\nResponder un mensaje difícil con educación.\nPasar a texto la foto de una receta o un tíquet.\nRepartir las tareas de la semana según tus horas libres.\nGuárdalo para el domingo 🗓️ ¿Y una app hecha para tu casa? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #organizacion #hogar #productividad #neogestlab",
       "comments_count": 0,
-      "like_count": 0,
+      "like_count": 1,
       "media_product_type": "FEED",
       "media_type": "CAROUSEL_ALBUM",
       "permalink": "https://www.instagram.com/p/DffQZfmE7I6/",
       "timestamp": "2026-11-08T17:07:54+0000",
       "metricas": {
-        "reach": 2,
-        "views": 7,
+        "reach": 9,
+        "views": 29,
         "saved": 0,
-        "shares": 0,
-        "total_interactions": 0
+        "shares": 1,
+        "total_interactions": 3
       }
     },
     {
@@ -73,8 +107,8 @@
       "permalink": "https://www.instagram.com/p/Dfe-iOFD7dQ/",
       "timestamp": "2026-11-08T14:31:49+0000",
       "metricas": {
-        "reach": 4,
-        "views": 23,
+        "reach": 5,
+        "views": 26,
         "saved": 0,
         "shares": 0,
         "total_interactions": 1
@@ -90,8 +124,8 @@
       "permalink": "https://www.instagram.com/p/Dfe-VhUj8LS/",
       "timestamp": "2026-11-08T14:30:04+0000",
       "metricas": {
-        "reach": 6,
-        "views": 17,
+        "reach": 8,
+        "views": 19,
         "saved": 0,
         "shares": 0,
         "total_interactions": 1
@@ -107,8 +141,8 @@
       "permalink": "https://www.instagram.com/p/Dfe8Sb1n_cY/",
       "timestamp": "2026-11-08T14:12:01+0000",
       "metricas": {
-        "reach": 12,
-        "views": 23,
+        "reach": 20,
+        "views": 39,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -124,8 +158,8 @@
       "permalink": "https://www.instagram.com/p/Dfe8MyWjzSv/",
       "timestamp": "2026-11-08T14:11:13+0000",
       "metricas": {
-        "reach": 16,
-        "views": 24,
+        "reach": 23,
+        "views": 38,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -141,8 +175,8 @@
       "permalink": "https://www.instagram.com/p/Dfe7vqnIW5Q/",
       "timestamp": "2026-11-08T14:07:15+0000",
       "metricas": {
-        "reach": 3,
-        "views": 11,
+        "reach": 4,
+        "views": 14,
         "saved": 0,
         "shares": 0,
         "total_interactions": 1
@@ -158,8 +192,8 @@
       "permalink": "https://www.instagram.com/p/Dfe7qRLIKe6/",
       "timestamp": "2026-11-08T14:06:32+0000",
       "metricas": {
-        "reach": 3,
-        "views": 9,
+        "reach": 8,
+        "views": 16,
         "saved": 0,
         "shares": 0,
         "total_interactions": 2
@@ -197,6 +231,10 @@
     },
     {
       "fecha": "2026-11-08T17:58+00:00",
+      "seguidores": 1603
+    },
+    {
+      "fecha": "2026-11-09T00:04+00:00",
       "seguidores": 1603
     }
   ]
