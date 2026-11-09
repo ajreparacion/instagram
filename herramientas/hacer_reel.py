@@ -1478,7 +1478,7 @@ APP = {"path": None, "w": 0, "h": 0, "dur": 0.0, "vertical": True, "audio": Fals
 # ni Ken Burns que corten el marco), subtitulos oscuros bajo el dispositivo con el unico acento cian, Bit mas abajo.
 PLANT_HOOK_CY = 185       # gancho en la franja libre sobre el dispositivo (plantilla)
 PLANT_ROTULO_Y = 120      # rotulo corto (plantilla)
-SUB_CY_PLANT = 1478       # subtitulos bajo el dispositivo (plantilla)
+SUB_CY_PLANT = 1502       # subtitulos bajo el dispositivo (plantilla)
 MAX_VEL_APP = 1.75
 APP_VID_W = 1000          # ancho del video apaisado enmarcado sobre papel
 APP_VID_CY = 800          # centro vertical del video apaisado

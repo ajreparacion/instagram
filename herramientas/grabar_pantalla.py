@@ -12,7 +12,7 @@ musica y gancho los pone hacer_reel.py). Nada se inventa: lo que se ve es lo que
 grabacion.json:
  {"dispositivo": "movil" | "portatil", "fondo": "#DDEBF7", "marco": "oscuro" | "claro",
   "url": "https://...  o ruta .html relativa a este json", "sesion": "storage_state.json (opcional: Gmail, chat...)",
-  "viewport": [390, 750], "escala": 2, "idioma": "es-ES", "esperar_carga": 0.8,
+  "viewport": [390, 640], "escala": 2, "idioma": "es-ES", "esperar_carga": 0.8,
   "pasos": [
     {"accion": "esperar", "seg": 1.0},
     {"accion": "clic", "selector": "#boton"}                       (o "x","y" en px del viewport; "doble": true)
@@ -35,7 +35,7 @@ CIAN = (0, 184, 217)
 
 # pantalla (donde va la grabacion) y cuerpo del dispositivo, en el lienzo 1080x1920
 DISPOSITIVOS = {
-    "movil":   dict(pantalla=(250, 320, 580, 1060), bisel=20, radio_p=44, radio_c=66, viewport=(390, 713), escala=2,
+    "movil":   dict(pantalla=(215, 322, 650, 1066), bisel=20, radio_p=44, radio_c=66, viewport=(390, 640), escala=2,
                     movil=True, isla=True),
     "portatil": dict(pantalla=(60, 470, 960, 600), bisel=22, radio_p=10, radio_c=26, viewport=(1280, 800), escala=1.5,
                      movil=False, isla=False),
@@ -58,11 +58,22 @@ class Registro:
         self.t0 = None
     def t(self): return time.time() - self.t0
 
+def ajustar_pantalla(disp, vw, vh):
+    """Si el viewport pedido no tiene la proporcion de la pantalla del dispositivo, la pantalla se reencaja (centrada en su
+    caja, sin salirse) para que la captura no salga estirada. Con el viewport por defecto no cambia nada."""
+    sx, sy, sw, sh = disp["pantalla"]
+    if abs(sw / sh - vw / vh) < 0.01: return disp
+    w, h = sw, int(round(sw * vh / vw))
+    if h > sh: h, w = sh, int(round(sh * vw / vh))
+    nd = dict(disp); nd["pantalla"] = (sx + (sw - w) // 2, sy + (sh - h) // 2, w, h)
+    return nd
+
 def grabar(spec, base_dir, rec):
     from playwright.sync_api import sync_playwright
     disp = DISPOSITIVOS.get(str(spec.get("dispositivo") or "movil").lower())
     if not disp: sys.exit("dispositivo desconocido: %r (movil | portatil)" % spec.get("dispositivo"))
     vw, vh = [int(x) for x in (spec.get("viewport") or disp["viewport"])]
+    disp = ajustar_pantalla(disp, vw, vh)
     escala = float(spec.get("escala") or disp["escala"])
     sesion = spec.get("sesion") or os.environ.get("PANTALLA_SESION") or ""
     if sesion and not os.path.isabs(sesion): sesion = os.path.join(base_dir, sesion)
