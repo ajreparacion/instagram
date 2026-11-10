@@ -37,3 +37,6 @@ Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11
 
 13. **(10/11/2026, Estratega) Perfil para la serie**: cambia la bio (aún acaba en «Escríbeme IDEA…», cierre prohibido) y el nombre visible; texto listo en equipo/perfil_propuesto.md (ACTUALIZACIÓN 10/11). Sustituye a los puntos 9 y 11. El punto 12 (nombres de Matías) queda anulado: los personajes son los de serie_jambo.md.
 14. **(10/11/2026, Estratega) Apps como cameo**: durante el mes de prueba no hay apps en los episodios. Dime cuándo quieres el cameo de 2 s y el equipo lo añade.
+
+13. (11/11 00:30, Calidad) Studio Beats PRO incluye cajas de ritmo con nombres de máquinas ajenas (808, 909, LinnDrum, RX5…) y cientos de muestras nuevas: confirma que tienes licencia para usarlas y promocionarlas; mientras tanto no se anuncia como «libre de derechos».
+14. (11/11 00:30, Calidad) GPS Andaluz sigue con la v1.2 sin publicar; Insultator tiene frases de humor negro duro que no salen en ningún post.

@@ -1,0 +1,29 @@
+# Novedades de las apps para reels y carruseles (Calidad, 11/11/2026 00:30; orden del dueño: «revisa las aplicaciones que hemos mejorado, que se incluyan en los reels y carruseles con las novedades»)
+Fuente: historial de código de las apps en Base44 (commits del 8 al 10/11) + fichas Producto del Centro (actualizadas 9/11 23:00 y 10/11 08:58). Lo de «visto en código» NO se afirma en un post hasta que el Creador lo compruebe en pantalla con datos ficticios y lo añada a hechos_verificados del Producto. Lo ya listado en hechos_verificados sí se puede usar.
+
+## Qué ha cambiado desde el catálogo del 8/11 (catalogo_apps.md está desfasado)
+**GH PLUS · Gestión Hogar** (activo, ficha nueva, 16 hechos; app gestion-hogar-c9185d78.base44.app; ~35 cambios el 10/11 entre 22:55 y 23:21): ya NO es «sin ficha», entra en la rotación.
+- En hechos_verificados (usable): Dinero disponible del mes, avisos de pagos vencidos con «Marcar pagado», gastos fijos con «Generar pagos del mes» sin duplicar, presupuestos por categoría con aviso al 80 %, nóminas, préstamos («me deben»), embargos, leer con la cámara (siempre se revisa), importar extracto CSV/Excel, hogar compartido con código, exportar a CSV/PDF, PWA.
+- Novedades vistas en código (a comprobar): ajustes con tema claro/oscuro/automático, tamaño de letra, «menos animaciones»; **celebraciones con confeti al pagar o al conseguir un logro**; **logros y medallas** («Nuevo logro»); «Consejo del día» y saludo «Así va tu dinero»; ayuda explicada en cada pantalla con botón de escuchar; **modo demo con botón «Salir y crear mi cuenta»** (lib/demo.js, ideal para grabar con datos ficticios); descargar mis datos y eliminar cuenta; paquete de Google Play preparado (NO decir que está en la tienda).
+- Ganchos: «Ya no me pasa que se me olvida pagar la luz» · «Mi nómina entra… y la app me enseña adónde se va» · «Confeti al pagar el recibo (sí, funciona)».
+- Riesgo: finanzas personales; solo datos inventados, nunca el código de hogar en pantalla; sin «gratis», «sin registro» ni «asesoría».
+
+**MEDICATOR** (activo; 43 hechos; código cambiado el 10/11 de 20:43 a 23:21): 
+- Usable: escanear caja (CIMA/AEMPS), lectura de parte médico, hoja para el médico, farmacia, salud de la mujer, alergias, modo «Muy fácil», llamar a un familiar, constantes con gráfica de 30 días (ya listadas).
+- Novedades vistas en código (a comprobar): «Mis constantes» añade **oxígeno** (tensión, azúcar, peso, pulso y oxígeno); **«Medir con el dedo»** con la cámara y **«Leer de mi reloj o aparato» por Bluetooth** (lib/sensores.js); barra de pestañas inferior; deslizar para actualizar; «Encender la cámara otra vez» en el escáner; crear la cuenta con el correo en la app instalada.
+- Cuidado extremo con salud: «medir con el dedo» y el Bluetooth dependen del móvil y del navegador; decir «puede leer» solo si se comprueba, y siempre «orientativo, no sustituye a tu médico». Nada de diagnosticar.
+
+**Studio Beats PRO** (activo; código cambiado el 10/11 de 23:05 a 23:32, 496 archivos, sobre todo sonidos):
+- Novedades vistas en código (a comprobar): **biblioteca «Sonidos del estudio»** con cajas de ritmo clásicas (TR-808, 909, 707, 606, LinnDrum, Yamaha RX5, CR-78) y batería acústica; categorías (bombos, cajas, charles, 808 y bajos, FX, loops), búsqueda, favoritos y descarga en WAV; Beat Creator renovado (género, BPM con «Tap», silenciar/aleatorio/borrar por pista, presets, exportar con formato y duración); Dashboard rehecho.
+- Riesgo de derechos: son nombres de máquinas ajenas y no consta licencia de las muestras. En posts decir «sonidos de cajas de ritmo clásicas» sin marcas en el texto de venta, ni «libres de derechos». Pendiente del dueño: confirmar licencia (pendiente_usuario.md).
+
+**Gestión Integral 7D** (activo): sin cambios de código desde el 7/11; ficha actualizada el 9/11; sigue siendo la app más fuerte para autónomos (cadena presupuesto→factura, enlace de pago, «Mi día», catálogo con IA).
+**AJ Sistema DEMO**: sin cambios desde el 8/11 (multisector, datos ficticios, solo ficha del taller con /web).
+**Insultator** (ficha pausado; 14 hechos; 10/11 20:30-20:38): una pantalla, «Pulsa. Que hable la máquina», 5 categorías, zasca aleatorio, Ruleta, Loop Studio con 10 bases. Encaja con el humor de la serie, pero solo frases sarcásticas o absurdas; nunca humor negro duro (notas_riesgo) y nada de «voces grabadas».
+**GPS Andaluz**: pausado (la v1.2 con rutas sigue pendiente de que el dueño pulse Publicar); no promocionar.
+
+## Cómo se usan en la cola (decisión de Calidad que respeta la orden de hoy)
+1. Vuelven las apps a los carruseles de 17:10 todos los días en rotación (GH PLUS, MEDICATOR, Studio Beats PRO, Gestión Integral 7D, AJ Sistema DEMO, Insultator) con «Novedad:» en la portada, y a un reel de app a las 13:40; los episodios de El Jambo siguen a las 20:40.
+2. Cada pieza de app lleva: pico en el fotograma 0 (la novedad más vistosa: confeti, medallas, la biblioteca de sonidos), una sola función, frase de envío («Mándaselo a quien…»), cierre único de prueba gratuita con enlace al Centro y música audio_ig.
+3. Un cameo de app de 2 s en los episodios de Jambo, solo cuando encaje.
+4. Antes de afirmar algo «visto en código», comprobarlo en pantalla y añadirlo a hechos_verificados; si no se puede abrir (proxy 403 a *.base44.app), usar solo lo ya verificado o el prototipo marcado como «demo».
