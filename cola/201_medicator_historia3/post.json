@@ -2,7 +2,7 @@
  "tipo": "historia",
  "texto": "",
  "cuando": "2026-11-12T15:30:00+01:00",
- "renderizado": "2026-11-08T17:29:58+00:00",
+ "renderizado": "2026-11-10T19:21:12+00:00",
  "asset": "201_medicator_historia3.mp4",
  "medio": "video",
  "duracion_s": 9.6,
@@ -15,8 +15,8 @@
  },
  "audio": {
   "lufs_integrados": -13.9,
-  "pico_real_dbtp": -4.5,
-  "lra_lu": 0.5,
+  "pico_real_dbtp": -5.9,
+  "lra_lu": 0.3,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
  "app": "MEDICATOR",
