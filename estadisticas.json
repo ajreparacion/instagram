@@ -1,13 +1,34 @@
 {
-  "actualizado": "2026-11-09T18:07:43+00:00",
+  "actualizado": "2026-11-10T00:08:22+00:00",
   "cuenta": {
     "id": "17841400403112257",
-    "followers_count": 1603,
+    "followers_count": 1602,
     "follows_count": 176,
-    "media_count": 13,
+    "media_count": 14,
     "username": "neogestlab"
   },
   "posts": [
+    {
+      "id": "17873859903642425",
+      "caption": "Tu canción en 4 pasos 🎤\nBase, voz, mezcla y master con Studio Beats PRO: eliges estilo, grabas encima y «Terminar canción» la deja lista para descargar.\nEstá en fase de pruebas: pide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#musica #productormusical #beats #cantantes #apps #neogestlab",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfiIDnkD2zh/",
+      "timestamp": "2026-11-09T19:52:53+0000",
+      "metricas": {
+        "reach": 7,
+        "views": 12,
+        "saved": 0,
+        "shares": 1,
+        "comments": 0,
+        "likes": 1,
+        "total_interactions": 3,
+        "ig_reels_avg_watch_time": 12637,
+        "ig_reels_video_view_total_time": 101098
+      }
+    },
     {
       "id": "17865814698695210",
       "caption": "Pastillas y citas, con letra grande 💊\nMEDICATOR enseña la pastilla que toca ahora, guarda las citas en un calendario y prepara la hoja para el médico y la lista para la farmacia.\nCapturas de la demo con datos de ejemplo. Organiza; no sustituye a tu médico.\nPide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#mayores #cuidadores #organizacion #apps #neogestlab",
@@ -18,15 +39,15 @@
       "permalink": "https://www.instagram.com/reel/DfhX2RRgesw/",
       "timestamp": "2026-11-09T12:51:39+0000",
       "metricas": {
-        "reach": 5,
-        "views": 7,
+        "reach": 6,
+        "views": 8,
         "saved": 0,
         "shares": 1,
         "comments": 0,
         "likes": 3,
         "total_interactions": 7,
-        "ig_reels_avg_watch_time": 6971,
-        "ig_reels_video_view_total_time": 48800
+        "ig_reels_avg_watch_time": 6394,
+        "ig_reels_video_view_total_time": 51154
       }
     },
     {
@@ -39,8 +60,8 @@
       "permalink": "https://www.instagram.com/p/DfhG07DFzQm/",
       "timestamp": "2026-11-09T10:22:43+0000",
       "metricas": {
-        "reach": 6,
-        "views": 14,
+        "reach": 7,
+        "views": 16,
         "saved": 0,
         "shares": 0,
         "total_interactions": 4
@@ -56,8 +77,8 @@
       "permalink": "https://www.instagram.com/p/Dffsx71mBtI/",
       "timestamp": "2026-11-08T21:15:54+0000",
       "metricas": {
-        "reach": 22,
-        "views": 53,
+        "reach": 25,
+        "views": 55,
         "saved": 0,
         "shares": 1,
         "total_interactions": 5
@@ -90,15 +111,15 @@
       "permalink": "https://www.instagram.com/reel/DffUzH3ALoA/",
       "timestamp": "2026-11-08T17:46:49+0000",
       "metricas": {
-        "reach": 5,
-        "views": 10,
+        "reach": 6,
+        "views": 11,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 13575,
-        "ig_reels_video_view_total_time": 108605
+        "ig_reels_avg_watch_time": 12282,
+        "ig_reels_video_view_total_time": 110539
       }
     },
     {
@@ -111,8 +132,8 @@
       "permalink": "https://www.instagram.com/p/DffSjjIFyw1/",
       "timestamp": "2026-11-08T17:26:43+0000",
       "metricas": {
-        "reach": 7,
-        "views": 14,
+        "reach": 8,
+        "views": 15,
         "saved": 0,
         "shares": 0,
         "total_interactions": 3
@@ -128,8 +149,8 @@
       "permalink": "https://www.instagram.com/p/DffQZfmE7I6/",
       "timestamp": "2026-11-08T17:07:54+0000",
       "metricas": {
-        "reach": 19,
-        "views": 50,
+        "reach": 20,
+        "views": 51,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -286,6 +307,10 @@
     {
       "fecha": "2026-11-09T18:07+00:00",
       "seguidores": 1603
+    },
+    {
+      "fecha": "2026-11-10T00:08+00:00",
+      "seguidores": 1602
     }
   ]
 }
