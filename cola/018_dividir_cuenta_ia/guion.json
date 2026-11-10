@@ -5,12 +5,12 @@
  "video": "demo.mp4",
  "volumen_original": 0,
  "musica": true,
- "portada_texto": "¿Cuánto toca pagar a cada uno?",
+ "portada_texto": "POV: nadie quiere hacer la cuenta",
  "escenas": [
   {
    "estilo": "gancho",
-   "texto": "¿Cuánto toca pagar a *cada uno*?",
-   "voz": "¿Cuánto toca pagar a *cada uno*?"
+   "texto": "POV: nadie quiere hacer la cuenta",
+   "voz": "Cuatro amigos, una cuenta y *nadie quiere hacerla*. Mira esto."
   },
   {
    "estilo": "tramo",
