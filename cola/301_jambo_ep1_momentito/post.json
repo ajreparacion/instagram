@@ -20,9 +20,11 @@
   "pie": 4,
   "total": 83
  },
- "_nota_creador": "10/11/2026. Sin enlace ni «prueba gratuita» (fase sin apps, directiva). Sin voz del dueño. Se guarda como post.pendiente.json para que el ciclo no intente renderizar con un modo que aún no existe; al estar listo 'sketch' (Mejora) y los 5 personajes, renombrar a post.json, poner 'renderizado': false y pasar por Calidad (nota ≥ 90). Autoevaluación v8 honesta: no se puede superar 83 hasta ver el render.",
+ "_nota_creador": "11/11/2026: activado (post.json) con el guion v4 y los campos de interacción (B8). Calidad (≥ 90) y el visto bueno del dueño siguen mandando: sin calidad.json aprobado no se publica. Sin enlace ni prueba gratuita (fase sin apps). Voz genérica de España.",
  "renderizado": false,
  "motor_voz": "chatterbox",
  "palabras_de_voz": 46,
- "_nota_estratega": "Plan del Estratega 10/11: esta pieza es el episodio de plan.json «jambo_0N» (20:40). Carpeta real: 301_jambo_ep1_momentito"
+ "_nota_estratega": "Plan del Estratega 10/11: esta pieza es el episodio de plan.json «jambo_0N» (20:40). Carpeta real: 301_jambo_ep1_momentito",
+ "comentario_fijado": "¿A ti también te piden «un momentito» a las 18:55? Cuéntalo.",
+ "avance_siguiente": "Mañana: el Jambo y su factura."
 }

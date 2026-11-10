@@ -20,25 +20,9 @@
  "escenas": [
   {
    "estilo": "gancho",
-   "hablante": "tramites",
-   "voz": "Para una factura, rellene el impreso *27-B*.",
-   "texto": "POV: eres autónomo y solo quieres hacer una factura",
-   "dibujo": {
-    "personajes": [
-     "jambo",
-     "tramites"
-    ],
-    "acciones": {
-     "jambo": "presume",
-     "tramites": "habla"
-    }
-   }
-  },
-  {
-   "estilo": "gag",
    "hablante": "jambo",
-   "voz": "¿Y el 27-B dónde se pide?",
-   "texto": "El Jambo",
+   "voz": "¡¿Factura *denegada*?! ¡Pero si la hice yo!",
+   "texto": "POV: eres autónomo y la factura no cuela",
    "dibujo": {
     "personajes": [
      "jambo",
@@ -53,7 +37,7 @@
   {
    "estilo": "gag",
    "hablante": "tramites",
-   "voz": "Con el impreso 27-A. Que se pide con el 27-B.",
+   "voz": "Falta el *27-B*. Se pide con el 27-A.",
    "texto": "La Trámites",
    "dibujo": {
     "personajes": [
@@ -65,6 +49,26 @@
      "tramites": "habla"
     }
    }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "tramites",
+   "voz": "",
+   "texto": "",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "tramites"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "tramites": "habla"
+    },
+    "efecto": "sello",
+    "efecto_t": 0.7,
+    "sello_texto": "DENEGADO"
+   },
+   "duracion": 2.4
   },
   {
    "estilo": "delega",
@@ -80,7 +84,8 @@
      "jambo": "delega",
      "jupillo": "habla"
     }
-   }
+   },
+   "contar": true
   },
   {
    "estilo": "gag",
@@ -97,25 +102,26 @@
    }
   },
   {
-   "estilo": "remate",
+   "estilo": "gag",
    "hablante": "jambo",
-   "voz": "Factura enviada. Qué bien me ha quedado.",
-   "texto": "FACTURA ENVIADA · MÉRITO: EL JAMBO",
+   "voz": "Cobrada. Qué bien me ha quedado.",
+   "texto": "El Jambo",
    "dibujo": {
     "personajes": [
-     "jambo",
-     "tramites"
+     "jupillo",
+     "jambo"
     ],
     "acciones": {
-     "jambo": "remata",
-     "tramites": "habla"
+     "jupillo": "habla",
+     "jambo": "remata"
     }
-   }
+   },
+   "cartel": "FACTURA COBRADA · MÉRITO: EL JAMBO"
   },
   {
    "estilo": "gag",
    "hablante": "tramites",
-   "voz": "Impreso de agradecimiento a la Jupillo: el 27-Z. Plazo: nunca.",
+   "voz": "Impreso de agradecimiento a la Jupillo: 27-Z. Plazo: nunca.",
    "texto": "La Trámites",
    "dibujo": {
     "personajes": [
@@ -156,5 +162,6 @@
    "tramites"
   ]
  },
- "_guion_v2": "10/11/2026 noche: guion reescrito tras la crítica del dueño («sin sentido ni gracia») con patrones de reels virales de sketch de oficina: situación concreta, escalada en tres golpes, interpretación literal / error seguro de sí mismo, remate donde el mérito se lo lleva el Jambo y última frase seca de la IA (la que de verdad hace el trabajo)."
+ "_guion_v2": "10/11/2026 noche: guion reescrito tras la crítica del dueño («sin sentido ni gracia») con patrones de reels virales de sketch de oficina: situación concreta, escalada en tres golpes, interpretación literal / error seguro de sí mismo, remate donde el mérito se lo lleva el Jambo y última frase seca de la IA (la que de verdad hace el trabajo).",
+ "_guion_v4": "11/11/2026 (Creador): fórmula del cambio 40 aplicada: conflicto desde el segundo 0 con el Jambo quejándose de algo que él causó, la IA responde SIN palabras con un sello enorme en la cara (efecto sello con sello_texto), él sigue presumiendo con cartel de mérito, última frase seca y dato serio con fuente."
 }
