@@ -8,3 +8,5 @@
 5. Commit y push.
 
 > NUEVO (7/11/2026, orden del usuario): con 3-4 reels por fórmula (post.json "formula"), compara salto, compartidos por 100 «me gusta», guardados y comentarios y actualiza la fórmula ganadora en equipo/formulas_ganadoras_ia.md.
+
+> NUEVO (10/11/2026, serie El Jambo): a las 48 h de cada episodio (cola/jambo_NN, 20:40 los días 12, 13 y 14/11 y los siguientes), ejecuta ig_post_stats y apunta en el registro diario: abandono (meta < 40 %), compartidos por 100 me gusta (meta ≥ 8), visualización media (meta ≥ 15 s), alcance a no seguidores, guardados por 100 de alcance, seguidores netos del día siguiente; veredicto cumple/no cumple por métrica y comparación con el brazo B (103, 104, 205). Avisa al Estratega antes del lunes 16/11 (provisional) y del 23/11 (decisiva). Menos de 3 episodios con 48 h = «provisional».
