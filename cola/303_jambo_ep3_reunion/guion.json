@@ -20,8 +20,8 @@
  "escenas": [
   {
    "estilo": "gancho",
-   "hablante": "bola",
-   "voz": "Reunión de dos horas. ¡Más reuniones, más *éxito*!",
+   "hablante": "jambo",
+   "voz": "¡¿Dos horas?! ¡Dije que sería *rápida*!",
    "texto": "POV: una reunión de dos horas que era un correo",
    "dibujo": {
     "personajes": [
@@ -36,19 +36,39 @@
   },
   {
    "estilo": "gag",
-   "hablante": "pelota",
-   "voz": "Se ha acordado… que no hay acuerdo. Fijo.",
-   "texto": "La Pelota",
+   "hablante": "bola",
+   "voz": "¡Más reuniones, más *éxito*!",
+   "texto": "El Bola",
    "dibujo": {
     "personajes": [
      "jambo",
-     "pelota"
+     "bola"
     ],
     "acciones": {
-     "jambo": "presume",
-     "pelota": "habla"
+     "jambo": "desespera",
+     "bola": "habla"
     }
    }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "bola",
+   "voz": "",
+   "texto": "",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "bola"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "bola": "habla"
+    },
+    "efecto": "sello",
+    "efecto_t": 0.7,
+    "sello_texto": "REUNIÓN"
+   },
+   "duracion": 2.4
   },
   {
    "estilo": "delega",
@@ -64,7 +84,8 @@
      "jambo": "delega",
      "jupillo": "habla"
     }
-   }
+   },
+   "contar": true
   },
   {
    "estilo": "gag",
@@ -81,20 +102,21 @@
    }
   },
   {
-   "estilo": "remate",
-   "hablante": "bola",
-   "voz": "¡Gran correo! Lo comentamos mañana. En una reunión.",
-   "texto": "REUNIÓN DE SEGUIMIENTO · MAÑANA · 2 H",
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Resuelto. Qué bien lo he organizado.",
+   "texto": "El Jambo",
    "dibujo": {
     "personajes": [
-     "jambo",
-     "bola"
+     "jupillo",
+     "jambo"
     ],
     "acciones": {
-     "jambo": "remata",
-     "bola": "habla"
+     "jupillo": "habla",
+     "jambo": "remata"
     }
-   }
+   },
+   "cartel": "RESUELTO · MÉRITO: EL JAMBO"
   },
   {
    "estilo": "gag",
@@ -113,7 +135,7 @@
   {
    "estilo": "mensaje",
    "hablante": null,
-   "voz": "El *55 %* de las empresas pequeñas dice que el papeleo les quita tiempo.",
+   "voz": "El *cincuenta y cinco por ciento* de las empresas pequeñas dice que el papeleo les quita tiempo.",
    "texto": "55 % de las micro y pequeñas empresas: la administración les quita tiempo",
    "dibujo": {
     "personajes": [],
@@ -140,5 +162,6 @@
    "tramites"
   ]
  },
- "_guion_v2": "10/11/2026 noche: guion reescrito tras la crítica del dueño («sin sentido ni gracia») con patrones de reels virales de sketch de oficina: situación concreta, escalada en tres golpes, interpretación literal / error seguro de sí mismo, remate donde el mérito se lo lleva el Jambo y última frase seca de la IA (la que de verdad hace el trabajo)."
+ "_guion_v2": "10/11/2026 noche: guion reescrito tras la crítica del dueño («sin sentido ni gracia») con patrones de reels virales de sketch de oficina: situación concreta, escalada en tres golpes, interpretación literal / error seguro de sí mismo, remate donde el mérito se lo lleva el Jambo y última frase seca de la IA (la que de verdad hace el trabajo).",
+ "_guion_v4": "11/11/2026 (Creador): fórmula del cambio 40 aplicada: conflicto desde el segundo 0 con el Jambo quejándose de algo que él causó, la IA responde SIN palabras con un sello enorme en la cara (efecto sello con sello_texto), él sigue presumiendo con cartel de mérito, última frase seca y dato serio con fuente."
 }

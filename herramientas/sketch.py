@@ -412,6 +412,7 @@ def preparar(sc, spec, rng):
     sc.efecto = str(dib.get("efecto") or "").strip().lower()      # papeles (avalancha sobre El Jambo) | sello (DENEGADO en la cara)
     sc.efecto_t = float(dib.get("efecto_t", 0.9))                 # segundo en que empieza (negativo = ya hecho al empezar la escena)
     sc.efecto_sin_voz = bool(dib.get("sin_voz"))
+    sc.sello_texto = str(dib.get("sello_texto") or "DENEGADO").strip().upper()[:16]   # texto del sello (por defecto DENEGADO)
     sc.globo_texto = "" if sc.estilo_d in ("remate", "gancho") else extra
     # gancho y rótulo fijo arriba: «POV: …» desde el fotograma 0
     gancho = str(ctx.get("gancho") or "").strip()
@@ -583,7 +584,7 @@ def _efecto(img, sc, t, x, sj):
     elif sc.efecto == "sello":
         k = min(1.0, te / 0.12)
         z = 2.6 - 1.6 * k
-        txt = "DENEGADO"
+        txt = getattr(sc, "sello_texto", "") or "DENEGADO"
         f = hr.font(hr.F_DIB, int(88 * sj * z))
         wtxt = int(d.textlength(txt, font=f))
         cx, cy = x, SK_SUELO - 465 * sj
