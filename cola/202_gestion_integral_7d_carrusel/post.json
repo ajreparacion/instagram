@@ -1,13 +1,13 @@
 {
- "tipo": "carrusel",
- "texto": "¿Tu ruta de visitas sigue en papel? 🚗\nGestión Integral 7D es nuestra app para comerciales y pymes que venden en la calle.\nClientes clasificados A, B y C, con su ubicación y la fecha de la última visita.\n«Mi día» ordena tus visitas por carretera y te da la hora prevista de llegada.\nPresupuesto, pedido, albarán y factura heredando líneas e IVA, sin volver a teclear.\nFactura en PDF con tus datos y enlace de pago: tarjeta, Bizum o transferencia.\nCapturas reales de la demo. Mándaselo a quien aún apunta las visitas en papel.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#comerciales #pymes #ventas #facturacion #apps #neogestlab",
- "cuando": "2026-11-27T17:10:00+01:00",
- "renderizado": "no aplica (carrusel)",
- "diapositivas": 8,
- "app": "Gestión Integral 7D",
- "publico": "Comerciales y pymes",
- "fuentes": [
-  "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Gestión Integral 7D»: demo[] (capturas reales de la demo y sus textos), hechos_verificados y prohibido_afirmar (consulta 8/11/2026)."
- ],
- "origen": "herramientas/demo_app.py"
+  "tipo": "carrusel",
+  "texto": "¿Tu ruta de visitas sigue en papel? 🚗\nGestión Integral 7D es nuestra app para comerciales y pymes que venden en la calle.\nClientes clasificados A, B y C, con su ubicación y la fecha de la última visita.\n«Mi día» ordena tus visitas por carretera y te da la hora prevista de llegada.\nPresupuesto, pedido, albarán y factura heredando líneas e IVA, sin volver a teclear.\nFactura en PDF con tus datos y enlace de pago: tarjeta, Bizum o transferencia.\nCapturas reales de la demo. Mándaselo a quien aún apunta las visitas en papel.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#comerciales #pymes #ventas #facturacion #apps #neogestlab",
+  "cuando": "2026-11-11T17:10:00+01:00",
+  "renderizado": "no aplica (carrusel)",
+  "diapositivas": 8,
+  "app": "Gestión Integral 7D",
+  "publico": "Comerciales y pymes",
+  "fuentes": [
+    "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Gestión Integral 7D»: demo[] (capturas reales de la demo y sus textos), hechos_verificados y prohibido_afirmar (consulta 8/11/2026)."
+  ],
+  "origen": "herramientas/demo_app.py"
 }
