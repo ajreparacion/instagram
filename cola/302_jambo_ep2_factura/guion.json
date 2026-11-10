@@ -5,11 +5,12 @@
  "serie": "El Jambo que sabe y las IAs",
  "episodio": 2,
  "negocio": "autónomo",
- "portada_texto": "El Jambo hace una factura",
+ "portada_texto": "POV: eres autónomo y solo quieres hacer una factura",
  "musica": true,
  "_formato": "Modo 'sketch' (NUEVO, pendiente de Mejora). Escena = {estilo gancho|gag|delega|remate|mensaje|cierre, hablante jambo|jupillo|pelota|bola|tramites|null, voz (con *énfasis*), texto (globo o rótulo en pantalla)}. El mensaje y el cierre van serios, sin música de chiste, fotograma guardable con la fuente pequeña.",
  "contador": {
   "texto": "Veces que se lo ha pasado a la Jupillo",
+  "inicio": 1,
   "valor": 2
  },
  "mensaje_final": {
@@ -19,26 +20,50 @@
  "escenas": [
   {
    "estilo": "gancho",
-   "hablante": "jambo",
-   "voz": "El Jambo que sabe hacer una *factura*.",
-   "texto": "El Jambo que sabe hacer una factura",
+   "hablante": "tramites",
+   "voz": "Para una factura, rellene el impreso *27-B*.",
+   "texto": "POV: eres autónomo y solo quieres hacer una factura",
    "dibujo": {
     "personajes": [
-     "jambo"
+     "jambo",
+     "tramites"
     ],
-    "accion": "presume"
+    "acciones": {
+     "jambo": "presume",
+     "tramites": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "¿Y el 27-B dónde se pide?",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "tramites"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "tramites": "habla"
+    }
    }
   },
   {
    "estilo": "gag",
    "hablante": "tramites",
-   "voz": "Rellene el impreso veintisiete be.",
-   "texto": "La Trámites · Impreso 27-B",
+   "voz": "Con el impreso 27-A. Que se pide con el 27-B.",
+   "texto": "La Trámites",
    "dibujo": {
     "personajes": [
+     "jambo",
      "tramites"
     ],
-    "accion": "habla"
+    "acciones": {
+     "jambo": "desespera",
+     "tramites": "habla"
+    }
    }
   },
   {
@@ -48,33 +73,57 @@
    "texto": "Que lo haga la Jupillo.",
    "dibujo": {
     "personajes": [
-     "jambo"
+     "jambo",
+     "jupillo"
     ],
-    "accion": "delega"
+    "acciones": {
+     "jambo": "delega",
+     "jupillo": "habla"
+    }
    }
   },
   {
    "estilo": "gag",
    "hablante": "jupillo",
-   "voz": "Hecho. ¿Y tú qué has hecho hoy?",
+   "voz": "Hecho. El 27-A, el 27-B y uno que ni existía.",
    "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
      "jupillo"
     ],
-    "accion": "habla"
+    "acciones": {
+     "jupillo": "habla"
+    }
    }
   },
   {
    "estilo": "remate",
    "hablante": "jambo",
-   "voz": "Qué bien me ha quedado.",
-   "texto": "Falta el impreso 27-C",
+   "voz": "Factura enviada. Qué bien me ha quedado.",
+   "texto": "FACTURA ENVIADA · MÉRITO: EL JAMBO",
    "dibujo": {
     "personajes": [
-     "jambo"
+     "jambo",
+     "tramites"
     ],
-    "accion": "remata"
+    "acciones": {
+     "jambo": "remata",
+     "tramites": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "tramites",
+   "voz": "Impreso de agradecimiento a la Jupillo: el 27-Z. Plazo: nunca.",
+   "texto": "La Trámites",
+   "dibujo": {
+    "personajes": [
+     "tramites"
+    ],
+    "acciones": {
+     "tramites": "habla"
+    }
    }
   },
   {
@@ -106,5 +155,6 @@
    "bola",
    "tramites"
   ]
- }
+ },
+ "_guion_v2": "10/11/2026 noche: guion reescrito tras la crítica del dueño («sin sentido ni gracia») con patrones de reels virales de sketch de oficina: situación concreta, escalada en tres golpes, interpretación literal / error seguro de sí mismo, remate donde el mérito se lo lleva el Jambo y última frase seca de la IA (la que de verdad hace el trabajo)."
 }

@@ -2427,11 +2427,12 @@ def main():
         valor = int(cont.get("valor") or 0)
         mf = g.get("mensaje_final") if isinstance(g.get("mensaje_final"), dict) else {}
         msg = next((str(e.get("texto") or "") for e in esc if e.get("estilo") == "mensaje"), "")
-        i_del = next((i for i, e in enumerate(esc) if e.get("estilo") == "delega"), None)
+        base = int(cont.get("inicio") or 0)   # veces acumuladas en episodios anteriores: el contador sube +1 en cada escena "delega"
+        k = base
         for i, e in enumerate(esc):
-            ini = 0 if (i_del is None or i <= i_del) else valor
-            fin = valor if (i_del is not None and i >= i_del) else 0
-            e["_ctx"] = {"gancho": gancho, "contador": cont if cont.get("texto") else None, "cont_ini": ini, "cont_fin": fin,
+            ini = k
+            if e.get("estilo") == "delega": k += 1
+            e["_ctx"] = {"gancho": gancho, "contador": cont if cont.get("texto") else None, "cont_ini": ini, "cont_fin": k,
                          "mensaje": msg, "fuente": str(mf.get("fuente") or "")}
     bounds = [0]
     for i, e in enumerate(esc):

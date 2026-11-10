@@ -5,11 +5,12 @@
  "serie": "El Jambo que sabe y las IAs",
  "episodio": 4,
  "negocio": "pyme / servicios",
- "portada_texto": "El cliente que paga a 90 días",
+ "portada_texto": "POV: tu cliente te paga a noventa días",
  "musica": true,
  "_formato": "Modo 'sketch' (NUEVO, pendiente de Mejora). Escena = {estilo gancho|gag|delega|remate|mensaje|cierre, hablante jambo|jupillo|pelota|bola|tramites|null, voz (con *énfasis*), texto (globo o rótulo en pantalla)}. El mensaje y el cierre van serios, sin música de chiste, fotograma guardable con la fuente pequeña.",
  "contador": {
   "texto": "Veces que se lo ha pasado a la Jupillo",
+  "inicio": 3,
   "valor": 4
  },
  "mensaje_final": {
@@ -19,38 +20,34 @@
  "escenas": [
   {
    "estilo": "gancho",
-   "hablante": "jambo",
-   "voz": "El cliente que paga a *noventa días*.",
-   "texto": "El cliente que paga a 90 días",
+   "hablante": "pelota",
+   "voz": "El plazo legal de pago es de noventa días. *Segurísimo*.",
+   "texto": "POV: tu cliente te paga a noventa días",
    "dibujo": {
     "personajes": [
-     "jambo"
+     "jambo",
+     "pelota"
     ],
-    "accion": "presume"
+    "acciones": {
+     "jambo": "presume",
+     "pelota": "habla"
+    }
    }
   },
   {
    "estilo": "gag",
    "hablante": "tramites",
-   "voz": "Rellene el impreso veintisiete de.",
-   "texto": "La Trámites · Impreso 27-D",
+   "voz": "Para reclamar un pago: impreso 27-B.",
+   "texto": "La Trámites",
    "dibujo": {
     "personajes": [
+     "jambo",
      "tramites"
     ],
-    "accion": "habla"
-   }
-  },
-  {
-   "estilo": "gag",
-   "hablante": "pelota",
-   "voz": "El plazo legal es de *cuatrocientos* días.",
-   "texto": "La Pelota",
-   "dibujo": {
-    "personajes": [
-     "pelota"
-    ],
-    "accion": "habla"
+    "acciones": {
+     "jambo": "desespera",
+     "tramites": "habla"
+    }
    }
   },
   {
@@ -60,21 +57,59 @@
    "texto": "Que lo haga la Jupillo.",
    "dibujo": {
     "personajes": [
-     "jambo"
+     "jambo",
+     "jupillo"
     ],
-    "accion": "delega"
+    "acciones": {
+     "jambo": "delega",
+     "jupillo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jupillo",
+   "voz": "Reclamado. Y el plazo era de *sesenta*, Pelota.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "pelota"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "pelota": "habla"
+    }
    }
   },
   {
    "estilo": "remate",
    "hablante": "jambo",
-   "voz": "Cobrado. Qué buen cliente tengo.",
-   "texto": "Cobrado. El mérito, del Jambo",
+   "voz": "Cobrado. Se nota que sé del tema.",
+   "texto": "COBRADO · MÉRITO: EL JAMBO",
    "dibujo": {
     "personajes": [
-     "jambo"
+     "jambo",
+     "pelota"
     ],
-    "accion": "remata"
+    "acciones": {
+     "jambo": "remata",
+     "pelota": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jupillo",
+   "voz": "Se nota.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo"
+    ],
+    "acciones": {
+     "jupillo": "habla"
+    }
    }
   },
   {
@@ -106,5 +141,6 @@
    "bola",
    "tramites"
   ]
- }
+ },
+ "_guion_v2": "10/11/2026 noche: guion reescrito tras la crítica del dueño («sin sentido ni gracia») con patrones de reels virales de sketch de oficina: situación concreta, escalada en tres golpes, interpretación literal / error seguro de sí mismo, remate donde el mérito se lo lleva el Jambo y última frase seca de la IA (la que de verdad hace el trabajo)."
 }
