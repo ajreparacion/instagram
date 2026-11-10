@@ -2,22 +2,22 @@
  "tipo": "reel",
  "texto": "Pulsa. Que hable la máquina 😂\nInsultator: frases con humor que salen en grande y se leen en voz alta, por categorías, con favoritos y un Loop Studio con 10 bases rítmicas.\nEstá en fase de pruebas. ¿Una app así para tu grupo o tu negocio? Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#humor #risas #ocio #apps #neogestlab",
  "cuando": "2026-11-12T20:40:00+01:00",
- "renderizado": "2026-11-10T19:24:44+00:00",
+ "renderizado": "2026-11-10T19:43:19+00:00",
  "asset": "205_insultator_reel.mp4",
  "portada_ms": 3500,
  "compartir_en_feed": true,
  "duracion_s": 29.4,
  "formato": "presentación (capturas reales con Ken Burns, música en primer plano y efectos; sin voz)",
  "musica": {
-  "estilo": "dembow",
-  "bpm": 96.0,
-  "tono": 1,
-  "origen": "generada por código (sin licencias de terceros)"
+  "origen": "biblioteca de Instagram (colección libre de derechos)",
+  "titulo": "Latina (Instrumental) · Tony Dark Eyes",
+  "audio_id": "583674661052146",
+  "nota": "música puesta por Instagram al publicar (audio_configuration); el vídeo lleva solo efectos"
  },
  "audio": {
-  "lufs_integrados": -14.0,
-  "pico_real_dbtp": -3.7,
-  "lra_lu": 1.4,
+  "lufs_integrados": -21.4,
+  "pico_real_dbtp": -9.0,
+  "lra_lu": 2.2,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
  "app": "Insultator",
@@ -25,5 +25,12 @@
  "fuentes": [
   "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Insultator»: demo[] (capturas reales de la demo y sus textos), hechos_verificados y prohibido_afirmar (consulta 8/11/2026)."
  ],
- "origen": "herramientas/demo_app.py"
+ "origen": "herramientas/demo_app.py",
+ "audio_ig": {
+  "audio_id": "583674661052146",
+  "titulo": "Latina (Instrumental) · Tony Dark Eyes",
+  "origen": "biblioteca de Instagram (colección libre de derechos)",
+  "audio_volume": 1.0,
+  "video_volume": 0.5
+ }
 }

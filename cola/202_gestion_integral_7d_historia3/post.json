@@ -2,7 +2,7 @@
  "tipo": "historia",
  "texto": "",
  "cuando": "2026-11-12T21:30:00+01:00",
- "renderizado": "2026-11-10T19:21:28+00:00",
+ "renderizado": "2026-11-10T19:40:41+00:00",
  "asset": "202_gestion_integral_7d_historia3.mp4",
  "medio": "video",
  "duracion_s": 9.5,
@@ -14,9 +14,9 @@
   "origen": "generada por código (sin licencias de terceros)"
  },
  "audio": {
-  "lufs_integrados": -13.9,
-  "pico_real_dbtp": -6.1,
-  "lra_lu": 0.2,
+  "lufs_integrados": -23.0,
+  "pico_real_dbtp": -9.0,
+  "lra_lu": 9.2,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
  "app": "Gestión Integral 7D",

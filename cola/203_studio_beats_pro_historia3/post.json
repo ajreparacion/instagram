@@ -2,7 +2,7 @@
  "tipo": "historia",
  "texto": "",
  "cuando": "2026-11-13T09:30:00+01:00",
- "renderizado": "2026-11-10T19:22:04+00:00",
+ "renderizado": "2026-11-10T19:41:09+00:00",
  "asset": "203_studio_beats_pro_historia3.mp4",
  "medio": "video",
  "duracion_s": 10.1,
@@ -14,9 +14,9 @@
   "origen": "generada por código (sin licencias de terceros)"
  },
  "audio": {
-  "lufs_integrados": -13.9,
-  "pico_real_dbtp": -2.6,
-  "lra_lu": 0.5,
+  "lufs_integrados": -22.3,
+  "pico_real_dbtp": -9.2,
+  "lra_lu": 9.2,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
  "app": "Studio Beats PRO",

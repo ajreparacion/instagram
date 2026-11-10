@@ -2,7 +2,7 @@
  "tipo": "historia",
  "texto": "",
  "cuando": "2026-11-14T09:30:00+01:00",
- "renderizado": "2026-11-10T19:25:19+00:00",
+ "renderizado": "2026-11-10T19:43:32+00:00",
  "asset": "206_aj_reparacion_web_historia3.mp4",
  "medio": "video",
  "duracion_s": 9.8,
@@ -14,9 +14,9 @@
   "origen": "generada por código (sin licencias de terceros)"
  },
  "audio": {
-  "lufs_integrados": -13.9,
-  "pico_real_dbtp": -3.4,
-  "lra_lu": 0.2,
+  "lufs_integrados": -22.8,
+  "pico_real_dbtp": -9.1,
+  "lra_lu": 9.1,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
  "app": "AJ Web",

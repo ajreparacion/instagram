@@ -2,7 +2,7 @@
  "tipo": "historia",
  "texto": "",
  "cuando": "2026-11-11T21:30:00+01:00",
- "renderizado": "2026-11-10T19:23:41+00:00",
+ "renderizado": "2026-11-10T19:42:28+00:00",
  "asset": "205_insultator_historia2.mp4",
  "medio": "video",
  "duracion_s": 9.6,
@@ -14,9 +14,9 @@
   "origen": "generada por código (sin licencias de terceros)"
  },
  "audio": {
-  "lufs_integrados": -13.9,
-  "pico_real_dbtp": -3.9,
-  "lra_lu": 0.6,
+  "lufs_integrados": -22.2,
+  "pico_real_dbtp": -9.1,
+  "lra_lu": 9.2,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
  "app": "Insultator",
