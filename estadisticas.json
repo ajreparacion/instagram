@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-10T00:08:22+00:00",
+  "actualizado": "2026-11-10T06:28:19+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1602,
@@ -18,15 +18,15 @@
       "permalink": "https://www.instagram.com/reel/DfiIDnkD2zh/",
       "timestamp": "2026-11-09T19:52:53+0000",
       "metricas": {
-        "reach": 7,
-        "views": 12,
+        "reach": 8,
+        "views": 14,
         "saved": 0,
         "shares": 1,
         "comments": 0,
         "likes": 1,
         "total_interactions": 3,
-        "ig_reels_avg_watch_time": 12637,
-        "ig_reels_video_view_total_time": 101098
+        "ig_reels_avg_watch_time": 10293,
+        "ig_reels_video_view_total_time": 102938
       }
     },
     {
@@ -39,15 +39,15 @@
       "permalink": "https://www.instagram.com/reel/DfhX2RRgesw/",
       "timestamp": "2026-11-09T12:51:39+0000",
       "metricas": {
-        "reach": 6,
-        "views": 8,
+        "reach": 7,
+        "views": 9,
         "saved": 0,
         "shares": 1,
         "comments": 0,
         "likes": 3,
         "total_interactions": 7,
-        "ig_reels_avg_watch_time": 6394,
-        "ig_reels_video_view_total_time": 51154
+        "ig_reels_avg_watch_time": 5765,
+        "ig_reels_video_view_total_time": 51885
       }
     },
     {
@@ -149,8 +149,8 @@
       "permalink": "https://www.instagram.com/p/DffQZfmE7I6/",
       "timestamp": "2026-11-08T17:07:54+0000",
       "metricas": {
-        "reach": 20,
-        "views": 51,
+        "reach": 21,
+        "views": 52,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -310,6 +310,10 @@
     },
     {
       "fecha": "2026-11-10T00:08+00:00",
+      "seguidores": 1602
+    },
+    {
+      "fecha": "2026-11-10T06:28+00:00",
       "seguidores": 1602
     }
   ]
