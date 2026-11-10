@@ -21,43 +21,90 @@
    "estilo": "gancho",
    "hablante": "jambo",
    "voz": "El cliente que paga a *noventa días*.",
-   "texto": "El cliente que paga a 90 días"
+   "texto": "El cliente que paga a 90 días",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "accion": "presume"
+   }
   },
   {
    "estilo": "gag",
    "hablante": "tramites",
    "voz": "Rellene el impreso veintisiete de.",
-   "texto": "La Trámites · Impreso 27-D"
+   "texto": "La Trámites · Impreso 27-D",
+   "dibujo": {
+    "personajes": [
+     "tramites"
+    ],
+    "accion": "habla"
+   }
   },
   {
    "estilo": "gag",
    "hablante": "pelota",
    "voz": "El plazo legal es de *cuatrocientos* días.",
-   "texto": "La Pelota"
+   "texto": "La Pelota",
+   "dibujo": {
+    "personajes": [
+     "pelota"
+    ],
+    "accion": "habla"
+   }
   },
   {
    "estilo": "delega",
    "hablante": "jambo",
    "voz": "Que lo haga la Jupillo.",
-   "texto": "Que lo haga la Jupillo."
+   "texto": "Que lo haga la Jupillo.",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "accion": "delega"
+   }
   },
   {
    "estilo": "remate",
    "hablante": "jambo",
    "voz": "Cobrado. Qué buen cliente tengo.",
-   "texto": "Cobrado. El mérito, del Jambo"
+   "texto": "Cobrado. El mérito, del Jambo",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "accion": "remata"
+   }
   },
   {
    "estilo": "mensaje",
    "hablante": null,
    "voz": "Entre empresas, el máximo pactable son *sesenta días naturales*.",
-   "texto": "60 días naturales: máximo pactable entre empresas"
+   "texto": "60 días naturales: máximo pactable entre empresas",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
   },
   {
    "estilo": "cierre",
    "hablante": null,
    "voz": "Mándaselo a quien carga con todo.",
-   "texto": "Mándaselo a quien carga con todo"
+   "texto": "Mándaselo a quien carga con todo",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
   }
- ]
+ ],
+ "dibujo": {
+  "personajes": [
+   "jambo",
+   "jupillo",
+   "pelota",
+   "bola",
+   "tramites"
+  ]
+ }
 }

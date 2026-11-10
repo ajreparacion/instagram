@@ -21,43 +21,90 @@
    "estilo": "gancho",
    "hablante": "jambo",
    "voz": "Las siete menos cinco. «Un *momentito*».",
-   "texto": "POV: «un momentito» a las 18:55"
+   "texto": "POV: «un momentito» a las 18:55",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "accion": "presume"
+   }
   },
   {
    "estilo": "delega",
    "hablante": "jambo",
    "voz": "Que lo haga la Jupillo.",
-   "texto": "Que lo haga la Jupillo."
+   "texto": "Que lo haga la Jupillo.",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "accion": "delega"
+   }
   },
   {
    "estilo": "gag",
    "hablante": "jupillo",
    "voz": "Claro. Lo hago yo. Como siempre.",
-   "texto": "La Jupillo"
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo"
+    ],
+    "accion": "habla"
+   }
   },
   {
    "estilo": "gag",
    "hablante": "bola",
    "voz": "¡Dormir es de débiles!",
-   "texto": "El Bola"
+   "texto": "El Bola",
+   "dibujo": {
+    "personajes": [
+     "bola"
+    ],
+    "accion": "habla"
+   }
   },
   {
    "estilo": "remate",
    "hablante": "jambo",
    "voz": "Las once. Entregado. Qué bien me ha quedado.",
-   "texto": "23:00 · Informe entregado"
+   "texto": "23:00 · Informe entregado",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "accion": "remata"
+   }
   },
   {
    "estilo": "mensaje",
    "hablante": null,
    "voz": "Dos millones y medio de horas extra *sin cobrar* cada semana.",
-   "texto": "2,5 millones de horas extra sin cobrar, cada semana"
+   "texto": "2,5 millones de horas extra sin cobrar, cada semana",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
   },
   {
    "estilo": "cierre",
    "hablante": null,
    "voz": "Mándaselo a quien carga con todo.",
-   "texto": "Mándaselo a quien carga con todo"
+   "texto": "Mándaselo a quien carga con todo",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
   }
- ]
+ ],
+ "dibujo": {
+  "personajes": [
+   "jambo",
+   "jupillo",
+   "pelota",
+   "bola",
+   "tramites"
+  ]
+ }
 }
