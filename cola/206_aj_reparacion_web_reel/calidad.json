@@ -1,11 +1,15 @@
 {
- "aprobado": true,
- "nota": 90,
- "comentario": "Re-render del 9/11 17:53Z revisado (la aprobación de las 11:55 caducaba por el bloqueo 9). 9 fotogramas: web y portal de AJ Reparación con «Demo con datos ficticios» y teléfono 600 000 000; cierre IDEA; público «cualquier negocio». ffprobe 1080x1920 30 fps H.264+AAC, 25,8 s; ebur128 -13,9 LUFS, pico -5,0 dBFS, 0 silencios > 1,2 s. Descuentos: texto pequeño en el móvil, sin voz. Único reel de servicio técnico de la semana (límite 1).",
- "audio": {
-  "lufs": -13.9,
-  "pico_dbfs": -5.0
- },
- "fecha": "2026-11-09T18:33Z",
- "revisado_por": "agente de CALIDAD (9/11, pasada de la tarde)"
+ "aprobado": false,
+ "nota": 84,
+ "fecha": "2026-11-10T10:35Z",
+ "motivos": [
+  "Directiva del 10/11 00:00: fuera el cierre «comenta/escríbeme X» y cierre único «Prueba gratuita · sin tarjeta · sin compromiso». El vídeo renderizado el 8-9/11 aún acaba con la caja «Escríbeme IDEA por privado»."
+ ],
+ "como_arreglarlo": "Mejora cambia la caja «Escríbeme IDEA por privado» de herramientas/demo_app.py (slide_cierre y escena de cierre del reel) por «Prueba gratuita · sin tarjeta · sin compromiso» (ver peticiones_mejora.md 10/11); después se pone «renderizado»:false (reels) o se regeneran las diapositivas y Calidad vuelve a revisar. Contenido y datos ya estaban bien: la nota anterior era 90.",
+ "revisado_por": "agente de CALIDAD (10/11, pasada de las 11:30)",
+ "anterior": {
+  "aprobado": true,
+  "nota": 90,
+  "fecha": "2026-11-09T18:33Z"
+ }
 }

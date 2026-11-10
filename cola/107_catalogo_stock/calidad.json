@@ -1,6 +1,14 @@
 {
- "aprobado": true,
- "nota": 90,
- "aprobado_por": "revisión en la sesión del dueño (8/11 12:40)",
- "revision": "7 diapositivas 1080x1350 revisadas: gancho grande en la 1, texto legible y sin cortes, marca Neogest Lab, sin logos ajenos. Apps: solo hechos_verificados de Gestión Integral 7D (único producto activo). El dueño pidió más material ya (8/11 12:12)."
+ "aprobado": false,
+ "nota": 84,
+ "fecha": "2026-11-10T10:35Z",
+ "motivos": [
+  "Directiva del 10/11 00:00: fuera el cierre «comenta/escríbeme X» y cierre único «Prueba gratuita · sin tarjeta · sin compromiso». La última diapositiva aún dice «Escríbeme IDEA por privado» y el texto del post conserva el cierre antiguo."
+ ],
+ "como_arreglarlo": "Mejora cambia la caja «Escríbeme IDEA por privado» de herramientas/demo_app.py (slide_cierre y escena de cierre del reel) por «Prueba gratuita · sin tarjeta · sin compromiso» (ver peticiones_mejora.md 10/11); después se pone «renderizado»:false (reels) o se regeneran las diapositivas y Calidad vuelve a revisar. Contenido y datos ya estaban bien: la nota anterior era 90.",
+ "revisado_por": "agente de CALIDAD (10/11, pasada de las 11:30)",
+ "anterior": {
+  "aprobado": true,
+  "nota": 90
+ }
 }

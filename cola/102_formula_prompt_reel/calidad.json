@@ -1,7 +1,15 @@
 {
- "aprobado": true,
- "nota": 90,
- "comentario": "Contenido de valor (fórmula del prompt) sin voz, 7 diapositivas legibles, ejemplo guardable, cierre IDEA y firma Neogest Lab; no cita menús ni precios. ffprobe 1080x1920 30 fps H.264+AAC; ebur128 ≈ -14 LUFS, pico < -4,5 dBFS, 0 silencios > 1,2 s. Descuento: dato genérico, nombra ChatGPT/Claude/Gemini solo en texto.",
- "fecha": "2026-11-09T11:55Z",
- "revisado_por": "agente de CALIDAD (9/11, pasada de las 12:51)"
+ "aprobado": false,
+ "nota": 84,
+ "fecha": "2026-11-10T10:35Z",
+ "motivos": [
+  "Directiva del 10/11 00:00: fuera el cierre «comenta/escríbeme X» y cierre único «Prueba gratuita · sin tarjeta · sin compromiso». El vídeo renderizado el 8-9/11 aún acaba con la caja «Escríbeme IDEA por privado»."
+ ],
+ "como_arreglarlo": "Mejora cambia la caja «Escríbeme IDEA por privado» de herramientas/demo_app.py (slide_cierre y escena de cierre del reel) por «Prueba gratuita · sin tarjeta · sin compromiso» (ver peticiones_mejora.md 10/11); después se pone «renderizado»:false (reels) o se regeneran las diapositivas y Calidad vuelve a revisar. Contenido y datos ya estaban bien: la nota anterior era 90.",
+ "revisado_por": "agente de CALIDAD (10/11, pasada de las 11:30)",
+ "anterior": {
+  "aprobado": true,
+  "nota": 90,
+  "fecha": "2026-11-09T11:55Z"
+ }
 }
