@@ -20,8 +20,15 @@
   "publico": "Hogar y familias",
   "formato": "Una idea, una app",
   "_nota_calidad": "10/11 Calidad: cierre cambiado al de la directiva (prueba gratuita) en guion y post, quitada la automatización IDEA; duraciones de tramo ajustadas para evitar huecos de voz > 1,5 s. renderizado:false para que el ciclo lo rehaga.",
-  "renderizado": false,
+  "renderizado": "2026-11-10T21:06:48+00:00",
   "nota_mejora": "10/11/2026 (2.ª ejecución): rendido con Piper por error de instalación; se rehace con «Chatterbox España» (es-es sin referencia de persona real). Sin voz del dueño.",
   "motor_voz": "chatterbox",
-  "asset": "019_suscripciones_ia.mp4"
+  "asset": "019_suscripciones_ia.mp4",
+  "audio_ig": {
+    "audio_id": "1018682932882496",
+    "titulo": "Made It Out (Instrumental) · Robin-Huws",
+    "origen": "biblioteca de Instagram (colección libre de derechos)",
+    "audio_volume": 0.35,
+    "video_volume": 1.0
+  }
 }
