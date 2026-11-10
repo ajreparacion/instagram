@@ -310,16 +310,22 @@ class TextBlock:
 # el texto entero desde el primer fotograma; "texto" en las demas escenas = rotulo corto fijo arriba.
 # Musica discreta (-31 LUFS antes de la voz), sin lecho de tension, sin golpes ni subidas.
 # Con "modo" ausente o distinto, todo se comporta exactamente como antes.
-MODO = {"humano": False, "dibujo": False, "app": False}
+MODO = {"humano": False, "dibujo": False, "app": False, "sketch": False}
+
+def _sk():
+    """Modulo sketch.py (serie «El Jambo que sabe y las IAs»), enchufado a este modulo."""
+    import sketch
+    sketch.bind(sys.modules[__name__])
+    return sketch
 SEMILLA = {"v": 1}
 
 def modo_suave():
     """Modos sin HUD ni tension (humano y dibujo): musica discreta, sin bombo ni golpes."""
-    return MODO["humano"] or MODO["dibujo"] or MODO["app"]
+    return MODO["humano"] or MODO["dibujo"] or MODO["app"] or MODO["sketch"]
 
 def modo_alegre():
     """Musica mayor y viva (dibujo y app)."""
-    return MODO["dibujo"] or MODO["app"]
+    return MODO["dibujo"] or MODO["app"] or MODO["sketch"]
 AMARILLO = (255, 212, 0)
 WPS_HUMANO = 2.6          # palabras por segundo de la voz (misma cifra que usa main() para la duracion minima)
 CACHE_IMG = os.path.expanduser("~/.cache/expedientes/imagenes")
@@ -1738,6 +1744,8 @@ class Scene:
             preparar_humano(self, sc, rng)
         elif MODO["dibujo"]:
             preparar_dibujo(self, sc, rng)
+        elif MODO["sketch"]:
+            _sk().preparar(self, sc, rng)
         elif MODO["app"]:
             preparar_app(self, sc, rng)
 
@@ -1806,6 +1814,8 @@ def render_frame(fi, scenes, noise, date_s, title, rg):
         return render_frame_humano(fi, sc, noise, rg)
     if MODO["dibujo"]:
         return render_frame_dibujo(fi, sc, noise, rg, SEMILLA["v"])
+    if MODO["sketch"]:
+        return _sk().render_frame(fi, sc, noise, rg, SEMILLA["v"])
     if MODO["app"]:
         return render_frame_app(fi, sc, noise, rg, SEMILLA["v"])
     lf = fi - sc.start; t = lf / FPS; ta = fi / FPS
@@ -2225,6 +2235,8 @@ def sfx_dibujo(tipo, dur, rg):
             out[i0:i0 + mm] += click * rg.uniform(0.5, 1.0)
             k += rg.uniform(0.07, 0.12)
         return out * 0.22
+    if tipo in ("tick", "sting", "boing"):   # efectos del modo sketch (sketch.py)
+        return _sk().sfx(tipo, dur, rg, lp_fft)
     if tipo == "ding":
         return (np.sin(2 * np.pi * 1318.5 * tt) + 0.35 * np.sin(2 * np.pi * 2637 * tt)) * np.exp(-tt * 6.5) * 0.17
     return None
@@ -2301,6 +2313,7 @@ def make_audio(scenes, total, seed, musica=True):
             m = int(0.09 * SR); tp = np.arange(m) / SR
             pop = np.sin(2 * np.pi * np.cumsum(620 - 300 * tp / 0.09) / SR) * np.exp(-tp * 45) * 0.45
             for s in scenes[1:]:
+                if getattr(s, "serio", False): continue   # sketch: el mensaje final va serio, sin efectos
                 i0 = int(s.start / FPS * SR); i1 = min(n, i0 + m)
                 st[i0:i1, 0] += pop[:i1 - i0]; st[i0:i1, 1] += pop[:i1 - i0]
         if MODO["app"]:      # 7/11 (queja del dueno: «mas efectos sonoros»): whoosh en cada corte, pop de entrada y ding en el cierre
@@ -2312,7 +2325,7 @@ def make_audio(scenes, total, seed, musica=True):
                     i0 = max(0, int((s.start / FPS + t_rel) * SR)); i1 = min(n, i0 + len(sig))
                     if i0 < n and i1 > i0:
                         st[i0:i1, 0] += amp * sig[:i1 - i0]; st[i0:i1, 1] += amp * sig[:i1 - i0] * 0.95
-        if MODO["dibujo"]:   # efectos sutiles por evento (whoosh en el corte, pop del rebote, lapiz, teclas, ding)
+        if MODO["dibujo"] or MODO["sketch"]:   # efectos sutiles por evento (whoosh en el corte, pop del rebote, lapiz, teclas, ding)
             for s in scenes:
                 for tipo, t_rel, dur in getattr(s, "sfx", []):
                     sig = sfx_dibujo(tipo, dur, rg)
@@ -2328,6 +2341,15 @@ def make_audio(scenes, total, seed, musica=True):
         st = st + orig
     if musica:
         mus = np.stack([mL * cutg, mR * cutg], 1)
+        if MODO["sketch"]:   # sketch: sin musica de chiste en el mensaje serio (fundido de 0,35 s)
+            duck = np.ones(n)
+            for s in scenes:
+                if getattr(s, "serio", False):
+                    i0 = int(s.start / FPS * SR); k = int(0.35 * SR)
+                    duck[max(0, i0 - k):i0] = np.linspace(1, 0, min(k, i0))
+                    duck[i0:] = 0.0
+                    break
+            mus *= duck[:, None]
         lm0 = lufs(mus)
         mus *= 10 ** (((-31 if MODO["humano"] else (-18 if modo_alegre() else -24)) - lm0) / 20)   # humano/dibujo/app: musica discreta
         if modo_suave() and hook_end < total - 2.0:
@@ -2374,11 +2396,12 @@ def main():
     seed = int(g.get("semilla", 1)); title = g.get("titulo", "")
     musica = bool(g.get("musica", True))
     modo = (g.get("modo") or "").strip().lower()
-    if modo not in ("", "humano", "dibujo", "app"):   # guardia: un modo desconocido nunca se renderiza con otro estilo
-        sys.exit("modo desconocido en guion.json: %r (este generador conoce: humano, dibujo, app)" % modo)
+    if modo not in ("", "humano", "dibujo", "app", "sketch"):   # guardia: un modo desconocido nunca se renderiza con otro estilo
+        sys.exit("modo desconocido en guion.json: %r (este generador conoce: humano, dibujo, app, sketch)" % modo)
     MODO["humano"] = modo == "humano"
     MODO["dibujo"] = modo == "dibujo"
     MODO["app"] = modo == "app"
+    MODO["sketch"] = modo == "sketch"
     if MODO["app"]:
         cargar_video_app(str(g.get("video") or ""))
         APP["plantilla"] = bool(g.get("plantilla")) and APP["vertical"]
@@ -2395,9 +2418,22 @@ def main():
     SEMILLA["v"] = int(g.get("semilla", 1))
     DIB_PREV["pers"] = set()
     esc = g["escenas"]
+    if MODO["sketch"]:   # contexto de la serie para cada escena (gancho fijo, contador, mensaje serio y su fuente)
+        DIB_PREV["pers"] = set()
+        gancho = str(esc[0].get("texto") or g.get("portada_texto") or "")
+        cont = g.get("contador") if isinstance(g.get("contador"), dict) else {}
+        valor = int(cont.get("valor") or 0)
+        mf = g.get("mensaje_final") if isinstance(g.get("mensaje_final"), dict) else {}
+        msg = next((str(e.get("texto") or "") for e in esc if e.get("estilo") == "mensaje"), "")
+        i_del = next((i for i, e in enumerate(esc) if e.get("estilo") == "delega"), None)
+        for i, e in enumerate(esc):
+            ini = 0 if (i_del is None or i <= i_del) else valor
+            fin = valor if (i_del is not None and i >= i_del) else 0
+            e["_ctx"] = {"gancho": gancho, "contador": cont if cont.get("texto") else None, "cont_ini": ini, "cont_fin": fin,
+                         "mensaje": msg, "fuente": str(mf.get("fuente") or "")}
     bounds = [0]
     for i, e in enumerate(esc):
-        d = float(e.get("duracion", 3.0))
+        d = float(e.get("duracion", 2.2 if MODO["sketch"] else 3.0))
         if MODO["app"] and "duracion" not in e:   # app: sin "duracion", el tramo dura lo que su clip (o 1,8 s el gancho)
             c = e.get("clip") if isinstance(e.get("clip"), dict) else {}
             ini, fin = c.get("inicio", e.get("inicio")), c.get("fin", e.get("fin"))
@@ -2421,12 +2457,14 @@ def main():
                 d = max(need, e["_largo_clip"] / MAX_VEL_APP)
             else:
                 d = max(d, need)
+        if MODO["sketch"]:   # el mensaje serio se lee entero y el fotograma final se puede guardar
+            d = max(d, {"mensaje": 3.2, "cierre": 2.2, "gancho": 1.8}.get(e.get("estilo"), 2.2))
         bounds.append(bounds[-1] + int(math.ceil(d * FPS - 1e-6)))
     loc = []
     for i, e in enumerate(esc):
         if not (e.get("voz") or "").strip(): continue
         limpio, enf = parsear_enfasis(e["voz"])   # la voz recibe el texto sin asteriscos; el enfasis va aparte
-        loc.append({"escena": i, "estilo": e.get("estilo", "evidencia"), "inicio": round(bounds[i] / FPS, 3),
+        loc.append({"escena": i, "estilo": e.get("estilo", "evidencia"), "hablante": e.get("hablante"), "inicio": round(bounds[i] / FPS, 3),
                     "duracion": round((bounds[i + 1] - bounds[i]) / FPS, 3), "texto": limpio, "enfasis": enf})
     with open(os.path.splitext(out)[0] + ".locucion.json", "w", encoding="utf-8") as fh:
         json.dump(loc, fh, ensure_ascii=False, indent=1)
@@ -2451,6 +2489,10 @@ def main():
         DIB_PREV["pers"] = {"paco", "bit"}
     if MODO["app"]:
         cov["bit"] = True
+    if MODO["sketch"]:
+        DIB_PREV["pers"] = set()
+        cov.update({"texto": str(esc[0].get("texto") or cov["texto"]), "hablante": "jambo", "dibujo": {"personajes": ["jambo"], "accion": "presume"},
+                    "_ctx": dict(esc[0].get("_ctx") or {}, cont_ini=0, cont_fin=0)})
     cs = Scene(0, cov, seed, title, 90, 0)
     cimg = render_frame(60, [cs], noise, date_s, title, random.Random(1))
     Image.fromarray(cimg).save(os.path.splitext(out)[0] + "_portada.jpg", quality=90)

@@ -497,13 +497,64 @@ def recortar_silencios(ruta, cfg):
         return False
 
 
+# Serie «El Jambo que sabe y las IAs» (10/11/2026): una sola voz base (la del motor, genérica de España, nunca la del dueño);
+# las IAs suenan distinto con tono, ritmo y un filtro (equipo/voz.json → "hablantes"; estos son los valores por defecto).
+HABLANTES_DEF = {
+    "jupillo": {"tono": 1.14, "tempo": 0.93, "filtro": "lowpass=f=5600"},                       # cansada, resignada
+    "pelota": {"tono": 1.28, "tempo": 1.07, "filtro": "highshelf=f=4000:g=3"},                  # sabelotodo, aguda y rápida
+    "bola": {"tono": 0.84, "tempo": 1.04,                                                       # coach tóxico: megáfono
+             "filtro": "highpass=f=180,lowpass=f=4200,acompressor=threshold=0.05:ratio=6:makeup=4,aecho=0.8:0.6:25:0.25"},
+    "tramites": {"tono": 0.94, "tempo": 0.96, "filtro": "highpass=f=260,lowpass=f=3400,tremolo=f=38:d=0.18"},   # ventanilla
+}
+ESTILO_VOZ = {"remate": "giro", "mensaje": "cierre"}   # estilos del sketch -> ajustes por estilo del motor
+
+
+def aplicar_voz_hablante(wav, cfg):
+    """Cambia el timbre de una frase (wav 16 bit) según el personaje: tono (asetrate + atempo para conservar la
+    duración), ritmo y un filtro de ffmpeg. Se hace sobre el wav del motor, antes del recorte y la alineación.
+    Nunca lanza: si falla, la frase queda como estaba. Devuelve True si se aplicó."""
+    try:
+        if not isinstance(cfg, dict):
+            return False
+        with wave.open(wav) as w:
+            sr = w.getframerate()
+        tono = float(cfg.get("tono", 1.0)); tempo = float(cfg.get("tempo", 1.0))
+        cadena = []
+        if abs(tono - 1.0) > 0.005:
+            cadena += [f"asetrate={int(sr * tono)}", f"aresample={sr}"]
+        ritmo = tempo / tono
+        if abs(ritmo - 1.0) > 0.005:
+            cadena.append(f"atempo={min(2.0, max(0.5, ritmo)):.4f}")
+        if cfg.get("filtro"):
+            cadena.append(str(cfg["filtro"]).strip(","))
+        if not cadena:
+            return False
+        tmp = wav + ".hab.wav"
+        r = subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", wav, "-af", ",".join(cadena), "-ar", str(sr), "-ac", "1",
+                            "-c:a", "pcm_s16le", tmp], capture_output=True, text=True, timeout=120)
+        if r.returncode != 0 or not os.path.exists(tmp) or os.path.getsize(tmp) < 1000:
+            log(f"Voz de personaje no aplicada ({(r.stderr or '')[-120:]})")
+            return False
+        os.replace(tmp, wav)
+        return True
+    except Exception as e:
+        log(f"Voz de personaje no aplicada ({str(e)[-120:]})")
+        return False
+
+
 def preparar_voz(locucion, trabajo):
     """Genera y recorta la voz de cada tramo de locucion.json. Devuelve (tramos, [(wav, duración)], motor, ajustes)."""
     tramos = [t for t in (leer_json(locucion, []) or []) if t.get("texto", "").strip()]
     if not tramos:
         return tramos, [], None, None
     aj = ajustes_voz()
-    rutas, motor = generar_locucion([t["texto"] for t in tramos], trabajo, aj, estilos=[t.get("estilo") for t in tramos])
+    rutas, motor = generar_locucion([t["texto"] for t in tramos], trabajo, aj,
+                                    estilos=[ESTILO_VOZ.get(t.get("estilo"), t.get("estilo")) for t in tramos])
+    hab = dict(HABLANTES_DEF)
+    hab.update(aj.get("hablantes") if isinstance(aj.get("hablantes"), dict) else {})
+    hechos = [t.get("hablante") for t, w in zip(tramos, rutas) if t.get("hablante") in hab and aplicar_voz_hablante(w, hab[t["hablante"]])]
+    if hechos:
+        log(f"Voz: timbre de personaje aplicado a {len(hechos)} frases ({sorted(set(hechos))})")
     recortes = [recortar_silencios(w, aj.get("recorte")) for w in rutas]
     if any(recortes):
         log(f"Voz: silencios recortados por frase (s): {[r or 0 for r in recortes]}")
