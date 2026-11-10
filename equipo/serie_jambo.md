@@ -1,11 +1,11 @@
 # Serie «El Jambo que sabe y las IAs» (biblia v2, 10/11/2026 noche, orden del dueño)
 Sustituye a «Matías y las IAs» (v1). Cualquier tipo de negocio (se acabó el tema taller). Humor negro y satírico, con las IAs «peculiares» que ayudan muy a su pesar, historias de carga de trabajo, y **final con un mensaje que cale**. Sin apps de Neogest Lab al principio. 3 episodios por semana durante un mes en @neogestlab. Metas v8: abandono < 40 %, compartidos/me gusta ≥ 8 %, visualización media ≥ 15 s.
 
-## Personajes (nombres del dueño; rasgos de El Bola y de El Jambo, provisionales hasta que el dueño responda)
-- **El Jambo que sabe** (humano, protagonista). Presume de saberlo todo y no sabe nada: lo delega todo. Frase fija: **«Que lo haga la Jupillo.»** Contador en pantalla: «Veces que se lo ha pasado a la Jupillo: N» (sube cada episodio). Se lleva siempre el mérito.
+## Personajes (nombres del dueño; El Bola confirmado «coach tóxico, más satírico»; El Jambo y el significado de «jambo» son supuestos de Calidad hasta que el dueño diga otra cosa)
+- **El Jambo que sabe** (humano, protagonista; SUPUESTO: «jambo» es un apodo inventado y el personaje es el «príncipe del escaqueo»: joven presumido de corbata torcida y gafas de sabio que se lleva el mérito y no hace nada). Presume de saberlo todo y no sabe nada: lo delega todo. Frase fija: **«Que lo haga la Jupillo.»** Contador en pantalla: «Veces que se lo ha pasado a la Jupillo: N» (sube cada episodio). Se lleva siempre el mérito.
 - **La Jupillo** (IA). La que acaba haciendo todo el trabajo, a su pesar: resignada, agotada, ironía amarga («Claro. Lo hago yo. Como siempre.»). Es el corazón del mensaje: representa a quien carga con el trabajo de los demás.
 - **La Pelota** (IA, antes Bolo): lo sabe todo y se equivoca con seguridad absoluta.
-- **El Bola** (IA nueva, rasgo propuesto): coach motivacional tóxico («¡Tú puedes con todo! ¡Dormir es de débiles!»). Es la sátira de la cultura del esfuerzo.
+- **El Bola** (IA nueva, confirmado por el dueño: coach tóxico «pero más satírico»): parodia exagerada del gurú de la productividad y de LinkedIn («¡Mentalidad de tiburón!», «¡El burnout es falta de actitud!», «¡Club de las 5 de la mañana: yo no duermo, yo me optimizo!»). Se pasa de rosca hasta el absurdo; es la sátira de la cultura del esfuerzo, sin ridiculizar a personas reales.
 - **La Trámites** (IA, antes Doña Trámite): burócrata. Todo es posible, tras rellenar el impreso 27-B.
 Formas y colores distintos por personaje; nombre en texto cuando hablan; una o dos IAs por episodio.
 
