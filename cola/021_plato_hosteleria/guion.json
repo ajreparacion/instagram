@@ -22,7 +22,8 @@
     "inicio": 2.7,
     "fin": 7.5
    },
-   "voz": "Le pedí a una IA esta calculadora, con *un solo mensaje*."
+   "voz": "Le pedí a una IA esta calculadora, con *un solo mensaje*.",
+   "duracion": 3.94
   },
   {
    "estilo": "tramo",
@@ -30,7 +31,8 @@
     "inicio": 8.2,
     "fin": 18.7
    },
-   "voz": "Pongo cada ingrediente con *lo que cuesta*: huevos, patatas, cebolla y aceite. Mira cómo sube el coste por ración con cada ingrediente que añado, *al momento*."
+   "voz": "Pongo cada ingrediente con *lo que cuesta*: huevos, patatas, cebolla y aceite. Mira cómo sube el coste por ración con cada ingrediente que añado, *al momento*.",
+   "duracion": 9.07
   },
   {
    "estilo": "tramo",
@@ -50,8 +52,8 @@
   },
   {
    "estilo": "cierre",
-   "texto": "Escríbeme «IDEA»",
-   "voz": "¿Tienes una idea para tu negocio? Escríbeme *idea* por privado."
+   "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+   "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
   }
  ]
 }

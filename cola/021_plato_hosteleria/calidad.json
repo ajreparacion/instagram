@@ -1,13 +1,11 @@
 {
  "aprobado": false,
- "nota": 83,
- "fecha": "2026-11-08T17:34Z",
+ "nota": 84,
+ "fecha": "2026-11-10T11:55Z",
  "motivos": [
-  "A1: dos huecos de voz de ≈ 1,6-1,9 s (final de las escenas 3 y 4) y varios de 1,3-1,5 s.",
-  "Audio del render antiguo: −12,9 LUFS (directiva: −14).",
-  "Voz: seseo/θ sin validar de oído (techo ≈ 88).",
-  "Gancho legible en pregunta, cierre IDEA correcto, subtítulos palabra a palabra, demo grabada funcionando con datos de ejemplo, sin clientes, marcas ni logos.",
-  "Su hora (8/11 13:40) ya pasó: reprogramado al 12/11 12:10."
+  "Cierre antiguo «Escríbeme IDEA por privado» en voz, pantalla y texto del post (la directiva del 10/11 00:00 lo prohíbe).",
+  "Bloqueo A1: huecos de voz > 1,5 s con solo música: [[6.05, 7.7], [15.9, 18.15]]."
  ],
- "como_arreglarlo": "Frases más largas en las escenas 3 y 4; se quita «renderizado» para rehacerlo con la mezcla nueva."
+ "como_arreglarlo": "Calidad ya ha corregido guion.json y post.json (cierre de la directiva y duraciones de tramo) y ha puesto renderizado:false; el ciclo lo rehace con la voz genérica y Calidad vuelve a revisar el render (nota esperada ≥ 90 si no quedan huecos > 1,5 s). La θ/seseo de la voz Kokoro no es medible sin oído.",
+ "revisado_por": "agente de CALIDAD (10/11, pasada de las 12:50)"
 }

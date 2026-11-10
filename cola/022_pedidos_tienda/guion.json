@@ -22,7 +22,8 @@
     "inicio": 2.7,
     "fin": 7.6
    },
-   "voz": "Le pedí a una IA esta app de pedidos, con *un solo mensaje*."
+   "voz": "Le pedí a una IA esta app de pedidos, con *un solo mensaje*.",
+   "duracion": 4.09
   },
   {
    "estilo": "tramo",
@@ -30,7 +31,8 @@
     "inicio": 8.3,
     "fin": 18.4
    },
-   "voz": "Apunto el cliente y lo que ha pedido. Marta quiere una taza con nombre, Luis un llavero de madera y Ana una caja de regalo. Tres pedidos, *tres líneas*."
+   "voz": "Apunto el cliente y lo que ha pedido. Marta quiere una taza con nombre, Luis un llavero de madera y Ana una caja de regalo. Tres pedidos, *tres líneas*.",
+   "duracion": 8.81
   },
   {
    "estilo": "tramo",
@@ -38,12 +40,13 @@
     "inicio": 18.4,
     "fin": 25.0
    },
-   "voz": "Toco el estado: *pendiente, hecho, entregado*, y los contadores se actualizan solos."
+   "voz": "Toco el estado: *pendiente, hecho, entregado*, y los contadores se actualizan solos.",
+   "duracion": 5.33
   },
   {
    "estilo": "cierre",
-   "texto": "Escríbeme «IDEA»",
-   "voz": "¿Tienes una tienda y una idea? Escríbeme *idea* por privado."
+   "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+   "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
   }
  ]
 }

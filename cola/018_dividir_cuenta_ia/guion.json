@@ -18,7 +18,8 @@
     "inicio": 2.7,
     "fin": 7.92
    },
-   "voz": "Se lo pedí a una IA con *un solo mensaje*: total, personas y propina."
+   "voz": "Se lo pedí a una IA con *un solo mensaje*: total, personas y propina.",
+   "duracion": 4.56
   },
   {
    "estilo": "tramo",
@@ -26,7 +27,8 @@
     "inicio": 8.64,
     "fin": 14.06
    },
-   "voz": "Pongo el total, somos cuatro y dejamos *cinco por ciento* de propina."
+   "voz": "Pongo el total, somos cuatro y dejamos *cinco por ciento* de propina.",
+   "duracion": 4.56
   },
   {
    "estilo": "tramo",
@@ -38,8 +40,8 @@
   },
   {
    "estilo": "cierre",
-   "texto": "Escríbeme «IDEA»",
-   "voz": "¿Tienes una idea para tu negocio? Escríbeme *idea* por privado."
+   "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+   "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
   }
  ]
 }

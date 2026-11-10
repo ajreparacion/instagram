@@ -18,7 +18,8 @@
     "inicio": 2.7,
     "fin": 7.37
    },
-   "voz": "Le pedí a una IA esta pequeña web. *Mira el mensaje*."
+   "voz": "Le pedí a una IA esta pequeña web. *Mira el mensaje*.",
+   "duracion": 3.74
   },
   {
    "estilo": "tramo",
@@ -26,7 +27,8 @@
     "inicio": 8.09,
     "fin": 18.59
    },
-   "voz": "Apunto tres: streaming, música y gimnasio, con lo que pago *al mes*. Fíjate cómo la web suma sola cada precio y me dice lo que gasto *al año*, sin sacar la calculadora."
+   "voz": "Apunto tres: streaming, música y gimnasio, con lo que pago *al mes*. Fíjate cómo la web suma sola cada precio y me dice lo que gasto *al año*, sin sacar la calculadora.",
+   "duracion": 9.53
   },
   {
    "estilo": "tramo",
@@ -34,12 +36,13 @@
     "inicio": 18.59,
     "fin": 22.44
    },
-   "voz": "Quito el gimnasio y me dice *cuánto ahorro* al año."
+   "voz": "Quito el gimnasio y me dice *cuánto ahorro* al año.",
+   "duracion": 3.63
   },
   {
    "estilo": "cierre",
-   "texto": "Escríbeme «IDEA»",
-   "voz": "¿Y si tu idea fuera una app? Escríbeme *idea* por privado y te cuento cómo sería."
+   "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+   "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
   }
  ]
 }
