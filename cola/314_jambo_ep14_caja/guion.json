@@ -1,0 +1,166 @@
+{
+ "titulo": "El Jambo que sabe y las IAs · ep. 14",
+ "semilla": 3014,
+ "modo": "sketch",
+ "serie": "El Jambo que sabe y las IAs",
+ "episodio": 14,
+ "negocio": "mercadillo / tienda",
+ "portada_texto": "POV: faltan cuarenta euros en la caja",
+ "musica": true,
+ "contador": {
+  "texto": "Veces que se lo ha pasado a la Jupillo",
+  "inicio": 13,
+  "valor": 14
+ },
+ "mensaje_final": {
+  "cifra": "Cuadrar la caja también es cuidar el negocio.",
+  "fuente": "Reflexión de la serie (sin cifra)"
+ },
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "hablante": "jambo",
+   "voz": "¡¿Faltan cuarenta euros?! ¡Yo *conté*!",
+   "texto": "POV: faltan cuarenta euros en la caja",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "pelota"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "pelota": "habla"
+    }
+   },
+   "contar": false
+  },
+  {
+   "estilo": "gag",
+   "hablante": "pelota",
+   "voz": "Dos más dos: *cinco*. Seguro.",
+   "texto": "La Pelota",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "pelota"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "pelota": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "pelota",
+   "voz": "",
+   "texto": "",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "pelota"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "pelota": "habla"
+    },
+    "efecto": "sello",
+    "efecto_t": 0.7,
+    "sello_texto": "DESCUADRE"
+   },
+   "duracion": 2.4
+  },
+  {
+   "estilo": "delega",
+   "hablante": "jambo",
+   "voz": "Que lo haga la Jupillo.",
+   "texto": "",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "jupillo"
+    ],
+    "acciones": {
+     "jambo": "delega",
+     "jupillo": "habla"
+    }
+   },
+   "contar": true
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jupillo",
+   "voz": "Caja cuadrada. Estaban en tu bolsillo.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo"
+    ],
+    "acciones": {
+     "jupillo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Cuadrado. Qué bien llevo la caja.",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "remata"
+    }
+   },
+   "cartel": "CAJA CUADRADA · MÉRITO: EL JAMBO"
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jupillo",
+   "voz": "En tu bolsillo, otra vez.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo"
+    ],
+    "acciones": {
+     "jupillo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "mensaje",
+   "hablante": null,
+   "voz": "Cuadrar la caja también es *cuidar el negocio*.",
+   "texto": "Cuadrar la caja también es cuidar el negocio.",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
+  },
+  {
+   "estilo": "cierre",
+   "hablante": null,
+   "voz": "Mándaselo a quien carga con todo.",
+   "texto": "Mándaselo a quien carga con todo",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
+  }
+ ],
+ "dibujo": {
+  "personajes": [
+   "jambo",
+   "jupillo",
+   "pelota",
+   "bola",
+   "tramites"
+  ]
+ },
+ "_guion": "11/11/2026 Creador: fórmula del cambio 40 (conflicto en el fotograma 0, IA responde sin palabras con sello, el Jambo se lleva el mérito, frase seca, mensaje serio). Mensaje sin cifra por no haber dato con fuente primaria comprobada."
+}
