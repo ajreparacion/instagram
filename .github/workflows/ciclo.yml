@@ -37,14 +37,23 @@ jobs:
           if ls cola/*/post.json >/dev/null 2>&1; then echo "cola=si" >> "$GITHUB_OUTPUT"; else echo "cola=no" >> "$GITHUB_OUTPUT"; fi
           # Motores de voz (equipo/voz.json "motor" + "respaldo") solo si hay algún reel sin renderizar.
           # Chatterbox (pesado) solo si es el motor principal; Pocket y Kokoro (ligeros) también como respaldo.
-          pendiente=no
-          for f in cola/*/post.json; do [ -f "$f" ] && ! grep -q '"renderizado"' "$f" && pendiente=si; done
-          python3 - "$pendiente" >> "$GITHUB_OUTPUT" <<'EOF'
-          import json, sys
+          # 10/11/2026: «pendiente» = reel sin "renderizado" O con "renderizado": false (antes solo se miraba si faltaba la
+          # clave: los reels puestos a false no activaban la instalación de Kokoro/Chatterbox y salían con Piper).
+          python3 - >> "$GITHUB_OUTPUT" <<'EOF'
+          import glob, json, sys
+          pendiente = False
+          for f in glob.glob("cola/*/post.json"):
+              try:
+                  p = json.load(open(f))
+              except Exception:
+                  continue
+              if p.get("tipo") in ("carrusel", "imagen", "historia") or p.get("renderizado"):
+                  continue
+              pendiente = True
           aj = json.load(open("equipo/voz.json"))
           principal = str(aj.get("motor", "piper")).lower()
           cadena = [principal] + [str(m).lower() for m in aj.get("respaldo") or []]
-          pend = sys.argv[1] == "si"
+          pend = pendiente
           print("chatterbox=" + ("si" if pend and principal == "chatterbox" else "no"))
           print("kokoro=" + ("si" if pend and "kokoro" in cadena else "no"))
           print("pocket=" + ("si" if pend and "pocket" in cadena else "no"))
@@ -81,7 +90,9 @@ jobs:
         if: steps.trabajo.outputs.cola == 'si'
         run: |
           nec=no
-          for f in cola/*/grabacion.json; do [ -f "$f" ] && ! grep -q '"renderizado"' "$(dirname "$f")/post.json" && nec=si; done
+          for f in cola/*/grabacion.json; do
+            [ -f "$f" ] && ! grep -Eq '"renderizado": *"' "$(dirname "$f")/post.json" && nec=si
+          done
           if [ "$nec" = si ]; then
             pip install --quiet playwright
             python3 -m playwright install --with-deps chromium > /dev/null
@@ -137,16 +148,6 @@ jobs:
           ~/.venvs/chatterbox/bin/pip install --quiet chatterbox-tts --extra-index-url https://download.pytorch.org/whl/cpu
           ~/.venvs/chatterbox/bin/python -c "import chatterbox.mtl_tts, torch; print('chatterbox OK, torch', torch.__version__)"
           echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
-
-      - name: Voz del dueño (referencia de Chatterbox, release «voces»)
-        if: steps.trabajo.outputs.chatterbox == 'si'
-        # Autorizada por el dueño el 6/11/2026 (su voz, sacada de sus reels de Mr. Empírico). voces/ está en .gitignore.
-        continue-on-error: true
-        env:
-          GH_TOKEN: ${{ github.token }}
-        run: |
-          mkdir -p voces
-          gh release download voces -p referencia_usuario.wav -D voces --clobber && ls -la voces/ || echo "Sin referencia: Chatterbox usa su voz integrada"
 
       - name: Ciclo
         env:
