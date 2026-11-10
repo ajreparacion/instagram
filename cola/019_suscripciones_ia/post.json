@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "¿Cuánto pagas al año en suscripciones? Esta mini web la ha hecho una IA con un solo mensaje: apuntas cada suscripción con su precio al mes y te dice lo que pagas al mes y al año, y cuánto ahorras si quitas una.\nEs una demo con datos de ejemplo, grabada funcionando. Revisa siempre tus cuentas reales. En Neogest Lab hacemos apps así, a medida.\n¿Y si tu idea fuera una app? Escríbeme IDEA por privado y te digo cómo sería.\nVoz: generada a partir de la voz del autor.\n\n#hogar #familia #ahorro #apps #neogestlab",
+  "texto": "¿Cuánto pagas al año en suscripciones? Esta mini web la ha hecho una IA con un solo mensaje: apuntas cada suscripción con su precio al mes y te dice lo que pagas al mes y al año, y cuánto ahorras si quitas una.\nEs una demo con datos de ejemplo, grabada funcionando. Revisa siempre tus cuentas reales. En Neogest Lab hacemos apps así, a medida.\n¿Y si tu idea fuera una app? Escríbeme IDEA por privado y te digo cómo sería.\nVoz generada por IA\n\n#hogar #familia #ahorro #apps #neogestlab",
   "cuando": "2026-11-14T13:40:00+01:00",
   "palabra_clave": "IDEA",
   "respuesta": "Cuéntame tu idea y para quién es, y te digo cómo sería tu app. Para probar esta demo, pídele a una IA: «Hazme una página web en un solo archivo HTML donde apunte mis suscripciones con su precio al mes y me diga cuánto pago al año. Que pueda quitar una y ver cuánto ahorro.»",
@@ -19,10 +19,9 @@
     "cta_monetizacion": 9,
     "total": 80
   },
-  "motor_voz": "chatterbox",
   "publico": "Hogar y familias",
   "formato": "Una idea, una app",
   "_nota_calidad": "8/11 Calidad: huecos de voz de ~6 s en la escena 2 rellenados (A1), cierre y texto al de Neogest Lab (directiva §2 y §5).",
-  "asset": "019_suscripciones_ia.mp4",
-  "renderizado": "2026-11-08T18:18:01+00:00"
+  "renderizado": false,
+  "nota_mejora": "10/11/2026: reel con la voz del dueño, prohibida por la directiva (9/11 23:55); se rehace con voz genérica de España o sin voz."
 }

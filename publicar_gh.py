@@ -285,6 +285,10 @@ def sintetizar_chatterbox(textos, salidas, trabajo, aj, estilos=None):
     o una con licencia libre; si el archivo no existe se usa la voz integrada del modelo."""
     cb = dict(aj.get("chatterbox") or {})
     ref = cb.get("referencia")
+    if ref and aj.get("prohibir_voz_dueno", True) and any(k in str(ref) for k in ("voz_dueno", "referencia_usuario")):
+        # Orden del dueño (9/11/2026 23:55): su voz no se usa en ningún vídeo nuevo.
+        log("Voz del dueño prohibida por la directiva: se ignora la referencia y se usa una sintética con licencia libre")
+        ref = None
     if ref and not os.path.isabs(ref):
         ref = os.path.join(BASE, ref)
     if ref and os.path.exists(ref) and cb.get("eq_referencia"):

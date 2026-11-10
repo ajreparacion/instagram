@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "¿Las citas de los abuelos y de la familia, apuntadas en un papel? Esta agenda la ha hecho una IA con un mensaje: apuntas quién tiene cita y qué día, se ordena sola por fecha y marca la que es mañana.\nEs una demo con datos ficticios, grabada funcionando; no es una agenda médica ni sustituye a la de tu centro de salud. En Neogest Lab hacemos apps así, a medida.\n¿Tienes una idea para tu familia o tu negocio? Escríbeme IDEA por privado y te digo cómo sería tu app.\nVoz: generada a partir de la voz del autor.\n\n#familia #cuidadores #mayores #apps #neogestlab",
+  "texto": "¿Las citas de los abuelos y de la familia, apuntadas en un papel? Esta agenda la ha hecho una IA con un mensaje: apuntas quién tiene cita y qué día, se ordena sola por fecha y marca la que es mañana.\nEs una demo con datos ficticios, grabada funcionando; no es una agenda médica ni sustituye a la de tu centro de salud. En Neogest Lab hacemos apps así, a medida.\n¿Tienes una idea para tu familia o tu negocio? Escríbeme IDEA por privado y te digo cómo sería tu app.\nVoz generada por IA\n\n#familia #cuidadores #mayores #apps #neogestlab",
   "cuando": "2026-11-18T20:40:00+01:00",
   "palabra_clave": "IDEA",
   "respuesta": "Cuéntame tu idea y para quién es, y te digo cómo sería tu app. Para probar la demo, pídele a una IA: «Página web en un solo HTML para apuntar citas de la familia, ordenadas por fecha»",
@@ -21,7 +21,6 @@
     "post_descubrimiento": 12,
     "total": 80
   },
-  "motor_voz": "chatterbox",
-  "asset": "023_citas_familia.mp4",
-  "renderizado": "2026-11-08T18:41:35+00:00"
+  "renderizado": false,
+  "nota_mejora": "10/11/2026: reel con la voz del dueño, prohibida por la directiva (9/11 23:55); se rehace con voz genérica de España o sin voz."
 }
