@@ -2,7 +2,7 @@
  "tipo": "reel",
  "texto": "5 tareas pesadas que ChatGPT, Claude o Gemini hacen por ti (prompts incluidos).\nMenú de cenas de la semana y lista de la compra por secciones.\nResumir la circular del cole o de la comunidad y decirte qué hacer y para cuándo, sin pegar datos personales.\nResponder un mensaje difícil con educación.\nPasar a texto la foto de una receta o un tíquet.\nRepartir las tareas de la semana según tus horas libres.\nGuárdalo para el domingo 🗓️\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#inteligenciaartificial #organizacion #hogar #productividad #neogestlab",
  "cuando": "2026-11-11T13:40:00+01:00",
- "renderizado": "2026-11-10T18:54:57+00:00",
+ "renderizado": "2026-11-10T19:16:53+00:00",
  "asset": "103_tareas_casa_ia_reel.mp4",
  "portada_ms": 1500,
  "compartir_en_feed": true,
@@ -23,9 +23,9 @@
   "origen": "generada por código (sin licencias de terceros)"
  },
  "audio": {
-  "lufs_integrados": -14.0,
-  "pico_real_dbtp": -4.7,
-  "lra_lu": 0.1,
+  "lufs_integrados": -13.9,
+  "pico_real_dbtp": -4.9,
+  "lra_lu": 1.2,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
  "origen": "herramientas/demo_app.py"
