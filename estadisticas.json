@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-10T12:30:32+00:00",
+  "actualizado": "2026-11-10T18:56:23+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1602,
@@ -18,15 +18,15 @@
       "permalink": "https://www.instagram.com/reel/DfiIDnkD2zh/",
       "timestamp": "2026-11-09T19:52:53+0000",
       "metricas": {
-        "reach": 10,
-        "views": 18,
+        "reach": 11,
+        "views": 21,
         "saved": 0,
         "shares": 1,
         "comments": 0,
         "likes": 1,
         "total_interactions": 3,
-        "ig_reels_avg_watch_time": 11351,
-        "ig_reels_video_view_total_time": 158920
+        "ig_reels_avg_watch_time": 10675,
+        "ig_reels_video_view_total_time": 202842
       }
     },
     {
@@ -77,8 +77,8 @@
       "permalink": "https://www.instagram.com/p/Dffsx71mBtI/",
       "timestamp": "2026-11-08T21:15:54+0000",
       "metricas": {
-        "reach": 25,
-        "views": 55,
+        "reach": 26,
+        "views": 57,
         "saved": 0,
         "shares": 1,
         "total_interactions": 5
@@ -94,8 +94,8 @@
       "permalink": "https://www.instagram.com/p/DffYnNFFwz9/",
       "timestamp": "2026-11-08T18:19:39+0000",
       "metricas": {
-        "reach": 19,
-        "views": 43,
+        "reach": 20,
+        "views": 45,
         "saved": 0,
         "shares": 3,
         "total_interactions": 9
@@ -112,14 +112,14 @@
       "timestamp": "2026-11-08T17:46:49+0000",
       "metricas": {
         "reach": 6,
-        "views": 11,
+        "views": 12,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 12282,
-        "ig_reels_video_view_total_time": 110539
+        "ig_reels_avg_watch_time": 11126,
+        "ig_reels_video_view_total_time": 111266
       }
     },
     {
@@ -132,8 +132,8 @@
       "permalink": "https://www.instagram.com/p/DffSjjIFyw1/",
       "timestamp": "2026-11-08T17:26:43+0000",
       "metricas": {
-        "reach": 8,
-        "views": 15,
+        "reach": 9,
+        "views": 17,
         "saved": 0,
         "shares": 0,
         "total_interactions": 3
@@ -318,6 +318,10 @@
     },
     {
       "fecha": "2026-11-10T12:30+00:00",
+      "seguidores": 1602
+    },
+    {
+      "fecha": "2026-11-10T18:56+00:00",
       "seguidores": 1602
     }
   ]

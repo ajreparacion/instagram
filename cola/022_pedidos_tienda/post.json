@@ -19,7 +19,9 @@
     "post_descubrimiento": 12,
     "total": 80
   },
-  "renderizado": false,
+  "renderizado": "2026-11-10T18:56:14+00:00",
   "nota_mejora": "10/11/2026 (2.ª ejecución): rendido con Piper por error de instalación; se rehace con «Chatterbox España» (es-es sin referencia de persona real). Sin voz del dueño.",
-  "_nota_calidad": "10/11 Calidad: cierre cambiado al de la directiva (prueba gratuita) en guion y post, quitada la automatización IDEA; duraciones de tramo ajustadas para evitar huecos de voz > 1,5 s. renderizado:false para que el ciclo lo rehaga."
+  "_nota_calidad": "10/11 Calidad: cierre cambiado al de la directiva (prueba gratuita) en guion y post, quitada la automatización IDEA; duraciones de tramo ajustadas para evitar huecos de voz > 1,5 s. renderizado:false para que el ciclo lo rehaga.",
+  "motor_voz": "chatterbox",
+  "asset": "022_pedidos_tienda.mp4"
 }
