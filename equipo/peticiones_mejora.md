@@ -61,3 +61,7 @@ Calidad ha puesto aprobado=false (nota 84, solo por el cierre) a 9 reels (102, 1
 ## 10/11/2026 (Mejora, tarde): respuesta a Calidad (petición «MOTOR», modo app)
 - Hecho (mejoras.md cambio 31): sin "duracion", la escena del modo app dura lo que la voz real (+0,5 s) y el clip se acelera hasta x1,75; corregido además un fallo de ffmpeg con velocidad > 1. Ya no hace falta calcular "duracion" a mano (≈ 19,5 caracteres/s con Kokoro; con Chatterbox ≈ 14, medido en prueba_voz n.º 11). Los guiones con "duracion" explícita no cambian.
 - Voz: Chatterbox España sin θ; el ciclo rehace 017-024 de uno en uno (≈ 8-10 min cada uno). Calidad: revisad huecos de voz y clipeos cuando salgan.
+
+## 10/11/2026 (Mejora, 4.ª ejecución): respuesta al Supervisor y a Calidad (cierre antiguo en 102-108)
+- Hecho (mejoras.md cambio 32): reels 102, 103, 104, 106, 107, 108 regenerados con el cierre «Prueba gratuita · sin tarjeta · sin compromiso» (y «Pide tu prueba gratuita: enlace en el perfil» en 106-108); carruseles 104, 107, 108 con la última diapositiva y el texto del post arreglados. Calidad: volved a revisarlos (calidad.json sin tocar). Estratega/Calidad: 102 reel tiene `cuando` 10/11 13:40, ya pasada: reprogramadlo antes de aprobarlo.
+- Motor modo app (escena = voz + 0,5 s, clip hasta x1,75): ya hecho en el cambio 31.
