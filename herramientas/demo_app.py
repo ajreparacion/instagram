@@ -1152,6 +1152,70 @@ def slides_de(carpeta):
     return out
 
 
+def corregir_cierre(im, sub=None):
+    """10/11/2026 (orden del dueño 00:00 + Calidad): diapositiva de cierre con el cierre antiguo cocido
+    («Escríbeme IDEA por privado») -> caja «Prueba gratuita · sin tarjeta · sin compromiso». Detecta la caja redondeada
+    por su borde, repinta esa franja con el degradado del fondo y dibuja la caja nueva con el mismo color de acento. Si se
+    pasa `sub`, repinta también el subtítulo (p. ej. «… Pide la demo: enlace en el perfil.»). Idempotente."""
+    im = im.convert("RGB")
+    a = np.asarray(im).astype(np.int32)
+    H_, W_ = a.shape[:2]
+
+    def degradado(y0, y1, x0=96, x1=W_ - 96):
+        izq = a[y0:y1, 56:64].mean(axis=1)
+        der = a[y0:y1, W_ - 64:W_ - 56].mean(axis=1)
+        t = np.clip((np.arange(x0, x1) - 60) / float(W_ - 120), 0, 1)[None, :, None]
+        return (izq[:, None, :] * (1 - t) + der[:, None, :] * t)
+
+    # 1) caja: filas entre 605 y 860 donde, en x 300-760, hay algo distinto del fondo (borde superior e inferior; el
+    #    texto queda entre ambos). El color del borde se toma en el lado izquierdo, ya en el tramo recto.
+    ref = degradado(605, 860, 300, 760)
+    dif_c = np.abs(a[605:860, 300:760] - ref).sum(axis=2)
+    filas = [605 + int(y) for y in np.where(dif_c.max(axis=1) > 120)[0]]
+    if not filas:
+        return im
+    top, bot = min(filas), max(filas)
+    # borde: el píxel más lejano al fondo en la franja del borde superior (3 filas)
+    franja = a[top:top + 4, 300:760].reshape(-1, 3)
+    bg_top = a[top, 56:60].mean(axis=0)
+    acento = tuple(int(v) for v in franja[np.abs(franja - bg_top).sum(axis=1).argmax()])
+    # color del texto: el píxel más lejano al fondo en «By Neogest Lab»
+    reg = a[1170:1225, 370:710].reshape(-1, 3)
+    bg_pie = a[1195, 56:60].mean(axis=0)
+    txt = tuple(int(v) for v in reg[np.abs(reg - bg_pie).sum(axis=1).argmax()])
+    out = a.copy()
+    out[top - 8:bot + 9, 96:W_ - 96] = degradado(top - 8, bot + 9)
+    # 2) subtítulo (opcional)
+    if sub:
+        sy0, sy1 = 470, top - 14
+        sub_col = None
+        reg_s = a[sy0:sy1, 96:W_ - 96]
+        bgs = degradado(sy0, sy1)
+        dif = np.abs(reg_s - bgs).sum(axis=2)
+        filas_s = np.where(dif.max(axis=1) > 150)[0]
+        if len(filas_s):
+            sub_col = tuple(int(v) for v in reg_s.reshape(-1, 3)[dif.reshape(-1).argmax()])
+            ytxt = sy0 + int(filas_s.min())
+            out[sy0:sy1, 96:W_ - 96] = bgs
+    im2 = Image.fromarray(np.clip(out, 0, 255).astype(np.uint8))
+    d = ImageDraw.Draw(im2)
+    if sub and sub_col is not None:
+        fs, lss = ajustar(sub, "Medium", CW - 2 * MX - 40, 2, 40, 30)
+        dibujar_lineas(d, 0, ytxt - int(fs.size * 0.28), lss, fs, sub_col, alto=1.35, centro=CW // 2)
+    fb = fnt(40, "Bold")
+    y0 = top
+    d.rounded_rectangle((120, y0, CW - 120, y0 + 94), 30, outline=acento, width=4)
+    partes = [("Prueba gratuita", acento), (" · sin tarjeta · sin compromiso", txt)]
+    while sum(fb.getlength(p_) for p_, _ in partes) > CW - 240 - 60 and fb.size > 24:
+        fb = fnt(fb.size - 2, "Bold")
+    total = sum(fb.getlength(p_) for p_, _ in partes)
+    x = CW / 2 - total / 2
+    for p_, col in partes:
+        d.text((x, y0 + 23), p_, font=fb, fill=col)
+        x += fb.getlength(p_)
+    return im2
+
+
 def video_carrusel(slides, salida, trabajo, mus, max_total=30.0):
     beat = 60.0 / mus["bpm"]
     n = len(slides)
@@ -1366,7 +1430,10 @@ def reels_carrusel(c, carpetas, subir=False):
         if ya_publicado(nom):
             continue
         slides = slides_de(item["carpeta"])
+        # 10/11/2026: cierre «Prueba gratuita · sin tarjeta · sin compromiso» también en las diapositivas antiguas
+        slides[-1] = corregir_cierre(slides[-1], item.get("cierre_sub"))
         post_car = leer_post(item["carpeta"])
+        post_reel = leer_post(nom)   # el texto del reel que ya esté en cola (con el cierre de la directiva) manda
         trabajo = os.path.join("/tmp", "demo_" + nom)
         shutil.rmtree(trabajo, ignore_errors=True)
         os.makedirs(trabajo)
@@ -1383,7 +1450,8 @@ def reels_carrusel(c, carpetas, subir=False):
         if subir:
             subir_release(video)
             escribir_post(carpeta, dict(
-                tipo="reel", texto=item.get("texto") or post_car.get("texto", ""), cuando=item["cuando"],
+                tipo="reel", texto=item.get("texto") or post_reel.get("texto") or post_car.get("texto", ""),
+                cuando=post_reel.get("cuando") or item["cuando"],
                 renderizado=datetime.now(timezone.utc).isoformat(timespec="seconds"), asset=nom + ".mp4",
                 portada_ms=1500, compartir_en_feed=True, duracion_s=round(total, 1),
                 formato="versión reel del carrusel (diapositivas animadas, música en primer plano y efectos; sin voz)",
@@ -1393,6 +1461,29 @@ def reels_carrusel(c, carpetas, subir=False):
                 carrusel=item["carpeta"], musica=resumen_musica(mus), audio=audio, origen="herramientas/demo_app.py"))
         else:
             shutil.copy(video, os.path.join("/tmp", nom + ".mp4"))
+
+
+CIERRE_POST = "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil."
+
+
+def cierres_carruseles(c, carpetas):
+    """Carruseles de cola/ con el cierre antiguo cocido en la última diapositiva y en el texto del post: repinta la caja
+    (y el subtítulo si el item de reels_carrusel lleva «cierre_sub») y pone el cierre de la directiva del 10/11 en post.json."""
+    subs = {it["carpeta"]: it.get("cierre_sub") for it in c.get("reels_carrusel", [])}
+    for car in carpetas:
+        d = os.path.join(COLA, car)
+        sl = sorted(f for f in os.listdir(os.path.join(d, "slides")) if f.endswith(".jpg"))
+        ruta = os.path.join(d, "slides", sl[-1])
+        corregir_cierre(Image.open(ruta), subs.get(car)).save(ruta, quality=88, subsampling=2, optimize=True)
+        pj = os.path.join(d, "post.json")
+        post = json.load(open(pj, encoding="utf-8"))
+        t = post.get("texto", "")
+        t = re.sub(r"(Pide la demo en el enlace del perfil\.\s*)?(¿Lo quieres para tu negocio\?|¿Y una app a medida para tu negocio\?)?\s*"
+                   r"Escríbeme IDEA por privado\.?", " " + CIERRE_POST, t)
+        t = re.sub(r"\n[ \t]+" + re.escape(CIERRE_POST), "\n" + CIERRE_POST, t)
+        post["texto"] = t
+        json.dump(post, open(pj, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+        print(f"{car}: última diapositiva {sl[-1]} y texto del post con el cierre de la directiva")
 
 
 # ------------------------------------------------------------------ principal
@@ -1410,6 +1501,8 @@ def main():
                 subir="--subir" in opciones, solo=solo or None)
     elif orden == "reels_carrusel":
         reels_carrusel(c, slugs, subir="--subir" in opciones)
+    elif orden == "cierres":
+        cierres_carruseles(c, slugs)
     else:
         sys.exit(f"orden desconocida: {orden}")
 
