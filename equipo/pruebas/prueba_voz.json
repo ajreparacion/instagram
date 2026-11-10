@@ -1,179 +1,12 @@
 {
-  "fecha": "2026-11-10 10:26 UTC",
+  "fecha": "2026-11-10 17:33 UTC",
   "guion": "herramientas/ejemplo_guion_humano.json",
-  "render_video_s": 59.9,
+  "render_video_s": 60.2,
   "frases": 8,
   "palabras": 104,
   "referencia": "Un barco a la deriva… con comida para seis meses. Y sin nadie. Tal día como hoy, en mil ochocientos setenta y dos, sale de Nueva York el Mary Celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las Azores y Portugal. Suben… y está todo. La comida, el agua, sus cosas. Solo falta una cosa. El bote salvavidas. Y eran diez. Con la mujer del capitán… y su hija de dos años. La última nota del diario es del veinticinco de noviembre. Y luego… nada. De los diez, nunca más se supo. Mándaselo a quien le flipen los misterios.",
   "cpu": 4,
   "variantes": {
-    "piper": {
-      "flujo": "voz_primero",
-      "ajustes": {
-        "motor": "piper"
-      },
-      "render_total_s": 74.5,
-      "duracion_reel_s": 36.4,
-      "motor_usado": "piper",
-      "sintesis_s": 5.3,
-      "frases": [
-        {
-          "dur_s": 3.8,
-          "hueco_s": 4.12,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 4.76,
-          "hueco_s": 5.08,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 4.58,
-          "hueco_s": 4.88,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 3.38,
-          "hueco_s": 4.18,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 3.04,
-          "hueco_s": 3.35,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 3.62,
-          "hueco_s": 4.45,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 4.16,
-          "hueco_s": 4.48,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 4.26,
-          "hueco_s": 4.65,
-          "atempo": 1.0
-        }
-      ],
-      "voz_total_s": 31.6,
-      "veces_tiempo_real": 5.96,
-      "frases_que_no_caben": 0,
-      "lufs": -13.9,
-      "pico_real_dbfs": -2.4,
-      "prosodia": {
-        "f0_mediana_hz": 120.7,
-        "tono_desv_st": 3.17,
-        "tono_rango_st": 8.49,
-        "pausas_pct": 18.5,
-        "duracion_s": 31.6,
-        "palabras_por_s": 3.29
-      },
-      "transcripcion_mezcla": "Un barco a la deriva con comida para seis meses. Y sin nadie. Tal día como hoy, en 1872, sale de Nueva Joaquemar y Celeste. Unes después, otro barco se lo encuentra a la deriva entre las Azores y Portugal. Sube y está todo. La comida, el agua, sus cosas. Sólo falta una cosa. El bote salva vidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre. Y luego nada. De los diez, nunca más se supo. Mándaselo a quien le friten los misterios.",
-      "wer_mezcla": 0.144,
-      "transcripcion_voz_sola": "Un barco a la deriva con comida para seis meses. Y sin nadie, tal día como hoy, en 1872, sale de nuevo Joaquín Mariceleste. Un mes después, otro barco se lo encuentra a la deriva, entre las Azores y Portugal. Su venista todo. La comida, el agua, sus cosas. Sólo falta una cosa. El bote salva vidas. Y eran diez. Con la mujer del capitán y su hija de los años. La última nota del diario es del 25 de noviembre. Y luego nada, de los diez. Nunca más se supo. Mándaselo a quien le friten los misterios.",
-      "wer_voz_sola": 0.173,
-      "utmos_medio": 2.84,
-      "utmos_frases": [
-        2.95,
-        2.73,
-        2.28,
-        3.32,
-        3.04,
-        2.59,
-        2.64,
-        3.17
-      ]
-    },
-    "pocket": {
-      "flujo": "voz_primero",
-      "ajustes": {
-        "motor": "pocket",
-        "pocket": {
-          "idioma": "spanish",
-          "voz": "lola",
-          "temperatura": null,
-          "ganancia": 1.0,
-          "max_s": 600
-        }
-      },
-      "render_total_s": 110.8,
-      "duracion_reel_s": 49.0,
-      "motor_usado": "pocket",
-      "sintesis_s": 22.5,
-      "frases": [
-        {
-          "dur_s": 6.18,
-          "hueco_s": 6.48,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 5.92,
-          "hueco_s": 6.25,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 5.68,
-          "hueco_s": 5.98,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 6.04,
-          "hueco_s": 6.85,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 3.66,
-          "hueco_s": 3.98,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 5.32,
-          "hueco_s": 5.65,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 6.12,
-          "hueco_s": 6.45,
-          "atempo": 1.0
-        },
-        {
-          "dur_s": 5.8,
-          "hueco_s": 6.12,
-          "atempo": 1.0
-        }
-      ],
-      "voz_total_s": 44.7,
-      "veces_tiempo_real": 1.99,
-      "frases_que_no_caben": 0,
-      "lufs": -14.1,
-      "pico_real_dbfs": -1.3,
-      "prosodia": {
-        "f0_mediana_hz": 200.7,
-        "tono_desv_st": 2.21,
-        "tono_rango_st": 5.5,
-        "pausas_pct": 40.5,
-        "duracion_s": 44.72,
-        "palabras_por_s": 2.33
-      },
-      "transcripcion_mezcla": "Un barco a la deriva riva sí con comida para seis meses y sin nadie. Tal día como hoy, en 1872 sale de Nueva York el mar y celeste. Un mes después, otro barco se lo encuentra a la deriva entre las azores y Portugal. Sube en Kirfea si está todo. La comida, el agua, sus cosas. Sólo falta una cosa. El bote salvavidas. Y eran diez. Con la mujer del capitán Quinty y herija de dos años. La última nota del diario es del 25 de noviembre. Y luego, jernada, de los diez, nunca más se supo. Mándaselo a quien le flippen los misterios.",
-      "wer_mezcla": 0.183,
-      "transcripcion_voz_sola": "Un barco a la deriva se iba sí con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el mar y celeste. Un mes después, otro barco se lo encuentra a la deriva entre las azores y Portugal. Subenquifea sí está todo, la comida, el agua, sus cosas. Sólo falta una cosa, el bote salva vidas y eran diez. Con la mujer del capitán Hinti y herrija de dos años. La última nota del diario es del 25 de noviembre. Y luego, Jernada, de los diez, nunca más se supo. Mándaselo a quien le flippen los misterios.",
-      "wer_voz_sola": 0.192,
-      "utmos_medio": 3.9,
-      "utmos_frases": [
-        3.67,
-        4.12,
-        3.97,
-        3.95,
-        3.92,
-        3.54,
-        3.66,
-        4.34
-      ]
-    },
     "kokoro_alex": {
       "flujo": "voz_primero",
       "ajustes": {
@@ -190,13 +23,14 @@
             "giro": {
               "velocidad": 0.9
             }
-          }
+          },
+          "_nota": "10/11/2026: motor principal. Voz genérica de España del modelo Kokoro-82M (Apache 2.0, no clonada de nadie; G2P espeak-ng castellano, con z/c = θ). Medido en prueba_voz.yml n.º 9: transcripción Whisper limpia (Piper: «Nueva Joaquemar», «salva vidas»; Pocket: titubeos y 2x más lenta), 1,5x tiempo real en CPU, -14,1 LUFS, pico -1,3 dBFS, rango de tono 8,6 st (Piper 8,5, Pocket 5,5), pausas 16,7 %. Alternativa femenina: ef_dora."
         }
       },
-      "render_total_s": 95.3,
+      "render_total_s": 89.1,
       "duracion_reel_s": 38.1,
       "motor_usado": "kokoro",
-      "sintesis_s": 22.3,
+      "sintesis_s": 18.2,
       "frases": [
         {
           "dur_s": 4.02,
@@ -209,8 +43,8 @@
           "atempo": 1.0
         },
         {
-          "dur_s": 5.02,
-          "hueco_s": 5.35,
+          "dur_s": 5.0,
+          "hueco_s": 5.32,
           "atempo": 1.0
         },
         {
@@ -240,144 +74,269 @@
         }
       ],
       "voz_total_s": 33.5,
-      "veces_tiempo_real": 1.5,
+      "veces_tiempo_real": 1.84,
       "frases_que_no_caben": 0,
       "lufs": -14.1,
       "pico_real_dbfs": -1.3,
       "prosodia": {
         "f0_mediana_hz": 133.1,
-        "tono_desv_st": 3.33,
-        "tono_rango_st": 8.6,
+        "tono_desv_st": 3.32,
+        "tono_rango_st": 8.7,
         "pausas_pct": 16.7,
-        "duracion_s": 33.5,
-        "palabras_por_s": 3.1
+        "duracion_s": 33.48,
+        "palabras_por_s": 3.11
       },
-      "transcripcion_mezcla": "Un barco a la deriva, con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el mar y celeste. Un mes después otro barco se lo encuentra a la deriva, entre las azores y Portugal. Suven y está todo, la comida, el agua, sus cosas. Sólo falta una cosa, el bote salvavidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre y luego nada. De los diez nunca más se supo, mandáselo a quien le flipen los misterios.",
+      "transcripcion_mezcla": "Un barco a la deriva con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el mar y celeste. Un mes después, otro barco se lo encuentra a la deriva entre las azores y Portugal. Suben y está todo, la comida, el agua, sus cosas. Sólo falta una cosa, el bote salvavidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre y luego nada. De los diez nunca más se supo, mándaselo a quien le flippen los misterios.",
       "wer_mezcla": 0.087,
-      "transcripcion_voz_sola": "Un barco a la deriva con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el mar y celeste. Un mes después otro barco se lo encuentra a la deriva entre las azores y Portugal. Suben y está todo, la comida, el agua, sus cosas. Sólo falta una cosa, el bote salvavidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre, y luego nada. De los diez, nunca más se supo, mándaselo a quien le flippen los misterios.",
+      "transcripcion_voz_sola": "Un barco a la deriva con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el mar y celeste. Un mes después otro barco se lo encuentra a la deriva, entre las azores y Portugal. Suben y está todo, la comida, el agua, sus cosas. Sólo falta una cosa, el bote salvavidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre, y luego nada. De los diez, nunca más se supo, mándaselo a quien le flippen los misterios.",
       "wer_voz_sola": 0.087,
-      "utmos_medio": 3.6,
+      "utmos_medio": 3.59,
       "utmos_frases": [
         3.47,
-        3.14,
-        3.51,
-        3.73,
+        3.16,
+        3.46,
         3.76,
+        3.77,
         3.67,
-        3.64,
-        3.89
+        3.54,
+        3.9
       ]
     },
-    "kokoro_dora": {
+    "chatterbox_es": {
       "flujo": "voz_primero",
       "ajustes": {
-        "motor": "kokoro",
-        "kokoro": {
-          "voz": "ef_dora",
-          "velocidad": 0.95,
+        "motor": "chatterbox",
+        "chatterbox": {
+          "modelo": "es-es",
+          "idioma": "es",
+          "exageracion": 0.6,
+          "cfg": 0.35,
+          "temperatura": 0.75,
+          "referencia": null,
+          "referencia_kokoro": null,
           "ganancia": 1.0,
-          "max_s": 300,
+          "semilla": 7,
+          "theta": "griego_sin_inicial",
+          "max_s": 2400,
+          "_nota": "referencia = VOZ DEL DUEÑO. Desde el 7/11/2026 12:45: nota de voz limpia grabada por él para el canal (voz_dueno/referencia_usuario.wav, 12,6 s, 24 kHz mono, -20 LUFS; versión larga de 28 s al lado). Señal/ruido ~43 dB, contenido hasta 8 kHz (la anterior, sacada de sus reels con Demucs, no pasaba de 4 kHz). Para volver a la anterior: 'referencia': 'voces/referencia_usuario.wav' (release «voces», sigue ahí) o restaurar herramientas/versiones/voz.json_2026-11-07.",
           "por_estilo": {
             "gancho": {
-              "velocidad": 0.88
+              "exageracion": 0.75,
+              "cfg": 0.45
             },
             "giro": {
-              "velocidad": 0.9
+              "exageracion": 0.7,
+              "cfg": 0.45
+            },
+            "cierre": {
+              "exageracion": 0.65,
+              "cfg": 0.5
             }
-          }
+          },
+          "_nota_por_estilo": "7/11 13:12: el dueño oye clipeos, acento latino al empezar que luego cambia, silencios y voz plana. Equilibrio: exageración igual o algo menor que antes (0,6 base; 0,65-0,75 en gancho, giro y cierre) para no perder énfasis, pero cfg mucho más alto (0,45-0,5 en vez de 0,3-0,35) para que no se aleje de su voz ni cambie de acento, temperatura 0,65 y recorte de restos al final de frase (recorte.umbral_db -32). Énfasis de las palabras *así*: +4,5 dB con bajada previa de 1,5 dB. Revertir: herramientas/versiones/voz.json_2026-11-07b.",
+          "_nota_theta": "7/11 14:40 (directiva: voz sin seseo): el texto de cada frase se pasa a Chatterbox con la letra griega θ donde España dice θ (z y c ante e/i, salvo la c inicial de palabra: sale como t). Medido en Actions (equipo/pruebas/prueba_seseo.json, mejoras.md): θ reconocida 0 % -> 22-33 % (control Piper de España: 33 %), parecido con el dueño 0,959, WER 6,8 %, variación de tono 7,1 st. Subtítulos y alineación siguen con el texto original. Revertir: \"theta\": \"\" o restaurar herramientas/versiones/voz.json_2026-11-07c.",
+          "_nota_dueno": "10/11/2026: orden del dueño (9/11 23:55) «quita mi voz de todos los vídeos»: sin referencia del dueño. Chatterbox ya no es motor ni respaldo; si alguien lo reactiva, usa solo referencia_kokoro (sintética, Apache 2.0). Para volver a la configuración anterior: herramientas/versiones/voz.json_2026-11-10 (NO recomendable: usa la voz del dueño)."
         }
       },
-      "render_total_s": 91.4,
-      "duracion_reel_s": 37.8,
-      "motor_usado": "kokoro",
-      "sintesis_s": 19.7,
+      "render_total_s": 418.9,
+      "duracion_reel_s": 39.1,
+      "motor_usado": "chatterbox",
+      "sintesis_s": 331.4,
       "frases": [
         {
-          "dur_s": 4.04,
-          "hueco_s": 4.35,
+          "dur_s": 3.44,
+          "hueco_s": 3.75,
           "atempo": 1.0
         },
         {
-          "dur_s": 5.22,
-          "hueco_s": 5.55,
+          "dur_s": 5.56,
+          "hueco_s": 5.88,
           "atempo": 1.0
         },
         {
-          "dur_s": 4.84,
-          "hueco_s": 5.15,
+          "dur_s": 5.12,
+          "hueco_s": 5.45,
           "atempo": 1.0
         },
         {
-          "dur_s": 3.36,
-          "hueco_s": 4.18,
+          "dur_s": 3.76,
+          "hueco_s": 4.58,
           "atempo": 1.0
         },
         {
-          "dur_s": 2.94,
+          "dur_s": 2.7,
           "hueco_s": 3.25,
           "atempo": 1.0
         },
         {
-          "dur_s": 3.68,
+          "dur_s": 3.94,
           "hueco_s": 4.45,
           "atempo": 1.0
         },
         {
-          "dur_s": 4.42,
-          "hueco_s": 4.75,
+          "dur_s": 4.72,
+          "hueco_s": 5.05,
           "atempo": 1.0
         },
         {
-          "dur_s": 4.56,
-          "hueco_s": 4.88,
+          "dur_s": 5.2,
+          "hueco_s": 5.52,
           "atempo": 1.0
         }
       ],
-      "voz_total_s": 33.1,
-      "veces_tiempo_real": 1.68,
+      "voz_total_s": 34.4,
+      "veces_tiempo_real": 0.1,
+      "frases_que_no_caben": 0,
+      "lufs": -13.9,
+      "pico_real_dbfs": -1.6,
+      "prosodia": {
+        "f0_mediana_hz": 143.5,
+        "tono_desv_st": 6.33,
+        "tono_rango_st": 15.2,
+        "pausas_pct": 25.2,
+        "duracion_s": 34.44,
+        "palabras_por_s": 3.02
+      },
+      "transcripcion_mezcla": "Un barco a la deriva, con comida para seis meses, y sin nadie, tal día como hoy, en 1872, sale de Nueva York el Mery Celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las atores y Portugal. Suben, y está todo, la comida, el agua, sus cosas... Sólo falta una cosa, el bote salvavidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre, y luego nada. De los diez, nunca más es supo. Mándaselo a quien le flippen los misterios.",
+      "wer_mezcla": 0.096,
+      "transcripcion_voz_sola": "Un barco a la deriva, con comida para seis meses, y sin nadie, tal día como hoy, en 1872, sale de Nueva York el Meri Celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las atores y Portugal. Suben, y está todo. La comida, el agua, sus cosas... Sólo falta una cosa. El bote salva vidas, y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre, y luego nada. De los diez, nunca más se supo. Mándaselo a quien le flippen los misterios.",
+      "wer_voz_sola": 0.106,
+      "utmos_medio": 3.12,
+      "utmos_frases": [
+        3.42,
+        3.63,
+        2.97,
+        2.61,
+        3.96,
+        3.14,
+        2.45,
+        2.82
+      ]
+    },
+    "chatterbox_es_ref": {
+      "flujo": "voz_primero",
+      "ajustes": {
+        "motor": "chatterbox",
+        "chatterbox": {
+          "modelo": "es-es",
+          "idioma": "es",
+          "exageracion": 0.6,
+          "cfg": 0.35,
+          "temperatura": 0.75,
+          "referencia": null,
+          "referencia_kokoro": "em_alex",
+          "ganancia": 1.0,
+          "semilla": 7,
+          "theta": "griego_sin_inicial",
+          "max_s": 2400,
+          "_nota": "referencia = VOZ DEL DUEÑO. Desde el 7/11/2026 12:45: nota de voz limpia grabada por él para el canal (voz_dueno/referencia_usuario.wav, 12,6 s, 24 kHz mono, -20 LUFS; versión larga de 28 s al lado). Señal/ruido ~43 dB, contenido hasta 8 kHz (la anterior, sacada de sus reels con Demucs, no pasaba de 4 kHz). Para volver a la anterior: 'referencia': 'voces/referencia_usuario.wav' (release «voces», sigue ahí) o restaurar herramientas/versiones/voz.json_2026-11-07.",
+          "por_estilo": {
+            "gancho": {
+              "exageracion": 0.75,
+              "cfg": 0.45
+            },
+            "giro": {
+              "exageracion": 0.7,
+              "cfg": 0.45
+            },
+            "cierre": {
+              "exageracion": 0.65,
+              "cfg": 0.5
+            }
+          },
+          "_nota_por_estilo": "7/11 13:12: el dueño oye clipeos, acento latino al empezar que luego cambia, silencios y voz plana. Equilibrio: exageración igual o algo menor que antes (0,6 base; 0,65-0,75 en gancho, giro y cierre) para no perder énfasis, pero cfg mucho más alto (0,45-0,5 en vez de 0,3-0,35) para que no se aleje de su voz ni cambie de acento, temperatura 0,65 y recorte de restos al final de frase (recorte.umbral_db -32). Énfasis de las palabras *así*: +4,5 dB con bajada previa de 1,5 dB. Revertir: herramientas/versiones/voz.json_2026-11-07b.",
+          "_nota_theta": "7/11 14:40 (directiva: voz sin seseo): el texto de cada frase se pasa a Chatterbox con la letra griega θ donde España dice θ (z y c ante e/i, salvo la c inicial de palabra: sale como t). Medido en Actions (equipo/pruebas/prueba_seseo.json, mejoras.md): θ reconocida 0 % -> 22-33 % (control Piper de España: 33 %), parecido con el dueño 0,959, WER 6,8 %, variación de tono 7,1 st. Subtítulos y alineación siguen con el texto original. Revertir: \"theta\": \"\" o restaurar herramientas/versiones/voz.json_2026-11-07c.",
+          "_nota_dueno": "10/11/2026: orden del dueño (9/11 23:55) «quita mi voz de todos los vídeos»: sin referencia del dueño. Chatterbox ya no es motor ni respaldo; si alguien lo reactiva, usa solo referencia_kokoro (sintética, Apache 2.0). Para volver a la configuración anterior: herramientas/versiones/voz.json_2026-11-10 (NO recomendable: usa la voz del dueño)."
+        }
+      },
+      "render_total_s": 461.0,
+      "duracion_reel_s": 41.4,
+      "motor_usado": "chatterbox",
+      "sintesis_s": 384.5,
+      "frases": [
+        {
+          "dur_s": 3.88,
+          "hueco_s": 4.18,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 6.02,
+          "hueco_s": 6.35,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 5.44,
+          "hueco_s": 5.75,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 4.18,
+          "hueco_s": 4.98,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 3.2,
+          "hueco_s": 3.52,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 4.16,
+          "hueco_s": 4.48,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 4.88,
+          "hueco_s": 5.18,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 5.44,
+          "hueco_s": 5.75,
+          "atempo": 1.0
+        }
+      ],
+      "voz_total_s": 37.2,
+      "veces_tiempo_real": 0.1,
       "frases_que_no_caben": 0,
       "lufs": -14.1,
-      "pico_real_dbfs": -1.3,
+      "pico_real_dbfs": -1.4,
       "prosodia": {
-        "f0_mediana_hz": 174.7,
-        "tono_desv_st": 2.91,
-        "tono_rango_st": 7.8,
-        "pausas_pct": 18.1,
-        "duracion_s": 33.06,
-        "palabras_por_s": 3.15
+        "f0_mediana_hz": 130.1,
+        "tono_desv_st": 4.68,
+        "tono_rango_st": 10.1,
+        "pausas_pct": 25.8,
+        "duracion_s": 37.2,
+        "palabras_por_s": 2.8
       },
-      "transcripcion_mezcla": "Un barco a la deriva con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el mar y celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las azores y Portugal. Sube y está todo, la comida, el agua, sus cosas. Sólo falta una cosa, el bote salvavidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre y luego nada. De los diez, nunca más se supo, mandáselo a quien le flipen los misterios.",
-      "wer_mezcla": 0.087,
-      "transcripcion_voz_sola": "Un barco a la deriva con comida para seis meses y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el mar y celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las azores y Portugal. Suven y está todo, la comida, el agua, sus cosas. Sólo falta una cosa, el bote salvavidas. Y eran diez, con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre y luego nada. De los diez, nunca más se supo. Mándaselo a quien le flippen los misterios.",
-      "wer_voz_sola": 0.096,
-      "utmos_medio": 3.82,
+      "transcripcion_mezcla": "Un barco a la deriva, con comida para seis meses, y sin nadie. Tal día como hoy, en 1872, sale de Nueva York el Mary Celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las atores y Portugal. Suben, y está todo, la comida, el agua, sus cosas. Sólo falta una cosa, el bote salvavidas. Con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre, y luego nada. De los diez, nunca más se supo. Mándaselo a quien le flippen los misterios.",
+      "wer_mezcla": 0.106,
+      "transcripcion_voz_sola": "un barco a la deriva, con comida para seis meses, y sin nadie, tal día como hoy, en 1872, sale de Nueva York el Mary Celeste. Un mes después, otro barco se lo encuentra a la deriva, entre las atores y Portugal. Suben. Y está todo. La comida, el agua, sus cosas. Sólo falta una cosa. El bote salvavidas. Y eran diez. Con la mujer del capitán y su hija de dos años. La última nota del diario es del 25 de noviembre. Y luego nada. De los diez. Nunca más se supo. Mándaselo a quien le flippen los misterios.",
+      "wer_voz_sola": 0.077,
+      "utmos_medio": 3.72,
       "utmos_frases": [
-        3.86,
-        3.24,
-        3.73,
-        3.86,
-        4.04,
-        3.84,
-        3.79,
-        4.24
+        3.42,
+        3.41,
+        3.12,
+        4.29,
+        3.57,
+        3.96,
+        3.81,
+        4.2
       ]
     }
   },
   "registro": [
-    "2026-11-10 11:26  Voz: silencios recortados por frase (s): [0.34, 0.35, 0.31, 0.36, 0.32, 0.3, 0.32, 0.26]",
-    "2026-11-10 11:27  Voz: alineación palabra a palabra (small, 15.9 s): 8/8 frases",
-    "2026-11-10 11:28  Mezcla: voz -12.2 LUFS, música -25.5 LUFS (con ducking -29.0), la música baja 6.0 dB (p90) bajo la voz, ratio 1.75; máster -12.44 -> -13.9 LUFS, pico -2.4 dBFS; huecos de voz: []",
-    "2026-11-10 11:29  Voz con Pocket TTS (spanish/lola): 8 frases en 22 s",
-    "2026-11-10 11:29  Voz: silencios recortados por frase (s): [0.38, 0.08, 0.88, 0.28, 0.26, 0.2, 0.44, 0.44]",
-    "2026-11-10 11:29  Voz: alineación palabra a palabra (small, 16.3 s): 8/8 frases",
-    "2026-11-10 11:30  Mezcla: voz -14.9 LUFS, música -25.4 LUFS (con ducking -27.7), la música baja 6.0 dB (p90) bajo la voz, ratio 1.987; máster -15.6 -> -14.1 LUFS, pico -1.3 dBFS; huecos de voz: [[21.3, 23.25]]",
-    "2026-11-10 11:31  Voz con Kokoro (em_alex): 8 frases en 22 s",
-    "2026-11-10 11:31  Voz: silencios recortados por frase (s): [0.2, 0.21, 0.18, 0.14, 0.14, 0.14, 0.15, 0.15]",
-    "2026-11-10 11:31  Voz: alineación palabra a palabra (small, 16.3 s): 8/8 frases",
-    "2026-11-10 11:32  Mezcla: voz -15.7 LUFS, música -25.6 LUFS (con ducking -28.4), la música baja 5.63 dB (p90) bajo la voz, ratio 2.0; máster -15.98 -> -14.1 LUFS, pico -1.3 dBFS; huecos de voz: []",
-    "2026-11-10 11:33  Voz con Kokoro (ef_dora): 8 frases en 20 s",
-    "2026-11-10 11:33  Voz: silencios recortados por frase (s): [0.18, 0.18, 0.16, 0.14, 0.14, 0.14, 0.18, 0.14]",
-    "2026-11-10 11:33  Voz: alineación palabra a palabra (small, 16.1 s): 8/8 frases",
-    "2026-11-10 11:34  Mezcla: voz -15.9 LUFS, música -25.5 LUFS (con ducking -28.4), la música baja 5.63 dB (p90) bajo la voz, ratio 2.0; máster -16.1 -> -14.1 LUFS, pico -1.3 dBFS; huecos de voz: []"
+    "2026-11-10 18:33  Voz con Kokoro (em_alex): 8 frases en 18 s",
+    "2026-11-10 18:33  Voz: silencios recortados por frase (s): [0.2, 0.21, 0.2, 0.14, 0.14, 0.14, 0.15, 0.15]",
+    "2026-11-10 18:33  Voz: alineación palabra a palabra (small, 15.6 s): 8/8 frases",
+    "2026-11-10 18:34  Mezcla: voz -15.8 LUFS, música -25.5 LUFS (con ducking -28.4), la música baja 5.68 dB (p90) bajo la voz, ratio 2.0; máster -15.98 -> -14.1 LUFS, pico -1.3 dBFS; huecos de voz: []",
+    "2026-11-10 18:40  Voz con Chatterbox (es-es, referencia=integrada, exageración 0.6, cfg 0.35): 8 frases en 331 s",
+    "2026-11-10 18:40  Voz: silencios recortados por frase (s): [0.92, 0, 0, 0, 0.38, 0.02, 0, 0]",
+    "2026-11-10 18:41  Voz: alineación palabra a palabra (small, 30.2 s): 8/8 frases",
+    "2026-11-10 18:42  Mezcla: voz -12.7 LUFS, música -25.5 LUFS (con ducking -28.5), la música baja 6.0 dB (p90) bajo la voz, ratio 1.813; máster -13.08 -> -13.9 LUFS, pico -1.6 dBFS; huecos de voz: []",
+    "2026-11-10 18:49  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.35): 8 frases en 374 s",
+    "2026-11-10 18:49  Voz: silencios recortados por frase (s): [0.6, 0.7, 0.76, 0.42, 0.44, 0.24, 0.44, 0.96]",
+    "2026-11-10 18:49  Voz: alineación palabra a palabra (small, 16.7 s): 8/8 frases",
+    "2026-11-10 18:50  Mezcla: voz -16.1 LUFS, música -25.5 LUFS (con ducking -28.0), la música baja 5.55 dB (p90) bajo la voz, ratio 2.0; máster -16.44 -> -14.1 LUFS, pico -1.4 dBFS; huecos de voz: []"
   ]
 }
