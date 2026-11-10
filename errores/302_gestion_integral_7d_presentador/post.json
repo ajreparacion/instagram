@@ -28,6 +28,6 @@
   ],
   "origen": "herramientas/presentador",
   "nota_mejora": "10/11/2026: reel con la voz del dueño, prohibida por la directiva (9/11 23:55); se rehace con voz genérica de España o sin voz.",
-  "_intentos_render": 2,
+  "_intentos_render": 3,
   "_error_render": "El generador falló: modo desconocido en guion.json: 'presentador' (este generador conoce: humano, dibujo, app)\n"
 }

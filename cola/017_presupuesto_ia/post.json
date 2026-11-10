@@ -22,6 +22,8 @@
   "publico": "Autónomos y servicios técnicos",
   "formato": "Una idea, una app",
   "_nota_calidad": "8/11 Calidad: gancho cambiado a pregunta (A2), huecos de voz rellenados (A1), cierre y texto al de Neogest Lab (directiva §2 y §5).",
-  "renderizado": false,
-  "nota_mejora": "10/11/2026: reel con la voz del dueño, prohibida por la directiva (9/11 23:55); se rehace con voz genérica de España o sin voz."
+  "renderizado": "2026-11-10T11:04:46+00:00",
+  "nota_mejora": "10/11/2026: reel con la voz del dueño, prohibida por la directiva (9/11 23:55); se rehace con voz genérica de España o sin voz.",
+  "motor_voz": "piper",
+  "asset": "017_presupuesto_ia.mp4"
 }
