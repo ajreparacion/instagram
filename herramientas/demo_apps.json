@@ -670,7 +670,8 @@
     "estilo": "dembow",
     "tono": -4,
     "bpm": 98
-   }
+   },
+   "cierre_sub": "Gestión Integral 7D es nuestra app. Pide tu prueba gratuita: enlace en el perfil."
   },
   {
    "carpeta": "102_formula_prompt",
@@ -689,7 +690,8 @@
     "estilo": "trap",
     "tono": 1,
     "bpm": 142
-   }
+   },
+   "cierre_sub": "Gestión Integral 7D es nuestra app. Pide tu prueba gratuita: enlace en el perfil."
   },
   {
    "carpeta": "104_ia_negocio",
@@ -708,7 +710,8 @@
     "tono": -2,
     "bpm": 106,
     "prog": 1
-   }
+   },
+   "cierre_sub": "Gestión Integral 7D es nuestra app. Pide tu prueba gratuita: enlace en el perfil."
   }
  ]
 }
