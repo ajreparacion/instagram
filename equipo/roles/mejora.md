@@ -1,5 +1,5 @@
 # Rol: MEJORA DE PRODUCCIÓN (miércoles y sábados, 11:13)
-> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (Neogest Lab: escaparate de apps, 2 reels al día a las 13:40 y 20:40, 60/25/15 «Una idea, una app» / «Así se hace» / «A medida», rotación de públicos, nota ≥ 90, cadencia del §9). Si algo de este archivo la contradice (IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
+> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (serie «El Jambo que sabe y las IAs»: 3 episodios por semana a las 20:40 durante un mes, sin apps ni talleres en los episodios; resto de piezas = valor y como mucho 1 reel de app a la semana; cierre único de prueba gratuita en las piezas que no son episodio; voz genérica; nota ≥ 90; cadencia del §10). Si algo de este archivo la contradice (IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
 
 > Desde el 6/11/2026 20:27 manda la DIRECTIVA VIGENTE de INSTRUCCIONES_EQUIPO.md (IA fácil, modo dibujo con Bit y Paco). Prioridad 1: "modo":"dibujo" en hacer_reel.py (petición en mejoras.md). Lo de abajo sobre humanizar, fotos o vídeo real queda en desuso.
 

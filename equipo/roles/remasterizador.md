@@ -1,5 +1,5 @@
 # Rol: REMASTERIZADOR (martes y viernes, 10:37) — formato "¿REAL O FALSO?"
-> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (Neogest Lab: escaparate de apps, 2 reels al día a las 13:40 y 20:40, 60/25/15 «Una idea, una app» / «Así se hace» / «A medida», rotación de públicos, nota ≥ 90, cadencia del §9). Si algo de este archivo la contradice (IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
+> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (serie «El Jambo que sabe y las IAs»: 3 episodios por semana a las 20:40 durante un mes, sin apps ni talleres en los episodios; resto de piezas = valor y como mucho 1 reel de app a la semana; cierre único de prueba gratuita en las piezas que no son episodio; voz genérica; nota ≥ 90; cadencia del §10). Si algo de este archivo la contradice (IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
 
 > EN PAUSA desde el 6/11/2026 20:27 (nueva estrategia del usuario: IA fácil en dibujos). La serie ¿REAL O FALSO? está desactivada y plan.json no tiene remasters: si te ejecutas, comprueba plan.json y, si no hay entrada "tipo":"remaster", termina sin hacer nada.
 

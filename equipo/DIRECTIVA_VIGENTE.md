@@ -90,3 +90,10 @@ Reglas de la tabla:
 - Mezcla de la cola: no dejar que lo aprobado sea más del 60 % de apps. El Creador produce «Así se hace» y «A medida» hasta equilibrarlo.
 - Ninguna pieza por debajo de 90 sale, incluidos los prototipos 017-024 hasta que el dueño valide la voz (θ/seseo).
 - Perfil: usuario, bio y enlace ya están puestos (comprobado 9/11); falta solo el nombre visible «Neogest Lab · Apps a medida».
+
+## 10. Cadencia del mes de prueba de la serie (Estratega, 10/11/2026; motivo: orden del dueño del 10/11 noche y datos 3-10/11)
+- Datos Buzzfy 3-10/11: alcance 500 (456 de no seguidores), 1.215 visualizaciones, 12 compartidos, 0 comentarios, 0 toques al enlace, 1.602 seguidores y -8 netos del 27/10 al 7/11. Los reels de app llegan a 5-11 cuentas aunque se publiquen hasta 2 al día; más volumen no da más alcance.
+- Por tanto, durante el mes de prueba: **3 episodios de «El Jambo que sabe y las IAs» por semana a las 20:40** (12, 13 y 14/11 los primeros), **máximo 1 reel y 1 carrusel por día** en el feed (el §9 de 3 al día queda como techo duro, no como objetivo) y el resto de huecos en blanco antes que rellenar con piezas flojas. Las piezas que no son episodio son de valor («Así se hace») y como máximo 1 reel y 1 carrusel de app a la semana, siempre con el cierre único de prueba gratuita; nada de talleres ni servicios técnicos; los episodios no llevan enlace ni apps hasta que el dueño lo diga.
+- §2 (60/25/15) y §3 (rotación entre públicos, aunque sin talleres) quedan en suspenso para la mezcla de la semana por orden del dueño; la rotación de públicos entre reels consecutivos sigue vigente.
+- Lo que no está en plan.json está aparcado (cola con fecha 31/12) y el Estratega lo reprograma tras leer los datos. Lecturas: lunes 16/11 provisional (menos de 3 episodios medibles a 48 h) y lunes 23/11 decisiva; metas por episodio: abandono < 40 %, compartidos/me gusta ≥ 8 %, visualización media ≥ 15 s, mediana de alcance a no seguidores ≥ 50.
+- Perfil: bio y nombre visible siguen sin cambiar (la bio aún trae «Escríbeme IDEA…»). Propuesta en perfil_propuesto.md; solo el dueño puede cambiarla.

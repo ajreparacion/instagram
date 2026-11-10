@@ -1,78 +1,37 @@
 {
- "semana": "2026-11-09 a 2026-11-16",
- "creado_por": "Estratega, lunes 9/11/2026 10:30. Sustituye al plan del 6/11 (IA fácil con Bit y Paco). Sigue DIRECTIVA_VIGENTE.md: escaparate de Neogest Lab, 2 reels al día (13:40 y 20:40), mezcla 60/25/15 y rotación de públicos.",
- "objetivo": "Que los reels lleguen a no seguidores sin perder el foco comercial. Metas de la semana: (1) mediana de alcance a no seguidores ≥ 50 por reel a las 48 h (hoy: reels de valor ~115 de alcance, reels de apps 5-12), (2) ≥ 3 DMs con intención (APP/IDEA/precio) y ≥ 5 toques al enlace, (3) seguidores netos ≥ 0.",
- "punto_de_partida": "Datos 2-9/11 (Buzzfy, 7 días): alcance cuenta 484 (450 no seguidores; 461 por reels que ya no están en el perfil, ~90 por pieza); carruseles 34; historias 19. 1.603 seguidores (-5 netos del 30/10 al 6/11). Reel de app del 8/11 (Gestión Integral): alcance 5, visualización media 13,6 s. Carruseles de app 10-12 de alcance; los de valor de IA 22-25. Enlace: 2 clics, 0 toques; 0 comentarios.",
+ "semana": "2026-11-11 a 2026-11-17",
+ "creado_por": "Estratega, martes 10/11/2026 (ejecución programada, tarde). Sustituye al plan 9-16/11. Aplica la ORDEN DEL DUEÑO del 10/11 (noche): serie «El Jambo que sabe y las IAs», 3 episodios por semana durante un mes, sin apps de Neogest Lab en los episodios, se acaba el tema taller. Mantiene cierre único y orden de voz.",
+ "objetivo": "Probar la serie sin perder más seguidores. Metas v8 por episodio a 48 h: abandono < 40 %, compartidos/me gusta ≥ 8 %, visualización media ≥ 15 s; y mediana de alcance a no seguidores ≥ 50 por reel. Seguidores netos ≥ 0 en la semana.",
+ "punto_de_partida": "Buzzfy 3-10/11 (7 días): alcance 500 (456 no seguidores, 47 seguidores; 469 vienen de reels, 44 de carruseles, 31 de historias), 1.215 visualizaciones, 94 interacciones (47 likes, 5 guardados, 12 compartidos, 18 reposts, 0 comentarios), 14 visitas al perfil, 3 clics en el sitio web, 0 toques en el enlace. Seguidores 1.602 y -8 netos del 27/10 al 7/11 (4 altas, 12 bajas; 8 y 9/11 pendientes). Reels de apps del 8-9/11: alcance 5-11 y 5-13 s de visualización media; carruseles de valor 8-26. 8/11 salieron 11 piezas y el 9-10/11 5 reels: la cadencia alta no ha dado alcance.",
+ "decision_cadencia": "Se baja el volumen: 6 reels y 3 carruseles esta semana (antes 16 y 8). Motivo: los datos muestran que más piezas no dan más alcance (5-11 por reel de app) y el dueño avisa de que se pierden seguidores. Los 3 episodios de la serie mandan sobre la mezcla 60/25/15 (§2 queda en suspenso durante el mes de prueba por orden del dueño). Hueco vacío = no se publica nada.",
  "reglas_de_cadencia": {
-  "feed_max_al_dia": "3 (2 reels a las 13:40 y 20:40 + 1 carrusel a las 17:10). Historias aparte (09:30, 15:30, 21:30).",
-  "sin_duplicados": "Prohibido republicar un texto ya publicado (8/11: «presupuestos» y «prompts» salieron ×3 en 3 h y todos rindieron peor). Mejora debe bloquearlo en publicar_gh.py.",
+  "feed_max_al_dia": "2 (1 reel + 1 carrusel); historias aparte. Nunca dos reels el mismo día salvo orden nueva.",
+  "sin_duplicados": "Prohibido republicar un texto ya publicado (publicar_gh.py lo bloquea).",
   "mismo_producto": "Carrusel y reel del mismo producto o tema, con ≥ 24 h entre ambos.",
-  "rotacion": "Nunca dos reels seguidos del mismo público; máx. 1 reel/semana de talleres o servicios técnicos (esta semana: 204 el lunes 16).",
-  "calidad": "Nota ≥ 90 o no sale. Los prototipos 017-024 están a 70-88 por la voz θ sin validar de oído por el dueño: sus huecos no se rellenan con nada por debajo de 90."
+  "rotacion": "Nunca dos reels seguidos del mismo público. Cero reels de talleres o servicios técnicos (orden del dueño 10/11): AJ Sistema taller (204) fuera del plan.",
+  "apps": "Máximo 1 reel de app a la semana durante el mes de prueba (sin cameos en los episodios hasta que el dueño lo diga). Carruseles de app: máx. 1 a la semana.",
+  "cierre": "Reels y carruseles de valor/apps: cierre único «Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso». Episodios Jambo: sin enlace ni prueba gratuita; cierre «Mándaselo a quien carga con todo». Nada de «comenta X y te envío».",
+  "voz": "Voz genérica de España o sin voz; nunca la del dueño.",
+  "calidad": "Nota ≥ 90 (estandar_calidad v8) o no sale. Los prototipos 017-024 siguen fuera hasta que Calidad los apruebe con voz genérica."
  },
  "horas": {
-  "13:40": "reel (franja de valor y reels de prueba para no seguidores cuando toque)",
-  "17:10": "1 carrusel",
-  "20:40": "reel (pico de seguidores conectados: 20:00-22:00)"
+  "13:40": "reel de valor o de app (no los días de episodio)",
+  "17:10": "carrusel (máx. 3 a la semana)",
+  "20:40": "episodio de la serie (pico de seguidores conectados 20:00-22:00)"
  },
  "mezcla_semana": {
-  "Una idea, una app": "9 de 16 reels (56 %)",
-  "Así se hace": "5 (31 %)",
-  "¿Y si tu idea fuera una app?": "2 (13 %)",
-  "nota": "En cola hay pocos reels de valor aprobados (102, 103, 104); el Creador debe producir más «Así se hace» con la cola completa."
+  "El Jambo que sabe y las IAs": "3 de 6 reels (50 %)",
+  "Así se hace (valor)": "2 (33 %)",
+  "Una idea, una app": "1 (17 %)",
+  "A medida": "0 (se retoma cuando vuelvan las apps)",
+  "formulas": "F3 historia con personajes + F7 humor en los 3 episodios; F4 antes/después o tutorial en 103; F1/F2 lista o precio en 104; F7 humor en 205. Hueco: 1 reel de ≤ 20 s para la banda de cuentas pequeñas (los episodios duran 15-25 s) y 1 de cada 3 sin palabra clave (los 3 episodios van sin palabra clave: «envíaselo»)."
  },
  "experimento": {
-  "nombre": "Valor primero vs app directa",
-  "como": "Los reels de «Así se hace»/valor (102, 103, 104, 019, 018) frente a los de «Una idea, una app» (resto). Métrica: mediana de alcance a no seguidores a 48 h por reel, más compartidos + guardados y DMs/toques al enlace. Hipótesis: el valor llega a más gente, la app convierte mejor. Cada reel lleva «serie» en este plan.",
-  "decision": "Lunes 16/11, 10:13: si valor ≥ 2× app en alcance y las apps no ganan en DMs o toques, subir «Así se hace» al 40 % dentro de lo que permite la directiva (la hará el Estratega); si no hay 3+ reels medibles por brazo, se repite."
+  "nombre": "Serie con personajes vs valor y apps",
+  "como": "Brazo A: los 3 episodios de El Jambo. Brazo B: reels sin personajes (103, 104, 205). Métricas a 48 h con ig_post_stats: mediana de alcance a no seguidores, visualización media (s), % de abandono, compartidos + guardados por 100 de alcance, seguidores netos del día siguiente. Hipótesis: la serie con personajes y humor negro compartible llega más que las capturas de app y el valor suelto.",
+  "decision": "Lunes 16/11 (Estratega): lectura PROVISIONAL (solo episodios 1 y 2 tienen 48 h; no se cambia nada con menos de 3 por brazo). Lunes 23/11: decisión con 6 episodios (2 semanas). Si la serie no supera a B en alcance a no seguidores ni en compartidos, se cambia el ángulo de los personajes (no el formato de entrega) antes de agotar el mes."
  },
  "dias": [
-  {
-   "fecha": "2026-11-09",
-   "hora": "13:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "Una idea, una app",
-   "publico": "Mayores y quien los cuida",
-   "app": "MEDICATOR",
-   "cola": "201_medicator_reel",
-   "aprobado_calidad": true,
-   "nota": "Prioridad del dueño 8/11 (pieza 1 de 2 de la semana; el carrusel ya salió el 8/11)."
-  },
-  {
-   "fecha": "2026-11-09",
-   "hora": "20:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "Una idea, una app",
-   "publico": "Música y creadores",
-   "app": "Studio Beats PRO",
-   "cola": "203_studio_beats_pro_reel",
-   "aprobado_calidad": true
-  },
-  {
-   "fecha": "2026-11-10",
-   "hora": "13:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "Así se hace",
-   "publico": "Público general y pequeños negocios",
-   "app": "(valor: fórmula de prompt)",
-   "cola": "102_formula_prompt_reel",
-   "aprobado_calidad": true,
-   "nota": "Franja de valor: prueba para no seguidores."
-  },
-  {
-   "fecha": "2026-11-10",
-   "hora": "20:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "Una idea, una app",
-   "publico": "Cualquier negocio",
-   "app": "AjReparacion Gestión / web",
-   "cola": "206_aj_reparacion_web_reel",
-   "aprobado_calidad": true
-  },
   {
    "fecha": "2026-11-11",
    "hora": "13:40",
@@ -81,165 +40,116 @@
    "serie": "Así se hace",
    "publico": "Hogar y familias",
    "app": "(valor: tareas de casa con IA)",
+   "formula": "F4",
    "cola": "103_tareas_casa_ia_reel",
    "aprobado_calidad": true,
-   "nota": "Prueba para no seguidores."
-  },
-  {
-   "fecha": "2026-11-11",
-   "hora": "20:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "Una idea, una app",
-   "publico": "Mayores y quien los cuida",
-   "app": "MEDICATOR",
-   "cola": "301_medicator_presentador",
-   "aprobado_calidad": true,
-   "nota": "Pieza 2 de 2 de MEDICATOR. Formato presentador (Nea y Bit): aquí se mide si aporta frente a la captura."
+   "nota": "Brazo B. Prueba para no seguidores."
   },
   {
    "fecha": "2026-11-12",
+   "hora": "20:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "El Jambo que sabe y las IAs",
+   "episodio": 1,
+   "publico": "Oficina y pymes",
+   "app": "(ninguna: fase sin apps)",
+   "formula": "F3+F7",
+   "cola": "jambo_01",
+   "aprobado_calidad": false,
+   "titulo": "POV: tu jefe pide «un momentito» a las 18:55",
+   "mensaje_final": "Cada semana se trabajan millones de horas extra sin cobrar (EPA, 1T 2026; el Creador confirma la cifra en ine.es antes de publicar).",
+   "nota": "Episodio de la serie (orden del dueño 10/11). Sin enlace ni «prueba gratuita». Si a las 12:00 del día no está aprobado (≥ 90), el Creador pone el reel de valor de reserva; no se publica nada por debajo de 90. Cifra del mensaje con fuente primaria comprobada (B4)."
+  },
+  {
+   "fecha": "2026-11-13",
+   "hora": "20:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "El Jambo que sabe y las IAs",
+   "episodio": 2,
+   "publico": "Autónomos",
+   "app": "(ninguna: fase sin apps)",
+   "formula": "F3+F7",
+   "cola": "jambo_02",
+   "aprobado_calidad": false,
+   "titulo": "El Jambo que sabe hacer una factura",
+   "mensaje_final": "Los autónomos dedican unas 200 horas al año a papeleo, según ATA.",
+   "nota": "Episodio de la serie (orden del dueño 10/11). Sin enlace ni «prueba gratuita». Si a las 12:00 del día no está aprobado (≥ 90), el Creador pone el reel de valor de reserva; no se publica nada por debajo de 90. Cifra del mensaje con fuente primaria comprobada (B4)."
+  },
+  {
+   "fecha": "2026-11-14",
+   "hora": "20:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "El Jambo que sabe y las IAs",
+   "episodio": 3,
+   "publico": "Tiendas y despachos",
+   "app": "(ninguna: fase sin apps)",
+   "formula": "F3+F7",
+   "cola": "jambo_03",
+   "aprobado_calidad": false,
+   "titulo": "La reunión de dos horas que era un correo",
+   "mensaje_final": "El 55 % de las pymes dice que la administración le quita tiempo para lo importante (informe de Qonto).",
+   "nota": "Episodio de la serie (orden del dueño 10/11). Sin enlace ni «prueba gratuita». Si a las 12:00 del día no está aprobado (≥ 90), el Creador pone el reel de valor de reserva; no se publica nada por debajo de 90. Cifra del mensaje con fuente primaria comprobada (B4)."
+  },
+  {
+   "fecha": "2026-11-15",
+   "hora": "13:40",
+   "tipo": "nuevo",
+   "formato": "reel",
+   "serie": "Una idea, una app",
+   "publico": "Ocio, humor y viajes",
+   "app": "Insultator",
+   "formula": "F7",
+   "cola": "205_insultator_reel",
+   "aprobado_calidad": true,
+   "nota": "Brazo B. Único reel de app de la semana. Cierre único de prueba gratuita."
+  },
+  {
+   "fecha": "2026-11-16",
    "hora": "13:40",
    "tipo": "nuevo",
    "formato": "reel",
    "serie": "Así se hace",
    "publico": "Pequeños negocios y autónomos",
    "app": "(valor: IA para el negocio)",
+   "formula": "F1",
    "cola": "104_ia_negocio_reel",
    "aprobado_calidad": true,
-   "nota": "Prueba para no seguidores."
-  },
-  {
-   "fecha": "2026-11-12",
-   "hora": "20:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "Una idea, una app",
-   "publico": "Ocio y humor",
-   "app": "Insultator",
-   "cola": "205_insultator_reel",
-   "aprobado_calidad": true
-  },
-  {
-   "fecha": "2026-11-13",
-   "hora": "13:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "Una idea, una app",
-   "publico": "Tiendas, almacenes y mayoristas",
-   "app": "Gestión Integral 7D",
-   "cola": "107_catalogo_stock_reel",
-   "aprobado_calidad": true
-  },
-  {
-   "fecha": "2026-11-13",
-   "hora": "20:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "Una idea, una app",
-   "publico": "Comerciales y pymes",
-   "app": "Gestión Integral 7D",
-   "cola": "302_gestion_integral_7d_presentador",
-   "aprobado_calidad": true,
-   "nota": "Formato presentador."
-  },
-  {
-   "fecha": "2026-11-14",
-   "hora": "13:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "Así se hace",
-   "publico": "Hogar y familias",
-   "app": "(valor: suscripciones con IA)",
-   "cola": "019_suscripciones_ia",
-   "aprobado_calidad": false,
-   "nota": "PROTOTIPO: sale solo si Calidad lo aprueba (≥ 90); hoy topado a 88 por la voz θ sin validar. Si a las 12:00 no está aprobado, el Creador pone el 106 reel o un valor nuevo aprobado."
-  },
-  {
-   "fecha": "2026-11-14",
-   "hora": "20:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "¿Y si tu idea fuera una app?",
-   "publico": "Aficiones y tiendas pequeñas",
-   "app": "prototipo a medida",
-   "cola": "022_pedidos_tienda",
-   "aprobado_calidad": false,
-   "nota": "PROTOTIPO, mismas condiciones que 019. Se dice que es una demo."
-  },
-  {
-   "fecha": "2026-11-15",
-   "hora": "13:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "Una idea, una app",
-   "publico": "Pymes y autónomos de servicios",
-   "app": "Gestión Integral 7D",
-   "cola": "108_cobrar_facturas_reel",
-   "aprobado_calidad": true
-  },
-  {
-   "fecha": "2026-11-15",
-   "hora": "20:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "¿Y si tu idea fuera una app?",
-   "publico": "Hostelería y comercio",
-   "app": "prototipo a medida",
-   "cola": "021_plato_hosteleria",
-   "aprobado_calidad": false,
-   "nota": "PROTOTIPO, mismas condiciones que 019 (nota 83)."
-  },
-  {
-   "fecha": "2026-11-16",
-   "hora": "13:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "Una idea, una app",
-   "publico": "Autónomos y servicios técnicos",
-   "app": "AJ Sistema DEMO",
-   "cola": "204_aj_sistema_taller_reel",
-   "aprobado_calidad": true,
-   "nota": "ÚNICO reel de talleres/servicios de la semana (regla de §3)."
-  },
-  {
-   "fecha": "2026-11-16",
-   "hora": "20:40",
-   "tipo": "nuevo",
-   "formato": "reel",
-   "serie": "Así se hace",
-   "publico": "Ocio, humor y viajes",
-   "app": "(valor: dividir una cuenta con IA)",
-   "cola": "018_dividir_cuenta_ia",
-   "aprobado_calidad": false,
-   "nota": "PROTOTIPO, mismas condiciones que 019."
+   "nota": "Brazo B. Han pasado ≥ 4 días desde el carrusel 104 (11/11)."
   }
  ],
  "carruseles": {
-  "10/11": "108_cobrar_facturas",
-  "11/11": "204_aj_sistema_taller_carrusel",
-  "12/11": "206_aj_reparacion_web_carrusel",
-  "13/11": "203_studio_beats_pro_carrusel",
-  "14/11": "205_insultator_carrusel",
-  "15/11": "202_gestion_integral_7d_carrusel",
-  "16/11": "104_ia_negocio",
-  "17/11": "107_catalogo_stock",
-  "hecho": "102_formula_prompt hoy 11:10 (valor)"
+  "11/11": "104_ia_negocio (17:10, valor)",
+  "15/11": "108_cobrar_facturas (17:10, único carrusel de app; ≥ 24 h del reel 205 de Insultator, otro tema)",
+  "17/11": "107_catalogo_stock (17:10) solo si hay hueco y Calidad lo aprueba; si no, se salta",
+  "nota": "No se publica ningún otro carrusel ni historia de app esta semana."
  },
+ "fuera_del_plan": [
+  "204_aj_sistema_taller_reel y carrusel (taller)",
+  "206_aj_reparacion_web (el reel salió el 10/11; la serie de talleres/servicios queda cerrada)",
+  "301_medicator_presentador y 302_gestion_integral_7d_presentador (apps; vuelven cuando el dueño lo diga o tras la lectura del 23/11)",
+  "107_catalogo_stock_reel, 108_cobrar_facturas_reel, 106_comerciales_ruta_reel (apps; se reprograman tras el 23/11)",
+  "017-024 (prototipos de voz sin validar)"
+ ],
  "kpi_semana": {
-  "principal": "Mediana de alcance a no seguidores ≥ 50 por reel a 48 h (n ≥ 6).",
-  "segundo": "≥ 3 DMs con intención y ≥ 5 toques al enlace.",
+  "principal": "Por episodio a 48 h: abandono < 40 %, compartidos/me gusta ≥ 8 %, visualización media ≥ 15 s.",
+  "segundo": "Mediana de alcance a no seguidores ≥ 50 por reel (n ≥ 6 al cierre de la semana).",
   "tercero": "Seguidores netos ≥ 0 y 0 duplicados publicados."
  },
  "pendientes_dueño": [
-  "Validar de oído la voz (θ/seseo): desbloquea 8 prototipos (017-024) y las 4 piezas de este plan marcadas PROTOTIPO.",
-  "Analizar su vídeo de referencia (reel DfXjcjiNW8k): no está en la biblioteca de Buzzfy; sin acceso al reel desde aquí. Si puede, que lo suba como vídeo a la release o describa en 3 frases qué le gusta (ritmo, gancho, audio).",
-  "Cambiar el nombre visible del perfil a «Neogest Lab · Apps a medida» (usuario, bio y enlace ya están bien; el nombre aún es «IA Fácil · Trucos que no sabes»)."
+  "Perfil: la bio aún acaba en «Escríbeme IDEA y te digo cómo sería» (cierre prohibido el 10/11) y el nombre visible sigue siendo «IA Fácil · Trucos que no sabes». Propuesta lista en equipo/perfil_propuesto.md (bio de 138 caracteres).",
+  "Cuándo vuelven las apps como cameo de 2 s en los episodios (dices tú; hoy no hay ninguno).",
+  "Analizar su vídeo de referencia (reel DfXjcjiNW8k): sigue sin poder abrirse desde las sesiones; súbelo o descríbelo en 3 frases."
  ],
  "notas_para_el_equipo": [
-  "CREADOR: la cola cubre hasta el 19/11, pero casi todo es app. Prioridad: 3-4 reels «Así se hace» o «A medida» de calidad ≥ 90 (el valor llega a más gente) y 1 «Así se hace» para el sábado 14 si el 019 no se aprueba.",
-  "CALIDAD: 3 de las 4 piezas PROTOTIPO tienen hueco fijo; revísalas 24 h antes y avisa si no llegan a 90.",
-  "ANALISTA: informe por público y por brazo del experimento; usar ig_post_stats (Buzzfy) con los media_id, no solo estadisticas.json.",
-  "MEJORA: bloquear republicar un texto ya publicado; revisar que la cuenta correcta es @neogestlab (config_publico.json aún dice nosabesloquehasvisto)."
- ]
+  "CREADOR: hoy no existe ninguna carpeta cola/jambo_*. Prioridad absoluta: guion.json de los episodios 1-3 (publican 12, 13 y 14/11 a las 20:40) y, con margen, 4-6 para la semana siguiente. Cifra de cada mensaje con fuente primaria comprobada. Las tres carpetas de hoy deben estar para Calidad a las 12:00 del día anterior.",
+  "MEJORA: dibujar a El Jambo (desaliñado y poco limpio, confirmado) y a las IAs, plantilla sketch con contador «Veces que se lo ha pasado a la Jupillo: N» y fotograma final serio; audio con música de la biblioteca de Instagram y voz genérica o sin voz. Reajusta el «cuando» de cola/*/post.json a este plan.",
+  "CALIDAD: v8 (B1-B6). Un episodio por debajo de 90 no sale: se publica la reserva de valor y no un prototipo. Aviso de rechazo si aparecen marcas reales, cifras sin fuente o chistes sobre colectivos.",
+  "ANALISTA: seguimiento a 48 h de cada episodio con ig_post_stats y lectura por brazo (A serie / B resto) para el lunes 16/11 y 23/11.",
+  "MONETIZACIÓN: en la fase sin apps no hay embudo de pruebas gratuitas: mide solo compartidos, seguidores nuevos por episodio y visitas al perfil."
+ ],
+ "reserva_valor": "102_formula_prompt_reel (aprobado; reprogramado a 31/12 como aparcado: el Creador/Estratega lo adelanta a la hora del episodio si un episodio no llega a 90).",
+ "cola_aparcada": "Todo lo que no está en este plan (apps, historias, prototipos 017-024) se ha pasado a 31/12 para que el ciclo no lo publique durante el mes de prueba; el Estratega lo reprograma tras la lectura del 23/11."
 }
