@@ -2395,6 +2395,8 @@ def main():
             print("tiempos de voz no leidos (se usa la estimacion):", str(e)[:120])
     seed = int(g.get("semilla", 1)); title = g.get("titulo", "")
     musica = bool(g.get("musica", True))
+    if g.get("modo") == "sketch":
+        musica = False   # sketch: nunca musica cocida (orden del dueno 10/11: la cancion la pone Instagram al publicar, audio_ig)
     modo = (g.get("modo") or "").strip().lower()
     if modo not in ("", "humano", "dibujo", "app", "sketch"):   # guardia: un modo desconocido nunca se renderiza con otro estilo
         sys.exit("modo desconocido en guion.json: %r (este generador conoce: humano, dibujo, app, sketch)" % modo)

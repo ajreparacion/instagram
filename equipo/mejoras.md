@@ -544,3 +544,7 @@ La cadena actual (equipo/voz.json `cadena_voz`: paso alto 80 Hz, EQ, compresor, 
 
 ## 10/11/2026 (noche) · Orden del dueño: reel 017
 «Este último se puede publicar, ponle música de Instagram»: `cola/017_presupuesto_ia` aprobado (calidad.json, aprobado_por: dueño), con la canción de la biblioteca de Instagram ya en `post.json → audio_ig` (Good Time (Instrumental) · Company Money, volumen 0,35 con voz), voz Chatterbox España y el cierre de la directiva. Sale el 11/11 20:40.
+
+## Cambio 38 · 10/11/2026 (noche) · Sketch sin música cocida; el dueño: «no tiene sentido, ni gracia, la música es malísima, pon la de Instagram»
+La muestra del cambio 37 llevaba la pista generada por código (prueba_voz.yml no pasa por el paso de la canción de Instagram). Ahora `"modo": "sketch"` fuerza `musica = False` en hacer_reel.py: el vídeo lleva solo voz y efectos, y la canción la pone Instagram al publicar (`post.json → audio_ig`, de la biblioteca libre de derechos de Meta). Canciones que ya les tocan (determinista por nombre): 301 «Motive (Instrumental)», 302 «Coming Back (Instrumental)», 303 «Move Ur Body (Instrumental)», 304 «Big Leagues (Instrumental)», a volumen 0,35 con voz. Revertir: `herramientas/versiones/hacer_reel.py_2026-11-10h`.
+**Guion (no es de Mejora):** el dueño dice que el episodio 1 «no tiene sentido ni gracia». Anotado en peticiones_mejora.md para Creador/Estratega/Calidad: 301-304 siguen sin publicar (post.pendiente.json).
