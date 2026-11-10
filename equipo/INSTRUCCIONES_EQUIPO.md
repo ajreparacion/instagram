@@ -1,9 +1,16 @@
 # Instrucciones comunes del equipo de @nosabesloquehasvisto
 
-> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (Neogest Lab: escaparate de apps, 2 reels al día a las 13:40 y 20:40, 60/25/15 «Una idea, una app» / «Así se hace» / «A medida», rotación de públicos, nota ≥ 90, cadencia del §9). Si algo de este archivo la contradice (IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
+> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (serie «El Jambo que sabe y las IAs»: 3 episodios por semana a las 20:40 durante un mes, sin apps ni talleres en los episodios; resto de piezas = valor y como mucho 1 reel de app a la semana; cierre único de prueba gratuita en las piezas que no son episodio; voz genérica; nota ≥ 90; cadencia del §10). Si algo de este archivo la contradice (IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
 
 
 Lee esto entero antes de tu rol (equipo/roles/<tu_rol>.md).
+
+## SERIE VIGENTE (orden del dueño, 10/11/2026 noche): «EL JAMBO QUE SABE Y LAS IAs»
+Manda sobre todo lo de abajo que hable de Bit y Paco, trucos de IA como tema único, apps o talleres. Biblia: equipo/serie_jambo.md; técnica: equipo/tecnicas_virales.md; calidad: equipo/estandar_calidad.md v8.
+- 3 episodios por semana a las 20:40 durante un mes (12, 13 y 14/11 los primeros), 15-25 s, humor negro y satírico con IAs inventadas (La Pelota, El Bola, La Trámites, La Jupillo), cualquier tipo de negocio, historias de carga de trabajo, y un mensaje final serio y guardable con cifra y fuente comprobadas. Sin apps de Neogest Lab, sin enlace y sin «prueba gratuita» en los episodios. Cero talleres o servicios técnicos en ninguna pieza.
+- Voz: genérica de España o sin voz. Prohibida la voz del dueño (orden del 9/11, intacta).
+- Resto del feed: valor («Así se hace») y como mucho 1 reel y 1 carrusel de app a la semana, con el cierre único de prueba gratuita. Máx. 2 piezas al día en el feed durante el mes de prueba (techo duro 3), sin repetir texto. Calendario: equipo/plan.json; reglas: DIRECTIVA §10.
+- **Medición de cada episodio a las 48 h** (Analista, con ig_post_stats de Buzzfy; registro diario en aprendizajes.md): abandono < 40 % (= skip rate de ig_post_stats), compartidos por cada 100 me gusta ≥ 8, visualización media ≥ 15 s; además alcance a no seguidores, guardados por 100 de alcance y seguidores netos del día siguiente. Cada episodio recibe un veredicto por métrica (cumple / no cumple) y se compara con el brazo B (resto de reels). Sin 3 episodios con 48 h no se concluye nada: se anota «provisional».
 
 ## DIRECTIVA VIGENTE (orden del usuario, 6/11/2026 20:27): IA FÁCIL PARA GENTE NORMAL
 Sustituye por completo a «HUMANIZAR AL MÁXIMO» y al enfoque de misterios. Manda sobre cualquier otra regla de este archivo, del estándar de calidad y de los roles.
