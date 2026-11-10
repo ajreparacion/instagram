@@ -2,7 +2,7 @@
  "tipo": "reel",
  "texto": "¿Tu negocio aún no usa IA? Empieza por aquí.\nResponder reseñas negativas con empatía y sin excusas.\nTextos cortos para redes y carteles: la oferta de la semana, el horario de festivos.\nPreguntas frecuentes con respuesta a partir de tus horarios, precios y normas.\nEmails que cuestan, como pedir a un proveedor que mantenga el precio.\nLa regla: nada de contraseñas, datos bancarios ni datos de clientes, y revisa siempre antes de publicar.\nGuárdalo y compártelo con tu equipo 💼\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#pymes #autonomos #inteligenciaartificial #negocios #neogestlab",
  "cuando": "2026-11-12T13:40:00+01:00",
- "renderizado": "2026-11-08T17:26:49+00:00",
+ "renderizado": "2026-11-10T18:57:26+00:00",
  "asset": "104_ia_negocio_reel.mp4",
  "portada_ms": 1500,
  "compartir_en_feed": true,
@@ -24,10 +24,9 @@
  },
  "audio": {
   "lufs_integrados": -14.0,
-  "pico_real_dbtp": -4.5,
+  "pico_real_dbtp": -4.1,
   "lra_lu": 0.3,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
- "origen": "herramientas/demo_app.py",
- "_nota_creador": "10/11 Creador: texto de cierre cambiado al de la directiva (prueba gratuita). El vídeo ya renderizado conserva su cierre antiguo."
+ "origen": "herramientas/demo_app.py"
 }
