@@ -1,7 +1,7 @@
 {
  "tipo": "reel",
  "texto": "Entre empresas, el plazo máximo de pago pactado es de 60 días naturales.\nEl Jambo que sabe y su cliente de los 90 días: la que reclama es la Jupillo.\nHumor negro de ficción. Es información general, no asesoramiento legal.\nMándaselo a quien carga con todo.\nFuente: Ley 3/2004, de 29 de diciembre, artículo 4 (BOE, texto consolidado; plazo de 30 días y ampliable por pacto sin superar los 60 días naturales).\n#humornegro #autonomos #pymes #morosidad #ia\nVoz y personajes generados por IA",
- "cuando": "2026-11-17T13:40:00+01:00",
+ "cuando": "2026-11-17T20:40:00+01:00",
  "compartir_en_feed": true,
  "prueba_no_seguidores": true,
  "formato": "Serie El Jambo",
@@ -23,5 +23,6 @@
  "_nota_creador": "10/11/2026. Sin enlace ni «prueba gratuita» (fase sin apps, directiva). Sin voz del dueño. Se guarda como post.pendiente.json para que el ciclo no intente renderizar con un modo que aún no existe; al estar listo 'sketch' (Mejora) y los 5 personajes, renombrar a post.json, poner 'renderizado': false y pasar por Calidad (nota ≥ 90). Autoevaluación v8 honesta: no se puede superar 83 hasta ver el render.",
  "renderizado": false,
  "motor_voz": "chatterbox",
- "palabras_de_voz": 44
+ "palabras_de_voz": 44,
+ "_nota_estratega": "Plan del Estratega 10/11: esta pieza es el episodio de plan.json «jambo_0N» (20:40). Carpeta real: 304_jambo_ep4_pago_90"
 }
