@@ -1,0 +1,27 @@
+{
+ "tipo": "reel",
+ "texto": "El 55 % de las micro y pequeñas empresas dice que el papeleo le quita tiempo del trabajo importante.\nDos horas de reunión para organizar el papeleo, y la solución era un correo de tres líneas.\nHumor negro de ficción; los personajes son inventados.\nMándaselo a quien carga con todo.\nFuente: «Radiografía económica y bancaria de la micro y pequeña empresa en España 2026», de Qonto con IO Investigación, según Forbes España (22/04/2026). Lo encarga una fintech.\n#humornegro #pymes #reuniones #ia #trabajo\nVoz y personajes generados por IA",
+ "cuando": "2026-11-14T13:40:00+01:00",
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "formato": "Serie El Jambo",
+ "publico": "tienda / despacho",
+ "formula": "humor con personaje (v8 B2)",
+ "_fuentes": [
+  "Informe de Qonto con IO Investigación (abril 2026), según Forbes España"
+ ],
+ "_comprobado": "Forbes España 22/04/2026 leído: «el 55 % de las compañías considera que las tareas administrativas restan tiempo al trabajo estratégico». OJO: el 15 % «más de 10 días al mes» de la biblia es solo de tareas bancarias y el texto da 23 % para las muy digitalizadas: NO se usa. Muestra no publicada en el artículo.",
+ "_autoevaluacion": {
+  "gancho": 26,
+  "espina_originalidad": 17,
+  "retencion": 15,
+  "enviar_guardar": 13,
+  "exactitud": 8,
+  "pie": 4,
+  "total": 83
+ },
+ "_nota_creador": "10/11/2026. Sin enlace ni «prueba gratuita» (fase sin apps, directiva). Sin voz del dueño. Se guarda como post.pendiente.json para que el ciclo no intente renderizar con un modo que aún no existe; al estar listo 'sketch' (Mejora) y los 5 personajes, renombrar a post.json, poner 'renderizado': false y pasar por Calidad (nota ≥ 90). Autoevaluación v8 honesta: no se puede superar 83 hasta ver el render.",
+ "renderizado": false,
+ "motor_voz": "chatterbox",
+ "palabras_de_voz": 49
+}

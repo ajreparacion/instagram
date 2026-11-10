@@ -1,0 +1,63 @@
+{
+ "titulo": "El Jambo que sabe y las IAs · ep. 2",
+ "semilla": 3002,
+ "modo": "sketch",
+ "serie": "El Jambo que sabe y las IAs",
+ "episodio": 2,
+ "negocio": "autónomo",
+ "portada_texto": "El Jambo hace una factura",
+ "musica": true,
+ "_formato": "Modo 'sketch' (NUEVO, pendiente de Mejora). Escena = {estilo gancho|gag|delega|remate|mensaje|cierre, hablante jambo|jupillo|pelota|bola|tramites|null, voz (con *énfasis*), texto (globo o rótulo en pantalla)}. El mensaje y el cierre van serios, sin música de chiste, fotograma guardable con la fuente pequeña.",
+ "contador": {
+  "texto": "Veces que se lo ha pasado a la Jupillo",
+  "valor": 2
+ },
+ "mensaje_final": {
+  "cifra": "200 horas al año por autónomo en trámites (afirmación de ATA, sin metodología publicada)",
+  "fuente": "ATA (comunicado, 18/12/2025), según The Objective"
+ },
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "hablante": "jambo",
+   "voz": "El Jambo que sabe hacer una *factura*.",
+   "texto": "El Jambo que sabe hacer una factura"
+  },
+  {
+   "estilo": "gag",
+   "hablante": "tramites",
+   "voz": "Rellene el impreso veintisiete be.",
+   "texto": "La Trámites · Impreso 27-B"
+  },
+  {
+   "estilo": "delega",
+   "hablante": "jambo",
+   "voz": "Que lo haga la Jupillo.",
+   "texto": "Que lo haga la Jupillo."
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jupillo",
+   "voz": "Hecho. ¿Y tú qué has hecho hoy?",
+   "texto": "La Jupillo"
+  },
+  {
+   "estilo": "remate",
+   "hablante": "jambo",
+   "voz": "Qué bien me ha quedado.",
+   "texto": "Falta el impreso 27-C"
+  },
+  {
+   "estilo": "mensaje",
+   "hablante": null,
+   "voz": "Un autónomo dedica *doscientas horas* al año a trámites, según ATA.",
+   "texto": "200 horas al año en trámites con la administración"
+  },
+  {
+   "estilo": "cierre",
+   "hablante": null,
+   "voz": "Mándaselo a quien carga con todo.",
+   "texto": "Mándaselo a quien carga con todo"
+  }
+ ]
+}

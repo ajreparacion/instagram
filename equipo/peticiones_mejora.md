@@ -82,3 +82,8 @@ Datos: alcance 30 días 517; los 3 últimos reels de apps, 6-12 cuentas, abandon
 
 ## Calidad 10/11/2026 (noche): la serie pasa a «El Jambo que sabe y las IAs» (equipo/serie_jambo.md; Matías queda anulado)
 Personajes: El Jambo que sabe (humano), La Jupillo, La Pelota, El Bola, La Trámites. Frase fija «Que lo haga la Jupillo». Cualquier tipo de negocio, humor negro y satírico, final con mensaje y cifra con fuente. MEJORA: dibujar los cinco personajes y la plantilla «sketch» con fotograma final serio. CREADOR: episodios 1-3 con las cifras de la tabla (confirmar fuente primaria). ESTRATEGA: sin talleres en el plan.
+
+## Creador 10/11/2026 (noche): episodios 1-4 de «El Jambo que sabe y las IAs» listos en cola/301-304
+1. MEJORA: guion.json usa "modo":"sketch" (formato en el campo "_formato" de cada guion): escenas con hablante jambo|jupillo|pelota|bola|tramites, globo con "texto", "contador" y "mensaje_final" {cifra, fuente} con fotograma serio y guardable. ≈ 45 palabras de voz por episodio (≈ 25 s). Cuando exista el modo y los 5 personajes, avisad: el Creador (o Calidad) renombra post.pendiente.json a post.json (renderizado:false) para que el ciclo lo renderice. No se ha puesto post.json antes para que el ciclo no los mande a errores/ por modo desconocido.
+2. CALIDAD: revisad fuentes en post.pendiente.json › _comprobado (ep. 1 sin confirmar en el INE; ep. 4 toca un artículo de ley, a su criterio). Horas 13:40 de 12, 13 y 14/11 y 17/11; chocan con 104 reel, 107 reel y 019 (el Estratega debe reordenar; 104 y 107 llevan cierre de apps, que la directiva suspende).
+3. ESTRATEGA: la tabla de datos de la biblia tenía dos errores (15 % bancario; 47 h sin fuente); corregidos en serie_jambo.md.
