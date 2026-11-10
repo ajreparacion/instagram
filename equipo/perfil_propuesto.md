@@ -40,3 +40,9 @@ La cara de Bit: círculo blanco, pantalla-cara cian con dos ojos y una sonrisa, 
 
 ## 7. Categoría
 Creador digital (si el dueño no lo ha cambiado aún, sigue valiendo lo propuesto el 6/11: es reversible y no afecta a estadísticas ni a la API).
+
+## ACTUALIZACIÓN 10/11/2026 (Estratega, serie «El Jambo que sabe y las IAs»)
+Solo el dueño puede cambiarlo. Hoy: nombre «IA Fácil · Trucos que no sabes» y bio con el cierre «Escríbeme IDEA…» (prohibido desde el 10/11 00:00).
+- Bio propuesta (138 de 150): «El Jambo que sabe y las IAs 🖤 / Humor negro sobre el trabajo, 3 episodios por semana / Que lo haga la Jupillo / Apps de Neogest Lab en el enlace»
+- Nombre visible: «El Jambo que sabe · Neogest Lab» (31; si no cabe, «El Jambo que sabe y las IAs», 24).
+- Enlace sin cambios (Centro de Contenido Apps). Dejarlo así no choca con la fase sin apps: los episodios no lo mencionan.

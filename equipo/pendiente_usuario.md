@@ -34,3 +34,6 @@ Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11
 11. **(10/11/2026, Calidad) Perfil**: nombre visible aún «IA Fácil · Trucos que no sabes» (Buzzfy, 10/11 19:37) y la bio acaba en «Escríbeme IDEA y te digo cómo sería»: la directiva del 10/11 prohíbe ese cierre. Cambia la bio por «Prueba gratuita sin tarjeta ni compromiso 👇» o similar, y el nombre por «Neogest Lab · Apps a medida».
 
 12. **(10/11/2026, Calidad) Matías**: confirmar o cambiar los nombres provisionales de las IAs (Bolo, Clara, Doña Trámite) y la frase fija («Es que yo lo he delegado»). Hasta que respondas, el equipo usa estos.
+
+13. **(10/11/2026, Estratega) Perfil para la serie**: cambia la bio (aún acaba en «Escríbeme IDEA…», cierre prohibido) y el nombre visible; texto listo en equipo/perfil_propuesto.md (ACTUALIZACIÓN 10/11). Sustituye a los puntos 9 y 11. El punto 12 (nombres de Matías) queda anulado: los personajes son los de serie_jambo.md.
+14. **(10/11/2026, Estratega) Apps como cameo**: durante el mes de prueba no hay apps en los episodios. Dime cuándo quieres el cameo de 2 s y el equipo lo añade.

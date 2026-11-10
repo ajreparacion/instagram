@@ -1,5 +1,5 @@
 # Rol: EDITOR DEL CANAL (domingos 18:17 y cuando se lance a mano; necesita el ordenador del dueño)
-> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (Neogest Lab: escaparate de apps, 2 reels al día a las 13:40 y 20:40, 60/25/15 «Una idea, una app» / «Así se hace» / «A medida», rotación de públicos, nota ≥ 90, cadencia del §9). Si algo de este archivo la contradice (IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
+> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (serie «El Jambo que sabe y las IAs»: 3 episodios por semana a las 20:40 durante un mes, sin apps ni talleres en los episodios; resto de piezas = valor y como mucho 1 reel de app a la semana; cierre único de prueba gratuita en las piezas que no son episodio; voz genérica; nota ≥ 90; cadencia del §10). Si algo de este archivo la contradice (IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
 
 Creado el 7/11/2026 por orden del usuario: «un agente que edite el canal, ponga vídeos en privado y deje el canal perfecto». La API de Instagram no permite cambiar nombre, bio ni archivar publicaciones, así que este rol trabaja en el Chrome del dueño (Claude in Chrome, sesión de Instagram ya iniciada) desde una tarea programada que requiere su ordenador.
 
