@@ -79,6 +79,10 @@ def voz():
         print("solo clips:", [c["id"] for c in clips])
     cfg = json.load(open(VOZ_JSON, encoding="utf-8"))
     cb = cfg["chatterbox"]
+    if cfg.get("prohibir_voz_dueno", True):
+        # Orden del dueño (9/11/2026 23:55): su voz no se usa en ningún audio nuevo (tampoco en la demo del Centro).
+        raise SystemExit("Voz del dueño prohibida por la directiva (9/11/2026): no se genera narración con su referencia. "
+                         "Pendiente: narrar la demo con la voz genérica de España (Kokoro) o dejarla sin voz.")
     os.makedirs(TRABAJO, exist_ok=True)
     os.makedirs(SALIDA, exist_ok=True)
     # Referencia propia de la demo (8/11/2026): tramo 41,26-54,13 s (12,9 s, el más limpio y expresivo) de la nota de voz

@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Hacer presupuestos sin liarte con el IVA: esta mini web la ha hecho una IA con un solo mensaje. Escribes concepto, unidades y precio, y suma las líneas, calcula el IVA y te da el total.\nEs una demo con datos de ejemplo, grabada funcionando. Revisa siempre los cálculos y el tipo de IVA con tu gestor antes de usarla con clientes. En Neogest Lab hacemos apps así, a medida.\n¿Tienes una idea para tu negocio? Escríbeme IDEA por privado y te digo cómo sería tu app.\nVoz: generada a partir de la voz del autor.\n\n#autonomos #presupuestos #pymes #apps #neogestlab",
+  "texto": "Hacer presupuestos sin liarte con el IVA: esta mini web la ha hecho una IA con un solo mensaje. Escribes concepto, unidades y precio, y suma las líneas, calcula el IVA y te da el total.\nEs una demo con datos de ejemplo, grabada funcionando. Revisa siempre los cálculos y el tipo de IVA con tu gestor antes de usarla con clientes. En Neogest Lab hacemos apps así, a medida.\n¿Tienes una idea para tu negocio? Escríbeme IDEA por privado y te digo cómo sería tu app.\nVoz generada por IA\n\n#autonomos #presupuestos #pymes #apps #neogestlab",
   "cuando": "2026-11-17T20:40:00+01:00",
   "palabra_clave": "IDEA",
   "respuesta": "Cuéntame tu idea y para quién es, y te digo cómo sería tu app. Para probar esta demo, pídele a una IA: «Hazme una página web en un solo archivo HTML para hacer presupuestos: líneas con concepto, cantidad y precio, un selector de IVA y el total calculado solo.»",
@@ -22,7 +22,6 @@
   "publico": "Autónomos y servicios técnicos",
   "formato": "Una idea, una app",
   "_nota_calidad": "8/11 Calidad: gancho cambiado a pregunta (A2), huecos de voz rellenados (A1), cierre y texto al de Neogest Lab (directiva §2 y §5).",
-  "motor_voz": "chatterbox",
-  "renderizado": "2026-11-08T18:58:37+00:00",
-  "asset": "017_presupuesto_ia.mp4"
+  "renderizado": false,
+  "nota_mejora": "10/11/2026: reel con la voz del dueño, prohibida por la directiva (9/11 23:55); se rehace con voz genérica de España o sin voz."
 }
