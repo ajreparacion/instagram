@@ -13,7 +13,7 @@
   "escena": 1,
   "estilo": "tramo",
   "inicio": 2.233,
-  "duracion": 4.7,
+  "duracion": 3.767,
   "texto": "Le pedí a una IA esta pequeña web. Mira el mensaje.",
   "enfasis": [
    8,
@@ -24,8 +24,8 @@
  {
   "escena": 2,
   "estilo": "tramo",
-  "inicio": 6.933,
-  "duracion": 10.5,
+  "inicio": 6.0,
+  "duracion": 10.467,
   "texto": "Apunto tres: streaming, música y gimnasio, con lo que pago al mes. Fíjate cómo la web suma sola cada precio y me dice lo que gasto al año, sin sacar la calculadora.",
   "enfasis": [
    10,
@@ -37,8 +37,8 @@
  {
   "escena": 3,
   "estilo": "tramo",
-  "inicio": 17.433,
-  "duracion": 3.867,
+  "inicio": 16.467,
+  "duracion": 3.633,
   "texto": "Quito el gimnasio y me dice cuánto ahorro al año.",
   "enfasis": [
    6,
@@ -48,11 +48,12 @@
  {
   "escena": 4,
   "estilo": "cierre",
-  "inicio": 21.3,
-  "duracion": 4.867,
-  "texto": "¿Y si tu idea fuera una app? Escríbeme idea por privado y te cuento cómo sería.",
+  "inicio": 20.1,
+  "duracion": 5.3,
+  "texto": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
   "enfasis": [
-   8
+   2,
+   3
   ]
  }
 ]
