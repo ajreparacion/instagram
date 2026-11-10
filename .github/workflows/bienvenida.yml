@@ -7,6 +7,7 @@ on:
     branches: [main]
     paths:
       - herramientas/bienvenida.py
+      - equipo/config_publico.json
   workflow_dispatch:
 
 permissions:

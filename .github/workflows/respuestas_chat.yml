@@ -11,6 +11,7 @@ on:
     branches: [main]
     paths:
       - herramientas/respuestas_chat.py
+      - equipo/config_publico.json
       - herramientas/diagnostico_vinculacion.py
       - .github/workflows/respuestas_chat.yml
   workflow_dispatch:
