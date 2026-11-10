@@ -942,12 +942,51 @@ def ig_activo():
     """equipo/musica_instagram.json → «activo»: la musica la pone Instagram al publicar (audio_configuration); el video
     lleva solo efectos suaves (whoosh en cada corte y «pop» de entrada)."""
     try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import pistas
+        if pistas.hay_pistas():      # hay pistas reales en musica/: van dentro del video y no se usa la de Instagram
+            return False
         return bool(json.load(open(os.path.join(BASE, "equipo", "musica_instagram.json"), encoding="utf-8")).get("activo"))
     except Exception:
         return False
 
 
+FICHA_ACTUAL = {}
+
+
+def _audio_pistas(cortes, total, mus, entradas, whoosh_inicio):
+    """Pista real de musica/ (pistas.py) + los efectos de siempre; None si no hay pistas."""
+    import pistas
+    ficha = pistas.elegir("%s%s%s" % (mus["estilo"], mus["bpm"], mus["tono"])) if pistas.hay_pistas() else None
+    if not ficha:
+        return None
+    n = int((total + 1.0) * SR)
+    izq, der, info = pistas.segmento(ficha, n, SR, list(cortes), total + 1.0)
+    FICHA_ACTUAL.clear()
+    FICHA_ACTUAL.update(info, atribucion=ficha.get("atribucion", ""), url=ficha.get("url", ""))
+    rng = np.random.default_rng(int(mus["bpm"] * 7 + mus["tono"] * 31))
+    sfx = np.zeros(n)
+    for c in list(cortes[1:]) + ([0.0] if whoosh_inicio else []):
+        m = int(0.5 * SR)
+        env = np.concatenate([np.linspace(0, 1, int(0.32 * SR)) ** 2, np.exp(-np.arange(m - int(0.32 * SR)) / SR / 0.06)])
+        _poner(sfx, _hp(_lp(rng.uniform(-1, 1, m), 4000), 500) * env, max(0.0, c - 0.32), 0.3)
+    for e in entradas:
+        tp = np.arange(int(0.08 * SR)) / SR
+        _poner(sfx, np.sin(2 * np.pi * np.cumsum(1100 - 5000 * tp) / SR) * np.exp(-tp / 0.02), e, 0.2)
+    est = np.stack([izq + sfx * 0.5, der + sfx * 0.5], axis=1)
+    est /= max(1.0, float(np.max(np.abs(est))) / 0.95)
+    est = est[:int(total * SR)]
+    est[-int(0.6 * SR):] *= np.linspace(1, 0, int(0.6 * SR))[:, None] ** 1.5
+    return est * 0.9
+
+
 def audio_pieza(cortes, total, mus, entradas=(), whoosh_inicio=False):
+    try:
+        r = _audio_pistas(cortes, total, mus, entradas, whoosh_inicio)
+        if r is not None:
+            return r
+    except Exception as e:
+        print("pistas no disponibles (%s)" % e)
     if ig_activo():
         rng = np.random.default_rng(int(mus["bpm"] * 7 + mus["tono"] * 31))
         n = int((total + 1.0) * SR)
@@ -1379,6 +1418,12 @@ def escribir_post(carpeta, datos):
     for k in ("_intentos",):
         if k in previo:
             datos[k] = previo[k]
+    if FICHA_ACTUAL and datos.get("tipo") in ("reel", "historia"):   # pista real de musica/: licencia (y atribucion si la exige)
+        datos["musica"] = {k: FICHA_ACTUAL.get(k) for k in ("titulo", "autor", "licencia", "url", "archivo", "bpm")}
+        datos["musica"]["origen"] = "pista sin derechos de la biblioteca musica/ (licencia en musica/pistas.json)"
+        at = FICHA_ACTUAL.get("atribucion")
+        if at and datos.get("texto") is not None and at not in datos["texto"] and datos.get("tipo") == "reel":
+            datos["texto"] = datos["texto"].rstrip() + "\n\n" + at
     if ig_activo() and datos.get("tipo") == "reel":   # musica de la biblioteca de Instagram al publicar
         sys.path.insert(0, BASE)
         import publicar_gh as _P

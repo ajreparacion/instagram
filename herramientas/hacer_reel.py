@@ -1994,9 +1994,21 @@ def _golpe(tipo, rg, v=1.0):
     x = lp_fft(rg.standard_normal(m), 5200, 2) - lp_fft(rg.standard_normal(m), 900, 2)
     return (x * np.exp(-t * 32) * 0.9 + 0.5 * np.sin(2 * np.pi * 210 * t) * np.exp(-t * 38)) * v
 
+INFO_MUSICA = {}
+
+
 def make_music(scenes, n, seed, gs, hook_end):
     rng = random.Random(seed * 7919 + 13)
     total = n / SR
+    try:   # 10/11/2026 (orden del dueno): pistas reales SIN DERECHOS de musica/ (con ficha de licencia en musica/pistas.json)
+        import pistas as _pi
+        ficha = _pi.elegir("reel%s" % seed) if _pi.hay_pistas() else None
+        if ficha:
+            mL, mR, info_p = _pi.segmento(ficha, n, SR, [s.start / FPS for s in scenes[1:]], total)
+            INFO_MUSICA.clear(); INFO_MUSICA.update(info_p, atribucion=ficha.get("atribucion", ""), url=ficha.get("url", ""))
+            return mL, mR, np.ones(n), info_p
+    except Exception as e:
+        print("pistas no disponibles (%s): se sigue con la musica generada" % e)
     bpm = rng.uniform(70, 90); beat = 60.0 / bpm
     if modo_alegre(): bpm = rng.uniform(98, 110); beat = 60.0 / bpm   # dibujo/app: mas vivo
     fase = 0.0; rejilla = None
@@ -2452,6 +2464,9 @@ def main():
         p.stdin.write(render_frame(fi, scenes, noise, date_s, title, rg).tobytes())
     p.stdin.close()
     if p.wait() != 0: sys.exit("ffmpeg fallo")
+    if INFO_MUSICA:
+        with open(os.path.splitext(out)[0] + ".musica.json", "w", encoding="utf-8") as fh:
+            json.dump(INFO_MUSICA, fh, ensure_ascii=False)
     print("OK %s (%d frames, %.1fs, render %.1fs)" % (out, total_f, total_f / FPS, time.time() - t0))
 
 if __name__ == "__main__":

@@ -1034,6 +1034,13 @@ def audio_ig_para(nombre, con_voz, estilo=None):
     c = leer_json(os.path.join(EQUIPO, "musica_instagram.json")) or {}
     if not c.get("activo"):
         return None
+    sys.path.insert(0, HERR_REEL)
+    try:
+        import pistas
+        if pistas.hay_pistas():   # hay pistas reales en musica/: van dentro del video, no se usa la de Instagram
+            return None
+    except Exception:
+        pass
     clave = (c.get("alias") or {}).get(estilo or "", None) or sorted(c["estilos"])[int(hashlib.md5(nombre.encode()).hexdigest(), 16) % len(c["estilos"])]
     ids = c["estilos"][clave]
     aid = ids[int(hashlib.md5((nombre + clave).encode()).hexdigest(), 16) % len(ids)]
@@ -1080,6 +1087,12 @@ def renderizar(cfg, carpeta, post):
             shutil.copy(os.path.join(trabajo, "voz_musica.json"), os.path.join(carpeta, "voz_musica.json"))
         if motor:
             post["motor_voz"] = motor
+        mj = os.path.join(trabajo, "video.musica.json")   # pista real de musica/ usada por hacer_reel.py
+        if os.path.exists(mj):
+            m = leer_json(mj) or {}
+            post["musica"] = {k: m.get(k) for k in ("titulo", "autor", "licencia", "url", "archivo", "bpm")}
+            if m.get("atribucion") and m["atribucion"] not in post.get("texto", ""):
+                post["texto"] = post.get("texto", "").rstrip() + "\n\n" + m["atribucion"]
     else:
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=1200, cwd=HERR_REEL)
         if r.returncode != 0 or not os.path.exists(video):
