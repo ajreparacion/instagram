@@ -20,81 +20,90 @@
  "escenas": [
   {
    "estilo": "gancho",
-   "hablante": "bola",
-   "voz": "Jambo, un *momentito*. Informe de doscientas páginas. Para mañana.",
+   "hablante": "jambo",
+   "voz": "Doscientas páginas para mañana. *Que lo haga la Jupillo*.",
    "texto": "POV: tu jefe pide «un momentito» a las 18:55",
    "dibujo": {
     "personajes": [
-     "jambo",
-     "bola"
+     "jupillo",
+     "jambo"
     ],
     "acciones": {
-     "jambo": "presume",
-     "bola": "habla"
+     "jupillo": "habla",
+     "jambo": "presume"
     }
-   }
-  },
-  {
-   "estilo": "delega",
-   "hablante": "jambo",
-   "voz": "Claro, jefe. *Que lo haga la Jupillo*.",
-   "texto": "Que lo haga la Jupillo.",
-   "dibujo": {
-    "personajes": [
-     "jambo",
-     "jupillo"
-    ],
-    "acciones": {
-     "jambo": "delega",
-     "jupillo": "habla"
-    }
-   }
-  },
-  {
-   "estilo": "gag",
-   "hablante": "pelota",
-   "voz": "¡Yo te ayudo! Doscientas páginas son diez. Seguro.",
-   "texto": "La Pelota",
-   "dibujo": {
-    "personajes": [
-     "pelota",
-     "jupillo"
-    ],
-    "acciones": {
-     "pelota": "habla",
-     "jupillo": "habla"
-    }
-   }
+   },
+   "contar": true
   },
   {
    "estilo": "gag",
    "hablante": "jupillo",
-   "voz": "Eran doscientas. Las hago yo. *Como siempre*.",
+   "voz": "Doscientas páginas. Hechas. Como pediste.",
    "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
-     "jupillo"
+     "jupillo",
+     "jambo"
     ],
     "acciones": {
-     "jupillo": "habla"
+     "jupillo": "habla",
+     "jambo": "presume"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "¿Las once? ¡Te dije un *momentito*!",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "desespera"
     }
    }
   },
   {
    "estilo": "remate",
-   "hablante": "jambo",
-   "voz": "Entregado a las once. Qué bien me ha quedado.",
-   "texto": "23:00 · ENTREGADO POR EL JAMBO",
+   "hablante": "jupillo",
+   "voz": "",
+   "texto": "",
    "dibujo": {
     "personajes": [
-     "jambo",
-     "bola"
+     "jupillo",
+     "jambo"
     ],
     "acciones": {
-     "jambo": "remata",
-     "bola": "habla"
-    }
-   }
+     "jupillo": "habla",
+     "jambo": "desespera"
+    },
+    "efecto": "papeles",
+    "efecto_t": 0.8
+   },
+   "duracion": 2.6
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Entregado. Qué bien me ha quedado.",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "remata"
+    },
+    "efecto": "papeles",
+    "efecto_t": -3
+   },
+   "cartel": "23:00 · ENTREGADO POR EL JAMBO"
   },
   {
    "estilo": "gag",
@@ -140,5 +149,6 @@
    "tramites"
   ]
  },
- "_guion_v2": "10/11/2026 noche: guion reescrito tras la crítica del dueño («sin sentido ni gracia») con patrones de reels virales de sketch de oficina: situación concreta, escalada en tres golpes, interpretación literal / error seguro de sí mismo, remate donde el mérito se lo lleva el Jambo y última frase seca de la IA (la que de verdad hace el trabajo)."
+ "_guion_v2": "10/11/2026 noche: guion reescrito tras la crítica del dueño («sin sentido ni gracia») con patrones de reels virales de sketch de oficina: situación concreta, escalada en tres golpes, interpretación literal / error seguro de sí mismo, remate donde el mérito se lo lleva el Jambo y última frase seca de la IA (la que de verdad hace el trabajo).",
+ "_guion_v3": "10/11/2026 noche: copia de la fórmula del sketch del «robot del diablo» (Buzzfy, 197 mil visitas, 10 s): el humano se queja de una chapuza visible y la máquina responde SIN PALABRAS con una acción desproporcionada (aquí la avalancha de papeles); remate: él sigue presumiendo enterrado; última frase seca."
 }

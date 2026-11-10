@@ -2235,7 +2235,7 @@ def sfx_dibujo(tipo, dur, rg):
             out[i0:i0 + mm] += click * rg.uniform(0.5, 1.0)
             k += rg.uniform(0.07, 0.12)
         return out * 0.22
-    if tipo in ("tick", "sting", "boing"):   # efectos del modo sketch (sketch.py)
+    if tipo in ("tick", "sting", "boing", "thud", "papeles"):   # efectos del modo sketch (sketch.py)
         return _sk().sfx(tipo, dur, rg, lp_fft)
     if tipo == "ding":
         return (np.sin(2 * np.pi * 1318.5 * tt) + 0.35 * np.sin(2 * np.pi * 2637 * tt)) * np.exp(-tt * 6.5) * 0.17
@@ -2431,12 +2431,12 @@ def main():
         k = base
         for i, e in enumerate(esc):
             ini = k
-            if e.get("estilo") == "delega": k += 1
+            if e.get("estilo") == "delega" or e.get("contar"): k += 1
             e["_ctx"] = {"gancho": gancho, "contador": cont if cont.get("texto") else None, "cont_ini": ini, "cont_fin": k,
                          "mensaje": msg, "fuente": str(mf.get("fuente") or "")}
     bounds = [0]
     for i, e in enumerate(esc):
-        d = float(e.get("duracion", 2.2 if MODO["sketch"] else 3.0))
+        d = float(e.get("duracion", 1.8 if MODO["sketch"] else 3.0))
         if MODO["app"] and "duracion" not in e:   # app: sin "duracion", el tramo dura lo que su clip (o 1,8 s el gancho)
             c = e.get("clip") if isinstance(e.get("clip"), dict) else {}
             ini, fin = c.get("inicio", e.get("inicio")), c.get("fin", e.get("fin"))
@@ -2461,7 +2461,7 @@ def main():
             else:
                 d = max(d, need)
         if MODO["sketch"]:   # el mensaje serio se lee entero y el fotograma final se puede guardar
-            d = max(d, {"mensaje": 3.2, "cierre": 2.2, "gancho": 1.8}.get(e.get("estilo"), 2.2))
+            d = max(d, {"mensaje": 3.2, "cierre": 2.2, "gancho": 1.8}.get(e.get("estilo"), 1.8))
         bounds.append(bounds[-1] + int(math.ceil(d * FPS - 1e-6)))
     loc = []
     for i, e in enumerate(esc):
