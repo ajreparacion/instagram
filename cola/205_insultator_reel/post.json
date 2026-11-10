@@ -1,8 +1,8 @@
 {
  "tipo": "reel",
- "texto": "Pulsa. Que hable la máquina 😂\nInsultator: frases con humor que salen en grande y se leen en voz alta, por categorías, con favoritos y un Loop Studio con 10 bases rítmicas.\nEstá en fase de pruebas.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#humor #risas #ocio #apps #neogestlab",
+ "texto": "Pulsa. Que hable la máquina 😂\nInsultator: frases con humor que salen en grande y se leen en voz alta, por categorías, con favoritos y un Loop Studio con 10 bases rítmicas.\nEstá en fase de pruebas. ¿Una app así para tu grupo o tu negocio? Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#humor #risas #ocio #apps #neogestlab",
  "cuando": "2026-11-12T20:40:00+01:00",
- "renderizado": "2026-11-08T17:23:12+00:00",
+ "renderizado": "2026-11-10T10:41:12+00:00",
  "asset": "205_insultator_reel.mp4",
  "portada_ms": 3500,
  "compartir_en_feed": true,
@@ -25,6 +25,5 @@
  "fuentes": [
   "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Insultator»: demo[] (capturas reales de la demo y sus textos), hechos_verificados y prohibido_afirmar (consulta 8/11/2026)."
  ],
- "origen": "herramientas/demo_app.py",
- "_nota_creador": "10/11 Creador: texto de cierre cambiado al de la directiva (prueba gratuita). El vídeo ya renderizado conserva su cierre antiguo."
+ "origen": "herramientas/demo_app.py"
 }
