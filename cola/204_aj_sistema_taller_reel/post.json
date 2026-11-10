@@ -1,8 +1,8 @@
 {
  "tipo": "reel",
- "texto": "Que tus clientes sepan «cómo va lo suyo» sin llamarte 📞\nAJ Sistema, nuestra app: web para tus clientes con solicitudes, consulta de estado y pedidos, y tu panel para gestionarlo todo.\nCapturas de la demo con datos ficticios. Te lo adaptamos a medida a cualquier negocio.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#autonomos #pymes #negocios #atencionalcliente #apps #neogestlab",
+ "texto": "Que tus clientes sepan «cómo va lo suyo» sin llamarte 📞\nAJ Sistema: web para tus clientes con solicitudes, consulta de estado y pedidos, y tu panel para gestionarlo todo.\nCapturas de la demo con datos ficticios. Te lo adaptamos a medida a cualquier negocio.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#autonomos #pymes #negocios #atencionalcliente #apps #neogestlab",
  "cuando": "2026-11-16T13:40:00+01:00",
- "renderizado": "2026-11-10T10:40:42+00:00",
+ "renderizado": "2026-11-10T19:23:24+00:00",
  "asset": "204_aj_sistema_taller_reel.mp4",
  "portada_ms": 2847,
  "compartir_en_feed": true,
@@ -16,8 +16,8 @@
  },
  "audio": {
   "lufs_integrados": -13.9,
-  "pico_real_dbtp": -4.9,
-  "lra_lu": 0.2,
+  "pico_real_dbtp": -4.7,
+  "lra_lu": 1.0,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
  "app": "AJ Sistema",
