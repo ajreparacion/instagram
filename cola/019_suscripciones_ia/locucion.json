@@ -2,8 +2,9 @@
  {
   "escena": 0,
   "estilo": "gancho",
+  "hablante": null,
   "inicio": 0.0,
-  "duracion": 2.9,
+  "duracion": 2.8,
   "texto": "¿Cuánto pagas al año en suscripciones?",
   "enfasis": [
    5
@@ -12,8 +13,9 @@
  {
   "escena": 1,
   "estilo": "tramo",
-  "inicio": 2.9,
-  "duracion": 3.833,
+  "hablante": null,
+  "inicio": 2.8,
+  "duracion": 3.8,
   "texto": "Le pedí a una IA esta pequeña web. Mira el mensaje.",
   "enfasis": [
    8,
@@ -24,8 +26,9 @@
  {
   "escena": 2,
   "estilo": "tramo",
-  "inicio": 6.733,
-  "duracion": 11.867,
+  "hablante": null,
+  "inicio": 6.6,
+  "duracion": 11.933,
   "texto": "Apunto tres: streaming, música y gimnasio, con lo que pago al mes. Fíjate cómo la web suma sola cada precio y me dice lo que gasto al año, sin sacar la calculadora.",
   "enfasis": [
    10,
@@ -37,8 +40,9 @@
  {
   "escena": 3,
   "estilo": "tramo",
-  "inicio": 18.6,
-  "duracion": 3.733,
+  "hablante": null,
+  "inicio": 18.533,
+  "duracion": 3.633,
   "texto": "Quito el gimnasio y me dice cuánto ahorro al año.",
   "enfasis": [
    6,
@@ -48,8 +52,9 @@
  {
   "escena": 4,
   "estilo": "cierre",
-  "inicio": 22.333,
-  "duracion": 5.433,
+  "hablante": null,
+  "inicio": 22.167,
+  "duracion": 5.0,
   "texto": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
   "enfasis": [
    2,
