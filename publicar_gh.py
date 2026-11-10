@@ -1164,8 +1164,16 @@ def url_directa_release(nombre):
 def crear_contenedor_url(cfg, params, video):
     p = {k: v for k, v in params.items() if k != "upload_type"}
     p["video_url"] = url_directa_release(os.path.basename(video))
-    r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **p)
-    esperar_contenedor(cfg, r["id"])
+    try:
+        r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **p)
+        esperar_contenedor(cfg, r["id"])
+    except ErrorAPI as e:
+        if "audio_configuration" not in p:
+            raise
+        log(f"audio de Instagram rechazado en el contenedor por URL ({str(e)[-160:]}); se publica sin él")
+        p.pop("audio_configuration")
+        r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **p)
+        esperar_contenedor(cfg, r["id"])
     return r["id"]
 
 
@@ -1181,15 +1189,31 @@ def publicar_reel(cfg, video, post):
     if prueba:
         estrategia = "MANUAL" if str(prueba).upper() == "MANUAL" else "SS_PERFORMANCE"
         params["trial_params"] = json.dumps({"graduation_strategy": estrategia})
-    try:
-        r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **params)
-    except ErrorAPI as e:
-        if "trial_params" not in params:
-            raise
-        log(f"reel de prueba rechazado por la API ({e}); se publica como reel normal")
-        params.pop("trial_params")
-        prueba = None
-        r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **params)
+    # 10/11/2026: cancion de la biblioteca de Instagram (API de audio; ver equipo/audios_instagram.json). post.json:
+    # "audio_ig": {"audio_id": "...", "audio_volume": 0.8, "video_volume": 1.0}. Si Instagram la rechaza, se publica sin ella
+    # (el reel lleva su musica horneada o solo la voz).
+    ai = post.get("audio_ig")
+    if isinstance(ai, dict) and ai.get("audio_id"):
+        params["audio_configuration"] = json.dumps({
+            "audio_id": str(ai["audio_id"]), "audio_volume": float(ai.get("audio_volume", 0.8)),
+            "video_volume": float(ai.get("video_volume", 1.0))})
+    r = None
+    if "audio_configuration" in params:   # primero con la cancion; si Instagram no la acepta, sin ella
+        try:
+            r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **params)
+        except ErrorAPI as e:
+            log(f"audio de Instagram rechazado por la API ({str(e)[-200:]}); se publica sin él")
+            params.pop("audio_configuration")
+    if r is None:
+        try:
+            r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **params)
+        except ErrorAPI as e:
+            if "trial_params" not in params:
+                raise
+            log(f"reel de prueba rechazado por la API ({e}); se publica como reel normal")
+            params.pop("trial_params")
+            prueba = None
+            r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **params)
     cid = r["id"]
     try:
         subir_y_esperar(cfg, cid, video, r.get("uri"))

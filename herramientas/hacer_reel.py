@@ -2002,6 +2002,15 @@ def make_music(scenes, n, seed, gs, hook_end):
     fase = 0.0; rejilla = None
     if modo_alegre():   # tempo y fase de la rejilla elegidos para que los cortes caigan en un pulso
         beat, fase, rejilla = ajustar_rejilla([s.start / FPS for s in scenes[1:]], beat)
+        try:   # 10/11/2026 (queja «parece de ascensor»): pista con bombo, bajo 808, palmas, hats y melodia que ENGANCHA
+            import musica_viral as _mv   # herramientas/musica_viral.py (numpy, sin licencias); si falla, cae al colchon antiguo
+            estilo_mv = ("dembow", "phonk", "house")[rng.randrange(3)]
+            cortes_mv = [0.0] + [s.start / FPS for s in scenes[1:]]
+            mL, mR, info_mv = _mv.generar(n, SR, beat, fase, cortes_mv, seed, estilo=estilo_mv, total=total)
+            info_mv.update(cortes_al_golpe=rejilla, motor="musica_viral")
+            return mL, mR, np.ones(n), info_mv
+        except Exception as e:
+            print("musica_viral no disponible (%s): se usa la musica antigua" % e)
     cut0 = gs - CORTE_GIRO if (gs and gs >= 3.0) else None
     if gs and gs >= 3.0:  # que el giro caiga en un pulso
         b2 = gs / max(1, round(gs / beat))
