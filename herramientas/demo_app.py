@@ -939,6 +939,42 @@ def _acorde(raiz, grado, modo):
 
 
 def audio_pieza(cortes, total, mus, entradas=(), whoosh_inicio=False):
+    """10/11/2026 (queja «parece de ascensor»): pista de musica_viral.py (bombo + 808 + palmas + hats + melodia pegadiza,
+    cortes al golpe) con los efectos de siempre encima. Si el motor falla, la pista antigua (_audio_pieza_antiguo)."""
+    try:
+        import musica_viral as mv
+        beat = 60.0 / float(mus["bpm"])
+        if cortes and len(cortes) > 1:      # el compas cae en el corte: la duracion de la diapositiva = nº entero de pulsos
+            d = float(cortes[1]) - float(cortes[0])
+            k = max(1, round(d / beat))
+            if 0.8 <= (d / k) / beat <= 1.25:
+                beat = d / k
+        n = int((total + 1.0) * SR)
+        rng = np.random.default_rng(int(mus["bpm"] * 7 + mus["tono"] * 31 + len(mus["estilo"])))
+        izq, der, _info = mv.generar(n, SR, beat, 0.0, list(cortes), int(mus["bpm"] * 7 + mus["tono"] * 31), estilo=mus["estilo"], total=total + 1.0)
+        sfx = np.zeros(n)
+        for c in list(cortes[1:]) + ([0.0] if whoosh_inicio else []):
+            m = int(0.5 * SR)
+            r = rng.uniform(-1, 1, m)
+            env = np.concatenate([np.linspace(0, 1, int(0.32 * SR)) ** 2, np.exp(-np.arange(m - int(0.32 * SR)) / SR / 0.06)])
+            _poner(sfx, _hp(_lp(r, 4000), 500) * env, max(0.0, c - 0.32), 0.35)
+        for e in entradas:
+            tp = np.arange(int(0.08 * SR)) / SR
+            _poner(sfx, np.sin(2 * np.pi * np.cumsum(1100 - 5000 * tp) / SR) * np.exp(-tp / 0.02), e, 0.25)
+        est = np.stack([izq + sfx * 0.6, der + sfx * 0.6], axis=1)
+        est /= max(1.0, float(np.max(np.abs(est))) / 0.95)
+        fin = int(total * SR)
+        est = est[:fin]
+        caida = int(0.6 * SR)
+        est[-caida:] *= np.linspace(1, 0, caida)[:, None] ** 1.5
+        est[:int(0.01 * SR)] *= np.linspace(0, 1, int(0.01 * SR))[:, None]
+        return est * 0.9
+    except Exception as e:
+        print("musica_viral no disponible (%s): pista antigua" % e)
+        return _audio_pieza_antiguo(cortes, total, mus, entradas, whoosh_inicio)
+
+
+def _audio_pieza_antiguo(cortes, total, mus, entradas=(), whoosh_inicio=False):
     estilo, bpm = mus["estilo"], mus["bpm"]
     rng = np.random.default_rng(int(bpm * 7 + mus["tono"] * 31 + len(estilo)))
     beat = 60.0 / bpm

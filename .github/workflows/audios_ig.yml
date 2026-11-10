@@ -8,6 +8,9 @@ on:
       consultas:
         description: "Consultas separadas por comas (vacío = lista por defecto; una vacía = tendencia)"
         default: ""
+      probar_audio_id:
+        description: "audio_id a probar: crea un contenedor REELS con esa cancion (sin publicar) y muestra la respuesta"
+        default: ""
 
 permissions:
   contents: write
@@ -26,9 +29,16 @@ jobs:
         with:
           python-version: "3.11"
       - name: Consultar la API de audio
+        if: ${{ inputs.probar_audio_id == '' }}
         env:
           PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
         run: python3 herramientas/audios_ig.py "${{ inputs.consultas }}"
+      - name: Probar una cancion (contenedor sin publicar)
+        if: ${{ inputs.probar_audio_id != '' }}
+        env:
+          PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+        run: python3 herramientas/audios_ig.py --probar "${{ inputs.probar_audio_id }}"
       - name: Guardar respuesta
         if: always()
         run: |
