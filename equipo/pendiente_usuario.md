@@ -40,3 +40,5 @@ Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11
 
 13. RESUELTO 11/11 (el dueño confirma que tiene licencia de las muestras de Studio Beats PRO; sigue sin decirse «libres de derechos»). Original: Studio Beats PRO incluye cajas de ritmo con nombres de máquinas ajenas (808, 909, LinnDrum, RX5…) y cientos de muestras nuevas: confirma que tienes licencia para usarlas y promocionarlas; mientras tanto no se anuncia como «libre de derechos».
 14. (11/11 00:30, Calidad) GPS Andaluz sigue con la v1.2 sin publicar; Insultator tiene frases de humor negro duro que no salen en ningún post.
+
+15. **(11/11/2026, Mejora) Cosas que la API de Instagram no deja hacer solas:** fijar el comentario del reel (`comentario_fijado` en post.json: escríbelo tú y fíjalo en la primera hora), elegir el punto de inicio de la canción de Instagram al editar el reel y compartir a Historias con pegatina de pregunta. Si prefieres, dime y se prueba a publicar el comentario como respuesta automática (sin fijarlo).

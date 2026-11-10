@@ -2433,7 +2433,9 @@ def main():
             ini = k
             if e.get("estilo") == "delega" or e.get("contar"): k += 1
             e["_ctx"] = {"gancho": gancho, "contador": cont if cont.get("texto") else None, "cont_ini": ini, "cont_fin": k,
-                         "mensaje": msg, "fuente": str(mf.get("fuente") or "")}
+                         "mensaje": msg, "fuente": str(mf.get("fuente") or ""),
+                         "gancho_corto": str(g.get("gancho_corto") or ""), "fondo": g.get("fondo", "auto"),
+                         "primer_plano": g.get("primer_plano", True) is not False}
     bounds = [0]
     for i, e in enumerate(esc):
         d = float(e.get("duracion", 1.8 if MODO["sketch"] else 3.0))

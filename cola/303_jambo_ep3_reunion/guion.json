@@ -5,6 +5,7 @@
  "serie": "El Jambo que sabe y las IAs",
  "episodio": 3,
  "negocio": "tienda / despacho",
+ "gancho_corto": "UNA REUNIÓN QUE ERA UN CORREO",
  "portada_texto": "POV: una reunión de dos horas que era un correo",
  "musica": true,
  "_formato": "Modo 'sketch' (NUEVO, pendiente de Mejora). Escena = {estilo gancho|gag|delega|remate|mensaje|cierre, hablante jambo|jupillo|pelota|bola|tramites|null, voz (con *énfasis*), texto (globo o rótulo en pantalla)}. El mensaje y el cierre van serios, sin música de chiste, fotograma guardable con la fuente pequeña.",

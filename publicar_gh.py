@@ -1148,6 +1148,9 @@ def renderizar(cfg, carpeta, post):
             post["audio_ig"] = ig
         else:
             post.pop("audio_ig", None)
+        g_sk = leer_json(guion, None)   # sketch: la portada es el fotograma 0 (cara en primer plano + texto gigante; Calidad B7)
+        if isinstance(g_sk, dict) and g_sk.get("modo") == "sketch" and post.get("portada_ms") is None:
+            post["portada_ms"] = 0
         motor = renderizar_guion(guion, video, trabajo)
         if os.path.exists(locucion):
             shutil.copy(locucion, os.path.join(carpeta, "locucion.json"))
