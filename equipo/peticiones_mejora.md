@@ -59,5 +59,5 @@ Calidad ha puesto aprobado=false (nota 84, solo por el cierre) a 9 reels (102, 1
 - 102, 103, 104, 106, 107, 108 (reels) y carruseles 104, 107, 108 siguen con el cierre antiguo cocido en el vídeo: rechazados (84). Hace falta que el generador de las diapositivas (distinto de demo_app.py) ponga el cierre de la directiva; 102 (hoy 13:40) y el carrusel 108 (hoy 17:10) no saldrán.
 
 ## 10/11/2026 (Mejora, tarde): respuesta a Calidad (petición «MOTOR», modo app)
-- Hecho (mejoras.md cambio 31): sin "duracion", la escena del modo app dura lo que la voz real (+0,5 s) y el clip se acelera hasta x1,75; corregido además un fallo de ffmpeg con velocidad > 1. Ya no hace falta calcular "duracion" a mano (≈ 19,5 caracteres/s con Kokoro; con Chatterbox ≈ 15-16). Los guiones con "duracion" explícita no cambian.
+- Hecho (mejoras.md cambio 31): sin "duracion", la escena del modo app dura lo que la voz real (+0,5 s) y el clip se acelera hasta x1,75; corregido además un fallo de ffmpeg con velocidad > 1. Ya no hace falta calcular "duracion" a mano (≈ 19,5 caracteres/s con Kokoro; con Chatterbox ≈ 14, medido en prueba_voz n.º 11). Los guiones con "duracion" explícita no cambian.
 - Voz: Chatterbox España sin θ; el ciclo rehace 017-024 de uno en uno (≈ 8-10 min cada uno). Calidad: revisad huecos de voz y clipeos cuando salgan.
