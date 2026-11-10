@@ -19,6 +19,7 @@ Secretos/variables del repositorio: PAGE_TOKEN (secreto). El resto está en equi
 Solo usa la librería estándar, Pillow/numpy (para los generadores), ffmpeg, gh, Piper y (opcional) pocket-tts.
 """
 import glob
+import hashlib
 import json
 import os
 import shutil
@@ -1027,6 +1028,20 @@ def asegurar_release():
            "--notes", "Vídeos renderizados pendientes de publicar. Se borran solos al publicarse.")
 
 
+def audio_ig_para(nombre, con_voz, estilo=None):
+    """Cancion de la biblioteca de Instagram para una pieza (equipo/musica_instagram.json), elegida por el nombre para
+    que cada reel lleve una distinta y siempre la misma. None si esta apagado."""
+    c = leer_json(os.path.join(EQUIPO, "musica_instagram.json")) or {}
+    if not c.get("activo"):
+        return None
+    clave = (c.get("alias") or {}).get(estilo or "", None) or sorted(c["estilos"])[int(hashlib.md5(nombre.encode()).hexdigest(), 16) % len(c["estilos"])]
+    ids = c["estilos"][clave]
+    aid = ids[int(hashlib.md5((nombre + clave).encode()).hexdigest(), 16) % len(ids)]
+    return {"audio_id": aid, "titulo": (c.get("titulos") or {}).get(aid, ""), "origen": "biblioteca de Instagram (colección libre de derechos)",
+            "audio_volume": c["volumen_cancion_con_voz"] if con_voz else c["volumen_cancion_sin_voz"],
+            "video_volume": 1.0 if con_voz else c["volumen_video_sin_voz"]}
+
+
 def renderizar(cfg, carpeta, post):
     nombre = os.path.basename(carpeta)
     trabajo = os.path.join("/tmp", "render_" + nombre)
@@ -1052,6 +1067,12 @@ def renderizar(cfg, carpeta, post):
     if cmd is None:
         guion = grabar_pantalla_guion(os.path.join(carpeta, "guion.json"), trabajo)
         guion = resolver_videos_guion(cfg, guion, trabajo)
+        ig = audio_ig_para(nombre, True)
+        if ig:   # 10/11/2026: la musica la pone Instagram al publicar; el video lleva solo la voz (y los efectos)
+            guion["musica"] = False
+            post["audio_ig"] = ig
+        else:
+            post.pop("audio_ig", None)
         motor = renderizar_guion(guion, video, trabajo)
         if os.path.exists(locucion):
             shutil.copy(locucion, os.path.join(carpeta, "locucion.json"))

@@ -1,0 +1,26 @@
+{
+  "_nota": "10/11/2026 (orden del dueño: «pon música de librerías sin derechos»): la música NO va cocida en el vídeo; Instagram la pone al publicar (audio_configuration de la API de audio) desde su colección libre de derechos. Solo versiones instrumentales de equipo/audios_instagram.json (búsquedas por estilo; la lista de tendencias es de sellos y no vale para una cuenta de negocio). Apagar: activo=false (vuelve la música generada por código). Las historias no admiten audio por API: van sin música.",
+  "activo": true,
+  "volumen_cancion_con_voz": 0.35,
+  "volumen_cancion_sin_voz": 1.0,
+  "volumen_video_sin_voz": 0.5,
+  "estilos": {
+    "house": ["1852688158814799", "1174983090781223", "1579921342191993", "1127106596130760"],
+    "dembow": ["583674661052146", "921967353426231", "25873624668895779"],
+    "hiphop": ["523966117385305", "1403284444689007", "1579125763264830", "1018682932882496"]
+  },
+  "alias": {"house": "house", "pop": "house", "disco": "house", "dembow": "dembow", "funk": "dembow", "trap": "hiphop", "phonk": "hiphop"},
+  "titulos": {
+    "1852688158814799": "Hypnotized (Instrumental) · Company Money",
+    "1174983090781223": "Float In The Waves (Instrumental) · Company Money",
+    "1579921342191993": "Motive (Instrumental) · Giulio Cercato",
+    "1127106596130760": "Move Ur Body (Instrumental) · half.cool",
+    "583674661052146": "Latina (Instrumental) · Tony Dark Eyes",
+    "921967353426231": "Bajalo (Instrumental) · Company Money",
+    "25873624668895779": "Coming Back (Instrumental) · Flow Loris",
+    "523966117385305": "Big Leagues (Instrumental) · Mike Floss",
+    "1403284444689007": "Good Time (feat. Lowen) (Instrumental) · Company Money",
+    "1579125763264830": "Pressure (Instrumental) · Tony Dark Eyes",
+    "1018682932882496": "Made It Out (Instrumental) · Robin-Huws"
+  }
+}

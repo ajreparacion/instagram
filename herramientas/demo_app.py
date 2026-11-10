@@ -938,7 +938,32 @@ def _acorde(raiz, grado, modo):
     return [r, r + (3 if q == "m" else 4), r + 7]
 
 
+def ig_activo():
+    """equipo/musica_instagram.json → «activo»: la musica la pone Instagram al publicar (audio_configuration); el video
+    lleva solo efectos suaves (whoosh en cada corte y «pop» de entrada)."""
+    try:
+        return bool(json.load(open(os.path.join(BASE, "equipo", "musica_instagram.json"), encoding="utf-8")).get("activo"))
+    except Exception:
+        return False
+
+
 def audio_pieza(cortes, total, mus, entradas=(), whoosh_inicio=False):
+    if ig_activo():
+        rng = np.random.default_rng(int(mus["bpm"] * 7 + mus["tono"] * 31))
+        n = int((total + 1.0) * SR)
+        sfx = np.zeros(n)
+        for c in list(cortes[1:]) + ([0.0] if whoosh_inicio else []):
+            m = int(0.5 * SR)
+            r = rng.uniform(-1, 1, m)
+            env = np.concatenate([np.linspace(0, 1, int(0.32 * SR)) ** 2, np.exp(-np.arange(m - int(0.32 * SR)) / SR / 0.06)])
+            _poner(sfx, _hp(_lp(r, 4000), 500) * env, max(0.0, c - 0.32), 0.5)
+        for e in entradas:
+            tp = np.arange(int(0.08 * SR)) / SR
+            _poner(sfx, np.sin(2 * np.pi * np.cumsum(1100 - 5000 * tp) / SR) * np.exp(-tp / 0.02), e, 0.35)
+        sfx = sfx / (np.max(np.abs(sfx)) + 1e-9) * 0.35
+        est = np.stack([sfx, sfx], axis=1)[:int(total * SR)]
+        est[-int(0.3 * SR):] *= np.linspace(1, 0, int(0.3 * SR))[:, None]
+        return est
     """10/11/2026 (queja «parece de ascensor»): pista de musica_viral.py (bombo + 808 + palmas + hats + melodia pegadiza,
     cortes al golpe) con los efectos de siempre encima. Si el motor falla, la pista antigua (_audio_pieza_antiguo)."""
     try:
@@ -1142,6 +1167,8 @@ def escribir_wav(ruta, est):
 
 def masterizar(wav, trabajo, objetivo=-14.0, pico=-1.0):
     """Máster a -14 LUFS integrados y pico real ≤ -1 dBTP (loudnorm de ffmpeg en dos pasadas, modo lineal)."""
+    if ig_activo():
+        return   # solo efectos: no se sube a -14 LUFS (la musica y el volumen los pone Instagram)
     r = subprocess.run(["ffmpeg", "-hide_banner", "-i", wav, "-af",
                         f"loudnorm=I={objetivo}:TP={pico}:LRA=11:print_format=json", "-f", "null", "-"],
                        capture_output=True, text=True)
@@ -1352,6 +1379,15 @@ def escribir_post(carpeta, datos):
     for k in ("_intentos",):
         if k in previo:
             datos[k] = previo[k]
+    if ig_activo() and datos.get("tipo") == "reel":   # musica de la biblioteca de Instagram al publicar
+        sys.path.insert(0, BASE)
+        import publicar_gh as _P
+        est = (datos.get("musica") or {}).get("estilo") if isinstance(datos.get("musica"), dict) else None
+        ig = _P.audio_ig_para(os.path.basename(carpeta), False, est)
+        if ig:
+            datos["audio_ig"] = ig
+            datos["musica"] = {"origen": ig["origen"], "titulo": ig["titulo"], "audio_id": ig["audio_id"],
+                               "nota": "música puesta por Instagram al publicar (audio_configuration); el vídeo lleva solo efectos"}
     if previo.get("cuando"):   # la hora de publicación que ya esté en la cola manda (Calidad/Estratega la mueven en post.json)
         datos["cuando"] = previo["cuando"]
     with open(ruta + ".tmp", "w", encoding="utf-8") as f:
