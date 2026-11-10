@@ -1049,6 +1049,23 @@ def audio_ig_para(nombre, con_voz, estilo=None):
             "video_volume": 1.0 if con_voz else c["volumen_video_sin_voz"]}
 
 
+def guion_sin_musica(guion, trabajo):
+    """`guion` es la RUTA de un guion.json (no un dict). Escribe una copia con "musica": false en la carpeta de trabajo y
+    devuelve su ruta. El "video" relativo se vuelve absoluto, porque hacer_reel.py lo resuelve respecto a la carpeta del guion.
+    (10/11/2026, 4.ª ejecución: antes se hacía guion["musica"] = False sobre la ruta y los 7 reels fallaban con
+    «'str' object does not support item assignment».) Si no se puede leer el guion, se devuelve tal cual."""
+    g = leer_json(guion, None)
+    if not isinstance(g, dict):
+        return guion
+    v = str(g.get("video") or "").strip()
+    if v and not v.startswith("http") and not os.path.isabs(v):
+        g["video"] = os.path.join(os.path.dirname(os.path.abspath(guion)), v)
+    g["musica"] = False
+    copia = os.path.join(trabajo, "guion_sin_musica.json")
+    escribir_json(copia, g)
+    return copia
+
+
 def renderizar(cfg, carpeta, post):
     nombre = os.path.basename(carpeta)
     trabajo = os.path.join("/tmp", "render_" + nombre)
@@ -1076,7 +1093,7 @@ def renderizar(cfg, carpeta, post):
         guion = resolver_videos_guion(cfg, guion, trabajo)
         ig = audio_ig_para(nombre, True)
         if ig:   # 10/11/2026: la musica la pone Instagram al publicar; el video lleva solo la voz (y los efectos)
-            guion["musica"] = False
+            guion = guion_sin_musica(guion, trabajo)
             post["audio_ig"] = ig
         else:
             post.pop("audio_ig", None)
