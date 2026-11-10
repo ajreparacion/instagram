@@ -1,11 +1,23 @@
 name: Respuestas del chat (ice breakers)
 
-# Cada 30 minutos revisa los chats de Instagram y contesta a quien haya pulsado una de las
-# 4 preguntas de bienvenida. Usa el secreto PAGE_TOKEN; no escribe nada en el repositorio.
+# Contestador gratuito del chat de Instagram (herramientas/respuestas_chat.py): botones de bienvenida
+# y mensajes cortos con palabra clave (precio, a medida, prueba, apps, hola). Lo lanza también el
+# Reloj cada 15 min, porque el cron de GitHub se salta ejecuciones. Al subir cambios del script se
+# ejecuta en MODO PRUEBA (no envía nada) junto con el diagnóstico de vinculación.
 on:
   schedule:
     - cron: "*/30 * * * *"
+  push:
+    branches: [main]
+    paths:
+      - herramientas/respuestas_chat.py
+      - .github/workflows/respuestas_chat.yml
   workflow_dispatch:
+    inputs:
+      prueba:
+        description: "Modo prueba: no enviar nada, solo decir qué contestaría"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -20,7 +32,14 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+      - name: Diagnóstico de vinculación (solo al subir cambios)
+        if: github.event_name == 'push'
+        continue-on-error: true
+        env:
+          PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+        run: python3 herramientas/diagnostico_vinculacion.py
       - name: Revisar chats y responder
         env:
           PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+          DRY_RUN: ${{ (github.event_name == 'push' || inputs.prueba) && '1' || '' }}
         run: python3 herramientas/respuestas_chat.py

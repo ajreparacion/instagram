@@ -1,8 +1,12 @@
 name: Bienvenida del chat (ice breakers)
 
-# Solo a mano. Configura las 4 preguntas frecuentes del chat de Instagram (Graph API, messenger_profile).
+# A mano, o sola al subir cambios de herramientas/bienvenida.py. Configura las 4 preguntas frecuentes del chat de Instagram (Graph API, messenger_profile).
 # Usa el secreto PAGE_TOKEN; no escribe nada en el repositorio.
 on:
+  push:
+    branches: [main]
+    paths:
+      - herramientas/bienvenida.py
   workflow_dispatch:
 
 permissions:

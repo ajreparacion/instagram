@@ -17,10 +17,11 @@ TOKEN = token_de_pagina(TOKEN, VERSION, _CFG.get("page_id"))
 URL = f"https://graph.facebook.com/{VERSION}/me/messenger_profile"
 
 PREGUNTAS = [
-    {"question": "¿Qué vas a enseñarme?", "payload": "BIENVENIDA"},
-    {"question": "Quiero la guía de prompts gratis", "payload": "GUIA"},
-    {"question": "¿Cómo uso Claude o ChatGPT gratis?", "payload": "GRATIS"},
-    {"question": "Quiero proponerte un tema", "payload": "TEMA"},
+    # Neogest Lab (10/11/2026). Las respuestas están en herramientas/respuestas_chat.py (BOTONES).
+    {"question": "¿Qué apps tenéis?", "payload": "APPS"},
+    {"question": "Quiero probar una app gratis", "payload": "PRUEBA"},
+    {"question": "Quiero una app a medida", "payload": "MEDIDA"},
+    {"question": "¿Cuánto cuesta?", "payload": "PRECIO"},
 ]
 
 
