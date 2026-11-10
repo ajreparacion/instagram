@@ -1,0 +1,41 @@
+name: Audios de Instagram (API de audio, solo lectura)
+
+# A mano. Consulta GET /ig_audio (audios que Instagram autoriza a terceros: tendencia y búsquedas por estilo) y guarda
+# la respuesta en equipo/audios_instagram.json. No publica nada.
+on:
+  workflow_dispatch:
+    inputs:
+      consultas:
+        description: "Consultas separadas por comas (vacío = lista por defecto; una vacía = tendencia)"
+        default: ""
+
+permissions:
+  contents: write
+
+concurrency:
+  group: audios-ig
+  cancel-in-progress: false
+
+jobs:
+  audios:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Consultar la API de audio
+        env:
+          PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+        run: python3 herramientas/audios_ig.py "${{ inputs.consultas }}"
+      - name: Guardar respuesta
+        if: always()
+        run: |
+          git config user.name "expedientes-bot"
+          git config user.email "expedientes-bot@users.noreply.github.com"
+          git add equipo/audios_instagram.json
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -q -m "Audios de Instagram (API de audio) $(date -u +%FT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 5; done
+          exit 1
