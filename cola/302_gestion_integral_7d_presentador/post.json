@@ -1,31 +1,33 @@
 {
- "tipo": "reel",
- "texto": "Presupuesto → pedido → albarán → factura, sin pasar por el Excel 🧾\nGestión Integral 7D, nuestra app, convierte el presupuesto en pedido con un clic; al servirlo genera el albarán numerado y descuenta stock, y la factura hereda líneas, IVA y retención. PDF con tus datos fiscales y enlace de pago por tarjeta, transferencia o Bizum (si lo tienes activo).\nComprobado en la demo de la app con datos de ejemplo (8/11/2026). De pago, con precio por usuario.\nComenta APP y te paso la demo.\n\n#autonomos #pymes #facturacion #apps #neogestlab\n\nVoz generada por IA",
- "cuando": "2026-11-13T20:40:00+01:00",
- "palabra_clave": "APP",
- "respuesta": "¡Hola! La demo de Gestión Integral 7D está en el enlace de nuestro perfil: mira en 60 segundos lo que haría por tu negocio 😊",
- "compartir_en_feed": true,
- "portada_ms": 1200,
- "renderizado": false,
- "duracion_s": 33.4,
- "formato": "modo presentador (Nea y Bit en 3D con three.js + Remotion, titulares, subtítulos palabra a palabra, capturas reales de la demo, música y efectos generados por código)",
- "musica": {
-  "estilo": "house",
-  "bpm": 122,
-  "tono": -2,
-  "origen": "generada por código (sin licencias de terceros)"
- },
- "audio": {
-  "lufs_integrados": -14.2,
-  "pico_real_dbtp": -1.3,
-  "lra_lu": 2.2,
-  "medido_con": "ffmpeg ebur128=peak=true"
- },
- "app": "Gestión Integral 7D",
- "publico": "Autónomos y pymes",
- "fuentes": [
-  "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «gestion-integral-7d»: hechos_verificados, prohibido_afirmar y demo[] (consulta 8/11/2026)."
- ],
- "origen": "herramientas/presentador",
- "nota_mejora": "10/11/2026: reel con la voz del dueño, prohibida por la directiva (9/11 23:55); se rehace con voz genérica de España o sin voz."
+  "tipo": "reel",
+  "texto": "Presupuesto → pedido → albarán → factura, sin pasar por el Excel 🧾\nGestión Integral 7D, nuestra app, convierte el presupuesto en pedido con un clic; al servirlo genera el albarán numerado y descuenta stock, y la factura hereda líneas, IVA y retención. PDF con tus datos fiscales y enlace de pago por tarjeta, transferencia o Bizum (si lo tienes activo).\nComprobado en la demo de la app con datos de ejemplo (8/11/2026). De pago, con precio por usuario.\nComenta APP y te paso la demo.\n\n#autonomos #pymes #facturacion #apps #neogestlab\n\nVoz generada por IA",
+  "cuando": "2026-11-13T20:40:00+01:00",
+  "palabra_clave": "APP",
+  "respuesta": "¡Hola! La demo de Gestión Integral 7D está en el enlace de nuestro perfil: mira en 60 segundos lo que haría por tu negocio 😊",
+  "compartir_en_feed": true,
+  "portada_ms": 1200,
+  "renderizado": false,
+  "duracion_s": 33.4,
+  "formato": "modo presentador (Nea y Bit en 3D con three.js + Remotion, titulares, subtítulos palabra a palabra, capturas reales de la demo, música y efectos generados por código)",
+  "musica": {
+    "estilo": "house",
+    "bpm": 122,
+    "tono": -2,
+    "origen": "generada por código (sin licencias de terceros)"
+  },
+  "audio": {
+    "lufs_integrados": -14.2,
+    "pico_real_dbtp": -1.3,
+    "lra_lu": 2.2,
+    "medido_con": "ffmpeg ebur128=peak=true"
+  },
+  "app": "Gestión Integral 7D",
+  "publico": "Autónomos y pymes",
+  "fuentes": [
+    "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «gestion-integral-7d»: hechos_verificados, prohibido_afirmar y demo[] (consulta 8/11/2026)."
+  ],
+  "origen": "herramientas/presentador",
+  "nota_mejora": "10/11/2026: reel con la voz del dueño, prohibida por la directiva (9/11 23:55); se rehace con voz genérica de España o sin voz.",
+  "_intentos_render": 1,
+  "_error_render": "El generador falló: modo desconocido en guion.json: 'presentador' (este generador conoce: humano, dibujo, app)\n"
 }

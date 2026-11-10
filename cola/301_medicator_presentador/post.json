@@ -1,31 +1,33 @@
 {
- "tipo": "reel",
- "texto": "App para que tus padres no se líen con las pastillas 💊\nMEDICATOR, nuestra app, enseña la pastilla que toca ahora con letra grande, en el modo «Muy fácil» lee las pantallas en voz alta, guarda las citas en un calendario y tiene un botón para llamar al familiar con un toque.\nComprobado en la demo de la app con datos de ejemplo (8/11/2026). Acceso por solicitud. Organiza; no sustituye a tu médico.\nComenta APP y te paso la demo.\n\n#mayores #cuidadores #organizacion #apps #neogestlab\n\nVoz generada por IA",
- "cuando": "2026-11-11T20:40:00+01:00",
- "palabra_clave": "APP",
- "respuesta": "¡Hola! La demo de MEDICATOR está en el enlace de nuestro perfil: ahí la ves en 60 segundos y puedes pedir acceso 😊",
- "compartir_en_feed": true,
- "portada_ms": 1200,
- "renderizado": false,
- "duracion_s": 35.5,
- "formato": "modo presentador (Nea y Bit en 3D con three.js + Remotion, titulares, subtítulos palabra a palabra, capturas reales de la demo, música y efectos generados por código)",
- "musica": {
-  "estilo": "pop",
-  "bpm": 116,
-  "tono": 2,
-  "origen": "generada por código (sin licencias de terceros)"
- },
- "audio": {
-  "lufs_integrados": -14.2,
-  "pico_real_dbtp": -1.6,
-  "lra_lu": 1.8,
-  "medido_con": "ffmpeg ebur128=peak=true"
- },
- "app": "MEDICATOR",
- "publico": "Mayores y quien los cuida",
- "fuentes": [
-  "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «medicator»: hechos_verificados, prohibido_afirmar y demo[] (consulta 8/11/2026)."
- ],
- "origen": "herramientas/presentador",
- "nota_mejora": "10/11/2026: reel con la voz del dueño, prohibida por la directiva (9/11 23:55); se rehace con voz genérica de España o sin voz."
+  "tipo": "reel",
+  "texto": "App para que tus padres no se líen con las pastillas 💊\nMEDICATOR, nuestra app, enseña la pastilla que toca ahora con letra grande, en el modo «Muy fácil» lee las pantallas en voz alta, guarda las citas en un calendario y tiene un botón para llamar al familiar con un toque.\nComprobado en la demo de la app con datos de ejemplo (8/11/2026). Acceso por solicitud. Organiza; no sustituye a tu médico.\nComenta APP y te paso la demo.\n\n#mayores #cuidadores #organizacion #apps #neogestlab\n\nVoz generada por IA",
+  "cuando": "2026-11-11T20:40:00+01:00",
+  "palabra_clave": "APP",
+  "respuesta": "¡Hola! La demo de MEDICATOR está en el enlace de nuestro perfil: ahí la ves en 60 segundos y puedes pedir acceso 😊",
+  "compartir_en_feed": true,
+  "portada_ms": 1200,
+  "renderizado": false,
+  "duracion_s": 35.5,
+  "formato": "modo presentador (Nea y Bit en 3D con three.js + Remotion, titulares, subtítulos palabra a palabra, capturas reales de la demo, música y efectos generados por código)",
+  "musica": {
+    "estilo": "pop",
+    "bpm": 116,
+    "tono": 2,
+    "origen": "generada por código (sin licencias de terceros)"
+  },
+  "audio": {
+    "lufs_integrados": -14.2,
+    "pico_real_dbtp": -1.6,
+    "lra_lu": 1.8,
+    "medido_con": "ffmpeg ebur128=peak=true"
+  },
+  "app": "MEDICATOR",
+  "publico": "Mayores y quien los cuida",
+  "fuentes": [
+    "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «medicator»: hechos_verificados, prohibido_afirmar y demo[] (consulta 8/11/2026)."
+  ],
+  "origen": "herramientas/presentador",
+  "nota_mejora": "10/11/2026: reel con la voz del dueño, prohibida por la directiva (9/11 23:55); se rehace con voz genérica de España o sin voz.",
+  "_intentos_render": 1,
+  "_error_render": "El generador falló: modo desconocido en guion.json: 'presentador' (este generador conoce: humano, dibujo, app)\n"
 }
