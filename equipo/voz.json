@@ -1,9 +1,7 @@
 {
   "motor": "chatterbox",
   "respaldo": [
-    "kokoro",
-    "pocket",
-    "piper"
+    "kokoro"
   ],
   "chatterbox": {
     "modelo": "es-es",
@@ -66,7 +64,7 @@
   "umbral_duck": 0.08,
   "ratio_duck": 2,
   "limite": 0.89,
-  "cadena_voz": "highpass=f=80,equalizer=f=300:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=3,acompressor=threshold=0.08:ratio=3:attack=2:release=120:makeup=3.2,deesser=i=0.4,alimiter=limit=0.62:attack=1:release=40:level=false",
+  "cadena_voz": "highpass=f=80,equalizer=f=300:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=3,acompressor=threshold=0.08:ratio=3:attack=5:release=180:makeup=3,deesser=i=0.4",
   "recorte": {
     "activo": true,
     "umbral_db": -32,
@@ -99,5 +97,9 @@
   },
   "duck_max_db": 6.0,
   "hueco_voz_max_s": 1.5,
-  "prohibir_voz_dueno": true
+  "prohibir_voz_dueno": true,
+  "permitir_piper": false,
+  "normalizar_pico_db": -6.0,
+  "fundidos_frase": true,
+  "_nota_cadena_2": "10/11/2026 (pasada urgente): sin alimiter por frase (un solo limitador, el del máster, limite 0,89 + loudnorm TP -1,5). El pico de cada frase se normaliza a -6 dBFS antes de la cadena (normalizar_pico_db), así el compresor trabaja siempre al mismo nivel con makeup 3 (lineal, ≈ +9,5 dB; antes 3,2 + alimiter 0,62 que recortaba picos). Cada frase con fundido de entrada 15 ms y de salida 40 ms (fundidos_frase). Piper desactivado (permitir_piper false): si falla Chatterbox y Kokoro, el render falla y no se publica. Revertir: herramientas/versiones/voz.json_2026-11-10c."
 }
