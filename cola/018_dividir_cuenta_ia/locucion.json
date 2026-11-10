@@ -3,7 +3,7 @@
   "escena": 0,
   "estilo": "gancho",
   "inicio": 0.0,
-  "duracion": 5.1,
+  "duracion": 1.967,
   "texto": "¿Cuánto toca pagar a cada uno?",
   "enfasis": [
    4,
@@ -13,7 +13,7 @@
  {
   "escena": 1,
   "estilo": "tramo",
-  "inicio": 5.1,
+  "inicio": 1.967,
   "duracion": 5.233,
   "texto": "Se lo pedí a una IA con un solo mensaje: total, personas y propina.",
   "enfasis": [
@@ -25,7 +25,7 @@
  {
   "escena": 2,
   "estilo": "tramo",
-  "inicio": 10.333,
+  "inicio": 7.2,
   "duracion": 5.433,
   "texto": "Pongo el total, somos cuatro y dejamos cinco por ciento de propina.",
   "enfasis": [
@@ -37,8 +37,8 @@
  {
   "escena": 3,
   "estilo": "tramo",
-  "inicio": 15.767,
-  "duracion": 4.767,
+  "inicio": 12.633,
+  "duracion": 4.633,
   "texto": "Veintidós con sesenta y ocho cada uno. Si llega otro, se recalcula.",
   "enfasis": [
    10,
@@ -48,8 +48,8 @@
  {
   "escena": 4,
   "estilo": "cierre",
-  "inicio": 20.533,
-  "duracion": 5.167,
+  "inicio": 17.267,
+  "duracion": 4.133,
   "texto": "¿Tienes una idea para tu negocio? Escríbeme idea por privado.",
   "enfasis": [
    7
