@@ -1138,7 +1138,8 @@ def slides_de(carpeta):
             return [Image.open(os.path.join(d, f)).convert("RGB") for f in sorted(os.listdir(d)) if f.endswith(".jpg")]
     # ya publicado (slides/ borradas del árbol): se sacan del historial de git
     ruta = f"cola/{carpeta}/slides"
-    sha = subprocess.run(["git", "log", "-1", "--format=%H", "--", ruta + "/01.jpg"], cwd=BASE, capture_output=True,
+    # --diff-filter=AM: último commit que añadió o cambió la diapositiva (el último a secas es el que la borró y ahí ya no está)
+    sha = subprocess.run(["git", "log", "-1", "--diff-filter=AM", "--format=%H", "--", ruta + "/01.jpg"], cwd=BASE, capture_output=True,
                          text=True).stdout.strip()
     if not sha:
         raise SystemExit(f"{carpeta}: no encuentro sus diapositivas")
