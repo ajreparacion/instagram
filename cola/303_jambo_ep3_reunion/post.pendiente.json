@@ -1,7 +1,7 @@
 {
  "tipo": "reel",
  "texto": "El 55 % de las micro y pequeñas empresas dice que el papeleo le quita tiempo del trabajo importante.\nDos horas de reunión para organizar el papeleo, y la solución era un correo de tres líneas.\nHumor negro de ficción; los personajes son inventados.\nMándaselo a quien carga con todo.\nFuente: «Radiografía económica y bancaria de la micro y pequeña empresa en España 2026», de Qonto con IO Investigación, según Forbes España (22/04/2026). Lo encarga una fintech.\n#humornegro #pymes #reuniones #ia #trabajo\nVoz y personajes generados por IA",
- "cuando": "2026-11-14T13:40:00+01:00",
+ "cuando": "2026-11-14T20:40:00+01:00",
  "compartir_en_feed": true,
  "prueba_no_seguidores": true,
  "formato": "Serie El Jambo",
@@ -23,5 +23,6 @@
  "_nota_creador": "10/11/2026. Sin enlace ni «prueba gratuita» (fase sin apps, directiva). Sin voz del dueño. Se guarda como post.pendiente.json para que el ciclo no intente renderizar con un modo que aún no existe; al estar listo 'sketch' (Mejora) y los 5 personajes, renombrar a post.json, poner 'renderizado': false y pasar por Calidad (nota ≥ 90). Autoevaluación v8 honesta: no se puede superar 83 hasta ver el render.",
  "renderizado": false,
  "motor_voz": "chatterbox",
- "palabras_de_voz": 49
+ "palabras_de_voz": 49,
+ "_nota_estratega": "Plan del Estratega 10/11: esta pieza es el episodio de plan.json «jambo_0N» (20:40). Carpeta real: 303_jambo_ep3_reunion"
 }
