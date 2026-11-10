@@ -1,7 +1,5 @@
 {
-  "_nota": "Archivos que el equipo de Instagram pasa al Centro de Contenido Apps (privados, solo admin). Cambiar este archivo lanza el envío.",
-  "fecha": "2026-11-08T14:40",
-  "archivos": [
-    {"ruta": "voz_dueno/referencia_usuario.wav", "nota": "voz del dueño (referencia aprobada 7/11) para los vídeos de presentación del Centro"}
-  ]
+  "_nota": "Archivos que el equipo de Instagram pasa al Centro de Contenido Apps (privados, solo admin). Cambiar este archivo lanza el envío. Lista vacía: no enviar nada. La voz del dueño está prohibida (orden 9/11).",
+  "fecha": "2026-11-10T23:55",
+  "archivos": []
 }
