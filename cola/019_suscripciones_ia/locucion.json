@@ -3,7 +3,7 @@
   "escena": 0,
   "estilo": "gancho",
   "inicio": 0.0,
-  "duracion": 2.7,
+  "duracion": 2.233,
   "texto": "¿Cuánto pagas al año en suscripciones?",
   "enfasis": [
    5
@@ -12,7 +12,7 @@
  {
   "escena": 1,
   "estilo": "tramo",
-  "inicio": 2.7,
+  "inicio": 2.233,
   "duracion": 4.7,
   "texto": "Le pedí a una IA esta pequeña web. Mira el mensaje.",
   "enfasis": [
@@ -24,8 +24,8 @@
  {
   "escena": 2,
   "estilo": "tramo",
-  "inicio": 7.4,
-  "duracion": 11.3,
+  "inicio": 6.933,
+  "duracion": 10.5,
   "texto": "Apunto tres: streaming, música y gimnasio, con lo que pago al mes. Fíjate cómo la web suma sola cada precio y me dice lo que gasto al año, sin sacar la calculadora.",
   "enfasis": [
    10,
@@ -37,7 +37,7 @@
  {
   "escena": 3,
   "estilo": "tramo",
-  "inicio": 18.7,
+  "inicio": 17.433,
   "duracion": 3.867,
   "texto": "Quito el gimnasio y me dice cuánto ahorro al año.",
   "enfasis": [
@@ -48,8 +48,8 @@
  {
   "escena": 4,
   "estilo": "cierre",
-  "inicio": 22.567,
-  "duracion": 6.7,
+  "inicio": 21.3,
+  "duracion": 4.867,
   "texto": "¿Y si tu idea fuera una app? Escríbeme idea por privado y te cuento cómo sería.",
   "enfasis": [
    8
