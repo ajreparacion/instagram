@@ -1,20 +1,14 @@
 {
- "aprobado": true,
- "nota": 92,
- "aprobado_por": "revisión del agente de demos (8/11)",
- "revision": [
-  "reel de presentación de 29.0 s: capturas reales con Ken Burns, cortes en el golpe, textos animados, whoosh/pop/ding",
-  "datos fieles a demo[] y hechos_verificados; nada de prohibido_afirmar",
-  "se indica demo con datos ficticios y adaptación a medida a cualquier negocio",
-  "música en primer plano todo el tiempo (sin voz): disco a 118 BPM, tono +5, generada por código (sin licencias de terceros)",
-  "máster medido con ffmpeg ebur128: -13.9 LUFS integrados, pico -4.9 dBTP, LRA 0.2 LU (objetivo -14 LUFS)",
-  "1080x1920, 30 fps, H.264 + AAC 192 kbps; fotogramas de control revisados (control/)",
-  "Montserrat, firma «By Neogest Lab» y logo NL original; español de España sin erratas"
+ "aprobado": false,
+ "nota": 84,
+ "fecha": "2026-11-10T10:35Z",
+ "motivos": [
+  "Directiva del 10/11 00:00: fuera el cierre «comenta/escríbeme X» y cierre único «Prueba gratuita · sin tarjeta · sin compromiso». El vídeo renderizado el 8-9/11 aún acaba con la caja «Escríbeme IDEA por privado»."
  ],
- "audio": {
-  "lufs_integrados": -13.9,
-  "pico_real_dbtp": -4.9,
-  "lra_lu": 0.2,
-  "medido_con": "ffmpeg ebur128=peak=true"
+ "como_arreglarlo": "Mejora cambia la caja «Escríbeme IDEA por privado» de herramientas/demo_app.py (slide_cierre y escena de cierre del reel) por «Prueba gratuita · sin tarjeta · sin compromiso» (ver peticiones_mejora.md 10/11); después se pone «renderizado»:false (reels) o se regeneran las diapositivas y Calidad vuelve a revisar. Contenido y datos ya estaban bien: la nota anterior era 92.",
+ "revisado_por": "agente de CALIDAD (10/11, pasada de las 11:30)",
+ "anterior": {
+  "aprobado": true,
+  "nota": 92
  }
 }

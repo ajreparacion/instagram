@@ -1,14 +1,14 @@
 {
- "aprobado": true,
- "nota": 94,
- "aprobado_por": "revisión del agente de demos (8/11)",
- "revision": [
-  "8 diapositivas 1080x1350 revisadas una a una: gancho grande en la 1, un paso por diapositiva con su captura en marco de móvil, cierre suave con IDEA y logo",
-  "texto sin cortes ni solapes, contraste alto sobre fondo morado oscuro",
-  "texto del post: gancho en la 1.ª línea, valor, CTA suave, máx. 2 emojis, 4-6 hashtags con #neogestlab",
-  "datos fieles a demo[] y hechos_verificados del Producto; nada de prohibido_afirmar",
-  "capturas reales de la demo, nítidas (780 px reducidas, sin reescalar hacia arriba) y sin bordes raros",
-  "Montserrat, firma «By Neogest Lab» y logo NL original (recorte circular)",
-  "español de España, sin erratas"
- ]
+ "aprobado": false,
+ "nota": 84,
+ "fecha": "2026-11-10T10:35Z",
+ "motivos": [
+  "Directiva del 10/11 00:00: fuera el cierre «comenta/escríbeme X» y cierre único «Prueba gratuita · sin tarjeta · sin compromiso». La última diapositiva aún dice «Escríbeme IDEA por privado» y el texto del post conserva el cierre antiguo."
+ ],
+ "como_arreglarlo": "Mejora cambia la caja «Escríbeme IDEA por privado» de herramientas/demo_app.py (slide_cierre y escena de cierre del reel) por «Prueba gratuita · sin tarjeta · sin compromiso» (ver peticiones_mejora.md 10/11); después se pone «renderizado»:false (reels) o se regeneran las diapositivas y Calidad vuelve a revisar. Contenido y datos ya estaban bien: la nota anterior era 94.",
+ "revisado_por": "agente de CALIDAD (10/11, pasada de las 11:30)",
+ "anterior": {
+  "aprobado": true,
+  "nota": 94
+ }
 }
