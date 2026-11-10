@@ -44,6 +44,10 @@ VARIANTES = [
     ("chatterbox_es", {"motor": "chatterbox", "respaldo": [], "chatterbox": dict(CB)}),
     ("chatterbox_es_ref", {"motor": "chatterbox", "respaldo": [], "chatterbox": {**CB, "referencia_kokoro": "em_alex"}}),
     ("chatterbox_mtl", {"motor": "chatterbox", "respaldo": [], "chatterbox": {**CB, "modelo": "multilingue"}}),
+    # 10/11/2026: ajustes REALES de equipo/voz.json (cfg, temperatura, θ, por_estilo) con la referencia sintética Kokoro.
+    ("chatterbox_prod", {"motor": "chatterbox", "respaldo": [],
+                         "chatterbox": {**{k: v for k, v in (json.load(open(os.path.join(BASE, "equipo", "voz.json"))).get("chatterbox") or {}).items()},
+                                        "referencia": None, "referencia_kokoro": "em_alex", "max_s": 2400}}),
     # Voz CLONADA del dueño (autorizada por él el 6/11/2026; la saca herramientas/voz_usuario.py de sus reels de
     # Mr. Empírico). Solo funcionan si existe voces/referencia_usuario.wav (workflow voz_usuario.yml).
     ("chatterbox_usuario", {"motor": "chatterbox", "respaldo": [],

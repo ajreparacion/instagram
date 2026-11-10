@@ -174,7 +174,7 @@ def ajustes_voz():
             "ruido": 0.8, "cadena_voz": "",
             "pocket": {"idioma": "spanish", "voz": "lola", "temperatura": None, "ganancia": 1.0, "max_s": 600},
             "chatterbox": {"modelo": "es-es", "idioma": "es", "exageracion": 0.6, "cfg": 0.35, "temperatura": 0.75,
-                           "referencia": "voces/referencia_usuario.wav", "referencia_kokoro": None,
+                           "referencia": None, "referencia_kokoro": "em_alex",
                            "ganancia": 1.0, "semilla": 7, "max_s": 1500},
             "kokoro": {"voz": "em_alex", "velocidad": 0.95, "ganancia": 1.0, "max_s": 300}}
     base.update(leer_json(AJUSTES_VOZ, {}) or {})
