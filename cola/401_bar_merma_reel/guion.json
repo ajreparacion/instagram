@@ -1,0 +1,61 @@
+{
+ "titulo": "Reel 401: cuánto se tira en un bar (cálculo en pantalla)",
+ "semilla": 4101,
+ "modo": "app",
+ "plantilla": true,
+ "volumen_original": 0,
+ "musica": true,
+ "portada_texto": "Un bar tira 540 € al mes",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "texto": "Ejemplo: un bar tira *540 €* al mes",
+   "voz": "Un bar tira *quinientos cuarenta euros* al mes.",
+   "clip": {
+    "inicio": 0,
+    "fin": 2.5
+   }
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 2.5,
+    "fin": 7.5
+   },
+   "texto": "El mensaje que usé",
+   "voz": "Esta página la hizo una IA con *un solo mensaje*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 7.5,
+    "fin": 11.2
+   },
+   "texto": "Cambio un número",
+   "voz": "Con cinco raciones al día, ya son *novecientos euros*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 11.2,
+    "fin": 14.5
+   },
+   "texto": "Otro número más",
+   "voz": "A ocho euros la ración, *catorce mil cuatrocientos* al año."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 14.5,
+    "fin": 19.0
+   },
+   "texto": "Guárdalo y pon tus números",
+   "voz": "Pon tus números y *mándaselo* al que lleva el bar."
+  },
+  {
+   "estilo": "cierre",
+   "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+   "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
+  }
+ ]
+}
