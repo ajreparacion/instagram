@@ -21,6 +21,8 @@
     "post_descubrimiento": 12,
     "total": 80
   },
-  "renderizado": false,
-  "nota_mejora": "10/11/2026: reel con la voz del dueño, prohibida por la directiva (9/11 23:55); se rehace con voz genérica de España o sin voz."
+  "renderizado": "2026-11-10T11:10:51+00:00",
+  "nota_mejora": "10/11/2026: reel con la voz del dueño, prohibida por la directiva (9/11 23:55); se rehace con voz genérica de España o sin voz.",
+  "motor_voz": "piper",
+  "asset": "023_citas_familia.mp4"
 }

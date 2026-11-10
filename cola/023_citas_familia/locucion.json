@@ -3,7 +3,7 @@
   "escena": 0,
   "estilo": "gancho",
   "inicio": 0.0,
-  "duracion": 3.633,
+  "duracion": 2.567,
   "texto": "¿Las citas de los abuelos, en un papel?",
   "enfasis": [
    5,
@@ -14,7 +14,7 @@
  {
   "escena": 1,
   "estilo": "tramo",
-  "inicio": 3.633,
+  "inicio": 2.567,
   "duracion": 5.3,
   "texto": "Le pedí a una IA esta agenda, con un solo mensaje.",
   "enfasis": [
@@ -26,7 +26,7 @@
  {
   "escena": 2,
   "estilo": "tramo",
-  "inicio": 8.933,
+  "inicio": 7.867,
   "duracion": 10.8,
   "texto": "Apunto quién tiene cita y qué día, sin ordenarlas, tal como me vienen.",
   "enfasis": [
@@ -37,7 +37,7 @@
  {
   "escena": 3,
   "estilo": "tramo",
-  "inicio": 19.733,
+  "inicio": 18.667,
   "duracion": 3.2,
   "texto": "Se ordena sola y me marca la de mañana.",
   "enfasis": [
@@ -47,8 +47,8 @@
  {
   "escena": 4,
   "estilo": "cierre",
-  "inicio": 22.933,
-  "duracion": 4.133,
+  "inicio": 21.867,
+  "duracion": 4.5,
   "texto": "¿Tienes una idea para ayudar en casa? Escríbeme idea por privado.",
   "enfasis": [
    8
