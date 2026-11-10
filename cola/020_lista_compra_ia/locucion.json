@@ -2,8 +2,9 @@
  {
   "escena": 0,
   "estilo": "gancho",
+  "hablante": null,
   "inicio": 0.0,
-  "duracion": 2.167,
+  "duracion": 3.433,
   "texto": "¿Tu lista de la compra es un caos?",
   "enfasis": [
    7
@@ -12,8 +13,9 @@
  {
   "escena": 1,
   "estilo": "tramo",
-  "inicio": 2.167,
-  "duracion": 4.8,
+  "hablante": null,
+  "inicio": 3.433,
+  "duracion": 4.633,
   "texto": "Se lo pedí a una IA con un solo mensaje, que es este que ves.",
   "enfasis": [
    7,
@@ -24,8 +26,9 @@
  {
   "escena": 2,
   "estilo": "tramo",
-  "inicio": 6.967,
-  "duracion": 5.867,
+  "hablante": null,
+  "inicio": 8.067,
+  "duracion": 5.933,
   "texto": "Pego la lista tal cual, toda desordenada, y le doy a ordenar por secciones. Así de fácil.",
   "enfasis": [
    11,
@@ -36,8 +39,9 @@
  {
   "escena": 3,
   "estilo": "tramo",
-  "inicio": 12.833,
-  "duracion": 3.8,
+  "hablante": null,
+  "inicio": 14.0,
+  "duracion": 4.3,
   "texto": "Sale agrupada por secciones, y voy tachando lo que meto en el carro.",
   "enfasis": [
    6
@@ -46,7 +50,8 @@
  {
   "escena": 4,
   "estilo": "cierre",
-  "inicio": 16.633,
+  "hablante": null,
+  "inicio": 18.3,
   "duracion": 5.3,
   "texto": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
   "enfasis": [

@@ -20,6 +20,15 @@
   "publico": "Hogar y familias",
   "formato": "Una idea, una app",
   "_nota_calidad": "10/11 Calidad: cierre cambiado al de la directiva (prueba gratuita) en guion y post, quitada la automatización IDEA; renderizado:false para que el ciclo lo rehaga.",
-  "renderizado": false,
-  "nota_mejora": "10/11/2026 (2.ª ejecución): rendido con Piper por error de instalación; se rehace con «Chatterbox España» (es-es sin referencia de persona real). Sin voz del dueño."
+  "renderizado": "2026-11-10T21:20:08+00:00",
+  "nota_mejora": "10/11/2026 (2.ª ejecución): rendido con Piper por error de instalación; se rehace con «Chatterbox España» (es-es sin referencia de persona real). Sin voz del dueño.",
+  "audio_ig": {
+    "audio_id": "1174983090781223",
+    "titulo": "Float In The Waves (Instrumental) · Company Money",
+    "origen": "biblioteca de Instagram (colección libre de derechos)",
+    "audio_volume": 0.35,
+    "video_volume": 1.0
+  },
+  "motor_voz": "chatterbox",
+  "asset": "020_lista_compra_ia.mp4"
 }
