@@ -1211,6 +1211,17 @@ def crear_contenedor_url(cfg, params, video):
     return r["id"]
 
 
+def _nota_cancion(post, params):
+    """Si el reel debia llevar cancion de Instagram y no se aplico, se deja dicho en el resultado: el dueno la añade a mano
+    despues de publicar (editar el reel > Audio)."""
+    ai = post.get("audio_ig")
+    if not (isinstance(ai, dict) and ai.get("audio_id")):
+        return {}
+    if "audio_configuration" in params:
+        return {"cancion_instagram": ai.get("titulo") or ai["audio_id"]}
+    return {"cancion_instagram": None, "falta_cancion": "Instagram no aplico la cancion; añadela editando el reel (Audio): sugerida «%s»" % (ai.get("titulo") or ai["audio_id"])}
+
+
 def publicar_reel(cfg, video, post):
     params = {"media_type": "REELS", "upload_type": "resumable",
               "caption": con_atribucion(post.get("texto", ""), post.get("motor_voz")),
@@ -1263,7 +1274,7 @@ def publicar_reel(cfg, video, post):
                 enlace = api(cfg, mid, fields="permalink").get("permalink", "")
             except ErrorAPI:
                 pass
-            return {"media_id": mid, "enlace": enlace, "prueba_no_seguidores": False, "metodo": "video_url"}
+            return {"media_id": mid, "enlace": enlace, "prueba_no_seguidores": False, "metodo": "video_url", **_nota_cancion(post, params)}
         # 6/11/2026: el 010 (reel de prueba) falló en la subida con «ProcessingFailedError: Request processing
         # failed». Si el contenedor de prueba no procesa el vídeo, se reintenta al momento como reel normal.
         log(f"reel de prueba: fallo al subir/procesar ({str(e)[-160:]}); se publica como reel normal")
@@ -1282,7 +1293,7 @@ def publicar_reel(cfg, video, post):
         enlace = api(cfg, mid, fields="permalink").get("permalink", "")
     except ErrorAPI:
         pass
-    return {"media_id": mid, "enlace": enlace, "prueba_no_seguidores": bool(prueba)}
+    return {"media_id": mid, "enlace": enlace, "prueba_no_seguidores": bool(prueba), **_nota_cancion(post, params)}
 
 
 def aprobado(carpeta, cuando, ahora):
