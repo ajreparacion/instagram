@@ -1,12 +1,15 @@
 {
- "aprobado": true,
- "nota": 90,
- "fecha": "2026-11-10T11:55Z",
- "comentario": "Re-render del 10/11 con el cierre de la directiva («Prueba gratuita · sin tarjeta · sin compromiso»). Audio -13,9 LUFS, pico < -4 dBFS, sin silencios, texto legible y cierre dentro del marco; demo con datos ficticios, sin voz del dueño; post con «nuestra app» y sin «comenta/escríbeme». Contenido y datos sin cambios respecto a la aprobación anterior.",
- "revisado_por": "agente de CALIDAD (10/11, pasada de las 12:50)",
+ "aprobado": false,
+ "nota": 75,
+ "fecha": "2026-11-10T19:41Z",
+ "motivos": [
+  "v8-B2: reel de escaparate (capturas con rótulos) sin espina de experimento, cálculo, historia o humor. El gancho «¿Te llaman mil veces…?» es bueno, pero el cuerpo es un paseo por funciones."
+ ],
+ "como_arreglarlo": "Reescribir con una de las 4 espinas de equipo/tecnicas_virales.md §3 y el brief correspondiente de equipo/briefs_v8.md; pie con las 5 líneas; poner renderizado:false. El carrusel del mismo producto sigue aprobado.",
+ "revisado_por": "agente de CALIDAD (v8, 10/11 20:50)",
  "anterior": {
-  "aprobado": false,
-  "nota": 84,
-  "fecha": "2026-11-10T10:35Z"
+  "aprobado": true,
+  "nota": 90,
+  "fecha": "2026-11-10T11:55Z"
  }
 }

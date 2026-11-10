@@ -5,12 +5,12 @@
  "video": "demo.mp4",
  "volumen_original": 0,
  "musica": true,
- "portada_texto": "¿Haces los presupuestos a mano?",
+ "portada_texto": "POV: el IVA te sale mal otra vez",
  "escenas": [
   {
    "estilo": "gancho",
-   "texto": "¿Haces los presupuestos *a mano*?",
-   "voz": "¿Haces los presupuestos *a mano*?"
+   "texto": "POV: el IVA te sale mal otra vez",
+   "voz": "¿Otra vez te sale mal el *IVA*? Mira lo que hizo una IA."
   },
   {
    "estilo": "tramo",

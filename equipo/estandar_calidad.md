@@ -2,7 +2,19 @@
 
 Lo mantiene el agente de CALIDAD (lo revisa cada lunes estudiando reels virales de IA y trucos). Creador lee esto antes de producir. Ningún reel se publica si no pasa este estándar.
 
-Versión 6 (7/11/2026, serie de apps). Versión 5 (6/11/2026 20:35, Estratega, por la NUEVA ESTRATEGIA del usuario: IA fácil en dibujos animados doodle). Sustituye a la v4 (misterios reales con fotos y vídeo real). Base: algoritmo de Instagram 2026 (compartidos por mensaje, guardados y retención pesan más que los likes; contenido original) e informe Buzzfy «AI & tech» de 6/11 (en cuentas pequeñas funcionan los ganchos de pregunta, número o mini historia / antes-después en los primeros 2 s).
+Versión 8 (10/11/2026, retención y envíos; ver sección v8). Versión 6 (7/11/2026, serie de apps). Versión 5 (6/11/2026 20:35, Estratega, por la NUEVA ESTRATEGIA del usuario: IA fácil en dibujos animados doodle). Sustituye a la v4 (misterios reales con fotos y vídeo real). Base: algoritmo de Instagram 2026 (compartidos por mensaje, guardados y retención pesan más que los likes; contenido original) e informe Buzzfy «AI & tech» de 6/11 (en cuentas pequeñas funcionan los ganchos de pregunta, número o mini historia / antes-después en los primeros 2 s).
+
+## v8 (10/11/2026 20:50): RETENCIÓN, ENVÍOS Y ORIGINALIDAD (manda sobre todo lo anterior; motivo: 30 días con 517 de alcance, 6-12 cuentas por reel y 67-93 % de abandono; ver equipo/tecnicas_virales.md)
+Bloqueos nuevos (si falla uno, nota máxima 75 = no sale, porque la directiva exige ≥ 90):
+B1. **Gancho descriptivo o promocional**: empieza por el nombre de la app, «Con X puedes…», «Tu X en N pasos», «Descubre…» o describe una función. El gancho tiene ≤ 8 palabras y al menos uno de: cifra concreta, resultado/fallo, conflicto o error en primera persona, pregunta que deja el «cómo» abierto, POV. Se lee en el primer fotograma y se oye en el primer segundo.
+B2. **Sin espina**: el reel no es experimento «le pedí a la IA…», cálculo en pantalla, historia/error en primera persona ni humor/personaje (ver tecnicas_virales.md §3). Un escaparate de funciones o montaje de capturas queda en 75 como máximo; solo vale en carruseles e historias.
+B3. **Sin motivo para enviar o guardar**: ni una frase destinataria («mándaselo a…») ni un fotograma final guardable (resumen, cálculo o paso a paso).
+B4. **Inventar o inflar**: cifra, resultado, cliente, tiempo ahorrado o «antes/después» que no se grabó o no se calculó a la vista (hipótesis visibles y rotuladas «ejemplo»). Rechazo inmediato.
+B5. **Ritmo muerto**: primer corte después de 3 s, más de 3,5 s sin cambio visual o de frase, o duración < 15 s sin ser humor de una sola frase. Meta de visualización media ≥ 15 s.
+B6. **Pie del post sin estructura**: línea 1 = gancho con cifra; 2-4 = la historia; una sola petición (guardar o enviar); línea de la directiva («Pide tu prueba gratuita…»); 1-5 hashtags específicos; sin «comenta/escríbeme X».
+Puntuación v8 (sustituye los pesos de la v6): gancho y apertura 30 · espina y originalidad 20 · retención (ritmo, claridad, resultado visible) 20 · enviar/guardar 15 · exactitud y confianza 10 · pie del post 5.
+Seguimiento: a las 48 h Calidad lee ig_post_stats de cada reel publicado. Metas: abandono < 40 %, compartidos/me gusta ≥ 8 %, visualización media ≥ 15 s. Con 3 reels seguidos por debajo de la meta se cambia la columna, no el decorado.
+Régimen transitorio: las piezas con «cuando» hasta el 11/11 23:59 conservan su aprobación v7 (no hay tiempo de rehacerlas). Todas las demás se reevalúan con la v8 en la siguiente pasada; las que fallen B1-B6 vuelven a «aprobado»: false con el brief de equipo/briefs_v8.md.
 
 ## Bloqueos (si falla uno, NO se publica)
 1. Un truco, menú, botón, precio o requisito que no coincide con la documentación oficial actual, o que no existe en la versión que se dice (gratis / España / español). Sin "_fuentes" oficiales en post.json.
@@ -58,6 +70,7 @@ El resto de la puntuación (100 puntos, mínimo 75) se aplica igual, cambiando �
 - Números escritos con letra en la voz.
 
 ## Registro de cambios
+- v8, 10/11/2026 20:50: bloqueos B1-B6 (gancho descriptivo, sin espina, sin motivo para enviar, cifras inventadas, ritmo, pie), nueva puntuación y seguimiento a las 48 h. Fuente: datos propios Buzzfy + Viral Reels Playbook 2026 + reels en español de cuentas pequeñas (equipo/tecnicas_virales.md).
 - v7, 8/11/2026 18:50: A1 admite reels de presentación sin voz con música en primer plano (orden del dueño 8/11 17:59); con voz, huecos ≤ 1,5 s.
 - v6, 7/11/2026: excepción y bloqueos de la serie APPS NEOGEST LAB (orden del usuario 7/11 11:01).
 - v5, 6/11/2026 20:35: cambio de temática y formato por orden del usuario (IA fácil, modo dibujo con Bit y Paco). Se quitan el vídeo/foto real obligatorio, las fuentes de misterio y las reglas de remasters; se añaden la comprobación en documentación oficial, el veto a logos y el estilo doodle.
