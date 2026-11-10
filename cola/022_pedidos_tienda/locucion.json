@@ -2,8 +2,9 @@
  {
   "escena": 0,
   "estilo": "gancho",
+  "hablante": null,
   "inicio": 0.0,
-  "duracion": 4.133,
+  "duracion": 3.8,
   "texto": "¿Llevas los pedidos de memoria? Mira lo que hace esta app.",
   "enfasis": [
    3,
@@ -13,7 +14,8 @@
  {
   "escena": 1,
   "estilo": "tramo",
-  "inicio": 4.133,
+  "hablante": null,
+  "inicio": 3.8,
   "duracion": 4.1,
   "texto": "Le pedí a una IA esta app de pedidos, con un solo mensaje.",
   "enfasis": [
@@ -25,8 +27,9 @@
  {
   "escena": 2,
   "estilo": "tramo",
-  "inicio": 8.233,
-  "duracion": 8.867,
+  "hablante": null,
+  "inicio": 7.9,
+  "duracion": 9.933,
   "texto": "Apunto el cliente y lo que ha pedido. Marta quiere una taza con nombre, Luis un llavero de madera y Ana una caja de regalo. Tres pedidos, tres líneas.",
   "enfasis": [
    27,
@@ -36,8 +39,9 @@
  {
   "escena": 3,
   "estilo": "tramo",
-  "inicio": 17.1,
-  "duracion": 5.7,
+  "hablante": null,
+  "inicio": 17.833,
+  "duracion": 6.5,
   "texto": "Toco el estado: pendiente, hecho, entregado, y los contadores se actualizan solos.",
   "enfasis": [
    3,
@@ -48,8 +52,9 @@
  {
   "escena": 4,
   "estilo": "cierre",
-  "inicio": 22.8,
-  "duracion": 5.533,
+  "hablante": null,
+  "inicio": 24.333,
+  "duracion": 6.267,
   "texto": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
   "enfasis": [
    2,
