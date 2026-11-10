@@ -11,6 +11,7 @@ B2. **Sin espina**: el reel no es experimento «le pedí a la IA…», cálculo 
 B3. **Sin motivo para enviar o guardar**: ni una frase destinataria («mándaselo a…») ni un fotograma final guardable (resumen, cálculo o paso a paso).
 B4. **Inventar o inflar**: cifra, resultado, cliente, tiempo ahorrado o «antes/después» que no se grabó o no se calculó a la vista (hipótesis visibles y rotuladas «ejemplo»). Rechazo inmediato.
 B5. **Ritmo muerto**: primer corte después de 3 s, más de 3,5 s sin cambio visual o de frase, o duración < 15 s sin ser humor de una sola frase. Meta de visualización media ≥ 15 s.
+B9. **Marca de producto ajena** en texto, voz o pantalla (Roland, TR-808/909, LinnDrum, Yamaha, Playmobil, etc.): bloquea. Orden del dueño 11/11/2026.
 B7/B8 (v8.1, 11/11/2026): primer fotograma débil y falta de mecanismo de interacción; ver equipo/primer_fotograma_e_interaccion.md §4. La música de Instagram se comprueba por audio_ig (título, audio_id y offset), no por el MP4.
 B6. **Pie del post sin estructura**: línea 1 = gancho con cifra; 2-4 = la historia; una sola petición (guardar o enviar); línea de la directiva («Pide tu prueba gratuita…»); 1-5 hashtags específicos; sin «comenta/escríbeme X».
 Puntuación v8 (sustituye los pesos de la v6): gancho y apertura 30 · espina y originalidad 20 · retención (ritmo, claridad, resultado visible) 20 · enviar/guardar 15 · exactitud y confianza 10 · pie del post 5.
