@@ -11,6 +11,7 @@ B2. **Sin espina**: el reel no es experimento «le pedí a la IA…», cálculo 
 B3. **Sin motivo para enviar o guardar**: ni una frase destinataria («mándaselo a…») ni un fotograma final guardable (resumen, cálculo o paso a paso).
 B4. **Inventar o inflar**: cifra, resultado, cliente, tiempo ahorrado o «antes/después» que no se grabó o no se calculó a la vista (hipótesis visibles y rotuladas «ejemplo»). Rechazo inmediato.
 B5. **Ritmo muerto**: primer corte después de 3 s, más de 3,5 s sin cambio visual o de frase, o duración < 15 s sin ser humor de una sola frase. Meta de visualización media ≥ 15 s.
+B7/B8 (v8.1, 11/11/2026): primer fotograma débil y falta de mecanismo de interacción; ver equipo/primer_fotograma_e_interaccion.md §4. La música de Instagram se comprueba por audio_ig (título, audio_id y offset), no por el MP4.
 B6. **Pie del post sin estructura**: línea 1 = gancho con cifra; 2-4 = la historia; una sola petición (guardar o enviar); línea de la directiva («Pide tu prueba gratuita…»); 1-5 hashtags específicos; sin «comenta/escríbeme X».
 Puntuación v8 (sustituye los pesos de la v6): gancho y apertura 30 · espina y originalidad 20 · retención (ritmo, claridad, resultado visible) 20 · enviar/guardar 15 · exactitud y confianza 10 · pie del post 5.
 Seguimiento: a las 48 h Calidad lee ig_post_stats de cada reel publicado. Metas: abandono < 40 %, compartidos/me gusta ≥ 8 %, visualización media ≥ 15 s. Con 3 reels seguidos por debajo de la meta se cambia la columna, no el decorado.
@@ -70,6 +71,7 @@ El resto de la puntuación (100 puntos, mínimo 75) se aplica igual, cambiando �
 - Números escritos con letra en la voz.
 
 ## Registro de cambios
+- v8.1, 11/11/2026 00:00: B7 (primer fotograma) y B8 (interacción: comentario fijado, avance del siguiente, frase de envío); música de Instagram verificada por audio_ig. Orden del dueño.
 - v8, 10/11/2026 20:50: bloqueos B1-B6 (gancho descriptivo, sin espina, sin motivo para enviar, cifras inventadas, ritmo, pie), nueva puntuación y seguimiento a las 48 h. Fuente: datos propios Buzzfy + Viral Reels Playbook 2026 + reels en español de cuentas pequeñas (equipo/tecnicas_virales.md).
 - v7, 8/11/2026 18:50: A1 admite reels de presentación sin voz con música en primer plano (orden del dueño 8/11 17:59); con voz, huecos ≤ 1,5 s.
 - v6, 7/11/2026: excepción y bloqueos de la serie APPS NEOGEST LAB (orden del usuario 7/11 11:01).
