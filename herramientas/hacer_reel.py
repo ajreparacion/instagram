@@ -461,8 +461,13 @@ class Clip:
         cmd = [FFMPEG, "-y", "-loglevel", "error"]
         if bucle and total > 0.5 and total - inicio < need * vel:   # clip corto: se repite en bucle para llenar la escena
             cmd += ["-stream_loop", "-1"]
-        cmd += ["-i", path, "-ss", "%.3f" % inicio, "-t", "%.3f" % (need * vel), "-an",
-                "-filter_complex", "[0:v]" + encaje + "," + ritmo + "fps=%d,format=yuv420p[v]" % FPS, "-map", "[v]",
+        if app and abs(vel - 1.0) > 0.001:
+            # 10/11/2026: con velocidad != 1, -ss/-t DESPUES de -i se medían tras el setpts (en tiempo ya acelerado):
+            # el tramo salía desplazado (inicio*vel) o vacío si inicio > duración/vel. Antes de -i miden vídeo original.
+            cmd += ["-ss", "%.3f" % inicio, "-t", "%.3f" % (need * vel), "-i", path, "-an"]
+        else:
+            cmd += ["-i", path, "-ss", "%.3f" % inicio, "-t", "%.3f" % (need * vel), "-an"]
+        cmd += ["-filter_complex", "[0:v]" + encaje + "," + ritmo + "fps=%d,format=yuv420p[v]" % FPS, "-map", "[v]",
                 "-q:v", "3", os.path.join(self.dir, "f%05d.jpg")]
         try:
             subprocess.run(cmd, check=True, timeout=600, capture_output=True)
@@ -2376,6 +2381,8 @@ def main():
             c = e.get("clip") if isinstance(e.get("clip"), dict) else {}
             ini, fin = c.get("inicio", e.get("inicio")), c.get("fin", e.get("fin"))
             d = 1.8 if (e.get("estilo") == "gancho") else (max(0.5, float(fin) - float(ini)) if (ini is not None and fin is not None) else 3.0)
+            if e.get("estilo") != "gancho" and ini is not None and fin is not None:
+                e["_largo_clip"] = max(0.5, float(fin) - float(ini))
         voz = parsear_enfasis(e.get("voz") or "")[0]
         if voz:  # duracion minima para que el narrador termine
             if i in tiempos and tiempos[i] > 0.2:
@@ -2387,7 +2394,12 @@ def main():
                 need = len(voz.split()) / 2.6 + 0.6
             if i + 1 < len(esc) and esc[i + 1].get("estilo") == "giro":
                 need += 0.5  # deja libre el segundo de silencio antes del giro
-            d = max(d, need)
+            if MODO["app"] and "duracion" not in e and e.get("estilo") != "gancho" and "_largo_clip" in e:
+                # 10/11/2026 (petición de Calidad): sin "duracion", la escena dura lo que la voz real (+0,5 s) y el
+                # clip se acelera hasta x1,75; nunca más corta que clip/1,75 (si no, el tramo se cortaría).
+                d = max(need, e["_largo_clip"] / MAX_VEL_APP)
+            else:
+                d = max(d, need)
         bounds.append(bounds[-1] + int(math.ceil(d * FPS - 1e-6)))
     loc = []
     for i, e in enumerate(esc):
