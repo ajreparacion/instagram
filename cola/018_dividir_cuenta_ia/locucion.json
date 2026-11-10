@@ -3,18 +3,19 @@
   "escena": 0,
   "estilo": "gancho",
   "inicio": 0.0,
-  "duracion": 2.0,
-  "texto": "¿Cuánto toca pagar a cada uno?",
+  "duracion": 3.933,
+  "texto": "Cuatro amigos, una cuenta y nadie quiere hacerla. Mira esto.",
   "enfasis": [
-   4,
-   5
+   5,
+   6,
+   7
   ]
  },
  {
   "escena": 1,
   "estilo": "tramo",
-  "inicio": 2.0,
-  "duracion": 4.833,
+  "inicio": 3.933,
+  "duracion": 4.933,
   "texto": "Se lo pedí a una IA con un solo mensaje: total, personas y propina.",
   "enfasis": [
    7,
@@ -25,8 +26,8 @@
  {
   "escena": 2,
   "estilo": "tramo",
-  "inicio": 6.833,
-  "duracion": 4.567,
+  "inicio": 8.867,
+  "duracion": 4.733,
   "texto": "Pongo el total, somos cuatro y dejamos cinco por ciento de propina.",
   "enfasis": [
    7,
@@ -37,8 +38,8 @@
  {
   "escena": 3,
   "estilo": "tramo",
-  "inicio": 11.4,
-  "duracion": 4.567,
+  "inicio": 13.6,
+  "duracion": 5.433,
   "texto": "Veintidós con sesenta y ocho cada uno. Si llega otro, se recalcula.",
   "enfasis": [
    10,
@@ -48,8 +49,8 @@
  {
   "escena": 4,
   "estilo": "cierre",
-  "inicio": 15.967,
-  "duracion": 5.2,
+  "inicio": 19.033,
+  "duracion": 4.967,
   "texto": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
   "enfasis": [
    2,
