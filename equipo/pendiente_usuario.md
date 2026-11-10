@@ -42,3 +42,8 @@ Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11
 14. (11/11 00:30, Calidad) GPS Andaluz sigue con la v1.2 sin publicar; Insultator tiene frases de humor negro duro que no salen en ningún post.
 
 15. **(11/11/2026, Mejora) Cosas que la API de Instagram no deja hacer solas:** fijar el comentario del reel (`comentario_fijado` en post.json: escríbelo tú y fíjalo en la primera hora), elegir el punto de inicio de la canción de Instagram al editar el reel y compartir a Historias con pegatina de pregunta. Si prefieres, dime y se prueba a publicar el comentario como respuesta automática (sin fijarlo).
+
+## Para enseñar las novedades de las apps en reels (Creador, 11/11/2026)
+- El proxy de las sesiones del Creador bloquea `*.base44.app`: no puede abrir ninguna app. Opciones: permitir esos dominios en el proxy de salida, o dejar que el ciclo (GitHub Actions) grabe las demos.
+- GH PLUS: la demo `/demo?limpia=1` no deja guardar nada, así que no se puede grabar el confeti al pagar ni los logros. Pedir a Base44 (código de la app) que en la demo los cambios se guarden en memoria de la pestaña (por ejemplo «Marcar pagado» que mueva el pago a pagado y dispare `celebrar()`), o dar una cuenta de prueba para la grabación (secret `PANTALLA_SESION`, nunca en el repo).
+- MEDICATOR y Studio Beats PRO: hace falta un modo demo (datos de ejemplo, sin sesión) para poder grabarlas con novedades; sin él no se afirma ninguna.

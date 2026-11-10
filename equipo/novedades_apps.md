@@ -28,3 +28,9 @@ Fuente: historial de código de las apps en Base44 (commits del 8 al 10/11) + fi
 2. Cada pieza de app lleva: pico en el fotograma 0 (la novedad más vistosa: confeti, medallas, la biblioteca de sonidos), una sola función, frase de envío («Mándaselo a quien…»), cierre único de prueba gratuita con enlace al Centro y música audio_ig.
 3. Un cameo de app de 2 s en los episodios de Jambo, solo cuando encaje.
 4. Antes de afirmar algo «visto en código», comprobarlo en pantalla y añadirlo a hechos_verificados; si no se puede abrir (proxy 403 a *.base44.app), usar solo lo ya verificado o el prototipo marcado como «demo».
+
+## Comprobación del Creador, 11/11/2026 (sin acceso a *.base44.app desde su sesión)
+- Ninguna novedad «vista en código» se ha podido comprobar en pantalla: el proxy de salida bloquea los dominios de las apps. Se leyó el código por el MCP de Base44 (solo lectura).
+- **GH PLUS tiene modo demostración**: `/demo?limpia=1` entra sin sesión con datos ficticios de «María» (sin franja de aviso) y es la forma de grabar la app real. Límite: en la demo crear, actualizar y borrar están desactivados (`entidadDemo` → `noDemo`), de modo que **«Marcar pagado» no guarda ni lanza el confeti, ni se ve el logro**; el confeti, las medallas y el «Consejo del día» no se pueden mostrar en la demo hoy. Lo que sí se ve: Inicio con «Dinero disponible», los avisos (vencido en rojo, próximo en naranja) y los presupuestos.
+- Reel `405_gh_plus_demo_reel` (19/11, 13:40): grabado por el ciclo desde esa demo; solo hechos_verificados; Calidad debe revisar los fotogramas de control y los tiempos antes de aprobarlo.
+- MEDICATOR y Studio Beats PRO: sin modo demo conocido; sus novedades siguen sin afirmarse.

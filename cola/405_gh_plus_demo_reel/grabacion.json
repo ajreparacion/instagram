@@ -1,0 +1,83 @@
+{
+ "dispositivo": "movil",
+ "fondo": "#E0E7FF",
+ "url": "https://gestion-hogar-c9185d78.base44.app/demo?limpia=1",
+ "esperar_carga": 0.8,
+ "pasos": [
+  {
+   "accion": "esperar_selector",
+   "selector": "#avisos",
+   "seg": 25
+  },
+  {
+   "accion": "esperar",
+   "seg": 6.1
+  },
+  {
+   "accion": "mover",
+   "selector": "#avisos",
+   "seg": 0.3
+  },
+  {
+   "accion": "esperar",
+   "seg": 0.9
+  },
+  {
+   "accion": "esperar",
+   "seg": 2.5
+  },
+  {
+   "accion": "zoom",
+   "selector": "#avisos",
+   "nivel": 1.3,
+   "seg": 0.7
+  },
+  {
+   "accion": "esperar",
+   "seg": 2.4
+  },
+  {
+   "accion": "mover",
+   "selector": "#avisos button:has-text('Marcar pagado')",
+   "seg": 0.9
+  },
+  {
+   "accion": "esperar",
+   "seg": 2.0
+  },
+  {
+   "accion": "zoom",
+   "nivel": 1.0,
+   "seg": 0.5
+  },
+  {
+   "accion": "mover",
+   "selector": "p:text-is('Dinero disponible')",
+   "seg": 0.9
+  },
+  {
+   "accion": "zoom",
+   "selector": "p:text-is('Dinero disponible')",
+   "nivel": 1.4,
+   "seg": 0.7
+  },
+  {
+   "accion": "esperar",
+   "seg": 2.8
+  },
+  {
+   "accion": "zoom",
+   "nivel": 1.0,
+   "seg": 0.5
+  },
+  {
+   "accion": "mover",
+   "selector": "#avisos",
+   "seg": 0.8
+  },
+  {
+   "accion": "esperar",
+   "seg": 3.2
+  }
+ ]
+}
