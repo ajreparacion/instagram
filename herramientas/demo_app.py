@@ -391,11 +391,13 @@ def slide_cierre(app, k, n):
     y = dibujar_lineas(d, 0, 200, ls, f, BLANCO, app["cierre_destacar"], alto=1.1, centro=CW // 2)
     fs, lss = ajustar(app["cierre_sub"], "Medium", CW - 2 * MX - 40, 3, 38, 30)
     y = dibujar_lineas(d, 0, y + 18, lss, fs, GRIS, alto=1.35, centro=CW // 2)
-    # caja IDEA
+    # caja de cierre: prueba gratuita
     fb = fnt(40, "Bold")
     y0 = y + 44
     d.rounded_rectangle((120, y0, CW - 120, y0 + 94), 30, outline=ACENTO, width=4)
-    partes = [("Escríbeme ", BLANCO), ("IDEA", ACENTO), (" por privado", BLANCO)]
+    partes = [("Prueba gratuita", ACENTO), (" · sin tarjeta · sin compromiso", BLANCO)]
+    while sum(fb.getlength(p) for p, _ in partes) > CW - 240 - 60 and fb.size > 24:  # cierre de la directiva del 10/11
+        fb = fnt(fb.size - 2, "Bold")
     total = sum(fb.getlength(p) for p, _ in partes)
     x = CW / 2 - total / 2
     for p, col in partes:
@@ -739,7 +741,9 @@ def preparar_reel(app, caps, dur):
     dc = ImageDraw.Draw(caja)
     dc.rounded_rectangle((100, 6, SW - 100, 114), 34, outline=ACENTO, width=5, fill=(40, 26, 56, 255))
     fb = fnt(44, "Bold")
-    partes = [("Escríbeme ", BLANCO), ("IDEA", ACENTO), (" por privado", BLANCO)]
+    partes = [("Prueba gratuita", ACENTO), (" · sin tarjeta · sin compromiso", BLANCO)]
+    while sum(fb.getlength(q) for q, _ in partes) > SW - 200 - 60 and fb.size > 24:  # cierre de la directiva del 10/11
+        fb = fnt(fb.size - 2, "Bold")
     tx = SW / 2 - sum(fb.getlength(q) for q, _ in partes) / 2
     for q, col in partes:
         dc.text((tx, 32), q, font=fb, fill=col)
