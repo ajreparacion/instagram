@@ -50,18 +50,6 @@ jobs:
           ~/.venvs/chatterbox/bin/python -c "import chatterbox.mtl_tts, torch; print('chatterbox OK, torch', torch.__version__)"
           echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
 
-      - name: OpenVoice V2 (CPU, entorno propio)
-        continue-on-error: true
-        run: |
-          python -m venv ~/.venvs/openvoice
-          ~/.venvs/openvoice/bin/pip install --quiet --upgrade pip
-          ~/.venvs/openvoice/bin/pip install --quiet torch torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
-          ~/.venvs/openvoice/bin/pip install --quiet "numpy<2" "librosa==0.10.1" soundfile huggingface_hub scipy tqdm \
-            pydub inflect unidecode eng_to_ipa pypinyin cn2an jieba langid
-          ~/.venvs/openvoice/bin/pip install --quiet --no-deps git+https://github.com/myshell-ai/OpenVoice.git
-          ~/.venvs/openvoice/bin/python -c "import openvoice; print('openvoice instalado en', openvoice.__file__)"
-          echo "PYTHON_OPENVOICE=$HOME/.venvs/openvoice/bin/python" >> "$GITHUB_ENV"
-
       - name: Prueba
         env:
           TZ: Europe/Madrid

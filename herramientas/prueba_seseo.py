@@ -112,8 +112,23 @@ def nombres_wav(carpeta):
             [os.path.join(carpeta, f"p{i}.wav") for i in range(len(PALABRAS))])
 
 
-def sintetizar_chatterbox(carpeta, theta):
-    """theta: False | "th" | "griego" (ver a_theta)."""
+TEXTO_REFERENCIA = ("A ver, te cuento una cosa que me pasó el otro día. Estaba en casa, tranquilo, y de repente… "
+                    "oigo un ruido en la cocina. Nada, pensé. Pero no. Ojo, que esto se pone bueno.")
+
+
+def referencia_kokoro_sintetica():
+    """Referencia SINTÉTICA (Kokoro em_alex, Apache 2.0; no es ninguna persona real) para Chatterbox."""
+    destino = os.path.join(DIR, "ref_kokoro_em_alex.wav")
+    if not os.path.exists(destino):
+        lote = {"voz": "em_alex", "velocidad": 1.0, "ganancia": 1.0, "frases": [{"texto": TEXTO_REFERENCIA, "salida": destino}]}
+        ruta = os.path.join(DIR, "lote_ref.json")
+        json.dump(lote, open(ruta, "w"), ensure_ascii=False)
+        correr([sys.executable, os.path.join(BASE, "herramientas", "voz_kokoro.py"), ruta], timeout=900)
+    return destino
+
+
+def sintetizar_chatterbox(carpeta, theta, ref=None):
+    """theta: False | "th" | "griego" (ver a_theta). ref: wav de referencia (por defecto REF, la del dueño: ya no se usa)."""
     if not PY_CB:
         raise RuntimeError("sin entorno de Chatterbox (PYTHON_CHATTERBOX)")
     sw, pw = nombres_wav(carpeta)
@@ -121,7 +136,7 @@ def sintetizar_chatterbox(carpeta, theta):
     if theta:
         textos = [a_theta(t, "th" if theta is True else theta) for t in textos]
     lote = {"modelo": "es-es", "idioma": "es", "exageracion": 0.65, "cfg": 0.45, "temperatura": 0.65,
-            "referencia": REF, "ganancia": 1.0, "semilla": 7,
+            "referencia": ref or REF, "ganancia": 1.0, "semilla": 7,
             "frases": [{"texto": t, "salida": s} for t, s in zip(textos, sw + pw)]}
     ruta = os.path.join(carpeta, "lote.json")
     json.dump(lote, open(ruta, "w"), ensure_ascii=False)
@@ -205,7 +220,9 @@ class Medidor:
             self.enc = VoiceEncoder("cpu", verbose=False)
         except Exception as e:
             self.avisos["resemblyzer"] = str(e)[-200:]
-        self.emb_ref = [self.embedding(audio16k(REF)), self.embedding(audio16k(REF_LARGA))] if self.enc else None
+        # 10/11/2026: la voz del dueño está prohibida: ya no se carga ni se mide parecido con ella.
+        self.enc = None
+        self.emb_ref = None
 
     def embedding(self, x):
         import numpy as np
@@ -302,10 +319,7 @@ def main():
     med = Medidor()
     informe["avisos_medidor"] = med.avisos
     # Control de referencia: el propio dueño (parecido consigo mismo y variación de tono natural)
-    try:
-        informe["dueno_referencia"] = {"prosodia": prosodia(REF_LARGA, 1)}
-    except Exception as e:
-        informe["dueno_referencia"] = {"aviso": str(e)[-150:]}
+    informe["dueno_referencia"] = {"aviso": "omitida: la voz del dueño está prohibida (10/11/2026)"}
 
     def variante(nombre, fn):
         if solo and nombre not in solo:
@@ -344,6 +358,8 @@ def main():
 
     variante("piper_ov", con_ov("piper", sintetizar_piper))
     variante("kokoro_ov", con_ov("kokoro", sintetizar_kokoro))
+    variante("cbk_actual", lambda c: sintetizar_chatterbox(c, False, referencia_kokoro_sintetica()))
+    variante("cbk_griego2", lambda c: sintetizar_chatterbox(c, "griego_sin_inicial", referencia_kokoro_sintetica()))
     variante("cb_actual", lambda c: sintetizar_chatterbox(c, False))
     variante("cb_theta", lambda c: sintetizar_chatterbox(c, "th"))
     variante("cb_griego", lambda c: sintetizar_chatterbox(c, "griego"))
