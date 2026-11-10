@@ -1087,8 +1087,11 @@ def renderizar_pendientes(cfg):
     if os.environ.get("OMITIR_RENDER") == "1":   # ciclo.yml: falta el motor de voz o faster-whisper; no se gastan intentos
         log("Render omitido: ciclo.yml avisó de que falta un motor de voz o faster-whisper (no se cae a Piper)")
         return
+    # 10/11/2026 (Mejora, tarde): con Chatterbox (≈8 min de síntesis por reel en CPU, medido en prueba_voz) solo 1 render por
+    # ciclo: así el ciclo no pasa de ~15 min y no retrasa la publicación de las 13:40 / 20:40; el resto se hace en los siguientes.
+    limite = 1 if str(ajustes_voz().get("motor", "")).lower() == "chatterbox" else MAX_RENDERS
     for _, carpeta, post in carpetas_cola():
-        if post.get("renderizado") or post.get("tipo") in ("carrusel", "imagen", "historia") or hechos >= MAX_RENDERS:
+        if post.get("renderizado") or post.get("tipo") in ("carrusel", "imagen", "historia") or hechos >= limite:
             continue
         nombre = os.path.basename(carpeta)
         try:
