@@ -15,7 +15,8 @@ Fuente: historial de código de las apps en Base44 (commits del 8 al 10/11) + fi
 
 **Studio Beats PRO** (activo; código cambiado el 10/11 de 23:05 a 23:32, 496 archivos, sobre todo sonidos):
 - Novedades vistas en código (a comprobar): **biblioteca «Sonidos del estudio»** con cajas de ritmo clásicas (TR-808, 909, 707, 606, LinnDrum, Yamaha RX5, CR-78) y batería acústica; categorías (bombos, cajas, charles, 808 y bajos, FX, loops), búsqueda, favoritos y descarga en WAV; Beat Creator renovado (género, BPM con «Tap», silenciar/aleatorio/borrar por pista, presets, exportar con formato y duración); Dashboard rehecho.
-- Riesgo de derechos: son nombres de máquinas ajenas y no consta licencia de las muestras. En posts decir «sonidos de cajas de ritmo clásicas» sin marcas en el texto de venta, ni «libres de derechos». Pendiente del dueño: confirmar licencia (pendiente_usuario.md).
+- LICENCIA CONFIRMADA por el dueño (11/11/2026): tiene licencia para usar y promocionar las muestras. Ya se puede enseñar la biblioteca en reels y carruseles. Se mantiene: no decir «libres de derechos» (es otra afirmación, solo si el dueño lo confirma con esas palabras) y nombrar las máquinas como estilo («sonido 808», «tipo 909»), no como producto de marca.
+- (Nota anterior, ya resuelta) Riesgo de derechos: son nombres de máquinas ajenas y no consta licencia de las muestras. En posts decir «sonidos de cajas de ritmo clásicas» sin marcas en el texto de venta, ni «libres de derechos». Pendiente del dueño: confirmar licencia (pendiente_usuario.md).
 
 **Gestión Integral 7D** (activo): sin cambios de código desde el 7/11; ficha actualizada el 9/11; sigue siendo la app más fuerte para autónomos (cadena presupuesto→factura, enlace de pago, «Mi día», catálogo con IA).
 **AJ Sistema DEMO**: sin cambios desde el 8/11 (multisector, datos ficticios, solo ficha del taller con /web).
