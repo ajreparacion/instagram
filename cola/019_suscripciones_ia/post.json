@@ -20,8 +20,6 @@
   "publico": "Hogar y familias",
   "formato": "Una idea, una app",
   "_nota_calidad": "10/11 Calidad: cierre cambiado al de la directiva (prueba gratuita) en guion y post, quitada la automatización IDEA; duraciones de tramo ajustadas para evitar huecos de voz > 1,5 s. renderizado:false para que el ciclo lo rehaga.",
-  "renderizado": "2026-11-10T12:05:43+00:00",
-  "nota_mejora": "10/11/2026: reel con la voz del dueño, prohibida por la directiva (9/11 23:55); se rehace con voz genérica de España o sin voz.",
-  "motor_voz": "piper",
-  "asset": "019_suscripciones_ia.mp4"
+  "renderizado": false,
+  "nota_mejora": "10/11/2026 (2.ª ejecución): rendido con Piper por error de instalación; se rehace con «Chatterbox España» (es-es sin referencia de persona real). Sin voz del dueño."
 }
