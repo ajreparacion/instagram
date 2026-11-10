@@ -2,22 +2,22 @@
  "tipo": "reel",
  "texto": "Que tus clientes sepan «cómo va lo suyo» sin llamarte 📞\nAJ Sistema: web para tus clientes con solicitudes, consulta de estado y pedidos, y tu panel para gestionarlo todo.\nCapturas de la demo con datos ficticios. Te lo adaptamos a medida a cualquier negocio.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#autonomos #pymes #negocios #atencionalcliente #apps #neogestlab",
  "cuando": "2026-11-16T13:40:00+01:00",
- "renderizado": "2026-11-10T19:23:24+00:00",
+ "renderizado": "2026-11-10T19:42:14+00:00",
  "asset": "204_aj_sistema_taller_reel.mp4",
  "portada_ms": 2847,
  "compartir_en_feed": true,
  "duracion_s": 29.0,
  "formato": "presentación (capturas reales con Ken Burns, música en primer plano y efectos; sin voz)",
  "musica": {
-  "estilo": "disco",
-  "bpm": 118.0,
-  "tono": 5,
-  "origen": "generada por código (sin licencias de terceros)"
+  "origen": "biblioteca de Instagram (colección libre de derechos)",
+  "titulo": "Motive (Instrumental) · Giulio Cercato",
+  "audio_id": "1579921342191993",
+  "nota": "música puesta por Instagram al publicar (audio_configuration); el vídeo lleva solo efectos"
  },
  "audio": {
-  "lufs_integrados": -13.9,
-  "pico_real_dbtp": -4.7,
-  "lra_lu": 1.0,
+  "lufs_integrados": -21.4,
+  "pico_real_dbtp": -9.1,
+  "lra_lu": 6.6,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
  "app": "AJ Sistema",
@@ -25,5 +25,12 @@
  "fuentes": [
   "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «AJ Sistema»: demo[] (capturas reales de la demo y sus textos), hechos_verificados y prohibido_afirmar (consulta 8/11/2026)."
  ],
- "origen": "herramientas/demo_app.py"
+ "origen": "herramientas/demo_app.py",
+ "audio_ig": {
+  "audio_id": "1579921342191993",
+  "titulo": "Motive (Instrumental) · Giulio Cercato",
+  "origen": "biblioteca de Instagram (colección libre de derechos)",
+  "audio_volume": 1.0,
+  "video_volume": 0.5
+ }
 }
