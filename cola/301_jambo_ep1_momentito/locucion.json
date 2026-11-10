@@ -1,0 +1,76 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.933,
+  "texto": "Doscientas páginas para mañana. Que lo haga la Jupillo.",
+  "enfasis": [
+   4,
+   5,
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 3.933,
+  "duracion": 3.5,
+  "texto": "Doscientas páginas. Hechas. Como pediste.",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 7.433,
+  "duracion": 2.833,
+  "texto": "¿Las once? ¡Te dije un momentito!",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 12.867,
+  "duracion": 2.567,
+  "texto": "Entregado. Qué bien me ha quedado.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 15.433,
+  "duracion": 1.8,
+  "texto": "De nada.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 17.233,
+  "duracion": 4.2,
+  "texto": "Dos millones y medio de horas extra sin cobrar cada semana.",
+  "enfasis": [
+   7,
+   8
+  ]
+ },
+ {
+  "escena": 7,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 21.433,
+  "duracion": 2.333,
+  "texto": "Mándaselo a quien carga con todo.",
+  "enfasis": []
+ }
+]
