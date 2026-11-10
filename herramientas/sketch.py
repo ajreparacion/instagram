@@ -408,7 +408,10 @@ def preparar(sc, spec, rng):
     extra = ""
     if sc.texto and _sin_acentos(sc.texto) not in (_sin_acentos(voz), _sin_acentos(NOMBRES.get(sc.hablante, "")), ""):
         extra = sc.texto
-    sc.cartel = extra if sc.estilo_d == "remate" else ""            # remate: cartel con el chiste (hora, resultado…)
+    sc.cartel = str(spec.get("cartel") or "") or (extra if sc.estilo_d == "remate" else "")   # cartel con el chiste (hora, resultado…)
+    sc.efecto = str(dib.get("efecto") or "").strip().lower()      # papeles (avalancha sobre El Jambo) | sello (DENEGADO en la cara)
+    sc.efecto_t = float(dib.get("efecto_t", 0.9))                 # segundo en que empieza (negativo = ya hecho al empezar la escena)
+    sc.efecto_sin_voz = bool(dib.get("sin_voz"))
     sc.globo_texto = "" if sc.estilo_d in ("remate", "gancho") else extra
     # gancho y rótulo fijo arriba: «POV: …» desde el fotograma 0
     gancho = str(ctx.get("gancho") or "").strip()
@@ -426,7 +429,10 @@ def preparar(sc, spec, rng):
     if sc.cont_sube:
         for k in range(sc.cont_fin - sc.cont_ini):
             sc.sfx.append(("tick", 0.7 + k * 0.28, 0.12))
-    if sc.estilo_d == "remate":
+    if sc.efecto and sc.efecto_t >= 0:
+        sc.sfx.append(("papeles" if sc.efecto == "papeles" else "thud", sc.efecto_t, 1.1 if sc.efecto == "papeles" else 0.35))
+        sc.sfx.append(("sting", sc.efecto_t + (1.0 if sc.efecto == "papeles" else 0.3), 0.9))
+    elif sc.estilo_d == "remate":
         sc.sfx.append(("sting", 0.14, 0.9))
     if sc.estilo_d == "gag": sc.sfx.append(("boing", 0.45, 0.25))
     # cámara: cortes cada SK_SEG s con encuadre distinto y zoom de golpe
@@ -531,6 +537,63 @@ def _serio(sc, t):
     return img
 
 
+def _hoja(w, h, ang, cx, cy):
+    c, sn = math.cos(ang), math.sin(ang)
+    return [(cx + x * c - y * sn, cy + x * sn + y * c) for x, y in ((-w, -h), (w, -h), (w, h), (-w, h))]
+
+
+def _efecto(img, sc, t, x, sj):
+    """Gags visuales sobre El Jambo (fórmula del «robot del diablo»: la máquina responde sin palabras con algo desproporcionado).
+    papeles: la pila de la Jupillo le cae encima y lo entierra; sale solo un pulgar. sello: un DENEGADO enorme en la cara."""
+    d = ImageDraw.Draw(img, "RGBA")
+    te = t - sc.efecto_t
+    if te < 0:
+        return
+    alto = ALTURA["jambo"] * sj
+    if sc.efecto == "papeles":
+        n = 46
+        rr = random.Random(77)
+        hojas = []
+        for i in range(n):
+            lj = rr.uniform(-0.08, 0.08)
+            hojas.append((i, i / n * 0.9 + lj, x + rr.uniform(-1, 1) * 150 * sj, SK_SUELO - (i / n) ** 0.85 * alto * 1.12 + rr.uniform(-18, 18),
+                          rr.uniform(-0.5, 0.5), rr.uniform(0.7, 1.0)))
+        for (i, t0, hx, hy, ang, esc) in sorted(hojas, key=lambda z: z[1]):
+            k = (te - t0) / 0.38
+            if k <= 0:
+                continue
+            k = min(1.0, k)
+            y = -120 + (hy + 120) * k * k                     # cae con aceleración
+            a = ang + (1 - k) * 2.2 * (1 if i % 2 else -1)    # y gira al caer
+            w, h = 62 * sj * esc, 82 * sj * esc
+            pts = _hoja(w, h, a, hx, y)
+            d.polygon(pts, fill=(252, 252, 247, 255), outline=hr.TINTA)
+            for q in (-0.45, 0.0, 0.45):
+                c_, s_ = math.cos(a), math.sin(a)
+                p1 = (hx + (-w * 0.7) * c_ - (h * q) * s_, y + (-w * 0.7) * s_ + (h * q) * c_)
+                p2 = (hx + (w * 0.7) * c_ - (h * q) * s_, y + (w * 0.7) * s_ + (h * q) * c_)
+                d.line([p1, p2], fill=(160, 160, 165, 255), width=3)
+        fin = 0.9 + 0.38
+        if te > fin:   # un pulgar asoma entre los papeles
+            k = hr.ease_out_back(min(1.0, (te - fin) / 0.35))
+            ty = SK_SUELO - alto * 1.12 - 56 * sj * k
+            _T(d, [(x + 30 * sj, ty + 60 * sj * k), (x + 30 * sj, ty + 8 * sj)], random.Random(3), 26 * sj, PIEL, 0.6)
+            _T(d, [(x + 30 * sj, ty + 14 * sj), (x + 30 * sj, ty - 26 * sj * k)], random.Random(4), 12 * sj, PIEL, 0.4)
+            d.ellipse([x + 4 * sj, ty + 4 * sj, x + 58 * sj, ty + 62 * sj], outline=hr.TINTA, width=4)
+    elif sc.efecto == "sello":
+        k = min(1.0, te / 0.12)
+        z = 2.6 - 1.6 * k
+        txt = "DENEGADO"
+        f = hr.font(hr.F_DIB, int(88 * sj * z))
+        wtxt = int(d.textlength(txt, font=f))
+        cx, cy = x, SK_SUELO - 465 * sj
+        cap = Image.new("RGBA", (wtxt + 90, int(150 * sj * z)), (0, 0, 0, 0)); dc = ImageDraw.Draw(cap, "RGBA")
+        dc.rounded_rectangle([4, 4, cap.width - 5, cap.height - 5], radius=16, outline=(200, 40, 40, 235), width=10)
+        dc.text((cap.width // 2, cap.height // 2), txt, font=f, fill=(200, 40, 40, 235), anchor="mm")
+        cap = cap.rotate(-9, expand=True, resample=Image.BICUBIC)
+        img.paste(cap, (int(cx - cap.width / 2), int(cy - cap.height / 2)), cap)
+
+
 def render_frame(fi, sc, noise, rg, seed):
     lf = fi - sc.start
     t = lf / hr.FPS
@@ -563,6 +626,8 @@ def render_frame(fi, sc, noise, rg, seed):
             x += (1 - hr.ease_out(t / 0.4)) * (-560 if x < 540 else 560)
         acc = sc.acciones.get(p) or (sc.accion if p == (sc.hablante or sc.pers[0]) else "habla")
         DIBUJAR[p](d, x, SK_SUELO, t, rng, acc, hv if p == sc.hablante else 0.0, ESCALA[p] * mult)
+    if sc.efecto:
+        _efecto(img, sc, t, xs.get("jambo", 540), ESCALA["jambo"] * mult)
     _T(d, [(110, SK_SUELO + 8), (970, SK_SUELO + 3)], rng, 7, hr.TINTA, 1.5)
     # globo con el nombre de quien habla (+ texto si aporta algo)
     if sc.globo_nombre and sc.hablante in xs:
@@ -601,6 +666,8 @@ def render_frame(fi, sc, noise, rg, seed):
 def sfx(tipo, dur, rg, lp_fft):
     """Efectos de sonido propios del sketch (tick del contador, sting del remate, boing del gag). None si no es de aquí."""
     dur = max(0.03, float(dur)); m = int(dur * SR_); tt = np.arange(m) / SR_
+    if tipo in ("thud", "papeles", "tick", "sting", "boing") and False:
+        return None
     if tipo == "tick":
         return (np.sin(2 * np.pi * 1760 * tt) * np.exp(-tt * 38) + 0.5 * np.sin(2 * np.pi * 880 * tt) * np.exp(-tt * 30)) * 0.26
     if tipo == "sting":   # «uah-uah»: trombón triste (cae el tono), dos notas
@@ -615,6 +682,17 @@ def sfx(tipo, dur, rg, lp_fft):
             sig = lp_fft(saw, 1100, 2) * np.minimum(1.0, u / 0.03) * np.exp(-u * (2.2 if k == 0 else 3.0))
             out[i0:i1] += sig * (0.30 if k == 0 else 0.34)
         return out
+    if tipo == "thud":   # golpe sordo (sello / caída)
+        f = 70 + 140 * np.exp(-tt * 28)
+        return (np.sin(2 * np.pi * np.cumsum(f) / SR_) * np.exp(-tt * 9) + 0.5 * lp_fft(rg.standard_normal(m), 900, 2) * np.exp(-tt * 40)) * 0.55
+    if tipo == "papeles":   # avalancha de hojas: ráfagas de ruido que se espesan y un golpe sordo al final
+        out = np.zeros(m)
+        for k in range(40):
+            i0 = int((0.05 + 0.75 * k / 40 + rg.uniform(-0.01, 0.01)) * SR_); mm = min(int(rg.uniform(0.03, 0.07) * SR_), m - i0)
+            if mm <= 8 or i0 < 0: continue
+            u = np.arange(mm) / SR_
+            out[i0:i0 + mm] += (lp_fft(rg.standard_normal(mm), 7000, 2) - lp_fft(rg.standard_normal(mm), 1800, 2)) * np.exp(-u * 60) * rg.uniform(0.2, 0.5)
+        return out * 0.5
     if tipo == "boing":
         f = 260 + 220 * np.exp(-tt * 18) * np.sin(2 * np.pi * 9 * tt)
         return np.sin(2 * np.pi * np.cumsum(f) / SR_) * np.exp(-tt * 11) * 0.20
