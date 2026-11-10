@@ -2,7 +2,7 @@
  "tipo": "reel",
  "texto": "5 tareas pesadas que ChatGPT, Claude o Gemini hacen por ti (prompts incluidos).\nMenú de cenas de la semana y lista de la compra por secciones.\nResumir la circular del cole o de la comunidad y decirte qué hacer y para cuándo, sin pegar datos personales.\nResponder un mensaje difícil con educación.\nPasar a texto la foto de una receta o un tíquet.\nRepartir las tareas de la semana según tus horas libres.\nGuárdalo para el domingo 🗓️\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#inteligenciaartificial #organizacion #hogar #productividad #neogestlab",
  "cuando": "2026-11-11T13:40:00+01:00",
- "renderizado": "2026-11-10T19:16:53+00:00",
+ "renderizado": "2026-11-10T19:36:45+00:00",
  "asset": "103_tareas_casa_ia_reel.mp4",
  "portada_ms": 1500,
  "compartir_en_feed": true,
@@ -17,16 +17,23 @@
  ],
  "carrusel": "103_tareas_casa_ia",
  "musica": {
-  "estilo": "disco",
-  "bpm": 120.0,
-  "tono": -1,
-  "origen": "generada por código (sin licencias de terceros)"
+  "origen": "biblioteca de Instagram (colección libre de derechos)",
+  "titulo": "Float In The Waves (Instrumental) · Company Money",
+  "audio_id": "1174983090781223",
+  "nota": "música puesta por Instagram al publicar (audio_configuration); el vídeo lleva solo efectos"
  },
  "audio": {
-  "lufs_integrados": -13.9,
-  "pico_real_dbtp": -4.9,
-  "lra_lu": 1.2,
+  "lufs_integrados": -22.3,
+  "pico_real_dbtp": -9.0,
+  "lra_lu": 6.4,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
- "origen": "herramientas/demo_app.py"
+ "origen": "herramientas/demo_app.py",
+ "audio_ig": {
+  "audio_id": "1174983090781223",
+  "titulo": "Float In The Waves (Instrumental) · Company Money",
+  "origen": "biblioteca de Instagram (colección libre de derechos)",
+  "audio_volume": 1.0,
+  "video_volume": 0.5
+ }
 }

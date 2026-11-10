@@ -2,7 +2,7 @@
  "tipo": "reel",
  "texto": "¿Improvisas cada día tu ruta de visitas?\nPara comerciales y distribuidores que pasan el día de cliente en cliente.\nEn Gestión Integral 7D, nuestra app, «Mi día» ordena tus paradas por carretera con la hora prevista de llegada (si el servicio de rutas falla, las ordena en línea recta y te avisa).\nCada visita queda registrada con llegada, salida y distancia a la ubicación del cliente.\nTu cartera, con ranking ABC.\nLos agentes IA solo proponen acciones: tú decides si las apruebas.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#comerciales #distribucion #ventas #pymes #neogestlab",
  "cuando": "2026-11-17T13:40:00+01:00",
- "renderizado": "2026-11-10T19:17:30+00:00",
+ "renderizado": "2026-11-10T19:37:15+00:00",
  "asset": "106_comerciales_ruta_reel.mp4",
  "portada_ms": 1500,
  "compartir_en_feed": true,
@@ -16,16 +16,23 @@
  ],
  "carrusel": "106_comerciales_ruta",
  "musica": {
-  "estilo": "dembow",
-  "bpm": 98.0,
-  "tono": -4,
-  "origen": "generada por código (sin licencias de terceros)"
+  "origen": "biblioteca de Instagram (colección libre de derechos)",
+  "titulo": "Latina (Instrumental) · Tony Dark Eyes",
+  "audio_id": "583674661052146",
+  "nota": "música puesta por Instagram al publicar (audio_configuration); el vídeo lleva solo efectos"
  },
  "audio": {
-  "lufs_integrados": -14.0,
-  "pico_real_dbtp": -3.2,
-  "lra_lu": 1.3,
+  "lufs_integrados": -22.8,
+  "pico_real_dbtp": -9.2,
+  "lra_lu": 6.4,
   "medido_con": "ffmpeg ebur128=peak=true"
  },
- "origen": "herramientas/demo_app.py"
+ "origen": "herramientas/demo_app.py",
+ "audio_ig": {
+  "audio_id": "583674661052146",
+  "titulo": "Latina (Instrumental) · Tony Dark Eyes",
+  "origen": "biblioteca de Instagram (colección libre de derechos)",
+  "audio_volume": 1.0,
+  "video_volume": 0.5
+ }
 }
