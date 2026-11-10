@@ -525,3 +525,11 @@ La cadena actual (equipo/voz.json `cadena_voz`: paso alto 80 Hz, EQ, compresor, 
 **Revertir:** `herramientas/versiones/hacer_reel.py_2026-11-10e`, `demo_app.py_2026-11-10e`, `publicar_gh.py_2026-11-10e`; o vaciar `musica/pistas.json`.
 
 **Nota (10/11, noche):** el dueño acepta que un reel salga sin canción si Instagram la rechaza: la añade él editando el reel (Audio). `publicar_reel` deja en resultado.json «cancion_instagram» (aplicada) o «falta_cancion» (con la sugerida).
+
+## Cambio 36 · 10/11/2026 (noche, ejecución programada de Mejora) · ARREGLO URGENTE: los reels con voz no se renderizaban
+**Síntoma (medido en registro.log y en el ciclo n.º 266/267):** desde el cambio 34 (música de la biblioteca de Instagram) el ciclo de las 20:00 UTC falló en 017, 018, 019, 020, 022, 023 y 024 con «'str' object does not support item assignment» (1/3 intentos) y ningún reel con voz Chatterbox España se rehizo. Con 3 fallos más habrían ido a errores/.
+**Causa:** en `publicar_gh.renderizar`, `guion` es la RUTA del guion.json, y el cambio 34 hacía `guion["musica"] = False` sobre esa cadena.
+**Arreglo:** función nueva `guion_sin_musica(guion, trabajo)`: lee el guion, pone `"musica": false`, vuelve absoluto el `"video"` relativo (hacer_reel.py lo resuelve respecto a la carpeta del guion) y escribe una copia en la carpeta de trabajo, cuya ruta es la que se renderiza. Probado en la nube con `cola/017_presupuesto_ia`: la copia se renderiza con hacer_reel.py (modo app, 1137 fotogramas, 37,9 s, OK). La voz no se puede probar aquí (Hugging Face bloqueado): la prueba real es el ciclo en Actions.
+**Cola:** quitados `_error_render` e `_intentos_render` de los 7 reels (siguen con `"renderizado": false`; todos salen dentro de más de 3 h) y relanzado el ciclo (con Chatterbox es 1 reel por ciclo, ≈ 8-10 min cada uno).
+**Voz:** sin cambios (Chatterbox España es-es, sin referencia de persona real; referencia sintética Kokoro em_alex; sin voz del dueño). **Música:** sin cambios (orden del dueño de esta noche: librería sin derechos de la biblioteca de Instagram, cambios 34-35).
+**Revertir:** copiar `herramientas/versiones/publicar_gh.py_2026-11-10f` sobre `publicar_gh.py` (volvería el fallo; solo sirve si se apaga la música de Instagram con `equipo/musica_instagram.json → "activo": false`).

@@ -21,7 +21,5 @@
   },
   "renderizado": false,
   "nota_mejora": "10/11/2026 (2.ª ejecución): rendido con Piper por error de instalación; se rehace con «Chatterbox España» (es-es sin referencia de persona real). Sin voz del dueño.",
-  "_nota_calidad": "10/11 Calidad: cierre cambiado al de la directiva (prueba gratuita) en guion y post, quitada la automatización IDEA; duraciones de tramo ajustadas para evitar huecos de voz > 1,5 s. renderizado:false para que el ciclo lo rehaga.",
-  "_intentos_render": 1,
-  "_error_render": "'str' object does not support item assignment"
+  "_nota_calidad": "10/11 Calidad: cierre cambiado al de la directiva (prueba gratuita) en guion y post, quitada la automatización IDEA; duraciones de tramo ajustadas para evitar huecos de voz > 1,5 s. renderizado:false para que el ciclo lo rehaga."
 }

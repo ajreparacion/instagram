@@ -23,7 +23,5 @@
   "renderizado": false,
   "nota_mejora": "10/11/2026 (2.ª ejecución): rendido con Piper por error de instalación; se rehace con «Chatterbox España» (es-es sin referencia de persona real). Sin voz del dueño.",
   "motor_voz": "chatterbox",
-  "asset": "019_suscripciones_ia.mp4",
-  "_intentos_render": 1,
-  "_error_render": "'str' object does not support item assignment"
+  "asset": "019_suscripciones_ia.mp4"
 }
