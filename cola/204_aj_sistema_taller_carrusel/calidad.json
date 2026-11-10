@@ -1,14 +1,12 @@
 {
- "aprobado": false,
- "nota": 84,
- "fecha": "2026-11-10T10:35Z",
- "motivos": [
-  "Directiva del 10/11 00:00: fuera el cierre «comenta/escríbeme X» y cierre único «Prueba gratuita · sin tarjeta · sin compromiso». La última diapositiva aún dice «Escríbeme IDEA por privado» y el texto del post conserva el cierre antiguo."
- ],
- "como_arreglarlo": "Mejora cambia la caja «Escríbeme IDEA por privado» de herramientas/demo_app.py (slide_cierre y escena de cierre del reel) por «Prueba gratuita · sin tarjeta · sin compromiso» (ver peticiones_mejora.md 10/11); después se pone «renderizado»:false (reels) o se regeneran las diapositivas y Calidad vuelve a revisar. Contenido y datos ya estaban bien: la nota anterior era 94.",
- "revisado_por": "agente de CALIDAD (10/11, pasada de las 11:30)",
+ "aprobado": true,
+ "nota": 90,
+ "fecha": "2026-11-10T11:55Z",
+ "comentario": "Diapositivas regeneradas el 10/11 con el cierre de la directiva (6/6 o última diapositiva con «Prueba gratuita · sin tarjeta · sin compromiso»), texto del post sin «comenta/escríbeme X», datos de demo, firma By Neogest Lab. Contenido y datos sin cambios respecto a la aprobación anterior.",
+ "revisado_por": "agente de CALIDAD (10/11, pasada de las 12:50)",
  "anterior": {
-  "aprobado": true,
-  "nota": 94
+  "aprobado": false,
+  "nota": 84,
+  "fecha": "2026-11-10T10:35Z"
  }
 }

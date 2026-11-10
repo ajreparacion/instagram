@@ -1,10 +1,10 @@
 {
  "aprobado": false,
- "nota": 84,
- "fecha": "2026-11-08T18:33Z",
+ "nota": 86,
+ "fecha": "2026-11-10T11:55Z",
  "motivos": [
-  "A1: hueco de voz de 1,55 s (16,3-17,85 s) en la escena 2, rozando el límite de 1,5 s.",
-  "Voz clonada con θ sin validar de oído por el dueño (Calidad no puede evaluar el seseo): techo 88 hasta que la valide (peticiones_mejora.md, punto 4)."
+  "Cierre antiguo «Escríbeme IDEA por privado» en voz, pantalla y texto del post (la directiva del 10/11 00:00 lo prohíbe)."
  ],
- "como_arreglarlo": "Guion corregido (la escena 2 añade «y sin calculadora»); se quita «renderizado» para que se rehaga. Se revisa en la siguiente pasada. Sale mañana 13:40."
+ "como_arreglarlo": "Calidad ya ha corregido guion.json y post.json (cierre de la directiva y duraciones de tramo) y ha puesto renderizado:false; el ciclo lo rehace con la voz genérica y Calidad vuelve a revisar el render (nota esperada ≥ 90 si no quedan huecos > 1,5 s). La θ/seseo de la voz Kokoro no es medible sin oído.",
+ "revisado_por": "agente de CALIDAD (10/11, pasada de las 12:50)"
 }

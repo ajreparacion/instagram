@@ -22,15 +22,17 @@
     "inicio": 2.7,
     "fin": 8.0
    },
-   "voz": "Le pedí a una IA esta agenda, con *un solo mensaje*."
+   "voz": "Le pedí a una IA esta agenda, con *un solo mensaje*.",
+   "duracion": 3.68
   },
   {
    "estilo": "tramo",
    "clip": {
     "inicio": 8.7,
-    "fin": 19.5
+    "fin": 16.94
    },
-   "voz": "Apunto quién tiene cita y qué día, *sin ordenarlas*, tal como me vienen."
+   "voz": "Apunto quién tiene cita y qué día, *sin ordenarlas*, tal como me vienen.",
+   "duracion": 4.71
   },
   {
    "estilo": "tramo",
@@ -42,8 +44,8 @@
   },
   {
    "estilo": "cierre",
-   "texto": "Escríbeme «IDEA»",
-   "voz": "¿Tienes una idea para ayudar en casa? Escríbeme *idea* por privado."
+   "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+   "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
   }
  ]
 }

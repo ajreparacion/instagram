@@ -1,11 +1,11 @@
 {
  "aprobado": false,
- "nota": 88,
- "fecha": "2026-11-09T18:33Z",
+ "nota": 84,
+ "fecha": "2026-11-10T11:55Z",
  "motivos": [
-  "Voz clonada con θ sin validar de oído por el dueño (Calidad no puede evaluar el seseo): techo 88 hasta que la valide (directiva §9, pendiente_usuario.md punto 7).",
-  "Demo HTML real grabada funcionando (8 fotogramas revisados): contadores coherentes con lo escrito (3 planificados, 2 publicados, 4 libres de 7 días). Cierre IDEA, firma By Neogest Lab, texto del post con aviso de datos de ejemplo, sin marcas ni clientes. ffprobe 1080x1920 30 fps H.264+AAC, 24,1 s; ebur128 -14,0 LUFS, pico -3,0 dBFS, 0 silencios > 1,2 s; voz contigua sin huecos > 1,5 s. Sin reel del mismo público adyacente (018 y 020 en medio)."
+  "Cierre antiguo «Escríbeme IDEA por privado» en voz, pantalla y texto del post (la directiva del 10/11 00:00 lo prohíbe).",
+  "Bloqueo A1: huecos de voz > 1,5 s con solo música: [[5.3, 7.45], [9.7, 12.45], [15.35, 18.25]]."
  ],
- "como_arreglarlo": "Aprobable (≥ 90) en cuanto el dueño valide la voz θ, sin tocar el reel.",
- "revisado_por": "agente de CALIDAD (9/11, pasada de la tarde)"
+ "como_arreglarlo": "Calidad ya ha corregido guion.json y post.json (cierre de la directiva y duraciones de tramo) y ha puesto renderizado:false; el ciclo lo rehace con la voz genérica y Calidad vuelve a revisar el render (nota esperada ≥ 90 si no quedan huecos > 1,5 s). La θ/seseo de la voz Kokoro no es medible sin oído.",
+ "revisado_por": "agente de CALIDAD (10/11, pasada de las 12:50)"
 }
