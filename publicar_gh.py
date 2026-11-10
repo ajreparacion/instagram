@@ -182,8 +182,10 @@ def ajustes_voz():
 
 
 def cadena_motores(aj):
-    """Motor principal y después los de respaldo, sin repetir y solo los conocidos. Piper siempre cierra la lista."""
-    orden = [str(aj.get("motor", "piper")).lower()] + [str(m).lower() for m in (aj.get("respaldo") or [])] + ["piper"]
+    """Motor principal y después los de respaldo, sin repetir y solo los conocidos. Piper cierra la lista salvo "permitir_piper": false."""
+    orden = [str(aj.get("motor", "piper")).lower()] + [str(m).lower() for m in (aj.get("respaldo") or [])]
+    if aj.get("permitir_piper", True):   # 10/11/2026: con "permitir_piper": false el render FALLA antes que salir con Piper (robótico)
+        orden.append("piper")
     vistos = []
     for m in orden:
         if m in MOTORES and m not in vistos:
@@ -406,6 +408,30 @@ def duracion_wav(ruta):
         return w.getnframes() / float(w.getframerate())
 
 
+def normalizar_pico(ruta, db=-6.0):
+    """Escala la frase (wav 16 bit) para que su pico quede en `db` dBFS. Devuelve la ganancia en dB (None si no se pudo)."""
+    try:
+        import numpy as np
+        with wave.open(ruta) as w:
+            sr, ch, sw = w.getframerate(), w.getnchannels(), w.getsampwidth()
+            raw = w.readframes(w.getnframes())
+        if sw != 2:
+            return None
+        x = np.frombuffer(raw, "<i2").astype(np.float32) / 32768.0
+        pk = float(np.abs(x).max()) if x.size else 0.0
+        if pk < 1e-4:
+            return None
+        g = (10 ** (db / 20)) / pk
+        y = np.clip(x * g, -1.0, 1.0)
+        with wave.open(ruta, "wb") as w:
+            w.setnchannels(ch); w.setsampwidth(2); w.setframerate(sr)
+            w.writeframes((y * 32767).astype("<i2").tobytes())
+        return round(20 * np.log10(g), 1)
+    except Exception as e:
+        log(f"Normalización de pico omitida en {os.path.basename(ruta)}: {str(e)[-120:]}")
+        return None
+
+
 def recortar_silencios(ruta, cfg):
     """Quita el silencio del principio y del final de una frase y acorta las pausas internas largas.
 
@@ -480,6 +506,11 @@ def preparar_voz(locucion, trabajo):
     recortes = [recortar_silencios(w, aj.get("recorte")) for w in rutas]
     if any(recortes):
         log(f"Voz: silencios recortados por frase (s): {[r or 0 for r in recortes]}")
+    # 10/11/2026: pico de cada frase a -6 dBFS ANTES de la cadena (así el compresor trabaja siempre al mismo nivel y no hace
+    # falta un limitador por frase que sature).
+    if aj.get("normalizar_pico_db") is not None:
+        gan = [normalizar_pico(w, float(aj["normalizar_pico_db"])) for w in rutas]
+        log(f"Voz: pico de cada frase normalizado a {aj['normalizar_pico_db']} dBFS (ganancia aplicada, dB): {gan}")
     # Alineación palabra a palabra (faster-whisper) → subtítulos clavados a la voz y énfasis en las palabras marcadas
     palabras = alinear_palabras(rutas, [t["texto"] for t in tramos], trabajo, aj)
     for t, w, p in zip(tramos, rutas, palabras):
@@ -776,7 +807,10 @@ def _grafo_voz(video, tramos, wavs, aj, cadena):
         ms = int(float(t["inicio"]) * 1000 + 120)
         proc = f"{cadena}," if cadena else ""
         proc += realce_enfasis(t, aj)   # énfasis (+dB en las palabras marcadas), después de la cadena
-        filtros.append(f"[{i + 1}:a]aresample=44100,{proc}atempo={tempo:.3f},adelay={ms}|{ms},volume={aj['volumen_voz']}[v{i}]")
+        # 10/11/2026: fundido de entrada 15 ms y de salida 40 ms por frase (sin clics en los bordes) y silencio limpio entre frases
+        fin = max(d / tempo - 0.04, 0.05)
+        fade = f"afade=t=in:d=0.015,afade=t=out:st={fin:.3f}:d=0.04," if aj.get("fundidos_frase", True) else ""
+        filtros.append(f"[{i + 1}:a]aresample=44100,{proc}atempo={tempo:.3f},{fade}adelay={ms}|{ms},volume={aj['volumen_voz']}[v{i}]")
         etiquetas.append(f"[v{i}]")
     filtros.append(f"{''.join(etiquetas)}amix=inputs={len(etiquetas)}:normalize=0,pan=stereo|c0=c0|c1=c0,apad,asplit=2[vox][key]")
     return entradas, filtros
@@ -1050,6 +1084,9 @@ def renderizar(cfg, carpeta, post):
 
 def renderizar_pendientes(cfg):
     hechos = 0
+    if os.environ.get("OMITIR_RENDER") == "1":   # ciclo.yml: falta el motor de voz o faster-whisper; no se gastan intentos
+        log("Render omitido: ciclo.yml avisó de que falta un motor de voz o faster-whisper (no se cae a Piper)")
+        return
     for _, carpeta, post in carpetas_cola():
         if post.get("renderizado") or post.get("tipo") in ("carrusel", "imagen", "historia") or hechos >= MAX_RENDERS:
             continue

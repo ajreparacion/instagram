@@ -149,6 +149,32 @@ jobs:
           ~/.venvs/chatterbox/bin/python -c "import chatterbox.mtl_tts, torch; print('chatterbox OK, torch', torch.__version__)"
           echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
 
+      - name: Comprobar que el motor de voz y la alineación están instalados (si no, NO se renderiza y el ciclo acaba en rojo)
+        if: steps.trabajo.outputs.ml == 'si'
+        # 10/11/2026: el 13:40 los renders cayeron a Piper (ModuleNotFoundError: kokoro, pocket_tts, faster_whisper) y la voz
+        # salió robótica. Con "permitir_piper": false no hay Piper; si falta algo, OMITIR_RENDER=1 hace que publicar_gh.py no
+        # renderice (sin gastar intentos del reel) pero siga publicando lo ya listo, y el último paso deja el ciclo en rojo.
+        run: |
+          python3 - <<'EOF'
+          import json, os, subprocess, sys
+          aj = json.load(open("equipo/voz.json"))
+          motores = [str(aj.get("motor", "")).lower()] + [str(m).lower() for m in aj.get("respaldo") or []]
+          fallos = []
+          def prueba(py, mod):
+              return subprocess.run([py, "-c", "import " + mod], capture_output=True).returncode == 0
+          if motores[0] == "chatterbox":
+              py = os.environ.get("PYTHON_CHATTERBOX", "")
+              if not (py and prueba(py, "chatterbox.mtl_tts")): fallos.append("chatterbox")
+          if "kokoro" in motores and not prueba(sys.executable, "kokoro"): fallos.append("kokoro")
+          if "pocket" in motores and not prueba(sys.executable, "pocket_tts"): fallos.append("pocket_tts")
+          if (aj.get("alineacion") or {}).get("activo", True) and not prueba(sys.executable, "faster_whisper"): fallos.append("faster_whisper")
+          if fallos:
+              print("::error::FALTA en el ciclo: " + ", ".join(fallos))
+              open(os.environ["GITHUB_ENV"], "a").write("OMITIR_RENDER=1\n")
+          else:
+              print("Motores de voz y alineación OK:", motores)
+          EOF
+
       - name: Ciclo
         env:
           PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
@@ -168,4 +194,10 @@ jobs:
             git pull --rebase -q && git push -q && exit 0
             sleep 5
           done
+          exit 1
+
+      - name: Aviso en rojo si se omitió el render por falta de motor de voz
+        if: env.OMITIR_RENDER == '1'
+        run: |
+          echo "::error::Se omitió el render de los reels con voz: faltaba un motor de voz o faster-whisper (no se usa Piper)."
           exit 1
