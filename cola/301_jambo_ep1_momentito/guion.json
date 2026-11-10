@@ -5,6 +5,7 @@
  "serie": "El Jambo que sabe y las IAs",
  "episodio": 1,
  "negocio": "oficina / pyme",
+ "gancho_corto": "«UN MOMENTITO» A LAS 18:55",
  "portada_texto": "POV: tu jefe pide «un momentito» a las 18:55",
  "musica": true,
  "_formato": "Modo 'sketch' (NUEVO, pendiente de Mejora). Escena = {estilo gancho|gag|delega|remate|mensaje|cierre, hablante jambo|jupillo|pelota|bola|tramites|null, voz (con *énfasis*), texto (globo o rótulo en pantalla)}. El mensaje y el cierre van serios, sin música de chiste, fotograma guardable con la fuente pequeña.",

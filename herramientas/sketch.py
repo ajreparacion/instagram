@@ -13,7 +13,7 @@ globo con el nombre de quien habla, contador «Veces que se lo ha pasado a la Ju
 cada ~2,7 s (zoom de golpe), efectos de sonido al giro (remate) y fotograma final serio (fondo oscuro, frase, cifra y
 fuente pequeña, sin música de chiste).
 Se usa desde hacer_reel.py: sketch.bind(modulo_hacer_reel) y después preparar()/render_frame()."""
-import math, random
+import math, random, re
 import numpy as np
 from PIL import Image, ImageDraw
 
@@ -33,6 +33,13 @@ SK_SUELO = 1330            # y del suelo de los personajes
 SK_SUB_CY = 1445           # banda de subtítulos (por encima de la interfaz de Instagram)
 SK_SEG = 2.7               # segundos entre cortes de cámara dentro de una escena
 FONDO_SERIO = (22, 24, 29)
+# Primer fotograma (Calidad v8.1, B7; 11/11/2026): fondo plano saturado que corta el feed, primer plano de cara en el
+# fotograma 0 con zoom-out de golpe y texto gigante de 3-6 palabras. Se apaga con "fondo": false / "primer_plano": false.
+FONDOS = {"amarillo": (255, 214, 10), "cian": (30, 205, 235), "rojo": (240, 70, 60), "naranja": (255, 150, 30)}
+ACTIVO_SOBRE_FONDO = (200, 20, 60)   # palabra activa del subtítulo sobre fondo saturado (el cian no se lee sobre amarillo)
+PP_ZOOM = 2.0       # zoom de la cara en el fotograma 0
+PP_DUR = 0.7        # s que tarda en abrirse al plano normal
+GC_FIN = 0.95       # s hasta que el texto gigante se ha ido
 PIEL = (236, 194, 158)
 SUCIO = (120, 96, 70)
 
@@ -388,6 +395,18 @@ def preparar(sc, spec, rng):
     ac = dib.get("acciones") if isinstance(dib.get("acciones"), dict) else {}
     sc.acciones = {str(k).strip().lower(): str(v).strip().lower() for k, v in ac.items()}   # accion de cada personaje (si no, la de la escena para quien habla)
     sc.entran = [p for p in sc.pers if p not in hr.DIB_PREV["pers"]]
+    sc.primero = sc.idx == 0 and not sc.serio
+    if sc.primero:
+        sc.entran = []   # fotograma 0: los personajes YA están en escena (antes entraban deslizándose y el primer fotograma era un decorado vacío)
+    fo = ctx.get("fondo", "auto")
+    if fo in (False, "no", "ninguno"):
+        sc.fondo = None
+    elif isinstance(fo, (list, tuple)) and len(fo) == 3:
+        sc.fondo = tuple(int(x) for x in fo)
+    elif isinstance(fo, str) and fo in FONDOS:
+        sc.fondo = FONDOS[fo]
+    else:
+        sc.fondo = FONDOS["amarillo"]
     hr.DIB_PREV["pers"] = set(sc.pers)
     voz, enf_voz = hr.parsear_enfasis(spec.get("voz") or "")
     texto, _ = hr.parsear_enfasis(spec.get("texto") or "")
@@ -399,7 +418,8 @@ def preparar(sc, spec, rng):
         wps = len(voz.split()) / max(0.3, dv - 0.1)
     else:
         wps = max(hr.WPS_HUMANO, len(voz.split()) / max(0.3, sc.dur * 0.8))
-    estilo_sub = dict(fill=hr.TINTA, stroke=hr.PAPEL, activo=hr.CIAN, enfasis=hr.TINTA, marca=True, cy=SK_SUB_CY, smax=78, smin=52)
+    estilo_sub = dict(fill=hr.TINTA, stroke=(hr.PAPEL if not sc.fondo else (255, 255, 255)), activo=(hr.CIAN if not sc.fondo else ACTIVO_SOBRE_FONDO),
+                      enfasis=hr.TINTA, marca=True, cy=SK_SUB_CY, smax=78, smin=52)
     sc.sub = hr.Subtitulos(voz, wps, 0.12, sc.dur, enfasis=enf_voz, tiempos=tiempos, estilo=estilo_sub) if (voz and not sc.serio) else None
     env = spec.get("_voz_env")
     sc.env = [min(1.0, max(0.0, float(x))) for x in env] if isinstance(env, list) and env else None
@@ -417,6 +437,12 @@ def preparar(sc, spec, rng):
     # gancho y rótulo fijo arriba: «POV: …» desde el fotograma 0
     gancho = str(ctx.get("gancho") or "").strip()
     sc.gancho = hr.rotulo_dibujo(gancho, grande=(sc.estilo_d == "gancho")) if (gancho and not sc.serio) else None
+    # texto gigante del fotograma 0 (3-6 palabras); si el guion no lo trae, las últimas 6 palabras del gancho sin «POV:»
+    gc = str(ctx.get("gancho_corto") or "").strip()
+    if not gc and gancho:
+        pal = re.sub(r"^\s*POV\s*:\s*", "", gancho, flags=re.I).split()
+        gc = " ".join(pal[-6:])
+    sc.gancho_gigante = gc if (sc.primero and gc and ctx.get("primer_plano", True)) else ""
     # contador «Veces que se lo ha pasado a la Jupillo: N» que sube
     cont = ctx.get("contador") if isinstance(ctx.get("contador"), dict) else {}
     sc.cont_texto = str(cont.get("texto") or "")
@@ -425,8 +451,9 @@ def preparar(sc, spec, rng):
     sc.cont_sube = sc.cont_fin > sc.cont_ini
     # efectos de sonido (los mezcla make_audio): (tipo, t relativo, duración)
     sc.sfx = []
-    if sc.idx > 0 and not sc.serio: sc.sfx.append(("whoosh", 0.0, 0.22))
+    if (sc.idx > 0 or ctx.get("primer_plano", True)) and not sc.serio: sc.sfx.append(("whoosh", 0.0, 0.22))   # el 0,0 s del reel ya suena (B7: sonido en 0,3 s)
     if sc.entran and not sc.serio: sc.sfx.append(("pop", 0.3, 0.09))
+    if sc.primero: sc.sfx.append(("pop", 0.1, 0.09))
     if sc.cont_sube:
         for k in range(sc.cont_fin - sc.cont_ini):
             sc.sfx.append(("tick", 0.7 + k * 0.28, 0.12))
@@ -464,6 +491,39 @@ def _globo(img, d, x, y_bajo, nombre, texto, col, k):
         dc.text((x0 + tw / 2, y0 + 84), texto, font=f2, fill=hr.TINTA, anchor="mm")
     if s < 1.0:
         cap = hr.capa_escala(cap, s, cx0, cy0)
+    img.paste(cap, (0, 0), cap)
+
+
+def _gancho_gigante(img, texto, t):
+    """Texto de 3-6 palabras, gigante y en contraste máximo, en el fotograma 0 (entre y=400 y 800, legible en miniatura):
+    entra de golpe con rebote, una palabra en rojo (la que va entre «» o la última) y se va entre 0,55 y GC_FIN s."""
+    texto = " ".join(texto.upper().split())
+    pal = texto.split()
+    f, size, lines = hr.wrap_fit(texto, hr.F_DIB, maxw=hr.W - 120, maxlines=2, smax=140, smin=84)
+    if len(" ".join(lines).split()) < len(pal) or size < 90:   # no cabe bien en 2 líneas: 3 líneas, sin perder palabras
+        f, size, lines = hr.wrap_fit(texto, hr.F_DIB, maxw=hr.W - 120, maxlines=3, smax=140, smin=84)
+    lh = int(size * 1.12)
+    y0 = 400
+    cap = Image.new("RGBA", (hr.W, hr.H), (0, 0, 0, 0)); dc = ImageDraw.Draw(cap, "RGBA")
+    # palabra de acento: la primera dentro de «» (o con asterisco); si no hay, la última
+    ac = next((i for i, w in enumerate(pal) if "«" in w or "»" in w or "*" in w), len(pal) - 1)
+    idx = 0
+    for li, ln in enumerate(lines):
+        ws = ln.split()
+        wtot = dc.textlength(ln, font=f)
+        x = (hr.W - wtot) / 2
+        for w in ws:
+            col = ACTIVO_SOBRE_FONDO if idx == ac else hr.TINTA
+            dc.text((x, y0 + 10 + li * lh), w.replace("*", ""), font=f, fill=col + (255,), stroke_width=12, stroke_fill=(255, 255, 255, 255))
+            x += dc.textlength(w + " ", font=f)
+            idx += 1
+    k = min(1.0, t / 0.16)
+    s = (0.8 + 0.2 * hr.ease_out_back(k)) if k < 1 else 1.0   # ya a 80 % en el fotograma 0 y rebota hasta 100 %
+    alfa = 1.0 if t < 0.55 else max(0.0, 1 - (t - 0.55) / (GC_FIN - 0.55))
+    if alfa < 1.0:
+        cap.putalpha(cap.getchannel("A").point(lambda v: int(v * alfa)))
+    if s != 1.0:
+        cap = hr.capa_escala(cap, s, hr.W / 2, y0 + (lh * len(lines)) / 2)
     img.paste(cap, (0, 0), cap)
 
 
@@ -604,7 +664,7 @@ def render_frame(fi, sc, noise, rg, seed):
         a += noise[fi % 8] // 10   # grano muy suave: la imagen se queda quieta, sin cámara
         np.clip(a, 0, 255, out=a)
         return a.astype(np.uint8)
-    img = hr.papel_img(seed).copy()
+    img = Image.new("RGB", (hr.W, hr.H), sc.fondo) if sc.fondo else hr.papel_img(seed).copy()
     d = ImageDraw.Draw(img, "RGBA")
     rng = random.Random(seed * 31 + sc.idx * 101 + fi // 4)   # temblor del trazo
     # gancho «POV: …» fijo arriba, desde el fotograma 0
@@ -652,14 +712,27 @@ def render_frame(fi, sc, noise, rg, seed):
     if sc.estilo_d == "remate" and t > 0.14:
         z *= 1 + 0.16 * hr.ease_out((t - 0.14) / 0.12)
         dx += 10 * math.sin((t - 0.14) * 60) * max(0.0, 1 - (t - 0.14) / 0.4)   # temblor del golpe
-    cw, ch = int(hr.W / z), int(hr.H / z)
+    pp = 0.0   # primer plano del fotograma 0: 1 -> 0 en PP_DUR s (zoom-out de golpe sobre la cara de quien habla)
+    if sc.primero and sc.gancho_gigante and t < PP_DUR:
+        pp = 1 - hr.ease_out(t / PP_DUR)
+    zt = z * (1 + (PP_ZOOM - 1) * pp)
+    cw, ch = int(hr.W / zt), int(hr.H / zt)
     cx = int((hr.W - cw) / 2 + dx * ts / SK_SEG) if sc.estilo_d != "remate" else int((hr.W - cw) / 2 + dx)
     cy = int((hr.H - ch) / 2 + dy * ts / SK_SEG)
+    if pp > 0:
+        quien = sc.hablante if sc.hablante in xs else (sc.pers[0] if sc.pers else None)
+        if quien:
+            alto = ALTURA[quien] * ESCALA[quien] * mult
+            hx, hy = xs[quien], SK_SUELO - 0.80 * alto          # centro de la cabeza
+            cx = int(cx * (1 - pp) + (hx - 540 / zt) * pp)       # la cabeza queda en (540, 1020) de la pantalla
+            cy = int(cy * (1 - pp) + (hy - 1020 / zt) * pp)
     cx = max(0, min(hr.W - cw, cx)); cy = max(0, min(hr.H - ch, cy))
     img = img.crop((cx, cy, cx + cw, cy + ch)).resize((hr.W, hr.H), Image.BILINEAR)
+    if sc.primero and sc.gancho_gigante and t < GC_FIN:
+        _gancho_gigante(img, sc.gancho_gigante, t)
     a = np.asarray(img, dtype=np.int16).copy()
     a += noise[fi % 8] // 6
-    if lf < 2: a -= 10   # micro parpadeo en el corte
+    if lf < 2 and sc.idx > 0: a -= 10   # micro parpadeo en el corte (nunca en el fotograma 0: B7)
     np.clip(a, 0, 255, out=a)
     return a.astype(np.uint8)
 
