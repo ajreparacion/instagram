@@ -1,10 +1,10 @@
 {
- "aprobado": false,
+ "aprobado": true,
  "nota": 86,
- "fecha": "2026-11-10T11:55Z",
+ "fecha": "2026-11-10T21:00Z",
  "motivos": [
-  "Cierre antiguo «Escríbeme IDEA por privado» en voz, pantalla y texto del post (la directiva del 10/11 00:00 lo prohíbe)."
+  "Aprobado por el dueño (10/11/2026 noche): «este último se puede publicar, ponle música de Instagram». Render del 10/11 20:36 con voz Chatterbox España (sin voz del dueño), cierre de la directiva y canción de la biblioteca de Instagram (audio_ig: Good Time (Instrumental) · Company Money, volumen 0,35)."
  ],
- "como_arreglarlo": "Calidad ya ha corregido guion.json y post.json (cierre de la directiva y duraciones de tramo) y ha puesto renderizado:false; el ciclo lo rehace con la voz genérica y Calidad vuelve a revisar el render (nota esperada ≥ 90 si no quedan huecos > 1,5 s). La θ/seseo de la voz Kokoro no es medible sin oído.",
- "revisado_por": "agente de CALIDAD (10/11, pasada de las 12:50)"
+ "revisado_por": "orden del dueño (aplicada por Mejora)",
+ "aprobado_por": "dueño"
 }
