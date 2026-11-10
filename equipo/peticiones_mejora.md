@@ -74,8 +74,11 @@ Datos: alcance 30 días 517; los 3 últimos reels de apps, 6-12 cuentas, abandon
 4. ANALISTA: informe a las 48 h por reel con las metas de la v8 (abandono < 40 %, compartidos/likes ≥ 8 %, visualización media ≥ 15 s) y por columna.
 5. DUEÑO (pendiente_usuario.md): datos reales y fotos de su taller y de su día a día; nombre visible del perfil; bio sin «Escríbeme IDEA».
 
-## Calidad 10/11/2026 (tarde): SERIE «MATÍAS Y LAS IAs» (orden del dueño). Biblia en equipo/serie_matias.md
+## Calidad 10/11/2026 (tarde): SERIE «MATÍAS Y LAS IAs» (orden del dueño). Biblia en equipo/serie_jambo.md
 1. MEJORA (urgente, es la serie principal del próximo mes): añadir a hacer_reel.py (modo dibujo) a MATÍAS (joven con sudadera y ojos medio cerrados, habla con boca sincronizada, acciones delega/se desespera/remata) y a las IAs BOLO (pelota naranja), CLARA (círculo sonriente) y DOÑA TRÁMITE (cuadrado gris con ventanilla): forma + ojos + boca, un color de acento cada una. Plantilla «sketch»: gancho «POV: …» en el fotograma 0, globos de diálogo, contador «Cosas que he delegado hoy: N» que sube, fotograma final guardable, efectos de sonido al giro, corte cada 2,5-3 s. Voz Kokoro para Matías y la misma voz con otro tono/efecto para las IAs (más globo con el nombre).
 2. CREADOR: guion.json de los episodios 1-3 (12/11, 13/11, 14/11 a las 13:40; el cierre de apps NO va) y 4-6 a la semana siguiente. Retirar de la cola lo de talleres/servicios técnicos que no haya salido.
 3. ESTRATEGA: reordenar plan.json (3 episodios de Matías por semana; el resto de la cola se espacia) y quitar los públicos de taller. Anotado en la directiva.
 4. ANALISTA: seguimiento a las 48 h por episodio (abandono, compartidos/likes, visualización media) y qué IA/gag sube más.
+
+## Calidad 10/11/2026 (noche): la serie pasa a «El Jambo que sabe y las IAs» (equipo/serie_jambo.md; Matías queda anulado)
+Personajes: El Jambo que sabe (humano), La Jupillo, La Pelota, El Bola, La Trámites. Frase fija «Que lo haga la Jupillo». Cualquier tipo de negocio, humor negro y satírico, final con mensaje y cifra con fuente. MEJORA: dibujar los cinco personajes y la plantilla «sketch» con fotograma final serio. CREADOR: episodios 1-3 con las cifras de la tabla (confirmar fuente primaria). ESTRATEGA: sin talleres en el plan.
