@@ -1,0 +1,32 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>¿Qué nota necesitas en el final?</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Poppins,system-ui,sans-serif;background:#fff;color:#1c1a18}
+header{padding:16px 16px 8px;font-weight:800;font-size:20px;line-height:1.2}
+.tag{display:inline-block;margin:0 16px 6px;padding:3px 10px;border-radius:99px;background:#fff3cd;color:#7a5b00;font-size:11px;font-weight:700}
+main{padding:2px 16px 14px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #eee}
+.row label{font-size:14px;color:#444;flex:1}.row span.u{font-size:13px;color:#888;width:46px}
+input{width:84px;font:inherit;font-size:20px;font-weight:700;text-align:right;border:2px solid #cfd8dc;border-radius:10px;padding:6px 8px;color:#1c1a18}
+input:focus{outline:none;border-color:#00b8d9;background:#f1fbfd}
+#res{margin:6px 0 8px;padding:14px;border-radius:16px;background:#00b8d9;color:#fff}
+#big{font-size:34px;font-weight:800;line-height:1.1}#sub{font-size:15px;margin-top:4px;font-weight:600}
+#det{margin-top:8px;font-size:13px;line-height:1.5;opacity:.95}
+.hip{font-size:11px;color:#777;line-height:1.4}
+#pr{margin-top:16px;padding:12px;border:2px dashed #b0bec5;border-radius:12px;font-size:12.5px;line-height:1.45;color:#37474f}
+#pr b{display:block;font-size:11px;letter-spacing:.06em;color:#00798f;margin-bottom:4px}
+</style></head><body>
+<header>¿Qué nota necesitas en el final?</header><div class="tag">EJEMPLO · datos inventados</div>
+<main>
+<div id="res"><div id="big"></div><div id="sub"></div><div id="det"></div></div>
+<div class="row"><label for="n1">Parcial (nota)</label><input id="n1" inputmode="decimal" value="4,2"><span class="u"></span></div><div class="row"><label for="w1">Parcial (peso)</label><input id="w1" inputmode="decimal" value="30"><span class="u">%</span></div><div class="row"><label for="n2">Prácticas (nota)</label><input id="n2" inputmode="decimal" value="6,5"><span class="u"></span></div><div class="row"><label for="w2">Prácticas (peso)</label><input id="w2" inputmode="decimal" value="20"><span class="u">%</span></div><div class="row"><label for="wf">Examen final (peso)</label><input id="wf" inputmode="decimal" value="50"><span class="u">%</span></div>
+<div class="hip">Ejemplo con datos inventados. Cuenta: nota final = suma de cada nota × su peso; para aprobar hace falta un 5. Mira cómo pondera tu asignatura, porque cada una es distinta.</div>
+<div id="pr"><b>MENSAJE QUE LE DI A LA IA PARA HACER ESTA PÁGINA</b>Hazme una página para el móvil, en español, para estudiantes: dos notas con su peso en porcentaje y el peso del examen final. Que calcule al momento qué nota necesito en el final para llegar a un 5 de nota final, y que avise si no se puede.</div>
+</main>
+<script>
+const num=id=>{const v=parseFloat(String(document.getElementById(id).value).replace(',','.'));return isNaN(v)?0:v};
+const fmt=(n,d=2)=>{const s=Math.abs(n).toFixed(d).split('.');s[0]=s[0].replace(/\B(?=(\d{3})+(?!\d))/g,'.');return (n<0?'-':'')+s.join(',')};
+function render(){const ya=(num('n1')*num('w1')+num('n2')*num('w2'))/100;const wf=num('wf')/100;const need=wf>0?(5-ya)/wf:0;let big,sub;if(need>10){big='No llegas ni con un 10';sub='te harían falta un '+fmt(need,2)}else if(need<=0){big='Ya has aprobado';sub='con lo que llevas, sin contar el final'}else{big='Un '+fmt(need,2)+' en el final';sub='para llegar a un 5 de nota final'}return{big:big,sub:sub,det:['Ya llevas: '+fmt(ya,2)+' puntos','Cuenta: (5 − '+fmt(ya,2)+') ÷ '+fmt(wf,2)]}}
+function calc(){const r=render();document.getElementById('big').textContent=r.big;document.getElementById('sub').textContent=r.sub;document.getElementById('det').innerHTML=r.det.join('<br>')}
+document.querySelectorAll('input').forEach(i=>{i.addEventListener('input',calc);i.addEventListener('focus',()=>i.select());i.addEventListener('mouseup',e=>e.preventDefault())});
+calc();
+</script></body></html>

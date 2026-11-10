@@ -1,0 +1,61 @@
+{
+ "titulo": "Reel 402: gastos hormiga al año (cálculo en pantalla)",
+ "semilla": 4102,
+ "modo": "app",
+ "plantilla": true,
+ "volumen_original": 0,
+ "musica": true,
+ "portada_texto": "Caprichos pequeños, 1.388 € al año",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "texto": "Caprichos pequeños: *1.388 €* al año",
+   "voz": "Tres caprichos, *mil trescientos ochenta y ocho euros* al año.",
+   "clip": {
+    "inicio": 0,
+    "fin": 2.6
+   }
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 2.6,
+    "fin": 7.3
+   },
+   "texto": "El mensaje que usé",
+   "voz": "Datos de ejemplo. La página la hizo una IA con *este mensaje*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 7.3,
+    "fin": 11.2
+   },
+   "texto": "Bajo el bocata",
+   "voz": "Bocata solo una vez por semana: *novecientos setenta y dos*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 11.2,
+    "fin": 14.6
+   },
+   "texto": "Bajo el café",
+   "voz": "Y el café, a tres: *quinientos setenta y dos euros* menos."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 14.6,
+    "fin": 20.0
+   },
+   "texto": "Guárdalo y pon tus precios",
+   "voz": "Pon tus precios y *mándaselo* a quien dice que no gasta nada."
+  },
+  {
+   "estilo": "cierre",
+   "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+   "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
+  }
+ ]
+}

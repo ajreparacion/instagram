@@ -1,0 +1,32 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>¿Cuánto se tira en el bar?</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Poppins,system-ui,sans-serif;background:#fff;color:#1c1a18}
+header{padding:16px 16px 8px;font-weight:800;font-size:20px;line-height:1.2}
+.tag{display:inline-block;margin:0 16px 6px;padding:3px 10px;border-radius:99px;background:#fff3cd;color:#7a5b00;font-size:11px;font-weight:700}
+main{padding:2px 16px 14px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #eee}
+.row label{font-size:14px;color:#444;flex:1}.row span.u{font-size:13px;color:#888;width:46px}
+input{width:84px;font:inherit;font-size:20px;font-weight:700;text-align:right;border:2px solid #cfd8dc;border-radius:10px;padding:6px 8px;color:#1c1a18}
+input:focus{outline:none;border-color:#00b8d9;background:#f1fbfd}
+#res{margin:6px 0 8px;padding:14px;border-radius:16px;background:#00b8d9;color:#fff}
+#big{font-size:34px;font-weight:800;line-height:1.1}#sub{font-size:15px;margin-top:4px;font-weight:600}
+#det{margin-top:8px;font-size:13px;line-height:1.5;opacity:.95}
+.hip{font-size:11px;color:#777;line-height:1.4}
+#pr{margin-top:16px;padding:12px;border:2px dashed #b0bec5;border-radius:12px;font-size:12.5px;line-height:1.45;color:#37474f}
+#pr b{display:block;font-size:11px;letter-spacing:.06em;color:#00798f;margin-bottom:4px}
+</style></head><body>
+<header>¿Cuánto se tira en el bar?</header><div class="tag">EJEMPLO · datos inventados</div>
+<main>
+<div id="res"><div id="big"></div><div id="sub"></div><div id="det"></div></div>
+<div class="row"><label for="a">Raciones que se tiran al día</label><input id="a" inputmode="decimal" value="3"><span class="u">raciones</span></div><div class="row"><label for="b">Coste de cada ración</label><input id="b" inputmode="decimal" value="6"><span class="u">€</span></div><div class="row"><label for="c">Días abierto al mes</label><input id="c" inputmode="decimal" value="30"><span class="u">días</span></div>
+<div class="hip">Ejemplo con datos inventados: coste de cada ración = lo que te cuesta prepararla, no lo que cobras. Se multiplica raciones × coste × días; el año son 12 meses.</div>
+<div id="pr"><b>MENSAJE QUE LE DI A LA IA PARA HACER ESTA PÁGINA</b>Hazme una página de una sola pantalla para un bar, en español y pensada para el móvil. Tres campos: raciones que se tiran al día, coste de cada ración y días abierto al mes. Que calcule al momento lo que se pierde al mes y al año, con la cifra grande.</div>
+</main>
+<script>
+const num=id=>{const v=parseFloat(String(document.getElementById(id).value).replace(',','.'));return isNaN(v)?0:v};
+const fmt=(n,d=2)=>{const s=Math.abs(n).toFixed(d).split('.');s[0]=s[0].replace(/\B(?=(\d{3})+(?!\d))/g,'.');return (n<0?'-':'')+s.join(',')};
+function render(){const m=num('a')*num('b')*num('c');return{big:fmt(m,0)+' € al mes',sub:fmt(m*12,0)+' € al año tirados',det:['Cuenta: '+fmt(num('a'),0)+' raciones × '+fmt(num('b'),2)+' € × '+fmt(num('c'),0)+' días']}}
+function calc(){const r=render();document.getElementById('big').textContent=r.big;document.getElementById('sub').textContent=r.sub;document.getElementById('det').innerHTML=r.det.join('<br>')}
+document.querySelectorAll('input').forEach(i=>{i.addEventListener('input',calc);i.addEventListener('focus',()=>i.select());i.addEventListener('mouseup',e=>e.preventDefault())});
+calc();
+</script></body></html>

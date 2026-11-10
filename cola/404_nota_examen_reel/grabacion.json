@@ -1,0 +1,71 @@
+{
+ "dispositivo": "movil",
+ "fondo": "#F3E5F5",
+ "url": "herramienta.html",
+ "pasos": [
+  {
+   "accion": "esperar",
+   "seg": 2.5
+  },
+  {
+   "accion": "scroll",
+   "y": 430,
+   "seg": 0.9
+  },
+  {
+   "accion": "esperar",
+   "seg": 3.0
+  },
+  {
+   "accion": "scroll",
+   "y": -430,
+   "seg": 0.9
+  },
+  {
+   "accion": "escribir",
+   "selector": "#n2",
+   "texto": "8",
+   "cps": 5
+  },
+  {
+   "accion": "zoom",
+   "selector": "#res",
+   "nivel": 1.4,
+   "seg": 0.7
+  },
+  {
+   "accion": "esperar",
+   "seg": 1.5
+  },
+  {
+   "accion": "zoom",
+   "nivel": 1.0,
+   "seg": 0.6
+  },
+  {
+   "accion": "escribir",
+   "selector": "#n1",
+   "texto": "6",
+   "cps": 5
+  },
+  {
+   "accion": "zoom",
+   "selector": "#res",
+   "nivel": 1.4,
+   "seg": 0.7
+  },
+  {
+   "accion": "esperar",
+   "seg": 1.8
+  },
+  {
+   "accion": "zoom",
+   "nivel": 1.0,
+   "seg": 0.6
+  },
+  {
+   "accion": "esperar",
+   "seg": 2.4
+  }
+ ]
+}

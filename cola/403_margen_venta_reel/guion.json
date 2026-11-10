@@ -1,0 +1,61 @@
+{
+ "titulo": "Reel 403: cuánto te queda al vender (cálculo en pantalla)",
+ "semilla": 4103,
+ "modo": "app",
+ "plantilla": true,
+ "volumen_original": 0,
+ "musica": true,
+ "portada_texto": "Vendes a 12 € y te quedan 4,52 €",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "texto": "Vendes a 12 € y te quedan *4,52 €*",
+   "voz": "Vendes a doce euros y te quedan *cuatro con cincuenta y dos*.",
+   "clip": {
+    "inicio": 0,
+    "fin": 2.5
+   }
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 2.5,
+    "fin": 7.5
+   },
+   "texto": "El mensaje que usé",
+   "voz": "La hizo una IA con *este mensaje*. Y el IVA no es tuyo."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 7.5,
+    "fin": 11.3
+   },
+   "texto": "Subo el precio",
+   "voz": "Subes dos euros: te quedan *uno sesenta y cinco* más."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 11.3,
+    "fin": 14.8
+   },
+   "texto": "Compro más barato",
+   "voz": "Y comprando a cuatro con cincuenta, *siete euros con siete*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 14.8,
+    "fin": 19.6
+   },
+   "texto": "Guárdalo y pon tus precios",
+   "voz": "Mándaselo a quien vende y *no sabe lo que gana*."
+  },
+  {
+   "estilo": "cierre",
+   "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+   "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
+  }
+ ]
+}

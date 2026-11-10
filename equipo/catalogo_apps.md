@@ -23,3 +23,6 @@ GH PLUS · Gestión Hogar, Insultator, Centro de Contenido Apps (es el hub del p
 ## Uso en reels
 - Prioridad de grabación real cuando haya acceso: Gestión Integral 7D (autónomos/pymes), AJ Sistema DEMO (peluquería/bar/tienda), MEDICATOR (con usuario demo), Studio Beats PRO.
 - Mientras tanto: prototipos propios en herramientas/casos/ (plato, pedidos, citas, semana, presupuesto, cuenta, suscripciones, compra), siempre dichos como «demo» y sin prometer precios ni plazos.
+
+## Comprobación del 11/11/2026 (Creador, ejecución programada)
+Sigue sin poder abrirse ninguna app `*.base44.app` desde la sesión del Creador (sin respuesta del proxy en gestion-hogar, centro-de-contenido y aj-reparacion-gestion). Por tanto no se graba ninguna app real y las novedades «vistas en código» (confeti y logros de GH PLUS, constantes con oxígeno de MEDICATOR, biblioteca de sonidos de Studio Beats PRO) NO se afirman. Reels 401-404: mini webs hechas con IA, grabadas funcionando y dichas como demo (cálculo en pantalla, datos de ejemplo rotulados).

@@ -1,0 +1,61 @@
+{
+ "titulo": "Reel 404: la nota que necesitas en el final (cálculo en pantalla)",
+ "semilla": 4104,
+ "modo": "app",
+ "plantilla": true,
+ "volumen_original": 0,
+ "musica": true,
+ "portada_texto": "POV: necesitas un 4,88 en el final",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "texto": "POV: necesitas un *4,88* en el final",
+   "voz": "Necesitas un *cuatro con ochenta y ocho* en el final.",
+   "clip": {
+    "inicio": 0,
+    "fin": 2.6
+   }
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 2.6,
+    "fin": 7.2
+   },
+   "texto": "El mensaje que usé",
+   "voz": "La hizo una IA con *este mensaje*. Pon los pesos de tu asignatura."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 7.2,
+    "fin": 11.2
+   },
+   "texto": "Mejoro las prácticas",
+   "voz": "Si las prácticas te salen con un ocho: *cuatro con veintiocho*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 11.2,
+    "fin": 14.5
+   },
+   "texto": "Mejoro el parcial",
+   "voz": "Y con un seis en el parcial, *tres con veinte*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 14.5,
+    "fin": 19.9
+   },
+   "texto": "Guárdalo y pon tus pesos",
+   "voz": "Mándaselo a quien está en *época de exámenes*."
+  },
+  {
+   "estilo": "cierre",
+   "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+   "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
+  }
+ ]
+}

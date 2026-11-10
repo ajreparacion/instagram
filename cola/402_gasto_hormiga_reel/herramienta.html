@@ -1,0 +1,32 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tus caprichos pequeños, al año</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Poppins,system-ui,sans-serif;background:#fff;color:#1c1a18}
+header{padding:16px 16px 8px;font-weight:800;font-size:20px;line-height:1.2}
+.tag{display:inline-block;margin:0 16px 6px;padding:3px 10px;border-radius:99px;background:#fff3cd;color:#7a5b00;font-size:11px;font-weight:700}
+main{padding:2px 16px 14px}.row{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid #eee}
+.row label{font-size:14px;color:#444;flex:1}.row span.u{font-size:13px;color:#888;width:46px}
+input{width:84px;font:inherit;font-size:20px;font-weight:700;text-align:right;border:2px solid #cfd8dc;border-radius:10px;padding:6px 8px;color:#1c1a18}
+input:focus{outline:none;border-color:#00b8d9;background:#f1fbfd}
+#res{margin:6px 0 8px;padding:14px;border-radius:16px;background:#00b8d9;color:#fff}
+#big{font-size:34px;font-weight:800;line-height:1.1}#sub{font-size:15px;margin-top:4px;font-weight:600}
+#det{margin-top:8px;font-size:13px;line-height:1.5;opacity:.95}
+.hip{font-size:11px;color:#777;line-height:1.4}
+#pr{margin-top:16px;padding:12px;border:2px dashed #b0bec5;border-radius:12px;font-size:12.5px;line-height:1.45;color:#37474f}
+#pr b{display:block;font-size:11px;letter-spacing:.06em;color:#00798f;margin-bottom:4px}
+</style></head><body>
+<header>Tus caprichos pequeños, al año</header><div class="tag">EJEMPLO · datos inventados</div>
+<main>
+<div id="res"><div id="big"></div><div id="sub"></div><div id="det"></div></div>
+<div class="row"><label for="p1">Café: precio</label><input id="p1" inputmode="decimal" value="1,50"><span class="u">€</span></div><div class="row"><label for="v1">Café: veces por semana</label><input id="v1" inputmode="decimal" value="5"><span class="u">veces</span></div><div class="row"><label for="p2">Bocata: precio</label><input id="p2" inputmode="decimal" value="4"><span class="u">€</span></div><div class="row"><label for="v2">Bocata: veces por semana</label><input id="v2" inputmode="decimal" value="3"><span class="u">veces</span></div><div class="row"><label for="p3">Refresco: precio</label><input id="p3" inputmode="decimal" value="1,80"><span class="u">€</span></div><div class="row"><label for="v3">Refresco: veces por semana</label><input id="v3" inputmode="decimal" value="4"><span class="u">veces</span></div>
+<div class="hip">Ejemplo con datos inventados. Cuenta: precio × veces por semana × 52 semanas, sumando los tres.</div>
+<div id="pr"><b>MENSAJE QUE LE DI A LA IA PARA HACER ESTA PÁGINA</b>Hazme una página para el móvil, en español, con tres gastos pequeños de cada día: precio y veces por semana de cada uno. Que sume al momento cuánto cuestan al año (52 semanas) y que enseñe cuánto es cada uno.</div>
+</main>
+<script>
+const num=id=>{const v=parseFloat(String(document.getElementById(id).value).replace(',','.'));return isNaN(v)?0:v};
+const fmt=(n,d=2)=>{const s=Math.abs(n).toFixed(d).split('.');s[0]=s[0].replace(/\B(?=(\d{3})+(?!\d))/g,'.');return (n<0?'-':'')+s.join(',')};
+function render(){const t=[1,2,3].map(i=>num('p'+i)*num('v'+i)*52);const s=t[0]+t[1]+t[2];return{big:fmt(s,2)+' € al año',sub:'tres caprichos pequeños, sumados',det:['Café: '+fmt(t[0],2)+' €','Bocata: '+fmt(t[1],2)+' €','Refresco: '+fmt(t[2],2)+' €']}}
+function calc(){const r=render();document.getElementById('big').textContent=r.big;document.getElementById('sub').textContent=r.sub;document.getElementById('det').innerHTML=r.det.join('<br>')}
+document.querySelectorAll('input').forEach(i=>{i.addEventListener('input',calc);i.addEventListener('focus',()=>i.select());i.addEventListener('mouseup',e=>e.preventDefault())});
+calc();
+</script></body></html>
