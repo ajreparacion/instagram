@@ -5,11 +5,12 @@
  "serie": "El Jambo que sabe y las IAs",
  "episodio": 1,
  "negocio": "oficina / pyme",
- "portada_texto": "«Un momentito» a las 18:55",
+ "portada_texto": "POV: tu jefe pide «un momentito» a las 18:55",
  "musica": true,
  "_formato": "Modo 'sketch' (NUEVO, pendiente de Mejora). Escena = {estilo gancho|gag|delega|remate|mensaje|cierre, hablante jambo|jupillo|pelota|bola|tramites|null, voz (con *énfasis*), texto (globo o rótulo en pantalla)}. El mensaje y el cierre van serios, sin música de chiste, fotograma guardable con la fuente pequeña.",
  "contador": {
   "texto": "Veces que se lo ha pasado a la Jupillo",
+  "inicio": 0,
   "valor": 1
  },
  "mensaje_final": {
@@ -19,62 +20,94 @@
  "escenas": [
   {
    "estilo": "gancho",
-   "hablante": "jambo",
-   "voz": "Las siete menos cinco. «Un *momentito*».",
-   "texto": "POV: «un momentito» a las 18:55",
+   "hablante": "bola",
+   "voz": "Jambo, un *momentito*. Informe de doscientas páginas. Para mañana.",
+   "texto": "POV: tu jefe pide «un momentito» a las 18:55",
    "dibujo": {
     "personajes": [
-     "jambo"
+     "jambo",
+     "bola"
     ],
-    "accion": "presume"
+    "acciones": {
+     "jambo": "presume",
+     "bola": "habla"
+    }
    }
   },
   {
    "estilo": "delega",
    "hablante": "jambo",
-   "voz": "Que lo haga la Jupillo.",
+   "voz": "Claro, jefe. *Que lo haga la Jupillo*.",
    "texto": "Que lo haga la Jupillo.",
    "dibujo": {
     "personajes": [
-     "jambo"
+     "jambo",
+     "jupillo"
     ],
-    "accion": "delega"
+    "acciones": {
+     "jambo": "delega",
+     "jupillo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "pelota",
+   "voz": "¡Yo te ayudo! Doscientas páginas son diez. Seguro.",
+   "texto": "La Pelota",
+   "dibujo": {
+    "personajes": [
+     "pelota",
+     "jupillo"
+    ],
+    "acciones": {
+     "pelota": "habla",
+     "jupillo": "habla"
+    }
    }
   },
   {
    "estilo": "gag",
    "hablante": "jupillo",
-   "voz": "Claro. Lo hago yo. Como siempre.",
+   "voz": "Eran doscientas. Las hago yo. *Como siempre*.",
    "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
      "jupillo"
     ],
-    "accion": "habla"
-   }
-  },
-  {
-   "estilo": "gag",
-   "hablante": "bola",
-   "voz": "¡Dormir es de débiles!",
-   "texto": "El Bola",
-   "dibujo": {
-    "personajes": [
-     "bola"
-    ],
-    "accion": "habla"
+    "acciones": {
+     "jupillo": "habla"
+    }
    }
   },
   {
    "estilo": "remate",
    "hablante": "jambo",
-   "voz": "Las once. Entregado. Qué bien me ha quedado.",
-   "texto": "23:00 · Informe entregado",
+   "voz": "Entregado a las once. Qué bien me ha quedado.",
+   "texto": "23:00 · ENTREGADO POR EL JAMBO",
    "dibujo": {
     "personajes": [
-     "jambo"
+     "jambo",
+     "bola"
     ],
-    "accion": "remata"
+    "acciones": {
+     "jambo": "remata",
+     "bola": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jupillo",
+   "voz": "De nada.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo"
+    ],
+    "acciones": {
+     "jupillo": "habla"
+    }
    }
   },
   {
@@ -106,5 +139,6 @@
    "bola",
    "tramites"
   ]
- }
+ },
+ "_guion_v2": "10/11/2026 noche: guion reescrito tras la crítica del dueño («sin sentido ni gracia») con patrones de reels virales de sketch de oficina: situación concreta, escalada en tres golpes, interpretación literal / error seguro de sí mismo, remate donde el mérito se lo lleva el Jambo y última frase seca de la IA (la que de verdad hace el trabajo)."
 }

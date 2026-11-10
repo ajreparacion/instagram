@@ -385,6 +385,8 @@ def preparar(sc, spec, rng):
     if sc.hablante and sc.hablante not in sc.pers and not sc.serio:
         sc.pers = ([sc.hablante] + sc.pers)[:2]
     sc.accion = str(dib.get("accion") or ("remata" if sc.estilo_d == "remate" else "habla")).strip().lower()
+    ac = dib.get("acciones") if isinstance(dib.get("acciones"), dict) else {}
+    sc.acciones = {str(k).strip().lower(): str(v).strip().lower() for k, v in ac.items()}   # accion de cada personaje (si no, la de la escena para quien habla)
     sc.entran = [p for p in sc.pers if p not in hr.DIB_PREV["pers"]]
     hr.DIB_PREV["pers"] = set(sc.pers)
     voz, enf_voz = hr.parsear_enfasis(spec.get("voz") or "")
@@ -553,13 +555,13 @@ def render_frame(fi, sc, noise, rg, seed):
     # personajes
     hv = hr.boca(sc, t)
     n = len(sc.pers)
-    mult = 1.0 if n == 1 else 0.78
-    xs = {sc.pers[0]: 540} if n == 1 else ({sc.pers[0]: 300, sc.pers[1]: 790} if n == 2 else {})
+    mult = 1.0 if n == 1 else 0.72
+    xs = {sc.pers[0]: 540} if n == 1 else ({sc.pers[0]: 280, sc.pers[1]: 765} if n == 2 else {})
     for p in sc.pers:
         x = xs[p]
         if p in sc.entran:
             x += (1 - hr.ease_out(t / 0.4)) * (-560 if x < 540 else 560)
-        acc = sc.accion if p == (sc.hablante or sc.pers[0]) else "habla"
+        acc = sc.acciones.get(p) or (sc.accion if p == (sc.hablante or sc.pers[0]) else "habla")
         DIBUJAR[p](d, x, SK_SUELO, t, rng, acc, hv if p == sc.hablante else 0.0, ESCALA[p] * mult)
     _T(d, [(110, SK_SUELO + 8), (970, SK_SUELO + 3)], rng, 7, hr.TINTA, 1.5)
     # globo con el nombre de quien habla (+ texto si aporta algo)

@@ -5,11 +5,12 @@
  "serie": "El Jambo que sabe y las IAs",
  "episodio": 3,
  "negocio": "tienda / despacho",
- "portada_texto": "Dos horas de reunión sobre papeleo",
+ "portada_texto": "POV: una reunión de dos horas que era un correo",
  "musica": true,
  "_formato": "Modo 'sketch' (NUEVO, pendiente de Mejora). Escena = {estilo gancho|gag|delega|remate|mensaje|cierre, hablante jambo|jupillo|pelota|bola|tramites|null, voz (con *énfasis*), texto (globo o rótulo en pantalla)}. El mensaje y el cierre van serios, sin música de chiste, fotograma guardable con la fuente pequeña.",
  "contador": {
   "texto": "Veces que se lo ha pasado a la Jupillo",
+  "inicio": 2,
   "valor": 3
  },
  "mensaje_final": {
@@ -19,38 +20,34 @@
  "escenas": [
   {
    "estilo": "gancho",
-   "hablante": "jambo",
-   "voz": "Dos horas de reunión para organizar el *papeleo*.",
-   "texto": "Reunión de dos horas sobre el papeleo",
+   "hablante": "bola",
+   "voz": "Reunión de dos horas. ¡Más reuniones, más *éxito*!",
+   "texto": "POV: una reunión de dos horas que era un correo",
    "dibujo": {
     "personajes": [
-     "jambo"
+     "jambo",
+     "bola"
     ],
-    "accion": "presume"
+    "acciones": {
+     "jambo": "desespera",
+     "bola": "habla"
+    }
    }
   },
   {
    "estilo": "gag",
    "hablante": "pelota",
-   "voz": "Lo he resumido sin oír nada. *Segurísima*.",
+   "voz": "Se ha acordado… que no hay acuerdo. Fijo.",
    "texto": "La Pelota",
    "dibujo": {
     "personajes": [
+     "jambo",
      "pelota"
     ],
-    "accion": "habla"
-   }
-  },
-  {
-   "estilo": "gag",
-   "hablante": "bola",
-   "voz": "¡Más reuniones, más éxito!",
-   "texto": "El Bola",
-   "dibujo": {
-    "personajes": [
-     "bola"
-    ],
-    "accion": "habla"
+    "acciones": {
+     "jambo": "presume",
+     "pelota": "habla"
+    }
    }
   },
   {
@@ -60,21 +57,57 @@
    "texto": "Que lo haga la Jupillo.",
    "dibujo": {
     "personajes": [
-     "jambo"
+     "jambo",
+     "jupillo"
     ],
-    "accion": "delega"
+    "acciones": {
+     "jambo": "delega",
+     "jupillo": "habla"
+    }
    }
   },
   {
-   "estilo": "remate",
+   "estilo": "gag",
    "hablante": "jupillo",
-   "voz": "Tres líneas. Era un correo.",
-   "texto": "Era un correo de tres líneas",
+   "voz": "Correo de tres líneas. Lo resolvía todo hace dos horas.",
+   "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
      "jupillo"
     ],
-    "accion": "remata"
+    "acciones": {
+     "jupillo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "bola",
+   "voz": "¡Gran correo! Lo comentamos mañana. En una reunión.",
+   "texto": "REUNIÓN DE SEGUIMIENTO · MAÑANA · 2 H",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "bola"
+    ],
+    "acciones": {
+     "jambo": "remata",
+     "bola": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jupillo",
+   "voz": "Otra vez.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo"
+    ],
+    "acciones": {
+     "jupillo": "habla"
+    }
    }
   },
   {
@@ -106,5 +139,6 @@
    "bola",
    "tramites"
   ]
- }
+ },
+ "_guion_v2": "10/11/2026 noche: guion reescrito tras la crítica del dueño («sin sentido ni gracia») con patrones de reels virales de sketch de oficina: situación concreta, escalada en tres golpes, interpretación literal / error seguro de sí mismo, remate donde el mérito se lo lleva el Jambo y última frase seca de la IA (la que de verdad hace el trabajo)."
 }
