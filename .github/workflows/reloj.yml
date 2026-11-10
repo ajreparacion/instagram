@@ -38,6 +38,8 @@ jobs:
             else
               echo "$(TZ=Europe/Madrid date '+%F %H:%M') ya hay un ciclo en marcha o en espera"
             fi
+            # Contestador del chat de Instagram (gratis): misma cadencia que el ciclo
+            gh workflow run respuestas_chat.yml -R "$REPO" --ref main || echo "no se pudo lanzar el contestador"
             sleep 900
           done
       - name: Relanzar el reloj

@@ -173,3 +173,9 @@ Todos los roles leen equipo/formulas_ganadoras_ia.md: ocho fórmulas F1-F8 sacad
 - Las contesta el workflow «Respuestas del chat» cada 30 min (herramientas/respuestas_chat.py). Los textos viven SOLO en ese script (RESPUESTAS); para cambiarlos se edita ahí. Enlace de la guía: GUIA_URL o https://ajreparacion.github.io/guia-prompts/ (no inventar otras URL).
 - Token: los dos scripts usan herramientas/token_pagina.py. Si PAGE_TOKEN es de usuario (lo normal tras renovarlo), sacan solos el token de la página 107316837808795. Si falla con 190/463, el token ha caducado: avisar en equipo/pendiente_usuario.md.
 - Tono de cualquier texto nuevo: breve, cercano, español de España; nunca pedir datos personales.
+
+## Chat de Instagram: contestador gratuito de Neogest Lab (orden del dueño, 10/11/2026)
+Sustituye a la sección anterior del chat (la de la guía de prompts). El dueño ya activó «Permitir acceso a los mensajes».
+- `herramientas/respuestas_chat.py` contesta, gratis y dentro de la ventana de 24 h: los 4 botones de bienvenida («¿Qué apps tenéis?», «Quiero probar una app gratis», «Quiero una app a medida», «¿Cuánto cuesta?») y mensajes cortos (≤ 20 palabras) con palabra clave (MEDIDA, PRECIO, PRUEBA, APPS, hola). Las respuestas están en `TEXTOS`; nunca dan precios ni plazos y cierran con la prueba gratuita «sin tarjeta, sin datos bancarios y sin compromiso».
+- Se calla si el dueño ya ha escrito a mano en ese chat, si el mensaje es largo o sin palabra clave (lo contesta el dueño) y nunca repite una respuesta.
+- Lo lanza el Reloj cada 15 min (además del cron). Al subir cambios del script se ejecuta en modo prueba (DRY_RUN) con el diagnóstico de vinculación. Los botones se cambian en `herramientas/bienvenida.py` (se aplican solos al subirlo) y deben coincidir con `BOTONES`.
