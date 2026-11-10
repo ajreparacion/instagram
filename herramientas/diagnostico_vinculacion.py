@@ -41,6 +41,7 @@ st1, yo = mostrar("1. ¿Quién es /me?", "me?fields=id,name")
 st2, pag = mostrar(f"2. Página {PAGINA} y su Instagram vinculado",
                    f"{PAGINA}?fields=name,instagram_business_account,connected_instagram_account")
 st3, ig = mostrar(f"3. Cuenta de Instagram {IG}", f"{IG}?fields=username")
+st4, cuentas = mostrar("4. Páginas que gestiona este token y su Instagram", "me/accounts?fields=id,name,instagram_business_account{id,username}&limit=50")
 
 print("\n== Resumen")
 if st1 == 200:
