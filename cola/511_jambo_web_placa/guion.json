@@ -8,7 +8,7 @@
  "gancho_corto": "«¿DÓNDE ESTÁ LA PLACA?»",
  "portada_texto": "POV: buscas el número de serie con linterna",
  "musica": true,
- "app": "AJ Reparación web",
+ "app": "Webs a medida Neogest Lab",
  "contador": {
   "texto": "Veces que se lo ha pasado a la Jupillo",
   "inicio": 24,
@@ -147,8 +147,8 @@
   {
    "estilo": "mensaje",
    "hablante": null,
-   "voz": "En la vida real no hay Jupillo. En ajreparacion.com la cámara lee la placa de tu equipo.",
-   "texto": "En la vida real no hay Jupillo. En ajreparacion.com la cámara lee la placa de tu equipo.",
+   "voz": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
+   "texto": "En la vida real no hay Jupillo. Hay webs a medida, como ajreparacion.com, donde la cámara lee la placa. Más asequibles de lo que piensas.",
    "dibujo": {
     "personajes": [],
     "accion": "serio"
@@ -157,8 +157,8 @@
   {
    "estilo": "cierre",
    "hablante": null,
-   "voz": "Mándaselo a quien busca el número de serie con linterna.",
-   "texto": "ajreparacion.com",
+   "voz": "Mándaselo a quien aún no tiene web.",
+   "texto": "Consultoría gratuita · presupuesto sin compromiso",
    "dibujo": {
     "personajes": [],
     "accion": "serio"

@@ -8,7 +8,7 @@
  "gancho_corto": "«NO SÉ QUÉ LE PASA»",
  "portada_texto": "POV: no sabes explicar la avería",
  "musica": true,
- "app": "AJ Reparación web",
+ "app": "Webs a medida Neogest Lab",
  "contador": {
   "texto": "Veces que se lo ha pasado a la Jupillo",
   "inicio": 23,
@@ -147,8 +147,8 @@
   {
    "estilo": "mensaje",
    "hablante": null,
-   "voz": "En la vida real no hay Jupillo. En ajreparacion.com cuentas la avería y subes hasta cuatro fotos.",
-   "texto": "En la vida real no hay Jupillo. En ajreparacion.com haces la pre-entrada online: máquina, avería y hasta cuatro fotos.",
+   "voz": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
+   "texto": "En la vida real no hay Jupillo. Hay webs a medida, como ajreparacion.com, con pre-entrada y hasta cuatro fotos. Más asequibles de lo que piensas.",
    "dibujo": {
     "personajes": [],
     "accion": "serio"
@@ -157,8 +157,8 @@
   {
    "estilo": "cierre",
    "hablante": null,
-   "voz": "Mándaselo a quien explica la avería con ruidos.",
-   "texto": "ajreparacion.com",
+   "voz": "Mándaselo a quien aún no tiene web.",
+   "texto": "Consultoría gratuita · presupuesto sin compromiso",
    "dibujo": {
     "personajes": [],
     "accion": "serio"

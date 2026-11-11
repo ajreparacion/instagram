@@ -8,7 +8,7 @@
  "gancho_corto": "«¿CÓMO VA LO MÍO?»",
  "portada_texto": "POV: llamas al taller por quinta vez",
  "musica": true,
- "app": "AJ Reparación web",
+ "app": "Webs a medida Neogest Lab",
  "contador": {
   "texto": "Veces que se lo ha pasado a la Jupillo",
   "inicio": 22,
@@ -147,8 +147,8 @@
   {
    "estilo": "mensaje",
    "hablante": null,
-   "voz": "En la vida real no hay Jupillo. Hay ajreparacion.com: consulta el estado con tu número de orden.",
-   "texto": "En la vida real no hay Jupillo. Hay ajreparacion.com: consulta el estado de tu reparación con tu número de orden y tu teléfono.",
+   "voz": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
+   "texto": "En la vida real no hay Jupillo. Hay webs a medida, como la de ajreparacion.com, donde se consulta el estado con el número de orden. Más asequibles de lo que piensas.",
    "dibujo": {
     "personajes": [],
     "accion": "serio"
@@ -157,8 +157,8 @@
   {
    "estilo": "cierre",
    "hablante": null,
-   "voz": "Mándaselo a quien llama al taller cada día.",
-   "texto": "ajreparacion.com",
+   "voz": "Mándaselo a quien aún no tiene web.",
+   "texto": "Consultoría gratuita · presupuesto sin compromiso",
    "dibujo": {
     "personajes": [],
     "accion": "serio"
