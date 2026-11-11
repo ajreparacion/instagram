@@ -1,0 +1,82 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.933,
+  "texto": "¡¿Faltan cuarenta euros?! ¡Yo conté!",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 2.933,
+  "duracion": 2.567,
+  "texto": "Dos más dos: cinco. Seguro.",
+  "enfasis": [
+   3
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 7.9,
+  "duracion": 1.8,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 9.7,
+  "duracion": 3.667,
+  "texto": "Caja cuadrada. Estaban en tu bolsillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 13.367,
+  "duracion": 2.767,
+  "texto": "Cuadrado. Qué bien llevo la caja.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 16.133,
+  "duracion": 2.133,
+  "texto": "En tu bolsillo, otra vez.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 18.267,
+  "duracion": 4.033,
+  "texto": "Cuadrar la caja también es cuidar el negocio.",
+  "enfasis": [
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 22.3,
+  "duracion": 2.733,
+  "texto": "Mándaselo a quien carga con todo.",
+  "enfasis": []
+ }
+]
