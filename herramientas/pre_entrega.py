@@ -35,6 +35,12 @@ def revisar(carpeta):
     for pal in ("voz_dueno", "referencia_usuario", "clon_dueno"):
         if pal in crudo and not pal in json.dumps({k: v for k, v in post.items() if str(k).startswith("_")}, ensure_ascii=False):
             e.append("VOZ del dueño prohibida: aparece «%s»" % pal)
+    if guion.get("modo") == "datos":   # modo datos: ficha completa y verificada, sin ensayo (herramientas/datos.py, equipo/FORMATO_DATOS.md)
+        try:
+            sys.path.insert(0, os.path.join(RAIZ, "herramientas")); import datos
+            est, ver = datos.problemas_ficha(guion)
+            for m in est + ver: e.append("DATOS ficha: " + m)
+        except Exception as ex: a.append("DATOS no se pudo revisar la ficha: %s" % str(ex)[:80])
     if tipo == "reel":
         t = post.get("texto", "")
         if CIERRE_ANTIGUO.search(t): e.append("B6 cierre antiguo «comenta/escríbeme X» en el texto del post")

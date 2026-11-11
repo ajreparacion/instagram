@@ -16,6 +16,7 @@ Sistema automático de la cuenta de Instagram. Funciona sin ningún dispositivo 
 | `originales/` | Datos de los reels antiguos de la cuenta (para remasterizar) |
 | `equipo/` | Plan semanal, aprendizajes, estándar de calidad, ajustes de voz, mejoras |
 | `herramientas/` | Generadores de vídeo (`hacer_reel.py`, `remaster.py`) |
+| `herramientas/datos.py`, `control_datos.py` | Modo `datos`: reels explicativos con datos verificados y gráficos animados (contadores, barras, líneas, comparativas, anillos, rankings); ficha de datos obligatoria y control de calidad automático. Manual: `equipo/FORMATO_DATOS.md` |
 
 ## Secreto necesario
 `PAGE_TOKEN` en *Settings → Secrets and variables → Actions*: token de página de Facebook vinculado a la cuenta (no caduca salvo cambio de contraseña).
