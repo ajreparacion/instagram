@@ -1,0 +1,87 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.867,
+  "texto": "Cinco llamadas. ¡¿Cómo va lo mío?!",
+  "enfasis": []
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 2.867,
+  "duracion": 4.9,
+  "texto": "Su orden está en cola. Rellene el impreso 27-B.",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 10.167,
+  "duracion": 3.033,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 13.2,
+  "duracion": 4.133,
+  "texto": "Número de orden y teléfono. Estado de tu reparación.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 17.333,
+  "duracion": 4.067,
+  "texto": "Qué paciencia tengo. Soy un santo.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 21.4,
+  "duracion": 2.767,
+  "texto": "Cinco llamadas. Santo, dice.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 24.167,
+  "duracion": 3.467,
+  "texto": "Esperar sin saber es lo peor de una reparación.",
+  "enfasis": [
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 27.633,
+  "duracion": 6.0,
+  "texto": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
+  "enfasis": []
+ },
+ {
+  "escena": 9,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 33.633,
+  "duracion": 2.7,
+  "texto": "Mándaselo a quien aún no tiene web.",
+  "enfasis": []
+ }
+]
