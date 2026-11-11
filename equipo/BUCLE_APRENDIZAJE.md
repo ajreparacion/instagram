@@ -29,3 +29,6 @@ Añade a `equipo/lecciones.md` una línea con este formato (una sola, la más ú
 | Rechazos por cierre antiguo o marca ajena | 17 de 19 | 0 |
 | Reels en la misma hora | 8 pares | 0 |
 Fuente: `equipo/lecciones_calidad.md` (se regenera solo con `--stats`).
+
+## Monetización obsesiva (11/11/2026)
+Cada ejecución termina con una línea `MONETIZACIÓN: …` en `lecciones.md` (qué se hizo hoy que acerque el primer euro y qué paso del embudo mueve). El cuadro del día es `equipo/embudo.md`. Meta de la semana: la primera solicitud registrada en `equipo/leads.json`; después, conversión visita → clic ≥ 25 % y clic → solicitud ≥ 20 %.

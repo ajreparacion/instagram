@@ -39,6 +39,7 @@ def revisar(carpeta):
         t = post.get("texto", "")
         if CIERRE_ANTIGUO.search(t): e.append("B6 cierre antiguo «comenta/escríbeme X» en el texto del post")
         if any(CIERRE_ANTIGUO.search(x) for x in textos(guion)): e.append("B6 cierre antiguo «comenta/escríbeme X» en la voz o el texto del guion")
+        if not post.get("monetizacion"): a.append("MONETIZACIÓN falta el bloque «monetizacion» en post.json: {\"objetivo\": \"visita_perfil|clic_enlace|solicitud|dm\", \"oferta\": \"qué se ofrece\", \"paso_embudo\": \"el paso de equipo/embudo.md que mueve\"}")
         if not post.get("comentario_fijado"): a.append("B8 falta comentario_fijado")
         if not post.get("avance_siguiente"): a.append("B8 falta avance_siguiente")
         esc = guion.get("escenas") or []
