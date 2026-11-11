@@ -1,0 +1,37 @@
+{
+  "fecha": "2026-11-11T18:29:14+00:00",
+  "avisos": [
+    "huecos de voz > 1.5 s (solo suena la música): [[5.95, 9.0]]"
+  ],
+  "ajustes_ducking": [
+    {
+      "ratio": 2.0,
+      "bajada_p90_db": 6.01,
+      "ratio_nuevo": 1.997
+    }
+  ],
+  "duracion_s": 32.8,
+  "voz_activa_pct": 66.0,
+  "bajada_musica_p90_db": 6.0,
+  "bajada_musica_mediana_db": 4.8,
+  "voz_sobre_musica_db": 10.64,
+  "musica_entre_frases_db": -18.6,
+  "musica_en_voz_db": -30.8,
+  "huecos_voz": [
+    [
+      5.95,
+      9.0
+    ]
+  ],
+  "ratio_duck_usado": 1.997,
+  "voz_lufs": -15.9,
+  "musica_lufs": -15.5,
+  "musica_con_ducking_lufs": -16.0,
+  "master": {
+    "objetivo_lufs": -14.0,
+    "antes_lufs": -15.49,
+    "antes_pico_dbtp": -1.0,
+    "despues_lufs": -14.0,
+    "despues_pico_dbfs": -1.5
+  }
+}

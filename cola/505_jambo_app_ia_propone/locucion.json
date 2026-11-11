@@ -1,0 +1,85 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.8,
+  "texto": "¡Que facture la IA! ¡Sin preguntarme!",
+  "enfasis": []
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 2.8,
+  "duracion": 3.6,
+  "texto": "Factura enviada. Cuarenta mil euros. Seguro.",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 8.8,
+  "duracion": 3.0,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 11.8,
+  "duracion": 3.3,
+  "texto": "Yo propongo. Tú decides.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 15.1,
+  "duracion": 2.833,
+  "texto": "Qué bien delego.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 17.933,
+  "duracion": 2.167,
+  "texto": "«Revisada» por mí.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 20.1,
+  "duracion": 4.1,
+  "texto": "Una IA debe proponer. Decidir sigue siendo cosa tuya.",
+  "enfasis": [
+   3
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 24.2,
+  "duracion": 5.7,
+  "texto": "En la vida real no hay Jupillo. En Gestión Integral 7D la IA solo propone.",
+  "enfasis": []
+ },
+ {
+  "escena": 9,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 29.9,
+  "duracion": 2.933,
+  "texto": "Mándaselo a quien se fía de la IA a ciegas.",
+  "enfasis": []
+ }
+]
