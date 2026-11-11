@@ -8,9 +8,19 @@
   "publico": "autónomos y pymes",
   "formula": "humor negro con personaje + pivote de producto (v9)",
   "app": "Gestión Integral 7D",
-  "renderizado": false,
+  "renderizado": "2026-11-11T17:43:01+00:00",
   "_fuentes": [],
   "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
   "comentario_fijado": "¿Cuál es tu «mañana» más largo? Cuéntalo.",
-  "avance_siguiente": "Mañana: la ruta de visitas en papel."
+  "avance_siguiente": "Mañana: la ruta de visitas en papel.",
+  "audio_ig": {
+    "audio_id": "1174983090781223",
+    "titulo": "Float In The Waves (Instrumental) · Company Money",
+    "origen": "biblioteca de Instagram (colección libre de derechos)",
+    "audio_volume": 0.5,
+    "video_volume": 1.0
+  },
+  "portada_ms": 0,
+  "motor_voz": "chatterbox",
+  "asset": "502_jambo_app_cobro_manana.mp4"
 }
