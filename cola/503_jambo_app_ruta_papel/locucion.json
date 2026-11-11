@@ -1,0 +1,87 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.433,
+  "texto": "Doce visitas. ¡Ni idea de por dónde empezar!",
+  "enfasis": []
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 3.433,
+  "duracion": 3.3,
+  "texto": "Gira a la izquierda. Camino al mar. Seguro.",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 9.133,
+  "duracion": 1.8,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 10.933,
+  "duracion": 3.3,
+  "texto": "Doce visitas, ordenadas por carretera.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 14.233,
+  "duracion": 1.9,
+  "texto": "Qué ruta. Cosa mía.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 16.133,
+  "duracion": 1.8,
+  "texto": "Aquí no hay mar.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 17.933,
+  "duracion": 4.433,
+  "texto": "Cada kilómetro de más lo pagas tú.",
+  "enfasis": [
+   4,
+   5,
+   6
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 22.367,
+  "duracion": 6.133,
+  "texto": "En la vida real no hay Jupillo. Gestión Integral 7D: «Mi día» ordena tu ruta.",
+  "enfasis": []
+ },
+ {
+  "escena": 9,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 28.5,
+  "duracion": 4.833,
+  "texto": "Mándaselo a quien aún apunta las visitas en papel.",
+  "enfasis": []
+ }
+]
