@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Generador de reels de misterio / falso documental.
-Uso: python3 hacer_reel.py guion.json salida.mp4 [--solo-locucion] [--tiempos tiempos.json]
+Uso: python3 hacer_reel.py guion.json salida.mp4 [--solo-locucion] [--tiempos tiempos.json] [--ensayo]
 Modo "humano": fotos y CLIPS DE VIDEO reales ("imagenes": [{"video": url|ruta, "inicio": s, ...}]) con subtitulos palabra a palabra.
 Solo Pillow + numpy + ffmpeg (subprocess). Fuentes: DejaVu del sistema; si hay
 fuentes opcionales en ./fonts (Oswald*.ttf, SpecialElite*.ttf) se usan."""
@@ -310,18 +310,24 @@ class TextBlock:
 # el texto entero desde el primer fotograma; "texto" en las demas escenas = rotulo corto fijo arriba.
 # Musica discreta (-31 LUFS antes de la voz), sin lecho de tension, sin golpes ni subidas.
 # Con "modo" ausente o distinto, todo se comporta exactamente como antes.
-MODO = {"humano": False, "dibujo": False, "app": False, "sketch": False}
+MODO = {"humano": False, "dibujo": False, "app": False, "sketch": False, "datos": False}
 
 def _sk():
     """Modulo sketch.py (serie «El Jambo que sabe y las IAs»), enchufado a este modulo."""
     import sketch
     sketch.bind(sys.modules[__name__])
     return sketch
+
+def _dt():
+    """Modulo datos.py (reels explicativos con datos verificados y graficos animados), enchufado a este modulo."""
+    import datos
+    datos.bind(sys.modules[__name__])
+    return datos
 SEMILLA = {"v": 1}
 
 def modo_suave():
     """Modos sin HUD ni tension (humano y dibujo): musica discreta, sin bombo ni golpes."""
-    return MODO["humano"] or MODO["dibujo"] or MODO["app"] or MODO["sketch"]
+    return MODO["humano"] or MODO["dibujo"] or MODO["app"] or MODO["sketch"] or MODO["datos"]
 
 def modo_alegre():
     """Musica mayor y viva (dibujo y app)."""
@@ -1758,6 +1764,8 @@ class Scene:
             preparar_dibujo(self, sc, rng)
         elif MODO["sketch"]:
             _sk().preparar(self, sc, rng)
+        elif MODO["datos"]:
+            _dt().preparar(self, sc, rng)
         elif MODO["app"]:
             preparar_app(self, sc, rng)
 
@@ -1828,6 +1836,8 @@ def render_frame(fi, scenes, noise, date_s, title, rg):
         return render_frame_dibujo(fi, sc, noise, rg, SEMILLA["v"])
     if MODO["sketch"]:
         return _sk().render_frame(fi, sc, noise, rg, SEMILLA["v"])
+    if MODO["datos"]:
+        return _dt().render_frame(fi, sc, noise, rg, SEMILLA["v"])
     if MODO["app"]:
         return render_frame_app(fi, sc, noise, rg, SEMILLA["v"])
     lf = fi - sc.start; t = lf / FPS; ta = fi / FPS
@@ -2249,6 +2259,8 @@ def sfx_dibujo(tipo, dur, rg):
         return out * 0.22
     if tipo in ("tick", "sting", "boing", "thud", "papeles"):   # efectos del modo sketch (sketch.py)
         return _sk().sfx(tipo, dur, rg, lp_fft)
+    if tipo.startswith("dt_"):   # efectos del modo datos (datos.py)
+        return _dt().sfx(tipo, dur, rg, lp_fft)
     if tipo == "ding":
         return (np.sin(2 * np.pi * 1318.5 * tt) + 0.35 * np.sin(2 * np.pi * 2637 * tt)) * np.exp(-tt * 6.5) * 0.17
     return None
@@ -2337,7 +2349,7 @@ def make_audio(scenes, total, seed, musica=True):
                     i0 = max(0, int((s.start / FPS + t_rel) * SR)); i1 = min(n, i0 + len(sig))
                     if i0 < n and i1 > i0:
                         st[i0:i1, 0] += amp * sig[:i1 - i0]; st[i0:i1, 1] += amp * sig[:i1 - i0] * 0.95
-        if MODO["dibujo"] or MODO["sketch"]:   # efectos sutiles por evento (whoosh en el corte, pop del rebote, lapiz, teclas, ding)
+        if MODO["dibujo"] or MODO["sketch"] or MODO["datos"]:   # efectos sutiles por evento (whoosh en el corte, pop del rebote, lapiz, teclas, ding)
             for s in scenes:
                 for tipo, t_rel, dur in getattr(s, "sfx", []):
                     sig = sfx_dibujo(tipo, dur, rg)
@@ -2380,7 +2392,7 @@ def make_audio(scenes, total, seed, musica=True):
 # ---------------------------------------------------------------- principal
 def main():
     if len(sys.argv) < 3:
-        print("Uso: python3 hacer_reel.py guion.json salida.mp4 [--solo-locucion] [--tiempos tiempos.json]"); sys.exit(1)
+        print("Uso: python3 hacer_reel.py guion.json salida.mp4 [--solo-locucion] [--tiempos tiempos.json] [--ensayo]"); sys.exit(1)
     t0 = time.time()
     g = json.load(open(sys.argv[1], encoding="utf-8")); out = sys.argv[2]
     GUION_DIR[0] = os.path.dirname(os.path.abspath(sys.argv[1]))
@@ -2410,12 +2422,15 @@ def main():
     if g.get("modo") == "sketch":
         musica = False   # sketch: nunca musica cocida (orden del dueno 10/11: la cancion la pone Instagram al publicar, audio_ig)
     modo = (g.get("modo") or "").strip().lower()
-    if modo not in ("", "humano", "dibujo", "app", "sketch"):   # guardia: un modo desconocido nunca se renderiza con otro estilo
-        sys.exit("modo desconocido en guion.json: %r (este generador conoce: humano, dibujo, app, sketch)" % modo)
+    if modo == "datos":
+        musica = False   # datos: nunca musica cocida (la cancion la pone Instagram al publicar, audio_ig); solo efectos sintetizados
+    if modo not in ("", "humano", "dibujo", "app", "sketch", "datos"):   # guardia: un modo desconocido nunca se renderiza con otro estilo
+        sys.exit("modo desconocido en guion.json: %r (este generador conoce: humano, dibujo, app, sketch, datos)" % modo)
     MODO["humano"] = modo == "humano"
     MODO["dibujo"] = modo == "dibujo"
     MODO["app"] = modo == "app"
     MODO["sketch"] = modo == "sketch"
+    MODO["datos"] = modo == "datos"
     if MODO["app"]:
         cargar_video_app(str(g.get("video") or ""))
         APP["plantilla"] = bool(g.get("plantilla")) and APP["vertical"]
@@ -2432,6 +2447,8 @@ def main():
     SEMILLA["v"] = int(g.get("semilla", 1))
     DIB_PREV["pers"] = set()
     esc = g["escenas"]
+    if MODO["datos"]:   # puerta dura de la ficha de datos (salvo --ensayo) y contexto de cada escena
+        _dt().iniciar(g, "--ensayo" in sys.argv)
     if MODO["sketch"]:   # contexto de la serie para cada escena (gancho fijo, contador, mensaje serio y su fuente)
         DIB_PREV["pers"] = set()
         gancho = str(esc[0].get("texto") or g.get("portada_texto") or "")
@@ -2474,6 +2491,8 @@ def main():
                 d = max(need, e["_largo_clip"] / MAX_VEL_APP)
             else:
                 d = max(d, need)
+        if MODO["datos"]:   # los graficos necesitan tiempo para animarse y leerse
+            d = max(d, {"gancho": 2.2, "cierre": 3.0, "giro": 2.4}.get(e.get("estilo"), 3.2))
         if MODO["sketch"]:   # el mensaje serio se lee entero y el fotograma final se puede guardar
             d = max(d, {"mensaje": 3.2, "cierre": 2.2, "gancho": 1.8}.get(e.get("estilo"), 1.8))
         bounds.append(bounds[-1] + int(math.ceil(d * FPS - 1e-6)))
@@ -2489,6 +2508,8 @@ def main():
         print("locucion %d frases, %.1fs" % (len(loc), bounds[-1] / FPS)); return
     scenes = [Scene(i, e, seed, title, bounds[i + 1] - bounds[i], bounds[i]) for i, e in enumerate(esc)]
     total_f = bounds[-1]
+    if MODO["datos"]:
+        _dt().fijar_total(scenes, total_f)
     rr = random.Random(seed)
     date_s = "%02d/%02d/%d" % (rr.randint(1, 28), rr.randint(1, 12), rr.randint(1994, 2007))
     noise = build_noise(seed); rg = random.Random(seed + 99)
@@ -2510,6 +2531,8 @@ def main():
         DIB_PREV["pers"] = set()
         cov.update({"texto": str(esc[0].get("texto") or cov["texto"]), "hablante": "jambo", "dibujo": {"personajes": ["jambo"], "accion": "presume"},
                     "_ctx": dict(esc[0].get("_ctx") or {}, cont_ini=0, cont_fin=0)})
+    if MODO["datos"]:   # portada = fotograma del gancho
+        cov.update({"texto": str(g.get("gancho_corto") or esc[0].get("texto") or cov["texto"]), "grafico": "texto", "_ctx": dict(esc[0].get("_ctx") or {})})
     cs = Scene(0, cov, seed, title, 90, 0)
     cimg = render_frame(60, [cs], noise, date_s, title, random.Random(1))
     Image.fromarray(cimg).save(os.path.splitext(out)[0] + "_portada.jpg", quality=90)
