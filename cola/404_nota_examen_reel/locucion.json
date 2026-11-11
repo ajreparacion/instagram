@@ -1,0 +1,80 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": null,
+  "inicio": 0.0,
+  "duracion": 3.333,
+  "texto": "Necesitas un cuatro con ochenta y ocho en el final.",
+  "enfasis": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 3.333,
+  "duracion": 4.433,
+  "texto": "La hizo una IA con este mensaje. Pon los pesos de tu asignatura.",
+  "enfasis": [
+   5,
+   6
+  ]
+ },
+ {
+  "escena": 2,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 7.767,
+  "duracion": 4.133,
+  "texto": "Si las prácticas te salen con un ocho: cuatro con veintiocho.",
+  "enfasis": [
+   8,
+   9,
+   10
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 11.9,
+  "duracion": 3.633,
+  "texto": "Y con un seis en el parcial, tres con veinte.",
+  "enfasis": [
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 15.533,
+  "duracion": 3.333,
+  "texto": "Mándaselo a quien está en época de exámenes.",
+  "enfasis": [
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 18.867,
+  "duracion": 5.633,
+  "texto": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
+  "enfasis": [
+   2,
+   3
+  ]
+ }
+]
