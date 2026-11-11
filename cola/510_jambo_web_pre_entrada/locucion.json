@@ -1,0 +1,89 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.5,
+  "texto": "Hace un ruido. Un ruido raro. ¡Así!",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 3.5,
+  "duracion": 4.1,
+  "texto": "Es el motor. Seguro. O la manguera. Seguro.",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 10.0,
+  "duracion": 2.0,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 12.0,
+  "duracion": 3.733,
+  "texto": "Tipo de máquina, avería y hasta cuatro fotos.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 15.733,
+  "duracion": 1.8,
+  "texto": "Qué bien lo he explicado.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 17.533,
+  "duracion": 2.633,
+  "texto": "Un ruido. Explicado, dice.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 20.167,
+  "duracion": 4.333,
+  "texto": "Contar la avería antes de llegar ahorra vueltas.",
+  "enfasis": [
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 24.5,
+  "duracion": 6.067,
+  "texto": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
+  "enfasis": []
+ },
+ {
+  "escena": 9,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 30.567,
+  "duracion": 2.5,
+  "texto": "Mándaselo a quien aún no tiene web.",
+  "enfasis": []
+ }
+]
