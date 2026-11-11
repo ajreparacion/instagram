@@ -18,9 +18,17 @@
  "comentarios": 0,
  "perfil": {
   "nombre_visible": "IA Fácil · Trucos que no sabes",
-  "enlace": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/demo",
+  "enlace": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?src=instagram",
   "bio_con_IDEA": false,
   "bio_nueva_desde": "2026-11-11",
-  "nombre_bloqueado_hasta": "~2026-11-25 (Instagram: 2 cambios en 14 días)"
+  "nombre_bloqueado_hasta": "~2026-11-25 (Instagram: 2 cambios en 14 días)",
+  "enlace_cambiado": "2026-11-11 21:12 CET"
+ },
+ "linea_base_antes_del_enlace": {
+  "ventana": "4-11/11 (7 días)",
+  "visitas_perfil": 14,
+  "clics_enlace": 3,
+  "conv_visita_a_clic_pct": 21.4,
+  "alcance_no_seguidores": 565
  }
 }
