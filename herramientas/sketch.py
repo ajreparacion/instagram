@@ -668,14 +668,19 @@ def render_frame(fi, sc, noise, rg, seed):
     d = ImageDraw.Draw(img, "RGBA")
     rng = random.Random(seed * 31 + sc.idx * 101 + fi // 4)   # temblor del trazo
     # gancho «POV: …» fijo arriba, desde el fotograma 0
-    if sc.gancho is not None:
-        img.paste(sc.gancho, (0, 150), sc.gancho)
-    # contador
-    if sc.cont_texto:
-        tt = t - 0.7
-        n = sc.cont_ini + (max(0, min(sc.cont_fin - sc.cont_ini, int(tt / 0.28) + 1)) if tt >= 0 else 0)
-        t_cambio = (0.7 + (n - sc.cont_ini - 1) * 0.28) if n > sc.cont_ini else None
-        _contador(img, sc.cont_texto, n, n - 1, t_cambio, t)
+    # Durante el zoom de entrada del fotograma 0 (pp > 0) el rótulo y el contador son HUD: se dibujan DESPUÉS del
+    # recorte para que no se corten por arriba (11/11/2026, aviso de Creador: «VECES QUE SE LO HA PASA…»).
+    hud_tarde = bool(sc.primero and sc.gancho_gigante and t < PP_DUR)
+    def _hud(im):
+        if sc.gancho is not None:
+            im.paste(sc.gancho, (0, 150), sc.gancho)
+        if sc.cont_texto:
+            tt = t - 0.7
+            n = sc.cont_ini + (max(0, min(sc.cont_fin - sc.cont_ini, int(tt / 0.28) + 1)) if tt >= 0 else 0)
+            t_cambio = (0.7 + (n - sc.cont_ini - 1) * 0.28) if n > sc.cont_ini else None
+            _contador(im, sc.cont_texto, n, n - 1, t_cambio, t)
+    if not hud_tarde:
+        _hud(img)
     # personajes
     hv = hr.boca(sc, t)
     n = len(sc.pers)
@@ -728,6 +733,8 @@ def render_frame(fi, sc, noise, rg, seed):
             cy = int(cy * (1 - pp) + (hy - 1020 / zt) * pp)
     cx = max(0, min(hr.W - cw, cx)); cy = max(0, min(hr.H - ch, cy))
     img = img.crop((cx, cy, cx + cw, cy + ch)).resize((hr.W, hr.H), Image.BILINEAR)
+    if hud_tarde:
+        _hud(img)
     if sc.primero and sc.gancho_gigante and t < GC_FIN:
         _gancho_gigante(img, sc.gancho_gigante, t)
     a = np.asarray(img, dtype=np.int16).copy()
