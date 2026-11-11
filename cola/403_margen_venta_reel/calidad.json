@@ -1,0 +1,7 @@
+{
+  "aprobado": true,
+  "nota": 90,
+  "fecha": "2026-11-11T11:57Z",
+  "revisado_por": "agente de CALIDAD (11/11, pasada de las 12:50)",
+  "comentario": "v8.1: gancho con cifra y «(ejemplo)» desde el fotograma 0, cálculo a la vista y operaciones comprobadas por Calidad (cuentas correctas), envío y guardado explícitos, cierre único de prueba gratuita, sin marcas ajenas, sin «comenta X». Defecto menor: subtítulo pisado un instante por la marca «By Neogest Lab» (ver peticiones_mejora.md). Seguimiento a las 48 h obligatorio."
+}
