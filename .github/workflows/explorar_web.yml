@@ -1,0 +1,50 @@
+name: Explorar una web (solo lectura)
+
+# Solo a mano. Abre la web con Playwright desde GitHub (que sí llega a ella), guarda textos, botones, campos y capturas
+# de cada página SIN enviar formularios, deja el informe en equipo/pruebas/explorar_web.json y las capturas en la
+# release «pruebas». Lo usa Mejora para preparar el recorrido de ajreparacion.com (orden del dueño 11/11/2026).
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "Web a explorar"
+        type: string
+        default: "https://ajreparacion.com"
+      rutas:
+        description: "Rutas extra separadas por espacios (vacío = enlaces del menú)"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  explorar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Herramientas
+        run: |
+          pip install --quiet playwright
+          python3 -m playwright install --with-deps chromium > /dev/null
+      - name: Explorar
+        run: python3 herramientas/explorar_web.py "${{ inputs.url }}" /tmp/exp ${{ inputs.rutas }}
+      - name: Guardar informe y capturas
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p equipo/pruebas
+          cp /tmp/exp/explorar.json equipo/pruebas/explorar_web.json
+          gh release view pruebas >/dev/null 2>&1 || gh release create pruebas --title "Pruebas de producción" --notes "Vídeos de prueba de Mejora (no se publican)."
+          cd /tmp/exp && for f in *.png; do mv "$f" "explorar_$f"; done
+          gh release upload pruebas /tmp/exp/explorar_*.png --clobber
+          cd - > /dev/null
+          git config user.name "github-actions"; git config user.email "actions@github.com"
+          git add equipo/pruebas/explorar_web.json
+          git commit -m "Explorar web: informe" || true
+          git pull --rebase -q origin main || true
+          git push || true
