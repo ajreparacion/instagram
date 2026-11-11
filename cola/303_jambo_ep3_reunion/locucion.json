@@ -1,0 +1,84 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.833,
+  "texto": "¡¿Dos horas?! ¡Dije que sería rápida!",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 2.833,
+  "duracion": 2.6,
+  "texto": "¡Más reuniones, más éxito!",
+  "enfasis": [
+   3
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 7.833,
+  "duracion": 2.733,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 10.567,
+  "duracion": 4.3,
+  "texto": "Correo de tres líneas. Lo resolvía todo hace dos horas.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 14.867,
+  "duracion": 3.067,
+  "texto": "Resuelto. Qué bien lo he organizado.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 17.933,
+  "duracion": 2.6,
+  "texto": "Otra vez.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 20.533,
+  "duracion": 5.667,
+  "texto": "El cincuenta y cinco por ciento de las empresas pequeñas dice que el papeleo les quita tiempo.",
+  "enfasis": [
+   1,
+   2,
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 26.2,
+  "duracion": 2.933,
+  "texto": "Mándaselo a quien carga con todo.",
+  "enfasis": []
+ }
+]

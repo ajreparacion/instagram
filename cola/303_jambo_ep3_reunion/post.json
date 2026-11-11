@@ -1,30 +1,39 @@
 {
- "tipo": "reel",
- "texto": "El 55 % de las micro y pequeñas empresas dice que el papeleo le quita tiempo del trabajo importante.\nDos horas de reunión para organizar el papeleo, y la solución era un correo de tres líneas.\nHumor negro de ficción; los personajes son inventados.\nMándaselo a quien carga con todo.\nFuente: «Radiografía económica y bancaria de la micro y pequeña empresa en España 2026», de Qonto con IO Investigación, según Forbes España (22/04/2026). Lo encarga una fintech.\n#humornegro #pymes #reuniones #ia #trabajo\nVoz y personajes generados por IA",
- "cuando": "2026-11-14T20:40:00+01:00",
- "compartir_en_feed": true,
- "prueba_no_seguidores": true,
- "formato": "Serie El Jambo",
- "publico": "tienda / despacho",
- "formula": "humor con personaje (v8 B2)",
- "_fuentes": [
-  "Informe de Qonto con IO Investigación (abril 2026), según Forbes España"
- ],
- "_comprobado": "Forbes España 22/04/2026 leído: «el 55 % de las compañías considera que las tareas administrativas restan tiempo al trabajo estratégico». OJO: el 15 % «más de 10 días al mes» de la biblia es solo de tareas bancarias y el texto da 23 % para las muy digitalizadas: NO se usa. Muestra no publicada en el artículo.",
- "_autoevaluacion": {
-  "gancho": 26,
-  "espina_originalidad": 17,
-  "retencion": 15,
-  "enviar_guardar": 13,
-  "exactitud": 8,
-  "pie": 4,
-  "total": 83
- },
- "_nota_creador": "11/11/2026: activado (post.json) con el guion v4 y los campos de interacción (B8). Calidad (≥ 90) y el visto bueno del dueño siguen mandando: sin calidad.json aprobado no se publica. Sin enlace ni prueba gratuita (fase sin apps). Voz genérica de España.",
- "renderizado": false,
- "motor_voz": "chatterbox",
- "palabras_de_voz": 49,
- "_nota_estratega": "Plan del Estratega 10/11: esta pieza es el episodio de plan.json «jambo_0N» (20:40). Carpeta real: 303_jambo_ep3_reunion",
- "comentario_fijado": "¿Cuál fue tu reunión más larga que era un correo? Cuéntala.",
- "avance_siguiente": "Mañana: el cliente que paga a 90 días."
+  "tipo": "reel",
+  "texto": "El 55 % de las micro y pequeñas empresas dice que el papeleo le quita tiempo del trabajo importante.\nDos horas de reunión para organizar el papeleo, y la solución era un correo de tres líneas.\nHumor negro de ficción; los personajes son inventados.\nMándaselo a quien carga con todo.\nFuente: «Radiografía económica y bancaria de la micro y pequeña empresa en España 2026», de Qonto con IO Investigación, según Forbes España (22/04/2026). Lo encarga una fintech.\n#humornegro #pymes #reuniones #ia #trabajo\nVoz y personajes generados por IA",
+  "cuando": "2026-11-14T20:40:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo",
+  "publico": "tienda / despacho",
+  "formula": "humor con personaje (v8 B2)",
+  "_fuentes": [
+    "Informe de Qonto con IO Investigación (abril 2026), según Forbes España"
+  ],
+  "_comprobado": "Forbes España 22/04/2026 leído: «el 55 % de las compañías considera que las tareas administrativas restan tiempo al trabajo estratégico». OJO: el 15 % «más de 10 días al mes» de la biblia es solo de tareas bancarias y el texto da 23 % para las muy digitalizadas: NO se usa. Muestra no publicada en el artículo.",
+  "_autoevaluacion": {
+    "gancho": 26,
+    "espina_originalidad": 17,
+    "retencion": 15,
+    "enviar_guardar": 13,
+    "exactitud": 8,
+    "pie": 4,
+    "total": 83
+  },
+  "_nota_creador": "11/11/2026: activado (post.json) con el guion v4 y los campos de interacción (B8). Calidad (≥ 90) y el visto bueno del dueño siguen mandando: sin calidad.json aprobado no se publica. Sin enlace ni prueba gratuita (fase sin apps). Voz genérica de España.",
+  "renderizado": "2026-11-11T01:22:08+00:00",
+  "motor_voz": "chatterbox",
+  "palabras_de_voz": 49,
+  "_nota_estratega": "Plan del Estratega 10/11: esta pieza es el episodio de plan.json «jambo_0N» (20:40). Carpeta real: 303_jambo_ep3_reunion",
+  "comentario_fijado": "¿Cuál fue tu reunión más larga que era un correo? Cuéntala.",
+  "avance_siguiente": "Mañana: el cliente que paga a 90 días.",
+  "audio_ig": {
+    "audio_id": "1127106596130760",
+    "titulo": "Move Ur Body (Instrumental) · half.cool",
+    "origen": "biblioteca de Instagram (colección libre de derechos)",
+    "audio_volume": 0.5,
+    "video_volume": 1.0
+  },
+  "portada_ms": 0,
+  "asset": "303_jambo_ep3_reunion.mp4"
 }
