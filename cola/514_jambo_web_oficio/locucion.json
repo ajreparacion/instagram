@@ -1,0 +1,88 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.967,
+  "texto": "El teléfono suena. ¡Otra vez! ¡Estoy ocupado!",
+  "enfasis": []
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 3.967,
+  "duracion": 5.567,
+  "texto": "Rellene el impreso 27-B. Y espere su turno.",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 11.933,
+  "duracion": 2.6,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 14.533,
+  "duracion": 4.4,
+  "texto": "Solicitud online, fotos y aviso por WhatsApp al cambiar el estado.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 18.933,
+  "duracion": 2.3,
+  "texto": "Todo bajo control. Casi.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 21.233,
+  "duracion": 1.933,
+  "texto": "Casi. Siempre casi.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 23.167,
+  "duracion": 5.033,
+  "texto": "Un cliente que no consigue hablar contigo se va a otro.",
+  "enfasis": [
+   7,
+   8,
+   9,
+   10
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 28.2,
+  "duracion": 6.067,
+  "texto": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
+  "enfasis": []
+ },
+ {
+  "escena": 9,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 34.267,
+  "duracion": 2.633,
+  "texto": "Mándaselo a quien aún no tiene web.",
+  "enfasis": []
+ }
+]
