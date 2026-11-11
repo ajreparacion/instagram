@@ -1,0 +1,80 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.467,
+  "texto": "¡¿Mesa siete sin servir?! ¡Si tengo una IA!",
+  "enfasis": [
+   2,
+   3
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 3.467,
+  "duracion": 2.2,
+  "texto": "¡La IA no duerme, tú tampoco!",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 8.067,
+  "duracion": 2.333,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 10.4,
+  "duracion": 3.1,
+  "texto": "Comandas, cocina y caja. Hecho.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 13.5,
+  "duracion": 3.033,
+  "texto": "Todo controlado. Qué gran equipo.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 16.533,
+  "duracion": 1.933,
+  "texto": "Gracias por preguntar.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 18.467,
+  "duracion": 3.7,
+  "texto": "La IA no se cansa. Tú sí. Eso no es un fallo tuyo.",
+  "enfasis": [
+   5,
+   6
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 22.167,
+  "duracion": 2.667,
+  "texto": "Mándaselo a quien carga con todo.",
+  "enfasis": []
+ }
+]
