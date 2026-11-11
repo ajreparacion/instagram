@@ -1,0 +1,32 @@
+{
+  "tipo": "reel",
+  "origen": "variante «parte 2» de 202_gestion_integral_7d_reel (publicado 8/11/2026, alcance de referencia: retención media 11.126 ms, por encima de la mediana de la cuenta de 10.729 ms)",
+  "estado": "guion pendiente de render, voz y calidad (Calidad escribe calidad.json con nota ≥ 90)",
+  "app": "Gestión Integral 7D",
+  "publico": "Reformas e instalaciones: autónomos que pasan del presupuesto a la factura",
+  "rotacion": "distinto de 106 (comerciales y ruta) y de 108 (cobros); no es el mismo texto que ningún post publicado",
+  "formato": "Una idea, una app · 20-35 s · vertical 1080x1920 · grabación real de la app con datos ficticios",
+  "monetizacion": {
+    "objetivo": "clic_enlace",
+    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
+    "paso_embudo": "visita_perfil -> clic_enlace"
+  },
+  "gancho": "Del presupuesto a la factura sin volver a teclear",
+  "escenas": [
+    {"t": "0-3 s", "pantalla": "Presupuesto de reforma ya creado con sus líneas e IVA, en la app", "texto_pantalla": "Un presupuesto. Tres pasos más."},
+    {"t": "3-10 s", "pantalla": "Pulsar «Convertir en pedido», luego albarán: las líneas y el IVA se heredan solos", "texto_pantalla": "Las líneas y el IVA se heredan"},
+    {"t": "10-20 s", "pantalla": "Factura en PDF con datos fiscales del emisor y del cliente", "texto_pantalla": "Factura en PDF con tus datos fiscales"},
+    {"t": "20-27 s", "pantalla": "Enlace de pago de la factura (tarjeta, TPV Redsys con Bizum si está activo, o transferencia)", "texto_pantalla": "Cada factura, su enlace de pago"},
+    {"t": "27-32 s", "pantalla": "Cierre: logo NL neón, firma «By Neogest Lab»", "texto_pantalla": "Pide tu prueba gratuita · sin tarjeta · sin compromiso"}
+  ],
+  "voz": "genérica de España, castellano sin seseo, sin voz del dueño; si no suena bien, sin voz con texto en pantalla",
+  "musica": "instrumental de equipo/musica_instagram.json (licencia comercial), volumen 0,5 con voz; pendiente de elegir título",
+  "cierre_enlace": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=instagram (slug a confirmar en el Centro)",
+  "texto_post": "Del presupuesto a la factura, sin volver a teclear 🛠️\nSi haces reformas o instalaciones, cada paso debería heredar lo anterior: líneas, IVA y retención.\nEn Gestión Integral 7D, nuestra app, el presupuesto pasa a pedido, albarán y factura, y la factura sale en PDF con tus datos fiscales y los del cliente.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#autonomos #reformas #facturacion #pymes #apps #neogestlab",
+  "hechos_a_verificar": [
+    "Herencia de líneas, IVA y retención de presupuesto a pedido, albarán y factura (ficha del Producto en el Centro, hechos_verificados)",
+    "PDF de factura con datos fiscales del emisor y del cliente",
+    "Enlace de pago por factura: tarjeta, TPV Redsys con Bizum si está activo, o transferencia con IBAN"
+  ],
+  "prohibido": ["voz del dueño", "cliente, testimonio o cifra inventados", "precios o plazos", "cierre «comenta X»"]
+}
