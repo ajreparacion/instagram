@@ -1,0 +1,18 @@
+{
+  "tipo": "reel",
+  "texto": "Cada factura se teclea dos veces: una en el presupuesto y otra, igual, al facturar.\nEl Jambo lo delega en la Jupillo, como siempre. Humor negro de ficción; los personajes son inventados.\nEn Gestión Integral 7D, presupuesto, pedido, albarán y factura heredan líneas e IVA del documento anterior.\nFuente de la cifra: ATA, según The Objective (18/12/2025).\nMándaselo a quien factura dos veces.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n#humornegro #autonomos #pymes #ia #facturacion #neogestlab\nVoz y personajes generados por IA",
+  "cuando": "2026-11-15T13:40:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo + app",
+  "publico": "autónomos y pymes",
+  "formula": "humor negro con personaje + pivote de producto (v9)",
+  "app": "Gestión Integral 7D",
+  "renderizado": false,
+  "_fuentes": [
+    "ATA, según The Objective (18/12/2025)"
+  ],
+  "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
+  "comentario_fijado": "¿Cuántas veces has tecleado lo mismo hoy? Cuéntalo.",
+  "avance_siguiente": "Mañana: el cliente que paga «mañana»."
+}
