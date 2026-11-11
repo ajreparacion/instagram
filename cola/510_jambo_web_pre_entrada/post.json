@@ -1,16 +1,16 @@
 {
   "tipo": "reel",
-  "texto": "Hace un ruido raro. Así. Explícaselo al mecánico.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nEn ajreparacion.com haces la pre-entrada online: tipo de máquina, avería y hasta cuatro fotos.\nMándaselo a quien explica la avería con ruidos.\n#humornegro #mallorca #palma #maquinaria #taller #ajreparacion\nVoz y personajes generados por IA",
+  "texto": "Hace un ruido raro. Así. En ajreparacion.com se hace la pre-entrada online: tipo de máquina, avería y hasta cuatro fotos.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nNeogest Lab crea webs a medida para cualquier negocio, afición o asociación; ajreparacion.com es un ejemplo real de lo que hacemos.\nPensarás que cuesta un riñón. Pide presupuesto y te sorprenderás.\nMándaselo a quien aún no tiene web.\nConsultoría gratuita y presupuesto sin compromiso. Enlace en el perfil.\nVoz y personajes generados por IA",
   "cuando": "2026-11-24T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
   "formato": "Serie El Jambo + web",
-  "publico": "clientes de maquinaria de limpieza y jardinería en Mallorca",
+  "publico": "negocios, asociaciones y aficiones que quieren web propia",
   "formula": "humor negro con personaje + pivote de web (v9)",
-  "app": "AJ Reparación web",
+  "app": "Webs a medida Neogest Lab",
   "renderizado": false,
   "_fuentes": [],
-  "_nota_creador": "11/11/2026: promoción de la web ajreparacion.com (orden del dueño). Función tomada del ficha AJ Web/AJ Sistema (hechos_verificados). Cierre propio de la web (no es una app: sin «prueba gratuita»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
+  "_nota_creador": "11/11/2026 (webs a medida): Webs a medida de Neogest Lab: ajreparacion.com es el EJEMPLO de lo que se hace. Función de la web verificada en la ficha AJ Web; la idea de que el precio es asequible es del dueño (sin cifras) y debe confirmarla antes de publicar. Sin calidad.json no se publica.",
   "comentario_fijado": "¿Cómo explicas tú una avería? Cuéntalo.",
   "avance_siguiente": "Mañana: el número de serie."
 }
