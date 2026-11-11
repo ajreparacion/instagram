@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-11T01:08:04+00:00",
+  "actualizado": "2026-11-11T07:15:09+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1601,
@@ -136,8 +136,8 @@
       "permalink": "https://www.instagram.com/p/DffYnNFFwz9/",
       "timestamp": "2026-11-08T18:19:39+0000",
       "metricas": {
-        "reach": 20,
-        "views": 45,
+        "reach": 21,
+        "views": 47,
         "saved": 0,
         "shares": 3,
         "total_interactions": 9
@@ -243,7 +243,7 @@
       "timestamp": "2026-11-08T14:12:01+0000",
       "metricas": {
         "reach": 27,
-        "views": 53,
+        "views": 54,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -368,6 +368,10 @@
     },
     {
       "fecha": "2026-11-11T01:08+00:00",
+      "seguidores": 1601
+    },
+    {
+      "fecha": "2026-11-11T07:15+00:00",
       "seguidores": 1601
     }
   ]
