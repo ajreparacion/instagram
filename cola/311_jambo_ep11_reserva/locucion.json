@@ -1,0 +1,84 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.6,
+  "texto": "¡¿Doble reserva?! ¡La apunté en una servilleta!",
+  "enfasis": [
+   3
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 3.6,
+  "duracion": 4.4,
+  "texto": "Sin reserva en el impreso 27-B no hay habitación.",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 10.4,
+  "duracion": 1.8,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 12.2,
+  "duracion": 3.967,
+  "texto": "Reservas unificadas. Y una disculpa redactada.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 16.167,
+  "duracion": 3.4,
+  "texto": "Todo controlado. Qué bien llevo el hotel.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 19.567,
+  "duracion": 1.8,
+  "texto": "Controlado, sí.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 21.367,
+  "duracion": 5.033,
+  "texto": "Cuando todo depende de una servilleta, depende de alguien que no la pierda.",
+  "enfasis": [
+   8,
+   9,
+   10,
+   11,
+   12
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 26.4,
+  "duracion": 3.733,
+  "texto": "Mándaselo a quien carga con todo.",
+  "enfasis": []
+ }
+]
