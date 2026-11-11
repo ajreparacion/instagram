@@ -1,0 +1,94 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.7,
+  "texto": "¿La factura? ¡Se la mando otra vez!",
+  "enfasis": [
+   4,
+   5,
+   6
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 2.7,
+  "duracion": 3.933,
+  "texto": "La factura está en el correo. Seguro. De 2019.",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 9.033,
+  "duracion": 1.8,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 10.833,
+  "duracion": 4.567,
+  "texto": "Portal del cliente: órdenes, presupuestos y facturas.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 15.4,
+  "duracion": 2.633,
+  "texto": "Atiendo a todos. Soy un crack.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 18.033,
+  "duracion": 2.467,
+  "texto": "Atiende a todos. Clack.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 20.5,
+  "duracion": 3.8,
+  "texto": "Cada correo que reenvías es una hora que no vuelve.",
+  "enfasis": [
+   4,
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 24.3,
+  "duracion": 5.533,
+  "texto": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
+  "enfasis": []
+ },
+ {
+  "escena": 9,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 29.833,
+  "duracion": 3.0,
+  "texto": "Mándaselo a quien aún no tiene web.",
+  "enfasis": []
+ }
+]

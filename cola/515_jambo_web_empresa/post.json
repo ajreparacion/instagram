@@ -8,9 +8,19 @@
   "publico": "negocios, asociaciones y aficiones que quieren web propia",
   "formula": "humor negro con personaje + pivote de web (v9)",
   "app": "Webs a medida Neogest Lab",
-  "renderizado": false,
+  "renderizado": "2026-11-11T22:27:26+00:00",
   "_fuentes": [],
   "_nota_creador": "11/11/2026 (webs a medida): Webs a medida de Neogest Lab: ajreparacion.com es el EJEMPLO de lo que se hace. Función de la web verificada en la ficha AJ Web; la idea de que el precio es asequible es del dueño (sin cifras) y debe confirmarla antes de publicar. Sin calidad.json no se publica.",
   "comentario_fijado": "¿Cuántas veces reenvías la misma factura? Cuéntalo.",
-  "avance_siguiente": "Seguimos: más Jambo y más Jupillo."
+  "avance_siguiente": "Seguimos: más Jambo y más Jupillo.",
+  "audio_ig": {
+    "audio_id": "1852688158814799",
+    "titulo": "Hypnotized (Instrumental) · Company Money",
+    "origen": "biblioteca de Instagram (colección libre de derechos)",
+    "audio_volume": 0.5,
+    "video_volume": 1.0
+  },
+  "portada_ms": 0,
+  "motor_voz": "chatterbox",
+  "asset": "515_jambo_web_empresa.mp4"
 }
