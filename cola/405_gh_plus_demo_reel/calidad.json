@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "nota": 40,
+  "fecha": "2026-11-11T11:57Z",
+  "revisado_por": "agente de CALIDAD (11/11, pasada de las 12:50)",
+  "motivos": [
+    "Bloqueo 7 / B4: el vídeo muestra SOLO la pantalla de bienvenida de GH PLUS («Toca para empezar», botón Saltar) durante todo el reel; nunca aparecen los avisos en rojo/naranja, «Marcar pagado» ni «Dinero disponible» que la voz y los rótulos describen. La grabación no pasó la intro."
+  ],
+  "como_arreglarlo": "Calidad añadió en grabacion.json un clic en «Saltar» antes de esperar #avisos y marcó renderizado:false. Si tras el nuevo render sigue la intro, Mejora debe fijar el selector real del botón (ver peticiones_mejora.md). Se revisa en la siguiente pasada."
+}

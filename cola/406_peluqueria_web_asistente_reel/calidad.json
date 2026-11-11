@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "nota": 72,
+  "fecha": "2026-11-11T11:57Z",
+  "revisado_por": "agente de CALIDAD (11/11, pasada de las 12:50)",
+  "motivos": [
+    "B1: gancho descriptivo («Esta web contesta a tus clientes»: describe una función, sin cifra, conflicto, pregunta ni POV).",
+    "B2: escaparate de funciones (servicios, formulario, asistente) sin espina: máximo 75."
+  ],
+  "como_arreglarlo": "Rehacer con espina: POV o mini historia («POV: un cliente pregunta el precio a las 23:00 y nadie contesta»), el asistente respondiendo el precio como resultado, y mantener frase para enviar y cierre. La grabación sirve; cambiar gancho, orden de escenas y voz. Datos y respuesta del asistente verificados (tinte 35 €, 90 min)."
+}

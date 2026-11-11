@@ -1,0 +1,7 @@
+{
+  "aprobado": true,
+  "nota": 90,
+  "fecha": "2026-11-11T11:57Z",
+  "revisado_por": "agente de CALIDAD (11/11, pasada de las 12:50)",
+  "comentario": "v8.1: render revisado (1080x1920 H.264+AAC, -14,1 LUFS, pico -1,1 a -1,5 dBFS, sin cortes de audio). Gancho POV con fondo amarillo y personajes ya en escena en el fotograma 0, humor con personaje (B2 ok), remate, mensaje final guardable con frase para enviar (B3 ok), comentario fijado y avance (B8 ok), sin marcas ni apps (directiva Jambo). Sin cifras inventadas. Pie corregido por Calidad (quitada una nota interna que se iba a publicar). Defectos menores, no bloqueantes: hueco de voz de ~3 s en el tramo 3 (bajo el límite de 3,5 s de B5 y con cambio visual) y cabecera POV pisada por el contador en el primer segundo de algunos episodios (ver peticiones_mejora.md). Voz Chatterbox es-es sin voz del dueño; tono aceptado por el dueño el 10/11 en 017. Seguimiento a las 48 h obligatorio. Cifra 55 % confirmada en Forbes España 22/04/2026 (informe Qonto con IO Investigación); frase del post ajustada a «tareas administrativas restan tiempo al trabajo estratégico»."
+}
