@@ -1,0 +1,82 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": null,
+  "inicio": 0.0,
+  "duracion": 4.4,
+  "texto": "Tres caprichos, mil trescientos ochenta y ocho euros al año.",
+  "enfasis": [
+   2,
+   3,
+   4,
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 4.4,
+  "duracion": 5.333,
+  "texto": "Datos de ejemplo. La página la hizo una IA con este mensaje.",
+  "enfasis": [
+   10,
+   11
+  ]
+ },
+ {
+  "escena": 2,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 9.733,
+  "duracion": 4.033,
+  "texto": "Bocata solo una vez por semana: novecientos setenta y dos.",
+  "enfasis": [
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 13.767,
+  "duracion": 4.033,
+  "texto": "Y el café, a tres: quinientos setenta y dos euros menos.",
+  "enfasis": [
+   5,
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 17.8,
+  "duracion": 4.533,
+  "texto": "Pon tus precios y mándaselo a quien dice que no gasta nada.",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 22.333,
+  "duracion": 5.333,
+  "texto": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
+  "enfasis": [
+   2,
+   3
+  ]
+ }
+]
