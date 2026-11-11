@@ -5,27 +5,6 @@
   "esperar_carga": 0.8,
   "pasos": [
     {
-      "accion": "esperar",
-      "seg": 1.5
-    },
-    {
-      "accion": "clic",
-      "selector": "button:has-text('Saltar')"
-    },
-    {
-      "accion": "esperar",
-      "seg": 1.0
-    },
-    {
-      "accion": "esperar_selector",
-      "selector": "#avisos",
-      "seg": 25
-    },
-    {
-      "accion": "esperar",
-      "seg": 6.1
-    },
-    {
       "accion": "mover",
       "selector": "#avisos",
       "seg": 0.3
@@ -90,6 +69,47 @@
     {
       "accion": "esperar",
       "seg": 3.2
+    }
+  ],
+  "reemplazos": [
+    {
+      "buscar": " (CaixaBank)",
+      "por": ""
+    }
+  ],
+  "previos": [
+    {
+      "accion": "esperar",
+      "seg": 1.5
+    },
+    {
+      "accion": "clic",
+      "selector": "button:has-text('Saltar')",
+      "opcional": true,
+      "seg": 12
+    },
+    {
+      "accion": "esperar_selector",
+      "selector": "#avisos",
+      "seg": 25
+    },
+    {
+      "accion": "esperar",
+      "seg": 0.8
+    },
+    {
+      "accion": "clic",
+      "selector": "button:has-text('Entendido')",
+      "opcional": true,
+      "seg": 4
+    },
+    {
+      "accion": "ver",
+      "selector": "#avisos"
+    },
+    {
+      "accion": "esperar",
+      "seg": 0.6
     }
   ]
 }

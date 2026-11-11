@@ -22,7 +22,13 @@ grabacion.json:
     {"accion": "zoom", "selector": "#resultado", "nivel": 1.5, "seg": 0.8}   (nivel 1.0 = vista completa; con selector
         el nivel se limita para que el elemento entre entero a lo ancho; "forzar": true lo desactiva)
     {"accion": "pulsar", "tecla": "Enter"},  {"accion": "esperar_selector", "selector": "...", "seg": 8},
-    {"accion": "ir", "url": "..."}]}
+    {"accion": "ir", "url": "..."}],
+  "reemplazos": [{"buscar": " (CaixaBank)", "por": ""}],      (opcional: cambia ese texto en la pagina mientras se graba, p. ej. para
+        quitar una marca ajena de los datos de ejemplo; solo texto visible, no toca datos ni cuentas)
+  "previos": [{"accion": "clic", "selector": "button:has-text('Saltar')", "opcional": true, "seg": 12},
+              {"accion": "esperar_selector", "selector": "#avisos", "seg": 25}, {"accion": "ver", "selector": "#avisos"}]}
+        (opcional: pasos que se hacen ANTES de empezar a grabar, sin cursor ni fotogramas: cerrar intros o paneles de
+        bienvenida para que el primer fotograma ya sea lo que importa; "opcional": true no falla si el elemento no esta)
 La sesion (cookies de una cuenta de PRUEBA ya iniciada) tambien puede venir de la variable PANTALLA_SESION."""
 import sys, os, io, re, json, math, time, random, shutil, subprocess, base64
 import numpy as np
@@ -107,8 +113,30 @@ def grabar(spec, base_dir, rec):
                 p = url if os.path.isabs(url) else os.path.join(base_dir, url)
                 url = "file://" + os.path.abspath(p)
             page.goto(url, wait_until="load", timeout=60000)
+        reemp = [(str(r.get("buscar") or ""), str(r.get("por") or "")) for r in (spec.get("reemplazos") or []) if r.get("buscar")]
+        if reemp:   # cambia texto visible (nodos de texto), tambien el que la app pinta despues
+            page.add_init_script("""(() => { const R = %s;
+              const fix = n => { let t = n.nodeValue, o = t; for (const [a, b] of R) t = t.split(a).join(b); if (t !== o) n.nodeValue = t; };
+              const pasar = root => { const w = document.createTreeWalker(root, NodeFilter.SHOW_TEXT); let n; while ((n = w.nextNode())) fix(n); };
+              const ini = () => { pasar(document.body); new MutationObserver(ms => { for (const m of ms) { if (m.type === 'characterData') fix(m.target); m.addedNodes.forEach(a => { if (a.nodeType === 3) fix(a); else if (a.nodeType === 1) pasar(a); }); } })
+                .observe(document.body, {childList: true, subtree: true, characterData: true}); };
+              if (document.body) ini(); else document.addEventListener('DOMContentLoaded', ini); })();""" % json.dumps(reemp, ensure_ascii=False))
         ir(str(spec.get("url") or ""))
         esperar(float(spec.get("esperar_carga", 0.8)))
+        for p in spec.get("previos") or []:   # antes de grabar: sin cursor ni fotogramas
+            a = str(p.get("accion") or "").lower(); opc = bool(p.get("opcional"))
+            try:
+                if a == "esperar": esperar(float(p.get("seg", 0.5)))
+                elif a == "esperar_selector":
+                    page.locator(p["selector"]).first.wait_for(state="visible", timeout=int(float(p.get("seg", 10)) * 1000)); bombear(80)
+                elif a == "clic":
+                    page.locator(p["selector"]).first.click(timeout=int(float(p.get("seg", 8)) * 1000)); bombear(150)
+                elif a == "ver":   # desplaza hasta que el elemento se vea (el primer fotograma ya lo muestra)
+                    page.locator(p["selector"]).first.scroll_into_view_if_needed(timeout=int(float(p.get("seg", 8)) * 1000)); bombear(150)
+            except Exception as e:
+                if not opc: raise
+                print("previo opcional omitido:", a, p.get("selector"), str(e)[:60])
+        esperar(0.4)
         rec.t0 = time.time()
         pos = [vw / 2, vh * 0.8]   # cursor inicial: abajo, centrado
         rec.cursor.append((0.0, 0.0, tuple(pos), tuple(pos), 0.0))
