@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-11-11T12:24:31+00:00",
+  "fecha": "2026-11-11T18:56:18+00:00",
   "avisos": [],
   "duracion_s": 23.6,
   "voz_activa_pct": 79.0,
@@ -18,6 +18,6 @@
     "antes_lufs": -14.79,
     "antes_pico_dbtp": -0.95,
     "despues_lufs": -14.0,
-    "despues_pico_dbfs": -1.4
+    "despues_pico_dbfs": -1.2
   }
 }
