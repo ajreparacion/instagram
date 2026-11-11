@@ -1,0 +1,81 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.267,
+  "texto": "¡¿Otra revisión?! ¡Si ya estaba perfecto!",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 3.267,
+  "duracion": 3.867,
+  "texto": "¡Catorce revisiones, catorce oportunidades!",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 9.533,
+  "duracion": 1.8,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 11.333,
+  "duracion": 3.633,
+  "texto": "Versión quince. Idéntica a la uno.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 14.967,
+  "duracion": 3.433,
+  "texto": "Aprobado a la primera. Qué buen ojo.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 18.4,
+  "duracion": 1.8,
+  "texto": "A la primera, sí.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 20.2,
+  "duracion": 4.933,
+  "texto": "Un cambio pequeñito, repetido catorce veces, ya no es pequeño.",
+  "enfasis": [
+   6,
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 25.133,
+  "duracion": 2.433,
+  "texto": "Mándaselo a quien carga con todo.",
+  "enfasis": []
+ }
+]
