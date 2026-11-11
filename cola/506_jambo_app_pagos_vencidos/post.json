@@ -1,0 +1,16 @@
+{
+  "tipo": "reel",
+  "texto": "Se te olvidó pagar la luz. Otra vez. No eres un desastre: tienes la cabeza en todo.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nGH PLUS avisa de los pagos vencidos y los marcas con «Marcar pagado».\nMándaselo a quien siempre paga el último día.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n#humornegro #finanzaspersonales #ahorro #ia #hogar #neogestlab\nVoz y personajes generados por IA",
+  "cuando": "2026-11-20T13:40:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo + app",
+  "publico": "hogar y finanzas personales",
+  "formula": "humor negro con personaje + pivote de producto (v9)",
+  "app": "GH PLUS",
+  "renderizado": false,
+  "_fuentes": [],
+  "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
+  "comentario_fijado": "¿Cuál fue el último recibo que se te pasó? Cuéntalo.",
+  "avance_siguiente": "Mañana: la nómina que desaparece."
+}

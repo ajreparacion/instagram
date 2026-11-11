@@ -1,0 +1,16 @@
+{
+  "tipo": "reel",
+  "texto": "Alquiler, luz, internet: lo mismo, cada mes, a mano.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nGH PLUS genera los pagos del mes de tus gastos fijos, sin duplicarlos.\nMándaselo a quien paga lo mismo a mano cada mes.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n#humornegro #finanzaspersonales #ahorro #ia #hogar #neogestlab\nVoz y personajes generados por IA",
+  "cuando": "2026-11-22T13:40:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo + app",
+  "publico": "hogar y finanzas personales",
+  "formula": "humor negro con personaje + pivote de producto (v9)",
+  "app": "GH PLUS",
+  "renderizado": false,
+  "_fuentes": [],
+  "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
+  "comentario_fijado": "¿Cuántos pagos fijos tienes? Cuéntalo.",
+  "avance_siguiente": "Seguimos: más Jambo y más Jupillo."
+}

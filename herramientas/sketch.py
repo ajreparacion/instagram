@@ -494,7 +494,7 @@ def _globo(img, d, x, y_bajo, nombre, texto, col, k):
     img.paste(cap, (0, 0), cap)
 
 
-def _gancho_gigante(img, texto, t):
+def _gancho_gigante(img, texto, t, y_ini=400):
     """Texto de 3-6 palabras, gigante y en contraste máximo, en el fotograma 0 (entre y=400 y 800, legible en miniatura):
     entra de golpe con rebote, una palabra en rojo (la que va entre «» o la última) y se va entre 0,55 y GC_FIN s."""
     texto = " ".join(texto.upper().split())
@@ -503,7 +503,7 @@ def _gancho_gigante(img, texto, t):
     if len(" ".join(lines).split()) < len(pal) or size < 90:   # no cabe bien en 2 líneas: 3 líneas, sin perder palabras
         f, size, lines = hr.wrap_fit(texto, hr.F_DIB, maxw=hr.W - 120, maxlines=3, smax=140, smin=84)
     lh = int(size * 1.12)
-    y0 = 400
+    y0 = y_ini
     cap = Image.new("RGBA", (hr.W, hr.H), (0, 0, 0, 0)); dc = ImageDraw.Draw(cap, "RGBA")
     # palabra de acento: la primera dentro de «» (o con asterisco); si no hay, la última
     ac = next((i for i, w in enumerate(pal) if "«" in w or "»" in w or "*" in w), len(pal) - 1)
@@ -546,12 +546,12 @@ def _cartel(img, texto, col, t):
     img.paste(cap, (hr.W // 2 - cap.width // 2, 1170 - cap.height // 2), cap)
 
 
-def _contador(img, texto, valor, valor_prev, t_cambio, t):
+def _contador(img, texto, valor, valor_prev, t_cambio, t, y0=352):
     """Contador fijo bajo el gancho: la cifra salta (rebote) cuando sube."""
     d = ImageDraw.Draw(img, "RGBA")
     f = hr.font(hr.F_DIB_C, 36)
     fn = hr.font(hr.F_DIB, 68)
-    y0, y1 = 352, 440
+    y1 = y0 + 88
     d.rounded_rectangle([60, y0, hr.W - 60, y1], radius=26, fill=(255, 255, 255, 230), outline=hr.TINTA + (255,), width=5)
     d.text((92, (y0 + y1) / 2), texto.upper() + ":", font=f, fill=hr.TINTA, anchor="lm")
     k = max(0.0, min(1.0, (t - t_cambio) / 0.35)) if t_cambio is not None else 1.0
@@ -671,6 +671,8 @@ def render_frame(fi, sc, noise, rg, seed):
     # Durante el zoom de entrada del fotograma 0 (pp > 0) el rótulo y el contador son HUD: se dibujan DESPUÉS del
     # recorte para que no se corten por arriba (11/11/2026, aviso de Creador: «VECES QUE SE LO HA PASA…»).
     hud_tarde = bool(sc.primero and sc.gancho_gigante and t < PP_DUR)
+    # el contador baja si el «POV» ocupa dos líneas grandes (11/11/2026: «PAGAR LA LUZ» quedaba tapado por el contador)
+    cont_y0 = max(352, 150 + sc.gancho.height - 22) if sc.gancho is not None else 352
     def _hud(im):
         if sc.gancho is not None:
             im.paste(sc.gancho, (0, 150), sc.gancho)
@@ -678,7 +680,7 @@ def render_frame(fi, sc, noise, rg, seed):
             tt = t - 0.7
             n = sc.cont_ini + (max(0, min(sc.cont_fin - sc.cont_ini, int(tt / 0.28) + 1)) if tt >= 0 else 0)
             t_cambio = (0.7 + (n - sc.cont_ini - 1) * 0.28) if n > sc.cont_ini else None
-            _contador(im, sc.cont_texto, n, n - 1, t_cambio, t)
+            _contador(im, sc.cont_texto, n, n - 1, t_cambio, t, cont_y0)
     if not hud_tarde:
         _hud(img)
     # personajes
@@ -736,7 +738,7 @@ def render_frame(fi, sc, noise, rg, seed):
     if hud_tarde:
         _hud(img)
     if sc.primero and sc.gancho_gigante and t < GC_FIN:
-        _gancho_gigante(img, sc.gancho_gigante, t)
+        _gancho_gigante(img, sc.gancho_gigante, t, max(400, cont_y0 + 88 + 24 if sc.cont_texto else 400))
     a = np.asarray(img, dtype=np.int16).copy()
     a += noise[fi % 8] // 6
     if lf < 2 and sc.idx > 0: a -= 10   # micro parpadeo en el corte (nunca en el fotograma 0: B7)
