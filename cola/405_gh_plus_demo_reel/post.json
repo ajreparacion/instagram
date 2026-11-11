@@ -14,7 +14,7 @@
   "_fuentes": [],
   "_comprobado": "Solo hechos_verificados de la ficha Producto GH PLUS (Centro de Contenido Apps, consulta 11/11/2026): «avisos de pagos vencidos y próximos con botón Marcar pagado» y «Dinero disponible del mes» (saldo menos pendientes). Código leído en Base44 (src/pages/Dashboard.jsx: tarjeta #avisos, vencido en rojo y próximo en ámbar; src/lib/demo.js: /demo?limpia=1 con datos ficticios de «María», sin sesión y sin guardar).",
   "_nota_creador": "11/11/2026. NO comprobado en pantalla por el Creador: el proxy bloquea *.base44.app. El render lo graba el ciclo en Actions desde https://gestion-hogar-c9185d78.base44.app/demo?limpia=1 y Calidad debe mirar control/*.jpg antes de aprobar. Tiempos supuestos: la intro de marca dura ~6,7 s y se recorta (clips desde 7,4 s); si el render sale desfasado, ajustar los «clip» del guion a la grabación. Sin novedades (confeti, logros, consejo del día): en la demo crear/actualizar/borrar está desactivado (entidadDemo → noDemo), así que «Marcar pagado» no guarda ni dispara el confeti; no se pulsa. Para enseñarlos hace falta una cuenta de prueba o un modo demo que guarde en memoria (ver pendiente_usuario.md). Frase de envío, cierre único, voz genérica, datos ficticios. AVISO a Calidad (11/11): la demo muestra «Cuenta nómina (CaixaBank)» en la tarjeta de saldo; si aparece en algún fotograma de control, recortar con zoom o rechazar (marca ajena en pantalla).",
-  "renderizado": false,
+  "renderizado": "2026-11-11T21:07:15+00:00",
   "audio_ig": {
     "audio_id": "1579921342191993",
     "titulo": "Motive (Instrumental) · Giulio Cercato",
