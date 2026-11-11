@@ -1,0 +1,13 @@
+{
+ "_nota": "Contador de CLIENTES POTENCIALES, a mano por quien los vea (Creador/Estratega leen /panel/solicitudes del Centro vía Base44; el dueño, los DMs). Una línea por día con algo nuevo. 'ingresos_eur' solo lo confirma el dueño.",
+ "registros": [
+  {
+   "fecha": "2026-11-11",
+   "solicitudes_centro": null,
+   "dms_con_intencion": null,
+   "pruebas_gratuitas": null,
+   "ingresos_eur": 0,
+   "nota": "sin lectura: Base44 /panel/solicitudes no es accesible desde las sesiones del Analista"
+  }
+ ]
+}
