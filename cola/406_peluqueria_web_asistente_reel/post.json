@@ -1,0 +1,17 @@
+{
+ "tipo": "reel",
+ "texto": "Una web que contesta a tus clientes: servicios, precios y cita en una sola página.\nEs una web de demostración de una peluquería ficticia, hecha con Neogest Lab y grabada funcionando con datos de ejemplo. Tiene los servicios con su precio y su duración, un formulario para pedir cita y un asistente con IA que responde solo con la información de la web: le preguntamos cuánto cuesta el tinte y lo contestó.\nMándaselo a quien tenga una peluquería o un negocio con cita previa.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nVoz generada por IA\n\n#peluqueria #negociolocal #webparanegocios #apps #neogestlab",
+ "cuando": "2026-11-18T13:40:00+01:00",
+ "compartir_en_feed": true,
+ "portada_ms": 300,
+ "prueba_no_seguidores": true,
+ "formula": "F3",
+ "formato": "Una idea, una app (web real de la demo AJ Sistema grabada funcionando)",
+ "publico": "Cualquier negocio con cita previa (peluquería)",
+ "app": "AJ Sistema DEMO",
+ "comentario_fijado": "¿Qué le preguntarías tú al asistente de tu negocio?",
+ "avance_siguiente": "Mañana: la app que te avisa del recibo que se te pasó pagar",
+ "_fuentes": [],
+ "_comprobado": "Grabado el 11/11/2026 desde https://aj-reparacion-gestion-copy-61ad5afb.base44.app/w/peluqueria-demo (responde 200; la intro se salta con «Saltar»). Visto en pantalla: servicios Corte 18 €/30 min, Tinte 35 €/90 min, Mechas 60 €/120 min, Manicura 15 €/45 min (datos de ejemplo rotulados en la web); formulario «Reserva tu cita» (no se envía ninguno); asistente que contesta a «¿Cuánto cuesta el tinte y cuánto dura?» con 35 € y unos 90 minutos; rótulo de la web «Asistente con IA: responde solo con la información de esta web». No se afirma nada más: ni que el pedido entre en la gestión (comprobado por el Estratega el 8/11, no re-comprobado hoy), ni huecos libres, ni precios del servicio, ni plazos. No se crea ninguna reserva ni dato en la demo.",
+ "_nota_creador": "11/11/2026. Un solo caso: la web pública de la demo AJ Sistema con su asistente. Pico en el fotograma 0 = la respuesta del asistente en pantalla (clip del final de la grabación), frase de envío, cierre único, sin «comenta X», voz genérica, datos ficticios (negocio «Peluquería Demo»). La respuesta de la IA puede variar al regrabar: la voz NO dice cifras, pero Calidad debe mirar en control/*.jpg que la respuesta sea coherente (tinte, precio y duración) y que los tiempos de los clips coincidan con la grabación (marcas: scroll a servicios ~6-9 s, formulario ~9-12 s, asistente ~14-21 s, respuesta ~22 s; si cambia, reajustar los «clip»). Sin sector sanitario ni consejos. Estado de la ficha: AJ Sistema DEMO multisector, no es taller."
+}

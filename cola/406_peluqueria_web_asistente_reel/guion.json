@@ -1,0 +1,79 @@
+{
+ "titulo": "Apps 406: web de una peluquería con asistente que contesta (AJ Sistema DEMO, demo con datos de ejemplo)",
+ "semilla": 4106,
+ "modo": "app",
+ "plantilla": true,
+ "volumen_original": 0,
+ "musica": true,
+ "portada_texto": "Esta web contesta a tus clientes",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "texto": "Esta web *contesta* a tus clientes",
+   "voz": "Esta web *contesta* a tus clientes.",
+   "clip": {
+    "inicio": 23.6,
+    "fin": 26.0
+   }
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 2.5,
+    "fin": 6.0
+   },
+   "texto": "Web de demostración · datos de ejemplo",
+   "voz": "Web de una peluquería *de ejemplo*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 6.0,
+    "fin": 9.3
+   },
+   "texto": "Servicios y precios",
+   "voz": "Con sus servicios, *precios* y duración."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 9.3,
+    "fin": 12.4
+   },
+   "texto": "Formulario de cita",
+   "voz": "Un formulario para *pedir cita*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 13.8,
+    "fin": 21.5
+   },
+   "texto": "Le pregunto al asistente",
+   "voz": "Y un asistente con IA. Le pregunto: *cuánto cuesta el tinte*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 21.8,
+    "fin": 26.0
+   },
+   "texto": "Responde con lo que pone la web",
+   "voz": "Y responde *solo* con lo que pone en la web."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 24.8,
+    "fin": 26.1
+   },
+   "texto": "Para quien tenga cita previa",
+   "voz": "Mándaselo a quien tenga *peluquería*."
+  },
+  {
+   "estilo": "cierre",
+   "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+   "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
+  }
+ ]
+}
