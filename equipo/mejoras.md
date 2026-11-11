@@ -630,3 +630,8 @@ La muestra del cambio 37 llevaba la pista generada por código (prueba_voz.yml n
 **Medido (4-11/11):** alcance 616 (565 no seguidores), 14 visitas al perfil (2,5 %; antes 0,9 %), 3 clics al enlace (21 %), 0 solicitudes registradas, 0 €; seguidores -8 netos en 14 días. Paso más débil: alcance → visita. En el perfil siguen el nombre «IA Fácil · Trucos que no sabes», la bio con «Escríbeme IDEA» y el enlace a /demo: solo el dueño puede cambiarlos y es la palanca más barata.
 **Límites:** solicitudes y DMs no se pueden leer desde las sesiones del Analista (Base44 devuelve 403 al proxy, `ig_inbox` sin permiso): `leads.json` lo rellenan quienes lo vean. No se toca la cola ni el render.
 **Revertir:** borrar `embudo.py`, `embudo.md`, `leads.json`, el bloque de la directiva y la línea 2 de los roles.
+
+## Cambio 51 · 11/11/2026 (noche, orden del dueño) · Todos los agentes usan el navegador
+**Qué se hizo:** bloque «NAVEGADOR PARA TODOS LOS AGENTES» al principio de `DIRECTIVA_VIGENTE.md` (qué mirar por rol, reglas de solo lectura, nada de credenciales en el repo, qué hacer si la sesión no lo tiene) y una línea en los roles analista, calidad, creador, estratega, mejora, monetizacion y editor_canal.
+**Límite:** esta sesión programada se abrió antes de activar Browser Use y no lo cargó (RefreshMcpTools no lo añadió); las tareas que arranquen desde ahora deberían tenerlo. Sin navegador, el equipo sigue con Buzzfy y Base44.
+**Revertir:** quitar el bloque de la directiva y la línea 2 de cada rol.
