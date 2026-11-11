@@ -1,55 +1,50 @@
 # Monetización de @neogestlab (Neogest Lab · escaparate de apps)
 
-Analista de monetización. Versión 5: 8/11/2026 19:20 CET (domingo). Sustituye a la v4 (plan por fases de afiliados/misterios), archivada en `monetizacion_v4_archivo.md` (tabla de vías de Instagram y afiliados de Amazon, aún útil como referencia). Rige DIRECTIVA_VIGENTE.md (no se toca).
-Regla: lo que no he leído en una fuente se marca "no consta". Sin gasto ni promociones sin visto bueno del dueño.
+Analista de monetización. Versión 6: 11/11/2026 ~22:00 CET (revisión diaria, orden del dueño «monetizar, obsesivo»). Sustituye a la v5 del 8/11 (en git). Rige DIRECTIVA_VIGENTE.md (no se toca). Vías de Instagram y afiliados con fuentes: `monetizacion_v4_archivo.md`.
+Regla: lo que no he leído en una fuente se marca «no consta». Sin gasto ni promociones sin visto bueno del dueño.
 
 ## 0. Resumen ejecutivo
-- El embudo de la directiva (palabra clave → DM → clic al enlace → interés en apps a medida / Gestión Integral 7D) está **a cero en lo medible y ciego en lo demás**: 0 clics al enlace, 0 comentarios, 4 visitas al perfil en 7 días, y los DMs no se pueden leer (permiso de mensajes sin verificar en Buzzfy, sin webhooks, automatizaciones solo en plan MAX).
-- Cuello de botella: **del alcance a la visita al perfil**. 445 cuentas no seguidoras alcanzadas → 4 visitas al perfil (0,9 %) → 0 clics. Antes del enlace falla el gancho de cierre, no la página.
-- Hallazgo de riesgo: los carruseles de hoy salieron **duplicados** (101 ×3 y 105 ×3 en 15:06-15:31 CET) y aun así alcanzan 3-12 cuentas cada uno. Los reels, en cambio, daban ~115 de alcance por pieza.
-- Ingresos: 0 €. No hay plan de pago de ninguna app documentado (pendiente del dueño).
+- **Embudo 28/10-11/11 (Buzzfy, 14 días):** 568 cuentas no seguidoras alcanzadas → 14 visitas al perfil (2,5 %) → 3 clics al sitio web (21 %) → **1 solicitud registrada en el Centro (dudosa, ver §2)** → 0 € de ingresos. Seguidores 1.602; del 28/10 al 8/11: 4 altas y 12 bajas (-8 netos).
+- **Hallazgo nuevo y más importante: el alcance y la venta están en piezas distintas.** El episodio de El Jambo (humor negro) de hoy tiene **120 cuentas de alcance en 2,9 h**, 34 % de saltos y 10 s de visualización media. Los 6 reels de app/web de los últimos 3 días alcanzan **3-14 cuentas** (mediana 6) con 50-88 % de saltos. Es ~20 veces más alcance, pero el episodio no lleva oferta ni enlace (la directiva lo manda así) y las piezas con oferta no las ve nadie.
+- Lectura honesta: el cuello de botella ya no es solo «gancho → visita». Es que **no hay ningún puente entre la audiencia que sí llega (episodios) y la oferta (prueba gratuita)**. La fórmula v9 (episodio + pivote de UNA función de app + cierre único) es exactamente ese puente; el bloque 501-508 empieza el 15/11.
+- El enlace de la bio ya apunta a `/solicitar?src=instagram` (cambiado 11/11 21:12 CET). Aún no hay datos posteriores: primera lectura útil el 13/11.
 
-## 1. Embudo medido (Buzzfy, 1-8/11/2026 17:18 UTC; los datos tardan hasta 48 h)
+## 1. Cifras (Buzzfy, datos hasta 11/11 20:40 UTC; retraso de hasta 48 h)
 | Etapa | Dato | Lectura |
 |---|---|---|
-| Alcance | 468 cuentas (445 no seguidoras = 95 %); reels 459, carruseles 15, historias 6, posts 2 | Se distribuye a desconocidos, que es lo que se busca |
-| Reproducciones | 715 (550 de no seguidores) | Los 6 carruseles de hoy suman solo 97 |
-| Señales de interés | 44 interacciones: 25 me gusta, 5 guardados, 4 compartidos, 6 reposts, 0 comentarios | Guardados y compartidos existen pero son poquitos |
-| Visitas al perfil | 4 | Etapa más débil del embudo |
-| Clics al enlace (`/demo`) | 0 (linkTaps 0, websiteClicks 0) | Sin tráfico a la demo |
-| Palabra clave en comentarios | 0 comentarios en los 7 posts actuales | Nadie escribe APP/IDEA en público |
-| DMs con intención (IDEA, APP, «¿cuánto cuesta?») | **no medible** | `ig_inbox` falla por permiso; respondidos.json vacío |
-| Solicitudes en /solicitar (apps a medida, 7D) | **no medible desde aquí** | Base44 devuelve 403 al proxy; lo ve el dueño en /panel/solicitudes |
-| Seguidores | 1.603; netos -2 (1-5/11; 6 y 7/11 pendientes) | Sin cambio de tendencia |
+| Alcance 14 d | 619 cuentas (568 no seguidoras, 51 seguidoras); reels 581, carruseles 46, historias 38 | Casi todo llega a desconocidos; los reels son el único formato que alcanza |
+| Visualizaciones | 1.421 (reels 810, carruseles 419, historias 192) | |
+| Interacciones | 104: 52 me gusta, 5 guardados, 13 compartidos, 21 reposts, 0 comentarios | Los compartidos existen; nadie comenta |
+| Visitas al perfil | 14 (2,5 % de los no seguidores; meta ≥ 3 %) | Paso más débil según `embudo.md` |
+| Clics al sitio / toques al enlace | 3 / 0 (21 % de las visitas; meta ≥ 25 %) | Medición previa al cambio de enlace |
+| Solicitudes en el Centro (`SolicitudInfo`) | 1 total (8/11 21:40), estado «nueva» | Ver §2 |
+| Clics registrados en el Centro (`Clic`, por producto) | 32 desde el 30/10; solo 3 con `l.instagram.com` (todos el 8/11); ninguno desde Instagram el 9-11/11 | La web casi no recibe tráfico de Instagram |
+| DMs con intención / automatizaciones | **no medible**: `ig_inbox` falla (permiso de mensajes sin aprobar en Buzzfy) y las automatizaciones son plan MAX | Enlace de reconexión: buzzfy.co/connect/instagram?feature=messaging (solo el dueño) |
 
-Estado del perfil leído hoy: bio y enlace ya son los de Neogest Lab (enlace `…/demo`), pero el **nombre visible sigue siendo «IA Fácil · Trucos que no sabes»** y no «Neogest Lab · Apps a medida». 7 publicaciones en la cuadrícula; los reels 001 y 013-016 ya no existen en el perfil (el dueño borró reels por la música), así que las cifras de reels son de piezas retiradas.
+## 2. Lo que sí he podido leer del Centro (Base44, solo lectura)
+- Esta sesión puede leer las entidades `SolicitudInfo` y `Clic` del Centro con las herramientas de Base44 (antes se anotaba «no accesible»). Lo he dejado en `leads.json` solo como contadores, sin nombres ni emails.
+- **Única solicitud:** 8/11 21:40, `origen: demo`, producto `app-a-medida`, sector «Academia / formación», estado **nueva** (nadie la ha marcado como contactada en 3 días). Cae 7 min después de un clic con referer del panel del propio Centro, así que **puede ser una prueba del equipo**; no puedo confirmarlo. Si es real, es el primer cliente potencial y está sin atender.
+- Los clics `origen: bio/ig` por producto se repartieron entre gps-andaluz, aj-sistema-taller, medicator, insultator y expedientes-imposibles: el tráfico llegó a apps que hoy no se promocionan o a un hub retirado. Ninguno a Gestión Integral 7D desde Instagram.
+- `SolicitudInfo.origen` solo recoge `demo`; `src=instagram` y la pieza de origen no quedan atribuidos por defecto. Sin eso no se sabe qué reel vende.
 
-## 2. Por público y por producto: todavía no hay muestra
-- Solo han salido dos temas con la nueva línea: **autónomos/reformas (105, Gestión Integral 7D)** y **trucos de IA genéricos (101)**, cada uno ×3 en el mismo día, todos con menos de 3,2 h. Alcance 3-12, 1 compartido en cada tema, 0 guardados, 1 visita al perfil. Es PROVISIONAL (hasta 48 h) y demasiado pequeño para elegir sector.
-- Interés en **apps a medida**: no consta ningún DM «IDEA» ni solicitud. Interés en **Gestión Integral 7D**: 1 compartido en 105 (cuenta a revisar a las 48 h), nada más.
-- No se ha probado todavía hostelería, hogar, mayores (MEDICATOR), música ni ocio (directiva §3). Sin esos datos no se puede decir qué sector da más DMs.
-- Comparación de formato (dato real de la semana): reels 459 de alcance en total frente a 15 de carruseles. Los carruseles publicados hoy no sustituyen a los reels para captar.
+## 3. Por qué (datos reales, no suposiciones)
+- Episodio Jambo (11/11 17:43 UTC, 2,9 h): alcance 120, 149 visualizaciones, 2 me gusta, 0 compartidos, saltos 34,4 %, media 10 s. Provisional, pero ya supera a cualquier pieza de app.
+- Reels de app/web (8-10/11): alcance 3-14, saltos 50-88 %, media 5-26 s. El mejor por compartidos es Studio Beats PRO (1 compartido sobre 14 de alcance) y MEDICATOR (1 sobre 8): ruido, muestra mínima.
+- Carruseles: 3-10 de alcance (0,19-0,65× la mediana de feed de 15,5). No captan.
+- Conclusión: con 1.600 seguidores y un algoritmo que reparte el contenido de entretenimiento a desconocidos, la venta tiene que viajar **dentro** del contenido que sí se distribuye, no en piezas de producto puras.
 
-## 3. Qué no se puede medir y qué hace falta
-| Hueco | Causa | Arreglo |
-|---|---|---|
-| DMs y palabras clave | Permiso de mensajes de Buzzfy sin verificar (enlace de reconexión: buzzfy.co/connect/instagram?feature=messaging); webhooks sin suscribir; la prueba de Buzzfy vence el 8/11 18:04 UTC y automatizaciones/respuestas son MAX | Opción A: el dueño reconecta con «mensajes» marcado. Opción B (gratis): contar hilos con APP/IDEA en `respuestas_chat.py` (PAGE_TOKEN ya lee mensajes) y guardarlos en `equipo/kpi_embudo.json` |
-| Origen de cada solicitud | `/solicitar` no distingue de qué reel o sector viene | Campo «sector»/«ref» en el formulario y enlace de bio `…/demo?sector=X&ref=ig` (lo monta Mejora con código, no con el builder) |
-| Clics por sector | Un solo enlace en el perfil | Cambiar el enlace según el reel que se fije/impulse, o medir por `/demo?sector=` en Base44 |
-| Ingresos | Ninguna app con plan de pago conocido | Pregunta al dueño (pendiente_usuario.md 3b) |
+## 4. Recomendaciones para el Estratega (3-5 acciones, por orden de efecto)
+1. **Dar prioridad a los episodios con pivote (501-508, desde el 15/11) y no retrasarlos por nada.** Cada uno cierra con UNA función verificada, el cierre único («Pide tu prueba gratuita…») y el enlace a `/solicitar?app=<slug>&src=instagram` en el texto. Experimento de la semana 16-22/11 (el 1 de cada 3 sin producto de la fórmula v9 ya es el grupo de control): comparar a 48 h visitas al perfil por cada 100 de alcance en episodios con pivote frente a sin pivote. Si el pivote no sube las visitas ≥ 3/100, cambiar el pivote por la oferta en el último fotograma, no por más producto.
+2. **Atribuir cada pieza.** Pedir a Mejora que el enlace de cada texto lleve `&ref=<id de pieza>` y que `/solicitar` guarde `src` y `ref` en `SolicitudInfo.origen` (hoy solo guarda «demo»). Sin esto no hay forma de saber qué reel trajo la primera solicitud.
+3. **No subir el volumen de piezas de producto puras.** Con alcance 3-14, más reels de app solo diluyen. Mantener 1 reel de app y 1 carrusel de app por semana (§10) y darles el gancho que ya mueve a la cuenta (dolor concreto + humor negro: cobros a 60-90 días, factura con enlace de pago, de `virales_semana.md` fórmula 1). El resto de huecos, episodios o en blanco.
+4. **Leer el embudo el 13/11 y el 18/11 con una regla fija.** Si tras el cambio de enlace visita → clic sigue < 25 % o clic → solicitud es 0 en 7 días, el siguiente experimento (semana del 23/11) es la oferta del título del enlace: «Prueba gratuita» frente a «Cuéntanos tu idea: te decimos cómo sería tu app» (la segunda sirve a quien no sabe qué app quiere). Solo el dueño cambia el título del enlace.
+5. **Atender lo que ya existe.** Pedir al dueño que (a) marque la solicitud del 8/11 como contactada o descartada en `/panel/solicitudes` (o confirme que fue una prueba) y (b) reconecte Buzzfy con permiso de mensajes para poder contar los DMs. Hasta entonces el indicador de DMs seguirá en «n/d».
 
-## 4. Recomendaciones para el Estratega (acciones concretas, en orden)
-1. **Parar los duplicados antes de publicar más.** Pedir a Mejora que `publicar_gh.py` compruebe en Instagram (o en el registro) si la pieza ya salió antes de reintentar tras un fallo 2/3, y que el dueño borre 4 de los 6 carruseles repetidos (dejar 1 de 101 y 1 de 105). Tres copias del mismo post en 25 min dañan la imagen de la cuenta y reparten el alcance.
-2. **Reels para captar, carruseles para dar confianza.** Con los datos de la semana (459 vs 15 de alcance), poner en `plan.json` los reels «Una idea, una app» en los huecos de 13:40 y 20:40 y dejar los carruseles como máximo 1 al día, a otra hora, sin repetir tema.
-3. **Un solo CTA por pieza y por público, y medible:** reel de negocio → «Comenta APP» (se cuenta en comentarios, que sí leemos); reel de apps a medida → «Escríbeme IDEA por privado»; hogar/mayores → «enlace en el perfil». Registrar en plan.json qué palabra lleva cada pieza para poder cruzarla con los DMs.
-4. **Probar un sector por reel en 7 días y decidir con regla fija:** hostelería, hogar, mayores, autónomos (7D), música y «a medida», sin repetir seguidos (§3). Decisión a las 48 h con lo que exista: guardados + compartidos + visitas al perfil por cada 100 de alcance, y DMs/comentarios cuando el contador funcione. El que supere a los demás en dos mediciones pasa a ser el 60 % de «Una idea, una app».
-5. **Arreglar el paso reel → perfil:** que el último segundo y la última diapositiva digan en grande «Enlace en el perfil · Neogest Lab» y que el nombre visible del perfil pase a «Neogest Lab · Apps a medida» (hoy no cuadra con el contenido: pendiente_usuario.md 3c). Medir visitas al perfil por pieza (`ig_post_stats`, carruseles e historias lo dan; reels no) y objetivo mínimo: 3 visitas por cada 100 de alcance (hoy 0,9).
+## 5. Vías de ingresos (resumen)
+- Única vía realista hoy: **captar clientes de apps a medida / Gestión Integral 7D / prueba gratuita de las apps**. Las herramientas de monetización de Instagram y los afiliados dependen de umbrales y alcance que no se cumplen (detalle y fuentes en `monetizacion_v4_archivo.md`; no se han vuelto a verificar hoy).
+- **Promoción de 10 €** (regla del dueño 8/11): solo con pieza que ya funcione orgánicamente a 48-72 h: alcance ≥ 3× la mediana y ≥ 500 cuentas, + compartidos ≥ 1 % o guardados ≥ 2 %, + retención. Hoy ningún reel llega a 500 (el episodio de hoy: 120 en 2,9 h; revisar a las 48 h el 13/11). Si cumple, aviso al dueño; no se activa nada sin su visto bueno. La cuenta publicitaria sigue sin método de pago ni Instagram vinculado (v5).
+- Nada de ingresos confirmados: `leads.json` mantiene 0 € hasta que el dueño lo confirme.
 
-## 5. Vías de ingresos (resumen; el detalle con fuentes está en monetizacion_v4_archivo.md)
-- Hoy la única vía realista es **captar clientes para las apps de Neogest Lab** (apps a medida, Gestión Integral 7D y las demás): no depende de umbrales de Instagram, solo del embudo de arriba.
-- Herramientas de Instagram (regalos, suscripciones, marcas): umbrales sin confirmar y alcance insuficiente; no priorizar. Afiliados de Amazon: encajaban con misterios, no con esta línea; no se activan.
-- **Promoción de 10 €** (regla del dueño, 8/11/2026): solo se promociona una pieza que ya funciona orgánicamente a las 48-72 h (alcance ≥ 3 × la mediana y ≥ 500 cuentas, + compartidos ≥ 1 % o guardados ≥ 2 %, + retención). Hoy ninguna pieza lo cumple y la cuenta publicitaria 966846446095574 no tiene método de pago ni Instagram vinculado. No se gasta nada. Si algo cumple en la próxima revisión, aviso al dueño por notificación.
-
-## 6. Pendiente del dueño (lo que solo él puede ver o hacer)
-1) Contar cuántos DMs con IDEA/APP/precio ha recibido desde el 7/11 y cuántas solicitudes hay en /panel/solicitudes (yo no los puedo leer). 2) Reconectar Buzzfy con permiso de mensajes o decidir si seguir con su plan (prueba vencida el 8/11). 3) Borrar los carruseles duplicados. 4) Cambiar el nombre visible del perfil. 5) Decir si alguna app tiene plan de pago.
-Próxima revisión: domingo 15/11/2026, con las piezas de esta semana ya a 48 h.
+## 6. Pendiente del dueño (solo él puede)
+1) Revisar la solicitud del 8/11 en `/panel/solicitudes`. 2) Reconectar Buzzfy con permiso de mensajes. 3) Nombre visible → «Neogest Lab · Apps a medida» (Instagram lo bloquea hasta ~25/11). 4) Quitar o editar a mano los textos antiguos que aún dicen «escríbeme IDEA» (reels 8-9/11 y carruseles): contradicen el cierre único. 5) Decir si alguna app tiene plan de pago (sin precio no hay ingreso medible).
+Próxima revisión: jueves 12/11 (embudo diario) y lectura a 48 h de los episodios el 13/11.
