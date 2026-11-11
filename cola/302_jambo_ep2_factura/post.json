@@ -1,30 +1,39 @@
 {
- "tipo": "reel",
- "texto": "Dicen desde ATA que un autónomo dedica de media 200 horas al año a trámites.\nEl Jambo que sabe ya sabe hacer facturas: las hace la Jupillo.\nHumor negro de ficción; el impreso 27-B no existe.\nMándaselo a quien carga con todo.\nFuente: ATA (Federación Nacional de Asociaciones de Trabajadores Autónomos), comunicado recogido por The Objective el 18/12/2025. Es una cifra de la asociación, sin metodología publicada.\n#humornegro #autonomos #papeleo #ia #pymes\nVoz y personajes generados por IA",
- "cuando": "2026-11-13T20:40:00+01:00",
- "compartir_en_feed": true,
- "prueba_no_seguidores": true,
- "formato": "Serie El Jambo",
- "publico": "autónomo",
- "formula": "humor con personaje (v8 B2)",
- "_fuentes": [
-  "ATA (comunicado, 18/12/2025), según The Objective"
- ],
- "_comprobado": "The Objective 18/12/2025 leído: «una media de 200 horas al año exclusivamente a realizar trámites con las diferentes administraciones…». Se dice siempre «según ATA». Las 47 h semanales NO se usan: el texto las liga a «una actividad» sin precisar y sin fuente.",
- "_autoevaluacion": {
-  "gancho": 26,
-  "espina_originalidad": 17,
-  "retencion": 15,
-  "enviar_guardar": 13,
-  "exactitud": 8,
-  "pie": 4,
-  "total": 83
- },
- "_nota_creador": "11/11/2026: activado (post.json) con el guion v4 y los campos de interacción (B8). Calidad (≥ 90) y el visto bueno del dueño siguen mandando: sin calidad.json aprobado no se publica. Sin enlace ni prueba gratuita (fase sin apps). Voz genérica de España.",
- "renderizado": false,
- "motor_voz": "chatterbox",
- "palabras_de_voz": 46,
- "_nota_estratega": "Plan del Estratega 10/11: esta pieza es el episodio de plan.json «jambo_0N» (20:40). Carpeta real: 302_jambo_ep2_factura",
- "comentario_fijado": "¿Cuántos impresos has rellenado este año? Dime tu récord.",
- "avance_siguiente": "Mañana: la reunión que era un correo."
+  "tipo": "reel",
+  "texto": "Dicen desde ATA que un autónomo dedica de media 200 horas al año a trámites.\nEl Jambo que sabe ya sabe hacer facturas: las hace la Jupillo.\nHumor negro de ficción; el impreso 27-B no existe.\nMándaselo a quien carga con todo.\nFuente: ATA (Federación Nacional de Asociaciones de Trabajadores Autónomos), comunicado recogido por The Objective el 18/12/2025. Es una cifra de la asociación, sin metodología publicada.\n#humornegro #autonomos #papeleo #ia #pymes\nVoz y personajes generados por IA",
+  "cuando": "2026-11-13T20:40:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo",
+  "publico": "autónomo",
+  "formula": "humor con personaje (v8 B2)",
+  "_fuentes": [
+    "ATA (comunicado, 18/12/2025), según The Objective"
+  ],
+  "_comprobado": "The Objective 18/12/2025 leído: «una media de 200 horas al año exclusivamente a realizar trámites con las diferentes administraciones…». Se dice siempre «según ATA». Las 47 h semanales NO se usan: el texto las liga a «una actividad» sin precisar y sin fuente.",
+  "_autoevaluacion": {
+    "gancho": 26,
+    "espina_originalidad": 17,
+    "retencion": 15,
+    "enviar_guardar": 13,
+    "exactitud": 8,
+    "pie": 4,
+    "total": 83
+  },
+  "_nota_creador": "11/11/2026: activado (post.json) con el guion v4 y los campos de interacción (B8). Calidad (≥ 90) y el visto bueno del dueño siguen mandando: sin calidad.json aprobado no se publica. Sin enlace ni prueba gratuita (fase sin apps). Voz genérica de España.",
+  "renderizado": "2026-11-11T00:53:44+00:00",
+  "motor_voz": "chatterbox",
+  "palabras_de_voz": 46,
+  "_nota_estratega": "Plan del Estratega 10/11: esta pieza es el episodio de plan.json «jambo_0N» (20:40). Carpeta real: 302_jambo_ep2_factura",
+  "comentario_fijado": "¿Cuántos impresos has rellenado este año? Dime tu récord.",
+  "avance_siguiente": "Mañana: la reunión que era un correo.",
+  "audio_ig": {
+    "audio_id": "25873624668895779",
+    "titulo": "Coming Back (Instrumental) · Flow Loris",
+    "origen": "biblioteca de Instagram (colección libre de derechos)",
+    "audio_volume": 0.5,
+    "video_volume": 1.0
+  },
+  "portada_ms": 0,
+  "asset": "302_jambo_ep2_factura.mp4"
 }
