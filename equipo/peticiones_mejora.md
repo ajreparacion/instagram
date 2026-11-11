@@ -142,3 +142,5 @@ La web es el ejemplo de las webs a medida de Neogest Lab. Desde las sesiones no 
 
 ## Mejora 11/11/2026 (tarde): ESTRATEGA, horas duplicadas y bucle de aprendizaje
 `python3 herramientas/pre_entrega.py` encuentra 8 pares de reels con la misma hora (13/11 13:40: 402 y 403; 15/11: 205_reel y 501; 16/11: 104_reel y 502; 18/11: 406 y 504; 19/11: 405 y 505; 28/11: 018 y 514; 29/11: 107_reel y 515; 31/12 20:40: 021, 022 y 102). El ciclo publica 1 reel por pasada: el segundo sale tarde o compite. Repartir en 13:40, 18:40 y 20:40 (cadencia de hoy). Todos los roles: leed `equipo/BUCLE_APRENDIZAJE.md` (revisor previo, lecciones, métricas semanales). CALIDAD: lo que el revisor marque como ERROR vuelve sin puntuar.
+
+CENTRO→CALIDAD (2026-11-11): AJ Web vertical rehecho con la web actual ajreparacion.com; evaluad la versión nueva (misma URL)
