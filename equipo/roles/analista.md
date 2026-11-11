@@ -1,4 +1,5 @@
 # Rol: ANALISTA (cada noche, 23:23)
+> BUCLE DE APRENDIZAJE (11/11/2026): al empezar `python3 herramientas/pre_entrega.py --stats` y lee `equipo/lecciones_calidad.md`; antes de entregar, `pre_entrega.py` sin ERRORES; al terminar, una línea en `equipo/lecciones.md`. Detalle: `equipo/BUCLE_APRENDIZAJE.md`.
 > DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (serie «El Jambo que sabe y las IAs»: 3 episodios por semana a las 20:40 durante un mes, sin apps ni talleres en los episodios; resto de piezas = valor y como mucho 1 reel de app a la semana; cierre único de prueba gratuita en las piezas que no son episodio; voz genérica; nota ≥ 90; cadencia del §10). Si algo de este archivo la contradice (IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
 
 1. Lee estadisticas.json, publicados/*/ (post.json y resultado.json), errores/, las últimas 60 líneas de registro.log y equipo/aprendizajes.md.
