@@ -50,5 +50,5 @@ Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11
 
 ## Perfil 11/11/2026 (noche): hecho y pendiente
 - HECHO (en Instagram web, confirmado por Buzzfy): bio nueva «Apps para tu negocio y tu día a día 📲 / El Jambo que sabe y las IAs, cada día 😈 / Prueba gratuita: sin tarjeta ni compromiso / Pídela aquí 👇» (134 caracteres, sin «Escríbeme IDEA»).
-- PENDIENTE del dueño, en la app del móvil: Editar perfil → Enlaces → `https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?src=instagram`, título «Pide tu prueba gratuita» (hoy sigue /demo); y la categoría («Desarrollador de software» o «Servicios informáticos»).
+- HECHO (11/11 21:12, verificado con Buzzfy): enlace de la bio = /solicitar?src=instagram. Queda la categoría (móvil) y el nombre (a partir del 25/11).
 - PENDIENTE, bloqueado por Instagram (2 cambios en 14 días): nombre visible «Neogest Lab · Apps a medida»; reintentar a partir del 25/11 (hay recordatorio).
