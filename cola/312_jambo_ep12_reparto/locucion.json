@@ -1,0 +1,85 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.9,
+  "texto": "¡¿Puerta equivocada?! ¡Seguí el mapa!",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 2.9,
+  "duracion": 3.233,
+  "texto": "Giro a la izquierda. Seguro. Hay un río.",
+  "enfasis": [
+   7
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 8.533,
+  "duracion": 1.8,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 10.333,
+  "duracion": 4.533,
+  "texto": "Ruta rehecha. Paquete localizado y cliente avisado.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 14.867,
+  "duracion": 4.033,
+  "texto": "Entrega perfecta. Qué buen sentido de la orientación.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 18.9,
+  "duracion": 2.0,
+  "texto": "Orientación, no.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 20.9,
+  "duracion": 4.133,
+  "texto": "Detrás de cada entrega puntual hay alguien que se sabe el camino.",
+  "enfasis": [
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 25.033,
+  "duracion": 2.767,
+  "texto": "Mándaselo a quien carga con todo.",
+  "enfasis": []
+ }
+]
