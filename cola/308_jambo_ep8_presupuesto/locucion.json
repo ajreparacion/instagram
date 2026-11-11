@@ -1,0 +1,82 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.3,
+  "texto": "¡¿El doble?! ¡Yo dije lo mismo!",
+  "enfasis": [
+   4,
+   5
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 3.3,
+  "duracion": 4.033,
+  "texto": "Presupuesto cerrado. Salvo imprevistos. Hay imprevistos.",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 9.733,
+  "duracion": 1.8,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 11.533,
+  "duracion": 5.5,
+  "texto": "Presupuesto, partidas y una cifra que sí cuadra.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 17.033,
+  "duracion": 2.9,
+  "texto": "Presupuesto clavado. Qué ojo tengo.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 19.933,
+  "duracion": 2.533,
+  "texto": "Qué ojo.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 22.467,
+  "duracion": 4.733,
+  "texto": "Un buen presupuesto se hace con calma, no con prisa.",
+  "enfasis": [
+   5,
+   6
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 27.2,
+  "duracion": 2.8,
+  "texto": "Mándaselo a quien carga con todo.",
+  "enfasis": []
+ }
+]
