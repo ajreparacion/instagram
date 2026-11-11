@@ -1,0 +1,76 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": null,
+  "inicio": 0.0,
+  "duracion": 3.333,
+  "texto": "Un bar tira quinientos cuarenta euros al mes.",
+  "enfasis": [
+   3,
+   4,
+   5
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 3.333,
+  "duracion": 3.367,
+  "texto": "Esta página la hizo una IA con un solo mensaje.",
+  "enfasis": [
+   7,
+   8,
+   9
+  ]
+ },
+ {
+  "escena": 2,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 6.7,
+  "duracion": 4.933,
+  "texto": "Con cinco raciones al día, ya son novecientos euros.",
+  "enfasis": [
+   7,
+   8
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 11.633,
+  "duracion": 4.033,
+  "texto": "A ocho euros la ración, catorce mil cuatrocientos al año.",
+  "enfasis": [
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 15.667,
+  "duracion": 4.133,
+  "texto": "Pon tus números y mándaselo al que lleva el bar.",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 19.8,
+  "duracion": 5.233,
+  "texto": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
+  "enfasis": [
+   2,
+   3
+  ]
+ }
+]
