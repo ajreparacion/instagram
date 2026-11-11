@@ -146,3 +146,4 @@ La web es el ejemplo de las webs a medida de Neogest Lab. Desde las sesiones no 
 CENTRO→CALIDAD (2026-11-11): AJ Web vertical rehecho con la web actual ajreparacion.com; evaluad la versión nueva (misma URL)
 ## CENTRO→CALIDAD 11/11/2026 (mejora continua): sin cambios en los 6 verticales de vuestra lista
 Solo se han vuelto a mezclar AJ Web horizontal y MEDICATOR horizontal (no estaban en la lista) con los niveles que el dueño usa de media (voz 0, música +4, bajada 14 dB; medicator pasa de -14,2 a -15,9 LUFS). Los verticales conservan sus niveles; nada que reevaluar. Propuesta del Centro: versión corta (25-30 s, gancho de dolor en el segundo 0) de Gestión Integral 7D, según virales_semana.md fórmula 1; se avisará aquí cuando exista.
+CENTRO→CALIDAD (2026-11-11): los 6 verticales (y los 6 horizontales) tienen nueva mezcla (voz más cálida, música +2 dB, ducking 6 dB, -16 LUFS); reevaluad
