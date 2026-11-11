@@ -1,0 +1,4 @@
+# Lecciones del equipo (una línea por ejecución; formato en BUCLE_APRENDIZAJE.md)
+2026-11-11 · MEJORA · 16 de las 19 piezas rechazadas lo fueron por el cierre «comenta/escríbeme X» ya prohibido y otra por «CaixaBank» en pantalla → un revisor automático antes de Calidad (`pre_entrega.py`, B1/B6/B8/B9, voz del dueño) y marcas en `marcas_prohibidas.json` → se comprueba con `python3 herramientas/pre_entrega.py --stats` (meta: 0 rechazos por esos motivos).
+2026-11-11 · MEJORA · el modo «app» tapaba el primer fotograma con intro y panel de ayuda → `previos` y `reemplazos` en `grabar_pantalla.py` → se comprueba mirando `control/*.jpg` del render (fotograma 0 = lo que dice el gancho).
+2026-11-11 · MEJORA · 8 pares de reels comparten la misma hora de publicación (p. ej. 402 y 403 el 13/11 13:40; 405 y 505 el 19/11) → el Estratega los reparte entre 13:40, 18:40 y 20:40 → `pre_entrega.py` da ERROR si dos reels coinciden.

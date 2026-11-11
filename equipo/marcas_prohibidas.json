@@ -1,0 +1,4 @@
+{
+ "_nota": "B9 (estandar_calidad.md): marcas de producto ajenas que no pueden salir en texto, voz ni pantalla. Cualquier agente puede añadir una cuando Calidad rechace por una nueva. Se compara sin mayúsculas ni tildes.",
+ "marcas": ["caixabank", "santander", "bbva", "sabadell", "bankinter", "ing direct", "roland", "tr-808", "tr 808", "tr-909", "tr 909", "linndrum", "yamaha", "playmobil", "mercadona", "amazon", "netflix", "spotify", "iphone", "chatgpt", "openai", "gemini", "copilot"]
+}
