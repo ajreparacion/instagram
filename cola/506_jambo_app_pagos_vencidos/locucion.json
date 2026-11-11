@@ -1,0 +1,91 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.033,
+  "texto": "¡La luz vencía el cinco! ¡Hoy es siete!",
+  "enfasis": [
+   7
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 3.033,
+  "duracion": 4.1,
+  "texto": "Hoy es siete. Rellene el impreso 27-B.",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 9.533,
+  "duracion": 1.8,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 11.333,
+  "duracion": 3.633,
+  "texto": "Lo vencido, en rojo. Marcar pagado.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 14.967,
+  "duracion": 1.8,
+  "texto": "Lo tenía controlado.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 16.767,
+  "duracion": 2.267,
+  "texto": "Casi. Siempre casi.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 19.033,
+  "duracion": 4.8,
+  "texto": "Olvidarse no es ser un desastre: es ir con la cabeza llena.",
+  "enfasis": [
+   7,
+   8,
+   9,
+   10,
+   11
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 23.833,
+  "duracion": 4.9,
+  "texto": "En la vida real no hay Jupillo. GH PLUS avisa de lo vencido.",
+  "enfasis": []
+ },
+ {
+  "escena": 9,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 28.733,
+  "duracion": 3.067,
+  "texto": "Mándaselo a quien siempre paga el último día.",
+  "enfasis": []
+ }
+]
