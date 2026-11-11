@@ -1,0 +1,87 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.667,
+  "texto": "¡Llegó la nómina! ¿Adónde se fue?",
+  "enfasis": []
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 2.667,
+  "duracion": 4.067,
+  "texto": "¡El dinero se invierte! ¡Mentalidad de abundancia!",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 9.133,
+  "duracion": 3.1,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 12.233,
+  "duracion": 4.567,
+  "texto": "Dinero disponible del mes. Una cifra.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 16.8,
+  "duracion": 2.333,
+  "texto": "Mi economía, bajo control.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 19.133,
+  "duracion": 2.2,
+  "texto": "Creer no es controlar.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 21.333,
+  "duracion": 3.467,
+  "texto": "Si no sabes adónde se va, te faltan cuentas.",
+  "enfasis": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 24.8,
+  "duracion": 5.5,
+  "texto": "En la vida real no hay Jupillo. GH PLUS te muestra tu dinero disponible.",
+  "enfasis": []
+ },
+ {
+  "escena": 9,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 30.3,
+  "duracion": 3.4,
+  "texto": "Mándaselo a quien no sabe adónde se va la nómina.",
+  "enfasis": []
+ }
+]
