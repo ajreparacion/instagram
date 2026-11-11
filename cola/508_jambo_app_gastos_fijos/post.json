@@ -8,9 +8,19 @@
   "publico": "hogar y finanzas personales",
   "formula": "humor negro con personaje + pivote de producto (v9)",
   "app": "GH PLUS",
-  "renderizado": false,
+  "renderizado": "2026-11-11T19:26:17+00:00",
   "_fuentes": [],
   "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
   "comentario_fijado": "¿Cuántos pagos fijos tienes? Cuéntalo.",
-  "avance_siguiente": "Seguimos: más Jambo y más Jupillo."
+  "avance_siguiente": "Seguimos: más Jambo y más Jupillo.",
+  "audio_ig": {
+    "audio_id": "1403284444689007",
+    "titulo": "Good Time (feat. Lowen) (Instrumental) · Company Money",
+    "origen": "biblioteca de Instagram (colección libre de derechos)",
+    "audio_volume": 0.5,
+    "video_volume": 1.0
+  },
+  "portada_ms": 0,
+  "motor_voz": "chatterbox",
+  "asset": "508_jambo_app_gastos_fijos.mp4"
 }
