@@ -1,13 +1,55 @@
 {
-  "actualizado": "2026-11-10T18:56:23+00:00",
+  "actualizado": "2026-11-11T01:08:04+00:00",
   "cuenta": {
     "id": "17841400403112257",
-    "followers_count": 1602,
+    "followers_count": 1601,
     "follows_count": 176,
-    "media_count": 14,
+    "media_count": 16,
     "username": "neogestlab"
   },
   "posts": [
+    {
+      "id": "17875897623679672",
+      "caption": "Una web que no solo enseña tu teléfono 💻\nCon AJ Web, nuestra web de servicio, tus clientes te envían solicitudes, consultan sus encargos, te piden material y tienen su propio portal con sus facturas.\nDemo con datos ficticios. Te la adaptamos a medida a cualquier negocio.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#pequenonegocio #emprendedores #paginaweb #pymes #apps #neogestlab",
+      "comments_count": 0,
+      "like_count": 0,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfkvcMMCbFQ/",
+      "timestamp": "2026-11-10T20:15:30+0000",
+      "metricas": {
+        "reach": 3,
+        "views": 4,
+        "saved": 0,
+        "shares": 0,
+        "comments": 0,
+        "likes": 0,
+        "total_interactions": 0,
+        "ig_reels_avg_watch_time": 9033,
+        "ig_reels_video_view_total_time": 36135
+      }
+    },
+    {
+      "id": "17994038034074673",
+      "caption": "Una web que no solo enseña tu teléfono 💻\nCon AJ Web, nuestra web de servicio, tus clientes te envían solicitudes, consultan sus encargos, te piden material y tienen su propio portal con sus facturas.\nDemo con datos ficticios. Te la adaptamos a medida a cualquier negocio.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#pequenonegocio #emprendedores #paginaweb #pymes #apps #neogestlab",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfksC5PEcip/",
+      "timestamp": "2026-11-10T19:45:52+0000",
+      "metricas": {
+        "reach": 3,
+        "views": 5,
+        "saved": 0,
+        "shares": 0,
+        "comments": 0,
+        "likes": 1,
+        "total_interactions": 2,
+        "ig_reels_avg_watch_time": 26407,
+        "ig_reels_video_view_total_time": 79223
+      }
+    },
     {
       "id": "17873859903642425",
       "caption": "Tu canción en 4 pasos 🎤\nBase, voz, mezcla y master con Studio Beats PRO: eliges estilo, grabas encima y «Terminar canción» la deja lista para descargar.\nEstá en fase de pruebas: pide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#musica #productormusical #beats #cantantes #apps #neogestlab",
@@ -18,15 +60,15 @@
       "permalink": "https://www.instagram.com/reel/DfiIDnkD2zh/",
       "timestamp": "2026-11-09T19:52:53+0000",
       "metricas": {
-        "reach": 11,
-        "views": 21,
+        "reach": 14,
+        "views": 33,
         "saved": 0,
         "shares": 1,
         "comments": 0,
         "likes": 1,
         "total_interactions": 3,
-        "ig_reels_avg_watch_time": 10675,
-        "ig_reels_video_view_total_time": 202842
+        "ig_reels_avg_watch_time": 16967,
+        "ig_reels_video_view_total_time": 390251
       }
     },
     {
@@ -71,17 +113,17 @@
       "id": "18009506007004960",
       "caption": "¿Improvisas cada día tu ruta de visitas?\nPara comerciales y distribuidores que pasan el día de cliente en cliente.\nEn Gestión Integral 7D, nuestra app, «Mi día» ordena tus paradas por carretera con la hora prevista de llegada (si el servicio de rutas falla, las ordena en línea recta y te avisa).\nCada visita queda registrada con llegada, salida y distancia a la ubicación del cliente.\nTu cartera, con ranking ABC.\nLos agentes IA solo proponen acciones: tú decides si las apruebas.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🚐\n\n#comerciales #distribucion #ventas #pymes #neogestlab",
       "comments_count": 0,
-      "like_count": 2,
+      "like_count": 3,
       "media_product_type": "FEED",
       "media_type": "CAROUSEL_ALBUM",
       "permalink": "https://www.instagram.com/p/Dffsx71mBtI/",
       "timestamp": "2026-11-08T21:15:54+0000",
       "metricas": {
         "reach": 26,
-        "views": 57,
+        "views": 58,
         "saved": 0,
         "shares": 1,
-        "total_interactions": 5
+        "total_interactions": 7
       }
     },
     {
@@ -323,6 +365,10 @@
     {
       "fecha": "2026-11-10T18:56+00:00",
       "seguidores": 1602
+    },
+    {
+      "fecha": "2026-11-11T01:08+00:00",
+      "seguidores": 1601
     }
   ]
 }
