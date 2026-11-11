@@ -1,0 +1,25 @@
+# Análisis de ajreparacion.com y plan de promoción (Mejora, 11/11/2026; orden del dueño: «también puedes promocionar nuestra web, analízala»)
+Leído el 11/11/2026 desde la nube (portada y 5 subpáginas, todas HTTP 200). Las subpáginas /web/servicio, /contacto, /marcas, /alquiler y /blog devolvieron el mismo listado de rutas de apps y no su contenido propio (no se pudo leer el formulario, las marcas, las condiciones de alquiler ni el blog): revisar en el navegador. Contrastado con la ficha «AJ Web» y «AJ Sistema» del Centro (hechos_verificados).
+
+## Qué es lo que dice la web
+AJ Reparación y Mantenimiento S.L., taller técnico multimarca en Palma de Mallorca (Sa Indioteria), «más de 20 años», maquinaria de limpieza y jardinería (hidrolimpiadoras, cortacésped, motosierras, aspiración). Lema: «Reparamos lo que otros rechazan». Promete diagnóstico honesto, recambios originales, presupuesto por escrito («nada se repara sin tu visto bueno») y seguimiento de la reparación desde la web. Además presenta NeogestLab (software a medida, agentes de IA, diseño web).
+Servicios y funciones citados: reparación y mantenimiento preventivo, alquiler de equipos de respaldo, recambios y consumibles, reacondicionados, pre-entrada online, consulta del estado de la reparación, escáner de placa (PlacaScan), portal del cliente (órdenes, presupuestos, facturas) y asistente virtual 24 h en el teléfono. CTAs: pre-entrada online, pedir materiales, WhatsApp, ver demos, consultoría gratuita.
+Contacto, horarios y dirección: los publica la propia web; no se copian aquí ni en los vídeos salvo el dominio (en los reels solo «ajreparacion.com»; el resto, en el perfil).
+
+## Qué se puede afirmar en redes (solo lo ya verificado)
+Del Centro (AJ Web / AJ Sistema, hechos_verificados): pre-entrada online (tipo de máquina, avería, hasta 4 fotos, código); consulta del estado con número de orden y teléfono y aceptación del presupuesto; lectura de la placa del equipo con la cámara (marca, modelo, n.º de serie); pedidos de recambios; catálogo de alquiler y formulario de contacto; portal de clientes (reparaciones, órdenes, facturas); aviso por WhatsApp al cliente en cambios de estado.
+NO afirmar: pago online con tarjeta, diagnóstico por IA, «SAT oficial» (el título lo dice; no consta autorización de marca), plazos o garantías concretas (la web no los da), precios, ni que las solicitudes crean el trabajo solas sin revisión.
+
+## Qué mejorar en la web (para el dueño; las vemos desde fuera)
+1. **Sin precios orientativos ni plazos de garantía**: es el freno de quien compara. Una frase («revisión desde X €», «garantía de N meses») sube la confianza, si es cierta.
+2. **Identidad confusa**: AJ Taller / AjReparacion Gestión / AJ Reparación / NeogestLab; el título dice «SAT Oficial Multimarca» y el texto «SAT multimarca». Un solo nombre y una sola promesa.
+3. **Poca prueba social**: solo antes/después. Añadir 3-5 reseñas reales (con permiso) y los trabajos recientes.
+4. **Dos negocios en una web** (taller + software de IA/diseño web) diluye el SEO local. Separar: ajreparacion.com = taller en Palma; Neogest Lab en su propia página.
+5. **SEO técnico**: título y descripción idénticos en todas las páginas, blog sin artículos, sin datos estructurados de negocio local; falta una página por servicio y zona (p. ej. «reparación de hidrolimpiadoras en Palma»).
+6. Las subpáginas /web/* no muestran su contenido propio a quien las lee sin ejecutar la aplicación: comprobar que Google las ve (Search Console).
+
+## Plan de promoción (sin romper la orden del dueño de no hacer «contenido de talleres» en la serie)
+- Piezas de **web** con el mismo universo de El Jambo (humor negro + una función real + mensaje que cala), cierre propio: sobre fondo oscuro, solo «ajreparacion.com» (no es una app: no lleva «prueba gratuita»). Bloque 509-511: «¿Cómo va lo mío?» (consulta de estado), «No sé qué le pasa» (pre-entrada con fotos) y «¿Dónde está la placa?» (lectura de la placa). Salen a las 13:40 del 23 al 25/11, tras la nota de Calidad ≥ 90.
+- Siguientes (Creador): recambios («pide la pieza sin llamar»), alquiler de equipo de respaldo, portal del cliente (ver mi factura), antes/después real del taller (con fotos del dueño); carrusel «5 cosas que puedes hacer sin llamar al taller» (solo funciones verificadas).
+- Enlace: el del perfil; pedir al dueño que apunte la bio a ajreparacion.com cuando haya una landing clara de taller (pendiente_usuario.md).
+- Medir a las 48 h (Analista): clics al perfil y mensajes directos de clientes de Mallorca; si no hay señal, bajar a 1 pieza de web a la semana.
