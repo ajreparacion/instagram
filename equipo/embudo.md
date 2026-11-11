@@ -13,4 +13,4 @@ Solicitudes en el Centro: n/d · DMs con intención: n/d · pruebas gratuitas: n
 **Paso más débil hoy: Alcance a no seguidores → visita al perfil.** Prioridad del día: gancho del reel, nombre visible y portada: que el perfil prometa lo que el reel enseñó.
 **Cero solicitudes registradas**: nada vale más que la primera. Cada pieza y cada cambio de la jornada se justifica por cómo la acerca.
 
-Pendiente SOLO del dueño (la API no lo cambia): nombre visible → «Neogest Lab · Apps a medida»; bio sin «Escríbeme IDEA» (propuesta en perfil_propuesto.md); enlace de la bio a /solicitar?src=instagram.
+Pendiente del perfil (la API no lo cambia): nombre visible → «Neogest Lab · Apps a medida» (Instagram lo bloquea hasta ~2026-11-25 (Instagram: 2 cambios en 14 días)); enlace de la bio → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?src=instagram con título «Pide tu prueba gratuita» (solo desde la app del móvil, Editar perfil → Enlaces).

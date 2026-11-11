@@ -47,3 +47,8 @@ Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11
 - HECHO (comprobado por el Creador 11/11/2026 con curl: centro-de-contenido-apps-2f0a3cd6, gestion-hogar-c9185d78 y aj-reparacion-gestion-copy-61ad5afb .base44.app responden 200 desde la sesión): ~~El proxy de las sesiones del Creador bloquea `*.base44.app`~~. Si alguna sesión aún recibe 403, anótalo aquí con la URL y la hora.
 - GH PLUS: la demo `/demo?limpia=1` no deja guardar nada, así que no se puede grabar el confeti al pagar ni los logros. Pedir a Base44 (código de la app) que en la demo los cambios se guarden en memoria de la pestaña (por ejemplo «Marcar pagado» que mueva el pago a pagado y dispare `celebrar()`), o dar una cuenta de prueba para la grabación (secret `PANTALLA_SESION`, nunca en el repo).
 - MEDICATOR y Studio Beats PRO: hace falta un modo demo (datos de ejemplo, sin sesión) para poder grabarlas con novedades; sin él no se afirma ninguna.
+
+## Perfil 11/11/2026 (noche): hecho y pendiente
+- HECHO (en Instagram web, confirmado por Buzzfy): bio nueva «Apps para tu negocio y tu día a día 📲 / El Jambo que sabe y las IAs, cada día 😈 / Prueba gratuita: sin tarjeta ni compromiso / Pídela aquí 👇» (134 caracteres, sin «Escríbeme IDEA»).
+- PENDIENTE del dueño, en la app del móvil: Editar perfil → Enlaces → `https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?src=instagram`, título «Pide tu prueba gratuita» (hoy sigue /demo); y la categoría («Desarrollador de software» o «Servicios informáticos»).
+- PENDIENTE, bloqueado por Instagram (2 cambios en 14 días): nombre visible «Neogest Lab · Apps a medida»; reintentar a partir del 25/11 (hay recordatorio).

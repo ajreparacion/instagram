@@ -29,7 +29,10 @@ L += ["", "Solicitudes en el Centro: %s · DMs con intención: %s · pruebas gra
 if peor: L.append("**Paso más débil hoy: %s.** Prioridad del día: %s." % (peor[1], peor[2]))
 if not sol: L.append("**Cero solicitudes registradas**: nada vale más que la primera. Cada pieza y cada cambio de la jornada se justifica por cómo la acerca.")
 p = k.get("perfil") or {}
-if p.get("bio_con_IDEA") or "IA Fácil" in str(p.get("nombre_visible")):
-    L += ["", "Pendiente SOLO del dueño (la API no lo cambia): nombre visible → «Neogest Lab · Apps a medida»; bio sin «Escríbeme IDEA» (propuesta en perfil_propuesto.md); enlace de la bio a /solicitar?src=instagram."]
+falta = []
+if "IA Fácil" in str(p.get("nombre_visible")): falta.append("nombre visible → «Neogest Lab · Apps a medida» (Instagram lo bloquea hasta %s)" % (p.get("nombre_bloqueado_hasta") or "pasar 14 días"))
+if "/solicitar" not in str(p.get("enlace")): falta.append("enlace de la bio → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?src=instagram con título «Pide tu prueba gratuita» (solo desde la app del móvil, Editar perfil → Enlaces)")
+if p.get("bio_con_IDEA"): falta.append("bio sin «Escríbeme IDEA»")
+if falta: L += ["", "Pendiente del perfil (la API no lo cambia): " + "; ".join(falta) + "."]
 open(os.path.join(R, "equipo", "embudo.md"), "w", encoding="utf-8").write("\n".join(L) + "\n")
 print("\n".join(L))
