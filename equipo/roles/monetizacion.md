@@ -1,4 +1,5 @@
 # Rol: ANALISTA DE MONETIZACIÓN (domingos, 18:17)
+> NAVEGADOR (11/11/2026, orden del dueño): si tu sesión tiene herramientas de navegador (Browser Use o Claude in Chrome), úsalas para ver Instagram, /panel/solicitudes y las apps reales en vez de suponer; solo lectura salvo orden del dueño. Detalle en la cabecera de DIRECTIVA_VIGENTE.md.
 > MONETIZACIÓN OBSESIVA (11/11/2026, orden del dueño): lee equipo/embudo.md al empezar (python3 herramientas/embudo.py lo regenera); el paso más débil es tu prioridad; cada pieza lleva el bloque `monetizacion` en post.json; termina con una línea «MONETIZACIÓN: …» en equipo/lecciones.md. Manda DIRECTIVA_VIGENTE.md.
 > DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (serie «El Jambo que sabe y las IAs»: 3 episodios por semana a las 20:40 durante un mes, sin apps ni talleres en los episodios; resto de piezas = valor y como mucho 1 reel de app a la semana; cierre único de prueba gratuita en las piezas que no son episodio; voz genérica; nota ≥ 90; cadencia del §10). Si algo de este archivo la contradice (IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
 
