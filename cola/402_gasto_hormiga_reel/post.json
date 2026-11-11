@@ -14,7 +14,7 @@
   "_fuentes": [],
   "_comprobado": "Herramienta HTML real (cola/402_gasto_hormiga_reel/herramienta.html) grabada funcionando con herramientas/grabar_pantalla.py. Cálculos verificados con Playwright: 1,5×5×52=390; 4×3×52=624; 1,8×4×52=374,4; suma 1388,40. Con bocata ×1 y café ×3: 234+208+374,4=816,40; diferencia 572,00 (comprobado con Playwright). Datos de ejemplo rotulados en pantalla («EJEMPLO · datos inventados»); sin cifras de terceros ni estadísticas. No se afirma nada de ninguna app publicada de Neogest Lab.",
   "_nota_creador": "11/11/2026. Espina v8: cálculo en pantalla con hipótesis visibles. Las apps de Neogest Lab (*.base44.app) no se abren desde la sesión del Creador (proxy 403, comprobado 11/11), así que se graba una mini web construida con IA, dicha como demo. El mensaje que se ve en pantalla es el brief real con el que se construyó la página. Pico en el fotograma 0 (resultado), frase de envío, fotograma final guardable (resultado con la cuenta), cierre único de la directiva, sin «comenta X». Voz genérica de España, nunca la del dueño. Pendiente: render por el ciclo y revisión de Calidad (nota ≥ 90).",
-  "renderizado": false,
+  "renderizado": "2026-11-11T12:09:37+00:00",
   "audio_ig": {
     "audio_id": "583674661052146",
     "titulo": "Latina (Instrumental) · Tony Dark Eyes",
