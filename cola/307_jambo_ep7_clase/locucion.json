@@ -1,0 +1,82 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.967,
+  "texto": "¡¿Clase mañana?! ¡Si la di el año pasado!",
+  "enfasis": [
+   5,
+   6,
+   7
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 2.967,
+  "duracion": 2.933,
+  "texto": "Son sesenta temas. Seguro que cuarenta.",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 8.3,
+  "duracion": 1.8,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 10.1,
+  "duracion": 3.667,
+  "texto": "Temario, ejercicios y corrección. Hecho.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 13.767,
+  "duracion": 2.6,
+  "texto": "Clase magistral. Qué bien enseño.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 16.367,
+  "duracion": 2.967,
+  "texto": "Segurísimo que se ha enterado todo el mundo.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 19.333,
+  "duracion": 3.2,
+  "texto": "Lo que no se ve también es trabajo.",
+  "enfasis": [
+   2,
+   3,
+   4
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 22.533,
+  "duracion": 2.633,
+  "texto": "Mándaselo a quien carga con todo.",
+  "enfasis": []
+ }
+]
