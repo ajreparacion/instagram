@@ -589,12 +589,22 @@ class Subtitulos:
             texto = " ".join(" ".join(g) for g in self.grupos)
             f, size, lines = wrap_fit(texto, FUENTE_SUB, maxw=W - SAFE_L - SAFE_R - 40, maxlines=3,
                                       smax=self.estilo.get("smax_entero", 104), smin=56)
+            if self.estilo.get("gancho_2_lineas"):   # plantilla app: 2 lineas si caben a >= 56 px; si no, 3 mas pequenas para no tocar el movil
+                f2, s2, l2 = wrap_fit(texto, FUENTE_SUB, maxw=W - SAFE_L - SAFE_R - 40, maxlines=2,
+                                      smax=self.estilo.get("smax_entero", 104), smin=56)
+                if " ".join(l2).split() == texto.split():
+                    f, size, lines = f2, s2, l2
+                else:
+                    f, size, lines = wrap_fit(texto, FUENTE_SUB, maxw=W - SAFE_L - SAFE_R - 40, maxlines=3,
+                                              smax=min(66, self.estilo.get("smax_entero", 104)), smin=48)
             activo = -1
         else:
             texto = " ".join(self.grupos[gi])
             f, size, lines = wrap_fit(texto, FUENTE_SUB, maxw=W - SAFE_L - SAFE_R - 40, maxlines=2,
                                       smax=self.estilo.get("smax", 112), smin=self.estilo.get("smin", 64))
             activo = vis - 1
+            if self.estilo.get("bottom_max") and len(lines) > 1 and size > 58:   # plantilla app: 2 lineas mas pequenas para no pisar el pie
+                f, size, lines = wrap_fit(texto, FUENTE_SUB, maxw=W - SAFE_L - SAFE_R - 40, maxlines=2, smax=58, smin=46)
         lh = int(size * 1.18); total = len(lines) * lh
         im = Image.new("RGBA", (W, total + 60), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
         stroke = max(5, size // 12)
@@ -621,7 +631,9 @@ class Subtitulos:
                     col = c_act if (not self.entero and idx == activo) else c_fill
                 d.text((x, 30 + i * lh), w, font=f, fill=col + (255,), stroke_width=sw, stroke_fill=c_stroke + (255,))
                 x += widths[j] + space; idx += 1
-        self.cache[key] = (im, int(self.estilo.get("cy", TEXT_CY) - total / 2) - 30)
+        cy_ef = self.estilo.get("cy", TEXT_CY)
+        if self.estilo.get("bottom_max"): cy_ef = min(cy_ef, self.estilo["bottom_max"] - total / 2)   # el texto nunca baja de esa y
+        self.cache[key] = (im, int(cy_ef - total / 2) - 30)
         return self.cache[key]
 
 def rotulo_humano(texto):
@@ -1618,7 +1630,7 @@ def preparar_app(sc, spec, rng):
     sobre_video = vert and sc.estilo_a != "cierre"
     plant = bool(APP["plantilla"]) and vert and sc.estilo_a != "cierre"
     if plant:
-        est = dict(fill=TINTA, stroke=(255, 255, 255), activo=CIAN, enfasis=TINTA, marca=True, grosor=14, cy=SUB_CY_PLANT, smax=74, smin=50)
+        est = dict(fill=TINTA, stroke=(255, 255, 255), activo=CIAN, enfasis=TINTA, marca=True, grosor=14, cy=SUB_CY_PLANT, smax=74, smin=50, bottom_max=1540)
     elif sobre_video:
         est = dict(fill=(255, 255, 255), stroke=(0, 0, 0), activo=CIAN, enfasis=TINTA, marca=True, grosor=11, cy=SUB_CY_APP_V, smax=96, smin=56)
     else:
@@ -1626,7 +1638,7 @@ def preparar_app(sc, spec, rng):
     sc.sub = None; sc.grande = None; sc.rotulo = None
     if sc.estilo_a == "gancho":
         base, enf = (texto, enf_txt) if texto else (voz, enf_voz)
-        est_g = dict(est, cy=(PLANT_HOOK_CY if plant else (720 if vert else 290)), smax_entero=(80 if plant else (112 if vert else 90)))
+        est_g = dict(est, cy=(PLANT_HOOK_CY if plant else (720 if vert else 290)), smax_entero=(80 if plant else (112 if vert else 90)), gancho_2_lineas=plant)
         sc.grande = Subtitulos(base, wps, 0.0, sc.dur, entero=True, enfasis=enf, estilo=est_g) if base else None
     else:
         sc.sub = Subtitulos(voz, wps, 0.12, sc.dur, enfasis=enf_voz, tiempos=tiempos, estilo=est) if voz else None
