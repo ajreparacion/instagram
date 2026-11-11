@@ -1,10 +1,11 @@
 {
   "aprobado": false,
-  "nota": 40,
-  "fecha": "2026-11-11T11:57Z",
-  "revisado_por": "agente de CALIDAD (11/11, pasada de las 12:50)",
+  "nota": 74,
   "motivos": [
-    "Bloqueo 7 / B4: el vídeo muestra SOLO la pantalla de bienvenida de GH PLUS («Toca para empezar», botón Saltar) durante todo el reel; nunca aparecen los avisos en rojo/naranja, «Marcar pagado» ni «Dinero disponible» que la voz y los rótulos describen. La grabación no pasó la intro."
+    "B9/bloqueo 4: la tarjeta de saldo muestra «Saldo · Cuenta nómina (CaixaBank)» (marca bancaria ajena) en pantalla unos 4 s (≈15-19 s del vídeo, tramo «Dinero disponible» / «Datos de ejemplo»).",
+    "B7: el fotograma 0 y los primeros 2,5 s enseñan el panel de bienvenida «Inicio: cómo ver tu dinero», no el aviso del seguro del coche que dice el gancho; el aviso rojo no aparece hasta el segundo ~3."
   ],
-  "como_arreglarlo": "Calidad añadió en grabacion.json un clic en «Saltar» antes de esperar #avisos y marcó renderizado:false. Si tras el nuevo render sigue la intro, Mejora debe fijar el selector real del botón (ver peticiones_mejora.md). Se revisa en la siguiente pasada."
+  "como_arreglarlo": "Mejora/Creador: en guion.json recortar el último tramo (clip 16.2-21.0) para que solo se vea la tarjeta «Dinero disponible» sin la cabecera «Saldo · Cuenta nómina (CaixaBank)» (zoom o clip anterior al desplazamiento), o dejar el scroll fuera; y que el gancho arranque ya sobre la lista de avisos (cerrar el panel de bienvenida antes de grabar). Lo demás está bien: avisos rojo/naranja, «Marcar pagado» y «Dinero disponible» coinciden con hechos_verificados de GH PLUS; audio −14,0 LUFS. Poner renderizado:false al corregir.",
+  "fecha": "2026-11-11T18:35Z",
+  "revisado_por": "agente de CALIDAD (11/11, pasada de la tarde)"
 }
