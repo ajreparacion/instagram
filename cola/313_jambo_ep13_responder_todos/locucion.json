@@ -1,0 +1,78 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.333,
+  "texto": "¡¿Respuesta a todos?! ¡Era solo para mí!",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 3.333,
+  "duracion": 2.433,
+  "texto": "¡Transparencia radical, equipo!",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 8.167,
+  "duracion": 2.733,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 10.9,
+  "duracion": 3.967,
+  "texto": "Aclaración enviada a los trescientos. Como siempre.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 14.867,
+  "duracion": 3.433,
+  "texto": "Comunicación impecable. Qué bien me explico.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 18.3,
+  "duracion": 3.333,
+  "texto": "Ahora lo han leído todos.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 21.633,
+  "duracion": 4.9,
+  "texto": "Un error de uno lo arregla casi siempre otro.",
+  "enfasis": [
+   8
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 26.533,
+  "duracion": 2.333,
+  "texto": "Mándaselo a quien carga con todo.",
+  "enfasis": []
+ }
+]
