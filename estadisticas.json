@@ -1,13 +1,51 @@
 {
-  "actualizado": "2026-11-11T13:17:12+00:00",
+  "actualizado": "2026-11-11T19:26:28+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1602,
     "follows_count": 176,
-    "media_count": 16,
+    "media_count": 18,
     "username": "neogestlab"
   },
   "posts": [
+    {
+      "id": "18100382501427663",
+      "caption": "Cada semana se trabajan 2,5 millones de horas extra sin cobrar en España.\nEl Jambo que sabe ya ha encontrado a quien se lo hace todo: la Jupillo.\nHumor negro de ficción; los personajes son inventados.\nMándaselo a quien carga con todo.\nFuente: EPA (INE), 1.er trimestre de 2026, según El Español (26/05/2026): 5,89 millones de horas extra semanales, 3,38 pagadas.\n#humornegro #trabajo #ia #pymes #horasextra\nVoz y personajes generados por IA\n\nVoz generada por IA",
+      "comments_count": 0,
+      "like_count": 2,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfnC1dAk27o/",
+      "timestamp": "2026-11-11T17:43:30+0000",
+      "metricas": {
+        "reach": 115,
+        "views": 142,
+        "saved": 0,
+        "shares": 0,
+        "comments": 0,
+        "likes": 2,
+        "total_interactions": 3,
+        "ig_reels_avg_watch_time": 10332,
+        "ig_reels_video_view_total_time": 1208892
+      }
+    },
+    {
+      "id": "18355798099217485",
+      "caption": "¿Tu ruta de visitas sigue en papel? 🚗\nGestión Integral 7D es nuestra app para comerciales y pymes que venden en la calle.\nClientes clasificados A, B y C, con su ubicación y la fecha de la última visita.\n«Mi día» ordena tus visitas por carretera y te da la hora prevista de llegada.\nPresupuesto, pedido, albarán y factura heredando líneas e IVA, sin volver a teclear.\nFactura en PDF con tus datos y enlace de pago: tarjeta, Bizum o transferencia.\nCapturas reales de la demo. Mándaselo a quien aún apunta las visitas en papel.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#comerciales #pymes #ventas #facturacion #apps #neogestlab",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/Dfm_dyMlKbx/",
+      "timestamp": "2026-11-11T17:13:41+0000",
+      "metricas": {
+        "reach": 2,
+        "views": 2,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 2
+      }
+    },
     {
       "id": "17875897623679672",
       "caption": "Una web que no solo enseña tu teléfono 💻\nCon AJ Web, nuestra web de servicio, tus clientes te envían solicitudes, consultan sus encargos, te piden material y tienen su propio portal con sus facturas.\nDemo con datos ficticios. Te la adaptamos a medida a cualquier negocio.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#pequenonegocio #emprendedores #paginaweb #pymes #apps #neogestlab",
@@ -102,8 +140,8 @@
       "permalink": "https://www.instagram.com/p/DfhG07DFzQm/",
       "timestamp": "2026-11-09T10:22:43+0000",
       "metricas": {
-        "reach": 8,
-        "views": 17,
+        "reach": 10,
+        "views": 25,
         "saved": 0,
         "shares": 0,
         "total_interactions": 4
@@ -136,8 +174,8 @@
       "permalink": "https://www.instagram.com/p/DffYnNFFwz9/",
       "timestamp": "2026-11-08T18:19:39+0000",
       "metricas": {
-        "reach": 21,
-        "views": 47,
+        "reach": 22,
+        "views": 48,
         "saved": 0,
         "shares": 3,
         "total_interactions": 9
@@ -376,6 +414,10 @@
     },
     {
       "fecha": "2026-11-11T13:17+00:00",
+      "seguidores": 1602
+    },
+    {
+      "fecha": "2026-11-11T19:26+00:00",
       "seguidores": 1602
     }
   ]

@@ -1,0 +1,87 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.9,
+  "texto": "¡Otro mes! ¡Otra vez lo de siempre!",
+  "enfasis": []
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 2.9,
+  "duracion": 3.8,
+  "texto": "Los gastos fijos son una sorpresa mensual.",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 9.1,
+  "duracion": 1.8,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 10.9,
+  "duracion": 3.167,
+  "texto": "Generar pagos del mes. Sin duplicar.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 14.067,
+  "duracion": 3.0,
+  "texto": "Qué mes tan ordenado. Mérito mío.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 17.067,
+  "duracion": 3.1,
+  "texto": "Mismos pagos. Mismo mérito.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 20.167,
+  "duracion": 3.767,
+  "texto": "Lo que se repite cada mes debería hacerse solo.",
+  "enfasis": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 23.933,
+  "duracion": 5.467,
+  "texto": "En la vida real no hay Jupillo. GH PLUS genera tus pagos fijos del mes.",
+  "enfasis": []
+ },
+ {
+  "escena": 9,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 29.4,
+  "duracion": 3.533,
+  "texto": "Mándaselo a quien paga lo mismo a mano cada mes.",
+  "enfasis": []
+ }
+]
