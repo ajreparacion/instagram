@@ -1,0 +1,81 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.867,
+  "texto": "¡¿Factura denegada?! ¡Pero si la hice yo!",
+  "enfasis": [
+   1
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 2.867,
+  "duracion": 4.5,
+  "texto": "Falta el 27-B. Se pide con el 27-A.",
+  "enfasis": [
+   2
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 9.767,
+  "duracion": 1.8,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 11.567,
+  "duracion": 5.2,
+  "texto": "Hecho. El 27-A, el 27-B y uno que ni existía.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 16.767,
+  "duracion": 2.4,
+  "texto": "Cobrada. Qué bien me ha quedado.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 19.167,
+  "duracion": 5.133,
+  "texto": "Impreso de agradecimiento a la Jupillo: 27-Z. Plazo: nunca.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "mensaje",
+  "hablante": null,
+  "inicio": 24.3,
+  "duracion": 4.233,
+  "texto": "Un autónomo dedica doscientas horas al año a trámites, según ATA.",
+  "enfasis": [
+   3,
+   4
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 28.533,
+  "duracion": 2.567,
+  "texto": "Mándaselo a quien carga con todo.",
+  "enfasis": []
+ }
+]
