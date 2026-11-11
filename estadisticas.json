@@ -1,8 +1,8 @@
 {
-  "actualizado": "2026-11-11T07:15:09+00:00",
+  "actualizado": "2026-11-11T13:17:12+00:00",
   "cuenta": {
     "id": "17841400403112257",
-    "followers_count": 1601,
+    "followers_count": 1602,
     "follows_count": 176,
     "media_count": 16,
     "username": "neogestlab"
@@ -120,7 +120,7 @@
       "timestamp": "2026-11-08T21:15:54+0000",
       "metricas": {
         "reach": 26,
-        "views": 58,
+        "views": 59,
         "saved": 0,
         "shares": 1,
         "total_interactions": 7
@@ -243,7 +243,7 @@
       "timestamp": "2026-11-08T14:12:01+0000",
       "metricas": {
         "reach": 27,
-        "views": 54,
+        "views": 55,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -373,6 +373,10 @@
     {
       "fecha": "2026-11-11T07:15+00:00",
       "seguidores": 1601
+    },
+    {
+      "fecha": "2026-11-11T13:17+00:00",
+      "seguidores": 1602
     }
   ]
 }
