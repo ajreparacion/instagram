@@ -21,7 +21,7 @@ permissions:
 jobs:
   explorar:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -29,8 +29,9 @@ jobs:
           python-version: "3.11"
       - name: Herramientas
         run: |
+          sudo apt-get update -qq
           pip install --quiet playwright
-          python3 -m playwright install --with-deps chromium > /dev/null
+          timeout 600 python3 -m playwright install --with-deps chromium > /dev/null
       - name: Explorar
         run: python3 herramientas/explorar_web.py "${{ inputs.url }}" /tmp/exp ${{ inputs.rutas }}
       - name: Guardar informe y capturas
