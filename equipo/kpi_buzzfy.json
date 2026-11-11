@@ -19,6 +19,8 @@
  "perfil": {
   "nombre_visible": "IA Fácil · Trucos que no sabes",
   "enlace": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/demo",
-  "bio_con_IDEA": true
+  "bio_con_IDEA": false,
+  "bio_nueva_desde": "2026-11-11",
+  "nombre_bloqueado_hasta": "~2026-11-25 (Instagram: 2 cambios en 14 días)"
  }
 }
