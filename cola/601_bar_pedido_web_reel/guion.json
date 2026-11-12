@@ -1,0 +1,70 @@
+{
+  "titulo": "Apps 601: web de un bar con pedido para llevar (AJ Sistema DEMO, demo con datos de ejemplo)",
+  "semilla": 4601,
+  "modo": "app",
+  "plantilla": true,
+  "volumen_original": 0,
+  "musica": true,
+  "portada_texto": "POV: pides para llevar sin llamar",
+  "escenas": [
+    {
+      "estilo": "gancho",
+      "texto": "POV: pides para llevar sin *llamar*",
+      "voz": "Pides para llevar sin *llamar*.",
+      "clip": {
+        "inicio": 12.6,
+        "fin": 15.1
+      }
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 0.4,
+        "fin": 3.2
+      },
+      "texto": "Web de un bar de ejemplo",
+      "voz": "Esta es la web de un bar *de ejemplo*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 3.6,
+        "fin": 6.6
+      },
+      "texto": "Eliges los platos",
+      "voz": "Eliges los *platos* con un toque."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 6.6,
+        "fin": 10.5
+      },
+      "texto": "El total, solo",
+      "voz": "Y el carrito te suma el *total* solo."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 12.6,
+        "fin": 15.1
+      },
+      "texto": "Enviar pedido",
+      "voz": "Y le das a *enviar pedido*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 14.0,
+        "fin": 15.6
+      },
+      "texto": "Datos de ejemplo",
+      "voz": "Mándaselo a quien tenga un *bar*."
+    },
+    {
+      "estilo": "cierre",
+      "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+      "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
+    }
+  ]
+}
