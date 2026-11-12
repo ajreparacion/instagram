@@ -25,6 +25,8 @@ grabacion.json:
     {"accion": "ir", "url": "..."}],
   "reemplazos": [{"buscar": " (CaixaBank)", "por": ""}],      (opcional: cambia ese texto en la pagina mientras se graba, p. ej. para
         quitar una marca ajena de los datos de ejemplo; solo texto visible, no toca datos ni cuentas)
+  "ocultar": ["#campo_vacio"], "difuminar": [".lista-marcas"],   (opcional, selectores CSS: lo que no debe leerse en pantalla;
+        ocultar deja el hueco en blanco, difuminar lo emborrona. No vale para tapar datos reales: esos no se graban.)
   "previos": [{"accion": "clic", "selector": "button:has-text('Saltar')", "opcional": true, "seg": 12},
               {"accion": "esperar_selector", "selector": "#avisos", "seg": 25}, {"accion": "ver", "selector": "#avisos"}]}
         (opcional: pasos que se hacen ANTES de empezar a grabar, sin cursor ni fotogramas: cerrar intros o paneles de
@@ -121,6 +123,14 @@ def grabar(spec, base_dir, rec):
               const ini = () => { pasar(document.body); new MutationObserver(ms => { for (const m of ms) { if (m.type === 'characterData') fix(m.target); m.addedNodes.forEach(a => { if (a.nodeType === 3) fix(a); else if (a.nodeType === 1) pasar(a); }); } })
                 .observe(document.body, {childList: true, subtree: true, characterData: true}); };
               if (document.body) ini(); else document.addEventListener('DOMContentLoaded', ini); })();""" % json.dumps(reemp, ensure_ascii=False))
+        # 12/11/2026 (Calidad, 601 y B9): "ocultar" y "difuminar" = listas de selectores CSS que no deben leerse en la
+        # grabacion (campos vacios sin etiqueta, listas con marcas ajenas). ocultar conserva el hueco; difuminar emborrona.
+        css = "".join("%s{visibility:hidden !important}" % str(x) for x in (spec.get("ocultar") or []) if str(x).strip()) + \
+              "".join("%s{filter:blur(7px) !important}" % str(x) for x in (spec.get("difuminar") or []) if str(x).strip())
+        if css:
+            page.add_init_script("""(() => { const add = () => { const s = document.createElement('style'); s.textContent = %s;
+              (document.head || document.documentElement).appendChild(s); };
+              if (document.head) add(); else document.addEventListener('DOMContentLoaded', add); })();""" % json.dumps(css))
         ir(str(spec.get("url") or ""))
         esperar(float(spec.get("esperar_carga", 0.8)))
         for p in spec.get("previos") or []:   # antes de grabar: sin cursor ni fotogramas
