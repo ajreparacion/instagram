@@ -1,10 +1,10 @@
 {
  "semana": "2026-11-13 a 2026-11-19",
  "creado_por": "Estratega, jueves 12/11/2026 15:45 (ejecución programada). Sustituye al plan 11-17/11, que quedó desfasado por las órdenes del dueño del 11 y 12/11 (publicación masiva, apps de vuelta, fórmula v9, reels de datos, monetización obsesiva, vídeos del Centro). No cambia ninguna orden: reparte los huecos con datos. Recoge las pasadas del Analista y de Monetización (v7.1) de las 15:45-16:00 del mismo día.",
- "objetivo": "Primera solicitud en /solicitar. Paso más débil del embudo: alcance a no seguidores → visita al perfil (1,9 %; referencia ≥ 3 %). Para moverlo, la oferta tiene que ir dentro de las piezas que sí tienen alcance: los episodios de El Jambo.",
+ "objetivo": "Primera solicitud real en /solicitar (la única registrada, del 8/11, está sin contactar y puede ser una prueba interna). Paso más débil del embudo: alcance a no seguidores → visita al perfil (1,9 %; referencia ≥ 3 %). Para moverlo, la oferta tiene que ir dentro de las piezas que sí tienen alcance: los episodios de El Jambo.",
  "punto_de_partida": {
   "fuente": "Buzzfy, 12/11/2026 15:42 CET (ig_account_stats 7 días, ig_follower_growth 14 días, ig_post_stats) y estadisticas.json de las 14:38 CET",
-  "cuenta_7_dias_5_a_12_nov": "alcance 746 (689 no seguidores, 56 seguidores; 709 por reels, 46 por carruseles, 43 por historias), 1.612 visualizaciones, 103 interacciones (51 me gusta, 13 compartidos, 21 reposts, 5 guardados, 0 comentarios), 13 visitas al perfil, 3 clics en la web, 0 toques en el enlace, 0 solicitudes, 0 €",
+  "cuenta_7_dias_5_a_12_nov": "alcance 746 (689 no seguidores, 56 seguidores; 709 por reels, 46 por carruseles, 43 por historias), 1.612 visualizaciones, 103 interacciones (51 me gusta, 13 compartidos, 21 reposts, 5 guardados, 0 comentarios), 13 visitas al perfil, 3 clics en la web, 0 toques en el enlace, 0 solicitudes nuevas (la única registrada es del 8/11, sin contactar y quizá una prueba), 0 €",
   "seguidores": "1.602. Del 29/10 al 9/11 (días cerrados): 4 altas, 12 bajas, -8 netos; 8 y 9/11 a cero; 10 y 11/11 pendientes",
   "episodio_1_jambo_a_21_h_provisional": "alcance 255, 311 visualizaciones, abandono 30,6 % (meta < 40 %: cumple), visualización media 10,6 s de 23,8 s (45 %), 3 me gusta, 0 compartidos, 0 guardados. Es un tercio del alcance de toda la semana",
   "reels_de_app_y_web_sin_personaje_8_a_10_nov": "alcance 3-14 (mediana 6)",
@@ -351,7 +351,7 @@
   ],
   "MEJORA": [
    "En src/pages/Solicitar.jsx del Centro (antes del 15/11 a las 13:40): registro Clic al cargar la página con origen = src, y desplegable opcional «¿Qué te interesa?» guardado en producto_slug (monetizacion.md v7.1, acción 3). No añadir &ref= a los textos: esos enlaces no se pulsan.",
-   "embudo.md sigue diciendo que el enlace es /demo: regenerarlo con los datos de hoy.",
+   "embudo.md regenerado por el Estratega con las cifras del 12/11; volver a leerlo el 13/11 y el 18/11.",
    "Comprobar con ig_posts antes de reintentar una publicación «fallida»: el 206 salió dos veces el 10/11."
   ]
  },
@@ -363,7 +363,7 @@
  ],
  "siguiente_semana_ya_en_cola": "13:40 del 20 al 29/11: episodios con pivote 506-508 (GH PLUS) y 509-515 (webs a medida, cierre ajreparacion.com). Faltan las 18:40 y las 20:40.",
  "kpi_semana": {
-  "principal": "Primera solicitud registrada en leads.json; visitas al perfil ≥ 3 por cada 100 cuentas no seguidoras alcanzadas (hoy 1,9).",
+  "principal": "Primera solicitud nueva en leads.json (desde Instagram, con el dueño confirmando que es real); visitas al perfil ≥ 3 por cada 100 cuentas no seguidoras alcanzadas (hoy 1,9).",
   "segundo": "Mediana de alcance por episodio a 48 h ≥ 150 y abandono < 40 %; visualización media ≥ 50 % de la duración.",
   "tercero": "Seguidores netos ≥ 0, ≥ 1 compartido por episodio y 0 choques de hora."
  },
@@ -374,5 +374,5 @@
   "Reconectar Buzzfy con permiso de mensajes para poder contar los DMs con intención (hoy no se ven).",
   "Vídeo de referencia (reel DfXjcjiNW8k): sigue sin poder abrirse desde las sesiones; súbelo o descríbelo en tres frases."
  ],
- "regla_con_fecha_14_nov": "Analista, fijada antes de ver el dato: si a las 48 h la visualización media de 302 y 303 (31,1 y 29,1 s de duración) sigue por debajo de 12 s, el Creador recorta los episodios sin publicar desde el 15/11 (308-314 y 501-505) y los devuelve a Calidad: 22 s como máximo, remate con voz o efecto en lugar de 3 s mudos, mensaje y «mándaselo» antes del segundo 14. Los «cuando» no cambian."
+ "regla_con_fecha_14_nov": "Analista, fijada antes de ver el dato: si a las 48 h la visualización media de 302 y 303 (31,1 y 29,1 s de duración) sigue por debajo de 12 s, el Creador recorta los episodios sin publicar desde el 15/11 (308-314 y 501-505) y los devuelve a Calidad: 22 s como máximo, remate con voz o efecto en lugar de 3 s mudos, mensaje y «mándaselo» antes del segundo 14, y rótulo fijo y pequeño «@neogestlab · episodio nuevo cada día» desde el segundo 0 (la invitación al perfil no puede ir solo en el cierre: la media se va en el segundo 10,6). Los «cuando» no cambian."
 }

@@ -1,5 +1,14 @@
 # Perfil propuesto de @nosabesloquehasvisto (Estratega, 6/11/2026 20:35)
 
+## ESTADO REAL Y LO QUE FALTA (Estratega, 12/11/2026; comprobado en Buzzfy a las 15:42; manda sobre todo lo de abajo)
+- Usuario: @neogestlab. **Hecho.**
+- Biografía (134 caracteres de 150), **ya puesta** el 11/11: «Apps para tu negocio y tu día a día 📲 / El Jambo que sabe y las IAs, cada día 😈 / Prueba gratuita: sin tarjeta ni compromiso / Pídela aquí 👇». No se toca esta semana: promete lo mismo que enseñan los episodios y la oferta.
+- Enlace, **ya puesto** el 11/11 a las 21:12: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?src=instagram
+- Nombre visible: sigue «IA Fácil · Trucos que no sabes». **Falta** cambiarlo a «Neogest Lab · Apps a medida» (27 caracteres); Instagram no lo permite hasta ~25/11 y solo se hace desde el móvil.
+- Rejilla: **falta** archivar las 6 publicaciones repetidas del 8-10/11 (lista con enlaces en pendiente_usuario.md); hoy quien llega al perfil ve la misma pieza dos y tres veces.
+- Título del enlace: se queda en «Prueba gratuita» esta semana. Si el 18/11 visita → clic sigue por debajo del 25 %, el experimento de la semana del 23/11 es probar «Cuéntanos tu idea: te decimos cómo sería tu app» (monetizacion.md, acción 4 del 11/11).
+- Lo de abajo (Bit y Paco, «IA Fácil», @nosabesloquehasvisto) es histórico y no se aplica.
+
 Por la NUEVA ESTRATEGIA del usuario (6/11/2026 20:27): IA y automatizaciones fáciles para gente normal, en dibujos animados doodle con Bit y Paco. Sustituye a la propuesta de «Expedientes · Misterios Reales». El usuario @nosabesloquehasvisto se mantiene. Lo que solo puede cambiar el dueño (nombre, bio, enlace, foto, destacadas) se copia también en equipo/pendiente_usuario.md.
 
 ## 1. Nombre visible
