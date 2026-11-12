@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "¿Cuánto pagas al año en suscripciones? Esta mini web la ha hecho una IA con un solo mensaje: apuntas cada suscripción con su precio al mes y te dice lo que pagas al mes y al año, y cuánto ahorras si quitas una.\nEs una demo con datos de ejemplo, grabada funcionando. Revisa siempre tus cuentas reales. En Neogest Lab hacemos apps así, a medida.\nMándaselo a quien tenga más de cinco suscripciones.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nVoz generada por IA\n\n#hogar #familia #ahorro #apps #neogestlab",
+  "texto": "¿Cuánto pagas al año en suscripciones? En el ejemplo salen 646,56 €.\nEsta mini web la ha hecho una IA con un solo mensaje: apuntas cada suscripción con su precio al mes y te dice lo que pagas al mes y al año, y cuánto ahorras si quitas una.\nEs una demo con datos de ejemplo, grabada funcionando. Revisa siempre tus cuentas reales. En Neogest Lab hacemos apps así, a medida.\nMándaselo a quien tenga más de cinco suscripciones.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nVoz generada por IA\n\n#hogar #familia #ahorro #apps #neogestlab",
   "cuando": "2026-12-01T13:40:00+01:00",
   "compartir_en_feed": true,
   "portada_ms": 300,
@@ -19,7 +19,7 @@
   },
   "publico": "Hogar y familias",
   "formato": "Una idea, una app",
-  "_nota_calidad": "10/11 Calidad: cierre cambiado al de la directiva (prueba gratuita) en guion y post, quitada la automatización IDEA; duraciones de tramo ajustadas para evitar huecos de voz > 1,5 s. renderizado:false para que el ciclo lo rehaga.",
+  "_nota_calidad": "12/11 Calidad: aprobado 90 sobre el render del 10/11 21:06. Pie: cifra del ejemplo en la primera línea (B6), comentario_fijado y monetizacion añadidos (no cambian el vídeo).",
   "renderizado": "2026-11-10T21:06:48+00:00",
   "nota_mejora": "10/11/2026 (2.ª ejecución): rendido con Piper por error de instalación; se rehace con «Chatterbox España» (es-es sin referencia de persona real). Sin voz del dueño.",
   "motor_voz": "chatterbox",
@@ -31,5 +31,11 @@
     "audio_volume": 0.5,
     "video_volume": 1.0,
     "mood": "app"
+  },
+  "comentario_fijado": "¿Cuántas suscripciones pagas tú sin usarlas?",
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso (app a medida)",
+    "paso_embudo": "alcance a no seguidores -> visita_perfil"
   }
 }

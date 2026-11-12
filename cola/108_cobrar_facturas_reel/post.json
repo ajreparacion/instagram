@@ -1,6 +1,6 @@
 {
  "tipo": "reel",
- "texto": "Factura enviada. ¿Y el cobro?\nSi tienes una pyme o eres autónomo de servicios, cobrar no debería ser otro trabajo.\nEn Gestión Integral 7D, nuestra app, cada factura puede llevar su enlace de pago: tarjeta con Stripe, TPV Redsys (con Bizum si está activo) o transferencia con IBAN.\nLas facturas salen en PDF con tus datos fiscales y los del cliente.\nY los agentes IA solo proponen acciones: tú las apruebas o las rechazas.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#autonomos #pymes #facturacion #cobros #neogestlab",
+ "texto": "Factura enviada. ¿Y el cobro?\nSi tienes una pyme o eres autónomo de servicios, cobrar no debería ser otro trabajo.\nEn Gestión Integral 7D, nuestra app, cada factura puede llevar su enlace de pago: tarjeta, TPV o transferencia con IBAN.\nLas facturas salen en PDF con tus datos fiscales y los del cliente.\nY los agentes IA solo proponen acciones: tú las apruebas o las rechazas.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#autonomos #pymes #facturacion #cobros #neogestlab",
  "cuando": "2026-12-06T13:40:00+01:00",
  "renderizado": "2026-11-10T19:39:16+00:00",
  "asset": "108_cobrar_facturas_reel.mp4",

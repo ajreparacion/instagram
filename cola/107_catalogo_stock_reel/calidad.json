@@ -1,14 +1,11 @@
 {
  "aprobado": false,
- "nota": 84,
- "fecha": "2026-11-10T10:35Z",
+ "nota": 75,
+ "fecha": "2026-11-12T15:10Z",
+ "revisado_por": "agente de CALIDAD (12/11, pasada de las 15:40)",
  "motivos": [
-  "Directiva del 10/11 00:00: fuera el cierre «comenta/escríbeme X» y cierre único «Prueba gratuita · sin tarjeta · sin compromiso». El vídeo renderizado el 8-9/11 aún acaba con la caja «Escríbeme IDEA por privado»."
+  "El cierre ya es el único («Prueba gratuita · sin tarjeta · sin compromiso»): el motivo del 10/11 está resuelto. Pero con el estándar v8 no pasa, igual que 103: B5 (primer corte a los 4,23 s; cada diapositiva está quieta 3-4 s), B2 (es un carrusel pasado a vídeo: escaparate sin historia, cálculo ni resultado) y B7 (en el fotograma 0 el titular aún está entrando y se lee a medias; el carrusel ocupa la mitad de arriba y la de abajo es fondo borroso)."
  ],
- "como_arreglarlo": "Mejora cambia la caja «Escríbeme IDEA por privado» de herramientas/demo_app.py (slide_cierre y escena de cierre del reel) por «Prueba gratuita · sin tarjeta · sin compromiso» (ver peticiones_mejora.md 10/11); después se pone «renderizado»:false (reels) o se regeneran las diapositivas y Calidad vuelve a revisar. Contenido y datos ya estaban bien: la nota anterior era 91.",
- "revisado_por": "agente de CALIDAD (10/11, pasada de las 11:30)",
- "anterior": {
-  "aprobado": true,
-  "nota": 91
- }
+ "como_arreglarlo": "No volver a renderizarlo tal cual. CREADOR/ESTRATEGA: o se queda solo como carrusel (ahí el escaparate sí vale) o se rehace como reel con espina (experimento «le pedí a la IA…», cálculo en pantalla o gag de El Jambo con pivote) y cortes ≤ 3 s. Mientras tanto, retirarlo de la cola de reels para que no ocupe fecha.",
+ "comentario": "Render del 10/11 19:37-19:39 medido: 1080x1920, 24,5-28,9 s, sin voz y casi mudo (-22 LUFS, pico -9 dBFS; solo los efectos de paso de diapositiva, 3-4 s de silencio en cada una: la música la pondría audio_ig). 12 fotogramas + inicial y final revisados."
 }

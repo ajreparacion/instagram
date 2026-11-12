@@ -10,7 +10,7 @@
   {
    "estilo": "gancho",
    "texto": "¿Calculas el precio de tus platos *a ojo*?",
-   "voz": "¿Calculas el precio de tus platos *a ojo*?",
+   "voz": "¿Pones los precios *a ojo*?",
    "clip": {
     "inicio": 0.0,
     "fin": 2.5
