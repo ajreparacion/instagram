@@ -19,7 +19,7 @@
     "post_descubrimiento": 12,
     "total": 80
   },
-  "renderizado": false,
+  "renderizado": "2026-11-12T15:18:03+00:00",
   "nota_mejora": "10/11/2026 (2.ª ejecución): rendido con Piper por error de instalación; se rehace con «Chatterbox España» (es-es sin referencia de persona real). Sin voz del dueño.",
   "_nota_calidad": "12/11 Calidad: voz del gancho acortada a «¿Pones los precios a ojo?» (la escena duraba 3,2 s; B5 pide el primer corte antes de 3 s); el texto en pantalla no cambia. renderizado:false para que el ciclo lo rehaga. Añadidos comentario_fijado y monetizacion. Sigue aparcado el 31/12: el Estratega le da hueco cuando se apruebe.",
   "motor_voz": "chatterbox",
