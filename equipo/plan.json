@@ -1,6 +1,7 @@
 {
  "semana": "2026-11-13 a 2026-11-19",
  "creado_por": "Estratega, jueves 12/11/2026 15:45 (ejecución programada). Sustituye al plan 11-17/11, que quedó desfasado por las órdenes del dueño del 11 y 12/11 (publicación masiva, apps de vuelta, fórmula v9, reels de datos, monetización obsesiva, vídeos del Centro). No cambia ninguna orden: reparte los huecos con datos. Recoge las pasadas del Analista y de Monetización (v7.1) de las 15:45-16:00 del mismo día.",
+ "revision_12_nov_16_40": "Tercera pasada del Estratega (12/11 16:40). No hay cifras nuevas de audiencia desde las 15:42 (302 y 303 salen hoy a las 18:40 y 20:40), así que el reparto de reels, el experimento y la directiva NO cambian. Lo único nuevo es la pasada de Calidad de las 15:40: aprobados (90) el reel 019 y los carruseles 104, 107 y 108. Cambios: 104 pasa del 31/12 al 14/11 a las 17:10 (era un hueco sin pieza); 019 pasa del 1/12 al 23/11 a las 18:40; los reels de diapositivas 106 y 108 (75, Calidad pide no re-renderizarlos) se aparcan el 31/12 con horas distintas. 0 choques de hora.",
  "objetivo": "Primera solicitud real en /solicitar (la única registrada, del 8/11, está sin contactar y puede ser una prueba interna). Paso más débil del embudo: alcance a no seguidores → visita al perfil (1,9 %; referencia ≥ 3 %). Para moverlo, la oferta tiene que ir dentro de las piezas que sí tienen alcance: los episodios de El Jambo.",
  "punto_de_partida": {
   "fuente": "Buzzfy, 12/11/2026 15:42 CET (ig_account_stats 7 días, ig_follower_growth 14 días, ig_post_stats) y estadisticas.json de las 14:38 CET",
@@ -312,14 +313,14 @@
  ],
  "carruseles_17_10": {
   "13/11": "205_insultator_carrusel (aprobado, 90)",
-  "14/11": "NUEVO · MEDICATOR: escanear la caja (datos de CIMA) y «Lectura de parte médico» (orden del dueño 8/11)",
+  "14/11": "104_ia_negocio (aprobado, 90; valor para pequeños negocios con cierre único) como RESERVA. Si el NUEVO de MEDICATOR (escanear la caja con datos de CIMA y «Lectura de parte médico», orden del dueño 8/11) está aprobado a las 12:00 del 14/11, sale MEDICATOR y 104 pasa al primer 17:10 libre; si no, MEDICATOR pasa al 15/11 y los nuevos se corren un día",
   "15/11": "NUEVO · AJ Sistema DEMO: la web del negocio con pedidos que entran en la gestión (peluquería o tienda; nada de talleres)",
   "16/11": "NUEVO · GH PLUS: novedades comprobadas en novedades_apps.md",
   "17/11": "NUEVO · GPS Andaluz",
   "18/11": "NUEVO · MEDICATOR 2: modo «Muy fácil» y hoja para el médico",
   "19/11": "NUEVO · «¿Y si tu idea fuera una app?»: consultoría gratuita, objetivo solicitud",
-  "despues": "108_cobrar_facturas el 21/11 y 107_catalogo_stock el 23/11 (Gestión Integral 7D, hoy 84: solo si el Creador los rehace y pasan de 90)",
-  "nota": "Solo funciones de hechos_verificados y novedades_apps.md; cierre único y enlace /solicitar?app=<slug>&src=instagram; bloque monetizacion. Nunca dos días seguidos la misma app. Si no hay carrusel aprobado, el hueco queda vacío."
+  "despues": "108_cobrar_facturas el 21/11 y 107_catalogo_stock el 23/11 (Gestión Integral 7D, aprobados con 90 el 12/11). No se adelantan: un carrusel de 7D entre el 14 y el 19/11 quedaría a menos de 24 h de un episodio con pivote de 7D (501-505). Antes del 21/11, Mejora regenera la diapositiva 04 de 108 con «Tarjeta», «TPV» y «Transferencia con IBAN» (sin nombres de pasarelas).",
+  "nota": "Solo funciones de hechos_verificados y novedades_apps.md; cierre único y enlace /solicitar?app=<slug>&src=instagram; bloque monetizacion. Nunca dos días seguidos la misma app. Si no hay carrusel aprobado, el hueco queda vacío. Con carrusel aprobado en la mano, el hueco no se deja vacío esperando a uno nuevo."
  },
  "historias": {
   "13/11": "09:30 205_insultator_historia2 y 15:30 205_insultator_historia3 (aprobadas); 21:30 NUEVA",
@@ -331,8 +332,8 @@
    "HOY, antes del 304 (13/11 18:40): en 304-314 y 501-515, última línea del texto y comentario fijado con «Episodio nuevo cada día en @neogestlab», avance_siguiente con el episodio de mañana y bloque monetizacion (objetivo visita_perfil en los sin producto). Solo texto: no hace falta volver a renderizar.",
    "Reels de datos 602-604 (601 ya es un reel de app): el primero aprobado sale el 19/11 a las 18:40; después, 1 al día a las 18:40 desde el 20/11. Ficha de datos verificada o no se renderiza.",
    "Episodios sin producto 315-322 para las 20:40 del 19 al 26/11 (colchón de 7 días).",
-   "6 carruseles de app (14-19/11) y 19 historias (13-19/11) del cuadro de arriba.",
-   "Rehacer lo aparcado con 75-86 (103, 104, 017-024, 102, 106-108, 205 reel, 406): quitar marcas ajenas (B9), cierre único y espina; sin eso no vuelven al calendario.",
+   "5 carruseles de app nuevos (15-19/11; el 14/11 lo cubre 104 como reserva) y 19 historias (13-19/11) del cuadro de arriba. El primero, MEDICATOR.",
+   "Lo aparcado, según la pasada de Calidad del 12/11 15:40: 020, 022, 023 y 024 se rehacen con el arreglo exacto de su calidad.json (gancho con primer corte ≤ 3 s, voz del gancho ≤ 9 sílabas, sin fecha real en pantalla); 018 y 021 ya están en re-render y esperan nota. Los reels de diapositivas 102, 103, 104, 106, 107 y 108 NO se re-renderizan: o se rehacen desde cero con espina o se quedan fuera (sus carruseles 104, 107 y 108 sí salen). 017, 205 reel y 406: cierre único, sin marcas ajenas (B9) y espina; sin eso no vuelven al calendario.",
    "Apuntar en leads.json cada solicitud de /panel/solicitudes.",
    "Antes de programar una pieza, comprobar que su texto no está ya publicado (hay 6 repetidas en el perfil)."
   ],
@@ -352,16 +353,18 @@
   "MEJORA": [
    "En src/pages/Solicitar.jsx del Centro (antes del 15/11 a las 13:40): registro Clic al cargar la página con origen = src, y desplegable opcional «¿Qué te interesa?» guardado en producto_slug (monetizacion.md v7.1, acción 3). No añadir &ref= a los textos: esos enlaces no se pulsan.",
    "embudo.md regenerado por el Estratega con las cifras del 12/11; volver a leerlo el 13/11 y el 18/11.",
-   "Comprobar con ig_posts antes de reintentar una publicación «fallida»: el 206 salió dos veces el 10/11."
+   "Comprobar con ig_posts antes de reintentar una publicación «fallida»: el 206 salió dos veces el 10/11.",
+   "Antes del 21/11: regenerar la diapositiva 04 del carrusel 108 con «Tarjeta», «TPV» y «Transferencia con IBAN». Medios de pago en genérico en todo lo nuevo hasta que el dueño diga otra cosa (pendiente_usuario.md, punto 16).",
+   "Modo app (petición de Calidad 12/11): aviso o fallo si la escena del gancho pasa de 3,0 s, fotograma 0 = gancho (sin destello blanco) y cursor oculto durante el gancho."
   ]
  },
  "fuera_del_plan": [
-  "Aparcados el 31/12 por nota < 90: 103, 104 (reel y carrusel), 017, 018, 021, 022, 102, 205_insultator_reel, 107_catalogo_stock_reel. Con fecha posterior y también < 90: 019, 020, 023, 024, 106, 108 reel y 406.",
+  "Aparcados el 31/12 por nota < 90: reels 017, 018, 021, 022, 102, 103, 104, 106, 107, 108 y 205_insultator_reel (018 y 021 en re-render; los de diapositivas no vuelven sin rehacerse). Con fecha de diciembre y también < 90, a la espera del arreglo del Creador: 020, 023, 024 y 406 (el publicador no saca nada con nota < 90).",
   "516_gestion_integral_7d_parte2_reel: solo guion, sin render.",
   "Vídeos cortos del Centro de 7D y AJ Web (72-75 en Calidad): no salen hasta que el Centro los corrija.",
   "Todo lo de talleres y servicios técnicos como tema (orden del dueño 10/11)."
  ],
- "siguiente_semana_ya_en_cola": "13:40 del 20 al 29/11: episodios con pivote 506-508 (GH PLUS) y 509-515 (webs a medida, cierre ajreparacion.com). Faltan las 18:40 y las 20:40.",
+ "siguiente_semana_ya_en_cola": "13:40 del 20 al 29/11: episodios con pivote 506-508 (GH PLUS) y 509-515 (webs a medida, cierre ajreparacion.com). Carruseles 17:10: 108 el 21/11 y 107 el 23/11. Reel 019 (valor, hogar; aprobado el 12/11) el 23/11 a las 18:40 como reserva del reel de datos: no va del 20 al 22/11 porque 506-508 son del mismo público (hogar) y no salen dos reels seguidos para el mismo. Faltan el resto de las 18:40 y todas las 20:40.",
  "kpi_semana": {
   "principal": "Primera solicitud nueva en leads.json (desde Instagram, con el dueño confirmando que es real); visitas al perfil ≥ 3 por cada 100 cuentas no seguidoras alcanzadas (hoy 1,9).",
   "segundo": "Mediana de alcance por episodio a 48 h ≥ 150 y abandono < 40 %; visualización media ≥ 50 % de la duración.",
