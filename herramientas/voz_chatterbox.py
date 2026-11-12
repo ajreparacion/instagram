@@ -37,9 +37,9 @@ def sin_hache(t):
     def _q(m):
         i = m.start()
         ant = t[i - 1] if i > 0 else ""
-        if ant in "cC":
+        if ant and ant in "cC":
             return m.group(0)
-        if ant in "sS" and (i < 2 or not t[i - 2].isalpha()):   # «sh» inicial: show, shopping
+        if ant and ant in "sS" and (i < 2 or not t[i - 2].isalpha()):   # «sh» inicial: show, shopping
             return m.group(0)
         sig = m.group(2)
         return sig.upper() if m.group(1) == "H" else sig
