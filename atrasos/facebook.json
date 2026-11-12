@@ -40,7 +40,9 @@
    "commit": "52aa8246c44bb538131a3298239050689df6d6d9^",
    "ruta": "cola/105_reformas_presupuestos/slides",
    "huella": "9c68d2261a97bf9e",
-   "estado": "pendiente"
+   "estado": "pendiente",
+   "errores": 1,
+   "ultimo_error": "Facebook HTTP 403: {\"error\":{\"message\":\"(#200) Unpublished posts must be posted to a page as the page itself.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AIjLU1dG4dOOmXtMeF74eNV\"}}"
   },
   {
    "id": "106_comerciales_ruta",
