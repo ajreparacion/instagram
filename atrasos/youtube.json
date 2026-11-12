@@ -13,8 +13,8 @@
    "texto": "Gestión Integral 7D (reel corto)\n\nPrueba gratuita: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube\nBy Neogest Lab",
    "largo": false,
    "huella": "4788ae2471c28a11",
-   "estado": "pendiente",
-   "errores": 2,
+   "estado": "error",
+   "errores": 3,
    "ultimo_error": "YouTube HTTP 400: {\n  \"error\": \"invalid_grant\",\n  \"error_description\": \"Bad Request\"\n}"
   }
  ],

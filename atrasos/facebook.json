@@ -12,9 +12,9 @@
    "commit": "2fa2cb311b94f99fd8cb343668cd7d085e7788ba^",
    "ruta": "cola/201_medicator_carrusel/slides",
    "huella": "34128af0f3ac38fe",
-   "estado": "pendiente",
-   "errores": 2,
-   "ultimo_error": "Facebook HTTP 403: {\"error\":{\"message\":\"(#200) Unpublished posts must be posted to a page as the page itself.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AanJ7rQ8VkiMfeOuG34ttW5\"}}"
+   "estado": "error",
+   "errores": 3,
+   "ultimo_error": "Facebook HTTP 403: {\"error\":{\"message\":\"(#200) Unpublished posts must be posted to a page as the page itself.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"Aa7oogbb6daMV0Q0jm3D8qL\"}}"
   },
   {
    "id": "101_errores_prompt",
