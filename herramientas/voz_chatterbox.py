@@ -30,6 +30,22 @@ import numpy as np
 REPO_ES = "ResembleAI/Chatterbox-Multilingual-es-es"
 
 
+def sin_hache(t):
+    """12/11/2026 (queja del dueño: decía «jaces» por «haces»): el modelo aspira la h como en inglés. En español la h es
+    muda salvo en «ch» (y «sh» a principio de palabra en las de fuera: show, shopping), así que se quita del texto QUE VA
+    AL MODELO (los subtítulos no cambian). Si una palabra extranjera necesita la h sonora, escríbela con j en «dice»."""
+    def _q(m):
+        i = m.start()
+        ant = t[i - 1] if i > 0 else ""
+        if ant in "cC":
+            return m.group(0)
+        if ant in "sS" and (i < 2 or not t[i - 2].isalpha()):   # «sh» inicial: show, shopping
+            return m.group(0)
+        sig = m.group(2)
+        return sig.upper() if m.group(1) == "H" else sig
+    return re.sub(r"([hH])([a-záéíóúüA-ZÁÉÍÓÚÜ])", _q, t)
+
+
 def a_theta(t, modo):
     """Contra el seseo (7/11/2026): Chatterbox dice «s» donde España dice «z» / «c» ante e, i. Escribiendo esa letra
     como la griega θ el modelo (su tokenizador incluye el griego) sí pronuncia la θ. modo "griego": todas;
@@ -129,7 +145,8 @@ def main():
         x = None
         for intento in range(3):
             with torch.inference_mode():
-                wav = modelo.generate(a_theta(f["texto"], lote.get("theta")), **kwf)
+                txt = f["texto"] if lote.get("sin_hache") is False else sin_hache(f["texto"])
+                wav = modelo.generate(a_theta(txt, lote.get("theta")), **kwf)
             x = a_numpy(wav)
             dur = x.size / sr
             if x.size >= sr * 0.2 and np.isfinite(x).all() and dur <= esperado * 1.6:
