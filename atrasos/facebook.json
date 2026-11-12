@@ -26,7 +26,9 @@
    "commit": "52aa8246c44bb538131a3298239050689df6d6d9^",
    "ruta": "cola/101_errores_prompt/slides",
    "huella": "5b86e0df305b9bc8",
-   "estado": "pendiente"
+   "estado": "pendiente",
+   "errores": 1,
+   "ultimo_error": "Facebook HTTP 403: {\"error\":{\"message\":\"(#200) Unpublished posts must be posted to a page as the page itself.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AUgYVlYweCUXXYII_vrUpRu\"}}"
   },
   {
    "id": "105_reformas_presupuestos",
