@@ -76,7 +76,7 @@ def metadatos(post):
     texto = post.get("texto", "")
     primera = texto.split("\n", 1)[0].strip()
     titulo = yt.get("titulo") or primera
-    if "#shorts" not in titulo.lower():
+    if not yt.get("largo") and "#shorts" not in titulo.lower():
         titulo = titulo[:91].rstrip() + " #Shorts"
     app = post.get("app")
     enlace = f"{CENTRO}/solicitar?{'app=' + app + '&' if app else ''}src=youtube"
