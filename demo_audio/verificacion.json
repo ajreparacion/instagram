@@ -11,17 +11,17 @@
  },
  "acciones_4": {
   "esperado": "Y reactivas a quien lleva noventa días sin venir.",
-  "oido": "y reactivas a quien lleva 90 días sin venir.",
-  "similitud": 0.889
+  "oido": "y le activas a quien lleva 90 días sin venir.",
+  "similitud": 0.737
  },
  "gestion_3": {
   "esperado": "Envías el presupuesto por email, con un enlace para aceptarlo.",
-  "oido": "Envías el presupuesto por email con un enlace para aceptarlo.",
-  "similitud": 1.0
+  "oido": "Envías el presupuesto por e-mail con un enlace para aceptarlo.",
+  "similitud": 0.857
  },
  "final": {
   "esperado": "¿Y si tu idea fuera una app? La hacemos a medida. Solicita acceso.",
-  "oido": "Y si tu idea fuera una app, la hacemos a medida, solicita acceso.",
+  "oido": "Y si tu idea fuera una app, la hacemos a medida. Solicita acceso.",
   "similitud": 1.0
  }
 }
