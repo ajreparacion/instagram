@@ -1,14 +1,14 @@
 {
- "aprobado": false,
- "nota": 84,
- "fecha": "2026-11-10T10:35Z",
- "motivos": [
-  "Directiva del 10/11 00:00: fuera el cierre «comenta/escríbeme X» y cierre único «Prueba gratuita · sin tarjeta · sin compromiso». El vídeo renderizado el 8-9/11 aún acaba con la caja «Escríbeme IDEA por privado»."
- ],
- "como_arreglarlo": "Mejora cambia la caja «Escríbeme IDEA por privado» de herramientas/demo_app.py (slide_cierre y escena de cierre del reel) por «Prueba gratuita · sin tarjeta · sin compromiso» (ver peticiones_mejora.md 10/11); después se pone «renderizado»:false (reels) o se regeneran las diapositivas y Calidad vuelve a revisar. Contenido y datos ya estaban bien: la nota anterior era 91.",
- "revisado_por": "agente de CALIDAD (10/11, pasada de las 11:30)",
- "anterior": {
-  "aprobado": true,
-  "nota": 91
- }
+  "aprobado": false,
+  "nota": 75,
+  "fecha": "2026-11-12T12:20Z",
+  "revisado_por": "agente de CALIDAD (12/11, reevaluación pedida por el Supervisor)",
+  "motivos": [
+    "B1: gancho descriptivo («5 tareas pesadas que la IA hace por ti»): sin cifra de resultado, conflicto, pregunta ni POV; empieza describiendo una lista.",
+    "B2: escaparate sin espina (carrusel de 5 prompts pasado a vídeo); tope 75 y solo vale como carrusel o historia.",
+    "B5: primer corte a 5,0 s (límite 3 s) y cada diapositiva dura 4 s sin cambio visual (> 3,5 s); sin voz y con el audio propio en -22,3 LUFS porque la música va por audio_ig.",
+    "Bloqueo 4/B9: el fotograma 0 nombra ChatGPT, Claude y Gemini (marcas ajenas; solo se admiten como personaje inventado)."
+  ],
+  "ya_arreglado": "El cierre ya es el único («Prueba gratuita · sin tarjeta · sin compromiso» + By Neogest Lab) y el pie del post lo lleva; sin «comenta X». Contenido y avisos de datos personales correctos.",
+  "como_arreglarlo": "No se publica como reel. Se queda como carrusel (el 104/107/108 ya cubren el hueco de 17:10) o se rehace con espina: POV o mini historia de UNA tarea («POV: el domingo por la noche y no hay menú de cenas»), el resultado visible (menú y lista generados) en el fotograma 0, cortes cada ≤ 3 s, sin nombres de marcas de IA («una IA»), frase para enviar y cierre único. Su «cuando» (11/11 13:40) ya pasó: Estratega debe reprogramarlo o retirarlo."
 }
