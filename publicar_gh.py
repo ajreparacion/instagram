@@ -1532,12 +1532,15 @@ def quitar_imagenes(carpeta):
 
 
 def cancion_para_historia(cfg, carpeta, post):
-    """Canción de la biblioteca de Instagram para una historia en vídeo (equipo/musica_instagram.json; apagar solo las
-    historias: "historias_con_cancion": false). Usa post.audio_ig si ya viene; si no, la elige por el estilo de la música
-    del vídeo y, si está activa, la búsqueda en vivo. Nunca lanza: cualquier fallo = None (se publica como antes)."""
+    """Canción de la biblioteca de Instagram para una historia en vídeo. APAGADO por defecto: probado dos veces el 12/11/2026
+    (workflow audios_ig con historia=true) y la API rechaza audio_configuration en STORIES («Invalid parameter», código 100,
+    subcódigo 2207065); por eso las historias llevan la música DENTRO del vídeo (demo_app.video_historia, máster -14 LUFS).
+    Si Meta lo abre algún día: equipo/musica_instagram.json → "historias_con_cancion": true (y volver a pasar la prueba).
+    Usa post.audio_ig si ya viene; si no, la elige por el estilo de la música del vídeo y, si está activa, la búsqueda en
+    vivo. Nunca lanza: cualquier fallo = None (se publica como antes)."""
     try:
         c = leer_json(os.path.join(EQUIPO, "musica_instagram.json")) or {}
-        if not c.get("activo") or c.get("historias_con_cancion") is False:
+        if not c.get("activo") or c.get("historias_con_cancion") is not True:
             return None
         ai = post.get("audio_ig")
         if not (isinstance(ai, dict) and ai.get("audio_id")):
