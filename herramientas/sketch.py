@@ -8,7 +8,9 @@ Personajes (todos inventados, forma simple + ojos + boca, un acento de color cad
   pelota    La Pelota: pelota naranja sabelotodo, siempre muy segura (dedo en alto, gafas redondas).
   bola      El Bola: coach tóxico satírico (gafas de sol, auricular, corbata dorada, bíceps).
   tramites  La Trámites: cuadrado gris con ventanilla, sello y el impreso 27-B.
-Escenas (guion "modo": "sketch"): gancho | gag | delega | remate | mensaje | cierre. Gancho «POV: …» desde el fotograma 0,
+Escenas (guion "modo": "sketch"): gancho | gag | delega | remate | texto | mensaje | cierre. «texto» (12/11/2026, fórmula F4
+«Yo: …» de virales_semana): frase gigante fija en pantalla SIN voz, con o sin personajes (dibujo.texto_y opcional); un reel
+mudo es 100 % escenas «texto»/«remate» y la canción de Instagram va a pleno volumen (publicar_gh.guion_tiene_voz). Gancho «POV: …» desde el fotograma 0,
 globo con el nombre de quien habla, contador «Veces que se lo ha pasado a la Jupillo: N» que sube, corte de cámara
 cada ~2,7 s (zoom de golpe), efectos de sonido al giro (remate) y fotograma final serio (fondo oscuro, frase, cifra y
 fuente pequeña, sin música de chiste).
@@ -391,6 +393,7 @@ def preparar(sc, spec, rng):
     sc.hablante = h if h in PERSONAJES else None
     if sc.hablante and sc.hablante not in sc.pers and not sc.serio:
         sc.pers = ([sc.hablante] + sc.pers)[:2]
+    sc.dib_texto_y = dib.get("texto_y") or 0   # solo escena «texto»: y de la primera línea (por defecto 700 sin personajes, 320 con ellos)
     sc.accion = str(dib.get("accion") or ("remata" if sc.estilo_d == "remate" else "habla")).strip().lower()
     ac = dib.get("acciones") if isinstance(dib.get("acciones"), dict) else {}
     sc.acciones = {str(k).strip().lower(): str(v).strip().lower() for k, v in ac.items()}   # accion de cada personaje (si no, la de la escena para quien habla)
@@ -463,6 +466,7 @@ def preparar(sc, spec, rng):
     elif sc.estilo_d == "remate":
         sc.sfx.append(("sting", 0.14, 0.9))
     if sc.estilo_d == "gag": sc.sfx.append(("boing", 0.45, 0.25))
+    if sc.estilo_d == "texto" and sc.texto: sc.sfx.append(("pop", 0.1, 0.09))   # escena de texto sin voz: pop al entrar la frase
     # cámara: cortes cada SK_SEG s con encuadre distinto y zoom de golpe
     rc = random.Random(sc.idx * 17 + 3)
     sc.cam = [(rc.choice([1.0, 1.03, 1.06]), rc.uniform(-18, 18), rc.uniform(-12, 12), rc.choice([1, -1])) for _ in range(int(sc.dur / SK_SEG) + 2)]
@@ -494,9 +498,10 @@ def _globo(img, d, x, y_bajo, nombre, texto, col, k):
     img.paste(cap, (0, 0), cap)
 
 
-def _gancho_gigante(img, texto, t, y_ini=400):
+def _gancho_gigante(img, texto, t, y_ini=400, fijo=False):
     """Texto de 3-6 palabras, gigante y en contraste máximo, en el fotograma 0 (entre y=400 y 800, legible en miniatura):
-    entra de golpe con rebote, una palabra en rojo (la que va entre «» o la última) y se va entre 0,55 y GC_FIN s."""
+    entra de golpe con rebote, una palabra en rojo (la que va entre «» o la última) y se va entre 0,55 y GC_FIN s.
+    fijo=True (escena «texto», 12/11/2026): se queda en pantalla todo el rato (reel sin voz: el texto ES el mensaje)."""
     texto = " ".join(texto.upper().split())
     pal = texto.split()
     f, size, lines = hr.wrap_fit(texto, hr.F_DIB, maxw=hr.W - 120, maxlines=2, smax=140, smin=84)
@@ -519,7 +524,7 @@ def _gancho_gigante(img, texto, t, y_ini=400):
             idx += 1
     k = min(1.0, t / 0.16)
     s = (0.8 + 0.2 * hr.ease_out_back(k)) if k < 1 else 1.0   # ya a 80 % en el fotograma 0 y rebota hasta 100 %
-    alfa = 1.0 if t < 0.55 else max(0.0, 1 - (t - 0.55) / (GC_FIN - 0.55))
+    alfa = 1.0 if (fijo or t < 0.55) else max(0.0, 1 - (t - 0.55) / (GC_FIN - 0.55))
     if alfa < 1.0:
         cap.putalpha(cap.getchannel("A").point(lambda v: int(v * alfa)))
     if s != 1.0:
@@ -739,6 +744,9 @@ def render_frame(fi, sc, noise, rg, seed):
         _hud(img)
     if sc.primero and sc.gancho_gigante and t < GC_FIN:
         _gancho_gigante(img, sc.gancho_gigante, t, max(400, cont_y0 + 88 + 24 if sc.cont_texto else 400))
+    if sc.estilo_d == "texto" and sc.texto:   # escena «texto» (12/11/2026, fórmula F4 «Yo: …»): frase gigante fija, sin voz
+        y_t = int(sc.dib_texto_y) if sc.dib_texto_y else (320 if sc.pers else 700)
+        _gancho_gigante(img, sc.texto, t, max(y_t, cont_y0 + 88 + 24 if sc.cont_texto else y_t), fijo=True)
     a = np.asarray(img, dtype=np.int16).copy()
     a += noise[fi % 8] // 6
     if lf < 2 and sc.idx > 0: a -= 10   # micro parpadeo en el corte (nunca en el fotograma 0: B7)
