@@ -242,3 +242,10 @@ Aprobado: 406 (90, el pie ahora dice «nuestra app AJ Sistema (Neogest Lab)»). 
 3. MEJORA, 021: los subtítulos de los tramos 4-5 tapan los cuadros de resultado; subirlos o encuadrar la tarjeta más arriba, quitar el cursor suelto del fotograma 0 y cerrar con un fotograma de resumen guardable. Está aparcado el 31/12.
 4. MEJORA, 406 (aviso, no bloquea): fotograma 0 con el título «Pregúntale al asistente» cortado por arriba y el botón de WhatsApp por la derecha.
 5. ESTRATEGA: 404_nota_examen_reel y 408_medicator_pastilla_reel comparten hueco (19/11 18:40) según pre_entrega.py; 408 está suspendido (82), así que no sale, pero hay que moverlo cuando se rehaga. 516_gestion_integral_7d_parte2_reel aún no tiene post.json (solo guion.json): no se ha evaluado.
+
+
+## VOZ: COMPRESOR, PRESENCIA Y SIN ECO — orden del dueño 12/11/2026 22:00 («sigue sonando con eco, lejana y enlatada; mete un compresor») — HECHO en Instagram, PENDIENTE en el Centro
+- Medido en la pista de voz del reel de 7D: 2,5-4,5 kHz a −15,8 dB, 4,5-8 kHz a −29,1 dB y 8-12 kHz a −41,9 dB respecto a 150-400 Hz: voz sin presencia ni aire (lejana, de lata). Con la cadena nueva: −10,0 / −20,1 / −28,1 dB (perfil de voz cercana).
+- HECHO: equipo/voz.json → cadena_voz nueva (limpieza de graves, menos barro en 320 Hz, cuerpo en 160 Hz, excitador de armónicos, aire +4 dB desde 6 kHz, compresor 4:1 rápido, de-esser, puerta en las pausas y limitador). La usa el ciclo de Instagram en todo reel nuevo.
+- HECHO: los 13 vídeos del Centro remezclados con esa cadena (workflow «Centro · remezclar vídeos con la voz nueva», release centro-v3) y metidos en las colas de atrasos de Facebook (reels ≤ 90 s) y YouTube (todos).
+- CENTRO: aplicar EXACTAMENTE la misma cadena (la de equipo/voz.json → cadena_voz) en video-studio a la pista de voz antes de mezclar, para que los vídeos nuevos salgan ya así. Fish Audio S2 Pro descartado: licencia de investigación (uso comercial de pago) y 5.000 millones de parámetros (no corre en CPU gratis).
