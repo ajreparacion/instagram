@@ -59,8 +59,7 @@ def probar(audio_id, asset=None, tipo="REELS"):
             print("sin .mp4 en la release de cola: no se puede probar"); return
         asset = nombres[0]
     params = {"media_type": tipo, "video_url": P.url_directa_release(asset),
-              "audio_configuration": json.dumps({"audio_id": str(audio_id), "audio_volume": 1.0 if tipo == "STORIES" else 0.8,
-                                                 "video_volume": 0.0 if tipo == "STORIES" else 1.0})}
+              "audio_configuration": json.dumps({"audio_id": str(audio_id), "audio_volume": 0.8, "video_volume": 1.0})}
     if tipo == "REELS":
         params["caption"] = "(prueba de audio, no se publica)"
     print(f"prueba {tipo} con {asset} y audio_id {audio_id}", flush=True)

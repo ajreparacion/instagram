@@ -568,8 +568,9 @@ def video_historia(app, caps, h, idx, salida, trabajo, mus):
     total = beat * max(4, round(10.0 / beat / 2) * 2)
     entradas = sorted({round(t, 2) for _, _, _, t in capas} | {0.55})
     wav = os.path.join(trabajo, "audio.wav")
-    escribir_wav(wav, audio_pieza([0.0], total, mus, entradas=entradas, whoosh_inicio=True))
-    masterizar(wav, trabajo)
+    # 12/11/2026: las historias SIEMPRE con música dentro del vídeo y máster a -14 LUFS (Instagram no pone canción por API en historias)
+    escribir_wav(wav, audio_pieza([0.0], total, mus, entradas=entradas, whoosh_inicio=True, solo_efectos=False))
+    masterizar(wav, trabajo, forzar=True)
     mb = movil.getbbox()
     mov = movil.crop(mb)
 
@@ -980,14 +981,19 @@ def _audio_pistas(cortes, total, mus, entradas, whoosh_inicio):
     return est * 0.9
 
 
-def audio_pieza(cortes, total, mus, entradas=(), whoosh_inicio=False):
+def audio_pieza(cortes, total, mus, entradas=(), whoosh_inicio=False, solo_efectos=None):
+    """solo_efectos=None: lo decide ig_activo() (reels: la canción la pone Instagram al publicar). solo_efectos=False
+    fuerza la música dentro del vídeo: lo usan las HISTORIAS, porque la API de Instagram no admite canción en historias
+    (probado el 12/11/2026: error 100/2207065) y salían solo con efectos, casi mudas (-23 LUFS; queja del dueño)."""
+    if solo_efectos is None:
+        solo_efectos = ig_activo()
     try:
         r = _audio_pistas(cortes, total, mus, entradas, whoosh_inicio)
         if r is not None:
             return r
     except Exception as e:
         print("pistas no disponibles (%s)" % e)
-    if ig_activo():
+    if solo_efectos:
         rng = np.random.default_rng(int(mus["bpm"] * 7 + mus["tono"] * 31))
         n = int((total + 1.0) * SR)
         sfx = np.zeros(n)
@@ -1204,9 +1210,10 @@ def escribir_wav(ruta, est):
         w.writeframes(datos)
 
 
-def masterizar(wav, trabajo, objetivo=-14.0, pico=-1.0):
-    """Máster a -14 LUFS integrados y pico real ≤ -1 dBTP (loudnorm de ffmpeg en dos pasadas, modo lineal)."""
-    if ig_activo():
+def masterizar(wav, trabajo, objetivo=-14.0, pico=-1.0, forzar=False):
+    """Máster a -14 LUFS integrados y pico real ≤ -1 dBTP (loudnorm de ffmpeg en dos pasadas, modo lineal).
+    forzar=True: masteriza aunque la música de Instagram esté activa (historias: llevan la música dentro del vídeo)."""
+    if ig_activo() and not forzar:
         return   # solo efectos: no se sube a -14 LUFS (la musica y el volumen los pone Instagram)
     r = subprocess.run(["ffmpeg", "-hide_banner", "-i", wav, "-af",
                         f"loudnorm=I={objetivo}:TP={pico}:LRA=11:print_format=json", "-f", "null", "-"],
