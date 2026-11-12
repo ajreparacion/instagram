@@ -4,66 +4,73 @@
   "estilo": "gancho",
   "hablante": null,
   "inicio": 0.0,
-  "duracion": 3.833,
-  "texto": "Preguntan el precio a las once de la noche.",
+  "duracion": 1.833,
+  "texto": "Las once de la noche.",
   "enfasis": [
-   5
+   1
   ]
  },
  {
   "escena": 1,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 3.833,
-  "duracion": 4.7,
-  "texto": "Nadie coge el teléfono. Pero la web de la peluquería de ejemplo sí.",
+  "inicio": 1.833,
+  "duracion": 2.833,
+  "texto": "Y te preguntan el precio.",
   "enfasis": [
-   10,
-   11
+   4
   ]
  },
  {
   "escena": 2,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 8.533,
-  "duracion": 4.4,
-  "texto": "Le pregunto al asistente: cuánto cuesta el tinte.",
+  "inicio": 4.667,
+  "duracion": 2.933,
+  "texto": "Nadie contesta. La web sí.",
   "enfasis": [
-   4,
-   5,
-   6,
-   7
+   4
   ]
  },
  {
   "escena": 3,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 12.933,
-  "duracion": 3.167,
-  "texto": "Y responde solo con lo que pone en la web.",
+  "inicio": 7.6,
+  "duracion": 2.1,
+  "texto": "Le pregunto por el tinte.",
   "enfasis": [
-   2
+   4
   ]
  },
  {
   "escena": 4,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 16.1,
-  "duracion": 3.467,
+  "inicio": 9.7,
+  "duracion": 3.433,
+  "texto": "Y responde solo con lo que pone la web.",
+  "enfasis": [
+   2
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 13.133,
+  "duracion": 2.7,
   "texto": "Mándaselo a quien tenga peluquería.",
   "enfasis": [
    4
   ]
  },
  {
-  "escena": 5,
+  "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 19.567,
-  "duracion": 5.5,
+  "inicio": 15.833,
+  "duracion": 5.133,
   "texto": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
   "enfasis": [
    2,
