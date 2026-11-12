@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "nota": 82,
+  "fecha": "2026-11-12T17:45Z",
+  "revisado_por": "agente de CALIDAD (12/11, pasada de las 17:30)",
+  "motivos": [
+    "Bloqueo 2 (texto cortado) y B7 (primer fotograma débil): la ventana del recorte corta el texto de la propia app por la izquierda en 4 de las 6 escenas, incluido el fotograma 0 («Ahora te toca» se lee «hora te toca», «siempre a la misma hora» → «iempre…», «Todo en orden» → «odo en orden», «La próxima es a las 9 de la noche» → «a próxima…»). No es el encuadre del recorte: la propia pista del Centro entra en zoom por dentro entre ~10,8 s y ~16,0 s y ya corta el texto en origen, así que bajar el zoom o desplazar la ventana no lo arregla."
+  ],
+  "ya_bien": "Gancho POV «Mamá: ¿ya me tomé la pastilla?» (5 palabras, pregunta, B1 ok); primer corte a 2,6 s; sin tramos quietos ≥ 1,5 s; sin destello en el fotograma 0; 21,7 s, 1080x1920; -14,2 LUFS, pico -1,4 dBFS; sin silencios ≥ 0,7 s; frase de envío; cierre único; aviso «no sustituye a tu médico»; afirmaciones dentro de hechos_verificados; audio_ig correcto.",
+  "como_arreglarlo": "Creador, solo recorte.json (y los clip de guion.json si cambia la duración): usar únicamente tramos de la pista SIN zoom de origen: 7,4-11,0 s («Ahora te toca», pastilla y botón verde, ventana con y mayor para ver el botón), 16,3-17,4 s («Todo en orden» + tarjeta de la cita; sirve de fotograma 0) y 17,9-20,0 s (calendario «Mi calendario», noviembre). Evita 11,8-16,2 s (zoom de origen). Sin zoom propio > 1,03 en los tramos (el texto de la app empieza a 35 px del borde). El «pulsar» no se ve sin zoom de origen: cambiar la voz de la escena 3 a «Un botón grande: *ya me la he tomado*» (no afirmar que se pulsa) o dejar el clic solo con el botón entero en pantalla. Después renderizado:false y lanzar el ciclo; Calidad reevalúa."
+}
