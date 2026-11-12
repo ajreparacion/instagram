@@ -1796,7 +1796,7 @@ def render_frame_app(fi, sc, noise, rg, seed):
     pie_neogest(d, sobre_video and not plant)
     a = np.asarray(img, dtype=np.int16).copy()
     a += noise[fi % 8] // 8
-    if lf < 3: a += int(10 * (3 - lf))   # parpadeo minimo en el corte
+    if lf < 3 and sc.start > 0: a += int(10 * (3 - lf))   # parpadeo minimo en el corte (no al empezar: el fotograma 0 es ya el gancho, B7)
     np.clip(a, 0, 255, out=a)
     return a.astype(np.uint8)
 
@@ -2598,6 +2598,8 @@ def main():
     if solo_loc:
         print("locucion %d frases, %.1fs" % (len(loc), bounds[-1] / FPS)); return
     scenes = [Scene(i, e, seed, title, bounds[i + 1] - bounds[i], bounds[i]) for i, e in enumerate(esc)]
+    if MODO["app"] and scenes and getattr(scenes[0], "estilo_a", "") == "gancho" and scenes[0].dur > 3.0:
+        print("AVISO RITMO: el gancho dura %.1f s (B5: primer corte a los 3 s como mucho); acorta su voz (unas 9 silabas) o parte la escena en dos" % scenes[0].dur)
     total_f = bounds[-1]
     if MODO["datos"]:
         _dt().fijar_total(scenes, total_f)
