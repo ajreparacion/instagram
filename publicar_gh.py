@@ -1627,6 +1627,39 @@ def publicar_en_youtube(video, post, nombre):
         return {"estado": "error", "error": str(e)[-300:]}
 
 
+def publicar_en_facebook(medio, post, nombre, tipo):
+    """Orden del dueño 12/11/2026: todo lo que sale en Instagram sale también en la página de Facebook (herramientas/facebook.py).
+    tipo "reel" (medio = ruta del mp4) o "foto" (medio = carpeta con slides/). Nunca rompe Instagram: el error queda en resultado.json["facebook"]."""
+    if post.get("facebook", {}).get("omitir"):
+        return {"estado": "omitido"}
+    try:
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "herramientas"))
+        import facebook
+        res = facebook.publicar_reel(medio, post) if tipo == "reel" else facebook.publicar_foto(medio, post)
+        log(f"{nombre}: Facebook {res.get('estado')} {res.get('enlace', '')}")
+        return res
+    except Exception as e:
+        try:
+            msg = facebook._limpio(e)
+        except Exception:
+            msg = "error"
+        log(f"{nombre}: Facebook falló (Instagram sí publicado): {msg[-200:]}")
+        return {"estado": "error", "error": msg[-300:]}
+
+
+def publicar_atrasos(cfg):
+    """Colas de atrasos (atrasos/facebook.json y youtube.json): hasta 6 al día por canal, 09:00-22:00 Madrid. Aislado de Instagram."""
+    sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "herramientas"))
+    import atrasos
+    for canal in ("facebook", "youtube"):
+        try:
+            r = atrasos.publicar(canal)
+            if r.get("estado") in ("publicado", "error"):
+                log(f"atrasos {canal}: {r.get('estado')} {r.get('id')} {r.get('enlace', r.get('error', ''))}")
+        except Exception as e:
+            log(f"atrasos {canal}: fallo aislado ({str(e)[-160:]})")
+
+
 def publicar_pendientes(cfg):
     ahora = datetime.now(timezone.utc)
     sin_cdn = None  # si las imágenes no son públicas, carruseles e historias esperan sin gastar intentos
@@ -1670,6 +1703,7 @@ def publicar_pendientes(cfg):
             if post.get("tipo") in ("carrusel", "imagen"):
                 res = publicar_carrusel(cfg, carpeta, post)
                 res["publicado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+                res["facebook"] = publicar_en_facebook(carpeta, post, nombre, "foto")
                 quitar_imagenes(mover(carpeta, PUBLICADOS, res))
                 log(f"{nombre}: publicado {res.get('enlace')}")
                 continue
@@ -1677,6 +1711,7 @@ def publicar_pendientes(cfg):
             res = publicar_reel(cfg, os.path.join(trabajo, post["asset"]), post)
             res["publicado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
             res["youtube"] = publicar_en_youtube(os.path.join(trabajo, post["asset"]), post, nombre)
+            res["facebook"] = publicar_en_facebook(os.path.join(trabajo, post["asset"]), post, nombre, "reel")
             mover(carpeta, PUBLICADOS, res)
             gh("release", "delete-asset", RELEASE, post["asset"], "-y", check=False)
             log(f"{nombre}: publicado {res.get('enlace')}")
@@ -1796,7 +1831,7 @@ def ciclo():
     # 8/11/2026: primero se publica lo que ya toca y después se renderiza (renderizar tarda minutos por reel
     # y retrasaba las publicaciones); al final otra pasada de publicar por si algo se renderizó con hora pasada.
     pasos = [("publicar", publicar_pendientes), ("renderizar", renderizar_pendientes),
-             ("publicar", publicar_pendientes), ("comentarios", responder_comentarios)]
+             ("publicar", publicar_pendientes), ("atrasos", publicar_atrasos), ("comentarios", responder_comentarios)]
     if estadisticas_viejas() or os.environ.get("FORZAR_ESTADISTICAS"):
         pasos.append(("estadísticas", actualizar_estadisticas))
     for nombre, paso in pasos:
