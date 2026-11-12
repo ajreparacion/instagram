@@ -1,0 +1,51 @@
+{
+ "_nota": "Tramos de la grabación real del Centro (VideoMezcla studio-beats-pro, formato vertical, pista de vídeo) que forman demo.mp4. Se regenera con: python3 herramientas/recorte_centro.py cola/409_studio_beats_cancion_reel/recorte.json cola/409_studio_beats_cancion_reel/demo.mp4",
+ "origen": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/videos/pistas/studio-beats-pro-vertical-video.mp4",
+ "fondo": "#E9E3FA",
+ "pantalla_origen": [
+  190,
+  203,
+  700,
+  1512
+ ],
+ "segmentos": [
+  {
+   "inicio": 48.2,
+   "fin": 51.0,
+   "y": 250,
+   "zoom": [
+    1.0,
+    1.06
+   ],
+   "foco": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "inicio": 12.6,
+   "fin": 15.6,
+   "y": 150
+  },
+  {
+   "inicio": 18.6,
+   "fin": 21.9,
+   "y": 150
+  },
+  {
+   "inicio": 38.4,
+   "fin": 41.6,
+   "y": 250
+  },
+  {
+   "inicio": 51.0,
+   "fin": 54.0,
+   "y": 250
+  },
+  {
+   "inicio": 61.0,
+   "fin": 64.4,
+   "y": 250
+  }
+ ]
+}

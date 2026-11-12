@@ -1,0 +1,71 @@
+{
+  "titulo": "Apps 407: Gestión Integral 7D, factura con enlace de pago (grabación real del Centro, datos de ejemplo)",
+  "semilla": 4407,
+  "modo": "app",
+  "plantilla": true,
+  "video": "demo.mp4",
+  "volumen_original": 0,
+  "musica": true,
+  "portada_texto": "Mi cliente: te pago esta semana",
+  "escenas": [
+    {
+      "estilo": "gancho",
+      "texto": "Mi cliente: «te pago *esta semana*»",
+      "voz": "Mi cliente: te pago *esta semana*.",
+      "clip": {
+        "inicio": 0.0,
+        "fin": 3.0
+      }
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 6.1,
+        "fin": 9.2
+      },
+      "texto": "Emites la factura",
+      "voz": "Emites la *factura* desde el albarán."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 3.1,
+        "fin": 6.0
+      },
+      "texto": "Cada factura, su enlace",
+      "voz": "Cada factura trae su *enlace de pago*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 9.3,
+        "fin": 12.1
+      },
+      "texto": "Lo pulsas y se abre",
+      "voz": "Lo pulsas y *se abre*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 12.2,
+        "fin": 15.5
+      },
+      "texto": "Copiar o enviar por correo",
+      "voz": "Lo copias o lo envías por *correo*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 15.6,
+        "fin": 19.0
+      },
+      "texto": "Datos de ejemplo",
+      "voz": "Mándaselo a quien tenga que *cobrar*."
+    },
+    {
+      "estilo": "cierre",
+      "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+      "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
+    }
+  ]
+}

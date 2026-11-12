@@ -1,0 +1,71 @@
+{
+  "titulo": "Apps 409: Studio Beats PRO, tu canción en 4 pasos (grabación real del Centro, datos de ejemplo)",
+  "semilla": 4409,
+  "modo": "app",
+  "plantilla": true,
+  "video": "demo.mp4",
+  "volumen_original": 0,
+  "musica": true,
+  "portada_texto": "Tu canción, en 4 pasos",
+  "escenas": [
+    {
+      "estilo": "gancho",
+      "texto": "Tu canción, en *4 pasos*",
+      "voz": "Tu canción en *cuatro pasos*.",
+      "clip": {
+        "inicio": 0.0,
+        "fin": 2.8
+      }
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 2.8,
+        "fin": 5.8
+      },
+      "texto": "Eliges estilo, tono y modo",
+      "voz": "Eliges *estilo*, tono y modo."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 5.8,
+        "fin": 9.1
+      },
+      "texto": "Generar beat",
+      "voz": "Pulsas *Generar beat*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 9.1,
+        "fin": 12.3
+      },
+      "texto": "Terminar canción",
+      "voz": "Terminar canción: mezcla y máster *automáticos*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 12.3,
+        "fin": 15.3
+      },
+      "texto": "Y la descargas en MP3",
+      "voz": "Y la descargas en *MP3*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 15.3,
+        "fin": 18.7
+      },
+      "texto": "Datos de ejemplo",
+      "voz": "Mándaselo a quien haga *música*."
+    },
+    {
+      "estilo": "cierre",
+      "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+      "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
+    }
+  ]
+}

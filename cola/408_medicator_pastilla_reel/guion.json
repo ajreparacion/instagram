@@ -1,0 +1,71 @@
+{
+  "titulo": "Apps 408: MEDICATOR, la pastilla que toca ahora (grabación real del Centro, usuario de ejemplo)",
+  "semilla": 4408,
+  "modo": "app",
+  "plantilla": true,
+  "video": "demo.mp4",
+  "volumen_original": 0,
+  "musica": true,
+  "portada_texto": "Mamá: ¿ya me tomé la pastilla?",
+  "escenas": [
+    {
+      "estilo": "gancho",
+      "texto": "Mamá: «¿ya me tomé la *pastilla*?»",
+      "voz": "¿Ya me tomé la *pastilla*?",
+      "clip": {
+        "inicio": 0.0,
+        "fin": 2.6
+      }
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 2.6,
+        "fin": 5.8
+      },
+      "texto": "Ahora te toca",
+      "voz": "Aquí ves la que toca *ahora*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 5.8,
+        "fin": 9.0
+      },
+      "texto": "Un botón grande",
+      "voz": "La tomas y pulsas *Ya me la he tomado*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 9.0,
+        "fin": 12.0
+      },
+      "texto": "Todo en orden",
+      "voz": "Y sale: *todo en orden*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 12.0,
+        "fin": 14.4
+      },
+      "texto": "Y mañana, la cita",
+      "voz": "Y mañana, la *cita* con el médico."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 14.4,
+        "fin": 16.6
+      },
+      "texto": "Datos de ejemplo · No sustituye a tu médico",
+      "voz": "Mándaselo a quien cuide de *mamá*."
+    },
+    {
+      "estilo": "cierre",
+      "texto": "Prueba gratuita · sin tarjeta · sin compromiso",
+      "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
+    }
+  ]
+}
