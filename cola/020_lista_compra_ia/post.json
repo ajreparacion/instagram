@@ -27,7 +27,8 @@
     "titulo": "Float In The Waves (Instrumental) · Company Money",
     "origen": "biblioteca de Instagram (colección libre de derechos)",
     "audio_volume": 0.5,
-    "video_volume": 1.0
+    "video_volume": 1.0,
+    "mood": "app"
   },
   "motor_voz": "chatterbox",
   "asset": "020_lista_compra_ia.mp4"
