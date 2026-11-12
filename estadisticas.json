@@ -1,22 +1,22 @@
 {
-  "actualizado": "2026-11-12T13:38:46+00:00",
+  "actualizado": "2026-11-12T20:41:42+00:00",
   "cuenta": {
     "id": "17841400403112257",
-    "followers_count": 1602,
+    "followers_count": 1601,
     "follows_count": 176,
-    "media_count": 19,
+    "media_count": 21,
     "username": "neogestlab"
   },
   "posts": [
     {
-      "id": "18376524796214067",
-      "caption": "Un bar que tira 3 raciones al día a 6 € pierde 540 € al mes (ejemplo).\nEs una cuenta con datos inventados: 3 raciones × 6 € × 30 días = 540 € al mes y 6.480 € al año. Con 5 raciones y 8 € cada una, sube a 14.400 € al año.\nLa página la ha hecho una IA con un solo mensaje y se grabó funcionando. En Neogest Lab hacemos apps así, a medida.\nMándaselo al que lleva el bar o guárdalo para hacer tu cuenta con tus números.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nVoz generada por IA\n\n#hosteleria #bares #mermas #apps #neogestlab",
+      "id": "17911257984583629",
+      "caption": "El 55 % de las empresas encuestadas considera que las tareas administrativas restan tiempo al trabajo estratégico.\nDos horas de reunión para organizar el papeleo, y la solución era un correo de tres líneas.\nHumor negro de ficción; los personajes son inventados.\nMándaselo a quien carga con todo.\nFuente: «Radiografía económica y bancaria de la micro y pequeña empresa en España 2026», de Qonto con IO Investigación, según Forbes España (22/04/2026). Lo encarga una fintech.\n#humornegro #pymes #reuniones #ia #trabajo\nVoz y personajes generados por IA\n\nVoz generada por IA",
       "comments_count": 0,
       "like_count": 0,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
-      "permalink": "https://www.instagram.com/reel/DfpGZLZlGH3/",
-      "timestamp": "2026-11-12T12:53:03+0000",
+      "permalink": "https://www.instagram.com/reel/Dfp74hakXc2/",
+      "timestamp": "2026-11-12T20:40:34+0000",
       "metricas": {
         "reach": 0,
         "views": 0,
@@ -30,24 +30,62 @@
       }
     },
     {
+      "id": "18159089551472345",
+      "caption": "¿Tienes letras pero no tienes estudio? 🎤\nStudio Beats PRO te lleva de la idea a la canción en 4 pasos.\n1. Eliges estilo, tono y modo y sale la base: batería, bajo, acordes y melodía.\n2. Grabas tu voz encima, con cuenta atrás y metrónomo.\n3. «Terminar canción» afina, mezcla y masteriza en un clic.\n4. La descargas en MP3 a 320 kbps (en modo Pro, también WAV, FLAC y stems).\nEstá en fase de pruebas. Mándaselo a quien guarda letras en el cajón.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#musica #productormusical #beats #cantantes #apps #neogestlab",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/DfpeynwDiJn/",
+      "timestamp": "2026-11-12T16:26:03+0000",
+      "metricas": {
+        "reach": 8,
+        "views": 14,
+        "saved": 0,
+        "shares": 1,
+        "total_interactions": 2
+      }
+    },
+    {
+      "id": "18376524796214067",
+      "caption": "Un bar que tira 3 raciones al día a 6 € pierde 540 € al mes (ejemplo).\nEs una cuenta con datos inventados: 3 raciones × 6 € × 30 días = 540 € al mes y 6.480 € al año. Con 5 raciones y 8 € cada una, sube a 14.400 € al año.\nLa página la ha hecho una IA con un solo mensaje y se grabó funcionando. En Neogest Lab hacemos apps así, a medida.\nMándaselo al que lleva el bar o guárdalo para hacer tu cuenta con tus números.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nVoz generada por IA\n\n#hosteleria #bares #mermas #apps #neogestlab",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfpGZLZlGH3/",
+      "timestamp": "2026-11-12T12:53:03+0000",
+      "metricas": {
+        "reach": 2,
+        "views": 4,
+        "saved": 0,
+        "shares": 0,
+        "comments": 0,
+        "likes": 1,
+        "total_interactions": 2,
+        "ig_reels_avg_watch_time": 13457,
+        "ig_reels_video_view_total_time": 53828
+      }
+    },
+    {
       "id": "18100382501427663",
       "caption": "Cada semana se trabajan 2,5 millones de horas extra sin cobrar en España.\nEl Jambo que sabe ya ha encontrado a quien se lo hace todo: la Jupillo.\nHumor negro de ficción; los personajes son inventados.\nMándaselo a quien carga con todo.\nFuente: EPA (INE), 1.er trimestre de 2026, según El Español (26/05/2026): 5,89 millones de horas extra semanales, 3,38 pagadas.\n#humornegro #trabajo #ia #pymes #horasextra\nVoz y personajes generados por IA\n\nVoz generada por IA",
       "comments_count": 0,
-      "like_count": 2,
+      "like_count": 3,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DfnC1dAk27o/",
       "timestamp": "2026-11-11T17:43:30+0000",
       "metricas": {
-        "reach": 241,
-        "views": 290,
+        "reach": 347,
+        "views": 425,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 2,
-        "total_interactions": 3,
-        "ig_reels_avg_watch_time": 10322,
-        "ig_reels_video_view_total_time": 2518582
+        "likes": 3,
+        "total_interactions": 4,
+        "ig_reels_avg_watch_time": 10874,
+        "ig_reels_video_view_total_time": 3816964
       }
     },
     {
@@ -61,7 +99,7 @@
       "timestamp": "2026-11-11T17:13:41+0000",
       "metricas": {
         "reach": 5,
-        "views": 17,
+        "views": 19,
         "saved": 0,
         "shares": 0,
         "total_interactions": 2
@@ -78,14 +116,14 @@
       "timestamp": "2026-11-10T20:15:30+0000",
       "metricas": {
         "reach": 3,
-        "views": 4,
+        "views": 6,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 0,
         "total_interactions": 0,
-        "ig_reels_avg_watch_time": 9033,
-        "ig_reels_video_view_total_time": 36135
+        "ig_reels_avg_watch_time": 11265,
+        "ig_reels_video_view_total_time": 56326
       }
     },
     {
@@ -452,6 +490,10 @@
     {
       "fecha": "2026-11-12T13:38+00:00",
       "seguidores": 1602
+    },
+    {
+      "fecha": "2026-11-12T20:41+00:00",
+      "seguidores": 1601
     }
   ]
 }
