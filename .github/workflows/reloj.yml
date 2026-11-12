@@ -29,6 +29,7 @@ jobs:
       - name: Lanzar el ciclo cada 15 minutos
         run: |
           fin=$(( $(date +%s) + 345*60 ))
+          vuelta=0
           while [ "$(date +%s)" -lt "$fin" ]; do
             activos=$(gh run list -R "$REPO" -w ciclo.yml -L 5 --json status \
               --jq '[.[] | select(.status=="in_progress" or .status=="queued" or .status=="pending" or .status=="waiting")] | length' || echo 0)
@@ -40,6 +41,11 @@ jobs:
             fi
             # Contestador del chat de Instagram (gratis): misma cadencia que el ciclo
             gh workflow run respuestas_chat.yml -R "$REPO" --ref main || echo "no se pudo lanzar el contestador"
+            # Comunidad (comentarios de Facebook y YouTube): cada hora (una de cada 4 vueltas)
+            if [ $(( vuelta % 4 )) = 0 ]; then
+              gh workflow run comunidad.yml -R "$REPO" --ref main || echo "no se pudo lanzar comunidad"
+            fi
+            vuelta=$(( vuelta + 1 ))
             sleep 900
           done
       - name: Relanzar el reloj

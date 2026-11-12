@@ -1,0 +1,54 @@
+name: Facebook · comprobar conexión
+
+# Lee el nombre de la página de Facebook con FACEBOOK_PAGE_TOKEN. No publica nada.
+# Con «publicar_prueba» publica UNA pieza real aprobada (primera de atrasos/facebook.json) para ver si el público la ve.
+on:
+  workflow_dispatch:
+    inputs:
+      publicar_prueba:
+        description: "Publicar una pieza real de prueba (la primera de atrasos/facebook.json)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  comprobar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Comprobar página
+        env:
+          FACEBOOK_PAGE_TOKEN: ${{ secrets.FACEBOOK_PAGE_TOKEN }}
+        run: python3 herramientas/facebook.py comprobar
+      - name: Publicación de prueba (opcional)
+        if: inputs.publicar_prueba
+        env:
+          FACEBOOK_PAGE_TOKEN: ${{ secrets.FACEBOOK_PAGE_TOKEN }}
+          TZ: Europe/Madrid
+        run: |
+          python3 - <<'PY'
+          import json, sys
+          sys.path.insert(0, "herramientas")
+          import atrasos
+          # fuerza una pieza ignorando horario y separación: solo la primera pendiente
+          cola = json.load(open("atrasos/facebook.json"))
+          p = next(x for x in cola["piezas"] if x.get("estado") == "pendiente" and x["tipo"] != "video_centro")
+          import tempfile, facebook
+          t = tempfile.mkdtemp(); atrasos._recuperar_imagenes(p, t)
+          res = facebook.publicar_foto(t, {"texto": p["texto"], "app": p.get("app")})
+          p.update(estado="publicado", publicado=__import__("datetime").datetime.now(__import__("datetime").timezone.utc).isoformat(timespec="seconds"), enlace=res.get("enlace", ""))
+          json.dump(cola, open("atrasos/facebook.json", "w"), ensure_ascii=False, indent=1)
+          print("PRUEBA publicada:", res.get("enlace"))
+          PY
+      - name: Guardar cola
+        if: inputs.publicar_prueba
+        run: |
+          git config user.name "expedientes-bot"; git config user.email "expedientes-bot@users.noreply.github.com"
+          git add atrasos; git diff --cached --quiet && exit 0
+          git commit -q -m "Facebook: publicación de prueba"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done; exit 1

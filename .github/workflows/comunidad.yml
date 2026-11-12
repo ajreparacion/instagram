@@ -1,0 +1,44 @@
+name: Comunidad · comentarios de Facebook y YouTube
+
+# (1) Cada hora (lo lanza el Reloj) recoge comentarios nuevos en comunidad/pendientes.json (solo nombre público, texto, id y fecha).
+# (2) En push de comunidad/respuestas.json publica las respuestas y oculta el spam; lo hecho queda en comunidad/hechos.json.
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["comunidad/respuestas.json"]
+  schedule:
+    - cron: "17 * * * *"   # respaldo; el Reloj lo lanza cada hora
+
+permissions:
+  contents: write
+
+concurrency:
+  group: comunidad
+  cancel-in-progress: false
+
+jobs:
+  comunidad:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Responder y recoger
+        env:
+          FACEBOOK_PAGE_TOKEN: ${{ secrets.FACEBOOK_PAGE_TOKEN }}
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: |
+          python3 herramientas/comunidad.py responder
+          if [ "${{ github.event_name }}" != "push" ]; then python3 herramientas/comunidad.py recoger; fi
+      - name: Guardar cambios
+        run: |
+          git config user.name "expedientes-bot"
+          git config user.email "expedientes-bot@users.noreply.github.com"
+          git add comunidad
+          if git diff --cached --quiet; then echo "Sin cambios"; exit 0; fi
+          git commit -q -m "Comunidad $(date -u +%FT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && exit 0; sleep 5; done
+          exit 1
