@@ -1,11 +1,11 @@
 {
   "aprobado": false,
-  "nota": 72,
-  "fecha": "2026-11-11T11:57Z",
-  "revisado_por": "agente de CALIDAD (11/11, pasada de las 12:50)",
+  "nota": 75,
+  "fecha": "2026-11-12T11:45Z",
+  "revisado_por": "agente de CALIDAD (12/11, pasada de las 12:30)",
   "motivos": [
-    "B1: gancho descriptivo («Esta web contesta a tus clientes»: describe una función, sin cifra, conflicto, pregunta ni POV).",
-    "B2: escaparate de funciones (servicios, formulario, asistente) sin espina: máximo 75."
+    "B5: el fotograma 0 se queda congelado 3,8 s (primer corte a 3,8 s; el límite es 3 s) y de 3,9 a 7,5 s hay otros 3,6 s sin ningún cambio visual (> 3,5 s). Hay además un silencio de voz de 1,4 s (11,4-12,8 s) en el límite del A1."
   ],
-  "como_arreglarlo": "Rehacer con espina: POV o mini historia («POV: un cliente pregunta el precio a las 23:00 y nadie contesta»), el asistente respondiendo el precio como resultado, y mantener frase para enviar y cierre. La grabación sirve; cambiar gancho, orden de escenas y voz. Datos y respuesta del asistente verificados (tinte 35 €, 90 min)."
+  "ya_arreglado": "B1 (gancho POV «preguntan el precio a las 23:00» con la respuesta del asistente en el fotograma 0) y B2 (espina). Audio -14,0 LUFS, pico -1,4 dBFS, 25,1 s, datos y respuesta del asistente verificados (tinte 35 €, 90 min).",
+  "como_arreglarlo": "Mejora/Creador en guion.json: (1) escena de gancho: sustituir el clip congelado 23.6-26.0 por un tramo con movimiento (cursor pulsando «Enviar» o respuesta apareciendo, p. ej. 21.8-24.4) o dividirla en dos tramos con corte antes de 3 s; (2) la escena 2 (2.5-6.0) tiene 3,6 s sin cambio: acortar su voz o intercalar el scroll de servicios; (3) cerrar el hueco de voz de 11,4-12,8 s. Poner renderizado:false y lanzar el ciclo; Calidad reevalúa."
 }
