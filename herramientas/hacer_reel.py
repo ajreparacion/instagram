@@ -2465,6 +2465,8 @@ def main():
     if MODO["sketch"]:   # contexto de la serie para cada escena (gancho fijo, contador, mensaje serio y su fuente)
         DIB_PREV["pers"] = set()
         gancho = str(esc[0].get("texto") or g.get("portada_texto") or "")
+        if str(esc[0].get("estilo") or "").strip().lower() == "texto":
+            gancho = ""   # 12/11/2026: reel que arranca con escena «texto» (sin voz): la frase gigante ya es el gancho, sin «POV» arriba
         cont = g.get("contador") if isinstance(g.get("contador"), dict) else {}
         valor = int(cont.get("valor") or 0)
         mf = g.get("mensaje_final") if isinstance(g.get("mensaje_final"), dict) else {}

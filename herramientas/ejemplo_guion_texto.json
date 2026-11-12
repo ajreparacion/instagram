@@ -1,0 +1,16 @@
+{
+  "titulo": "Ejemplo del modo sketch sin voz (fórmula F4, solo para ensayo)",
+  "semilla": 4004,
+  "modo": "sketch",
+  "musica": false,
+  "portada_texto": "Mi cliente: «te pago esta semana»",
+  "fondo": "amarillo",
+  "_nota": "Reel MUDO (texto en pantalla + canción de Instagram a pleno volumen). Sin voz en ninguna escena: publicar_gh.guion_tiene_voz da False. Ejemplo de formato, no es una pieza de cola.",
+  "escenas": [
+    {"estilo": "texto", "texto": "Mi cliente: «te pago esta semana»", "voz": "", "duracion": 2.4, "dibujo": {"personajes": []}},
+    {"estilo": "remate", "hablante": "jambo", "texto": "", "voz": "", "duracion": 2.6,
+     "dibujo": {"personajes": ["jambo"], "acciones": {"jambo": "desespera"}, "efecto": "papeles", "efecto_t": 0.3}, "cartel": "90 DÍAS DESPUÉS"},
+    {"estilo": "texto", "texto": "Yo, con enlace de pago en la factura:", "voz": "", "duracion": 2.6, "dibujo": {"personajes": ["jupillo"], "acciones": {"jupillo": "habla"}}},
+    {"estilo": "texto", "texto": "Pagar, a un clic", "voz": "", "duracion": 2.2, "dibujo": {"personajes": []}}
+  ]
+}

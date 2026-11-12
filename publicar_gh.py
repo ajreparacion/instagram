@@ -1100,6 +1100,15 @@ def audio_ig_para(nombre, con_voz, estilo=None):
             "video_volume": 1.0 if con_voz else c["volumen_video_sin_voz"]}
 
 
+def guion_tiene_voz(guion):
+    """True si alguna escena del guion.json (ruta) tiene texto en "voz". Sin ninguna escena con voz = reel mudo (texto en
+    pantalla + música): la canción va a pleno volumen. Si el guion no se puede leer, se supone que lleva voz (lo de antes)."""
+    g = leer_json(guion, None)
+    if not isinstance(g, dict) or not isinstance(g.get("escenas"), list):
+        return True
+    return any(str((e or {}).get("voz") or "").strip() for e in g["escenas"] if isinstance(e, dict))
+
+
 def guion_sin_musica(guion, trabajo):
     """`guion` es la RUTA de un guion.json (no un dict). Escribe una copia con "musica": false en la carpeta de trabajo y
     devuelve su ruta. El "video" relativo se vuelve absoluto, porque hacer_reel.py lo resuelve respecto a la carpeta del guion.
@@ -1142,7 +1151,9 @@ def renderizar(cfg, carpeta, post):
     if cmd is None:
         guion = grabar_pantalla_guion(os.path.join(carpeta, "guion.json"), trabajo)
         guion = resolver_videos_guion(cfg, guion, trabajo)
-        ig = audio_ig_para(nombre, True)
+        # 12/11/2026 (Mejora, orden del dueño «la música tiene que resaltar»): un reel SIN voz (texto en pantalla + música) lleva
+        # la canción a volumen_cancion_sin_voz (1,0) y no a 0,5/0,35: antes se mandaba siempre como «con voz» y quedaba enterrada.
+        ig = audio_ig_para(nombre, guion_tiene_voz(guion))
         if ig:   # 10/11/2026: la musica la pone Instagram al publicar; el video lleva solo la voz (y los efectos)
             guion = guion_sin_musica(guion, trabajo)
             post["audio_ig"] = ig
