@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "«Presupuesto cerrado, salvo imprevistos». Hay imprevistos.\nEl Jambo promete un presupuesto que no sube. La Jupillo lo rehace. Humor negro de ficción.\nSígueme y mañana verás qué pasa: tres citas a la misma hora.\n#humornegro #reformas #autonomos #presupuesto #trabajo\nVoz y personajes generados por IA",
+  "texto": "«Presupuesto cerrado, salvo imprevistos». Hay imprevistos.\nEl Jambo promete un presupuesto que no sube. La Jupillo lo rehace. Humor negro de ficción.\nSígueme y mañana verás qué pasa: tres citas a la misma hora.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #reformas #autonomos #presupuesto #trabajo\nVoz y personajes generados por IA",
   "cuando": "2026-11-15T18:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -12,7 +12,7 @@
   "_nota_creador": "11/11/2026: episodio nuevo. Sin enlace ni prueba gratuita en el episodio. Calidad (≥ 90) y visto bueno del dueño mandan: sin calidad.json aprobado no se publica. Voz genérica de España.",
   "renderizado": "2026-11-11T03:09:22+00:00",
   "motor_voz": "chatterbox",
-  "comentario_fijado": "¿Cuál fue tu imprevisto más caro? Dilo sin llorar.",
+  "comentario_fijado": "¿Cuál fue tu imprevisto más caro? Dilo sin llorar. Episodio nuevo cada día en @neogestlab",
   "avance_siguiente": "Mañana: tres citas a la misma hora.",
   "audio_ig": {
     "audio_id": "1579125763264830",
@@ -23,5 +23,10 @@
     "mood": "comedia"
   },
   "portada_ms": 0,
-  "asset": "308_jambo_ep8_presupuesto.mp4"
+  "asset": "308_jambo_ep8_presupuesto.mp4",
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
+    "paso_embudo": "alcance → visita al perfil"
+  }
 }

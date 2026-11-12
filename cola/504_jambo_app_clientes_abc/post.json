@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Visitar a todos los clientes no es una estrategia: es cansancio con coche.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nEn Gestión Integral 7D los clientes se clasifican en A, B y C, con ubicación y fecha de la última visita.\nMándaselo a quien visita por instinto.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n#humornegro #autonomos #pymes #ia #facturacion #neogestlab\nVoz y personajes generados por IA",
+  "texto": "Visitar a todos los clientes no es una estrategia: es cansancio con coche.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nEn Gestión Integral 7D los clientes se clasifican en A, B y C, con ubicación y fecha de la última visita.\nMándaselo a quien visita por instinto.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #autonomos #pymes #ia #facturacion #neogestlab\nVoz y personajes generados por IA",
   "cuando": "2026-11-18T20:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -11,7 +11,7 @@
   "renderizado": "2026-11-11T18:11:57+00:00",
   "_fuentes": [],
   "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
-  "comentario_fijado": "¿Cuánto hace que no visitas a tu mejor cliente? Cuéntalo.",
+  "comentario_fijado": "¿Cuánto hace que no visitas a tu mejor cliente? Cuéntalo. Episodio nuevo cada día en @neogestlab",
   "avance_siguiente": "Mañana: la IA que factura sola.",
   "audio_ig": {
     "audio_id": "583674661052146",
@@ -23,5 +23,10 @@
   },
   "portada_ms": 0,
   "motor_voz": "chatterbox",
-  "asset": "504_jambo_app_clientes_abc.mp4"
+  "asset": "504_jambo_app_clientes_abc.mp4",
+  "monetizacion": {
+    "objetivo": "clic_enlace",
+    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
+    "paso_embudo": "visita_perfil -> clic_enlace"
+  }
 }

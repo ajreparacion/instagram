@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Tres citas a las cinco y una agenda que «lo apunta todo».\nLa Pelota ve un número redondo y la Jupillo reordena la agenda. Humor negro de ficción.\nMándaselo a quien carga con todo.\n#humornegro #peluqueria #agenda #ia #trabajo\nVoz y personajes generados por IA",
+  "texto": "Tres citas a las cinco y una agenda que «lo apunta todo».\nLa Pelota ve un número redondo y la Jupillo reordena la agenda. Humor negro de ficción.\nMándaselo a quien carga con todo.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #peluqueria #agenda #ia #trabajo\nVoz y personajes generados por IA",
   "cuando": "2026-11-15T20:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -12,7 +12,7 @@
   "_nota_creador": "11/11/2026: episodio nuevo. Sin enlace ni prueba gratuita en el episodio. Calidad (≥ 90) y visto bueno del dueño mandan: sin calidad.json aprobado no se publica. Voz genérica de España.",
   "renderizado": "2026-11-11T03:24:40+00:00",
   "motor_voz": "chatterbox",
-  "comentario_fijado": "¿Te han doblado alguna vez una cita? ¿A quién culpas?",
+  "comentario_fijado": "¿Te han doblado alguna vez una cita? ¿A quién culpas? Episodio nuevo cada día en @neogestlab",
   "avance_siguiente": "Mañana: la revisión número quince.",
   "audio_ig": {
     "audio_id": "1018682932882496",
@@ -23,5 +23,10 @@
     "mood": "comedia"
   },
   "portada_ms": 0,
-  "asset": "309_jambo_ep9_agenda.mp4"
+  "asset": "309_jambo_ep9_agenda.mp4",
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
+    "paso_embudo": "alcance → visita al perfil"
+  }
 }
