@@ -310,6 +310,7 @@ class TextBlock:
 # el texto entero desde el primer fotograma; "texto" en las demas escenas = rotulo corto fijo arriba.
 # Musica discreta (-31 LUFS antes de la voz), sin lecho de tension, sin golpes ni subidas.
 # Con "modo" ausente o distinto, todo se comporta exactamente como antes.
+MASTER_DATOS = [False]   # modo datos sin ninguna voz: make_audio masteriza a -14 LUFS (ver make_audio)
 MODO = {"humano": False, "dibujo": False, "app": False, "sketch": False, "datos": False}
 
 def _sk():
@@ -2375,13 +2376,24 @@ def make_audio(scenes, total, seed, musica=True):
                     break
             mus *= duck[:, None]
         lm0 = lufs(mus)
-        mus *= 10 ** (((-31 if MODO["humano"] else (-18 if modo_alegre() else -24)) - lm0) / 20)   # humano/dibujo/app: musica discreta
+        mus *= 10 ** (((-31 if MODO["humano"] else (-18 if (modo_alegre() or MODO["datos"]) else -24)) - lm0) / 20)   # humano/dibujo/app: musica discreta
         if modo_suave() and hook_end < total - 2.0:
             # el gancho va a pelo (solo la voz): la musica entra en fundido de 0,8 s cuando termina la primera escena
-            mus *= np.clip((t - hook_end + 0.2) / 0.8, 0.5 if modo_alegre() else 0.0, 1.0)[:, None]   # dibujo/app: ya suena en el gancho (a media fuerza)
+            mus *= np.clip((t - hook_end + 0.2) / 0.8, 0.5 if (modo_alegre() or MODO["datos"]) else 0.0, 1.0)[:, None]   # dibujo/app: ya suena en el gancho (a media fuerza)
         st = st + mus
     fade = np.minimum(1, np.minimum(t / 0.3, (total - t) / 0.9))
     st *= fade[:, None]
+    if MASTER_DATOS[0]:
+        # datos SIN voz (12/11/2026): no pasa por la mezcla de voz de publicar_gh.py, que es la que masteriza; aquí se deja
+        # ya a -14 LUFS con techo de -1,9 dBFS (margen para el pico verdadero ≤ -1 dBTP que exige control_datos.py).
+        techo = 10 ** (-1.9 / 20)
+        for _ in range(3):
+            l0 = lufs(st)
+            if l0 is None or not np.isfinite(l0): break
+            st = st * 10 ** ((-14.0 - l0) / 20)
+            a = np.abs(st); th = techo * 0.75
+            st = np.where(a > th, np.sign(st) * (th + (techo - th) * np.tanh((a - th) / (techo - th))), st)
+        return (np.clip(st, -techo, techo) * 32767).astype(np.int16)
     a = np.abs(st); th = 0.7   # limitador suave (sin clipping)
     st = np.where(a > th, np.sign(st) * (th + (1 - th) * np.tanh((a - th) / (1 - th))), st)
     pk = np.abs(st).max()
@@ -2422,8 +2434,8 @@ def main():
     if g.get("modo") == "sketch":
         musica = False   # sketch: nunca musica cocida (orden del dueno 10/11: la cancion la pone Instagram al publicar, audio_ig)
     modo = (g.get("modo") or "").strip().lower()
-    if modo == "datos":
-        musica = False   # datos: nunca musica cocida (la cancion la pone Instagram al publicar, audio_ig); solo efectos sintetizados
+    # datos (12/11/2026, orden del dueño: «música y voz si lo consideran»): la música la decide el equipo con "musica" en el
+    # guion (por defecto sí). Si se publica con canción de Instagram, publicar_gh.py ya pasa "musica": false (guion_sin_musica).
     if modo not in ("", "humano", "dibujo", "app", "sketch", "datos"):   # guardia: un modo desconocido nunca se renderiza con otro estilo
         sys.exit("modo desconocido en guion.json: %r (este generador conoce: humano, dibujo, app, sketch, datos)" % modo)
     MODO["humano"] = modo == "humano"
@@ -2447,6 +2459,7 @@ def main():
     SEMILLA["v"] = int(g.get("semilla", 1))
     DIB_PREV["pers"] = set()
     esc = g["escenas"]
+    MASTER_DATOS[0] = modo == "datos" and not any(str(e.get("voz") or "").strip() for e in esc)
     if MODO["datos"]:   # puerta dura de la ficha de datos (salvo --ensayo) y contexto de cada escena
         _dt().iniciar(g, "--ensayo" in sys.argv)
     if MODO["sketch"]:   # contexto de la serie para cada escena (gancho fijo, contador, mensaje serio y su fuente)

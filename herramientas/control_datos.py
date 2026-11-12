@@ -184,7 +184,7 @@ def revisar(guion, video):
     if tiene_audio(video):
         li, pico = sonoridad(video)
         med["lufs"], med["pico_dbtp"] = li, pico
-        sin_musica = g.get("musica") is False or g.get("modo") == "datos"
+        sin_musica = g.get("musica") is False
         if li is not None and abs(li - LUFS_OBJ) > LUFS_TOL:
             m = "sonoridad integrada %.1f LUFS (objetivo %.0f ± %.1f)" % (li, LUFS_OBJ, LUFS_TOL)
             if sin_musica:
@@ -211,12 +211,17 @@ def revisar(guion, video):
             if x not in ok and x.rstrip(",.") not in ok:
                 av.append("escena %d: la cifra «%s» de la voz o el texto no sale de la ficha de datos" % (i, x))
     # 9. cierre
+    # 9b. voz y música (12/11/2026: las decide el equipo por reel; nunca las dos fuera a la vez sin canción de Instagram)
+    con_voz = any(limpio(e.get("voz")) for e in esc)
+    med["voz"], med["musica_cocida"] = con_voz, g.get("musica") is not False
+    if not con_voz and g.get("musica") is False:
+        av.append("sin voz y sin música cocida: el reel depende de la canción de Instagram (audio_ig); si no se aplica, solo quedan los efectos")
     cierre = next((e for e in reversed(esc) if str(e.get("estilo")) == "cierre"), None)
     if not esc or esc[-1].get("estilo") != "cierre":
         bl.append('la última escena no es el cierre ("estilo": "cierre")')
-    elif "prueba gratuita" not in limpio(cierre.get("voz") + " " + cierre.get("texto", "")).lower():
+    elif "prueba gratuita" not in limpio((cierre.get("voz") or "") + " " + (cierre.get("texto") or "")).lower():
         av.append("el cierre no menciona la prueba gratuita")
-    elif not all(k in limpio(cierre.get("voz")).lower() for k in ("sin tarjeta", "sin compromiso")):
+    elif con_voz and not all(k in limpio(cierre.get("voz") or "").lower() for k in ("sin tarjeta", "sin compromiso")):
         av.append("la voz del cierre debería decir «sin tarjeta, sin datos bancarios y sin compromiso»")
     # 10. monetización del post
     post = None
