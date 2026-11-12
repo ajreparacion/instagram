@@ -22,3 +22,5 @@ MONETIZACIÓN: se evita gastar un hueco de 13:40 en un reel sin espina; el hueco
 - 2026-11-12 Mejora: reel mudo = escenas sketch «texto» con voz vacía; la canción sube a 1,0 solo si NINGUNA escena tiene voz (publicar_gh.guion_tiene_voz). Comprobar siempre con md5 de fotogramas que los episodios ya aprobados no cambian.
 2026-11-12 · CALIDAD (pasada 12:50) · sin reels nuevos que evaluar: lo programado en las próximas 10 h ya está aprobado (401, 302, 303); 406 y 103 siguen suspendidos sin cambios desde 11:30 y 516 aún es solo guion sin render.
 MONETIZACIÓN: no se ha movido ni retirado ningún reel; la cola aprobada de hoy (401 a las 13:40, 302 a las 18:40, 303 a las 20:40) sale con cierre único.
+2026-11-12 · ANALISTA · 301 a 21 h: alcance 255 (248 no seguidores), abandono 30,6 %, pero 0 compartidos y 0 visitas al perfil → el reel de prueba a no seguidores con dato + personaje distribuye; el cierre no mueve a nadie → no dar por bueno un formato sin separar el efecto de la prueba a no seguidores.
+MONETIZACIÓN: señalado al Estratega el paso roto (alcance → visita al perfil: 0 de 248) y un cambio concreto de cierre para los episodios sin render.
