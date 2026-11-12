@@ -1742,7 +1742,7 @@ def responder_comentarios(cfg, maximo=15):
         clave = (post.get("palabra_clave") or "").strip().lower()
         respuesta = (post.get("respuesta") or "").strip()
         mid = res.get("media_id")
-        if not (clave and respuesta and mid):
+        if not (clave and respuesta and mid) or res.get("borrado_en_ig"):
             continue
         try:
             if leer_fecha(res.get("publicado", "")) < limite:
@@ -1752,7 +1752,13 @@ def responder_comentarios(cfg, maximo=15):
         try:
             datos = api(cfg, f"{mid}/comments", fields="id,text,username", limit=50).get("data", [])
         except ErrorAPI as e:
-            log(f"{os.path.basename(carpeta)}: no se pudieron leer comentarios: {e}")
+            if "subcódigo 33" in str(e) or "does not exist" in str(e):
+                # La publicación ya no existe en Instagram (archivada o borrada): se marca y no se vuelve a consultar.
+                res["borrado_en_ig"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+                escribir_json(os.path.join(carpeta, "resultado.json"), res)
+                log(f"{os.path.basename(carpeta)}: ya no existe en Instagram; se deja de leer sus comentarios")
+            else:
+                log(f"{os.path.basename(carpeta)}: no se pudieron leer comentarios: {e}")
             continue
         for c in datos:
             if enviados >= maximo:

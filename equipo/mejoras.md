@@ -673,3 +673,9 @@ La muestra del cambio 37 llevaba la pista generada por código (prueba_voz.yml n
 **Cola:** solo 406 (suspendido, sale el 30/11) pasa a `renderizado: false` y se lanza el ciclo para que Calidad lo reevalúe; 405 y 601 (aprobados) NO se re-renderizan. No se ha tocado ni voz ni música.
 **Límites:** el empuje quita la imagen congelada, pero no el hueco de voz de 1,4 s de 406 ni sustituye a un tramo con acción de verdad: si el guion puede enseñar movimiento real, mejor. El aviso «AVISO RITMO» sigue saliendo si aun así queda algo quieto > 3 s. El zoom por coordenadas (`x`,`y`, sin selector) no lleva la protección de textos.
 **Revertir:** `cp herramientas/versiones/hacer_reel.py_2026-11-12c herramientas/hacer_reel.py; cp herramientas/versiones/grabar_pantalla.py_2026-11-12 herramientas/grabar_pantalla.py; cp herramientas/versiones/prueba_plantilla.yml_2026-11-12 .github/workflows/prueba_plantilla.yml; rm herramientas/plantilla/ejemplo_guion_quieto.json` (o solo `"empuje": false` en el guion afectado).
+
+## Cambio 56 · 12/11/2026 23:45 (revisión del dueño) · Comentarios de Instagram: dejar de consultar publicaciones borradas
+- Problema: cada 15 min el ciclo pedía los comentarios de 013, 014, 015, 016 y 001, que ya no existen en Instagram (error 100/33). Llenaba registro.log de errores y ocultaba los fallos reales.
+- Cambio: en publicar_gh.py › responder_comentarios, si Instagram responde que el objeto no existe, se marca `borrado_en_ig` en su resultado.json y no se vuelve a consultar.
+- Revertir: `cp herramientas/versiones/publicar_gh.py_2026-11-12d publicar_gh.py` y quitar `borrado_en_ig` de los resultado.json.
+- Facebook carruseles: el error «Unpublished posts must be posted to a page as the page itself» ya lo corrigió el commit de las 21:21 (canje del token por el de la página). Se comprueba en la primera pasada de atrasos de mañana (09:00).
