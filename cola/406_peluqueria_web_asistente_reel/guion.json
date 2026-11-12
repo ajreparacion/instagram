@@ -10,44 +10,53 @@
     {
       "estilo": "gancho",
       "texto": "POV: preguntan el precio a las *23:00*",
-      "voz": "Preguntan el precio a las *once* de la noche.",
+      "voz": "Las *once* de la noche.",
       "clip": {
-        "inicio": 23.6,
-        "fin": 26.0
+        "inicio": 19.3,
+        "fin": 21.8
       }
     },
     {
       "estilo": "tramo",
       "clip": {
-        "inicio": 2.5,
-        "fin": 6.0
+        "inicio": 8.0,
+        "fin": 11.0
       },
-      "texto": "Nadie contesta… la web, sí",
-      "voz": "Nadie coge el teléfono. Pero la web de la peluquería *de ejemplo* sí."
+      "texto": "Y te preguntan el precio",
+      "voz": "Y te preguntan el *precio*."
     },
     {
       "estilo": "tramo",
       "clip": {
-        "inicio": 13.8,
-        "fin": 21.5
+        "inicio": 0.3,
+        "fin": 3.3
+      },
+      "texto": "Nadie contesta. La web, sí",
+      "voz": "Nadie contesta. La web *sí*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 10.3,
+        "fin": 12.9
       },
       "texto": "Le pregunto al asistente",
-      "voz": "Le pregunto al asistente: *cuánto cuesta el tinte*."
+      "voz": "Le pregunto por el *tinte*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 13.3,
+        "fin": 19.3
+      },
+      "texto": "Responde con lo que pone la web",
+      "voz": "Y responde *solo* con lo que pone la web."
     },
     {
       "estilo": "tramo",
       "clip": {
         "inicio": 21.8,
-        "fin": 26.0
-      },
-      "texto": "Responde con lo que pone la web",
-      "voz": "Y responde *solo* con lo que pone en la web."
-    },
-    {
-      "estilo": "tramo",
-      "clip": {
-        "inicio": 24.8,
-        "fin": 26.1
+        "fin": 25.3
       },
       "texto": "Datos de ejemplo",
       "voz": "Mándaselo a quien tenga *peluquería*."

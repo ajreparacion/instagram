@@ -3,7 +3,7 @@
  "fondo": "#FCE4EC",
  "url": "https://aj-reparacion-gestion-copy-61ad5afb.base44.app/w/peluqueria-demo",
  "esperar_carga": 0.8,
- "pasos": [
+ "previos": [
   {
    "accion": "esperar_selector",
    "selector": "button.ni-saltar",
@@ -15,53 +15,78 @@
   },
   {
    "accion": "esperar",
-   "seg": 0.8
+   "seg": 1.2
   },
   {
-   "accion": "scroll",
-   "y": -5000,
-   "seg": 0.4
+   "accion": "ver",
+   "selector": "text=Peluquería Demo"
   },
   {
    "accion": "esperar",
-   "seg": 1.8
+   "seg": 0.5
+  }
+ ],
+ "pasos": [
+  {
+   "accion": "esperar",
+   "seg": 0.6
   },
   {
    "accion": "scroll",
    "y": 300,
-   "seg": 1.0
+   "seg": 0.9
   },
   {
    "accion": "esperar",
-   "seg": 2.2
+   "seg": 0.5
   },
   {
    "accion": "scroll",
    "y": 650,
-   "seg": 1.0
+   "seg": 0.9
+  },
+  {
+   "accion": "esperar",
+   "seg": 0.3
+  },
+  {
+   "accion": "scroll",
+   "y": 2030,
+   "seg": 1.2
+  },
+  {
+   "accion": "esperar",
+   "seg": 0.3
+  },
+  {
+   "accion": "escribir",
+   "selector": "input[placeholder*='regunta']",
+   "texto": "¿Cuánto cuesta el tinte y cuánto dura?",
+   "cps": 14
+  },
+  {
+   "accion": "clic",
+   "selector": "button:has-text('Enviar')"
+  },
+  {
+   "accion": "mover",
+   "x": 200,
+   "y": 380,
+   "seg": 0.8
   },
   {
    "accion": "esperar",
    "seg": 2.0
   },
   {
-   "accion": "scroll",
-   "y": 2030,
-   "seg": 1.3
-  },
-  {
-   "accion": "esperar",
+   "accion": "mover",
+   "x": 235,
+   "y": 425,
    "seg": 0.6
   },
   {
-   "accion": "escribir",
-   "selector": "input[placeholder*='regunta']",
-   "texto": "¿Cuánto cuesta el tinte y cuánto dura?",
-   "cps": 13
-  },
-  {
-   "accion": "clic",
-   "selector": "button:has-text('Enviar')"
+   "accion": "esperar",
+   "seg": 2.4
   },
   {
    "accion": "esperar_selector",
@@ -69,19 +94,39 @@
    "seg": 25
   },
   {
-   "accion": "esperar",
-   "seg": 0.5
-  },
-  {
    "accion": "zoom",
    "nivel": 1.12,
-   "seg": 0.7,
+   "seg": 1.2,
    "x": 195,
    "y": 340
   },
   {
+   "accion": "mover",
+   "x": 150,
+   "y": 400,
+   "seg": 0.8
+  },
+  {
+   "accion": "zoom",
+   "nivel": 1.22,
+   "seg": 1.4,
+   "x": 195,
+   "y": 380
+  },
+  {
+   "accion": "mover",
+   "x": 260,
+   "y": 360,
+   "seg": 0.8
+  },
+  {
+   "accion": "zoom",
+   "nivel": 1.0,
+   "seg": 1.2
+  },
+  {
    "accion": "esperar",
-   "seg": 2.6
+   "seg": 0.6
   }
  ]
 }

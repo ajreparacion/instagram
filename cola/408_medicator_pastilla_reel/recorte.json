@@ -1,0 +1,64 @@
+{
+ "_nota": "Qué tramos de la grabación real del Centro (VideoMezcla medicator, formato vertical, pista de vídeo) forman demo.mp4. Se regenera con: python3 herramientas/recorte_centro.py cola/408_medicator_pastilla_reel/recorte.json cola/408_medicator_pastilla_reel/demo.mp4",
+ "origen": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/videos/pistas/medicator-vertical-video.mp4",
+ "fondo": "#DFF3EC",
+ "pantalla_origen": [
+  190,
+  203,
+  700,
+  1512
+ ],
+ "segmentos": [
+  {
+   "inicio": 12.8,
+   "fin": 15.4,
+   "y": 300
+  },
+  {
+   "inicio": 7.2,
+   "fin": 10.4,
+   "y": 364,
+   "zoom": [
+    1.0,
+    1.08
+   ],
+   "foco": [
+    0.5,
+    0.55
+   ]
+  },
+  {
+   "inicio": 10.4,
+   "fin": 13.6,
+   "y": 300
+  },
+  {
+   "inicio": 13.6,
+   "fin": 15.4,
+   "dur": 3.0,
+   "y": 300,
+   "zoom": [
+    1.0,
+    1.25
+   ],
+   "foco": [
+    0.5,
+    0.44
+   ]
+  },
+  {
+   "inicio": 15.4,
+   "fin": 17.6,
+   "dur": 4.6,
+   "y": 300,
+   "zoom": [
+    1.0,
+    1.12
+   ],
+   "foco": [
+    0.5,
+    0.42
+   ]
+  }
+ ]
+}
