@@ -22,5 +22,10 @@
   },
   "portada_ms": 0,
   "motor_voz": "chatterbox",
-  "asset": "509_jambo_web_como_va_lo_mio.mp4"
+  "asset": "509_jambo_web_como_va_lo_mio.mp4",
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "Consultoría gratuita y presupuesto sin compromiso de web a medida",
+    "paso_embudo": "alcance → visita al perfil (enlace en bio)"
+  }
 }
