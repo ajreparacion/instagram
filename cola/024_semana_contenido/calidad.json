@@ -1,11 +1,12 @@
 {
  "aprobado": false,
  "nota": 84,
- "fecha": "2026-11-10T11:55Z",
+ "fecha": "2026-11-12T15:10Z",
+ "revisado_por": "agente de CALIDAD (12/11, pasada de las 15:40)",
  "motivos": [
-  "Cierre antiguo «Escríbeme IDEA por privado» en voz, pantalla y texto del post (la directiva del 10/11 00:00 lo prohíbe).",
-  "Bloqueo A1: huecos de voz > 1,5 s con solo música: [[5.3, 7.45], [9.7, 12.45], [15.35, 18.25]]."
+  "Sin bloqueos, pero no llega a 90: es el caso más flojo de la serie. El resultado son tres contadores (3 planificados, 2 publicados, 4 libres) que no resuelven nada a quien publica sin plan; la escena del mensaje dura 5,8 s con la voz acabada a los 4 s (hueco de 1,3 s, al límite de A1); y de 20,7 s, 5,2 s son el cierre.",
+  "Puntos: gancho 25/30, espina 16/20, retención 16/20, enviar-guardar 12/15, exactitud 10/10, pie 4/5 = 83-84."
  ],
- "como_arreglarlo": "Calidad ya ha corregido guion.json y post.json (cierre de la directiva y duraciones de tramo) y ha puesto renderizado:false; el ciclo lo rehace con la voz genérica y Calidad vuelve a revisar el render (nota esperada ≥ 90 si no quedan huecos > 1,5 s). La θ/seseo de la voz Kokoro no es medible sin oído.",
- "revisado_por": "agente de CALIDAD (10/11, pasada de las 12:50)"
+ "como_arreglarlo": "CREADOR: (1) en guion.json baja la «duracion» de la escena 1 a ≈ 4,2 s para quitar el hueco; (2) cambia el resultado: que la web proponga las ideas de los 7 días a partir de un tema (resultado visible: semana llena en 1 toque) o que avise del día que se queda sin contenido; (3) gancho con número («7 días de contenido en 1 mensaje»); (4) comentario_fijado, monetizacion y renderizado:false. Si no se mejora el resultado, mejor retirarlo que gastar un hueco.",
+ "comentario": "Render del 10/11 medido entero: 1080x1920 H.264+AAC, -14,0 a -14,2 LUFS, pico -1,4 dBFS, 0 muestras recortadas. El MP4 lleva solo la voz (la música la pone audio_ig al publicar): huecos de voz ≤ 1,3 s (A1 ok). Voz Chatterbox es-es sin voz del dueño: misma voz en todas las escenas (tono 122-153 Hz, nivel ±1,5 dB entre escenas), entonación viva (desviación ≈ 4 semitonos, no plana), 1,8-3,2 palabras/s. El seseo/θ NO se puede comprobar de oído desde la nube ni con reconocedor (descarga del modelo bloqueada): queda como límite de esta revisión. 12 fotogramas + fotograma 0 y final revisados; importes de pantalla recalculados a mano y correctos; cierre único en voz y pantalla; sin «comenta X»; sin marcas."
 }

@@ -1,14 +1,7 @@
 {
- "aprobado": false,
- "nota": 84,
- "fecha": "2026-11-10T10:35Z",
- "motivos": [
-  "Directiva del 10/11 00:00: fuera el cierre «comenta/escríbeme X» y cierre único «Prueba gratuita · sin tarjeta · sin compromiso». La última diapositiva aún dice «Escríbeme IDEA por privado» y el texto del post conserva el cierre antiguo."
- ],
- "como_arreglarlo": "Mejora cambia la caja «Escríbeme IDEA por privado» de herramientas/demo_app.py (slide_cierre y escena de cierre del reel) por «Prueba gratuita · sin tarjeta · sin compromiso» (ver peticiones_mejora.md 10/11); después se pone «renderizado»:false (reels) o se regeneran las diapositivas y Calidad vuelve a revisar. Contenido y datos ya estaban bien: la nota anterior era 90.",
- "revisado_por": "agente de CALIDAD (10/11, pasada de las 11:30)",
- "anterior": {
-  "aprobado": true,
-  "nota": 90
- }
+ "aprobado": true,
+ "nota": 90,
+ "fecha": "2026-11-12T15:10Z",
+ "revisado_por": "agente de CALIDAD (12/11, pasada de las 15:40)",
+ "comentario": "Carrusel de valor (7 diapositivas 1080x1350) revisado con las diapositivas regeneradas el 10/11 18:49: la última ya lleva «Prueba gratuita · sin tarjeta · sin compromiso» y el pie acaba con la frase de la directiva, sin «comenta/escríbeme X». Portada con pregunta, 4 usos con el prompt copiable, regla de seguridad y «Guárdalo para tu equipo» (guardable). Sin marcas ni datos. En carrusel el escaparate es válido (v8-B2). Se recupera la nota previa (90). El Estratega lo tiene aparcado el 31/12: queda aprobado y disponible para un hueco libre de carrusel."
 }

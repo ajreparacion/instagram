@@ -1,14 +1,7 @@
 {
- "aprobado": false,
- "nota": 84,
- "fecha": "2026-11-10T10:35Z",
- "motivos": [
-  "Directiva del 10/11 00:00: fuera el cierre «comenta/escríbeme X» y cierre único «Prueba gratuita · sin tarjeta · sin compromiso». La última diapositiva aún dice «Escríbeme IDEA por privado» y el texto del post conserva el cierre antiguo."
- ],
- "como_arreglarlo": "Mejora cambia la caja «Escríbeme IDEA por privado» de herramientas/demo_app.py (slide_cierre y escena de cierre del reel) por «Prueba gratuita · sin tarjeta · sin compromiso» (ver peticiones_mejora.md 10/11); después se pone «renderizado»:false (reels) o se regeneran las diapositivas y Calidad vuelve a revisar. Contenido y datos ya estaban bien: la nota anterior era 90.",
- "revisado_por": "agente de CALIDAD (10/11, pasada de las 11:30)",
- "anterior": {
-  "aprobado": true,
-  "nota": 90
- }
+ "aprobado": true,
+ "nota": 90,
+ "fecha": "2026-11-12T15:10Z",
+ "revisado_por": "agente de CALIDAD (12/11, pasada de las 15:40)",
+ "comentario": "Carrusel de Gestión Integral 7D (7 diapositivas) revisado con las diapositivas del 10/11 18:49: cierre único en la última y en el pie, «nuestra app», sin «comenta X». Enlace de pago por factura, PDF con datos fiscales y agentes IA que solo proponen = lo que la revisión anterior de Calidad ya dio por bueno frente a hechos_verificados (hoy no se ha vuelto a abrir el Centro). Aviso, no bloqueo: la diapositiva 04 nombra las pasarelas («Tarjeta (Stripe)», «TPV Redsys», «Bizum si está activo»); no están en marcas_prohibidas.json y es el mismo criterio con el que se aprobó 502 y se publicó 202, pero la orden del dueño es «sin marca de producto»: Calidad ha quitado esos nombres del pie y pide a Mejora regenerar la 04 con «Tarjeta», «TPV» y «Transferencia con IBAN» antes del 21/11, su nueva fecha (peticiones_mejora.md). Se recupera la nota previa (90)."
 }

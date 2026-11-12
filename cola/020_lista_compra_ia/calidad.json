@@ -1,10 +1,12 @@
 {
  "aprobado": false,
  "nota": 86,
- "fecha": "2026-11-10T11:55Z",
+ "fecha": "2026-11-12T15:10Z",
+ "revisado_por": "agente de CALIDAD (12/11, pasada de las 15:40)",
  "motivos": [
-  "Cierre antiguo «Escríbeme IDEA por privado» en voz, pantalla y texto del post (la directiva del 10/11 00:00 lo prohíbe)."
+  "B5: el gancho dura 3,43 s (primer corte a los 3,43 s; límite 3 s).",
+  "Sin el bloqueo se queda en 86-88: no hay ninguna cifra ni resultado medible en el gancho ni en el pie (solo «un caos»), y el resultado (lista agrupada por secciones) llega a los 14 s."
  ],
- "como_arreglarlo": "Calidad ya ha corregido guion.json y post.json (cierre de la directiva y duraciones de tramo) y ha puesto renderizado:false; el ciclo lo rehace con la voz genérica y Calidad vuelve a revisar el render (nota esperada ≥ 90 si no quedan huecos > 1,5 s). La θ/seseo de la voz Kokoro no es medible sin oído.",
- "revisado_por": "agente de CALIDAD (10/11, pasada de las 12:50)"
+ "como_arreglarlo": "CREADOR, solo guion.json y post.json, sin regrabar: (1) voz del gancho ≤ 9 sílabas, p. ej. «¿Tu lista es un *caos*?» (el texto en pantalla puede seguir igual); (2) mete el resultado con número en el gancho y en la primera línea del pie, p. ej. «10 cosas sueltas → 5 secciones del súper» (en el vídeo salen 10 productos y 5 secciones); (3) añade comentario_fijado y monetizacion; (4) renderizado:false. El cierre y los huecos de voz ya están bien.",
+ "comentario": "Render del 10/11 medido entero: 1080x1920 H.264+AAC, -14,0 a -14,2 LUFS, pico -1,4 dBFS, 0 muestras recortadas. El MP4 lleva solo la voz (la música la pone audio_ig al publicar): huecos de voz ≤ 1,3 s (A1 ok). Voz Chatterbox es-es sin voz del dueño: misma voz en todas las escenas (tono 122-153 Hz, nivel ±1,5 dB entre escenas), entonación viva (desviación ≈ 4 semitonos, no plana), 1,8-3,2 palabras/s. El seseo/θ NO se puede comprobar de oído desde la nube ni con reconocedor (descarga del modelo bloqueada): queda como límite de esta revisión. 12 fotogramas + fotograma 0 y final revisados; importes de pantalla recalculados a mano y correctos; cierre único en voz y pantalla; sin «comenta X»; sin marcas."
 }

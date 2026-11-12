@@ -1,11 +1,7 @@
 {
- "aprobado": false,
- "nota": 84,
- "fecha": "2026-11-10T11:55Z",
- "motivos": [
-  "Cierre antiguo «Escríbeme IDEA por privado» en voz, pantalla y texto del post (la directiva del 10/11 00:00 lo prohíbe).",
-  "Bloqueo A1: huecos de voz > 1,5 s con solo música: [[5.4, 7.05]]."
- ],
- "como_arreglarlo": "Calidad ya ha corregido guion.json y post.json (cierre de la directiva y duraciones de tramo) y ha puesto renderizado:false; el ciclo lo rehace con la voz genérica y Calidad vuelve a revisar el render (nota esperada ≥ 90 si no quedan huecos > 1,5 s). La θ/seseo de la voz Kokoro no es medible sin oído.",
- "revisado_por": "agente de CALIDAD (10/11, pasada de las 12:50)"
+ "aprobado": true,
+ "nota": 90,
+ "fecha": "2026-11-12T15:10Z",
+ "revisado_por": "agente de CALIDAD (12/11, pasada de las 15:40)",
+ "comentario": "v8.1 sobre el render del 10/11 21:06 (27,2 s). Gancho pregunta de 6 palabras, 2,8 s, con la app y el total (646,56 € al año) ya detrás en el fotograma 0; espina «le pedí a una IA» + cálculo a la vista; resultado claro (quitar el gimnasio: 287,76 € al año, «Ahorras 358,80 € al año»); sumas comprobadas (12,99 + 10,99 + 29,90 = 53,88 €/mes = 646,56 €/año). Frase para enviar en el pie, comentario fijado añadido, cierre único, 5 hashtags. Puntos: gancho 27/30, espina 18/20, retención 17/20, enviar-guardar 13/15, exactitud 10/10, pie 5/5. Descuentos: plano único de 11,9 s en el tramo de apuntar (hay cambio continuo en pantalla y de frase, no bloquea), frase de envío solo en el pie y destello blanco de 2 fotogramas en el fotograma 0 (pedido a Mejora). Render del 10/11 medido entero: 1080x1920 H.264+AAC, -14,0 a -14,2 LUFS, pico -1,4 dBFS, 0 muestras recortadas. El MP4 lleva solo la voz (la música la pone audio_ig al publicar): huecos de voz ≤ 1,3 s (A1 ok). Voz Chatterbox es-es sin voz del dueño: misma voz en todas las escenas (tono 122-153 Hz, nivel ±1,5 dB entre escenas), entonación viva (desviación ≈ 4 semitonos, no plana), 1,8-3,2 palabras/s. El seseo/θ NO se puede comprobar de oído desde la nube ni con reconocedor (descarga del modelo bloqueada): queda como límite de esta revisión. 12 fotogramas + fotograma 0 y final revisados; importes de pantalla recalculados a mano y correctos; cierre único en voz y pantalla; sin «comenta X»; sin marcas. Falta avance_siguiente: lo pone el Estratega al fijar qué va detrás."
 }

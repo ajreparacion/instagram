@@ -19,8 +19,8 @@
   },
   "publico": "Ocio, humor y viajes",
   "formato": "Una idea, una app",
-  "_nota_calidad": "10/11 Calidad: cierre cambiado al de la directiva (prueba gratuita) en guion y post, quitada la automatización IDEA; duraciones de tramo ajustadas para evitar huecos de voz > 1,5 s. renderizado:false para que el ciclo lo rehaga.",
-  "renderizado": "2026-11-10T20:51:59+00:00",
+  "_nota_calidad": "12/11 Calidad: voz del gancho acortada a «Nadie quiere hacer la cuenta» (la escena del gancho duraba 3,93 s; B5 pide el primer corte antes de 3 s); renderizado:false para que el ciclo lo rehaga. Añadidos comentario_fijado y monetizacion. La fecha (aparcado el 31/12 por el Estratega) no se toca.",
+  "renderizado": false,
   "nota_mejora": "10/11/2026 (2.ª ejecución): rendido con Piper por error de instalación; se rehace con «Chatterbox España» (es-es sin referencia de persona real). Sin voz del dueño.",
   "audio_ig": {
     "audio_id": "583674661052146",
@@ -31,5 +31,11 @@
     "mood": "app"
   },
   "motor_voz": "chatterbox",
-  "asset": "018_dividir_cuenta_ia.mp4"
+  "asset": "018_dividir_cuenta_ia.mp4",
+  "comentario_fijado": "¿Quién de tu grupo acaba haciendo siempre la cuenta?",
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso (app a medida)",
+    "paso_embudo": "alcance a no seguidores -> visita_perfil"
+  }
 }

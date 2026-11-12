@@ -5,8 +5,14 @@
  "renderizado": "no aplica (carrusel)",
  "publico": "Pequeños negocios y autónomos de cualquier sector",
  "app": null,
- "fuentes": [
+ "_fuentes": [
   "Técnicas de redacción de prompts recogidas en las guías públicas de OpenAI (Prompt engineering), Anthropic (Prompt engineering overview) y Google (guía de prompts de Gemini): dar contexto, indicar formato, iterar y comprobar las respuestas. No se citan menús, botones ni precios.",
   "Aviso de que la IA puede cometer errores: ChatGPT, Claude y Gemini lo muestran en su propia interfaz."
- ]
+ ],
+ "monetizacion": {
+  "objetivo": "visita_perfil",
+  "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
+  "paso_embudo": "alcance a no seguidores -> visita_perfil"
+ },
+ "_nota_calidad": "12/11 Calidad: aprobado 90 con las diapositivas regeneradas el 10/11 18:49 (cierre único). Sigue aparcado el 31/12 por el Estratega: ya puede ocupar un hueco libre de carrusel (17:10)."
 }

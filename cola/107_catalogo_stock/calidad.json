@@ -1,14 +1,7 @@
 {
- "aprobado": false,
- "nota": 84,
- "fecha": "2026-11-10T10:35Z",
- "motivos": [
-  "Directiva del 10/11 00:00: fuera el cierre «comenta/escríbeme X» y cierre único «Prueba gratuita · sin tarjeta · sin compromiso». La última diapositiva aún dice «Escríbeme IDEA por privado» y el texto del post conserva el cierre antiguo."
- ],
- "como_arreglarlo": "Mejora cambia la caja «Escríbeme IDEA por privado» de herramientas/demo_app.py (slide_cierre y escena de cierre del reel) por «Prueba gratuita · sin tarjeta · sin compromiso» (ver peticiones_mejora.md 10/11); después se pone «renderizado»:false (reels) o se regeneran las diapositivas y Calidad vuelve a revisar. Contenido y datos ya estaban bien: la nota anterior era 90.",
- "revisado_por": "agente de CALIDAD (10/11, pasada de las 11:30)",
- "anterior": {
-  "aprobado": true,
-  "nota": 90
- }
+ "aprobado": true,
+ "nota": 90,
+ "fecha": "2026-11-12T15:10Z",
+ "revisado_por": "agente de CALIDAD (12/11, pasada de las 15:40)",
+ "comentario": "Carrusel de Gestión Integral 7D (7 diapositivas) revisado con las diapositivas del 10/11 18:49: cierre único en la última y en el pie, «nuestra app» (A6), sin «comenta X». Lo afirmado (importar catálogo con extracción por IA y aviso de revisar, albarán numerado que descuenta stock, factura que hereda líneas, IVA y retención en PDF) es lo que la revisión anterior de Calidad ya dio por bueno frente a hechos_verificados (hoy no se ha vuelto a abrir el Centro). «Excel» aparece como formato de archivo (no está en marcas_prohibidas.json; mejor «hoja de cálculo» la próxima vez). Se recupera la nota previa (90)."
 }

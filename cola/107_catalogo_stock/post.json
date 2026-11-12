@@ -7,5 +7,11 @@
  "app": "Gestión Integral 7D",
  "fuentes": [
   "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Gestión Integral 7D» (estado activo, actualizada 8/11/2026): hechos_verificados (importación de catálogo desde Excel, CSV, PDF o imagen con extracción por IA; albarán numerado que descuenta stock; factura que hereda líneas, IVA por línea y retención; PDF con datos fiscales de empresa y cliente) y eslogan."
- ]
+ ],
+ "monetizacion": {
+  "objetivo": "clic_enlace",
+  "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
+  "paso_embudo": "visita_perfil -> clic_enlace"
+ },
+ "_nota_calidad": "12/11 Calidad: aprobado 90 con las diapositivas regeneradas el 10/11 18:49 (cierre único)."
 }
