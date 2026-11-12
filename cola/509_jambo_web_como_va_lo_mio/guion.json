@@ -1,178 +1,178 @@
 {
- "titulo": "El Jambo que sabe y las IAs · ep. 23",
- "semilla": 3023,
- "modo": "sketch",
- "serie": "El Jambo que sabe y las IAs",
- "episodio": 23,
- "negocio": "cliente de un taller",
- "gancho_corto": "«¿CÓMO VA LO MÍO?»",
- "portada_texto": "POV: llamas al taller por quinta vez",
- "musica": true,
- "app": "Webs a medida Neogest Lab",
- "contador": {
-  "texto": "Veces que se lo ha pasado a la Jupillo",
-  "inicio": 22,
-  "valor": 23
- },
- "mensaje_final": {
-  "cifra": "Esperar sin saber es lo peor de una reparación.",
-  "fuente": ""
- },
- "escenas": [
-  {
-   "estilo": "gancho",
-   "hablante": "jambo",
-   "voz": "Cinco llamadas. ¡*¿Cómo va lo mío?*!",
-   "texto": "POV: llamas al taller por quinta vez",
-   "dibujo": {
-    "personajes": [
-     "jambo",
-     "tramites"
-    ],
-    "acciones": {
-     "jambo": "desespera",
-     "tramites": "habla"
-    }
-   },
-   "contar": false
+  "titulo": "El Jambo que sabe y las IAs · ep. 23",
+  "semilla": 3023,
+  "modo": "sketch",
+  "serie": "El Jambo que sabe y las IAs",
+  "episodio": 23,
+  "negocio": "cliente de un taller",
+  "gancho_corto": "«¿CÓMO VA LO MÍO?»",
+  "portada_texto": "POV: llamas al taller por quinta vez",
+  "musica": true,
+  "app": "Webs a medida Neogest Lab",
+  "contador": {
+    "texto": "Veces que se lo ha pasado a la Jupillo",
+    "inicio": 22,
+    "valor": 23
   },
-  {
-   "estilo": "gag",
-   "hablante": "tramites",
-   "voz": "Su orden está en cola. Rellene el impreso 27-B.",
-   "texto": "La Trámites",
-   "dibujo": {
-    "personajes": [
-     "jambo",
-     "tramites"
-    ],
-    "acciones": {
-     "jambo": "desespera",
-     "tramites": "habla"
-    }
-   }
+  "mensaje_final": {
+    "cifra": "Esperar sin saber es lo peor de una reparación.",
+    "fuente": ""
   },
-  {
-   "estilo": "remate",
-   "hablante": "tramites",
-   "voz": "",
-   "texto": "",
-   "dibujo": {
-    "personajes": [
-     "jambo",
-     "tramites"
-    ],
-    "acciones": {
-     "jambo": "desespera",
-     "tramites": "habla"
+  "escenas": [
+    {
+      "estilo": "gancho",
+      "hablante": "jambo",
+      "voz": "Cinco llamadas. ¡*¿Cómo va lo mío?*!",
+      "texto": "POV: llamas al taller por quinta vez",
+      "dibujo": {
+        "personajes": [
+          "jambo",
+          "tramites"
+        ],
+        "acciones": {
+          "jambo": "desespera",
+          "tramites": "habla"
+        }
+      },
+      "contar": false
     },
-    "efecto": "sello",
-    "efecto_t": 0.7,
-    "sello_texto": "EN COLA"
-   },
-   "duracion": 2.4
-  },
-  {
-   "estilo": "delega",
-   "hablante": "jambo",
-   "voz": "Que lo haga la Jupillo.",
-   "texto": "",
-   "dibujo": {
-    "personajes": [
-     "jambo",
-     "jupillo"
-    ],
-    "acciones": {
-     "jambo": "delega",
-     "jupillo": "habla"
+    {
+      "estilo": "gag",
+      "hablante": "tramites",
+      "voz": "Su orden está en cola. Rellene el impreso 27-B.",
+      "texto": "La Trámites",
+      "dibujo": {
+        "personajes": [
+          "jambo",
+          "tramites"
+        ],
+        "acciones": {
+          "jambo": "desespera",
+          "tramites": "habla"
+        }
+      }
+    },
+    {
+      "estilo": "remate",
+      "hablante": "tramites",
+      "voz": "",
+      "texto": "",
+      "dibujo": {
+        "personajes": [
+          "jambo",
+          "tramites"
+        ],
+        "acciones": {
+          "jambo": "desespera",
+          "tramites": "habla"
+        },
+        "efecto": "sello",
+        "efecto_t": 0.7,
+        "sello_texto": "EN COLA"
+      },
+      "duracion": 2.4
+    },
+    {
+      "estilo": "delega",
+      "hablante": "jambo",
+      "voz": "Que lo haga la Jupillo.",
+      "texto": "",
+      "dibujo": {
+        "personajes": [
+          "jambo",
+          "jupillo"
+        ],
+        "acciones": {
+          "jambo": "delega",
+          "jupillo": "habla"
+        }
+      },
+      "contar": true
+    },
+    {
+      "estilo": "gag",
+      "hablante": "jupillo",
+      "voz": "Número de orden y teléfono. Estado de tu reparación.",
+      "texto": "La Jupillo",
+      "dibujo": {
+        "personajes": [
+          "jupillo"
+        ],
+        "acciones": {
+          "jupillo": "habla"
+        }
+      }
+    },
+    {
+      "estilo": "gag",
+      "hablante": "jambo",
+      "voz": "Qué paciencia tengo. Soy un santo.",
+      "texto": "El Jambo",
+      "dibujo": {
+        "personajes": [
+          "jupillo",
+          "jambo"
+        ],
+        "acciones": {
+          "jupillo": "habla",
+          "jambo": "remata"
+        }
+      },
+      "cartel": "LLAMADAS: 5 · PACIENCIA: EL JAMBO"
+    },
+    {
+      "estilo": "gag",
+      "hablante": "jupillo",
+      "voz": "Cinco llamadas. Santo, dice.",
+      "texto": "La Jupillo",
+      "dibujo": {
+        "personajes": [
+          "jupillo"
+        ],
+        "acciones": {
+          "jupillo": "habla"
+        }
+      }
+    },
+    {
+      "estilo": "mensaje",
+      "hablante": null,
+      "voz": "Esperar sin saber *es lo peor* de una reparación.",
+      "texto": "Esperar sin saber es lo peor de una reparación.",
+      "dibujo": {
+        "personajes": [],
+        "accion": "serio"
+      }
+    },
+    {
+      "estilo": "mensaje",
+      "hablante": null,
+      "voz": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
+      "texto": "En la vida real no hay Jupillo. Hay webs a medida, como ajreparacion.com, con consulta de estado. Más asequibles de lo que piensas.",
+      "dibujo": {
+        "personajes": [],
+        "accion": "serio"
+      }
+    },
+    {
+      "estilo": "cierre",
+      "hablante": null,
+      "voz": "Mándaselo a quien aún no tiene web.",
+      "texto": "Consultoría gratuita · presupuesto sin compromiso",
+      "dibujo": {
+        "personajes": [],
+        "accion": "serio"
+      }
     }
-   },
-   "contar": true
-  },
-  {
-   "estilo": "gag",
-   "hablante": "jupillo",
-   "voz": "Número de orden y teléfono. Estado de tu reparación.",
-   "texto": "La Jupillo",
-   "dibujo": {
+  ],
+  "dibujo": {
     "personajes": [
-     "jupillo"
-    ],
-    "acciones": {
-     "jupillo": "habla"
-    }
-   }
+      "jambo",
+      "jupillo",
+      "pelota",
+      "bola",
+      "tramites"
+    ]
   },
-  {
-   "estilo": "gag",
-   "hablante": "jambo",
-   "voz": "Qué paciencia tengo. Soy un santo.",
-   "texto": "El Jambo",
-   "dibujo": {
-    "personajes": [
-     "jupillo",
-     "jambo"
-    ],
-    "acciones": {
-     "jupillo": "habla",
-     "jambo": "remata"
-    }
-   },
-   "cartel": "LLAMADAS: 5 · PACIENCIA: EL JAMBO"
-  },
-  {
-   "estilo": "gag",
-   "hablante": "jupillo",
-   "voz": "Cinco llamadas. Santo, dice.",
-   "texto": "La Jupillo",
-   "dibujo": {
-    "personajes": [
-     "jupillo"
-    ],
-    "acciones": {
-     "jupillo": "habla"
-    }
-   }
-  },
-  {
-   "estilo": "mensaje",
-   "hablante": null,
-   "voz": "Esperar sin saber *es lo peor* de una reparación.",
-   "texto": "Esperar sin saber es lo peor de una reparación.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
-   }
-  },
-  {
-   "estilo": "mensaje",
-   "hablante": null,
-   "voz": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
-   "texto": "En la vida real no hay Jupillo. Hay webs a medida, como la de ajreparacion.com, donde se consulta el estado con el número de orden. Más asequibles de lo que piensas.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
-   }
-  },
-  {
-   "estilo": "cierre",
-   "hablante": null,
-   "voz": "Mándaselo a quien aún no tiene web.",
-   "texto": "Consultoría gratuita · presupuesto sin compromiso",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
-   }
-  }
- ],
- "dibujo": {
-  "personajes": [
-   "jambo",
-   "jupillo",
-   "pelota",
-   "bola",
-   "tramites"
-  ]
- },
- "_guion": "11/11/2026 v9 (equipo/formula_v9_humor_negro_producto.md): fórmula del cambio 40 + mensaje serio + pivote de producto (una función de hechos_verificados) + cierre único."
+  "_guion": "11/11/2026 v9 (equipo/formula_v9_humor_negro_producto.md): fórmula del cambio 40 + mensaje serio + pivote de producto (una función de hechos_verificados) + cierre único."
 }

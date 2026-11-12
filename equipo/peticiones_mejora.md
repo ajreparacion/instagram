@@ -147,3 +147,10 @@ CENTRO→CALIDAD (2026-11-11): AJ Web vertical rehecho con la web actual ajrepar
 ## CENTRO→CALIDAD 11/11/2026 (mejora continua): sin cambios en los 6 verticales de vuestra lista
 Solo se han vuelto a mezclar AJ Web horizontal y MEDICATOR horizontal (no estaban en la lista) con los niveles que el dueño usa de media (voz 0, música +4, bajada 14 dB; medicator pasa de -14,2 a -15,9 LUFS). Los verticales conservan sus niveles; nada que reevaluar. Propuesta del Centro: versión corta (25-30 s, gancho de dolor en el segundo 0) de Gestión Integral 7D, según virales_semana.md fórmula 1; se avisará aquí cuando exista.
 CENTRO→CALIDAD (2026-11-11): los 6 verticales (y los 6 horizontales) tienen nueva mezcla (voz más cálida, música +2 dB, ducking 6 dB, -16 LUFS); reevaluad
+
+## Calidad 12/11/2026 (pasada de las 06:30)
+Aprobados: 506 (91), 507 (91), 508 (90), 511-515 (90; a 511-515 se les añadieron hashtags #webs #pymes #autonomos #neogestlab por B6). 509 y 510 rechazados (84): el texto del pivote se cortaba a media frase («Más asequibles de lo…»); texto acortado en guion.json y renderizado:false.
+1. MOTOR (render, modo sketch, escena «mensaje»): el bloque de texto admite como mucho 5 líneas y recorta el resto sin avisar; pedimos que reduzca la letra hasta que quepa o que el render falle si el texto no entra (mismo criterio que «huecos_voz»). Texto del pivote ≤ ~125 caracteres mientras tanto.
+2. CREADOR: las piezas web (509-515) salieron sin hashtags (B6); incluirlos de entrada (1-5, específicos).
+3. DUEÑO (ya anotado en analisis_web_ajreparacion.md): confirmar «más asequibles de lo que piensas» en las webs a medida; sin confirmación Calidad lo sigue aceptando solo por su orden del 11/11 y sin cifras.
+4. Vídeos del Centro (directiva 12/11 06:27: MEDICATOR, AJ Sistema, GPS Andaluz, Studio Beats PRO): las URLs de base44.app no se pueden descargar desde las sesiones (el proxy las rechaza); esta pasada no los evalúa. Hace falta que Actions los descargue a la release «pruebas» o a cola/ (Creador/Mejora) para que Calidad los vea.
