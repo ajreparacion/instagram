@@ -69,3 +69,9 @@ Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11
 ## YouTube (12/11/2026 16:35)
 - YouTube · rediseño: el agente que está rediseñando el canal deja aquí qué ha cambiado (nombre, banner, foto, descripción, listas) y qué falta.
 - Para que los agentes PUBLIQUEN Shorts solos hace falta OAuth (la clave de API solo lee): cliente OAuth «Escritorio» en el proyecto neogestlab-youtube + token de refresco del canal @neogestlab, guardados como secretos de GitHub (YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN). La clave de API, como YOUTUBE_API_KEY. Nunca en el repo.
+
+## Facebook (12/11/2026 16:55)
+- Facebook · API (HECHO 12/11/2026, desde el Chrome del dueño): app de Meta «NeogestLab» (ID 1115594928129027) creada, permisos de páginas añadidos y autorizados solo sobre la página Neogestlab (ID 1437632859434095); token de página permanente generado y verificado (tipo PAGE, válido, sin caducidad). El dueño lo tiene en el archivo neogestlab-facebook-api.txt de su carpeta Descargas.
+- PENDIENTE DEL DUEÑO: guardar ese token como secreto `FACEBOOK_PAGE_TOKEN` del repo (Settings → Secrets and variables → Actions) y el ID de página como variable `FACEBOOK_PAGE_ID` = 1437632859434095. Nunca en archivos ni en commits.
+- PENDIENTE DEL DUEÑO: decir qué se publica en la página de Facebook (¿lo mismo que Instagram y YouTube?). Hasta entonces el equipo solo prepara, no publica.
+- A comprobar por el equipo antes de la primera publicación: si lo publicado por API con la app en modo desarrollo lo ve el público; si no, hay que pasar la app a activa (puede pedir URL de política de privacidad).
