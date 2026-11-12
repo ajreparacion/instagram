@@ -209,6 +209,16 @@ def grabar(spec, base_dir, rec):
                     cx, cy, bb = centro(p["selector"])
                     if not p.get("forzar"):   # nunca cortar el elemento por los lados: el zoom cabe en su ancho (+ margen)
                         nivel = max(1.0, min(nivel, vw / (bb["width"] + 24), vh / (bb["height"] + 24)))
+                        # 12/11/2026 (Calidad, 405: «el borde corta Saldo e Ingresos»): tampoco se cortan por los lados
+                        # los textos cortos vecinos (etiquetas, cifras, botones); se baja el nivel hasta que entren enteros.
+                        pedido = nivel
+                        try: cajas = page.evaluate(JS_TEXTOS)
+                        except Exception: cajas = []
+                        while nivel > 1.001 and textos_cortados(cajas, cx, cy, nivel, vw, vh):
+                            nivel = max(1.0, round(nivel - 0.05, 3))
+                        if nivel < pedido - 0.001:
+                            print("AVISO ENCUADRE: zoom a %s bajado de %.2f a %.2f para no cortar texto por los lados (\"forzar\": true lo impide)"
+                                  % (str(p.get("selector"))[:50], pedido, nivel))
                 else: cx, cy = float(p.get("x", vw / 2)), float(p.get("y", vh / 2))
                 zoom(cx, cy, nivel, seg); esperar(seg + 0.1)
             else:
@@ -267,6 +277,23 @@ def sprite_cursor(alto=46):
     d.polygon([(x + off, y + off) for x, y in P], fill=(255, 255, 255, 255), outline=(20, 20, 24, 255))
     d.line([(x + off, y + off) for x, y in P + [P[0]]], fill=(20, 20, 24, 255), width=2 * ss, joint="curve")
     return im.resize((im.width // ss, im.height // ss), Image.LANCZOS), (off // ss, off // ss)
+
+JS_TEXTOS = """() => { const out = []; const w = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT); let n;
+  while ((n = w.nextNode())) { if (!n.textContent.trim() || !n.parentElement) continue;
+    const st = getComputedStyle(n.parentElement); if (st.visibility === 'hidden' || parseFloat(st.opacity) < 0.1) continue;
+    const r = document.createRange(); r.selectNodeContents(n);
+    for (const b of r.getClientRects()) { if (b.width > 2 && b.height > 2) out.push([b.left, b.top, b.width, b.height]); } }
+  return out; }"""
+
+def textos_cortados(cajas, cx, cy, nivel, vw, vh):
+    """Numero de lineas de texto cortas (< 60 % del ancho) que el encuadre del zoom partiria por la izquierda o la derecha."""
+    rw, rh = vw / nivel, vh / nivel
+    x0 = min(max(cx - rw / 2, 0), vw - rw); y0 = min(max(cy - rh / 2, 0), vh - rh)
+    n = 0
+    for (x, y, w, h) in cajas:
+        if w >= 0.6 * vw or y + h <= y0 + 2 or y >= y0 + rh - 2: continue
+        if (x < x0 - 0.5 and x + w > x0 + 3) or (x + w > x0 + rw + 0.5 and x < x0 + rw - 3): n += 1
+    return n
 
 def camara_en(t, cams, vw, vh):
     """Rectangulo visible (x0, y0, ancho, alto) del viewport en el instante t, con transiciones suaves entre zooms."""

@@ -31,6 +31,12 @@ jobs:
           python3 grabar_pantalla.py plantilla/ejemplo_grabacion.json plantilla/ejemplo_grabacion.mp4
           python3 hacer_reel.py plantilla/ejemplo_guion_plantilla.json /tmp/plantilla/plantilla_muestra.mp4
           cp plantilla/ejemplo_grabacion.mp4 /tmp/plantilla/plantilla_grabacion.mp4
+          # 12/11/2026: empuje de cámara en tramos quietos (mismo guion con y sin empuje; freezedetect mide la diferencia)
+          python3 hacer_reel.py plantilla/ejemplo_guion_quieto.json /tmp/plantilla/plantilla_quieto_con_empuje.mp4 | grep -E "empuje|AVISO|OK" || true
+          python3 -c "import json; g=json.load(open('plantilla/ejemplo_guion_quieto.json')); g['empuje']=False; json.dump(g, open('plantilla/_quieto_sin.json','w'))"
+          python3 hacer_reel.py plantilla/_quieto_sin.json /tmp/plantilla/plantilla_quieto_sin_empuje.mp4 | grep -E "empuje|AVISO|OK" || true
+          rm -f /tmp/plantilla/*_portada.jpg plantilla/_quieto_sin.json
+          for f in con sin; do echo "== imagen quieta >= 1,5 s, $f empuje"; ffmpeg -hide_banner -i /tmp/plantilla/plantilla_quieto_${f}_empuje.mp4 -vf freezedetect=n=-55dB:d=1.5 -an -f null - 2>&1 | grep -oE "freeze_(start|duration): [0-9.]+" | paste - - ; done
           ffprobe -v error -show_entries stream=codec_name,width,height,r_frame_rate:format=duration -of default=nw=1 /tmp/plantilla/plantilla_muestra.mp4
       - name: Subir a la release "pruebas"
         env:
