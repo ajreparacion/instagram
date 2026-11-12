@@ -65,3 +65,7 @@ Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11
 - Temática: 19 publicaciones, ninguna fuera de la temática (apps de Neogest Lab, trucos de IA y El Jambo). No queda nada de misterios.
 - A decidir por el dueño (no se ha borrado ni archivado nada): hay carruseles repetidos del 8/11 («Deja de pedirle así las cosas a la IA» ×3, «¿Pasas los presupuestos al Excel por la noche?» ×3, «5 tareas pesadas…» ×2) y el reel de AJ Web del 10/11 ×2; convendría archivar los duplicados y dejar uno de cada. Varias piezas del 8-9/11 aún cierran con «Escríbeme IDEA por privado» (cierre anterior a la orden del 10/11).
 - Segunda pasada el 12/11 (ejecución de prueba): sigue sin haber navegador en la sesión y la directiva no ha cambiado, así que tampoco hubo cambios en Instagram. Hay 4 historias activas (11-12/11) publicadas por el ciclo; Buzzfy no deja ver su contenido ni las destacadas, que quedan para la primera ejecución con Chrome.
+
+## YouTube (12/11/2026 16:35)
+- YouTube · rediseño: el agente que está rediseñando el canal deja aquí qué ha cambiado (nombre, banner, foto, descripción, listas) y qué falta.
+- Para que los agentes PUBLIQUEN Shorts solos hace falta OAuth (la clave de API solo lee): cliente OAuth «Escritorio» en el proyecto neogestlab-youtube + token de refresco del canal @neogestlab, guardados como secretos de GitHub (YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN). La clave de API, como YOUTUBE_API_KEY. Nunca en el repo.
