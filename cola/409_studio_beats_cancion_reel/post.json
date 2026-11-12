@@ -20,5 +20,14 @@
   "_comprobado": "12/11/2026: hechos_verificados del Producto «Studio Beats PRO» en el Centro (consultado hoy, estado activo): «Flujo guiado «Crea tu canción en 4 pasos»», «Beat instantáneo con batería, bajo, acordes y melodía eligiendo estilo, tono y modo, con «Otra idea»», ««Terminar canción»: afinación opcional, mezcla y master automáticos con medida de LUFS y pico» y «Exportación WAV 16/24-bit, FLAC, MP3 320/192 kbps y stems». Visto en la pista de vídeo del Centro (VideoMezcla studio-beats-pro, formato vertical, 1080x1920): «Crea tu canción en 4 pasos», «La base» con estilo trap, tono y modo menor, botón «Generar beat», «Sonido profesional» con «Terminar canción», «Escucha y comparte» con «Parar» y «Descargar MP3». La voz solo dice eso. NO se afirma: beats con IA (desactivada), «libres de derechos», uso sin cuenta, calidad de estudio ni resultados de streaming.",
   "_nota_creador": "12/11/2026. Un caso: de la base al MP3. Función más vistosa verificada para el segundo 0: el final del flujo («Escucha y comparte» con el botón «Descargar MP3»), así el resultado está ya en el fotograma 0 y el resto cuenta cómo se llega. demo.mp4 (18,7 s) sale de herramientas/recorte_centro.py con recorte.json de esta carpeta (solo la pantalla del móvil, sin rótulos del Centro; mp4 del Centro intacto). Seis escenas de 2,8-3,4 s con corte antes de 3 s; frase de envío y cierre único; sin «comenta X», sin precios. Voz genérica de España (chatterbox del pipeline, nunca la del dueño). La pista usa el modo oscuro de la app sobre fondo lavanda claro de la plantilla. Tiempos de demo.mp4: resultado 0-2,8; estilo y tono 2,8-5,8; Generar beat 5,8-9,1; Terminar canción 9,1-12,3; descarga 12,3-15,3; secuenciador 15,3-18,7 (solo imagen para la frase de envío; no se narra).",
   "motor_voz": "chatterbox",
-  "renderizado": false
+  "renderizado": "2026-11-12T18:03:40+00:00",
+  "audio_ig": {
+    "audio_id": "1174983090781223",
+    "titulo": "Float In The Waves (Instrumental) · Company Money",
+    "origen": "biblioteca de Instagram (colección libre de derechos)",
+    "audio_volume": 0.5,
+    "video_volume": 1.0,
+    "mood": "app"
+  },
+  "asset": "409_studio_beats_cancion_reel.mp4"
 }
