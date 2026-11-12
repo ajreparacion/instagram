@@ -12,7 +12,9 @@
    "commit": "2fa2cb311b94f99fd8cb343668cd7d085e7788ba^",
    "ruta": "cola/201_medicator_carrusel/slides",
    "huella": "34128af0f3ac38fe",
-   "estado": "pendiente"
+   "estado": "pendiente",
+   "errores": 1,
+   "ultimo_error": " has expired on Thursday, 12-Nov-26 10:00:00 PST. The current time is Thursday, 12-Nov-26 10:39:24 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":463,\"fbtrace_id\":\"AExKHgamQQBUZSOwrcb5f-o\"}}"
   },
   {
    "id": "101_errores_prompt",
