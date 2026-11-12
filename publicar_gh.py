@@ -1611,6 +1611,22 @@ def publicar_historia(cfg, carpeta, post):
     return {"media_id": mid, "tipo": "historia", "medio": "imagen" if imgs else "video", **extra}
 
 
+def publicar_en_youtube(video, post, nombre):
+    """Orden del dueño 12/11/2026: cada reel publicado en Instagram sale también como YouTube Short.
+    Nunca rompe la publicación de Instagram: cualquier fallo queda anotado en resultado.json["youtube"]."""
+    if post.get("youtube", {}).get("omitir"):
+        return {"estado": "omitido"}
+    try:
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "herramientas"))
+        import youtube
+        res = youtube.subir_short(video, post)
+        log(f"{nombre}: YouTube {res.get('estado')} {res.get('enlace', '')}")
+        return res
+    except Exception as e:
+        log(f"{nombre}: YouTube falló (Instagram sí publicado): {str(e)[-200:]}")
+        return {"estado": "error", "error": str(e)[-300:]}
+
+
 def publicar_pendientes(cfg):
     ahora = datetime.now(timezone.utc)
     sin_cdn = None  # si las imágenes no son públicas, carruseles e historias esperan sin gastar intentos
@@ -1660,6 +1676,7 @@ def publicar_pendientes(cfg):
             gh("release", "download", RELEASE, "-p", post["asset"], "-D", trabajo, "--clobber")
             res = publicar_reel(cfg, os.path.join(trabajo, post["asset"]), post)
             res["publicado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+            res["youtube"] = publicar_en_youtube(os.path.join(trabajo, post["asset"]), post, nombre)
             mover(carpeta, PUBLICADOS, res)
             gh("release", "delete-asset", RELEASE, post["asset"], "-y", check=False)
             log(f"{nombre}: publicado {res.get('enlace')}")
