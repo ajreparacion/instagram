@@ -4,89 +4,66 @@
   "estilo": "gancho",
   "hablante": null,
   "inicio": 0.0,
-  "duracion": 2.6,
-  "texto": "Esta web contesta a tus clientes.",
+  "duracion": 3.833,
+  "texto": "Preguntan el precio a las once de la noche.",
   "enfasis": [
-   2
+   5
   ]
  },
  {
   "escena": 1,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 2.6,
-  "duracion": 3.1,
-  "texto": "Web de una peluquería de ejemplo.",
+  "inicio": 3.833,
+  "duracion": 4.7,
+  "texto": "Nadie coge el teléfono. Pero la web de la peluquería de ejemplo sí.",
   "enfasis": [
-   4,
-   5
+   10,
+   11
   ]
  },
  {
   "escena": 2,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 5.7,
-  "duracion": 3.033,
-  "texto": "Con sus servicios, precios y duración.",
+  "inicio": 8.533,
+  "duracion": 4.4,
+  "texto": "Le pregunto al asistente: cuánto cuesta el tinte.",
   "enfasis": [
-   3
+   4,
+   5,
+   6,
+   7
   ]
  },
  {
   "escena": 3,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 8.733,
-  "duracion": 2.3,
-  "texto": "Un formulario para pedir cita.",
-  "enfasis": [
-   3,
-   4
-  ]
- },
- {
-  "escena": 4,
-  "estilo": "tramo",
-  "hablante": null,
-  "inicio": 11.033,
-  "duracion": 4.4,
-  "texto": "Y un asistente con IA. Le pregunto: cuánto cuesta el tinte.",
-  "enfasis": [
-   7,
-   8,
-   9,
-   10
-  ]
- },
- {
-  "escena": 5,
-  "estilo": "tramo",
-  "hablante": null,
-  "inicio": 15.433,
-  "duracion": 2.967,
+  "inicio": 12.933,
+  "duracion": 3.167,
   "texto": "Y responde solo con lo que pone en la web.",
   "enfasis": [
    2
   ]
  },
  {
-  "escena": 6,
+  "escena": 4,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 18.4,
-  "duracion": 2.567,
+  "inicio": 16.1,
+  "duracion": 3.467,
   "texto": "Mándaselo a quien tenga peluquería.",
   "enfasis": [
    4
   ]
  },
  {
-  "escena": 7,
+  "escena": 5,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 20.967,
-  "duracion": 5.433,
+  "inicio": 19.567,
+  "duracion": 5.5,
   "texto": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
   "enfasis": [
    2,
