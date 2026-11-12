@@ -1,10 +1,7 @@
 {
-  "aprobado": false,
-  "nota": 84,
-  "fecha": "2026-11-12T05:40Z",
-  "motivos": [
-    "Texto del pivote cortado a mitad de frase en pantalla («Más asequibles de lo…»): bloqueo 2 (texto ilegible/cortado)."
-  ],
-  "como_arreglarlo": "Ya acortado el texto de la escena 8 en guion.json y añadidos hashtags al post; renderizado:false para que el ciclo regenere. Reaprobable (≈90) si el pivote se lee entero.",
-  "revisado_por": "agente de CALIDAD (12/11, pasada de la mañana)"
+  "aprobado": true,
+  "nota": 90,
+  "fecha": "2026-11-12T06:40Z",
+  "comentario": "Re-render tras corregir el pivote: texto de la escena 8 legible entero. Audio −14,1 LUFS, pico −1,4 dBFS, sin silencios >1,2 s; 1080x1920 H.264+AAC, 36 s. Fotogramas de gancho POV, contador, gag, pivote y cierre legibles; frase de envío, comentario fijado, avance y música por audio_ig presentes. Pieza web por orden del dueño (11/11): función (consultar el estado de la reparación en ajreparacion.com) tomada de hechos_verificados de AJ Web; «más asequibles de lo que piensas» es afirmación del dueño sin cifras (pendiente de que la confirme, igual que 511-515). Cierre propio de web (no es app). Añadido bloque monetizacion.",
+  "revisado_por": "agente de CALIDAD (12/11, pasada de las 06:30)"
 }
