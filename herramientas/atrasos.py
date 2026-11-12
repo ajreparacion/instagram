@@ -30,7 +30,9 @@ except Exception:  # pragma: no cover
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.join(RAIZ, "herramientas"))
 CENTRO = "https://centro-de-contenido-apps-2f0a3cd6.base44.app"
-MAX_DIA, HORA_INI, HORA_FIN, SEPARACION_MIN, NOTA_MIN = 6, 9, 22, 100, 90
+# 12/11/2026 (dueño: «en Facebook se pueden subir reels de forma masiva»): Facebook hasta 12 al día; YouTube sigue en 6 por la cuota.
+MAX_POR_CANAL = {"facebook": 12, "youtube": 6}
+MAX_DIA, HORA_INI, HORA_FIN, SEPARACION_MIN, NOTA_MIN = 6, 9, 22, 60, 90
 COLAS = {c: os.path.join(RAIZ, "atrasos", f"{c}.json") for c in ("facebook", "youtube")}
 
 
@@ -172,7 +174,7 @@ def publicar(canal, ahora=None, simular=False):
     if not (HORA_INI <= m.hour < HORA_FIN):
         return {"estado": "fuera_de_horario"}
     hoy, ultima = _publicadas_hoy(canal)
-    if hoy >= MAX_DIA:
+    if hoy >= MAX_POR_CANAL.get(canal, MAX_DIA):
         return {"estado": "tope_diario", "hoy": hoy}
     if ultima and ahora - ultima < timedelta(minutes=SEPARACION_MIN):
         return {"estado": "espera_separacion"}
