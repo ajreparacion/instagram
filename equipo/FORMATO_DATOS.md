@@ -3,7 +3,7 @@
 Manual para Estratega, Investigador/Creador y Calidad. Código: `herramientas/datos.py` (render), `herramientas/control_datos.py` (control), ejemplo: `herramientas/ejemplo_guion_datos.json`.
 
 ## Cuándo usarlo
-Reels para @neogestlab sobre IA, negocios, digitalización y ahorro de tiempo con apps, en los que **una cifra con fuente** es el gancho. Mismo cierre único de siempre («Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso»; en pantalla «Prueba gratuita · sin tarjeta · sin compromiso») y mismo bloque `monetizacion` en `post.json`. Sin música cocida: la pone Instagram (`audio_ig`); el vídeo lleva voz y efectos sintetizados. Voz genérica de España (flujo voz primero ya existente), nunca la del dueño.
+Reels para @neogestlab sobre IA, negocios, digitalización y ahorro de tiempo con apps, en los que **una cifra con fuente** es el gancho. Mismo cierre único de siempre («Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso»; en pantalla «Prueba gratuita · sin tarjeta · sin compromiso») y mismo bloque `monetizacion` en `post.json`. Voz y música las decide el equipo en cada reel (ver «Voz y música»). Voz siempre genérica de España (flujo voz primero ya existente), nunca la del dueño.
 
 ## Las 5 fases
 1. **Ficha de datos.** Una entrada por cifra con fuente oficial (INE, Eurostat, Banco de España, ministerios, informes públicos…), `url`, `anio` y `comprobado` (fecha y cómo: «11/11/2026, abierta la tabla X de la web del INE, columna Y»). Solo se pone `"estado": "verificado"` tras **abrir la fuente** y ver la cifra. Si no se puede comprobar, `"pendiente"` y no se publica.
@@ -54,3 +54,10 @@ python3 control_datos.py ../cola/NNN_x/guion.json ../cola/NNN_x/video.mp4 --sali
 python3 pre_entrega.py ../cola/NNN_x
 ```
 `control_datos.py` bloquea: ficha incompleta, duración fuera de 12-45 s, escena de menos de 1,2 s, gancho de más de 8 palabras, tramo estático ≥ 1 s, fotogramas negros, pico > -1 dBTP, sin cierre. Avisa de: sonoridad fuera de -14 ± 1,5 LUFS (el vídeo va sin música y la voz se mezcla después), más de 4 palabras/s, cifras de la voz que no salen de la ficha, cierre sin prueba gratuita, falta `monetizacion`. Guarda `control/gancho.jpg`, `medio.jpg` y `cierre.jpg` junto al guion: Calidad los mira (fotograma 0 = el gancho).
+
+## Voz y música (orden del dueño 12/11/2026: «música y voz si lo consideran»)
+Decisión del Creador en cada reel, revisada por Calidad; se apunta el motivo en `post.json` → `"_voz_musica": "..."`.
+- **Voz** (campo `"voz"` en las escenas): SÍ cuando explica algo que los gráficos solos no cuentan (comparativas, giro, contexto de la fuente) o el reel pasa de ~15 s. NO cuando el reel es corto, de una sola cifra potente y se entiende leyendo; entonces se quita `"voz"` de todas las escenas y el texto en pantalla lo cuenta todo. Nunca voz a medias (o todas las escenas con voz o ninguna, salvo el gancho mudo si se busca impacto).
+- **Música**: por defecto SÍ (`"musica": true` o sin la clave). El ciclo pone una canción de la biblioteca de Instagram (`equipo/musica_instagram.json`, `audio_ig`) si está activa y entonces el vídeo sale sin música cocida; si no, el motor mete la música propia (pistas sin derechos de `musica/` o la generada) con presencia (-18 LUFS bajo la voz, ya suena en el gancho). `"musica": false` solo si se busca un efecto concreto y hay voz.
+- **Nunca sin voz y sin música a la vez** (control_datos.py lo avisa).
+- Sin voz, el motor masteriza el audio a -14 LUFS (pico ≤ -1 dBTP); con voz lo hace la mezcla de voz del ciclo (ducking de 6 dB como máximo, la música se oye entre frases).
