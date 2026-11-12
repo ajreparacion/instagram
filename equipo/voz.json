@@ -64,7 +64,8 @@
   "umbral_duck": 0.08,
   "ratio_duck": 2,
   "limite": 0.89,
-  "cadena_voz": "highpass=f=80,equalizer=f=300:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=3,acompressor=threshold=0.08:ratio=3:attack=5:release=180:makeup=3,deesser=i=0.4",
+  "cadena_voz": "highpass=f=90:p=2,equalizer=f=320:t=q:w=1.0:g=-2.5,equalizer=f=160:t=q:w=0.9:g=1.5,aexciter=amount=3.5:drive=8:blend=0:freq=3500:ceil=12000,highshelf=f=6000:g=4,acompressor=threshold=0.015:ratio=4:attack=4:release=90:knee=4:makeup=6,deesser=i=0.45:m=0.5:f=0.5,agate=threshold=0.006:ratio=3:attack=3:release=150,alimiter=limit=0.89:level=false",
+  "_nota_cadena_voz": "12/11/2026 22:10, orden del dueño («suena con eco, lejana y enlatada; mete un compresor»). Medido en la pista de voz del reel corto de 7D (bandas respecto a 150-400 Hz): antes 2,5-4,5 kHz −15,8 dB, 4,5-8 kHz −29,1 dB, 8-12 kHz −41,9 dB = voz sin presencia ni aire (lejana, de lata); después −10,0 / −20,1 / −28,1 dB (perfil de voz natural cercana). Cadena: limpieza de graves, menos barro en 320 Hz y algo de cuerpo en 160 Hz (proximidad), excitador para recuperar armónicos agudos que el motor no genera, estante +4 dB desde 6 kHz (aire), compresor 4:1 con ataque rápido (voz delante y pareja), de-esser, puerta para cortar soplos y cola de sala en las pausas (el «eco») y limitador. Revertir: highpass=f=80,equalizer=f=300:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=3,acompressor=threshold=0.08:ratio=3:attack=5:release=180:makeup=3,deesser=i=0.4",
   "recorte": {
     "activo": true,
     "umbral_db": -32,
