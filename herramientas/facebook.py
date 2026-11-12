@@ -30,14 +30,32 @@ def credenciales_listas():
     return bool(os.environ.get("FACEBOOK_PAGE_TOKEN"))
 
 
+_TOKEN_PAGINA = None
+
+
 def _token():
-    return os.environ["FACEBOOK_PAGE_TOKEN"]
+    """Token de la PÁGINA. Si el secreto guarda un token de usuario (p. ej. ampliado a 60 días), se canjea aquí por el de la página:
+    las publicaciones sin publicar (carruseles) exigen publicar como la propia página."""
+    global _TOKEN_PAGINA
+    if _TOKEN_PAGINA:
+        return _TOKEN_PAGINA
+    t = os.environ["FACEBOOK_PAGE_TOKEN"]
+    try:
+        q = urllib.parse.urlencode({"fields": "access_token", "access_token": t})
+        with urllib.request.urlopen(f"{GRAPH}/{PAGINA}?{q}", timeout=60) as r:
+            _TOKEN_PAGINA = json.loads(r.read()).get("access_token") or t
+    except Exception:
+        _TOKEN_PAGINA = t
+    return _TOKEN_PAGINA
 
 
 def _limpio(msg):
-    """Quita el token de cualquier texto antes de registrarlo o devolverlo."""
-    t = os.environ.get("FACEBOOK_PAGE_TOKEN")
-    return str(msg).replace(t, "***") if t else str(msg)
+    """Quita los tokens (secreto y token de página) de cualquier texto antes de registrarlo o devolverlo."""
+    s = str(msg)
+    for t in (os.environ.get("FACEBOOK_PAGE_TOKEN"), _TOKEN_PAGINA):
+        if t:
+            s = s.replace(t, "***")
+    return s
 
 
 def _peticion(url, datos=None, cabeceras=None, metodo=None, timeout=120):
