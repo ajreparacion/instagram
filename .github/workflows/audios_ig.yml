@@ -11,6 +11,9 @@ on:
       probar_audio_id:
         description: "audio_id a probar: crea un contenedor REELS con esa cancion (sin publicar) y muestra la respuesta"
         default: ""
+      historia:
+        description: "true = la prueba crea un contenedor de HISTORIA (STORIES) en vez de REELS (tampoco se publica)"
+        default: "false"
 
 permissions:
   contents: write
@@ -38,7 +41,7 @@ jobs:
         env:
           PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
           GH_TOKEN: ${{ github.token }}
-        run: python3 herramientas/audios_ig.py --probar "${{ inputs.probar_audio_id }}"
+        run: python3 herramientas/audios_ig.py --probar "${{ inputs.probar_audio_id }}" ${{ inputs.historia == 'true' && '--historia' || '' }}
       - name: Guardar respuesta
         if: always()
         run: |

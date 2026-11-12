@@ -1531,6 +1531,34 @@ def quitar_imagenes(carpeta):
     shutil.rmtree(os.path.join(carpeta, "control"), ignore_errors=True)
 
 
+def cancion_para_historia(cfg, carpeta, post):
+    """Canción de la biblioteca de Instagram para una historia en vídeo (equipo/musica_instagram.json; apagar solo las
+    historias: "historias_con_cancion": false). Usa post.audio_ig si ya viene; si no, la elige por el estilo de la música
+    del vídeo y, si está activa, la búsqueda en vivo. Nunca lanza: cualquier fallo = None (se publica como antes)."""
+    try:
+        c = leer_json(os.path.join(EQUIPO, "musica_instagram.json")) or {}
+        if not c.get("activo") or c.get("historias_con_cancion") is False:
+            return None
+        ai = post.get("audio_ig")
+        if not (isinstance(ai, dict) and ai.get("audio_id")):
+            mus = post.get("musica") if isinstance(post.get("musica"), dict) else {}
+            ai = audio_ig_para(os.path.basename(carpeta), False, mus.get("estilo"))
+            if not ai:
+                return None
+            ai["mood"] = "calido" if "medicator" in os.path.basename(carpeta).lower() else "app"
+        ai = dict(ai, audio_volume=1.0, video_volume=0.0)
+        try:
+            vivo = elegir_cancion_en_vivo(cfg, dict(post, audio_ig=ai, nombre=os.path.basename(carpeta)))
+            if vivo:
+                ai = vivo
+        except Exception as e:
+            log(f"historia: búsqueda de música en vivo no disponible ({str(e)[-120:]}); se usa la de la lista")
+        return ai
+    except Exception as e:
+        log(f"historia: no se pudo elegir canción de Instagram ({str(e)[-160:]})")
+        return None
+
+
 def publicar_historia(cfg, carpeta, post):
     """Historia (8/11/2026): "tipo": "historia". Imagen = primer JPG de <carpeta>/slides/ (servido por jsDelivr fijado
     al commit, como los carruseles); vídeo = post["asset"] de la release 'cola' (video_url). Instagram no admite texto
@@ -1542,21 +1570,42 @@ def publicar_historia(cfg, carpeta, post):
     imgs = sorted(f for f in os.listdir(sl) if f.lower().endswith((".jpg", ".jpeg"))) if os.path.isdir(sl) else []
     if post.get("asset"):
         imgs = []   # historia en vídeo con música (8/11/2026): manda el vídeo de la release aunque haya imágenes
+    extra = {}
     if imgs:
         url = f"https://cdn.jsdelivr.net/gh/{repo}@{ref}/{urllib.parse.quote(carpeta_rel)}/slides/{urllib.parse.quote(imgs[0])}"
         comprobar_url_publica(url)
         r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", media_type="STORIES", image_url=url)
         esperar_contenedor(cfg, r["id"], max_seg=300)
     elif post.get("asset"):
-        r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", media_type="STORIES",
-                video_url=url_directa_release(post["asset"]))
-        esperar_contenedor(cfg, r["id"])
+        base = dict(media_type="STORIES", video_url=url_directa_release(post["asset"]))
+        r = None
+        # 12/11/2026 (queja del dueño: «las historias publicadas están sin música de Instagram»): se pide a Instagram una
+        # canción de su biblioteca igual que en los reels (audio_configuration). Con canción, el sonido del vídeo va a 0
+        # (lleva música generada por código y no deben sonar dos a la vez). Si Instagram no la acepta en historias,
+        # se publica como antes (con la música del vídeo) y queda dicho en el resultado.
+        cancion = cancion_para_historia(cfg, carpeta, post)
+        if cancion:
+            try:
+                r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", audio_configuration=json.dumps({
+                    "audio_id": str(cancion["audio_id"]), "audio_volume": float(cancion.get("audio_volume", 1.0)),
+                    "video_volume": float(cancion.get("video_volume", 0.0))}), **base)
+                esperar_contenedor(cfg, r["id"])
+            except ErrorAPI as e:
+                log(f"historia: Instagram no aceptó la canción «{cancion.get('titulo') or cancion['audio_id']}» "
+                    f"({str(e)[-200:]}); se publica con la música del vídeo")
+                extra = {"cancion_instagram": None, "falta_cancion": "Instagram rechazó la canción en la historia: " + str(e)[-200:]}
+                r, cancion = None, None
+        if r is None:
+            r = api(cfg, f"{cfg['ig_user_id']}/media", "POST", **base)
+            esperar_contenedor(cfg, r["id"])
+        elif cancion:
+            extra = {"cancion_instagram": cancion.get("titulo") or cancion["audio_id"], "audio_ig": cancion}
     else:
         raise ErrorAPI("la historia no tiene imagen en slides/ ni 'asset' de vídeo")
     mid = api(cfg, f"{cfg['ig_user_id']}/media_publish", "POST", creation_id=r["id"])["id"]
     if post.get("asset") and not imgs:
         gh("release", "delete-asset", RELEASE, post["asset"], "-y", check=False)
-    return {"media_id": mid, "tipo": "historia", "medio": "imagen" if imgs else "video"}
+    return {"media_id": mid, "tipo": "historia", "medio": "imagen" if imgs else "video", **extra}
 
 
 def publicar_pendientes(cfg):

@@ -43,20 +43,27 @@ def main():
 
 
 
-def probar(audio_id, asset=None):
-    """Crea un contenedor REELS con audio_configuration desde la release (video_url) y mira si Instagram lo acepta.
-    NO llama a media_publish: el contenedor caduca solo. Uso: python3 herramientas/audios_ig.py --probar AUDIO_ID [asset.mp4]"""
+def probar(audio_id, asset=None, tipo="REELS"):
+    """Crea un contenedor REELS (o STORIES) con audio_configuration desde la release (video_url) y mira si Instagram lo acepta.
+    NO llama a media_publish: el contenedor caduca solo.
+    Uso: python3 herramientas/audios_ig.py --probar AUDIO_ID [asset.mp4] [--historia]"""
+    tipo = "STORIES" if str(tipo).upper().startswith("STOR") else "REELS"
     cfg = P.cargar_config()
     if not asset:
         repo = os.environ.get("GITHUB_REPOSITORY", "ajreparacion/instagram")
         r = P.gh("api", f"repos/{repo}/releases/tags/{P.RELEASE}", "-q", ".assets[].name")
         nombres = [x for x in r.stdout.split() if x.endswith(".mp4")]
+        if tipo == "STORIES":   # mejor con un vídeo de historia de verdad (duración y formato de historia)
+            nombres = [x for x in nombres if "historia" in x] or nombres
         if not nombres:
             print("sin .mp4 en la release de cola: no se puede probar"); return
         asset = nombres[0]
-    params = {"media_type": "REELS", "caption": "(prueba de audio, no se publica)",
-              "video_url": P.url_directa_release(asset),
-              "audio_configuration": json.dumps({"audio_id": str(audio_id), "audio_volume": 0.8, "video_volume": 1.0})}
+    params = {"media_type": tipo, "video_url": P.url_directa_release(asset),
+              "audio_configuration": json.dumps({"audio_id": str(audio_id), "audio_volume": 1.0 if tipo == "STORIES" else 0.8,
+                                                 "video_volume": 0.0 if tipo == "STORIES" else 1.0})}
+    if tipo == "REELS":
+        params["caption"] = "(prueba de audio, no se publica)"
+    print(f"prueba {tipo} con {asset} y audio_id {audio_id}", flush=True)
     try:
         r = P.api(cfg, f"{cfg['ig_user_id']}/media", "POST", **params)
         print("contenedor creado:", r)
@@ -72,6 +79,7 @@ def probar(audio_id, asset=None):
 
 if __name__ == "__main__":
     if len(sys.argv) > 2 and sys.argv[1] == "--probar":
-        probar(sys.argv[2], sys.argv[3] if len(sys.argv) > 3 else None)
+        resto = [a for a in sys.argv[3:] if a and not a.startswith("--")]
+        probar(sys.argv[2], resto[0] if resto else None, "STORIES" if "--historia" in sys.argv else "REELS")
     else:
         main()
