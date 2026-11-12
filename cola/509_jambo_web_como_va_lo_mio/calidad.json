@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "nota": 84,
+  "fecha": "2026-11-12T05:40Z",
+  "motivos": [
+    "Texto del pivote cortado a mitad de frase en pantalla («Más asequibles de lo…»): bloqueo 2 (texto ilegible/cortado)."
+  ],
+  "como_arreglarlo": "Ya acortado el texto de la escena 8 en guion.json y añadidos hashtags al post; renderizado:false para que el ciclo regenere. Reaprobable (≈90) si el pivote se lee entero.",
+  "revisado_por": "agente de CALIDAD (12/11, pasada de la mañana)"
+}
