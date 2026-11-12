@@ -1,15 +1,16 @@
 {
  "aprobado": false,
  "nota": 75,
- "fecha": "2026-11-10T19:41Z",
+ "fecha": "2026-11-12T18:34Z",
  "motivos": [
   "v8-B2/B3: escaparate de funciones con rótulos y sin chiste ni giro; sin frase para enviar. El gancho «Tu grupo necesita un botón de zasca» es válido: rehacer como sketch de 12-20 s (alguien suelta la frase en una discusión real de grupo y el botón responde)."
  ],
  "como_arreglarlo": "Reescribir con una de las 4 espinas de equipo/tecnicas_virales.md §3 y el brief correspondiente de equipo/briefs_v8.md; pie con las 5 líneas; poner renderizado:false. El carrusel del mismo producto sigue aprobado.",
- "revisado_por": "agente de CALIDAD (v8, 10/11 20:50)",
+ "revisado_por": "agente de CALIDAD (12/11, pasada de las 19:30)",
  "anterior": {
   "aprobado": true,
   "nota": 92,
   "fecha": "2026-11-10T11:55Z"
- }
+ },
+ "comentario": "Render del 10/11 19:43Z sin cambios desde la revisión v8 del 10/11 (post.json y vídeo intactos, solo cambió el plan): el rechazo sigue vigente. Se actualiza la fecha para que la pasada no lo vuelva a marcar como pendiente."
 }

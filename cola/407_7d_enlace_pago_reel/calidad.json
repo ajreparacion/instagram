@@ -1,0 +1,11 @@
+{
+ "aprobado": false,
+ "nota": 80,
+ "motivos": [
+  "Bloqueo 2 (texto cortado por la izquierda), el mismo fallo que 408: en las escenas «Lo pulsas y se abre», «Copiar o enviar por correo» y «Mándaselo a quien tenga que cobrar» el importe y el título de la ventana se leen «8,46 €», «e de pago · FAC-2026-006», «lace de pago»; en la lista, «Andratx» sale como «ndratx». Es la propia pista del Centro (la ventana modal entra por dentro de la pantalla) y bajar el zoom no lo arregla. Descuentos menores: B2 flojo (POV «Mi cliente: te pago esta semana» sin giro: la respuesta es una demo de funciones) y sin fotograma final guardable."
+ ],
+ "como_arreglarlo": "Creador, solo recorte.json (y los «clip» de guion.json si cambia la duración): usar tramos de la pista SIN la ventana de pago cortada y mirar la pista cada 0,75 s antes de recortar; el fotograma 0 debe enseñar el «Enlace de pago» completo con su importe legible. Si no hay tramo completo en la pista, grabar el tramo de nuevo en la app con datos ficticios. Opcional para subir de 90: un giro en la escena 2 («y te paga el viernes») rotulado como ejemplo. Después poner «renderizado» a false.",
+ "comentario": "22,1 s, 1080x1920, -14,1 LUFS, pico -1,49 dBFS, sin silencios > 1,2 s. Primer cambio a 2,5 s, escenas de 2,2-3,2 s; gancho de 5 palabras con el enlace de pago ya en el fotograma 0; frase para enviar y cierre único; sin «comenta X»; voz genérica; audio_ig con volumen 0,5. Lo dicho coincide con _comprobado (nada de tarjeta ni Bizum). Revisados 12 fotogramas (contacta cada ~1,8 s).",
+ "fecha": "2026-11-12T18:34Z",
+ "revisado_por": "agente de CALIDAD (12/11, pasada de las 19:30)"
+}

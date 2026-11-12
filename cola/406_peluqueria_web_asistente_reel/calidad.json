@@ -1,11 +1,7 @@
 {
-  "aprobado": false,
-  "nota": 75,
-  "fecha": "2026-11-12T11:45Z",
-  "revisado_por": "agente de CALIDAD (12/11, pasada de las 12:30)",
-  "motivos": [
-    "B5: el fotograma 0 se queda congelado 3,8 s (primer corte a 3,8 s; el límite es 3 s) y de 3,9 a 7,5 s hay otros 3,6 s sin ningún cambio visual (> 3,5 s). Hay además un silencio de voz de 1,4 s (11,4-12,8 s) en el límite del A1."
-  ],
-  "ya_arreglado": "B1 (gancho POV «preguntan el precio a las 23:00» con la respuesta del asistente en el fotograma 0) y B2 (espina). Audio -14,0 LUFS, pico -1,4 dBFS, 25,1 s, datos y respuesta del asistente verificados (tinte 35 €, 90 min).",
-  "como_arreglarlo": "Mejora/Creador en guion.json: (1) escena de gancho: sustituir el clip congelado 23.6-26.0 por un tramo con movimiento (cursor pulsando «Enviar» o respuesta apareciendo, p. ej. 21.8-24.4) o dividirla en dos tramos con corte antes de 3 s; (2) la escena 2 (2.5-6.0) tiene 3,6 s sin cambio: acortar su voz o intercalar el scroll de servicios; (3) cerrar el hueco de voz de 11,4-12,8 s. Poner renderizado:false y lanzar el ciclo; Calidad reevalúa."
+ "aprobado": true,
+ "nota": 90,
+ "comentario": "Re-render del 12/11 18:20 revisado: B5 resuelto (primer cambio a 1,8 s; el tramo más largo es de 3,4 s y cambia la frase). 21,0 s, 1080x1920, -14,1 LUFS, pico -1,40 dBFS, sin silencios > 0,8 s. Gancho POV de 5 palabras con cifra («23:00») y la respuesta del asistente ya en el fotograma 0; giro «Nadie contesta. La web, sí»; un solo caso; frase para enviar; cierre único; sin «comenta X»; voz genérica; audio_ig con volumen 0,5. Lo dicho (servicios con precio y duración, formulario de cita, asistente con IA que responde solo con la información de la web) se ve en pantalla, y los precios van rotulados como datos de ejemplo. Corregido el pie del post: ahora dice «nuestra app AJ Sistema (Neogest Lab)» (A6). Descuentos: el título «Pregúntale al asistente» sale cortado por arriba y el botón de WhatsApp de la web por la derecha en el fotograma 0; cinco escenas seguidas sobre la misma pantalla de chat (solo cambian cursor y subtítulo); sin fotograma final guardable. Aviso a Mejora: encuadrar el fotograma 0 con el título entero.",
+ "fecha": "2026-11-12T18:34Z",
+ "revisado_por": "agente de CALIDAD (12/11, pasada de las 19:30)"
 }
