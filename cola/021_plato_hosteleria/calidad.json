@@ -1,11 +1,11 @@
 {
  "aprobado": false,
- "nota": 75,
- "fecha": "2026-11-12T15:10Z",
- "revisado_por": "agente de CALIDAD (12/11, pasada de las 15:40)",
+ "nota": 82,
  "motivos": [
-  "B5: el gancho dura 3,2 s (primer corte a los 3,2 s; límite 3 s). Es el único bloqueo: cierre y huecos de voz del 10/11 ya resueltos."
+  "Sin bloqueos: el motivo del 12/11 (B5, gancho de 3,2 s) está resuelto, el primer corte llega a 1,9 s. Pero no llega a 90: (1) los subtítulos tapan el resultado en las escenas de «Cuatro raciones» y «Cambio el porcentaje» (los dos cuadros «Coste por ración» y «Vender a» quedan debajo de «Cuatro raciones y…», justo la cifra que da sentido al reel); (2) el cursor suelto de la esquina en los fotogramas 0 y 1; (3) el fotograma final no se puede guardar (el cálculo no se resume: ni 1,20 € por ración ni 3,43 € de venta); (4) el cierre cambia a fondo pergamino y no casa con el resto del vídeo."
  ],
- "como_arreglarlo": "YA ARREGLADO por Calidad en guion.json (voz del gancho = «¿Pones los precios a ojo?», ≈ 2,2 s) y renderizado:false; el ciclo lo rehace y Calidad lo vuelve a medir. Nota esperada 90: pregunta directa a hostelería, cálculo a la vista y resultado útil (4 raciones: 1,20 € por ración; vender a 4,00 € con coste del 30 % o 3,43 € con el 35 %, sin IVA; comprobado: 4,80 / 4 = 1,20; 1,20 / 0,30 = 4,00; 1,20 / 0,35 = 3,43). ESTRATEGA: sigue aparcado el 31/12; darle hueco real cuando se apruebe. MEJORA: el cursor queda aparcado en la esquina superior izquierda durante el gancho.",
- "comentario": "Render del 10/11 medido entero: 1080x1920 H.264+AAC, -14,0 a -14,2 LUFS, pico -1,4 dBFS, 0 muestras recortadas. El MP4 lleva solo la voz (la música la pone audio_ig al publicar): huecos de voz ≤ 1,3 s (A1 ok). Voz Chatterbox es-es sin voz del dueño: misma voz en todas las escenas (tono 122-153 Hz, nivel ±1,5 dB entre escenas), entonación viva (desviación ≈ 4 semitonos, no plana), 1,8-3,2 palabras/s. El seseo/θ NO se puede comprobar de oído desde la nube ni con reconocedor (descarga del modelo bloqueada): queda como límite de esta revisión. 12 fotogramas + fotograma 0 y final revisados; importes de pantalla recalculados a mano y correctos; cierre único en voz y pantalla; sin «comenta X»; sin marcas."
+ "como_arreglarlo": "Creador/Mejora: subir los subtítulos de los tramos 4-5 por encima de los cuadros de resultado (o encuadrar la tarjeta más arriba), quitar el cursor del fotograma 0, y cerrar la demo con un fotograma de resumen guardable («4 raciones · 1,20 € por ración · vender a 3,43 € sin IVA con coste 35 %»). Aparcado el 31/12: no vuelve al calendario sin ≥ 90.",
+ "comentario": "33,2 s, 1080x1920, -14,2 LUFS, pico -1,39 dBFS. Cuentas comprobadas a mano: 4,80 € / 4 raciones = 1,20 €; 1,20/0,30 = 4,00 € y 1,20/0,35 = 3,43 €; 4,80/3 = 1,60 y 1,60/0,30 = 5,33 €. Gancho en forma de pregunta (7 palabras) y experimento «se lo pedí a una IA» con el mensaje a la vista: la espina es válida. Frase para enviar y cierre único. Revisados 12 fotogramas.",
+ "fecha": "2026-11-12T18:34Z",
+ "revisado_por": "agente de CALIDAD (12/11, pasada de las 19:30)"
 }

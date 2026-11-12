@@ -1,0 +1,11 @@
+{
+ "aprobado": false,
+ "nota": 74,
+ "motivos": [
+  "B1: gancho descriptivo de promesa de pasos («Tu canción, en 4 pasos»), la forma «Tu X en N pasos» que el estándar v8 lista como no válida: sin conflicto, error, cifra de resultado ni pregunta. B2: es un recorrido por funciones (estilo, tono, Generar beat, Terminar canción, MP3) sin experimento, cálculo ni personaje. Bloqueo 2: en «Terminar canción» la pista del Centro corta el texto de la app por los bordes («/oz natural», «Streaming (Spotify / YouTube) · -1»; además el fotograma 0 enseña unos ajustes oscuros recortados, no el resultado)."
+ ],
+ "como_arreglarlo": "Creador: nuevo gancho con experimento o conflicto en primera persona (p. ej. «Hice una canción sin saber música» o una pregunta que deje el cómo abierto), fotograma 0 con el resultado legible («Descargar MP3» completo, que es lo que dice la nota del creador pero el render muestra el panel de ajustes), y tramos sin texto cortado. Mantener la frase para enviar y el cierre único. Después poner «renderizado» a false.",
+ "comentario": "21,6 s, 1080x1920, -14,2 LUFS, pico -1,21 dBFS, sin silencios > 1,2 s, primer cambio a 2,8 s, escenas de 2-3,8 s. Voz y hechos dentro de _comprobado (no se afirma beats con IA ni libres de derechos). Cierre único, sin «comenta X», sin precios. Revisados 12 fotogramas.",
+ "fecha": "2026-11-12T18:34Z",
+ "revisado_por": "agente de CALIDAD (12/11, pasada de las 19:30)"
+}
