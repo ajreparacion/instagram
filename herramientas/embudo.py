@@ -13,7 +13,7 @@ def pct(a, b): return "n/d" if not b or a is None else "%.1f %%" % (100.0 * a / 
 nsa, vp, ce = k.get("alcance_no_seguidores_total"), k.get("visitas_perfil"), k.get("clics_enlace")
 sol, dms, pru, eur = suma("solicitudes_centro"), suma("dms_con_intencion"), suma("pruebas_gratuitas"), suma("ingresos_eur")
 pasos = [("Alcance a no seguidores → visita al perfil", vp, nsa, 3.0, "gancho del reel, nombre visible y portada: que el perfil prometa lo que el reel enseñó"),
-         ("Visita al perfil → clic en el enlace", ce, vp, 25.0, "nombre visible, bio y enlace (hoy: «IA Fácil…», «Escríbeme IDEA» y /demo en lugar de /solicitar)"),
+         ("Visita al perfil → clic en el enlace", ce, vp, 25.0, "nombre visible (aún «IA Fácil…»), título del enlace y perfil sin piezas repetidas; la bio y el enlace a /solicitar ya están puestos"),
          ("Clic en el enlace → solicitud en el Centro", sol, ce, 20.0, "página de destino y formulario /solicitar")]
 L = ["# Embudo de monetización (generado por herramientas/embudo.py; no editar a mano)", "",
      "Datos Buzzfy: %s · ventana %s días · seguidores netos/día %s" % (k.get("fecha"), k.get("dias"), k.get("seguidores_netos_dia")), "",

@@ -1,18 +1,18 @@
 {
  "_nota": "Cifras que solo da Buzzfy/Instagram, copiadas a mano por el Analista (herramientas de solo lectura). Las actualiza el Analista cada noche. Si una cifra no se ha leído, dejarla en null.",
- "fecha": "2026-11-11 21:01 CET",
+ "fecha": "2026-11-12 15:42 CET",
  "dias": 7,
- "alcance_total": 616,
- "alcance_no_seguidores_total": 565,
- "alcance_seguidores_total": 51,
- "visualizaciones_no_seguidores": 752,
+ "alcance_total": 746,
+ "alcance_no_seguidores_total": 689,
+ "alcance_seguidores_total": 56,
+ "visualizaciones_no_seguidores": 897,
  "clics_enlace": 3,
- "visitas_perfil": 14,
+ "visitas_perfil": 13,
  "seguidores_netos_dia": -0.67,
- "_seguidores_detalle": "ig_follower_growth 28/10-8/11: +4 / -12 = -8 netos; 9 y 10/11 pendientes. Seguidores 1.602.",
+ "_seguidores_detalle": "ig_follower_growth 29/10-9/11 (12 días cerrados): +4 / -12 = -8 netos; 8 y 9/11 a cero; 10 y 11/11 pendientes. Seguidores 1.602.",
  "no_seguidores_por_reel": {},
  "toques_enlace": 0,
- "interacciones": 104,
+ "interacciones": 103,
  "guardados": 5,
  "compartidos": 13,
  "comentarios": 0,
@@ -30,5 +30,6 @@
   "clics_enlace": 3,
   "conv_visita_a_clic_pct": 21.4,
   "alcance_no_seguidores": 565
- }
+ },
+ "_leido_por": "Estratega, 12/11/2026 15:42 CET (ig_account_stats 7 días e ig_follower_growth 14 días); la ventana 5-12/11 aún incluye 6 días anteriores al cambio de enlace del 11/11 21:12."
 }
