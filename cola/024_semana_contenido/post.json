@@ -27,7 +27,8 @@
     "titulo": "Hypnotized (Instrumental) · Company Money",
     "origen": "biblioteca de Instagram (colección libre de derechos)",
     "audio_volume": 0.5,
-    "video_volume": 1.0
+    "video_volume": 1.0,
+    "mood": "app"
   },
   "motor_voz": "chatterbox",
   "asset": "024_semana_contenido.mp4"

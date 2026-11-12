@@ -1100,6 +1100,64 @@ def audio_ig_para(nombre, con_voz, estilo=None):
             "video_volume": 1.0 if con_voz else c["volumen_video_sin_voz"]}
 
 
+MOODS_DEF = {"comedia": ["upbeat", "funny", "playful"], "datos": ["tech house", "house", "instrumental"],
+             "app": ["upbeat", "house", "energetic"], "calido": ["calm", "acoustic", "piano"], "defecto": ["upbeat", "instrumental"]}
+
+
+def mood_para(guion):
+    """Humor de la pieza para elegir canción (12/11/2026): comedia (sketch), datos, app, cálido (mayores/cuidadores) o defecto."""
+    g = leer_json(guion, None)
+    if not isinstance(g, dict):
+        return "defecto"
+    txt = json.dumps(g, ensure_ascii=False).lower()
+    if any(k in txt for k in ("medicator", "mayores", "cuidador", "pastilla")):
+        return "calido"
+    return {"sketch": "comedia", "datos": "datos", "app": "app"}.get(str(g.get("modo") or "").lower(), "defecto")
+
+
+def elegir_cancion_en_vivo(cfg, post):
+    """Justo ANTES de publicar (12/11/2026, orden del dueño: «busca la música más usada y que se adapte al vídeo»): consulta
+    GET /ig_audio con las búsquedas del humor de la pieza (equipo/musica_instagram.json → moods) y elige entre las canciones
+    de la colección libre de derechos (is_ads_eligible no False). Instagram NO da el número de usos: el orden de resultados de
+    la API (el que usa su propio buscador) es el único indicio de popularidad; se evitan las 12 últimas canciones usadas, se
+    prefieren las instrumentales y se exige duración >= 90 s. Cualquier fallo = se queda la canción de render (post.audio_ig).
+    Devuelve el dict audio_ig elegido o None."""
+    c = leer_json(os.path.join(EQUIPO, "musica_instagram.json")) or {}
+    ai = post.get("audio_ig")
+    if not (c.get("buscar_en_vivo") and isinstance(ai, dict) and ai.get("audio_id")):
+        return None
+    usadas_f = os.path.join(EQUIPO, "canciones_usadas.json")
+    usadas = leer_json(usadas_f, []) or []
+    recientes = {u.get("audio_id") for u in usadas[-12:]}
+    moods = dict(MOODS_DEF); moods.update(c.get("moods") or {})
+    consultas = moods.get(ai.get("mood") or "defecto") or moods["defecto"]
+    cand = []
+    for q in consultas:
+        try:
+            r = api(cfg, "ig_audio", audio_type="music", user_id=cfg["ig_user_id"], search_query=q)
+        except Exception as e:
+            log(f"búsqueda de música «{q}» falló ({str(e)[-100:]})")
+            continue
+        for pos, x in enumerate(r.get("audio") or r.get("data") or []):
+            if x.get("is_ads_eligible") is False or not x.get("audio_id") or (x.get("duration_in_ms") or 0) < 90000:
+                continue
+            instr = "instrumental" in str(x.get("title", "")).lower()
+            cand.append((pos + (0 if instr else 6) + (50 if x["audio_id"] in recientes else 0), q, pos, x))
+    if not cand:
+        return None
+    cand.sort(key=lambda z: z[0])
+    _, q, pos, x = cand[0]
+    nuevo = dict(ai)
+    nuevo.update({"audio_id": str(x["audio_id"]), "titulo": "%s · %s" % (x.get("title", ""), x.get("display_artist", "")),
+                  "origen": "biblioteca de Instagram (búsqueda en vivo «%s», puesto %d)" % (q, pos + 1)})
+    usadas.append({"fecha": datetime.now(timezone.utc).isoformat(timespec="minutes"), "audio_id": nuevo["audio_id"],
+                   "titulo": nuevo["titulo"], "mood": ai.get("mood"), "busqueda": q, "puesto": pos + 1,
+                   "pieza": post.get("nombre") or post.get("titulo") or ""})
+    escribir_json(usadas_f, usadas[-200:])
+    log(f"Música elegida antes de publicar: {nuevo['titulo']} (búsqueda «{q}», puesto {pos + 1}, humor {ai.get('mood')})")
+    return nuevo
+
+
 def guion_tiene_voz(guion):
     """True si alguna escena del guion.json (ruta) tiene texto en "voz". Sin ninguna escena con voz = reel mudo (texto en
     pantalla + música): la canción va a pleno volumen. Si el guion no se puede leer, se supone que lleva voz (lo de antes)."""
@@ -1154,7 +1212,8 @@ def renderizar(cfg, carpeta, post):
         # 12/11/2026 (Mejora, orden del dueño «la música tiene que resaltar»): un reel SIN voz (texto en pantalla + música) lleva
         # la canción a volumen_cancion_sin_voz (1,0) y no a 0,5/0,35: antes se mandaba siempre como «con voz» y quedaba enterrada.
         ig = audio_ig_para(nombre, guion_tiene_voz(guion))
-        if ig:   # 10/11/2026: la musica la pone Instagram al publicar; el video lleva solo la voz (y los efectos)
+        if ig:
+            ig["mood"] = mood_para(guion)   # humor de la pieza: la canción definitiva se busca justo antes de publicar   # 10/11/2026: la musica la pone Instagram al publicar; el video lleva solo la voz (y los efectos)
             guion = guion_sin_musica(guion, trabajo)
             post["audio_ig"] = ig
         else:
@@ -1320,6 +1379,12 @@ def publicar_reel(cfg, video, post):
     # "audio_ig": {"audio_id": "...", "audio_volume": 0.8, "video_volume": 1.0}. Si Instagram la rechaza, se publica sin ella
     # (el reel lleva su musica horneada o solo la voz).
     ai = post.get("audio_ig")
+    try:
+        vivo = elegir_cancion_en_vivo(cfg, post)
+        if vivo:
+            ai = post["audio_ig"] = vivo
+    except Exception as e:
+        log(f"búsqueda de música en vivo no disponible ({str(e)[-120:]}); se usa la de render")
     if isinstance(ai, dict) and ai.get("audio_id"):
         params["audio_configuration"] = json.dumps({
             "audio_id": str(ai["audio_id"]), "audio_volume": float(ai.get("audio_volume", 0.8)),
