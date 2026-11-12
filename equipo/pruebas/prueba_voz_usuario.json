@@ -1,0 +1,148 @@
+{
+  "fecha": "2026-11-10 21:40 UTC",
+  "guion": "cola/301_jambo_ep1_momentito/guion.json",
+  "render_video_s": 24.4,
+  "frases": 7,
+  "palabras": 45,
+  "referencia": "Doscientas páginas para mañana. Que lo haga la Jupillo. Doscientas páginas. Hechas. Como pediste. ¿Las once? ¡Te dije un momentito! Entregado. Qué bien me ha quedado. De nada. Dos millones y medio de horas extra sin cobrar cada semana. Mándaselo a quien carga con todo.",
+  "cpu": 4,
+  "variantes": {
+    "chatterbox_prod": {
+      "flujo": "voz_primero",
+      "ajustes": {
+        "motor": "chatterbox",
+        "chatterbox": {
+          "modelo": "es-es",
+          "idioma": "es",
+          "exageracion": 0.6,
+          "cfg": 0.5,
+          "temperatura": 0.65,
+          "referencia": null,
+          "referencia_kokoro": "em_alex",
+          "ganancia": 1.0,
+          "semilla": 7,
+          "theta": "",
+          "max_s": 2400,
+          "_nota": "referencia = VOZ DEL DUEÑO. Desde el 7/11/2026 12:45: nota de voz limpia grabada por él para el canal (voz_dueno/referencia_usuario.wav, 12,6 s, 24 kHz mono, -20 LUFS; versión larga de 28 s al lado). Señal/ruido ~43 dB, contenido hasta 8 kHz (la anterior, sacada de sus reels con Demucs, no pasaba de 4 kHz). Para volver a la anterior: 'referencia': 'voces/referencia_usuario.wav' (release «voces», sigue ahí) o restaurar herramientas/versiones/voz.json_2026-11-07.",
+          "por_estilo": {
+            "gancho": {
+              "exageracion": 0.75,
+              "cfg": 0.45
+            },
+            "giro": {
+              "exageracion": 0.7,
+              "cfg": 0.45
+            },
+            "cierre": {
+              "exageracion": 0.65,
+              "cfg": 0.5
+            }
+          },
+          "_nota_por_estilo": "7/11 13:12: el dueño oye clipeos, acento latino al empezar que luego cambia, silencios y voz plana. Equilibrio: exageración igual o algo menor que antes (0,6 base; 0,65-0,75 en gancho, giro y cierre) para no perder énfasis, pero cfg mucho más alto (0,45-0,5 en vez de 0,3-0,35) para que no se aleje de su voz ni cambie de acento, temperatura 0,65 y recorte de restos al final de frase (recorte.umbral_db -32). Énfasis de las palabras *así*: +4,5 dB con bajada previa de 1,5 dB. Revertir: herramientas/versiones/voz.json_2026-11-07b.",
+          "_nota_theta": "10/11/2026 (tarde, Mejora; prueba_seseo.yml con referencia sintética Kokoro): sin truco θ el modelo ya da θ en 55,6 % de las palabras de prueba (control Piper de España 55,6 %, Kokoro suelto 11,1 %) con WER 6,8 %; con θ griego sigue en 55,6 % y el WER sube a 9,6 % (en prueba_voz con la configuración real: WER de la voz sola 12,5 % frente a 7,7 % sin θ, «Mary Celeste» sale «Mérice Leste»). Por eso theta va vacío. Revertir: herramientas/versiones/voz.json_2026-11-10d (theta griego_sin_inicial).",
+          "_nota_dueno": "10/11/2026 (2.ª ejecución): el dueño eligió «Chatterbox España» (chatterbox es-es SIN referencia de persona real). Motor principal otra vez, pero sin voz del dueño: referencia = null y timbre de partida sintético (referencia_kokoro em_alex, Apache 2.0, generado en el propio ciclo; no es nadie real). Respaldo: Kokoro directo, Pocket y Piper. Medido en prueba_voz.yml n.º 11 (ajustes reales): WER 10,6 % (solo falla el nombre propio «Mary Celeste»), UTMOS 3,77, rango de tono 10,9 st, pausas 24 %, -14,1 LUFS, pico -1,4 dBFS, 14x tiempo real en CPU (8 frases = 8,5 min). Revertir al motor Kokoro: herramientas/versiones/voz.json_2026-11-10b."
+        }
+      },
+      "render_total_s": 240.5,
+      "duracion_reel_s": 25.0,
+      "motor_usado": "chatterbox",
+      "sintesis_s": 205.7,
+      "frases": [
+        {
+          "dur_s": 3.46,
+          "hueco_s": 3.78,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 3.4,
+          "hueco_s": 3.72,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 2.14,
+          "hueco_s": 2.45,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 1.96,
+          "hueco_s": 2.28,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 2.34,
+          "hueco_s": 2.65,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 3.82,
+          "hueco_s": 4.15,
+          "atempo": 1.0
+        },
+        {
+          "dur_s": 1.98,
+          "hueco_s": 2.28,
+          "atempo": 1.0
+        }
+      ],
+      "voz_total_s": 19.1,
+      "veces_tiempo_real": 0.09,
+      "frases_que_no_caben": 0,
+      "lufs": -14.1,
+      "pico_real_dbfs": -1.3,
+      "prosodia": {
+        "f0_mediana_hz": 138.6,
+        "tono_desv_st": 4.14,
+        "tono_rango_st": 9.19,
+        "pausas_pct": 31.6,
+        "duracion_s": 19.1,
+        "palabras_por_s": 2.36
+      },
+      "transcripcion_mezcla": "200 páginas para mañana, que lo haga la jupillo. 200 páginas, hechas, como peliste. Las 11, te dije un momentito. Entregado, qué bien me ha quedado. De nada. 2 millones y medio de horas extra, sin cobrar cada semana. Mándaselo a quien carga con todo.",
+      "wer_mezcla": 0.111,
+      "transcripcion_voz_sola": "200 páginas para mañana, que lo haga la jupillo. 200 páginas, hechas, como peliste. Las 11, te dije un momentito, entregado. ¿Qué bien me ha quedado? De nada. Dos millones y medio de horas extra, sin cobrar cada semana. Mándaselo a quien carga con todo.",
+      "wer_voz_sola": 0.089,
+      "utmos_medio": 3.51,
+      "utmos_frases": [
+        3.97,
+        3.6,
+        3.52,
+        2.89,
+        2.82,
+        3.83,
+        3.96
+      ]
+    }
+  },
+  "registro": [
+    "2026-11-10 21:35  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 6 frases en 230 s",
+    "2026-11-10 21:35  Voz: silencios recortados por frase (s): [0.46, 0.46, 0.52, 0.44, 0.72, 0.62]",
+    "2026-11-10 21:35  Voz: pico de cada frase normalizado a -6.0 dBFS (ganancia aplicada, dB): [np.float64(3.1), np.float64(3.1), np.float64(0.7), np.float64(0.1), np.float64(-1.3), np.float64(2.0)]",
+    "2026-11-10 21:35  Voz: alineación palabra a palabra (small, 18.8 s): 6/6 frases",
+    "2026-11-10 21:36  Mezcla: voz -15.1 LUFS, música -15.5 LUFS (con ducking -15.8), la música baja 6.0 dB (p90) bajo la voz, ratio 1.893; máster -15.26 -> -14.1 LUFS, pico -1.4 dBFS; huecos de voz: []",
+    "2026-11-10 21:36  017_presupuesto_ia: renderizado con voz y subido a la release 'cola'",
+    "2026-11-10 21:51  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 5 frases en 194 s",
+    "2026-11-10 21:51  Voz: silencios recortados por frase (s): [0.46, 0.82, 0.48, 0.74, 0.46]",
+    "2026-11-10 21:51  Voz: pico de cada frase normalizado a -6.0 dBFS (ganancia aplicada, dB): [np.float64(0.2), np.float64(1.0), np.float64(3.2), np.float64(1.0), np.float64(1.9)]",
+    "2026-11-10 21:51  Voz: alineación palabra a palabra (small, 15.3 s): 5/5 frases",
+    "2026-11-10 21:51  Mezcla: voz -14.8 LUFS, música -15.3 LUFS (con ducking -15.8), la música baja 6.0 dB (p90) bajo la voz, ratio 1.952; máster -14.96 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []",
+    "2026-11-10 21:51  018_dividir_cuenta_ia: renderizado con voz y subido a la release 'cola'",
+    "2026-11-10 22:05  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 5 frases en 317 s",
+    "2026-11-10 22:05  Voz: silencios recortados por frase (s): [0.8, 0.42, 0, 0.46, 0.54]",
+    "2026-11-10 22:05  Voz: pico de cada frase normalizado a -6.0 dBFS (ganancia aplicada, dB): [np.float64(-1.3), np.float64(0.3), np.float64(-0.1), np.float64(3.0), np.float64(0.5)]",
+    "2026-11-10 22:06  Voz: alineación palabra a palabra (small, 17.1 s): 5/5 frases",
+    "2026-11-10 22:06  Mezcla: voz -15.3 LUFS, música -15.8 LUFS (con ducking -16.1), la música baja 6.0 dB (p90) bajo la voz, ratio 1.926; máster -15.43 -> -14.1 LUFS, pico -1.4 dBFS; huecos de voz: []",
+    "2026-11-10 22:06  019_suscripciones_ia: renderizado con voz y subido a la release 'cola'",
+    "2026-11-10 22:19  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 5 frases en 199 s",
+    "2026-11-10 22:19  Voz: silencios recortados por frase (s): [0, 0.46, 0.4, 0.86, 0.84]",
+    "2026-11-10 22:19  Voz: pico de cada frase normalizado a -6.0 dBFS (ganancia aplicada, dB): [np.float64(3.5), np.float64(3.4), np.float64(1.3), np.float64(-0.4), np.float64(-0.1)]",
+    "2026-11-10 22:19  Voz: alineación palabra a palabra (small, 8.0 s): 5/5 frases",
+    "2026-11-10 22:20  Mezcla: voz -14.8 LUFS, música -15.3 LUFS (con ducking -15.8), la música baja 5.41 dB (p90) bajo la voz, ratio 2.0; máster -14.98 -> -14.2 LUFS, pico -1.4 dBFS; huecos de voz: []",
+    "2026-11-10 22:20  020_lista_compra_ia: renderizado con voz y subido a la release 'cola'",
+    "2026-11-10 22:44  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 7 frases en 206 s",
+    "2026-11-10 22:44  Voz: timbre de personaje aplicado a 2 frases (['jupillo'])",
+    "2026-11-10 22:44  Voz: silencios recortados por frase (s): [0.5, 0.23, 0.7, 1.16, 0, 0.46, 0.46]",
+    "2026-11-10 22:44  Voz: pico de cada frase normalizado a -6.0 dBFS (ganancia aplicada, dB): [np.float64(1.8), np.float64(5.7), np.float64(6.1), np.float64(4.8), np.float64(-0.9), np.float64(2.1), np.float64(1.4)]",
+    "2026-11-10 22:44  Voz: alineación palabra a palabra (small, 9.2 s): 7/7 frases",
+    "2026-11-10 22:44  Mezcla: voz -14.9 LUFS, música -15.6 LUFS (con ducking -15.9), la música baja 5.74 dB (p90) bajo la voz, ratio 2.0; máster -14.8 -> -14.1 LUFS, pico -1.3 dBFS; huecos de voz: [[9.95, 13.2]]"
+  ]
+}
