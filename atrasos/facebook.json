@@ -12,9 +12,8 @@
    "commit": "2fa2cb311b94f99fd8cb343668cd7d085e7788ba^",
    "ruta": "cola/201_medicator_carrusel/slides",
    "huella": "34128af0f3ac38fe",
-   "estado": "error",
-   "errores": 3,
-   "ultimo_error": "Facebook HTTP 403: {\"error\":{\"message\":\"(#200) Unpublished posts must be posted to a page as the page itself.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"Aa7oogbb6daMV0Q0jm3D8qL\"}}"
+   "estado": "pendiente",
+   "errores": 0
   },
   {
    "id": "101_errores_prompt",
@@ -26,9 +25,8 @@
    "commit": "52aa8246c44bb538131a3298239050689df6d6d9^",
    "ruta": "cola/101_errores_prompt/slides",
    "huella": "5b86e0df305b9bc8",
-   "estado": "error",
-   "errores": 3,
-   "ultimo_error": "Facebook HTTP 403: {\"error\":{\"message\":\"(#200) Unpublished posts must be posted to a page as the page itself.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AfK50FnXoje08Vj1YtVNx2M\"}}"
+   "estado": "pendiente",
+   "errores": 0
   },
   {
    "id": "105_reformas_presupuestos",
