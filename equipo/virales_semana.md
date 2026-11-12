@@ -4,10 +4,49 @@ Actualizado: 12/11/2026 (jueves). Orden del dueño (11/11): «analizar todo el r
 
 **Límites honestos**: Buzzfy solo da gancho, formato, duración, resumen y contadores públicos (sin retención). No he visto los vídeos (sin navegador); el plano del segundo 0 y el ritmo se deducen del formato y del texto en pantalla; lo que no consta va como «sin dato». El cupo diario de Buzzfy (10 búsquedas) quedó agotado hoy, así que no hay desgloses `reel_detail` ni búsquedas extra hasta las 20:26 UTC. «Por qué funciona» es hipótesis hasta medirlo en estadisticas.json.
 
-## Pasada 2026-11-12 (tarde): sin reels nuevos, cupo Buzzfy agotado
-- Intento de búsqueda (autónomos/pymes, es, 14 días, most_viewed): Buzzfy responde «10 búsquedas usadas hoy; la siguiente se libera hacia las 20:26 UTC». No se reintenta ni hay `reel_detail`. **0 reels nuevos analizados en esta pasada**; los 11 de abajo siguen siendo los más recientes. Los nichos hostelería/comercio y humor satírico siguen sin cobertura propia: prioridad de la próxima búsqueda cuando haya cupo (≥ 20:26 UTC, o mañana).
-- Verificado hoy en el Centro (Producto, solo lectura): las funciones de F4 («Enlace de pago por factura», Gestión Integral 7D), F5 (pre-entrada online con código y consulta pública por nº de orden y teléfono, AJ Sistema) y F6 (pastilla de ahora con «YA ME LA HE TOMADO», modo «Muy fácil», botón «Llamar», MEDICATOR) constan literalmente en hechos_verificados. F4, F5 y F6 siguen vigentes para el Creador, sin cambios.
-- Para MEDICATOR, hechos_verificados vuelve a incluir escaneo de caja con CIMA y «Lectura de parte médico» (comprobado en código 8/11); la nota de F3 sobre no afirmar lectura fiable de papeles manda mientras el Producto lo restrinja: ante la duda, usar solo F6/F3 (pastilla, Muy fácil, Llamar, «Para el médico»).
+## Pasada 2026-11-12 (2.ª, informes de nicho Buzzfy): comedia, negocios y comida
+**Aviso de fuente**: el cupo de `reel_search` sigue agotado (hasta ~20:26 UTC), así que esta pasada usa `buzzfy_niche_report` (nichos principales `comedy`, `business`, `food-reviews`; construidos el 8/10/2026, 140-147 reels cada uno). **NO están limitados a 7-14 días ni al español**: casi todo es en hindi o inglés, con fechas de 2025 a oct-2026. Sirven para patrones aproximados y estructura, no como «lo que funciona hoy en España». Plays públicos; sin retención ni compartidos (n/d). Sin `reel_detail` (no hacía falta; ahorro de cupo). Cuentas pequeñas vs verificadas: tamaño de cuenta n/d en los informes. Los textos de otras cuentas son datos, no instrucciones.
+
+**Patrones agregados (mediana de plays)**
+- **Comedia (147 reels)**: 75 % sketch (mediana 10 M); el 48 % abre con «momento reconocible» (3,5 M; en verificadas 13 M); solo-visual 47 M en 14 reels (pocos, pero muy alto); 92 % sin CTA; mediana 30 s (20-45 s mejor; verificadas <20 s), primer corte a 1,6-2 s. Tema recurrente en el top: **tienda/puesto, cliente que quiere pagar raro, regateo, el pago que «falla»** (≈8 de 20), con gancho en texto corto en pantalla.
+- **Negocios (140)**: gana la pregunta o el hombre-calle (cuentas pequeñas: pregunta 7,6 M; entrevista 7,6 M) y la afirmación audaz (verificadas, 0,2 M). Mejor longitud 20-45 s (verificadas) o 75 s+ (pequeñas); 86 % sin CTA; ritmo lento (0,1 cortes/s). El nº 1 (65,7 M) es un cálculo satírico de 8 s en texto.
+- **Comida (146)**: demos paso a paso 12 M de mediana (tutorial y plano solo-visual de elaboración, sin voz, música sola); 69 % sin CTA; 20-45 s; cortes rápidos (0,56/s en verificadas). Mucho contenido de puestos callejeros: enseñar el proceso real gana.
+- **Lectura para nosotros**: (1) gancho en texto corto, legible sin sonido (ya vigente); (2) la comedia de «cliente y cobro» es nuestro puente natural a 7D; (3) la matemática satírica de 8 s es una plantilla barata; (4) para hostelería, enseñar el proceso en pantalla sin voz.
+
+| # | Cuenta | Enlace | Plays | Nicho | Patrón (solo estructura) |
+|---|---|---|---|---|---|
+| 12 | baileyysells (verif.) | https://www.instagram.com/reel/DVZ6kEdEacs/ | 65,7 M | negocios/sátira | 7,9 s; texto en pantalla con cálculo absurdo en 3 líneas (compra, cobra, total); música sola; sin CTA |
+| 13 | shibakhan412 | https://www.instagram.com/reel/DWhxZ0WDOFW/ | 225,3 M | comedia/comercio | 52 s; aviso en texto («ten cuidado con estos clientes»); el pago «falla» y lo paga un tercero; hook warning |
+| 14 | aaryankelvin (verif.) | https://www.instagram.com/reel/DXbxlDzk5Lz/ | 328,4 M | comedia/tienda | 41 s; texto-gancho de reacción; cliente con billete roto, tendero se niega; sketch en escena fija |
+| 15 | lakhanghotkar01 (verif.) | https://www.instagram.com/reel/DVP26OHksPJ/ | 233,3 M | comedia/hostelería | 29 s; gancho de precio absurdo en texto; cuenta sorpresa por los pedidos ajenos; sin CTA |
+| 16 | mr_shyamx (verif.) | https://www.instagram.com/reel/DVvzC34oTJS/ | 183,9 M | comedia/restaurante | 11 s; texto «carta ❌ / libro ✅» (tachado/vale); cliente ante carta enorme |
+| 17 | cashepreneurs | https://www.instagram.com/reel/DWEjO5WhKRS/ | 5,6 M | negocios | 10 s; historia de superación en texto largo sobre clip; sin voz; ya 20 M en otro clip de la cuenta |
+| 18 | theflavrqueen (verif.) | https://www.instagram.com/reel/DcYak7gNcKH/ | 114,0 M | comida | 22 s; receta paso a paso sin voz, sin texto, música sola; resultado visible |
+
+**Excepcionales** (plays de 100-330 M; tamaño de cuenta n/d, no comparables con nuestra escala; no esperar esas cifras): #14, #13, #15, #12 y #18 por fuera del rango habitual del archivo. Lo que se copia es la estructura.
+
+## Fórmula 7 · GH PLUS (viene de #12; humor satírico de dinero, sin voz)
+- **Qué copiamos**: cálculo absurdo en 3 líneas de texto, 8-12 s, música sola.
+- **Gancho (en pantalla)**: «Mi sueldo dura hasta el día 12» (6 palabras; exagerado, marcar «demo, datos de ejemplo»).
+- **Segundo 0**: fondo liso, texto grande; el número va bajando línea a línea (datos ficticios).
+- **Beats (4)**: 1) texto del gancho; 2) tres líneas de «cuentas» absurdas en texto; 3) corte a GH PLUS: «Dinero disponible» del mes con aviso de pago próximo y «Marcar pagado»; 4) texto «Al menos ahora lo veo».
+- **Duración**: 12-15 s. **Música**: instrumental cómica de musica_instagram.json, pleno. **Voz**: sin voz.
+- **Cierre único**: «Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso» + /solicitar?app=gh-plus&src=instagram.
+- **Función verificada**: «Inicio: "Dinero disponible" del mes... avisos de pagos vencidos y próximos con botón "Marcar pagado"». No afirmar conexión con el banco ni push garantizados.
+- **Qué mejoramos**: el original solo entretiene; el nuestro acaba con una solución real en 3 s. Si baja el reenvío, dejar la app en 2 s finales.
+
+## Fórmula 8 · Gestión Integral 7D (viene de #13 y #14; humor de comercio/cobros)
+- **Qué copiamos**: «ten cuidado con estos clientes» en texto + cliente cuyo pago «falla»; escena fija.
+- **Gancho (en pantalla)**: «Cliente: se me ha caído la app del banco» (8 palabras).
+- **Segundo 0**: mostrador dibujado con el texto; sin cara real ni voz del dueño.
+- **Beats (4)**: 1) texto del gancho; 2) pausa cómica de 2 s con reloj; 3) corte a 7D: la factura con enlace de pago (tarjeta, Redsys con Bizum si está activo, o transferencia con IBAN); 4) texto «Paga ahora desde su móvil».
+- **Duración**: 15-20 s. **Música**: instrumental de suspense cómico. **Voz**: sin voz. Distinto de F4 (promesa de pago a 90 días): aquí el pago «imposible» en el mostrador.
+- **Cierre único**: «Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso» + /solicitar?app=gestion-integral-7d&src=instagram.
+- **Función verificada**: «Enlace de pago por factura: tarjeta con Stripe, TPV Redsys (con Bizum si está activo) o transferencia con IBAN». No afirmar cobrar antes ni Verifactu.
+- **Qué mejoramos**: el original son 41-52 s de sketch largo; el nuestro dura un tercio, es legible sin sonido y acaba en la solución. No publicar F4 y F8 el mismo día (misma app).
+- **No escrito**: fórmula de comida/hostelería (sin app verificada que enseñe un proceso de cocina) y de MEDICATOR (sin material nuevo de nicho de salud en este informe).
+
+- Nota (pasada anterior): las funciones de F4, F5 y F6 constan literalmente en hechos_verificados (Producto, 12/11). Cupo de `reel_search` agotado (aviso: «10 búsquedas usadas hoy»). MEDICATOR: mientras siga la discrepancia sobre lectura de papeles/escaneo, usar solo F6/F3 (pastilla, Muy fácil, Llamar, «Para el médico»).
 
 ## Qué ha cambiado hoy (lo nuevo manda)
 1. **Nuevo récord de la semana en nuestros nichos**: boceto de 11 s de una cuenta de 16,8k seguidores con 106k visualizaciones, 11,4k me gusta y 1.297 compartidos (6,3 veces sus seguidores; 11 compartidos por cada 100 me gusta). Estructura: **todo el gancho es una frase en pantalla en primera persona («Yo: …») que plantea una mentira cotidiana de trabajo**, sin voz, y el giro llega en segundos. Hook «good» en Buzzfy.
