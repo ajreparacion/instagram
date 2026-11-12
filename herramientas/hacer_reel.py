@@ -1601,6 +1601,60 @@ def enmarcar_apaisado(fr, seed, rng):
     rect_mano(d, x0 - 6, y0 - 6, x0 + fw + 6, y0 + fh + 6, rng, 10, radio=14, amp=2.0)
     return img
 
+# ---- empuje de camara en tramos quietos (plantilla; 12/11/2026 tarde, peticion de Calidad por 406: B5)
+# Si la grabacion se queda quieta >= min_s (respuesta ya en pantalla, clip agotado, gancho sobre un fotograma fijo), el
+# dispositivo entero hace un empuje lento (zoom-in) con un "golpe" (corte de encuadre) cada <= seg_s. Siempre con escala
+# <= 1,0: nunca recorta la pantalla ni pisa el gancho o los subtitulos, y cada tramo quieto acaba en 1,0, asi que enlaza
+# sin salto con el movimiento siguiente. Apagar en un guion: "empuje": false.
+EMPUJE = {"activo": True, "min_s": 1.5, "seg_s": 2.2, "bajo": 0.90, "deriva": 0.035, "nivel": 10, "bloques": 6}
+
+def quietud_clip(clip, nframes):
+    """True por fotograma si la pantalla esta quieta A LA VISTA: respecto al primer fotograma de su tramo cambian como
+    mucho EMPUJE["bloques"] bloques de 8x8 px (un cursor de texto que parpadea no cuenta; teclear, mover el raton, un
+    scroll o una respuesta que aparece, si). Mas alla del final del clip se congela el ultimo fotograma: quieto."""
+    firmas = []
+    for f in clip.files[:nframes]:
+        try:
+            im = Image.open(f); im.draft("L", (W // 8, H // 8))
+            firmas.append(np.asarray(im.convert("L").resize((W // 8, H // 8), Image.BOX), dtype=np.float32))
+        except Exception:
+            firmas.append(firmas[-1] if firmas else np.zeros((H // 8, W // 8), np.float32))
+    q = [True] * nframes
+    if not firmas: return q
+    ancla = firmas[0]
+    for i in range(1, min(nframes, len(firmas))):
+        if int((np.abs(firmas[i] - ancla) > EMPUJE["nivel"]).sum()) > EMPUJE["bloques"]:
+            q[i] = False; ancla = firmas[i]
+    return q
+
+def plan_empuje(quieto):
+    """Escala del dispositivo por fotograma (1,0 fuera de los tramos quietos) y lista de tramos (inicio_s, dur_s, golpes)."""
+    n_f = len(quieto); z = [1.0] * n_f; tramos = []
+    der = EMPUJE["deriva"]; i = 0
+    while i < n_f:
+        if not quieto[i]: i += 1; continue
+        j = i
+        while j < n_f and quieto[j]: j += 1
+        L = j - i
+        if L >= EMPUJE["min_s"] * FPS:
+            n = max(1, int(math.ceil(L / (EMPUJE["seg_s"] * FPS))))
+            for k in range(n):
+                a = i + (L * k) // n; b = i + (L * (k + 1)) // n
+                z0 = (1.0 - der) if (n - 1 - k) % 2 == 0 else EMPUJE["bajo"]   # el ultimo segmento acaba en 1,0
+                for f in range(a, b): z[f] = z0 + der * (f - a + 1) / max(1, b - a)
+            if i > 0:   # tramo quieto a mitad de escena: entra desde 1,0 con una transicion corta, sin salto
+                m = max(1, min(int(0.3 * FPS), L // 4))
+                for f in range(i, i + m): z[f] = 1.0 + (z[f] - 1.0) * ease_out((f - i + 1) / m)
+            tramos.append((i / FPS, L / FPS, n - 1))
+        i = j
+    return z, tramos
+
+def escalar_dispositivo(img, z):
+    """Fotograma de la plantilla con el dispositivo a escala z (< 1) sobre su mismo fondo plano."""
+    cx, cy = APP.get("centro") or (W / 2, 855)
+    return img.transform((W, H), Image.AFFINE, (1 / z, 0, cx - cx / z, 0, 1 / z, cy - cy / z), resample=Image.BICUBIC,
+                         fillcolor=tuple(APP.get("fondo") or (255, 255, 255))[:3])
+
 def preparar_app(sc, spec, rng):
     """Prepara una escena en modo app: tramo de video (acelerado a la voz), gancho, cierre, subtitulos y Bit."""
     sc.estilo_a = str(spec.get("estilo") or "tramo").strip().lower()
@@ -1660,6 +1714,14 @@ def preparar_app(sc, spec, rng):
         sc.env = [min(1.0, max(0.0, float(x))) for x in env] if isinstance(env, list) and env else None
         if texto:
             sc.rotulo = rotulo_humano(texto) if (sobre_video and not plant) else rotulo_dibujo(texto, grande=(sc.estilo_a == "cierre"))
+    sc.empuje = None
+    if plant and EMPUJE["activo"] and APP.get("empuje", True) and not spec.get("_sin_empuje") and (sc.clip is not None or sc.still is not None):
+        q = quietud_clip(sc.clip, sc.nframes) if sc.clip is not None else [True] * sc.nframes
+        z, tramos = plan_empuje(q)
+        if tramos:
+            sc.empuje = z
+            print("empuje de camara, escena %d: %s" % (sc.idx + 1, "; ".join(
+                "quieta %.1f s desde %.1f s (%d golpe%s)" % (d, a, g, "" if g == 1 else "s") for a, d, g in tramos)))
 
 def render_frame_app(fi, sc, noise, rg, seed):
     lf = fi - sc.start; t = lf / FPS
@@ -1687,6 +1749,8 @@ def render_frame_app(fi, sc, noise, rg, seed):
         img = Image.new("RGB", (W, H), APP["fondo"])   # cierre en plantilla: el mismo fondo plano de la grabacion
     else:
         img = papel_img(seed).copy()
+    if plant and getattr(sc, "empuje", None) and 0 <= lf < len(sc.empuje) and sc.empuje[lf] < 0.999:
+        img = escalar_dispositivo(img, sc.empuje[lf])
     d = ImageDraw.Draw(img, "RGBA")
     # ---- gancho: texto grande (entra con un pequeno "pop")
     if sc.grande is not None:
@@ -2456,6 +2520,11 @@ def main():
         if APP["plantilla"]:
             f0 = fotograma_video(APP["path"], 0.0)
             if f0 is not None: APP["fondo"] = f0.getpixel((4, 4))
+            APP["empuje"] = g.get("empuje", True) is not False
+            APP["centro"] = (W / 2, 855)   # movil de grabar_pantalla.py; portatil (cuerpo mas ancho): centro mas arriba
+            if f0 is not None:
+                fila = np.abs(np.asarray(f0.resize((W, H)).crop((0, 760, W, 780)), dtype=np.int16) - np.array(APP["fondo"][:3])).sum(2).max(0)
+                if int((fila > 60).sum()) > 800: APP["centro"] = (W / 2, 790)
         APP["volumen"] = max(0.0, min(1.5, float(g.get("volumen_original", 0.5))))
         if "musica" not in g: musica = None   # automatico: segun si el video trae sonido
         for e in g["escenas"]:
@@ -2555,6 +2624,7 @@ def main():
                     "_ctx": dict(esc[0].get("_ctx") or {}, cont_ini=0, cont_fin=0)})
     if MODO["datos"]:   # portada = fotograma del gancho
         cov.update({"texto": str(g.get("gancho_corto") or esc[0].get("texto") or cov["texto"]), "grafico": "texto", "_ctx": dict(esc[0].get("_ctx") or {})})
+    cov["_sin_empuje"] = True   # la portada no lleva empuje de camara: dispositivo a tamano completo
     cs = Scene(0, cov, seed, title, 90, 0)
     cimg = render_frame(60, [cs], noise, date_s, title, random.Random(1))
     Image.fromarray(cimg).save(os.path.splitext(out)[0] + "_portada.jpg", quality=90)

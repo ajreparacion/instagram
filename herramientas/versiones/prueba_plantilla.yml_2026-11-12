@@ -1,0 +1,40 @@
+name: Prueba de la plantilla de grabación de pantalla
+
+# Solo a mano (Actions → Prueba de la plantilla → Run workflow). No publica nada en Instagram.
+# Graba herramientas/plantilla/demo_tareas.html con Playwright (grabar_pantalla.py), lo renderiza con hacer_reel.py en
+# "modo":"app" + "plantilla":true (sin voz: tiempos estimados) y sube la muestra a la release "pruebas".
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Herramientas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core > /dev/null
+          pip install --quiet pillow numpy playwright
+          python3 -m playwright install --with-deps chromium > /dev/null
+      - name: Grabar y renderizar
+        run: |
+          mkdir -p /tmp/plantilla
+          cd herramientas
+          python3 grabar_pantalla.py plantilla/ejemplo_grabacion.json plantilla/ejemplo_grabacion.mp4
+          python3 hacer_reel.py plantilla/ejemplo_guion_plantilla.json /tmp/plantilla/plantilla_muestra.mp4
+          cp plantilla/ejemplo_grabacion.mp4 /tmp/plantilla/plantilla_grabacion.mp4
+          ffprobe -v error -show_entries stream=codec_name,width,height,r_frame_rate:format=duration -of default=nw=1 /tmp/plantilla/plantilla_muestra.mp4
+      - name: Subir a la release "pruebas"
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release view pruebas >/dev/null 2>&1 || gh release create pruebas --title "Pruebas de producción" --notes "Vídeos de prueba de Mejora (no se publican)."
+          gh release upload pruebas /tmp/plantilla/*.mp4 --clobber
