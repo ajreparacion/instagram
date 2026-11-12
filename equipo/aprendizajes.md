@@ -39,6 +39,7 @@ Regla: cada aprendizaje lleva evidencia y confianza (alta/media/baja). Sin evide
 - Seguidores (Buzzfy, 22/10-2/11/2026): +6 / -11 = -5 netos en 12 días cerrados. La cuenta pierde seguidores lentamente sin publicar. Confianza: alta.
 
 ## Decisiones vigentes
+- 12/11/2026 MONETIZACIÓN: embudo 5-12/11 = 689 no seguidores → 13 visitas al perfil (1,9 %) → 3 clics → 0 solicitudes nuevas → 0 €. El episodio 301 da 255 de alcance en 21 h y 0 visitas al perfil: hace falta un motivo para ir al perfil en cada episodio y publicar pivote y control a la misma hora (equipo/monetizacion.md v7).
 - 10/11/2026 ESTRATEGA: plan 11-17/11 rehecho para la serie «El Jambo que sabe y las IAs» (orden del dueño 10/11): 3 episodios 20:40 (12, 13, 14/11), 3 reels de valor/app a las 13:40 y 3 carruseles; 6 reels frente a los 16 anteriores y cola aparcada a 31/12. Motivo: Buzzfy 3-10/11 da alcance 500 con 16+ piezas, reels de app 5-11 de alcance y -8 seguidores netos; más volumen no ha dado alcance.
 - 10/11/2026 ESTRATEGA: experimento «serie con personajes vs valor y apps» (plan.json); lectura provisional el 16/11 y decisiva el 23/11 con 6 episodios; metas por episodio en DIRECTIVA §10.
 - 10/11/2026 ESTRATEGA: fórmulas F3+F7 en los episodios, F4/F1 en los reels de valor y F7 en Insultator; los tres episodios van sin palabra clave (cierre «envíaselo»).
