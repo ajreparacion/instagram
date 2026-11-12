@@ -1,0 +1,152 @@
+{
+ "canal": "facebook",
+ "generado": "2026-11-12T17:04:20+00:00",
+ "piezas": [
+  {
+   "id": "201_medicator_carrusel",
+   "tipo": "carrusel",
+   "nota": 94,
+   "retencion": 22.0,
+   "texto": "¿Ya te tomaste la pastilla o no? 💊\nMEDICATOR organiza las pastillas y las citas médicas con letra grande, pensada para mayores y para quien los cuida.\nAl abrirla ves la pastilla que toca ahora y la apuntas con un botón grande.\nLas citas van en un calendario: médico, centro, planta, si es en ayunas y qué llevar.\nPrepara una hoja con tus medicinas, alergias y preguntas para el médico, y una lista para la farmacia.\nCapturas de la demo con datos de ejemplo. Organiza; no sustituye a tu médico ni a tu farmacéutico.\n¿La quieres para ti o para tus padres? Pide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#mayores #cuidadores #organizacion #apps #neogestlab",
+   "app": "MEDICATOR",
+   "commit": "2fa2cb311b94f99fd8cb343668cd7d085e7788ba^",
+   "ruta": "cola/201_medicator_carrusel/slides",
+   "huella": "34128af0f3ac38fe",
+   "estado": "pendiente"
+  },
+  {
+   "id": "101_errores_prompt",
+   "tipo": "carrusel",
+   "nota": 90,
+   "retencion": 28.0,
+   "texto": "Deja de pedirle así las cosas a la IA.\nSi ChatGPT, Claude o Gemini te contestan regular, casi siempre es por el mensaje:\n1. Dale contexto: para quién es, qué pasa y qué tono quieres.\n2. Dile el formato: tabla, 3 puntos o menos de 100 palabras.\n3. No te quedes con la primera respuesta: pide «más corto» o «3 versiones».\n4. Pídele que te haga preguntas antes de responder.\n5. Comprueba datos, fechas y cifras, porque puede equivocarse.\nGuárdalo para tu próximo prompt 📌 Y si quieres una app para tu negocio, escríbeme IDEA por privado.\n\n#inteligenciaartificial #ia #prompts #productividad #neogestlab",
+   "app": null,
+   "commit": "52aa8246c44bb538131a3298239050689df6d6d9^",
+   "ruta": "cola/101_errores_prompt/slides",
+   "huella": "5b86e0df305b9bc8",
+   "estado": "pendiente"
+  },
+  {
+   "id": "105_reformas_presupuestos",
+   "tipo": "carrusel",
+   "nota": 90,
+   "retencion": 27.0,
+   "texto": "¿Pasas los presupuestos al Excel por la noche?\nSi trabajas en reformas o instalaciones, conoces el bucle: libreta, Excel y factura a mano.\nGestión Integral 7D, nuestra app, une presupuesto, pedido, albarán y factura, y cada paso hereda líneas, IVA y retención.\nPresupuestos y facturas en PDF con tus datos fiscales y los del cliente.\nCada factura puede llevar su enlace de pago: tarjeta, TPV Redsys (con Bizum si está activo) o transferencia.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🛠️\n\n#autonomos #reformas #facturacion #pymes #apps #neogestlab",
+   "app": "Gestión Integral 7D",
+   "commit": "52aa8246c44bb538131a3298239050689df6d6d9^",
+   "ruta": "cola/105_reformas_presupuestos/slides",
+   "huella": "9c68d2261a97bf9e",
+   "estado": "pendiente"
+  },
+  {
+   "id": "106_comerciales_ruta",
+   "tipo": "carrusel",
+   "nota": 90,
+   "retencion": 27.0,
+   "texto": "¿Improvisas cada día tu ruta de visitas?\nPara comerciales y distribuidores que pasan el día de cliente en cliente.\nEn Gestión Integral 7D, nuestra app, «Mi día» ordena tus paradas por carretera con la hora prevista de llegada (si el servicio de rutas falla, las ordena en línea recta y te avisa).\nCada visita queda registrada con llegada, salida y distancia a la ubicación del cliente.\nTu cartera, con ranking ABC.\nLos agentes IA solo proponen acciones: tú decides si las apruebas.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🚐\n\n#comerciales #distribucion #ventas #pymes #neogestlab",
+   "app": "Gestión Integral 7D",
+   "commit": "4eed209ef76f861027362466f1bc64c833722e6b^",
+   "ruta": "cola/106_comerciales_ruta/slides",
+   "huella": "b87614bc8c350ba3",
+   "estado": "pendiente"
+  },
+  {
+   "id": "103_tareas_casa_ia",
+   "tipo": "carrusel",
+   "nota": 90,
+   "retencion": 21.0,
+   "texto": "5 tareas pesadas que ChatGPT, Claude o Gemini hacen por ti (prompts incluidos).\nMenú de cenas de la semana y lista de la compra por secciones.\nResumir la circular del cole o de la comunidad y decirte qué hacer y para cuándo, sin pegar datos personales.\nResponder un mensaje difícil con educación.\nPasar a texto la foto de una receta o un tíquet.\nRepartir las tareas de la semana según tus horas libres.\nGuárdalo para el domingo 🗓️ ¿Y una app hecha para tu casa? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #organizacion #hogar #productividad #neogestlab",
+   "app": null,
+   "commit": "aabfa229e58230aa183b4718d355aa4073672aca^",
+   "ruta": "cola/103_tareas_casa_ia/slides",
+   "huella": "5711da1664434fcc",
+   "estado": "pendiente"
+  },
+  {
+   "id": "102_formula_prompt",
+   "tipo": "carrusel",
+   "nota": 90,
+   "retencion": 10.0,
+   "texto": "Con esta fórmula la IA por fin te entiende.\nUn buen prompt tiene 4 piezas, en este orden:\nRol: «Actúa como asesor de marketing para pequeños negocios».\nContexto: quién eres, qué pasa y para quién es.\nTarea: un verbo claro y una sola cosa cada vez.\nFormato: tabla, lista, email o número de líneas.\nGuárdalo: el ejemplo completo está en la diapositiva 6, listo para cambiar los datos ✍️ ¿Tienes una idea para tu negocio? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #prompts #ia #pymes #neogestlab",
+   "app": null,
+   "commit": "d9feaf83a45749ad89acb68ac3070855b484446d^",
+   "ruta": "cola/102_formula_prompt/slides",
+   "huella": "d150c681411f6403",
+   "estado": "pendiente"
+  },
+  {
+   "id": "202_gestion_integral_7d_carrusel",
+   "tipo": "carrusel",
+   "nota": 90,
+   "retencion": 5.0,
+   "texto": "¿Tu ruta de visitas sigue en papel? 🚗\nGestión Integral 7D es nuestra app para comerciales y pymes que venden en la calle.\nClientes clasificados A, B y C, con su ubicación y la fecha de la última visita.\n«Mi día» ordena tus visitas por carretera y te da la hora prevista de llegada.\nPresupuesto, pedido, albarán y factura heredando líneas e IVA, sin volver a teclear.\nFactura en PDF con tus datos y enlace de pago: tarjeta, Bizum o transferencia.\nCapturas reales de la demo. Mándaselo a quien aún apunta las visitas en papel.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#comerciales #pymes #ventas #facturacion #apps #neogestlab",
+   "app": "Gestión Integral 7D",
+   "commit": "bdb7017ba65a24fccfdde3d863a515430b38f556^",
+   "ruta": "cola/202_gestion_integral_7d_carrusel/slides",
+   "huella": "6e978b5789875750",
+   "estado": "pendiente"
+  },
+  {
+   "id": "203_studio_beats_pro_carrusel",
+   "tipo": "carrusel",
+   "nota": 90,
+   "retencion": 0.0,
+   "texto": "¿Tienes letras pero no tienes estudio? 🎤\nStudio Beats PRO te lleva de la idea a la canción en 4 pasos.\n1. Eliges estilo, tono y modo y sale la base: batería, bajo, acordes y melodía.\n2. Grabas tu voz encima, con cuenta atrás y metrónomo.\n3. «Terminar canción» afina, mezcla y masteriza en un clic.\n4. La descargas en MP3 a 320 kbps (en modo Pro, también WAV, FLAC y stems).\nEstá en fase de pruebas. Mándaselo a quien guarda letras en el cajón.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#musica #productormusical #beats #cantantes #apps #neogestlab",
+   "app": "Studio Beats PRO",
+   "commit": "cb05aa13066fcef6e540475eb950f8b32b9b5b5c^",
+   "ruta": "cola/203_studio_beats_pro_carrusel/slides",
+   "huella": "43cfaa9801446239",
+   "estado": "pendiente"
+  },
+  {
+   "id": "centro_gestion-integral-7d_reel",
+   "tipo": "video_centro",
+   "nota": 90,
+   "retencion": 0.0,
+   "app": "Gestión Integral 7D (reel corto)",
+   "url_mp4": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/videos/gestion-integral-7d-reel.mp4",
+   "duracion": 52.7,
+   "texto": "Gestión Integral 7D (reel corto)\n\nPrueba gratuita: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=facebook\nBy Neogest Lab",
+   "huella": "76c13e8d9155b0b7",
+   "estado": "pendiente"
+  }
+ ],
+ "saltados": [
+  {
+   "id": "013_claude_gratis",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "014_formula_prompt",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "015_resumir_correo",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "016_filtro_facturas",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "201_medicator_reel",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "202_gestion_integral_7d_reel",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "203_studio_beats_pro_reel",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "301_jambo_ep1_momentito",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "401_bar_merma_reel",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  }
+ ]
+}

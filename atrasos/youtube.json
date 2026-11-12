@@ -1,0 +1,89 @@
+{
+ "canal": "youtube",
+ "generado": "2026-11-12T17:04:20+00:00",
+ "piezas": [
+  {
+   "id": "centro_gestion-integral-7d_reel",
+   "tipo": "video_centro",
+   "nota": 90,
+   "retencion": 0.0,
+   "app": "Gestión Integral 7D (reel corto)",
+   "url_mp4": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/videos/gestion-integral-7d-reel.mp4",
+   "duracion": 52.7,
+   "texto": "Gestión Integral 7D (reel corto)\n\nPrueba gratuita: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube\nBy Neogest Lab",
+   "largo": false,
+   "huella": "4788ae2471c28a11",
+   "estado": "pendiente"
+  }
+ ],
+ "saltados": [
+  {
+   "id": "013_claude_gratis",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "014_formula_prompt",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "015_resumir_correo",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "016_filtro_facturas",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "101_errores_prompt",
+   "motivo": "carrusel de imágenes: no es vídeo"
+  },
+  {
+   "id": "102_formula_prompt",
+   "motivo": "carrusel de imágenes: no es vídeo"
+  },
+  {
+   "id": "103_tareas_casa_ia",
+   "motivo": "carrusel de imágenes: no es vídeo"
+  },
+  {
+   "id": "105_reformas_presupuestos",
+   "motivo": "carrusel de imágenes: no es vídeo"
+  },
+  {
+   "id": "106_comerciales_ruta",
+   "motivo": "carrusel de imágenes: no es vídeo"
+  },
+  {
+   "id": "201_medicator_carrusel",
+   "motivo": "carrusel de imágenes: no es vídeo"
+  },
+  {
+   "id": "201_medicator_reel",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "202_gestion_integral_7d_carrusel",
+   "motivo": "carrusel de imágenes: no es vídeo"
+  },
+  {
+   "id": "202_gestion_integral_7d_reel",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "203_studio_beats_pro_carrusel",
+   "motivo": "carrusel de imágenes: no es vídeo"
+  },
+  {
+   "id": "203_studio_beats_pro_reel",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "301_jambo_ep1_momentito",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  },
+  {
+   "id": "401_bar_merma_reel",
+   "motivo": "el mp4 se borró de la release tras publicar y no se conserva en git"
+  }
+ ]
+}
