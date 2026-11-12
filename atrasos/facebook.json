@@ -13,8 +13,8 @@
    "ruta": "cola/201_medicator_carrusel/slides",
    "huella": "34128af0f3ac38fe",
    "estado": "pendiente",
-   "errores": 1,
-   "ultimo_error": " has expired on Thursday, 12-Nov-26 10:00:00 PST. The current time is Thursday, 12-Nov-26 10:39:24 PST.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":463,\"fbtrace_id\":\"AExKHgamQQBUZSOwrcb5f-o\"}}"
+   "errores": 2,
+   "ultimo_error": "Facebook HTTP 403: {\"error\":{\"message\":\"(#200) Unpublished posts must be posted to a page as the page itself.\",\"type\":\"OAuthException\",\"code\":200,\"fbtrace_id\":\"AanJ7rQ8VkiMfeOuG34ttW5\"}}"
   },
   {
    "id": "101_errores_prompt",

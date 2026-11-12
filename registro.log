@@ -1,13 +1,3 @@
-2026-11-11 20:43  016_filtro_facturas: no se pudieron leer comentarios: Unsupported get request. Object with ID '18015411647992201' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
-2026-11-11 20:55  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 9 frases en 222 s
-2026-11-11 20:55  Voz: timbre de personaje aplicado a 3 frases (['jupillo', 'pelota'])
-2026-11-11 20:55  Voz: silencios recortados por frase (s): [0.34, 0.15, 0.34, 0.52, 0.8, 0.6, 0.26, 0.48, 1.02]
-2026-11-11 20:55  Voz: pico de cada frase normalizado a -6.0 dBFS (ganancia aplicada, dB): [np.float64(0.3), np.float64(4.7), np.float64(3.7), np.float64(3.2), np.float64(4.1), np.float64(6.8), np.float64(-5.4), np.float64(-0.4), np.float64(1.2)]
-2026-11-11 20:55  Voz: alineación palabra a palabra (small, 17.5 s): 9/9 frases
-2026-11-11 20:55  Mezcla: voz -16.4 LUFS, música -15.5 LUFS (con ducking -16.0), la música baja 6.0 dB (p90) bajo la voz, ratio 1.987; máster -15.89 -> -14.2 LUFS, pico -1.4 dBFS; huecos de voz: [[7.15, 10.2]]
-2026-11-11 20:56  510_jambo_web_pre_entrada: renderizado con voz y subido a la release 'cola'
-2026-11-11 20:56  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
-2026-11-11 20:56  013_claude_gratis: no se pudieron leer comentarios: Unsupported get request. Object with ID '17980873539135416' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-11 20:56  014_formula_prompt: no se pudieron leer comentarios: Unsupported get request. Object with ID '18114456071177223' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-11 20:56  015_resumir_correo: no se pudieron leer comentarios: Unsupported get request. Object with ID '18119170952012543' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-11 20:56  016_filtro_facturas: no se pudieron leer comentarios: Unsupported get request. Object with ID '18015411647992201' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
@@ -598,3 +588,13 @@
 2026-11-12 19:39  014_formula_prompt: no se pudieron leer comentarios: Error validating access token: Session has expired on Thursday, 12-Nov-26 10:00:00 PST. The current time is Thursday, 12-Nov-26 10:39:26 PST. (código 190, subcódigo 463)
 2026-11-12 19:39  015_resumir_correo: no se pudieron leer comentarios: Error validating access token: Session has expired on Thursday, 12-Nov-26 10:00:00 PST. The current time is Thursday, 12-Nov-26 10:39:26 PST. (código 190, subcódigo 463)
 2026-11-12 19:39  016_filtro_facturas: no se pudieron leer comentarios: Error validating access token: Session has expired on Thursday, 12-Nov-26 10:00:00 PST. The current time is Thursday, 12-Nov-26 10:39:26 PST. (código 190, subcódigo 463)
+2026-11-12 19:54  atrasos facebook: error 201_medicator_carrusel Facebook HTTP 403: {"error":{"message":"(#200) Unpublished posts must be posted to a page as the page itself.","type":"OAuthException","code":200,"fbtrace_id":"AanJ7rQ8VkiMfeOuG34ttW5"}}
+2026-11-12 19:54  atrasos youtube: error centro_gestion-integral-7d_reel YouTube HTTP 400: {
+  "error": "invalid_grant",
+  "error_description": "Bad Request"
+}
+2026-11-12 19:54  001_baile_1518: no se pudieron leer comentarios: Error validating access token: Session has expired on Thursday, 12-Nov-26 10:00:00 PST. The current time is Thursday, 12-Nov-26 10:54:22 PST. (código 190, subcódigo 463)
+2026-11-12 19:54  013_claude_gratis: no se pudieron leer comentarios: Error validating access token: Session has expired on Thursday, 12-Nov-26 10:00:00 PST. The current time is Thursday, 12-Nov-26 10:54:22 PST. (código 190, subcódigo 463)
+2026-11-12 19:54  014_formula_prompt: no se pudieron leer comentarios: Error validating access token: Session has expired on Thursday, 12-Nov-26 10:00:00 PST. The current time is Thursday, 12-Nov-26 10:54:22 PST. (código 190, subcódigo 463)
+2026-11-12 19:54  015_resumir_correo: no se pudieron leer comentarios: Error validating access token: Session has expired on Thursday, 12-Nov-26 10:00:00 PST. The current time is Thursday, 12-Nov-26 10:54:22 PST. (código 190, subcódigo 463)
+2026-11-12 19:54  016_filtro_facturas: no se pudieron leer comentarios: Error validating access token: Session has expired on Thursday, 12-Nov-26 10:00:00 PST. The current time is Thursday, 12-Nov-26 10:54:22 PST. (código 190, subcódigo 463)
