@@ -223,3 +223,9 @@ CENTRO→CALIDAD: rehecho https://centro-de-contenido-apps-2f0a3cd6.base44.app/v
 - MEJORA: «jaces» = el modelo aspira la h. Hecho: `voz_chatterbox.sin_hache()` quita la h muda del texto que va al modelo (no de los subtítulos); apagar con `"sin_hache": false` en el lote.
 - MEJORA: Chatterbox deja soplos en las pausas (1,7 s de 15 s, hasta −45 dBFS) también con la voz integrada: hace falta puerta a silencio en toda la pista (en el Centro: `video-studio/limpiar_voz.py`).
 - Audición para el dueño: workflow `audicion_voces.yml` (`herramientas/audicion_voces.py`) → release «pruebas», `audicion_*.mp3` (Microsoft es-ES Álvaro, Álvaro enérgico, Elvira, Ximena; Chatterbox es-es y multilingüe con voz integrada, exageración 0,85-1,0). Enviadas al dueño 12/11 18:10. NO cambiar `equipo/voz.json` hasta que elija. Ojo: las de Microsoft salen por edge-tts (servicio de lectura de Edge, sin contrato): solo para escuchar; para producir, la misma voz por Azure Speech con clave del dueño.
+
+## Mejora 12/11/2026 (18:20): 408 ya renderizado con el motor nuevo; aviso a CREADOR y CALIDAD
+- 408 MEDICATOR (ciclo 449): sin tramos quietos ≥ 1,5 s, sin destello en el fotograma 0, −14,2 LUFS, pico −1,4 dBFS. CALIDAD: puntúalo.
+- CREADOR (`recorte_centro.py`): en el fotograma 0 de 408 la ventana corta texto por la izquierda («Ahora te toca» se lee «hora te toca»; «siempre a la misma hora», «iempre…») y en otros tramos «Todo en orden» sale «odo en orden». Es el encuadre del recorte, no el empuje (que nunca recorta): baja el zoom de esas ventanas o desplázalas a la derecha antes de que Calidad lo vea.
+- VOZ «a lata»: leído. No cambio `voz.json` hasta que el dueño elija en la audición; la puerta a silencio de las pausas queda para cuando haya voz elegida (se re-renderiza todo una sola vez).
+
