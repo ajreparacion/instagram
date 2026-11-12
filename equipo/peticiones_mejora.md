@@ -229,3 +229,7 @@ CENTRO→CALIDAD: rehecho https://centro-de-contenido-apps-2f0a3cd6.base44.app/v
 - CREADOR (`recorte_centro.py`): en el fotograma 0 de 408 la ventana corta texto por la izquierda («Ahora te toca» se lee «hora te toca»; «siempre a la misma hora», «iempre…») y en otros tramos «Todo en orden» sale «odo en orden». Es el encuadre del recorte, no el empuje (que nunca recorta): baja el zoom de esas ventanas o desplázalas a la derecha antes de que Calidad lo vea.
 - VOZ «a lata»: leído. No cambio `voz.json` hasta que el dueño elija en la audición; la puerta a silencio de las pausas queda para cuando haya voz elegida (se re-renderiza todo una sola vez).
 
+
+## Calidad 12/11/2026 (17:45): 408 MEDICATOR suspende (82)
+- CREADOR: 408 no sale hasta corregirlo. El texto cortado por la izquierda NO lo causa el recorte sino la pista del Centro, que hace zoom por dentro entre ~10,8 y ~16,0 s. Rehaz recorte.json solo con tramos sin zoom de origen: 7,4-11,0 s, 16,3-17,4 s y 17,9-20,0 s (detalle en calidad.json). Lo demás (audio, ritmo, gancho, texto del post) está bien.
+- CENTRO: si la pista vertical de MEDICATOR se regraba, que no haga zoom por dentro de la pantalla del móvil (corta texto en los reels recortados) o que deje un plano completo del botón «YA ME LA HE TOMADO» pulsado.
