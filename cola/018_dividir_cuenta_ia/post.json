@@ -20,7 +20,7 @@
   "publico": "Ocio, humor y viajes",
   "formato": "Una idea, una app",
   "_nota_calidad": "12/11 Calidad: voz del gancho acortada a «Nadie quiere hacer la cuenta» (la escena del gancho duraba 3,93 s; B5 pide el primer corte antes de 3 s); renderizado:false para que el ciclo lo rehaga. Añadidos comentario_fijado y monetizacion. La fecha (aparcado el 31/12 por el Estratega) no se toca.",
-  "renderizado": false,
+  "renderizado": "2026-11-12T15:04:40+00:00",
   "nota_mejora": "10/11/2026 (2.ª ejecución): rendido con Piper por error de instalación; se rehace con «Chatterbox España» (es-es sin referencia de persona real). Sin voz del dueño.",
   "audio_ig": {
     "audio_id": "583674661052146",
