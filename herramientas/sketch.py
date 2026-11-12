@@ -576,7 +576,7 @@ def _serio(sc, t):
     a = int(255 * k)
     blanco = (244, 242, 236, a)
     if sc.estilo_d == "mensaje":
-        f, size, lines = hr.wrap_fit(sc.texto, hr.F_DIB, maxw=hr.W - 180, maxlines=5, smax=92, smin=50)
+        f, size, lines = hr.wrap_fit(sc.texto, hr.F_DIB, maxw=hr.W - 180, maxlines=5, smax=92, smin=50, estricto=40)   # 12/11/2026: baja hasta 40 px y, si no cabe, el render FALLA (antes recortaba sin avisar)
         lh = int(size * 1.22)
         y = 830 - lh * len(lines) // 2
         d.rectangle([110, y - 56, 110 + 150, y - 46], fill=hr.CIAN + (a,))

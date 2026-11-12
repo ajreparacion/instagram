@@ -4,7 +4,7 @@
 Uso: python3 herramientas/narracion_demo.py [musica|voz|duraciones|verificar|todo]
 
 - voz: lee herramientas/demo_narracion.json, sintetiza cada clip con voz_chatterbox.py y la configuración vigente de
-  equipo/voz.json (voz del dueño, autorizada por él, + truco θ), y deja un mp3 por clip en demo_audio/
+  equipo/voz.json (desde el 12/11/2026 la voz genérica de España de los reels; la del dueño está prohibida), y deja un mp3 por clip en demo_audio/
   (mono, 44,1 kHz, 112 kbps, -16 LUFS, sin silencios largos al principio ni al final).
 - musica: pista de fondo en bucle, GENERADA POR CÓDIGO (numpy), sin material de terceros: sin problemas de licencia.
   ~74 s a 104 bpm (32 compases), -26 LUFS (la voz va a -16: la app además la baja con ducking).
@@ -81,8 +81,25 @@ def voz():
     cb = cfg["chatterbox"]
     if cfg.get("prohibir_voz_dueno", True):
         # Orden del dueño (9/11/2026 23:55): su voz no se usa en ningún audio nuevo (tampoco en la demo del Centro).
-        raise SystemExit("Voz del dueño prohibida por la directiva (9/11/2026): no se genera narración con su referencia. "
-                         "Pendiente: narrar la demo con la voz genérica de España (Kokoro) o dejarla sin voz.")
+        # 12/11/2026 (Mejora): en vez de abortar, la demo se narra con la MISMA voz genérica de España que los reels
+        # (publicar_gh.generar_locucion: Chatterbox es-es sin referencia de persona, respaldo Kokoro em_alex), con el mismo
+        # recorte, cadena de voz y -16 LUFS. Así el mp3 que queda en demo_audio/ ya no es el de la voz del dueño.
+        os.makedirs(TRABAJO, exist_ok=True)
+        os.makedirs(SALIDA, exist_ok=True)
+        sys.path.insert(0, BASE)
+        import publicar_gh as pg
+        aj = pg.ajustes_voz()
+        rutas, motor = pg.generar_locucion([c["texto"] for c in clips], TRABAJO, aj,
+                                           estilos=[pg.ESTILO_VOZ.get(c.get("estilo"), c.get("estilo")) for c in clips])
+        print("motor de voz de la demo:", motor, "(genérica de España; nunca la voz del dueño)")
+        cadena = (cfg.get("cadena_voz") or "").strip().strip(",")
+        recorte = ("silenceremove=start_periods=1:start_threshold=-42dB:start_silence=0.06,areverse,"
+                   "silenceremove=start_periods=1:start_threshold=-42dB:start_silence=0.12,areverse")
+        previo = (cadena + "," if cadena else "") + recorte
+        for c, wav in zip(clips, rutas):
+            normalizar_a_mp3(wav, os.path.join(SALIDA, c["id"] + ".mp3"), LUFS_VOZ, previo)
+            print("clip", c["id"], duracion(os.path.join(SALIDA, c["id"] + ".mp3")), "s")
+        return
     os.makedirs(TRABAJO, exist_ok=True)
     os.makedirs(SALIDA, exist_ok=True)
     # Referencia propia de la demo (8/11/2026): tramo 41,26-54,13 s (12,9 s, el más limpio y expresivo) de la nota de voz

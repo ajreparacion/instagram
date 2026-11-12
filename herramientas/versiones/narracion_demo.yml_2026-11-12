@@ -1,0 +1,107 @@
+name: Narración y música del escaparate /demo
+
+# Genera un mp3 por clip de herramientas/demo_narracion.json con Chatterbox y la voz del dueño (equipo/voz.json),
+# una pista de música generada por código y demo_audio/duraciones.json; los sube al repo (demo_audio/).
+# No publica nada en Instagram.
+on:
+  workflow_dispatch:
+    inputs:
+      solo_ids:
+        description: "ids de clips separados por comas para regenerar solo esos (vacío = todos)"
+        required: false
+        default: ""
+      solo_musica:
+        description: "true = solo regenerar la música (sin voz)"
+        default: "false"
+  push:
+    paths:
+      - "herramientas/demo_narracion.json"
+      - "herramientas/narracion_demo.py"
+      - ".github/workflows/narracion_demo.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: narracion-demo
+  cancel-in-progress: true
+
+jobs:
+  narracion:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Herramientas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg espeak-ng > /dev/null
+          pip install --quiet numpy faster-whisper
+
+      - name: Caché de modelos
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.cache/huggingface
+            ~/.cache/torch
+            ~/.cache/pip
+          key: narracion-demo-v1
+          restore-keys: |
+            prueba-voz-v2-
+            voz-v2-
+
+      - name: Música (por código)
+        run: python3 herramientas/narracion_demo.py musica
+
+      - name: Chatterbox (CPU, entorno propio)
+        if: ${{ inputs.solo_musica != 'true' }}
+        run: |
+          python -m venv ~/.venvs/chatterbox
+          ~/.venvs/chatterbox/bin/pip install --quiet --upgrade pip
+          ~/.venvs/chatterbox/bin/pip install --quiet chatterbox-tts --extra-index-url https://download.pytorch.org/whl/cpu
+          ~/.venvs/chatterbox/bin/python -c "import chatterbox.mtl_tts, torch; print('chatterbox OK, torch', torch.__version__)"
+          echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
+
+      - name: Voz (voz del dueño, autorizada por él)
+        if: ${{ inputs.solo_musica != 'true' }}
+        env:
+          TZ: Europe/Madrid
+          SOLO_IDS: ${{ inputs.solo_ids }}
+        run: python3 herramientas/narracion_demo.py voz
+
+      - name: Duraciones y comprobación con Whisper
+        if: always()
+        run: |
+          python3 herramientas/narracion_demo.py duraciones
+          if [ "${{ inputs.solo_musica }}" != "true" ]; then python3 herramientas/narracion_demo.py verificar || true; fi
+          cat demo_audio/duraciones.json | head -60
+
+      - name: Copia de seguridad (artefacto)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: demo_audio
+          path: demo_audio
+          retention-days: 14
+
+      - name: Subir demo_audio al repo
+        if: always()
+        run: |
+          git config user.name "expedientes-bot"
+          git config user.email "expedientes-bot@users.noreply.github.com"
+          git add demo_audio
+          if git diff --cached --quiet; then echo "sin cambios"; exit 0; fi
+          git commit -q -m "Narración y música del /demo $(date -u +%FT%H:%MZ)"
+          # los scripts pueden haber tocado otros ficheros seguidos (p. ej. registro.log): se descartan antes del pull
+          git checkout -- . 2>/dev/null || true
+          for i in 1 2 3 4; do
+            git pull --rebase -q && git push -q && exit 0
+            git rebase --abort 2>/dev/null || true
+            sleep 6
+          done
+          exit 1
