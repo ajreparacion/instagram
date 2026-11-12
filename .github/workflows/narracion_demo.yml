@@ -1,7 +1,8 @@
 name: Narración y música del escaparate /demo
 
-# Genera un mp3 por clip de herramientas/demo_narracion.json con Chatterbox y la voz del dueño (equipo/voz.json),
+# Genera un mp3 por clip de herramientas/demo_narracion.json con la voz genérica de equipo/voz.json (Chatterbox es-es / Kokoro),
 # una pista de música generada por código y demo_audio/duraciones.json; los sube al repo (demo_audio/).
+# 12/11/2026: la voz es la genérica de España de los reels (la del dueño está prohibida desde el 9/11).
 # No publica nada en Instagram.
 on:
   workflow_dispatch:
@@ -58,6 +59,10 @@ jobs:
       - name: Música (por código)
         run: python3 herramientas/narracion_demo.py musica
 
+      - name: Voz Kokoro (CPU; referencia sintética y respaldo)
+        if: ${{ inputs.solo_musica != 'true' }}
+        run: pip install --quiet kokoro soundfile pillow --extra-index-url https://download.pytorch.org/whl/cpu
+
       - name: Chatterbox (CPU, entorno propio)
         if: ${{ inputs.solo_musica != 'true' }}
         run: |
@@ -67,7 +72,7 @@ jobs:
           ~/.venvs/chatterbox/bin/python -c "import chatterbox.mtl_tts, torch; print('chatterbox OK, torch', torch.__version__)"
           echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
 
-      - name: Voz (voz del dueño, autorizada por él)
+      - name: Voz (genérica de España, no la del dueño)
         if: ${{ inputs.solo_musica != 'true' }}
         env:
           TZ: Europe/Madrid

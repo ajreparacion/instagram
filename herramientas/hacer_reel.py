@@ -246,9 +246,13 @@ def draw_prueba(sc, d, t):
     return False
 
 # ---------------------------------------------------------------- texto
-def wrap_fit(text, path, maxw=W - SAFE_L - SAFE_R - 40, maxlines=3, smax=118, smin=44):
+def wrap_fit(text, path, maxw=W - SAFE_L - SAFE_R - 40, maxlines=3, smax=118, smin=44, estricto=0):
+    """Ajusta `text` a maxlines líneas bajando la letra de smax a smin. Si aun así no cabe: con estricto=N (12/11/2026,
+    petición de Calidad: el mensaje se recortaba sin avisar) sigue bajando hasta N px y, si tampoco cabe, FALLA con un
+    mensaje claro; sin estricto se recorta como siempre (los modos antiguos no cambian) pero se avisa por la salida."""
     probe = ImageDraw.Draw(Image.new("L", (4, 4)))
-    for size in range(smax, smin - 1, -4):
+    piso = min(smin, int(estricto)) if estricto else smin
+    for size in range(smax, piso - 1, -4):
         f = font(path, size)
         words, lines, cur = text.split(), [], ""
         for w in words:
@@ -260,6 +264,9 @@ def wrap_fit(text, path, maxw=W - SAFE_L - SAFE_R - 40, maxlines=3, smax=118, sm
         lines.append(cur)
         if len(lines) <= maxlines and all(probe.textlength(l, font=f) <= maxw for l in lines):
             return f, size, lines
+    if estricto:
+        raise ValueError("el texto no cabe en %d líneas ni con letra de %d px (%d caracteres): acórtalo. Texto: %r" % (maxlines, piso, len(text), text[:90]))
+    print("AVISO: texto recortado a %d líneas (no cabe con letra de %d px): %r" % (maxlines, smin, text[:70]))
     f = font(path, smin)
     return f, smin, lines[:maxlines]
 
@@ -2564,6 +2571,15 @@ def main():
     if INFO_MUSICA:
         with open(os.path.splitext(out)[0] + ".musica.json", "w", encoding="utf-8") as fh:
             json.dump(INFO_MUSICA, fh, ensure_ascii=False)
+    if MODO["app"] or MODO["datos"]:   # control de ritmo (12/11/2026, petición de Calidad por 406): avisa de tramos quietos > 3 s
+        try:
+            r = subprocess.run([FFMPEG, "-hide_banner", "-i", out, "-vf", "freezedetect=n=-55dB:d=3", "-an", "-f", "null", "-"],
+                               capture_output=True, text=True, timeout=300)
+            ini = re.findall(r"freeze_start: ([0-9.]+)", r.stderr); dur = re.findall(r"freeze_duration: ([0-9.]+)", r.stderr)
+            for a, d in zip(ini, dur):
+                print("AVISO RITMO: imagen quieta %.1f s desde %.1f s (B5: máx. 3 s sin cambio); acorta el clip o añade movimiento/corte" % (float(d), float(a)))
+        except Exception as ex:
+            print("control de ritmo no disponible:", str(ex)[:80])
     print("OK %s (%d frames, %.1fs, render %.1fs)" % (out, total_f, total_f / FPS, time.time() - t0))
 
 if __name__ == "__main__":
