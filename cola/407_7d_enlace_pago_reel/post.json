@@ -20,5 +20,14 @@
   "_comprobado": "12/11/2026: hechos_verificados del Producto «Gestión Integral 7D» en el Centro (consultado hoy): «Cadena documental: presupuesto → pedido → albarán numerado → factura» y «Enlace de pago por factura: tarjeta con Stripe, TPV Redsys (con Bizum si está activo) o transferencia con IBAN». Visto en la pista de vídeo del Centro (VideoMezcla gestion-integral-7d, formato reel, estado aprobado 12/11 07:05; 1080x1920): albarán «servido» con botón «Emitir factura», lista de facturas con «Enlace de pago» y «Marcar cobrada», ventana «Enlace de pago · FAC-2026-006» con «Copiar», «Enviar por correo» y «Abrir enlace». La voz solo dice lo que se ve: emitir la factura desde el albarán, el enlace por factura, que se abre, que se copia o se envía por correo. NO se afirma: tarjeta, Bizum ni transferencia en la voz (en pantalla solo se lee «datos de transferencia»), Verifactu, contabilidad, que se cobre antes ni plazos. El cliente de la escena es un POV de humor, no un cliente real (dicho en el texto).",
   "_nota_creador": "12/11/2026. Directiva: un caso real por reel grabado funcionando, resultado en el segundo 0, gancho 5-8 palabras. Función más vistosa de las ocho verificadas para el segundo 0: el enlace de pago (ventana con Copiar / Enviar por correo / Abrir enlace); el fotograma 0 YA es esa ventana. demo.mp4 (19,1 s) sale de herramientas/recorte_centro.py con recorte.json de esta carpeta: SOLO la pantalla del móvil de la pista del Centro (sin sus rótulos ni subtítulos), en el marco de móvil de la plantilla, con zoom suave; el mp4 del Centro no se toca. Seis escenas de 2,8-3,4 s con corte antes de 3 s (B5), una frase para enviar y cierre único; sin «comenta X», sin precios, sin «gratis para siempre». Voz genérica de España (chatterbox del pipeline, nunca la del dueño). Si el render sale desfasado, ajustar los «clip» (tiempos de demo.mp4: gancho 0-3,1; emitir factura 6,1-9,3; lista con enlace 3,1-6,1; pulsar 9,3-12,2; ventana 12,2-19,1). El Centro los vídeos largos de 7D (104 s) no van a Instagram; este reel es otra pieza (recorte propio, 19 s).",
   "motor_voz": "chatterbox",
-  "renderizado": false
+  "renderizado": "2026-11-12T17:48:47+00:00",
+  "audio_ig": {
+    "audio_id": "1127106596130760",
+    "titulo": "Move Ur Body (Instrumental) · half.cool",
+    "origen": "biblioteca de Instagram (colección libre de derechos)",
+    "audio_volume": 0.5,
+    "video_volume": 1.0,
+    "mood": "app"
+  },
+  "asset": "407_7d_enlace_pago_reel.mp4"
 }
