@@ -1,0 +1,30 @@
+{
+  "tipo": "reel",
+  "texto": "POV: pides para llevar sin llamar al bar.\nEs la web de un bar ficticio, hecha con Neogest Lab y grabada funcionando con datos de ejemplo: eliges los platos con un toque, el carrito suma el total solo y lo único que queda es pulsar «Enviar pedido».\nMándaselo a quien tenga un bar o un negocio que vende para llevar.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nVoz generada por IA\n\n#hosteleria #bar #pedirparallevar #apps #neogestlab",
+  "cuando": "2026-12-02T13:40:00+01:00",
+  "compartir_en_feed": true,
+  "portada_ms": 300,
+  "prueba_no_seguidores": true,
+  "formula": "virales_semana-F5 (antes/después con caso concreto) + F3",
+  "formato": "Una idea, una app (web real de la demo AJ Sistema grabada funcionando)",
+  "publico": "Hostelería y comercio",
+  "app": "AJ Sistema DEMO",
+  "comentario_fijado": "¿Tu bar todavía apunta los pedidos por teléfono?",
+  "avance_siguiente": "Mañana: la app que te avisa del recibo que se te pasó pagar",
+  "monetizacion": {
+    "objetivo": "clic_enlace",
+    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
+    "paso_embudo": "visita_perfil -> clic_enlace"
+  },
+  "_fuentes": [],
+  "_comprobado": "12/11/2026: abierta y grabada en local desde https://aj-reparacion-gestion-copy-61ad5afb.base44.app/w/bar-demo (200; intro con «Saltar»). Visto en pantalla: «Bar Demo», carta de ejemplo con precios, bloque «Pide para llevar» con − / + por plato y «Tu carrito» que suma (2 × Tortilla de patatas 14,00 €, 1 × Croquetas caseras 9,00 €, 1 × Menú del día 12,00 € = 35,00 €) y botón «Enviar pedido». NO se pulsa «Enviar pedido» (no se crea ningún pedido en la demo) y la voz solo dice lo que se ve: eliges platos, el carrito suma, existe el botón. No se afirma que el pedido entre en la gestión (la ficha Producto no lo lista en hechos_verificados; lo comprobó el Estratega el 8/11), ni tiempos, ni WhatsApp, ni pago online.",
+  "_nota_creador": "12/11/2026. Reel de ~23 s con gancho POV de 6 palabras y resultado en el fotograma 0 (carrito con total y «Enviar pedido», clip del final de la grabación). Un caso, frase de envío, cierre único, sin «comenta X», voz genérica de España (motor chatterbox del pipeline, nunca voz del dueño), sin precios de las apps. Grabación local verificada (15,7 s): carta ~0,4-3 s, scroll y «Pide para llevar» ~3,5-6 s, clics en platos ~6-8,5 s, carrito/total ~8,5-12 s, resultado ~12,6-15,6 s. Si el render sale desfasado, ajustar «clip». Hay 3 «sin título» en el formulario del carrito (campos sin etiqueta visible): no se enseñan de cerca. Enlace profundo del cierre: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=aj-sistema-taller&src=instagram",
+  "audio_ig": {
+    "audio_id": "583674661052146",
+    "titulo": "Latina (Instrumental) · Tony Dark Eyes",
+    "origen": "biblioteca de Instagram (colección libre de derechos)",
+    "audio_volume": 0.5,
+    "video_volume": 1.0
+  },
+  "motor_voz": "chatterbox"
+}
