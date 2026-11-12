@@ -1,5 +1,5 @@
 {
-  "fecha": "2026-11-11T19:43:06+00:00",
+  "fecha": "2026-11-12T05:42:30+00:00",
   "avisos": [
     "huecos de voz > 1.5 s (solo suena la música): [[7.4, 10.35]]"
   ],
@@ -29,9 +29,9 @@
   "musica_con_ducking_lufs": -16.1,
   "master": {
     "objetivo_lufs": -14.0,
-    "antes_lufs": -15.76,
+    "antes_lufs": -15.75,
     "antes_pico_dbtp": -1.01,
     "despues_lufs": -14.1,
-    "despues_pico_dbfs": -1.3
+    "despues_pico_dbfs": -1.4
   }
 }
