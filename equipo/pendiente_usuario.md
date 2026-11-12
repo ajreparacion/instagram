@@ -75,3 +75,9 @@ Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11
 - PENDIENTE DEL DUEÑO: guardar ese token como secreto `FACEBOOK_PAGE_TOKEN` del repo (Settings → Secrets and variables → Actions) y el ID de página como variable `FACEBOOK_PAGE_ID` = 1437632859434095. Nunca en archivos ni en commits.
 - PENDIENTE DEL DUEÑO: decir qué se publica en la página de Facebook (¿lo mismo que Instagram y YouTube?). Hasta entonces el equipo solo prepara, no publica.
 - A comprobar por el equipo antes de la primera publicación: si lo publicado por API con la app en modo desarrollo lo ve el público; si no, hay que pasar la app a activa (puede pedir URL de política de privacidad).
+
+## Facebook, atrasos y comunidad (12/11/2026 19:00, subido desde el Chrome del dueño)
+- Ya en main: herramientas/facebook.py, atrasos.py, comunidad.py; publicar_gh.py publica en Facebook lo que sale en Instagram y gestiona las colas de atrasos (atrasos/facebook.json: 9 piezas; atrasos/youtube.json: 1); workflows comunidad.yml y facebook_prueba.yml; el Reloj lanza comunidad cada hora. El secreto FACEBOOK_PAGE_TOKEN ya existe (renovado el 12/11 17:37).
+- A comprobar: lanzar «Facebook · comprobar conexión» (con publicar_prueba) y ver desde una cuenta que NO sea administradora si la pieza se ve; si no, pasar la app de Meta a modo activo (puede pedir URL de política de privacidad).
+- Comunidad en YouTube: responder comentarios exige el alcance youtube.force-ssl en el token de refresco; si falta, las respuestas quedan en comunidad/sin_publicar.json.
+- Los 9 reels ya publicados no se pueden reciclar (mp4 borrados de la release tras publicar). Para el resto de vídeos del Centro: aprobarlos en VideoMezcla y añadirlos a atrasos/centro_videos.json.
