@@ -1,32 +1,96 @@
 {
   "tipo": "reel",
-  "origen": "variante «parte 2» de 202_gestion_integral_7d_reel (publicado 8/11/2026, alcance de referencia: retención media 11.126 ms, por encima de la mediana de la cuenta de 10.729 ms)",
-  "estado": "guion pendiente de render, voz y calidad (Calidad escribe calidad.json con nota ≥ 90)",
+  "modo": "app",
   "app": "Gestión Integral 7D",
   "publico": "Reformas e instalaciones: autónomos que pasan del presupuesto a la factura",
+  "estado": "PREPARADO, SIN GRABAR: falta la grabación real de la app con datos ficticios (grabacion.json), el render con voz y la nota de Calidad ≥ 90. No tiene post.json a propósito: así el ciclo no lo toca.",
+  "origen": "variante «parte 2» de 202_gestion_integral_7d_reel (publicado 8/11/2026, alcance de referencia: retención media 11.126 ms, por encima de la mediana de la cuenta de 10.729 ms)",
   "rotacion": "distinto de 106 (comerciales y ruta) y de 108 (cobros); no es el mismo texto que ningún post publicado",
-  "formato": "Una idea, una app · 20-35 s · vertical 1080x1920 · grabación real de la app con datos ficticios",
+  "formato": "Una idea, una app · 28-30 s · vertical 1080x1920 · gramática El Telar (cambio visual cada ≤ 3 s, tarjeta A vs B, «así de fácil») con la paleta de Neogest Lab",
+  "funcion_elegida": "Cadena documental presupuesto → pedido → albarán numerado → factura, que hereda líneas, IVA por línea y retención (hechos_verificados de gestion-integral-7d, Base44, 12/11/2026). Elegida por ser la que mejor se ve en 1 s: la factura terminada es el resultado tangible. No repite 407 (enlace de pago) ni 107 (catálogo).",
   "monetizacion": {
     "objetivo": "clic_enlace",
     "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
     "paso_embudo": "visita_perfil -> clic_enlace"
   },
-  "gancho": "Del presupuesto a la factura sin volver a teclear",
+  "gancho": "De presupuesto a factura sin reteclear",
   "escenas": [
-    {"t": "0-3 s", "pantalla": "Presupuesto de reforma ya creado con sus líneas e IVA, en la app", "texto_pantalla": "Un presupuesto. Tres pasos más."},
-    {"t": "3-10 s", "pantalla": "Pulsar «Convertir en pedido», luego albarán: las líneas y el IVA se heredan solos", "texto_pantalla": "Las líneas y el IVA se heredan"},
-    {"t": "10-20 s", "pantalla": "Factura en PDF con datos fiscales del emisor y del cliente", "texto_pantalla": "Factura en PDF con tus datos fiscales"},
-    {"t": "20-27 s", "pantalla": "Enlace de pago de la factura (tarjeta, TPV Redsys con Bizum si está activo, o transferencia)", "texto_pantalla": "Cada factura, su enlace de pago"},
-    {"t": "27-32 s", "pantalla": "Cierre: logo NL neón, firma «By Neogest Lab»", "texto_pantalla": "Pide tu prueba gratuita · sin tarjeta · sin compromiso"}
+    {
+      "t": "0-2,5 s",
+      "estilo": "gancho",
+      "pantalla": "Fotograma 0 = la factura ya terminada en la app (líneas, IVA, total) con el gancho escrito grande",
+      "texto_pantalla": "De presupuesto a factura sin *reteclear*",
+      "voz": "De presupuesto a factura, sin *reteclear*."
+    },
+    {
+      "t": "2,5-5 s",
+      "estilo": "tarjeta_ab",
+      "pantalla": "Tarjeta A vs B tipo interfaz, sin cifras: A «Teclearlo otra vez» tachado ❌ / B «Se hereda solo» ✅ con círculo dibujado en B",
+      "texto_pantalla": "Antes: teclear otra vez ❌  Ahora: se hereda ✅",
+      "voz": "Antes lo tecleabas otra vez en cada *documento*."
+    },
+    {
+      "t": "5-8 s",
+      "estilo": "tramo",
+      "pantalla": "Grabación real: presupuesto de reforma ficticio con sus líneas e IVA",
+      "texto_pantalla": "Un presupuesto de ejemplo",
+      "voz": "Parte de un *presupuesto*."
+    },
+    {
+      "t": "8-11 s",
+      "estilo": "tramo",
+      "pantalla": "Grabación real: paso a pedido (nombre exacto del botón: COMPROBAR en pantalla al grabar)",
+      "texto_pantalla": "A pedido, con un toque",
+      "voz": "Lo pasas a *pedido*."
+    },
+    {
+      "t": "11-14 s",
+      "estilo": "tramo",
+      "pantalla": "Grabación real: albarán numerado con las mismas líneas",
+      "texto_pantalla": "Albarán numerado",
+      "voz": "Sale el *albarán*, ya numerado."
+    },
+    {
+      "t": "14-18 s",
+      "estilo": "tramo",
+      "pantalla": "Grabación real: factura con líneas, IVA por línea y retención heredados",
+      "texto_pantalla": "Líneas, IVA y retención heredados",
+      "voz": "Y la *factura* hereda líneas, IVA y retención."
+    },
+    {
+      "t": "18-22 s",
+      "estilo": "tramo",
+      "pantalla": "Grabación real: PDF de la factura con datos fiscales del emisor y del cliente (ficticios)",
+      "texto_pantalla": "PDF con los datos fiscales",
+      "voz": "En *PDF*, con los datos fiscales de los dos."
+    },
+    {
+      "t": "22-25 s",
+      "estilo": "chapas",
+      "pantalla": "Tres chapas animadas con iconos: Presupuesto · Albarán · Factura",
+      "texto_pantalla": "Así de fácil",
+      "voz": "*Así de fácil*. Mándaselo a quien reforma o instala."
+    },
+    {
+      "t": "25-30 s",
+      "estilo": "cierre",
+      "pantalla": "Logo NL neón, firma «By Neogest Lab», franja de prueba gratuita",
+      "texto_pantalla": "Prueba gratuita · sin tarjeta · sin compromiso",
+      "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
+    }
   ],
-  "voz": "genérica de España, castellano sin seseo, sin voz del dueño; si no suena bien, sin voz con texto en pantalla",
-  "musica": "instrumental de equipo/musica_instagram.json (licencia comercial), volumen 0,5 con voz; pendiente de elegir título",
-  "cierre_enlace": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=instagram (slug a confirmar en el Centro)",
-  "texto_post": "Del presupuesto a la factura, sin volver a teclear 🛠️\nSi haces reformas o instalaciones, cada paso debería heredar lo anterior: líneas, IVA y retención.\nEn Gestión Integral 7D, nuestra app, el presupuesto pasa a pedido, albarán y factura, y la factura sale en PDF con tus datos fiscales y los del cliente.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#autonomos #reformas #facturacion #pymes #apps #neogestlab",
-  "hechos_a_verificar": [
-    "Herencia de líneas, IVA y retención de presupuesto a pedido, albarán y factura (ficha del Producto en el Centro, hechos_verificados)",
-    "PDF de factura con datos fiscales del emisor y del cliente",
-    "Enlace de pago por factura: tarjeta, TPV Redsys con Bizum si está activo, o transferencia con IBAN"
+  "voz": "genérica de España (motor chatterbox del pipeline), nunca la del dueño; si no suena bien, sin voz con texto en pantalla",
+  "musica": "instrumental de equipo/musica_instagram.json (licencia comercial), volumen 0,5 con voz",
+  "cierre_enlace": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=instagram",
+  "no_afirmar": [
+    "Verifactu o facturación certificada",
+    "que la app hace contabilidad o impuestos",
+    "tiempos o ahorros en cifras",
+    "precios",
+    "que los agentes IA actúan solos (aquí no se mencionan)"
   ],
-  "prohibido": ["voz del dueño", "cliente, testimonio o cifra inventados", "precios o plazos", "cierre «comenta X»"]
+  "texto_post": "Del presupuesto a la factura, sin volver a teclear 🛠️\nSi haces reformas o instalaciones, cada paso debería heredar lo anterior. En Gestión Integral 7D, nuestra app, el presupuesto pasa a pedido, albarán numerado y factura con las mismas líneas, el IVA por línea y la retención.\nLa factura sale en PDF con los datos fiscales de tu empresa y de tu cliente. Grabado funcionando, con datos de ejemplo.\n📩 Mándaselo a quien reforma o instala.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n#autonomos #reformas #pymes #facturacion #apps #neogestlab",
+  "comentario_fijado": "¿Cuántas veces tecleas lo mismo antes de facturar?",
+  "para_grabar": "Entrar en la app con una cuenta de pruebas y datos ficticios (nunca datos reales, PIN ni emails en pantalla); confirmar nombres exactos de botones y que los documentos heredan líneas/IVA/retención como dice la ficha; si algo no se ve, quitar esa escena. Fotograma 0 = factura final (grabar primero el resultado y usar ese clip también al inicio).",
+  "pendiente": "Grabación, voz, render, pre_entrega.py sin errores y Calidad ≥ 90; luego crear post.json con cuando libre (18:40 del 24/11 o primer hueco libre, nunca dos reels en el mismo hueco)."
 }

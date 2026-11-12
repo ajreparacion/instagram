@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Tu tienda no sale en internet y los clientes buscan en el móvil.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nNeogest Lab crea webs a medida para cualquier negocio, afición o asociación; ajreparacion.com es un ejemplo real de lo que hacemos.\nPensarás que cuesta un riñón. Pide presupuesto y te sorprenderás.\nMándaselo a quien aún no tiene web.\nConsultoría gratuita y presupuesto sin compromiso. Enlace en el perfil.\n#webs #pymes #autonomos #neogestlab\nVoz y personajes generados por IA",
+  "texto": "Tu tienda no sale en internet y los clientes buscan en el móvil.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nNeogest Lab crea webs a medida para cualquier negocio, afición o asociación; ajreparacion.com es un ejemplo real de lo que hacemos.\nPensarás que cuesta un riñón. Pide presupuesto y te sorprenderás.\nMándaselo a quien aún no tiene web.\nConsultoría gratuita y presupuesto sin compromiso. Enlace en el perfil.\nEpisodio nuevo cada día en @neogestlab\n#webs #pymes #autonomos #neogestlab\nVoz y personajes generados por IA",
   "cuando": "2026-11-27T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -11,7 +11,7 @@
   "renderizado": "2026-11-11T22:00:26+00:00",
   "_fuentes": [],
   "_nota_creador": "11/11/2026 (webs a medida): Webs a medida de Neogest Lab: ajreparacion.com es el EJEMPLO de lo que se hace. Función de la web verificada en la ficha AJ Web; la idea de que el precio es asequible es del dueño (sin cifras) y debe confirmarla antes de publicar. Sin calidad.json no se publica.",
-  "comentario_fijado": "¿Te encuentran tus clientes en internet? Cuéntalo.",
+  "comentario_fijado": "¿Te encuentran tus clientes en internet? Cuéntalo. Episodio nuevo cada día en @neogestlab",
   "avance_siguiente": "Mañana: el oficio.",
   "audio_ig": {
     "audio_id": "25873624668895779",
@@ -23,5 +23,10 @@
   },
   "portada_ms": 0,
   "motor_voz": "chatterbox",
-  "asset": "513_jambo_web_tienda.mp4"
+  "asset": "513_jambo_web_tienda.mp4",
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "Consultoría gratuita y presupuesto sin compromiso de web a medida",
+    "paso_embudo": "alcance → visita al perfil (enlace en bio)"
+  }
 }

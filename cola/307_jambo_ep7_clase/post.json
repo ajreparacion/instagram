@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "La clase de mañana se prepara a las 23:00 y la prepara otra.\nLa Pelota se equivoca con seguridad y la Jupillo prepara el temario. Humor negro de ficción.\nMándaselo a quien carga con todo.\n#humornegro #profesores #academia #ia #trabajo\nVoz y personajes generados por IA",
+  "texto": "La clase de mañana se prepara a las 23:00 y la prepara otra.\nLa Pelota se equivoca con seguridad y la Jupillo prepara el temario. Humor negro de ficción.\nMándaselo a quien carga con todo.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #profesores #academia #ia #trabajo\nVoz y personajes generados por IA",
   "cuando": "2026-11-14T20:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -12,7 +12,7 @@
   "_nota_creador": "11/11/2026: episodio nuevo. Sin enlace ni prueba gratuita en el episodio. Calidad (≥ 90) y visto bueno del dueño mandan: sin calidad.json aprobado no se publica. Voz genérica de España.",
   "renderizado": "2026-11-11T02:39:08+00:00",
   "motor_voz": "chatterbox",
-  "comentario_fijado": "¿A qué hora preparas tú lo de mañana?",
+  "comentario_fijado": "¿A qué hora preparas tú lo de mañana? Episodio nuevo cada día en @neogestlab",
   "avance_siguiente": "Mañana: el presupuesto que no iba a subir.",
   "audio_ig": {
     "audio_id": "1127106596130760",
@@ -23,5 +23,10 @@
     "mood": "comedia"
   },
   "portada_ms": 0,
-  "asset": "307_jambo_ep7_clase.mp4"
+  "asset": "307_jambo_ep7_clase.mp4",
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
+    "paso_embudo": "alcance → visita al perfil"
+  }
 }

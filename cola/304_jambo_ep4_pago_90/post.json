@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Entre empresas, el plazo máximo de pago pactado es de 60 días naturales.\nEl Jambo que sabe y su cliente de los 90 días: la que reclama es la Jupillo.\nHumor negro de ficción. Es información general, no asesoramiento legal.\nMándaselo a quien carga con todo.\nFuente: Ley 3/2004, de 29 de diciembre, artículo 4 (BOE, texto consolidado; plazo de 30 días y ampliable por pacto sin superar los 60 días naturales).\n#humornegro #autonomos #pymes #morosidad #ia\nVoz y personajes generados por IA",
+  "texto": "Entre empresas, el plazo máximo de pago pactado es de 60 días naturales.\nEl Jambo que sabe y su cliente de los 90 días: la que reclama es la Jupillo.\nHumor negro de ficción. Es información general, no asesoramiento legal.\nMándaselo a quien carga con todo.\nFuente: Ley 3/2004, de 29 de diciembre, artículo 4 (BOE, texto consolidado; plazo de 30 días y ampliable por pacto sin superar los 60 días naturales).\nEpisodio nuevo cada día en @neogestlab\n#humornegro #autonomos #pymes #morosidad #ia\nVoz y personajes generados por IA",
   "cuando": "2026-11-13T18:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -25,7 +25,7 @@
   "motor_voz": "chatterbox",
   "palabras_de_voz": 44,
   "_nota_estratega": "Plan del Estratega 10/11: esta pieza es el episodio de plan.json «jambo_0N» (20:40). Carpeta real: 304_jambo_ep4_pago_90",
-  "comentario_fijado": "¿Cuántos días tardó en pagarte tu último cliente?",
+  "comentario_fijado": "¿Cuántos días tardó en pagarte tu último cliente? Episodio nuevo cada día en @neogestlab",
   "avance_siguiente": "Pronto: más trabajo para la Jupillo.",
   "audio_ig": {
     "audio_id": "523966117385305",
@@ -36,5 +36,10 @@
     "mood": "comedia"
   },
   "portada_ms": 0,
-  "asset": "304_jambo_ep4_pago_90.mp4"
+  "asset": "304_jambo_ep4_pago_90.mp4",
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
+    "paso_embudo": "alcance → visita al perfil"
+  }
 }

@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Llega la nómina y, al cabo de unos días, no sabes adónde se ha ido.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nGH PLUS te enseña tu dinero disponible del mes y avisa al llegar al 80 % de un presupuesto por categoría.\nMándaselo a quien no sabe adónde se va la nómina.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n#humornegro #finanzaspersonales #ahorro #ia #hogar #neogestlab\nVoz y personajes generados por IA",
+  "texto": "Llega la nómina y, al cabo de unos días, no sabes adónde se ha ido.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nGH PLUS te enseña tu dinero disponible del mes y avisa al llegar al 80 % de un presupuesto por categoría.\nMándaselo a quien no sabe adónde se va la nómina.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #finanzaspersonales #ahorro #ia #hogar #neogestlab\nVoz y personajes generados por IA",
   "cuando": "2026-11-21T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -11,7 +11,7 @@
   "renderizado": "2026-11-11T19:14:25+00:00",
   "_fuentes": [],
   "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
-  "comentario_fijado": "¿A cuántos días del mes te quedas sin nómina? Cuéntalo.",
+  "comentario_fijado": "¿A cuántos días del mes te quedas sin nómina? Cuéntalo. Episodio nuevo cada día en @neogestlab",
   "avance_siguiente": "Mañana: los gastos que se repiten.",
   "audio_ig": {
     "audio_id": "921967353426231",
@@ -23,5 +23,10 @@
   },
   "portada_ms": 0,
   "motor_voz": "chatterbox",
-  "asset": "507_jambo_app_dinero_disponible.mp4"
+  "asset": "507_jambo_app_dinero_disponible.mp4",
+  "monetizacion": {
+    "objetivo": "clic_enlace",
+    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
+    "paso_embudo": "visita_perfil -> clic_enlace"
+  }
 }

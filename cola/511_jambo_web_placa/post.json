@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Número de serie: algún sitio, debajo, detrás, quién sabe. En ajreparacion.com la cámara lee la placa del equipo: marca, modelo y número de serie.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nNeogest Lab crea webs a medida para cualquier negocio, afición o asociación; ajreparacion.com es un ejemplo real de lo que hacemos.\nPensarás que cuesta un riñón. Pide presupuesto y te sorprenderás.\nMándaselo a quien aún no tiene web.\nConsultoría gratuita y presupuesto sin compromiso. Enlace en el perfil.\n#webs #pymes #autonomos #neogestlab\nVoz y personajes generados por IA",
+  "texto": "Número de serie: algún sitio, debajo, detrás, quién sabe. En ajreparacion.com la cámara lee la placa del equipo: marca, modelo y número de serie.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nNeogest Lab crea webs a medida para cualquier negocio, afición o asociación; ajreparacion.com es un ejemplo real de lo que hacemos.\nPensarás que cuesta un riñón. Pide presupuesto y te sorprenderás.\nMándaselo a quien aún no tiene web.\nConsultoría gratuita y presupuesto sin compromiso. Enlace en el perfil.\nEpisodio nuevo cada día en @neogestlab\n#webs #pymes #autonomos #neogestlab\nVoz y personajes generados por IA",
   "cuando": "2026-11-25T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -11,7 +11,7 @@
   "renderizado": "2026-11-11T21:26:40+00:00",
   "_fuentes": [],
   "_nota_creador": "11/11/2026 (webs a medida): Webs a medida de Neogest Lab: ajreparacion.com es el EJEMPLO de lo que se hace. Función de la web verificada en la ficha AJ Web; la idea de que el precio es asequible es del dueño (sin cifras) y debe confirmarla antes de publicar. Sin calidad.json no se publica.",
-  "comentario_fijado": "¿Dónde tienes tú la placa de tu máquina? Cuéntalo.",
+  "comentario_fijado": "¿Dónde tienes tú la placa de tu máquina? Cuéntalo. Episodio nuevo cada día en @neogestlab",
   "avance_siguiente": "Mañana: la web de tu afición.",
   "audio_ig": {
     "audio_id": "25873624668895779",
@@ -23,5 +23,10 @@
   },
   "portada_ms": 0,
   "motor_voz": "chatterbox",
-  "asset": "511_jambo_web_placa.mp4"
+  "asset": "511_jambo_web_placa.mp4",
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "Consultoría gratuita y presupuesto sin compromiso de web a medida",
+    "paso_embudo": "alcance → visita al perfil (enlace en bio)"
+  }
 }
