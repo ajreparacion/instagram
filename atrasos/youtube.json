@@ -14,7 +14,7 @@
    "largo": false,
    "huella": "4788ae2471c28a11",
    "estado": "pendiente",
-   "errores": 1,
+   "errores": 2,
    "ultimo_error": "YouTube HTTP 400: {\n  \"error\": \"invalid_grant\",\n  \"error_description\": \"Bad Request\"\n}"
   }
  ],
