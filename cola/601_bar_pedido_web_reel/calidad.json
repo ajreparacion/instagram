@@ -1,0 +1,7 @@
+{
+  "aprobado": true,
+  "nota": 91,
+  "fecha": "2026-11-12T11:45Z",
+  "revisado_por": "agente de CALIDAD (12/11, pasada de las 12:30)",
+  "comentario": "20,6 s, 1080x1920, -14,2 LUFS, pico -1,4 dBFS, sin silencios > 0,8 s, primer cambio a 2,0 s y ningún tramo > 2,3 s sin cambio. Gancho POV de 6 palabras con el carrito (35,00 € y «Enviar pedido») ya en el fotograma 0; un solo caso; frase para enviar; cierre único; sin «comenta X»; voz genérica; música audio_ig con volumen 0,5. Lo visto coincide con _comprobado (3 platos, total 35,00 €, no se pulsa «Enviar pedido» ni se afirma que el pedido entre en la gestión). Corregido el pie del post: ahora dice «nuestra app AJ Sistema» (A6). Descuentos: el formulario del carrito enseña 3 campos en blanco sin etiqueta y el botón verde de WhatsApp de la web flota en pantalla (no es marca de producto ajena en voz ni texto; se acepta como el resto de webs 509-515). Aviso a Mejora: recortar o difuminar los 3 campos vacíos."
+}
