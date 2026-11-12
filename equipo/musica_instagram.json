@@ -1,5 +1,5 @@
 {
- "_nota": "10/11/2026 (orden del dueño: «pon música de librerías sin derechos»): la música NO va cocida en el vídeo; Instagram la pone al publicar (audio_configuration de la API de audio) desde su colección libre de derechos. Solo versiones instrumentales de equipo/audios_instagram.json (búsquedas por estilo; la lista de tendencias es de sellos y no vale para una cuenta de negocio). Apagar: activo=false (vuelve la música generada por código). Las historias no admiten audio por API: van sin música.",
+ "_nota": "10/11/2026 (orden del dueño: «pon música de librerías sin derechos»): la música NO va cocida en el vídeo; Instagram la pone al publicar (audio_configuration de la API de audio) desde su colección libre de derechos. Solo versiones instrumentales de equipo/audios_instagram.json (búsquedas por estilo; la lista de tendencias es de sellos y no vale para una cuenta de negocio). Apagar: activo=false (vuelve la música generada por código). HISTORIAS (12/11/2026, queja del dueño «están sin música»): la API rechaza la canción en historias (probado: error 100/2207065), así que llevan la música DENTRO del vídeo a -14 LUFS (demo_app.video_historia fuerza música aunque activo=true); \"historias_con_cancion\": true solo si Meta lo abre.",
  "activo": true,
  "volumen_cancion_con_voz": 0.5,
  "volumen_cancion_sin_voz": 1.0,
