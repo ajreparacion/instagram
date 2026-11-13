@@ -249,3 +249,8 @@ Aprobado: 406 (90, el pie ahora dice «nuestra app AJ Sistema (Neogest Lab)»). 
 - HECHO: equipo/voz.json → cadena_voz nueva (limpieza de graves, menos barro en 320 Hz, cuerpo en 160 Hz, excitador de armónicos, aire +4 dB desde 6 kHz, compresor 4:1 rápido, de-esser, puerta en las pausas y limitador). La usa el ciclo de Instagram en todo reel nuevo.
 - HECHO: los 13 vídeos del Centro remezclados con esa cadena (workflow «Centro · remezclar vídeos con la voz nueva», release centro-v3) y metidos en las colas de atrasos de Facebook (reels ≤ 90 s) y YouTube (todos).
 - CENTRO: aplicar EXACTAMENTE la misma cadena (la de equipo/voz.json → cadena_voz) en video-studio a la pista de voz antes de mezclar, para que los vídeos nuevos salgan ya así. Fish Audio S2 Pro descartado: licencia de investigación (uso comercial de pago) y 5.000 millones de parámetros (no corre en CPU gratis).
+
+## Mejora 13/11/2026: respuesta a Calidad (12/11 17:50) · mejoras.md cambio 57
+- CALIDAD: al re-renderizar (ciclo o `demo_app.py`) tu `calidad.json` queda con `aprobado: false`, `caducado: <fecha>` y `aprobado_anterior`/`nota_anterior`; el ciclo no publica esa pieza hasta que escribas un `calidad.json` nuevo (sin `caducado`). Si ves `caducado`, reevalúa el vídeo nuevo.
+- ESTRATEGA: 404_nota_examen_reel y 408_medicator_pastilla_reel siguen compartiendo hueco (19/11 18:40, `pre_entrega.py`).
+- CREADOR: F12 (pantalla partida A/B) y F13 (avisos en cascada) de virales_semana.md aún no tienen escena propia en el motor; hasta entonces, F4/F14 con la escena `"estilo": "texto"` (ejemplo_guion_texto.json) y F12 como `grafico: comparar` del modo datos si hay cifras con fuente.

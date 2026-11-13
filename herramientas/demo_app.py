@@ -1415,8 +1415,29 @@ def ya_publicado(nombre):
     return False
 
 
+def caducar_calidad(carpeta, motivo):
+    """13/11/2026 (petición de Calidad 12/11): al re-renderizar, el calidad.json anterior deja de valer
+    (aprobado=false, caducado=<fecha>; se conserva lo anterior). Misma lógica que publicar_gh.caducar_calidad."""
+    ruta = os.path.join(carpeta, "calidad.json")
+    try:
+        with open(ruta, encoding="utf-8") as f:
+            cal = json.load(f)
+    except (OSError, ValueError):
+        return False
+    if not isinstance(cal, dict) or cal.get("caducado"):
+        return False
+    vigente = bool(cal.get("aprobado"))
+    cal.update(aprobado_anterior=vigente, nota_anterior=cal.get("nota"), aprobado=False,
+               caducado=datetime.now(timezone.utc).isoformat(timespec="seconds"), motivo_caducidad=motivo)
+    with open(ruta, "w", encoding="utf-8") as f:
+        json.dump(cal, f, indent=2, ensure_ascii=False)
+    return vigente
+
+
 def escribir_post(carpeta, datos):
     os.makedirs(carpeta, exist_ok=True)
+    if datos.get("renderizado") and caducar_calidad(carpeta, "re-render de demo_app.py " + str(datos["renderizado"])):
+        print(f"{os.path.basename(carpeta)}: re-renderizado; su aprobación de Calidad anterior queda caducada")
     ruta = os.path.join(carpeta, "post.json")
     previo = {}
     if os.path.exists(ruta):
