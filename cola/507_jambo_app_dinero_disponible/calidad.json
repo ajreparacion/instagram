@@ -8,5 +8,8 @@
   "motivos": [
     "Aprobación caducada por cambio de guion (regla 9): se quitó la tarjeta final de venta («prueba gratuita»/«presupuesto sin compromiso») que la DIRECTIVA §14 (b) y la lista §6 ya no admiten dentro del reel"
   ],
-  "como_arreglarlo": "Esperar al re-render del ciclo (renderizado distinto de false) y reevaluar: el contenido del episodio no cambia, solo la tarjeta final (ahora muestra la frase de reenvío)."
+  "como_arreglarlo": "Esperar al re-render del ciclo (renderizado distinto de false) y reevaluar: el contenido del episodio no cambia, solo la tarjeta final (ahora muestra la frase de reenvío).",
+  "aprobado_anterior": false,
+  "caducado": "2026-11-13T15:08:53+00:00",
+  "motivo_caducidad": "re-render del ciclo 2026-11-13T15:08:53+00:00"
 }

@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 2.667,
+  "duracion": 3.033,
   "texto": "¡Llegó la nómina! ¿Adónde se fue?",
   "enfasis": []
  },
@@ -12,8 +12,8 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 2.667,
-  "duracion": 4.067,
+  "inicio": 3.033,
+  "duracion": 3.8,
   "texto": "¡El dinero se invierte! ¡Mentalidad de abundancia!",
   "enfasis": []
  },
@@ -21,8 +21,8 @@
   "escena": 3,
   "estilo": "delega",
   "hablante": "jambo",
-  "inicio": 9.133,
-  "duracion": 3.1,
+  "inicio": 9.233,
+  "duracion": 1.8,
   "texto": "Que lo haga la Jupillo.",
   "enfasis": []
  },
@@ -30,8 +30,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 12.233,
-  "duracion": 4.567,
+  "inicio": 11.033,
+  "duracion": 3.567,
   "texto": "Dinero disponible del mes. Una cifra.",
   "enfasis": []
  },
@@ -39,8 +39,8 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 16.8,
-  "duracion": 2.333,
+  "inicio": 14.6,
+  "duracion": 2.133,
   "texto": "Mi economía, bajo control.",
   "enfasis": []
  },
@@ -48,8 +48,8 @@
   "escena": 6,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 19.133,
-  "duracion": 2.2,
+  "inicio": 16.733,
+  "duracion": 1.8,
   "texto": "Creer no es controlar.",
   "enfasis": []
  },
@@ -57,8 +57,8 @@
   "escena": 7,
   "estilo": "mensaje",
   "hablante": null,
-  "inicio": 21.333,
-  "duracion": 3.467,
+  "inicio": 18.533,
+  "duracion": 3.2,
   "texto": "Si no sabes adónde se va, te faltan cuentas.",
   "enfasis": [
    6,
@@ -70,8 +70,8 @@
   "escena": 8,
   "estilo": "mensaje",
   "hablante": null,
-  "inicio": 24.8,
-  "duracion": 5.5,
+  "inicio": 21.733,
+  "duracion": 4.6,
   "texto": "En la vida real no hay Jupillo. GH PLUS te muestra tu dinero disponible.",
   "enfasis": []
  },
@@ -79,8 +79,8 @@
   "escena": 9,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 30.3,
-  "duracion": 3.4,
+  "inicio": 26.333,
+  "duracion": 2.833,
   "texto": "Mándaselo a quien no sabe adónde se va la nómina.",
   "enfasis": []
  }

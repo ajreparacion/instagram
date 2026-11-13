@@ -8,7 +8,7 @@
   "publico": "hogar y finanzas personales",
   "formula": "humor negro con personaje + pivote de producto (v9)",
   "app": "GH PLUS",
-  "renderizado": false,
+  "renderizado": "2026-11-13T15:10:08+00:00",
   "_fuentes": [],
   "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
   "comentario_fijado": "¿Cuántos pagos fijos tienes? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
@@ -22,7 +22,7 @@
     "mood": "comedia"
   },
   "portada_ms": 0,
-  "motor_voz": "chatterbox",
+  "motor_voz": "melo",
   "asset": "508_jambo_app_gastos_fijos.mp4",
   "monetizacion": {
     "objetivo": "clic_enlace",
