@@ -30,7 +30,9 @@ AQUI = os.path.dirname(os.path.abspath(__file__))
 MONT = os.path.join(AQUI, "fonts", "Montserrat-VF.ttf")
 
 W, H, FPS = 1080, 1920, 30
-BG0, BG1 = (10, 14, 26), (18, 26, 54)
+# Fondo: azul noche que acaba en un azul de marca #3F5FB6 oscurecido (13/11/2026; el acento sigue teniendo ≥ 4,5:1).
+BG0, BG1 = (10, 14, 26), (36, 52, 108)
+CORAL = (235, 134, 98)   # Coral #EB8662: acento de la llamada a la acción del cierre
 # Paleta de marca Neogest Lab (13/11/2026): Azul claro #3982CF y Rosa #CC4689 (antes cian #22E1FF y magenta #FF2BD6).
 # Los nombres CIAN/MAG se conservan para no tocar el resto del módulo.
 CIAN, MAG = (57, 130, 207), (204, 70, 137)
@@ -378,7 +380,7 @@ def _prep_texto(sc, spec):
     pal = texto.split()
     sc.t_pal = pal
     sc.t_acento = set(enf) if enf else ({len(pal) - 1} if pal else set())
-    sc.t_col = MAG if sc.estilo_d == "giro" else CIAN
+    sc.t_col = MAG if sc.estilo_d == "giro" else (CORAL if sc.estilo_d == "cierre" else CIAN)
     maxlin = 3 if sc.estilo_d == "gancho" else 4
     for s in range(150, 66, -4):
         f = F(s, "Black")
@@ -575,7 +577,7 @@ def _g_texto(layer, d, sc, t):
         yy = y0 + lins * sc.t_lh + 90 + pill.height / 2
         w, h = pill.width + 70, pill.height + 40
         pl = Image.new("RGBA", (w, h), (0, 0, 0, 0)); dp = ImageDraw.Draw(pl)
-        dp.rounded_rectangle([0, 0, w - 1, h - 1], h // 2, fill=PANEL + (235,), outline=CIAN + (255,), width=4)
+        dp.rounded_rectangle([0, 0, w - 1, h - 1], h // 2, fill=PANEL + (235,), outline=CORAL + (255,), width=4)
         pl.alpha_composite(pill, ((w - pill.width) // 2, (h - pill.height) // 2))
         pegar(layer, pl, W / 2, yy, alfa=a, esc=0.9 + 0.1 * eback((t - 0.6) / 0.35))
         pegar(layer, _firma(), W / 2, yy + h / 2 + 120, alfa=e3((t - 0.9) / 0.4))
@@ -585,16 +587,57 @@ def _g_texto(layer, d, sc, t):
             d.ellipse([W / 2 - 520, 800 - 520, W / 2 + 520, 800 + 520], fill=MAG + (int(36 * a),))
 
 
+LOGO_URL = os.environ.get("NL_LOGO_URL") or "https://media.base44.com/images/public/6ae5244d4e2b32702f0a3cd6/c25965060_neogest-lab-logo.webp"
+LOGO_CACHE = os.path.join(AQUI, "logo_nl.webp")   # caché en el repo: se descarga una vez y se reutiliza
+
+
+def _logo_oficial():
+    """Logo NL oficial (1100x600) descargado en tiempo de ejecución con caché. Si no se consigue, devuelve None y la firma
+    sigue siendo la de texto de siempre (13/11/2026)."""
+    if "logo" in _tc:
+        return _tc["logo"]
+    im = None
+    try:
+        if not os.path.exists(LOGO_CACHE) or os.path.getsize(LOGO_CACHE) < 500:
+            import urllib.request
+            with urllib.request.urlopen(urllib.request.Request(LOGO_URL, headers={"User-Agent": "neogest-lab"}), timeout=15) as r:
+                datos = r.read(5_000_000)
+            tmp = LOGO_CACHE + ".tmp"
+            with open(tmp, "wb") as fh:
+                fh.write(datos)
+            Image.open(tmp).verify()
+            os.replace(tmp, LOGO_CACHE)
+        im = Image.open(LOGO_CACHE).convert("RGBA")
+        alto = 96
+        im = im.resize((max(1, int(im.width * alto / im.height)), alto), Image.LANCZOS)
+    except Exception as e:
+        print("logo NL oficial no disponible, se usa la firma de texto:", str(e)[:100])
+        im = None
+        try:
+            os.path.exists(LOGO_CACHE + ".tmp") and os.remove(LOGO_CACHE + ".tmp")
+        except OSError:
+            pass
+    _tc["logo"] = im
+    return im
+
+
 def _firma():
     if "firma" not in _tc:
         f = F(40, "Bold")
-        w = int(anc(FIRMA, f)) + 120
-        im = Image.new("RGBA", (w, 100), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
-        d.rounded_rectangle([4, 14, 76, 86], 16, outline=CIAN + (255,), width=5, fill=OSCURO + (200,))
-        fn = F(34, "Black")
-        d.text((26, 50), "N", font=fn, fill=CIAN + (255,), anchor="lm")
-        d.text((50, 50), "L", font=fn, fill=MAG + (255,), anchor="lm")
-        d.text((100, 50), FIRMA, font=f, fill=BLANCO + (255,), anchor="lm")
+        logo = _logo_oficial()
+        if logo is not None:
+            tw = int(anc(FIRMA, f))
+            im = Image.new("RGBA", (logo.width + 24 + tw, 100), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+            im.alpha_composite(logo, (0, 2))
+            d.text((logo.width + 24, 50), FIRMA, font=f, fill=BLANCO + (255,), anchor="lm")
+        else:
+            w = int(anc(FIRMA, f)) + 120
+            im = Image.new("RGBA", (w, 100), (0, 0, 0, 0)); d = ImageDraw.Draw(im)
+            d.rounded_rectangle([4, 14, 76, 86], 16, outline=CIAN + (255,), width=5, fill=OSCURO + (200,))
+            fn = F(34, "Black")
+            d.text((26, 50), "N", font=fn, fill=CIAN + (255,), anchor="lm")
+            d.text((50, 50), "L", font=fn, fill=MAG + (255,), anchor="lm")
+            d.text((100, 50), FIRMA, font=f, fill=BLANCO + (255,), anchor="lm")
         _tc["firma"] = im
     return _tc["firma"]
 

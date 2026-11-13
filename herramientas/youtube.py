@@ -32,6 +32,22 @@ def credenciales_listas():
     return all(os.environ.get(k) for k in ("YOUTUBE_CLIENT_ID", "YOUTUBE_CLIENT_SECRET", "YOUTUBE_REFRESH_TOKEN"))
 
 
+_AVISADO = []
+
+
+def _aviso_token(cuerpo):
+    """13/11/2026: invalid_grant (refresh token revocado/caducado) -> línea «AVISO TOKEN» en registro.log, sin parar nada."""
+    try:
+        if "invalid_grant" in cuerpo and not _AVISADO:
+            _AVISADO.append(1)
+            ruta = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "registro.log")
+            hora = __import__("datetime").datetime.now(__import__("datetime").timezone.utc).strftime("%Y-%m-%d %H:%M UTC")
+            with open(ruta, "a", encoding="utf-8") as f:
+                f.write(f"{hora}  AVISO TOKEN YouTube: invalid_grant, el token de refresco está caducado o revocado; renovar YOUTUBE_REFRESH_TOKEN (el ciclo sigue)\n")
+    except Exception:
+        pass
+
+
 def _peticion(url, datos=None, cabeceras=None, metodo=None, timeout=120):
     req = urllib.request.Request(url, data=datos, headers=cabeceras or {}, method=metodo)
     try:
@@ -39,6 +55,7 @@ def _peticion(url, datos=None, cabeceras=None, metodo=None, timeout=120):
             return r.status, dict(r.headers), r.read()
     except urllib.error.HTTPError as e:
         cuerpo = e.read().decode("utf-8", "replace")
+        _aviso_token(cuerpo)
         raise RuntimeError(f"YouTube HTTP {e.code}: {cuerpo[:400]}") from None
 
 

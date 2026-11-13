@@ -22,6 +22,7 @@ import glob
 import hashlib
 import json
 import os
+import re
 import shutil
 import subprocess
 import sys
@@ -91,6 +92,24 @@ class ErrorAPI(Exception):
     pass
 
 
+_TOKEN_AVISADO = set()
+
+
+def aviso_token(servicio, detalle):
+    """13/11/2026: deja en registro.log «AVISO TOKEN» (una vez por ejecución y servicio) cuando un token de Instagram/Meta
+    falla con 190/463/467 o «Error validating access token». Nunca lanza ni para el ciclo."""
+    try:
+        d = str(detalle)
+        if not re.search(r"código 190|subcódigo 46[37]|Error validating access token|invalid_grant", d):
+            return
+        if servicio in _TOKEN_AVISADO:
+            return
+        _TOKEN_AVISADO.add(servicio)
+        log(f"AVISO TOKEN {servicio}: token caducado o anulado; renovar el secreto en GitHub (el ciclo sigue). Detalle: {d[:140]}")
+    except Exception:
+        pass
+
+
 class SinURLPublica(ErrorAPI):
     """La imagen no es accesible desde fuera (p. ej. repo privado): no se gasta intento, se reintenta en otra pasada."""
 
@@ -108,7 +127,9 @@ def peticion(url, metodo="GET", datos=None, cabeceras=None, cuerpo=None, timeout
         texto = e.read().decode(errors="replace")
         try:
             err = json.loads(texto).get("error", {})
-            raise ErrorAPI(f"{err.get('message', texto)} (código {err.get('code')}, subcódigo {err.get('error_subcode')})")
+            msg_err = f"{err.get('message', texto)} (código {err.get('code')}, subcódigo {err.get('error_subcode')})"
+            aviso_token("Instagram/Meta", msg_err)
+            raise ErrorAPI(msg_err)
         except (ValueError, AttributeError):
             raise ErrorAPI(f"HTTP {e.code}: {texto[:300]}")
     except urllib.error.URLError as e:

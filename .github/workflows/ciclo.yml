@@ -1,6 +1,7 @@
 name: Ciclo Instagram
 
-# Cada 30 minutos de 12:17 a 23:47 (hora de España en invierno) y una vez por la mañana.
+# El cron de GitHub lo lanza cada 30 minutos de 12:17 a 23:47 (hora de España en invierno) y una vez por la mañana.
+# Además el workflow «Reloj» (reloj.yml) lo lanza a mano cada 15 min: la cadencia real es de 15 min, el cron es solo el respaldo de 30.
 # Minutos 17 y 47 a propósito: GitHub retrasa o se salta muchas ejecuciones programadas en
 # las horas en punto y a las y cinco, que es cuando más repositorios las piden.
 on:

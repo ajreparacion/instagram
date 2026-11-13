@@ -38,10 +38,12 @@ LOGO = os.path.join(BASE, "equipo", "perfil_kit", "perfil_neogest_lab_1080.jpg")
 ORIGEN = "https://centro-de-contenido-apps-2f0a3cd6.base44.app"
 RELEASE = "cola"
 
-# Paleta de los carruseles ya publicados (101-108): fondo morado oscuro, acento magenta.
-FONDO_A = (18, 15, 30)
-FONDO_B = (66, 38, 82)
-ACENTO = (232, 121, 249)
+# Paleta de marca (13/11/2026; antes, como en los carruseles 101-108: fondo morado y acento magenta (232,121,249)):
+# fondo azul noche que acaba en el Azul #3F5FB6 oscurecido y acento Coral #EB8662 (≥ 4,5:1 sobre el fondo).
+FONDO_A = (14, 18, 40)
+FONDO_B = (36, 52, 108)
+ACENTO = (235, 134, 98)
+PANEL = (22, 32, 72)
 BLANCO = (246, 243, 250)
 GRIS = (205, 198, 220)
 GRIS_OSC = (150, 140, 170)
@@ -538,7 +540,7 @@ def historia_capas(app, caps, h, idx):
         caja_top = SAFE_B - 340
         movil = movil_fundido(cap, y + 46, caja_top - 30, ancho=500, zona=h.get("zona"))
         _, d = C.nueva(1.3)
-        d.rounded_rectangle((x, caja_top, SW - x, caja_top + 190), 36, fill=(40, 26, 56), outline=ACENTO, width=4)
+        d.rounded_rectangle((x, caja_top, SW - x, caja_top + 190), 36, fill=PANEL, outline=ACENTO, width=4)
         ft, lst = ajustar(h["texto"], "Bold", SW - 2 * x - 160, 2, 42, 32)
         yy = caja_top + 95 - len(lst) * int(ft.size * 1.3) // 2
         dibujar_lineas(d, x + 44, yy, lst, ft, BLANCO, alto=1.3)
@@ -740,7 +742,7 @@ def preparar_reel(app, caps, dur):
     sub = capa_texto(lss2, fs2, GRIS, alto=1.32, centro=True)
     caja = Image.new("RGBA", (SW, 120), (0, 0, 0, 0))
     dc = ImageDraw.Draw(caja)
-    dc.rounded_rectangle((100, 6, SW - 100, 114), 34, outline=ACENTO, width=5, fill=(40, 26, 56, 255))
+    dc.rounded_rectangle((100, 6, SW - 100, 114), 34, outline=ACENTO, width=5, fill=PANEL + (255,))
     fb = fnt(44, "Bold")
     partes = [("Prueba gratuita", ACENTO), (" · sin tarjeta · sin compromiso", BLANCO)]
     while sum(fb.getlength(q) for q, _ in partes) > SW - 200 - 60 and fb.size > 24:  # cierre de la directiva del 10/11
