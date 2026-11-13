@@ -67,7 +67,13 @@ La búsqueda de vídeos muestra sobre todo reels reciclados de IG/TikTok; mismo 
 **Comunidad**
 - Responder comentarios con la voz del personaje (la Jupillo/el Bola), no como empresa.
 
-## 7. Perfiles (propuesta, pendiente del OK del dueño antes de cambiarlos)
+## 7. Perfiles: APLICADO el 13/11 con el OK del dueño («hazlo en todas las redes, deja los perfiles profesionales y virales»)
 - IG bio: «Las IAs de la oficina 😈 El Jambo y sus IAs, cada día · ¿Quieres tu app o web? Comenta APP · By Neogest Lab»
 - YouTube: mismo texto como descripción; tráiler/destacado = mejor episodio Jambo.
 - Facebook: misma línea en «Detalles»; botón Enviar mensaje.
+
+### Hecho el 13/11 (no deshacer)
+- IG: bio nueva aplicada. Reels de escaparate quitados de la cuadrícula (siguen existiendo): DfkvcMMCbFQ, DfpGZLZlGH3, DfiIDnkD2zh, DfhX2RRgesw, DffUzH3ALoA. Los carruseles de escaparate (DfpeynwDiJn, Dfm_dyMlKbx, Dffsx71mBtI, DffYnNFFwz9, Dfe8Sb1n_cY) no admiten ocultarse desde la web: no borrar; ir tapándolos con piezas nuevas de la serie.
+- YouTube: descripción nueva; tráiler del canal = «El que nunca hace nada ya encontró quién se lo hace TODO» (Jupillo, el Short con más views: 40); quitada de Inicio la sección vacía «Apps con IA en 1 minuto». 14 Shorts de escaparate pasados a PRIVADO, incluidos 9 que estaban PROGRAMADOS del 13 al 21/11. Siguen programados/públicos solo los de humor/dato: «2 HORAS de reunión…», «Tu bar tira 3 raciones…», «Un café, un bocata…» y el de la Jupillo.
+- Facebook: presentación nueva («Las IAs de la oficina 😈 … ¿Tu app o web? Escríbenos APP · By Neogest Lab»).
+- REGLA: Editor de canal y Creador NO vuelven a programar Shorts/Reels de escaparate de apps. Lo programado debe pasar la lista de Calidad de la sección 6.
