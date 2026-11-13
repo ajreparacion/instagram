@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 2.633,
+  "duracion": 3.067,
   "texto": "¿Qué cliente primero? ¡A todos!",
   "enfasis": []
  },
@@ -12,8 +12,8 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 2.633,
-  "duracion": 3.1,
+  "inicio": 3.067,
+  "duracion": 2.533,
   "texto": "¡Los tiburones no eligen, devoran!",
   "enfasis": []
  },
@@ -21,8 +21,8 @@
   "escena": 3,
   "estilo": "delega",
   "hablante": "jambo",
-  "inicio": 8.133,
-  "duracion": 3.4,
+  "inicio": 8.0,
+  "duracion": 1.8,
   "texto": "Que lo haga la Jupillo.",
   "enfasis": []
  },
@@ -30,8 +30,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 11.533,
-  "duracion": 4.0,
+  "inicio": 9.8,
+  "duracion": 3.533,
   "texto": "A, B y C. El que más compra, primero.",
   "enfasis": []
  },
@@ -39,8 +39,8 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 15.533,
-  "duracion": 2.9,
+  "inicio": 13.333,
+  "duracion": 1.8,
   "texto": "Mi instinto no falla.",
   "enfasis": []
  },
@@ -48,8 +48,8 @@
   "escena": 6,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 18.433,
-  "duracion": 3.1,
+  "inicio": 15.133,
+  "duracion": 2.633,
   "texto": "Dos meses sin visitar al cliente A.",
   "enfasis": []
  },
@@ -57,8 +57,8 @@
   "escena": 7,
   "estilo": "mensaje",
   "hablante": null,
-  "inicio": 21.533,
-  "duracion": 4.633,
+  "inicio": 17.767,
+  "duracion": 4.733,
   "texto": "No todos los clientes pesan igual. Tu agenda debería saberlo.",
   "enfasis": [
    6,
@@ -71,8 +71,8 @@
   "escena": 8,
   "estilo": "mensaje",
   "hablante": null,
-  "inicio": 26.167,
-  "duracion": 6.433,
+  "inicio": 22.5,
+  "duracion": 6.167,
   "texto": "En la vida real no hay Jupillo. Gestión Integral 7D clasifica tus clientes.",
   "enfasis": []
  },
@@ -80,8 +80,8 @@
   "escena": 9,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 32.6,
-  "duracion": 2.867,
+  "inicio": 28.667,
+  "duracion": 2.7,
   "texto": "Mándaselo a quien visita por instinto.",
   "enfasis": []
  }
