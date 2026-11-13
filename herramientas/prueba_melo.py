@@ -92,6 +92,18 @@ def ajuste():
     json.dump(res, open(f"{a2.SAL}/melo_ajuste.json", "w"), ensure_ascii=False, indent=1, default=float)
 
 
+def grafias():
+    res = {}
+    for g in ["Neogest Láb", "Neogest, Láb", "Neogest Lab", "Neogest Láb", "Neogest, Láb", "Neogest Lab", "Neogest Láb", "Neogest, Láb"]:
+        v = 1.1
+        rutas = melo([(FRASE.replace("Neogest Lab", g), None)], v, {}, "gx")
+        a2.postprocesar(rutas[0], "melo_gx"); t, w = whisper(f"{a2.SAL}/melo_gx.mp3")
+        ok = "neogestlab" in n(t).replace(" ", "").replace(",", "")
+        res.setdefault(g, []).append({"texto": t, "ok": ok, "palabras_s": w}); print(g, ok, t, flush=True)
+    os.remove(f"{a2.SAL}/melo_gx.mp3")
+    json.dump(res, open(f"{a2.SAL}/melo_grafias.json", "w"), ensure_ascii=False, indent=1)
+
+
 def final():
     aj = pg.ajustes_voz()["melo"]
     rutas = melo([(FRASE, None)] + [(t, None) for t in LARGAS], aj.get("velocidad", 1.0), aj.get("pronunciacion") or {}, "final")
@@ -132,4 +144,5 @@ if __name__ == "__main__":
     modo = sys.argv[1]
     if modo == "ajuste": ajuste()
     elif modo == "final": final()
+    elif modo == "grafias": grafias()
     else: reel(sys.argv[2] if len(sys.argv) > 2 else "cola/508_jambo_app_gastos_fijos/guion.json")
