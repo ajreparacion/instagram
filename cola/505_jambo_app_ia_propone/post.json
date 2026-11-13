@@ -8,7 +8,7 @@
   "publico": "autónomos y pymes",
   "formula": "humor negro con personaje + pivote de producto (v9)",
   "app": "Gestión Integral 7D",
-  "renderizado": false,
+  "renderizado": "2026-11-13T14:52:50+00:00",
   "_fuentes": [],
   "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
   "comentario_fijado": "¿Te fías de la IA sin mirar? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
@@ -22,7 +22,7 @@
     "mood": "comedia"
   },
   "portada_ms": 0,
-  "motor_voz": "chatterbox",
+  "motor_voz": "melo",
   "asset": "505_jambo_app_ia_propone.mp4",
   "monetizacion": {
     "objetivo": "clic_enlace",

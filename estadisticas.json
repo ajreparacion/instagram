@@ -1,13 +1,34 @@
 {
-  "actualizado": "2026-11-13T08:44:25+00:00",
+  "actualizado": "2026-11-13T14:54:22+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1601,
     "follows_count": 176,
-    "media_count": 15,
+    "media_count": 11,
     "username": "neogestlab"
   },
   "posts": [
+    {
+      "id": "18127618118515203",
+      "caption": "Un café, un bocata y un refresco suman 1.388,40 € al año (ejemplo).\nEs una cuenta con datos inventados: café 1,50 € × 5 veces por semana, bocata 4 € × 3 y refresco 1,80 € × 4, todo por 52 semanas. Si el bocata baja a 1 vez por semana y el café a 3, queda en 816,40 €: 572 € menos.\nLa página la ha hecho una IA con un solo mensaje y se grabó funcionando. En Neogest Lab hacemos apps así, a medida.\nMándaselo a quien dice que no gasta nada o guárdalo para hacer tu cuenta.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nVoz generada por IA\n\n#ahorro #gastoshormiga #economiadomestica #apps #neogestlab",
+      "comments_count": 0,
+      "like_count": 0,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfrqWpEHdns/",
+      "timestamp": "2026-11-13T12:45:47+0000",
+      "metricas": {
+        "reach": 2,
+        "views": 5,
+        "saved": 0,
+        "shares": 0,
+        "comments": 0,
+        "likes": 0,
+        "total_interactions": 0,
+        "ig_reels_avg_watch_time": 47852,
+        "ig_reels_video_view_total_time": 191410
+      }
+    },
     {
       "id": "17911257984583629",
       "caption": "El 55 % de las empresas encuestadas considera que las tareas administrativas restan tiempo al trabajo estratégico.\nDos horas de reunión para organizar el papeleo, y la solución era un correo de tres líneas.\nHumor negro de ficción; los personajes son inventados.\nMándaselo a quien carga con todo.\nFuente: «Radiografía económica y bancaria de la micro y pequeña empresa en España 2026», de Qonto con IO Investigación, según Forbes España (22/04/2026). Lo encarga una fintech.\n#humornegro #pymes #reuniones #ia #trabajo\nVoz y personajes generados por IA\n\nVoz generada por IA",
@@ -26,7 +47,7 @@
         "likes": 0,
         "total_interactions": 0,
         "ig_reels_avg_watch_time": 7374,
-        "ig_reels_video_view_total_time": 796418
+        "ig_reels_video_view_total_time": 803834
       }
     },
     {
@@ -63,8 +84,8 @@
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 8203,
-        "ig_reels_video_view_total_time": 65628
+        "ig_reels_avg_watch_time": 7842,
+        "ig_reels_video_view_total_time": 70586
       }
     },
     {
@@ -84,8 +105,8 @@
         "comments": 0,
         "likes": 3,
         "total_interactions": 4,
-        "ig_reels_avg_watch_time": 10787,
-        "ig_reels_video_view_total_time": 3829630
+        "ig_reels_avg_watch_time": 10820,
+        "ig_reels_video_view_total_time": 3852054
       }
     },
     {
@@ -122,8 +143,8 @@
         "comments": 0,
         "likes": 0,
         "total_interactions": 0,
-        "ig_reels_avg_watch_time": 26628,
-        "ig_reels_video_view_total_time": 159769
+        "ig_reels_avg_watch_time": 29520,
+        "ig_reels_video_view_total_time": 206644
       }
     },
     {
@@ -143,8 +164,8 @@
         "comments": 0,
         "likes": 1,
         "total_interactions": 3,
-        "ig_reels_avg_watch_time": 16967,
-        "ig_reels_video_view_total_time": 390251
+        "ig_reels_avg_watch_time": 16494,
+        "ig_reels_video_view_total_time": 395878
       }
     },
     {
@@ -164,8 +185,8 @@
         "comments": 0,
         "likes": 3,
         "total_interactions": 7,
-        "ig_reels_avg_watch_time": 5272,
-        "ig_reels_video_view_total_time": 52723
+        "ig_reels_avg_watch_time": 6402,
+        "ig_reels_video_view_total_time": 70429
       }
     },
     {
@@ -236,8 +257,8 @@
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 11126,
-        "ig_reels_video_view_total_time": 111266
+        "ig_reels_avg_watch_time": 10572,
+        "ig_reels_video_view_total_time": 116300
       }
     },
     {
@@ -395,6 +416,10 @@
     },
     {
       "fecha": "2026-11-13T08:44+00:00",
+      "seguidores": 1601
+    },
+    {
+      "fecha": "2026-11-13T14:54+00:00",
       "seguidores": 1601
     }
   ]
