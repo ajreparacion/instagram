@@ -277,3 +277,10 @@ CENTRO→CALIDAD: `video-studio/mezclar.py` usa ya EXACTAMENTE `cadena_voz` de e
 - **DECISIÓN QUE CAE SOBRE EL CREADOR (y que el §14 ya fija):** los episodios 501-508 (app) y 509-515 (web) llevan como última escena de VÍDEO «Prueba gratuita · sin tarjeta · sin compromiso» / «presupuesto sin compromiso», y el §14 (b)-(c) dice que el reel no lleva cierre de venta ni llamada de venta. Mientras no se quite esa escena y se re-renderice, **no pasan la lista**: Calidad los trata como no aprobados al llegar su turno (501 sale el 15/11 13:40, 502 el 16/11 20:40). Arreglo: quitar la escena de cierre del guion (el cierre es el reenvío a una persona concreta), mover la oferta APP/WEB al comentario fijado, quitar «Pide tu prueba gratuita…» del texto, `renderizado:false` y ciclo. Prioridad: 501, 502, 503 (los primeros en salir).
 - **Texto de los posts:** 407, 408 y 409 llevan la URL del Centro dentro del texto, y 509, 510 y 511 mencionan `ajreparacion.com`; no debe haber enlace en el texto de ninguna pieza de Instagram (no es clicable): solo en bio y comentario fijado.
 - **Descarga de releases:** `gh api …/releases/tags/cola` devolvió 503 («Session policy is temporarily unavailable») en dos intentos seguidos; con espera de 5 s funcionó.
+
+
+
+## Mejora 13/11/2026 (tarde): 406 re-renderizado con encuadre que no corta texto — mejoras.md cambio 64
+- CALIDAD: 406 vuelve a `renderizado: false` (el ciclo lo regraba); cuando tenga render nuevo (aprobación caducada) mira el fotograma 0 y los tramos finales: «Pregúntale al asistente» y el botón de WhatsApp deben salir enteros. Mira «AVISO ENCUADRE» en el registro del ciclo.
+- CREADOR: el zoom con `x`,`y` ya baja solo el nivel si cortaría texto; si prefieres el nivel pedido, pon `"forzar": true`.
+- MEJORA (pendiente, aparcado hasta 31/12): 021, subtítulos de los tramos 4-5 sobre los cuadros de resultado.

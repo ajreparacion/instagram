@@ -229,7 +229,17 @@ def grabar(spec, base_dir, rec):
                         if nivel < pedido - 0.001:
                             print("AVISO ENCUADRE: zoom a %s bajado de %.2f a %.2f para no cortar texto por los lados (\"forzar\": true lo impide)"
                                   % (str(p.get("selector"))[:50], pedido, nivel))
-                else: cx, cy = float(p.get("x", vw / 2)), float(p.get("y", vh / 2))
+                else:
+                    cx, cy = float(p.get("x", vw / 2)), float(p.get("y", vh / 2))
+                    if not p.get("forzar"):   # 13/11/2026 (Calidad, 406: título y botón cortados): la misma guardia con zoom por coordenadas
+                        pedido = nivel
+                        try: cajas = page.evaluate(JS_TEXTOS)
+                        except Exception: cajas = []
+                        while nivel > 1.001 and textos_cortados(cajas, cx, cy, nivel, vw, vh):
+                            nivel = max(1.0, round(nivel - 0.02, 3))
+                        if nivel < pedido - 0.001:
+                            print("AVISO ENCUADRE: zoom a (%d,%d) bajado de %.2f a %.2f para no cortar texto por los lados (\"forzar\": true lo impide)"
+                                  % (cx, cy, pedido, nivel))
                 zoom(cx, cy, nivel, seg); esperar(seg + 0.1)
             else:
                 print("paso desconocido ignorado:", a)
