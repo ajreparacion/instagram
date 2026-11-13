@@ -1,5 +1,12 @@
 # Lo que solo puede hacer el dueño de la cuenta
 
+**AUDITORÍA 13/11/2026 · lo urgente del dueño (por orden):**
+1. **Seguridad**: el 12/11 se subió por error un token de acceso de Meta a este repo PÚBLICO; sigue en el historial de git. Anúlalo en Meta y genera uno nuevo para el secreto FACEBOOK_PAGE_TOKEN.
+2. Contesta las 4 «Dudas para el dueño» al final de DIRECTIVA_VIGENTE.md.
+3. Contacta (o marca como prueba interna) la solicitud del 8/11 en /panel/solicitudes: es la única que hay.
+4. Nombre visible de Instagram cuando lo deje (~22-25/11).
+
+
 El equipo hace todo lo demás solo. Estas tareas necesitan la identidad, los datos fiscales o el acceso al perfil del usuario. Ordenadas por impacto en la monetización. Lo mantiene el Estratega.
 
 **Lo primero ahora (Estratega, 12/11/2026):** (a) cambiar el nombre visible a «Neogest Lab · Apps a medida» cuando Instagram lo permita (hacia el 25/11, desde el móvil); (b) en /panel/solicitudes, marcar la solicitud del 8/11 como contactada o descartada, o decir si fue una prueba; (c) reconectar Buzzfy con permiso de mensajes para poder contar los DMs con intención. (d) archivar desde el móvil las publicaciones repetidas (la API no archiva): instagram.com/p/Dfe8Sb1n_cY y /p/Dfe-iOFD7dQ (queda /p/Dfe7vqnIW5Q); /p/Dfe8MyWjzSv y /p/Dfe-VhUj8LS (queda /p/Dfe7qRLIKe6); /p/DffQZfmE7I6 (queda /p/DffSjjIFyw1); /reel/DfkvcMMCbFQ (AJ Web, queda /reel/DfksC5PEcip). La bio y el enlace a /solicitar ya están bien.

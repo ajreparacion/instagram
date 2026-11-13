@@ -1,4 +1,4 @@
-# Instrucciones comunes del equipo de @nosabesloquehasvisto
+# Instrucciones comunes del equipo de @neogestlab
 
 > DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (cabecera y §11, 12/11/2026): publicación diaria completa (historias 09:30, 15:30 y 21:30; reels 13:40, 18:40 y 20:40; carrusel de app 17:10); los episodios de «El Jambo que sabe y las IAs» son el motor de alcance, con pivote de app o web según la fórmula v9 (1 de cada 3 sin producto); reels de datos 6xx con fuente verificada; cierre único de prueba gratuita en todo lo que lleve producto; bloque `monetizacion` en cada pieza; voz genérica; nota ≥ 90; nunca dos reels en el mismo hueco. Si algo de este archivo la contradice (3 episodios por semana, 1 reel de app a la semana, máximo 2 o 3 piezas al día, episodios sin apps, IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
 
@@ -35,9 +35,9 @@ Sustituye por completo a «HUMANIZAR AL MÁXIMO» y al enfoque de misterios. Man
 - Formato de render (vídeo propio por URL con voz encima): HECHO el 7/11/2026 por Mejora → guion.json con "modo":"app" (ver «Modo "app"» más abajo y herramientas/ejemplo_guion_app.json).
 
 ## Contexto
-- Cuenta de Instagram @nosabesloquehasvisto (nombre visible propuesto «IA Fácil · Trucos que no sabías», ver equipo/perfil_propuesto.md). Dueño: el usuario (Neogest Lab). Ha dado control total y autorización para trabajar de forma 100 % autónoma. OBJETIVO PRINCIPAL: MONETIZAR. El crecimiento y la viralidad son el medio. El usuario ha dado control y permisos absolutos.
+- Cuenta de Instagram @neogestlab (estado del perfil en DIRECTIVA_VIGENTE §7). Dueño: el usuario (Neogest Lab). Ha dado control total y autorización para trabajar de forma 100 % autónoma. OBJETIVO PRINCIPAL: MONETIZAR. El crecimiento y la viralidad son el medio. El usuario ha dado control y permisos absolutos.
 - Regla de prioridad para todos los agentes: antes de decidir, lee equipo/monetizacion.md y elige siempre la opción que más acerque a ingresos reales (requisitos de monetización de Instagram, seguidores, alcance a no seguidores, retención, compartidos y guardados, temas con mayor valor comercial). Si dos opciones empatan, gana la que más monetiza. Nunca uses tácticas que pongan en riesgo la cuenta (spam, compra de seguidores, contenido engañoso o copiado).
-- Nada depende de ningún dispositivo del usuario: todo vive en el repositorio privado GitHub ajreparacion/instagram, y GitHub Actions (publicar_gh.py, cada 30 min de 12:05 a 23:35) renderiza, pone la voz, publica, responde comentarios y actualiza estadisticas.json.
+- Nada depende de ningún dispositivo del usuario: todo vive en el repositorio PÚBLICO GitHub ajreparacion/instagram, y GitHub Actions (publicar_gh.py, cada 30 min de 12:05 a 23:35) renderiza, pone la voz, publica, responde comentarios y actualiza estadisticas.json.
 - Escribe siempre en español de España. No hagas preguntas: decide tú y deja constancia.
 
 ## Cómo trabajar con el repositorio
@@ -91,8 +91,8 @@ Dibujos animados doodle sobre papel claro, trazo negro grueso con temblor de man
 - "pantalla": se teclea a 30 caracteres/s desde los 0,55 s con cursor cian; cuenta los caracteres para que quepa en la duración (p. ej. 60 caracteres → escena de ≥ 3,5 s). Es lo que hace guardable el reel (prompt o menú exacto, comprobado en la documentación oficial).
 - Siguen valiendo "cifra" (+ "unidad"), "lista" (recapitulación final de máx. 3 pasos, numerada) y "sello" (p. ej. "GRATIS", "HECHO"; cae en la esquina superior derecha del objeto; en rojo si es FALSO/NO).
 - Cámara leve (zoom/paneo por tramos de ~3 s) con «punch-in» en cada corte; música mayor y viva a ~100-110 bpm, discreta, que entra tras la primera frase; efectos sutiles generados por código: «pop» + whoosh en cada corte, pop al aterrizar el objeto, lápiz al dibujarse la pizarra/lista, teclas con la "pantalla", «ding» con la "cifra" (cambio 19, 7/11).
-- Animación continua (nada quieto más de 1 s): objeto/cifra/antes-después entran con rebote y flotan; pizarra y lista se dibujan trazo a trazo; Bit y Paco respiran, parpadean, gesticulan y mueven la BOCA con la envolvente real de la voz del dueño (publicar_gh.py la pasa en tiempos_voz.json "env"). Patrones de referencia en equipo/referentes_dibujo.md.
-- Duración: el render alarga cada escena a lo que dure su voz real (+0,45 s). Con la voz del dueño (Chatterbox) salen ~0,5 s por palabra: para un reel de ≤ 35 s, máx. ~60 palabras de voz en total.
+- Animación continua (nada quieto más de 1 s): objeto/cifra/antes-después entran con rebote y flotan; pizarra y lista se dibujan trazo a trazo; Bit y Paco respiran, parpadean, gesticulan y mueven la BOCA con la envolvente real de la voz (publicar_gh.py la pasa en tiempos_voz.json "env"). Patrones de referencia en equipo/referentes_dibujo.md.
+- Duración: el render alarga cada escena a lo que dure su voz real (+0,45 s). Con la voz genérica (Chatterbox España) salen ~0,5 s por palabra: para un reel de ≤ 35 s, máx. ~60 palabras de voz en total.
 - Un "modo" desconocido hace fallar el render a propósito (nunca se renderiza con otro estilo).
 
 ### Modo "app" (SERIE APPS NEOGEST LAB, orden del usuario 7/11/2026 11:01; IMPLEMENTADO en hacer_reel.py el 7/11/2026)
@@ -104,13 +104,13 @@ Reutiliza un VÍDEO PROPIO de demostración de una app del usuario (ya grabado) 
   {"estilo":"gancho","bit":true,"texto":"¿Todavía apuntas las tareas *a mano*?","voz":"la misma frase (máx. ~4 palabras de voz para que dure ≤ 2 s)"},
   {"estilo":"tramo","clip":{"inicio":0.5,"fin":5.0},"texto":"(opcional) rótulo corto arriba","voz":"lo que se ve en ese tramo, con *énfasis*"},
   {"estilo":"tramo","clip":{"inicio":5.0,"fin":10.0},"voz":"..."},
-  {"estilo":"cierre","bit":true,"texto":"Comenta «PALABRA»","voz":"Comenta *palabra* y te mando el enlace. Sígueme para más apps."}]}
+  {"estilo":"cierre","bit":true,"texto":"Prueba gratuita · sin tarjeta · sin compromiso","voz":"Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."}]}
 - "video": obligatorio. Si no se puede descargar o leer, el render falla a propósito (no sale nada roto). Vertical (9:16) → a pantalla completa; apaisado → enmarcado a mano sobre papel (estilo dibujo), con el texto arriba y los subtítulos debajo.
 - "tramo": `clip.inicio`/`clip.fin` en segundos del vídeo original (quédate con lo mejor: 3-5 tramos para un reel de 20-45 s). Cada tramo dura lo que su "voz" (+0,45 s): si el trozo es más largo que la voz se ACELERA (hasta x1,75; más allá se corta por el final) para que no haya huecos; si es más corto, sigue a velocidad real más allá de "fin" (o congela el último fotograma). "velocidad" opcional (0,5-2) fuerza una velocidad. Sin "fin", el tramo toma lo que dure la voz desde "inicio".
 - "gancho": texto grande (énfasis *así* con resaltado cian) + voz; sin "clip" usa un fotograma fijo del primer tramo con zoom lento. "bit": true añade a Bit (robot) sorprendido abajo a la derecha (también en el cierre, celebrando; "accion": sorprendido|explica|senala|celebra).
-- "cierre": papel claro, "texto" como rótulo grande con marcador cian (pon ahí la palabra clave: «Comenta "PALABRA"»), Bit y subtítulos de la voz. La palabra clave tiene que coincidir con "palabra_clave" de post.json.
+- "cierre": papel claro, "texto" como rótulo grande con marcador cian (pon ahí el cierre único vigente de DIRECTIVA §1, no «Comenta PALABRA»), Bit y subtítulos de la voz. Solo si el cierre usa la palabra clave WEB/APP de la maqueta (DIRECTIVA §1), debe coincidir con "palabra_clave" de post.json.
 - Audio: el audio original del vídeo se normaliza a −24 LUFS y se multiplica por "volumen_original" (0,5 por defecto → −30 LUFS; 0 = se quita) y la mezcla lo hunde bajo la voz (ducking). Sin "musica" en el guion: música discreta (la del modo dibujo) solo si el vídeo no trae sonido; "musica": true/false la fuerza. Pie «By Neogest Lab» en todas las escenas; «pop» suave en cada corte.
-- Salida 1080x1920 H.264+AAC < 60 s (vale para YouTube Shorts). Voz del dueño: ~0,5 s por palabra → máx. ~70 palabras para 35 s. La voz tiene que narrar lo que se ve EN ESE tramo (nada de funciones que no salgan en el vídeo).
+- Salida 1080x1920 H.264+AAC < 60 s (vale para YouTube Shorts). Voz genérica: ~0,5 s por palabra → máx. ~70 palabras para 35 s. La voz tiene que narrar lo que se ve EN ESE tramo (nada de funciones que no salgan en el vídeo).
 
 ### Plantilla de grabación de pantalla tipo @claudeai (HECHO 7/11/2026 noche, Mejora; "modo":"app" + "plantilla":true)
 Para reels de la directiva (resultado real funcionando sobre fondo plano suave, cursor visible, zoom). Dos ficheros en la carpeta del reel: `grabacion.json` (qué grabar) y `guion.json` (voz y texto).
@@ -137,7 +137,7 @@ Formato del guion (ejemplos completos: `cola/301_medicator_presentador/guion.jso
 ```
 Campos de cada escena (una frase de voz por escena, 2-4 s; las escenas de más de 3,6 s se parten solas con un subcorte de cámara y fondo):
 - "velocidad_voz" (en la raíz del guion, por defecto 1,12): acelera la voz sin cambiar el tono para que el ritmo se parezca al de la referencia.
-- "voz": lo que dice la voz del dueño; *asteriscos* = énfasis (más fuerte y palabra en azul). "clave": ["palabra"] para colorear sin subir el volumen. "estilo_voz": gancho|giro|cierre (opcional).
+- "voz": lo que dice la voz genérica de España (nunca la del dueño); *asteriscos* = énfasis (más fuerte y palabra en azul). "clave": ["palabra"] para colorear sin subir el volumen. "estilo_voz": gancho|giro|cierre (opcional).
 - "titular": texto en mayúsculas, "|" separa líneas (máx. ~13 letras por línea); "estilo_titular": amarillo | cian | rosa | blanco | sello (sello = rojo con golpe y sacudida). Un titular cada 2-3 escenas, no en todas.
 - "fondo": verde | magenta | morado | cian | rojo | negro | azul | turquesa | rosa (nunca dos seguidos iguales; evita amarillo y naranja: la sudadera es amarilla). "fondo2" opcional para el subcorte.
 - "presentador" (pose): manos | reposo | explica | presenta | senala | senala_arriba | idea | saluda | celebra | sorpresa | encoge | pulgar | piensa | preocupada | movil. "lado": 1 o -1 (mano que gesticula y hacia dónde señala). "expresion": feliz | habla | sorpresa | preocupada | piensa | guino | risa | seria.
@@ -145,7 +145,7 @@ Campos de cada escena (una frase de voz por escena, 2-4 s; las escenas de más d
 - "plano": medio | primer | lejos | abajo (con maqueta, abajo es automático: la presentadora asoma por debajo).
 - "elemento" (opcional): {"tipo":"captura","imagen":"/demos/<slug>/N.webp","zoom":[x,y,escala],"etiqueta":"Demo con datos de ejemplo"} · {"tipo":"broll","imagen":...} (a pantalla completa; tapa a la presentadora y a Bit) · {"tipo":"terminal","lineas":["..."]} · {"tipo":"movil","titulo":"Mamá","mensajes":[{"de":"otro|yo","texto":"..."}]} · {"tipo":"tarjeta","titulo":"...","items":["≤ 32 letras", "..."],"pegatina":"guárdalo","chip":"..."} · {"tipo":"cierre","chip":"Demo en el enlace del perfil"}.
 - "flash": true = destello blanco y golpe al acabar la escena (úsalo al final del gancho). "extra": segundos de más (tarjeta 1,2; cierre 0,9). "min": duración mínima.
-Estructura que funciona (la de los pilotos): gancho con titular y Bit entrando (≤ 3 s) → giro con sello → 4-6 escenas de funciones reales con captura y zoom al botón → titular de beneficio → tarjeta «guárdalo» → cierre «Comenta APP» con logo. 30-40 s, 10-12 escenas. Música y efectos salen solos (whoosh en cada corte, pop en titulares, ding en los checks); máster a -14 LUFS con la música bajando como mucho 5 dB bajo la voz y la voz entre 4 y 8 LU por encima de la música mientras se habla (se mide y se ajusta solo; queda en presentador.json → audio.voz_sobre_musica_lu).
+Estructura que funciona (la de los pilotos): gancho con titular y Bit entrando (≤ 3 s) → giro con sello → 4-6 escenas de funciones reales con captura y zoom al botón → titular de beneficio → tarjeta «guárdalo» → cierre único de prueba gratuita con logo. 30-40 s, 10-12 escenas. Música y efectos salen solos (whoosh en cada corte, pop en titulares, ding en los checks); máster a -14 LUFS con la música bajando como mucho 5 dB bajo la voz y la voz entre 4 y 8 LU por encima de la música mientras se habla (se mide y se ajusta solo; queda en presentador.json → audio.voz_sobre_musica_lu).
 Prueba en local sin voz ni capturas (solo para mirar el look): `python3 herramientas/presentador/preparar.py <guion> --sin-voz --sin-capturas --solo-plan` y `node fotogramas.mjs /tmp/presentador_<carpeta>/props.json /tmp/f_ 30,200,400 0.5 <chrome>` desde herramientas/presentador (necesita node_modules).
 
 ### Modo "humano" (EN DESUSO desde el 6/11/2026 20:27; se conserva la documentación para el énfasis y los subtítulos)
