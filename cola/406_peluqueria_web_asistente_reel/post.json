@@ -22,12 +22,12 @@
     "video_volume": 1.0,
     "mood": "app"
   },
-  "motor_voz": "chatterbox",
+  "motor_voz": "melo",
   "monetizacion": {
     "objetivo": "clic_enlace",
     "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
     "paso_embudo": "visita_perfil -> clic_enlace"
   },
-  "renderizado": false,
+  "renderizado": "2026-11-13T16:25:39+00:00",
   "asset": "406_peluqueria_web_asistente_reel.mp4"
 }

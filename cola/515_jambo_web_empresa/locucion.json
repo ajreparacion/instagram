@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 2.7,
+  "duracion": 3.2,
   "texto": "¿La factura? ¡Se la mando otra vez!",
   "enfasis": [
    4,
@@ -16,8 +16,8 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 2.7,
-  "duracion": 3.933,
+  "inicio": 3.2,
+  "duracion": 4.3,
   "texto": "La factura está en el correo. Seguro. De 2019.",
   "enfasis": []
  },
@@ -25,7 +25,7 @@
   "escena": 3,
   "estilo": "delega",
   "hablante": "jambo",
-  "inicio": 9.033,
+  "inicio": 9.9,
   "duracion": 1.8,
   "texto": "Que lo haga la Jupillo.",
   "enfasis": []
@@ -34,8 +34,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 10.833,
-  "duracion": 4.567,
+  "inicio": 11.7,
+  "duracion": 3.433,
   "texto": "Portal del cliente: órdenes, presupuestos y facturas.",
   "enfasis": []
  },
@@ -43,8 +43,8 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 15.4,
-  "duracion": 2.633,
+  "inicio": 15.133,
+  "duracion": 3.067,
   "texto": "Atiendo a todos. Soy un crack.",
   "enfasis": []
  },
@@ -52,8 +52,8 @@
   "escena": 6,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 18.033,
-  "duracion": 2.467,
+  "inicio": 18.2,
+  "duracion": 2.833,
   "texto": "Atiende a todos. Clack.",
   "enfasis": []
  },
@@ -61,8 +61,8 @@
   "escena": 7,
   "estilo": "mensaje",
   "hablante": null,
-  "inicio": 20.5,
-  "duracion": 3.8,
+  "inicio": 21.033,
+  "duracion": 3.2,
   "texto": "Cada correo que reenvías es una hora que no vuelve.",
   "enfasis": [
    4,
@@ -77,8 +77,8 @@
   "escena": 8,
   "estilo": "mensaje",
   "hablante": null,
-  "inicio": 24.3,
-  "duracion": 5.533,
+  "inicio": 24.233,
+  "duracion": 5.467,
   "texto": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
   "enfasis": []
  },
@@ -86,8 +86,8 @@
   "escena": 9,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 29.833,
-  "duracion": 3.0,
+  "inicio": 29.7,
+  "duracion": 2.233,
   "texto": "Mándaselo a quien aún no tiene web.",
   "enfasis": []
  }
