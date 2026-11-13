@@ -72,7 +72,9 @@
    "commit": "aabfa229e58230aa183b4718d355aa4073672aca^",
    "ruta": "cola/103_tareas_casa_ia/slides",
    "huella": "5711da1664434fcc",
-   "estado": "pendiente"
+   "estado": "publicado",
+   "publicado": "2026-11-13T11:14:34+00:00",
+   "enlace": "https://www.facebook.com/1437632859434095_122109155211536765"
   },
   {
    "id": "102_formula_prompt",
