@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Visitar a todos los clientes no es una estrategia: es cansancio con coche.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nEn Gestión Integral 7D los clientes se clasifican en A, B y C, con ubicación y fecha de la última visita.\nMándaselo a quien visita por instinto.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #autonomos #pymes #ia #facturacion #neogestlab\nVoz y personajes generados por IA",
+  "texto": "Visitar a todos los clientes no es una estrategia: es cansancio con coche.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nEn Gestión Integral 7D los clientes se clasifican en A, B y C, con ubicación y fecha de la última visita.\nMándaselo a quien visita por instinto.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #autonomos #pymes #ia #facturacion #neogestlab\nVoz y personajes generados por IA",
   "cuando": "2026-11-18T20:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -8,10 +8,10 @@
   "publico": "autónomos y pymes",
   "formula": "humor negro con personaje + pivote de producto (v9)",
   "app": "Gestión Integral 7D",
-  "renderizado": "2026-11-11T18:11:57+00:00",
+  "renderizado": false,
   "_fuentes": [],
   "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
-  "comentario_fijado": "¿Cuánto hace que no visitas a tu mejor cliente? Cuéntalo. Episodio nuevo cada día en @neogestlab",
+  "comentario_fijado": "¿Cuánto hace que no visitas a tu mejor cliente? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
   "avance_siguiente": "Mañana: la IA que factura sola.",
   "audio_ig": {
     "audio_id": "583674661052146",
@@ -28,5 +28,6 @@
     "objetivo": "clic_enlace",
     "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
     "paso_embudo": "visita_perfil -> clic_enlace"
-  }
+  },
+  "_nota_calidad": "13/11: quitada del vídeo la tarjeta final de venta y la oferta del texto (DIRECTIVA §14 b-c); la oferta va en el comentario fijado. Re-render pendiente; Calidad reevalúa."
 }

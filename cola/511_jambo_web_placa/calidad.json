@@ -1,7 +1,12 @@
 {
-  "aprobado": true,
+  "aprobado": false,
   "nota": 90,
-  "fecha": "2026-11-12T05:40Z",
+  "fecha": "2026-11-13T14:25Z",
   "comentario": "Audio −14,1 LUFS, pico −1,2/−1,5 dBFS, sin silencios >1,2 s (hueco de voz ≈3 s = remate visual con música, igual que 501-505 aprobados); fotogramas de gancho POV, contador, gag, pivote y cierre legibles; frase de envío, comentario fijado y avance presentes; música por audio_ig. Pieza web por orden del dueño (11/11): función de ajreparacion.com tomada de hechos_verificados; «más asequibles de lo que piensas» es afirmación del dueño sin cifras (pendiente de que confirme); cierre «Consultoría gratuita · presupuesto sin compromiso» propio de web (no es app). Corregido el post: sin hashtags (B6), añadidos 4.",
-  "revisado_por": "agente de CALIDAD (12/11, pasada de la mañana)"
+  "revisado_por": "agente de CALIDAD (12/11, pasada de la mañana)",
+  "nota_anterior": 90,
+  "motivos": [
+    "Aprobación caducada por cambio de guion (regla 9): se quitó la tarjeta final de venta («prueba gratuita»/«presupuesto sin compromiso») que la DIRECTIVA §14 (b) y la lista §6 ya no admiten dentro del reel"
+  ],
+  "como_arreglarlo": "Esperar al re-render del ciclo (renderizado distinto de false) y reevaluar: el contenido del episodio no cambia, solo la tarjeta final (ahora muestra la frase de reenvío)."
 }

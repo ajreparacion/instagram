@@ -1,7 +1,12 @@
 {
-  "aprobado": true,
+  "aprobado": false,
   "nota": 90,
   "comentario": "Audio −14,0/−14,2 LUFS, pico < −1,3 dBFS, sin silencios >1,2 s; 13-14 fotogramas revisados (gancho POV en el fotograma 0, contador, sello, giro serio, pivote y cierre único con texto legible); frase de envío, comentario_fijado y avance_siguiente presentes; música por audio_ig. Enlace de pago por factura = hecho verificado; Bizum depende de que Redsys lo tenga activo, por eso Calidad corrigió el pie del post («Bizum (si está activo)»); el rótulo del pivote dice «Bizum» a secas (simplificación tolerada, no entra en prohibido_afirmar). Pedir al Creador «tarjeta, Bizum o transferencia» → «enlace de pago» en próximos episodios.",
-  "fecha": "2026-11-11T18:35Z",
-  "revisado_por": "agente de CALIDAD (11/11, pasada de la tarde)"
+  "fecha": "2026-11-13T14:25Z",
+  "revisado_por": "agente de CALIDAD (11/11, pasada de la tarde)",
+  "nota_anterior": 90,
+  "motivos": [
+    "Aprobación caducada por cambio de guion (regla 9): se quitó la tarjeta final de venta («prueba gratuita»/«presupuesto sin compromiso») que la DIRECTIVA §14 (b) y la lista §6 ya no admiten dentro del reel"
+  ],
+  "como_arreglarlo": "Esperar al re-render del ciclo (renderizado distinto de false) y reevaluar: el contenido del episodio no cambia, solo la tarjeta final (ahora muestra la frase de reenvío)."
 }

@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Cada factura se teclea dos veces: una en el presupuesto y otra, igual, al facturar.\nEl Jambo lo delega en la Jupillo, como siempre. Humor negro de ficción; los personajes son inventados.\nEn Gestión Integral 7D, presupuesto, pedido, albarán y factura heredan líneas e IVA del documento anterior.\nFuente de la cifra: ATA, según The Objective (18/12/2025).\nMándaselo a quien factura dos veces.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #autonomos #pymes #ia #facturacion #neogestlab\nVoz y personajes generados por IA",
+  "texto": "Cada factura se teclea dos veces: una en el presupuesto y otra, igual, al facturar.\nEl Jambo lo delega en la Jupillo, como siempre. Humor negro de ficción; los personajes son inventados.\nEn Gestión Integral 7D, presupuesto, pedido, albarán y factura heredan líneas e IVA del documento anterior.\nFuente de la cifra: ATA, según The Objective (18/12/2025).\nMándaselo a quien factura dos veces.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #autonomos #pymes #ia #facturacion #neogestlab\nVoz y personajes generados por IA",
   "cuando": "2026-11-15T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -8,12 +8,12 @@
   "publico": "autónomos y pymes",
   "formula": "humor negro con personaje + pivote de producto (v9)",
   "app": "Gestión Integral 7D",
-  "renderizado": "2026-11-11T17:22:04+00:00",
+  "renderizado": false,
   "_fuentes": [
     "ATA, según The Objective (18/12/2025)"
   ],
   "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
-  "comentario_fijado": "¿Cuántas veces has tecleado lo mismo hoy? Cuéntalo. Episodio nuevo cada día en @neogestlab",
+  "comentario_fijado": "¿Cuántas veces has tecleado lo mismo hoy? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
   "avance_siguiente": "Mañana: el cliente que paga «mañana».",
   "audio_ig": {
     "audio_id": "921967353426231",
@@ -30,5 +30,6 @@
     "objetivo": "clic_enlace",
     "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
     "paso_embudo": "visita_perfil -> clic_enlace"
-  }
+  },
+  "_nota_calidad": "13/11: quitada del vídeo la tarjeta final de venta y la oferta del texto (DIRECTIVA §14 b-c); la oferta va en el comentario fijado. Re-render pendiente; Calidad reevalúa."
 }

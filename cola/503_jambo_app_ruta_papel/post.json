@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Doce visitas, una libreta y la Pelota diciendo que gires a la izquierda.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nEn Gestión Integral 7D, «Mi día» ordena las visitas por carretera (si el servicio de rutas falla, en línea recta y lo avisa) y da la hora prevista de llegada.\nMándaselo a quien aún apunta las visitas en papel.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #autonomos #pymes #ia #facturacion #neogestlab\nVoz y personajes generados por IA",
+  "texto": "Doce visitas, una libreta y la Pelota diciendo que gires a la izquierda.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nEn Gestión Integral 7D, «Mi día» ordena las visitas por carretera (si el servicio de rutas falla, en línea recta y lo avisa) y da la hora prevista de llegada.\nMándaselo a quien aún apunta las visitas en papel.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #autonomos #pymes #ia #facturacion #neogestlab\nVoz y personajes generados por IA",
   "cuando": "2026-11-17T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -8,10 +8,10 @@
   "publico": "autónomos y pymes",
   "formula": "humor negro con personaje + pivote de producto (v9)",
   "app": "Gestión Integral 7D",
-  "renderizado": "2026-11-11T18:00:36+00:00",
+  "renderizado": false,
   "_fuentes": [],
   "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
-  "comentario_fijado": "¿Aún apuntas la ruta en papel? Cuéntalo. Episodio nuevo cada día en @neogestlab",
+  "comentario_fijado": "¿Aún apuntas la ruta en papel? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
   "avance_siguiente": "Mañana: el cliente al que no visitaste.",
   "audio_ig": {
     "audio_id": "1018682932882496",
@@ -28,5 +28,6 @@
     "objetivo": "clic_enlace",
     "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
     "paso_embudo": "visita_perfil -> clic_enlace"
-  }
+  },
+  "_nota_calidad": "13/11: quitada del vídeo la tarjeta final de venta y la oferta del texto (DIRECTIVA §14 b-c); la oferta va en el comentario fijado. Re-render pendiente; Calidad reevalúa."
 }
