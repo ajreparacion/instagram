@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 3.133,
+  "duracion": 3.533,
   "texto": "¿El número de serie? ¡Está debajo, creo!",
   "enfasis": [
    5
@@ -14,8 +14,8 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 3.133,
-  "duracion": 2.967,
+  "inicio": 3.533,
+  "duracion": 2.767,
   "texto": "¡Los tiburones no leen placas, las devoran!",
   "enfasis": []
  },
@@ -23,7 +23,7 @@
   "escena": 3,
   "estilo": "delega",
   "hablante": "jambo",
-  "inicio": 8.5,
+  "inicio": 8.7,
   "duracion": 1.8,
   "texto": "Que lo haga la Jupillo.",
   "enfasis": []
@@ -32,8 +32,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 10.3,
-  "duracion": 4.5,
+  "inicio": 10.5,
+  "duracion": 4.233,
   "texto": "Foto a la placa. Marca, modelo y número de serie.",
   "enfasis": []
  },
@@ -41,8 +41,8 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 14.8,
-  "duracion": 2.1,
+  "inicio": 14.733,
+  "duracion": 1.833,
   "texto": "Lo encontré yo solito.",
   "enfasis": []
  },
@@ -50,8 +50,8 @@
   "escena": 6,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 16.9,
-  "duracion": 2.8,
+  "inicio": 16.567,
+  "duracion": 3.133,
   "texto": "Con mi linterna. Y mis ojos.",
   "enfasis": []
  },
@@ -60,7 +60,7 @@
   "estilo": "mensaje",
   "hablante": null,
   "inicio": 19.7,
-  "duracion": 3.967,
+  "duracion": 3.2,
   "texto": "Tu equipo ya trae escrito lo que el taller necesita.",
   "enfasis": [
    4
@@ -70,8 +70,8 @@
   "escena": 8,
   "estilo": "mensaje",
   "hablante": null,
-  "inicio": 23.667,
-  "duracion": 5.633,
+  "inicio": 22.9,
+  "duracion": 5.467,
   "texto": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
   "enfasis": []
  },
@@ -79,8 +79,8 @@
   "escena": 9,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 29.3,
-  "duracion": 3.9,
+  "inicio": 28.367,
+  "duracion": 2.233,
   "texto": "Mándaselo a quien aún no tiene web.",
   "enfasis": []
  }

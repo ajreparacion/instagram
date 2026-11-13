@@ -1,18 +1,3 @@
-2026-11-12 06:42  509_jambo_web_como_va_lo_mio: renderizado con voz y subido a la release 'cola'
-2026-11-12 06:42  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
-2026-11-12 06:42  013_claude_gratis: no se pudieron leer comentarios: Unsupported get request. Object with ID '17980873539135416' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
-2026-11-12 06:42  014_formula_prompt: no se pudieron leer comentarios: Unsupported get request. Object with ID '18114456071177223' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
-2026-11-12 06:42  015_resumir_correo: no se pudieron leer comentarios: Unsupported get request. Object with ID '18119170952012543' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
-2026-11-12 06:42  016_filtro_facturas: no se pudieron leer comentarios: Unsupported get request. Object with ID '18015411647992201' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
-2026-11-12 07:02  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 9 frases en 407 s
-2026-11-12 07:02  Voz: timbre de personaje aplicado a 3 frases (['jupillo', 'pelota'])
-2026-11-12 07:02  Voz: silencios recortados por frase (s): [0.34, 0.15, 0.34, 0.52, 0.8, 0.6, 0.26, 0.48, 1.02]
-2026-11-12 07:02  Voz: pico de cada frase normalizado a -6.0 dBFS (ganancia aplicada, dB): [np.float64(0.3), np.float64(4.7), np.float64(3.7), np.float64(3.2), np.float64(4.1), np.float64(6.8), np.float64(-5.4), np.float64(-0.4), np.float64(1.2)]
-2026-11-12 07:02  Voz: alineación palabra a palabra (small, 30.0 s): 8/9 frases
-2026-11-12 07:03  Mezcla: voz -16.4 LUFS, música -15.5 LUFS (con ducking -16.0), la música baja 6.0 dB (p90) bajo la voz, ratio 1.987; máster -15.89 -> -14.2 LUFS, pico -1.4 dBFS; huecos de voz: [[7.15, 10.2]]
-2026-11-12 07:03  510_jambo_web_pre_entrada: renderizado con voz y subido a la release 'cola'
-2026-11-12 07:03  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
-2026-11-12 07:03  013_claude_gratis: no se pudieron leer comentarios: Unsupported get request. Object with ID '17980873539135416' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-12 07:03  014_formula_prompt: no se pudieron leer comentarios: Unsupported get request. Object with ID '18114456071177223' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-12 07:03  015_resumir_correo: no se pudieron leer comentarios: Unsupported get request. Object with ID '18119170952012543' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-12 07:03  016_filtro_facturas: no se pudieron leer comentarios: Unsupported get request. Object with ID '18015411647992201' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
@@ -598,3 +583,18 @@
 2026-11-13 16:22  Voz: alineación palabra a palabra (small, 17.3 s): 9/9 frases
 2026-11-13 16:23  Mezcla: voz -15.3 LUFS, música -15.5 LUFS (con ducking -16.0), la música baja 5.45 dB (p90) bajo la voz, ratio 2.0; máster -14.91 -> -14.0 LUFS, pico -1.1 dBFS; huecos de voz: [[8.25, 11.3]]
 2026-11-13 16:23  510_jambo_web_pre_entrada: renderizado con voz y subido a la release 'cola'
+2026-11-13 16:50  Voz con MeloTTS (ES/ES, 44100 Hz, velocidad 1.1): 9 frases en 18 s
+2026-11-13 16:50  Voz: timbre de personaje aplicado a 3 frases (['bola', 'jupillo'])
+2026-11-13 16:50  Voz: silencios recortados por frase (s): [0.69, 0.67, 0.71, 0.76, 0.71, 0.73, 0.73, 0.71, 0.69]
+2026-11-13 16:50  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(-0.1), np.float64(1.4), np.float64(0.1), np.float64(-1.0), np.float64(-1.4), np.float64(-0.0), np.float64(-0.9), np.float64(-1.7), np.float64(-1.0)]
+2026-11-13 16:50  Voz: alineación palabra a palabra (small, 11.9 s): 9/9 frases
+2026-11-13 16:51  Mezcla: voz -15.3 LUFS, música -15.5 LUFS (con ducking -16.0), la música baja 5.58 dB (p90) bajo la voz, ratio 2.0; máster -14.94 -> -14.1 LUFS, pico -1.3 dBFS; huecos de voz: [[5.85, 8.9]]
+2026-11-13 16:51  511_jambo_web_placa: renderizado con voz y subido a la release 'cola'
+2026-11-13 16:51  Voz con MeloTTS (ES/ES, 44100 Hz, velocidad 1.1): 9 frases en 17 s
+2026-11-13 16:51  Voz: timbre de personaje aplicado a 3 frases (['jupillo', 'pelota'])
+2026-11-13 16:51  Voz: silencios recortados por frase (s): [0.7, 0.65, 0.71, 0.88, 0.7, 0.74, 0.71, 0.71, 0.69]
+2026-11-13 16:51  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(-2.9), np.float64(-1.3), np.float64(0.1), np.float64(-1.2), np.float64(-1.6), np.float64(-0.3), np.float64(-1.6), np.float64(-1.7), np.float64(-1.0)]
+2026-11-13 16:51  Voz: alineación palabra a palabra (small, 11.6 s): 9/9 frases
+2026-11-13 16:52  Mezcla: voz -15.3 LUFS, música -15.5 LUFS (con ducking -16.0), la música baja 5.44 dB (p90) bajo la voz, ratio 2.0; máster -14.94 -> -14.1 LUFS, pico -1.3 dBFS; huecos de voz: [[6.55, 9.6]]
+2026-11-13 16:52  512_jambo_web_club: renderizado con voz y subido a la release 'cola'
+2026-11-13 16:52  atrasos facebook: publicado centro_aj-reparacion-web_reel_v3 https://www.facebook.com/reel/1895900005188486
