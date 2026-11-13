@@ -1171,6 +1171,8 @@ def mood_para(guion):
     txt = json.dumps(g, ensure_ascii=False).lower()
     if any(k in txt for k in ("medicator", "mayores", "cuidador", "pastilla")):
         return "calido"
+    if any(isinstance(e, dict) and e.get("estilo") in ("avisos", "ab") for e in (g.get("escenas") or [])):
+        return "app"   # 13/11/2026: escenas de interfaz F12/F13 (avisos, A contra B) = pieza de app, no sketch de humor
     return {"sketch": "comedia", "datos": "datos", "app": "app"}.get(str(g.get("modo") or "").lower(), "defecto")
 
 

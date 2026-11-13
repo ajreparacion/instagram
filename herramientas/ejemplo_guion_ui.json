@@ -1,0 +1,17 @@
+{
+  "titulo": "Ejemplo de escenas de interfaz: avisos en cascada (F13) y A contra B (F12), solo para ensayo",
+  "semilla": 4012,
+  "modo": "sketch",
+  "musica": false,
+  "portada_texto": "Cada día: «¿ya está mi equipo?»",
+  "fondo": "amarillo",
+  "_nota": "Reel MUDO de ensayo (texto en pantalla). Textos ficticios, rotulados «Ejemplo»; no es una pieza de cola. Escenas nuevas: estilo «avisos» (lista «avisos», «app») y estilo «ab» (bloque «ab» con columnas a/b y sus pasos [título, detalle]; cada paso dura como mucho 2,6 s).",
+  "escenas": [
+    {"estilo": "avisos", "texto": "Cada día: «¿ya está mi equipo?»", "voz": "", "duracion": 3.4, "app": "Mensajes", "rotulo": "Ejemplo",
+     "avisos": ["¿Ya está mi equipo?", "¿Cuándo lo puedo recoger?", "Llamo otra vez, perdona", "¿Alguna novedad?", "¿Está listo ya?"]},
+    {"estilo": "ab", "texto": "Mismo presupuesto, dos formas de hacerlo", "voz": "", "duracion": 8.0, "rotulo": "Ejemplo · datos ficticios",
+     "ab": {"a": {"titulo": "A mano", "pasos": [["Presupuesto", "copiar líneas a mano"], ["Pedido", "copiarlas otra vez"], ["Albarán", "y otra vez más"], ["Factura", "copiar, sumar y revisar"]]},
+            "b": {"titulo": "Con la app", "pasos": [["Presupuesto", "líneas ya cargadas"], ["Pedido", "heredado, un toque"], ["Albarán", "heredado, un toque"], ["Factura", "con enlace de pago"]]}}},
+    {"estilo": "texto", "texto": "Así de fácil", "voz": "", "duracion": 2.2, "dibujo": {"personajes": []}}
+  ]
+}

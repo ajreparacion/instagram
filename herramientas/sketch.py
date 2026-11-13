@@ -467,6 +467,27 @@ def preparar(sc, spec, rng):
         sc.sfx.append(("sting", 0.14, 0.9))
     if sc.estilo_d == "gag": sc.sfx.append(("boing", 0.45, 0.25))
     if sc.estilo_d == "texto" and sc.texto: sc.sfx.append(("pop", 0.1, 0.09))   # escena de texto sin voz: pop al entrar la frase
+    # escenas de interfaz (13/11/2026, fórmulas F12 «A contra B» y F13 «avisos en cascada» de virales_semana.md)
+    sc.avisos = []; sc.ab = None; sc.rotulo_ui = str(spec.get("rotulo") or "Ejemplo")[:40]; sc._cache = {}
+    if sc.estilo_d == "avisos":
+        sc.avisos = [str(x).strip()[:70] for x in (spec.get("avisos") or []) if str(x).strip()][:6]
+        sc.app_aviso = str(spec.get("app") or "Mensajes")[:20]
+        for i in range(len(sc.avisos)):
+            sc.sfx.append(("pop", max(0.05, AV_T0 + i * AV_PASO + 0.1), 0.09))
+    elif sc.estilo_d == "ab":
+        ab = spec.get("ab") if isinstance(spec.get("ab"), dict) else {}
+        pasos = []
+        for k in ("a", "b"):
+            col = ab.get(k) if isinstance(ab.get(k), dict) else {}
+            pasos.append({"titulo": str(col.get("titulo") or ("A mano" if k == "a" else "Con la app"))[:18],
+                          "pasos": [[str(x[0])[:22], str(x[1] if len(x) > 1 else "")[:64]] for x in (col.get("pasos") or []) if isinstance(x, (list, tuple)) and x][:4]})
+        n = max(len(pasos[0]["pasos"]), len(pasos[1]["pasos"]))
+        sc.ab = {"cols": pasos, "n": n, "paso": min(AB_PASO_MAX, sc.dur / max(1, n))}
+        if n and sc.dur / n > 3.0:
+            print("AVISO RITMO: escena «ab» con un cambio cada %.1f s (> 3 s): baja la duración o añade pasos" % (sc.dur / n))
+        for k in range(1, n):
+            sc.sfx.append(("tick", k * sc.ab["paso"], 0.12))
+        sc.sfx.append(("pop", 0.1, 0.09))
     # cámara: cortes cada SK_SEG s con encuadre distinto y zoom de golpe
     rc = random.Random(sc.idx * 17 + 3)
     sc.cam = [(rc.choice([1.0, 1.03, 1.06]), rc.uniform(-18, 18), rc.uniform(-12, 12), rc.choice([1, -1])) for _ in range(int(sc.dur / SK_SEG) + 2)]
@@ -660,9 +681,193 @@ def _efecto(img, sc, t, x, sj):
         img.paste(cap, (int(cx - cap.width / 2), int(cy - cap.height / 2)), cap)
 
 
+# ---------------------------------------------------------------- escenas de interfaz (13/11/2026)
+# «avisos» (F13): avisos de mensaje que entran en cascada bajo el gancho, con teléfono que vibra y contador de «sin leer».
+# «ab» (F12): pantalla partida, el mismo tema resuelto de dos maneras; los pasos cambian cada <= AB_PASO_MAX s.
+# Todo dibujado por código (sin marcas ni datos reales): lo que sale en las tarjetas es el texto del guion, rotulado «Ejemplo».
+ESTILOS_UI = ("avisos", "ab")
+AV_T0 = -0.25        # el primer aviso ya está dentro en el fotograma 0 (B7)
+AV_PASO = 0.26       # s entre avisos
+AB_PASO_MAX = 2.6    # s máximos de cada paso (regla F12/El Telar: un cambio visual cada <= 3 s)
+AZUL_OK = (0, 150, 190)
+ROJO_MAL = (214, 62, 62)
+GRIS_T = (92, 92, 96)
+
+
+def _tarjeta(d, x0, y0, x1, y1, relleno=(255, 255, 255, 245), borde=None, r=26, w=5):
+    d.rounded_rectangle([x0, y0, x1, y1], radius=r, fill=relleno, outline=(borde or hr.TINTA) + (255,), width=w)
+
+
+def _icono_msg(d, cx, cy, r, col):
+    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=col + (255,))
+    b = r * 0.55
+    d.rounded_rectangle([cx - b, cy - b * 0.75, cx + b, cy + b * 0.55], radius=int(b * 0.4), fill=(255, 255, 255, 255))
+    d.polygon([(cx - b * 0.5, cy + b * 0.5), (cx - b * 0.9, cy + b * 1.05), (cx - b * 0.05, cy + b * 0.5)], fill=(255, 255, 255, 255))
+
+
+def _una_linea(sc, txt, ruta, maxw, smax, smin):
+    k = (txt, ruta, maxw, smax)
+    if k not in sc._cache:
+        f, size, lines = hr.wrap_fit(txt, ruta, maxw=maxw, maxlines=1, smax=smax, smin=smin)
+        sc._cache[k] = (f, " ".join(lines))
+    return sc._cache[k]
+
+
+def _telefono(img, cx, cy, t, n):
+    """Teléfono que vibra (giro ±6°) y pastilla roja con los avisos sin leer."""
+    cap = Image.new("RGBA", (200, 200), (0, 0, 0, 0)); dc = ImageDraw.Draw(cap, "RGBA")
+    dc.rounded_rectangle([62, 28, 138, 172], radius=16, fill=(255, 255, 255, 255), outline=hr.TINTA + (255,), width=6)
+    dc.rounded_rectangle([72, 46, 128, 142], radius=6, fill=hr.CIAN + (255,))
+    dc.ellipse([92, 150, 108, 166], fill=hr.TINTA + (255,))
+    for k in (1, 2):   # ondas de vibración
+        dc.arc([62 - 26 * k, 78 - 8 * k, 62 - 2 * k, 122 + 8 * k], 110, 250, fill=hr.TINTA + (255,), width=6)
+        dc.arc([138 + 2 * k, 78 - 8 * k, 138 + 26 * k, 122 + 8 * k], -70, 70, fill=hr.TINTA + (255,), width=6)
+    ang = 6 * math.sin(t * 38) if n > 0 else 0
+    cap = cap.rotate(ang, resample=Image.BICUBIC)
+    img.paste(cap, (int(cx - 100), int(cy - 100)), cap)
+    d = ImageDraw.Draw(img, "RGBA")
+    f = hr.font(hr.F_DIB, 46)
+    txt = "%d SIN LEER" % n
+    w = d.textlength(txt, font=f) + 56
+    x0 = cx + 80
+    d.rounded_rectangle([x0, cy - 36, x0 + w, cy + 36], radius=36, fill=ROJO_MAL + (255,), outline=hr.TINTA + (255,), width=5)
+    d.text((x0 + w / 2, cy + 2), txt, font=f, fill=(255, 255, 255, 255), anchor="mm")
+
+
+def _escena_avisos(img, sc, t):
+    d = ImageDraw.Draw(img, "RGBA")
+    f_s = hr.font(hr.F_DIB_C, 28)
+    ya, paso, alto = 660, 154, 136
+    llegados = sum(1 for i in range(len(sc.avisos)) if t >= AV_T0 + i * AV_PASO + 0.05)
+    _telefono(img, 400, 585, t, llegados)
+    d = ImageDraw.Draw(img, "RGBA")
+    for i, txt in enumerate(sc.avisos):
+        ti = AV_T0 + i * AV_PASO
+        k = (t - ti) / 0.34
+        if k <= 0:
+            continue
+        kk = min(1.0, k)
+        off = (1 - hr.ease_out(kk)) * 900
+        shake = 9 * math.sin((t - ti) * 70) * max(0.0, 1 - (t - ti) / 0.45)
+        x0 = 60 + off + shake; x1 = 1020 + off + shake
+        y = ya + i * paso
+        _tarjeta(d, x0, y, x1, y + alto)
+        _icono_msg(d, x0 + 76, y + alto / 2, 38, ACENTO["jupillo"] if i % 2 else AZUL_OK)
+        d.text((x0 + 140, y + 36), (sc.app_aviso + " · ahora").upper(), font=f_s, fill=GRIS_T + (255,), anchor="lm")
+        f, linea = _una_linea(sc, txt, hr.F_DIB_C, 760, 46, 30)
+        d.text((x0 + 140, y + 88), linea, font=f, fill=hr.TINTA + (255,), anchor="lm")
+        if int(t * 2) % 2 == 0 or t - ti < 1.0:
+            d.ellipse([x1 - 50, y + 26, x1 - 28, y + 48], fill=ROJO_MAL + (255,))
+
+
+def _escena_ab(img, sc, t):
+    d = ImageDraw.Draw(img, "RGBA")
+    ab = sc.ab
+    n = ab["n"]
+    paso = ab["paso"]
+    act = min(n - 1, int(t / paso)) if n else 0
+    tp = t - act * paso                      # s dentro del paso activo
+    f_h = hr.font(hr.F_DIB, 44); f_t = hr.font(hr.F_DIB_C, 38); f_s = hr.font(hr.F_DIB_C, 28)
+    cols = [(50, 520), (560, 1030)]
+    y_h, y0, pas, alto = 560, 670, 170, 150
+    for ci, (x0, x1) in enumerate(cols):
+        col = ab["cols"][ci]
+        malo = ci == 0
+        tono = ROJO_MAL if malo else AZUL_OK
+        d.rounded_rectangle([x0, y_h, x1, y_h + 84], radius=24, fill=tono + (255,), outline=hr.TINTA + (255,), width=5)
+        d.text(((x0 + x1) / 2, y_h + 44), col["titulo"].upper(), font=f_h, fill=(255, 255, 255, 255), anchor="mm")
+        for i, (tit, sub) in enumerate(col["pasos"]):
+            y = y0 + i * pas
+            if i > act:
+                _tarjeta(d, x0, y, x1, y + alto, relleno=(255, 255, 255, 120), borde=(150, 150, 150), w=4)
+                d.text((x0 + 24, y + 46), tit, font=f_t, fill=(120, 120, 120, 255), anchor="lm")
+                continue
+            activo = i == act
+            s = 1.0 + (0.05 * math.sin(math.pi * min(1.0, tp / 0.3)) if activo else 0.0)
+            cy = y + alto / 2; hh = alto / 2 * s; ww = (x1 - x0) / 2 * s; cx = (x0 + x1) / 2
+            _tarjeta(d, cx - ww, cy - hh, cx + ww, cy + hh, borde=tono if activo else hr.TINTA, w=8 if activo else 5)
+            d.text((x0 + 24, y + 38), tit, font=f_t, fill=hr.TINTA + (255,), anchor="lm")
+            # subtítulo: a mano se «teclea» despacio (repetir cuesta); con la app aparece entero
+            txt = sub
+            if activo and malo:
+                txt = sub[:max(0, int(tp * 14))]
+            f2, lin = _una_linea(sc, sub, hr.F_DIB_C, 420, 28, 22) if sub else (f_s, "")
+            if txt != sub:
+                lin = lin[:len(txt)]
+            d.text((x0 + 24, y + 86), lin, font=f2, fill=GRIS_T + (255,), anchor="lm")
+            # barra de progreso y marca
+            bx0, bx1, by = x0 + 24, x1 - 90, y + alto - 24
+            d.rounded_rectangle([bx0, by - 8, bx1, by + 8], radius=8, fill=(225, 225, 225, 255))
+            prog = 1.0 if not activo else min(1.0, tp / (paso * (0.9 if malo else 0.18)))
+            d.rounded_rectangle([bx0, by - 8, bx0 + (bx1 - bx0) * max(0.02, prog), by + 8], radius=8, fill=tono + (255,))
+            mx, my = x1 - 46, y + alto / 2
+            if prog >= 1.0:
+                if malo:   # otra vez a copiar: aspa
+                    d.line([(mx - 14, my - 14), (mx + 14, my + 14)], fill=ROJO_MAL + (255,), width=9)
+                    d.line([(mx + 14, my - 14), (mx - 14, my + 14)], fill=ROJO_MAL + (255,), width=9)
+                else:      # hecho: marca de verificación
+                    d.line([(mx - 16, my + 2), (mx - 4, my + 14), (mx + 18, my - 14)], fill=AZUL_OK + (255,), width=10)
+            else:
+                d.arc([mx - 18, my - 18, mx + 18, my + 18], int(t * 300) % 360, int(t * 300) % 360 + 250, fill=tono + (255,), width=7)
+    d.ellipse([540 - 40, y_h + 2, 540 + 40, y_h + 82], fill=(255, 255, 255, 255), outline=hr.TINTA + (255,), width=5)
+    d.text((540, y_h + 44), "VS", font=hr.font(hr.F_DIB, 38), fill=hr.TINTA + (255,), anchor="mm")
+
+
+def _gancho_ui(img, sc, t, y0=170):
+    """Gancho gigante fijo de las escenas de interfaz: 2 líneas como mucho (debajo van las tarjetas), la capa se dibuja una vez."""
+    if "hook" not in sc._cache:
+        texto = " ".join(sc.texto.upper().split()); pal = texto.split()
+        f, size, lines = hr.wrap_fit(texto, hr.F_DIB, maxw=hr.W - 120, maxlines=2, smax=124, smin=56)
+        lh = int(size * 1.12)
+        cap = Image.new("RGBA", (hr.W, hr.H), (0, 0, 0, 0)); dc = ImageDraw.Draw(cap, "RGBA")
+        ac = next((i for i, w in enumerate(pal) if "«" in w or "»" in w or "*" in w), len(pal) - 1)
+        idx = 0
+        for li, ln in enumerate(lines):
+            x = (hr.W - dc.textlength(ln, font=f)) / 2
+            for w in ln.split():
+                col = ACTIVO_SOBRE_FONDO if idx == ac else hr.TINTA
+                dc.text((x, y0 + 10 + li * lh), w.replace("*", ""), font=f, fill=col + (255,), stroke_width=10, stroke_fill=(255, 255, 255, 255))
+                x += dc.textlength(w + " ", font=f); idx += 1
+        sc._cache["hook"] = (cap, y0 + (lh * len(lines)) / 2)
+    cap, cy = sc._cache["hook"]
+    k = min(1.0, t / 0.16)
+    if k < 1:
+        cap = hr.capa_escala(cap, 0.85 + 0.15 * hr.ease_out_back(k), hr.W / 2, cy)
+    img.paste(cap, (0, 0), cap)
+
+
+def _render_ui(fi, sc, noise, t, seed=0):
+    img = Image.new("RGB", (hr.W, hr.H), sc.fondo) if sc.fondo else hr.papel_img(seed).copy()
+    if sc.estilo_d == "avisos":
+        _escena_avisos(img, sc, t)
+    else:
+        _escena_ab(img, sc, t)
+    if sc.texto:
+        _gancho_ui(img, sc, t)
+    d = ImageDraw.Draw(img, "RGBA")
+    if sc.rotulo_ui:
+        f = hr.font(hr.F_DIB_C, 32)
+        d.text((hr.W // 2, 1462), sc.rotulo_ui.upper(), font=f, fill=(60, 60, 64, 255), anchor="mm")
+    if sc.sub is not None:
+        cp = sc.sub.capa(t)
+        if cp:
+            timg, ty = cp
+            img.paste(timg, (0, ty), timg)
+    z = 1.0 + 0.035 * min(1.0, t / max(0.5, sc.dur))   # empuje de cámara lento: nunca una imagen quieta
+    cw, ch = int(hr.W / z), int(hr.H / z)
+    cx = (hr.W - cw) // 2; cy = (hr.H - ch) // 2
+    img = img.crop((cx, cy, cx + cw, cy + ch)).resize((hr.W, hr.H), Image.BILINEAR)
+    a = np.asarray(img, dtype=np.int16).copy()
+    a += noise[fi % 8] // 6
+    np.clip(a, 0, 255, out=a)
+    return a.astype(np.uint8)
+
+
 def render_frame(fi, sc, noise, rg, seed):
     lf = fi - sc.start
     t = lf / hr.FPS
+    if sc.estilo_d in ESTILOS_UI:
+        return _render_ui(fi, sc, noise, t, seed)
     if sc.serio:
         img = _serio(sc, t)
         a = np.asarray(img, dtype=np.int16).copy()
