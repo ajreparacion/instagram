@@ -174,14 +174,14 @@
    "fecha": "2026-11-16",
    "hora": "18:40",
    "formato": "reel",
-   "serie": "El Jambo que sabe y las IAs",
-   "publico": "Hotel pequeño",
-   "app": "(ninguna)",
-   "formula": "F3+F7",
-   "cola": "311_jambo_ep11_reserva",
-   "aprobado_calidad": true,
-   "nota": "Episodio sin producto: sin enlace ni prueba gratuita; cierre «Mándaselo a quien carga con todo».",
-   "brazo": "A"
+   "serie": "Una idea, una app (rescate)",
+   "publico": "Mayores y cuidadores",
+   "app": "MEDICATOR",
+   "formula": "F6",
+   "cola": "408_medicator_pastilla_reel",
+   "aprobado_calidad": false,
+   "reserva": true,
+   "nota": "RESERVA: nota 86; solo sale si Calidad lo aprueba (≥ 90) antes de las 12:00 del 16/11 tras arreglar el fundido de 6,7-8,5 s. Si no, el hueco queda vacío (los episodios ya no ocupan el 18:40 estos dos días)."
   },
   {
    "fecha": "2026-11-16",
@@ -213,14 +213,14 @@
    "fecha": "2026-11-17",
    "hora": "18:40",
    "formato": "reel",
-   "serie": "El Jambo que sabe y las IAs",
-   "publico": "Reparto y transporte",
-   "app": "(ninguna)",
-   "formula": "F3+F7",
-   "cola": "312_jambo_ep12_reparto",
-   "aprobado_calidad": true,
-   "nota": "Episodio sin producto: sin enlace ni prueba gratuita; cierre «Mándaselo a quien carga con todo».",
-   "brazo": "A"
+   "serie": "Así se hace (rescate)",
+   "publico": "Bar y hostelería",
+   "app": "(valor: coste por ración)",
+   "formula": "F2",
+   "cola": "021_plato_hosteleria",
+   "aprobado_calidad": false,
+   "reserva": true,
+   "nota": "RESERVA: nota 82; solo sale si Calidad lo aprueba (≥ 90) antes de las 12:00 del 17/11. Si no, vacío."
   },
   {
    "fecha": "2026-11-17",
@@ -309,6 +309,32 @@
    "cola": "601_bar_pedido_web_reel",
    "aprobado_calidad": true,
    "nota": "HUECO RESERVADO al episodio 315 (nuevo, sin producto). Si a las 12:00 del 19/11 no está aprobado, sale 601; si lo está, 601 pasa al primer hueco libre del 20/11."
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "20:40",
+   "formato": "reel",
+   "serie": "El Jambo que sabe y las IAs",
+   "publico": "Hotel pequeño",
+   "app": "(ninguna)",
+   "formula": "F3+F7",
+   "cola": "311_jambo_ep11_reserva",
+   "aprobado_calidad": true,
+   "nota": "Episodio sin producto: sin enlace ni prueba gratuita; cierre «Mándaselo a quien carga con todo». Movido desde el 16/11 18:40 (13/11): episodios a ≥ 5 h entre sí el 16 y 17/11.",
+   "brazo": "A"
+  },
+  {
+   "fecha": "2026-11-21",
+   "hora": "20:40",
+   "formato": "reel",
+   "serie": "El Jambo que sabe y las IAs",
+   "publico": "Reparto y transporte",
+   "app": "(ninguna)",
+   "formula": "F3+F7",
+   "cola": "312_jambo_ep12_reparto",
+   "aprobado_calidad": true,
+   "nota": "Episodio sin producto: sin enlace ni prueba gratuita; cierre «Mándaselo a quien carga con todo». Movido desde el 17/11 18:40 (13/11): episodios a ≥ 5 h entre sí el 16 y 17/11.",
+   "brazo": "A"
   }
  ],
  "carruseles_17_10": {
@@ -379,5 +405,41 @@
  ],
  "regla_con_fecha_14_nov": "Analista, fijada antes de ver el dato: si a las 48 h la visualización media de 302 y 303 (31,1 y 29,1 s de duración) sigue por debajo de 12 s, el Creador recorta los episodios sin publicar desde el 15/11 (308-314 y 501-505) y los devuelve a Calidad: 22 s como máximo, remate con voz o efecto en lugar de 3 s mudos, mensaje y «mándaselo» antes del segundo 14, y rótulo fijo y pequeño «@neogestlab · episodio nuevo cada día» desde el segundo 0 (la invitación al perfil no puede ir solo en el cierre: la media se va en el segundo 10,6). Los «cuando» no cambian.",
  "revision_13_nov_14_30": "Cuarta pasada del Estratega (programada, 13/11 ~13:30 CET). Datos Buzzfy 6-13/11 en DIRECTIVA §12: alcance 929 (872 no seguidores), episodio 301 = 350 de alcance y 10,8 s de media a 42 h; episodio 303 = 105 y 7,4 s a 16 h; reels de app/web 3-8. Sin cambios de reparto, horas ni experimento (n = 2, nada medible aún en los brazos A/B). Única novedad: si el Analista confirma el 14/11 la regla de recorte (media de 302/303 < 12 s), los episodios que salen desde el 15/11 (501, 308-314, 502-505) se recortan antes de publicarse; el Creador puede preparar el recorte ya. El 12/11 18:40 se perdió por token de Meta caducado (código 190): no se publica a mano para compensar.",
- "dias_afectados_por_regla_recorte": "desde 2026-11-15 (501 en adelante); 304-307 salen el 13 y 14/11 tal como están aprobados"
+ "dias_afectados_por_regla_recorte": "desde 2026-11-15 (501 en adelante); 304-307 salen el 13 y 14/11 tal como están aprobados",
+ "rescates_y_archivo_13_nov": {
+  "rescatar": {
+   "408_medicator_pastilla_reel": "86: arreglar el fundido de 6,7-8,5 s (la pantalla enseña el calendario mientras la voz dice «todo en orden»); hueco 16/11 18:40",
+   "021_plato_hosteleria": "82: subir subtítulos (tapan «Coste por ración» y «Vender a»), quitar el cursor suelto de los fotogramas 0-1, fotograma final con 1,20 €/ración y 3,43 € de venta, cierre con el mismo fondo; hueco 17/11 18:40",
+   "017_presupuesto_ia": "86, aprobado por el dueño el 10/11 pero bajo el listón: re-render ≥ 90 y, si lo logra, primer hueco libre desde el 20/11; sigue aparcado el 31/12"
+  },
+  "archivados_en_revision": [
+   "018_dividir_cuenta_ia",
+   "022_pedidos_tienda",
+   "102_formula_prompt_reel",
+   "103_tareas_casa_ia_reel",
+   "104_ia_negocio_reel",
+   "106_comerciales_ruta_reel",
+   "107_catalogo_stock_reel",
+   "108_cobrar_facturas_reel",
+   "205_insultator_reel"
+  ],
+  "fuera_del_plan_sin_cambio": [
+   "019_suscripciones_ia (aprobada, 23/11 18:40)",
+   "carruseles 104, 107, 108, 205 (aprobados)"
+  ]
+ },
+ "cinco_cambios_13_nov": [
+  "1. Episodios separados ≥ 5 h el 16 y 17/11 (13:40 y 20:40) frente a 2 h (18:40 y 20:40) el 13, 14 y 15/11: prueba de canibalización. Se compara el alcance de los episodios de las 20:40 y la cuenta por día; decisión el 23/11 (Analista).",
+  "2. Retención: desde el 16/11 todo episodio sin publicar se entrega recortado (≤ 22 s, gancho en el segundo 0 con la pregunta o la cifra, mensaje + «mándaselo» antes del segundo 14, remate con voz o efecto, rótulo fijo «@neogestlab · episodio nuevo cada día»). Excepción: si el 14/11 la media de 303 a 48 h es ≥ 12 s.",
+  "3. Conversión fuera de Instagram: en Facebook y YouTube (donde el enlace sí es clicable) cada pieza con producto lleva en el texto y en el primer comentario el enlace /solicitar?src=facebook|youtube&app=<slug>; Instagram sigue sin enlace en el texto.",
+  "4. Medir la ruta: /solicitar registra un Clic al cargar con origen = src y pide «¿Qué te interesa?» (acción 2 de monetizacion.md), antes del 15/11 13:40; el Analista cuenta cada día visitas al perfil, clics y solicitudes por origen.",
+  "5. Cola limpia: 9 reels archivados, 3 rescatados con arreglo concreto (408 y 021 con hueco reservado el 16 y 17/11), y los carruseles de las 17:10 priorizan «para quién + cálculo» (alcance 21-28 el 8/11) sobre el escaparate de funciones (5-10)."
+ ],
+ "tareas_por_rol_13_nov": {
+  "Creador": "TAREA 13/11 (Estratega, DIRECTIVA §13): recorta los episodios sin publicar desde el 16/11 (≤ 22 s, gancho en el segundo 0, mensaje y «mándaselo» antes del segundo 14, remate con voz o efecto, rótulo «@neogestlab · episodio nuevo cada día»); arregla 408 y 021 antes de las 12:00 del 16 y 17/11 (arreglos en plan.json › rescates_y_archivo_13_nov); después 017. No toques lo archivado en revision/.",
+  "Calidad": "TAREA 13/11 (Estratega, DIRECTIVA §13): reevalúa 408 y 021 a las 12:51 del 14, 15 y 16/11 (reserva 18:40 del 16 y 17/11, solo si ≥ 90); comprueba que cada recorte de episodio dura ≤ 22 s y que ninguna pieza de Instagram lleva enlace en el texto.",
+  "Mejora": "TAREA 13/11 (Estratega, DIRECTIVA §13): (1) /solicitar con Clic al cargar (origen = src) y desplegable «¿Qué te interesa?» antes del 15/11 13:40; (2) enlace /solicitar?src=facebook|youtube&app=<slug> en el texto y primer comentario de Facebook y en la descripción de YouTube para piezas con producto.",
+  "Comunidad": "Responder en menos de 1 h los comentarios de Facebook y YouTube y anotar en comunidad/ los que pidan precio o prueba; contar los DMs si Buzzfy da el permiso.",
+  "Cazador": "Cada día 3 virales de España de humor de trabajo y pymes (duración, primer corte, remate) en virales_semana.md para ajustar el recorte; sin copiar contenido."
+ }
 }

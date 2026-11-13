@@ -1,83 +1,34 @@
 # Lo que solo puede hacer el dueño de la cuenta
 
-El equipo hace todo lo demás solo. Estas tareas necesitan la identidad, los datos fiscales o el acceso al perfil del usuario. Ordenadas por impacto en la monetización. Lo mantiene el Estratega.
+Reducido el 13/11/2026 por el Estratega (la versión larga está en git). Aquí solo queda lo que necesita tu identidad, tus datos o el móvil; el equipo hace todo lo demás.
 
-**Lo primero ahora (Estratega, 12/11/2026):** (a) cambiar el nombre visible a «Neogest Lab · Apps a medida» cuando Instagram lo permita (hacia el 25/11, desde el móvil); (b) en /panel/solicitudes, marcar la solicitud del 8/11 como contactada o descartada, o decir si fue una prueba; (c) reconectar Buzzfy con permiso de mensajes para poder contar los DMs con intención. (d) archivar desde el móvil las publicaciones repetidas (la API no archiva): instagram.com/p/Dfe8Sb1n_cY y /p/Dfe-iOFD7dQ (queda /p/Dfe7vqnIW5Q); /p/Dfe8MyWjzSv y /p/Dfe-VhUj8LS (queda /p/Dfe7qRLIKe6); /p/DffQZfmE7I6 (queda /p/DffSjjIFyw1); /reel/DfkvcMMCbFQ (AJ Web, queda /reel/DfksC5PEcip). La bio y el enlace a /solicitar ya están bien.
+## Tres acciones prioritarias (por orden de efecto)
+1. **Reconectar Buzzfy con permiso de mensajes** (buzzfy.co/connect/instagram?feature=messaging). Sin él no se pueden contar ni responder los DMs con intención, y hoy es la única señal de interés que no se mide.
+2. **En /panel/solicitudes, marcar la solicitud del 8/11** como contactada o descartada (o decir que fue una prueba) **y decir si alguna app tiene plan de pago o precio**. Sin eso el embudo no puede medir euros.
+3. **Archivar desde el móvil los duplicados** (la API no archiva): carruseles del 8/11 «Deja de pedirle así las cosas a la IA» ×3, «¿Pasas los presupuestos al Excel por la noche?» ×3, «5 tareas pesadas…» ×2 y el reel de AJ Web del 10/11 ×2; dejar uno de cada. Quitar de paso lo que aún diga «Escríbeme IDEA».
 
-0. **Tu voz: AUTORIZADO y en marcha (6/11/2026)**. Tu mensaje: «los vídeos subidos son todos míos, soy yo el protagonista, clona mi voz de esos vídeos de Mr. Empírico». Con eso el equipo saca tu voz de los reels del podcast Empírico (workflow «Voz del dueño», herramientas/voz_usuario.py): separa la voz de la música, se queda con TU voz (confirmaste el 6/11 que eres la «voz A», la del reel del Proyecto ALCAYATA; la de Mr. Tartaria no es tuya y no se usa) y crea una referencia de ~11 s (release privada «voces», nunca en el historial de git) para que Chatterbox lea los guiones con tu voz. Se usa solo tu voz y solo para esta cuenta; si algún día quieres retirarla, basta con decirlo y se borra la release «voces».
-   Lo que todavía mejoraría el resultado (opcional): una nota de voz de 30-60 s con tu voz normal (no la del personaje), sin música, subida a la release «voces» como referencia_usuario.wav. Y, mejor aún, un clip de 5-10 s a cámara para abrir o cerrar el reel.
-   Honestidad: aunque sea tu voz, el audio sigue siendo generado, así que los posts llevan «Voz: generada a partir de la voz del autor» (Meta exige marcar audio realista generado y la ley europea de IA obliga desde el 2/8/2026).
-0b. **(8/11/2026, agente de demos) Carruseles e historias PARADOS: el repositorio ajreparacion/instagram está PRIVADO.** Instagram descarga cada imagen de una URL pública (jsDelivr) y con el repo privado devuelve 404 («Only photo or video can be accepted»); el plan B de los reels (video_url desde la release) también necesita repo público. Comprobado con el workflow «Prueba CDN de imágenes». Hay 6 carruseles, 18 historias y 6 reels de demo de las apps aprobados en cola (y los carruseles 101-108). Decide: (a) volver a hacerlo público (Settings > General > Danger Zone > Change visibility), sabiendo que voz_dueno/ guarda tus notas de voz en el historial; o (b) dar al equipo otro sitio público para las imágenes. Mientras tanto publicar_gh.py los deja esperando sin gastar intentos (caducan a las 36 h de su hora).
-1. **Darse de alta en Afiliados de Amazon.es** (afiliados.amazon.es) con la cuenta de Instagram como sitio. Hacen falta datos personales y fiscales. Después, pasar al equipo el ID de afiliado (no es secreto): el equipo prepara la página de enlaces con los libros que citamos como fuente y la frase legal obligatoria.
-2. **Perfil (NUEVO, 7/11 23:44, Neogest Lab)**: ver 3c; detalle en equipo/DIRECTIVA_VIGENTE.md §6.
-3. **Panel profesional > Monetización** (subido de prioridad el 6/11 por Monetización): entrar y anotar qué herramientas salen disponibles o bloqueadas, y con qué requisito (solo lo ve el dueño). Hay una discrepancia entre fuentes sobre Regalos (Meta 2023: 5.000 seguidores y España fuera; tercero de 10/2026: 500 seguidores y España dentro): si Regalos aparece disponible, activarlo cuesta 2 minutos y no tiene coste. La cuenta es de EMPRESA: si alguna herramienta pide cuenta de CREADOR, valorar cambiarla (se puede volver atrás).
-3b. **Apps de Neogest Lab** (añadido el 6/11 por Monetización): decir si alguna app (Insultator, GPS Andaluz u otra) tiene plan de pago o ingresos; sin eso el equipo solo puede medir clics al hub, no euros. El hub de enlaces Expedientes Imposibles pasará a tener una sección "Apps gratuitas de Neogest Lab".
-3c. **CAMBIO DE PERFIL a «Neogest Lab»** (orden del dueño 7/11/2026 23:44; sustituye a «IA Fácil»). En la app, Perfil > «Editar perfil»:
-   - **Usuario**: `neogestlab` (si está cogido, `neogest.lab`).
-   - **Nombre**: `Neogest Lab · Apps a medida` (27 caracteres).
-   - **Presentación** (140 caracteres): `Apps para tu negocio y tu día a día 📲` / `Una idea, una app: mira cómo funcionan` / `Tu app a medida, sin líos` / `Escríbeme IDEA y te digo cómo sería 👇`.
-   - **Enlace**: `https://centro-de-contenido-apps-2f0a3cd6.base44.app`, título `Ver nuestras apps`.
-   - **Categoría**: «Desarrollador de software» o «Servicios informáticos». **Foto**: logo NL neón. **Destacadas**: `EMPIEZA`, `APPS`, `A MEDIDA`, `ASÍ SE HACE`, `NEGOCIOS`.
-4. **(Opcional) Buzzfy, reels de prueba automáticos**: Buzzfy tiene el reparto de reels de prueba en pausa ("no se ha activado el compartir"). Se activa desde el panel de Buzzfy y puede requerir plan de pago. No es imprescindible: nuestro sistema ya publica reels de prueba por su cuenta desde el 5/11.
-5. **(7/11/2026)** Preguntas frecuentes del chat bloqueadas: Meta devuelve error 100/2534013 (página no vinculada a cuenta profesional de Instagram desde el token PAGE_TOKEN). Diagnóstico: workflow «Diagnóstico de vinculación (página ↔ Instagram)».
-   Actualización 7/11 14:15: la vinculación ya está bien (página 107316837808795 ↔ iafacil.trucos). Ahora Meta devuelve 200/2534041: «El propietario de la cuenta ha desactivado el acceso a los mensajes directos de Instagram». Falta activar en Instagram: Configuración > Mensajes y respuestas del story > Herramientas conectadas > «Permitir acceso a los mensajes». Después, relanzar «Bienvenida del chat (ice breakers)».
-   Resuelto 7/11 20:45 UTC: ice breakers configuradas y VERIFICADAS (4 preguntas). 8/11: el PAGE_TOKEN renovado es de usuario y los scripts del chat fallaban con 100/33; corregido con herramientas/token_pagina.py.
+## Con fecha
+- **Nombre visible** «Neogest Lab · Apps a medida»: Instagram lo bloquea hasta ~25/11 (hay recordatorio). Es lo único que falta del perfil.
+- **Token de Meta:** el 12/11 a las 21:10 caducó (código 190) y volvió a funcionar a las 21:39. Si se repite, renovarlo; el equipo anotará aquí la hora.
 
-Hecho: token PAGE_TOKEN renovado por el dueño el 8/11/2026 (comprobado: el ciclo de las 11:41 UTC volvió a leer estadísticas).
-Hecho: biografía actualizada al enfoque de misterios reales (comprobado el 5/11/2026).
+## Decisiones tuyas (cuando puedas, no bloquean nada)
+- Medios de pago en las piezas de Gestión Integral 7D: ¿nombrar Stripe, Redsys y Bizum o decir «tarjeta», «TPV» y «transferencia»? Mientras no digas nada va en genérico.
+- Cuándo quieres apps en los episodios (hoy el pivote de app va en 1 de cada 3 por la fórmula v9).
+- Tu vídeo de referencia (reel DfXjcjiNW8k): no se puede abrir desde el equipo; súbelo como vídeo o cuéntalo en 3 frases.
+- Fijar el comentario del reel y elegir el inicio de la canción de Instagram: la API no lo permite; si no quieres hacerlo a mano, se prueba el comentario como respuesta automática.
+- Facebook: confirmar qué se publica en la página (hoy sale lo mismo que en Instagram) y, desde una cuenta que no sea administradora, que se ve una pieza.
+- Afiliados de Amazon.es y panel de Monetización de Instagram (anotar herramientas disponibles): solo si quieres abrir esas vías; hoy no hay umbrales cumplidos.
 
-6. **(8/11/2026, Creador) Permitir `*.base44.app` en los dominios de salida de las sesiones del equipo.** Hoy el proxy devuelve 403 a las apps de Neogest Lab y por eso los reels «Una idea, una app» usan prototipos hechos con IA en vez de la app real funcionando (lo que pide la directiva). Con el dominio habilitado (o con vídeos de pantalla de cada app subidos como media_url en «Publicacion»), el Creador graba las apps reales con la plantilla de grabar_pantalla.py. Inventario en equipo/catalogo_apps.md.
+## Hecho (no hace falta nada)
+- Bio nueva y enlace /solicitar?src=instagram (verificado con Buzzfy 11/11); categoría puesta (dicho por el dueño); usuario @neogestlab.
+- Voz del dueño retirada: voz genérica de España (9/11). Voz clonada y prototipos 017-024: ya no dependen de validar θ/seseo.
+- Token PAGE_TOKEN renovado (8/11); ice breakers del chat configuradas y verificadas (7/11); repositorio público y reels por release.
+- Facebook: app de Meta, token de página y secreto FACEBOOK_PAGE_TOKEN creados (12/11); registro.log del 13/11 ya muestra publicaciones en Facebook.
+- YouTube: canal NeogestLab con publicación de Shorts por OAuth (registro.log del 13/11 muestra Shorts publicados).
+- Studio Beats PRO: licencia de muestras confirmada (11/11). Proxy de sesiones ya deja entrar a *.base44.app (11/11).
+- Anulados: Matías y sus nombres, tema taller, material de anécdotas del taller, «Escríbeme IDEA» como cierre.
 
-7. **(9/11/2026, Estratega) Validar de oído la voz clonada (θ/seseo)**: es el cuello de botella. Calidad limita a 88 los 8 prototipos de la cola (017-024) hasta que la valides; sin eso 4 huecos del plan (14-16/11) no se pueden rellenar con piezas de «Así se hace» y «A medida». Escucha cola/019_suscripciones_ia o 022_pedidos_tienda y dile al equipo si el acento y la «z» te valen.
-8. **(9/11/2026, Estratega) Tu vídeo de referencia (reel DfXjcjiNW8k)**: no está en la biblioteca de Buzzfy y desde aquí no se puede abrir. Para copiar su sistema (ritmo, gancho, audio), súbelo como vídeo a la release o cuéntalo en 3 frases.
-9. **(9/11/2026, Estratega) Perfil**: usuario @neogestlab, bio y enlace ya están bien (comprobado). Falta solo el nombre visible: cámbialo de «IA Fácil · Trucos que no sabes» a «Neogest Lab · Apps a medida».
-
-10. **(ANULADO 10/11 tarde: el dueño descarta el tema taller; ver serie_jambo.md) El material que más puede cambiar el alcance lo tienes tú.** Los reels que revientan en español (cuentas de 2.000 seguidores con 1 M de vistas) son historias reales, cuentas con dinero real y humor con personajes; los nuestros son capturas de app. Necesitamos de ti, en 3-5 frases cada uno: (a) 3 anécdotas reales de tu taller o de tus clientes (sin nombres): una vez que te llamaron muchas veces por lo mismo, un presupuesto que se te complicó, un cobro que se retrasó; (b) cuántas llamadas o WhatsApp de «¿cómo va lo mío?» recibes al día, a ojo; (c) 3 fotos o vídeos cortos de tu taller (papeles, libreta, pantalla), sin caras de clientes; (d) si te parece bien la serie de humor «Paco y la IA» (el personaje del taller contra el robot y el cliente que llama), que sería lo que más reacción puede dar. Con eso, el Creador produce los briefs 10-12 y la serie.
-11. **(10/11/2026, Calidad) Perfil**: nombre visible aún «IA Fácil · Trucos que no sabes» (Buzzfy, 10/11 19:37) y la bio acaba en «Escríbeme IDEA y te digo cómo sería»: la directiva del 10/11 prohíbe ese cierre. Cambia la bio por «Prueba gratuita sin tarjeta ni compromiso 👇» o similar, y el nombre por «Neogest Lab · Apps a medida».
-
-12. **(10/11/2026, Calidad) Matías**: confirmar o cambiar los nombres provisionales de las IAs (Bolo, Clara, Doña Trámite) y la frase fija («Es que yo lo he delegado»). Hasta que respondas, el equipo usa estos.
-
-13. **(10/11/2026, Estratega) Perfil para la serie**: cambia la bio (aún acaba en «Escríbeme IDEA…», cierre prohibido) y el nombre visible; texto listo en equipo/perfil_propuesto.md (ACTUALIZACIÓN 10/11). Sustituye a los puntos 9 y 11. El punto 12 (nombres de Matías) queda anulado: los personajes son los de serie_jambo.md.
-14. **(10/11/2026, Estratega) Apps como cameo**: durante el mes de prueba no hay apps en los episodios. Dime cuándo quieres el cameo de 2 s y el equipo lo añade.
-
-13. RESUELTO 11/11 (el dueño confirma que tiene licencia de las muestras de Studio Beats PRO; sigue sin decirse «libres de derechos»). Original: Studio Beats PRO incluye cajas de ritmo con nombres de máquinas ajenas (808, 909, LinnDrum, RX5…) y cientos de muestras nuevas: confirma que tienes licencia para usarlas y promocionarlas; mientras tanto no se anuncia como «libre de derechos».
-14. (11/11 00:30, Calidad) GPS Andaluz sigue con la v1.2 sin publicar; Insultator tiene frases de humor negro duro que no salen en ningún post.
-
-15. **(11/11/2026, Mejora) Cosas que la API de Instagram no deja hacer solas:** fijar el comentario del reel (`comentario_fijado` en post.json: escríbelo tú y fíjalo en la primera hora), elegir el punto de inicio de la canción de Instagram al editar el reel y compartir a Historias con pegatina de pregunta. Si prefieres, dime y se prueba a publicar el comentario como respuesta automática (sin fijarlo).
-
-16. **(12/11/2026, Estratega) Medios de pago en las piezas**: Gestión Integral 7D cobra con Stripe, Redsys y Bizum. ¿Podemos nombrarlos tal cual o prefieres «tarjeta», «TPV» y «transferencia»? Mientras no digas nada, en lo nuevo van en genérico; lo ya aprobado (episodio 502, que dice «Bizum») no se toca.
-
-## Para enseñar las novedades de las apps en reels (Creador, 11/11/2026)
-- HECHO (comprobado por el Creador 11/11/2026 con curl: centro-de-contenido-apps-2f0a3cd6, gestion-hogar-c9185d78 y aj-reparacion-gestion-copy-61ad5afb .base44.app responden 200 desde la sesión): ~~El proxy de las sesiones del Creador bloquea `*.base44.app`~~. Si alguna sesión aún recibe 403, anótalo aquí con la URL y la hora.
-- GH PLUS: la demo `/demo?limpia=1` no deja guardar nada, así que no se puede grabar el confeti al pagar ni los logros. Pedir a Base44 (código de la app) que en la demo los cambios se guarden en memoria de la pestaña (por ejemplo «Marcar pagado» que mueva el pago a pagado y dispare `celebrar()`), o dar una cuenta de prueba para la grabación (secret `PANTALLA_SESION`, nunca en el repo).
-- MEDICATOR y Studio Beats PRO: hace falta un modo demo (datos de ejemplo, sin sesión) para poder grabarlas con novedades; sin él no se afirma ninguna.
-
-## Perfil 11/11/2026 (noche): hecho y pendiente
-- HECHO (en Instagram web, confirmado por Buzzfy): bio nueva «Apps para tu negocio y tu día a día 📲 / El Jambo que sabe y las IAs, cada día 😈 / Prueba gratuita: sin tarjeta ni compromiso / Pídela aquí 👇» (134 caracteres, sin «Escríbeme IDEA»).
-- HECHO (11/11 21:12, verificado con Buzzfy): enlace de la bio = /solicitar?src=instagram. Queda la categoría (móvil) y el nombre (a partir del 25/11).
-- PENDIENTE, bloqueado por Instagram (2 cambios en 14 días): nombre visible «Neogest Lab · Apps a medida»; reintentar a partir del 25/11 (hay recordatorio).
-- HECHO (11/11, dicho por el dueño; la API de Buzzfy no devuelve la categoría y no se puede verificar): categoría «Desarrollador de software» (o «Servicios informáticos»). Solo queda el nombre visible, a partir del 25/11.
-- (12/11/2026, Creador) Para grabar las fórmulas F4 (Gestión Integral 7D: factura con enlace de pago) y F6 (MEDICATOR: pastilla de ahora y botón «Llamar») con la app real hace falta una cuenta de prueba con datos ficticios (secret `PANTALLA_SESION`, nunca en el repo) o un modo `/demo` público como el de GH PLUS; hoy 7D y MEDICATOR no lo tienen y no se graban sin él. Los reels 405 (GH PLUS) y 601 (web de bar de AJ Sistema DEMO) sí se graban sin sesión.
-
-## Editor del canal 12/11/2026 (revisión semanal)
-- SIN CAMBIOS en Instagram: esta ejecución corre en la nube y no tiene Claude in Chrome ni el ordenador del dueño, así que no se pudo tocar el perfil (destacadas y fijados siguen sin revisar). Para que funcione: abrir la tarea en la app de escritorio de Claude y activar «Requerir este ordenador», con Chrome abierto y la sesión de Instagram iniciada.
-- Comprobado con Buzzfy (solo lectura, 14:41 UTC): usuario @neogestlab, bio y enlace correctos (/solicitar?src=instagram). Nombre visible aún «IA Fácil · Trucos que no sabes» (bloqueado por Instagram hasta el 25/11).
-- Temática: 19 publicaciones, ninguna fuera de la temática (apps de Neogest Lab, trucos de IA y El Jambo). No queda nada de misterios.
-- A decidir por el dueño (no se ha borrado ni archivado nada): hay carruseles repetidos del 8/11 («Deja de pedirle así las cosas a la IA» ×3, «¿Pasas los presupuestos al Excel por la noche?» ×3, «5 tareas pesadas…» ×2) y el reel de AJ Web del 10/11 ×2; convendría archivar los duplicados y dejar uno de cada. Varias piezas del 8-9/11 aún cierran con «Escríbeme IDEA por privado» (cierre anterior a la orden del 10/11).
-- Segunda pasada el 12/11 (ejecución de prueba): sigue sin haber navegador en la sesión y la directiva no ha cambiado, así que tampoco hubo cambios en Instagram. Hay 4 historias activas (11-12/11) publicadas por el ciclo; Buzzfy no deja ver su contenido ni las destacadas, que quedan para la primera ejecución con Chrome.
-
-## YouTube (12/11/2026 16:35)
-- YouTube · rediseño: el agente que está rediseñando el canal deja aquí qué ha cambiado (nombre, banner, foto, descripción, listas) y qué falta.
-- Para que los agentes PUBLIQUEN Shorts solos hace falta OAuth (la clave de API solo lee): cliente OAuth «Escritorio» en el proyecto neogestlab-youtube + token de refresco del canal @neogestlab, guardados como secretos de GitHub (YOUTUBE_CLIENT_ID, YOUTUBE_CLIENT_SECRET, YOUTUBE_REFRESH_TOKEN). La clave de API, como YOUTUBE_API_KEY. Nunca en el repo.
-
-## Facebook (12/11/2026 16:55)
-- Facebook · API (HECHO 12/11/2026, desde el Chrome del dueño): app de Meta «NeogestLab» (ID 1115594928129027) creada, permisos de páginas añadidos y autorizados solo sobre la página Neogestlab (ID 1437632859434095); token de página permanente generado y verificado (tipo PAGE, válido, sin caducidad). El dueño lo tiene en el archivo neogestlab-facebook-api.txt de su carpeta Descargas.
-- PENDIENTE DEL DUEÑO: guardar ese token como secreto `FACEBOOK_PAGE_TOKEN` del repo (Settings → Secrets and variables → Actions) y el ID de página como variable `FACEBOOK_PAGE_ID` = 1437632859434095. Nunca en archivos ni en commits.
-- PENDIENTE DEL DUEÑO: decir qué se publica en la página de Facebook (¿lo mismo que Instagram y YouTube?). Hasta entonces el equipo solo prepara, no publica.
-- A comprobar por el equipo antes de la primera publicación: si lo publicado por API con la app en modo desarrollo lo ve el público; si no, hay que pasar la app a activa (puede pedir URL de política de privacidad).
-
-## Facebook, atrasos y comunidad (12/11/2026 19:00, subido desde el Chrome del dueño)
-- Ya en main: herramientas/facebook.py, atrasos.py, comunidad.py; publicar_gh.py publica en Facebook lo que sale en Instagram y gestiona las colas de atrasos (atrasos/facebook.json: 9 piezas; atrasos/youtube.json: 1); workflows comunidad.yml y facebook_prueba.yml; el Reloj lanza comunidad cada hora. El secreto FACEBOOK_PAGE_TOKEN ya existe (renovado el 12/11 17:37).
-- A comprobar: lanzar «Facebook · comprobar conexión» (con publicar_prueba) y ver desde una cuenta que NO sea administradora si la pieza se ve; si no, pasar la app de Meta a modo activo (puede pedir URL de política de privacidad).
-- Comunidad en YouTube: responder comentarios exige el alcance youtube.force-ssl en el token de refresco; si falta, las respuestas quedan en comunidad/sin_publicar.json.
-- Los 9 reels ya publicados no se pueden reciclar (mp4 borrados de la release tras publicar). Para el resto de vídeos del Centro: aprobarlos en VideoMezcla y añadirlos a atrasos/centro_videos.json.
+## Pendiente del equipo (no del dueño; se deja aquí para no perderlo)
+- Modo `/demo` público (datos de ejemplo, que guarde en memoria de la pestaña) en GH PLUS, MEDICATOR, Studio Beats PRO y Gestión Integral 7D para grabar las novedades con la app real: Mejora, con el MCP de Base44 si la sesión lo tiene.
+- Editor del canal: destacadas y fijados del perfil necesitan una sesión con Chrome (la tarea en la nube no lo tiene); no es una acción tuya salvo que actives «Requerir este ordenador».
+- YouTube: responder comentarios exige el alcance youtube.force-ssl en el token de refresco; si falta, quedan en comunidad/sin_publicar.json (lo revisa Comunidad).
