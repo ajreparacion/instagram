@@ -1,33 +1,33 @@
 {
- "tipo": "reel",
- "texto": "Mamá: «¿ya me tomé la pastilla?»\nEs MEDICATOR, nuestra app, grabada funcionando con una usuaria de ejemplo: ves la pastilla que toca ahora, pulsas «Ya me la he tomado» y la pantalla te dice «Todo en orden» y te recuerda la cita de mañana.\nMándaselo a quien cuide de sus padres. MEDICATOR organiza; no sustituye a tu médico.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=medicator&src=instagram\nVoz generada por IA\n\n#mayores #cuidadores #salud #apps #neogestlab",
- "cuando": "2026-11-19T18:40:00+01:00",
- "compartir_en_feed": true,
- "portada_ms": 300,
- "prueba_no_seguidores": true,
- "formula": "virales_semana-F6 (primera persona escrita + pastilla de ahora)",
- "formato": "Una idea, una app (grabación real de la app con datos ficticios, tomada de la pista de vídeo del Centro)",
- "publico": "Mayores y quien los cuida",
- "app": "MEDICATOR",
- "comentario_fijado": "¿Quién se encarga de recordar las pastillas en tu casa?",
- "avance_siguiente": "Pronto: la app que ordena tu dinero del mes",
- "monetizacion": {
-  "objetivo": "clic_enlace",
-  "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
-  "paso_embudo": "visita_perfil -> clic_enlace"
- },
- "_fuentes": [],
- "_comprobado": "12/11/2026: hechos_verificados del Producto «MEDICATOR» en el Centro (consultado hoy): «Inicio: muestra la pastilla que toca ahora (nombre, cantidad, hora e indicaciones) con un botón grande «YA ME LA HE TOMADO»; si te equivocas, hay un botón para deshacerlo» y «En el inicio aparece un recordatorio cuando la cita es mañana u hoy». Visto en la pista de vídeo del Centro (VideoMezcla medicator, formato vertical, 1080x1920; usuaria de ejemplo «Carmen»): «Ahora te toca · Enalapril · 15:05», botón verde «YA ME LA HE TOMADO», después «Todo en orden · La próxima es a las 9 de la noche · ¿Te has equivocado? Toca aquí para deshacer» y «Mañana tienes cita · 10:30 · Dra. Elena Martín». La voz solo dice eso. NO se afirma: avisos a familiares ni modo cuidador, avisos que lleguen con garantías, lectura de cajas o papeles, botón «Llamar» (no sale en este recorte), diagnósticos ni promesas de salud. Aviso «no sustituye a tu médico» en pantalla y en el texto.",
- "_nota_creador": "12/11/2026. Sustituye la idea F6 original («llamando a mamá por tercera vez», que pedía enseñar «Llamar», no incluido en la pista del Centro) por «Mamá: ¿ya me tomé la pastilla?», que sí se contesta con lo grabado: el fotograma 0 YA muestra «Todo en orden» tras pulsar. Función más vistosa verificada y visible: el botón grande «YA ME LA HE TOMADO». demo.mp4 (16,6 s) sale de herramientas/recorte_centro.py con recorte.json de esta carpeta (solo la pantalla del móvil, sin rótulos del Centro; mp4 del Centro intacto). Seis escenas de 2,2-3,2 s con corte antes de 3 s; el último tramo con empuje de zoom para no acabar congelado; frase de envío y cierre único; sin «comenta X». Tiempos de demo.mp4: ahora te toca 2,6-5,8; pulsar 5,8-9,0 (clic ~7,4); todo en orden 9,0-12,0; cita 12,0-16,6. Datos de la usuaria: solo los de ejemplo del vídeo (nombre de pila Carmen, no se dice en voz). Música tranquila y cálida. 13/11: rehecho el recorte con tramos sin texto cortado (arreglo de Calidad 12/11); gancho sin cambios; la voz de la escena 2 ya no afirma el clic; pendiente de reevaluar y renderizar.",
- "motor_voz": "chatterbox",
- "renderizado": false,
- "audio_ig": {
-  "audio_id": "921967353426231",
-  "titulo": "Bajalo (Instrumental) · Company Money",
-  "origen": "biblioteca de Instagram (colección libre de derechos)",
-  "audio_volume": 0.5,
-  "video_volume": 1.0,
-  "mood": "calido"
- },
- "asset": "408_medicator_pastilla_reel.mp4"
+  "tipo": "reel",
+  "texto": "Mamá: «¿ya me tomé la pastilla?»\nEs MEDICATOR, nuestra app, grabada funcionando con una usuaria de ejemplo: ves la pastilla que toca ahora, pulsas «Ya me la he tomado» y la pantalla te dice «Todo en orden» y te recuerda la cita de mañana.\nMándaselo a quien cuide de sus padres. MEDICATOR organiza; no sustituye a tu médico.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=medicator&src=instagram\nVoz generada por IA\n\n#mayores #cuidadores #salud #apps #neogestlab",
+  "cuando": "2026-11-19T18:40:00+01:00",
+  "compartir_en_feed": true,
+  "portada_ms": 300,
+  "prueba_no_seguidores": true,
+  "formula": "virales_semana-F6 (primera persona escrita + pastilla de ahora)",
+  "formato": "Una idea, una app (grabación real de la app con datos ficticios, tomada de la pista de vídeo del Centro)",
+  "publico": "Mayores y quien los cuida",
+  "app": "MEDICATOR",
+  "comentario_fijado": "¿Quién se encarga de recordar las pastillas en tu casa?",
+  "avance_siguiente": "Pronto: la app que ordena tu dinero del mes",
+  "monetizacion": {
+    "objetivo": "clic_enlace",
+    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
+    "paso_embudo": "visita_perfil -> clic_enlace"
+  },
+  "_fuentes": [],
+  "_comprobado": "12/11/2026: hechos_verificados del Producto «MEDICATOR» en el Centro (consultado hoy): «Inicio: muestra la pastilla que toca ahora (nombre, cantidad, hora e indicaciones) con un botón grande «YA ME LA HE TOMADO»; si te equivocas, hay un botón para deshacerlo» y «En el inicio aparece un recordatorio cuando la cita es mañana u hoy». Visto en la pista de vídeo del Centro (VideoMezcla medicator, formato vertical, 1080x1920; usuaria de ejemplo «Carmen»): «Ahora te toca · Enalapril · 15:05», botón verde «YA ME LA HE TOMADO», después «Todo en orden · La próxima es a las 9 de la noche · ¿Te has equivocado? Toca aquí para deshacer» y «Mañana tienes cita · 10:30 · Dra. Elena Martín». La voz solo dice eso. NO se afirma: avisos a familiares ni modo cuidador, avisos que lleguen con garantías, lectura de cajas o papeles, botón «Llamar» (no sale en este recorte), diagnósticos ni promesas de salud. Aviso «no sustituye a tu médico» en pantalla y en el texto.",
+  "_nota_creador": "12/11/2026. Sustituye la idea F6 original («llamando a mamá por tercera vez», que pedía enseñar «Llamar», no incluido en la pista del Centro) por «Mamá: ¿ya me tomé la pastilla?», que sí se contesta con lo grabado: el fotograma 0 YA muestra «Todo en orden» tras pulsar. Función más vistosa verificada y visible: el botón grande «YA ME LA HE TOMADO». demo.mp4 (16,6 s) sale de herramientas/recorte_centro.py con recorte.json de esta carpeta (solo la pantalla del móvil, sin rótulos del Centro; mp4 del Centro intacto). Seis escenas de 2,2-3,2 s con corte antes de 3 s; el último tramo con empuje de zoom para no acabar congelado; frase de envío y cierre único; sin «comenta X». Tiempos de demo.mp4: ahora te toca 2,6-5,8; pulsar 5,8-9,0 (clic ~7,4); todo en orden 9,0-12,0; cita 12,0-16,6. Datos de la usuaria: solo los de ejemplo del vídeo (nombre de pila Carmen, no se dice en voz). Música tranquila y cálida. 13/11: rehecho el recorte con tramos sin texto cortado (arreglo de Calidad 12/11); gancho sin cambios; la voz de la escena 2 ya no afirma el clic; pendiente de reevaluar y renderizar.",
+  "motor_voz": "chatterbox",
+  "renderizado": "2026-11-13T09:05:23+00:00",
+  "audio_ig": {
+    "audio_id": "921967353426231",
+    "titulo": "Bajalo (Instrumental) · Company Money",
+    "origen": "biblioteca de Instagram (colección libre de derechos)",
+    "audio_volume": 0.5,
+    "video_volume": 1.0,
+    "mood": "calido"
+  },
+  "asset": "408_medicator_pastilla_reel.mp4"
 }
