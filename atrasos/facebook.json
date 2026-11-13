@@ -27,8 +27,10 @@
    "commit": "52aa8246c44bb538131a3298239050689df6d6d9^",
    "ruta": "cola/101_errores_prompt/slides",
    "huella": "5b86e0df305b9bc8",
-   "estado": "pendiente",
-   "errores": 0
+   "estado": "publicado",
+   "errores": 0,
+   "publicado": "2026-11-13T09:13:51+00:00",
+   "enlace": "https://www.facebook.com/1437632859434095_122109099633536765"
   },
   {
    "id": "105_reformas_presupuestos",
