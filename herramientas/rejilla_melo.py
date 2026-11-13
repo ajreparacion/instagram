@@ -113,7 +113,9 @@ def bandas(wav48):
     ref = b(150, 400)
     h = 960
     nn = len(x) // h
-    suelo = float(np.percentile(20 * np.log10(np.sqrt((x[:nn * h].reshape(nn, h) ** 2).mean(1)) + 1e-9), 10))
+    nivel = 20 * np.log10(np.sqrt((x[:nn * h].reshape(nn, h) ** 2).mean(1)) + 1e-9)
+    ruido = nivel[(nivel > -90) & (nivel < -40)]   # tramos casi mudos pero no silencio digital (el relleno de pausa no cuenta)
+    suelo = float(ruido.mean()) if ruido.size else -90.0
     m = subprocess.run(["ffmpeg", "-v", "info", "-i", wav48, "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
     lufs = float([l for l in m.splitlines() if "I:" in l and "LUFS" in l][-1].split("I:")[1].split("LUFS")[0])
     return {"presencia_2.5-4.5k": round(float(b(2500, 4500) - ref), 1), "sibilancia_5-9k": round(float(b(5000, 9000) - ref), 1),
@@ -166,8 +168,9 @@ def main():
     ks = list(res)
     wmin = min(res[k]["WER"] for k in ks); gmin = min(res[k]["glitches_min"] for k in ks)
     ok = [k for k in ks if res[k]["WER"] <= wmin + 0.03 and res[k]["glitches_min"] <= gmin + 1.0] or ks
-    expresiva = max(ok, key=lambda k: res[k]["f0_std_st"])
     estable = min(ks, key=lambda k: (res[k]["glitches_min"] + res[k]["recortes"], res[k]["WER"], -res[k]["f0_std_st"]))
+    ok = [k for k in ks if k != estable and res[k]["WER"] <= wmin + 0.04 and res[k]["glitches_min"] <= gmin + 4.0] or [k for k in ks if k != estable]
+    expresiva = max(ok, key=lambda k: res[k]["f0_std_st"])
     z = lambda v, a: (v - np.mean(a)) / (np.std(a) + 1e-9)
     F = [res[k]["f0_std_st"] for k in ks]; W = [res[k]["WER"] for k in ks]; G = [res[k]["glitches_min"] for k in ks]
     punt = {k: z(res[k]["f0_std_st"], F) - z(res[k]["WER"], W) - z(res[k]["glitches_min"], G) for k in ks}
@@ -196,7 +199,7 @@ def main():
         os.remove(f"{a2.SAL}/cad_{nm[0]}.mp3")
         print("cadena", nm, medidas[nm], flush=True)
     A = medidas["A_actual"]
-    validas = [nm for nm, m in medidas.items() if m["sibilancia_5-9k"] <= A["sibilancia_5-9k"] + 1.0 and m["suelo_dBFS"] <= A["suelo_dBFS"] + 1.0 and abs(m["LUFS"] + 14) <= 0.6]
+    validas = [nm for nm, m in medidas.items() if m["sibilancia_5-9k"] <= A["sibilancia_5-9k"] + 1.0 and m["suelo_dBFS"] <= A["suelo_dBFS"] + 1.0 and abs(m["LUFS"] - A["LUFS"]) <= 0.4]
     mejor = max(validas, key=lambda nm: (medidas[nm]["presencia_2.5-4.5k"], nm == "A_actual"))
     cadena = ins(variantes[mejor])
     a2.CADENA = cadena
