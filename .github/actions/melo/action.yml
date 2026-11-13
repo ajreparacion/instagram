@@ -1,0 +1,32 @@
+name: MeloTTS ES (venv propio, con caché)
+description: Instala MeloTTS en ~/.venvs/melo (Python 3.10) con caché de pip, modelos y diccionarios, y exporta PYTHON_MELO. Si falla no para el job.
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-python@v5
+      id: py310
+      with:
+        python-version: "3.10"
+    - name: Caché de MeloTTS (venv, pip, modelos)
+      uses: actions/cache@v4
+      with:
+        path: |
+          ~/.venvs/melo
+          ~/.cache/pip
+          ~/.cache/huggingface
+          ~/nltk_data
+        key: melo-v1-${{ runner.os }}
+    - name: Instalar MeloTTS (solo si no está en la caché)
+      shell: bash
+      continue-on-error: true
+      run: |
+        if ! ~/.venvs/melo/bin/python "$GITHUB_WORKSPACE/herramientas/voz_melo.py" --comprobar >/dev/null 2>&1; then
+          "${{ steps.py310.outputs.python-path }}" -m venv ~/.venvs/melo
+          ~/.venvs/melo/bin/pip install --quiet --upgrade pip
+          ~/.venvs/melo/bin/pip install --quiet "git+https://github.com/myshell-ai/MeloTTS.git"
+          ~/.venvs/melo/bin/python -c "import nltk; [nltk.download(p, quiet=True) for p in ('averaged_perceptron_tagger','averaged_perceptron_tagger_eng','cmudict')]"
+          # El diccionario japonés (unidic, ~500 MB) solo se baja si MeloTTS no arranca ni con el módulo japonés vacío.
+          ~/.venvs/melo/bin/python "$GITHUB_WORKSPACE/herramientas/voz_melo.py" --comprobar >/dev/null 2>&1 || ~/.venvs/melo/bin/python -m unidic download
+        fi
+        ~/.venvs/melo/bin/python "$GITHUB_WORKSPACE/herramientas/voz_melo.py" --comprobar
+        echo "PYTHON_MELO=$HOME/.venvs/melo/bin/python" >> "$GITHUB_ENV"

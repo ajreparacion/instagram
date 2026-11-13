@@ -57,12 +57,15 @@ VOZ_RAIZ = "https://huggingface.co/rhasspy/piper-voices/resolve/v1.0.0/"
 VOZ_POCKET = os.path.join(BASE, "herramientas", "voz_pocket.py")
 VOZ_CHATTERBOX = os.path.join(BASE, "herramientas", "voz_chatterbox.py")
 VOZ_KOKORO = os.path.join(BASE, "herramientas", "voz_kokoro.py")
+VOZ_MELO = os.path.join(BASE, "herramientas", "voz_melo.py")
+# MeloTTS va en su propio venv (Python 3.10, dependencias fijadas): las workflows exportan PYTHON_MELO (.github/actions/melo)
+PYTHON_MELO = os.environ.get("PYTHON_MELO") or sys.executable
 # Chatterbox va en su propio entorno virtual (fija torch 2.6 y transformers 4.46): ciclo.yml exporta PYTHON_CHATTERBOX
 PYTHON_CHATTERBOX = os.environ.get("PYTHON_CHATTERBOX") or sys.executable
 ATRIBUCION_POCKET = "Voz: Kyutai Pocket TTS (CC BY 4.0)"
 # Chatterbox (MIT) y Kokoro (Apache 2.0) no exigen atribución, pero Meta pide marcar el audio realista generado:
 ATRIBUCION_IA = "Voz generada por IA"
-ATRIBUCIONES = {"pocket": ATRIBUCION_POCKET, "chatterbox": ATRIBUCION_IA, "kokoro": ATRIBUCION_IA}
+ATRIBUCIONES = {"melo": ATRIBUCION_IA, "pocket": ATRIBUCION_POCKET, "chatterbox": ATRIBUCION_IA, "kokoro": ATRIBUCION_IA}
 MAX_RENDERS = 2
 GRACIA_SIN_CALIDAD = timedelta(hours=3)  # ya no se usa (7/11/2026)
 NOTA_MINIMA = 90  # nota mínima de Calidad para publicar (7/11/2026)
@@ -205,7 +208,7 @@ def gh(*args, check=True):
 
 
 # ---------------------------------------------------------------- voz (Chatterbox / Kokoro / Pocket TTS / Piper)
-MOTORES = ("chatterbox", "kokoro", "pocket", "piper")
+MOTORES = ("melo", "chatterbox", "kokoro", "pocket", "piper")
 
 
 def ajustes_voz():
@@ -217,7 +220,8 @@ def ajustes_voz():
             "chatterbox": {"modelo": "es-es", "idioma": "es", "exageracion": 0.6, "cfg": 0.35, "temperatura": 0.75,
                            "referencia": None, "referencia_kokoro": "em_alex",
                            "ganancia": 1.0, "semilla": 7, "max_s": 1500},
-            "kokoro": {"voz": "em_alex", "velocidad": 0.95, "ganancia": 1.0, "max_s": 300}}
+            "kokoro": {"voz": "em_alex", "velocidad": 0.95, "ganancia": 1.0, "max_s": 300},
+            "melo": {"idioma": "ES", "speaker": "ES", "velocidad": 1.0, "ganancia": 1.0, "max_s": 900}}
     base.update(leer_json(AJUSTES_VOZ, {}) or {})
     return base
 
@@ -404,12 +408,25 @@ def sintetizar_kokoro(textos, salidas, trabajo, aj, estilos=None):
     log(f"Voz con Kokoro ({kk.get('voz', 'em_alex')}): {len(textos)} frases en {info['_segundos']} s")
 
 
+def sintetizar_melo(textos, salidas, trabajo, aj, estilos=None):
+    """MeloTTS ES (MIT, voz genérica, 44,1 kHz). 13/11/2026: elección del dueño en la audición v2. Sin remuestrear aquí."""
+    ml = dict(aj.get("melo") or {})
+    info = _sintetizar_lote("MeloTTS", VOZ_MELO, PYTHON_MELO,
+                            {"idioma": ml.get("idioma", "ES"), "speaker": ml.get("speaker", "ES"),
+                             "velocidad": ml.get("velocidad", 1.0), "ganancia": ml.get("ganancia", 1.0),
+                             "pronunciacion": ml.get("pronunciacion") or {}},
+                            textos, salidas, trabajo, ml.get("max_s", 900),
+                            extras=ajustes_por_estilo(ml, estilos, ("velocidad",)))
+    log(f"Voz con MeloTTS ({ml.get('idioma', 'ES')}/{ml.get('speaker', 'ES')}, {info.get('sr', '?')} Hz, velocidad {ml.get('velocidad', 1.0)}): "
+        f"{len(textos)} frases en {info['_segundos']} s")
+
+
 def sintetizar_piper(textos, salidas, trabajo, aj, estilos=None):
     for t, s in zip(textos, salidas):
         sintetizar(t, s)
 
 
-SINTETIZADORES = {"chatterbox": sintetizar_chatterbox, "kokoro": sintetizar_kokoro,
+SINTETIZADORES = {"melo": sintetizar_melo, "chatterbox": sintetizar_chatterbox, "kokoro": sintetizar_kokoro,
                   "pocket": sintetizar_pocket, "piper": sintetizar_piper}
 
 
