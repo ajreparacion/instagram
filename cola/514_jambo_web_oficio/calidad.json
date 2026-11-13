@@ -1,15 +1,16 @@
 {
   "aprobado": false,
-  "nota": 90,
-  "fecha": "2026-11-13T14:25Z",
-  "comentario": "Audio −14,1 LUFS, pico −1,2/−1,5 dBFS, sin silencios >1,2 s (hueco de voz ≈3 s = remate visual con música, igual que 501-505 aprobados); fotogramas de gancho POV, contador, gag, pivote y cierre legibles; frase de envío, comentario fijado y avance presentes; música por audio_ig. Pieza web por orden del dueño (11/11): función de ajreparacion.com tomada de hechos_verificados; «más asequibles de lo que piensas» es afirmación del dueño sin cifras (pendiente de que confirme); cierre «Consultoría gratuita · presupuesto sin compromiso» propio de web (no es app). Corregido el post: sin hashtags (B6), añadidos 4.",
-  "revisado_por": "agente de CALIDAD (12/11, pasada de la mañana)",
-  "nota_anterior": 90,
+  "nota": 75,
+  "fecha": "2026-11-13T18:40Z",
+  "revisado_por": "agente de CALIDAD (13/11, pasada de la tarde)",
+  "comentario": "Audio del re-render medido: -14,1/-14,2 LUFS, pico < -1,2 dBTP, sin silencios > 1,1 s; 1080x1920 H.264+AAC. Sin problemas de audio ni de datos nuevos; el rechazo es solo por forma frente a la orden del dueño del 13/11 14:46 (≤ 20 s, personaje en pantalla, sin venta en el reel).",
   "motivos": [
-    "Aprobación caducada por cambio de guion (regla 9): se quitó la tarjeta final de venta («prueba gratuita»/«presupuesto sin compromiso») que la DIRECTIVA §14 (b) y la lista §6 ya no admiten dentro del reel"
+    "Duración 31.9 s: supera los 20 s de la orden del dueño del 13/11 14:46 (DIRECTIVA §14 a y lista §6); el margen de 35 s es para un solo episodio con historia y se ha concedido al 501.",
+    "Los últimos 11 s son 3 tarjetas oscuras de texto estático sin personaje en pantalla (mensaje serio + pivote + reenvío): ritmo muerto (B5) y la lista §6 pide personaje visible y pivote DENTRO de la historia.",
+    "Tarjeta del pivote con venta dentro del reel: dice «Hay webs a medida, como ajreparacion.com… Más asequibles de lo que piensas» (enlace/dominio y afirmación sin cifra, aún sin confirmar por el dueño; §14 b-c y §6 «nada de precios ni venta en el reel»).",
+    "El texto del post lleva venta («Neogest Lab crea webs a medida…», «Pide presupuesto y te sorprenderás»); la oferta va solo en el comentario fijado y en la bio (§14)."
   ],
-  "como_arreglarlo": "Esperar al re-render del ciclo (renderizado distinto de false) y reevaluar: el contenido del episodio no cambia, solo la tarjeta final (ahora muestra la frase de reenvío).",
+  "como_arreglarlo": "Recortar a ≤ 20 s (renderizado false): conservar el gancho y el gag (≈ 0-22 s), sustituir las 3 tarjetas oscuras por una sola de ≤ 2,5 s o, mejor, decir el pivote con la Jupillo en pantalla, y cerrar con el reenvío a la persona concreta. Pivote web sin dominio ni «más asequibles de lo que piensas»; quitar del post las líneas de venta (queda en el comentario fijado). Calidad reevalúa en cuanto haya render nuevo (contenido ya puntuado 90 el 12/11).",
   "aprobado_anterior": false,
-  "caducado": "2026-11-13T16:07:43+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-13T16:07:43+00:00"
+  "nota_anterior": 90
 }
