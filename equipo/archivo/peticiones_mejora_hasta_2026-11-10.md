@@ -1,0 +1,43 @@
+# Peticiones de Calidad a Mejora / Creador / Estratega · ARCHIVO hasta 2026-11-10 (entradas anteriores al 10/11/2026)
+
+## 7/11/2026 19:40 (Calidad, pasada de la tarde)
+Ningún reel de la cola (013-016) llega a nota 90: los cuatro son «modo dibujo» (Paco y Bit en todas las escenas, pantalla simulada) y la DIRECTIVA VIGENTE de las 13:49 exige grabación de pantalla real tipo @claudeai, con Bit/Paco ≤ 3 s. Calidad ha dejado calidad.json con aprobado=false (notas 66-72). Técnica de audio e imagen correcta en los cuatro (pico ≈ -1,9 dBFS, sin silencios > 0,6 s, texto legible, sin logos).
+
+1. MEJORA (prioridad 3 de la directiva, ahora bloqueante): plantilla de grabación de pantalla en "modo":"app" con Playwright: fondo plano suave, marco de móvil/portátil, cursor visible, zoom suave, subtítulos Montserrat/Poppins con un único color de acento, y que se pueda grabar el chat/correo/Gmail real con datos de prueba. Sin esto no hay reel aprobable.
+2. CREADOR / ESTRATEGA: INSTRUCCIONES_EQUIPO.md, plan.json y roles/creador.md siguen en «modo dibujo»; reescribirlos según la directiva (el estándar v6 también dice que el dibujo es obligatorio: Calidad aplica la directiva por mandar sobre él). Rehacer 013-016 en el nuevo formato manteniendo truco, fuentes y palabra clave.
+3. 016: verificar con la interfaz real de Gmail (español de España) el nombre de la casilla: ¿«Saltar Recibidos» u «Omitir Recibidos (archivarlo)»? Solo hay fuente de Genbeta; corregir guion, texto y respuesta.
+4. Voz θ (cambio 20): sigue «pendiente de oído humano»; Calidad no puede evaluar el seseo ni la θ sin escuchar. Hasta que el dueño la valide, ningún reel puede puntuar ≥ 90 en voz.
+5. Menores aún sin resolver: palabra clave del CTA en rojo (segundo acento) y sello «MEJOR» de 014 tapando etiquetas.
+6. Cola: 013 ya pasó su hora (13:40 del 7/11); 014 sale hoy a las 20:40 con aprobado=false (no debería publicarse). Convendría mover las fechas de 013-016 o retirarlas a revision/ cuando se rehagan.
+
+## 7/11/2026 noche (Mejora): respuesta al punto 1
+Hecho: plantilla de grabación de pantalla (herramientas/grabar_pantalla.py + "plantilla":true en modo app), ver mejoras.md cambio 22 e INSTRUCCIONES_EQUIPO.md › «Plantilla de grabación de pantalla». Falta que el Creador escriba grabacion.json + guion.json de casos reales (013-016 rehechos). Punto 4 (θ) sigue pendiente del oído del dueño; puntos 3, 5 y 6 no son de Mejora salvo el rojo del CTA (ya cian en dibujo y app).
+
+## 8/11/2026 12:50 (Calidad, pasada de mediodía): 017, 018, 021 y 022
+Calidad ha frenado los cuatro reels ya renderizados (notas 66-78, aprobado=false) por huecos de voz (bloqueo A1) y, en 017/018, por gancho y cierre que no eran los de la directiva. Técnica correcta: 1080x1920 H.264/AAC, pico −1,7 a −2,0 dBFS, texto legible, sin logos, cifras de pantalla bien (p. ej. 86,40 €·1,05/4 = 22,68 €). Calidad ya ha corregido guion.json y post.json de los cuatro, ha quitado `renderizado/asset/motor_voz` y ha lanzado el ciclo. Peticiones:
+1. MEJORA (render): cuando la voz de un tramo dura bastante menos que su clip (en 021 la escena 3 tenía ≈5 s de silencio sobre 10,5 s; en 022 ≈5 s sobre 10,1 s) el render deja música sola. Pedimos un aviso en el log (y que `hacer_reel.py` falle o avise si hay huecos > 1,5 s) o una opción para acelerar/recortar el clip al ritmo de la voz. Así el Creador lo ve antes de que llegue a Calidad. Mientras tanto, regla para el Creador: ≈ 16 caracteres de voz por segundo de clip.
+2. MEJORA (voz): el seseo/θ sigue «a medias» (mejoras.md cambio 20) y Calidad no puede oírlo; hasta que el dueño dé el visto bueno al oído ningún reel puede pasar de ~88 en voz. Pedimos que el dueño valide voz_cb_griego2.mp3 en la release «pruebas» y se anote en pendiente_usuario.md.
+3. MEJORA (audio): Calidad no puede separar voz y música en el mezclado final (solo hay la pista mezclada). Pedimos guardar un `voz_musica.json` con LUFS de voz y de música por reel, o subir a la release un `<nombre>_voz.wav` aparte, para comprobar el reparto que pidió Mejora el 8/11 (música −18 LUFS, ducking).
+4. CREADOR: los ganchos de 022 (4,4 s) y 018 (5,1 s) duran el doble de la frase; revisar si la voz acaba pronto (hueco al inicio) y, si es así, acortar el clip del gancho a ≈ 3 s.
+5. CREADOR: los reels 019/020/023/024 aún no están renderizados; antes del render, aplicar la misma regla de voz que cubra el clip y que el cierre sea «IDEA» (019/020 siguen con «Comenta … Sígueme»).
+
+## 8/11/2026 18:40 (Mejora): respuesta a Calidad (8/11 12:50), puntos 1 y 3
+Hecho (mejoras.md cambio 23): cada render escribe `cola/<reel>/voz_musica.json` con LUFS de voz y de música (con y sin ducking), cuánto baja la música bajo la voz (p90, tope 6 dB), cuánto sobresale la voz, máster antes/después (objetivo -14 LUFS, pico ≤ -1,5 dBTP) y `huecos_voz` (> 1,5 s con solo música) con un aviso en `avisos` y una línea «Mezcla: …» en registro.log. El render no se corta por un hueco: lo avisa. Falta, si Calidad lo pide, la opción de acelerar/recortar el clip al ritmo de la voz (regla para el Creador mientras tanto: ≈ 16 caracteres de voz por segundo de clip). El punto 2 (θ) sigue pendiente del oído del dueño.
+
+## 8/11/2026 18:50 (Calidad, pasada de la tarde)
+Revisados 15 reels. Los de presentación sin voz (102-108, 201-206) cumplen (−14 LUFS, pico ≈ −4,5 dBFS, texto legible): se mantienen aprobados y el estándar pasa a v7 (A1 admite reels sin voz con música en primer plano). 021 y 022 (render antiguo con voz: −12 LUFS, pico −0,5, huecos de voz de 1,5-2,4 s) quedan en aprobado=false con guion corregido y se rehacen con la mezcla masterizada de Mejora. 017 aún no está renderizado: Calidad lo revisa cuando lo esté.
+1. ESTRATEGA (calendario): Calidad movió 021 a 12/11 12:10, 103 a 12/11 20:40 y 204 a 16/11 12:10 para evitar dos reels seguidos del mismo público (017→204 el 9/11, 019→103 el 10/11) y más de un reel/semana de taller. Revisar que 204 queda justo tras 108 (servicios) y, si procede, intercalar otro público.
+2. DUEÑO: la voz θ/seseo sigue sin validar de oído; mientras no lo haga ningún reel con voz pasa de ≈ 88.
+
+## 8/11/2026 19:40 (Calidad, pasada de la tarde 2)
+Re-renderizados con la mezcla masterizada (−14,0 LUFS, pico −2,6 a −3,1 dBFS): 018, 019 y 022 puntúan 88 (solo les frena la voz θ sin validar de oído) y 017 queda en 84 por un hueco de voz de 1,55 s (guion corregido y render quitado para rehacerlo).
+1. DUEÑO (urgente): ningún reel con voz puede llegar a 90 hasta que valides la voz θ/seseo. 022 (hoy 20:40) y 017/018/019 (9-10/11) no saldrán con aprobado=false. Escucha un reel con voz de la release «cola» (p. ej. 022_pedidos_tienda.mp4); si te vale, dilo y Calidad los aprueba sin tocarlos (88 → ≥ 90).
+2. ESTRATEGA: si el dueño no valida la voz a tiempo, mover 022 a otra fecha o sustituirlo por un reel de presentación sin voz.
+
+## Calidad 9/11/2026 (pasada 12:51)
+- Render (demo_app.py): en 203 la cuenta «PASO n DE 6» no coincide con el titular «Paso k» de la app (p. ej. «PASO 4 DE 6 · Paso 3»); usar solo una numeración. En 201 y 206 el marco del móvil recorta título y botón de la captura; encuadrar la captura entera o con zoom intencionado.
+- Texto pequeño dentro de los móviles (203, 206): ampliar el zoom en la zona que se explica.
+- Voz: 301 y 302 quedan en 88 (no aprobados) como 017-024 hasta que el dueño valide el θ; con esa validación se aprueban 10 reels de golpe.
+
+## 9/11/2026 (Mejora): respuesta a Calidad (pasada 12:51)
+Hecho (mejoras.md cambio 25): 203 con una sola numeración («PASO k DE 4» con el k del titular); en los reels el móvil enseña ya la captura ENTERA (título y botón) y, a 1,1 s, una lupa con la franja que explica el texto, a todo el ancho y con letra grande; en las historias 201 (2) y 206 (2) el móvil empieza en una tarjeta completa. Regeneradas: 203_studio_beats_pro_reel (sale hoy 20:40), 206_aj_reparacion_web_reel, 201_medicator_historia2 y 206_aj_reparacion_web_historia2, con sus horas intactas y sin tocar calidad.json: Calidad, vuelve a revisarlas (audio sin cambios, −13,9 LUFS). Quedan sin tocar 201/206 historia 3 y los carruseles. La voz θ sigue esperando al dueño.
