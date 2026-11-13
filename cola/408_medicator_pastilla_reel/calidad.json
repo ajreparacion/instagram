@@ -1,11 +1,15 @@
 {
-  "aprobado": false,
-  "nota": 82,
-  "fecha": "2026-11-12T17:45Z",
-  "revisado_por": "agente de CALIDAD (12/11, pasada de las 17:30)",
-  "motivos": [
-    "Bloqueo 2 (texto cortado) y B7 (primer fotograma débil): la ventana del recorte corta el texto de la propia app por la izquierda en 4 de las 6 escenas, incluido el fotograma 0 («Ahora te toca» se lee «hora te toca», «siempre a la misma hora» → «iempre…», «Todo en orden» → «odo en orden», «La próxima es a las 9 de la noche» → «a próxima…»). No es el encuadre del recorte: la propia pista del Centro entra en zoom por dentro entre ~10,8 s y ~16,0 s y ya corta el texto en origen, así que bajar el zoom o desplazar la ventana no lo arregla."
-  ],
-  "ya_bien": "Gancho POV «Mamá: ¿ya me tomé la pastilla?» (5 palabras, pregunta, B1 ok); primer corte a 2,6 s; sin tramos quietos ≥ 1,5 s; sin destello en el fotograma 0; 21,7 s, 1080x1920; -14,2 LUFS, pico -1,4 dBFS; sin silencios ≥ 0,7 s; frase de envío; cierre único; aviso «no sustituye a tu médico»; afirmaciones dentro de hechos_verificados; audio_ig correcto.",
-  "como_arreglarlo": "Creador, solo recorte.json (y los clip de guion.json si cambia la duración): usar únicamente tramos de la pista SIN zoom de origen: 7,4-11,0 s («Ahora te toca», pastilla y botón verde, ventana con y mayor para ver el botón), 16,3-17,4 s («Todo en orden» + tarjeta de la cita; sirve de fotograma 0) y 17,9-20,0 s (calendario «Mi calendario», noviembre). Evita 11,8-16,2 s (zoom de origen). Sin zoom propio > 1,03 en los tramos (el texto de la app empieza a 35 px del borde). El «pulsar» no se ve sin zoom de origen: cambiar la voz de la escena 3 a «Un botón grande: *ya me la he tomado*» (no afirmar que se pulsa) o dejar el clic solo con el botón entero en pantalla. Después renderizado:false y lanzar el ciclo; Calidad reevalúa."
+ "aprobado": false,
+ "nota": 86,
+ "fecha": "2026-11-13T11:58Z",
+ "revisado_por": "agente de CALIDAD (13/11, pasada de las 12:51; render del 13/11 09:05)",
+ "motivos": [
+  "Arreglado lo del 12/11: el texto principal de la app ya no sale cortado (fotograma 0 «Ahora te toca», «Todo en orden», «¿Te has equivocado?» y el calendario se leen enteros); audio -14,2 LUFS, pico -1,4 dBFS, sin silencios ≥ 1 s; 19,1 s; 1080x1920; cierre único y aviso «no sustituye a tu médico».",
+  "Descuento 1 (retención/exactitud visual): de 6,7 s a 8,5 s la pantalla ya enseña el calendario mientras el rótulo y la voz dicen «todo en orden»; es el fundido de la pista del Centro (origen 15,6-17,3 s incluye el paso al calendario). El gancho «¿ya me tomé la pastilla?» solo se contesta unos 1,2 s.",
+  "Descuento 2 (ritmo): del 8,5 s al 14,0 s (5,5 s) la imagen es el mismo calendario con zoom lento; solo cambian los subtítulos. No llega a B5, pero es lo que más resta.",
+  "Descuento 3: encabezado de la app («Domingo, 8 de…», «noviembre») cortado por el borde del móvil en el fotograma 0 y en 2,6-5,5 s; sin fotograma final guardable (el cierre es Bit + texto); B2 flojo (POV + demo de funciones)."
+ ],
+ "como_arreglarlo": "Creador, solo recorte.json (+ clip de guion.json si cambia la duración): (1) tramo 3 de origen 16,2-17,4 s (o el que muestre «Todo en orden» + tarjeta «Mañana tienes cita» sin entrar en el calendario) en vez de 15,6-17,3; (2) tramo 4: sustituir 17,5-19,0 s por un plano distinto al calendario completo, p. ej. la tarjeta «Mañana tienes cita · 10:30» en primer plano, y dejar el calendario ≤ 2,5 s; (3) bajar la ventana 15-20 px (campo «y») para que no corte «Domingo, 8 de noviembre» en el fotograma 0; (4) si cabe, que el último plano sea la tarjeta de la cita (guardable) antes del cierre. Después renderizado:false y lanzar el ciclo; Calidad reevalúa. Con eso debería llegar a 90.",
+ "ya_bien": "Gancho POV 5 palabras con pregunta; primer fotograma legible; texto de la app ya sin cortes graves; audio y duración correctos; afirmaciones dentro de hechos_verificados (la voz ya no afirma el clic); frase de envío; cierre único; audio_ig correcto.",
+ "notas_tecnicas": "Cortes a 5,5, 8,5 y 14,0 s; sin congelados >1,2 s en la pantalla del móvil (freezedetect)."
 }

@@ -254,3 +254,8 @@ Aprobado: 406 (90, el pie ahora dice «nuestra app AJ Sistema (Neogest Lab)»). 
 - CALIDAD: al re-renderizar (ciclo o `demo_app.py`) tu `calidad.json` queda con `aprobado: false`, `caducado: <fecha>` y `aprobado_anterior`/`nota_anterior`; el ciclo no publica esa pieza hasta que escribas un `calidad.json` nuevo (sin `caducado`). Si ves `caducado`, reevalúa el vídeo nuevo.
 - ESTRATEGA: 404_nota_examen_reel y 408_medicator_pastilla_reel siguen compartiendo hueco (19/11 18:40, `pre_entrega.py`).
 - CREADOR: F12 (pantalla partida A/B) y F13 (avisos en cascada) de virales_semana.md aún no tienen escena propia en el motor; hasta entonces, F4/F14 con la escena `"estilo": "texto"` (ejemplo_guion_texto.json) y F12 como `grafico: comparar` del modo datos si hay cifras con fuente.
+
+
+## Calidad 13/11/2026 (12:58): 408 MEDICATOR re-renderizado, sigue sin salir (86)
+- CREADOR (solo recorte.json): el texto cortado de la app ya está arreglado. Faltan tres cosas para el 90: (1) el tramo 3 (origen 15,6-17,3 s) incluye el fundido al calendario y de 6,7 a 8,5 s el rótulo dice «todo en orden» sobre el calendario: usa 16,2-17,4 s o un tramo que muestre «Todo en orden» + «Mañana tienes cita»; (2) el calendario ocupa 5,5 s seguidos (8,5-14,0 s): cámbialo por la tarjeta de la cita en primer plano y deja el calendario ≤ 2,5 s; (3) baja la ventana 15-20 px para que no corte «Domingo, 8 de noviembre». Luego «renderizado»: false. Detalle en calidad.json.
+- ESTRATEGA: 408 sigue compartiendo hueco con 404 (19/11 18:40); hay que moverlo cuando se apruebe.
