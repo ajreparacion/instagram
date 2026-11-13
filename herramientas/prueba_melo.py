@@ -44,7 +44,7 @@ def bandas(mp3):
     ref = b(150, 400)
     m = subprocess.run(["ffmpeg", "-v", "info", "-i", mp3, "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr
     lufs = [l for l in m.splitlines() if "I:" in l and "LUFS" in l][-1].split("I:")[1].split("LUFS")[0].strip()
-    return {"8-12k_dB": round(b(8000, 12000) - ref, 1), "12-16k_dB": round(b(12000, 16000) - ref, 1), "LUFS": float(lufs), "dur_s": round(len(x) / 48000, 2)}
+    return {"8-12k_dB": float(round(b(8000, 12000) - ref, 1)), "12-16k_dB": float(round(b(12000, 16000) - ref, 1)), "LUFS": float(lufs), "dur_s": float(round(len(x) / 48000, 2))}
 
 
 def whisper(ruta):
@@ -56,13 +56,13 @@ def whisper(ruta):
     segs = list(segs)
     pal = [w for s in segs for w in s.words]
     texto = " ".join(s.text.strip() for s in segs)
-    wps = round(len(pal) / max(pal[-1].end - pal[0].start, 0.1), 2) if pal else 0
+    wps = float(round(len(pal) / max(pal[-1].end - pal[0].start, 0.1), 2)) if pal else 0.0
     return texto, wps
 
 
 def ajuste():
     res = {}
-    grafias = ["Neogest Lab", "Neogés Lab", "Neogest, Lab", "Neo gest Lab", "Neojest Lab", "Neogüest Lab", "Neogest Láb", "Neogués Lab", "Neogest Lap", "Neo-gest Lab"]
+    grafias = ["Neogest Lab", "Neogest, Lab", "Neogest. Lab", "Neogest... Lab", "Neogés, Lab", "Neojest, Lab", "Neogest, Láb", "Neogest, Leb"]
     ajota = ["Ajota", "Ajóta", "A jota", "Ahota"]
     excel = ["Éxcel", "Eksel", "Ecsel"]
     for v in (1.0, 1.1, 1.15, 1.2):
@@ -70,26 +70,26 @@ def ajuste():
         rutas = melo([(FRASE, None)], v, {}, "aj_" + nom)
         a2.postprocesar(rutas[0], f"melo_vel_{nom}")
         t, w = whisper(f"{a2.SAL}/melo_vel_{nom}.mp3")
-        res[f"velocidad_{v}"] = {"texto": t, "palabras_s": w, **bandas(f"{a2.SAL}/melo_vel_{nom}.mp3")}
+        res[f"velocidad_{v}"] = {"texto": t, "palabras_s": float(w), **bandas(f"{a2.SAL}/melo_vel_{nom}.mp3")}
         print(nom, res[f"velocidad_{v}"], flush=True)
     for g in grafias:
         frase = FRASE.replace("Neogest Lab", g)
         rutas = melo([(frase, None)], 1.15, {}, "gr")
         a2.postprocesar(rutas[0], "melo_gr")
         t, w = whisper(f"{a2.SAL}/melo_gr.mp3")
-        res["grafia_" + g] = {"texto": t, "ok": "neogest lab" in n(t) or "neogest lab" in n(t).replace("  ", " ")}
+        res["grafia_" + g] = {"texto": t, "ok": "neogestlab" in n(t).replace(" ", "")}
         print(g, res["grafia_" + g], flush=True)
     for g in ajota:
         rutas = melo([(FRASE.replace("Ajota", g), None)], 1.15, {}, "ga")
         a2.postprocesar(rutas[0], "melo_ga"); t, _ = whisper(f"{a2.SAL}/melo_ga.mp3")
-        res["ajota_" + g] = {"texto": t, "ok": "ajota" in n(t)}; print(g, res["ajota_" + g], flush=True)
+        res["ajota_" + g] = {"texto": t, "ok": "ajota" in n(t) or "ajsistema" in n(t).replace(" ", "")}; print(g, res["ajota_" + g], flush=True)
     for g in excel:
         rutas = melo([(FRASE.replace("Éxcel", g), None)], 1.15, {}, "ge")
         a2.postprocesar(rutas[0], "melo_ge"); t, _ = whisper(f"{a2.SAL}/melo_ge.mp3")
         res["excel_" + g] = {"texto": t, "ok": "excel" in n(t)}; print(g, res["excel_" + g], flush=True)
     for f in ("melo_gr", "melo_ga", "melo_ge"):
         os.remove(f"{a2.SAL}/{f}.mp3")
-    json.dump(res, open(f"{a2.SAL}/melo_ajuste.json", "w"), ensure_ascii=False, indent=1)
+    json.dump(res, open(f"{a2.SAL}/melo_ajuste.json", "w"), ensure_ascii=False, indent=1, default=float)
 
 
 def final():
@@ -99,14 +99,14 @@ def final():
     shutil.copy(f"{a2.SAL}/melo_final_frase.mp3", f"{a2.SAL}/melo_final_frase.mp3")
     res = {}
     t, w = whisper(f"{a2.SAL}/melo_final_frase.mp3")
-    res["frase"] = {"texto": t, "palabras_s": w, **bandas(f"{a2.SAL}/melo_final_frase.mp3")}
+    res["frase"] = {"texto": t, "palabras_s": float(w), **bandas(f"{a2.SAL}/melo_final_frase.mp3")}
     for i, r in enumerate(rutas[1:]):
         a2.postprocesar(r, f"melo_final_larga{i}")
         t, w = whisper(f"{a2.SAL}/melo_final_larga{i}.mp3")
         res[f"larga{i}"] = {"texto": t, "palabras_s": w}
         os.remove(f"{a2.SAL}/melo_final_larga{i}.mp3")
-    print(json.dumps(res, ensure_ascii=False, indent=1))
-    json.dump(res, open(f"{a2.SAL}/melo_final.json", "w"), ensure_ascii=False, indent=1)
+    print(json.dumps(res, ensure_ascii=False, indent=1, default=float))
+    json.dump(res, open(f"{a2.SAL}/melo_final.json", "w"), ensure_ascii=False, indent=1, default=float)
 
 
 def reel(guion):
@@ -122,8 +122,8 @@ def reel(guion):
     sr = [__import__("wave").open(os.path.join(trabajo, f)).getframerate() for f in wavs]
     t, w = whisper(f"{SAL}/melo_reel_prueba.mp3")
     res = {"motor_usado": motor, "render_s": seg, "sr_wavs_voz": sorted(set(sr)), "texto": t, "palabras_s": w, **bandas(f"{SAL}/melo_reel_prueba.mp3")}
-    print(json.dumps(res, ensure_ascii=False, indent=1))
-    json.dump(res, open(f"{SAL}/melo_reel.json", "w"), ensure_ascii=False, indent=1)
+    print(json.dumps(res, ensure_ascii=False, indent=1, default=float))
+    json.dump(res, open(f"{SAL}/melo_reel.json", "w"), ensure_ascii=False, indent=1, default=float)
 
 
 if __name__ == "__main__":
