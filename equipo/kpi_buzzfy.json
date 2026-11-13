@@ -1,44 +1,53 @@
 {
-  "_nota": "Cifras que solo da Buzzfy/Instagram, copiadas a mano por el Analista (herramientas de solo lectura). Las actualiza el Analista cada noche. Si una cifra no se ha leído, dejarla en null.",
-  "fecha": "2026-11-13 12:26 UTC",
-  "dias": 7,
-  "alcance_total": 929,
-  "alcance_no_seguidores_total": 872,
-  "alcance_seguidores_total": 59,
-  "visualizaciones_no_seguidores": 1119,
-  "clics_enlace": 4,
-  "visitas_perfil": 15,
-  "seguidores_netos_dia": -0.4,
-  "_seguidores_detalle": "ig_follower_growth 6-10/11 (5 días cerrados): +0 / -2 = -2 netos (7/11). 11 y 12/11 pendientes en Instagram. Seguidores ahora: 1.601.",
-  "no_seguidores_por_reel": {},
+ "_nota": "Cifras que solo da Buzzfy/Instagram, copiadas a mano por el Analista (herramientas de solo lectura). Las actualiza el Analista cada noche. Si una cifra no se ha leído, dejarla en null.",
+ "fecha": "2026-11-13 21:31 CET",
+ "dias": 7,
+ "alcance_total": 940,
+ "alcance_no_seguidores_total": 883,
+ "alcance_seguidores_total": 59,
+ "visualizaciones_no_seguidores": 1134,
+ "clics_enlace": 4,
+ "visitas_perfil": 15,
+ "seguidores_netos_dia": -0.4,
+ "_seguidores_detalle": "ig_follower_growth 6-10/11 (5 días cerrados): +0 / -2 = -2 netos (7/11). 11 y 12/11 pendientes en Instagram. Seguidores ahora: 1.601.",
+ "no_seguidores_por_reel": {},
+ "toques_enlace": 0,
+ "interacciones": 107,
+ "guardados": 5,
+ "compartidos": 13,
+ "comentarios": 0,
+ "perfil": {
+  "nombre_visible": null,
+  "_nombre_nota": "n/d: ig_account_stats devuelve name null; el dueño lo cambia (bloqueado hasta ~25/11)",
+  "enlace": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?src=instagram",
+  "bio_con_IDEA": false,
+  "bio_nueva_desde": "2026-11-11",
+  "bio_actual": "Las IAs de la oficina 😈 El Jambo y sus IAs, cada día / ¿Quieres tu app o web? Comenta APP / By Neogest Lab",
+  "nombre_bloqueado_hasta": "~2026-11-25 (Instagram: 2 cambios en 14 días)",
+  "enlace_cambiado": "2026-11-11 21:12 CET",
+  "_aviso_13_11": "La bio cambió otra vez después de las 12:26 UTC del 13/11 y ahora lleva «Comenta APP» (cierre que la directiva del 10/11 prohíbe en reels y posts; la bio no estaba citada). ig_account_stats también da postsTotal 14 (el 11/11 eran 18). Nadie lo ha anotado: confirmar con el dueño si es voluntario."
+ },
+ "linea_base_antes_del_enlace": {
+  "ventana": "4-11/11 (7 días)",
+  "visitas_perfil": 14,
+  "clics_enlace": 3,
+  "conv_visita_a_clic_pct": 21.4,
+  "alcance_no_seguidores": 565
+ },
+ "_leido_por": "Analista de monetización, pasada extraordinaria 13/11/2026 12:26 UTC (ig_account_stats 7 días, ig_follower_growth 7 días, SolicitudInfo y Clic del Centro); 21:31 CET, Mejora: ig_account_stats 3 y 7 días",
+ "embudo_centro": {
+  "solicitudes_totales": 1,
+  "solicitudes_nuevas_7d": 0,
+  "clics_bio_centro_7d": 1,
+  "clics_solicitar_registrados": null,
+  "_nota": "/solicitar no registra clics: la conversión clic → solicitud no se mide hasta que Mejora lo añada"
+ },
+ "ventana_post_enlace_3d": {
+  "ventana": "10-13/11 (3 días, enlace /solicitar desde el 11/11 21:12 CET)",
+  "alcance_no_seguidores": 445,
+  "visitas_perfil": 2,
+  "clics_enlace": 1,
   "toques_enlace": 0,
-  "interacciones": 107,
-  "guardados": 5,
-  "compartidos": 13,
-  "comentarios": 0,
-  "perfil": {
-    "nombre_visible": null,
-    "_nombre_nota": "n/d: ig_account_stats devuelve name null; el dueño lo cambia (bloqueado hasta ~25/11)",
-    "enlace": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?src=instagram",
-    "bio_con_IDEA": false,
-    "bio_nueva_desde": "2026-11-11",
-    "bio_actual": "Apps y webs a medida para tu negocio · El Jambo que sabe y las IAs, cada día · Prueba gratis, sin tarjeta ni compromiso",
-    "nombre_bloqueado_hasta": "~2026-11-25 (Instagram: 2 cambios en 14 días)",
-    "enlace_cambiado": "2026-11-11 21:12 CET"
-  },
-  "linea_base_antes_del_enlace": {
-    "ventana": "4-11/11 (7 días)",
-    "visitas_perfil": 14,
-    "clics_enlace": 3,
-    "conv_visita_a_clic_pct": 21.4,
-    "alcance_no_seguidores": 565
-  },
-  "_leido_por": "Analista de monetización, pasada extraordinaria 13/11/2026 12:26 UTC (ig_account_stats 7 días, ig_follower_growth 7 días, SolicitudInfo y Clic del Centro)",
-  "embudo_centro": {
-    "solicitudes_totales": 1,
-    "solicitudes_nuevas_7d": 0,
-    "clics_bio_centro_7d": 1,
-    "clics_solicitar_registrados": null,
-    "_nota": "/solicitar no registra clics: la conversión clic → solicitud no se mide hasta que Mejora lo añada"
-  }
+  "nota": "muestra mínima (2 visitas): no concluyente; conversión visita→clic 50 % con n=2"
+ }
 }
