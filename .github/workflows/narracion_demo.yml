@@ -34,6 +34,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: ./.github/actions/melo
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -62,15 +63,6 @@ jobs:
       - name: Voz Kokoro (CPU; referencia sintética y respaldo)
         if: ${{ inputs.solo_musica != 'true' }}
         run: pip install --quiet kokoro soundfile pillow --extra-index-url https://download.pytorch.org/whl/cpu
-
-      - name: Chatterbox (CPU, entorno propio)
-        if: ${{ inputs.solo_musica != 'true' }}
-        run: |
-          python -m venv ~/.venvs/chatterbox
-          ~/.venvs/chatterbox/bin/pip install --quiet --upgrade pip
-          ~/.venvs/chatterbox/bin/pip install --quiet chatterbox-tts --extra-index-url https://download.pytorch.org/whl/cpu
-          ~/.venvs/chatterbox/bin/python -c "import chatterbox.mtl_tts, torch; print('chatterbox OK, torch', torch.__version__)"
-          echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
 
       - name: Voz (genérica de España, no la del dueño)
         if: ${{ inputs.solo_musica != 'true' }}

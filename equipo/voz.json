@@ -1,8 +1,17 @@
 {
-  "motor": "chatterbox",
+  "motor": "melo",
   "respaldo": [
     "kokoro"
   ],
+  "melo": {
+    "idioma": "ES",
+    "speaker": "ES",
+    "velocidad": 1.15,
+    "ganancia": 1,
+    "max_s": 900,
+    "pronunciacion": {},
+    "_nota": "13/11/2026, elección del dueño entre las voces de la audición v2 (MeloTTS ES: MIT, voz genérica del modelo, no clonada de nadie, salida nativa a 44,1 kHz, medido 12-16 kHz −22,6 dB frente a −45…−50 dB de Kokoro y Chatterbox). Orden anterior del dueño 13/11 13:48: «parece acento chino» con Chatterbox es-es. Respaldo: Kokoro em_alex; nunca Chatterbox. velocidad y pronunciacion: ajustadas de oído y con Whisper (ver Cambio 62). pronunciacion solo cambia el texto que va al modelo, no los subtítulos. Revertir: cp herramientas/versiones/voz.json_2026-11-13c equipo/voz.json (vuelve a Chatterbox es-es con respaldo Kokoro)."
+  },
   "chatterbox": {
     "modelo": "es-es",
     "idioma": "es",

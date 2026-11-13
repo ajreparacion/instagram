@@ -1,4 +1,4 @@
-name: Centro · rehacer la voz (Chatterbox voz integrada)
+name: Centro · rehacer la voz (la de equipo/voz.json, MeloTTS ES)
 
 # Orden del dueño 12/11/2026 («suena telefónica»): rehace la voz de los 13 vídeos del Centro con Chatterbox es-es SIN muestra
 # y sustituye los mp4 de la release centro-v3 (mismo nombre: las colas de atrasos no cambian).
@@ -19,6 +19,7 @@ jobs:
         n: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
     steps:
       - uses: actions/checkout@v4
+      - uses: ./.github/actions/melo
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
@@ -33,10 +34,7 @@ jobs:
         run: |
           sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg >/dev/null
           pip install --quiet faster-whisper
-          python -m venv ~/.venvs/chatterbox
-          ~/.venvs/chatterbox/bin/pip install --quiet --upgrade pip
-          ~/.venvs/chatterbox/bin/pip install --quiet chatterbox-tts --extra-index-url https://download.pytorch.org/whl/cpu
-          echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
+          pip install --quiet kokoro soundfile --extra-index-url https://download.pytorch.org/whl/cpu   # respaldo de Melo
       - name: Rehacer la voz
         env:
           GH_TOKEN: ${{ github.token }}

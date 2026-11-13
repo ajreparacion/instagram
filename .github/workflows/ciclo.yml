@@ -55,11 +55,16 @@ jobs:
           principal = str(aj.get("motor", "piper")).lower()
           cadena = [principal] + [str(m).lower() for m in aj.get("respaldo") or []]
           pend = pendiente
+          print("melo=" + ("si" if pend and principal == "melo" else "no"))
           print("chatterbox=" + ("si" if pend and principal == "chatterbox" else "no"))
           print("kokoro=" + ("si" if pend and "kokoro" in cadena else "no"))
           print("pocket=" + ("si" if pend and "pocket" in cadena else "no"))
-          print("ml=" + ("si" if pend and (set(cadena) & {"chatterbox", "kokoro", "pocket"}) else "no"))
+          print("ml=" + ("si" if pend and (set(cadena) & {"melo", "chatterbox", "kokoro", "pocket"}) else "no"))
           EOF
+
+      - name: MeloTTS ES (venv propio con caché; va ANTES de Python 3.11 para que 3.11 quede como python por defecto)
+        if: steps.trabajo.outputs.melo == 'si'
+        uses: ./.github/actions/melo
 
       - name: Python 3.11 (motores de voz neuronales)
         if: steps.trabajo.outputs.ml == 'si'
@@ -163,6 +168,10 @@ jobs:
           fallos = []
           def prueba(py, mod):
               return subprocess.run([py, "-c", "import " + mod], capture_output=True).returncode == 0
+          if motores[0] == "melo":
+              py = os.environ.get("PYTHON_MELO", "")
+              if not (py and subprocess.run([py, "herramientas/voz_melo.py", "--comprobar"], capture_output=True).returncode == 0):
+                  print("::warning::MeloTTS no está instalado: las voces saldrán con el respaldo (Kokoro)")
           if motores[0] == "chatterbox":
               py = os.environ.get("PYTHON_CHATTERBOX", "")
               if not (py and prueba(py, "chatterbox.mtl_tts")): fallos.append("chatterbox")

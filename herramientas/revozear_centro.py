@@ -66,13 +66,14 @@ def main(n):
     json.dump([{"inicio": a, "fin": b, "texto": tx} for (a, b), tx in zip(tramos, textos)],
               open(os.path.join(RAIZ, "atrasos", "textos", f"{nombre}.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 
-    # 2) voz nueva: Chatterbox es-es con su voz integrada (sin referencia)
-    frases = [{"texto": tx, "salida": os.path.join(t, f"f{i}.wav")} for i, tx in enumerate(textos) if tx]
-    lote = {"modelo": cb.get("modelo", "es-es"), "idioma": "es", "exageracion": cb.get("exageracion", 0.6),
-            "cfg": cb.get("cfg", 0.5), "temperatura": cb.get("temperatura", 0.65), "referencia": None,
-            "ganancia": 1.0, "semilla": cb.get("semilla", 7), "theta": "", "frases": frases}
-    json.dump(lote, open(os.path.join(t, "lote.json"), "w"), ensure_ascii=False)
-    print(sh(PY_CB, os.path.join(RAIZ, "herramientas", "voz_chatterbox.py"), os.path.join(t, "lote.json"))[-400:])
+    # 2) voz nueva: la de equipo/voz.json (13/11/2026: MeloTTS ES, respaldo Kokoro) vía publicar_gh.generar_locucion
+    sys.path.insert(0, RAIZ)
+    import publicar_gh as pg
+    idx = [i for i, tx in enumerate(textos) if tx]
+    rutas_v, motor = pg.generar_locucion([textos[i] for i in idx], t, pg.ajustes_voz())
+    for i, r in zip(idx, rutas_v):
+        os.replace(r, os.path.join(t, f"f{i}.wav"))
+    print("motor de voz:", motor)
 
     # 3) colocar cada frase en su tramo
     entradas, filtros, etiquetas = [], [], []

@@ -89,6 +89,10 @@ jobs:
             https://github.com/google/fonts/raw/main/ofl/anton/Anton-Regular.ttf || echo "Sin Anton: se usa Montserrat"
           cd herramientas/presentador && npx remotion browser ensure
 
+      - name: MeloTTS ES (voz)
+        if: ${{ !inputs.dependencias && inputs.voz }}
+        uses: ./.github/actions/melo
+
       - name: Python 3.11 (voz)
         if: ${{ !inputs.dependencias && inputs.voz }}
         uses: actions/setup-python@v5
@@ -105,16 +109,12 @@ jobs:
           key: voz-v2-${{ hashFiles('equipo/voz.json') }}
           restore-keys: voz-v2-
 
-      - name: Voz Chatterbox + alineación (CPU)
+      - name: Voz (respaldo Kokoro) + alineación (CPU)
         if: ${{ !inputs.dependencias && inputs.voz }}
         continue-on-error: true
         run: |
           pip install --quiet numpy scipy pillow faster-whisper
-          python -m venv ~/.venvs/chatterbox
-          ~/.venvs/chatterbox/bin/pip install --quiet --upgrade pip
-          ~/.venvs/chatterbox/bin/pip install --quiet chatterbox-tts --extra-index-url https://download.pytorch.org/whl/cpu
-          ~/.venvs/chatterbox/bin/python -c "import chatterbox.mtl_tts, torch; print('chatterbox OK, torch', torch.__version__)"
-          echo "PYTHON_CHATTERBOX=$HOME/.venvs/chatterbox/bin/python" >> "$GITHUB_ENV"
+          pip install --quiet faster-whisper kokoro soundfile --extra-index-url https://download.pytorch.org/whl/cpu   # alineación y respaldo de Melo
 
       - name: Renderizar
         if: ${{ !inputs.dependencias }}
