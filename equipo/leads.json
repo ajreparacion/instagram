@@ -8,6 +8,14 @@
    "pruebas_gratuitas": null,
    "ingresos_eur": 0,
    "nota": "lectura Base44 (SolicitudInfo/Clic) por el Analista de monetización 11/11: 1 solicitud total (8/11 21:40, origen demo, app-a-medida, sin contactar, posible prueba interna sin confirmar); 3 clics l.instagram.com el 8/11 y ninguno desde Instagram el 9-11/11; sin nombres ni emails en el repo. DMs: no medible (permiso Buzzfy)"
+  },
+  {
+   "fecha": "2026-11-13",
+   "solicitudes_centro": 1,
+   "dms_con_intencion": null,
+   "pruebas_gratuitas": null,
+   "ingresos_eur": 0,
+   "nota": "Pasada extraordinaria 13/11 12:26 UTC (Analista de monetización): SolicitudInfo sin nuevas (1 total, la del 8/11, estado «nueva», sin contactar); Clic: último registro desde la bio el 12/11 19:55 (aj-reparacion-web); ningún Clic de /solicitar porque esa página no registra clics. Sin nombres ni emails en el repo. DMs: n/d (permiso Buzzfy)."
   }
  ]
 }

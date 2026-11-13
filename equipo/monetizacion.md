@@ -60,3 +60,15 @@ Fuentes de hoy, solo lectura: Buzzfy (`ig_account_stats` y `ig_follower_growth`,
 5. Decir si alguna app tiene plan de pago. Sin precio no hay ingreso medible.
 
 Próxima revisión: viernes 13/11 por la noche (48 h del 301 y de los episodios 302 y 303; primer dato del clic de bio del 12/11 con su ruta).
+
+## 7. Pasada extraordinaria 13/11 12:26 UTC (orden del dueño 13/11 13:23: «arranca todo y mejora en todo»)
+Cifras leídas de nuevo (Buzzfy 6-13/11 y Centro): 872 cuentas no seguidoras alcanzadas, 15 visitas al perfil, 4 clics a la web, 1 solicitud en total (la del 8/11, sin contactar), 0 nuevas, 1 clic desde la bio registrado (12/11 19:55, aj-reparacion-web). `equipo/leads.json` y `equipo/kpi_buzzfy.json` quedan actualizados con estas cifras.
+
+**Punto exacto donde se pierde la gente: alcance a no seguidores → visita al perfil.** De 872 cuentas no seguidoras, 857 no entran al perfil (98,3 %; meta ≥ 3 %). Es el único paso que queda muy por debajo de su meta. Visita → clic sí cumple (27 %, meta ≥ 25 %). Hay un segundo agujero que no se ve: 4 clics a la web y 0 solicitudes, pero `/solicitar` no registra clics, así que no sabemos si se pierden en la página o en el formulario. Esto lo arregla el encargo a Mejora de la sección 4, acción 2.
+
+**Tres arreglos concretos para alcance → perfil:**
+1. **Rótulo fijo desde el segundo 0 en cada episodio sin producto:** «@neogestlab · episodio nuevo cada día», pequeño y en pantalla todo el tiempo. El espectador medio se va en el segundo 10,6 y el cierre llega en el 21,4, así que la invitación no puede vivir solo en el último fotograma. Responsable: Creador, en cada render nuevo (y en los que se recorten). Medida: visitas al perfil por cada 100 cuentas no seguidoras a 48 h, hoy 1,7.
+2. **Que el perfil prometa lo que el reel enseñó (dueño):** archivar las publicaciones repetidas y fijar tres: «Una idea, una app», «Así se hace» y «A medida». La API no fija ni archiva, así que lo hace el dueño desde la app. Es lo primero que ve quien entra desde un reel.
+3. **Medir visitas al perfil por pieza, no solo por cuenta:** el Analista cruza cada día las visitas que da cada episodio (ig_post_stats) y lo anota en kpi_buzzfy.json. Si un episodio lleva dos días sin llegar a 3 visitas por cada 100 no seguidores, el Estratega cambia su línea de perfil antes del siguiente. Así se sabe qué formato manda gente al perfil y no se espera a la lectura del 23/11.
+
+Próxima revisión: viernes 13/11 por la noche (48 h del 301 y de los episodios 302 y 303; primer dato del clic de bio del 12/11 con su ruta).
