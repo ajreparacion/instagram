@@ -23,7 +23,7 @@
         "inicio": 2.6,
         "fin": 5.8
       },
-      "texto": "Ahora te toca",
+      "texto": "Un botón grande",
       "voz": "Aquí ves la que toca *ahora*."
     },
     {
@@ -32,8 +32,8 @@
         "inicio": 5.8,
         "fin": 9.0
       },
-      "texto": "Un botón grande",
-      "voz": "La tomas y pulsas *Ya me la he tomado*."
+      "texto": "Todo en orden",
+      "voz": "Y sale: *todo en orden*."
     },
     {
       "estilo": "tramo",
@@ -41,23 +41,14 @@
         "inicio": 9.0,
         "fin": 12.0
       },
-      "texto": "Todo en orden",
-      "voz": "Y sale: *todo en orden*."
-    },
-    {
-      "estilo": "tramo",
-      "clip": {
-        "inicio": 12.0,
-        "fin": 14.4
-      },
       "texto": "Y mañana, la cita",
       "voz": "Y mañana, la *cita* con el médico."
     },
     {
       "estilo": "tramo",
       "clip": {
-        "inicio": 14.4,
-        "fin": 16.6
+        "inicio": 12.0,
+        "fin": 14.2
       },
       "texto": "Datos de ejemplo · No sustituye a tu médico",
       "voz": "Mándaselo a quien cuide de *mamá*."

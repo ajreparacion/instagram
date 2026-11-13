@@ -1,5 +1,5 @@
 {
- "_nota": "Qué tramos de la grabación real del Centro (VideoMezcla medicator, formato vertical, pista de vídeo) forman demo.mp4. Se regenera con: python3 herramientas/recorte_centro.py cola/408_medicator_pastilla_reel/recorte.json cola/408_medicator_pastilla_reel/demo.mp4",
+ "_nota": "Qué tramos de la grabación real del Centro (VideoMezcla medicator, formato vertical, pista de vídeo) forman demo.mp4. Se regenera con: python3 herramientas/recorte_centro.py cola/408_medicator_pastilla_reel/recorte.json cola/408_medicator_pastilla_reel/demo.mp4 13/11: tramos nuevos sin zoom de origen (7,4-10,6; 15,6-17,3; 17,5-20,0) tras el rechazo de Calidad del 12/11.",
  "origen": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/videos/pistas/medicator-vertical-video.mp4",
  "fondo": "#DFF3EC",
  "pantalla_origen": [
@@ -10,54 +10,73 @@
  ],
  "segmentos": [
   {
-   "inicio": 12.8,
-   "fin": 15.4,
-   "y": 300
-  },
-  {
-   "inicio": 7.2,
-   "fin": 10.4,
+   "inicio": 7.4,
+   "fin": 9.0,
+   "dur": 2.6,
    "y": 364,
    "zoom": [
     1.0,
-    1.08
+    1.03
    ],
    "foco": [
     0.5,
-    0.55
+    0.5
    ]
   },
   {
-   "inicio": 10.4,
-   "fin": 13.6,
-   "y": 300
+   "inicio": 9.0,
+   "fin": 10.6,
+   "dur": 3.2,
+   "y": 364,
+   "zoom": [
+    1.0,
+    1.04
+   ],
+   "foco": [
+    0.5,
+    0.75
+   ]
   },
   {
-   "inicio": 13.6,
-   "fin": 15.4,
+   "inicio": 15.6,
+   "fin": 17.3,
+   "dur": 3.2,
+   "y": 300,
+   "zoom": [
+    1.0,
+    1.03
+   ],
+   "foco": [
+    0.5,
+    0.4
+   ]
+  },
+  {
+   "inicio": 17.5,
+   "fin": 19.0,
    "dur": 3.0,
-   "y": 300,
+   "y": 40,
    "zoom": [
     1.0,
-    1.25
+    1.04
    ],
    "foco": [
-    0.5,
-    0.44
+    0.35,
+    0.6
    ]
   },
   {
-   "inicio": 15.4,
-   "fin": 17.6,
-   "dur": 4.6,
-   "y": 300,
+   "inicio": 19.0,
+   "fin": 20.0,
+   "dur": 2.2,
+   "y": 40,
    "zoom": [
     1.0,
-    1.12
+    1.04
    ],
    "foco": [
     0.5,
-    0.42
+    0.6
    ]
   }
  ]
