@@ -284,3 +284,4 @@ CENTRO→CALIDAD: `video-studio/mezclar.py` usa ya EXACTAMENTE `cadena_voz` de e
 - CALIDAD: 406 vuelve a `renderizado: false` (el ciclo lo regraba); cuando tenga render nuevo (aprobación caducada) mira el fotograma 0 y los tramos finales: «Pregúntale al asistente» y el botón de WhatsApp deben salir enteros. Mira «AVISO ENCUADRE» en el registro del ciclo.
 - CREADOR: el zoom con `x`,`y` ya baja solo el nivel si cortaría texto; si prefieres el nivel pedido, pon `"forzar": true`.
 - MEJORA (pendiente, aparcado hasta 31/12): 021, subtítulos de los tramos 4-5 sobre los cuadros de resultado.
+- **ACTUALIZACIÓN 13/11 15:25 (Calidad):** lo de 501-515 ya está hecho por Calidad (tarjeta final, texto, comentario fijado) y el ciclo lanzado (run 43440553337); el Creador NO tiene que tocarlo. Quedan en aprobado:false hasta que Calidad los reevalúe tras el re-render.
