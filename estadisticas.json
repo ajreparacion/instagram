@@ -1,10 +1,10 @@
 {
-  "actualizado": "2026-11-12T20:41:42+00:00",
+  "actualizado": "2026-11-13T02:42:03+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1601,
     "follows_count": 176,
-    "media_count": 21,
+    "media_count": 15,
     "username": "neogestlab"
   },
   "posts": [
@@ -18,15 +18,15 @@
       "permalink": "https://www.instagram.com/reel/Dfp74hakXc2/",
       "timestamp": "2026-11-12T20:40:34+0000",
       "metricas": {
-        "reach": 0,
-        "views": 0,
+        "reach": 105,
+        "views": 122,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 0,
         "total_interactions": 0,
-        "ig_reels_avg_watch_time": 0,
-        "ig_reels_video_view_total_time": 0
+        "ig_reels_avg_watch_time": 7379,
+        "ig_reels_video_view_total_time": 789611
       }
     },
     {
@@ -39,8 +39,8 @@
       "permalink": "https://www.instagram.com/p/DfpeynwDiJn/",
       "timestamp": "2026-11-12T16:26:03+0000",
       "metricas": {
-        "reach": 8,
-        "views": 14,
+        "reach": 10,
+        "views": 19,
         "saved": 0,
         "shares": 1,
         "total_interactions": 2
@@ -56,15 +56,15 @@
       "permalink": "https://www.instagram.com/reel/DfpGZLZlGH3/",
       "timestamp": "2026-11-12T12:53:03+0000",
       "metricas": {
-        "reach": 2,
-        "views": 4,
+        "reach": 6,
+        "views": 8,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 13457,
-        "ig_reels_video_view_total_time": 53828
+        "ig_reels_avg_watch_time": 8203,
+        "ig_reels_video_view_total_time": 65628
       }
     },
     {
@@ -77,15 +77,15 @@
       "permalink": "https://www.instagram.com/reel/DfnC1dAk27o/",
       "timestamp": "2026-11-11T17:43:30+0000",
       "metricas": {
-        "reach": 347,
-        "views": 425,
+        "reach": 348,
+        "views": 427,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 3,
         "total_interactions": 4,
-        "ig_reels_avg_watch_time": 10874,
-        "ig_reels_video_view_total_time": 3816964
+        "ig_reels_avg_watch_time": 10832,
+        "ig_reels_video_view_total_time": 3823879
       }
     },
     {
@@ -122,29 +122,8 @@
         "comments": 0,
         "likes": 0,
         "total_interactions": 0,
-        "ig_reels_avg_watch_time": 11265,
-        "ig_reels_video_view_total_time": 56326
-      }
-    },
-    {
-      "id": "17994038034074673",
-      "caption": "Una web que no solo enseña tu teléfono 💻\nCon AJ Web, nuestra web de servicio, tus clientes te envían solicitudes, consultan sus encargos, te piden material y tienen su propio portal con sus facturas.\nDemo con datos ficticios. Te la adaptamos a medida a cualquier negocio.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#pequenonegocio #emprendedores #paginaweb #pymes #apps #neogestlab",
-      "comments_count": 0,
-      "like_count": 1,
-      "media_product_type": "REELS",
-      "media_type": "VIDEO",
-      "permalink": "https://www.instagram.com/reel/DfksC5PEcip/",
-      "timestamp": "2026-11-10T19:45:52+0000",
-      "metricas": {
-        "reach": 3,
-        "views": 5,
-        "saved": 0,
-        "shares": 0,
-        "comments": 0,
-        "likes": 1,
-        "total_interactions": 2,
-        "ig_reels_avg_watch_time": 26407,
-        "ig_reels_video_view_total_time": 79223
+        "ig_reels_avg_watch_time": 26628,
+        "ig_reels_video_view_total_time": 159769
       }
     },
     {
@@ -262,23 +241,6 @@
       }
     },
     {
-      "id": "18047708876823947",
-      "caption": "5 tareas pesadas que ChatGPT, Claude o Gemini hacen por ti (prompts incluidos).\nMenú de cenas de la semana y lista de la compra por secciones.\nResumir la circular del cole o de la comunidad y decirte qué hacer y para cuándo, sin pegar datos personales.\nResponder un mensaje difícil con educación.\nPasar a texto la foto de una receta o un tíquet.\nRepartir las tareas de la semana según tus horas libres.\nGuárdalo para el domingo 🗓️ ¿Y una app hecha para tu casa? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #organizacion #hogar #productividad #neogestlab",
-      "comments_count": 0,
-      "like_count": 2,
-      "media_product_type": "FEED",
-      "media_type": "CAROUSEL_ALBUM",
-      "permalink": "https://www.instagram.com/p/DffSjjIFyw1/",
-      "timestamp": "2026-11-08T17:26:43+0000",
-      "metricas": {
-        "reach": 9,
-        "views": 17,
-        "saved": 0,
-        "shares": 0,
-        "total_interactions": 3
-      }
-    },
-    {
       "id": "17892903792456559",
       "caption": "5 tareas pesadas que ChatGPT, Claude o Gemini hacen por ti (prompts incluidos).\nMenú de cenas de la semana y lista de la compra por secciones.\nResumir la circular del cole o de la comunidad y decirte qué hacer y para cuándo, sin pegar datos personales.\nResponder un mensaje difícil con educación.\nPasar a texto la foto de una receta o un tíquet.\nRepartir las tareas de la semana según tus horas libres.\nGuárdalo para el domingo 🗓️ ¿Y una app hecha para tu casa? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #organizacion #hogar #productividad #neogestlab",
       "comments_count": 0,
@@ -293,40 +255,6 @@
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
-      }
-    },
-    {
-      "id": "18312809329305009",
-      "caption": "¿Pasas los presupuestos al Excel por la noche?\nSi trabajas en reformas o instalaciones, conoces el bucle: libreta, Excel y factura a mano.\nGestión Integral 7D, nuestra app, une presupuesto, pedido, albarán y factura, y cada paso hereda líneas, IVA y retención.\nPresupuestos y facturas en PDF con tus datos fiscales y los del cliente.\nCada factura puede llevar su enlace de pago: tarjeta, TPV Redsys (con Bizum si está activo) o transferencia.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🛠️\n\n#autonomos #reformas #facturacion #pymes #apps #neogestlab",
-      "comments_count": 0,
-      "like_count": 1,
-      "media_product_type": "FEED",
-      "media_type": "CAROUSEL_ALBUM",
-      "permalink": "https://www.instagram.com/p/Dfe-iOFD7dQ/",
-      "timestamp": "2026-11-08T14:31:49+0000",
-      "metricas": {
-        "reach": 6,
-        "views": 28,
-        "saved": 0,
-        "shares": 0,
-        "total_interactions": 1
-      }
-    },
-    {
-      "id": "18109693957963893",
-      "caption": "Deja de pedirle así las cosas a la IA.\nSi ChatGPT, Claude o Gemini te contestan regular, casi siempre es por el mensaje:\n1. Dale contexto: para quién es, qué pasa y qué tono quieres.\n2. Dile el formato: tabla, 3 puntos o menos de 100 palabras.\n3. No te quedes con la primera respuesta: pide «más corto» o «3 versiones».\n4. Pídele que te haga preguntas antes de responder.\n5. Comprueba datos, fechas y cifras, porque puede equivocarse.\nGuárdalo para tu próximo prompt 📌 Y si quieres una app para tu negocio, escríbeme IDEA por privado.\n\n#inteligenciaartificial #ia #prompts #productividad #neogestlab",
-      "comments_count": 0,
-      "like_count": 1,
-      "media_product_type": "FEED",
-      "media_type": "CAROUSEL_ALBUM",
-      "permalink": "https://www.instagram.com/p/Dfe-VhUj8LS/",
-      "timestamp": "2026-11-08T14:30:04+0000",
-      "metricas": {
-        "reach": 10,
-        "views": 25,
-        "saved": 0,
-        "shares": 0,
-        "total_interactions": 1
       }
     },
     {
@@ -361,40 +289,6 @@
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
-      }
-    },
-    {
-      "id": "18129996250867967",
-      "caption": "¿Pasas los presupuestos al Excel por la noche?\nSi trabajas en reformas o instalaciones, conoces el bucle: libreta, Excel y factura a mano.\nGestión Integral 7D, nuestra app, une presupuesto, pedido, albarán y factura, y cada paso hereda líneas, IVA y retención.\nPresupuestos y facturas en PDF con tus datos fiscales y los del cliente.\nCada factura puede llevar su enlace de pago: tarjeta, TPV Redsys (con Bizum si está activo) o transferencia.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🛠️\n\n#autonomos #reformas #facturacion #pymes #apps #neogestlab",
-      "comments_count": 0,
-      "like_count": 1,
-      "media_product_type": "FEED",
-      "media_type": "CAROUSEL_ALBUM",
-      "permalink": "https://www.instagram.com/p/Dfe7vqnIW5Q/",
-      "timestamp": "2026-11-08T14:07:15+0000",
-      "metricas": {
-        "reach": 6,
-        "views": 25,
-        "saved": 0,
-        "shares": 0,
-        "total_interactions": 1
-      }
-    },
-    {
-      "id": "18272809153306491",
-      "caption": "Deja de pedirle así las cosas a la IA.\nSi ChatGPT, Claude o Gemini te contestan regular, casi siempre es por el mensaje:\n1. Dale contexto: para quién es, qué pasa y qué tono quieres.\n2. Dile el formato: tabla, 3 puntos o menos de 100 palabras.\n3. No te quedes con la primera respuesta: pide «más corto» o «3 versiones».\n4. Pídele que te haga preguntas antes de responder.\n5. Comprueba datos, fechas y cifras, porque puede equivocarse.\nGuárdalo para tu próximo prompt 📌 Y si quieres una app para tu negocio, escríbeme IDEA por privado.\n\n#inteligenciaartificial #ia #prompts #productividad #neogestlab",
-      "comments_count": 0,
-      "like_count": 1,
-      "media_product_type": "FEED",
-      "media_type": "CAROUSEL_ALBUM",
-      "permalink": "https://www.instagram.com/p/Dfe7qRLIKe6/",
-      "timestamp": "2026-11-08T14:06:32+0000",
-      "metricas": {
-        "reach": 11,
-        "views": 29,
-        "saved": 0,
-        "shares": 0,
-        "total_interactions": 2
       }
     }
   ],
@@ -493,6 +387,10 @@
     },
     {
       "fecha": "2026-11-12T20:41+00:00",
+      "seguidores": 1601
+    },
+    {
+      "fecha": "2026-11-13T02:42+00:00",
       "seguidores": 1601
     }
   ]
