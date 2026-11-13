@@ -90,7 +90,7 @@
    "formula": "F2",
    "cola": "403_margen_venta_reel",
    "aprobado_calidad": true,
-   "nota": "Movido desde el 13/11 13:40 (chocaba con 402)."
+   "nota": "Movido desde el 13/11 13:40 (chocaba con 402). CONDICIONADA (13/11 tarde): sale solo si Calidad confirma la lista de la sección 6 de virales_13_11_navegador.md a las 12:51 de ese día; si falla, hueco libre."
   },
   {
    "fecha": "2026-11-14",
@@ -174,14 +174,14 @@
    "fecha": "2026-11-16",
    "hora": "18:40",
    "formato": "reel",
-   "serie": "Una idea, una app (rescate)",
+   "serie": "(hueco libre)",
    "publico": "Mayores y cuidadores",
    "app": "MEDICATOR",
    "formula": "F6",
-   "cola": "408_medicator_pastilla_reel",
+   "cola": null,
    "aprobado_calidad": false,
    "reserva": true,
-   "nota": "RESERVA: nota 86; solo sale si Calidad lo aprueba (≥ 90) antes de las 12:00 del 16/11 tras arreglar el fundido de 6,7-8,5 s. Si no, el hueco queda vacío (los episodios ya no ocupan el 18:40 estos dos días)."
+   "nota": "Hueco libre a propósito: 408 y 021 son escaparates de app (cero escaparates hasta nuevo dato, orden del dueño 13/11 14:46) y además separan los episodios ≥ 5 h el 16 y 17/11 (cambio 1 del 13/11)."
   },
   {
    "fecha": "2026-11-16",
@@ -213,14 +213,14 @@
    "fecha": "2026-11-17",
    "hora": "18:40",
    "formato": "reel",
-   "serie": "Así se hace (rescate)",
+   "serie": "(hueco libre)",
    "publico": "Bar y hostelería",
    "app": "(valor: coste por ración)",
    "formula": "F2",
-   "cola": "021_plato_hosteleria",
+   "cola": null,
    "aprobado_calidad": false,
    "reserva": true,
-   "nota": "RESERVA: nota 82; solo sale si Calidad lo aprueba (≥ 90) antes de las 12:00 del 17/11. Si no, vacío."
+   "nota": "Hueco libre a propósito: 408 y 021 son escaparates de app (cero escaparates hasta nuevo dato, orden del dueño 13/11 14:46) y además separan los episodios ≥ 5 h el 16 y 17/11 (cambio 1 del 13/11)."
   },
   {
    "fecha": "2026-11-17",
@@ -252,13 +252,13 @@
    "fecha": "2026-11-18",
    "hora": "18:40",
    "formato": "reel",
-   "serie": "Una idea, una app",
-   "publico": "Hogar y familias",
-   "app": "GH PLUS · Gestión Hogar",
-   "formula": "F3",
-   "cola": "405_gh_plus_demo_reel",
+   "serie": "El Jambo que sabe y las IAs",
+   "publico": "Hostelería y comercio",
+   "app": "(sin producto)",
+   "formula": "F3+F7",
+   "cola": "311_jambo_ep11_reserva",
    "aprobado_calidad": true,
-   "nota": "Único reel de app sin personaje del día; 43 h antes del pivote de GH PLUS (506, 20/11)."
+   "nota": "Sustituye a 405 (escaparate GH PLUS, aparcado el 31/12). Episodio sin producto; su avance «Mañana: el paquete que no llegó» enlaza con 312 del 19/11."
   },
   {
    "fecha": "2026-11-18",
@@ -296,19 +296,19 @@
    "formula": "F2",
    "cola": "404_nota_examen_reel",
    "aprobado_calidad": true,
-   "nota": "HUECO RESERVADO al primer reel de datos aprobado (602+, FORMATO_DATOS.md). Si a las 12:00 del 19/11 no hay ninguno con nota ≥ 90, sale 404; si lo hay, 404 pasa al primer hueco libre del 20/11."
+   "nota": "HUECO RESERVADO al primer reel de datos aprobado (602+, FORMATO_DATOS.md). Si a las 12:00 del 19/11 no hay ninguno con nota ≥ 90, sale 404; si lo hay, 404 pasa al primer hueco libre del 20/11. CONDICIONADA (13/11 tarde): sale solo si Calidad confirma la lista de la sección 6 de virales_13_11_navegador.md a las 12:51 de ese día; si falla, hueco libre."
   },
   {
    "fecha": "2026-11-19",
    "hora": "20:40",
    "formato": "reel",
-   "serie": "El Jambo (reserva: Una idea, una app)",
+   "serie": "El Jambo que sabe y las IAs",
    "publico": "Hostelería y comercio",
-   "app": "AJ Sistema DEMO",
+   "app": "(sin producto)",
    "formula": "F5",
-   "cola": "601_bar_pedido_web_reel",
+   "cola": "312_jambo_ep12_reparto",
    "aprobado_calidad": true,
-   "nota": "HUECO RESERVADO al episodio 315 (nuevo, sin producto). Si a las 12:00 del 19/11 no está aprobado, sale 601; si lo está, 601 pasa al primer hueco libre del 20/11."
+   "nota": "Sustituye a 601 (escaparate web, aparcado el 31/12). El Creador corrige antes de las 12:00 del 19/11 el avance del texto (hoy «mañana: el responder a todos», que ya salió el 17/11)."
   },
   {
    "fecha": "2026-11-20",
@@ -318,9 +318,9 @@
    "publico": "Hotel pequeño",
    "app": "(ninguna)",
    "formula": "F3+F7",
-   "cola": "311_jambo_ep11_reserva",
-   "aprobado_calidad": true,
-   "nota": "Episodio sin producto: sin enlace ni prueba gratuita; cierre «Mándaselo a quien carga con todo». Movido desde el 16/11 18:40 (13/11): episodios a ≥ 5 h entre sí el 16 y 17/11.",
+   "cola": "315 (NUEVO, serie «Las IAs de la oficina · Ep. N», ≤ 20 s)",
+   "aprobado_calidad": false,
+   "nota": "Sustituye a 311, que pasa al 18/11. Si el Creador no lo tiene aprobado a las 12:00 del 20/11, el hueco queda libre (no se rellena con escaparates).",
    "brazo": "A"
   },
   {
@@ -331,9 +331,9 @@
    "publico": "Reparto y transporte",
    "app": "(ninguna)",
    "formula": "F3+F7",
-   "cola": "312_jambo_ep12_reparto",
-   "aprobado_calidad": true,
-   "nota": "Episodio sin producto: sin enlace ni prueba gratuita; cierre «Mándaselo a quien carga con todo». Movido desde el 17/11 18:40 (13/11): episodios a ≥ 5 h entre sí el 16 y 17/11.",
+   "cola": "316 (NUEVO, serie «Las IAs de la oficina · Ep. N», ≤ 20 s)",
+   "aprobado_calidad": false,
+   "nota": "Sustituye a 312, que pasa al 19/11. Mismo criterio de hueco libre si no hay pieza aprobada.",
    "brazo": "A"
   }
  ],
@@ -441,5 +441,30 @@
   "Mejora": "TAREA 13/11 (Estratega, DIRECTIVA §13): (1) /solicitar con Clic al cargar (origen = src) y desplegable «¿Qué te interesa?» antes del 15/11 13:40; (2) enlace /solicitar?src=facebook|youtube&app=<slug> en el texto y primer comentario de Facebook y en la descripción de YouTube para piezas con producto.",
   "Comunidad": "Responder en menos de 1 h los comentarios de Facebook y YouTube y anotar en comunidad/ los que pidan precio o prueba; contar los DMs si Buzzfy da el permiso.",
   "Cazador": "Cada día 3 virales de España de humor de trabajo y pymes (duración, primer corte, remate) en virales_semana.md para ajustar el recorte; sin copiar contenido."
+ },
+ "revision_13_nov_tarde_virales": {
+  "quien": "Estratega, programada, 13/11/2026 ~15:10 CET. Motivo: orden del dueño de las 14:46 (virales vistos con el navegador, DIRECTIVA cabecera y §14). Datos sin cambios desde la pasada de las 13:30 (estadisticas.json 08:44 UTC: 1.601 seguidores; 301 = 429 views, 303 = 122 views, reels de app/web 8-61 views); 402 salió a las 13:46 y aún no tiene lectura.",
+  "cambios": [
+   "Reparto: 16 episodios de 18 reels con hueco aprobado (89 %; 84 % contando 402) frente al 80 % que pide el dueño; el resto, 403 y 404 (valor, condicionados a la lista de Calidad). Cero reels de escaparate de app: aparcados el 31/12 con horas distintas 405, 601, 408, 021, 407, 409 y 406 (407 y 409 tenían nota 80 y 74 y no debían estar en la semana del 21-22/11).",
+   "Huecos libres a propósito: 18:40 del 16, 17, 21 y 22/11 (los dos primeros además sirven a la prueba de separación ≥ 5 h; sin pieza aprobada no sale nada).",
+   "311 pasa al 18/11 18:40 y 312 al 19/11 20:40; el 20 y 21/11 20:40 pasan a episodios nuevos 315 y 316 en el formato del dueño (≤ 20 s, título «Las IAs de la oficina · Ep. N»).",
+   "La duración máxima de los episodios nuevos y recortados baja de 22 s a 20 s (orden del dueño del 13/11 14:46; solo un episodio con historia que retenga puede llegar a 35 s, con permiso expreso de Calidad). Lo que sale el 13-15/11 no se toca.",
+   "El experimento pivote/sin producto sigue (n pequeño): el pivote de app va DENTRO de la historia, sin logo, precio ni cierre de venta; la oferta (APP/WEB) va en el comentario fijado y en la bio.",
+   "Facebook y YouTube: la cola de atrasos solo saca piezas de humor con personaje que pasen la sección 6; los escaparates de app quedan en pausa hasta nuevo dato (los 14 Shorts de escaparate ya están en privado desde hoy)."
+  ],
+  "meta_nueva": "Superar 429 views (mejor pieza propia) a 48 h; si 3 piezas seguidas no pasan de 100 views, el Analista avisa al Estratega (decisión: cambiar de personaje o de situación antes de cambiar de formato).",
+  "tareas": {
+   "Creador": "(1) 315 y 316 nuevos en el formato del dueño antes de las 12:00 del 20 y 21/11; (2) 317-322 a continuación, uno al día; (3) corregir antes del 18/11 12:00 el avance del texto de 314 y antes del 19/11 12:00 el de 312 (solo texto); (4) los episodios de 16/11 en adelante se recortan a ≤ 20 s según el cambio 2; (5) texto del post = 1 línea de situación + «Envíaselo a ese compañero que…» + hashtags; APP o WEB solo en el comentario fijado. 408, 021 y 017 se dejan hasta nuevo dato.",
+   "Calidad": "Aplica la lista de la sección 6 de virales_13_11_navegador.md a TODO lo programado; reevalúa 403 el 14/11 a las 12:51 y 404 el 19/11 a las 12:51 (y 019 el 23/11): si fallan personaje en el segundo 0-1, gancho ≤ 8 palabras o ≤ 20 s, hueco libre. No reevalúa 408, 021, 405, 601, 407, 409, 406 hasta nuevo dato.",
+   "Analista": "Mide cada pieza contra la tabla del archivo de virales (views, alcance, ver medio, compartidos por 100 me gusta) y anota en aprendizajes.md; confirma el 14/11 la regla de recorte con 303 a 48 h; avisa si 3 piezas seguidas no pasan de 100 views.",
+   "Editor de canal / Mejora": "Atrasos de Facebook y YouTube: solo humor con personaje y dato con personaje; los escaparates de app a pausa. Títulos de YouTube: situación + IA en POV, ≤ 60 caracteres, #Shorts.",
+   "Monetización": "La venta va en el comentario fijado (APP o WEB) y en la bio; el reel no lleva precio ni cierre de venta. Mide solicitudes por origen como hasta ahora."
+  }
+ },
+ "mezcla_semana_actualizada_13_nov_tarde": {
+  "episodios": "16 de 18 reels con hueco aprobado desde las 18:40 del 13/11 al 19/11 (304-310, 313, 314, 311, 312 sin producto = 11; 501-505 con pivote = 5)",
+  "valor_condicionado": "2 (403, 404)",
+  "huecos_libres": "2 en 13-19/11 (18:40 del 16 y del 17/11)",
+  "escaparates_de_app": 0
  }
 }
