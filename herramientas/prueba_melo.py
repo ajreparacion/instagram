@@ -108,7 +108,6 @@ def final():
     aj = pg.ajustes_voz()["melo"]
     rutas = melo([(FRASE, None)] + [(t, None) for t in LARGAS], aj.get("velocidad", 1.0), aj.get("pronunciacion") or {}, "final")
     a2.postprocesar(rutas[0], "melo_final_frase")
-    shutil.copy(f"{a2.SAL}/melo_final_frase.mp3", f"{a2.SAL}/melo_final_frase.mp3")
     res = {}
     t, w = whisper(f"{a2.SAL}/melo_final_frase.mp3")
     res["frase"] = {"texto": t, "palabras_s": float(w), **bandas(f"{a2.SAL}/melo_final_frase.mp3")}
