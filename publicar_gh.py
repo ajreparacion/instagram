@@ -414,7 +414,9 @@ def sintetizar_melo(textos, salidas, trabajo, aj, estilos=None):
     info = _sintetizar_lote("MeloTTS", VOZ_MELO, PYTHON_MELO,
                             {"idioma": ml.get("idioma", "ES"), "speaker": ml.get("speaker", "ES"),
                              "velocidad": ml.get("velocidad", 1.0), "ganancia": ml.get("ganancia", 1.0),
-                             "pronunciacion": ml.get("pronunciacion") or {}},
+                             "pronunciacion": ml.get("pronunciacion") or {}, "semilla": ml.get("semilla"),
+                             "sdp_ratio": ml.get("sdp_ratio", 0.2), "noise_scale": ml.get("noise_scale", 0.6),
+                             "noise_scale_w": ml.get("noise_scale_w", 0.8)},
                             textos, salidas, trabajo, ml.get("max_s", 900),
                             extras=ajustes_por_estilo(ml, estilos, ("velocidad",)))
     log(f"Voz con MeloTTS ({ml.get('idioma', 'ES')}/{ml.get('speaker', 'ES')}, {info.get('sr', '?')} Hz, velocidad {ml.get('velocidad', 1.0)}): "

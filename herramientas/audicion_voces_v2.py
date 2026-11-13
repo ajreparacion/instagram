@@ -13,6 +13,7 @@ FRASE = "Hola, soy de Neogest Lab. Con Ajota Sistema llevas tu negocio al día, 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 RAIZ = os.path.dirname(AQUI)
 RAW, SAL = "/tmp/a2/raw", "/tmp/a2/salida"
+CADENA = None   # si no es None, sustituye a la cadena_voz de voz.json (pruebas de cadena)
 
 
 def sh(cmd, **k):
@@ -21,7 +22,7 @@ def sh(cmd, **k):
 
 def postprocesar(entrada, nombre):
     """48 kHz mono, pico a -6 dBFS, cadena_voz actual, loudnorm 2 pasadas a -14 LUFS / -1,5 dBTP, MP3 192 kbps 48 kHz."""
-    cadena = json.load(open(os.path.join(RAIZ, "equipo", "voz.json"), encoding="utf-8")).get("cadena_voz", "").strip().strip(",")
+    cadena = (CADENA if CADENA is not None else json.load(open(os.path.join(RAIZ, "equipo", "voz.json"), encoding="utf-8")).get("cadena_voz", "")).strip().strip(",")
     w48 = f"{RAW}/{nombre}_48.wav"
     sh(["ffmpeg", "-v", "error", "-y", "-i", entrada, "-ar", "48000", "-ac", "1", w48])
     vd = subprocess.run(["ffmpeg", "-v", "info", "-i", w48, "-af", "volumedetect", "-f", "null", "-"], capture_output=True, text=True).stderr

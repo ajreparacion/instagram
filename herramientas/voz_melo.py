@@ -4,7 +4,8 @@ no clonada de nadie. Sale a 44,1 kHz (la frecuencia del modelo) y NO se remuestr
 
 Uso: python3 voz_melo.py lote.json     (se ejecuta con el python del venv de Melo: PYTHON_MELO)
   lote.json = {"idioma": "ES", "speaker": "ES", "velocidad": 1.15, "ganancia": 1.0,
-               "pronunciacion": {"Neogest Lab": "Neogés Lab"},   # solo cambia el texto que va al modelo, no los subtítulos
+               "pronunciacion": {"Neogest Lab": "Neogés Lab"}, "semilla": 7,
+               "sdp_ratio": 0.2, "noise_scale": 0.6, "noise_scale_w": 0.8,   # opcionales; también por frase   # solo cambia el texto que va al modelo, no los subtítulos
                "frases": [{"texto": "...", "salida": "/ruta/voz0.wav", "velocidad": 1.2}, ...]}
 Escribe en stdout un JSON con tiempos y la frecuencia. Código de salida != 0 si algo falla: publicar_gh.py pasa al respaldo.
 """
@@ -42,7 +43,12 @@ def main():
     for f in lote["frases"]:
         vel = float(f["velocidad"]) if f.get("velocidad") is not None else vel0
         txt = pronunciar(f["texto"], lote.get("pronunciacion"))
-        x = m.tts_to_file(txt, spk, None, speed=vel, quiet=True)
+        if lote.get("semilla") is not None:   # misma semilla = misma salida (Melo es estocástico): comparaciones y reels repetibles
+            import torch
+            torch.manual_seed(int(lote["semilla"]))
+        g = lambda k, d: float(f[k]) if f.get(k) is not None else float(lote.get(k, d))
+        x = m.tts_to_file(txt, spk, None, sdp_ratio=g("sdp_ratio", 0.2), noise_scale=g("noise_scale", 0.6),
+                          noise_scale_w=g("noise_scale_w", 0.8), speed=vel, quiet=True)
         x = np.asarray(x, np.float32).reshape(-1)
         if x.size < sr * 0.2 or not np.isfinite(x).all():
             raise SystemExit(f"Melo devolvió audio vacío o inválido para: {f['texto'][:60]}")

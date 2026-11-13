@@ -1,0 +1,45 @@
+name: Rejilla de parámetros de MeloTTS ES (expresividad, estabilidad, WER)
+
+# Solo a mano. No publica nada ni toca la cola: renderiza en /tmp y sube mp3 y json a la release «pruebas».
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/melo
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Herramientas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core > /dev/null
+          pip install --quiet pillow numpy scipy faster-whisper librosa
+      - name: Caché de herramientas de vídeo
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/expedientes
+          key: piper-${{ hashFiles('equipo/voz.json') }}
+          restore-keys: piper-
+      - name: Prueba
+        env:
+          TZ: Europe/Madrid
+        run: python3 herramientas/rejilla_melo.py
+      - name: Subir a la release «pruebas»
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          shopt -s nullglob
+          f=(/tmp/melo/salida/melo_v2_*)
+          [ ${#f[@]} -gt 0 ] && gh release upload pruebas "${f[@]}" --clobber || true
+      - name: Registro de la voz
+        if: always()
+        run: grep -i "voz\|melo" registro.log | tail -20 || true

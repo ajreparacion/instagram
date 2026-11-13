@@ -1,0 +1,118 @@
+{
+  "motor": "melo",
+  "respaldo": [
+    "kokoro"
+  ],
+  "melo": {
+    "idioma": "ES",
+    "speaker": "ES",
+    "velocidad": 1.1,
+    "ganancia": 1,
+    "max_s": 900,
+    "pronunciacion": {
+      "Neogest Lab": "Neogest, Láb"
+    },
+    "_nota": "13/11/2026, elección del dueño entre las voces de la audición v2 (MeloTTS ES: MIT, voz genérica del modelo, no clonada de nadie, salida nativa a 44,1 kHz, medido 12-16 kHz −22,6 dB frente a −45…−50 dB de Kokoro y Chatterbox). Orden anterior del dueño 13/11 13:48: «parece acento chino» con Chatterbox es-es. Respaldo: Kokoro em_alex; nunca Chatterbox. velocidad y pronunciacion: ajustadas de oído y con Whisper (ver Cambio 62). pronunciacion solo cambia el texto que va al modelo, no los subtítulos. Revertir: cp herramientas/versiones/voz.json_2026-11-13c equipo/voz.json (vuelve a Chatterbox es-es con respaldo Kokoro). 13/11 ajuste con Whisper small (prueba_melo.yml): velocidad 1,0=2,72 palabras/s, 1,1=2,76, 1,15=2,89, 1,2=2,97; se elige 1,1 (centro de 2,6-2,9, natural). «Neogest Lab» sin tocar sale «Neogestla»/«NeoGestLab» (2 de 3 mal); «Neogest, Láb» (pausa breve + tilde) sale bien en 2 de 3 pasadas; «Neogés Lab» pierde la t. «Ajota» (sale «AJ Sistema» en Whisper, es el nombre real) y «Éxcel» bien."
+  },
+  "chatterbox": {
+    "modelo": "es-es",
+    "idioma": "es",
+    "exageracion": 0.6,
+    "cfg": 0.5,
+    "temperatura": 0.65,
+    "referencia": null,
+    "referencia_kokoro": null,
+    "ganancia": 1,
+    "semilla": 7,
+    "theta": "",
+    "max_s": 1500,
+    "_nota": "referencia = VOZ DEL DUEÑO. Desde el 7/11/2026 12:45: nota de voz limpia grabada por él para el canal (voz_dueno/referencia_usuario.wav, 12,6 s, 24 kHz mono, -20 LUFS; versión larga de 28 s al lado). Señal/ruido ~43 dB, contenido hasta 8 kHz (la anterior, sacada de sus reels con Demucs, no pasaba de 4 kHz). Para volver a la anterior: 'referencia': 'voces/referencia_usuario.wav' (release «voces», sigue ahí) o restaurar herramientas/versiones/voz.json_2026-11-07.",
+    "por_estilo": {
+      "gancho": {
+        "exageracion": 0.75,
+        "cfg": 0.45
+      },
+      "giro": {
+        "exageracion": 0.7,
+        "cfg": 0.45
+      },
+      "cierre": {
+        "exageracion": 0.65,
+        "cfg": 0.5
+      }
+    },
+    "_nota_por_estilo": "7/11 13:12: el dueño oye clipeos, acento latino al empezar que luego cambia, silencios y voz plana. Equilibrio: exageración igual o algo menor que antes (0,6 base; 0,65-0,75 en gancho, giro y cierre) para no perder énfasis, pero cfg mucho más alto (0,45-0,5 en vez de 0,3-0,35) para que no se aleje de su voz ni cambie de acento, temperatura 0,65 y recorte de restos al final de frase (recorte.umbral_db -32). Énfasis de las palabras *así*: +4,5 dB con bajada previa de 1,5 dB. Revertir: herramientas/versiones/voz.json_2026-11-07b.",
+    "_nota_theta": "10/11/2026 (tarde, Mejora; prueba_seseo.yml con referencia sintética Kokoro): sin truco θ el modelo ya da θ en 55,6 % de las palabras de prueba (control Piper de España 55,6 %, Kokoro suelto 11,1 %) con WER 6,8 %; con θ griego sigue en 55,6 % y el WER sube a 9,6 % (en prueba_voz con la configuración real: WER de la voz sola 12,5 % frente a 7,7 % sin θ, «Mary Celeste» sale «Mérice Leste»). Por eso theta va vacío. Revertir: herramientas/versiones/voz.json_2026-11-10d (theta griego_sin_inicial).",
+    "_nota_dueno": "10/11/2026 (2.ª ejecución): el dueño eligió «Chatterbox España» (chatterbox es-es SIN referencia de persona real). Motor principal otra vez, pero sin voz del dueño: referencia = null y timbre de partida sintético (referencia_kokoro em_alex, Apache 2.0, generado en el propio ciclo; no es nadie real). Respaldo: Kokoro directo, Pocket y Piper. Medido en prueba_voz.yml n.º 11 (ajustes reales): WER 10,6 % (solo falla el nombre propio «Mary Celeste»), UTMOS 3,77, rango de tono 10,9 st, pausas 24 %, -14,1 LUFS, pico -1,4 dBFS, 14x tiempo real en CPU (8 frases = 8,5 min). Revertir al motor Kokoro: herramientas/versiones/voz.json_2026-11-10b.",
+    "_nota_voz_integrada": "12/11/2026 22:40, orden del dueño («suena telefónica»; eligió la opción 1): Chatterbox es-es con su VOZ INTEGRADA, sin muestra. La muestra sintética llegaba recortada a ~4 kHz y el clon heredaba ese corte (medido: −21 dB a 4 kHz, −36 dB a 10 kHz respecto a 200-400 Hz). Revertir: referencia_kokoro = \"em_alex\"."
+  },
+  "kokoro": {
+    "voz": "em_alex",
+    "velocidad": 0.95,
+    "ganancia": 1,
+    "max_s": 300,
+    "por_estilo": {
+      "gancho": {
+        "velocidad": 0.88
+      },
+      "giro": {
+        "velocidad": 0.9
+      }
+    },
+    "_nota": "10/11/2026: motor principal. Voz genérica de España del modelo Kokoro-82M (Apache 2.0, no clonada de nadie; G2P espeak-ng castellano, con z/c = θ). Medido en prueba_voz.yml n.º 9: transcripción Whisper limpia (Piper: «Nueva Joaquemar», «salva vidas»; Pocket: titubeos y 2x más lenta), 1,5x tiempo real en CPU, -14,1 LUFS, pico -1,3 dBFS, rango de tono 8,6 st (Piper 8,5, Pocket 5,5), pausas 16,7 %. Alternativa femenina: ef_dora."
+  },
+  "pocket": {
+    "idioma": "spanish",
+    "voz": "lola",
+    "temperatura": null,
+    "ganancia": 1,
+    "max_s": 600
+  },
+  "modelo": "es/es_ES/davefx/medium/es_ES-davefx-medium",
+  "lentitud": 1.08,
+  "variacion": 0.667,
+  "ruido": 0.8,
+  "volumen_voz": 1.1,
+  "umbral_duck": 0.08,
+  "ratio_duck": 2,
+  "limite": 0.89,
+  "cadena_voz": "highpass=f=80:p=2,equalizer=f=200:t=q:w=0.9:g=1.5,equalizer=f=330:t=q:w=1.0:g=-2.5,equalizer=f=3500:t=q:w=0.7:g=3,equalizer=f=6500:t=q:w=0.6:g=2,highshelf=f=9500:g=2,deesser=i=0.45:m=0.5:f=0.5,acompressor=threshold=0.08:ratio=2:attack=10:release=160:knee=3:makeup=2,agate=threshold=0.004:ratio=2:attack=5:release=250,alimiter=limit=0.95:level=false",
+  "_nota_cadena_voz": "12/11/2026 22:10, orden del dueño («suena con eco, lejana y enlatada; mete un compresor»). Medido en la pista de voz del reel corto de 7D (bandas respecto a 150-400 Hz): antes 2,5-4,5 kHz −15,8 dB, 4,5-8 kHz −29,1 dB, 8-12 kHz −41,9 dB = voz sin presencia ni aire (lejana, de lata); después −10,0 / −20,1 / −28,1 dB (perfil de voz natural cercana). Cadena: limpieza de graves, menos barro en 320 Hz y algo de cuerpo en 160 Hz (proximidad), excitador para recuperar armónicos agudos que el motor no genera, estante +4 dB desde 6 kHz (aire), compresor 4:1 con ataque rápido (voz delante y pareja), de-esser, puerta para cortar soplos y cola de sala en las pausas (el «eco») y limitador. Revertir: highpass=f=80,equalizer=f=300:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=3,acompressor=threshold=0.08:ratio=3:attack=5:release=180:makeup=3,deesser=i=0.4 | 12/11 22:40: con la voz integrada (banda completa) se quita el excitador y el aire baja a +1,5 dB para no endurecerla. | 13/11/2026 (Mejora de voz, «se oye telefónica»): compresión 4:1 con umbral -36 dB y makeup +15,6 dB (aplastaba la dinámica y subía el ruido de fondo) → 2:1 con umbral -22 dB; presencia +3 dB a 3,5 kHz y +2 dB a 6,5 kHz; aire +2 dB desde 9,5 kHz (el motor llega a 12 kHz); cuerpo +1,5 dB a 200 Hz; highpass 80. Medido en una locución real de Chatterbox es-es (audicion_cb_es): 2,5-4,5 kHz −23,3→−21,0 dB y 4,5-8 kHz −26,9→−25,5 dB respecto a 150-400 Hz, suelo de ruido en pausas −58,4→−65,1 dBFS, dinámica p90-p10 48→54 dB, mismo LUFS (−14,7) y pico (−1,7 dBTP). Revertir: herramientas/versiones/voz.json_2026-11-13b.",
+  "recorte": {
+    "activo": true,
+    "umbral_db": -32,
+    "margen_ms": 120,
+    "pausa_larga_s": 9,
+    "pausa_max_s": 0.6,
+    "_nota": "6/11 (queja del usuario: se notan cortes): solo se recorta el silencio del principio y del final (120 ms de margen); las pausas internas NO se tocan (pausa_larga_s 9 s). Con voz primero ya no hace falta acortarlas para que quepan."
+  },
+  "alineacion": {
+    "activo": true,
+    "modelo": "small",
+    "max_s": 420,
+    "_nota": "faster-whisper por palabra: subtítulos clavados a la voz y énfasis. Si falla, se sigue con la estimación."
+  },
+  "enfasis": {
+    "activo": true,
+    "db": 4.5,
+    "rampa_ms": 60,
+    "pausa_ms": 0,
+    "db_previo": -1.5,
+    "_nota": "palabras entre *asteriscos*: +3 dB con rampas de 60 ms (sin escalón); pausa_ms 0 = sin respiro insertado (se oía como corte). En los subtítulos salen en rojo."
+  },
+  "volumen_musica": 1.9,
+  "_nota_mezcla": "8/11/2026: el dueño borró reels porque la música no se oía. Música +5,6 dB (volumen_musica 1,9), ducking suave (ratio 2, umbral 0,08: baja como mucho ~6 dB bajo la voz), voz 1,1, limitador 0,89. Revertir: herramientas/versiones/voz.json_2026-11-08e.",
+  "master": {
+    "activo": true,
+    "lufs": -14,
+    "pico_db": -1.5,
+    "_nota": "8/11/2026 (Mejora): máster a -14 LUFS con loudnorm en 2 pasadas (lineal) y pico real <= -1,5 dBTP (queda <= -1 tras el AAC). Se mide en cada render: cola/<reel>/voz_musica.json. Revertir: master.activo false o herramientas/versiones/voz.json_2026-11-08f."
+  },
+  "duck_max_db": 6,
+  "hueco_voz_max_s": 1.5,
+  "prohibir_voz_dueno": true,
+  "permitir_piper": false,
+  "normalizar_pico_db": -6,
+  "fundidos_frase": true,
+  "_nota_cadena_2": "10/11/2026 (pasada urgente): sin alimiter por frase (un solo limitador, el del máster, limite 0,89 + loudnorm TP -1,5). El pico de cada frase se normaliza a -6 dBFS antes de la cadena (normalizar_pico_db), así el compresor trabaja siempre al mismo nivel con makeup 3 (lineal, ≈ +9,5 dB; antes 3,2 + alimiter 0,62 que recortaba picos). Cada frase con fundido de entrada 15 ms y de salida 40 ms (fundidos_frase). Piper desactivado (permitir_piper false): si falla Chatterbox y Kokoro, el render falla y no se publica. Revertir: herramientas/versiones/voz.json_2026-11-10c."
+}
