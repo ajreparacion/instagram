@@ -2,8 +2,8 @@
 """Modo "datos" de hacer_reel.py: reels verticales explicativos con DATOS VERIFICADOS y gráficos animados
 (versión propia de Neogest Lab: ficha de datos -> ganchos y guion -> voz y storyboard -> animación -> control de calidad).
 
-Estética: fondo azul noche (#0A0E1A -> #121A36) con rejilla sutil que se desplaza, grano, acentos neón cian #22E1FF y
-magenta #FF2BD6 (estilo del logo NL), texto blanco en Montserrat Bold/Black. El fotograma 0 ya enseña el gancho gigante.
+Estética: fondo azul noche (#0A0E1A -> #121A36) con rejilla sutil que se desplaza, grano, acentos de marca azul claro #3982CF y
+rosa #CC4689, texto blanco en Montserrat Bold/Black. El fotograma 0 ya enseña el gancho gigante.
 Escenas del guion ("modo": "datos"), clave "grafico" por escena:
   contador    número que sube con easing y rodillo de dígitos, unidad y etiqueta, destello al llegar
   barras      barras horizontales escalonadas con su valor contando; la destacada va en magenta
@@ -31,7 +31,9 @@ MONT = os.path.join(AQUI, "fonts", "Montserrat-VF.ttf")
 
 W, H, FPS = 1080, 1920, 30
 BG0, BG1 = (10, 14, 26), (18, 26, 54)
-CIAN, MAG = (34, 225, 255), (255, 43, 214)
+# Paleta de marca Neogest Lab (13/11/2026): Azul claro #3982CF y Rosa #CC4689 (antes cian #22E1FF y magenta #FF2BD6).
+# Los nombres CIAN/MAG se conservan para no tocar el resto del módulo.
+CIAN, MAG = (57, 130, 207), (204, 70, 137)
 BLANCO = (255, 255, 255)
 GRIS = (160, 174, 210)
 PANEL = (22, 32, 68)

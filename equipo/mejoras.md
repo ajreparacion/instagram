@@ -687,3 +687,10 @@ La muestra del cambio 37 llevaba la pista generada por código (prueba_voz.yml n
 **Probado (local, 6 casos):** aprobada 92 → `aprobado()` True; tras `caducar_calidad` → False con los campos anteriores guardados; segunda llamada no hace nada (idempotente); un `calidad.json` nuevo de Calidad vuelve a valer; carpeta sin `calidad.json` no crea nada; copia de la función de `demo_app.py` también caduca. `pre_entrega.py`: 9 errores antes y después (todos de horas duplicadas, del Estratega). Sintaxis de los dos archivos correcta.
 **Límite:** no probado en Actions (el render con voz solo corre en el ciclo): comprobar en el primer reel que renderice el ciclo que su `calidad.json` trae `caducado` y la línea «re-renderizado; su aprobación… caducada» en registro.log.
 **Revertir:** `cp herramientas/versiones/publicar_gh.py_2026-11-13 publicar_gh.py; cp herramientas/versiones/demo_app.py_2026-11-13 herramientas/demo_app.py` (los `calidad.json` ya caducados se arreglan quitando `caducado` y poniendo `aprobado: true`).
+
+## Cambio 58 · 13/11/2026 (auditoría gráfica) · Reels de datos con la paleta de marca (azul claro #3982CF y rosa #CC4689)
+- Hallazgo: `herramientas/datos.py` (única plantilla que ya usa Montserrat y firma «By Neogest Lab») pintaba con cian #22E1FF y magenta #FF2BD6, fuera de la paleta de marca (Azul #3F5FB6 · Azul claro #3982CF · Magenta #B63C94 · Rosa #CC4689 · Coral #EB8662).
+- Cambio: solo la línea `CIAN, MAG = ...` (los nombres se conservan): CIAN = (57,130,207) #3982CF, MAG = (204,70,137) #CC4689, más el comentario de cabecera. Layout, zonas seguras, tamaños y tiempos no cambian.
+- Verificado (local, `--ensayo` con `ejemplo_guion_datos.json`, 930 fotogramas, 1080x1920, 31 s): 5 fotogramas antes/después revisados con Read; textos legibles (contraste del acento sobre el fondo ≈ 4,5-4,8:1, con contorno oscuro grueso) y mismo encuadre.
+- No tocado (propuesta): el logo NL de la firma se dibuja con texto, no con el logo oficial; las plantillas sketch/dibujo/demo_app usan DejaVu/Oswald/Poppins y fondos violeta (demo_app), no Montserrat ni la paleta.
+- Revertir: `cp herramientas/versiones/datos.py_2026-11-13 herramientas/datos.py`.
