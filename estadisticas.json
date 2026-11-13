@@ -1,13 +1,72 @@
 {
-  "actualizado": "2026-11-13T14:54:22+00:00",
+  "actualizado": "2026-11-13T21:02:33+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1601,
     "follows_count": 176,
-    "media_count": 11,
+    "media_count": 14,
     "username": "neogestlab"
   },
   "posts": [
+    {
+      "id": "18080505713424441",
+      "caption": "Contratar a una IA para no contratar a nadie: el sueño de El Jambo.\nEn el bar, la Jupillo atiende mesas, cocina y cobra. El Jambo se lleva el mérito.\nMándaselo a quien carga con todo.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #hosteleria #ia #trabajo #pymes\nVoz y personajes generados por IA\n\nVoz generada por IA",
+      "comments_count": 0,
+      "like_count": 0,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/Dfsar7fDHsL/",
+      "timestamp": "2026-11-13T19:48:14+0000",
+      "metricas": {
+        "reach": 12,
+        "views": 20,
+        "saved": 0,
+        "shares": 0,
+        "comments": 0,
+        "likes": 0,
+        "total_interactions": 0,
+        "ig_reels_avg_watch_time": 8423,
+        "ig_reels_video_view_total_time": 101077
+      }
+    },
+    {
+      "id": "18392929360226586",
+      "caption": "Entre empresas, el plazo máximo de pago pactado es de 60 días naturales.\nEl Jambo que sabe y su cliente de los 90 días: la que reclama es la Jupillo.\nHumor negro de ficción. Es información general, no asesoramiento legal.\nMándaselo a quien carga con todo.\nFuente: Ley 3/2004, de 29 de diciembre, artículo 4 (BOE, texto consolidado; plazo de 30 días y ampliable por pacto sin superar los 60 días naturales).\nEpisodio nuevo cada día en @neogestlab\n#humornegro #autonomos #pymes #morosidad #ia\nVoz y personajes generados por IA\n\nVoz generada por IA",
+      "comments_count": 0,
+      "like_count": 0,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfsM480kuYW/",
+      "timestamp": "2026-11-13T17:47:34+0000",
+      "metricas": {
+        "reach": 17,
+        "views": 34,
+        "saved": 0,
+        "shares": 0,
+        "comments": 0,
+        "likes": 0,
+        "total_interactions": 0,
+        "ig_reels_avg_watch_time": 14918,
+        "ig_reels_video_view_total_time": 268525
+      }
+    },
+    {
+      "id": "18100025984407994",
+      "caption": "Tu grupo necesita un botón de zasca 😂\nInsultator es un panel de frases con humor: pulsas un botón y la frase sale en grande y se lee en voz alta.\n«Zasca aleatorio» elige una al azar, sin repetir la anterior.\nCategorías como sarcásticos, absurdos, dramáticos o humor negro, con buscador y favoritos.\nY Loop Studio: 10 bases rítmicas para mezclar frases con ritmo.\nEstá en fase de pruebas. ¿Te imaginas una app así para tu grupo o tu negocio? Mándaselo al de tu grupo que más zascas suelta.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#humor #risas #ocio #apps #neogestlab",
+      "comments_count": 0,
+      "like_count": 0,
+      "media_product_type": "FEED",
+      "media_type": "CAROUSEL_ALBUM",
+      "permalink": "https://www.instagram.com/p/DfsDJzrDUOS/",
+      "timestamp": "2026-11-13T16:22:06+0000",
+      "metricas": {
+        "reach": 4,
+        "views": 14,
+        "saved": 0,
+        "shares": 0,
+        "total_interactions": 0
+      }
+    },
     {
       "id": "18127618118515203",
       "caption": "Un café, un bocata y un refresco suman 1.388,40 € al año (ejemplo).\nEs una cuenta con datos inventados: café 1,50 € × 5 veces por semana, bocata 4 € × 3 y refresco 1,80 € × 4, todo por 52 semanas. Si el bocata baja a 1 vez por semana y el café a 3, queda en 816,40 €: 572 € menos.\nLa página la ha hecho una IA con un solo mensaje y se grabó funcionando. En Neogest Lab hacemos apps así, a medida.\nMándaselo a quien dice que no gasta nada o guárdalo para hacer tu cuenta.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nVoz generada por IA\n\n#ahorro #gastoshormiga #economiadomestica #apps #neogestlab",
@@ -18,15 +77,15 @@
       "permalink": "https://www.instagram.com/reel/DfrqWpEHdns/",
       "timestamp": "2026-11-13T12:45:47+0000",
       "metricas": {
-        "reach": 2,
-        "views": 5,
+        "reach": 5,
+        "views": 8,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 0,
         "total_interactions": 0,
-        "ig_reels_avg_watch_time": 47852,
-        "ig_reels_video_view_total_time": 191410
+        "ig_reels_avg_watch_time": 25426,
+        "ig_reels_video_view_total_time": 203413
       }
     },
     {
@@ -420,6 +479,10 @@
     },
     {
       "fecha": "2026-11-13T14:54+00:00",
+      "seguidores": 1601
+    },
+    {
+      "fecha": "2026-11-13T21:02+00:00",
       "seguidores": 1601
     }
   ]
