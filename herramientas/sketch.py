@@ -387,6 +387,7 @@ def preparar(sc, spec, rng):
     dib = spec.get("dibujo") if isinstance(spec.get("dibujo"), dict) else {}
     ctx = spec.get("_ctx") if isinstance(spec.get("_ctx"), dict) else {}
     sc.ctx = ctx
+    sc.marca_serie = str(ctx.get("marca_serie") or "")   # rótulo pequeño y fijo de serie (guion "marca_serie"), desde el fotograma 0
     pers = [str(p).strip().lower() for p in (dib.get("personajes") or [])]
     sc.pers = [p for p in pers if p in PERSONAJES][:2]
     h = str(spec.get("hablante") or "").strip().lower()
@@ -836,6 +837,16 @@ def _gancho_ui(img, sc, t, y0=170):
     img.paste(cap, (0, 0), cap)
 
 
+def _marca_serie(img, sc):
+    """Rótulo fijo y pequeño de serie («@neogestlab · episodio nuevo cada día»), arriba y encima de todo: no lo mueve la cámara.
+    DIRECTIVA §13 cambio 2: el espectador medio se va en el segundo 10 y el cierre llega tarde, así que la cuenta se ve desde el 0."""
+    if not getattr(sc, "marca_serie", ""):
+        return
+    d = ImageDraw.Draw(img, "RGBA")
+    f = hr.font(hr.F_DIB_C, 30)
+    d.text((hr.W // 2, 112), sc.marca_serie, font=f, fill=(255, 255, 255, 235), anchor="mm", stroke_width=3, stroke_fill=(20, 24, 48, 235))
+
+
 def _render_ui(fi, sc, noise, t, seed=0):
     img = Image.new("RGB", (hr.W, hr.H), sc.fondo) if sc.fondo else hr.papel_img(seed).copy()
     if sc.estilo_d == "avisos":
@@ -857,6 +868,7 @@ def _render_ui(fi, sc, noise, t, seed=0):
     cw, ch = int(hr.W / z), int(hr.H / z)
     cx = (hr.W - cw) // 2; cy = (hr.H - ch) // 2
     img = img.crop((cx, cy, cx + cw, cy + ch)).resize((hr.W, hr.H), Image.BILINEAR)
+    _marca_serie(img, sc)
     a = np.asarray(img, dtype=np.int16).copy()
     a += noise[fi % 8] // 6
     np.clip(a, 0, 255, out=a)
@@ -952,6 +964,7 @@ def render_frame(fi, sc, noise, rg, seed):
     if sc.estilo_d == "texto" and sc.texto:   # escena «texto» (12/11/2026, fórmula F4 «Yo: …»): frase gigante fija, sin voz
         y_t = int(sc.dib_texto_y) if sc.dib_texto_y else (320 if sc.pers else 700)
         _gancho_gigante(img, sc.texto, t, max(y_t, cont_y0 + 88 + 24 if sc.cont_texto else y_t), fijo=True)
+    _marca_serie(img, sc)
     a = np.asarray(img, dtype=np.int16).copy()
     a += noise[fi % 8] // 6
     if lf < 2 and sc.idx > 0: a -= 10   # micro parpadeo en el corte (nunca en el fotograma 0: B7)

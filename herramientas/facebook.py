@@ -81,26 +81,72 @@ def comprobar():
     return {"pagina_id": d.get("id"), "nombre": d.get("name"), "seguidores": d.get("followers_count", d.get("fan_count"))}
 
 
+def _slug(post):
+    m = re.search(r"solicitar\?app=([\w-]+)", post.get("texto", ""))
+    return post.get("app_slug") or post.get("slug") or (m.group(1) if m else None)
+
+
+def tiene_producto(post):
+    """¿La pieza lleva producto (app o web)? Solo entonces se pone el enlace /solicitar con src (DIRECTIVA §13 cambio 3):
+    un episodio sin producto no lleva enlace ni venta, solo el motivo para seguir la página (§14)."""
+    t = (post.get("texto") or "").lower()
+    return bool(_slug(post) or post.get("app") or post.get("tipo") == "video_centro" or "solicitar?app=" in t
+                or "ajreparacion.com" in t)
+
+
+def enlace_facebook(post):
+    app = _slug(post)
+    return f"{CENTRO}/solicitar?{'app=' + app + '&' if app else ''}src=facebook"
+
+
 def texto_facebook(post):
     """Texto del post adaptado: bloque post["facebook"]["texto"] si existe; si no, el de Instagram con enlace src=facebook
-    y llamada a seguir la página. Sin 'enlace en el perfil' (en Facebook no existe)."""
+    (solo si la pieza lleva producto) y llamada a seguir la página. Sin 'enlace en el perfil' (en Facebook no existe)."""
     fb = post.get("facebook") or {}
-    m = re.search(r"solicitar\?app=([\w-]+)", post.get("texto", ""))
-    app = post.get("app_slug") or post.get("slug") or (m.group(1) if m else None)
-    enlace = f"{CENTRO}/solicitar?{'app=' + app + '&' if app else ''}src=facebook"
+    producto = tiene_producto(post)
+    enlace = enlace_facebook(post)
     if fb.get("texto"):
         t = fb["texto"]
     else:
         t = post.get("texto", "").replace("src=instagram", "src=facebook").replace("src=youtube", "src=facebook")
-        t = re.sub(r"Enlace en el perfil\.?", f"Pídela aquí: {enlace}", t, flags=re.I)
+        if producto:
+            t = re.sub(r"Enlace en el perfil\.?", f"Pídela aquí: {enlace}", t, flags=re.I)
+        else:
+            t = re.sub(r"(?im)^.*enlace en el perfil.*$", "", t)
         t = re.sub(r"(?im)^.*(comenta|escríbeme|escribeme).{0,60}por privado.*$", "", t)
-        if enlace not in t and "ajreparacion.com" not in t:
+        if producto and enlace not in t and "ajreparacion.com" not in t:
             t += f"\n\n{enlace}"
     if SEGUIR not in t:
         t += f"\n\n{SEGUIR}"
     if "By Neogest Lab" not in t:
         t += "\nBy Neogest Lab"
     return re.sub(r"\n{3,}", "\n\n", t).strip()[:60000]
+
+
+def texto_primer_comentario(post):
+    """Primer comentario de la pieza (la oferta va aquí y en la bio, no dentro del vídeo; DIRECTIVA §14). Solo con producto.
+    post["facebook"]["comentario"] lo sustituye. None si la pieza no lleva producto."""
+    fb = post.get("facebook") or {}
+    if fb.get("comentario"):
+        return str(fb["comentario"])[:2000]
+    if not tiene_producto(post):
+        return None
+    if _slug(post) or post.get("app") or post.get("tipo") == "video_centro":
+        return f"Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → {enlace_facebook(post)}"
+    return "Mira el ejemplo de web a medida: https://ajreparacion.com · Escribe WEB y te hago una maqueta gratis, sin compromiso."
+
+
+def comentar_primero(objeto_id, post):
+    """Publica el primer comentario con el enlace. Nunca hace fallar la publicación: devuelve «publicado», «sin_comentario»
+    o «error: …»."""
+    try:
+        msg = texto_primer_comentario(post)
+        if not msg:
+            return "sin_comentario"
+        graph(f"{objeto_id}/comments", "POST", message=msg)
+        return "publicado"
+    except Exception as e:  # pragma: no cover (red)
+        return _limpio(f"error: {e}")[:200]
 
 
 def publicar_reel(video, post):
@@ -115,7 +161,8 @@ def publicar_reel(video, post):
                                       "Content-Type": "application/octet-stream"}, "POST", timeout=900)
     graph(f"{PAGINA}/video_reels", "POST", upload_phase="finish", video_id=vid, video_state="PUBLISHED",
           description=texto_facebook(post), title=(post.get("texto", "").split("\n", 1)[0])[:100])
-    return {"estado": "publicado", "video_id": vid, "enlace": f"https://www.facebook.com/reel/{vid}"}
+    return {"estado": "publicado", "video_id": vid, "enlace": f"https://www.facebook.com/reel/{vid}",
+            "comentario": comentar_primero(vid, post)}
 
 
 def _subir_foto(ruta, **extra):
@@ -141,12 +188,14 @@ def publicar_foto(carpeta, post):
     texto = texto_facebook(post)
     if len(imgs) == 1:
         d = _subir_foto(imgs[0], caption=texto, published="true")
-        return {"estado": "publicado", "post_id": d.get("post_id") or d.get("id"),
-                "enlace": f"https://www.facebook.com/{d.get('post_id') or d.get('id')}"}
+        pid = d.get("post_id") or d.get("id")
+        return {"estado": "publicado", "post_id": pid, "enlace": f"https://www.facebook.com/{pid}",
+                "comentario": comentar_primero(pid, post)}
     ids = [_subir_foto(i, published="false", temporary="true")["id"] for i in imgs]
     d = graph(f"{PAGINA}/feed", "POST", message=texto,
               attached_media=json.dumps([{"media_fbid": i} for i in ids]))
-    return {"estado": "publicado", "post_id": d["id"], "enlace": f"https://www.facebook.com/{d['id']}"}
+    return {"estado": "publicado", "post_id": d["id"], "enlace": f"https://www.facebook.com/{d['id']}",
+            "comentario": comentar_primero(d["id"], post)}
 
 
 publicar_carrusel = publicar_foto

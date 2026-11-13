@@ -87,23 +87,49 @@ def _limpiar(texto, maximo):
     return texto[:maximo]
 
 
+def _titulo_corto(titulo, maximo=60):
+    """Título de Short con « #Shorts» al final y como mucho `maximo` caracteres en total, cortando por palabra."""
+    sufijo = " #Shorts"
+    lim = maximo - len(sufijo)
+    t = titulo.strip()
+    if len(t) > lim:
+        t = t[:lim]
+        if " " in t[lim // 2:]:
+            t = t[:t.rindex(" ")]
+        t = t.rstrip(" ,.;:-·")
+        sueltas = {"el", "la", "los", "las", "un", "una", "y", "o", "de", "del", "al", "a", "en", "con", "por", "para", "que", "tu", "su", "se"}
+        palabras = t.split()
+        while len(palabras) > 3 and palabras[-1].lower() in sueltas:   # nunca acabar en «…y el #Shorts»
+            palabras.pop()
+        t = " ".join(palabras).rstrip(" ,.;:-·")
+    return t + sufijo
+
+
 def metadatos(post):
     """Título y descripción: bloque post["youtube"] si existe (lo escribe el Creador); si no, se derivan del texto del post."""
     yt = post.get("youtube") or {}
     texto = post.get("texto", "")
     primera = texto.split("\n", 1)[0].strip()
     titulo = yt.get("titulo") or primera
-    if not yt.get("largo") and "#shorts" not in titulo.lower():
+    if not yt.get("titulo") and not yt.get("largo") and "#shorts" not in titulo.lower():
+        titulo = _titulo_corto(titulo)   # DIRECTIVA §14: ≤ 60 caracteres con #Shorts (los títulos escritos a mano por el Creador no se tocan)
+    elif not yt.get("largo") and "#shorts" not in titulo.lower():
         titulo = titulo[:91].rstrip() + " #Shorts"
     app = post.get("app")
     enlace = f"{CENTRO}/solicitar?{'app=' + app + '&' if app else ''}src=youtube"
+    texto_l = texto.lower()
+    producto = bool(app or post.get("tipo") == "video_centro" or "solicitar?app=" in texto_l or "ajreparacion.com" in texto_l)
     if yt.get("descripcion"):
         desc = yt["descripcion"]
     else:
         desc = texto.replace("src=instagram", "src=youtube")
-        desc = desc.replace("Enlace en el perfil.", f"Pídela aquí: {enlace}").replace("Enlace en el perfil", f"Pídela aquí: {enlace}")
-        if enlace not in desc and "ajreparacion.com" not in desc:
-            desc += f"\n\n{enlace}"
+        if producto:   # enlace solo con producto (DIRECTIVA §13 cambio 3); un episodio sin producto no lleva enlace ni venta
+            desc = desc.replace("Enlace en el perfil.", f"Pídela aquí: {enlace}").replace("Enlace en el perfil", f"Pídela aquí: {enlace}")
+            if enlace not in desc and "ajreparacion.com" not in desc:
+                desc += f"\n\n{enlace}"
+        else:
+            desc = re.sub(r"(?im)^.*enlace en el perfil.*$", "", desc)
+            desc = re.sub(r"\n{3,}", "\n\n", desc).strip()
     if "By Neogest Lab" not in desc:
         desc += "\n\nBy Neogest Lab"
     etiquetas = yt.get("etiquetas") or re.findall(r"#(\w+)", texto)

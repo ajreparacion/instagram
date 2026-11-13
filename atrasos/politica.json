@@ -1,0 +1,6 @@
+{
+  "_nota": "Política de la cola de atrasos de Facebook y YouTube. Orden: DIRECTIVA_VIGENTE §14 (13/11/2026): los escaparates de app o web se pausan hasta nuevo dato y solo sale humor con personaje (o dato con personaje). Nada se borra: las piezas pausadas quedan con estado «pausado» y se reactivan poniendo pausa_escaparates en false y ejecutando `python3 herramientas/atrasos.py pausar`.",
+  "pausa_escaparates": true,
+  "desde": "2026-11-13",
+  "palabras_personaje": ["jambo", "jupillo", "pelota", "bola", "trámites", "tramites", "las ias de la oficina"]
+}

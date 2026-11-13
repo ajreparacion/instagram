@@ -2,6 +2,7 @@
 """Colas de ATRASOS para Facebook y YouTube — orden del dueño 12/11/2026 17:50.
 
   python3 herramientas/atrasos.py construir   # regenera atrasos/facebook.json y atrasos/youtube.json (sin tocar lo ya publicado)
+  python3 herramientas/atrasos.py pausar   # aplica atrasos/politica.json (escaparates pausados, DIRECTIVA §14) a las colas guardadas
   python3 herramientas/atrasos.py publicar facebook|youtube   # publica la siguiente pieza si toca (lo llama el ciclo)
 
 Qué entra: publicados/ con calidad.json nota ≥ 90 (reels y carruseles; las historias caducan y no se reciclan) y los vídeos del
@@ -34,6 +35,57 @@ CENTRO = "https://centro-de-contenido-apps-2f0a3cd6.base44.app"
 MAX_POR_CANAL = {"facebook": 12, "youtube": 6}
 MAX_DIA, HORA_INI, HORA_FIN, SEPARACION_MIN, NOTA_MIN = 6, 9, 22, 60, 90
 COLAS = {c: os.path.join(RAIZ, "atrasos", f"{c}.json") for c in ("facebook", "youtube")}
+
+
+POLITICA = os.path.join(RAIZ, "atrasos", "politica.json")
+
+
+def es_humor_personaje(p):
+    """Pieza de humor con personaje de la serie (El Jambo, la Jupillo, la Pelota, el Bola, la Trámites o «Las IAs de la oficina»)."""
+    pol = _json(POLITICA, {})
+    t = " ".join(str(p.get(k) or "") for k in ("texto", "id", "serie", "personaje")).lower()
+    return any(w in t for w in pol.get("palabras_personaje", []))
+
+
+def es_escaparate(p):
+    """Escaparate de app o web: vídeo del Centro, o pieza con app / enlace /solicitar?app= en el texto (DIRECTIVA §14)."""
+    if p.get("tipo") == "video_centro" or p.get("app"):
+        return True
+    t = str(p.get("texto") or "").lower()
+    return "solicitar?app=" in t or "ajreparacion.com" in t
+
+
+def aplicar_pausa(cola):
+    """Marca como «pausado» (nunca borra) lo pendiente que es escaparate sin personaje mientras la política lo pida; si la
+    política se desactiva, devuelve a «pendiente» lo que ella pausó. Devuelve el número de piezas cambiadas."""
+    pol = _json(POLITICA, {})
+    activa = bool(pol.get("pausa_escaparates"))
+    n = 0
+    for p in cola.get("piezas", []):
+        if activa and p.get("estado") == "pendiente" and es_escaparate(p) and not es_humor_personaje(p):
+            p["estado"] = "pausado"
+            p["motivo_pausa"] = "escaparate de app/web sin personaje: pausado por DIRECTIVA §14 (13/11/2026) hasta nuevo dato"
+            n += 1
+        elif not activa and p.get("estado") == "pausado" and p.get("motivo_pausa"):
+            p["estado"] = "pendiente"
+            p.pop("motivo_pausa", None)
+            n += 1
+    return n
+
+
+def pausar():
+    """Aplica la política a las dos colas ya guardadas, sin reconstruirlas."""
+    for c, ruta in COLAS.items():
+        cola = _json(ruta, None)
+        if not cola:
+            continue
+        n = aplicar_pausa(cola)
+        if n:
+            _guardar(ruta, cola)
+        est = {}
+        for p in cola["piezas"]:
+            est[p.get("estado")] = est.get(p.get("estado"), 0) + 1
+        print(c, "cambiadas:", n, est)
 
 
 def _json(ruta, defecto):
@@ -129,9 +181,11 @@ def construir():
                 p["estado"] = "saltado"
             usados.setdefault(h, p["id"])
         pend = [p for p in pend if p["estado"] == "pendiente"]
-        _guardar(COLAS[c], {"canal": c, "generado": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-                            "piezas": list(hechos[c].values()) + pend, "saltados": saltados[c]})
-        print(c, "pendientes:", len(pend), "publicadas:", len(ya), "saltadas:", len(saltados[c]))
+        cola_nueva = {"canal": c, "generado": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+                      "piezas": list(hechos[c].values()) + pend, "saltados": saltados[c]}
+        pausadas = aplicar_pausa(cola_nueva)
+        _guardar(COLAS[c], cola_nueva)
+        print(c, "pendientes:", len(pend) - pausadas, "pausadas:", pausadas, "publicadas:", len(ya), "saltadas:", len(saltados[c]))
 
 
 def _publicadas_hoy(canal):
@@ -178,6 +232,8 @@ def publicar(canal, ahora=None, simular=False):
         return {"estado": "tope_diario", "hoy": hoy}
     if ultima and ahora - ultima < timedelta(minutes=SEPARACION_MIN):
         return {"estado": "espera_separacion"}
+    if aplicar_pausa(cola) and not simular:   # defensa: una cola construida antes de la política no saca escaparates
+        _guardar(COLAS[canal], cola)
     vistos = {p["huella"] for p in cola["piezas"] if p.get("estado") == "publicado"}
     for p in cola["piezas"]:
         if p.get("estado") != "pendiente":
@@ -231,6 +287,8 @@ if __name__ == "__main__":
     o = sys.argv[1] if len(sys.argv) > 1 else ""
     if o == "construir":
         construir()
+    elif o == "pausar":
+        pausar()
     elif o == "publicar" and len(sys.argv) > 2 and sys.argv[2] in COLAS:
         print(json.dumps(publicar(sys.argv[2], simular="--simular" in sys.argv), ensure_ascii=False))
     else:

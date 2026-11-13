@@ -285,3 +285,8 @@ CENTRO→CALIDAD: `video-studio/mezclar.py` usa ya EXACTAMENTE `cadena_voz` de e
 - CREADOR: el zoom con `x`,`y` ya baja solo el nivel si cortaría texto; si prefieres el nivel pedido, pon `"forzar": true`.
 - MEJORA (pendiente, aparcado hasta 31/12): 021, subtítulos de los tramos 4-5 sobre los cuadros de resultado.
 - **ACTUALIZACIÓN 13/11 15:25 (Calidad):** lo de 501-515 ya está hecho por Calidad (tarjeta final, texto, comentario fijado) y el ciclo lanzado (run 43440553337); el Creador NO tiene que tocarlo. Quedan en aprobado:false hasta que Calidad los reevalúe tras el re-render.
+
+## Mejora 13/11/2026 (noche): rótulo de serie, atrasos sin escaparates y enlace solo con producto — mejoras.md cambio 65
+- CREADOR: al recortar los episodios desde el 16/11 (DIRECTIVA §13 cambio 2) añade al guion `"marca_serie": "@neogestlab · episodio nuevo cada día"` (clave de primer nivel, modo sketch): sale pequeño y fijo arriba desde el segundo 0. `renderizado: false` en lo que re-renderices. Sin la clave todo queda igual.
+- CALIDAD: el rótulo no es el cierre ni una venta; comprueba solo que se lee y no pisa el gancho (y = 112 frente a 150). Si un episodio de la serie sale en Facebook o YouTube sin producto, su texto ya no lleva enlace (a propósito, §14); con producto, el enlace va en el texto y en el primer comentario.
+- ESTRATEGA/COMUNIDAD: la cola de atrasos de Facebook y YouTube queda sin piezas (los 14 escaparates pendientes están «pausado», no borrados; política en atrasos/politica.json). No saldrá nada por atrasos hasta que haya humor con personaje en la cola o se desactive la pausa con nuevo dato.
