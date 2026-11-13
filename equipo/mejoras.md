@@ -709,3 +709,9 @@ La muestra del cambio 37 llevaba la pista generada por código (prueba_voz.yml n
 - Antes → después (misma locución, tras loudnorm −14): 2,5-4,5 kHz −23,3 → −21,0 dB; 4,5-8 kHz −26,9 → −25,5 dB; suelo de ruido en pausas −58,4 → −65,1 dBFS; dinámica p90-p10 48 → 54 dB; LUFS −14,5 → −14,7; pico −1,74 → −1,73 dBTP.
 - Límite: la EQ no crea contenido por encima de 12 kHz (el modelo genera a 24 kHz) ni cambia el timbre del clon; la mejora medida es de ~2 dB en presencia. Si sigue sonando a lata, hay que cambiar de fuente de voz (otra opción de la audición o una referencia limpia grabada por el dueño a ≥ 44,1 kHz; hoy `prohibir_voz_dueno` es true).
 - Revertir: `cp herramientas/versiones/voz.json_2026-11-13b equipo/voz.json`. Los reels ya publicados no se rehacen; los nuevos usan la cadena nueva.
+
+## Cambio 61 · 13/11/2026 (ingeniería de audio) · Audición v2 de voces (acento de España, sin clonar a nadie)
+- Orden del dueño 13/11 13:48 («parece acento chino»). Solo audición: `audicion_voces_v2.yml` + `herramientas/audicion_voces_v2.py` + `herramientas/transcribir_audicion.py`. No cambia voz.json ni el motor de producción.
+- Salida: `audicion2_<letra>_<motor>_<voz>.mp3` en la release «pruebas» (cadena_voz actual + loudnorm −14 LUFS, MP3 192 kbps 48 kHz) y `audicion2_transcripciones.json` (faster-whisper small, es).
+- Modo sin voz global: NO existe interruptor en voz.json; un reel es mudo por pieza (ninguna escena con `voz`, cambio 52). No se ha inventado uno.
+- Revertir: borrar los tres archivos (no tocan nada más).
