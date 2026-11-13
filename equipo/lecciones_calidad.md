@@ -1,6 +1,6 @@
 # Lecciones de Calidad (generado por herramientas/pre_entrega.py --stats; no editar a mano)
 
-Piezas con calidad.json: 42 · aprobadas: 18 (43 %) · nota media: 83.0
+Piezas con calidad.json: 41 · aprobadas: 17 (41 %) · nota media: 82.8
 
 ## Motivos de rechazo más repetidos (los que no están en pre_entrega.py como comprobación automática, hay que añadirlos)
 - otro: 41

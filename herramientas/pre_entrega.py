@@ -53,7 +53,9 @@ def revisar(carpeta):
         txt = (guion.get("gancho_corto") or (g or {}).get("texto") or "")
         n = len(re.sub(r"[*¡!¿?«»]", "", txt).split())
         if txt and n > 8: a.append("B1 gancho de %d palabras (máximo 8): «%s»" % (n, txt[:60]))
-        if post.get("app") and "ajreparacion.com" not in t and "prueba gratuita" not in norm(t): a.append("cierre único de prueba gratuita ausente en un reel de app")
+        # Orden del dueño 13/11 14:46 (DIRECTIVA_VIGENTE, §14): en la serie la venta va solo en el comentario fijado y la bio; ni dominio ni «más asequibles» en el texto del post
+        if "jambo" in os.path.basename(carpeta) and re.search(r"ajreparacion\.com|m[aá]s asequibles|prueba gratuita", t, re.I):
+            a.append("§14 el texto del post de un episodio lleva venta (dominio, «más asequibles» o «prueba gratuita»): va solo en el comentario fijado y la bio")
     return e, a
 
 def main():
