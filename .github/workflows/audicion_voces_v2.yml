@@ -1,0 +1,96 @@
+name: Audición de voces v2 (acento de España, sin clonar a nadie)
+
+# Solo a mano. La misma frase con MeloTTS, Kokoro, Piper (referencia), Chatterbox multilingüe sin referencia y Microsoft neural
+# (edge-tts, solo para escuchar). Pasa por cadena_voz + loudnorm -14 LUFS, MP3 192 kbps 48 kHz y sube a la release «pruebas»
+# como audicion2_<letra>_<motor>_<voz>.mp3. Un candidato que falla no para a los demás. No publica nada ni toca secretos.
+# Creado el 13/11/2026 (orden del dueño: «parece acento chino»).
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sintesis:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    continue-on-error: true
+    strategy:
+      fail-fast: false
+      matrix:
+        grupo: [melo, kokoro, piper, chatterbox, edge]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.grupo == 'melo' && '3.10' || '3.11' }}
+      - name: Herramientas comunes
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg espeak-ng libsndfile1 > /dev/null
+          pip install --quiet numpy
+      - name: Instalar motor
+        continue-on-error: true
+        run: |
+          case "${{ matrix.grupo }}" in
+            melo)
+              pip install --quiet "git+https://github.com/myshell-ai/MeloTTS.git"
+              python -m unidic download
+              python -c "import nltk; [nltk.download(p) for p in ('averaged_perceptron_tagger','averaged_perceptron_tagger_eng','cmudict')]" ;;
+            kokoro)
+              pip install --quiet kokoro soundfile --extra-index-url https://download.pytorch.org/whl/cpu ;;
+            piper)
+              pip install --quiet piper-tts ;;
+            chatterbox)
+              pip install --quiet chatterbox-tts --extra-index-url https://download.pytorch.org/whl/cpu ;;
+            edge)
+              pip install --quiet edge-tts ;;
+          esac
+      - name: Sintetizar y procesar
+        run: python3 herramientas/audicion_voces_v2.py "${{ matrix.grupo }}"
+      - name: Subir a la release «pruebas»
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          ls /tmp/a2/salida/ || exit 0
+          gh release view pruebas >/dev/null 2>&1 || gh release create pruebas --title "Pruebas de producción" --notes "Pruebas (no se publican)." || true
+          shopt -s nullglob
+          f=(/tmp/a2/salida/*)
+          [ ${#f[@]} -gt 0 ] && gh release upload pruebas "${f[@]}" --clobber || true
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audicion2-${{ matrix.grupo }}
+          path: /tmp/a2/salida/
+          if-no-files-found: ignore
+
+  transcribir:
+    needs: sintesis
+    if: always()
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: audicion2-*
+          path: /tmp/mp3
+          merge-multiple: true
+      - name: Transcribir con faster-whisper (small, es)
+        run: |
+          pip install --quiet faster-whisper
+          python3 herramientas/transcribir_audicion.py /tmp/mp3 /tmp/audicion2_transcripciones.json
+      - name: Subir transcripciones
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh release upload pruebas /tmp/audicion2_transcripciones.json --clobber
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: audicion2-transcripciones
+          path: /tmp/audicion2_transcripciones.json
