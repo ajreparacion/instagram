@@ -8,7 +8,7 @@
   "publico": "autónomos y pymes",
   "formula": "humor negro con personaje + pivote de producto (v9)",
   "app": "Gestión Integral 7D",
-  "renderizado": false,
+  "renderizado": "2026-11-13T14:17:33+00:00",
   "_fuentes": [
     "ATA, según The Objective (18/12/2025)"
   ],
@@ -24,7 +24,7 @@
     "mood": "comedia"
   },
   "portada_ms": 0,
-  "motor_voz": "chatterbox",
+  "motor_voz": "melo",
   "asset": "501_jambo_app_factura_dos_veces.mp4",
   "monetizacion": {
     "objetivo": "clic_enlace",

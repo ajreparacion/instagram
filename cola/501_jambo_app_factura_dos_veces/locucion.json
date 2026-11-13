@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 3.8,
+  "duracion": 4.133,
   "texto": "Presupuesto aprobado. ¡Ahora tecleo todo otra vez!",
   "enfasis": [
    3
@@ -14,8 +14,8 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "tramites",
-  "inicio": 3.8,
-  "duracion": 4.867,
+  "inicio": 4.133,
+  "duracion": 4.133,
   "texto": "Para facturar, rellene el impreso 27-B. En triplicado.",
   "enfasis": []
  },
@@ -23,7 +23,7 @@
   "escena": 3,
   "estilo": "delega",
   "hablante": "jambo",
-  "inicio": 11.067,
+  "inicio": 10.667,
   "duracion": 1.8,
   "texto": "Que lo haga la Jupillo.",
   "enfasis": []
@@ -32,8 +32,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 12.867,
-  "duracion": 3.1,
+  "inicio": 12.467,
+  "duracion": 3.4,
   "texto": "Líneas, precios, IVA. Otra vez.",
   "enfasis": []
  },
@@ -41,8 +41,8 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 15.967,
-  "duracion": 1.867,
+  "inicio": 15.867,
+  "duracion": 1.8,
   "texto": "Qué rápido facturo.",
   "enfasis": []
  },
@@ -50,8 +50,8 @@
   "escena": 6,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 17.833,
-  "duracion": 3.3,
+  "inicio": 17.667,
+  "duracion": 3.567,
   "texto": "Cuarenta minutos. «Rápido», dice.",
   "enfasis": []
  },
@@ -59,8 +59,8 @@
   "escena": 7,
   "estilo": "mensaje",
   "hablante": null,
-  "inicio": 21.133,
-  "duracion": 4.233,
+  "inicio": 21.233,
+  "duracion": 3.433,
   "texto": "Unas 200 horas al año en trámites, según ATA.",
   "enfasis": [
    1,
@@ -73,8 +73,8 @@
   "escena": 8,
   "estilo": "mensaje",
   "hablante": null,
-  "inicio": 25.367,
-  "duracion": 5.5,
+  "inicio": 24.667,
+  "duracion": 5.8,
   "texto": "En la vida real no hay Jupillo. Gestión Integral 7D hereda las líneas.",
   "enfasis": []
  },
@@ -82,7 +82,7 @@
   "escena": 9,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 30.867,
+  "inicio": 30.467,
   "duracion": 2.6,
   "texto": "Mándaselo a quien factura dos veces.",
   "enfasis": []
