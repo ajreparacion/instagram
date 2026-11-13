@@ -12,8 +12,10 @@
    "commit": "2fa2cb311b94f99fd8cb343668cd7d085e7788ba^",
    "ruta": "cola/201_medicator_carrusel/slides",
    "huella": "34128af0f3ac38fe",
-   "estado": "pendiente",
-   "errores": 0
+   "estado": "publicado",
+   "errores": 0,
+   "publicado": "2026-11-13T08:13:32+00:00",
+   "enlace": "https://www.facebook.com/1437632859434095_122109074385536765"
   },
   {
    "id": "101_errores_prompt",
