@@ -129,6 +129,25 @@ def escribir_json(ruta, datos):
         json.dump(datos, f, indent=2, ensure_ascii=False)
 
 
+def caducar_calidad(carpeta, motivo="re-render"):
+    """13/11/2026 (petición de Calidad del 12/11 17:50): una pieza que se vuelve a renderizar ya no es el vídeo que
+    Calidad revisó. Se marca su calidad.json como caducado (aprobado=false, se conserva lo anterior) para que
+    el ciclo no publique con una aprobación antigua; Calidad la reevalúa y escribe un calidad.json nuevo.
+    Devuelve True si había una aprobación vigente que se ha caducado."""
+    ruta = os.path.join(carpeta, "calidad.json")
+    cal = leer_json(ruta)
+    if not isinstance(cal, dict) or cal.get("caducado"):
+        return False
+    vigente = bool(cal.get("aprobado"))
+    cal["aprobado_anterior"] = vigente
+    cal["nota_anterior"] = cal.get("nota")
+    cal["aprobado"] = False
+    cal["caducado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    cal["motivo_caducidad"] = motivo
+    escribir_json(ruta, cal)
+    return vigente
+
+
 def cargar_config():
     cfg = leer_json(os.path.join(EQUIPO, "config_publico.json"), {})
     cfg["page_token"] = os.environ.get("PAGE_TOKEN", "")
@@ -1254,6 +1273,8 @@ def renderizar(cfg, carpeta, post):
     post.pop("_error_render", None)
     escribir_json(os.path.join(carpeta, "post.json"), post)
     shutil.rmtree(trabajo, ignore_errors=True)
+    if caducar_calidad(carpeta, "re-render del ciclo " + post["renderizado"]):
+        log(f"{nombre}: re-renderizado; su aprobación de Calidad anterior queda caducada (Calidad debe reevaluarlo)")
     log(f"{nombre}: renderizado con voz y subido a la release '{RELEASE}'")
 
 
@@ -1447,7 +1468,7 @@ def aprobado(carpeta, cuando, ahora):
     # 7/11/2026 (orden del dueño: «hay que pasar todo por calidad, subir mucho más el listón»):
     # nada sale sin el visto bueno explícito de Calidad y con nota mínima. Se acabó la gracia de 3 h.
     cal = leer_json(os.path.join(carpeta, "calidad.json"))
-    if cal is None:
+    if cal is None or cal.get("caducado"):   # caducado = la pieza se re-renderizó después de la revisión de Calidad
         return False
     try:
         nota = float(cal.get("nota", 0))
