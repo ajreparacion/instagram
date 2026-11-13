@@ -1,29 +1,33 @@
 {
-  "fecha": "2026-11-11T22:00:18+00:00",
+  "fecha": "2026-11-13T16:06:30+00:00",
   "avisos": [
-    "huecos de voz > 1.5 s (solo suena la música): [[6.4, 9.45]]"
+    "huecos de voz > 1.5 s (solo suena la música): [[5.5, 8.5], [20.0, 21.75]]"
   ],
-  "duracion_s": 32.4,
-  "voz_activa_pct": 70.1,
-  "bajada_musica_p90_db": 5.91,
-  "bajada_musica_mediana_db": 5.13,
-  "voz_sobre_musica_db": 12.51,
+  "duracion_s": 29.25,
+  "voz_activa_pct": 60.3,
+  "bajada_musica_p90_db": 5.61,
+  "bajada_musica_mediana_db": 4.63,
+  "voz_sobre_musica_db": 9.45,
   "musica_entre_frases_db": -18.0,
-  "musica_en_voz_db": -29.8,
+  "musica_en_voz_db": -29.2,
   "huecos_voz": [
     [
-      6.4,
-      9.45
+      5.5,
+      8.5
+    ],
+    [
+      20.0,
+      21.75
     ]
   ],
   "ratio_duck_usado": 2.0,
-  "voz_lufs": -15.3,
+  "voz_lufs": -15.5,
   "musica_lufs": -15.6,
-  "musica_con_ducking_lufs": -16.1,
+  "musica_con_ducking_lufs": -16.0,
   "master": {
     "objetivo_lufs": -14.0,
-    "antes_lufs": -15.05,
-    "antes_pico_dbtp": -0.93,
+    "antes_lufs": -15.09,
+    "antes_pico_dbtp": -0.87,
     "despues_lufs": -14.1,
     "despues_pico_dbfs": -1.4
   }

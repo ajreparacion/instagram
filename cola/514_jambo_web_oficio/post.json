@@ -8,7 +8,7 @@
   "publico": "negocios, asociaciones y aficiones que quieren web propia",
   "formula": "humor negro con personaje + pivote de web (v9)",
   "app": "Webs a medida Neogest Lab",
-  "renderizado": false,
+  "renderizado": "2026-11-13T16:07:43+00:00",
   "_fuentes": [],
   "_nota_creador": "11/11/2026 (webs a medida): Webs a medida de Neogest Lab: ajreparacion.com es el EJEMPLO de lo que se hace. Función de la web verificada en la ficha AJ Web; la idea de que el precio es asequible es del dueño (sin cifras) y debe confirmarla antes de publicar. Sin calidad.json no se publica.",
   "comentario_fijado": "¿Cuántas llamadas pierdes al día? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu web a medida? Comenta WEB y te preparo una maqueta gratis, sin compromiso.",
@@ -22,7 +22,7 @@
     "mood": "comedia"
   },
   "portada_ms": 0,
-  "motor_voz": "chatterbox",
+  "motor_voz": "melo",
   "asset": "514_jambo_web_oficio.mp4",
   "monetizacion": {
     "objetivo": "visita_perfil",

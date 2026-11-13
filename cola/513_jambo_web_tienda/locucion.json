@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 2.733,
+  "duracion": 2.9,
   "texto": "¿Mi tienda? ¡Está en mi cabeza!",
   "enfasis": []
  },
@@ -12,8 +12,8 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 2.733,
-  "duracion": 4.133,
+  "inicio": 2.9,
+  "duracion": 3.033,
   "texto": "¡Los tiburones no necesitan web, necesitan hambre!",
   "enfasis": []
  },
@@ -21,8 +21,8 @@
   "escena": 3,
   "estilo": "delega",
   "hablante": "jambo",
-  "inicio": 9.267,
-  "duracion": 2.4,
+  "inicio": 8.333,
+  "duracion": 1.8,
   "texto": "Que lo haga la Jupillo.",
   "enfasis": []
  },
@@ -30,8 +30,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 11.667,
-  "duracion": 3.7,
+  "inicio": 10.133,
+  "duracion": 3.067,
   "texto": "Catálogo con consulta y pedido con formulario.",
   "enfasis": []
  },
@@ -39,8 +39,8 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 15.367,
-  "duracion": 3.333,
+  "inicio": 13.2,
+  "duracion": 2.467,
   "texto": "Mi tienda, en internet. Idea mía.",
   "enfasis": []
  },
@@ -48,8 +48,8 @@
   "escena": 6,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 18.7,
-  "duracion": 2.133,
+  "inicio": 15.667,
+  "duracion": 2.7,
   "texto": "Idea suya. Claro.",
   "enfasis": []
  },
@@ -57,7 +57,7 @@
   "escena": 7,
   "estilo": "mensaje",
   "hablante": null,
-  "inicio": 20.833,
+  "inicio": 18.367,
   "duracion": 3.2,
   "texto": "Quien no te encuentra no te compra.",
   "enfasis": [
@@ -70,8 +70,8 @@
   "escena": 8,
   "estilo": "mensaje",
   "hablante": null,
-  "inicio": 24.033,
-  "duracion": 5.767,
+  "inicio": 21.567,
+  "duracion": 5.467,
   "texto": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
   "enfasis": []
  },
@@ -79,8 +79,8 @@
   "escena": 9,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 29.8,
-  "duracion": 2.633,
+  "inicio": 27.033,
+  "duracion": 2.233,
   "texto": "Mándaselo a quien aún no tiene web.",
   "enfasis": []
  }
