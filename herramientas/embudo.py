@@ -7,8 +7,9 @@ R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 k = json.load(open(os.path.join(R, "equipo", "kpi_buzzfy.json"), encoding="utf-8"))
 l = json.load(open(os.path.join(R, "equipo", "leads.json"), encoding="utf-8"))
 reg = [x for x in l.get("registros", [])]
-def suma(c): 
-    v = [x.get(c) for x in reg if isinstance(x.get(c), (int, float))]; return sum(v) if v else None
+def suma(c):
+    """Cada registro de leads.json trae el TOTAL acumulado visto ese día (no el del día): vale el último que no sea null."""
+    v = [x.get(c) for x in reg if isinstance(x.get(c), (int, float))]; return v[-1] if v else None
 def pct(a, b): return "n/d" if not b or a is None else "%.1f %%" % (100.0 * a / b)
 nsa, vp, ce = k.get("alcance_no_seguidores_total"), k.get("visitas_perfil"), k.get("clics_enlace")
 sol, dms, pru, eur = suma("solicitudes_centro"), suma("dms_con_intencion"), suma("pruebas_gratuitas"), suma("ingresos_eur")
