@@ -1,0 +1,144 @@
+{
+ "titulo": "Las IAs de la oficina · Ep. 20: ¿dónde está mi pedido?",
+ "semilla": 3020,
+ "modo": "sketch",
+ "serie": "El Jambo que sabe y las IAs",
+ "episodio": 20,
+ "negocio": "reparto y transporte",
+ "portada_texto": "POV: el cliente pregunta por su pedido",
+ "musica": true,
+ "contador": {
+  "texto": "Veces que se lo ha pasado a la Jupillo",
+  "inicio": 30,
+  "valor": 31
+ },
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "hablante": "jambo",
+   "voz": "¿Mi pedido? ¡Ya *sale*!",
+   "texto": "POV: el cliente pregunta por su pedido",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "tramites"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "tramites": "habla"
+    }
+   },
+   "contar": false
+  },
+  {
+   "estilo": "gag",
+   "hablante": "tramites",
+   "voz": "Su pedido está en tramitación.",
+   "texto": "La Trámites",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "tramites"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "tramites": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "tramites",
+   "voz": "",
+   "texto": "",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "tramites"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "tramites": "habla"
+    },
+    "efecto": "sello",
+    "efecto_t": 0.7,
+    "sello_texto": "TRAMITANDO"
+   },
+   "duracion": 1.6
+  },
+  {
+   "estilo": "delega",
+   "hablante": "jambo",
+   "voz": "Que lo haga la Jupillo.",
+   "texto": "",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "jupillo"
+    ],
+    "acciones": {
+     "jambo": "delega",
+     "jupillo": "habla"
+    }
+   },
+   "contar": true
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jupillo",
+   "voz": "Sale hoy. Llega mañana.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo"
+    ],
+    "acciones": {
+     "jupillo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Qué rapidez. Mérito mío.",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "remata"
+    }
+   },
+   "cartel": "PEDIDO LOCALIZADO · MÉRITO: EL JAMBO"
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jupillo",
+   "voz": "Mándaselo a quien contesta «ya sale».",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo"
+    ],
+    "acciones": {
+     "jupillo": "habla"
+    }
+   }
+  }
+ ],
+ "dibujo": {
+  "personajes": [
+   "jambo",
+   "jupillo",
+   "pelota",
+   "bola",
+   "tramites"
+  ]
+ },
+ "_guion": "14/11/2026 Creador: formato del dueño 13/11 14:46 (DIRECTIVA §14): IA personificada en el segundo 0, ≤ 20 s, remate en 2 s, reenvío a persona concreta, sin producto ni mensaje en tarjeta; humor de ficción sin cifras.",
+ "gancho_corto": "¿DÓNDE ESTÁ MI PEDIDO?",
+ "marca_serie": "@neogestlab · episodio nuevo cada día"
+}

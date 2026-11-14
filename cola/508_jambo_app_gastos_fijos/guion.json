@@ -39,7 +39,7 @@
   {
    "estilo": "gag",
    "hablante": "pelota",
-   "voz": "Los gastos fijos son una sorpresa mensual.",
+   "voz": "Los gastos fijos: sorpresa mensual.",
    "texto": "La Pelota",
    "dibujo": {
     "personajes": [
@@ -70,7 +70,7 @@
     "efecto_t": 0.7,
     "sello_texto": "REPETIDO"
    },
-   "duracion": 2.4
+   "duracion": 1.6
   },
   {
    "estilo": "delega",
@@ -92,7 +92,7 @@
   {
    "estilo": "gag",
    "hablante": "jupillo",
-   "voz": "Generar pagos del mes. Sin duplicar.",
+   "voz": "Pagos del mes. Sin duplicar.",
    "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
@@ -106,7 +106,7 @@
   {
    "estilo": "gag",
    "hablante": "jambo",
-   "voz": "Qué mes tan ordenado. Mérito mío.",
+   "voz": "Qué mes ordenado.",
    "texto": "El Jambo",
    "dibujo": {
     "personajes": [
@@ -123,7 +123,7 @@
   {
    "estilo": "gag",
    "hablante": "jupillo",
-   "voz": "Mismos pagos. Mismo mérito.",
+   "voz": "Mándaselo a quien paga a mano.",
    "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
@@ -132,36 +132,6 @@
     "acciones": {
      "jupillo": "habla"
     }
-   }
-  },
-  {
-   "estilo": "mensaje",
-   "hablante": null,
-   "voz": "Lo que se repite cada mes *debería hacerse solo*.",
-   "texto": "Lo que se repite cada mes debería hacerse solo.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
-   }
-  },
-  {
-   "estilo": "mensaje",
-   "hablante": null,
-   "voz": "En la vida real no hay Jupillo. GH PLUS genera tus pagos fijos del mes.",
-   "texto": "No hay Jupillo en la vida real. GH PLUS genera los pagos fijos del mes, sin duplicar.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
-   }
-  },
-  {
-   "estilo": "cierre",
-   "hablante": null,
-   "voz": "Mándaselo a quien paga lo mismo a mano cada mes.",
-   "texto": "Mándaselo a quien paga lo mismo a mano cada mes.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
    }
   }
  ],
@@ -174,5 +144,6 @@
    "tramites"
   ]
  },
- "_guion": "11/11/2026 v9 (equipo/formula_v9_humor_negro_producto.md): fórmula del cambio 40 + mensaje serio + pivote de producto (una función de hechos_verificados) + cierre único."
+ "_guion": "11/11/2026 v9 (equipo/formula_v9_humor_negro_producto.md): fórmula del cambio 40 + mensaje serio + pivote de producto (una función de hechos_verificados) + cierre único. | 14/11/2026 Creador: recortado a ≤ 20 s (DIRECTIVA §14): sin tarjetas oscuras, el pivote lo dice la Jupillo en pantalla y el reenvío cierra en su voz.",
+ "marca_serie": "@neogestlab · episodio nuevo cada día"
 }

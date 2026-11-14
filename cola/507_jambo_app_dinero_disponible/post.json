@@ -8,9 +8,9 @@
   "publico": "hogar y finanzas personales",
   "formula": "humor negro con personaje + pivote de producto (v9)",
   "app": "GH PLUS",
-  "renderizado": "2026-11-13T15:08:53+00:00",
+  "renderizado": false,
   "_fuentes": [],
-  "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
+  "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90). | 14/11: recortado a ≤ 20 s para el re-render (calidad.json 13/11: recortar a ≤ 20 s, pivote con la Jupillo en pantalla).",
   "comentario_fijado": "¿A cuántos días del mes te quedas sin nómina? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
   "avance_siguiente": "Mañana: los gastos que se repiten.",
   "audio_ig": {

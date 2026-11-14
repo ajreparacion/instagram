@@ -70,7 +70,7 @@
     "efecto_t": 0.7,
     "sello_texto": "TODOS"
    },
-   "duracion": 2.4
+   "duracion": 1.6
   },
   {
    "estilo": "delega",
@@ -92,7 +92,7 @@
   {
    "estilo": "gag",
    "hablante": "jupillo",
-   "voz": "A, B y C. El que más compra, primero.",
+   "voz": "A, B y C. Al mejor, primero.",
    "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
@@ -123,7 +123,7 @@
   {
    "estilo": "gag",
    "hablante": "jupillo",
-   "voz": "Dos meses sin visitar al cliente A.",
+   "voz": "Mándaselo a quien visita por instinto.",
    "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
@@ -132,36 +132,6 @@
     "acciones": {
      "jupillo": "habla"
     }
-   }
-  },
-  {
-   "estilo": "mensaje",
-   "hablante": null,
-   "voz": "No todos los clientes pesan igual. *Tu agenda debería saberlo.*",
-   "texto": "No todos los clientes pesan igual. Tu agenda debería saberlo.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
-   }
-  },
-  {
-   "estilo": "mensaje",
-   "hablante": null,
-   "voz": "En la vida real no hay Jupillo. Gestión Integral 7D clasifica tus clientes.",
-   "texto": "No hay Jupillo en la vida real. Gestión Integral 7D: clientes A, B y C con su última visita.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
-   }
-  },
-  {
-   "estilo": "cierre",
-   "hablante": null,
-   "voz": "Mándaselo a quien visita por instinto.",
-   "texto": "Mándaselo a quien visita por instinto.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
    }
   }
  ],
@@ -174,5 +144,6 @@
    "tramites"
   ]
  },
- "_guion": "11/11/2026 v9 (equipo/formula_v9_humor_negro_producto.md): fórmula del cambio 40 + mensaje serio + pivote de producto (una función de hechos_verificados) + cierre único."
+ "_guion": "11/11/2026 v9 (equipo/formula_v9_humor_negro_producto.md): fórmula del cambio 40 + mensaje serio + pivote de producto (una función de hechos_verificados) + cierre único. | 14/11/2026 Creador: recortado a ≤ 20 s (DIRECTIVA §14): sin tarjetas oscuras, el pivote lo dice la Jupillo en pantalla y el reenvío cierra en su voz.",
+ "marca_serie": "@neogestlab · episodio nuevo cada día"
 }

@@ -1,0 +1,30 @@
+{
+  "tipo": "reel",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "portada_ms": 0,
+  "texto": "Por quinta vez, un huésped pregunta la hora del desayuno. La Pelota cambia la respuesta cada vez.\nEnvíaselo a ese compañero de recepción que ya no sabe qué contestar.\nHumor negro de ficción; los personajes son inventados.\n#humornegro #hotel #recepcion #ia #trabajo\nVoz y personajes generados por IA",
+  "cuando": "2026-11-20T20:40:00+01:00",
+  "formato": "Serie Las IAs de la oficina",
+  "publico": "hotel pequeño",
+  "formula": "F3+F7 con IA personificada en el segundo 0 (virales 13/11)",
+  "_fuentes": [],
+  "_comprobado": "Sin cifras ni funciones de producto: humor de ficción.",
+  "_nota_creador": "14/11/2026: episodio nuevo en el formato del dueño (DIRECTIVA §14). Sin producto, sin enlace y sin precio en el vídeo ni en el texto; la oferta va solo en el comentario fijado. Calidad (≥ 90) manda: sin calidad.json aprobado el hueco queda libre. Voz genérica de España.",
+  "renderizado": false,
+  "comentario_fijado": "¿Qué es lo que más te preguntan en el trabajo? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
+  "avance_siguiente": "Mañana: el cliente pregunta por su pedido.",
+  "audio_ig": {
+    "audio_id": "326419273084628",
+    "titulo": "Revival · Austin Cannon",
+    "origen": "biblioteca de Instagram (colección libre de derechos)",
+    "audio_volume": 0.5,
+    "video_volume": 1.0,
+    "mood": "comedia"
+  },
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "seguir el perfil; la oferta APP/WEB vive en el comentario fijado",
+    "paso_embudo": "alcance → visita al perfil"
+  }
+}

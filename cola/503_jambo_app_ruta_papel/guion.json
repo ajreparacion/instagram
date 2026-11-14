@@ -22,7 +22,7 @@
   {
    "estilo": "gancho",
    "hablante": "jambo",
-   "voz": "Doce visitas. ¡*Ni idea* de por dónde empezar!",
+   "voz": "¡Doce visitas! ¡*Ni idea*!",
    "texto": "POV: tu ruta de visitas está en papel",
    "dibujo": {
     "personajes": [
@@ -39,7 +39,7 @@
   {
    "estilo": "gag",
    "hablante": "pelota",
-   "voz": "Gira a la izquierda. Camino al mar. Seguro.",
+   "voz": "Gira a la izquierda. Camino al mar.",
    "texto": "La Pelota",
    "dibujo": {
     "personajes": [
@@ -70,7 +70,7 @@
     "efecto_t": 0.7,
     "sello_texto": "PERDIDO"
    },
-   "duracion": 2.4
+   "duracion": 1.6
   },
   {
    "estilo": "delega",
@@ -123,7 +123,7 @@
   {
    "estilo": "gag",
    "hablante": "jupillo",
-   "voz": "Aquí no hay mar.",
+   "voz": "Mándaselo a quien apunta visitas en papel.",
    "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
@@ -132,36 +132,6 @@
     "acciones": {
      "jupillo": "habla"
     }
-   }
-  },
-  {
-   "estilo": "mensaje",
-   "hablante": null,
-   "voz": "Cada kilómetro de más *lo pagas tú*.",
-   "texto": "Cada kilómetro de más lo pagas tú.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
-   }
-  },
-  {
-   "estilo": "mensaje",
-   "hablante": null,
-   "voz": "En la vida real no hay Jupillo. Gestión Integral 7D: «Mi día» ordena tu ruta.",
-   "texto": "No hay Jupillo en la vida real. Gestión Integral 7D: «Mi día» ordena tus visitas y calcula la llegada.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
-   }
-  },
-  {
-   "estilo": "cierre",
-   "hablante": null,
-   "voz": "Mándaselo a quien aún apunta las visitas en papel.",
-   "texto": "Mándaselo a quien aún apunta las visitas en papel.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
    }
   }
  ],
@@ -174,5 +144,6 @@
    "tramites"
   ]
  },
- "_guion": "11/11/2026 v9 (equipo/formula_v9_humor_negro_producto.md): fórmula del cambio 40 + mensaje serio + pivote de producto (una función de hechos_verificados) + cierre único."
+ "_guion": "11/11/2026 v9 (equipo/formula_v9_humor_negro_producto.md): fórmula del cambio 40 + mensaje serio + pivote de producto (una función de hechos_verificados) + cierre único. | 14/11/2026 Creador: recortado a ≤ 20 s (DIRECTIVA §14): sin tarjetas oscuras, el pivote lo dice la Jupillo en pantalla y el reenvío cierra en su voz.",
+ "marca_serie": "@neogestlab · episodio nuevo cada día"
 }

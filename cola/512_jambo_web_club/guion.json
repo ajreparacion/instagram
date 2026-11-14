@@ -39,7 +39,7 @@
   {
    "estilo": "gag",
    "hablante": "pelota",
-   "voz": "Una web cuesta un riñón. Con total seguridad.",
+   "voz": "Todos vienen el sábado. *Seguro*.",
    "texto": "La Pelota",
    "dibujo": {
     "personajes": [
@@ -68,9 +68,9 @@
     },
     "efecto": "sello",
     "efecto_t": 0.7,
-    "sello_texto": "RIÑÓN"
+    "sello_texto": "SIN CONFIRMAR"
    },
-   "duracion": 2.4
+   "duracion": 1.6
   },
   {
    "estilo": "delega",
@@ -92,7 +92,7 @@
   {
    "estilo": "gag",
    "hablante": "jupillo",
-   "voz": "Solicitud con fotos y estado consultable. Sin WhatsApp.",
+   "voz": "Una solicitud. Un estado. Sin WhatsApp.",
    "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
@@ -106,7 +106,7 @@
   {
    "estilo": "gag",
    "hablante": "jambo",
-   "voz": "Qué bien organizo. Soy un presidente.",
+   "voz": "Qué bien organizo.",
    "texto": "El Jambo",
    "dibujo": {
     "personajes": [
@@ -123,7 +123,7 @@
   {
    "estilo": "gag",
    "hablante": "jupillo",
-   "voz": "Trescientos mensajes. Organizado, dice.",
+   "voz": "Mándaselo a quien organiza el club.",
    "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
@@ -132,36 +132,6 @@
     "acciones": {
      "jupillo": "habla"
     }
-   }
-  },
-  {
-   "estilo": "mensaje",
-   "hablante": null,
-   "voz": "Se piensa que tener web es caro. *Casi nunca lo es.*",
-   "texto": "Se piensa que tener web es caro. Casi nunca lo es.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
-   }
-  },
-  {
-   "estilo": "mensaje",
-   "hablante": null,
-   "voz": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
-   "texto": "En la vida real no hay Jupillo. Neogest Lab crea webs a medida para tu club o afición. Más asequibles de lo que piensas.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
-   }
-  },
-  {
-   "estilo": "cierre",
-   "hablante": null,
-   "voz": "Mándaselo a quien aún no tiene web.",
-   "texto": "Mándaselo a quien aún no tiene web.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
    }
   }
  ],
@@ -174,5 +144,6 @@
    "tramites"
   ]
  },
- "_guion": "11/11/2026 v9 (equipo/formula_v9_humor_negro_producto.md): fórmula del cambio 40 + mensaje serio + pivote de producto (una función de hechos_verificados) + cierre único."
+ "_guion": "11/11/2026 v9 (equipo/formula_v9_humor_negro_producto.md): fórmula del cambio 40 + mensaje serio + pivote de producto (una función de hechos_verificados) + cierre único. | 14/11/2026 Creador: recortado a ≤ 20 s (DIRECTIVA §14): sin tarjetas oscuras ni venta en el vídeo; el reenvío cierra en la voz de la Jupillo.",
+ "marca_serie": "@neogestlab · episodio nuevo cada día"
 }

@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Hace un ruido raro. Así. En la web de un taller real se hace la pre-entrada online: tipo de máquina, avería y hasta cuatro fotos.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nNeogest Lab crea webs a medida para cualquier negocio, afición o asociación; la web de un taller de reparaciones es un ejemplo real de lo que hacemos.\nPensarás que cuesta un riñón. Pide presupuesto y te sorprenderás.\nMándaselo a quien aún no tiene web.\nEpisodio nuevo cada día en @neogestlab\n#webs #pymes #autonomos #neogestlab\nVoz y personajes generados por IA",
+  "texto": "Hace un ruido raro. Así. En la web de un taller real se hace la pre-entrada online: tipo de máquina, avería y hasta cuatro fotos.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nMándaselo a quien explica con ruiditos.\nEpisodio nuevo cada día en @neogestlab\n#webs #pymes #autonomos #neogestlab\nVoz y personajes generados por IA",
   "cuando": "2026-11-24T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -8,9 +8,9 @@
   "publico": "negocios, asociaciones y aficiones que quieren web propia",
   "formula": "humor negro con personaje + pivote de web (v9)",
   "app": "Webs a medida Neogest Lab",
-  "renderizado": "2026-11-13T15:23:42+00:00",
+  "renderizado": false,
   "_fuentes": [],
-  "_nota_creador": "11/11/2026 (webs a medida): Webs a medida de Neogest Lab: ajreparacion.com es el EJEMPLO de lo que se hace. Función de la web verificada en la ficha AJ Web; la idea de que el precio es asequible es del dueño (sin cifras) y debe confirmarla antes de publicar. Sin calidad.json no se publica.",
+  "_nota_creador": "11/11/2026 (webs a medida): Webs a medida de Neogest Lab: ajreparacion.com es el EJEMPLO de lo que se hace. Función de la web verificada en la ficha AJ Web; la idea de que el precio es asequible es del dueño (sin cifras) y debe confirmarla antes de publicar. Sin calidad.json no se publica. | 14/11: recortado a ≤ 20 s y sin venta en el texto ni en el vídeo (DIRECTIVA §14); la oferta WEB queda en el comentario fijado.",
   "comentario_fijado": "¿Cómo explicas tú una avería? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu web a medida? Comenta WEB y te preparo una maqueta gratis, sin compromiso.",
   "avance_siguiente": "Mañana: el número de serie.",
   "audio_ig": {

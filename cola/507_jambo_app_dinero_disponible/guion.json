@@ -39,7 +39,7 @@
   {
    "estilo": "gag",
    "hablante": "bola",
-   "voz": "¡El dinero se invierte! ¡Mentalidad de abundancia!",
+   "voz": "¡Invierte! ¡Mentalidad de abundancia!",
    "texto": "El Bola",
    "dibujo": {
     "personajes": [
@@ -70,7 +70,7 @@
     "efecto_t": 0.7,
     "sello_texto": "0 €"
    },
-   "duracion": 2.4
+   "duracion": 1.6
   },
   {
    "estilo": "delega",
@@ -123,7 +123,7 @@
   {
    "estilo": "gag",
    "hablante": "jupillo",
-   "voz": "Creer no es controlar.",
+   "voz": "Mándaselo a quien pierde la nómina.",
    "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
@@ -132,36 +132,6 @@
     "acciones": {
      "jupillo": "habla"
     }
-   }
-  },
-  {
-   "estilo": "mensaje",
-   "hablante": null,
-   "voz": "Si no sabes adónde se va, *te faltan cuentas*.",
-   "texto": "Si no sabes adónde se va, te faltan cuentas.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
-   }
-  },
-  {
-   "estilo": "mensaje",
-   "hablante": null,
-   "voz": "En la vida real no hay Jupillo. GH PLUS te muestra tu dinero disponible.",
-   "texto": "No hay Jupillo en la vida real. GH PLUS te muestra tu dinero disponible del mes.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
-   }
-  },
-  {
-   "estilo": "cierre",
-   "hablante": null,
-   "voz": "Mándaselo a quien no sabe adónde se va la nómina.",
-   "texto": "Mándaselo a quien no sabe adónde se va la nómina.",
-   "dibujo": {
-    "personajes": [],
-    "accion": "serio"
    }
   }
  ],
@@ -174,5 +144,6 @@
    "tramites"
   ]
  },
- "_guion": "11/11/2026 v9 (equipo/formula_v9_humor_negro_producto.md): fórmula del cambio 40 + mensaje serio + pivote de producto (una función de hechos_verificados) + cierre único."
+ "_guion": "11/11/2026 v9 (equipo/formula_v9_humor_negro_producto.md): fórmula del cambio 40 + mensaje serio + pivote de producto (una función de hechos_verificados) + cierre único. | 14/11/2026 Creador: recortado a ≤ 20 s (DIRECTIVA §14): sin tarjetas oscuras, el pivote lo dice la Jupillo en pantalla y el reenvío cierra en su voz.",
+ "marca_serie": "@neogestlab · episodio nuevo cada día"
 }

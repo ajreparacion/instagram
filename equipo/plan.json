@@ -318,7 +318,7 @@
    "publico": "Hotel pequeño",
    "app": "(ninguna)",
    "formula": "F3+F7",
-   "cola": "315 (NUEVO, serie «Las IAs de la oficina · Ep. N», ≤ 20 s)",
+   "cola": "315_ias_oficina_ep19_desayuno",
    "aprobado_calidad": false,
    "nota": "Sustituye a 311, que pasa al 18/11. Si el Creador no lo tiene aprobado a las 12:00 del 20/11, el hueco queda libre (no se rellena con escaparates).",
    "brazo": "A"
@@ -331,7 +331,7 @@
    "publico": "Reparto y transporte",
    "app": "(ninguna)",
    "formula": "F3+F7",
-   "cola": "316 (NUEVO, serie «Las IAs de la oficina · Ep. N», ≤ 20 s)",
+   "cola": "316_ias_oficina_ep20_pedido",
    "aprobado_calidad": false,
    "nota": "Sustituye a 312, que pasa al 19/11. Mismo criterio de hueco libre si no hay pieza aprobada.",
    "brazo": "A"
