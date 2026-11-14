@@ -1,38 +1,29 @@
 {
-  "tipo": "reel",
-  "texto": "Parte 2: tu jefe vuelve a pedir «un momentito» y el Jambo, también.\nLa Jupillo hace cuatrocientas páginas; el Jambo se lleva el mérito. Humor negro de ficción.\nDato: 2,5 millones de horas extra a la semana sin pagar, 42 % de las horas extra (EPA, INE, 1.er trim. 2026, según El Español 26/05/2026).\n¿Tu jefe también pide momentitos? Cuéntalo en comentarios.\nMándaselo a quien carga con todo.\nParte 3 mañana en @neogestlab\n#humornegro #trabajo #horasextra #ia #pymes\nVoz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
-  "cuando": "2026-11-15T11:40:00+01:00",
-  "compartir_en_feed": true,
-  "prueba_no_seguidores": true,
-  "formato": "Serie El Jambo",
-  "publico": "oficina",
-  "formula": "humor con personaje (v8 B2)",
-  "_fuentes": [],
-  "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
-  "_nota_creador": "14/11/2026 Remasterizador: Parte 2 de un éxito (serie El Jambo), hecha con la DIRECTIVA DE VÍDEO del 14/11. Falta: render (Creador), voz edge-tts (Álvaro/Ximena) y Calidad (≥ 90). Sin dato estadístico en el vídeo. Música: la de Instagram (audio_ig) o, si el render usa Kevin MacLeod, añadir su atribución obligatoria al post.",
-  "motor_voz": "edge",
-  "comentario_fijado": "¿Tu jefe también pide momentitos? Parte 3 mañana en @neogestlab",
-  "avance_siguiente": "Mañana: parte 3.",
-  "portada_ms": 0,
-  "monetizacion": {
-    "objetivo": "visita_perfil",
-    "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
-    "paso_embudo": "alcance → visita al perfil"
-  },
-  "musica": {
-    "titulo": "Monkeys Spinning Monkeys",
-    "autor": "Kevin MacLeod",
-    "licencia": "CC BY 4.0",
-    "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Monkeys_Spinning_Monkeys.mp3",
-    "bpm": 143.6
-  },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-14T20:41:55+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['18', '55'], sobran ['seis', 'cincuenta', 'y', 'cinco', 'y'] (rehacer esas frases)",
-      "silencios > 0.6 s entre frases (pista de voz): [[5.65, 6.26, 0.6]]"
-    ],
-    "guion_md5": "201757d9613e1f960422c8abf2adb3bb"
-  }
+ "tipo": "reel",
+ "texto": "Parte 2: «solo un momentito»… a las 23:00. La Jupillo lo hace todo; el Jambo se pone pálido. Humor negro de ficción.\nDato: 2,5 millones de horas extra a la semana sin pagar, 42 % de las horas extra (EPA, INE, 1.er trim. 2026, según El Español 26/05/2026).\n¿Cuántos «momentitos» te han hecho este año? Cuéntalo en comentarios.\nMándaselo a quien carga con todo.\nParte 3 mañana en @neogestlab\n#humornegro #trabajo #horasextra #ia #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+ "cuando": "2026-11-15T11:40:00+01:00",
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "formato": "Serie El Jambo",
+ "publico": "oficina",
+ "formula": "humor con personaje (v8 B2)",
+ "_fuentes": [],
+ "_nota_creador": "14/11/2026 Creador, directiva de vídeo 14/11: fórmula 0-2 s situación, planteamiento, escalada en 3 golpes, giro y cierre de serie; dato en el post. Voces edge-tts (Álvaro Jambo, Ximena Jupillo); falta render y Calidad.",
+ "motor_voz": "edge",
+ "comentario_fijado": "¿Cuántos «momentitos» te han hecho este año? Parte 3 mañana",
+ "avance_siguiente": "Mañana: parte 3.",
+ "portada_ms": 0,
+ "monetizacion": {
+  "objetivo": "visita_perfil",
+  "oferta": "prueba gratuita en /solicitar (texto del post)",
+  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+ },
+ "musica": {
+  "titulo": "Monkeys Spinning Monkeys",
+  "autor": "Kevin MacLeod",
+  "licencia": "CC BY 4.0",
+  "url": "https://incompetech.com/music/royalty-free/",
+  "archivo": "Monkeys_Spinning_Monkeys.mp3",
+  "bpm": 143.6
+ }
 }

@@ -1,16 +1,16 @@
 {
- "titulo": "El Jambo que sabe y las IAs · ep. 1 · parte 2",
+ "titulo": "El Jambo que sabe y las IAs · Horas extra · parte 2",
  "semilla": 3022,
  "modo": "sketch",
  "serie": "El Jambo que sabe y las IAs",
  "episodio": 22,
  "negocio": "oficina",
- "portada_texto": "POV: tu jefe vuelve a pedir «un momentito»",
+ "portada_texto": "Cuando tu jefe te dice «solo un momentito»… a las 23:00",
  "musica": true,
  "contador": {
-  "texto": "Veces que se lo ha pasado a la Jupillo",
-  "inicio": 1,
-  "valor": 2
+  "texto": "Momentitos de hoy",
+  "inicio": 0,
+  "valor": 3
  },
  "mensaje_final": {
   "cifra": "El momentito no existe.",
@@ -20,8 +20,8 @@
   {
    "estilo": "gancho",
    "hablante": "jambo",
-   "voz": "Son las 18:55 y *aún* quiero un momentito más.",
-   "texto": "POV: tu jefe vuelve a pedir «un momentito»",
+   "voz": "Jupillo, doscientas páginas para mañana. Es un *momentito*.",
+   "texto": "Cuando tu jefe te dice «solo un momentito»… a las 23:00",
    "dibujo": {
     "personajes": [
      "jambo",
@@ -35,8 +35,22 @@
   },
   {
    "estilo": "gag",
+   "hablante": "jupillo",
+   "voz": "Hechas. Son las *once*.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo"
+    ],
+    "acciones": {
+     "jupillo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
    "hablante": "jambo",
-   "voz": "Doscientas páginas más. Para *mañana*.",
+   "voz": "Pues ahora tradúcelas al *chino*. Momentito.",
    "texto": "El Jambo",
    "dibujo": {
     "personajes": [
@@ -52,7 +66,7 @@
   {
    "estilo": "gag",
    "hablante": "jupillo",
-   "voz": "Cuatrocientas páginas. Hechas.",
+   "voz": "Hechas. Las *doce*.",
    "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
@@ -66,37 +80,7 @@
   {
    "estilo": "gag",
    "hablante": "jambo",
-   "voz": "¿Las *cuatrocientas*? ¡Te dije un momentito!",
-   "texto": "El Jambo",
-   "dibujo": {
-    "personajes": [
-     "jambo",
-     "jupillo"
-    ],
-    "acciones": {
-     "jambo": "desespera",
-     "jupillo": "habla"
-    }
-   }
-  },
-  {
-   "estilo": "gag",
-   "hablante": "jupillo",
-   "voz": "Encuadernadas y con índice.",
-   "texto": "La Jupillo",
-   "dibujo": {
-    "personajes": [
-     "jupillo"
-    ],
-    "acciones": {
-     "jupillo": "habla"
-    }
-   }
-  },
-  {
-   "estilo": "gag",
-   "hablante": "jambo",
-   "voz": "¡Ahora quiero *firmarlas* yo!",
+   "voz": "Y ahora ponle *música*. Rapidito.",
    "texto": "El Jambo",
    "dibujo": {
     "personajes": [
@@ -112,7 +96,7 @@
   {
    "estilo": "remate",
    "hablante": "jupillo",
-   "voz": "Ya están firmadas. Con tu letra. Ya sabes cómo acaba.",
+   "voz": "Hecho. Y he mandado tu horario a Inspección de Trabajo. *Momentito*.",
    "texto": "La Jupillo",
    "dibujo": {
     "personajes": [
@@ -125,14 +109,28 @@
     },
     "efecto": "sello",
     "efecto_t": 0.6,
-    "sello_texto": "FIRMADO"
+    "sello_texto": "INSPECCIÓN"
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "¿Eso también lo haces tú?",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "desespera"
+    }
    }
   },
   {
    "estilo": "cierre",
    "hablante": null,
-   "voz": "¿Tu jefe también pide momentitos? Parte 3, mañana.",
-   "texto": "¿Tu jefe también pide momentitos? Parte 3 mañana",
+   "voz": "¿Cuántos momentitos te han hecho este año? Parte 3 mañana.",
+   "texto": "¿Cuántos «momentitos» te han hecho este año? Parte 3 mañana",
    "dibujo": {
     "personajes": [],
     "accion": "serio"
@@ -148,5 +146,5 @@
    "tramites"
   ]
  },
- "_guion": "14/11/2026 Remasterizador: Parte 2 con la directiva de vídeo del 14/11 (situación en 0-2 s, planteamiento en una frase, escalada en 3 golpes cada uno peor, giro final, cierre con gancho de serie; sin dato estadístico en el vídeo). Mismo conflicto y personajes que el original, escalada y giro nuevos."
+ "_guion": "14/11/2026 Creador, directiva de vídeo 14/11: fórmula 0-2 s situación, planteamiento, escalada en 3 golpes, giro y cierre de serie; dato en el post. Voces edge-tts (Álvaro Jambo, Ximena Jupillo); falta render y Calidad."
 }
