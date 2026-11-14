@@ -10,5 +10,6 @@
     "Lista §6: «nada de precios ni venta en el reel; la oferta va en el comentario fijado» -> el reel cierra con «Prueba gratuita · sin tarjeta · sin compromiso» en pantalla y en voz",
     "Duración ≤ 20 s (episodio con historia máx. 35 s): una demo sin historia ni personaje no tiene excusa para pasar de 20 s"
   ],
-  "como_arreglarlo": "Rehacerlo como pieza de la serie: personaje (Jupillo, Bola, Pelota, Trámites o el Jambo) en el fotograma 0 diciendo el gancho (situación reconocible ≤ 8 palabras), la app solo como el remate de 2 s o como pivote del episodio, ≤ 20 s, frase «envíaselo a [persona concreta]» y la oferta (APP/WEB) solo en el comentario fijado y la bio. Se puede reutilizar la grabación como inserto breve. Al re-renderizar, poner renderizado:false y Calidad reevalúa (≥ 90)."
+  "como_arreglarlo": "Rehacerlo como pieza de la serie: personaje (Jupillo, Bola, Pelota, Trámites o el Jambo) en el fotograma 0 diciendo el gancho (situación reconocible ≤ 8 palabras), la app solo como el remate de 2 s o como pivote del episodio, ≤ 20 s, frase «envíaselo a [persona concreta]» y la oferta (APP/WEB) solo en el comentario fijado y la bio. Se puede reutilizar la grabación como inserto breve. Al re-renderizar, poner renderizado:false y Calidad reevalúa (≥ 90).",
+  "reevaluado_14_11": "14/11 11:55Z: sin cambios (el render es el del 11/11, sigue siendo escaparate sin personaje, con cierre de venta y > 20 s); se mantiene el rechazo y el hueco queda libre hasta que el Creador lo rehaga como pieza de la serie."
 }

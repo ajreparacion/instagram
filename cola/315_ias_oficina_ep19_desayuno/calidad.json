@@ -1,0 +1,15 @@
+{
+  "aprobado": true,
+  "nota": 90,
+  "fecha": "2026-11-14T11:55Z",
+  "revisado_por": "agente de CALIDAD (14/11, pasada de las 11:50 UTC)",
+  "comentario": "Render revisado (18.9 s, 1080x1920 H.264+AAC, -14,0 LUFS, pico -1,4 dBFS, un solo silencio de 0,9 s que es el remate con sello, dentro del límite de 1,5 s). Lista §6 de virales_13_11: personaje (Jambo + IA) visible y hablando en el fotograma 0; gancho POV de 7-8 palabras que es una situación reconocible; ≤ 20 s; frase de reenvío a persona concreta en el vídeo y en el texto; ni precio ni venta ni enlace en el vídeo ni en el texto (oferta APP solo en comentario fijado); sin cifras ni marcas ni apps; contador de la serie y rótulo @neogestlab desde el segundo 0. Voz Melo (decisión del dueño 13/11, sin voz del dueño); el acento no se ha podido escuchar desde esta sesión, solo medir nivel y silencios. Defecto menor no bloqueante, igual que en los episodios 306-314: durante el sello (≈1,4 s) el punch-in recorta los bordes del título POV y lo pisa con el rótulo de la serie; el gancho ya se ha leído y dicho antes. Anotado en peticiones_mejora.md. Seguimiento a las 48 h: meta superar 429 views; con 3 piezas seguidas por debajo de 100, avisar al Estratega.",
+  "nota_detalle": {
+    "gancho_apertura": 28,
+    "espina_originalidad": 17,
+    "retencion": 17,
+    "enviar_guardar": 13,
+    "exactitud_confianza": 10,
+    "pie_post": 5
+  }
+}
