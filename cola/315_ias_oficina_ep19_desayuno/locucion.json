@@ -1,0 +1,60 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 4.2,
+  "texto": "¿Desayuno? ¡Eh… ocho! ¿Nueve?",
+  "enfasis": [
+   2
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 4.2,
+  "duracion": 3.4,
+  "texto": "Ocho. O nueve. Seguro.",
+  "enfasis": [
+   3
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 9.4,
+  "duracion": 1.8,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 11.2,
+  "duracion": 3.367,
+  "texto": "De siete a diez. Lo pone el cartel.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 14.567,
+  "duracion": 1.8,
+  "texto": "Lo tenía controlado.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 16.367,
+  "duracion": 2.5,
+  "texto": "Mándaselo a quien lleva la recepción.",
+  "enfasis": []
+ }
+]
