@@ -1,0 +1,30 @@
+{
+  "tipo": "reel",
+  "texto": "Parte 2: tu jefe vuelve a pedir «un momentito» y el Jambo, también.\nLa Jupillo hace cuatrocientas páginas; el Jambo se lleva el mérito. Humor negro de ficción.\nDato: 2,5 millones de horas extra a la semana sin pagar, 42 % de las horas extra (EPA, INE, 1.er trim. 2026, según El Español 26/05/2026).\n¿Tu jefe también pide momentitos? Cuéntalo en comentarios.\nMándaselo a quien carga con todo.\nParte 3 mañana en @neogestlab\n#humornegro #trabajo #horasextra #ia #pymes\nVoz y personajes generados por IA",
+  "cuando": "2026-11-15T11:40:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo",
+  "publico": "oficina",
+  "formula": "humor con personaje (v8 B2)",
+  "_fuentes": [],
+  "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
+  "_nota_creador": "14/11/2026 Remasterizador: Parte 2 de un éxito (serie El Jambo), hecha con la DIRECTIVA DE VÍDEO del 14/11. Falta: render (Creador), voz edge-tts (Álvaro/Ximena) y Calidad (≥ 90). Sin dato estadístico en el vídeo. Música: la de Instagram (audio_ig) o, si el render usa Kevin MacLeod, añadir su atribución obligatoria al post.",
+  "motor_voz": "chatterbox",
+  "comentario_fijado": "¿Tu jefe también pide momentitos? Parte 3 mañana en @neogestlab",
+  "avance_siguiente": "Mañana: parte 3.",
+  "audio_ig": {
+    "audio_id": "1403284444689007",
+    "titulo": "Good Time (feat. Lowen) (Instrumental) · Company Money",
+    "origen": "biblioteca de Instagram (colección libre de derechos)",
+    "audio_volume": 0.5,
+    "video_volume": 1.0,
+    "mood": "comedia"
+  },
+  "portada_ms": 0,
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
+    "paso_embudo": "alcance → visita al perfil"
+  }
+}
