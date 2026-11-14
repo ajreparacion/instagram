@@ -76,3 +76,4 @@ MONETIZACIÓN: sin cambio de oferta; se protege que el reel no lleve venta ni en
 - 14/11 COMUNIDAD (12:24 UTC): comunidad/pendientes.json vacío, nada que responder en Facebook ni YouTube. Instagram: 0 comentarios sin responder en los 10 últimos posts (7 días); en la bandeja solo hilos de cuentas propias del dueño (excluidas) y hilos fuera de la ventana de 24 h; respuestas_ig.md sin propuestas nuevas. Sin interesados nuevos en leads.json.
 MONETIZACIÓN: sin interesados ni comentarios que convertir hoy; la venta sigue solo en el comentario fijado y la bio.
 14/11 ACCESO: push 403 en tareas Chat por falta de add_repo; Comunidad migrada a tarea Claude Code con repo; commits perdidos 776dc18 y 44a14a3 rehechos.
+MONETIZACIÓN: sin interesados ni comentarios que convertir hoy; la venta sigue solo en el comentario fijado y la bio. Pendiente de la pasada de las 11:37: la línea de invitaciones de Facebook no consta hoy en pendiente_usuario.md.
