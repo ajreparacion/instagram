@@ -2,7 +2,18 @@
 
 Lo mantiene el agente de CALIDAD (lo revisa cada lunes estudiando reels virales de IA y trucos). Creador lee esto antes de producir. Ningún reel se publica si no pasa este estándar.
 
-Versión 8 (10/11/2026, retención y envíos; ver sección v8). Versión 6 (7/11/2026, serie de apps). Versión 5 (6/11/2026 20:35, Estratega, por la NUEVA ESTRATEGIA del usuario: IA fácil en dibujos animados doodle). Sustituye a la v4 (misterios reales con fotos y vídeo real). Base: algoritmo de Instagram 2026 (compartidos por mensaje, guardados y retención pesan más que los likes; contenido original) e informe Buzzfy «AI & tech» de 6/11 (en cuentas pequeñas funcionan los ganchos de pregunta, número o mini historia / antes-después en los primeros 2 s).
+Versión 9 (15/11/2026, «parece hecho por humanos», ver sección v9). Versión 8 (10/11/2026, retención y envíos; ver sección v8). Versión 6 (7/11/2026, serie de apps). Versión 5 (6/11/2026 20:35, Estratega, por la NUEVA ESTRATEGIA del usuario: IA fácil en dibujos animados doodle). Sustituye a la v4 (misterios reales con fotos y vídeo real). Base: algoritmo de Instagram 2026 (compartidos por mensaje, guardados y retención pesan más que los likes; contenido original) e informe Buzzfy «AI & tech» de 6/11 (en cuentas pequeñas funcionan los ganchos de pregunta, número o mini historia / antes-después en los primeros 2 s).
+
+## v9 (15/11/2026 00:55): «PARECE HECHO POR HUMANOS» (NUEVA ERA NEOGEST LAB, orden del dueño 15/11 00:39; se SUMA a v8 y a las series, no baja ningún criterio; nota mínima de publicación sigue en 90)
+Bloqueos H (si falla uno, nota máxima 89 = no sale):
+H1. **Guion sin conflicto o de folleto**: no hay una situación con tensión (problema, error, discusión, giro) o suena a anuncio. Lenguaje natural de la calle de España; prohibidos «descubre», «revoluciona», «potencia», «sumérgete», «solución integral», «de la mano de», «en el mundo actual» y cualquier frase que no diría una persona a un amigo.
+H2. **Muletillas de IA**: «¡Increíble!», «Sin duda», «Es importante destacar», estructuras de tres adjetivos, cierres moralizantes, voz plana de locutor.
+H3. **Ritmo**: cambio de plano o de frase cada 1,5-2 s (más de 2,5 s sin cambio = fallo).
+H4. **Sin imagen real en algún momento**: en todo momento hay un clip real (Flow/Gemini de la Biblioteca) o una toma real de la app; nada de pantallas vacías, fondos planos con solo texto ni plantillas genéricas.
+H5. **Voz con errores**: faster-whisper no coincide con el guion, palabras mal pronunciadas, cortes o silencios de más de 0,6 s.
+H6. **Una idea por pieza**: más de un conflicto o una afirmación de app que no esté en los hechos verificados de su ficha.
+Se valora (suma a la nota, sin sustituir pesos): final con pregunta concreta y fácil de contestar (comentario de una palabra o un número); imperfecciones humanas controladas (una duda, una coletilla natural, un chiste local) sin errores de contenido; detalle específico y reconocible del oficio (hostelería, taller, tienda, mayores) en lugar de generalidades.
+Seguimiento: Calidad registra a las 48 h si las piezas con H1-H6 limpios superan a las demás en retención y envíos; si no, afina estos criterios.
 
 ## v8 (10/11/2026 20:50): RETENCIÓN, ENVÍOS Y ORIGINALIDAD (manda sobre todo lo anterior; motivo: 30 días con 517 de alcance, 6-12 cuentas por reel y 67-93 % de abandono; ver equipo/tecnicas_virales.md)
 Bloqueos nuevos (si falla uno, nota máxima 75 = no sale, porque la directiva exige ≥ 90):
@@ -72,6 +83,7 @@ El resto de la puntuación (100 puntos, mínimo 75) se aplica igual, cambiando �
 - Números escritos con letra en la voz.
 
 ## Registro de cambios
+- v9, 15/11/2026 00:55: criterios H1-H6 «parece hecho por humanos» (orden del dueño 15/11 00:39). No baja ningún criterio anterior.
 - v8.1, 11/11/2026 00:00: B7 (primer fotograma) y B8 (interacción: comentario fijado, avance del siguiente, frase de envío); música de Instagram verificada por audio_ig. Orden del dueño.
 - v8, 10/11/2026 20:50: bloqueos B1-B6 (gancho descriptivo, sin espina, sin motivo para enviar, cifras inventadas, ritmo, pie), nueva puntuación y seguimiento a las 48 h. Fuente: datos propios Buzzfy + Viral Reels Playbook 2026 + reels en español de cuentas pequeñas (equipo/tecnicas_virales.md).
 - v7, 8/11/2026 18:50: A1 admite reels de presentación sin voz con música en primer plano (orden del dueño 8/11 17:59); con voz, huecos ≤ 1,5 s.
