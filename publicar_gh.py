@@ -744,6 +744,35 @@ def anadir_voz(video, locucion, trabajo):
     return motor
 
 
+CONTROL_AUDIO = {}   # resultado del último control de audio (lo lee renderizar() para bloquear la publicación)
+
+
+def controlar_audio(video, tramos, wavs, aj, trabajo, guion=None):
+    """Directiva de vídeo 14/11/2026: faster-whisper contra el guion + silencedetect (-45 dB / 0,6 s) + duración + giro.
+    herramientas/control_audio.py. Si falla, renderizar() no sube el reel ni lo publica. Nunca lanza (sin whisper = no bloquea)."""
+    CONTROL_AUDIO.clear()
+    cfg = aj.get("control_audio") if isinstance(aj.get("control_audio"), dict) else {}
+    if cfg.get("activo") is False:
+        return
+    try:
+        sys.path.insert(0, HERR_REEL)
+        import control_audio
+        g = leer_json(guion, None) if guion else None
+        if not isinstance(g, dict):   # sin guion (ruta antigua): se comprueba solo lo que dicen los tramos y se da por bueno el giro
+            g = {"escenas": [{"voz": t["texto"], "estilo": t.get("estilo")} for t in tramos] + [{"estilo": "remate"}]}
+        res = control_audio.control(video, g, tramos=tramos, wavs=[w for w, _ in wavs])
+    except Exception as e:
+        log(f"Control de audio no disponible ({str(e)[-160:]}); no se bloquea")
+        return
+    CONTROL_AUDIO.update(res)
+    try:
+        escribir_json(os.path.join(trabajo, "control_audio.json"), res)
+    except Exception:
+        pass
+    log("Control de audio: %s; duración %s s%s" % ("OK" if res["aprobado"] else "FALLA " + "; ".join(res["bloqueos"])[:300],
+        res.get("duracion_s"), ("; avisos: %s" % res["avisos"]) if res.get("avisos") else ""))
+
+
 def mezclar_voz(video, tramos, wavs, aj, trabajo):
     cadena = (aj.get("cadena_voz") or "").strip().strip(",")
     try:
@@ -883,6 +912,7 @@ def renderizar_guion(guion, video, trabajo):
                 if b.get("palabras"):
                     a["palabras"] = b["palabras"]
             mezclar_voz(video, nuevos, wavs, aj, trabajo)
+            controlar_audio(video, nuevos, wavs, aj, trabajo, guion)
             return motor
         log("Voz primero: los tramos cambiaron entre pasadas; se vuelve a generar la voz")
     return anadir_voz(video, locucion, trabajo)
@@ -936,7 +966,7 @@ def _grafo_voz(video, tramos, wavs, aj, cadena):
         # 10/11/2026: fundido de entrada 15 ms y de salida 40 ms por frase (sin clics en los bordes) y silencio limpio entre frases
         fin = max(d / tempo - 0.04, 0.05)
         fade = f"afade=t=in:d=0.015,afade=t=out:st={fin:.3f}:d=0.04," if aj.get("fundidos_frase", True) else ""
-        filtros.append(f"[{i + 1}:a]aresample=44100,{proc}atempo={tempo:.3f},{fade}adelay={ms}|{ms},volume={aj['volumen_voz']}[v{i}]")
+        filtros.append(f"[{i + 1}:a]aresample={int(aj.get('sr_voz', 44100))},{proc}atempo={tempo:.3f},{fade}adelay={ms}|{ms},volume={aj['volumen_voz']}[v{i}]")
         etiquetas.append(f"[v{i}]")
     filtros.append(f"{''.join(etiquetas)}amix=inputs={len(etiquetas)}:normalize=0,pan=stereo|c0=c0|c1=c0,apad,asplit=2[vox][key]")
     return entradas, filtros
@@ -1321,6 +1351,15 @@ def renderizar(cfg, carpeta, post):
                 shutil.copy(os.path.join(trabajo, "voz_musica.json"), os.path.join(carpeta, "voz_musica.json"))
             if motor:
                 post["motor_voz"] = motor
+    if CONTROL_AUDIO and not CONTROL_AUDIO.get("aprobado", True):
+        # el reel NO se sube ni se publica; queda anotado en post.json y control_audio.json. No se reintenta hasta que cambie el guion.
+        gj = os.path.join(carpeta, "guion.json")
+        post["_control_audio_fallo"] = {"fecha": datetime.now(timezone.utc).isoformat(timespec="seconds"), "bloqueos": CONTROL_AUDIO.get("bloqueos"),
+                                        "guion_md5": hashlib.md5(open(gj, "rb").read()).hexdigest() if os.path.exists(gj) else ""}
+        escribir_json(os.path.join(carpeta, "control_audio.json"), dict(CONTROL_AUDIO))
+        escribir_json(os.path.join(carpeta, "post.json"), post)
+        shutil.rmtree(trabajo, ignore_errors=True)
+        raise ControlAudioFallo("control de audio: " + "; ".join(CONTROL_AUDIO.get("bloqueos") or [])[:300])
     asset = os.path.join(trabajo, f"{nombre}.mp4")
     os.replace(video, asset)
     asegurar_release()
@@ -1328,11 +1367,18 @@ def renderizar(cfg, carpeta, post):
     post["renderizado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
     post["asset"] = f"{nombre}.mp4"
     post.pop("_error_render", None)
+    post.pop("_control_audio_fallo", None)
+    if CONTROL_AUDIO:
+        post["control_audio"] = {"aprobado": CONTROL_AUDIO.get("aprobado"), "duracion_s": CONTROL_AUDIO.get("duracion_s")}
     escribir_json(os.path.join(carpeta, "post.json"), post)
     shutil.rmtree(trabajo, ignore_errors=True)
     if caducar_calidad(carpeta, "re-render del ciclo " + post["renderizado"]):
         log(f"{nombre}: re-renderizado; su aprobación de Calidad anterior queda caducada (Calidad debe reevaluarlo)")
     log(f"{nombre}: renderizado con voz y subido a la release '{RELEASE}'")
+
+
+class ControlAudioFallo(Exception):
+    pass
 
 
 def renderizar_pendientes(cfg):
@@ -1347,9 +1393,16 @@ def renderizar_pendientes(cfg):
         if post.get("renderizado") or post.get("tipo") in ("carrusel", "imagen", "historia") or hechos >= limite:
             continue
         nombre = os.path.basename(carpeta)
+        bloq = post.get("_control_audio_fallo")
+        gj = os.path.join(carpeta, "guion.json")
+        if isinstance(bloq, dict) and bloq.get("guion_md5") and os.path.exists(gj) and \
+                hashlib.md5(open(gj, "rb").read()).hexdigest() == bloq["guion_md5"]:
+            continue   # falló el control de audio con este mismo guion: no se vuelve a renderizar hasta que cambie
         try:
             renderizar(cfg, carpeta, post)
             hechos += 1
+        except ControlAudioFallo as e:
+            log(f"{nombre}: NO se publica, {e}")
         except Exception as e:
             intentos = post.get("_intentos_render", 0) + 1
             post["_intentos_render"] = intentos

@@ -55,11 +55,12 @@ jobs:
           principal = str(aj.get("motor", "piper")).lower()
           cadena = [principal] + [str(m).lower() for m in aj.get("respaldo") or []]
           pend = pendiente
+          print("edge=" + ("si" if pend and principal == "edge" else "no"))
           print("melo=" + ("si" if pend and principal == "melo" else "no"))
           print("chatterbox=" + ("si" if pend and principal == "chatterbox" else "no"))
           print("kokoro=" + ("si" if pend and "kokoro" in cadena else "no"))
           print("pocket=" + ("si" if pend and "pocket" in cadena else "no"))
-          print("ml=" + ("si" if pend and (set(cadena) & {"melo", "chatterbox", "kokoro", "pocket"}) else "no"))
+          print("ml=" + ("si" if pend and (set(cadena) & {"edge", "melo", "chatterbox", "kokoro", "pocket"}) else "no"))
           EOF
 
       - name: MeloTTS ES (venv propio con caché; va ANTES de Python 3.11 para que 3.11 quede como python por defecto)
@@ -137,6 +138,10 @@ jobs:
         continue-on-error: true
         run: pip install --quiet faster-whisper
 
+      - name: Voz edge-tts (directiva de vídeo 14/11/2026)
+        if: steps.trabajo.outputs.edge == 'si'
+        run: pip install --quiet edge-tts
+
       - name: Voz Kokoro (CPU)
         if: steps.trabajo.outputs.kokoro == 'si'
         continue-on-error: true
@@ -168,6 +173,7 @@ jobs:
           fallos = []
           def prueba(py, mod):
               return subprocess.run([py, "-c", "import " + mod], capture_output=True).returncode == 0
+          if motores[0] == "edge" and not prueba(sys.executable, "edge_tts"): fallos.append("edge_tts")
           if motores[0] == "melo":
               py = os.environ.get("PYTHON_MELO", "")
               if not (py and subprocess.run([py, "herramientas/voz_melo.py", "--comprobar"], capture_output=True).returncode == 0):

@@ -20,6 +20,35 @@ import numpy as np
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DIR = os.environ.get("MUSICA_DIR") or os.path.join(BASE, "musica")
 EXT = (".mp3", ".wav", ".ogg", ".m4a", ".flac", ".opus")
+# 14/11/2026 (directiva de vídeo): pistas de Kevin MacLeod (incompetech.com, CC BY 4.0). La ficha puede traer "descarga" (URL):
+# si el archivo no está en musica/, se baja una vez a la caché (no se commitea el mp3). Sin red = esa pista no se usa.
+CACHE = os.environ.get("MUSICA_CACHE") or os.path.join(os.path.expanduser("~"), ".cache", "musica_incompetech")
+
+
+def _ruta(f):
+    """Ruta local de la pista de la ficha f (musica/ o caché; la baja de f["descarga"] si falta). None si no se puede."""
+    a = f.get("archivo", "")
+    for d in (DIR, CACHE):
+        r = os.path.join(d, a)
+        if os.path.exists(r) and os.path.getsize(r) > 50000:
+            return r
+    url = f.get("descarga")
+    if not url:
+        return None
+    try:
+        import urllib.request
+        os.makedirs(CACHE, exist_ok=True)
+        r = os.path.join(CACHE, a)
+        req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+        with urllib.request.urlopen(req, timeout=30) as resp, open(r + ".tmp", "wb") as out:
+            out.write(resp.read())
+        if os.path.getsize(r + ".tmp") < 50000:
+            raise ValueError("descarga demasiado pequena")
+        os.replace(r + ".tmp", r)
+        return r
+    except Exception as e:
+        print("pista %s no disponible (%s)" % (a, str(e)[:120]))
+        return None
 
 
 def fichas():
@@ -30,7 +59,7 @@ def fichas():
     salida = []
     for f in datos if isinstance(datos, list) else []:
         a = f.get("archivo", "")
-        if a.lower().endswith(EXT) and os.path.exists(os.path.join(DIR, a)) and f.get("licencia"):
+        if a.lower().endswith(EXT) and f.get("licencia") and _ruta(f):
             salida.append(f)
     return salida
 
@@ -82,7 +111,7 @@ def pulso(x, sr):
 
 def segmento(ficha, n, sr, cortes=None, total=None):
     """n muestras de la pista (L, R en [-1, 1]), empezando en un golpe y con el primer corte (si lo hay) cerca de otro."""
-    x = _cargar(os.path.join(DIR, ficha["archivo"]), sr)
+    x = _cargar(_ruta(ficha), sr)
     if ficha.get("bpm"):
         bpm, fase = float(ficha["bpm"]), float(ficha.get("salto_s", 0.0))
     else:
@@ -98,7 +127,7 @@ def segmento(ficha, n, sr, cortes=None, total=None):
     seg = x[int(ini * sr):int(ini * sr) + n]
     pk = max(1e-9, float(np.abs(seg).max()))
     seg = seg / pk * 0.9
-    f_in, f_out = int(0.01 * sr), int(min(1.5, dur * 0.2) * sr)
+    f_in, f_out = int(0.3 * sr), int(min(1.2, dur * 0.2) * sr)   # directiva 14/11: entrada 0,3 s, salida 1,2 s
     seg[:f_in] *= np.linspace(0, 1, f_in)[:, None]
     seg[-f_out:] *= np.linspace(1, 0, f_out)[:, None]
     return seg[:, 0], seg[:, 1], dict(motor="pistas", archivo=ficha["archivo"], titulo=ficha.get("titulo"), autor=ficha.get("autor"),

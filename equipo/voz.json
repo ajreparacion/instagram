@@ -1,8 +1,6 @@
 {
-  "motor": "melo",
-  "respaldo": [
-    "kokoro"
-  ],
+  "motor": "edge",
+  "respaldo": [],
   "melo": {
     "idioma": "ES",
     "speaker": "ES",
@@ -78,9 +76,9 @@
   "ruido": 0.8,
   "volumen_voz": 1.1,
   "umbral_duck": 0.08,
-  "ratio_duck": 2,
+  "ratio_duck": 2.5,
   "limite": 0.89,
-  "cadena_voz": "highpass=f=80:p=2,equalizer=f=200:t=q:w=0.9:g=1.5,equalizer=f=330:t=q:w=1.0:g=-2.5,equalizer=f=3500:t=q:w=0.7:g=3,equalizer=f=6500:t=q:w=0.6:g=2,highshelf=f=9500:g=2,equalizer=f=2800:t=q:w=1.0:g=2,deesser=i=0.45:m=0.5:f=0.5,acompressor=threshold=0.08:ratio=2:attack=10:release=160:knee=3:makeup=2,agate=threshold=0.004:ratio=2:attack=5:release=250,alimiter=limit=0.95:level=false",
+  "cadena_voz": "",
   "_nota_cadena_voz": "12/11/2026 22:10, orden del dueño («suena con eco, lejana y enlatada; mete un compresor»). Medido en la pista de voz del reel corto de 7D (bandas respecto a 150-400 Hz): antes 2,5-4,5 kHz −15,8 dB, 4,5-8 kHz −29,1 dB, 8-12 kHz −41,9 dB = voz sin presencia ni aire (lejana, de lata); después −10,0 / −20,1 / −28,1 dB (perfil de voz natural cercana). Cadena: limpieza de graves, menos barro en 320 Hz y algo de cuerpo en 160 Hz (proximidad), excitador para recuperar armónicos agudos que el motor no genera, estante +4 dB desde 6 kHz (aire), compresor 4:1 con ataque rápido (voz delante y pareja), de-esser, puerta para cortar soplos y cola de sala en las pausas (el «eco») y limitador. Revertir: highpass=f=80,equalizer=f=300:t=q:w=1:g=-2,equalizer=f=3500:t=q:w=1.2:g=3,acompressor=threshold=0.08:ratio=3:attack=5:release=180:makeup=3,deesser=i=0.4 | 12/11 22:40: con la voz integrada (banda completa) se quita el excitador y el aire baja a +1,5 dB para no endurecerla. | 13/11/2026 (Mejora de voz, «se oye telefónica»): compresión 4:1 con umbral -36 dB y makeup +15,6 dB (aplastaba la dinámica y subía el ruido de fondo) → 2:1 con umbral -22 dB; presencia +3 dB a 3,5 kHz y +2 dB a 6,5 kHz; aire +2 dB desde 9,5 kHz (el motor llega a 12 kHz); cuerpo +1,5 dB a 200 Hz; highpass 80. Medido en una locución real de Chatterbox es-es (audicion_cb_es): 2,5-4,5 kHz −23,3→−21,0 dB y 4,5-8 kHz −26,9→−25,5 dB respecto a 150-400 Hz, suelo de ruido en pausas −58,4→−65,1 dBFS, dinámica p90-p10 48→54 dB, mismo LUFS (−14,7) y pico (−1,7 dBTP). Revertir: herramientas/versiones/voz.json_2026-11-13b. | 13/11/2026 Cambio 63 (voz Melo): +2 dB a 2,8 kHz (presencia). Medido sobre la locución 508: 2,5-4,5 kHz −8,2 → −6,8 dB, sibilancia 5-9 kHz −12,0 → −11,7 dB (+0,3, límite +1), suelo de ruido −63,3 → −63,3 dBFS, mismo LUFS. Probadas 4 variantes más (cuerpo 170 Hz +1…+2, presencia +1…+2): ninguna mejoró la presencia sin subir la sibilancia o bajar el aire. Revertir: herramientas/versiones/voz.json_2026-11-13d.",
   "recorte": {
     "activo": true,
@@ -104,7 +102,7 @@
     "db_previo": -1.5,
     "_nota": "palabras entre *asteriscos*: +3 dB con rampas de 60 ms (sin escalón); pausa_ms 0 = sin respiro insertado (se oía como corte). En los subtítulos salen en rojo."
   },
-  "volumen_musica": 1.9,
+  "volumen_musica": 0.6,
   "_nota_mezcla": "8/11/2026: el dueño borró reels porque la música no se oía. Música +5,6 dB (volumen_musica 1,9), ducking suave (ratio 2, umbral 0,08: baja como mucho ~6 dB bajo la voz), voz 1,1, limitador 0,89. Revertir: herramientas/versiones/voz.json_2026-11-08e.",
   "master": {
     "activo": true,
@@ -118,5 +116,38 @@
   "permitir_piper": false,
   "normalizar_pico_db": -6,
   "fundidos_frase": true,
-  "_nota_cadena_2": "10/11/2026 (pasada urgente): sin alimiter por frase (un solo limitador, el del máster, limite 0,89 + loudnorm TP -1,5). El pico de cada frase se normaliza a -6 dBFS antes de la cadena (normalizar_pico_db), así el compresor trabaja siempre al mismo nivel con makeup 3 (lineal, ≈ +9,5 dB; antes 3,2 + alimiter 0,62 que recortaba picos). Cada frase con fundido de entrada 15 ms y de salida 40 ms (fundidos_frase). Piper desactivado (permitir_piper false): si falla Chatterbox y Kokoro, el render falla y no se publica. Revertir: herramientas/versiones/voz.json_2026-11-10c."
+  "_nota_cadena_2": "10/11/2026 (pasada urgente): sin alimiter por frase (un solo limitador, el del máster, limite 0,89 + loudnorm TP -1,5). El pico de cada frase se normaliza a -6 dBFS antes de la cadena (normalizar_pico_db), así el compresor trabaja siempre al mismo nivel con makeup 3 (lineal, ≈ +9,5 dB; antes 3,2 + alimiter 0,62 que recortaba picos). Cada frase con fundido de entrada 15 ms y de salida 40 ms (fundidos_frase). Piper desactivado (permitir_piper false): si falla Chatterbox y Kokoro, el render falla y no se publica. Revertir: herramientas/versiones/voz.json_2026-11-10c.",
+  "edge": {
+    "voces": {
+      "jambo": {
+        "voz": "es-ES-AlvaroNeural",
+        "rate": "+6%",
+        "pitch": "-3Hz"
+      },
+      "jupillo": {
+        "voz": "es-ES-XimenaNeural",
+        "rate": "+0%",
+        "pitch": "+0Hz"
+      }
+    },
+    "defecto": {
+      "voz": "es-ES-ElviraNeural",
+      "rate": "+0%",
+      "pitch": "+0Hz"
+    },
+    "max_s": 600,
+    "_nota": "14/11/2026 DIRECTIVA DE VÍDEO del dueño: edge-tts (Microsoft Edge neural, es-ES) por personaje; sustituye a Melo/Kokoro/Chatterbox (nunca la voz del dueño). Revertir: cp herramientas/versiones/voz.json_2026-11-14e equipo/voz.json (vuelve a Melo)."
+  },
+  "sr_voz": 48000,
+  "control_audio": {
+    "activo": true,
+    "modelo": "small",
+    "palabras_distintas_max": 0,
+    "silencio_db": -45,
+    "silencio_max_s": 0.6,
+    "max_s": 30,
+    "_nota": "14/11/2026 directiva: transcribir el audio final con faster-whisper y comparar con el guion; hueco de voz > 0,6 s, palabra distinta o duración > 30 s = el reel no se publica (post.json _control_audio_fallo). Poner activo:false para desactivar."
+  },
+  "_cadena_voz_anterior_melo": "highpass=f=70,acompressor=threshold=0.1:ratio=2.5:attack=8:release=120:makeup=1.5,equalizer=f=3500:t=q:w=0.7:g=2",
+  "_nota_cadena_edge": "14/11/2026: con motor edge la cadena de la directiva (highpass 70, compresor 2,5:1 a -20 dB, +2 dB a 3,5 kHz, silenceremove -45 dB, 48 kHz) la aplica herramientas/voz_edge.py por frase; cadena_voz queda vacía para no comprimir dos veces. Para volver a Melo: cp herramientas/versiones/voz.json_2026-11-14e equipo/voz.json (copia de antes de este cambio; también sirve herramientas/versiones/voz.json_2026-11-14 de la otra sesión)."
 }

@@ -2101,6 +2101,14 @@ def _golpe(tipo, rg, v=1.0):
 INFO_MUSICA = {}
 
 
+def _hay_pistas_reales():
+    try:
+        import pistas as _pi
+        return _pi.hay_pistas()
+    except Exception:
+        return False
+
+
 def make_music(scenes, n, seed, gs, hook_end):
     rng = random.Random(seed * 7919 + 13)
     total = n / SR
@@ -2502,7 +2510,7 @@ def main():
             print("tiempos de voz no leidos (se usa la estimacion):", str(e)[:120])
     seed = int(g.get("semilla", 1)); title = g.get("titulo", "")
     musica = bool(g.get("musica", True))
-    if g.get("modo") == "sketch":
+    if g.get("modo") == "sketch" and not _hay_pistas_reales():   # 14/11/2026: con pistas de Kevin MacLeod la musica va cocida tambien en el sketch
         musica = False   # sketch: nunca musica cocida (orden del dueno 10/11: la cancion la pone Instagram al publicar, audio_ig)
     modo = (g.get("modo") or "").strip().lower()
     # datos (12/11/2026, orden del dueño: «música y voz si lo consideran»): la música la decide el equipo con "musica" en el

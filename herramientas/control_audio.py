@@ -57,7 +57,26 @@ def comparar(esp, got):
     return faltan + esp[i:], sobran + got[j:]
 
 
-def control(video, guion, post=None):
+def huecos_voz(tramos, wavs):
+    """Silencios >= 0,6 s (-45 dB) ENTRE frases, sobre la pista de voz sola (frases en su instante): con música cocida el
+    silencedetect del vídeo final nunca los ve. tramos: locucion.json; wavs: un wav por tramo. Lista [[ini, fin, dur]]."""
+    import wave
+    ent, fil, et, fines = [], [], [], []
+    for i, (t, w) in enumerate(zip(tramos, wavs)):
+        ms = int(float(t["inicio"]) * 1000 + 120)
+        ent += ["-i", w]
+        fil.append("[%d:a]aresample=48000,adelay=%d|%d[v%d]" % (i, ms, ms, i)); et.append("[v%d]" % i)
+        with wave.open(w) as f:
+            fines.append((float(t["inicio"]) + 0.12, float(t["inicio"]) + 0.12 + f.getnframes() / float(f.getframerate())))
+    fil.append("%samix=inputs=%d:normalize=0,silencedetect=n=%ddB:d=%s" % ("".join(et), len(et), SIL_DB, SIL_S))
+    r = subprocess.run(["ffmpeg", "-nostats", *ent, "-filter_complex", ";".join(fil), "-f", "null", "-"], capture_output=True, text=True, timeout=300)
+    ini = [float(x) for x in re.findall(r"silence_start: (-?[\d.]+)", r.stderr)]
+    fin = re.findall(r"silence_end: ([\d.]+) \| silence_duration: ([\d.]+)", r.stderr)
+    p0, p1 = min(a for a, _ in fines), max(b for _, b in fines)
+    return [[round(a, 2), round(float(e), 2), round(float(d), 2)] for a, (e, d) in zip(ini, fin) if a >= p0 - 0.05 and float(e) <= p1 + 0.05]
+
+
+def control(video, guion, post=None, tramos=None, wavs=None):
     g = json.load(open(guion, encoding="utf-8")) if isinstance(guion, str) else guion
     bloqueos, avisos = [], []
     d = dur(video)
@@ -79,6 +98,12 @@ def control(video, guion, post=None):
     for a, b, s in silencios(video):
         if a >= t0 - 0.05 and b <= t1 + 0.05 and s > SIL_S and a > 0.3 and b < d - 0.3:
             bloqueos.append(f"silencio de {s:.2f} s entre {a:.1f} y {b:.1f} s (máximo {SIL_S} s)")
+    if tramos and wavs:
+        try:
+            h = huecos_voz(tramos, wavs)
+            if h: bloqueos.append(f"silencios > {SIL_S} s entre frases (pista de voz): {h}")
+        except Exception as e:
+            avisos.append(f"silencedetect de la pista de voz no disponible: {str(e)[-80:]}")
     if isinstance(post, dict) and post.get("musica_atribucion_requerida") and "MacLeod" not in post.get("texto", ""):
         bloqueos.append("falta la atribución musical de Kevin MacLeod en el texto del post")
     return {"aprobado": not bloqueos, "duracion_s": round(d, 2), "bloqueos": bloqueos, "avisos": avisos,
