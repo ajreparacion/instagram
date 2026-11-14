@@ -32,3 +32,6 @@ Reducido el 13/11/2026 por el Estratega (la versión larga está en git). Aquí 
 - Modo `/demo` público (datos de ejemplo, que guarde en memoria de la pestaña) en GH PLUS, MEDICATOR, Studio Beats PRO y Gestión Integral 7D para grabar las novedades con la app real: Mejora, con el MCP de Base44 si la sesión lo tiene.
 - Editor del canal: destacadas y fijados del perfil necesitan una sesión con Chrome (la tarea en la nube no lo tiene); no es una acción tuya salvo que actives «Requerir este ordenador».
 - YouTube: responder comentarios exige el alcance youtube.force-ssl en el token de refresco; si falta, quedan en comunidad/sin_publicar.json (lo revisa Comunidad).
+
+## Ventas · Prospección: red de la sesión (14/11/2026)
+La tarea no puede leer workana.com ni ajreparacion.com (ENOTFOUND: fuera de los dominios permitidos de la sesión) y WebSearch (solo EE. UU.) no da anuncios fechados. Para que haya propuestas y maquetas: permitir en la red del entorno workana.com, malt.es, freelancer.es, fiverr.com, ajreparacion.com y los directorios públicos de empresas (paginasamarillas.es, einforma.com); o que el dueño pegue 3-5 enlaces de anuncios y 3 negocios de Palma.

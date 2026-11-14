@@ -77,3 +77,4 @@ MONETIZACIÓN: sin cambio de oferta; se protege que el reel no lleve venta ni en
 MONETIZACIÓN: sin interesados ni comentarios que convertir hoy; la venta sigue solo en el comentario fijado y la bio.
 14/11 ACCESO: push 403 en tareas Chat por falta de add_repo; Comunidad migrada a tarea Claude Code con repo; commits perdidos 776dc18 y 44a14a3 rehechos.
 MONETIZACIÓN: sin interesados ni comentarios que convertir hoy; la venta sigue solo en el comentario fijado y la bio. Pendiente de la pasada de las 11:37: la línea de invitaciones de Facebook no consta hoy en pendiente_usuario.md.
+MONETIZACIÓN: 14/11 prospección sin resultados por red bloqueada (workana.com, ajreparacion.com); sin fuentes verificables no se inventan anuncios ni negocios. Pendiente: permitir dominios (ver pendiente_usuario.md).
