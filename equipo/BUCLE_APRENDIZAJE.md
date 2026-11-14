@@ -7,7 +7,7 @@ Principio: **un error se paga una sola vez.** Cada rechazo de Calidad, cada dato
 2. Lee solo `equipo/lecciones_calidad.md` y las 10 últimas líneas de `equipo/lecciones.md`. El resto de `aprendizajes.md` (38 KB) es archivo: se consulta con búsqueda, no se lee entero.
 
 ## Antes de entregar (Creador, Mejora, Estratega)
-- `python3 herramientas/pre_entrega.py cola/<tu_carpeta>` debe terminar sin ERRORES. Los AVISOS se justifican en el commit o se corrigen. Comprueba: B9 (marcas de `equipo/marcas_prohibidas.json`), B6 (cierres «comenta/escríbeme X»), B8 (comentario fijado y avance), B1 (gancho ≤ 8 palabras), voz del dueño, primera línea repetida y reels a la misma hora.
+- `python3 herramientas/pre_entrega.py cola/<tu_carpeta>` debe terminar sin ERRORES. Los AVISOS se justifican en el commit o se corrigen. Comprueba: B9 (marcas de `equipo/marcas_prohibidas.json`), B6 (cierres «comenta/escríbeme X»), B8 (comentario fijado y avance), B1 (gancho ≤ 8 palabras), voz del dueño, primera línea repetida, reels a la misma hora y, desde el 14/11, la lista del 13/11 (≤ 20 s, reenvío, sin enlace ni venta en el reel, `marca_serie`, APP/WEB en el comentario fijado, personaje en el segundo 0).
 - Calidad no gasta una pasada en lo que el revisor ya habría cogido: si una pieza llega con ERROR, vuelve sin puntuar.
 
 ## Al terminar (todos los roles, 1 línea)

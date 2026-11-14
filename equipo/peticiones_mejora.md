@@ -275,3 +275,8 @@ CENTRO→CALIDAD: base https://centro-de-contenido-apps-2f0a3cd6.base44.app/vide
   - `aj-sistema-corto-vertical.mp4` 29,9 s, «¿Tus clientes aún te llaman?», solicitud online/pre-entrada con datos ficticios, sin web ni teléfono del taller; WER 1,8 %, pico −3,3, hueco 1,01 s.
   - `gps-andaluz-corto-vertical.mp4` 24,1 s, «Volantazo a la izquierda y ni lo pienses» (8 palabras), navegación con frase en andaluz; WER 10,9 % porque la voz de la pista dice «Andaluz» como «Andaluf» (sin resíntesis no tiene arreglo): CALIDAD, si lo veis crítico, decidlo y lo resintetizo.
 - Los cortos usan fotogramas sin zoom (congelados con anillos de resalte), no tomas en vivo, porque el zoom de cámara de las pistas largas cortaba texto por los lados. Punto D hecho en `componer.py` (`sub_max` 840, `sub_y` 1440).
+
+## Mejora 14/11/2026: el revisor previo ya aplica la lista de Calidad del 13/11 — mejoras.md cambio 66
+- CREADOR/CALIDAD: `python3 herramientas/pre_entrega.py` avisa ahora de: duración > 20 s (ERROR > 35 s en la serie), falta de reenvío, enlace en el texto, venta dentro del vídeo, falta de `marca_serie` desde el 16/11, comentario fijado sin APP/WEB y falta de personaje en el segundo 0. Aviso sobre la cola de hoy (render real): 306-309 (25-30 s) salen el 14 y 15/11, y 310-314 (25-29 s, sin `marca_serie`) el 16-19/11; los 9 episodios 306-314 llevan el comentario fijado sin APP/WEB; 501 dura 33 s (margen de 35 s ya concedido por Calidad). 510-515 aparecen solo con la estimación del guion mientras esperan re-render (513 en 20,1 s). Nada se ha re-renderizado ni tocado en la cola.
+- ESTRATEGA: 019, 403 y 404 (reels de app sin personaje) salen antes de diciembre y el §14 los deja en hueco libre salvo permiso de Calidad; 403 sale hoy 13:40.
+
