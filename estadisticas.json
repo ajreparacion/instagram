@@ -1,8 +1,8 @@
 {
-  "actualizado": "2026-11-14T09:12:27+00:00",
+  "actualizado": "2026-11-14T15:22:53+00:00",
   "cuenta": {
     "id": "17841400403112257",
-    "followers_count": 1600,
+    "followers_count": 1601,
     "follows_count": 176,
     "media_count": 14,
     "username": "neogestlab"
@@ -18,15 +18,15 @@
       "permalink": "https://www.instagram.com/reel/Dfsar7fDHsL/",
       "timestamp": "2026-11-13T19:48:14+0000",
       "metricas": {
-        "reach": 133,
-        "views": 185,
+        "reach": 140,
+        "views": 192,
         "saved": 0,
         "shares": 1,
         "comments": 0,
         "likes": 2,
         "total_interactions": 4,
-        "ig_reels_avg_watch_time": 13225,
-        "ig_reels_video_view_total_time": 1838317
+        "ig_reels_avg_watch_time": 12926,
+        "ig_reels_video_view_total_time": 1874352
       }
     },
     {
@@ -77,15 +77,15 @@
       "permalink": "https://www.instagram.com/reel/DfrqWpEHdns/",
       "timestamp": "2026-11-13T12:45:47+0000",
       "metricas": {
-        "reach": 7,
-        "views": 12,
+        "reach": 8,
+        "views": 14,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 17602,
-        "ig_reels_video_view_total_time": 211225
+        "ig_reels_avg_watch_time": 16397,
+        "ig_reels_video_view_total_time": 213168
       }
     },
     {
@@ -492,6 +492,10 @@
     {
       "fecha": "2026-11-14T09:12+00:00",
       "seguidores": 1600
+    },
+    {
+      "fecha": "2026-11-14T15:22+00:00",
+      "seguidores": 1601
     }
   ]
 }
