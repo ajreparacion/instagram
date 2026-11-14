@@ -72,3 +72,31 @@ Cifras leídas de nuevo (Buzzfy 6-13/11 y Centro): 872 cuentas no seguidoras alc
 3. **Medir visitas al perfil por pieza, no solo por cuenta:** el Analista cruza cada día las visitas que da cada episodio (ig_post_stats) y lo anota en kpi_buzzfy.json. Si un episodio lleva dos días sin llegar a 3 visitas por cada 100 no seguidores, el Estratega cambia su línea de perfil antes del siguiente. Así se sabe qué formato manda gente al perfil y no se espera a la lectura del 23/11.
 
 Próxima revisión: viernes 13/11 por la noche (48 h del 301 y de los episodios 302 y 303; primer dato del clic de bio del 12/11 con su ruta).
+
+## 8. Lectura del 14/11/2026 (Buzzfy 7-14/11 a las 12:55 UTC; Centro, entidades SolicitudInfo y Clic)
+Solo lectura. Instagram puede retrasarse 48 h; 12 y 13/11 de seguidores siguen pendientes.
+
+| Etapa | 7-14/11 (7 d) | Lectura |
+|---|---|---|
+| Alcance total / no seguidores | 763 / 696 | Reels 719, carruseles 48, historias 51 |
+| Visualizaciones orgánicas | 1.764 (no seguidores 918) | Sin anuncios |
+| Visitas al perfil | 16 (2,3 % del alcance a no seguidores; meta ≥ 3 %) | Mejora frente al 1,7 % del 6-13/11, sin llegar a la meta |
+| Clics al sitio web | 5 (31 % de las visitas; meta ≥ 25 %) | Mejora frente al 27 % |
+| Toques al enlace (`linkTaps`) | 0 | |
+| Solicitudes nuevas en el Centro | 0 (sigue 1 en total, del 8/11, «nueva», sin contactar) | |
+| Clics `Clic` en el Centro, origen bio | 8 desde el 12/11: 1 (12/11), 5 (13/11), 2 (14/11) | Productos: aj-reparacion-web ×2, factura7d-verifactu ×2, medicator ×2, gh-plus, studio-beats-pro. Referer de 4 de ellos: `login` del panel o `app.base44.com` (posibles pruebas internas del equipo). No consta que sean clientes. |
+| Interacciones | 102 (49 me gusta, 25 reposts, 14 compartidos, 0 guardados, 0 comentarios) | Cuentas que interactúan: 9 |
+| Seguidores | 1.600 ahora; 7-11/11: +0 / -3 = -3 (12-13/11 pendientes) | |
+| Palabras clave y DMs | 0 comentarios en 7 días; DMs n/d (sin permiso de mensajes) | |
+
+**Hallazgos que cambian la lectura:**
+1. **La bio del perfil no coincide con la del Analista.** Buzzfy devuelve hoy: «Las IAs de la oficina 😈 El Jambo y sus IAs, cada día · ¿Quieres tu app o web? **Comenta APP** · By Neogest Lab». La sección 6 de este archivo daba por puesta la bio «Apps y webs a medida… Prueba gratis, sin tarjeta…». Y la orden del 10/11 de la directiva prohíbe el cierre «comenta X y te envío…». Con la bio actual, quien entra al perfil recibe la invitación a comentar. Acción del dueño (la API no edita la bio).
+2. **Los clics desde la bio sí llegan al Centro, pero la mayoría no parecen clientes.** 8 clics en tres días, con referer del panel o de Base44. Hay que separar el tráfico interno del externo antes de dar ninguna tasa de conversión.
+3. **Siguen sin registrarse solicitudes reales.** 5 clics a la web en 7 días y 0 solicitudes nuevas. `/solicitar` no crea `Clic`, así que el agujero entre la web y el formulario sigue sin medirse (acción 2 de la sección 4).
+
+**Acciones para el Estratega (3, por orden de efecto):**
+1. **Quitar «Comenta APP» de la bio y del último fotograma o texto fijado** (la bio la cambia el dueño; el Estratega lo deja escrito en `plan.json` para que lo haga). Motivo: la orden del 10/11 prohíbe ese cierre y la bio actual lo contradice.
+2. **Separar el tráfico interno del externo en el Centro** (Mejora): no contar como clic de bio los accesos con referer `login` o `app.base44.com`, y añadir el registro de llegada a `/solicitar` (acción 2 de la sección 4). Sin esto, la tasa clic→solicitud no tiene sentido.
+3. **Mantener el motivo de visita al perfil en cada pieza sin producto** (rótulo «@neogestlab · episodio nuevo cada día» desde el segundo 0, sección 7). Medida: visitas por cada 100 cuentas no seguidoras, hoy 2,3; meta ≥ 3.
+
+Lectura del embudo de hoy: alcance no seguidores 696 → visitas 16 → clics web 5 → solicitudes nuevas 0 → 0 €.
