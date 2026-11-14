@@ -4,24 +4,27 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 3.933,
-  "texto": "El teléfono suena. ¡Otra vez! ¡Estoy ocupado!",
-  "enfasis": []
+  "duracion": 3.033,
+  "texto": "¡El teléfono otra vez! ¡Ocupado!",
+  "enfasis": [
+   2,
+   3
+  ]
  },
  {
   "escena": 1,
   "estilo": "gag",
   "hablante": "tramites",
-  "inicio": 3.933,
-  "duracion": 3.233,
-  "texto": "Rellene el impreso 27-B. Y espere su turno.",
+  "inicio": 3.033,
+  "duracion": 1.8,
+  "texto": "Espere su turno.",
   "enfasis": []
  },
  {
   "escena": 3,
   "estilo": "delega",
   "hablante": "jambo",
-  "inicio": 9.567,
+  "inicio": 6.633,
   "duracion": 1.8,
   "texto": "Que lo haga la Jupillo.",
   "enfasis": []
@@ -30,16 +33,16 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 11.367,
-  "duracion": 4.2,
-  "texto": "Solicitud online, fotos y aviso por WhatsApp al cambiar el estado.",
+  "inicio": 8.433,
+  "duracion": 3.067,
+  "texto": "Solicitud online, fotos y aviso por WhatsApp.",
   "enfasis": []
  },
  {
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 15.567,
+  "inicio": 11.5,
   "duracion": 2.7,
   "texto": "Todo bajo control. Casi.",
   "enfasis": []
@@ -48,41 +51,9 @@
   "escena": 6,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 18.267,
-  "duracion": 2.7,
-  "texto": "Casi. Siempre casi.",
-  "enfasis": []
- },
- {
-  "escena": 7,
-  "estilo": "mensaje",
-  "hablante": null,
-  "inicio": 20.967,
-  "duracion": 3.2,
-  "texto": "Un cliente que no consigue hablar contigo se va a otro.",
-  "enfasis": [
-   7,
-   8,
-   9,
-   10
-  ]
- },
- {
-  "escena": 8,
-  "estilo": "mensaje",
-  "hablante": null,
-  "inicio": 24.167,
-  "duracion": 5.467,
-  "texto": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
-  "enfasis": []
- },
- {
-  "escena": 9,
-  "estilo": "cierre",
-  "hablante": null,
-  "inicio": 29.633,
-  "duracion": 2.233,
-  "texto": "Mándaselo a quien aún no tiene web.",
+  "inicio": 14.2,
+  "duracion": 2.733,
+  "texto": "Mándaselo a quien vive pegado al teléfono.",
   "enfasis": []
  }
 ]
