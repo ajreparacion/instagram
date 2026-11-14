@@ -15,15 +15,17 @@
   "estilo": "gag",
   "hablante": "pelota",
   "inicio": 3.6,
-  "duracion": 3.4,
-  "texto": "Una web cuesta un riñón. Con total seguridad.",
-  "enfasis": []
+  "duracion": 2.967,
+  "texto": "Todos vienen el sábado. Seguro.",
+  "enfasis": [
+   4
+  ]
  },
  {
   "escena": 3,
   "estilo": "delega",
   "hablante": "jambo",
-  "inicio": 9.4,
+  "inicio": 8.367,
   "duracion": 1.8,
   "texto": "Que lo haga la Jupillo.",
   "enfasis": []
@@ -32,59 +34,27 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 11.2,
-  "duracion": 3.933,
-  "texto": "Solicitud con fotos y estado consultable. Sin WhatsApp.",
+  "inicio": 10.167,
+  "duracion": 4.5,
+  "texto": "Una solicitud. Un estado. Sin WhatsApp.",
   "enfasis": []
  },
  {
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 15.133,
-  "duracion": 3.233,
-  "texto": "Qué bien organizo. Soy un presidente.",
+  "inicio": 14.667,
+  "duracion": 1.8,
+  "texto": "Qué bien organizo.",
   "enfasis": []
  },
  {
   "escena": 6,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 18.367,
-  "duracion": 3.933,
-  "texto": "Trescientos mensajes. Organizado, dice.",
-  "enfasis": []
- },
- {
-  "escena": 7,
-  "estilo": "mensaje",
-  "hablante": null,
-  "inicio": 22.3,
-  "duracion": 3.833,
-  "texto": "Se piensa que tener web es caro. Casi nunca lo es.",
-  "enfasis": [
-   7,
-   8,
-   9,
-   10
-  ]
- },
- {
-  "escena": 8,
-  "estilo": "mensaje",
-  "hablante": null,
-  "inicio": 26.133,
-  "duracion": 5.467,
-  "texto": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
-  "enfasis": []
- },
- {
-  "escena": 9,
-  "estilo": "cierre",
-  "hablante": null,
-  "inicio": 31.6,
-  "duracion": 2.233,
-  "texto": "Mándaselo a quien aún no tiene web.",
+  "inicio": 16.467,
+  "duracion": 2.367,
+  "texto": "Mándaselo a quien organiza el club.",
   "enfasis": []
  }
 ]
