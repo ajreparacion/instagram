@@ -78,3 +78,4 @@ MONETIZACIÓN: sin interesados ni comentarios que convertir hoy; la venta sigue 
 14/11 ACCESO: push 403 en tareas Chat por falta de add_repo; Comunidad migrada a tarea Claude Code con repo; commits perdidos 776dc18 y 44a14a3 rehechos.
 MONETIZACIÓN: sin interesados ni comentarios que convertir hoy; la venta sigue solo en el comentario fijado y la bio. Pendiente de la pasada de las 11:37: la línea de invitaciones de Facebook no consta hoy en pendiente_usuario.md.
 MONETIZACIÓN: 14/11 prospección sin resultados por red bloqueada (workana.com, ajreparacion.com); sin fuentes verificables no se inventan anuncios ni negocios. Pendiente: permitir dominios (ver pendiente_usuario.md).
+MONETIZACIÓN: 14/11 (2.ª pasada) prospección sin resultados, mismo bloqueo de red (workana 403); sigue pendiente permitir dominios o que el dueño pegue 3-5 anuncios y 3 negocios de Palma.
