@@ -73,3 +73,6 @@ MONETIZACIÓN: sin venta en vídeo ni texto; la oferta APP/WEB queda en el comen
 MONETIZACIÓN: sin cambio de oferta; se protege que el reel no lleve venta ni enlace y que la palabra APP/WEB esté en el comentario fijado (revisor previo).
 
 - 14/11 Calidad: aprobados 315 y 316 (90, episodios de la serie con IA en el segundo 0, ≤ 20 s, reenvío concreto). MONETIZACIÓN: la oferta APP/WEB queda solo en el comentario fijado de cada episodio, sin venta en el vídeo, para que el alcance de la serie lleve a visita al perfil.
+- 14/11 COMUNIDAD (12:24 UTC): comunidad/pendientes.json vacío, nada que responder en Facebook ni YouTube. Instagram: 0 comentarios sin responder en los 10 últimos posts (7 días); en la bandeja solo hilos de cuentas propias del dueño (excluidas) y hilos fuera de la ventana de 24 h; respuestas_ig.md sin propuestas nuevas. Sin interesados nuevos en leads.json.
+MONETIZACIÓN: sin interesados ni comentarios que convertir hoy; la venta sigue solo en el comentario fijado y la bio.
+14/11 ACCESO: push 403 en tareas Chat por falta de add_repo; Comunidad migrada a tarea Claude Code con repo; commits perdidos 776dc18 y 44a14a3 rehechos.
