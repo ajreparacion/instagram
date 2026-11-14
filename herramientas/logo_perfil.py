@@ -1,7 +1,7 @@
 """Genera la foto de perfil de Instagram de Neogest Lab desde el logo oficial."""
 import urllib.request, io
 from PIL import Image, ImageFilter
-URL = "https://media.base44.com/images/public/6ae5244d4e2b32702f0a3cd6/c25965060_neogest-lab-logo.webp"
+URL = "https://media.base44.com/images/public/6ae5244d4e2b32702f0a3cd6/711454aae_neogestlab-logo-2026.webp"
 im = Image.open(io.BytesIO(urllib.request.urlopen(URL).read())).convert("RGB")
 k = 1100 / 1408; L, T, S = round(567*k), round(192*k), round(335*k)  # recorte del símbolo NL (marca-kit)
 cx, cy = L + S/2, T + S/2; side = round(S/0.72)

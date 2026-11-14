@@ -587,7 +587,7 @@ def _g_texto(layer, d, sc, t):
             d.ellipse([W / 2 - 520, 800 - 520, W / 2 + 520, 800 + 520], fill=MAG + (int(36 * a),))
 
 
-LOGO_URL = os.environ.get("NL_LOGO_URL") or "https://media.base44.com/images/public/6ae5244d4e2b32702f0a3cd6/c25965060_neogest-lab-logo.webp"
+LOGO_URL = os.environ.get("NL_LOGO_URL") or "https://media.base44.com/images/public/6ae5244d4e2b32702f0a3cd6/711454aae_neogestlab-logo-2026.webp"
 LOGO_CACHE = os.path.join(AQUI, "logo_nl.webp")   # caché en el repo: se descarga una vez y se reutiliza
 
 
