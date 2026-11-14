@@ -13,15 +13,15 @@
   "estilo": "gag",
   "hablante": "pelota",
   "inicio": 3.233,
-  "duracion": 4.4,
-  "texto": "Factura enviada. Cuarenta mil euros. Seguro.",
+  "duracion": 3.4,
+  "texto": "Enviada. Cuarenta mil euros. Seguro.",
   "enfasis": []
  },
  {
   "escena": 3,
   "estilo": "delega",
   "hablante": "jambo",
-  "inicio": 10.033,
+  "inicio": 8.433,
   "duracion": 1.8,
   "texto": "Que lo haga la Jupillo.",
   "enfasis": []
@@ -30,7 +30,7 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 11.833,
+  "inicio": 10.233,
   "duracion": 2.933,
   "texto": "Yo propongo. Tú decides.",
   "enfasis": []
@@ -39,7 +39,7 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 14.767,
+  "inicio": 13.167,
   "duracion": 1.8,
   "texto": "Qué bien delego.",
   "enfasis": []
@@ -48,38 +48,9 @@
   "escena": 6,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 16.567,
-  "duracion": 1.8,
-  "texto": "«Revisada» por mí.",
-  "enfasis": []
- },
- {
-  "escena": 7,
-  "estilo": "mensaje",
-  "hablante": null,
-  "inicio": 18.367,
-  "duracion": 4.133,
-  "texto": "Una IA debe proponer. Decidir sigue siendo cosa tuya.",
-  "enfasis": [
-   3
-  ]
- },
- {
-  "escena": 8,
-  "estilo": "mensaje",
-  "hablante": null,
-  "inicio": 22.5,
-  "duracion": 6.333,
-  "texto": "En la vida real no hay Jupillo. En Gestión Integral 7D la IA solo propone.",
-  "enfasis": []
- },
- {
-  "escena": 9,
-  "estilo": "cierre",
-  "hablante": null,
-  "inicio": 28.833,
-  "duracion": 2.533,
-  "texto": "Mándaselo a quien se fía de la IA a ciegas.",
+  "inicio": 14.967,
+  "duracion": 2.333,
+  "texto": "Mándaselo a quien firma sin mirar.",
   "enfasis": []
  }
 ]

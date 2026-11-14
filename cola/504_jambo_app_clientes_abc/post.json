@@ -8,7 +8,7 @@
   "publico": "autónomos y pymes",
   "formula": "humor negro con personaje + pivote de producto (v9)",
   "app": "Gestión Integral 7D",
-  "renderizado": false,
+  "renderizado": "2026-11-14T09:26:16+00:00",
   "_fuentes": [],
   "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90). | 14/11: recortado a ≤ 20 s para el re-render (calidad.json 13/11: recortar a ≤ 20 s, pivote con la Jupillo en pantalla).",
   "comentario_fijado": "¿Cuánto hace que no visitas a tu mejor cliente? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
