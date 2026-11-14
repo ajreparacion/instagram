@@ -1,18 +1,12 @@
 {
-  "aprobado": false,
-  "nota": 75,
-  "fecha": "2026-11-13T18:40Z",
-  "revisado_por": "agente de CALIDAD (13/11, pasada de la tarde)",
-  "comentario": "Audio del re-render medido: -14,1/-14,2 LUFS, pico < -1,2 dBTP, sin silencios > 1,1 s; 1080x1920 H.264+AAC. Sin problemas de audio ni de datos nuevos; el rechazo es solo por forma frente a la orden del dueño del 13/11 14:46 (≤ 20 s, personaje en pantalla, sin venta en el reel).",
-  "motivos": [
-    "Duración 31.9 s: supera los 20 s de la orden del dueño del 13/11 14:46 (DIRECTIVA §14 a y lista §6); el margen de 35 s es para un solo episodio con historia y se ha concedido al 501.",
-    "Los últimos 11 s son 3 tarjetas oscuras de texto estático sin personaje en pantalla (mensaje serio + pivote + reenvío): ritmo muerto (B5) y la lista §6 pide personaje visible y pivote DENTRO de la historia.",
-    "Tarjeta del pivote con venta dentro del reel: dice «Hay webs a medida, como ajreparacion.com… Más asequibles de lo que piensas» (enlace/dominio y afirmación sin cifra, aún sin confirmar por el dueño; §14 b-c y §6 «nada de precios ni venta en el reel»).",
-    "El texto del post lleva venta («Neogest Lab crea webs a medida…», «Pide presupuesto y te sorprenderás»); la oferta va solo en el comentario fijado y en la bio (§14)."
-  ],
-  "como_arreglarlo": "Recortar a ≤ 20 s (renderizado false): conservar el gancho y el gag (≈ 0-22 s), sustituir las 3 tarjetas oscuras por una sola de ≤ 2,5 s o, mejor, decir el pivote con la Jupillo en pantalla, y cerrar con el reenvío a la persona concreta. Pivote web sin dominio ni «más asequibles de lo que piensas»; quitar del post las líneas de venta (queda en el comentario fijado). Calidad reevalúa en cuanto haya render nuevo (contenido ya puntuado 90 el 12/11).",
-  "aprobado_anterior": false,
-  "nota_anterior": 75,
-  "caducado": "2026-11-14T10:55:57+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-14T10:55:57+00:00"
+ "aprobado": true,
+ "nota": 90,
+ "fecha": "2026-11-14T13:05Z",
+ "revisado_por": "agente de CALIDAD (14/11, 12:51)",
+ "comentario": "Reevaluado sobre el re-render del 14/11: 15-19 s (≤ 20), personaje en el fotograma 0 (Jambo + IA/personaje) y gancho POV ≤ 8 palabras, pivote con la Jupillo en pantalla dentro de la historia, cierre con «mándaselo a quien…» (persona concreta), sin precio ni venta en el reel y sin enlace en el texto (la oferta va en el comentario fijado). Audio -14 LUFS, pico < -1,1 dBFS, sin silencios > 1,2 s, 1080x1920. Funciones de la app contrastadas con los hechos verificados (analisis_web_ajreparacion / catalogo_apps). Reserva: la voz se midió pero no se escuchó; sin seseo comprobable por máquina.",
+ "motivos": [],
+ "como_arreglarlo": "",
+ "aprobado_anterior": false,
+ "nota_anterior": 75,
+ "render_revisado": "2026-11-14T10:55:57+00:00"
 }

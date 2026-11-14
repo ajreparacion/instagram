@@ -1,15 +1,15 @@
 {
-  "aprobado": false,
-  "nota": 75,
-  "fecha": "2026-11-13T14:40Z",
-  "revisado_por": "agente de CALIDAD (13/11, pasada de las 14:00 UTC)",
-  "comentario": "Reevaluado el 13/11 con la lista de la directiva nueva (la aprobación 90 del 11/11 era con v8.1, anterior). Los números y las afirmaciones comprobados antes siguen siendo válidos; el rechazo es solo de formato/estrategia. No se ha tocado el vídeo ni se ha movido de cola/.",
-  "nota_anterior_v8_1": 90,
-  "motivos": [
-    "DIRECTIVA 13/11 (virales con navegador, §6): «cero reels de escaparate de app»; lista de Calidad: personaje (IA o Jambo) visible y hablando en el segundo 0-1 -> NO cumple (26 s, cálculo sobre pantalla de móvil de app sin personaje en ningún momento (solo el robot del cierre))",
-    "Lista §6: «nada de precios ni venta en el reel; la oferta va en el comentario fijado» -> el reel cierra con «Prueba gratuita · sin tarjeta · sin compromiso» en pantalla y en voz",
-    "Duración ≤ 20 s (episodio con historia máx. 35 s): una demo sin historia ni personaje no tiene excusa para pasar de 20 s"
-  ],
-  "como_arreglarlo": "Rehacerlo como pieza de la serie: personaje (Jupillo, Bola, Pelota, Trámites o el Jambo) en el fotograma 0 diciendo el gancho (situación reconocible ≤ 8 palabras), la app solo como el remate de 2 s o como pivote del episodio, ≤ 20 s, frase «envíaselo a [persona concreta]» y la oferta (APP/WEB) solo en el comentario fijado y la bio. Se puede reutilizar la grabación como inserto breve. Al re-renderizar, poner renderizado:false y Calidad reevalúa (≥ 90).",
-  "reevaluado_14_11": "14/11 11:55Z: sin cambios (el render es el del 11/11, sigue siendo escaparate sin personaje, con cierre de venta y > 20 s); se mantiene el rechazo y el hueco queda libre hasta que el Creador lo rehaga como pieza de la serie."
+ "aprobado": false,
+ "nota": 75,
+ "fecha": "2026-11-13T14:40Z",
+ "revisado_por": "agente de CALIDAD (13/11, pasada de las 14:00 UTC)",
+ "comentario": "Reevaluado el 13/11 con la lista de la directiva nueva (la aprobación 90 del 11/11 era con v8.1, anterior). Los números y las afirmaciones comprobados antes siguen siendo válidos; el rechazo es solo de formato/estrategia. No se ha tocado el vídeo ni se ha movido de cola/.",
+ "nota_anterior_v8_1": 90,
+ "motivos": [
+  "DIRECTIVA 13/11 (virales con navegador, §6): «cero reels de escaparate de app»; lista de Calidad: personaje (IA o Jambo) visible y hablando en el segundo 0-1 -> NO cumple (26 s, cálculo sobre pantalla de móvil de app sin personaje en ningún momento (solo el robot del cierre))",
+  "Lista §6: «nada de precios ni venta en el reel; la oferta va en el comentario fijado» -> el reel cierra con «Prueba gratuita · sin tarjeta · sin compromiso» en pantalla y en voz",
+  "Duración ≤ 20 s (episodio con historia máx. 35 s): una demo sin historia ni personaje no tiene excusa para pasar de 20 s"
+ ],
+ "como_arreglarlo": "Rehacerlo como pieza de la serie: personaje (Jupillo, Bola, Pelota, Trámites o el Jambo) en el fotograma 0 diciendo el gancho (situación reconocible ≤ 8 palabras), la app solo como el remate de 2 s o como pivote del episodio, ≤ 20 s, frase «envíaselo a [persona concreta]» y la oferta (APP/WEB) solo en el comentario fijado y la bio. Se puede reutilizar la grabación como inserto breve. Al re-renderizar, poner renderizado:false y Calidad reevalúa (≥ 90).",
+ "reevaluado_14_11": "14/11 13:05Z: sin cambios (render del 11/11, 26 s, escaparate sin personaje y con cierre de venta). Se mantiene el rechazo; hueco libre."
 }
