@@ -58,6 +58,7 @@ VOZ_POCKET = os.path.join(BASE, "herramientas", "voz_pocket.py")
 VOZ_CHATTERBOX = os.path.join(BASE, "herramientas", "voz_chatterbox.py")
 VOZ_KOKORO = os.path.join(BASE, "herramientas", "voz_kokoro.py")
 VOZ_MELO = os.path.join(BASE, "herramientas", "voz_melo.py")
+VOZ_EDGE = os.path.join(BASE, "herramientas", "voz_edge.py")
 # MeloTTS va en su propio venv (Python 3.10, dependencias fijadas): las workflows exportan PYTHON_MELO (.github/actions/melo)
 PYTHON_MELO = os.environ.get("PYTHON_MELO") or sys.executable
 # Chatterbox va en su propio entorno virtual (fija torch 2.6 y transformers 4.46): ciclo.yml exporta PYTHON_CHATTERBOX
@@ -65,7 +66,7 @@ PYTHON_CHATTERBOX = os.environ.get("PYTHON_CHATTERBOX") or sys.executable
 ATRIBUCION_POCKET = "Voz: Kyutai Pocket TTS (CC BY 4.0)"
 # Chatterbox (MIT) y Kokoro (Apache 2.0) no exigen atribución, pero Meta pide marcar el audio realista generado:
 ATRIBUCION_IA = "Voz generada por IA"
-ATRIBUCIONES = {"melo": ATRIBUCION_IA, "pocket": ATRIBUCION_POCKET, "chatterbox": ATRIBUCION_IA, "kokoro": ATRIBUCION_IA}
+ATRIBUCIONES = {"edge": ATRIBUCION_IA, "melo": ATRIBUCION_IA, "pocket": ATRIBUCION_POCKET, "chatterbox": ATRIBUCION_IA, "kokoro": ATRIBUCION_IA}
 MAX_RENDERS = 2
 GRACIA_SIN_CALIDAD = timedelta(hours=3)  # ya no se usa (7/11/2026)
 NOTA_MINIMA = 90  # nota mínima de Calidad para publicar (7/11/2026)
@@ -208,7 +209,7 @@ def gh(*args, check=True):
 
 
 # ---------------------------------------------------------------- voz (Chatterbox / Kokoro / Pocket TTS / Piper)
-MOTORES = ("melo", "chatterbox", "kokoro", "pocket", "piper")
+MOTORES = ("edge", "melo", "chatterbox", "kokoro", "pocket", "piper")
 
 
 def ajustes_voz():
@@ -423,16 +424,25 @@ def sintetizar_melo(textos, salidas, trabajo, aj, estilos=None):
         f"{len(textos)} frases en {info['_segundos']} s")
 
 
+def sintetizar_edge(textos, salidas, trabajo, aj, estilos=None, hablantes=None):
+    """edge-tts (Microsoft Edge neural, gratis), una voz por personaje y cadena de audio de la DIRECTIVA 14/11/2026."""
+    ed = dict(aj.get("edge") or {})
+    extras = [{"hablante": (hablantes[i] if hablantes and i < len(hablantes) else None)} for i in range(len(textos))]
+    info = _sintetizar_lote("edge-tts", VOZ_EDGE, sys.executable, {"voces": ed.get("voces") or {}},
+                            textos, salidas, trabajo, ed.get("max_s", 600), extras=extras)
+    log(f"Voz con edge-tts: {len(textos)} frases en {info['_segundos']} s")
+
+
 def sintetizar_piper(textos, salidas, trabajo, aj, estilos=None):
     for t, s in zip(textos, salidas):
         sintetizar(t, s)
 
 
-SINTETIZADORES = {"melo": sintetizar_melo, "chatterbox": sintetizar_chatterbox, "kokoro": sintetizar_kokoro,
+SINTETIZADORES = {"edge": sintetizar_edge, "melo": sintetizar_melo, "chatterbox": sintetizar_chatterbox, "kokoro": sintetizar_kokoro,
                   "pocket": sintetizar_pocket, "piper": sintetizar_piper}
 
 
-def generar_locucion(textos, trabajo, aj=None, estilos=None):
+def generar_locucion(textos, trabajo, aj=None, estilos=None, hablantes=None):
     """Devuelve (lista de wav, motor usado). Se prueba el motor de equipo/voz.json y, si falla, los de "respaldo"
     en orden (Piper siempre el último). Toda la locución sale del mismo motor: no se mezclan voces.
     estilos: estilo de la escena de cada frase (gancho, giro...) para los ajustes por estilo del motor."""
@@ -442,7 +452,10 @@ def generar_locucion(textos, trabajo, aj=None, estilos=None):
     ultimo = None
     for motor in motores:
         try:
-            SINTETIZADORES[motor](textos, salidas, trabajo, aj, estilos=estilos)
+            if motor == "edge":
+                SINTETIZADORES[motor](textos, salidas, trabajo, aj, estilos=estilos, hablantes=hablantes)
+            else:
+                SINTETIZADORES[motor](textos, salidas, trabajo, aj, estilos=estilos)
             return salidas, motor
         except Exception as e:
             ultimo = e
@@ -608,9 +621,11 @@ def preparar_voz(locucion, trabajo):
         return tramos, [], None, None
     aj = ajustes_voz()
     rutas, motor = generar_locucion([t["texto"] for t in tramos], trabajo, aj,
-                                    estilos=[ESTILO_VOZ.get(t.get("estilo"), t.get("estilo")) for t in tramos])
-    hab = dict(HABLANTES_DEF)
-    hab.update(aj.get("hablantes") if isinstance(aj.get("hablantes"), dict) else {})
+                                    estilos=[ESTILO_VOZ.get(t.get("estilo"), t.get("estilo")) for t in tramos],
+                                    hablantes=[t.get("hablante") for t in tramos])
+    hab = {} if motor == "edge" else dict(HABLANTES_DEF)   # edge-tts ya trae una voz por personaje: sin trucos de timbre
+    if motor != "edge":
+        hab.update(aj.get("hablantes") if isinstance(aj.get("hablantes"), dict) else {})
     hechos = [t.get("hablante") for t, w in zip(tramos, rutas) if t.get("hablante") in hab and aplicar_voz_hablante(w, hab[t["hablante"]])]
     if hechos:
         log(f"Voz: timbre de personaje aplicado a {len(hechos)} frases ({sorted(set(hechos))})")

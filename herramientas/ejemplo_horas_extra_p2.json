@@ -1,0 +1,137 @@
+{
+ "titulo": "El Jambo que sabe y las IAs · Horas extra — Parte 2",
+ "semilla": 9001,
+ "modo": "sketch",
+ "serie": "El Jambo que sabe y las IAs",
+ "episodio": 9001,
+ "negocio": "oficina / pyme",
+ "gancho_corto": "EL JAMBO PIDE LO IMPOSIBLE",
+ "portada_texto": "POV: tu jefe pide 200 páginas a las 18:55",
+ "musica": true,
+ "_formato": "Modo 'sketch' (NUEVO, pendiente de Mejora). Escena = {estilo gancho|gag|delega|remate|mensaje|cierre, hablante jambo|jupillo|pelota|bola|tramites|null, voz (con *énfasis*), texto (globo o rótulo en pantalla)}. El mensaje y el cierre van serios, sin música de chiste, fotograma guardable con la fuente pequeña.",
+ "contador": {
+  "texto": "Veces que se lo ha pasado a la Jupillo",
+  "inicio": 0,
+  "valor": 1
+ },
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "hablante": "jambo",
+   "voz": "Cuando tu jefe pide doscientas páginas para mañana.",
+   "texto": "POV: tu jefe pide 200 páginas a las 18:55",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "presume"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Yo quiero una cosa: que esté hecha y que no la haga yo.",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "presume"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jupillo",
+   "voz": "Son las siete. Y ya van tres informes más.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "¡Y el de ayer, con otro color!",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jupillo",
+   "voz": "Son las once. Ya está todo hecho.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "presume"
+    }
+   }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "jambo",
+   "voz": "Qué bien trabajo. ¡Que lo haga la Jupillo!",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "remata"
+    },
+    "efecto": "papeles",
+    "efecto_t": -3
+   }
+  },
+  {
+   "estilo": "cierre",
+   "hablante": null,
+   "voz": "¿A ti también te pasa? Parte 3 mañana.",
+   "texto": "¿A ti también te pasa? Parte 3 mañana",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
+  }
+ ],
+ "dibujo": {
+  "personajes": [
+   "jambo",
+   "jupillo",
+   "pelota",
+   "bola",
+   "tramites"
+  ]
+ },
+ "_nota": "Guion de prueba (14/11/2026) con la FÓRMULA de la directiva: situación, planteamiento, escalada en 3 golpes, giro, cierre con gancho de serie. El dato EPA va en el texto del post, no aquí."
+}

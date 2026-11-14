@@ -1,0 +1,52 @@
+name: Prueba edge-tts + música MacLeod + control de audio
+
+# Solo a mano. No publica ni toca la cola: renderiza en /tmp y sube mp4/mp3/json a la release «pruebas».
+on:
+  workflow_dispatch:
+    inputs:
+      guion:
+        description: "Guion a renderizar"
+        default: "herramientas/ejemplo_horas_extra_p2.json"
+
+permissions:
+  contents: write
+
+jobs:
+  prueba:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Herramientas
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq ffmpeg fonts-dejavu-core > /dev/null
+          pip install --quiet pillow numpy scipy faster-whisper edge-tts
+      - name: Música de Kevin MacLeod (incompetech, CC BY 4.0)
+        run: python3 herramientas/musica_macleod.py
+      - name: Ajustes de voz de la prueba (solo en este job, no se sube)
+        run: |
+          python3 - <<'PY'
+          import json
+          p = "equipo/voz.json"; a = json.load(open(p))
+          a.update(motor="edge", respaldo=[], permitir_piper=False, ratio_duck=2.5, normalizar_pico_db=None)
+          json.dump(a, open(p, "w"), indent=1)
+          PY
+      - name: Prueba
+        env:
+          TZ: Europe/Madrid
+        run: python3 herramientas/prueba_edge.py "${{ inputs.guion }}"
+      - name: Subir a la release «pruebas»
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          shopt -s nullglob
+          f=(/tmp/edge/salida/*)
+          [ ${#f[@]} -gt 0 ] && gh release upload pruebas "${f[@]}" --clobber || true
+      - name: Registro
+        if: always()
+        run: grep -i "voz\|mezcla\|música\|musica" registro.log | tail -20 || true
