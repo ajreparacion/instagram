@@ -100,3 +100,23 @@ Solo lectura. Instagram puede retrasarse 48 h; 12 y 13/11 de seguidores siguen p
 3. **Mantener el motivo de visita al perfil en cada pieza sin producto** (rótulo «@neogestlab · episodio nuevo cada día» desde el segundo 0, sección 7). Medida: visitas por cada 100 cuentas no seguidoras, hoy 2,3; meta ≥ 3.
 
 Lectura del embudo de hoy: alcance no seguidores 696 → visitas 16 → clics web 5 → solicitudes nuevas 0 → 0 €.
+
+## 9. Lectura de la tarde del 14/11/2026 (ig_account_stats 7-14/11, 12:55 UTC)
+Solo lectura. Cifras idénticas a la sección 8: no ha entrado dato nuevo desde la lectura de las 13:00.
+
+| Etapa | 7-14/11 | Meta | Lectura |
+|---|---|---|---|
+| Alcance no seguidores | 696 | — | 91 % del alcance total (763) |
+| Visitas al perfil | 16 (2,3 %) | ≥ 3 % | Sin llegar a la meta |
+| Clics al sitio web | 5 (31 % de las visitas) | ≥ 25 % | Cumple la meta |
+| Solicitudes nuevas | 0 | — | Sigue sin entrar ninguna desde Instagram |
+| Ingresos confirmados | 0 € | — | — |
+
+Problema que sigue vivo: la bio pública dice «¿Quieres tu app o web? **Comenta APP**», que contradice la orden de cierre único. El dueño debe cambiarla (ver acción 1).
+
+**Acciones (3, por orden de efecto):**
+1. **Bio sin «Comenta APP» (dueño).** Texto propuesto: «El Jambo y sus IAs, cada día · ¿Necesitas una app o web a medida? Pide tu prueba gratuita · By Neogest Lab», con el enlace a `/solicitar?src=instagram`. Solo el dueño puede cambiarla. El Estratega deja el texto en `plan.json`.
+2. **Quitar el cierre por comentario del producto (Estratega).** Un reel sin producto no pide comentar nada. Si lleva oferta, va en el comentario fijado con el enlace `/solicitar?src=instagram` y en la bio, nunca en el texto del reel (orden del 13/11 sobre la serie).
+3. **Separar tráfico interno y registrar la llegada a `/solicitar` (Mejora).** Los clics de `login` o `app.base44.com` no cuentan como clic de bio. Sin esto no se puede calcular la tasa clic→solicitud (acción 2 de la sección 4).
+
+Lectura del embudo de hoy: alcance no seguidores 696 → visitas 16 → clics web 5 → solicitudes nuevas 0 → 0 €.
