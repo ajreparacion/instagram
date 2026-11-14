@@ -334,3 +334,11 @@ La muestra del cambio 37 llevaba la pista generada por código (prueba_voz.yml n
 - **Límites:** mide texto y duración, no ve el vídeo ni oye la voz; la estimación desde el guion es conservadora (puede avisar de 20,1 s cuando el render dé 19). No sustituye la nota de Calidad.
 - **Revertir:** `cp herramientas/versiones/pre_entrega.py_2026-11-14 herramientas/pre_entrega.py`.
 
+
+## Cambio 67 · 14/11/2026 (Mejora programada) · El zoom del remate ya no recorta el título «POV…» ni lo solapa con el rótulo de serie
+- **Estado de las 4 prioridades:** voz del dueño prohibida (MeloTTS genérico + respaldo Kokoro, reels mudos por pieza), música de Instagram por humor, plantilla `"modo":"app"` y fórmulas F12/F13 ya hechas (cambios 22-66). Hoy no se toca voz ni música: no hace falta `renderizado: false` ni lanzar el ciclo.
+- **Dato que motiva el cambio:** petición de Calidad del 14/11 (tablón y peticiones_mejora.md): en episodios con remate el zoom de golpe (+16 %) recortaba los bordes del título y lo pisaba con «@neogestlab · episodio nuevo cada día» (medido en 315 y 316).
+- **Cambio:** `herramientas/sketch.py`, `render_frame`: en escenas `remate` la cabecera (título + contador) se pinta DESPUÉS del recorte de cámara (`hud_tarde`), igual que ya ocurría en el primer plano del fotograma 0. El zoom sigue afectando solo al dibujo.
+- **Medido (CPU, guion real de 315 sin voz, `--ensayo`):** render determinista (dos renders del código anterior idénticos); fotogramas tras el golpe del remate comparados antes/después con Read: antes el título salía cortado por ambos lados y se superponía al rótulo; ahora cabe completo (márgenes ≈ 25 px) y no toca el rótulo. Fotograma 0 y primeros 3 s idénticos píxel a píxel. Duración y audio sin cambios (378 fotogramas, 12,6 s).
+- **Límite:** los episodios ya renderizados (306-316 de la cola) conservan el defecto hasta que el Creador los re-renderice (`renderizado: false`) y Calidad los reevalúe; no he tocado la cola.
+- **Revertir:** `cp herramientas/versiones/sketch.py_2026-11-14 herramientas/sketch.py`.

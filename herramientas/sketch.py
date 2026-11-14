@@ -892,7 +892,8 @@ def render_frame(fi, sc, noise, rg, seed):
     # gancho «POV: …» fijo arriba, desde el fotograma 0
     # Durante el zoom de entrada del fotograma 0 (pp > 0) el rótulo y el contador son HUD: se dibujan DESPUÉS del
     # recorte para que no se corten por arriba (11/11/2026, aviso de Creador: «VECES QUE SE LO HA PASA…»).
-    hud_tarde = bool(sc.primero and sc.gancho_gigante and t < PP_DUR)
+    # 14/11/2026 (petición de Calidad): en el remate el zoom de golpe recortaba el título «POV…»; la cabecera se pinta tras el zoom
+    hud_tarde = bool((sc.primero and sc.gancho_gigante and t < PP_DUR) or sc.estilo_d == "remate")
     # el contador baja si el «POV» ocupa dos líneas grandes (11/11/2026: «PAGAR LA LUZ» quedaba tapado por el contador)
     cont_y0 = max(352, 150 + sc.gancho.height - 22) if sc.gancho is not None else 352
     def _hud(im):
