@@ -72,3 +72,4 @@ MONETIZACIÓN: sin venta en vídeo ni texto; la oferta APP/WEB queda en el comen
 2026-11-14 · MEJORA · la lista de Calidad del 13/11 (≤ 20 s, reenvío, sin venta/enlace, rótulo de serie, personaje en el segundo 0) solo se comprobaba a mano y 502-515 volvieron por ello → regla nueva: se comprueba antes de entregar → `python3 herramientas/pre_entrega.py` (cambio 66; hoy 31 avisos nuevos en la cola real, 0 errores).
 MONETIZACIÓN: sin cambio de oferta; se protege que el reel no lleve venta ni enlace y que la palabra APP/WEB esté en el comentario fijado (revisor previo).
 
+- 14/11 Calidad: aprobados 315 y 316 (90, episodios de la serie con IA en el segundo 0, ≤ 20 s, reenvío concreto). MONETIZACIÓN: la oferta APP/WEB queda solo en el comentario fijado de cada episodio, sin venta en el vídeo, para que el alcance de la serie lleve a visita al perfil.
