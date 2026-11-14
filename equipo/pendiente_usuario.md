@@ -35,3 +35,6 @@ Reducido el 13/11/2026 por el Estratega (la versión larga está en git). Aquí 
 
 ## Ventas · Prospección: red de la sesión (14/11/2026)
 La tarea no puede leer workana.com ni ajreparacion.com (ENOTFOUND: fuera de los dominios permitidos de la sesión) y WebSearch (solo EE. UU.) no da anuncios fechados. Para que haya propuestas y maquetas: permitir en la red del entorno workana.com, malt.es, freelancer.es, fiverr.com, ajreparacion.com y los directorios públicos de empresas (paginasamarillas.es, einforma.com); o que el dueño pegue 3-5 enlaces de anuncios y 3 negocios de Palma.
+
+## Requiere PC
+- 14/11/2026: por orden del dueño nada se ejecuta en su ordenador. Los agentes anotan aquí lo que solo se pueda hacer en él (no se hace solo).
