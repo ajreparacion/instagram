@@ -11,12 +11,12 @@
   "_fuentes": [],
   "_comprobado": "Sin cifras ni funciones de producto: humor de ficción.",
   "_nota_creador": "14/11/2026: episodio nuevo en el formato del dueño (DIRECTIVA §14). Sin producto, sin enlace y sin precio en el vídeo ni en el texto; la oferta va solo en el comentario fijado. Calidad (≥ 90) manda: sin calidad.json aprobado el hueco queda libre. Voz genérica de España.",
-  "renderizado": false,
+  "renderizado": "2026-11-14T09:57:55+00:00",
   "comentario_fijado": "¿Cuántas veces has dicho «ya sale» sin que saliera? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
   "avance_siguiente": "Seguimos: más trabajo para la Jupillo.",
   "audio_ig": {
-    "audio_id": "1256638451637432",
-    "titulo": "Beautiful Life · CALIDAD",
+    "audio_id": "1018682932882496",
+    "titulo": "Made It Out (Instrumental) · Robin-Huws",
     "origen": "biblioteca de Instagram (colección libre de derechos)",
     "audio_volume": 0.5,
     "video_volume": 1.0,
@@ -26,5 +26,7 @@
     "objetivo": "visita_perfil",
     "oferta": "seguir el perfil; la oferta APP/WEB vive en el comentario fijado",
     "paso_embudo": "alcance → visita al perfil"
-  }
+  },
+  "motor_voz": "melo",
+  "asset": "316_ias_oficina_ep20_pedido.mp4"
 }

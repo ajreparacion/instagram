@@ -1,0 +1,58 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 1.833,
+  "texto": "¿Mi pedido? ¡Ya sale!",
+  "enfasis": [
+   3
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 1.833,
+  "duracion": 2.2,
+  "texto": "Su pedido está en tramitación.",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "delega",
+  "hablante": "jambo",
+  "inicio": 5.833,
+  "duracion": 1.8,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 7.633,
+  "duracion": 3.0,
+  "texto": "Sale hoy. Llega mañana.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 10.633,
+  "duracion": 2.7,
+  "texto": "Qué rapidez. Mérito mío.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jupillo",
+  "inicio": 13.333,
+  "duracion": 2.467,
+  "texto": "Mándaselo a quien contesta «ya sale».",
+  "enfasis": []
+ }
+]
