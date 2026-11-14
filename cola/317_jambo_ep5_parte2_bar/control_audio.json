@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "duracion_s": 26.4,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['siete', 'ia', 'siete', 'ocho'], sobran ['7', 'i', 'a', '7', '8'] (rehacer esas frases)",
+    "silencios > 0.6 s entre frases (pista de voz): [[6.12, 6.72, 0.6]]"
+  ],
+  "avisos": [],
+  "transcripcion": "Otra vez la mesa 7, si le dí a la I a el bar entero. Quiero que atienda, cocine, cobre y sonría. Hecho, mesa 7, servida. Y la mesa 8, y la terraza, que también sonría la terraza. Terraza, barra y cocina, hecho. Y el cierre de caja, y el pedido de mañana, y mi café. Café, no, tú lo llevas cerrado con llave. ¿Quién carga con todo en tu bar? Parte 3 mañana.",
+  "guion": "¿Otra vez la mesa siete? ¡Si le di a la IA el bar entero! Quiero que atienda, cocine, cobre y sonría. Hecho. Mesa siete, servida. ¿Y la mesa ocho? ¿Y la terraza? ¡Que también sonría la terraza! Terraza, barra y cocina. Hecho. ¿Y el cierre de caja? ¿Y el pedido de mañana? ¿Y mi café? Café, no. Tú lo llevas cerrado… con llave. ¿Quién carga con todo en tu bar? Parte 3, mañana."
+}

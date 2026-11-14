@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Parte 2: le diste el bar entero a la IA y el Jambo sigue sin café.\nLa Jupillo atiende, cocina y cobra; el Jambo pide más. Humor negro de ficción.\n¿Quién carga con todo en tu bar? Cuéntalo en comentarios.\nMándaselo a quien carga con todo.\nParte 3 mañana en @neogestlab\n#humornegro #hosteleria #ia #trabajo #pymes\nVoz y personajes generados por IA",
+  "texto": "Parte 2: le diste el bar entero a la IA y el Jambo sigue sin café.\nLa Jupillo atiende, cocina y cobra; el Jambo pide más. Humor negro de ficción.\n¿Quién carga con todo en tu bar? Cuéntalo en comentarios.\nMándaselo a quien carga con todo.\nParte 3 mañana en @neogestlab\n#humornegro #hosteleria #ia #trabajo #pymes\nVoz y personajes generados por IA\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-15T16:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -10,21 +10,29 @@
   "_fuentes": [],
   "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
   "_nota_creador": "14/11/2026 Remasterizador: Parte 2 de un éxito (serie El Jambo), hecha con la DIRECTIVA DE VÍDEO del 14/11. Falta: render (Creador), voz edge-tts (Álvaro/Ximena) y Calidad (≥ 90). Sin dato estadístico en el vídeo. Música: la de Instagram (audio_ig) o, si el render usa Kevin MacLeod, añadir su atribución obligatoria al post.",
-  "motor_voz": "chatterbox",
+  "motor_voz": "edge",
   "comentario_fijado": "¿Quién carga con todo en tu bar: tú o «la IA»? Parte 3 mañana en @neogestlab",
   "avance_siguiente": "Mañana: parte 3.",
-  "audio_ig": {
-    "audio_id": "1403284444689007",
-    "titulo": "Good Time (feat. Lowen) (Instrumental) · Company Money",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
   "portada_ms": 0,
   "monetizacion": {
     "objetivo": "visita_perfil",
     "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
     "paso_embudo": "alcance → visita al perfil"
+  },
+  "musica": {
+    "titulo": "Sneaky Snitch",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Sneaky_Snitch.mp3",
+    "bpm": 87.6
+  },
+  "_control_audio_fallo": {
+    "fecha": "2026-11-14T20:43:30+00:00",
+    "bloqueos": [
+      "voz distinta del guion: faltan ['siete', 'ia', 'siete', 'ocho'], sobran ['7', 'i', 'a', '7', '8'] (rehacer esas frases)",
+      "silencios > 0.6 s entre frases (pista de voz): [[6.12, 6.72, 0.6]]"
+    ],
+    "guion_md5": "65c39dfba26ce39a63d09f7dcf29882f"
   }
 }
