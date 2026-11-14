@@ -81,3 +81,5 @@ MONETIZACIÓN: 14/11 prospección sin resultados por red bloqueada (workana.com,
 MONETIZACIÓN: 14/11 (2.ª pasada) prospección sin resultados, mismo bloqueo de red (workana 403); sigue pendiente permitir dominios o que el dueño pegue 3-5 anuncios y 3 negocios de Palma.
 14/11 15:42 · Comunidad: comunidad/pendientes.json vacío (el workflow comunidad.yml no ha dejado comentarios nuevos); sin interesados nuevos.
 MONETIZACIÓN: 14/11 15:42 sin interesados ni comentarios que convertir; Instagram sin comentarios sin responder y los DMs de terceros tienen la ventana de 24 h cerrada, así que no hay conversión posible hoy. Comunidad solo cierra si el workflow de Facebook/YouTube deja comentarios nuevos.
+14/11 20:38 UTC COMUNIDAD: comunidad/pendientes.json vacío; Instagram sin comentarios sin responder en los 10 últimos posts (7 días); bandeja: hilos de cuentas propias excluidos y 3 hilos de terceros con ventana de 24 h cerrada, sin propuesta posible.
+MONETIZACIÓN: 14/11 20:38 UTC sin interesados nuevos; directiva de vídeo 14/11 publicada (FÓRMULA Y AUDIO) con llamada a la prueba gratuita en el texto del post; sin conversión hoy.
