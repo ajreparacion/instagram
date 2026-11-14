@@ -4,26 +4,24 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 3.533,
-  "texto": "¿El número de serie? ¡Está debajo, creo!",
-  "enfasis": [
-   5
-  ]
+  "duracion": 3.133,
+  "texto": "¿Número de serie? ¡Debajo, creo!",
+  "enfasis": []
  },
  {
   "escena": 1,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 3.533,
-  "duracion": 2.767,
-  "texto": "¡Los tiburones no leen placas, las devoran!",
+  "inicio": 3.133,
+  "duracion": 2.133,
+  "texto": "¡Los tiburones devoran placas!",
   "enfasis": []
  },
  {
   "escena": 3,
   "estilo": "delega",
   "hablante": "jambo",
-  "inicio": 8.7,
+  "inicio": 7.067,
   "duracion": 1.8,
   "texto": "Que lo haga la Jupillo.",
   "enfasis": []
@@ -32,16 +30,16 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 10.5,
-  "duracion": 4.233,
-  "texto": "Foto a la placa. Marca, modelo y número de serie.",
+  "inicio": 8.867,
+  "duracion": 3.733,
+  "texto": "Foto a la placa. Marca, modelo, serie.",
   "enfasis": []
  },
  {
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 14.733,
+  "inicio": 12.6,
   "duracion": 1.833,
   "texto": "Lo encontré yo solito.",
   "enfasis": []
@@ -50,38 +48,9 @@
   "escena": 6,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 16.567,
-  "duracion": 3.133,
-  "texto": "Con mi linterna. Y mis ojos.",
-  "enfasis": []
- },
- {
-  "escena": 7,
-  "estilo": "mensaje",
-  "hablante": null,
-  "inicio": 19.7,
-  "duracion": 3.2,
-  "texto": "Tu equipo ya trae escrito lo que el taller necesita.",
-  "enfasis": [
-   4
-  ]
- },
- {
-  "escena": 8,
-  "estilo": "mensaje",
-  "hablante": null,
-  "inicio": 22.9,
-  "duracion": 5.467,
-  "texto": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
-  "enfasis": []
- },
- {
-  "escena": 9,
-  "estilo": "cierre",
-  "hablante": null,
-  "inicio": 28.367,
-  "duracion": 2.233,
-  "texto": "Mándaselo a quien aún no tiene web.",
+  "inicio": 14.433,
+  "duracion": 2.333,
+  "texto": "Mándaselo a quien pierde la placa.",
   "enfasis": []
  }
 ]

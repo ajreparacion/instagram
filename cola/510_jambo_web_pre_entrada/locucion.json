@@ -4,26 +4,28 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 3.7,
-  "texto": "Hace un ruido. Un ruido raro. ¡Así!",
+  "duracion": 2.867,
+  "texto": "Hace un ruido raro. ¡Así!",
   "enfasis": [
-   5
+   3
   ]
  },
  {
   "escena": 1,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 3.7,
-  "duracion": 5.0,
-  "texto": "Es el motor. Seguro. O la manguera. Seguro.",
-  "enfasis": []
+  "inicio": 2.867,
+  "duracion": 2.467,
+  "texto": "Es el motor. Seguro.",
+  "enfasis": [
+   3
+  ]
  },
  {
   "escena": 3,
   "estilo": "delega",
   "hablante": "jambo",
-  "inicio": 11.1,
+  "inicio": 7.133,
   "duracion": 1.8,
   "texto": "Que lo haga la Jupillo.",
   "enfasis": []
@@ -32,58 +34,27 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 12.9,
-  "duracion": 3.033,
-  "texto": "Tipo de máquina, avería y hasta cuatro fotos.",
+  "inicio": 8.933,
+  "duracion": 2.867,
+  "texto": "Máquina, avería y hasta cuatro fotos.",
   "enfasis": []
  },
  {
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 15.933,
+  "inicio": 11.8,
   "duracion": 1.8,
-  "texto": "Qué bien lo he explicado.",
+  "texto": "Lo expliqué perfecto.",
   "enfasis": []
  },
  {
   "escena": 6,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 17.733,
-  "duracion": 3.267,
-  "texto": "Un ruido. Explicado, dice.",
-  "enfasis": []
- },
- {
-  "escena": 7,
-  "estilo": "mensaje",
-  "hablante": null,
-  "inicio": 21.0,
-  "duracion": 3.2,
-  "texto": "Contar la avería antes de llegar ahorra vueltas.",
-  "enfasis": [
-   3,
-   4,
-   5
-  ]
- },
- {
-  "escena": 8,
-  "estilo": "mensaje",
-  "hablante": null,
-  "inicio": 24.2,
-  "duracion": 5.467,
-  "texto": "En la vida real no hay Jupillo. Hay webs a medida, más asequibles de lo que piensas.",
-  "enfasis": []
- },
- {
-  "escena": 9,
-  "estilo": "cierre",
-  "hablante": null,
-  "inicio": 29.667,
-  "duracion": 2.233,
-  "texto": "Mándaselo a quien aún no tiene web.",
+  "inicio": 13.6,
+  "duracion": 2.8,
+  "texto": "Mándaselo a quien explica con ruiditos.",
   "enfasis": []
  }
 ]
