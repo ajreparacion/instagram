@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 21.83,
+  "bloqueos": [
+    "silencios > 0.6 s entre frases (pista de voz): [[15.63, 17.15, 1.53], [17.56, 18.95, 1.4]]"
+  ],
+  "avisos": [],
+  "transcripcion": "Te pago a noventa días como siempre. Claro, claro, noventa. La ley dice sesenta como máximo. Pues a sesenta, del año que viene. Factura enviada, y el recargo por demora, también. ¿Esto quién lo ha hecho? Yo. Ella. ¿A cuántos días te pagan a ti? Comenta.",
+  "guion": "Te pago a noventa días, como siempre. Claro, claro, noventa. La ley dice sesenta como máximo. Pues a sesenta… del año que viene. Factura enviada. Y el recargo por demora, también. ¿Esto quién lo ha hecho? Yo. Ella. ¿A cuántos días te pagan a ti? Comenta."
+}

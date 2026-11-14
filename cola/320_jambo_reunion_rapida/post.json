@@ -1,28 +1,37 @@
 {
- "tipo": "reel",
- "texto": "La reunión rápida que no lo fue. Un correo de tres líneas lo resolvía. Humor negro de ficción.\nDato: el 55 % de las empresas encuestadas considera que las tareas administrativas restan tiempo al trabajo estratégico (Qonto con IO Investigación, «Radiografía económica y bancaria de la micro y pequeña empresa en España 2026», según Forbes España, 22/04/2026).\nEtiqueta al que convoca estas reuniones.\n#humornegro #reuniones #trabajo #ia #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
- "cuando": "2026-11-17T11:40:00+01:00",
- "compartir_en_feed": true,
- "prueba_no_seguidores": true,
- "formato": "Serie El Jambo",
- "publico": "oficina",
- "formula": "humor con personaje (v8 B2)",
- "_fuentes": [],
- "_nota_creador": "14/11/2026 Creador, directiva de vídeo 14/11: fórmula 0-2 s situación, planteamiento, escalada en 3 golpes, giro y cierre de serie; dato en el post. Voces edge-tts (Álvaro Jambo, Ximena Jupillo); falta render y Calidad.",
- "motor_voz": "edge",
- "comentario_fijado": "Etiqueta al que convoca estas reuniones",
- "avance_siguiente": "Parte 2 si funciona.",
- "portada_ms": 0,
- "monetizacion": {
-  "objetivo": "visita_perfil",
-  "oferta": "prueba gratuita en /solicitar (texto del post)",
-  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
- },
- "musica": {
-  "titulo": "Fluffing a Duck",
-  "autor": "Kevin MacLeod",
-  "licencia": "CC BY 4.0",
-  "url": "https://incompetech.com/music/royalty-free/",
-  "archivo": "Fluffing_a_Duck.mp3"
- }
+  "tipo": "reel",
+  "texto": "La reunión rápida que no lo fue. Un correo de tres líneas lo resolvía. Humor negro de ficción.\nDato: el 55 % de las empresas encuestadas considera que las tareas administrativas restan tiempo al trabajo estratégico (Qonto con IO Investigación, «Radiografía económica y bancaria de la micro y pequeña empresa en España 2026», según Forbes España, 22/04/2026).\nEtiqueta al que convoca estas reuniones.\n#humornegro #reuniones #trabajo #ia #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-17T11:40:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo",
+  "publico": "oficina",
+  "formula": "humor con personaje (v8 B2)",
+  "_fuentes": [],
+  "_nota_creador": "14/11/2026 Creador, directiva de vídeo 14/11: fórmula 0-2 s situación, planteamiento, escalada en 3 golpes, giro y cierre de serie; dato en el post. Voces edge-tts (Álvaro Jambo, Ximena Jupillo); falta render y Calidad.",
+  "motor_voz": "edge",
+  "comentario_fijado": "Etiqueta al que convoca estas reuniones",
+  "avance_siguiente": "Parte 2 si funciona.",
+  "portada_ms": 0,
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+  },
+  "musica": {
+    "titulo": "Fluffing a Duck",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Fluffing_a_Duck.mp3",
+    "bpm": 123.0
+  },
+  "_control_audio_fallo": {
+    "fecha": "2026-11-14T21:58:37+00:00",
+    "bloqueos": [
+      "voz distinta del guion: faltan ['dos', 'mil', 'veintiocho'], sobran ['2028'] (rehacer esas frases)",
+      "silencios > 0.6 s entre frases (pista de voz): [[2.25, 2.85, 0.6], [19.85, 20.45, 0.6]]"
+    ],
+    "guion_md5": "6987f9348d4f16e4a78121307b188c61"
+  }
 }

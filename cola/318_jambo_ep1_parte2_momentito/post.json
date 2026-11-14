@@ -1,29 +1,37 @@
 {
- "tipo": "reel",
- "texto": "Parte 2: «solo un momentito»… a las 23:00. La Jupillo lo hace todo; el Jambo se pone pálido. Humor negro de ficción.\nDato: 2,5 millones de horas extra a la semana sin pagar, 42 % de las horas extra (EPA, INE, 1.er trim. 2026, según El Español 26/05/2026).\n¿Cuántos «momentitos» te han hecho este año? Cuéntalo en comentarios.\nMándaselo a quien carga con todo.\nParte 3 mañana en @neogestlab\n#humornegro #trabajo #horasextra #ia #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
- "cuando": "2026-11-15T11:40:00+01:00",
- "compartir_en_feed": true,
- "prueba_no_seguidores": true,
- "formato": "Serie El Jambo",
- "publico": "oficina",
- "formula": "humor con personaje (v8 B2)",
- "_fuentes": [],
- "_nota_creador": "14/11/2026 Creador, directiva de vídeo 14/11: fórmula 0-2 s situación, planteamiento, escalada en 3 golpes, giro y cierre de serie; dato en el post. Voces edge-tts (Álvaro Jambo, Ximena Jupillo); falta render y Calidad.",
- "motor_voz": "edge",
- "comentario_fijado": "¿Cuántos «momentitos» te han hecho este año? Parte 3 mañana",
- "avance_siguiente": "Mañana: parte 3.",
- "portada_ms": 0,
- "monetizacion": {
-  "objetivo": "visita_perfil",
-  "oferta": "prueba gratuita en /solicitar (texto del post)",
-  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
- },
- "musica": {
-  "titulo": "Monkeys Spinning Monkeys",
-  "autor": "Kevin MacLeod",
-  "licencia": "CC BY 4.0",
-  "url": "https://incompetech.com/music/royalty-free/",
-  "archivo": "Monkeys_Spinning_Monkeys.mp3",
-  "bpm": 143.6
- }
+  "tipo": "reel",
+  "texto": "Parte 2: «solo un momentito»… a las 23:00. La Jupillo lo hace todo; el Jambo se pone pálido. Humor negro de ficción.\nDato: 2,5 millones de horas extra a la semana sin pagar, 42 % de las horas extra (EPA, INE, 1.er trim. 2026, según El Español 26/05/2026).\n¿Cuántos «momentitos» te han hecho este año? Cuéntalo en comentarios.\nMándaselo a quien carga con todo.\nParte 3 mañana en @neogestlab\n#humornegro #trabajo #horasextra #ia #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-15T11:40:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo",
+  "publico": "oficina",
+  "formula": "humor con personaje (v8 B2)",
+  "_fuentes": [],
+  "_nota_creador": "14/11/2026 Creador, directiva de vídeo 14/11: fórmula 0-2 s situación, planteamiento, escalada en 3 golpes, giro y cierre de serie; dato en el post. Voces edge-tts (Álvaro Jambo, Ximena Jupillo); falta render y Calidad.",
+  "motor_voz": "edge",
+  "comentario_fijado": "¿Cuántos «momentitos» te han hecho este año? Parte 3 mañana",
+  "avance_siguiente": "Mañana: parte 3.",
+  "portada_ms": 0,
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+  },
+  "musica": {
+    "titulo": "Monkeys Spinning Monkeys",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Monkeys_Spinning_Monkeys.mp3",
+    "bpm": 143.6
+  },
+  "_control_audio_fallo": {
+    "fecha": "2026-11-14T21:56:26+00:00",
+    "bloqueos": [
+      "voz distinta del guion: faltan ['once', 'doce'], sobran ['11', '12'] (rehacer esas frases)",
+      "silencios > 0.6 s entre frases (pista de voz): [[17.09, 17.69, 0.6], [18.78, 19.49, 0.71]]"
+    ],
+    "guion_md5": "55f690e588012ee4b5176292cb1e9a85"
+  }
 }

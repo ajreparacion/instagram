@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "duracion_s": 23.47,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['once', 'doce'], sobran ['11', '12'] (rehacer esas frases)",
+    "silencios > 0.6 s entre frases (pista de voz): [[17.09, 17.69, 0.6], [18.78, 19.49, 0.71]]"
+  ],
+  "avisos": [],
+  "transcripcion": "Jupillo, 200 páginas para mañana. Es un momentito. Echas, son las 11. Pues ahora tradúcelas al chino, momentito. Echas, las 12. Y ahora ponle música, rapidito. Echo, y he mandado tu horario a inspección de trabajo, momentito. ¿Eso también lo haces tú? ¿Cuántos momentitos te han hecho este año? Parte 3 mañana.",
+  "guion": "Jupillo, doscientas páginas para mañana. Es un momentito. Hechas. Son las once. Pues ahora tradúcelas al chino. Momentito. Hechas. Las doce. Y ahora ponle música. Rapidito. Hecho. Y he mandado tu horario a Inspección de Trabajo. Momentito. ¿Eso también lo haces tú? ¿Cuántos momentitos te han hecho este año? Parte 3 mañana."
+}
