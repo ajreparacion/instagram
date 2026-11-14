@@ -1,4 +1,3 @@
-2026-11-12 15:23  014_formula_prompt: no se pudieron leer comentarios: Unsupported get request. Object with ID '18114456071177223' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-12 15:23  015_resumir_correo: no se pudieron leer comentarios: Unsupported get request. Object with ID '18119170952012543' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-12 15:23  016_filtro_facturas: no se pudieron leer comentarios: Unsupported get request. Object with ID '18015411647992201' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-12 15:38  203_studio_beats_pro_historia3: publicando…
@@ -598,3 +597,4 @@
 2026-11-14 21:43  Mezcla: voz -17.0 LUFS, música -22.5 LUFS (con ducking -25.2), la música baja 6.0 dB (p90) bajo la voz, ratio 2.304; máster -16.95 -> -14.0 LUFS, pico -1.5 dBFS; huecos de voz: []
 2026-11-14 21:43  Control de audio: FALLA voz distinta del guion: faltan ['siete', 'ia', 'siete', 'ocho'], sobran ['7', 'i', 'a', '7', '8'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[6.12, 6.72, 0.6]]; duración 26.4 s
 2026-11-14 21:43  317_jambo_ep5_parte2_bar: NO se publica, control de audio: voz distinta del guion: faltan ['siete', 'ia', 'siete', 'ocho'], sobran ['7', 'i', 'a', '7', '8'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[6.12, 6.72, 0.6]]
+2026-11-14 22:25  Estadísticas actualizadas (22 posts, 1602 seguidores)
