@@ -1,8 +1,8 @@
 {
-  "actualizado": "2026-11-14T03:04:27+00:00",
+  "actualizado": "2026-11-14T09:12:27+00:00",
   "cuenta": {
     "id": "17841400403112257",
-    "followers_count": 1601,
+    "followers_count": 1600,
     "follows_count": 176,
     "media_count": 14,
     "username": "neogestlab"
@@ -18,15 +18,15 @@
       "permalink": "https://www.instagram.com/reel/Dfsar7fDHsL/",
       "timestamp": "2026-11-13T19:48:14+0000",
       "metricas": {
-        "reach": 129,
-        "views": 180,
+        "reach": 133,
+        "views": 185,
         "saved": 0,
         "shares": 1,
         "comments": 0,
         "likes": 2,
         "total_interactions": 4,
-        "ig_reels_avg_watch_time": 13396,
-        "ig_reels_video_view_total_time": 1781673
+        "ig_reels_avg_watch_time": 13225,
+        "ig_reels_video_view_total_time": 1838317
       }
     },
     {
@@ -39,15 +39,15 @@
       "permalink": "https://www.instagram.com/reel/DfsM480kuYW/",
       "timestamp": "2026-11-13T17:47:34+0000",
       "metricas": {
-        "reach": 111,
-        "views": 150,
+        "reach": 112,
+        "views": 151,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 2,
         "total_interactions": 3,
-        "ig_reels_avg_watch_time": 11293,
-        "ig_reels_video_view_total_time": 1276199
+        "ig_reels_avg_watch_time": 11204,
+        "ig_reels_video_view_total_time": 1277316
       }
     },
     {
@@ -77,15 +77,15 @@
       "permalink": "https://www.instagram.com/reel/DfrqWpEHdns/",
       "timestamp": "2026-11-13T12:45:47+0000",
       "metricas": {
-        "reach": 6,
-        "views": 11,
+        "reach": 7,
+        "views": 12,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 19108,
-        "ig_reels_video_view_total_time": 210188
+        "ig_reels_avg_watch_time": 17602,
+        "ig_reels_video_view_total_time": 211225
       }
     },
     {
@@ -365,7 +365,7 @@
       "timestamp": "2026-11-08T14:11:13+0000",
       "metricas": {
         "reach": 28,
-        "views": 50,
+        "views": 53,
         "saved": 0,
         "shares": 1,
         "total_interactions": 3
@@ -488,6 +488,10 @@
     {
       "fecha": "2026-11-14T03:04+00:00",
       "seguidores": 1601
+    },
+    {
+      "fecha": "2026-11-14T09:12+00:00",
+      "seguidores": 1600
     }
   ]
 }

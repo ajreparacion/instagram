@@ -4,24 +4,24 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 3.867,
-  "texto": "Doce visitas. ¡Ni idea de por dónde empezar!",
+  "duracion": 2.767,
+  "texto": "¡Doce visitas! ¡Ni idea!",
   "enfasis": []
  },
  {
   "escena": 1,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 3.867,
-  "duracion": 4.2,
-  "texto": "Gira a la izquierda. Camino al mar. Seguro.",
+  "inicio": 2.767,
+  "duracion": 2.933,
+  "texto": "Gira a la izquierda. Camino al mar.",
   "enfasis": []
  },
  {
   "escena": 3,
   "estilo": "delega",
   "hablante": "jambo",
-  "inicio": 10.467,
+  "inicio": 7.5,
   "duracion": 1.8,
   "texto": "Que lo haga la Jupillo.",
   "enfasis": []
@@ -30,8 +30,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 12.267,
-  "duracion": 3.0,
+  "inicio": 9.3,
+  "duracion": 2.833,
   "texto": "Doce visitas, ordenadas por carretera.",
   "enfasis": []
  },
@@ -39,8 +39,8 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 15.267,
-  "duracion": 2.133,
+  "inicio": 12.133,
+  "duracion": 2.567,
   "texto": "Qué ruta. Cosa mía.",
   "enfasis": []
  },
@@ -48,40 +48,9 @@
   "escena": 6,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 17.4,
-  "duracion": 1.8,
-  "texto": "Aquí no hay mar.",
-  "enfasis": []
- },
- {
-  "escena": 7,
-  "estilo": "mensaje",
-  "hablante": null,
-  "inicio": 19.2,
-  "duracion": 3.2,
-  "texto": "Cada kilómetro de más lo pagas tú.",
-  "enfasis": [
-   4,
-   5,
-   6
-  ]
- },
- {
-  "escena": 8,
-  "estilo": "mensaje",
-  "hablante": null,
-  "inicio": 22.4,
-  "duracion": 6.3,
-  "texto": "En la vida real no hay Jupillo. Gestión Integral 7D: «Mi día» ordena tu ruta.",
-  "enfasis": []
- },
- {
-  "escena": 9,
-  "estilo": "cierre",
-  "hablante": null,
-  "inicio": 28.7,
-  "duracion": 3.2,
-  "texto": "Mándaselo a quien aún apunta las visitas en papel.",
+  "inicio": 14.7,
+  "duracion": 2.8,
+  "texto": "Mándaselo a quien apunta visitas en papel.",
   "enfasis": []
  }
 ]
