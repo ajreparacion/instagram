@@ -9,7 +9,7 @@ import json, os, re, subprocess, sys, unicodedata
 SIL_DB, SIL_S, DUR_MAX = -45, 0.6, 30.0
 HOMOFONOS = [{"hechas", "echas"}, {"hecha", "echa"}, {"hecho", "echo"}, {"a", "ha"}, {"hay", "ahi", "ay"}, {"vaya", "valla"},
              {"hacia", "asia"}, {"tuvo", "tubo"}, {"ola", "hola"}, {"he", "e"}, {"sino", "si no"}]
-NUM = {"200": "doscientas", "2": "dos", "3": "tres", "18:55": "dieciocho cincuenta y cinco"}
+NUM = {"200": "doscientas", "1": "uno", "2": "dos", "3": "tres", "4": "cuatro", "5": "cinco", "10": "diez"}
 
 
 def norm(t):
@@ -88,6 +88,7 @@ def control(video, guion, post=None, tramos=None, wavs=None):
     esp = sum((norm(w) for w in esp), [])
     pal = transcribir(video)
     got = sum((norm(w) for w, _, _ in pal), [])
+    got = [NUM.get(w, w) for w in got]
     faltan, sobran = comparar(esp, got)
     malas = [w for w in sobran if w in ("ehm", "eh", "em", "mm", "hmm")]
     if malas: bloqueos.append(f"muletillas «ehm» en la voz: {malas}")

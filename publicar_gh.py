@@ -1328,6 +1328,20 @@ def renderizar(cfg, carpeta, post):
         if isinstance(g_sk, dict) and g_sk.get("modo") in ("sketch", "datos") and post.get("portada_ms") is None:
             post["portada_ms"] = 0
         motor = renderizar_guion(guion, video, trabajo)
+        if motor == "edge" and os.environ.get("CONTROL_AUDIO", "1") != "0":
+            # DIRECTIVA 14/11/2026: control de audio (faster-whisper contra el guion + silencios > 0,6 s + giro + duración ≤ 30 s).
+            # Si falla, el render falla: el reel no se publica y el motivo queda en _error_render y control_audio.json.
+            try:
+                sys.path.insert(0, os.path.join(BASE, "herramientas"))
+                import control_audio
+                ctl = control_audio.control(video, guion, post)
+            except Exception as e:
+                ctl = None
+                log(f"{nombre}: control de audio no disponible ({str(e)[-120:]}); se sigue sin él")
+            if ctl is not None:
+                escribir_json(os.path.join(carpeta, "control_audio.json"), ctl)
+                if not ctl["aprobado"]:
+                    raise ErrorAPI("Control de audio rechazado: " + "; ".join(ctl["bloqueos"])[:400])
         if os.path.exists(locucion):
             shutil.copy(locucion, os.path.join(carpeta, "locucion.json"))
         if os.path.exists(os.path.join(trabajo, "voz_musica.json")):   # LUFS de voz y música por reel (para Calidad)
