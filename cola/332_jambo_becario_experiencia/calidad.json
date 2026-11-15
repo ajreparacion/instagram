@@ -1,6 +1,6 @@
 {
   "nota": 90,
-  "aprobado": true,
+  "aprobado": false,
   "motivos": [
     "Control de audio OK en Actions tras mover «Bola» al final de la frase (whisper = guion); silencedetect local sin huecos; 22,0 s; −14,0 LUFS, pico −1,4 dBFS",
     "Gancho POV «becario con 5 años de experiencia» ahora coherente con la voz («cinco»); escalada idiomas → sueldo emocional → fruta los viernes; giro de la Jupillo («me han dado tu puesto»); pregunta final",
@@ -9,5 +9,9 @@
   ],
   "fecha": "2026-11-15T15:42:36+00:00",
   "revisor": "Calidad (tarea programada)",
-  "render": "2026-11-15T13:49:12+00:00"
+  "render": "2026-11-15T13:49:12+00:00",
+  "aprobado_anterior": true,
+  "nota_anterior": 90,
+  "caducado": "2026-11-15T16:04:46+00:00",
+  "motivo_caducidad": "vídeo externo subido 2026-11-15T16:04:46+00:00"
 }

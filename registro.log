@@ -1,5 +1,3 @@
-2026-11-13 15:18  Voz: alineación palabra a palabra (small, 24.2 s): 9/9 frases
-2026-11-13 15:19  Mezcla: voz -15.3 LUFS, música -15.5 LUFS (con ducking -15.9), la música baja 5.74 dB (p90) bajo la voz, ratio 2.0; máster -14.96 -> -14.1 LUFS, pico -1.3 dBFS; huecos de voz: [[5.85, 8.9]]
 2026-11-13 15:19  502_jambo_app_cobro_manana: renderizado con voz y subido a la release 'cola'
 2026-11-13 15:33  205_insultator_historia3: publicando…
 2026-11-13 15:34  205_insultator_historia3: historia publicada (17994913422026165)
@@ -598,3 +596,5 @@
 2026-11-15 16:46  Mezcla: voz -15.7 LUFS, música -22.6 LUFS (con ducking -25.2), la música baja 6.0 dB (p90) bajo la voz, ratio 2.143; máster -15.67 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
 2026-11-15 16:46  Control de audio: OK; duración 23.73 s
 2026-11-15 16:46  334_jambo_lunes_con_el_bola: renderizado con voz y subido a la release 'cola'
+2026-11-15 17:04  331_jambo_vacaciones_agosto: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
+2026-11-15 17:04  332_jambo_becario_experiencia: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)

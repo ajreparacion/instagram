@@ -24,11 +24,12 @@
     "autor": "Pixabay",
     "licencia": "Licencia de contenido de Pixabay"
   },
-  "renderizado": false,
+  "renderizado": "2026-11-15T16:04:42+00:00",
   "control_audio": {
     "aprobado": true,
     "duracion_s": 22.93
   },
-  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/804b85253_jambo-331-vacaciones-agosto.mp4",
-  "motor": "neogest-studio (personajes animados, decorados y planos; apertura con clip real Flow/Gemini; voz edge-tts; música Pixabay de la biblioteca del estudio)"
+  "motor": "neogest-studio (personajes animados, decorados y planos; apertura con clip real Flow/Gemini; voz edge-tts; música Pixabay de la biblioteca del estudio)",
+  "asset": "331_jambo_vacaciones_agosto.mp4",
+  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/804b85253_jambo-331-vacaciones-agosto.mp4"
 }
