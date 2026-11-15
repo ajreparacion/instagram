@@ -25,5 +25,11 @@
     "url": "https://incompetech.com/music/royalty-free/",
     "archivo": "Fluffing_a_Duck.mp3",
     "bpm": 123.0
+  },
+  "renderizado": "2026-11-15T07:53:20+00:00",
+  "asset": "320_jambo_reunion_rapida.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 25.03
   }
 }

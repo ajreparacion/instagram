@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 18.93,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['cobrar', 'es', 'la', 'jupillo'], sobran ['cobrares', 'el', 'ajupillo'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Mi cliente paga a noventa días. ¡Qué buen cliente! El interés de demora es del trescientos por cien. ¡Seguro! Cobrares de débiles. Mentalidad de tiburón. Pues que lo reclame el ajupillo. Reclamado, cobrado, ayer. ¡Qué buen cliente! ¡Que bien negocio! ¿A cuántos días te pagan a ti?",
+  "guion": "Mi cliente paga a noventa días. Qué buen cliente. El interés de demora es del trescientos por cien. Seguro. ¡Cobrar es de débiles! ¡Mentalidad de tiburón! Pues que lo reclame la Jupillo. Reclamado. Cobrado. Ayer. Qué buen cliente, qué bien negocio. ¿A cuántos días te pagan a ti?"
+}

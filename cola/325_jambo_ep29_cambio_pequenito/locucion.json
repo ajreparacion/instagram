@@ -1,0 +1,72 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.3,
+  "texto": "Solo es un cambio pequeñito, ¿verdad?",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 2.3,
+  "duracion": 3.6,
+  "texto": "¡El cliente siempre tiene razón! ¡Empezamos de cero!",
+  "enfasis": [
+   6,
+   7
+  ]
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 5.9,
+  "duracion": 3.267,
+  "texto": "Es un botón. Tardo un minuto. Seguro.",
+  "enfasis": [
+   6
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 9.167,
+  "duracion": 1.8,
+  "texto": "Pues que lo cambie la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 10.967,
+  "duracion": 3.767,
+  "texto": "Cambio hecho. Tres veces. Cada vez, uno pequeñito.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 14.733,
+  "duracion": 1.8,
+  "texto": "Qué bien se me da el cliente.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 16.533,
+  "duracion": 2.467,
+  "texto": "¿Cuántos cambios pequeñitos llevas hoy?",
+  "enfasis": []
+ }
+]

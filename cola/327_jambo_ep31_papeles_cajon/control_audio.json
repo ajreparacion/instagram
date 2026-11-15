@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "duracion_s": 19.17,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['la', 'jupillo'], sobran ['el', 'ajupillo'] (rehacer esas frases)",
+    "silencios > 0.6 s entre frases (pista de voz): [[15.44, 16.32, 0.88]]"
+  ],
+  "avisos": [],
+  "transcripcion": "Mis papeles están organizadísimos, en un cajón. Falta el justificante de marzo y el de abril. Están dentro, los oigo, seguro. Pues que los busque el ajupillo. Ordenado por fechas, aparecieron dos bocadillos. Que bien me organizo. Que es lo más raro que has encontrado en tu cajón.",
+  "guion": "Mis papeles están organizadísimos. En un cajón. Falta el justificante de marzo. Y el de abril. Están dentro. Los oigo. Seguro. Pues que los busque la Jupillo. Ordenado por fechas. Aparecieron dos bocadillos. Qué bien me organizo. ¿Qué es lo más raro que has encontrado en tu cajón?"
+}

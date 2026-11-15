@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "duracion_s": 17.1,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['contrate', 'a', 'ia'], sobran ['contratea', 'ya'] (rehacer esas frases)",
+    "silencios > 0.6 s entre frases (pista de voz): [[13.89, 14.99, 1.1]]"
+  ],
+  "avisos": [],
+  "transcripcion": "Contratea una ya para no contratar a nadie. Mesa 4. Cocina, barra, caja y limpiar los baños. Dormir es de débiles, yo me optimizo. Claro, lo hago yo, como siempre. Que gran equipo. ¿Quién carga con todo en tu negocio?",
+  "guion": "Contraté a una IA para no contratar a nadie. Mesa cuatro. Cocina. Barra. Caja. Y limpiar los baños. ¡Dormir es de débiles! ¡Yo me optimizo! Claro. Lo hago yo. Como siempre. Qué gran equipo. ¿Quién carga con todo en tu negocio?"
+}

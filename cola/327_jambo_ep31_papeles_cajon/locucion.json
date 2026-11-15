@@ -1,0 +1,69 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.133,
+  "texto": "Mis papeles están organizadísimos. En un cajón.",
+  "enfasis": [
+   3
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 3.133,
+  "duracion": 3.167,
+  "texto": "Falta el justificante de marzo. Y el de abril.",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 6.3,
+  "duracion": 3.0,
+  "texto": "Están dentro. Los oigo. Seguro.",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 9.3,
+  "duracion": 1.8,
+  "texto": "Pues que los busque la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 11.1,
+  "duracion": 3.3,
+  "texto": "Ordenado por fechas. Aparecieron dos bocadillos.",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 14.4,
+  "duracion": 1.8,
+  "texto": "Qué bien me organizo.",
+  "enfasis": []
+ },
+ {
+  "escena": 6,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 16.2,
+  "duracion": 2.967,
+  "texto": "¿Qué es lo más raro que has encontrado en tu cajón?",
+  "enfasis": []
+ }
+]

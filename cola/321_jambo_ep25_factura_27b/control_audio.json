@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "duracion_s": 19.9,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['veintisiete', 'b', 'veintisiete', 'c'], sobran ['27b', '27c'] (rehacer esas frases)",
+    "silencios > 0.6 s entre frases (pista de voz): [[16.33, 17.23, 0.9]]"
+  ],
+  "avisos": [],
+  "transcripcion": "Facturar es facilísimo, que lo haga la jupillo. Impreso 27B y el 27C. Y una copia de la copia sellada. Y una cita previa para entregarlo, dentro de un mes. Factura hecha, un minuto, sin impresos. Que bien me ha quedado. ¿Cuántas horas de papeleo llevas esta semana?",
+  "guion": "Facturar es facilísimo. Que lo haga la Jupillo. Impreso veintisiete-B. Y el veintisiete-C. Y una copia de la copia, sellada. Y una cita previa para entregarlo. Dentro de un mes. Factura hecha. Un minuto. Sin impresos. Qué bien me ha quedado. ¿Cuántas horas de papeleo llevas esta semana?"
+}

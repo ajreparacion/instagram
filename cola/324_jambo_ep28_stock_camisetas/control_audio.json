@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 17.83,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['cuatrocientas', 'en', 'triplicado', 'doce', 'doce'], sobran ['400', 'entriplicado', '12', '12'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Stock controlado. Lo he contado a ojo. Hay 400 camisetas. Seguro. Rellene el impreso de inventario. Entriplicado. Que lo cuente la jupillo. Hay 12. Y una es la que llevas puesta. 12. Que bien tengo el almacén. ¿Cuánto stock tienes de verdad?",
+  "guion": "Stock controlado. Lo he contado a ojo. Hay cuatrocientas camisetas. Seguro. Rellene el impreso de inventario. En triplicado. Que lo cuente la Jupillo. Hay doce. Y una es la que llevas puesta. Doce. Qué bien tengo el almacén. ¿Cuánto stock tienes de verdad?"
+}

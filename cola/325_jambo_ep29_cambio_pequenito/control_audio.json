@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 19.0,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['cambie', 'la', 'jupillo'], sobran ['cambia', 'el', 'ajupillo'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Sólo es un cambio pequeñito, ¿verdad? El cliente siempre tiene razón. Empezamos de cero. Es un botón. Tardo un minuto. Seguro. Pues que lo cambia el ajupillo. Cambio hecho. Tres veces. Cada vez uno pequeñito. Que bien se me da el cliente. ¿Cuántos cambios pequeñitos llevas hoy?",
+  "guion": "Solo es un cambio pequeñito, ¿verdad? ¡El cliente siempre tiene razón! ¡Empezamos de cero! Es un botón. Tardo un minuto. Seguro. Pues que lo cambie la Jupillo. Cambio hecho. Tres veces. Cada vez, uno pequeñito. Qué bien se me da el cliente. ¿Cuántos cambios pequeñitos llevas hoy?"
+}

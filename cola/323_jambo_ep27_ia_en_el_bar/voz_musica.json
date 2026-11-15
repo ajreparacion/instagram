@@ -1,0 +1,30 @@
+{
+  "fecha": "2026-11-15T07:56:09+00:00",
+  "avisos": [],
+  "ajustes_ducking": [
+    {
+      "ratio": 2.5,
+      "bajada_p90_db": 6.39,
+      "ratio_nuevo": 2.29
+    }
+  ],
+  "duracion_s": 17.1,
+  "voz_activa_pct": 79.5,
+  "bajada_musica_p90_db": 6.0,
+  "bajada_musica_mediana_db": 4.04,
+  "voz_sobre_musica_db": 8.66,
+  "musica_entre_frases_db": -26.9,
+  "musica_en_voz_db": -28.9,
+  "huecos_voz": [],
+  "ratio_duck_usado": 2.29,
+  "voz_lufs": -16.6,
+  "musica_lufs": -22.1,
+  "musica_con_ducking_lufs": -24.2,
+  "master": {
+    "objetivo_lufs": -14.0,
+    "antes_lufs": -16.76,
+    "antes_pico_dbtp": -0.89,
+    "despues_lufs": -14.0,
+    "despues_pico_dbfs": -1.4
+  }
+}

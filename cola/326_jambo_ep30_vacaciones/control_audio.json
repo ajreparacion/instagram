@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 20.13,
+  "bloqueos": [
+    "silencios > 0.6 s entre frases (pista de voz): [[16.78, 17.69, 0.9]]"
+  ],
+  "avisos": [],
+  "transcripcion": "Estoy de vacaciones, que no me llame nadie. Tu cliente llama, le digo que sí a todo. Seguro. Las vacaciones son de débiles. Contesta ya. Contesta tú, jupillo, yo estoy en la playa. Contestado, tres llamadas, una era tuya. Que bien desconecto. ¿Desconectas de verdad en vacaciones?",
+  "guion": "Estoy de vacaciones. Que no me llame nadie. Tu cliente llama. Le digo que sí a todo. Seguro. ¡Las vacaciones son de débiles! ¡Contesta ya! Contesta tú, Jupillo. Yo estoy en la playa. Contestado. Tres llamadas. Una era tuya. Qué bien desconecto. ¿Desconectas de verdad en vacaciones?"
+}
