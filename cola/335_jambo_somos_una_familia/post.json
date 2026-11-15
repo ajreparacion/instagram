@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Aquí somos una familia. La Jupillo lo arregla; el Jambo no tanto. Humor de oficina de ficción.\nDato: el registro diario de jornada es obligatorio para todas las empresas desde el 12/05/2019 (art. 34.9 del Estatuto de los Trabajadores, Real Decreto-ley 8/2019, BOE). No es asesoramiento legal.\n¿En tu trabajo también sois «una familia»? Cuéntalo en comentarios.\nMándaselo a quien le pasa esto.\n#humor #trabajo #oficina #fichaje #pymes #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "Aquí somos una familia. La Jupillo lo arregla; el Jambo no tanto. Humor de oficina de ficción.\nDato: el registro diario de jornada es obligatorio para todas las empresas desde el 12/05/2019 (art. 34.9 del Estatuto de los Trabajadores, Real Decreto-ley 8/2019, BOE). No es asesoramiento legal.\n¿En tu trabajo también sois «una familia»? Cuéntalo en comentarios.\nMándaselo a quien le pasa esto.\n#humor #trabajo #oficina #fichaje #pymes #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: biblioteca libre de derechos de Pixabay",
   "cuando": "2026-11-15T23:20:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -10,7 +10,7 @@
   "_fuentes": [
     "BOE"
   ],
-  "_nota_creador": "15/11/2026 lote nuevo de 6 episodios, programado hoy por orden del dueño.",
+  "_nota_creador": "15/11/2026 lote nuevo de 6 episodios, programado hoy por orden del dueño. | 15/11 17:05: rehecho en Neogest Studio por orden del dueño (formato de dibujos de calidad). Calidad: evaluar el vídeo nuevo.",
   "motor_voz": "edge",
   "comentario_fijado": "¿En tu trabajo también sois «una familia»? Comenta",
   "portada_ms": 0,
@@ -20,17 +20,15 @@
     "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
   "musica": {
-    "titulo": "Fluffing a Duck",
-    "autor": "Kevin MacLeod",
-    "licencia": "CC BY 4.0",
-    "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Fluffing_a_Duck.mp3",
-    "bpm": 123.0
+    "titulo": "Comedia 1 (biblioteca del estudio)",
+    "autor": "Pixabay",
+    "licencia": "Licencia de contenido de Pixabay"
   },
-  "renderizado": "2026-11-15T10:38:12+00:00",
-  "asset": "335_jambo_somos_una_familia.mp4",
+  "renderizado": false,
   "control_audio": {
     "aprobado": true,
     "duracion_s": 20.87
-  }
+  },
+  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/68eed07b5_jambo-335-somos-una-familia.mp4",
+  "motor": "neogest-studio (personajes animados, decorados y planos; apertura con clip real Flow/Gemini; voz edge-tts; música Pixabay de la biblioteca del estudio)"
 }

@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Becario con experiencia. La Jupillo lo arregla; el Jambo no tanto. Humor de oficina de ficción.\n¿La oferta de empleo más absurda que has visto? Cuéntalo en comentarios.\nMándaselo a quien le pasa esto.\n#humor #trabajo #oficina #empleo #pymes #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "Becario con experiencia. La Jupillo lo arregla; el Jambo no tanto. Humor de oficina de ficción.\n¿La oferta de empleo más absurda que has visto? Cuéntalo en comentarios.\nMándaselo a quien le pasa esto.\n#humor #trabajo #oficina #empleo #pymes #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: biblioteca libre de derechos de Pixabay",
   "cuando": "2026-11-15T20:00:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -8,7 +8,7 @@
   "publico": "oficina",
   "formula": "fórmula vídeos 14/11",
   "_fuentes": [],
-  "_nota_creador": "15/11/2026 lote nuevo de 6 episodios, programado hoy por orden del dueño.",
+  "_nota_creador": "15/11/2026 lote nuevo de 6 episodios, programado hoy por orden del dueño. | 15/11 17:05: rehecho en Neogest Studio por orden del dueño (formato de dibujos de calidad). Calidad: evaluar el vídeo nuevo.",
   "motor_voz": "edge",
   "comentario_fijado": "¿La oferta de empleo más absurda que has visto? Comenta",
   "portada_ms": 0,
@@ -18,17 +18,15 @@
     "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
   "musica": {
-    "titulo": "Sneaky Snitch",
-    "autor": "Kevin MacLeod",
-    "licencia": "CC BY 4.0",
-    "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Sneaky_Snitch.mp3",
-    "bpm": 87.6
+    "titulo": "Comedia 1 (biblioteca del estudio)",
+    "autor": "Pixabay",
+    "licencia": "Licencia de contenido de Pixabay"
   },
-  "renderizado": "2026-11-15T13:49:12+00:00",
-  "asset": "332_jambo_becario_experiencia.mp4",
+  "renderizado": false,
   "control_audio": {
     "aprobado": true,
     "duracion_s": 22.03
-  }
+  },
+  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/d80e89110_jambo-332-becario-experiencia.mp4",
+  "motor": "neogest-studio (personajes animados, decorados y planos; apertura con clip real Flow/Gemini; voz edge-tts; música Pixabay de la biblioteca del estudio)"
 }

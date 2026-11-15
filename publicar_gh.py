@@ -1296,6 +1296,24 @@ def renderizar(cfg, carpeta, post):
     shutil.rmtree(trabajo, ignore_errors=True)
     os.makedirs(trabajo)
     video = os.path.join(trabajo, "video.mp4")
+    externo = str(post.get("video_externo") or "").strip()
+    if externo.startswith("https://"):
+        # vídeo ya terminado fuera del ciclo (p. ej. Neogest Studio): se descarga, se sube a la release y Calidad lo revisa
+        descargar(externo, video)
+        asset = os.path.join(trabajo, f"{nombre}.mp4")
+        os.replace(video, asset)
+        asegurar_release()
+        gh("release", "upload", RELEASE, asset, "--clobber")
+        post["renderizado"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        post["asset"] = f"{nombre}.mp4"
+        post["_video_externo_usado"] = post.pop("video_externo")
+        post.pop("_error_render", None)
+        post.pop("_control_audio_fallo", None)
+        escribir_json(os.path.join(carpeta, "post.json"), post)
+        shutil.rmtree(trabajo, ignore_errors=True)
+        caducar_calidad(carpeta, "vídeo externo subido " + post["renderizado"])
+        log(f"{nombre}: vídeo externo subido a la release '{RELEASE}' (Calidad debe evaluarlo)")
+        return
     if os.path.exists(os.path.join(carpeta, "remaster.json")):
         oid = post.get("original_id")
         if not oid:
