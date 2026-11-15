@@ -1,5 +1,3 @@
-2026-11-13 15:34  205_insultator_historia3: historia publicada (17994913422026165)
-2026-11-13 15:35  Voz con MeloTTS (ES/ES, 44100 Hz, velocidad 1.1): 9 frases en 29 s
 2026-11-13 15:35  Voz: timbre de personaje aplicado a 3 frases (['jupillo', 'pelota'])
 2026-11-13 15:35  Voz: silencios recortados por frase (s): [0.72, 0.62, 0.69, 0.76, 0.68, 0.76, 0.7, 0.69, 0.7]
 2026-11-13 15:35  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(-0.6), np.float64(-1.2), np.float64(-0.4), np.float64(-1.2), np.float64(-1.7), np.float64(-0.2), np.float64(-2.8), np.float64(-1.4), np.float64(-1.4)]
@@ -598,3 +596,5 @@
 2026-11-15 17:04  332_jambo_becario_experiencia: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
 2026-11-15 17:15  333_jambo_precio_de_amigo: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
 2026-11-15 17:15  334_jambo_lunes_con_el_bola: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
+2026-11-15 17:22  333_jambo_precio_de_amigo: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
+2026-11-15 17:22  334_jambo_lunes_con_el_bola: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
