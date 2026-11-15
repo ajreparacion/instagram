@@ -1,0 +1,67 @@
+{
+ "dispositivo": "movil",
+ "fondo": "#DDEBF7",
+ "marco": "oscuro",
+ "url": "https://appcc-facil-9436934f.base44.app",
+ "viewport": [
+  390,
+  720
+ ],
+ "escala": 2,
+ "idioma": "es-ES",
+ "esperar_carga": 2.5,
+ "pasos": [
+  {
+   "accion": "esperar",
+   "seg": 2.5
+  },
+  {
+   "accion": "scroll",
+   "y": 600,
+   "seg": 1.4
+  },
+  {
+   "accion": "esperar",
+   "seg": 2.5
+  },
+  {
+   "accion": "scroll",
+   "y": 600,
+   "seg": 1.4
+  },
+  {
+   "accion": "esperar",
+   "seg": 2.5
+  },
+  {
+   "accion": "scroll",
+   "y": 600,
+   "seg": 1.4
+  },
+  {
+   "accion": "esperar",
+   "seg": 2.5
+  },
+  {
+   "accion": "scroll",
+   "y": 700,
+   "seg": 1.4
+  },
+  {
+   "accion": "esperar",
+   "seg": 3.0
+  }
+ ],
+ "previos": [
+  {
+   "accion": "clic",
+   "selector": "button:has-text('Saltar')",
+   "opcional": true,
+   "seg": 12
+  },
+  {
+   "accion": "esperar",
+   "seg": 3
+  }
+ ]
+}

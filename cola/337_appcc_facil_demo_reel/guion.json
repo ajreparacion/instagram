@@ -1,0 +1,51 @@
+{
+ "titulo": "APPCC Fácil · demo (web pública)",
+ "semilla": 3370,
+ "modo": "app",
+ "plantilla": true,
+ "video": "demo.mp4",
+ "volumen_original": 0,
+ "musica": true,
+ "portada_texto": "¿Las temperaturas, en un papel en la nevera?",
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "texto": "¿Las temperaturas, *en un papel en la nevera*?",
+   "voz": "¿Sigues apuntando las temperaturas en un papel pegado en la *nevera*?",
+   "clip": {
+    "inicio": 0.3,
+    "fin": 3.0
+   }
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 3.0,
+    "fin": 10.0
+   },
+   "voz": "Con APPCC Fácil apuntas cámaras, limpieza y aceite desde el móvil. Y si un valor sale de rango, te pide la acción *correctora*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 10.0,
+    "fin": 14.0
+   },
+   "voz": "Eliges las fechas y sacas el informe para *Sanidad*."
+  },
+  {
+   "estilo": "tramo",
+   "clip": {
+    "inicio": 14.0,
+    "fin": 21.0
+   },
+   "voz": "Empiezas gratis, sin permanencia. Y el plan Local, desde nueve con noventa al mes en pago *anual*."
+  },
+  {
+   "estilo": "cierre",
+   "texto": "Prueba el plan Local 7 días gratis",
+   "voz": "Prueba el plan Local siete días *gratis*. Enlace en el perfil."
+  }
+ ],
+ "_guion": "15/11/2026 precios aprobados por el dueño (Local 12,90 €/mes · 9,90 €/mes anual + IVA). Grabación de la web pública. Solo lo que dice la web; sin integración con 7D, sin «oficial», sin avisos automáticos ni IA."
+}
