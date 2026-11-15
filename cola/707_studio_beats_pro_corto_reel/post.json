@@ -1,0 +1,25 @@
+{
+  "tipo": "reel",
+  "texto": "¿Quieres hacer tu propia canción?\nEliges estilo, tono y modo y generas el beat al momento, con la opción de pedir otra idea. Grabas tu voz con cuenta atrás y metrónomo, y con un clic terminas la canción, con mezcla y máster automáticos.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n¿De qué estilo harías tu primera canción? Cuéntalo en comentarios.\nVoz generada por IA\n\n#musica #beats #productormusical #cancion #apps #neogestlab",
+  "cuando": "2026-11-17T17:30:00+01:00",
+  "compartir_en_feed": true,
+  "portada_ms": 0,
+  "prueba_no_seguidores": true,
+  "formula": "fórmula vídeos 14/11 (gancho en pregunta, 3 funciones, cierre único)",
+  "formato": "Una idea, una app (vídeo corto del Centro, mp4 terminado)",
+  "publico": "Aficionados a la música",
+  "app": "Studio Beats PRO",
+  "app_slug": "studio-beats-pro",
+  "comentario_fijado": "¿De qué estilo harías tu primera canción?",
+  "monetizacion": {
+    "objetivo": "clic_enlace",
+    "oferta": "cta_principal de la ficha Producto",
+    "paso_embudo": "visita_perfil -> clic_enlace"
+  },
+  "_fuentes": [],
+  "_comprobado": "14/11/2026: generar beat con estilo/tono/modo y «Otra idea», grabar voz con cuenta atrás y metrónomo, «Terminar canción» con mezcla y máster (guion studio-beats-pro-corto.md; prueba de exportación 14/11: mp3 -14,2 LUFS, pico -1,0). La voz solo dice lo que se ve; sin precios ni funciones fuera de la ficha.",
+  "_nota_creador": "Vídeo terminado del Centro de Contenido Apps (VideoMezcla aprobado por orden del dueño 14/11 23:10), subido tal cual a la release «cola»; no pasa por guion.json. Pendiente de Calidad.",
+  "motor_voz": "edge",
+  "renderizado": "2026-11-15T00:06:50+00:00",
+  "asset": "707_studio_beats_pro_corto_reel.mp4"
+}

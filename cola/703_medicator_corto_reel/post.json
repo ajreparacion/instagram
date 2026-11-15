@@ -1,0 +1,25 @@
+{
+  "tipo": "reel",
+  "texto": "¿Se te olvidan las pastillas?\nMEDICATOR te dice qué pastilla te toca y, con un botón grande, apuntas que ya te la has tomado. Tus citas, en un calendario con letra grande, y una lista para la farmacia que cuenta las pastillas que te quedan.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nMEDICATOR organiza; no sustituye a tu médico.\n¿Quién se encarga de recordar las pastillas en tu casa? Cuéntalo en comentarios.\nVoz generada por IA\n\n#mayores #cuidadores #salud #pastillas #citasmedicas #neogestlab",
+  "cuando": "2026-11-16T15:30:00+01:00",
+  "compartir_en_feed": true,
+  "portada_ms": 0,
+  "prueba_no_seguidores": true,
+  "formula": "fórmula vídeos 14/11 (gancho en pregunta, 3 funciones, cierre único)",
+  "formato": "Una idea, una app (vídeo corto del Centro, mp4 terminado)",
+  "publico": "Mayores y quien los cuida",
+  "app": "MEDICATOR",
+  "app_slug": "medicator",
+  "comentario_fijado": "¿Quién se encarga de recordar las pastillas en tu casa?",
+  "monetizacion": {
+    "objetivo": "clic_enlace",
+    "oferta": "cta_principal de la ficha Producto",
+    "paso_embudo": "visita_perfil -> clic_enlace"
+  },
+  "_fuentes": [],
+  "_comprobado": "14/11/2026: pastilla que toca + «Ya me la he tomado», calendario con letra grande, lista para la farmacia (guion medicator-corto.md; usuaria de pruebas ficticia). La voz solo dice lo que se ve; sin precios ni funciones fuera de la ficha.",
+  "_nota_creador": "Vídeo terminado del Centro de Contenido Apps (VideoMezcla aprobado por orden del dueño 14/11 23:10), subido tal cual a la release «cola»; no pasa por guion.json. Pendiente de Calidad.",
+  "motor_voz": "edge",
+  "renderizado": "2026-11-15T00:06:50+00:00",
+  "asset": "703_medicator_corto_reel.mp4"
+}

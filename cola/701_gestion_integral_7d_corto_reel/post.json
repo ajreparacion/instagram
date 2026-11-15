@@ -1,0 +1,25 @@
+{
+  "tipo": "reel",
+  "texto": "¿Tu cliente te paga a 90 días?\nHaces el presupuesto en la visita con IVA y margen, lo conviertes en pedido con un clic, sale el albarán (y se descuenta el stock) y emites la factura con las mismas líneas. Y le mandas un enlace de pago: tarjeta, Bizum si lo activas o transferencia.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n¿Cuánto tardan en pagarte tus clientes? Cuéntalo en comentarios.\nVoz generada por IA\n\n#autonomos #pymes #facturacion #presupuestos #gestion #neogestlab",
+  "cuando": "2026-11-15T09:30:00+01:00",
+  "compartir_en_feed": true,
+  "portada_ms": 0,
+  "prueba_no_seguidores": true,
+  "formula": "fórmula vídeos 14/11 (gancho en pregunta, 3 funciones, cierre único)",
+  "formato": "Una idea, una app (vídeo corto del Centro, mp4 terminado)",
+  "publico": "Autónomos y pymes",
+  "app": "Gestión Integral 7D",
+  "app_slug": "gestion-integral-7d",
+  "comentario_fijado": "¿Cuánto tardan en pagarte tus clientes?",
+  "monetizacion": {
+    "objetivo": "clic_enlace",
+    "oferta": "cta_principal de la ficha Producto",
+    "paso_embudo": "visita_perfil -> clic_enlace"
+  },
+  "_fuentes": [],
+  "_comprobado": "14/11/2026: presupuesto → pedido → albarán → factura → enlace de pago (guion gestion-integral-7d-corto.md; entorno de pruebas, datos ficticios). La voz solo dice lo que se ve; sin precios ni funciones fuera de la ficha.",
+  "_nota_creador": "Vídeo terminado del Centro de Contenido Apps (VideoMezcla aprobado por orden del dueño 14/11 23:10), subido tal cual a la release «cola»; no pasa por guion.json. Pendiente de Calidad.",
+  "motor_voz": "edge",
+  "renderizado": "2026-11-15T00:06:50+00:00",
+  "asset": "701_gestion_integral_7d_corto_reel.mp4"
+}

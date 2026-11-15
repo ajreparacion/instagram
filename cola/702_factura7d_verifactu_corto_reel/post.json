@@ -1,0 +1,25 @@
+{
+  "tipo": "reel",
+  "texto": "¿Tu programa de facturas cumple Verifactu?\nEscribes el importe, eliges la retención de IRPF y el total a pagar sale solo. Cada factura sale con su QR tributario y la leyenda Verifactu, y con un toque verificas que cada factura va encadenada a la anterior.\nPruébala gratis: 3 facturas al mes, sin permanencia. Enlace en el perfil.\n¿Qué programa usas ahora para facturar? Cuéntalo en comentarios.\nVoz generada por IA\n\n#verifactu #autonomos #facturacion #pymes #irpf #neogestlab",
+  "cuando": "2026-11-16T09:30:00+01:00",
+  "compartir_en_feed": true,
+  "portada_ms": 0,
+  "prueba_no_seguidores": true,
+  "formula": "fórmula vídeos 14/11 (gancho en pregunta, 3 funciones, cierre único)",
+  "formato": "Una idea, una app (vídeo corto del Centro, mp4 terminado)",
+  "publico": "Autónomos y pymes",
+  "app": "Factura7D Verifactu",
+  "app_slug": "factura7d-verifactu",
+  "comentario_fijado": "¿Qué programa usas ahora para facturar?",
+  "monetizacion": {
+    "objetivo": "clic_enlace",
+    "oferta": "cta_principal de la ficha Producto",
+    "paso_embudo": "visita_perfil -> clic_enlace"
+  },
+  "_fuentes": [],
+  "_comprobado": "14/11/2026: importe + retención IRPF + total a pagar, QR y leyenda VERI*FACTU, verificar integridad (guion factura7d-verifactu-corto.md; cuenta de pruebas, datos ficticios). La voz solo dice lo que se ve; sin precios ni funciones fuera de la ficha.",
+  "_nota_creador": "Vídeo terminado del Centro de Contenido Apps (VideoMezcla aprobado por orden del dueño 14/11 23:10), subido tal cual a la release «cola»; no pasa por guion.json. Pendiente de Calidad.",
+  "motor_voz": "edge",
+  "renderizado": "2026-11-15T00:06:50+00:00",
+  "asset": "702_factura7d_verifactu_corto_reel.mp4"
+}

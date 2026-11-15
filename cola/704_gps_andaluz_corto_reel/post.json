@@ -1,0 +1,25 @@
+{
+  "tipo": "reel",
+  "texto": "¿Un GPS con indicaciones en andaluz?\nEscribes tu destino y el mapa se centra en el lugar. Tocas una categoría, como farmacias, y ves los sitios cercanos. Pulsas Iniciar y cada maniobra sale con su frase en andaluz.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n¿Qué frase te gustaría que te dijera tu GPS? Cuéntalo en comentarios.\nVoz generada por IA\n\n#gpsandaluz #andalucia #humor #apps #gps #neogestlab",
+  "cuando": "2026-11-16T17:30:00+01:00",
+  "compartir_en_feed": true,
+  "portada_ms": 0,
+  "prueba_no_seguidores": true,
+  "formula": "fórmula vídeos 14/11 (gancho en pregunta, 3 funciones, cierre único)",
+  "formato": "Una idea, una app (vídeo corto del Centro, mp4 terminado)",
+  "publico": "Público general (humor andaluz)",
+  "app": "GPS Andaluz",
+  "app_slug": "gps-andaluz",
+  "comentario_fijado": "¿Qué frase te gustaría que te dijera tu GPS?",
+  "monetizacion": {
+    "objetivo": "clic_enlace",
+    "oferta": "cta_principal de la ficha Producto",
+    "paso_embudo": "visita_perfil -> clic_enlace"
+  },
+  "_fuentes": [],
+  "_comprobado": "14/11/2026: búsqueda de destino, sitios cercanos por categoría, navegación con frase en andaluz (guion gps-andaluz-corto.md; usuario de pruebas). La voz solo dice lo que se ve; sin precios ni funciones fuera de la ficha.",
+  "_nota_creador": "Vídeo terminado del Centro de Contenido Apps (VideoMezcla aprobado por orden del dueño 14/11 23:10), subido tal cual a la release «cola»; no pasa por guion.json. Pendiente de Calidad.",
+  "motor_voz": "edge",
+  "renderizado": "2026-11-15T00:06:50+00:00",
+  "asset": "704_gps_andaluz_corto_reel.mp4"
+}

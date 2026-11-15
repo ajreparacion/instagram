@@ -1,0 +1,25 @@
+{
+  "tipo": "reel",
+  "texto": "¿Tu web atiende a tus clientes?\nUna portada clara con acceso a la pre-entrada online y a la consulta de la reparación, un catálogo de alquiler con el precio por día y recambios con código de seguimiento. Te la adaptamos a tu negocio.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n¿Tu web te ahorra llamadas o te las trae? Cuéntalo en comentarios.\nVoz generada por IA\n\n#web #taller #pymes #negocios #paginaweb #neogestlab",
+  "cuando": "2026-11-17T15:30:00+01:00",
+  "compartir_en_feed": true,
+  "portada_ms": 0,
+  "prueba_no_seguidores": true,
+  "formula": "fórmula vídeos 14/11 (gancho en pregunta, 3 funciones, cierre único)",
+  "formato": "Una idea, una app (vídeo corto del Centro, mp4 terminado)",
+  "publico": "Negocios de servicio",
+  "app": "AJ Web",
+  "app_slug": "aj-reparacion-web",
+  "comentario_fijado": "¿Tu web te ahorra llamadas o te las trae?",
+  "monetizacion": {
+    "objetivo": "clic_enlace",
+    "oferta": "cta_principal de la ficha Producto",
+    "paso_embudo": "visita_perfil -> clic_enlace"
+  },
+  "_fuentes": [],
+  "_comprobado": "14/11/2026: portada con pre-entrada y consulta, catálogo de alquiler con precio por día, recambios con código de seguimiento (guion aj-reparacion-web-corto.md; copia AJ Sistema DEMO). La voz solo dice lo que se ve; sin precios ni funciones fuera de la ficha.",
+  "_nota_creador": "Vídeo terminado del Centro de Contenido Apps (VideoMezcla aprobado por orden del dueño 14/11 23:10), subido tal cual a la release «cola»; no pasa por guion.json. Pendiente de Calidad.",
+  "motor_voz": "edge",
+  "renderizado": "2026-11-15T00:06:50+00:00",
+  "asset": "706_aj_web_corto_reel.mp4"
+}
