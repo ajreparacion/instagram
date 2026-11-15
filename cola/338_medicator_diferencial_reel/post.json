@@ -11,12 +11,13 @@
   "comentario_fijado": "¿A quién de tu familia le vendría bien?",
   "portada_ms": 0,
   "motor_voz": "edge",
-  "video_externo": "https://media.base44.com/videos/public/6ae5244d4e2b32702f0a3cd6/c2523f761_medicator-diferencial.mp4",
   "monetizacion": {
     "objetivo": "clic_enlace",
     "oferta": "prueba gratuita de MEDICATOR",
     "paso_embudo": "visita_perfil -> clic_enlace"
   },
   "_comprobado": "15/11/2026: tomas reales en MEDICATOR con la usuaria de pruebas «Carmen» (datos ficticios): escaneo con lector real y consulta a CIMA en vivo, lectura de volante (OCR local), aviso de alergia, modo Muy fácil. Voz contrastada con faster-whisper. Sin «IA» para la lectura de papeles (el código es OCR + reglas).",
-  "renderizado": false
+  "renderizado": "2026-11-15T16:49:51+00:00",
+  "asset": "338_medicator_diferencial_reel.mp4",
+  "_video_externo_usado": "https://media.base44.com/videos/public/6ae5244d4e2b32702f0a3cd6/c2523f761_medicator-diferencial.mp4"
 }
