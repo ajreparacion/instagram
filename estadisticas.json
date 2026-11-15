@@ -1,53 +1,74 @@
 {
-  "actualizado": "2026-11-14T21:25:25+00:00",
+  "actualizado": "2026-11-15T03:26:55+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1602,
-    "follows_count": 176,
-    "media_count": 17,
+    "follows_count": 177,
+    "media_count": 18,
     "username": "neogestlab"
   },
   "posts": [
     {
+      "id": "18135321310688807",
+      "caption": "Nueva imagen, la misma misión ⚡\n\nEstrenamos identidad corporativa: Neogest Lab, Sistemas Digitales, Automatización e IA a Medida.\n\n¿Qué hacemos?\n• Apps a medida para cualquier negocio: clientes, pedidos, presupuestos, facturas y tareas repetitivas a un clic.\n• Webs a medida conectadas con tu gestión: reservas, pedidos y seguimiento de tus clientes.\n• Automatización e IA que te ahorran horas: asistentes, resúmenes y avisos automáticos.\n\nYa tenemos apps funcionando como Gestión Integral 7D, MEDICATOR, GPS Andaluz, Studio Beats PRO o Insultator.\n\nCuéntanos qué necesitas y pruébalo gratis, sin tarjeta y sin compromiso. Enlace en el perfil.\n\nBy Neogest Lab\n#NeogestLab #Automatizacion #InteligenciaArtificial #AppsAMedida #Pymes #Digitalizacion",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfvVjptSgT9/",
+      "timestamp": "2026-11-14T23:00:49+0000",
+      "metricas": {
+        "reach": 14,
+        "views": 21,
+        "saved": 0,
+        "shares": 0,
+        "comments": 0,
+        "likes": 1,
+        "total_interactions": 2,
+        "ig_reels_avg_watch_time": 6736,
+        "ig_reels_video_view_total_time": 107776
+      }
+    },
+    {
       "id": "18385952788238178",
       "caption": "La clase de mañana se prepara a las 23:00 y la prepara otra.\nLa Pelota se equivoca con seguridad y la Jupillo prepara el temario. Humor negro de ficción.\nMándaselo a quien carga con todo.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #profesores #academia #ia #trabajo\nVoz y personajes generados por IA\n\nVoz generada por IA",
       "comments_count": 0,
-      "like_count": 1,
+      "like_count": 3,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DfvANFTAMf-/",
       "timestamp": "2026-11-14T19:54:23+0000",
       "metricas": {
-        "reach": 112,
-        "views": 129,
+        "reach": 123,
+        "views": 148,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 1,
-        "total_interactions": 1,
-        "ig_reels_avg_watch_time": 7868,
-        "ig_reels_video_view_total_time": 897031
+        "likes": 3,
+        "total_interactions": 4,
+        "ig_reels_avg_watch_time": 25213,
+        "ig_reels_video_view_total_time": 3227362
       }
     },
     {
       "id": "18133108786840654",
       "caption": "El cliente quiere devolverlo sin ticket y El Jambo quiere un impreso.\nUna devolución, un impreso 27-B y la Jupillo haciendo de todo. Humor negro de ficción.\nSígueme y más tarde verás qué pasa: la clase de mañana se prepara a las 23:00.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #tienda #comercio #ia #trabajo\nVoz y personajes generados por IA\n\nVoz generada por IA",
       "comments_count": 0,
-      "like_count": 1,
+      "like_count": 2,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DfuyeXhiKCb/",
       "timestamp": "2026-11-14T17:54:26+0000",
       "metricas": {
-        "reach": 160,
-        "views": 185,
+        "reach": 185,
+        "views": 208,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 1,
-        "total_interactions": 1,
-        "ig_reels_avg_watch_time": 10336,
-        "ig_reels_video_view_total_time": 1633173
+        "likes": 2,
+        "total_interactions": 3,
+        "ig_reels_avg_watch_time": 9756,
+        "ig_reels_video_view_total_time": 1795194
       }
     },
     {
@@ -60,8 +81,8 @@
       "permalink": "https://www.instagram.com/p/DfuoO4yFy8-/",
       "timestamp": "2026-11-14T16:24:46+0000",
       "metricas": {
-        "reach": 2,
-        "views": 8,
+        "reach": 3,
+        "views": 9,
         "saved": 0,
         "shares": 0,
         "total_interactions": 2
@@ -84,8 +105,8 @@
         "comments": 0,
         "likes": 2,
         "total_interactions": 4,
-        "ig_reels_avg_watch_time": 12645,
-        "ig_reels_video_view_total_time": 1909414
+        "ig_reels_avg_watch_time": 12536,
+        "ig_reels_video_view_total_time": 1918091
       }
     },
     {
@@ -558,6 +579,10 @@
     },
     {
       "fecha": "2026-11-14T21:25+00:00",
+      "seguidores": 1602
+    },
+    {
+      "fecha": "2026-11-15T03:26+00:00",
       "seguidores": 1602
     }
   ]
