@@ -30,6 +30,7 @@ def num_es(n):
 
 
 def _cifras(t):
+    t = re.sub(r"\b[Ii]\.?\s*[Aa]\b\.?", "IA", t)       # Whisper: «I.A.» / «i a» = «IA»
     t = re.sub(r"(\d)\s*%", r"\1 por ciento", t)
     t = re.sub(r"(\d)[:.,](\d)", r"\1 \2", t)          # 23:47 -> 23 47
     t = re.sub(r"(\d)([a-zA-Z])", r"\1 \2", t)          # 27c -> 27 c
