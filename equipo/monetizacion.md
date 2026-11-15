@@ -1,102 +1,56 @@
 # Monetización de @neogestlab (Neogest Lab · escaparate de apps y webs)
 
-Analista de monetización. Versión 8: 13/11/2026 ~12:30 UTC (revisión diaria del embudo). Sustituye a la v7.1 del 12/11. Rige equipo/DIRECTIVA_VIGENTE.md (no se toca). Vías de Instagram y afiliados con fuentes: `monetizacion_v4_archivo.md`.
+Analista de monetización. Versión 9: 15/11/2026 17:18 UTC (revisión diaria del embudo). Sustituye a la v8 del 13/11 (archivada en `equipo/monetizacion_v8_archivo.md`). Rige equipo/DIRECTIVA_VIGENTE.md (no se toca). Vías de Instagram y afiliados con fuentes: `equipo/monetizacion_v4_archivo.md`.
 Regla: lo que no se ha leído en una fuente va como «no consta» o «n/d». Sin gasto ni promociones sin visto bueno del dueño.
-Fuentes de hoy, solo lectura: Buzzfy (`ig_account_stats` y `ig_follower_growth`, 6-13/11) y Base44 del Centro (entidades `SolicitudInfo` y `Clic`). `equipo/embudo.md` se regeneró con `herramientas/embudo.py`, pero sus cifras son las del 12/11 15:42; las de esta versión son más recientes. Sin navegador comprobado en esta sesión.
+Fuentes de hoy, solo lectura: Buzzfy (`ig_account_stats`, `ig_follower_growth`, `ig_comments`, `ig_posts`, `ig_post_stats`) y Base44 del Centro (`SolicitudInfo` y `Clic`). `equipo/embudo.md` regenerado con `herramientas/embudo.py` desde `kpi_buzzfy.json` y `leads.json`. Requisitos oficiales de monetización no se han vuelto a investigar en esta pasada (ver v4_archivo).
 
 ## 0. Resumen ejecutivo
-- **Embudo 6-13/11 (7 días):** 872 cuentas no seguidoras alcanzadas → **15 visitas al perfil (1,7 %; meta ≥ 3 %)** → **4 clics al sitio web (27 % de las visitas; meta ≥ 25 %)** → **0 solicitudes nuevas** → **0 €**.
-- **El paso más débil sigue siendo alcance → visita al perfil.** Empeora frente al 5-12/11 (1,9 %), aunque sube el alcance (929 cuentas en total).
-- **El dato que más cambia la lectura:** el 12/11 a las 19:55 se registra un clic de origen «bio» hacia `aj-reparacion-web` (Centro). Es el primero desde la bio con el enlace nuevo. No consta por qué ruta llegó, porque el enlace de la bio es `/solicitar?src=instagram`.
-- **La solicitud del 8/11 sigue en «nueva» tras 5 días.** Es la única solicitud registrada en el Centro. No consta que se haya contactado.
-- **La bio ya está actualizada** (leída hoy en Buzzfy): «Apps y webs a medida para tu negocio · El Jambo que sabe y las IAs, cada día · Prueba gratis, sin tarjeta ni compromiso», con enlace a `/solicitar?src=instagram`. El nombre visible no lo devuelve la API (n/d); el embudo anterior lo daba como «IA Fácil», cambio pendiente hasta ~25/11.
-- **Palabras clave y DMs:** 0 comentarios y 0 respuestas en 7 días; los DMs siguen sin poder leerse (n/d, falta el permiso de mensajes).
-- **Regla de promoción de 10 €:** no consta que ninguna pieza la cumpla (la mayor pieza medida el 12/11 llegó a 255 de alcance; hacen falta ≥ 500, compartidos o guardados y retención). No se propone gasto.
+- **Embudo 8-15/11 (7 días):** 1.514 cuentas no seguidoras alcanzadas → **8 visitas al perfil (0,5 %; meta ≥ 3 %)** → **3 clics al sitio (37,5 % de las visitas)** → **0 solicitudes nuevas** → **0 €**.
+- **Empeora frente al embudo del 13/11:** el alcance no seguidor sube (883 → 1.514), pero las visitas al perfil bajan (15 → 8). El paso más débil sigue siendo alcance → visita al perfil, y ahora es el peor de la serie.
+- **Cero comentarios** en las 10 publicaciones más recientes, pese a que todas acaban en «cuéntalo en comentarios». La pregunta final no está generando respuestas.
+- **La bio cambió hoy:** ya no lleva «El Jambo» ni «Comenta APP». Ahora dice «Sistemas Digitales, Automatización e IA a Medida ⚡ Apps y webs a medida… Pruébalo gratis 👇», con el enlace a `/solicitar?src=instagram`. No consta quién la cambió: confirmar con el dueño.
+- **Regla de promoción de 10 €: no se cumple.** La pieza más alta de 13-14/11 tiene 214 de alcance a 23 h; hacen falta ≥ 500 cuentas, compartidos o guardados y retención. No se propone gasto.
 
-## 1. Cifras de hoy (Buzzfy 6-13/11; Instagram puede retrasarse 48 h)
-| Etapa | 6-13/11 (7 d) | Lectura |
-|---|---|---|
-| Alcance total / no seguidores | 929 / 872 (59 seguidores) | Reels 895, carruseles 48, historias 46 |
-| Visualizaciones | 1.900 (reels 1.179; carruseles 455; historias 266) | Solo orgánicas |
-| Visitas al perfil | 15 (1,7 % del alcance a no seguidores) | **Paso más débil** |
-| Toques al enlace / clics al sitio web | 0 / 4 (27 % de las visitas) | El enlace nuevo lleva a `/solicitar?src=instagram` |
-| Solicitudes en el Centro | 0 nuevas (1 en total, del 8/11, «nueva») | `SolicitudInfo` no tiene nada desde el 8/11 |
-| Clics registrados en el Centro (`Clic`) | 1 desde la bio (12/11, aj-reparacion-web) | `/solicitar` no crea `Clic`: solo lo hacen `/ir/<app>` |
-| Interacciones | 107 (54 me gusta, 22 reposts, 13 compartidos, 5 guardados, 0 comentarios) | Los compartidos son la señal más útil |
-| Cuentas que interactúan | 14 | |
-| Seguidores | 1.601; 6-10/11: +0 / -2 = -2 | 11 y 12/11 pendientes de Instagram |
-| DMs con intención | n/d | Falta el permiso de mensajes en Buzzfy |
+## 1. Cifras (Buzzfy 8-15/11; Instagram puede retrasarse 48 h)
+| Etapa | 8-15/11 (7 d) | 6-13/11 (7 d, v8) | Lectura |
+|---|---|---|---|
+| Alcance total / no seguidores | 1.582 / 1.514 (63 seguidores) | 940 / 883 | sube mucho; el alcance no es el problema |
+| Visualizaciones / no seguidores | 2.410 / 1.856 | 1.134 (no seguidores) | |
+| Visitas al perfil | 8 | 15 | baja a la mitad |
+| Clics al enlace (web) | 3 | 4 | |
+| Interacciones / guardados / compartidos / comentarios | 91 / 0 / 9 / 0 | 107 / 5 / 13 / 0 | guardados a cero |
+| Reposts | 24 | n/d | métrica nueva, sin serie |
+| Seguidores netos | −1 (8-12/11 finalizados; 13 y 14/11 pendientes) | −2 | 1.602 seguidores |
 
-## 2. Por pieza y producto
-- **Episodios de «El Jambo que sabe y las IAs»:** el 301 llegó a 255 cuentas en 21 h, con 30,6 % de abandono, 10,6 s de visualización media y 0 compartidos (lectura del 12/11). Los episodios siguen siendo el motor de alcance; no consta que ninguno haya llevado visitas al perfil atribuibles.
-- **Gestión Integral 7D:** 0 clics organizados en el Centro desde el 1/11 (solo una prueba interna). La única señal es el carrusel «ruta de visitas» para comerciales (27 de alcance y 1 compartido, 8/11): muestra mínima.
-- **Apps a medida:** 1 solicitud (8/11, origen «demo», sector «Academia / formación»). Puede ser una prueba interna; sin contactar.
-- **AJ Web / web a medida:** el único clic de bio registrado (12/11) apunta aquí. Muestra de una sola visita: se vigila, sin conclusión.
+Conversión: alcance no seguidor → visita **0,5 %** · visita → clic **37,5 %** · clic → solicitud **0 de 3** en la ventana.
 
-## 3. Diagnóstico
-1. **Alcance → visita al perfil sigue siendo el cuello de botella.** 15 visitas por cada 872 cuentas no seguidoras. El alcance no falta; falta una razón para entrar al perfil.
-2. **Visita → clic es razonable** (27 %). La bio ya promete prueba gratuita y lleva al formulario; el problema está antes.
-3. **Clic → solicitud no se puede medir bien.** Instagram cuenta 4 clics al sitio, pero el Centro solo registra clics en `/ir/<app>`. Entrar a `/solicitar` no deja rastro hasta que se envía el formulario. Con 0 solicitudes nuevas, no hay conversión que medir todavía.
-4. **El experimento de la fórmula v9 sigue confundido por la hora** (pivote a las 13:40 frente a control a las 18:40 y 20:40). La directiva fija la lectura del 18/11 y la del 23/11; no se cambia.
-5. **Los textos antiguos siguen en el perfil** (publicaciones repetidas con «escríbeme IDEA» en la lectura del 12/11). Contradicen el cierre único y la bio nueva.
+## 2. Piezas (lo que se puede leer hoy)
+- 13/11 «Contratar a una IA…» (45 h): alcance 145, 197 vistas, 12,5 s de media, saltos 32,7 %, compartidos 1.
+- 13/11 «Plazo de pago 60 días» (47 h): alcance 114, 153 vistas, 11,1 s, saltos 32,2 %.
+- 14/11 «Devolución sin ticket» (23 h): alcance 214, 236 vistas, 9,4 s, saltos 34,1 %.
+- 14/11 «La clase de mañana» (21 h): alcance 137, 163 vistas, 23,4 s, saltos 43,6 %.
+- 14/11 «Nueva imagen» (18 h): alcance 30, 45 vistas, 5,1 s, saltos 67,7 %. Es un post de identidad y no vende nada.
+- Las piezas de hoy (15/11, 11:02 a 17:01 UTC) aún no tienen métricas útiles. Hay 8 reels publicados hoy, incluidos GPS, MEDICATOR y Factura7D.
+- Lectura: el gancho no retiene (saltos 32-44 % a los primeros segundos) y los reels de humor llegan a cuentas que no nos siguen, pero no pasan a visitar el perfil.
 
-## 4. Acciones para el Estratega (por orden de efecto)
-1. **Un motivo para visitar el perfil en cada pieza sin producto, desde el 13/11.** Última línea del texto y comentario fijado con «Episodio nuevo cada día en @neogestlab», y `avance_siguiente` que nombre el episodio de mañana. Cada pieza lleva en `post.json` el bloque `monetizacion` con `objetivo: visita_perfil`. Medida: visitas al perfil por cada 100 cuentas no seguidoras alcanzadas al día (hoy 1,7; meta ≥ 3).
-2. **Mejora: registrar la llegada al formulario antes del 15/11 a las 13:40.** En `src/pages/Solicitar.jsx`: (a) un `Clic` al cargar la página, con `origen` = `src`; (b) un desplegable opcional «¿Qué te interesa?» (Gestión Integral 7D, app a medida, web, otra), relleno si llega `app`, guardado en `producto_slug`. Sin esto, la solicitud de quien entra por la bio llega sin producto y no dice qué interesa. No se añade `&ref=` a los textos (no es clicable en Instagram). Sin este cambio no se puede medir la conversión.
-3. **Verificar la cola antes de la lectura del 18/11.** Según la lectura del 12/11 había dos choques de hora (403 el 13/11 a las 13:40; 405 y 505 el 19/11 a las 13:40). Sacar el choque antes de que el experimento de pivote compare horas. No re-verificado hoy: lo confirma el Estratega en `cola/`.
-4. **Medir los compartidos por pieza (13 en 7 días).** Pedir a Calidad que mire qué piezas los generan y que las repita con el mismo gancho. Es la señal de distribución más barata que tiene la cuenta.
-5. **Pieza de producto con prueba de igualdad (desde el 16/11).** Un vídeo del Centro aprobado por Calidad sale con `prueba_no_seguidores`, a las 13:40 y nunca en el hueco de un episodio; a las 48 h se compara con los episodios con la misma distribución. Si no llega a 50 cuentas no seguidoras (meta por reel), el producto viaja solo dentro de los episodios.
+## 3. Centro: solicitudes y clics (Base44, 15/11 17:18 UTC)
+- **Solicitudes:** 1 en total (8/11, app a medida, origen demo; ahora «cerrada», actualizada 14/11). Ninguna nueva en 7 días.
+- **Vistas de /solicitar hoy (fuera del panel): 28** → Facebook 15 (9 de ellas entre 15:01 y 15:03 UTC a `gps-andaluz`: puede ser una vista previa del enlace o una sola persona recargando; no concluyente), YouTube 4 (MEDICATOR, 13:47 y 14:20 UTC), directo 9 (GPS, Factura7D). Hubo además 1 vista de Facebook a `solicitar` a las 10:12.
+- **Clic en Enviar:** 0. /solicitar registra la vista, no el envío, así que la conversión a solicitud sigue sin poder medirse.
+- **Lectura del embudo:** hay interés en las demos de YouTube y Facebook (GPS, MEDICATOR), pero casi nadie llega del perfil de Instagram. Dos visitas internas desde la bio (16:59 y 17:01 UTC, panel de Gestoría7D y AppCC) se han excluido.
+- **Aviso sobre `embudo.md`:** la fila «clic → solicitud» (33 %) mezcla ventanas. La solicitud contada es la del 8/11, fuera de los 7 días. Corregir en `herramientas/embudo.py` antes de tomarla como cifra.
 
-## 5. Vías de ingresos (sin cambios)
-- Única vía realista hoy: clientes de apps a medida, Gestión Integral 7D y pruebas gratuitas. Las herramientas de monetización de Instagram y los afiliados dependen de umbrales que no se cumplen (fuentes en `monetizacion_v4_archivo.md`; no se han vuelto a verificar hoy).
-- Promoción de 10 € (regla del dueño, 8/11): alcance ≥ 3× la mediana y ≥ 500 cuentas, más compartidos ≥ 1 % o guardados ≥ 2 %, más retención, a las 48-72 h. Nada se activa sin el visto bueno del dueño.
-- Ingresos confirmados: 0 €. `leads.json` no cambia hoy: no hay solicitudes nuevas.
+## 4. Requisitos y vías
+- Requisitos oficiales de monetización de Instagram: no re-investigados en esta pasada. Siguen en `equipo/monetizacion_v4_archivo.md`, con fuente y fecha.
+- Afiliados, apps a medida y Gestión Integral 7D: el interés real está en las demos de apps, no en el perfil. Sin cambios en esta versión.
 
-## 6. Pendiente del dueño (solo él puede)
-1. Revisar la solicitud del 8/11 en `/panel/solicitudes`: marcarla como contactada o decir si fue una prueba (5 días en «nueva»).
-2. Reconectar Buzzfy con el permiso de mensajes (buzzfy.co/connect/instagram?feature=messaging); sin él no se cuentan los DMs.
-3. Archivar las publicaciones repetidas y quitar «escríbeme IDEA» de los textos antiguos (la API no archiva). La lista está en la versión 7.1 de este archivo (git).
-4. Nombre visible → «Neogest Lab · Apps a medida» (Instagram lo bloquea hasta ~25/11).
-5. Decir si alguna app tiene plan de pago. Sin precio no hay ingreso medible.
+## 5. Recomendaciones para el equipo
+1. **Estratega (prioridad 1): decidir dónde va la oferta.** La directiva del 13/11 (§14) dice que el reel no lleva cierre de venta y la oferta va solo en el comentario fijado y en la bio. Los pies actuales siguen diciendo «Pide tu prueba gratuita… Enlace en el perfil». Hasta que decida, no cambiar nada a mano; anotarlo en el tablón.
+2. **Creador: gancho de situación.** Las piezas con más de 40 % de saltos (14/11, 43,6 % y 67,7 %) abren con personaje o presentación. Las 3 próximas piezas del calendario 16/11 empiezan con la situación reconocible del usuario en texto de pantalla (fórmula 14/11). Medir saltos a 48 h.
+3. **Estratega/Comunidad: que la pregunta final se pueda contestar.** Cero comentarios en 10 publicaciones. Probar en 3 piezas una pregunta de elección («A o B», una palabra) y que Comunidad responda en menos de 24 h. Medir comentarios a 48 h.
+4. **Mejora: registrar el envío de /solicitar.** Hace falta un evento en el botón Enviar (y en el abandono del formulario), con `src` del canal. Sin eso no hay conversión medible desde Instagram, Facebook ni YouTube.
+5. **Estratega y dueño: que el perfil prometa lo que enseña el reel.** Visitas al perfil 15 → 8 con alcance no seguidor que sube a 1.514. La bio nueva es corporativa y no menciona el personaje que atrae al público. El nombre visible sigue sin cambiar hasta ~25/11. Pedir al dueño la decisión sobre la bio.
 
-Próxima revisión: viernes 13/11 por la noche (48 h del 301 y de los episodios 302 y 303; primer dato del clic de bio del 12/11 con su ruta).
-
-## 7. Pasada extraordinaria 13/11 12:26 UTC (orden del dueño 13/11 13:23: «arranca todo y mejora en todo»)
-Cifras leídas de nuevo (Buzzfy 6-13/11 y Centro): 872 cuentas no seguidoras alcanzadas, 15 visitas al perfil, 4 clics a la web, 1 solicitud en total (la del 8/11, sin contactar), 0 nuevas, 1 clic desde la bio registrado (12/11 19:55, aj-reparacion-web). `equipo/leads.json` y `equipo/kpi_buzzfy.json` quedan actualizados con estas cifras.
-
-**Punto exacto donde se pierde la gente: alcance a no seguidores → visita al perfil.** De 872 cuentas no seguidoras, 857 no entran al perfil (98,3 %; meta ≥ 3 %). Es el único paso que queda muy por debajo de su meta. Visita → clic sí cumple (27 %, meta ≥ 25 %). Hay un segundo agujero que no se ve: 4 clics a la web y 0 solicitudes, pero `/solicitar` no registra clics, así que no sabemos si se pierden en la página o en el formulario. Esto lo arregla el encargo a Mejora de la sección 4, acción 2.
-
-**Tres arreglos concretos para alcance → perfil:**
-1. **Rótulo fijo desde el segundo 0 en cada episodio sin producto:** «@neogestlab · episodio nuevo cada día», pequeño y en pantalla todo el tiempo. El espectador medio se va en el segundo 10,6 y el cierre llega en el 21,4, así que la invitación no puede vivir solo en el último fotograma. Responsable: Creador, en cada render nuevo (y en los que se recorten). Medida: visitas al perfil por cada 100 cuentas no seguidoras a 48 h, hoy 1,7.
-2. **Que el perfil prometa lo que el reel enseñó (dueño):** archivar las publicaciones repetidas y fijar tres: «Una idea, una app», «Así se hace» y «A medida». La API no fija ni archiva, así que lo hace el dueño desde la app. Es lo primero que ve quien entra desde un reel.
-3. **Medir visitas al perfil por pieza, no solo por cuenta:** el Analista cruza cada día las visitas que da cada episodio (ig_post_stats) y lo anota en kpi_buzzfy.json. Si un episodio lleva dos días sin llegar a 3 visitas por cada 100 no seguidores, el Estratega cambia su línea de perfil antes del siguiente. Así se sabe qué formato manda gente al perfil y no se espera a la lectura del 23/11.
-
-Próxima revisión: viernes 13/11 por la noche (48 h del 301 y de los episodios 302 y 303; primer dato del clic de bio del 12/11 con su ruta).
-
-## 8. Lectura del 14/11/2026 (Buzzfy 7-14/11 a las 12:55 UTC; Centro, entidades SolicitudInfo y Clic)
-Solo lectura. Instagram puede retrasarse 48 h; 12 y 13/11 de seguidores siguen pendientes.
-
-| Etapa | 7-14/11 (7 d) | Lectura |
-|---|---|---|
-| Alcance total / no seguidores | 763 / 696 | Reels 719, carruseles 48, historias 51 |
-| Visualizaciones orgánicas | 1.764 (no seguidores 918) | Sin anuncios |
-| Visitas al perfil | 16 (2,3 % del alcance a no seguidores; meta ≥ 3 %) | Mejora frente al 1,7 % del 6-13/11, sin llegar a la meta |
-| Clics al sitio web | 5 (31 % de las visitas; meta ≥ 25 %) | Mejora frente al 27 % |
-| Toques al enlace (`linkTaps`) | 0 | |
-| Solicitudes nuevas en el Centro | 0 (sigue 1 en total, del 8/11, «nueva», sin contactar) | |
-| Clics `Clic` en el Centro, origen bio | 8 desde el 12/11: 1 (12/11), 5 (13/11), 2 (14/11) | Productos: aj-reparacion-web ×2, factura7d-verifactu ×2, medicator ×2, gh-plus, studio-beats-pro. Referer de 4 de ellos: `login` del panel o `app.base44.com` (posibles pruebas internas del equipo). No consta que sean clientes. |
-| Interacciones | 102 (49 me gusta, 25 reposts, 14 compartidos, 0 guardados, 0 comentarios) | Cuentas que interactúan: 9 |
-| Seguidores | 1.600 ahora; 7-11/11: +0 / -3 = -3 (12-13/11 pendientes) | |
-| Palabras clave y DMs | 0 comentarios en 7 días; DMs n/d (sin permiso de mensajes) | |
-
-**Hallazgos que cambian la lectura:**
-1. **La bio del perfil no coincide con la del Analista.** Buzzfy devuelve hoy: «Las IAs de la oficina 😈 El Jambo y sus IAs, cada día · ¿Quieres tu app o web? **Comenta APP** · By Neogest Lab». La sección 6 de este archivo daba por puesta la bio «Apps y webs a medida… Prueba gratis, sin tarjeta…». Y la orden del 10/11 de la directiva prohíbe el cierre «comenta X y te envío…». Con la bio actual, quien entra al perfil recibe la invitación a comentar. Acción del dueño (la API no edita la bio).
-2. **Los clics desde la bio sí llegan al Centro, pero la mayoría no parecen clientes.** 8 clics en tres días, con referer del panel o de Base44. Hay que separar el tráfico interno del externo antes de dar ninguna tasa de conversión.
-3. **Siguen sin registrarse solicitudes reales.** 5 clics a la web en 7 días y 0 solicitudes nuevas. `/solicitar` no crea `Clic`, así que el agujero entre la web y el formulario sigue sin medirse (acción 2 de la sección 4).
-
-**Acciones para el Estratega (3, por orden de efecto):**
-1. **Quitar «Comenta APP» de la bio y del último fotograma o texto fijado** (la bio la cambia el dueño; el Estratega lo deja escrito en `plan.json` para que lo haga). Motivo: la orden del 10/11 prohíbe ese cierre y la bio actual lo contradice.
-2. **Separar el tráfico interno del externo en el Centro** (Mejora): no contar como clic de bio los accesos con referer `login` o `app.base44.com`, y añadir el registro de llegada a `/solicitar` (acción 2 de la sección 4). Sin esto, la tasa clic→solicitud no tiene sentido.
-3. **Mantener el motivo de visita al perfil en cada pieza sin producto** (rótulo «@neogestlab · episodio nuevo cada día» desde el segundo 0, sección 7). Medida: visitas por cada 100 cuentas no seguidoras, hoy 2,3; meta ≥ 3.
-
-Lectura del embudo de hoy: alcance no seguidores 696 → visitas 16 → clics web 5 → solicitudes nuevas 0 → 0 €.
+## 6. Notas
+- Solo lectura: no se han publicado comentarios ni se han enviado DMs.
+- Sin gasto. Ninguna promoción pagada, ninguna cifra de ingresos nueva (0 € confirmados).
