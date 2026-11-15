@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 19.3,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['gain', 'trescientos', 'doce', 'ocho', 'ocho', 'cuarenta'], sobran ['gan', '300', '12', '8', '8', '40'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "No pain, no gan, que se oiga. 300 socios, vienen 12. Mandemos audios de 8 minutos de motivación. Nadie escucha 8 minutos, ni yo. Mensaje corto y personal a cada uno, han vuelto 40. Gracias a mi motivación. ¿Cuántos meses pagaste sin ir?",
+  "guion": "¡No pain, no gain! ¡Que se oiga! Trescientos socios. Vienen doce. ¡Mandemos audios de ocho minutos de motivación! Nadie escucha ocho minutos. Ni yo. Mensaje corto y personal a cada uno. Han vuelto cuarenta. ¡Gracias a mi motivación! ¿Cuántos meses pagaste sin ir?"
+}
