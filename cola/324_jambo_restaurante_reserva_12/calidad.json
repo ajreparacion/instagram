@@ -1,13 +1,12 @@
 {
   "aprobado": false,
-  "nota": 86,
-  "fecha": "2026-11-15T12:05:00+00:00",
-  "comentario": "Silencio de 0,83 s entre el giro y el cierre (límite 0,6 s) en el control de audio; el resto cumple la fórmula.",
+  "nota": 85,
   "motivos": [
-    "silencio > 0,6 s antes del cierre (0,83 s): lo genera el motor de render, no el guion; Mejora debe acortarlo y re-renderizar"
+    "Re-render del 2026-11-15T19:34 con el motor «sketch» del repo, retirado para la serie desde el 15/11 (herramientas/estudio/LEEME.md, roles/creador.md): rechazo automático según roles/calidad.md",
+    "El control de audio de Actions pasa (duración 20.63 s), pero el formato exige dibujos de calidad de Neogest Studio"
   ],
-  "aprobado_anterior": false,
-  "nota_anterior": 86,
-  "caducado": "2026-11-15T19:34:18+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-15T19:34:18+00:00"
+  "como_arreglarlo": "Creador: rehacer el episodio en Neogest Studio según herramientas/estudio/LEEME.md (video_externo + motor neogest-studio + renderizado false) con la fórmula de 5 tiempos y moraleja; después lo evalúa Calidad.",
+  "fecha": "2026-11-15T19:43:18+00:00",
+  "revisor": "Calidad (pasada cada 2 h)",
+  "render": "2026-11-15T19:34:18+00:00"
 }

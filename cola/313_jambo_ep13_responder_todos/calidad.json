@@ -1,14 +1,12 @@
 {
   "aprobado": false,
   "nota": 78,
-  "fecha": "2026-11-15T10:00:00+00:00",
-  "revisado_por": "agente de CALIDAD (11/11, pasada de las 12:50)",
-  "comentario": "v8.1: render revisado (1080x1920 H.264+AAC, -14,1 LUFS, pico -1,1 a -1,5 dBFS, sin cortes de audio). Gancho POV con fondo amarillo y personajes ya en escena en el fotograma 0, humor con personaje (B2 ok), remate, mensaje final guardable con frase para enviar (B3 ok), comentario fijado y avance (B8 ok), sin marcas ni apps (directiva Jambo). Sin cifras inventadas. Pie corregido por Calidad (quitada una nota interna que se iba a publicar). Defectos menores, no bloqueantes: hueco de voz de ~3 s en el tramo 3 (bajo el límite de 3,5 s de B5 y con cambio visual) y cabecera POV pisada por el contador en el primer segundo de algunos episodios (ver peticiones_mejora.md). Voz Chatterbox es-es sin voz del dueño; tono aceptado por el dueño el 10/11 en 017. Seguimiento a las 48 h obligatorio.",
-  "revisor": "Calidad (directiva de vídeo 14/11)",
-  "observaciones": "Reevaluado con la directiva de vídeo 14/11: no cumple la fórmula de 5 tiempos. Guion antiguo: «Que lo haga la Jupillo» como muletilla a mitad (no es el remate), escena de sello en silencio >0,6 s (silencedetect −45 dB), sin atribución de música MacLeod en post.json y, en 501-515, dato estadístico/mensaje de marca pegado al final del vídeo (debe ir en el texto del post con su fuente). ",
-  "rehacer": "Creador: guion nuevo con la fórmula (planteamiento en 1 frase, escalada en 3 golpes, giro propio, cierre con pregunta o Parte 2), sin silencios >0,6 s, dato con fuente solo en el post, música MacLeod con atribución; luego renderizado:false.",
-  "aprobado_anterior": false,
-  "nota_anterior": 78,
-  "caducado": "2026-11-15T19:35:36+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-15T19:35:36+00:00"
+  "motivos": [
+    "Re-render del 2026-11-15T19:35 con el motor «sketch» del repo, retirado para la serie desde el 15/11 (herramientas/estudio/LEEME.md, roles/creador.md): rechazo automático según roles/calidad.md",
+    "El control de audio de Actions pasa (duración 21.1 s), pero el formato exige dibujos de calidad de Neogest Studio"
+  ],
+  "como_arreglarlo": "Creador: rehacer el episodio en Neogest Studio según herramientas/estudio/LEEME.md (video_externo + motor neogest-studio + renderizado false) con la fórmula de 5 tiempos y moraleja; después lo evalúa Calidad.",
+  "fecha": "2026-11-15T19:43:18+00:00",
+  "revisor": "Calidad (pasada cada 2 h)",
+  "render": "2026-11-15T19:35:36+00:00"
 }
