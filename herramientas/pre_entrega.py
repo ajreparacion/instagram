@@ -55,9 +55,9 @@ def revisar(carpeta):
         txt = (guion.get("gancho_corto") or (g or {}).get("texto") or "")
         n = len(re.sub(r"[*¡!¿?«»]", "", txt).split())
         if txt and n > 8: a.append("B1 gancho de %d palabras (máximo 8): «%s»" % (n, txt[:60]))
-        # Orden del dueño 13/11 14:46 (DIRECTIVA_VIGENTE, §14): en la serie la venta va solo en el comentario fijado y la bio; ni dominio ni «más asequibles» en el texto del post
-        if "jambo" in os.path.basename(carpeta) and re.search(r"ajreparacion\.com|m[aá]s asequibles|prueba gratuita", t, re.I):
-            a.append("§14 el texto del post de un episodio lleva venta (dominio, «más asequibles» o «prueba gratuita»): va solo en el comentario fijado y la bio")
+        # Directiva 15/11 §5: el post de un episodio de El Jambo cierra con la prueba gratuita (con enlace /solicitar) y la pregunta
+        if "jambo" in os.path.basename(carpeta) and not re.search(r"prueba gratuita", t, re.I):
+            a.append("§5 el texto del post de un episodio no lleva el cierre «Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso» con el enlace /solicitar")
         revisar_14(carpeta, post, guion, e, a)
     return e, a
 
@@ -91,22 +91,17 @@ def revisar_14(carpeta, post, guion, e, a):
     serie = bool(guion.get("serie")) or "jambo" in nombre or "ias_oficina" in nombre
     texto = post.get("texto", "")
     d, de = duracion_s(carpeta, guion)
-    if d is not None and d > 20:
-        msg = "§14 dura %.1f s (%s): tope 20 s; hasta 35 s solo con permiso expreso de Calidad" % (d, de)
-        (e if (serie and d > 35) else a).append(msg + (" · pasa de 35 s" if d > 35 else ""))
+    if serie and d is not None and d > 25:   # directiva 15/11 §5: episodios de 15-25 s, nunca más de 30
+        msg = "§5 dura %.1f s (%s): el formato pide 15-25 s" % (d, de)
+        (e if d > 30 else a).append(msg + (" · pasa de 30 s" if d > 30 else ""))
     if not REENVIO.search(texto) and not REENVIO.search(" ".join(textos(guion))):
         a.append("§14 sin reenvío a una persona concreta (p. ej. «Envíaselo a ese compañero que…»)")
-    if ENLACE.search(texto):
-        a.append("§14 enlace o dominio en el texto del post de Instagram (no es clicable): solo en bio y comentario fijado")
     if serie:
         # La venta va solo en el comentario fijado y la bio: ni en las escenas del vídeo ni en el texto
         venta = [x for x in textos(guion) if VENTA_EN_VIDEO.search(x)]
         if venta: a.append("§14 venta dentro del vídeo (precio, prueba gratuita, presupuesto, dominio…): «%s»" % venta[0][:50])
         if guion.get("modo") == "sketch" and cuando[:10] >= "2026-11-16" and not guion.get("marca_serie"):
             a.append("§13 falta marca_serie («@neogestlab · episodio nuevo cada día») en un episodio que sale desde el 16/11")
-        cf = post.get("comentario_fijado") or ""
-        if cf and not re.search(r"\b(APP|WEB)\b", cf):
-            a.append("§14 el comentario fijado no lleva la palabra clave APP o WEB (la oferta vive ahí)")
     esc = guion.get("escenas") or []
     if guion.get("modo") in ("app", "datos") and not serie:
         a.append("§14 sin personaje en el segundo 0 (reel de %s sin personaje): hueco libre salvo permiso de Calidad" % guion.get("modo"))
