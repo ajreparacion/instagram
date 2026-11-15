@@ -1,16 +1,8 @@
 {
+  "aprobado": true,
   "nota": 90,
-  "aprobado": false,
-  "motivos": [
-    "Control de audio OK en Actions (whisper = guion); silencedetect local sin huecos; 20,9 s; −14,0 LUFS, pico −1,5 dBFS",
-    "Situación en el segundo 0 («no hace falta fichar»), escalada horas/no se cobran, giro con sello REGISTRADO y «Que lo haga la Jupillo» como remate",
-    "Dato registro de jornada (art. 34.9 ET, RDL 8/2019) correcto con fuente BOE; prueba gratuita y atribución MacLeod CC BY presentes"
-  ],
-  "fecha": "2026-11-15T11:43:14+00:00",
-  "revisor": "Calidad (tarea programada)",
-  "render": "2026-11-15T10:38:12+00:00",
-  "aprobado_anterior": true,
-  "nota_anterior": 90,
-  "caducado": "2026-11-15T16:30:47+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-15T16:30:47+00:00"
+  "fecha": "2026-11-15T16:31:31+00:00",
+  "aprobado_por": "dueño",
+  "decision_dueno": "15/11/2026 17:14: visto bueno del dueño a los 5 episodios rehechos en Neogest Studio («Sí, que salgan los 5»); v2 (17:20) con los cambios que pidió él: guion más claro, moraleja y efectos de retención.",
+  "observaciones": "v2 Neogest Studio: 333 30,0 s, 334 29,1 s, 335 25,9 s; hoja de fotogramas del 333 revisada. Calidad puede revisarlo después, pero no lo retira."
 }
