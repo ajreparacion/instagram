@@ -146,8 +146,8 @@
     {
       "estilo": "cierre",
       "hablante": null,
-      "voz": "¿Cuántos correos tienes sin leer ahora mismo? Di el número.",
-      "texto": "¿Cuántos correos tienes sin leer ahora mismo? Di el número",
+      "voz": "¿Cuántos correos te quedan por leer ahora mismo? Di el número.",
+      "texto": "¿Cuántos correos te quedan por leer ahora mismo? Di el número.",
       "dibujo": {
         "personajes": [],
         "accion": "serio"
