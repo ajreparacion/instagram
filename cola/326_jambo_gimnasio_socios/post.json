@@ -35,5 +35,6 @@
       "voz distinta del guion: faltan ['gain', 'trescientos', 'doce', 'ocho', 'ocho', 'cuarenta'], sobran ['gan', '300', '12', '8', '8', '40'] (rehacer esas frases)"
     ],
     "guion_md5": "48d7853918a9c93c642cd9f32ab56885"
-  }
+  },
+  "renderizado": false
 }

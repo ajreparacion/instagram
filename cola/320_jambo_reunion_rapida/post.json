@@ -33,5 +33,6 @@
       "silencios > 0.6 s entre frases (pista de voz): [[2.25, 2.85, 0.6], [19.85, 20.45, 0.6]]"
     ],
     "guion_md5": "6987f9348d4f16e4a78121307b188c61"
-  }
+  },
+  "renderizado": false
 }

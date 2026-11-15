@@ -33,5 +33,6 @@
       "voz distinta del guion: faltan ['veintisiete', 'c', 'tique', 'veintisiete', 'd'], sobran ['27c', 'ticket', '27d'] (rehacer esas frases)"
     ],
     "guion_md5": "85036cde72d5bd8a5b38fbac39f39d44"
-  }
+  },
+  "renderizado": false
 }
