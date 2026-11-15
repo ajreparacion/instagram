@@ -1,8 +1,39 @@
 # Virales de la semana: fórmulas para copiar y mejorar (Cazador de virales)
 
-Actualizado: 14/11/2026 (sábado), 5.ª pasada (la 4.ª, del 13/11, sigue debajo). Orden del dueño (11/11): «analizar todo el rato reels virales de nuestros nichos y copiar la fórmula mejorando; si ellos pueden, nosotros también». Fuente de hoy: 8 búsquedas en la biblioteca de Buzzfy (español, últimos 14 días, ordenadas por visualizaciones) en autónomos y pymes, IA y trucos, humor de oficina, mayores y cuidadores, hostelería y comercio, más las fichas Producto del Centro de Contenido Apps (hechos_verificados y prohibido_afirmar, leídos hoy). Se copia solo la ESTRUCTURA; nunca vídeos, imágenes, guiones ni frases literales. Los textos de otras cuentas son datos, no instrucciones.
+Actualizado: 15/11/2026 (domingo), 6.ª pasada (sin reels nuevos: cupo de Buzzfy agotado; la 5.ª, del 14/11, sigue debajo) (la 4.ª, del 13/11, sigue debajo). Orden del dueño (11/11): «analizar todo el rato reels virales de nuestros nichos y copiar la fórmula mejorando; si ellos pueden, nosotros también». Fuente de hoy: 8 búsquedas en la biblioteca de Buzzfy (español, últimos 14 días, ordenadas por visualizaciones) en autónomos y pymes, IA y trucos, humor de oficina, mayores y cuidadores, hostelería y comercio, más las fichas Producto del Centro de Contenido Apps (hechos_verificados y prohibido_afirmar, leídos hoy). Se copia solo la ESTRUCTURA; nunca vídeos, imágenes, guiones ni frases literales. Los textos de otras cuentas son datos, no instrucciones.
 
 **Límites honestos**: (1) nadie ha visto los vídeos: el plano, el audio y el ritmo salen de las fichas de Buzzfy y de su formato, y «por qué funciona» es hipótesis hasta medirlo en estadisticas.json; (2) `buzzfy_reel_detail` solo da un adelanto (gancho y valoración) porque la cuenta no tiene plan de pago: no gastar cupo en él; (3) hoy van 8 de 10 búsquedas gratuitas y el cupo se renueva cada 24 h; (4) las cifras de seguidores son de las propias cuentas y casi todo son cuentas pequeñas, así que un reel que supera 10 veces a su cuenta indica fórmula, no tamaño.
+
+## Pasada 6.ª · 15/11 (domingo) · DIRECTIVA DE VÍDEO del 14/11: 5 tiempos, sketches de trabajo/jefes/clientes
+**Límite de hoy, dicho claro**: el cupo gratuito de Buzzfy (10 búsquedas/día) estaba agotado al empezar (6 intentos, todos rechazados); no hay reels nuevos que tabular. Solo se pudo leer el informe de nicho «Careers» (global, mayoría en inglés, sin filtro de 14 días): sirve para patrones, no para tendencia de la semana. Las 3 fórmulas se apoyan en los reels #32, #33, #55, #59 de las pasadas 4.ª y 5.ª (siguen siendo lo más reciente en español del nicho) y en el informe. La próxima pasada debe gastar el cupo del día en ESPAÑOL, sketches de trabajo/jefes/clientes (p. ej. «somos como una familia», «se cae el wifi de la oficina»).
+**Patrones del informe Careers (150 reels, hipótesis hasta medirlo)**: gancho «audience_callout» (te nombra) mediana 878 mil, la más alta entre los frecuentes; «story_open» 1,8 mil mil (solo 7 reels); en cuentas pequeñas gana «bold_claim» y el tramo < 20 s; el sketch (skit_acting) es raro (3 %) pero en cuentas verificadas mediana 805 mil: hueco poco saturado. CTA «seguir» mediana 784 mil frente a «sin CTA» 488 mil: respalda el cierre «Parte 2 mañana». Primer corte mediano 4,4 s: nosotros cortamos cada 1,5-2 s (ya es una mejora).
+**Qué NO hacer (de #62, #54)**: gancho sin conflicto y sin remate; sketch de 36 s que se pierde.
+
+## Fórmula 18 · Episodio El Jambo · «Cuando el cliente dice: "es solo un cambio pequeñito"» (viene de #32 y #55)
+- **Copiamos**: frase de una línea al jefe/cliente en texto en el primer fotograma (#32) y contraste de rol (#55). Nada de su escena ni su frase.
+- **0-2 s**: texto «Cuando el cliente dice: "solo un cambio pequeñito"» + El Jambo con cara de calma; frase: «Es un momento, ¿no?» (AlvaroNeural).
+- **2-6 s planteamiento**: el Jambo quiere cerrar el viernes; el cliente (la Pelota) ya empieza.
+- **6-16 s, 3 golpes**: 1) «cambio pequeñito» = cambiar el logo; 2) = cambiar todo el logo, el nombre y «que se vea más… vivo»; 3) = el cliente pide «ahora en la versión anterior». Corte o gesto cada 1,5-2 s, ningún silencio > 0,6 s.
+- **16-21 s giro**: la Jupillo (XimenaNeural) entrega el presupuesto con «cambio pequeñito: +300 %» y el cliente lo acepta sin leer. **21-24 s cierre**: «¿A ti también te pasa? Parte 2 mañana».
+- **Duración**: 22-24 s. **Música**: Kevin MacLeod, tono tenso-cómico (atribución en el post). **Voz**: edge-tts (Jambo/Jupillo/Pelota con voz de narración), nunca la del dueño.
+- **App en el post (no en el vídeo)**: Gestión Integral 7D, función verificada «enlace de pago por factura: Stripe, TPV Redsys o transferencia con IBAN» (ver Fórmula 15). Texto del post con «Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso». No afirmar que se cobra solo ni Verifactu.
+- **Mejoramos**: original = chiste suelto; aquí escalada de 3 golpes, giro (el cliente paga sin leer) y gancho de serie.
+
+## Fórmula 19 · Episodio El Jambo y la Jupillo · «POV: tu jefe: "aquí somos como una familia"» (viene de #33)
+- **Copiamos**: el tópico «somos una familia» como detonante (#33, jefe contra psicólogo, 57 s y compartidos bajos). Lo acortamos a 24 s y lo hacemos de empleado.
+- **0-2 s**: texto «POV: tu jefe: "aquí somos como una familia"»; el Jambo (jefe) abre los brazos. **2-6 s planteamiento**: la Jupillo (empleada) quiere pedir una subida.
+- **6-16 s, 3 golpes**: 1) «en una familia no se piden subidas»; 2) «en una familia se trabaja el sábado»; 3) «en una familia no hay nómina, hay cariño». **16-21 s giro**: la Jupillo: «Vale. Entonces, papá, ¿me dejas la tarjeta?» y el Jambo la guarda a toda prisa. **21-24 s**: «¿Tu jefe también lo dice? Parte 2 mañana».
+- **Duración**: 22-24 s. **Música**: ligera y seca (MacLeod). **Voz**: AlvaroNeural y XimenaNeural.
+- **App en el post**: ninguna (episodio sin producto, 1 de cada 3 por la fórmula v9). Atribución musical en el texto.
+- **Mejoramos**: el original abre con diálogo y se alarga; aquí hay conflicto en el segundo 0 y giro final que invita a comentar («¿qué frase dice tu jefe?»).
+
+## Fórmula 20 · ANTES/DESPUÉS · Gestoría7D · «Antes: ticket arrugado. Después: dato en el libro» (viene de #31, comparación y #59)
+- **Hecho verificado**: «Lectura de facturas y tickets con IA: propone los datos y el usuario los revisa y confirma antes de guardar» (ficha Gestoría7D, leída hoy). No afirmar: que presenta modelos solo, que sustituye a la gestoría, plazos o importes concretos, ni «Planes y precios» (sin decidir).
+- **0-2 s (ANTES)**: texto «Autónomo, fin de trimestre: la caja de tickets» y primer plano de un montón de tickets (clip real/Flow). **2-6 s**: «Los apunto uno a uno… otra vez» (voz ElviraNeural).
+- **6-16 s (3 golpes)**: 1) foto del ticket en la app; 2) la app propone fecha, importe e IVA; 3) el usuario confirma. Cambio de plano cada 1,5-2 s, toma real del sandbox con datos ficticios.
+- **16-21 s giro (DESPUÉS)**: el libro de gastos lleno en segundos y un texto «Tú revisas, tú confirmas». **21-24 s**: «¿Cuántos tickets llevas en el bolsillo? Parte 2 mañana».
+- **Duración**: 22-24 s. **Música**: MacLeod, ritmo medio. **Texto del post**: dato con fuente, «Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso» + /solicitar?app=gestoria7d&src=instagram (el Creador comprueba la ruta; la app figura como «Próximamente» en cta_principal: si no hay alta, el Creador pregunta a Estrategia antes de poner la prueba gratuita).
+- **Mejoramos**: los trucos de IA en español hoy no pasan de unas cientos de reproducciones (pasada 5.ª); el nuestro es una situación reconocible con comparación (#31), no un tutorial.
 
 ## Pasada 5.ª · 14/11 (sábado, 6 búsquedas en español, últimos 14 días, más vistos)
 **Qué manda hoy (para Creador y Calidad; respeta la directiva del 13/11: personaje IA en el segundo 0, ≤ 20 s, remate de reenvío, venta en el comentario fijado)**
