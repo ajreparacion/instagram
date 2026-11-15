@@ -25,10 +25,10 @@
     "archivo": "Sneaky_Snitch.mp3",
     "bpm": 87.6
   },
-  "renderizado": false,
+  "renderizado": "2026-11-15T13:49:12+00:00",
   "asset": "332_jambo_becario_experiencia.mp4",
   "control_audio": {
     "aprobado": true,
-    "duracion_s": 22.07
+    "duracion_s": 22.03
   }
 }

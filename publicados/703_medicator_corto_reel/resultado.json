@@ -1,0 +1,18 @@
+{
+  "media_id": "18135931396778326",
+  "enlace": "https://www.instagram.com/reel/Dfw69APnFCc/",
+  "prueba_no_seguidores": false,
+  "publicado": "2026-11-15T13:47:14+00:00",
+  "youtube": {
+    "estado": "publicado",
+    "video_id": "OFxmwjrm1dY",
+    "enlace": "https://youtube.com/shorts/OFxmwjrm1dY",
+    "titulo": "¿Se te olvidan las pastillas? #Shorts"
+  },
+  "facebook": {
+    "estado": "publicado",
+    "video_id": "1611073030767254",
+    "enlace": "https://www.facebook.com/reel/1611073030767254",
+    "comentario": "error: Facebook HTTP 400: {\"error\":{\"message\":\"Unsupported post request. Object with ID '1611073030767254' does not exist, cannot be loaded due to missing permissions, or does not support this operati"
+  }
+}

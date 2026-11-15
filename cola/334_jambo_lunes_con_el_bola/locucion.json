@@ -59,17 +59,17 @@
   "estilo": "gag",
   "hablante": "bola",
   "inicio": 10.833,
-  "duracion": 2.933,
-  "texto": "Levántate a las cinco y léelos en una ducha fría.",
+  "duracion": 3.2,
+  "texto": "Levántate a las cinco y lee el correo en una ducha fría.",
   "enfasis": [
-   9
+   11
   ]
  },
  {
   "escena": 6,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 13.767,
+  "inicio": 14.033,
   "duracion": 4.133,
   "texto": "Contestados los ciento veinte. Y he quitado al Bola de tu calendario.",
   "enfasis": [
@@ -80,7 +80,7 @@
   "escena": 7,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 17.9,
+  "inicio": 18.167,
   "duracion": 1.6,
   "texto": "Eso es muy tóxico.",
   "enfasis": [
@@ -91,7 +91,7 @@
   "escena": 8,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 19.5,
+  "inicio": 19.767,
   "duracion": 3.933,
   "texto": "¿Cuántos correos tienes sin leer ahora mismo? Di el número.",
   "enfasis": []
