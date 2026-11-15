@@ -1,8 +1,3 @@
-2026-11-13 15:36  Voz con MeloTTS (ES/ES, 44100 Hz, velocidad 1.1): 9 frases en 28 s
-2026-11-13 15:36  Voz: timbre de personaje aplicado a 3 frases (['bola', 'jupillo'])
-2026-11-13 15:36  Voz: silencios recortados por frase (s): [0.71, 0.67, 0.69, 0.77, 0.69, 0.75, 0.71, 0.7, 0.7]
-2026-11-13 15:36  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(-2.2), np.float64(3.5), np.float64(-0.3), np.float64(-0.9), np.float64(0.4), np.float64(-0.7), np.float64(-0.7), np.float64(-1.3), np.float64(-2.0)]
-2026-11-13 15:37  Voz: alineación palabra a palabra (small, 23.8 s): 9/9 frases
 2026-11-13 15:38  Mezcla: voz -15.0 LUFS, música -15.5 LUFS (con ducking -16.0), la música baja 5.63 dB (p90) bajo la voz, ratio 2.0; máster -14.8 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: [[5.15, 8.2]]
 2026-11-13 15:38  504_jambo_app_clientes_abc: renderizado con voz y subido a la release 'cola'
 2026-11-13 15:38  atrasos facebook: publicado 203_studio_beats_pro_carrusel https://www.facebook.com/1437632859434095_122109245427536765
@@ -598,3 +593,8 @@
 2026-11-15 18:01  331_jambo_vacaciones_agosto: YouTube publicado https://youtube.com/shorts/ay3ZCCykHSM
 2026-11-15 18:01  331_jambo_vacaciones_agosto: Facebook publicado https://www.facebook.com/reel/2490185341758375
 2026-11-15 18:01  331_jambo_vacaciones_agosto: publicado https://www.instagram.com/reel/DfxRMdqjUSm/
+2026-11-15 20:01  332_jambo_becario_experiencia: publicando…
+2026-11-15 20:01  reel de prueba: fallo al subir/procesar ({"debug_info":{"retriable":false,"type":"ProcessingFailedError","message":"Request processing failed"}} (código None, subcódigo None)); se publica como reel normal
+2026-11-15 20:02  332_jambo_becario_experiencia: YouTube publicado https://youtube.com/shorts/TD3YjogBek4
+2026-11-15 20:02  332_jambo_becario_experiencia: Facebook publicado https://www.facebook.com/reel/1436518741474028
+2026-11-15 20:02  332_jambo_becario_experiencia: publicado https://www.instagram.com/reel/DfxfC-MicFW/
