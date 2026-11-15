@@ -1,8 +1,16 @@
 {
-  "aprobado": true,
-  "nota": 90,
-  "fecha": "2026-11-15T18:05:46+00:00",
-  "aprobado_por": "dueño",
-  "decision_dueno": "15/11/2026: visto bueno del dueño en la conversación tras ver medicator-diferencial.mp4 («Sí, que salga a las 21:00»).",
-  "observaciones": "36,3 s, 1080x1920, −14,1 LUFS, pico −1,5 dBTP; voz contrastada con faster-whisper; tomas reales con datos ficticios; hoja de fotogramas revisada."
+  "aprobado": false,
+  "nota": 86,
+  "motivos": [
+    "Reevaluado con la directiva limpia del 15/11 (promo 25-45 s): la duración de 36,3 s ya NO es motivo",
+    "Estructura: abre con la diferencial (cámara + CIMA), bien, pero es un recorrido por 4 funciones sin ANTES/DESPUÉS (problema real en 2 s → resuelto → resultado); una idea por pieza (v9 H6)",
+    "post.json sin bloque «youtube» (título con #Shorts, descripción con /solicitar?app=medicator&src=youtube) ni «avance_siguiente», obligatorios (§7)",
+    "Post: cierre «Pruébala gratis. Enlace en el perfil» en vez del cierre único de prueba gratuita con /solicitar?app=medicator&src=instagram",
+    "Sin control_audio de Actions (vídeo externo); el post dice voz contrastada con faster-whisper en origen",
+    "Bien: 1080x1920, −14,1 LUFS, pico −1,5 dBFS, sin silencios > 0,6 s, «Datos de ejemplo» rotulados, cierre 3 s con logo 2026 y «By Neogest Lab», MEDICATOR sin «IA» ni consejo médico (aviso orientativo)"
+  ],
+  "como_arreglarlo": "Centro/Creador: rehacer en ANTES/DESPUÉS con UNA función (caja del medicamento → la cámara la lee y salen los datos de la AEMPS), 25-45 s; añadir bloques youtube y avance_siguiente y el cierre único de prueba gratuita con /solicitar?app=medicator&src=<canal>; volver a pasar Calidad.",
+  "fecha": "2026-11-15T19:42:37+00:00",
+  "revisor": "Calidad (pasada cada 2 h)",
+  "render": "2026-11-15T16:49:51+00:00"
 }
