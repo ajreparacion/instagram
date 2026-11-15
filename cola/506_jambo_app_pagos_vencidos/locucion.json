@@ -1,0 +1,77 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.1,
+  "texto": "¡Vencía el cinco! ¡Hoy es siete!",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 2.1,
+  "duracion": 2.267,
+  "texto": "¿Cuánto me cobran por tarde, Trámites?",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 4.367,
+  "duracion": 4.567,
+  "texto": "Un recargo. Más el impreso veintisiete be. Más vergüenza.",
+  "enfasis": [
+   8
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 8.933,
+  "duracion": 1.5,
+  "texto": "¡Pagar tarde es libertad!",
+  "enfasis": [
+   3
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 10.433,
+  "duracion": 2.9,
+  "texto": "No pasa nada. Seguro que la luz se olvida.",
+  "enfasis": [
+   8
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 13.333,
+  "duracion": 4.367,
+  "texto": "Estaba en rojo. Y ahora, a oscuras: la cortaron hace una hora.",
+  "enfasis": [
+   9,
+   10,
+   11
+  ]
+ },
+ {
+  "escena": 6,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 17.7,
+  "duracion": 2.267,
+  "texto": "¿Qué recibo se te olvida siempre pagar?",
+  "enfasis": []
+ }
+]

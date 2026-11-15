@@ -25,6 +25,14 @@
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Life_of_Riley.mp3"
+    "archivo": "Life_of_Riley.mp3",
+    "bpm": 101.3
+  },
+  "_control_audio_fallo": {
+    "fecha": "2026-11-15T20:36:26+00:00",
+    "bloqueos": [
+      "voz distinta del guion: faltan ['be'], sobran ['b'] (rehacer esas frases)"
+    ],
+    "guion_md5": "ab7f7cc568aab3351b67a1c3a2c24fc8"
   }
 }

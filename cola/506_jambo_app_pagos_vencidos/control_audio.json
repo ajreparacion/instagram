@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 19.97,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['be'], sobran ['b'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Vencía el 5. Hoy es 7. ¿Cuánto me cobran por tarde, Trámites? Un recargo. Más el impreso 27B. Más vergüenza. Pagar tarde es libertad. No pasa nada. Seguro que la luz se olvida. Estaba en rojo. Y ahora, a oscuras, la cortaron hace una hora. ¿Qué recibo se te olvida siempre pagar?",
+  "guion": "¡Vencía el cinco! ¡Hoy es siete! ¿Cuánto me cobran por tarde, Trámites? Un recargo. Más el impreso veintisiete be. Más vergüenza. ¡Pagar tarde es libertad! No pasa nada. Seguro que la luz se olvida. Estaba en rojo. Y ahora, a oscuras: la cortaron hace una hora. ¿Qué recibo se te olvida siempre pagar?"
+}

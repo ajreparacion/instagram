@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 20.1,
+  "bloqueos": [
+    "voz distinta del guion: faltan [], sobran ['a'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Cinco llamadas. ¿Cómo va lo mío? Dime en qué estado está, trámites. Su orden está en cola. La cola está en espera. Está casi lista. O casi empezada. Seguro. Esperar es entrenar la paciencia. Estado, lista desde el martes. Lo ponía a la web. Tú llamaste cinco veces. ¿Cuántas veces has llamado tú?",
+  "guion": "Cinco llamadas. ¿Cómo va lo mío? Dime en qué estado está, Trámites. Su orden está en cola. La cola está en espera. Está casi lista. O casi empezada. Seguro. ¡Esperar es entrenar la paciencia! Estado: lista desde el martes. Lo ponía la web. Tú llamaste cinco veces. ¿Cuántas veces has llamado tú?"
+}

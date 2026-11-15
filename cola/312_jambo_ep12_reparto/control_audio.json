@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 20.2,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['giro'], sobran ['quiro', 'a'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "40 paquetes y uno en la puerta equivocada. ¿Por dónde se va, pelota? Quiro a la izquierda, seguro, aunque ahí hay un río. Los tiburones nadan, cruza a campeón. Para cruzar el río, rellene el formulario de naufragio. Paquete localizado, lo entregaste en tu casa, otra vez. ¿Cuál fue tu entrega más absurda?",
+  "guion": "Cuarenta paquetes. Y uno en la puerta equivocada. ¿Por dónde se va, Pelota? Giro a la izquierda. Seguro. Aunque ahí hay un río. ¡Los tiburones nadan! ¡Cruza, campeón! Para cruzar el río, rellene el formulario de naufragio. Paquete localizado. Lo entregaste en tu casa. Otra vez. ¿Cuál fue tu entrega más absurda?"
+}

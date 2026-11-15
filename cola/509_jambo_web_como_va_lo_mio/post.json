@@ -25,6 +25,14 @@
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Investigations.mp3"
+    "archivo": "Investigations.mp3",
+    "bpm": 95.7
+  },
+  "_control_audio_fallo": {
+    "fecha": "2026-11-15T20:37:25+00:00",
+    "bloqueos": [
+      "voz distinta del guion: faltan [], sobran ['a'] (rehacer esas frases)"
+    ],
+    "guion_md5": "047a4f53b7764b28d056a4130ac7de4d"
   }
 }

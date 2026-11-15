@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 20.17,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['bola'], sobran ['hola'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Otra revisión? Si ya estaba perfecto. Dime que quiere ahora el cliente. Hola. El logo más grande, pero también más pequeño. Y que parezca el mismo, pero distinto. Es el cambio número 14. Rellene el impreso pequeñito. Le he mandado la versión 1 con otro nombre. Dice que es perfecta. ¿Por qué revisión vas tú?",
+  "guion": "¿Otra revisión? ¡Si ya estaba perfecto! Dime qué quiere ahora el cliente, Bola. El logo más grande. Pero también más pequeño. Y que parezca el mismo. Pero distinto. Es el cambio número catorce. Rellene el impreso pequeñito. Le he mandado la versión uno con otro nombre. Dice que es perfecta. ¿Por qué revisión vas tú?"
+}

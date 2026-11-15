@@ -1,0 +1,76 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.533,
+  "texto": "Necesito un cuatro con ochenta y ocho en el final.",
+  "enfasis": [
+   9
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 2.533,
+  "duracion": 1.967,
+  "texto": "¿Cómo se calcula eso, Pelota?",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 4.5,
+  "duracion": 3.133,
+  "texto": "Aprobado seguro. Con un cinco. O un diez.",
+  "enfasis": [
+   7
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 7.633,
+  "duracion": 4.733,
+  "texto": "El final vale la mitad. El parcial, treinta. Las prácticas, veinte.",
+  "enfasis": [
+   10
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 12.367,
+  "duracion": 2.767,
+  "texto": "¡Con mentalidad de campeón, apruebas sin estudiar!",
+  "enfasis": [
+   5,
+   6
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 15.133,
+  "duracion": 5.133,
+  "texto": "Con un ocho en prácticas, bastaría un cuatro con veintiocho. Y presentarte, claro.",
+  "enfasis": [
+   12
+  ]
+ },
+ {
+  "escena": 6,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 20.267,
+  "duracion": 2.2,
+  "texto": "¿Qué nota necesitas tú en el final?",
+  "enfasis": []
+ }
+]

@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "70 % de descuento. 100 % de pérdidas. La Jupillo sabe cómo se hace de verdad. Humor negro de ficción.\n¿Haces Black Friday? ¿Rebajas de verdad o de las otras?\nMándaselo a quien monta rebajas sin hacer las cuentas.\n#blackfriday #tiendaonline #humornegro #rebajas #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Life of Riley\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "70 % de descuento. 100 % de pérdidas. La Jupillo sabe cómo se hace de verdad. Humor negro de ficción.\n¿Haces Black Friday? ¿Rebajas de verdad o de las otras?\nMándaselo a quien monta rebajas sin hacer las cuentas.\n#blackfriday #tiendaonline #humornegro #rebajas #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-20T18:45:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -20,11 +20,17 @@
     "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
   "musica": {
-    "titulo": "Life of Riley",
+    "titulo": "Investigations",
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Life_of_Riley.mp3"
+    "archivo": "Investigations.mp3",
+    "bpm": 95.7
   },
-  "renderizado": false
+  "renderizado": "2026-11-15T20:38:22+00:00",
+  "asset": "327_jambo_black_friday_70.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 18.13
+  }
 }
