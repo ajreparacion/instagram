@@ -11,7 +11,7 @@
   "_fuentes": [],
   "_comprobado": "Sin cifras ni funciones de producto: humor de ficción.",
   "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
-  "renderizado": false,
+  "renderizado": "2026-11-15T21:04:15+00:00",
   "comentario_fijado": "¿Cuántas veces has dicho «ya sale» sin que saliera? Episodio nuevo cada día en @neogestlab",
   "avance_siguiente": "Mañana: vendes a 12 € y te quedan 4,52 €",
   "monetizacion": {
@@ -25,6 +25,12 @@
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Life_of_Riley.mp3"
+    "archivo": "Life_of_Riley.mp3",
+    "bpm": 101.3
+  },
+  "asset": "316_ias_oficina_ep20_pedido.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 18.23
   }
 }

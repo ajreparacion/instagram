@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Llega la nómina y, al cabo de unos días, no sabes adónde se ha ido. La Jupillo hace la cuenta. Humor negro de ficción; las cifras son inventadas.\n¿Sabes adónde va tu nómina? Cuéntalo en comentarios.\nGH PLUS te enseña tu dinero disponible del mes y avisa al llegar al 80 % de un presupuesto por categoría.\nMándaselo a quien no sabe adónde se va la nómina.\n#humornegro #finanzaspersonales #ahorro #hogar #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "Llega la nómina y, al cabo de unos días, no sabes adónde se ha ido. La Jupillo hace la cuenta. Humor negro de ficción; las cifras son inventadas.\n¿Sabes adónde va tu nómina? Cuéntalo en comentarios.\nGH PLUS te enseña tu dinero disponible del mes y avisa al llegar al 80 % de un presupuesto por categoría.\nMándaselo a quien no sabe adónde se va la nómina.\n#humornegro #finanzaspersonales #ahorro #hogar #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-21T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -8,7 +8,7 @@
   "publico": "particular / hogar",
   "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "app": "GH PLUS",
-  "renderizado": false,
+  "renderizado": "2026-11-15T21:02:47+00:00",
   "_fuentes": [],
   "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
   "comentario_fijado": "¿Sabes adónde va tu nómina? Episodio nuevo cada día en @neogestlab",
@@ -21,10 +21,16 @@
     "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
   "musica": {
-    "titulo": "Monkeys Spinning Monkeys",
+    "titulo": "Sneaky Snitch",
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Monkeys_Spinning_Monkeys.mp3"
+    "archivo": "Sneaky_Snitch.mp3",
+    "bpm": 87.6
+  },
+  "asset": "507_jambo_app_dinero_disponible.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 18.97
   }
 }

@@ -24,7 +24,15 @@
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Fluffing_a_Duck.mp3"
+    "archivo": "Fluffing_a_Duck.mp3",
+    "bpm": 123.0
   },
-  "renderizado": false
+  "renderizado": false,
+  "_control_audio_fallo": {
+    "fecha": "2026-11-15T21:03:30+00:00",
+    "bloqueos": [
+      "voz distinta del guion: faltan ['tiburones'], sobran ['tigurones'] (rehacer esas frases)"
+    ],
+    "guion_md5": "71be8cfad9188454be658fbc96189bdc"
+  }
 }
