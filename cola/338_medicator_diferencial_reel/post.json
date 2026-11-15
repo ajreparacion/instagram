@@ -1,0 +1,22 @@
+{
+  "tipo": "reel",
+  "texto": "¿Y si el móvil leyera tus recetas? 📷\nAlgo que casi ninguna aplicación hace: con MEDICATOR enfocas la caja del medicamento con la cámara y salen sus datos oficiales (CIMA, de la Agencia Española de Medicamentos). Haces una foto a un volante o una receta y te propone apuntar la cita; tú lo revisas antes de guardar y la foto no sale de tu móvil.\nSi una medicina choca con tus alergias, salta un aviso rojo (orientativo: pregunta siempre a tu médico o farmacéutico). Y con el modo Muy fácil: letra enorme, voz y un botón grande para llamar a tu familia.\nPensada para personas mayores y para quien les cuida. Pruébala gratis. Enlace en el perfil.\n¿A quién de tu familia le vendría bien? Mándaselo.\nEscenas con datos ficticios · Voz generada por IA · By Neogest Lab\n\n#medicamentos #mayores #salud #cuidadores #recetas #tecnologia #neogestlab",
+  "cuando": "2026-11-15T21:00:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Promo diferencial de app (orden del dueño 15/11)",
+  "publico": "Mayores y quien los cuida",
+  "app": "MEDICATOR",
+  "app_slug": "medicator",
+  "comentario_fijado": "¿A quién de tu familia le vendría bien?",
+  "portada_ms": 0,
+  "motor_voz": "edge",
+  "video_externo": "https://media.base44.com/videos/public/6ae5244d4e2b32702f0a3cd6/c2523f761_medicator-diferencial.mp4",
+  "monetizacion": {
+    "objetivo": "clic_enlace",
+    "oferta": "prueba gratuita de MEDICATOR",
+    "paso_embudo": "visita_perfil -> clic_enlace"
+  },
+  "_comprobado": "15/11/2026: tomas reales en MEDICATOR con la usuaria de pruebas «Carmen» (datos ficticios): escaneo con lector real y consulta a CIMA en vivo, lectura de volante (OCR local), aviso de alergia, modo Muy fácil. Voz contrastada con faster-whisper. Sin «IA» para la lectura de papeles (el código es OCR + reglas).",
+  "renderizado": false
+}
