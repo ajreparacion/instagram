@@ -18,6 +18,9 @@ Cuándo: cada 2 h de 08:41 a 22:41 (Madrid), tarea única «Calidad cada 2 h». 
 - Post: cierre del formato (§5), atribución musical sin duplicar, pregunta final, sin cierres prohibidos; bloque `youtube` (título con #Shorts) y primeros 3 s, que en YouTube se puntúan igual.
 - Reels de datos: `python3 herramientas/control_datos.py` sobre el render y abre al menos una fuente.
 
+## Piezas con visto bueno del dueño
+- Si `calidad.json` lleva `"aprobado_por": "dueño"`, no la reevalúes, no la rechaces ni la muevas: sale a su hora. Deja tus observaciones en el campo `nota_calidad`.
+
 ## Rechazos automáticos
 - Jambo hecho con el motor sketch antiguo; > 30 s; silencios por encima del máximo; sin giro; sin atribución musical.
 - Promo de app que abre con funciones básicas, escaparate sin ANTES/DESPUÉS o calculadora.

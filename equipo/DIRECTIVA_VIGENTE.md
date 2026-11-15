@@ -91,7 +91,7 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 
 ## 7. Control de calidad y publicación
 - Calidad revisa cada vídeo en cuanto está renderizado (no solo lo que sale pronto), en su pasada única cada 2 h. Aprobado solo con nota ≥ 90 según `equipo/estandar_calidad.md` (v9: «parece hecho por humanos»; si suena a IA, máximo 89).
-- Los reels de redes se publican solo con `calidad.json` aprobado; el ciclo no publica sin él. Solo los vídeos de presentación del Centro esperan además el aprobado del dueño en el editor del Centro (VideoMezcla).
+- Los reels de redes se publican solo con `calidad.json` aprobado; el ciclo no publica sin él. Una pieza con visto bueno expreso del dueño (`"aprobado_por": "dueño"` en su calidad.json) no se reevalúa, no se rechaza ni se mueve: sale a su hora; Calidad solo añade sus observaciones en `nota_calidad`. Solo los vídeos de presentación del Centro esperan además el aprobado del dueño en el editor del Centro (VideoMezcla).
 - Todo lo programado debe salir a su hora: si una pieza no tiene nota ≥ 90 a 60 min de su hora, se mueve al siguiente hueco libre; nunca dos piezas en el mismo hueco ni encima de una aprobada.
 - Publicación: GitHub Actions (`ciclo.yml`, relanzado por `reloj.yml` cada 15 min) renderiza, publica en Instagram, Facebook (por ID de página, `/video_reels` para reels) y YouTube (Short con `herramientas/youtube.py`; `"youtube": {"omitir": true}` para no subir uno), y actualiza estadisticas.json y registro.log. Las llamadas a las API de Facebook y YouTube solo funcionan dentro de Actions.
 - Un `video_externo` en post.json (vídeo ya terminado, p. ej. de Neogest Studio) lo descarga el ciclo y lo sube a la release; su calidad.json anterior caduca.
@@ -137,3 +137,4 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - 2026-11-15 · Coordinación · Calidad pasa a una sola tarea cada 2 h de 08:41 a 22:41; Analista de monetización fusionado en Analista; Ventas en pausa.
 - 2026-11-15 · Coordinación · las tareas creadas por el dueño no se pueden editar desde un agente: sus prompts antiguos quedan derogados por §1, las duplicadas se anulan por §2 y el Creador trabaja en una pasada hasta que el dueño amplíe su horario.
 - 2026-11-15 · Coordinación · hecho en claude.ai: prompts de las tareas reducidos a «lee la directiva y tu rol»; Creador a 3 pasadas; Cazador lunes, miércoles y viernes; en pausa Calidad 12:51, Calidad noche, Analista de monetización y Ventas.
+- 2026-11-15 · Coordinación · el visto bueno del dueño en una pieza manda sobre la nota de Calidad (§7).
