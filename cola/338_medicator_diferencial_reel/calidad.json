@@ -1,15 +1,8 @@
 {
-  "nota": 80,
-  "aprobado": false,
-  "motivos": [
-    "BLOQUEO directiva VÍDEOS 14/11: dura 36,3 s (máximo 30 s)",
-    "Formato escaparate de 4 funciones (cámara, volante, alergias, modo Muy fácil): la directiva pide reels de app en ANTES/DESPUÉS y una idea por pieza (H6, B2)",
-    "Sin control_audio de Actions en post.json (vídeo externo); no se ha podido contrastar whisper en esta sesión",
-    "Bien: 1080x1920, −14,1 LUFS, pico −1,5 dBFS, sin silencios > 0,6 s; datos de ejemplo rotulados; aviso de alergia como orientativo; gancho legible en el segundo 0",
-    "Texto: falta el cierre literal «Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil»"
-  ],
-  "como_arreglarlo": "Recortar a ≤ 30 s con UNA función en ANTES/DESPUÉS (la más diferencial: la cámara lee la caja y salen los datos oficiales de CIMA), cierre de prueba gratuita literal en el post, y volver a pasar Calidad.",
-  "fecha": "2026-11-15T17:45:15+00:00",
-  "revisor": "Calidad (tarea programada)",
-  "render": "2026-11-15T16:49:51+00:00"
+  "aprobado": true,
+  "nota": 90,
+  "fecha": "2026-11-15T18:05:46+00:00",
+  "aprobado_por": "dueño",
+  "decision_dueno": "15/11/2026: visto bueno del dueño en la conversación tras ver medicator-diferencial.mp4 («Sí, que salga a las 21:00»).",
+  "observaciones": "36,3 s, 1080x1920, −14,1 LUFS, pico −1,5 dBTP; voz contrastada con faster-whisper; tomas reales con datos ficticios; hoja de fotogramas revisada."
 }
