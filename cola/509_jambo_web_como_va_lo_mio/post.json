@@ -1,33 +1,30 @@
 {
   "tipo": "reel",
-  "texto": "Cinco llamadas al taller para preguntar cómo va lo tuyo. En la web de un taller real se consulta el estado de la reparación con el número de orden y el teléfono.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nMándaselo a quien espera sin saber.\nEpisodio nuevo cada día en @neogestlab\n#webs #pymes #autonomos #neogestlab\nVoz y personajes generados por IA",
-  "cuando": "2026-11-23T13:40:00+01:00",
+  "texto": "Cinco llamadas al taller para preguntar cómo va lo tuyo. La Jupillo mira el estado en la web. Humor negro de ficción.\n¿Cuántas veces has llamado tú a un taller para saber cómo va lo tuyo?\nEn la web de un taller real se consulta el estado de la reparación con el número de orden y el teléfono.\nMándaselo a quien espera sin saber.\n#humornegro #taller #pymes #webs #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-20T16:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
-  "formato": "Serie El Jambo + web",
-  "publico": "negocios, asociaciones y aficiones que quieren web propia",
-  "formula": "humor negro con personaje + pivote de web (v9)",
+  "formato": "Serie El Jambo",
+  "publico": "cliente de un taller",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "app": "Webs a medida Neogest Lab",
-  "renderizado": "2026-11-14T10:13:07+00:00",
+  "renderizado": false,
   "_fuentes": [],
-  "_nota_creador": "11/11/2026 (webs a medida): Webs a medida de Neogest Lab: ajreparacion.com es el EJEMPLO de lo que se hace. Función de la web verificada en la ficha AJ Web; la idea de que el precio es asequible es del dueño (sin cifras) y debe confirmarla antes de publicar. Sin calidad.json no se publica. | 14/11: recortado a ≤ 20 s y sin venta en el texto ni en el vídeo (DIRECTIVA §14); la oferta WEB queda en el comentario fijado.",
-  "comentario_fijado": "¿Cuántas veces has llamado al taller? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu web a medida? Comenta WEB y te preparo una maqueta gratis, sin compromiso.",
-  "avance_siguiente": "Mañana: la avería que no sabes explicar.",
-  "audio_ig": {
-    "audio_id": "1127106596130760",
-    "titulo": "Move Ur Body (Instrumental) · half.cool",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "comentario_fijado": "¿Cuántas veces has llamado tú? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: cobras la nómina y no sabes adónde va",
   "portada_ms": 0,
-  "motor_voz": "melo",
-  "asset": "509_jambo_web_como_va_lo_mio.mp4",
+  "motor_voz": "edge",
   "monetizacion": {
     "objetivo": "visita_perfil",
-    "oferta": "Consultoría gratuita y presupuesto sin compromiso de web a medida",
-    "paso_embudo": "alcance → visita al perfil (enlace en bio)"
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
-  "_nota_calidad": "13/11: quitada del vídeo la tarjeta final de venta y la oferta del texto (DIRECTIVA §14 b-c); la oferta va en el comentario fijado. Re-render pendiente; Calidad reevalúa."
+  "musica": {
+    "titulo": "Investigations",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Investigations.mp3"
+  }
 }

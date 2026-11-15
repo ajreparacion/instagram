@@ -1,33 +1,30 @@
 {
   "tipo": "reel",
-  "texto": "Alquiler, luz, internet: lo mismo, cada mes, a mano.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nGH PLUS genera los pagos del mes de tus gastos fijos, sin duplicarlos.\nMándaselo a quien paga lo mismo a mano cada mes.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #finanzaspersonales #ahorro #ia #hogar #neogestlab\nVoz y personajes generados por IA",
+  "texto": "Alquiler, luz, internet: lo mismo, cada mes, a mano. La Jupillo ordena los pagos y descubre un doble pago. Humor negro de ficción.\n¿Qué pagas tú a mano cada mes? Cuéntalo en comentarios.\nGH PLUS genera los pagos del mes de tus gastos fijos, sin duplicarlos.\nMándaselo a quien paga lo mismo a mano cada mes.\n#humornegro #finanzaspersonales #ahorro #hogar #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-22T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
-  "formato": "Serie El Jambo + app",
-  "publico": "hogar y finanzas personales",
-  "formula": "humor negro con personaje + pivote de producto (v9)",
+  "formato": "Serie El Jambo",
+  "publico": "particular / hogar",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "app": "GH PLUS",
-  "renderizado": "2026-11-14T10:12:08+00:00",
+  "renderizado": false,
   "_fuentes": [],
-  "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90). | 14/11: recortado a ≤ 20 s para el re-render (calidad.json 13/11: recortar a ≤ 20 s, pivote con la Jupillo en pantalla).",
-  "comentario_fijado": "¿Cuántos pagos fijos tienes? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
-  "avance_siguiente": "Seguimos: más Jambo y más Jupillo.",
-  "audio_ig": {
-    "audio_id": "1403284444689007",
-    "titulo": "Good Time (feat. Lowen) (Instrumental) · Company Money",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "comentario_fijado": "¿Qué pagas tú a mano cada mes? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: buscas el número de serie con linterna",
   "portada_ms": 0,
-  "motor_voz": "melo",
-  "asset": "508_jambo_app_gastos_fijos.mp4",
+  "motor_voz": "edge",
   "monetizacion": {
-    "objetivo": "clic_enlace",
-    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
-    "paso_embudo": "visita_perfil -> clic_enlace"
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
-  "_nota_calidad": "13/11: quitada del vídeo la tarjeta final de venta y la oferta del texto (DIRECTIVA §14 b-c); la oferta va en el comentario fijado. Re-render pendiente; Calidad reevalúa."
+  "musica": {
+    "titulo": "Fluffing a Duck",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Fluffing_a_Duck.mp3"
+  }
 }

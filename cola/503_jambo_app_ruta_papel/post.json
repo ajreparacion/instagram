@@ -1,33 +1,30 @@
 {
   "tipo": "reel",
-  "texto": "Doce visitas, una libreta y la Pelota diciendo que gires a la izquierda.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nEn Gestión Integral 7D, «Mi día» ordena las visitas por carretera (si el servicio de rutas falla, en línea recta y lo avisa) y da la hora prevista de llegada.\nMándaselo a quien aún apunta las visitas en papel.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #autonomos #pymes #ia #facturacion #neogestlab\nVoz y personajes generados por IA",
+  "texto": "Doce visitas, una libreta y la Pelota diciendo que gires a la izquierda. La Jupillo descubre qué libreta era. Humor negro de ficción.\n¿Todavía apuntas las visitas en papel? Cuéntalo en comentarios.\nEn Gestión Integral 7D, «Mi día» ordena las visitas por carretera (si el servicio de rutas falla, en línea recta y lo avisa) y da la hora prevista de llegada.\nMándaselo a quien aún apunta las visitas en papel.\n#humornegro #autonomos #pymes #comerciales #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-17T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
-  "formato": "Serie El Jambo + app",
-  "publico": "autónomos y pymes",
-  "formula": "humor negro con personaje + pivote de producto (v9)",
+  "formato": "Serie El Jambo",
+  "publico": "comercial de calle",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "app": "Gestión Integral 7D",
-  "renderizado": "2026-11-14T09:12:19+00:00",
+  "renderizado": false,
   "_fuentes": [],
-  "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90). | 14/11: recortado a ≤ 20 s para el re-render (calidad.json 13/11: recortar a ≤ 20 s, pivote con la Jupillo en pantalla).",
-  "comentario_fijado": "¿Aún apuntas la ruta en papel? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
-  "avance_siguiente": "Más tarde: «responder a todos» sin querer.",
-  "audio_ig": {
-    "audio_id": "1018682932882496",
-    "titulo": "Made It Out (Instrumental) · Robin-Huws",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "comentario_fijado": "¿Todavía apuntas las visitas en papel? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: faltan cuarenta euros en la caja",
   "portada_ms": 0,
-  "motor_voz": "melo",
-  "asset": "503_jambo_app_ruta_papel.mp4",
+  "motor_voz": "edge",
   "monetizacion": {
-    "objetivo": "clic_enlace",
-    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
-    "paso_embudo": "visita_perfil -> clic_enlace"
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
-  "_nota_calidad": "13/11: quitada del vídeo la tarjeta final de venta y la oferta del texto (DIRECTIVA §14 b-c); la oferta va en el comentario fijado. Re-render pendiente; Calidad reevalúa."
+  "musica": {
+    "titulo": "Investigations",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Investigations.mp3"
+  }
 }

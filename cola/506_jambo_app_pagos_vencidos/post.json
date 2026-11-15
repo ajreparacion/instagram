@@ -1,33 +1,30 @@
 {
   "tipo": "reel",
-  "texto": "Se te olvidó pagar la luz. Otra vez. No eres un desastre: tienes la cabeza en todo.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nGH PLUS avisa de los pagos vencidos y los marcas con «Marcar pagado».\nMándaselo a quien siempre paga el último día.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #finanzaspersonales #ahorro #ia #hogar #neogestlab\nVoz y personajes generados por IA",
+  "texto": "Se te olvidó pagar la luz. Otra vez. No eres un desastre: tienes la cabeza en todo. Humor negro de ficción.\n¿Qué recibo se te olvida siempre pagar? Cuéntalo en comentarios.\nGH PLUS avisa de los pagos vencidos y los marcas con «Marcar pagado».\nMándaselo a quien siempre paga el último día.\n#humornegro #finanzaspersonales #hogar #recibos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Life of Riley\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-20T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
-  "formato": "Serie El Jambo + app",
-  "publico": "hogar y finanzas personales",
-  "formula": "humor negro con personaje + pivote de producto (v9)",
+  "formato": "Serie El Jambo",
+  "publico": "particular / hogar",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "app": "GH PLUS",
-  "renderizado": "2026-11-14T09:41:34+00:00",
+  "renderizado": false,
   "_fuentes": [],
-  "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90). | 14/11: recortado a ≤ 20 s para el re-render (calidad.json 13/11: recortar a ≤ 20 s, pivote con la Jupillo en pantalla).",
-  "comentario_fijado": "¿Cuál fue el último recibo que se te pasó? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
-  "avance_siguiente": "Mañana: la nómina que desaparece.",
-  "audio_ig": {
-    "audio_id": "1127106596130760",
-    "titulo": "Move Ur Body (Instrumental) · half.cool",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "comentario_fijado": "¿Qué recibo se te olvida siempre pagar? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: cobras la nómina y no sabes adónde va",
   "portada_ms": 0,
-  "motor_voz": "melo",
-  "asset": "506_jambo_app_pagos_vencidos.mp4",
+  "motor_voz": "edge",
   "monetizacion": {
-    "objetivo": "clic_enlace",
-    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
-    "paso_embudo": "visita_perfil -> clic_enlace"
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
-  "_nota_calidad": "13/11: quitada del vídeo la tarjeta final de venta y la oferta del texto (DIRECTIVA §14 b-c); la oferta va en el comentario fijado. Re-render pendiente; Calidad reevalúa."
+  "musica": {
+    "titulo": "Life of Riley",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Life_of_Riley.mp3"
+  }
 }

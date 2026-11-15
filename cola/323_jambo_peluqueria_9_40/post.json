@@ -1,18 +1,18 @@
 {
   "tipo": "reel",
-  "texto": "La de las 9 llega a las 9:40. Siempre. Humor negro de ficción.\n¿Cuánto esperas tú?\n#peluqueria #humornegro #ia #autonomos\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "La de las 9 llega a las 9:40. Siempre. La Jupillo ha encontrado el truco. Humor negro de ficción.\n¿Cuánto esperas tú a quien llega tarde? Cuéntalo en comentarios.\nMándaselo a quien siempre espera a la clienta que llega tarde.\n#peluqueria #humornegro #agenda #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-16T18:45:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
   "formato": "Serie El Jambo",
-  "publico": "peluqueria",
-  "formula": "humor con personaje (v8 B2)",
+  "publico": "peluquería",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "_fuentes": [],
   "_comprobado": "Sin cifras de estudio: solo cifras del guion de ficción; no se afirma ningún dato real.",
-  "_nota_creador": "15/11/2026 Creador, calendario_16-22nov.md. Falta render (edge-tts) y Calidad ≥ 90; sin calidad.json aprobado no se publica.",
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
   "motor_voz": "edge",
-  "comentario_fijado": "¿Cuánto esperas tú? Palabra clave WEB o APP si quieres tu maqueta gratis.",
-  "avance_siguiente": "Parte 2 mañana: la mesa de doce.",
+  "comentario_fijado": "¿Cuánto esperas tú? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: tu ruta de visitas está en papel",
   "portada_ms": 0,
   "monetizacion": {
     "objetivo": "visita_perfil",
@@ -20,17 +20,11 @@
     "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
   "musica": {
-    "titulo": "Monkeys Spinning Monkeys",
+    "titulo": "Fluffing a Duck",
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Monkeys_Spinning_Monkeys.mp3",
-    "bpm": 143.6
+    "archivo": "Fluffing_a_Duck.mp3"
   },
-  "renderizado": false,
-  "asset": "323_jambo_peluqueria_9_40.mp4",
-  "control_audio": {
-    "aprobado": true,
-    "duracion_s": 20.5
-  }
+  "renderizado": false
 }

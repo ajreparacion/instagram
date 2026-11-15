@@ -1,33 +1,30 @@
 {
   "tipo": "reel",
-  "texto": "«Te pago mañana» lleva ya tres semanas siendo mañana.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nEn Gestión Integral 7D la factura en PDF lleva enlace de pago: tarjeta, Bizum (si está activo) o transferencia.\nMándaselo a quien cobra a base de insistir.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #autonomos #pymes #ia #facturacion #neogestlab\nVoz y personajes generados por IA",
+  "texto": "«Te pago mañana» lleva ya tres semanas siendo mañana. La Jupillo manda un enlace y cobra en un minuto. Humor negro de ficción.\n¿Cuánto llevas esperando un cobro? Cuéntalo en comentarios.\nEn Gestión Integral 7D la factura en PDF lleva enlace de pago: tarjeta, Bizum (si está activo) o transferencia.\nMándaselo a quien cobra a base de insistir.\n#humornegro #autonomos #pymes #cobros #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-22T16:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
-  "formato": "Serie El Jambo + app",
-  "publico": "autónomos y pymes",
-  "formula": "humor negro con personaje + pivote de producto (v9)",
+  "formato": "Serie El Jambo",
+  "publico": "autónomo / servicios",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "app": "Gestión Integral 7D",
-  "renderizado": "2026-11-14T09:11:26+00:00",
+  "renderizado": false,
   "_fuentes": [],
-  "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90). | 14/11: recortado a ≤ 20 s para el re-render (calidad.json 13/11: recortar a ≤ 20 s, pivote con la Jupillo en pantalla).",
-  "comentario_fijado": "¿Cuál es tu «mañana» más largo? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
-  "avance_siguiente": "Mañana: tu ruta de visitas está en papel.",
-  "audio_ig": {
-    "audio_id": "1174983090781223",
-    "titulo": "Float In The Waves (Instrumental) · Company Money",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "comentario_fijado": "¿Cuánto llevas esperando un cobro? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: buscas el número de serie con linterna",
   "portada_ms": 0,
-  "motor_voz": "melo",
-  "asset": "502_jambo_app_cobro_manana.mp4",
+  "motor_voz": "edge",
   "monetizacion": {
-    "objetivo": "clic_enlace",
-    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
-    "paso_embudo": "visita_perfil -> clic_enlace"
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
-  "_nota_calidad": "13/11: quitada del vídeo la tarjeta final de venta y la oferta del texto (DIRECTIVA §14 b-c); la oferta va en el comentario fijado. Re-render pendiente; Calidad reevalúa."
+  "musica": {
+    "titulo": "Monkeys Spinning Monkeys",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Monkeys_Spinning_Monkeys.mp3"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "tipo": "reel",
   "texto": "¿Todavía haces el 303 con una hoja de cálculo? 📊\nGestoría7D es tu gestoría en una app: libros de ingresos y gastos, modelos 303, 130, 111 y 115 calculados desde tus libros, calendario fiscal con «Qué tienes que hacer», Renta para particulares y modo multicliente para gestorías.\nImportante: calcula y prepara; los modelos los presentas tú en la Sede Electrónica de la AEAT. No sustituye el asesoramiento de un gestor.\nPlan Gratis para probar, sin tarjeta. Planes desde 3,90 €/mes + IVA. Enlace en el perfil.\n¿Quién te lleva hoy los impuestos: tú, un gestor o nadie? Cuéntalo en comentarios.\nVoz generada por IA · By Neogest Lab\n\n#autonomos #impuestos #modelo303 #gestoria #pymes #renta #neogestlab\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
-  "cuando": "2026-11-15T19:20:00+01:00",
+  "cuando": "2026-11-18T11:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
   "formato": "Una idea, una app (grabación de la web pública)",
@@ -30,12 +30,5 @@
   ],
   "_comprobado": "15/11/2026: textos tomados de la web pública (Plan Gratis sin tarjeta, desde 3,90 €/mes + IVA, 303/130/111/115 desde libros, «Qué tienes que hacer», aviso de que presenta el usuario). Prohibido: presentar ante AEAT, asesorar, Google Play, móvil, tarjeta.",
   "renderizado": false,
-  "_control_audio_fallo": {
-    "fecha": "2026-11-15T10:31:57+00:00",
-    "bloqueos": [
-      "falta el giro (escena «remate»)",
-      "voz distinta del guion: faltan ['calcula', 'pruebala'], sobran ['calcule', 'prueba', 'la'] (rehacer esas frases)"
-    ],
-    "guion_md5": "a61d1358b44e6e4a19df757fa158406f"
-  }
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad (ANTES/DESPUÉS, giro, sin precios ni venta en la voz); renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render y mirar control/*.jpg (los tiempos de los clips se han reajustado sin poder abrir la grabación desde aquí)."
 }

@@ -1,33 +1,30 @@
 {
   "tipo": "reel",
-  "texto": "Tu tienda no sale en internet y los clientes buscan en el móvil.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nMándaselo a quien vende sin internet.\nEpisodio nuevo cada día en @neogestlab\n#webs #pymes #autonomos #neogestlab\nVoz y personajes generados por IA",
-  "cuando": "2026-11-27T13:40:00+01:00",
+  "texto": "Tu tienda no sale en internet y los clientes buscan en el móvil. La Jupillo monta el catálogo y llega el primer pedido. Humor negro de ficción.\n¿Tu negocio sale en internet? Cuéntalo en comentarios.\nMándaselo a quien vende sin internet.\n#humornegro #tienda #pymes #webs #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-25T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
-  "formato": "Serie El Jambo + web",
-  "publico": "negocios, asociaciones y aficiones que quieren web propia",
-  "formula": "humor negro con personaje + pivote de web (v9)",
+  "formato": "Serie El Jambo",
+  "publico": "tienda de barrio",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "app": "Webs a medida Neogest Lab",
-  "renderizado": "2026-11-14T10:43:24+00:00",
+  "renderizado": false,
   "_fuentes": [],
-  "_nota_creador": "11/11/2026 (webs a medida): Webs a medida de Neogest Lab: ajreparacion.com es el EJEMPLO de lo que se hace. Función de la web verificada en la ficha AJ Web; la idea de que el precio es asequible es del dueño (sin cifras) y debe confirmarla antes de publicar. Sin calidad.json no se publica. | 14/11: recortado a ≤ 20 s y sin venta en el texto ni en el vídeo (DIRECTIVA §14); la oferta WEB queda en el comentario fijado.",
-  "comentario_fijado": "¿Te encuentran tus clientes en internet? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu web a medida? Comenta WEB y te preparo una maqueta gratis, sin compromiso.",
-  "avance_siguiente": "Mañana: el oficio.",
-  "audio_ig": {
-    "audio_id": "25873624668895779",
-    "titulo": "Coming Back (Instrumental) · Flow Loris",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "comentario_fijado": "¿Tu negocio sale en internet? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: tus clientes solo te llaman por teléfono",
   "portada_ms": 0,
-  "motor_voz": "melo",
-  "asset": "513_jambo_web_tienda.mp4",
+  "motor_voz": "edge",
   "monetizacion": {
     "objetivo": "visita_perfil",
-    "oferta": "Consultoría gratuita y presupuesto sin compromiso de web a medida",
-    "paso_embudo": "alcance → visita al perfil (enlace en bio)"
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
-  "_nota_calidad": "13/11: quitada del vídeo la tarjeta final de venta y la oferta del texto (DIRECTIVA §14 b-c); la oferta va en el comentario fijado. Re-render pendiente; Calidad reevalúa."
+  "musica": {
+    "titulo": "Fluffing a Duck",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Fluffing_a_Duck.mp3"
+  }
 }

@@ -1,149 +1,135 @@
 {
- "titulo": "El Jambo que sabe y las IAs · ep. 29",
- "semilla": 3029,
- "modo": "sketch",
- "serie": "El Jambo que sabe y las IAs",
- "episodio": 29,
- "negocio": "pyme con clientes fijos",
- "gancho_corto": "«¿ME REENVÍAS LA FACTURA?»",
- "portada_texto": "POV: tus clientes piden la factura otra vez",
- "musica": true,
- "app": "Webs a medida Neogest Lab",
- "contador": {
-  "texto": "Veces que se lo ha pasado a la Jupillo",
-  "inicio": 28,
-  "valor": 29
- },
- "mensaje_final": {
-  "cifra": "Cada correo que reenvías es una hora que no vuelve.",
-  "fuente": ""
- },
- "escenas": [
-  {
-   "estilo": "gancho",
-   "hablante": "jambo",
-   "voz": "¿La factura? ¡Se la *reenvío*!",
-   "texto": "POV: tus clientes piden la factura otra vez",
-   "dibujo": {
-    "personajes": [
-     "jambo",
-     "pelota"
-    ],
-    "acciones": {
-     "jambo": "desespera",
-     "pelota": "habla"
-    }
-   },
-   "contar": false
+  "titulo": "El Jambo que sabe y las IAs · ep. 29",
+  "semilla": 3029,
+  "modo": "sketch",
+  "serie": "El Jambo que sabe y las IAs",
+  "episodio": 29,
+  "negocio": "pyme con clientes fijos",
+  "portada_texto": "POV: tus clientes piden la factura otra vez",
+  "musica": true,
+  "mensaje_final": {
+    "cifra": "",
+    "fuente": ""
   },
-  {
-   "estilo": "gag",
-   "hablante": "pelota",
-   "voz": "Está en el correo. De 2019.",
-   "texto": "La Pelota",
-   "dibujo": {
-    "personajes": [
-     "jambo",
-     "pelota"
-    ],
-    "acciones": {
-     "jambo": "desespera",
-     "pelota": "habla"
-    }
-   }
-  },
-  {
-   "estilo": "remate",
-   "hablante": "pelota",
-   "voz": "",
-   "texto": "",
-   "dibujo": {
-    "personajes": [
-     "jambo",
-     "pelota"
-    ],
-    "acciones": {
-     "jambo": "desespera",
-     "pelota": "habla"
+  "escenas": [
+    {
+      "estilo": "gancho",
+      "hablante": "jambo",
+      "voz": "¿La factura? ¡Se la *reenvío*! ¡Otra vez!",
+      "texto": "POV: tus clientes piden la factura otra vez",
+      "dibujo": {
+        "personajes": [
+          "jambo",
+          "pelota"
+        ],
+        "acciones": {
+          "jambo": "habla",
+          "pelota": "habla"
+        }
+      }
     },
-    "efecto": "sello",
-    "efecto_t": 0.7,
-    "sello_texto": "REENVIAR"
-   },
-   "duracion": 1.6
-  },
-  {
-   "estilo": "delega",
-   "hablante": "jambo",
-   "voz": "Que lo haga la Jupillo.",
-   "texto": "",
-   "dibujo": {
-    "personajes": [
-     "jambo",
-     "jupillo"
-    ],
-    "acciones": {
-     "jambo": "delega",
-     "jupillo": "habla"
+    {
+      "estilo": "gag",
+      "hablante": "jambo",
+      "voz": "Búscala tú, Pelota.",
+      "texto": "El Jambo",
+      "dibujo": {
+        "personajes": [
+          "jambo",
+          "pelota"
+        ],
+        "acciones": {
+          "jambo": "desespera",
+          "pelota": "habla"
+        }
+      }
+    },
+    {
+      "estilo": "gag",
+      "hablante": "pelota",
+      "voz": "Está en el correo. De dos mil *diecinueve*.",
+      "texto": "La Pelota",
+      "dibujo": {
+        "personajes": [
+          "pelota",
+          "jambo"
+        ],
+        "acciones": {
+          "pelota": "habla",
+          "jambo": "desespera"
+        }
+      }
+    },
+    {
+      "estilo": "gag",
+      "hablante": "tramites",
+      "voz": "Reenviar facturas exige tres firmas. Y *nostalgia*.",
+      "texto": "La Trámites",
+      "dibujo": {
+        "personajes": [
+          "tramites",
+          "pelota"
+        ],
+        "acciones": {
+          "tramites": "habla",
+          "pelota": "habla"
+        }
+      }
+    },
+    {
+      "estilo": "gag",
+      "hablante": "bola",
+      "voz": "¡Reenviar es *conectar*! ¡Cuarenta veces, mejor!",
+      "texto": "El Bola",
+      "dibujo": {
+        "personajes": [
+          "bola",
+          "tramites"
+        ],
+        "acciones": {
+          "bola": "presume",
+          "tramites": "habla"
+        }
+      }
+    },
+    {
+      "estilo": "remate",
+      "hablante": "jupillo",
+      "voz": "Portal listo. Se bajaron todo. Y vieron que cobraste una *dos veces*.",
+      "texto": "La Jupillo",
+      "dibujo": {
+        "personajes": [
+          "jupillo",
+          "bola"
+        ],
+        "acciones": {
+          "jupillo": "habla",
+          "bola": "habla"
+        },
+        "efecto": "sello",
+        "efecto_t": 0.6,
+        "sello_texto": "DOS VECES"
+      }
+    },
+    {
+      "estilo": "cierre",
+      "hablante": null,
+      "voz": "¿Cuántas veces reenvías la misma factura?",
+      "texto": "¿Cuántas veces reenvías la misma factura?",
+      "dibujo": {
+        "personajes": [],
+        "accion": "serio"
+      }
     }
-   },
-   "contar": true
-  },
-  {
-   "estilo": "gag",
-   "hablante": "jupillo",
-   "voz": "Portal del cliente: órdenes, presupuestos y facturas.",
-   "texto": "La Jupillo",
-   "dibujo": {
+  ],
+  "dibujo": {
     "personajes": [
-     "jupillo"
-    ],
-    "acciones": {
-     "jupillo": "habla"
-    }
-   }
+      "jambo",
+      "jupillo",
+      "pelota",
+      "bola",
+      "tramites"
+    ]
   },
-  {
-   "estilo": "gag",
-   "hablante": "jambo",
-   "voz": "Atiendo a todos. Crack.",
-   "texto": "El Jambo",
-   "dibujo": {
-    "personajes": [
-     "jupillo",
-     "jambo"
-    ],
-    "acciones": {
-     "jupillo": "habla",
-     "jambo": "remata"
-    }
-   },
-   "cartel": "PORTAL DEL CLIENTE · MÉRITO: EL JAMBO"
-  },
-  {
-   "estilo": "gag",
-   "hablante": "jupillo",
-   "voz": "Mándaselo a quien reenvía facturas.",
-   "texto": "La Jupillo",
-   "dibujo": {
-    "personajes": [
-     "jupillo"
-    ],
-    "acciones": {
-     "jupillo": "habla"
-    }
-   }
-  }
- ],
- "dibujo": {
-  "personajes": [
-   "jambo",
-   "jupillo",
-   "pelota",
-   "bola",
-   "tramites"
-  ]
- },
- "_guion": "11/11/2026 v9 (equipo/formula_v9_humor_negro_producto.md): fórmula del cambio 40 + mensaje serio + pivote de producto (una función de hechos_verificados) + cierre único. | 14/11/2026 Creador: recortado a ≤ 20 s (DIRECTIVA §14): sin tarjetas oscuras ni venta en el vídeo; el reenvío cierra en la voz de la Jupillo.",
- "marca_serie": "@neogestlab · episodio nuevo cada día"
+  "_guion": "15/11/2026 Creador (pasada extra, orden del dueño): rehecho con la fórmula vigente: situación en el segundo 0, planteamiento en una frase, escalada en tres golpes, giro propio, cierre con pregunta; sin muletilla, sin dato ni venta en el vídeo; cifras en letra; frases cortas; edge-tts."
 }

@@ -1,33 +1,30 @@
 {
   "tipo": "reel",
-  "texto": "Visitar a todos los clientes no es una estrategia: es cansancio con coche.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nEn Gestión Integral 7D los clientes se clasifican en A, B y C, con ubicación y fecha de la última visita.\nMándaselo a quien visita por instinto.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #autonomos #pymes #ia #facturacion #neogestlab\nVoz y personajes generados por IA",
+  "texto": "Visitar a todos los clientes no es una estrategia: es cansancio con coche. La Jupillo los clasifica. Humor negro de ficción.\n¿A qué cliente visitas tú primero? Cuéntalo en comentarios.\nEn Gestión Integral 7D los clientes se clasifican en A, B y C, con ubicación y fecha de la última visita.\nMándaselo a quien visita a los clientes por instinto.\n#humornegro #autonomos #pymes #ventas #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-18T20:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
-  "formato": "Serie El Jambo + app",
-  "publico": "autónomos y pymes",
-  "formula": "humor negro con personaje + pivote de producto (v9)",
+  "formato": "Serie El Jambo",
+  "publico": "comercial / pyme",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "app": "Gestión Integral 7D",
-  "renderizado": "2026-11-14T09:26:16+00:00",
+  "renderizado": false,
   "_fuentes": [],
-  "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90). | 14/11: recortado a ≤ 20 s para el re-render (calidad.json 13/11: recortar a ≤ 20 s, pivote con la Jupillo en pantalla).",
-  "comentario_fijado": "¿Cuánto hace que no visitas a tu mejor cliente? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
-  "avance_siguiente": "Mañana: la IA te factura 40.000 euros.",
-  "audio_ig": {
-    "audio_id": "583674661052146",
-    "titulo": "Latina (Instrumental) · Tony Dark Eyes",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "comentario_fijado": "¿A quién visitas tú primero? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: tecleas dos veces lo mismo",
   "portada_ms": 0,
-  "motor_voz": "melo",
-  "asset": "504_jambo_app_clientes_abc.mp4",
+  "motor_voz": "edge",
   "monetizacion": {
-    "objetivo": "clic_enlace",
-    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
-    "paso_embudo": "visita_perfil -> clic_enlace"
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
-  "_nota_calidad": "13/11: quitada del vídeo la tarjeta final de venta y la oferta del texto (DIRECTIVA §14 b-c); la oferta va en el comentario fijado. Re-render pendiente; Calidad reevalúa."
+  "musica": {
+    "titulo": "Fluffing a Duck",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Fluffing_a_Duck.mp3"
+  }
 }

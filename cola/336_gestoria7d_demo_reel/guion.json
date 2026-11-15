@@ -1,51 +1,63 @@
 {
- "titulo": "Gestoría7D · demo (web pública, datos ficticios)",
- "semilla": 3360,
- "modo": "app",
- "plantilla": true,
- "video": "demo.mp4",
- "volumen_original": 0,
- "musica": true,
- "portada_texto": "¿El 303 todavía en una hoja de cálculo?",
- "escenas": [
-  {
-   "estilo": "gancho",
-   "texto": "¿El 303 todavía *en una hoja de cálculo*?",
-   "voz": "¿El trescientos tres todavía en una *hoja de cálculo*?",
-   "clip": {
-    "inicio": 0.3,
-    "fin": 2.8
-   }
-  },
-  {
-   "estilo": "tramo",
-   "clip": {
-    "inicio": 3.0,
-    "fin": 9.5
-   },
-   "voz": "Con Gestoría siete de, tus ingresos y gastos van a tus libros, y el trescientos tres sale *calculado* desde ellos."
-  },
-  {
-   "estilo": "tramo",
-   "clip": {
-    "inicio": 9.5,
-    "fin": 13.0
-   },
-   "voz": "La app te ordena los plazos y te lleva al modelo con *un botón*."
-  },
-  {
-   "estilo": "tramo",
-   "clip": {
-    "inicio": 13.0,
-    "fin": 23.0
-   },
-   "voz": "Para particulares, autónomos, sociedades y gestorías. Calcula y prepara: *tú presentas*."
-  },
-  {
-   "estilo": "cierre",
-   "texto": "Plan Gratis para probar · sin tarjeta",
-   "voz": "Pruébala *gratis*, sin tarjeta. Enlace en el perfil."
-  }
- ],
- "_guion": "15/11/2026 orden del dueño (demos de apps nuevas hoy). Grabación de la web pública de Gestoría7D (ejemplo con datos ficticios de la propia web), herramientas/grabar_pantalla.py con grabacion.json. Solo afirmaciones que dice la propia web y la ficha claude/apps/gestoria7d.md."
+  "titulo": "Gestoría7D · demo (web pública, datos ficticios)",
+  "semilla": 3360,
+  "modo": "app",
+  "plantilla": true,
+  "video": "demo.mp4",
+  "volumen_original": 0,
+  "musica": true,
+  "portada_texto": "¿El 303 otra vez en una hoja de cálculo?",
+  "escenas": [
+    {
+      "estilo": "gancho",
+      "texto": "¿El 303 otra vez *en una hoja de cálculo*?",
+      "voz": "¿El trescientos tres otra vez en una *hoja de cálculo*?",
+      "clip": {
+        "inicio": 0.3,
+        "fin": 2.8
+      }
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 3.0,
+        "fin": 9.5
+      },
+      "texto": "Tus libros alimentan el modelo",
+      "voz": "Aquí tus ingresos y gastos van a tus libros. Y el trescientos tres sale *calculado* desde ellos."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 9.5,
+        "fin": 13.0
+      },
+      "texto": "Plazos ordenados",
+      "voz": "Los plazos, ordenados. Y un botón te lleva al *modelo*."
+    },
+    {
+      "estilo": "tramo",
+      "clip": {
+        "inicio": 13.0,
+        "fin": 23.0
+      },
+      "texto": "Para quién es",
+      "voz": "Sirve a particulares, autónomos, sociedades y gestorías. Lo dejas *preparado* y lo presentas tú."
+    },
+    {
+      "estilo": "remate",
+      "clip": {
+        "inicio": 3.0,
+        "fin": 6.0
+      },
+      "texto": "Antes: fórmulas · Ahora: un botón",
+      "voz": "Antes, fórmulas y pestañas. Ahora, *un botón*."
+    },
+    {
+      "estilo": "cierre",
+      "texto": "Plan Gratis para probar · sin tarjeta",
+      "voz": "Empieza con el plan *gratis*, sin tarjeta. Enlace en el perfil."
+    }
+  ],
+  "_guion": "15/11/2026 orden del dueño (demos de apps nuevas hoy). Grabación de la web pública de Gestoría7D (ejemplo con datos ficticios de la propia web), herramientas/grabar_pantalla.py con grabacion.json. Solo afirmaciones que dice la propia web y la ficha claude/apps/gestoria7d.md."
 }

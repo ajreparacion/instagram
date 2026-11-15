@@ -1,33 +1,29 @@
 {
   "tipo": "reel",
-  "texto": "Tus clientes piden otra vez la factura por correo. Un portal de clientes con órdenes, presupuestos y facturas lo evita.\nEl Jambo lo delega en la Jupillo. Humor negro de ficción; los personajes son inventados.\nMándaselo a quien reenvía facturas.\nEpisodio nuevo cada día en @neogestlab\n#webs #pymes #autonomos #neogestlab\nVoz y personajes generados por IA",
-  "cuando": "2026-11-29T13:40:00+01:00",
+  "texto": "Tus clientes piden otra vez la factura por correo. La Jupillo abre el portal y alguien descubre algo. Humor negro de ficción.\n¿Cuántas veces reenvías tú la misma factura? Cuéntalo en comentarios.\nUn portal de clientes con órdenes, presupuestos y facturas evita reenviar la misma factura.\nMándaselo a quien reenvía facturas.\n#humornegro #facturas #pymes #webs #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Life of Riley\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-27T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
-  "formato": "Serie El Jambo + web",
-  "publico": "negocios, asociaciones y aficiones que quieren web propia",
-  "formula": "humor negro con personaje + pivote de web (v9)",
+  "formato": "Serie El Jambo",
+  "publico": "pyme con clientes fijos",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "app": "Webs a medida Neogest Lab",
-  "renderizado": "2026-11-14T10:56:58+00:00",
+  "renderizado": false,
   "_fuentes": [],
-  "_nota_creador": "11/11/2026 (webs a medida): Webs a medida de Neogest Lab: ajreparacion.com es el EJEMPLO de lo que se hace. Función de la web verificada en la ficha AJ Web; la idea de que el precio es asequible es del dueño (sin cifras) y debe confirmarla antes de publicar. Sin calidad.json no se publica. | 14/11: recortado a ≤ 20 s y sin venta en el texto ni en el vídeo (DIRECTIVA §14); la oferta WEB queda en el comentario fijado.",
-  "comentario_fijado": "¿Cuántas veces reenvías la misma factura? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu web a medida? Comenta WEB y te preparo una maqueta gratis, sin compromiso.",
-  "avance_siguiente": "Seguimos: más Jambo y más Jupillo.",
-  "audio_ig": {
-    "audio_id": "1852688158814799",
-    "titulo": "Hypnotized (Instrumental) · Company Money",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "comentario_fijado": "¿Cuántas veces reenvías la misma factura? Episodio nuevo cada día en @neogestlab",
   "portada_ms": 0,
-  "motor_voz": "melo",
-  "asset": "515_jambo_web_empresa.mp4",
+  "motor_voz": "edge",
   "monetizacion": {
     "objetivo": "visita_perfil",
-    "oferta": "Consultoría gratuita y presupuesto sin compromiso de web a medida",
-    "paso_embudo": "alcance → visita al perfil (enlace en bio)"
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
-  "_nota_calidad": "13/11: quitada del vídeo la tarjeta final de venta y la oferta del texto (DIRECTIVA §14 b-c); la oferta va en el comentario fijado. Re-render pendiente; Calidad reevalúa."
+  "musica": {
+    "titulo": "Life of Riley",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Life_of_Riley.mp3"
+  }
 }

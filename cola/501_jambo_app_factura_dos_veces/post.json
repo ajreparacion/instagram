@@ -1,35 +1,32 @@
 {
   "tipo": "reel",
-  "texto": "Cada factura se teclea dos veces: una en el presupuesto y otra, igual, al facturar.\nEl Jambo lo delega en la Jupillo, como siempre. Humor negro de ficción; los personajes son inventados.\nEn Gestión Integral 7D, presupuesto, pedido, albarán y factura heredan líneas e IVA del documento anterior.\nFuente de la cifra: ATA, según The Objective (18/12/2025).\nMándaselo a quien factura dos veces.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #autonomos #pymes #facturacion #neogestlab\nVoz y personajes generados por IA",
-  "cuando": "2026-11-15T14:00:00+01:00",
+  "texto": "Cada factura se teclea dos veces: una en el presupuesto y otra, igual, al facturar. La Jupillo cuenta los errores. Humor negro de ficción.\n¿Cuántas veces has tecleado lo mismo hoy? Cuéntalo en comentarios.\nDato: los autónomos dedican de media unas 200 horas al año a trámites con las administraciones, según ATA (The Objective, 18/12/2025).\nEn Gestión Integral 7D, presupuesto, pedido, albarán y factura heredan líneas e IVA del documento anterior.\nMándaselo a quien factura dos veces.\n#humornegro #autonomos #pymes #facturacion #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-19T11:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
-  "formato": "Serie El Jambo + app",
-  "publico": "autónomos y pymes",
-  "formula": "humor negro con personaje + pivote de producto (v9)",
+  "formato": "Serie El Jambo",
+  "publico": "autónomo (carpintería)",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "app": "Gestión Integral 7D",
-  "renderizado": "2026-11-13T14:17:33+00:00",
+  "renderizado": false,
   "_fuentes": [
     "ATA, según The Objective (18/12/2025)"
   ],
-  "_nota_creador": "11/11/2026: bloque v9 (501-508). Función de la app tomada de hechos_verificados/novedades_apps («usable»). Sin calidad.json no se publica: Calidad puntúa tras el render con voz (≥ 90).",
-  "comentario_fijado": "¿Cuántas veces has tecleado lo mismo hoy? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
-  "avance_siguiente": "Más tarde: el presupuesto «cerrado» de la reforma.",
-  "audio_ig": {
-    "audio_id": "921967353426231",
-    "titulo": "Bajalo (Instrumental) · Company Money",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "comentario_fijado": "¿Cuántas veces tecleas tú lo mismo? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: «un cambio pequeñito» por decimocuarta vez",
   "portada_ms": 0,
-  "motor_voz": "melo",
-  "asset": "501_jambo_app_factura_dos_veces.mp4",
+  "motor_voz": "edge",
   "monetizacion": {
-    "objetivo": "clic_enlace",
-    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
-    "paso_embudo": "visita_perfil -> clic_enlace"
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
-  "_nota_calidad": "13/11 tarde: reevaluado tras el re-render; aprobado 90. Quitado #ia (6 → 5 hashtags, B6)."
+  "musica": {
+    "titulo": "Sneaky Snitch",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Sneaky_Snitch.mp3"
+  }
 }

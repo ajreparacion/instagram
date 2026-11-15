@@ -1,7 +1,7 @@
 {
   "tipo": "reel",
   "texto": "¿Sigues apuntando las temperaturas en un papel pegado en la nevera? 🧊\nAPPCC Fácil lleva los registros de autocontrol de tu bar, restaurante u obrador en el móvil: temperaturas de cámaras y vitrinas, limpieza, aceite de fritura y recepción de mercancía. Si un valor sale de rango, la app te pide la acción correctora. Y sacas el informe por fechas con los datos de tu establecimiento, listo para imprimir o guardar en PDF.\nPlan Gratis para probar. Plan Local: 12,90 €/mes o 9,90 €/mes en pago anual (+ IVA), con 7 días de prueba y sin permanencia. Enlace en el perfil.\nAPPCC Fácil es una herramienta de ayuda: no sustituye a tu plan APPCC ni es un servicio oficial.\n¿Cuántas cámaras tienes que controlar cada día? Cuéntalo en comentarios.\nVoz generada por IA · By Neogest Lab\n\n#appcc #hosteleria #restaurantes #bares #seguridadalimentaria #obrador #neogestlab\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
-  "cuando": "2026-11-15T23:45:00+01:00",
+  "cuando": "2026-11-21T11:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
   "formato": "Una idea, una app (grabación de la web pública)",
@@ -29,12 +29,5 @@
   ],
   "_comprobado": "15/11/2026: textos de la web pública desplegada hoy (precios aprobados por el dueño). Prohibido: oficial, sustituye al plan APPCC, IA, avisos automáticos, pago en la app, Google Play, integración con 7D.",
   "renderizado": false,
-  "_control_audio_fallo": {
-    "fecha": "2026-11-15T10:46:35+00:00",
-    "bloqueos": [
-      "falta el giro (escena «remate»)",
-      "voz distinta del guion: faltan ['appcc', 'con'], sobran ['app'] (rehacer esas frases)"
-    ],
-    "guion_md5": "0f2a7336c67ba824f1c9a4a22f7e1c2f"
-  }
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad (ANTES/DESPUÉS, giro, sin precios ni venta en la voz); renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render y mirar control/*.jpg (los tiempos de los clips se han reajustado sin poder abrir la grabación desde aquí)."
 }

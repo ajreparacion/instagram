@@ -3,30 +3,28 @@
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
   "portada_ms": 0,
-  "texto": "Por quinta vez, un huésped pregunta la hora del desayuno. La Pelota cambia la respuesta cada vez.\nEnvíaselo a ese compañero de recepción que ya no sabe qué contestar.\nHumor negro de ficción; los personajes son inventados.\n#humornegro #hotel #recepcion #ia #trabajo\nVoz y personajes generados por IA",
+  "texto": "Por quinta vez, un huésped pregunta la hora del desayuno. La Pelota cambia la respuesta cada vez.\n¿Qué te preguntan mil veces en el trabajo? Cuéntalo en comentarios.\nMándaselo a ese compañero de recepción que ya no sabe qué contestar.\n#humornegro #hotel #recepcion #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-20T20:40:00+01:00",
-  "formato": "Serie Las IAs de la oficina",
+  "formato": "Serie El Jambo",
   "publico": "hotel pequeño",
-  "formula": "F3+F7 con IA personificada en el segundo 0 (virales 13/11)",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "_fuentes": [],
   "_comprobado": "Sin cifras ni funciones de producto: humor de ficción.",
-  "_nota_creador": "14/11/2026: episodio nuevo en el formato del dueño (DIRECTIVA §14). Sin producto, sin enlace y sin precio en el vídeo ni en el texto; la oferta va solo en el comentario fijado. Calidad (≥ 90) manda: sin calidad.json aprobado el hueco queda libre. Voz genérica de España.",
-  "renderizado": "2026-11-14T09:42:53+00:00",
-  "comentario_fijado": "¿Qué es lo que más te preguntan en el trabajo? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
-  "avance_siguiente": "Mañana: el cliente pregunta por su pedido.",
-  "audio_ig": {
-    "audio_id": "1852688158814799",
-    "titulo": "Hypnotized (Instrumental) · Company Money",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "renderizado": false,
+  "comentario_fijado": "¿Qué te preguntan mil veces en el trabajo? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: cobras la nómina y no sabes adónde va",
   "monetizacion": {
     "objetivo": "visita_perfil",
-    "oferta": "seguir el perfil; la oferta APP/WEB vive en el comentario fijado",
-    "paso_embudo": "alcance → visita al perfil"
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
-  "motor_voz": "melo",
-  "asset": "315_ias_oficina_ep19_desayuno.mp4"
+  "motor_voz": "edge",
+  "musica": {
+    "titulo": "Fluffing a Duck",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Fluffing_a_Duck.mp3"
+  }
 }

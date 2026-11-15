@@ -1,32 +1,30 @@
 {
   "tipo": "reel",
-  "texto": "Dos familias, una habitación y una reserva en una servilleta.\nLa Trámites pide el 27-B y la Jupillo arregla las reservas. Humor negro de ficción.\nMándaselo a quien carga con todo.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #hoteles #reservas #ia #trabajo\nVoz y personajes generados por IA",
+  "texto": "Dos familias, una habitación y una reserva apuntada en una servilleta. La Jupillo encuentra al culpable.\n¿Qué es lo más raro donde has apuntado una reserva?\nMándaselo a quien apunta las reservas en cualquier sitio.\n#humornegro #hoteles #reservas #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Life of Riley\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-18T16:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
   "formato": "Serie El Jambo",
   "publico": "hotel pequeño",
-  "formula": "humor con personaje (v8 B2)",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "_fuentes": [],
   "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
-  "_nota_creador": "11/11/2026: episodio nuevo. Sin enlace ni prueba gratuita en el episodio. Calidad (≥ 90) y visto bueno del dueño mandan: sin calidad.json aprobado no se publica. Voz genérica de España.",
-  "renderizado": "2026-11-11T03:53:36+00:00",
-  "motor_voz": "chatterbox",
-  "comentario_fijado": "¿Qué es lo más raro donde has apuntado una reserva? Episodio nuevo cada día en @neogestlab",
-  "avance_siguiente": "Más tarde: no sabes a qué cliente visitar hoy.",
-  "audio_ig": {
-    "audio_id": "25873624668895779",
-    "titulo": "Coming Back (Instrumental) · Flow Loris",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "renderizado": false,
+  "motor_voz": "edge",
+  "comentario_fijado": "¿Dónde apuntas tú las reservas? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: tecleas dos veces lo mismo",
   "portada_ms": 0,
-  "asset": "311_jambo_ep11_reserva.mp4",
   "monetizacion": {
     "objetivo": "visita_perfil",
-    "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
-    "paso_embudo": "alcance → visita al perfil"
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+  },
+  "musica": {
+    "titulo": "Life of Riley",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Life_of_Riley.mp3"
   }
 }

@@ -1,32 +1,30 @@
 {
   "tipo": "reel",
-  "texto": "Faltan cuarenta euros en la caja. Estaban en su bolsillo.\nLa Pelota suma con seguridad absoluta y la Jupillo cuadra la caja. Humor negro de ficción; los euros son inventados.\nSígueme y más tarde verás qué pasa: dos familias, una habitación.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #tienda #caja #ia #trabajo\nVoz y personajes generados por IA",
+  "texto": "Faltan cuarenta euros en la caja. Estaban en su bolsillo, con el tique del bocadillo. Los euros son inventados.\n¿Cuánto fue tu mayor descuadre? Cuéntalo en comentarios.\nMándaselo a quien cuadra la caja de memoria.\n#humornegro #tienda #caja #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-18T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
   "formato": "Serie El Jambo",
   "publico": "mercadillo / tienda",
-  "formula": "humor con personaje (v8 B2)",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "_fuentes": [],
   "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
-  "_nota_creador": "11/11/2026: episodio nuevo. Sin enlace ni prueba gratuita en el episodio. Calidad (≥ 90) y visto bueno del dueño mandan: sin calidad.json aprobado no se publica. Voz genérica de España.",
-  "renderizado": "2026-11-11T04:40:02+00:00",
-  "motor_voz": "chatterbox",
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "renderizado": false,
+  "motor_voz": "edge",
   "comentario_fijado": "¿Cuánto fue tu mayor descuadre? Episodio nuevo cada día en @neogestlab",
-  "avance_siguiente": "Más tarde: dos familias, una habitación.",
-  "audio_ig": {
-    "audio_id": "1579125763264830",
-    "titulo": "Pressure (Instrumental) · Tony Dark Eyes",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
+  "avance_siguiente": "Mañana: tecleas dos veces lo mismo",
   "portada_ms": 0,
-  "asset": "314_jambo_ep14_caja.mp4",
   "monetizacion": {
     "objetivo": "visita_perfil",
-    "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
-    "paso_embudo": "alcance → visita al perfil"
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+  },
+  "musica": {
+    "titulo": "Monkeys Spinning Monkeys",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Monkeys_Spinning_Monkeys.mp3"
   }
 }

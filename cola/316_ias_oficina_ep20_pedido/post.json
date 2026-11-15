@@ -3,30 +3,28 @@
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
   "portada_ms": 0,
-  "texto": "El cliente pregunta por su pedido. La Trámites lo tiene «en tramitación».\nEnvíaselo a ese compañero que siempre contesta «ya sale».\nHumor negro de ficción; los personajes son inventados.\n#humornegro #reparto #logistica #ia #trabajo\nVoz y personajes generados por IA",
-  "cuando": "2026-11-21T20:40:00+01:00",
-  "formato": "Serie Las IAs de la oficina",
+  "texto": "El cliente pregunta por su pedido. La Trámites lo tiene «en tramitación»; la Jupillo lo encuentra en el coche.\n¿Cuántas veces has dicho «ya sale» sin que saliera? Cuéntalo.\nMándaselo a ese compañero que siempre contesta «ya sale».\n#humornegro #reparto #logistica #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Life of Riley\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-21T20:45:00+01:00",
+  "formato": "Serie El Jambo",
   "publico": "reparto y transporte",
-  "formula": "F3+F7 con IA personificada en el segundo 0 (virales 13/11)",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "_fuentes": [],
   "_comprobado": "Sin cifras ni funciones de producto: humor de ficción.",
-  "_nota_creador": "14/11/2026: episodio nuevo en el formato del dueño (DIRECTIVA §14). Sin producto, sin enlace y sin precio en el vídeo ni en el texto; la oferta va solo en el comentario fijado. Calidad (≥ 90) manda: sin calidad.json aprobado el hueco queda libre. Voz genérica de España.",
-  "renderizado": "2026-11-14T09:57:55+00:00",
-  "comentario_fijado": "¿Cuántas veces has dicho «ya sale» sin que saliera? Cuéntalo. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
-  "avance_siguiente": "Seguimos: más trabajo para la Jupillo.",
-  "audio_ig": {
-    "audio_id": "1018682932882496",
-    "titulo": "Made It Out (Instrumental) · Robin-Huws",
-    "origen": "biblioteca de Instagram (colección libre de derechos)",
-    "audio_volume": 0.5,
-    "video_volume": 1.0,
-    "mood": "comedia"
-  },
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "renderizado": false,
+  "comentario_fijado": "¿Cuántas veces has dicho «ya sale» sin que saliera? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: vendes a 12 € y te quedan 4,52 €",
   "monetizacion": {
     "objetivo": "visita_perfil",
-    "oferta": "seguir el perfil; la oferta APP/WEB vive en el comentario fijado",
-    "paso_embudo": "alcance → visita al perfil"
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
-  "motor_voz": "melo",
-  "asset": "316_ias_oficina_ep20_pedido.mp4"
+  "motor_voz": "edge",
+  "musica": {
+    "titulo": "Life of Riley",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Life_of_Riley.mp3"
+  }
 }

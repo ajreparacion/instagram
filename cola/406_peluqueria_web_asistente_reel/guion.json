@@ -5,12 +5,12 @@
   "plantilla": true,
   "volumen_original": 0,
   "musica": true,
-  "portada_texto": "POV: preguntan el precio a las 23:00",
+  "portada_texto": "POV: preguntan el precio a las 23:00 y nadie contesta",
   "escenas": [
     {
       "estilo": "gancho",
       "texto": "POV: preguntan el precio a las *23:00*",
-      "voz": "Las *once* de la noche.",
+      "voz": "Las once de la noche. Preguntan el precio y nadie *contesta*.",
       "clip": {
         "inicio": 19.3,
         "fin": 21.8
@@ -20,28 +20,10 @@
       "estilo": "tramo",
       "clip": {
         "inicio": 8.0,
-        "fin": 11.0
-      },
-      "texto": "Y te preguntan el precio",
-      "voz": "Y te preguntan el *precio*."
-    },
-    {
-      "estilo": "tramo",
-      "clip": {
-        "inicio": 0.3,
-        "fin": 3.3
-      },
-      "texto": "Nadie contesta. La web, sí",
-      "voz": "Nadie contesta. La web *sí*."
-    },
-    {
-      "estilo": "tramo",
-      "clip": {
-        "inicio": 10.3,
         "fin": 12.9
       },
       "texto": "Le pregunto al asistente",
-      "voz": "Le pregunto por el *tinte*."
+      "voz": "En esta web de ejemplo, le pregunto por el *tinte*."
     },
     {
       "estilo": "tramo",
@@ -50,16 +32,16 @@
         "fin": 19.3
       },
       "texto": "Responde con lo que pone la web",
-      "voz": "Y responde *solo* con lo que pone la web."
+      "voz": "Y el asistente responde *solo* con lo que pone la web."
     },
     {
-      "estilo": "tramo",
+      "estilo": "remate",
       "clip": {
         "inicio": 21.8,
         "fin": 25.3
       },
-      "texto": "Datos de ejemplo",
-      "voz": "Mándaselo a quien tenga *peluquería*."
+      "texto": "Nadie cogió el teléfono. La web, sí",
+      "voz": "Nadie cogió el teléfono. La web *sí* contestó."
     },
     {
       "estilo": "cierre",
