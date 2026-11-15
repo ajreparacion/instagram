@@ -8,17 +8,44 @@ import json, os, re, subprocess, sys, unicodedata
 
 SIL_DB, SIL_S, DUR_MAX = -45, 0.6, 30.0
 HOMOFONOS = [{"hechas", "echas"}, {"hecha", "echa"}, {"hecho", "echo"}, {"a", "ha"}, {"hay", "ahi", "ay"}, {"vaya", "valla"},
-             {"hacia", "asia"}, {"tuvo", "tubo"}, {"ola", "hola"}, {"he", "e"}, {"sino", "si no"}]
+             {"hacia", "asia"}, {"tique", "ticket"}, {"uno", "un", "una"}, {"veintiun", "veintiuno"}, {"tuvo", "tubo"}, {"ola", "hola"}, {"he", "e"}, {"sino", "si no"}]
 NUM = {"200": "doscientas", "1": "uno", "2": "dos", "3": "tres", "4": "cuatro", "5": "cinco", "10": "diez"}
 
 
+_U = "cero uno dos tres cuatro cinco seis siete ocho nueve diez once doce trece catorce quince dieciseis diecisiete dieciocho diecinueve veinte veintiuno veintidos veintitres veinticuatro veinticinco veintiseis veintisiete veintiocho veintinueve".split()
+_D = {3: "treinta", 4: "cuarenta", 5: "cincuenta", 6: "sesenta", 7: "setenta", 8: "ochenta", 9: "noventa"}
+_C = {1: "ciento", 2: "doscientos", 3: "trescientos", 4: "cuatrocientos", 5: "quinientos", 6: "seiscientos", 7: "setecientos", 8: "ochocientos", 9: "novecientos"}
+
+
+def num_es(n):
+    """15/11/2026: Whisper escribe cifras («70», «2028») y el guion letras («setenta»): se pasa todo a letras."""
+    if n < 30: return _U[n]
+    if n < 100: return _D[n // 10] + ("" if n % 10 == 0 else " y " + _U[n % 10])
+    if n == 100: return "cien"
+    if n < 1000: return _C[n // 100] + ("" if n % 100 == 0 else " " + num_es(n % 100))
+    if n < 1000000:
+        m = "mil" if n // 1000 == 1 else num_es(n // 1000) + " mil"
+        return m + ("" if n % 1000 == 0 else " " + num_es(n % 1000))
+    return str(n)
+
+
+def _cifras(t):
+    t = re.sub(r"(\d)\s*%", r"\1 por ciento", t)
+    t = re.sub(r"(\d)[:.,](\d)", r"\1 \2", t)          # 23:47 -> 23 47
+    t = re.sub(r"(\d)([a-zA-Z])", r"\1 \2", t)          # 27c -> 27 c
+    t = re.sub(r"([a-zA-Z])(\d)", r"\1 \2", t)
+    return re.sub(r"\d+", lambda m: num_es(int(m.group())), t)
+
+
 def norm(t):
+    t = _cifras(t)
     t = unicodedata.normalize("NFD", t.lower())
     t = "".join(c for c in t if unicodedata.category(c) != "Mn")
     return re.findall(r"[a-z0-9]+", t)
 
 
 def igual(a, b):
+    if a.endswith(("cientas", "cientos")) and b.endswith(("cientas", "cientos")) and a[:-2] == b[:-2]: return True
     return a == b or any(a in h and b in h for h in HOMOFONOS)
 
 

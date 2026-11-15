@@ -2583,8 +2583,11 @@ def main():
                 if i in env_voz: e["_voz_env"] = env_voz[i]
             else:
                 need = len(voz.split()) / 2.6 + 0.6
+            voz_real = i in tiempos and tiempos[i] > 0.2
+            if voz_real:
+                need = tiempos[i] + 0.35   # 15/11/2026: respiro 0,35 s (antes 0,45): huecos de voz < 0,6 s (DIRECTIVA 14/11)
             if i + 1 < len(esc) and esc[i + 1].get("estilo") == "giro":
-                need += 0.5  # deja libre el segundo de silencio antes del giro
+                need += 0.15 if voz_real else 0.5  # pausa antes del giro sin pasar de 0,6 s de silencio de voz
             if MODO["app"] and "duracion" not in e and e.get("estilo") != "gancho" and "_largo_clip" in e:
                 # 10/11/2026 (petición de Calidad): sin "duracion", la escena dura lo que la voz real (+0,5 s) y el
                 # clip se acelera hasta x1,75; nunca más corta que clip/1,75 (si no, el tramo se cortaría).
@@ -2594,7 +2597,14 @@ def main():
         if MODO["datos"]:   # los graficos necesitan tiempo para animarse y leerse
             d = max(d, {"gancho": 2.2, "cierre": 3.0, "giro": 2.4}.get(e.get("estilo"), 3.2))
         if MODO["sketch"]:   # el mensaje serio se lee entero y el fotograma final se puede guardar
-            d = max(d, {"mensaje": 3.2, "cierre": 2.2, "gancho": 1.8}.get(e.get("estilo"), 1.8))
+            minimo = {"mensaje": 3.2, "cierre": 2.2, "gancho": 1.8}.get(e.get("estilo"), 1.8)
+            # 15/11/2026: con voz real, una escena con voz que va antes de otra frase dura lo que su voz (+respiro):
+            # los mínimos de 1,8-3,2 s dejaban silencios de 0,6-1,5 s entre frases y el control de audio bloqueaba todo.
+            hay_voz_despues = any((x.get("voz") or "").strip() for x in esc[i + 1:])
+            if voz and i in tiempos and tiempos[i] > 0.2 and hay_voz_despues:
+                d = max(need, min(minimo, need)) if "duracion" not in e else max(need, 0.8)
+            else:
+                d = max(d, minimo)
         bounds.append(bounds[-1] + int(math.ceil(d * FPS - 1e-6)))
     loc = []
     for i, e in enumerate(esc):
