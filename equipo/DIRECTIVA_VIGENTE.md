@@ -32,7 +32,7 @@ Fuera del repo (no leen este archivo, se citan para el mapa):
 - «Gemini: procesar cola» (cada 2 h, solo con el PC del dueño encendido): sirve `equipo/cola_gemini.md` y sube el resultado a la Biblioteca de Neogest Studio.
 
 ## 3. Protocolo de cada pasada
-0. Mira el mapa (§2): si tu tarea está fusionada, en pausa o se ha disparado fuera del día u hora de tu rol, termina en una línea sin hacer nada.
+0. Mira el mapa (§2): si tu tarea está fusionada, en pausa o se ha disparado fuera del día u hora de tu rol, termina en una línea sin hacer nada. Excepción temporal: PRUEBA DEL CICLO ordenada por el dueño; toda tarea activa que arranque el 15/11/2026 entre las 20:40 y las 23:59 (hora de Madrid) hace su pasada normal aunque no sea su día ni su hora.
 1. Repo: las tareas son de tipo Claude Code con `ajreparacion/instagram` conectado. Nada de add_repo ni clonar de nuevo: `git checkout main && git pull --rebase origin main`.
 2. Lee esta directiva, tu rol y las últimas 40 líneas de `equipo/tablon.md`; atiende o responde lo que otro rol te pida allí.
 3. Trabaja. Lee solo lo que vayas a usar. Toca solo tus archivos: otros roles escriben a la vez en main.
