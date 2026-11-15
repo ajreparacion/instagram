@@ -1,0 +1,82 @@
+{
+ "dispositivo": "movil",
+ "fondo": "#DDEBF7",
+ "marco": "oscuro",
+ "url": "https://gestoria7-d-1e795a2d.base44.app",
+ "viewport": [
+  390,
+  720
+ ],
+ "escala": 2,
+ "idioma": "es-ES",
+ "esperar_carga": 2.5,
+ "pasos": [
+  {
+   "accion": "esperar",
+   "seg": 2.0
+  },
+  {
+   "accion": "scroll",
+   "y": 350,
+   "seg": 1.2
+  },
+  {
+   "accion": "esperar",
+   "seg": 1.0
+  },
+  {
+   "accion": "zoom",
+   "selector": "text=Ejemplo con datos ficticios",
+   "nivel": 1.3,
+   "seg": 0.8
+  },
+  {
+   "accion": "esperar",
+   "seg": 3.0
+  },
+  {
+   "accion": "zoom",
+   "nivel": 1.0,
+   "seg": 0.6
+  },
+  {
+   "accion": "scroll",
+   "y": 700,
+   "seg": 1.5
+  },
+  {
+   "accion": "esperar",
+   "seg": 2.5
+  },
+  {
+   "accion": "scroll",
+   "y": 500,
+   "seg": 1.2
+  },
+  {
+   "accion": "esperar",
+   "seg": 2.5
+  },
+  {
+   "accion": "scroll",
+   "y": 500,
+   "seg": 1.2
+  },
+  {
+   "accion": "esperar",
+   "seg": 2.5
+  }
+ ],
+ "previos": [
+  {
+   "accion": "clic",
+   "selector": "button:has-text('Saltar')",
+   "opcional": true,
+   "seg": 12
+  },
+  {
+   "accion": "esperar",
+   "seg": 3
+  }
+ ]
+}
