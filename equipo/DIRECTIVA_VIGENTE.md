@@ -5,15 +5,16 @@ Versión limpia del 15/11/2026 (orden del dueño). Sustituye a todo lo anterior;
 - Cada pasada lee esta directiva y su archivo de rol (`equipo/roles/<rol>.md`). Si algo de otro archivo del repo la contradice, manda esta directiva; si dos textos chocan y aquí no se resuelve, manda la orden más reciente del dueño.
 - Solo el Estratega (o Coordinación por orden del dueño) edita este archivo. Una orden nueva SUSTITUYE la línea antigua en su sección y se anota en una línea en «Registro de cambios»; nunca se apila encima ni se añaden cabeceras «ignora lo de abajo».
 - Los archivos de rol no repiten la directiva: solo misión, horario, pasos y límites propios. Lo técnico de formatos de render antiguos (modos app, presentador, plantilla, datos) está en `equipo/archivo/INSTRUCCIONES_EQUIPO_hasta_2026-11-15.md` y en `equipo/FORMATO_DATOS.md`.
+- El prompt de tu tarea programada puede traer capas antiguas (DIRECTIVA DE VÍDEO del 14/11, pasos de add_repo o clonado, @iafacil.trucos, fire_trigger, «reserva anulada», tope de 30 s para todo…). Están derogadas: solo valen esta directiva y tu archivo de rol.
 - Español de España en todo. No se le pregunta al dueño: se decide, se deja constancia y se le entregan informes.
 
 ## 2. Mapa del equipo y horarios (hora de Madrid)
 | Rol | Cuándo | Modelo | Archivo |
 |---|---|---|---|
-| Creador | 09:51, 13:51 y 17:51 a diario | Sonnet | roles/creador.md |
-| Calidad | cada 2 h de 08:41 a 22:41 (8 pasadas, tarea única) | Sonnet | roles/calidad.md |
+| Creador | 09:51 a diario (13:51 y 17:51 cuando el dueño amplíe el horario de la tarea; hasta entonces, todo en la pasada de la mañana) | Sonnet | roles/creador.md |
+| Calidad | cada 2 h de 08:41 a 22:41 (8 pasadas; tarea única «Calidad cada 2 h») | Sonnet | roles/calidad.md |
 | Supervisor | 12:27 y 18:27 | Haiku | roles/supervisor.md |
-| Cazador de virales | lunes, miércoles y viernes 08:23 | Sonnet | roles/cazador.md |
+| Cazador de virales | lunes, miércoles y viernes 08:23 (si se dispara otro día, termina en una línea) | Sonnet | roles/cazador.md |
 | Remasterizador | 09:00 a diario | Sonnet | roles/remasterizador.md |
 | Analista (+ monetización los domingos) | 23:23 a diario | Haiku | roles/analista.md |
 | Estratega | lunes 10:13 | Sonnet | roles/estratega.md |
@@ -21,12 +22,17 @@ Versión limpia del 15/11/2026 (orden del dueño). Sustituye a todo lo anterior;
 | Comunidad | 11:37, 16:37 y 21:37 | Haiku | roles/comunidad.md |
 | Centro (vídeos y demos del Centro) | lunes y jueves 11:17 | Sonnet | roles/centro.md |
 | Ventas · prospección | L-V 09:43, EN PAUSA (ver su rol) | Sonnet | roles/ventas.md |
+Tareas duplicadas que siguen programadas hasta que el dueño las desactive (solo él puede editarlas): si eres una de ellas, NO trabajes; termina en una línea, sin tablón ni commit.
+- «IG nube · Calidad (repo)» de las 12:51 y «IG nube · Calidad (noche) (repo)» de las 19:31: fusionadas en la Calidad de cada 2 h (te reconoces porque arrancas a las 12:45-13:15 o a las 19:25-19:55, hora de Madrid).
+- «IG nube · Analista de monetización (repo)» (domingos 18:17): fusionada en el Analista.
+- «Ventas · Prospección (repo)»: en pausa.
 Fuera del repo (no leen este archivo, se citan para el mapa):
 - «Lote diario de comentarios» (08:21): prepara comentarios para que el dueño los publique a mano; doc del proyecto `claude/redes/comentarios_diarios.md`.
 - «Laboratorio de ideas» (martes): propuestas de apps nuevas en el doc del proyecto `claude/ideas/propuestas-apps.md`.
 - «Gemini: procesar cola» (cada 2 h, solo con el PC del dueño encendido): sirve `equipo/cola_gemini.md` y sube el resultado a la Biblioteca de Neogest Studio.
 
 ## 3. Protocolo de cada pasada
+0. Mira el mapa (§2): si tu tarea está fusionada, en pausa o se ha disparado fuera del día u hora de tu rol, termina en una línea sin hacer nada.
 1. Repo: las tareas son de tipo Claude Code con `ajreparacion/instagram` conectado. Nada de add_repo ni clonar de nuevo: `git checkout main && git pull --rebase origin main`.
 2. Lee esta directiva, tu rol y las últimas 40 líneas de `equipo/tablon.md`; atiende o responde lo que otro rol te pida allí.
 3. Trabaja. Lee solo lo que vayas a usar. Toca solo tus archivos: otros roles escriben a la vez en main.
@@ -129,3 +135,4 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 ## 13. Registro de cambios (una línea por cambio)
 - 2026-11-15 · Coordinación (orden del dueño) · directiva y roles reescritos en limpio; deroga lo apilado hasta hoy (ver archivo/).
 - 2026-11-15 · Coordinación · Calidad pasa a una sola tarea cada 2 h de 08:41 a 22:41; Analista de monetización fusionado en Analista; Ventas en pausa.
+- 2026-11-15 · Coordinación · las tareas creadas por el dueño no se pueden editar desde un agente: sus prompts antiguos quedan derogados por §1, las duplicadas se anulan por §2 y el Creador trabaja en una pasada hasta que el dueño amplíe su horario.
