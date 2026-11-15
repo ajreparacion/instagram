@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 3.2,
+  "duracion": 3.1,
   "texto": "Décima visita al mismo piso. La misma pareja.",
   "enfasis": []
  },
@@ -12,8 +12,8 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 3.2,
-  "duracion": 2.133,
+  "inicio": 3.1,
+  "duracion": 1.9,
   "texto": "Es que... nos lo pensamos.",
   "enfasis": [
    4
@@ -23,8 +23,8 @@
   "escena": 2,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 5.333,
-  "duracion": 3.0,
+  "inicio": 5.0,
+  "duracion": 2.9,
   "texto": "Las fotos del piso salen con mi dedo en el objetivo.",
   "enfasis": []
  },
@@ -32,8 +32,8 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 8.333,
-  "duracion": 2.733,
+  "inicio": 7.9,
+  "duracion": 2.5,
   "texto": "¡Una visita más es una venta más cerca!",
   "enfasis": []
  },
@@ -41,17 +41,17 @@
   "escena": 4,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 11.067,
-  "duracion": 4.8,
-  "texto": "Tour virtual hecho. Curiosos filtrados. Solo vienen los que van en serio.",
+  "inicio": 10.4,
+  "duracion": 5.0,
+  "texto": "Visita virtual hecha. Curiosos filtrados. Solo vienen los que van en serio.",
   "enfasis": []
  },
  {
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 15.867,
-  "duracion": 1.8,
+  "inicio": 15.4,
+  "duracion": 1.367,
   "texto": "¿Y la visita once?",
   "enfasis": [
    3
@@ -61,7 +61,7 @@
   "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 17.667,
+  "inicio": 16.767,
   "duracion": 2.2,
   "texto": "¿Cuántas visitas aguantas?",
   "enfasis": []

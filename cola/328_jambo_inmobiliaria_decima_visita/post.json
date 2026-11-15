@@ -27,5 +27,12 @@
     "archivo": "Fluffing_a_Duck.mp3",
     "bpm": 123.0
   },
-  "renderizado": false
+  "renderizado": false,
+  "_control_audio_fallo": {
+    "fecha": "2026-11-15T11:33:00+00:00",
+    "bloqueos": [
+      "voz distinta del guion: faltan ['nos', 'curiosos'], sobran ['no', 'os', 'furiosos'] (rehacer esas frases)"
+    ],
+    "guion_md5": "b5e32a08712cb1d814abec11798b977c"
+  }
 }
