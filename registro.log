@@ -1,11 +1,3 @@
-2026-11-12 16:04  014_formula_prompt: no se pudieron leer comentarios: Unsupported get request. Object with ID '18114456071177223' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
-2026-11-12 16:04  015_resumir_correo: no se pudieron leer comentarios: Unsupported get request. Object with ID '18119170952012543' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
-2026-11-12 16:04  016_filtro_facturas: no se pudieron leer comentarios: Unsupported get request. Object with ID '18015411647992201' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
-2026-11-12 16:17  Voz con Chatterbox (es-es, referencia=sí, exageración 0.6, cfg 0.5): 6 frases en 331 s
-2026-11-12 16:17  Voz: silencios recortados por frase (s): [0.8, 0.48, 0, 0.52, 0.52, 0.54]
-2026-11-12 16:17  Voz: pico de cada frase normalizado a -6.0 dBFS (ganancia aplicada, dB): [np.float64(6.3), np.float64(3.7), np.float64(-1.5), np.float64(-0.7), np.float64(4.6), np.float64(1.3)]
-2026-11-12 16:17  Voz: alineación palabra a palabra (small, 14.5 s): 6/6 frases
-2026-11-12 16:18  Mezcla: voz -15.1 LUFS, música -15.9 LUFS (con ducking -16.2), la música baja 5.57 dB (p90) bajo la voz, ratio 2.0; máster -15.22 -> -14.2 LUFS, pico -1.4 dBFS; huecos de voz: []
 2026-11-12 16:18  021_plato_hosteleria: renderizado con voz y subido a la release 'cola'
 2026-11-12 16:18  001_baile_1518: no se pudieron leer comentarios: Unsupported get request. Object with ID '17996499894053316' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
 2026-11-12 16:18  013_claude_gratis: no se pudieron leer comentarios: Unsupported get request. Object with ID '17980873539135416' does not exist, cannot be loaded due to missing permissions, or does not support this operation. Please read the Graph API documentation at https://developers.facebook.com/docs/graph-api (código 100, subcódigo 33)
@@ -598,3 +590,11 @@
 2026-11-14 22:58  Control de audio: FALLA voz distinta del guion: faltan ['dos', 'mil', 'veintiocho'], sobran ['2028'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[2.25, 2.85, 0.6], [19.85, 20.45, 0.6]]; duración 26.17 s
 2026-11-14 22:58  320_jambo_reunion_rapida: NO se publica, control de audio: voz distinta del guion: faltan ['dos', 'mil', 'veintiocho'], sobran ['2028'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[2.25, 2.85, 0.6], [19.85, 20.45, 0.6]]
 2026-11-15 04:26  Estadísticas actualizadas (23 posts, 1602 seguidores)
+2026-11-15 09:13  Voz con edge-tts: 7 frases en 8 s
+2026-11-15 09:13  Voz: silencios recortados por frase (s): [0.11, 0.11, 0.13, 0.13, 0.12, 0.12, 0.14]
+2026-11-15 09:13  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(1.1), np.float64(3.8), np.float64(1.4), np.float64(4.2), np.float64(2.2), np.float64(5.3), np.float64(3.4)]
+2026-11-15 09:13  Voz: alineación palabra a palabra (small, 14.2 s): 7/7 frases
+2026-11-15 09:14  Mezcla: voz -17.5 LUFS, música -22.5 LUFS (con ducking -25.3), la música baja 5.62 dB (p90) bajo la voz, ratio 2.5; máster -17.38 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
+2026-11-15 09:14  Control de audio: FALLA voz distinta del guion: faltan ['veintisiete', 'c', 'tique', 'veintisiete', 'd'], sobran ['27c', 'ticket', '27d'] (rehacer esas frases); duración 22.97 s
+2026-11-15 09:14  321_jambo_ep6_parte2_devolucion: NO se publica, control de audio: voz distinta del guion: faltan ['veintisiete', 'c', 'tique', 'veintisiete', 'd'], sobran ['27c', 'ticket', '27d'] (rehacer esas frases)
+2026-11-15 09:14  322_jambo_ep7_parte2_clase: error al renderizar (1/3): Ningún motor de voz funcionó (['edge']): edge-tts falló: edge-tts falló para «Son cuarenta alumnos. Seguro que aprueban.»: No audio was received. Please verify that your parameters are correct.

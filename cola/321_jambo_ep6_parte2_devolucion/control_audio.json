@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 22.97,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['veintisiete', 'c', 'tique', 'veintisiete', 'd'], sobran ['27c', 'ticket', '27d'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Otra vez el cliente del ticket, ahora trae la caja. Devolver la caja exige impreso 27C. Y el ticket de la caja también lo perdió. Entonces impreso 27D, en triplicado. Trae el producto, la caja y a su cuñado. Devuelto, reembolsado, y el cuñado fichado como cliente. ¿Cuál fue tu devolución más rara? Parte 3 mañana.",
+  "guion": "¿Otra vez el cliente del ticket? ¡Ahora trae la caja! Devolver la caja exige impreso veintisiete-C. ¡Y el tique de la caja también lo perdió! Entonces, impreso veintisiete-D. En triplicado. ¡Trae el producto, la caja y a su cuñado! Devuelto, reembolsado… y el cuñado, fichado como cliente. ¿Cuál fue tu devolución más rara? Parte tres, mañana."
+}

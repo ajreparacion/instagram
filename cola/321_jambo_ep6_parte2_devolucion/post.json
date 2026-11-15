@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Parte 2: el cliente sin ticket vuelve, ahora con la caja y su cuñado.\nLa Trámites pide impreso tras impreso. Humor negro de ficción.\n¿Cuál fue tu devolución más rara? Cuéntala en comentarios.\nMándaselo a quien atiende al público.\nParte 3 mañana en @neogestlab\n#humornegro #tienda #comercio #ia #trabajo\nVoz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "Parte 2: el cliente sin ticket vuelve, ahora con la caja y su cuñado.\nLa Trámites pide impreso tras impreso. Humor negro de ficción.\n¿Cuál fue tu devolución más rara? Cuéntala en comentarios.\nMándaselo a quien atiende al público.\nParte 3 mañana en @neogestlab\n#humornegro #tienda #comercio #ia #trabajo\nVoz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-16T14:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -20,10 +20,18 @@
     "paso_embudo": "alcance → visita al perfil"
   },
   "musica": {
-    "titulo": "Fluffing a Duck",
+    "titulo": "Monkeys Spinning Monkeys",
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Fluffing_a_Duck.mp3"
+    "archivo": "Monkeys_Spinning_Monkeys.mp3",
+    "bpm": 143.6
+  },
+  "_control_audio_fallo": {
+    "fecha": "2026-11-15T08:14:27+00:00",
+    "bloqueos": [
+      "voz distinta del guion: faltan ['veintisiete', 'c', 'tique', 'veintisiete', 'd'], sobran ['27c', 'ticket', '27d'] (rehacer esas frases)"
+    ],
+    "guion_md5": "85036cde72d5bd8a5b38fbac39f39d44"
   }
 }
