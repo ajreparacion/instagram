@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Alquiler, luz, internet: lo mismo, cada mes, a mano. La Jupillo ordena los pagos y descubre un doble pago. Humor negro de ficción.\n¿Qué pagas tú a mano cada mes? Cuéntalo en comentarios.\nGH PLUS genera los pagos del mes de tus gastos fijos, sin duplicarlos.\nMándaselo a quien paga lo mismo a mano cada mes.\n#humornegro #finanzaspersonales #ahorro #hogar #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "Alquiler, luz, internet: lo mismo, cada mes, a mano. La Jupillo ordena los pagos y descubre un doble pago. Humor negro de ficción.\n¿Qué pagas tú a mano cada mes? Cuéntalo en comentarios.\nGH PLUS genera los pagos del mes de tus gastos fijos, sin duplicarlos.\nMándaselo a quien paga lo mismo a mano cada mes.\n#humornegro #finanzaspersonales #ahorro #hogar #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-22T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -8,7 +8,7 @@
   "publico": "particular / hogar",
   "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "app": "GH PLUS",
-  "renderizado": false,
+  "renderizado": "2026-11-15T21:18:57+00:00",
   "_fuentes": [],
   "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
   "comentario_fijado": "¿Qué pagas tú a mano cada mes? Episodio nuevo cada día en @neogestlab",
@@ -21,10 +21,16 @@
     "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
   "musica": {
-    "titulo": "Fluffing a Duck",
+    "titulo": "Monkeys Spinning Monkeys",
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Fluffing_a_Duck.mp3"
+    "archivo": "Monkeys_Spinning_Monkeys.mp3",
+    "bpm": 143.6
+  },
+  "asset": "508_jambo_app_gastos_fijos.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 18.9
   }
 }
