@@ -27,13 +27,10 @@
     "archivo": "Monkeys_Spinning_Monkeys.mp3",
     "bpm": 143.6
   },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-15T09:06:16+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['team', 'building', 'doce'], sobran ['te', 'han', 'wielding', '12'] (rehacer esas frases)",
-      "silencios > 0.6 s entre frases (pista de voz): [[17.44, 18.62, 1.18]]"
-    ],
-    "guion_md5": "6dc6f0f0da35d9cdc606ec7a05713ac5"
-  },
-  "renderizado": false
+  "renderizado": "2026-11-15T09:47:58+00:00",
+  "asset": "329_jambo_cena_empresa_navidad.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 19.9
+  }
 }

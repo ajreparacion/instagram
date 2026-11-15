@@ -5,7 +5,7 @@
   "hablante": "bola",
   "inicio": 0.0,
   "duracion": 2.767,
-  "texto": "¡No pain, no gain! ¡Que se oiga!",
+  "texto": "¡Sin dolor no hay gloria! ¡Que se oiga!",
   "enfasis": []
  },
  {
@@ -13,7 +13,7 @@
   "estilo": "gag",
   "hablante": "jambo",
   "inicio": 2.767,
-  "duracion": 2.533,
+  "duracion": 2.433,
   "texto": "Trescientos socios. Vienen doce.",
   "enfasis": []
  },
@@ -21,8 +21,8 @@
   "escena": 2,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 5.3,
-  "duracion": 3.1,
+  "inicio": 5.2,
+  "duracion": 3.0,
   "texto": "¡Mandemos audios de ocho minutos de motivación!",
   "enfasis": []
  },
@@ -30,8 +30,8 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 8.4,
-  "duracion": 2.733,
+  "inicio": 8.2,
+  "duracion": 2.633,
   "texto": "Nadie escucha ocho minutos. Ni yo.",
   "enfasis": []
  },
@@ -39,8 +39,8 @@
   "escena": 4,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 11.133,
-  "duracion": 3.967,
+  "inicio": 10.833,
+  "duracion": 3.867,
   "texto": "Mensaje corto y personal a cada uno. Han vuelto cuarenta.",
   "enfasis": []
  },
@@ -48,8 +48,8 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 15.1,
-  "duracion": 2.0,
+  "inicio": 14.7,
+  "duracion": 1.9,
   "texto": "¡Gracias a mi motivación!",
   "enfasis": []
  },
@@ -57,7 +57,7 @@
   "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 17.1,
+  "inicio": 16.6,
   "duracion": 2.2,
   "texto": "¿Cuántos meses pagaste sin ir?",
   "enfasis": []
