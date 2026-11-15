@@ -1,16 +1,15 @@
 {
   "aprobado": false,
-  "nota": 85,
+  "nota": 88,
   "motivos": [
-    "Re-render del 2026-11-15T19:18 con el motor «sketch» del repo, retirado para la serie desde el 15/11 (herramientas/estudio/LEEME.md, roles/creador.md): rechazo automático según roles/calidad.md",
-    "El control de audio de Actions pasa (duración 16.67 s), pero el formato exige dibujos de calidad de Neogest Studio"
+    "Neogest Studio, buena imagen, moraleja y cierre con logo 2026 (21,5 s)",
+    "Pico −0,7 dBFS (> −1 dB), −14,7 LUFS",
+    "control_audio en post.json es del render anterior (16,7 s frente a 21,5 s): whisper sin contrastar en este render",
+    "Gancho del segundo 0 semitransparente sobre el reloj, poco legible",
+    "Sin bloque youtube ni avance_siguiente; atribución musical a comprobar"
   ],
-  "como_arreglarlo": "Creador: rehacer el episodio en Neogest Studio según herramientas/estudio/LEEME.md (video_externo + motor neogest-studio + renderizado false) con la fórmula de 5 tiempos y moraleja; después lo evalúa Calidad.",
-  "fecha": "2026-11-15T19:43:18+00:00",
+  "como_arreglarlo": "Neogest Studio: máster con pico real ≤ −1 dB y −14 LUFS; que el ciclo pase control_audio sobre el render nuevo; Creador: añadir bloque youtube (#Shorts, /solicitar?…&src=youtube) y avance_siguiente, atribuir la música que suena de verdad (Pixabay del estudio o MacLeod) y gancho del segundo 0 con contraste pleno; después vuelve a Calidad.",
+  "fecha": "2026-11-15T21:44:09+00:00",
   "revisor": "Calidad (pasada cada 2 h)",
-  "render": "2026-11-15T19:18:38+00:00",
-  "aprobado_anterior": false,
-  "nota_anterior": 85,
-  "caducado": "2026-11-15T19:46:49+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-15T19:46:49+00:00"
+  "render": "2026-11-15T19:46:49+00:00"
 }

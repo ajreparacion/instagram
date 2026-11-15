@@ -1,0 +1,13 @@
+{
+  "aprobado": false,
+  "nota": 80,
+  "motivos": [
+    "Promo: el móvil muestra la web con texto ilegible (no la app resolviendo un problema en pantalla); recorrido de funciones con «antes/ahora» solo rotulado al final: no es ANTES/DESPUÉS",
+    "Pico −0,8 dBFS (> −1 dB)",
+    "Post: precio «desde 3,90 €/mes + IVA» (§12: no se publican precios mientras el dueño no decida), cierre no literal de prueba gratuita con /solicitar?app=gestoria7d&src=…, sin youtube ni avance_siguiente"
+  ],
+  "como_arreglarlo": "Centro/Creador: grabar la app (entorno de pruebas, datos ficticios) haciendo UNA cosa: libros → 303 calculado, con texto legible a pantalla completa, ANTES (hoja de cálculo) / DESPUÉS (un botón), 25-45 s; quitar el precio; cierre único de prueba gratuita; bloques youtube y avance_siguiente.",
+  "fecha": "2026-11-15T21:44:09+00:00",
+  "revisor": "Calidad (pasada cada 2 h)",
+  "render": "2026-11-15T20:05:39+00:00"
+}

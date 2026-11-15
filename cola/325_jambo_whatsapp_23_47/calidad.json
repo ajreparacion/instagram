@@ -1,13 +1,11 @@
 {
   "aprobado": false,
-  "nota": 86,
-  "fecha": "2026-11-15T12:05:00+00:00",
-  "comentario": "Silencio de 0,70 s entre el giro y el cierre (límite 0,6 s) en el control de audio; el resto cumple la fórmula.",
+  "nota": 78,
   "motivos": [
-    "silencio > 0,6 s antes del cierre (0,70 s): lo genera el motor de render, no el guion; Mejora debe acortarlo y re-renderizar"
+    "Re-render de hoy con el motor «sketch» del repo, retirado para la serie desde el 15/11: rechazo automático (roles/calidad.md)"
   ],
-  "aprobado_anterior": false,
-  "nota_anterior": 86,
-  "caducado": "2026-11-15T20:09:18+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-15T20:09:18+00:00"
+  "como_arreglarlo": "Creador: rehacer en Neogest Studio (herramientas/estudio/LEEME.md) con la fórmula de 5 tiempos y moraleja.",
+  "fecha": "2026-11-15T21:44:09+00:00",
+  "revisor": "Calidad (pasada cada 2 h)",
+  "render": "2026-11-15T20:09:18+00:00"
 }

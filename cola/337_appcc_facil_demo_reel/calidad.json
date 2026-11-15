@@ -1,0 +1,13 @@
+{
+  "aprobado": false,
+  "nota": 80,
+  "motivos": [
+    "Promo de 21,4 s (formato 25-45 s)",
+    "Recorrido de funciones; el «antes/después» solo en la frase de remate",
+    "Revisar cierre literal de prueba gratuita con /solicitar?app=appcc&src=…, bloques youtube y avance_siguiente"
+  ],
+  "como_arreglarlo": "Centro/Creador: rehacer en ANTES/DESPUÉS (papel en la nevera → la app pide la acción correctora y saca el informe), 25-45 s, cierre único y bloques youtube/avance_siguiente.",
+  "fecha": "2026-11-15T21:44:09+00:00",
+  "revisor": "Calidad (pasada cada 2 h)",
+  "render": "2026-11-15T20:50:44+00:00"
+}
