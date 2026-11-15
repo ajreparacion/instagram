@@ -29,6 +29,11 @@
     "claude/apps/gestoria7d.md"
   ],
   "_comprobado": "15/11/2026: textos tomados de la web pública (Plan Gratis sin tarjeta, desde 3,90 €/mes + IVA, 303/130/111/115 desde libros, «Qué tienes que hacer», aviso de que presenta el usuario). Prohibido: presentar ante AEAT, asesorar, Google Play, móvil, tarjeta.",
-  "renderizado": false,
-  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad (ANTES/DESPUÉS, giro, sin precios ni venta en la voz); renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render y mirar control/*.jpg (los tiempos de los clips se han reajustado sin poder abrir la grabación desde aquí)."
+  "renderizado": "2026-11-15T20:05:39+00:00",
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad (ANTES/DESPUÉS, giro, sin precios ni venta en la voz); renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render y mirar control/*.jpg (los tiempos de los clips se han reajustado sin poder abrir la grabación desde aquí).",
+  "asset": "336_gestoria7d_demo_reel.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 25.93
+  }
 }

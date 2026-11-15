@@ -1,0 +1,77 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.867,
+  "texto": "Las once cuarenta y siete. «Es una cosita rápida».",
+  "enfasis": [
+   8
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 2.867,
+  "duracion": 1.333,
+  "texto": "¿Contesto, Pelota?",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 4.2,
+  "duracion": 2.2,
+  "texto": "¡Contesta! ¡Eso es cercanía!",
+  "enfasis": [
+   3
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 6.4,
+  "duracion": 3.067,
+  "texto": "La cosita: un presupuesto. Y ahora una factura.",
+  "enfasis": [
+   7
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 9.467,
+  "duracion": 4.2,
+  "texto": "Y una devolución. Con descuento. A las doce de la noche.",
+  "enfasis": [
+   10
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 13.667,
+  "duracion": 3.233,
+  "texto": "Todo enviado. El cliente se había equivocado de chat.",
+  "enfasis": [
+   6,
+   7,
+   8
+  ]
+ },
+ {
+  "escena": 6,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 16.9,
+  "duracion": 2.2,
+  "texto": "¿A qué hora te escriben a ti?",
+  "enfasis": []
+ }
+]

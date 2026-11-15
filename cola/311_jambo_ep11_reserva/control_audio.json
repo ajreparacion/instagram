@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 19.6,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['be'], sobran ['lin'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "¿Dos familias en la misma habitación? ¿Quién apuntó esta reserva? ¿Quién? Compartires vivir, hagan piña, sin impreso 27 lín no hay habitación, para ninguna. Caben, seguro, hay un sofá, encontré la servilleta. Las dos reservas son tuyas, duermes en el sofá. ¿Dónde apuntas tú las reservas?",
+  "guion": "¿Dos familias en la misma habitación? ¿Quién apuntó esta reserva? ¿Quién? ¡Compartir es vivir! ¡Hagan piña! Sin impreso veintisiete be no hay habitación. Para ninguna. Caben. Seguro. Hay un sofá. Encontré la servilleta. Las dos reservas son tuyas. Duermes en el sofá. ¿Dónde apuntas tú las reservas?"
+}

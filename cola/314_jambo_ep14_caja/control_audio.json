@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 19.93,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['faltan', 'caja'], sobran ['falta', 'en', 'taja'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Falta en 40 euros. Yo conté. Cuenta otra vez, pelota. 2 más 2, 5. Seguro. Los euros perdidos requieren acta y fotocopia de los euros. Con mentalidad de abundancia, nada falta. Taja cuadrada. Los 40 estaban en tu bolsillo, con el tique del bocadillo. ¿Cuánto fue tu mayor descuadre?",
+  "guion": "¡Faltan cuarenta euros! ¡Yo conté! Cuenta otra vez, Pelota. Dos más dos, cinco. Seguro. Los euros perdidos requieren acta. Y fotocopia de los euros. ¡Con mentalidad de abundancia, nada falta! Caja cuadrada. Los cuarenta estaban en tu bolsillo. Con el tique del bocadillo. ¿Cuánto fue tu mayor descuadre?"
+}

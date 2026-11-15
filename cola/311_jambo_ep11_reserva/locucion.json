@@ -1,0 +1,75 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 1.9,
+  "texto": "¿Dos familias en la misma habitación?",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 1.9,
+  "duracion": 2.0,
+  "texto": "¿Quién apuntó esta reserva? ¿Quién?",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 3.9,
+  "duracion": 2.133,
+  "texto": "¡Compartir es vivir! ¡Hagan piña!",
+  "enfasis": [
+   2
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 6.033,
+  "duracion": 3.933,
+  "texto": "Sin impreso veintisiete be no hay habitación. Para ninguna.",
+  "enfasis": [
+   8
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 9.967,
+  "duracion": 2.5,
+  "texto": "Caben. Seguro. Hay un sofá.",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 12.467,
+  "duracion": 4.933,
+  "texto": "Encontré la servilleta. Las dos reservas son tuyas. Duermes en el sofá.",
+  "enfasis": [
+   7
+  ]
+ },
+ {
+  "escena": 6,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 17.4,
+  "duracion": 2.2,
+  "texto": "¿Dónde apuntas tú las reservas?",
+  "enfasis": []
+ }
+]
