@@ -28,11 +28,6 @@
     "archivo": "Monkeys_Spinning_Monkeys.mp3",
     "bpm": 143.6
   },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-15T19:17:44+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['mi'], sobran ['ni'] (rehacer esas frases)"
-    ],
-    "guion_md5": "9c3f6f9999eee52ae6054380b03ee5d5"
-  }
+  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/9fe9bb394_308_jambo_presupuesto.mp4",
+  "motor": "neogest-studio"
 }
