@@ -16,3 +16,11 @@ El motor «sketch» de este repo queda SUSTITUIDO para la serie. Cada episodio s
 3. El giro resuelve el conflicto planteado (no otro) y se entiende sin contexto.
 4. Moraleja explícita en el cierre, en 6-9 palabras («Tu trabajo vale lo mismo para todos»).
 5. Cifras en letra y cero palabras en inglés en la voz.
+
+## Pasos en una sesión en la nube (todo por el MCP de Base44, app 6af862101565c330cf06389f)
+1. Escribe en el sandbox de la app (`write_file`) este `gen_episodios.py` y un `eps.json` con los episodios. Cada episodio: `slug` (empieza por el número de la pieza), `set` (oficina, despacho, bar, calle o reunion), `hora` (0-23), `flow` (URL de un clip de la Biblioteca: entidad MediaAsset, tags flow/gemini), `moraleja` (6-9 palabras) y `escenas`.
+2. Un guion del motor antiguo (`guion.json` con `escenas[].estilo/hablante/voz/texto/dibujo`) se pasa así a cada escena del estudio: `e` = estilo (gancho, gag, remate; la última escena va como `cierre`), `h` = hablante, `v` = voz, `t` = texto, `p` = dibujo.personajes, `a` = dibujo.acciones, `sello` (opcional, texto corto del remate).
+3. En el sandbox (`run_command`): `pip install edge-tts`, `python3 gen_episodios.py eps.json /tmp/jb` y, por episodio, `node scripts/render.mjs /tmp/jb/<n>.json /tmp/jb/<n>.mp4 --hoja`. Mira la hoja `.jpg` y el `.qc.json` antes de dar el vídeo por bueno (≤ 30 s).
+4. El render deja una copia publicable en `public/_render/`. Súbela con `upload_app_asset` usando `fileUrl = https://<preview_url>/_render/<archivo>?preview_token=<token>` (el token sale de `GET /api/apps/{app_id}/sandbox/preview-url`). La URL resultante (`https://media.base44.com/videos/public/6af862101565c330cf06389f/…mp4`) es el `video_externo`.
+5. En `cola/NNN_…/post.json`: `"video_externo": "<esa URL>"`, `"renderizado": false` y `"motor": "neogest-studio"`. El ciclo de GitHub descarga el vídeo, pasa el control de audio y lo sube a la release; después lo evalúa Calidad.
+6. Si /tmp del sandbox se ha borrado, repite el paso 1; si Base44 responde «busy» o 503, espera y reintenta.
