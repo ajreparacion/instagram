@@ -28,6 +28,10 @@
     "bpm": 101.3
   },
   "_intentos_render": 1,
-  "_error_render": "Ningún motor de voz funcionó (['edge']): edge-tts falló: edge-tts falló para «Son cuarenta alumnos. Seguro que aprueban.»: No audio was received. Please verify that your parameters are correct.",
-  "renderizado": false
+  "renderizado": "2026-11-15T11:01:53+00:00",
+  "asset": "322_jambo_ep7_parte2_clase.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 23.2
+  }
 }

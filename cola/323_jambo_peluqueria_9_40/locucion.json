@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 2.733,
+  "duracion": 2.633,
   "texto": "La de las nueve llega... a las nueve cuarenta.",
   "enfasis": [
    7,
@@ -15,8 +15,8 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 2.733,
-  "duracion": 2.133,
+  "inicio": 2.633,
+  "duracion": 1.967,
   "texto": "¡Llegar tarde es tendencia!",
   "enfasis": []
  },
@@ -24,8 +24,8 @@
   "escena": 2,
   "estilo": "gag",
   "hablante": "tramites",
-  "inicio": 4.867,
-  "duracion": 3.833,
+  "inicio": 4.6,
+  "duracion": 4.0,
   "texto": "Rellene el formulario de reprogramación. Por triplicado.",
   "enfasis": []
  },
@@ -33,8 +33,8 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 8.7,
-  "duracion": 3.5,
+  "inicio": 8.6,
+  "duracion": 3.4,
   "texto": "Y la de las diez ya está en la puerta, y la de las diez y media...",
   "enfasis": []
  },
@@ -42,8 +42,8 @@
   "escena": 4,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 12.2,
-  "duracion": 4.967,
+  "inicio": 12.0,
+  "duracion": 4.867,
   "texto": "Cita recordada ayer, hueco reasignado, y ya le estoy cobrando a la de las nueve.",
   "enfasis": []
  },
@@ -51,8 +51,8 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 17.167,
-  "duracion": 1.8,
+  "inicio": 16.867,
+  "duracion": 1.433,
   "texto": "Que lo haga la Jupillo.",
   "enfasis": [
    4
@@ -62,7 +62,7 @@
   "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 18.967,
+  "inicio": 18.3,
   "duracion": 2.2,
   "texto": "¿Cuánto esperas tú?",
   "enfasis": []
