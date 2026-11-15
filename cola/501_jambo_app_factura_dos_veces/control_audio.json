@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 21.53,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['be'], sobran ['b'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Presupuesto aprobado, ahora lo tecleo otra vez, las mismas líneas, los mismos precios. Para facturar, rellene el impreso 27B, en triplicado. Teclear dos veces sale el doble de bien. Cuarenta minutos por factura, eso es dedicación. Las líneas ya estaban escritas, las has tecleado mal las dos veces. ¿Cuántas veces tecleas tú lo mismo?",
+  "guion": "Presupuesto aprobado. Ahora lo tecleo otra vez. Las mismas líneas. Los mismos precios. Para facturar, rellene el impreso veintisiete be. En triplicado. Teclear dos veces sale el doble de bien. ¡Cuarenta minutos por factura! ¡Eso es dedicación! Las líneas ya estaban escritas. Las has tecleado mal las dos veces. ¿Cuántas veces tecleas tú lo mismo?"
+}
