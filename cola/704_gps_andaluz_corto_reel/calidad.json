@@ -1,0 +1,8 @@
+{
+  "aprobado": true,
+  "nota": 90,
+  "fecha": "2026-11-15T10:00:00+00:00",
+  "revisor": "Calidad (directiva de vídeo 14/11)",
+  "comprobado": "18,1 s; sin silencios >0,6 s; pico −3,5 dBFS. Gancho curioso («¿Un GPS con indicaciones en andaluz?») → destino, categoría, Iniciar, frase en andaluz visible; cambio de plano cada ~2 s; cierre con logo 2026.",
+  "aviso": "Whisper no pudo ejecutarse en esta sesión (huggingface.co bloqueado); voz sin transcripción independiente; medidas con ffmpeg: LUFS ≈ −16 (objetivo −14)."
+}

@@ -1,0 +1,8 @@
+{
+  "aprobado": true,
+  "nota": 90,
+  "fecha": "2026-11-15T10:00:00+00:00",
+  "revisor": "Calidad (directiva de vídeo 14/11)",
+  "comprobado": "23,5 s; 1080x1920; sin silencios >0,6 s a −45 dB; pico −2,6 dBFS. Gancho en pregunta rotulada en el 0 («¿Tu programa de facturas cumple Verifactu?») = problema reconocible; la app lo resuelve en pantalla con datos ficticios (importe, retención, QR, verificar); subtítulos grandes palabra a palabra; cierre único con logo 2026 y By Neogest Lab; pregunta final en el post. Sin música, no requiere atribución.",
+  "aviso": "Whisper no pudo ejecutarse en esta sesión (huggingface.co bloqueado); voz sin transcripción independiente; medidas con ffmpeg: LUFS ≈ −16 (objetivo −14)."
+}

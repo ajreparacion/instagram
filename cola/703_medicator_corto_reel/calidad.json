@@ -1,0 +1,8 @@
+{
+  "aprobado": true,
+  "nota": 91,
+  "fecha": "2026-11-15T10:00:00+00:00",
+  "revisor": "Calidad (directiva de vídeo 14/11)",
+  "comprobado": "19,8 s; sin silencios >0,6 s; pico −3,0 dBFS. Problema en 2 s («¿Se te olvidan las pastillas?») → botón «Ya me la he tomado» → calendario → lista de farmacia; datos ficticios rotulados; aviso «no sustituye a tu médico» en el post; logo 2026 al cierre.",
+  "aviso": "Whisper no pudo ejecutarse en esta sesión (huggingface.co bloqueado); voz sin transcripción independiente; medidas con ffmpeg: LUFS ≈ −16 (objetivo −14)."
+}

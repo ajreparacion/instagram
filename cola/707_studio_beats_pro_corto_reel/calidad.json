@@ -1,0 +1,8 @@
+{
+  "aprobado": false,
+  "nota": 86,
+  "fecha": "2026-11-15T10:00:00+00:00",
+  "revisor": "Calidad (directiva de vídeo 14/11)",
+  "observaciones": "20,6 s; sin silencios >0,6 s. Recorrido de funciones de Studio Beats sin problema ni resultado oyente (no se oye ninguna canción terminada); interfaz muy pequeña para móvil. Rehacer: ANTES (quiero una canción y no sé empezar) → DESPUÉS (la canción terminada sonando) con subtítulos grandes.",
+  "aviso": "Whisper no pudo ejecutarse en esta sesión (huggingface.co bloqueado); voz sin transcripción independiente; medidas con ffmpeg: LUFS ≈ −16 (objetivo −14)."
+}

@@ -1,9 +1,12 @@
 {
-  "aprobado": true,
-  "nota": 90,
-  "fecha": "2026-11-13T18:40Z",
+  "aprobado": false,
+  "nota": 78,
+  "fecha": "2026-11-15T10:00:00+00:00",
   "revisado_por": "agente de CALIDAD (13/11, pasada de la tarde)",
   "comentario": "Audio del re-render medido: -14,1/-14,2 LUFS, pico < -1,2 dBTP, sin silencios > 1,1 s; 1080x1920 H.264+AAC. Re-render del 13/11 14:17 revisado (14 fotogramas): gancho POV de 6 palabras en el fotograma 0 con el Jambo y la Trámites en pantalla, voz desde el segundo 0, primer corte a 2,7 s, contador, sello, giro serio (ATA según The Objective, 18/12/2025, fuente leída en la pasada anterior) y pivote en una frase literal de hechos_verificados de Gestión Integral 7D (hereda líneas e IVA); sin logo, sin precio y sin cierre de venta: la tarjeta final ya es «Mándaselo a quien factura dos veces» (DIRECTIVA §14 b-c). Comentario fijado con la oferta, avance y frase de envío presentes. EXCEPCIÓN: dura 33,1 s (> 20 s) y sale el 15/11, dentro del «lo que sale el 13-15/11 no se toca» del plan; es además el único episodio con historia al que Calidad concede el margen de 35 s (§14 a). Descuentos: los últimos 12 s son tarjetas oscuras de texto sin personaje (la del pivote aguanta ~6 s sin cambio visual) y el pie del post llevaba 6 hashtags (corregido a 5).",
   "aprobado_anterior": false,
-  "nota_anterior": 91
+  "nota_anterior": 91,
+  "revisor": "Calidad (directiva de vídeo 14/11)",
+  "observaciones": "Reevaluado con la directiva de vídeo 14/11: no cumple la fórmula de 5 tiempos. Guion antiguo: «Que lo haga la Jupillo» como muletilla a mitad (no es el remate), escena de sello en silencio >0,6 s (silencedetect −45 dB), sin atribución de música MacLeod en post.json y, en 501-515, dato estadístico/mensaje de marca pegado al final del vídeo (debe ir en el texto del post con su fuente).  Además dura 33,1 s (>30 s) y tiene 6 silencios de 0,63-0,91 s.",
+  "rehacer": "Creador: guion nuevo con la fórmula (planteamiento en 1 frase, escalada en 3 golpes, giro propio, cierre con pregunta o Parte 2), sin silencios >0,6 s, dato con fuente solo en el post, música MacLeod con atribución; luego renderizado:false."
 }

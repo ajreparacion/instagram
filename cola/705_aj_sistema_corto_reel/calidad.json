@@ -1,0 +1,8 @@
+{
+  "aprobado": false,
+  "nota": 88,
+  "fecha": "2026-11-15T10:00:00+00:00",
+  "revisor": "Calidad (directiva de vídeo 14/11)",
+  "observaciones": "19,2 s; sin silencios >0,6 s. Gancho aceptable pero recorrido de formularios sin problema vivido ni resultado final visible (el cliente ve «en qué paso va» sin mostrar el estado); el cierre es lista de funciones («A medida: …»). Falta ANTES/DESPUÉS. Rehacer: problema real en 2 s (el cliente llama «¿ya está mi encargo?») → pantalla de estado con el paso → resultado.",
+  "aviso": "Whisper no pudo ejecutarse en esta sesión (huggingface.co bloqueado); voz sin transcripción independiente; medidas con ffmpeg: LUFS ≈ −16 (objetivo −14)."
+}

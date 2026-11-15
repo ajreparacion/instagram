@@ -1,12 +1,15 @@
 {
- "aprobado": true,
- "nota": 90,
- "fecha": "2026-11-14T13:05Z",
- "revisado_por": "agente de CALIDAD (14/11, 12:51)",
- "comentario": "Reevaluado sobre el re-render del 14/11: 15-19 s (≤ 20), personaje en el fotograma 0 (Jambo + IA/personaje) y gancho POV ≤ 8 palabras, pivote con la Jupillo en pantalla dentro de la historia, cierre con «mándaselo a quien…» (persona concreta), sin precio ni venta en el reel y sin enlace en el texto (la oferta va en el comentario fijado). Audio -14 LUFS, pico < -1,1 dBFS, sin silencios > 1,2 s, 1080x1920. Funciones de la app contrastadas con los hechos verificados (analisis_web_ajreparacion / catalogo_apps). Reserva: la voz se midió pero no se escuchó; sin seseo comprobable por máquina.",
- "motivos": [],
- "como_arreglarlo": "",
- "aprobado_anterior": false,
- "nota_anterior": 75,
- "render_revisado": "2026-11-14T10:42:16+00:00"
+  "aprobado": false,
+  "nota": 78,
+  "fecha": "2026-11-15T10:00:00+00:00",
+  "revisado_por": "agente de CALIDAD (14/11, 12:51)",
+  "comentario": "Reevaluado sobre el re-render del 14/11: 15-19 s (≤ 20), personaje en el fotograma 0 (Jambo + IA/personaje) y gancho POV ≤ 8 palabras, pivote con la Jupillo en pantalla dentro de la historia, cierre con «mándaselo a quien…» (persona concreta), sin precio ni venta en el reel y sin enlace en el texto (la oferta va en el comentario fijado). Audio -14 LUFS, pico < -1,1 dBFS, sin silencios > 1,2 s, 1080x1920. Funciones de la app contrastadas con los hechos verificados (analisis_web_ajreparacion / catalogo_apps). Reserva: la voz se midió pero no se escuchó; sin seseo comprobable por máquina.",
+  "motivos": [],
+  "como_arreglarlo": "",
+  "aprobado_anterior": false,
+  "nota_anterior": 75,
+  "render_revisado": "2026-11-14T10:42:16+00:00",
+  "revisor": "Calidad (directiva de vídeo 14/11)",
+  "observaciones": "Reevaluado con la directiva de vídeo 14/11: no cumple la fórmula de 5 tiempos. Guion antiguo: «Que lo haga la Jupillo» como muletilla a mitad (no es el remate), escena de sello en silencio >0,6 s (silencedetect −45 dB), sin atribución de música MacLeod en post.json y, en 501-515, dato estadístico/mensaje de marca pegado al final del vídeo (debe ir en el texto del post con su fuente). ",
+  "rehacer": "Creador: guion nuevo con la fórmula (planteamiento en 1 frase, escalada en 3 golpes, giro propio, cierre con pregunta o Parte 2), sin silencios >0,6 s, dato con fuente solo en el post, música MacLeod con atribución; luego renderizado:false."
 }
