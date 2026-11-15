@@ -136,7 +136,7 @@ jobs:
         if: steps.trabajo.outputs.ml == 'si'
         # Subtítulos clavados a la voz y énfasis (*palabra*). Si falla, publicar_gh.py sigue con la estimación.
         continue-on-error: true
-        run: pip install --quiet faster-whisper
+        run: pip install --quiet faster-whisper num2words
 
       - name: Voz edge-tts (directiva de vídeo 14/11/2026)
         if: steps.trabajo.outputs.edge == 'si'

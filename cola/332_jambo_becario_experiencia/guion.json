@@ -1,0 +1,167 @@
+{
+ "titulo": "El Jambo que sabe y las IAs · Becario con experiencia",
+ "semilla": 3325,
+ "modo": "sketch",
+ "serie": "El Jambo que sabe y las IAs",
+ "episodio": 25,
+ "negocio": "oficina",
+ "portada_texto": "POV: tu empresa busca «becario con 5 años de experiencia»",
+ "musica": true,
+ "mensaje_final": {
+  "cifra": "",
+  "fuente": ""
+ },
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "hablante": "jambo",
+   "voz": "Bola, escribe la oferta de *empleo*.",
+   "texto": "POV: tu empresa busca «becario con 5 años de experiencia»",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "bola"
+    ],
+    "acciones": {
+     "jambo": "habla",
+     "bola": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "bola",
+   "voz": "Buscamos becario. Diez años de experiencia. Cuatro *idiomas*.",
+   "texto": "El Bola",
+   "dibujo": {
+    "personajes": [
+     "bola",
+     "jambo"
+    ],
+    "acciones": {
+     "bola": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "¿Y el sueldo?",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "bola"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "bola": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "bola",
+   "voz": "Sueldo *emocional*.",
+   "texto": "El Bola",
+   "dibujo": {
+    "personajes": [
+     "bola",
+     "jambo"
+    ],
+    "acciones": {
+     "bola": "presume",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "pelota",
+   "voz": "¡Y fruta los viernes! Qué *generosos*.",
+   "texto": "La Pelota",
+   "dibujo": {
+    "personajes": [
+     "pelota",
+     "bola"
+    ],
+    "acciones": {
+     "pelota": "habla",
+     "bola": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "jupillo",
+   "voz": "Me he presentado yo. Y he pedido *tu* sueldo.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "¿Y te lo han dado?",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "jupillo"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "jupillo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "jupillo",
+   "voz": "No. Me han dado tu *puesto*.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "desespera"
+    },
+    "efecto": "sello",
+    "efecto_t": 0.6,
+    "sello_texto": "CONTRATADA"
+   }
+  },
+  {
+   "estilo": "cierre",
+   "hablante": null,
+   "voz": "¿La oferta de empleo más absurda que has visto? Comenta.",
+   "texto": "¿La oferta de empleo más absurda que has visto? Comenta",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
+  }
+ ],
+ "dibujo": {
+  "personajes": [
+   "jambo",
+   "jupillo",
+   "pelota",
+   "bola",
+   "tramites"
+  ]
+ },
+ "_guion": "15/11/2026 lote del doc claude/redes/jambo_episodios_2026-11-15.md (orden del dueño: publicar hoy). Fórmula 14/11; cifras en letra y sin inglés en la voz; edge-tts."
+}

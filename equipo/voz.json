@@ -128,6 +128,21 @@
         "voz": "es-ES-XimenaNeural",
         "rate": "+0%",
         "pitch": "+0Hz"
+      },
+      "pelota": {
+        "voz": "es-ES-ElviraNeural",
+        "rate": "+6%",
+        "pitch": "+8Hz"
+      },
+      "bola": {
+        "voz": "es-ES-ElviraNeural",
+        "rate": "+10%",
+        "pitch": "-10Hz"
+      },
+      "tramites": {
+        "voz": "es-ES-ElviraNeural",
+        "rate": "-8%",
+        "pitch": "-4Hz"
       }
     },
     "defecto": {
@@ -136,7 +151,8 @@
       "pitch": "+0Hz"
     },
     "max_s": 600,
-    "_nota": "14/11/2026 DIRECTIVA DE VÍDEO del dueño: edge-tts (Microsoft Edge neural, es-ES) por personaje; sustituye a Melo/Kokoro/Chatterbox (nunca la voz del dueño). Revertir: cp herramientas/versiones/voz.json_2026-11-14e equipo/voz.json (vuelve a Melo)."
+    "_nota": "14/11/2026 DIRECTIVA DE VÍDEO del dueño: edge-tts (Microsoft Edge neural, es-ES) por personaje; sustituye a Melo/Kokoro/Chatterbox (nunca la voz del dueño). Revertir: cp herramientas/versiones/voz.json_2026-11-14e equipo/voz.json (vuelve a Melo).",
+    "_nota_15_11": "15/11/2026: Pelota, Bola y Trámites con ElviraNeural y pitch/rate distintos para distinguirlos (doc jambo_episodios_2026-11-15.md). Revertir: borrar esas tres entradas."
   },
   "sr_voz": 48000,
   "control_audio": {

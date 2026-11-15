@@ -1,0 +1,29 @@
+{
+  "tipo": "reel",
+  "texto": "Lunes con el Bola. La Jupillo lo arregla; el Jambo no tanto. Humor de oficina de ficción.\n¿Cuántos correos tienes sin leer ahora mismo? Di el número Cuéntalo en comentarios.\nMándaselo a quien le pasa esto.\n#humor #trabajo #oficina #correo #pymes #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-15T22:50:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo",
+  "publico": "oficina",
+  "formula": "fórmula vídeos 14/11",
+  "_fuentes": [],
+  "_nota_creador": "15/11/2026 lote nuevo de 6 episodios, programado hoy por orden del dueño.",
+  "motor_voz": "edge",
+  "comentario_fijado": "¿Cuántos correos tienes sin leer ahora mismo? Di el número",
+  "portada_ms": 0,
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+  },
+  "musica": {
+    "titulo": "Investigations",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Investigations.mp3",
+    "bpm": 95.7
+  },
+  "renderizado": false
+}

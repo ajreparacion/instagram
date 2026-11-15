@@ -1,0 +1,31 @@
+{
+  "tipo": "reel",
+  "texto": "Vacaciones en agosto. La Jupillo lo arregla; el Jambo no tanto. Humor de oficina de ficción.\nDato: el Estatuto de los Trabajadores (art. 38) fija vacaciones mínimas de 30 días naturales al año y el derecho a conocer las fechas al menos dos meses antes (BOE, Real Decreto Legislativo 2/2015). No es asesoramiento legal.\n¿Te dejan coger agosto o te toca noviembre? Cuéntalo en comentarios.\nMándaselo a quien le pasa esto.\n#humor #trabajo #oficina #vacaciones #pymes #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-15T18:00:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo",
+  "publico": "oficina",
+  "formula": "fórmula vídeos 14/11",
+  "_fuentes": [
+    "BOE"
+  ],
+  "_nota_creador": "15/11/2026 lote nuevo de 6 episodios, programado hoy por orden del dueño.",
+  "motor_voz": "edge",
+  "comentario_fijado": "¿Te dejan coger agosto o te toca noviembre? Comenta",
+  "portada_ms": 0,
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+  },
+  "musica": {
+    "titulo": "Fluffing a Duck",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Fluffing_a_Duck.mp3",
+    "bpm": 123.0
+  },
+  "renderizado": false
+}
