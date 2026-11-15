@@ -4,8 +4,8 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 3.667,
-  "texto": "Jupillo, doscientas páginas para mañana. Es un momentito.",
+  "duracion": 3.767,
+  "texto": "Doscientas páginas para mañana, Jupillo. Es un momentito.",
   "enfasis": [
    7
   ]
@@ -14,7 +14,7 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 3.667,
+  "inicio": 3.767,
   "duracion": 1.933,
   "texto": "Hechas. Son las once.",
   "enfasis": [
@@ -25,7 +25,7 @@
   "escena": 2,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 5.6,
+  "inicio": 5.7,
   "duracion": 2.767,
   "texto": "Pues ahora tradúcelas al chino. Momentito.",
   "enfasis": [
@@ -36,7 +36,7 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 8.367,
+  "inicio": 8.467,
   "duracion": 1.767,
   "texto": "Hechas. Las doce.",
   "enfasis": [
@@ -47,7 +47,7 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 10.133,
+  "inicio": 10.233,
   "duracion": 2.333,
   "texto": "Y ahora ponle música. Rapidito.",
   "enfasis": [
@@ -58,7 +58,7 @@
   "escena": 5,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 12.467,
+  "inicio": 12.567,
   "duracion": 4.5,
   "texto": "Hecho. Y he mandado tu horario a Inspección de Trabajo. Momentito.",
   "enfasis": [
@@ -69,7 +69,7 @@
   "escena": 6,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 16.967,
+  "inicio": 17.067,
   "duracion": 1.6,
   "texto": "¿Eso también lo haces tú?",
   "enfasis": []
@@ -78,7 +78,7 @@
   "escena": 7,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 18.567,
+  "inicio": 18.667,
   "duracion": 4.0,
   "texto": "¿Cuántos momentitos te han hecho este año? Parte 3 mañana.",
   "enfasis": []
