@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-15T03:26:55+00:00",
+  "actualizado": "2026-11-15T09:29:02+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1602,
@@ -18,15 +18,15 @@
       "permalink": "https://www.instagram.com/reel/DfvVjptSgT9/",
       "timestamp": "2026-11-14T23:00:49+0000",
       "metricas": {
-        "reach": 14,
-        "views": 21,
+        "reach": 23,
+        "views": 32,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 6736,
-        "ig_reels_video_view_total_time": 107776
+        "ig_reels_avg_watch_time": 4825,
+        "ig_reels_video_view_total_time": 130285
       }
     },
     {
@@ -39,36 +39,36 @@
       "permalink": "https://www.instagram.com/reel/DfvANFTAMf-/",
       "timestamp": "2026-11-14T19:54:23+0000",
       "metricas": {
-        "reach": 123,
-        "views": 148,
+        "reach": 128,
+        "views": 154,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 3,
         "total_interactions": 4,
-        "ig_reels_avg_watch_time": 25213,
-        "ig_reels_video_view_total_time": 3227362
+        "ig_reels_avg_watch_time": 24656,
+        "ig_reels_video_view_total_time": 3304020
       }
     },
     {
       "id": "18133108786840654",
       "caption": "El cliente quiere devolverlo sin ticket y El Jambo quiere un impreso.\nUna devolución, un impreso 27-B y la Jupillo haciendo de todo. Humor negro de ficción.\nSígueme y más tarde verás qué pasa: la clase de mañana se prepara a las 23:00.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #tienda #comercio #ia #trabajo\nVoz y personajes generados por IA\n\nVoz generada por IA",
       "comments_count": 0,
-      "like_count": 2,
+      "like_count": 3,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DfuyeXhiKCb/",
       "timestamp": "2026-11-14T17:54:26+0000",
       "metricas": {
-        "reach": 185,
-        "views": 208,
+        "reach": 210,
+        "views": 232,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 2,
-        "total_interactions": 3,
-        "ig_reels_avg_watch_time": 9756,
-        "ig_reels_video_view_total_time": 1795194
+        "likes": 3,
+        "total_interactions": 4,
+        "ig_reels_avg_watch_time": 9453,
+        "ig_reels_video_view_total_time": 1966296
       }
     },
     {
@@ -82,7 +82,7 @@
       "timestamp": "2026-11-14T16:24:46+0000",
       "metricas": {
         "reach": 3,
-        "views": 9,
+        "views": 10,
         "saved": 0,
         "shares": 0,
         "total_interactions": 2
@@ -119,15 +119,15 @@
       "permalink": "https://www.instagram.com/reel/DfsM480kuYW/",
       "timestamp": "2026-11-13T17:47:34+0000",
       "metricas": {
-        "reach": 113,
-        "views": 152,
+        "reach": 114,
+        "views": 153,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 3,
         "total_interactions": 4,
-        "ig_reels_avg_watch_time": 11205,
-        "ig_reels_video_view_total_time": 1288626
+        "ig_reels_avg_watch_time": 11118,
+        "ig_reels_video_view_total_time": 1289721
       }
     },
     {
@@ -157,15 +157,15 @@
       "permalink": "https://www.instagram.com/reel/DfrqWpEHdns/",
       "timestamp": "2026-11-13T12:45:47+0000",
       "metricas": {
-        "reach": 8,
-        "views": 14,
+        "reach": 9,
+        "views": 15,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 16397,
-        "ig_reels_video_view_total_time": 213168
+        "ig_reels_avg_watch_time": 15226,
+        "ig_reels_video_view_total_time": 213171
       }
     },
     {
@@ -583,6 +583,10 @@
     },
     {
       "fecha": "2026-11-15T03:26+00:00",
+      "seguidores": 1602
+    },
+    {
+      "fecha": "2026-11-15T09:29+00:00",
       "seguidores": 1602
     }
   ]
