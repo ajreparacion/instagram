@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 2.733,
+  "duracion": 2.633,
   "texto": "Reunión rapidita para organizar el papeleo.",
   "enfasis": [
    1
@@ -14,8 +14,8 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 2.733,
-  "duracion": 4.7,
+  "inicio": 2.633,
+  "duracion": 4.233,
   "texto": "Diez minutos. Ahora hablamos de las vacaciones de dos mil veintiocho.",
   "enfasis": [
    8,
@@ -27,8 +27,8 @@
   "escena": 2,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 7.433,
-  "duracion": 3.5,
+  "inicio": 6.867,
+  "duracion": 3.133,
   "texto": "Una hora. Y una presentación de la presentación.",
   "enfasis": [
    7
@@ -38,8 +38,8 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 10.933,
-  "duracion": 3.867,
+  "inicio": 10.0,
+  "duracion": 3.5,
   "texto": "Dos horas. Propongo otra reunión para resumir esta.",
   "enfasis": [
    6
@@ -49,8 +49,8 @@
   "escena": 4,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 14.8,
-  "duracion": 5.533,
+  "inicio": 13.5,
+  "duracion": 5.433,
   "texto": "Os he mandado un correo de tres líneas. Ya está todo resuelto. Desde el minuto uno.",
   "enfasis": [
    15
@@ -60,8 +60,8 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 20.333,
-  "duracion": 2.867,
+  "inicio": 18.933,
+  "duracion": 2.767,
   "texto": "Perfecto. Reunión para comentar el correo.",
   "enfasis": []
  },
@@ -69,8 +69,8 @@
   "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 23.2,
-  "duracion": 2.967,
+  "inicio": 21.7,
+  "duracion": 2.867,
   "texto": "Etiqueta al que convoca estas reuniones.",
   "enfasis": []
  }
