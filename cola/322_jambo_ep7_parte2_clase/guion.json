@@ -1,0 +1,138 @@
+{
+ "titulo": "El Jambo que sabe y las IAs · ep. 7 · parte 2",
+ "semilla": 3044,
+ "modo": "sketch",
+ "serie": "El Jambo que sabe y las IAs",
+ "episodio": 23,
+ "negocio": "academia",
+ "portada_texto": "POV: hoy toca el examen y no hay examen",
+ "musica": true,
+ "contador": {
+  "texto": "Veces que se lo ha pasado a la Jupillo",
+  "inicio": 8,
+  "valor": 11
+ },
+ "mensaje_final": {
+  "cifra": "Lo que no se ve también es trabajo.",
+  "fuente": ""
+ },
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "hablante": "jambo",
+   "voz": "¡¿Examen hoy?! ¡Si ni he *corregido* el de ayer!",
+   "texto": "POV: hoy toca el examen y no hay examen",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "pelota"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "pelota": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "pelota",
+   "voz": "Son cuarenta alumnos. Seguro que aprueban.",
+   "texto": "La Pelota",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "pelota"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "pelota": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "¡Y mañana la evaluación, y pasado las notas!",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "pelota"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "pelota": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "pelota",
+   "voz": "Tranquilo, la nota media la ponemos nosotros.",
+   "texto": "La Pelota",
+   "dibujo": {
+    "personajes": [
+     "pelota"
+    ],
+    "acciones": {
+     "pelota": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "¡Una alumna dice que su examen *no es suyo*!",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jambo",
+     "jupillo"
+    ],
+    "acciones": {
+     "jambo": "desespera",
+     "jupillo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "jupillo",
+   "voz": "Examen corregido, nota media: el Jambo, suspenso por copiar mi clase.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "remata"
+    },
+    "efecto": "sello",
+    "efecto_t": 0.6,
+    "sello_texto": "SUSPENSO"
+   }
+  },
+  {
+   "estilo": "cierre",
+   "hablante": null,
+   "voz": "¿A qué hora preparas tú las clases? Parte tres, mañana.",
+   "texto": "¿A qué hora preparas tú las clases? Parte 3 mañana",
+   "dibujo": {
+    "personajes": [],
+    "acciones": {}
+   }
+  }
+ ],
+ "dibujo": {
+  "personajes": [
+   "jambo",
+   "jupillo",
+   "pelota",
+   "bola",
+   "tramites"
+  ]
+ },
+ "_guion": "15/11/2026 Remasterizador: Parte 2 del ep7 (148 vistas, el de mayor tiempo visto: 25 s medios). Mismo conflicto y personajes; escalada nueva (examen, evaluación, alumna) y giro distinto (la Jupillo suspende al Jambo). Sin dato en el vídeo."
+}

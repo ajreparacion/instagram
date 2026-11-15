@@ -1,0 +1,29 @@
+{
+  "tipo": "reel",
+  "texto": "Parte 2: hoy hay examen y el Jambo ni ha corregido el de ayer.\nLa Pelota aplaude, la Jupillo corrige. Humor negro de ficción.\n¿A qué hora preparas tú las clases? Cuéntalo en comentarios.\nMándaselo a quien da clase.\nParte 3 mañana en @neogestlab\n#humornegro #profesores #educacion #ia #trabajo\nVoz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-16T19:40:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo",
+  "publico": "academia",
+  "formula": "humor con personaje (v8 B2)",
+  "_fuentes": [],
+  "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
+  "_nota_creador": "15/11/2026 Remasterizador: Parte 2 de un éxito (serie El Jambo) con la DIRECTIVA DE VÍDEO del 14/11. Falta: render (Creador) con edge-tts (Álvaro/Ximena/Elvira), control de audio y Calidad (≥ 90). Cifras en letra y sin «IA» en la voz para pasar el control de Whisper (fallo de 317). Publicar antes de 48 h del original.",
+  "motor_voz": "edge",
+  "comentario_fijado": "¿A qué hora preparas tú las clases? Parte 3 mañana en @neogestlab",
+  "avance_siguiente": "Mañana: parte 3.",
+  "portada_ms": 0,
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
+    "paso_embudo": "alcance → visita al perfil"
+  },
+  "musica": {
+    "titulo": "Monkeys Spinning Monkeys",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Monkeys_Spinning_Monkeys.mp3"
+  }
+}
