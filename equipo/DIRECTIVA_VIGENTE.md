@@ -11,10 +11,10 @@ Versión limpia del 15/11/2026 (orden del dueño). Sustituye a todo lo anterior;
 ## 2. Mapa del equipo y horarios (hora de Madrid)
 | Rol | Cuándo | Modelo | Archivo |
 |---|---|---|---|
-| Creador | 09:51 a diario (13:51 y 17:51 cuando el dueño amplíe el horario de la tarea; hasta entonces, todo en la pasada de la mañana) | Sonnet | roles/creador.md |
+| Creador | 09:51, 13:51 y 17:51 a diario | Sonnet | roles/creador.md |
 | Calidad | cada 2 h de 08:41 a 22:41 (8 pasadas; tarea única «Calidad cada 2 h») | Sonnet | roles/calidad.md |
 | Supervisor | 12:27 y 18:27 | Haiku | roles/supervisor.md |
-| Cazador de virales | lunes, miércoles y viernes 08:23 (si se dispara otro día, termina en una línea) | Sonnet | roles/cazador.md |
+| Cazador de virales | lunes, miércoles y viernes 08:23 | Sonnet | roles/cazador.md |
 | Remasterizador | 09:00 a diario | Sonnet | roles/remasterizador.md |
 | Analista (+ monetización los domingos) | 23:23 a diario | Haiku | roles/analista.md |
 | Estratega | lunes 10:13 | Sonnet | roles/estratega.md |
@@ -22,8 +22,8 @@ Versión limpia del 15/11/2026 (orden del dueño). Sustituye a todo lo anterior;
 | Comunidad | 11:37, 16:37 y 21:37 | Haiku | roles/comunidad.md |
 | Centro (vídeos y demos del Centro) | lunes y jueves 11:17 | Sonnet | roles/centro.md |
 | Ventas · prospección | L-V 09:43, EN PAUSA (ver su rol) | Sonnet | roles/ventas.md |
-Tareas duplicadas que siguen programadas hasta que el dueño las desactive (solo él puede editarlas): si eres una de ellas, NO trabajes; termina en una línea, sin tablón ni commit.
-- «IG nube · Calidad (repo)» de las 12:51 y «IG nube · Calidad (noche) (repo)» de las 19:31: fusionadas en la Calidad de cada 2 h (te reconoces porque arrancas a las 12:45-13:15 o a las 19:25-19:55, hora de Madrid).
+Tareas en pausa desde el 15/11 (si alguna se dispara, NO trabaja: termina en una línea, sin tablón ni commit):
+- «IG nube · Calidad (repo)» de las 12:51 y «IG nube · Calidad (noche) (repo)» de las 19:31: fusionadas en la Calidad de cada 2 h.
 - «IG nube · Analista de monetización (repo)» (domingos 18:17): fusionada en el Analista.
 - «Ventas · Prospección (repo)»: en pausa.
 Fuera del repo (no leen este archivo, se citan para el mapa):
@@ -136,3 +136,4 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - 2026-11-15 · Coordinación (orden del dueño) · directiva y roles reescritos en limpio; deroga lo apilado hasta hoy (ver archivo/).
 - 2026-11-15 · Coordinación · Calidad pasa a una sola tarea cada 2 h de 08:41 a 22:41; Analista de monetización fusionado en Analista; Ventas en pausa.
 - 2026-11-15 · Coordinación · las tareas creadas por el dueño no se pueden editar desde un agente: sus prompts antiguos quedan derogados por §1, las duplicadas se anulan por §2 y el Creador trabaja en una pasada hasta que el dueño amplíe su horario.
+- 2026-11-15 · Coordinación · hecho en claude.ai: prompts de las tareas reducidos a «lee la directiva y tu rol»; Creador a 3 pasadas; Cazador lunes, miércoles y viernes; en pausa Calidad 12:51, Calidad noche, Analista de monetización y Ventas.

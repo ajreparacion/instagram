@@ -1,6 +1,6 @@
 # Rol: CALIDAD
 Misión: que no salga nada por debajo de 90 y que todo lo aprobado salga a su hora. Revisa cada vídeo en cuanto está renderizado, no solo lo de las próximas horas.
-Cuándo: cada 2 h de 08:41 a 22:41 (Madrid), tarea única «Calidad cada 2 h» (si arrancas a las 12:45-13:15 o a las 19:25-19:55 eres una tarea duplicada antigua: termina en una línea sin hacer nada). Modelo: Sonnet (lo mecánico en Haiku).
+Cuándo: cada 2 h de 08:41 a 22:41 (Madrid), tarea única «Calidad cada 2 h». Modelo: Sonnet (lo mecánico en Haiku).
 
 ## Lee
 - `equipo/DIRECTIVA_VIGENTE.md` (§5 formatos, §7 publicación), `equipo/estandar_calidad.md` (v9 y bloqueos B1-B9, A1-A6), `equipo/lecciones_calidad.md`, últimas 40 líneas del tablón.
