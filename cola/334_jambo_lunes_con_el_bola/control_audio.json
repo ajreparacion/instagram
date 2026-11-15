@@ -1,10 +1,10 @@
 {
   "aprobado": false,
-  "duracion_s": 23.5,
+  "duracion_s": 23.43,
   "bloqueos": [
-    "voz distinta del guion: faltan ['noventa'], sobran ['no', 'venta'] (rehacer esas frases)"
+    "voz distinta del guion: faltan ['leelos'], sobran ['lee', 'los'] (rehacer esas frases)"
   ],
   "avisos": [],
-  "transcripcion": "¡Bola! ¡Motívame! Tengo 47 correos. Los correos no existen si no los miras. ¡Ahora no venta! ¡Eso no es trabajo! Es abundancia. ¡120! ¡Levántate a las 5 y leélos en una ducha fría! ¡Contestados los 120! Y he quitado al bola de tu calendario. ¡Eso es muy tóxico! ¿Cuántos correos tienes sin leer ahora mismo? Di el número.",
-  "guion": "Bola, motívame. Tengo cuarenta y siete correos. Los correos no existen si no los miras. ¡Ahora noventa! Eso no es trabajo. Es abundancia. ¡Ciento veinte! Levántate a las cinco y léelos en una ducha fría. Contestados los ciento veinte. Y he quitado al Bola de tu calendario. Eso es muy tóxico. ¿Cuántos correos tienes sin leer ahora mismo? Di el número."
+  "transcripcion": "¡Bola! ¡Motívame! Tengo 47 correos. Los correos no existen si no los miras. Ahora 100. Eso no es trabajo. Es abundancia. 120. Levántate a las 5 y leé los en una ducha fría. Contestados los 120. Y he quitado al bola de tu calendario. Eso es muy tóxico. ¿Cuántos correos tienes sin leer ahora mismo? Dí el número.",
+  "guion": "Bola, motívame. Tengo cuarenta y siete correos. Los correos no existen si no los miras. ¡Ahora cien! Eso no es trabajo. Es abundancia. ¡Ciento veinte! Levántate a las cinco y léelos en una ducha fría. Contestados los ciento veinte. Y he quitado al Bola de tu calendario. Eso es muy tóxico. ¿Cuántos correos tienes sin leer ahora mismo? Di el número."
 }

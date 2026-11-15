@@ -27,12 +27,10 @@
     "archivo": "Investigations.mp3",
     "bpm": 95.7
   },
-  "renderizado": false,
-  "_control_audio_fallo": {
-    "fecha": "2026-11-15T11:31:55+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['por', 'ciento'], sobran [] (rehacer esas frases)"
-    ],
-    "guion_md5": "1e2b49615911bf624c01dccfb987d56e"
+  "renderizado": "2026-11-15T11:56:50+00:00",
+  "asset": "327_jambo_black_friday_70.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 17.97
   }
 }

@@ -26,8 +26,8 @@
   "estilo": "gag",
   "hablante": "jambo",
   "inicio": 5.967,
-  "duracion": 1.167,
-  "texto": "¡Ahora noventa!",
+  "duracion": 1.1,
+  "texto": "¡Ahora cien!",
   "enfasis": [
    1
   ]
@@ -36,7 +36,7 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 7.133,
+  "inicio": 7.067,
   "duracion": 2.633,
   "texto": "Eso no es trabajo. Es abundancia.",
   "enfasis": [
@@ -47,7 +47,7 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 9.767,
+  "inicio": 9.7,
   "duracion": 1.133,
   "texto": "¡Ciento veinte!",
   "enfasis": [
@@ -58,7 +58,7 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 10.9,
+  "inicio": 10.833,
   "duracion": 2.933,
   "texto": "Levántate a las cinco y léelos en una ducha fría.",
   "enfasis": [
@@ -69,7 +69,7 @@
   "escena": 6,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 13.833,
+  "inicio": 13.767,
   "duracion": 4.133,
   "texto": "Contestados los ciento veinte. Y he quitado al Bola de tu calendario.",
   "enfasis": [
@@ -80,7 +80,7 @@
   "escena": 7,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 17.967,
+  "inicio": 17.9,
   "duracion": 1.6,
   "texto": "Eso es muy tóxico.",
   "enfasis": [
@@ -91,7 +91,7 @@
   "escena": 8,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 19.567,
+  "inicio": 19.5,
   "duracion": 3.933,
   "texto": "¿Cuántos correos tienes sin leer ahora mismo? Di el número.",
   "enfasis": []

@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 22.07,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['bola'], sobran ['vola'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "¡Vola! Escribe la oferta de empleo. Buscamos becario, cinco años de experiencia, cuatro idiomas. ¿Y el sueldo? ¡Sueldo emocional! ¡Y fruta los viernes! ¡Qué generosos! Me he presentado yo y he pedido tu sueldo. ¿Y te lo han dado? No, me han dado tu puesto. ¿La oferta de empleo más absurda que has visto? Comenta.",
+  "guion": "Bola, escribe la oferta de empleo. Buscamos becario. Cinco años de experiencia. Cuatro idiomas. ¿Y el sueldo? Sueldo emocional. ¡Y fruta los viernes! Qué generosos. Me he presentado yo. Y he pedido tu sueldo. ¿Y te lo han dado? No. Me han dado tu puesto. ¿La oferta de empleo más absurda que has visto? Comenta."
+}

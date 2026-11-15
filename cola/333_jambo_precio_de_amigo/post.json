@@ -25,5 +25,10 @@
     "archivo": "Investigations.mp3",
     "bpm": 95.7
   },
-  "renderizado": false
+  "renderizado": "2026-11-15T11:54:12+00:00",
+  "asset": "333_jambo_precio_de_amigo.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 24.37
+  }
 }

@@ -15,28 +15,28 @@
   "estilo": "gag",
   "hablante": "jambo",
   "inicio": 3.3,
-  "duracion": 2.467,
-  "texto": "Pelota, haz el presupuesto con cariño.",
+  "duracion": 2.5,
+  "texto": "Haz el presupuesto con cariño, Pelota.",
   "enfasis": [
-   5
+   4
   ]
  },
  {
   "escena": 2,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 5.767,
-  "duracion": 3.1,
-  "texto": "Diez por ciento menos. Por lo guapo que es.",
+  "inicio": 5.8,
+  "duracion": 2.633,
+  "texto": "Rebaja de diez. Por lo guapo que es.",
   "enfasis": [
-   6
+   5
   ]
  },
  {
   "escena": 3,
   "estilo": "gag",
   "hablante": "tramites",
-  "inicio": 8.867,
+  "inicio": 8.433,
   "duracion": 2.567,
   "texto": "¿Y si te hago publicidad en mi perfil?",
   "enfasis": []
@@ -45,9 +45,9 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 11.433,
+  "inicio": 11.0,
   "duracion": 1.5,
-  "texto": "¡Veinte por ciento!",
+  "texto": "¡Rebaja de veinte!",
   "enfasis": [
    2
   ]
@@ -56,7 +56,7 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "tramites",
-  "inicio": 12.933,
+  "inicio": 12.5,
   "duracion": 2.0,
   "texto": "Tengo doce seguidores.",
   "enfasis": [
@@ -67,7 +67,7 @@
   "escena": 6,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 14.933,
+  "inicio": 14.5,
   "duracion": 1.067,
   "texto": "¡Gratis!",
   "enfasis": []
@@ -76,7 +76,7 @@
   "escena": 7,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 16.0,
+  "inicio": 15.567,
   "duracion": 5.433,
   "texto": "Presupuesto corregido. Precio de amigo: el doble. A los amigos se les dice la verdad.",
   "enfasis": [
@@ -87,7 +87,7 @@
   "escena": 8,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 21.433,
+  "inicio": 21.0,
   "duracion": 3.367,
   "texto": "¿Cuánto te han pedido de descuento de amigo? Comenta.",
   "enfasis": []
