@@ -1,0 +1,6 @@
+{
+  "aprobado": true,
+  "nota": 90,
+  "fecha": "2026-11-15T12:05:00+00:00",
+  "comentario": "Control: voz = guion (solo '27C' en dígitos y 'ticket' por 'tique', homófono); sin silencios > 0,6 s; 23 s; giro y cierre con pregunta + parte 3."
+}

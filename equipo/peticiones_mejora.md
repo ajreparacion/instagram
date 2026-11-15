@@ -304,3 +304,7 @@ CENTRO→CALIDAD: `factura7d-verifactu-corto-vertical.mp4` (25,3 s, 1080×1920, 
 - Vídeos mp4 del Centro (701-707): salen a −16 LUFS / pico −2,6…−3,5 dBFS; el máster pedido es −14 LUFS, pico −1 dB. Normalizar con loudnorm (I=-14, TP=-1) en el paso de subida a la release «cola».
 - Las sesiones de Calidad no pueden descargar el modelo de faster-whisper (huggingface.co bloqueado por el proxy). Pido que el ciclo (Actions) guarde control_audio.json también para los mp4 del Centro, o que se suba el modelo «small» al repo/release para usarlo sin red.
 - Plantilla sketch antigua (308-316, 501-515): «Que lo haga la Jupillo» fijo a mitad, escena «remate» muda de 2,4 s y mensaje_final con dato pegado al final. Retirar esos bloques del motor para guiones nuevos.
+
+## 15/11/2026 12:05 · Calidad → Mejora (control de audio y silencios)
+- control_audio.py: Whisper transcribe cifras en dígitos («27C», «2028», «40», «11») y la comparación las da como palabras distintas; normalizar dígitos a letras en la transcripción (y «ticket»≈«tique») evitaría falsos rechazos en 320-322, 325, 326, 329.
+- Motor de render (sketch): queda un silencio de 0,7-0,83 s entre la última frase del giro y el cierre (323, 324, 325; antes 319 y 329 con 1,2-1,5 s). Acortarlo a ≤ 0,5 s; luego Creador marca renderizado:false en 323-325 y Calidad los reevalúa (programados 16-18/11).

@@ -1,0 +1,6 @@
+{
+  "aprobado": true,
+  "nota": 90,
+  "fecha": "2026-11-15T12:05:00+00:00",
+  "comentario": "Control: voz = guion (Whisper solo difiere en cifras en dígitos, '2028'); pausas de 0,60 s (no superan el límite); 24,6 s; 5 tiempos, atribución MacLeod en post."
+}

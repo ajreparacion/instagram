@@ -1,0 +1,9 @@
+{
+  "aprobado": false,
+  "nota": 86,
+  "fecha": "2026-11-15T12:05:00+00:00",
+  "comentario": "Silencio de 0,70 s entre el giro y el cierre (límite 0,6 s) en el control de audio; el resto cumple la fórmula.",
+  "motivos": [
+    "silencio > 0,6 s antes del cierre (0,70 s): lo genera el motor de render, no el guion; Mejora debe acortarlo y re-renderizar"
+  ]
+}
