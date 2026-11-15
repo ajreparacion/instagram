@@ -1,0 +1,173 @@
+{
+  "_nota": "15/11/2026 (Mejora, orden del dueño). Tabla EDITABLE del control de audio (herramientas/control_audio.py). Se aplica a AMBOS textos (guion y transcripción de Whisper) antes de comparar, así que una entrada solo hace equivalentes esas formas; una palabra distinta, cortada o inventada sigue fallando. Añadir aquí cada confusión nueva y conocida de Whisper con el motor de voz; no hace falta tocar el código. Revertir: borrar la entrada.",
+  "contexto_whisper": "Jambo, Jupillo, Pelota, Bola, Trámites, Neogest Lab, IA, Gestión Integral 7D, Factura7D, Gestoría7D, APPCC Fácil, Studio Beats PRO, GPS Andaluz, MEDICATOR, AJ Sistema, Centro de Contenido",
+  "fonetica": {
+    "_nota": "Pronunciación igual en español: b=v, h muda, ll=y. Se compara la forma fonética, no la grafía (hechas/echas, vola/bola, hola/ola).",
+    "b_v": true,
+    "h_muda": true,
+    "ll_y": true
+  },
+  "homofonos": [
+    [
+      "hechas",
+      "echas"
+    ],
+    [
+      "hecha",
+      "echa"
+    ],
+    [
+      "hecho",
+      "echo"
+    ],
+    [
+      "hechos",
+      "echos"
+    ],
+    [
+      "a",
+      "ha"
+    ],
+    [
+      "hay",
+      "ahi",
+      "ay"
+    ],
+    [
+      "vaya",
+      "valla"
+    ],
+    [
+      "hacia",
+      "asia"
+    ],
+    [
+      "tique",
+      "ticket",
+      "tiquet"
+    ],
+    [
+      "uno",
+      "un",
+      "una"
+    ],
+    [
+      "veintiun",
+      "veintiuno",
+      "veintiuna"
+    ],
+    [
+      "tuvo",
+      "tubo"
+    ],
+    [
+      "ola",
+      "hola"
+    ],
+    [
+      "he",
+      "e"
+    ],
+    [
+      "primero",
+      "primer"
+    ],
+    [
+      "tercero",
+      "tercer"
+    ],
+    [
+      "sino",
+      "si no"
+    ],
+    [
+      "tour",
+      "tur"
+    ]
+  ],
+  "alias": {
+    "_nota": "forma que escribe el guion -> formas que Whisper escribe al oír el audio (una o varias palabras). Sin tildes ni mayúsculas. «IA» (I.A., «i a», «ía») ya la unifica el código con una expresión regular.",
+    "jambo": [
+      "yambo",
+      "hambo",
+      "llambo",
+      "chambo",
+      "shambo",
+      "jambó"
+    ],
+    "jupillo": [
+      "cupillo",
+      "chupillo",
+      "jupilo",
+      "jupiyo",
+      "hupillo",
+      "yupillo",
+      "supillo"
+    ],
+    "pelota": [
+      "te lota",
+      "de lota",
+      "pe lota",
+      "p lota",
+      "pelotá"
+    ],
+    "bola": [
+      "vola",
+      "bolla",
+      "bolá"
+    ],
+    "neogestlab": [
+      "neogest lab",
+      "neo gest lab",
+      "neo jest lab",
+      "neogest la",
+      "neogestla",
+      "neohist lab",
+      "neohist",
+      "neo jest",
+      "neogest labs",
+      "neogestlabs"
+    ],
+    "factura siete d": [
+      "factura 7 d",
+      "factura siete de",
+      "factura 7 de"
+    ],
+    "gestoria siete d": [
+      "gestoria siete de",
+      "gestoria 7 de",
+      "gestoria 7 d"
+    ],
+    "appcc facil": [
+      "app facil",
+      "apcc facil",
+      "a p p c c facil",
+      "app c c facil"
+    ],
+    "team building": [
+      "te han wielding",
+      "tim bilding",
+      "tim building",
+      "team bilding",
+      "tin bilding",
+      "team bildin"
+    ],
+    "gain": [
+      "gan",
+      "gein",
+      "guein"
+    ],
+    "sin leer": [
+      "y leer"
+    ],
+    "tour virtual": [
+      "turvirtual",
+      "tur virtual"
+    ],
+    "pelota haz": [
+      "pelota hace",
+      "te lota hace",
+      "te lota haz"
+    ]
+  }
+}

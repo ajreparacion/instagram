@@ -27,7 +27,7 @@
     "archivo": "Life_of_Riley.mp3",
     "bpm": 101.3
   },
-  "renderizado": "2026-11-15T11:16:26+00:00",
+  "renderizado": false,
   "asset": "324_jambo_restaurante_reserva_12.mp4",
   "control_audio": {
     "aprobado": true,

@@ -1390,6 +1390,9 @@ def renderizar(cfg, carpeta, post):
     post.pop("_control_audio_fallo", None)
     if CONTROL_AUDIO:
         post["control_audio"] = {"aprobado": CONTROL_AUDIO.get("aprobado"), "duracion_s": CONTROL_AUDIO.get("duracion_s")}
+        # 15/11/2026 (Mejora): el control_audio.json de la carpeta se reescribe también al APROBAR; antes se quedaba el del último
+        # fallo y Calidad rechazaba 323-325 por un «silencio de 0,83 s» de un render que ya no existía.
+        escribir_json(os.path.join(carpeta, "control_audio.json"), dict(CONTROL_AUDIO))
     escribir_json(os.path.join(carpeta, "post.json"), post)
     shutil.rmtree(trabajo, ignore_errors=True)
     if caducar_calidad(carpeta, "re-render del ciclo " + post["renderizado"]):

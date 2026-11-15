@@ -341,6 +341,11 @@ def modo_alegre():
     """Musica mayor y viva (dibujo y app)."""
     return MODO["dibujo"] or MODO["app"] or MODO["sketch"]
 AMARILLO = (255, 212, 0)
+# 15/11/2026 (Mejora, control de audio): hueco ENTRE frases = RESPIRO_VOZ (+ la cola de ruido que deja recortar_silencios, hasta 2 x 0,12 s,
+# que silencedetect a -45 dB cuenta como silencio). Con 0,35 s el hueco medido salia en 0,59-0,62 s (limite 0,6 s) y el control rechazaba
+# piezas buenas al azar; con 0,15 s sale en ~0,3-0,4 s (objetivo 0,3). RESPIRO_GIRO = pausa extra antes de una escena «giro».
+RESPIRO_VOZ = 0.15   # >= 0,15: así la frase cabe sin atempo (hueco de mezcla = duración - 0,15 s)
+RESPIRO_GIRO = 0.05
 WPS_HUMANO = 2.6          # palabras por segundo de la voz (misma cifra que usa main() para la duracion minima)
 CACHE_IMG = os.path.expanduser("~/.cache/expedientes/imagenes")
 FUENTE_SUB = DJV + "DejaVuSans-Bold.ttf"
@@ -2565,6 +2570,8 @@ def main():
                          "gancho_corto": str(g.get("gancho_corto") or ""), "fondo": g.get("fondo", "auto"),
                          "marca_serie": str(g.get("marca_serie") or "").strip()[:48],   # 13/11 (Mejora): rótulo fijo de serie, DIRECTIVA §13/§14
                          "primer_plano": g.get("primer_plano", True) is not False}
+        if cont.get("texto") and valor and valor != k:   # 15/11/2026 (Mejora): el contador solo sube en escenas «delega» o con "contar": true
+            print("AVISO CONTADOR: «%s» empieza en %d y el guion pide valor %d, pero solo %d escena(s) llevan \"contar\": true (o estilo «delega»): el contador acabará en %d, no en %d" % (cont.get("texto"), base, valor, k - base, k, valor))
     bounds = [0]
     for i, e in enumerate(esc):
         d = float(e.get("duracion", 1.8 if MODO["sketch"] else 3.0))
@@ -2585,9 +2592,9 @@ def main():
                 need = len(voz.split()) / 2.6 + 0.6
             voz_real = i in tiempos and tiempos[i] > 0.2
             if voz_real:
-                need = tiempos[i] + 0.35   # 15/11/2026: respiro 0,35 s (antes 0,45): huecos de voz < 0,6 s (DIRECTIVA 14/11)
+                need = tiempos[i] + RESPIRO_VOZ   # 15/11/2026: respiro 0,15 s (antes 0,45 y 0,35): huecos de voz ~0,3 s, nunca > 0,6 s (DIRECTIVA 14/11)
             if i + 1 < len(esc) and esc[i + 1].get("estilo") == "giro":
-                need += 0.15 if voz_real else 0.5  # pausa antes del giro sin pasar de 0,6 s de silencio de voz
+                need += RESPIRO_GIRO if voz_real else 0.5  # pausa antes del giro sin pasar de 0,6 s de silencio de voz
             if MODO["app"] and "duracion" not in e and e.get("estilo") != "gancho" and "_largo_clip" in e:
                 # 10/11/2026 (petición de Calidad): sin "duracion", la escena dura lo que la voz real (+0,5 s) y el
                 # clip se acelera hasta x1,75; nunca más corta que clip/1,75 (si no, el tramo se cortaría).

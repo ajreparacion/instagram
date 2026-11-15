@@ -27,7 +27,7 @@
     "archivo": "Monkeys_Spinning_Monkeys.mp3",
     "bpm": 143.6
   },
-  "renderizado": "2026-11-15T11:00:49+00:00",
+  "renderizado": false,
   "asset": "323_jambo_peluqueria_9_40.mp4",
   "control_audio": {
     "aprobado": true,

@@ -7,18 +7,27 @@ Si falla, el reel NO se publica: publicar_gh.py anota el motivo en control_audio
 import json, os, re, subprocess, sys, unicodedata
 
 SIL_DB, SIL_S, DUR_MAX = -45, 0.6, 30.0
-HOMOFONOS = [{"hechas", "echas"}, {"hecha", "echa"}, {"hecho", "echo"}, {"a", "ha"}, {"hay", "ahi", "ay"}, {"vaya", "valla"},
-             {"hacia", "asia"}, {"tique", "ticket"}, {"uno", "un", "una"}, {"veintiun", "veintiuno"}, {"tuvo", "tubo"}, {"ola", "hola"}, {"he", "e"}, {"sino", "si no"}]
-NUM = {"200": "doscientas", "1": "uno", "2": "dos", "3": "tres", "4": "cuatro", "5": "cinco", "10": "diez"}
+LEXICO_RUTA = os.path.join(os.path.dirname(os.path.abspath(__file__)), "lexico_control.json")
+
+
+def cargar_lexico(ruta=LEXICO_RUTA):
+    """Tabla editable (lexico_control.json). Sin el archivo o con un JSON roto el control sigue con la tabla mínima."""
+    try:
+        return json.load(open(ruta, encoding="utf-8"))
+    except Exception:
+        return {"homofonos": [["hechas", "echas"], ["a", "ha"], ["uno", "un", "una"], ["tique", "ticket"]],
+                "fonetica": {"b_v": True, "h_muda": True, "ll_y": True}, "alias": {}, "contexto_whisper": ""}
 
 
 _U = "cero uno dos tres cuatro cinco seis siete ocho nueve diez once doce trece catorce quince dieciseis diecisiete dieciocho diecinueve veinte veintiuno veintidos veintitres veinticuatro veinticinco veintiseis veintisiete veintiocho veintinueve".split()
 _D = {3: "treinta", 4: "cuarenta", 5: "cincuenta", 6: "sesenta", 7: "setenta", 8: "ochenta", 9: "noventa"}
 _C = {1: "ciento", 2: "doscientos", 3: "trescientos", 4: "cuatrocientos", 5: "quinientos", 6: "seiscientos", 7: "setecientos", 8: "ochocientos", 9: "novecientos"}
+_ORD = {1: "primero", 2: "segundo", 3: "tercero", 4: "cuarto", 5: "quinto", 6: "sexto", 7: "septimo", 8: "octavo", 9: "noveno", 10: "decimo"}
+_NUMW = set(_U) | set(_D.values()) | set(_C.values()) | {"mil", "cien", "millon", "millones"} | {"doscientas", "trescientas", "cuatrocientas", "quinientas", "seiscientas", "setecientas", "ochocientas", "novecientas"}
 
 
 def num_es(n):
-    """15/11/2026: Whisper escribe cifras («70», «2028») y el guion letras («setenta»): se pasa todo a letras."""
+    """Whisper escribe cifras («70», «2028») y el guion letras («setenta»): se pasa todo a letras."""
     if n < 30: return _U[n]
     if n < 100: return _D[n // 10] + ("" if n % 10 == 0 else " y " + _U[n % 10])
     if n == 100: return "cien"
@@ -30,24 +39,112 @@ def num_es(n):
 
 
 def _cifras(t):
-    t = re.sub(r"\b[Ii]\.?\s*[Aa]\b\.?", "IA", t)       # Whisper: «I.A.» / «i a» = «IA»
+    """Texto con cifras, siglas y símbolos -> texto «como se dice» (15/11/2026: porcentajes, euros, horas, ordinales, miles, decimales)."""
+    t = re.sub(r"\b[Ii]\.?\s*[Aa]\b\.?", "IA", t)                      # Whisper: «I.A.» / «i a» = «IA»
+    t = re.sub(r"\b(\d{1,3})(?:\.(\d{3}))+\b", lambda m: m.group().replace(".", ""), t)   # 1.000 / 2.028 = miles
+    t = re.sub(r"(\d)\s*[°º]\s*[cC]\b", r"\1 grados", t)                # 27 °C
+    t = re.sub(r"(\d+)\s*(?:\.\s*)?([ºª]|er\b)", lambda m: " " + (_ORD[int(m.group(1))] if int(m.group(1)) in _ORD else num_es(int(m.group(1)))) +
+               ("a" if m.group(2) == "ª" and int(m.group(1)) in _ORD else "") + " ", t)   # 1.º / 3ª / 1.er
+    t = re.sub(r"(\d+),(\d{1,2})\s*€", lambda m: "%d coma %d " % (int(m.group(1)), int(m.group(2))), t)   # 9,90 € (el «euros» final no se oye distinto)
+    t = re.sub(r"(\d+)\s*€", r"\1 euros ", t)
+    t = re.sub(r"(\d+)\s*\$", r"\1 dolares ", t)
+    t = re.sub(r"(\d+),(\d+)", r"\1 coma \2", t)                        # 2,5 -> 2 coma 5 (9,90 -> 9 coma 90)
     t = re.sub(r"(\d)\s*%", r"\1 por ciento", t)
-    t = re.sub(r"(\d)[:.,](\d)", r"\1 \2", t)          # 23:47 -> 23 47
-    t = re.sub(r"(\d)([a-zA-Z])", r"\1 \2", t)          # 27c -> 27 c
+    t = re.sub(r"(\d)\s*h\b", r"\1 horas", t)
+    t = re.sub(r"(\d)[:.](\d)", r"\1 \2", t)                            # 23:47 -> 23 47
+    t = re.sub(r"(\d)([a-zA-Z])", r"\1 \2", t)                          # 27c -> 27 c
     t = re.sub(r"([a-zA-Z])(\d)", r"\1 \2", t)
     return re.sub(r"\d+", lambda m: num_es(int(m.group())), t)
 
 
-def norm(t):
+def _tokens(t):
     t = _cifras(t)
     t = unicodedata.normalize("NFD", t.lower())
     t = "".join(c for c in t if unicodedata.category(c) != "Mn")
     return re.findall(r"[a-z0-9]+", t)
 
 
+def _numerico(toks):
+    """«nueve con noventa» (guion) = «9,90» (Whisper): «con»/«coma» entre cifras es lo mismo; «euros» tras el decimal no cuenta."""
+    out = []
+    for i, w in enumerate(toks):
+        if w == "euros" and out and i + 1 < len(toks) and toks[i + 1] in ("con", "coma") and out[-1] in _NUMW:
+            continue                                                    # «nueve euros con noventa»
+        if w in ("con", "coma") and out and out[-1] in _NUMW and i + 1 < len(toks) and toks[i + 1] in _NUMW:
+            w = "coma"
+        out.append(w)
+    return out
+
+
+def _alias(toks, lex):
+    """Formas conocidas de Whisper (lexico_control.json «alias») -> forma del guion; sobre ambos textos, de varias palabras a una."""
+    tabla = {}
+    for canon, variantes in (lex.get("alias") or {}).items():
+        if canon.startswith("_"): continue
+        c = tuple(_tokens(canon))
+        for v in variantes:
+            tv = tuple(_tokens(v))
+            if tv and tv != c: tabla[tv] = c
+    if not tabla: return toks
+    largo = max(len(k) for k in tabla)
+    out, i = [], 0
+    while i < len(toks):
+        for n in range(min(largo, len(toks) - i), 0, -1):
+            c = tabla.get(tuple(toks[i:i + n]))
+            if c is not None:
+                out += list(c); i += n; break
+        else:
+            out.append(toks[i]); i += 1
+    return out
+
+
+def norm(t, lex=None):
+    lex = lex or LEXICO
+    return _alias(_numerico(_tokens(t)), lex)
+
+
+def _clave(w, lex=None):
+    """Forma fonética: b=v, h muda, ll=y (lexico_control.json «fonetica»)."""
+    f = (lex or LEXICO).get("fonetica") or {}
+    w = w.replace("ch", "ĉ")
+    if f.get("ll_y", True): w = w.replace("ll", "y")
+    if f.get("b_v", True): w = w.replace("v", "b")
+    if f.get("h_muda", True): w = w.replace("h", "")
+    return w.replace("ĉ", "ch")
+
+
+def _grupos(lex):
+    return [{_clave(x) for x in g} | set(g) for g in (lex.get("homofonos") or [])]
+
+
+def _preparar(lex):
+    return {"grupos": _grupos(lex)}
+
+
+LEXICO = cargar_lexico()
+_PREP = _preparar(LEXICO)
+
+
 def igual(a, b):
+    if a == b: return True
     if a.endswith(("cientas", "cientos")) and b.endswith(("cientas", "cientos")) and a[:-2] == b[:-2]: return True
-    return a == b or any(a in h and b in h for h in HOMOFONOS)
+    ka, kb = _clave(a), _clave(b)
+    return ka == kb or any((a in h or ka in h) and (b in h or kb in h) for h in _PREP["grupos"])
+
+
+def unir(esp, got):
+    """Palabras que Whisper parte o pega («prueba la» = «pruébala», «léelos» = «lee los», «noventa» = «no venta»):
+    solo se unen dos palabras si su suma es EXACTAMENTE (en fonética) una palabra del otro texto; nada se inventa."""
+    def une(a, b):
+        ks = {_clave(x) for x in b}
+        out, i = [], 0
+        while i < len(a):
+            if i + 1 < len(a) and _clave(a[i] + a[i + 1]) in ks and not (_clave(a[i]) in ks and _clave(a[i + 1]) in ks):
+                out.append(a[i] + a[i + 1]); i += 2
+            else:
+                out.append(a[i]); i += 1
+        return out
+    return une(esp, got), une(got, esp)
 
 
 def dur(v):
@@ -63,11 +160,35 @@ def silencios(v):
     return [(max(0, e - d), e, d) for e, d in fin]
 
 
-def transcribir(v):
+def transcribir(v, lex=None):
+    """[(palabra, inicio, fin)] con faster-whisper. Se le pasan como contexto los nombres de personaje y de las apps
+    (lexico_control.json «contexto_whisper»; hotwords si la versión lo admite, si no initial_prompt): solo nombres, nunca el guion."""
+    import inspect
     from faster_whisper import WhisperModel
     m = WhisperModel("small", device="cpu", compute_type="int8")
-    seg, _ = m.transcribe(v, language="es", beam_size=5, word_timestamps=True, vad_filter=False)
+    ctx = str((lex or LEXICO).get("contexto_whisper") or "").strip()
+    kw = {}
+    if ctx:
+        try:
+            kw = {"hotwords": ctx} if "hotwords" in inspect.signature(m.transcribe).parameters else {"initial_prompt": ctx}
+        except (TypeError, ValueError):
+            kw = {"initial_prompt": ctx}
+    seg, _ = m.transcribe(v, language="es", beam_size=5, word_timestamps=True, vad_filter=False, **kw)
     return [(w.word.strip(), w.start, w.end) for s in seg for w in s.words]
+
+
+def texto_de(pal):
+    """Texto de la transcripción. Whisper parte «70%» en «70» y «%» y «9,90» en «9» y «,90»: se pega lo que no empieza por letra."""
+    out = ""
+    for w, _, _ in pal:
+        out += (w if (out and re.match(r"[%,.:€$ºª°)]", w)) else " " + w)
+    return out.strip()
+
+
+def verificar(guion_txt, texto, lex=None):
+    """Compara el guion con lo que oyó Whisper (ambos normalizados). Devuelve (faltan, sobran). Se usa en control() y en las pruebas."""
+    esp, got = unir(norm(guion_txt, lex), norm(texto, lex))
+    return comparar(esp, got)
 
 
 def comparar(esp, got):
@@ -112,16 +233,13 @@ def control(video, guion, post=None, tramos=None, wavs=None):
     esc = g.get("escenas", [])
     if not any(e.get("estilo") == "remate" for e in esc): bloqueos.append("falta el giro (escena «remate»)")
     guion_txt = " ".join(re.sub(r"\*", "", e.get("voz", "")) for e in esc if e.get("voz"))
-    esp = [NUM.get(w, w) for w in norm(guion_txt)]
-    esp = sum((norm(w) for w in esp), [])
     pal = transcribir(video)
-    got = sum((norm(w) for w, _, _ in pal), [])
-    got = [NUM.get(w, w) for w in got]
-    faltan, sobran = comparar(esp, got)
+    texto = texto_de(pal)
+    faltan, sobran = verificar(guion_txt, texto)
     malas = [w for w in sobran if w in ("ehm", "eh", "em", "mm", "hmm")]
     if malas: bloqueos.append(f"muletillas «ehm» en la voz: {malas}")
     if faltan or sobran:
-        tasa = (len(faltan) + len(sobran)) / max(1, len(esp))
+        tasa = (len(faltan) + len(sobran)) / max(1, len(norm(guion_txt)))
         (bloqueos if tasa > 0.0 else avisos).append(f"voz distinta del guion: faltan {faltan}, sobran {sobran} (rehacer esas frases)")
     t0 = pal[0][1] if pal else 0.0; t1 = pal[-1][2] if pal else d
     for a, b, s in silencios(video):
@@ -136,7 +254,7 @@ def control(video, guion, post=None, tramos=None, wavs=None):
     if isinstance(post, dict) and post.get("musica_atribucion_requerida") and "MacLeod" not in post.get("texto", ""):
         bloqueos.append("falta la atribución musical de Kevin MacLeod en el texto del post")
     return {"aprobado": not bloqueos, "duracion_s": round(d, 2), "bloqueos": bloqueos, "avisos": avisos,
-            "transcripcion": " ".join(w for w, _, _ in pal), "guion": guion_txt}
+            "transcripcion": texto, "guion": guion_txt}
 
 
 if __name__ == "__main__":
