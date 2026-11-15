@@ -1,0 +1,76 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.467,
+  "texto": "¿Respuesta a todos? ¡Era solo para ella!",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 2.467,
+  "duracion": 2.133,
+  "texto": "¿Se puede retirar un correo, Bola?",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 4.6,
+  "duracion": 2.733,
+  "texto": "¡Transparencia radical! ¡Que lo lean todos!",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 7.333,
+  "duracion": 3.133,
+  "texto": "Ya han contestado trescientos. Con aplausos.",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 10.467,
+  "duracion": 3.733,
+  "texto": "Retirar un correo exige otro correo. A todos.",
+  "enfasis": [
+   7
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 14.2,
+  "duracion": 3.9,
+  "texto": "Retirado. Tarde: lo leyó tu jefa. Y contestó a todos.",
+  "enfasis": [
+   8,
+   9
+  ]
+ },
+ {
+  "escena": 6,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 18.1,
+  "duracion": 3.0,
+  "texto": "¿Quién fue el último en darle a «responder a todos»?",
+  "enfasis": []
+ }
+]

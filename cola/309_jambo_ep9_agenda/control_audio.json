@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 20.27,
+  "bloqueos": [
+    "voz distinta del guion: faltan [], sobran ['a'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "3 Clientas a las 5. Mi agenda lo apunta a todo. Reordénalas, pelota, que nadie se entere. 3 citas a las 5. Es un número redondo. Cada clienta debe rellenar su queja. Por triplicado. Las 3 a la vez. Eso es productividad. He llamado. Son la misma clienta con 3 nombres. ¿Te han doblado alguna vez una cita?",
+  "guion": "Tres clientas a las cinco. ¡Mi agenda lo apunta todo! Reordénalas, Pelota. Que nadie se entere. Tres citas a las cinco. Es un número redondo. Cada clienta debe rellenar su queja. Por triplicado. ¡Las tres a la vez! ¡Eso es productividad! He llamado. Son la misma clienta con tres nombres. ¿Te han doblado alguna vez una cita?"
+}

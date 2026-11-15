@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "«Responder a todos» sin querer: el error que ya ha leído media empresa. La Jupillo lo retira tarde.\n¿Quién fue el último en darle a «responder a todos»? Cuéntalo.\nMándaselo a quien manda correos a toda la empresa sin querer.\n#humornegro #oficina #correo #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "«Responder a todos» sin querer: el error que ya ha leído media empresa. La Jupillo lo retira tarde.\n¿Quién fue el último en darle a «responder a todos»? Cuéntalo.\nMándaselo a quien manda correos a toda la empresa sin querer.\n#humornegro #oficina #correo #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-17T20:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -10,7 +10,7 @@
   "_fuentes": [],
   "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
   "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
-  "renderizado": false,
+  "renderizado": "2026-11-15T19:35:36+00:00",
   "motor_voz": "edge",
   "comentario_fijado": "¿Quién fue el último en darle a «responder a todos»? Episodio nuevo cada día en @neogestlab",
   "avance_siguiente": "Mañana: faltan cuarenta euros en la caja",
@@ -21,10 +21,16 @@
     "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
   "musica": {
-    "titulo": "Investigations",
+    "titulo": "Monkeys Spinning Monkeys",
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Investigations.mp3"
+    "archivo": "Monkeys_Spinning_Monkeys.mp3",
+    "bpm": 143.6
+  },
+  "asset": "313_jambo_ep13_responder_todos.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 21.1
   }
 }

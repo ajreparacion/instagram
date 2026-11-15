@@ -1,0 +1,75 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.3,
+  "texto": "Mesa para doce. Doce tenedores. Cero personas.",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 3.3,
+  "duracion": 1.967,
+  "texto": "Que vengan, Bola. Por favor.",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 5.267,
+  "duracion": 3.133,
+  "texto": "¡Visualiza que vienen! La mente atrae comensales.",
+  "enfasis": [
+   6
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 8.4,
+  "duracion": 3.1,
+  "texto": "Llamar a un cliente requiere la firma del cliente.",
+  "enfasis": [
+   8
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 11.5,
+  "duracion": 2.733,
+  "texto": "Llevo veinte minutos visualizando. Tengo hambre.",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 14.233,
+  "duracion": 4.133,
+  "texto": "Están en el otro restaurante. El de enfrente. Se llama igual.",
+  "enfasis": [
+   10
+  ]
+ },
+ {
+  "escena": 6,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 18.367,
+  "duracion": 2.267,
+  "texto": "¿Te han dejado alguna vez la mesa vacía?",
+  "enfasis": []
+ }
+]
