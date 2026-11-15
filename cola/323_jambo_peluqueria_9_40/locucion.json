@@ -1,0 +1,76 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.167,
+  "texto": "La de las nueve llega a las nueve cuarenta.",
+  "enfasis": [
+   7,
+   8
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 2.167,
+  "duracion": 1.9,
+  "texto": "¿Qué hago con la de las diez, Pelota?",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 4.067,
+  "duracion": 1.767,
+  "texto": "¡Llegar tarde es tendencia!",
+  "enfasis": [
+   3
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 5.833,
+  "duracion": 3.8,
+  "texto": "Rellene el formulario de reprogramación. Por triplicado.",
+  "enfasis": [
+   6
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 9.633,
+  "duracion": 1.933,
+  "texto": "¡Y la de las once ya está en la puerta!",
+  "enfasis": [
+   9
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 11.567,
+  "duracion": 2.9,
+  "texto": "Le dije las ocho y veinte. Hoy llegó puntual.",
+  "enfasis": [
+   8
+  ]
+ },
+ {
+  "escena": 6,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 14.467,
+  "duracion": 2.2,
+  "texto": "¿Cuánto esperas tú?",
+  "enfasis": []
+ }
+]

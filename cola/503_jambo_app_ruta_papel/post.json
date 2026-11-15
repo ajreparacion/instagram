@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Doce visitas, una libreta y la Pelota diciendo que gires a la izquierda. La Jupillo descubre qué libreta era. Humor negro de ficción.\n¿Todavía apuntas las visitas en papel? Cuéntalo en comentarios.\nEn Gestión Integral 7D, «Mi día» ordena las visitas por carretera (si el servicio de rutas falla, en línea recta y lo avisa) y da la hora prevista de llegada.\nMándaselo a quien aún apunta las visitas en papel.\n#humornegro #autonomos #pymes #comerciales #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "Doce visitas, una libreta y la Pelota diciendo que gires a la izquierda. La Jupillo descubre qué libreta era. Humor negro de ficción.\n¿Todavía apuntas las visitas en papel? Cuéntalo en comentarios.\nEn Gestión Integral 7D, «Mi día» ordena las visitas por carretera (si el servicio de rutas falla, en línea recta y lo avisa) y da la hora prevista de llegada.\nMándaselo a quien aún apunta las visitas en papel.\n#humornegro #autonomos #pymes #comerciales #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-17T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -8,7 +8,7 @@
   "publico": "comercial de calle",
   "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
   "app": "Gestión Integral 7D",
-  "renderizado": false,
+  "renderizado": "2026-11-15T19:19:35+00:00",
   "_fuentes": [],
   "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
   "comentario_fijado": "¿Todavía apuntas las visitas en papel? Episodio nuevo cada día en @neogestlab",
@@ -21,10 +21,16 @@
     "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
   "musica": {
-    "titulo": "Investigations",
+    "titulo": "Fluffing a Duck",
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Investigations.mp3"
+    "archivo": "Fluffing_a_Duck.mp3",
+    "bpm": 123.0
+  },
+  "asset": "503_jambo_app_ruta_papel.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 18.37
   }
 }

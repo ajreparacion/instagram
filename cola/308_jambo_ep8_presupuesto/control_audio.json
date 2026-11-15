@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 21.6,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['mi'], sobran ['ni'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "El doble, ni presupuesto era cerrado. Explícame esto, pelota, con calma. Cerrado, salvo imprevistos. Y hay muchos imprevistos. Cada imprevisto lleva su impreso, y el impreso se cobra. Un imprevisto es una oportunidad, y otra factura. ¿Lo has firmado tú? La clausula dice, salvo todo. ¿Te han cerrado alguna vez un presupuesto abierto?",
+  "guion": "¿El doble? ¡Mi presupuesto era cerrado! Explícame esto, Pelota. Con calma. Cerrado, salvo imprevistos. Y hay muchos imprevistos. Cada imprevisto lleva su impreso. Y el impreso se cobra. ¡Un imprevisto es una oportunidad! Y otra factura. Lo has firmado tú. La cláusula dice: salvo todo. ¿Te han cerrado alguna vez un presupuesto abierto?"
+}
