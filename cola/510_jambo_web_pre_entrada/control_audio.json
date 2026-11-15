@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 19.23,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['sin', 'onomatopeyas', 'niic', 'niic'], sobran ['si', 'no', 'no', 'mato', 'pelas', 'yik', 'yik'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Hace un ruido raro. Así, explícaselo tú al taller, pelota. Es el motor, o la rueda. Seguro. Describa el ruido en el impreso. Si no, no mato pelas. Hace yik, pum, yik, pum. Ya está enviado, con fotos. Y el ruido era tu teléfono vibrando. ¿Tú explicas las averías con ruiditos?",
+  "guion": "Hace un ruido raro. ¡Así! Explícaselo tú al taller, Pelota. Es el motor. O la rueda. Seguro. Describa el ruido en el impreso. Sin onomatopeyas. Hace ñiic, pum, ñiic, pum. Ya está enviado, con fotos. Y el ruido era tu teléfono vibrando. ¿Tú explicas las averías con ruiditos?"
+}

@@ -1,137 +1,242 @@
 {
-  "actualizado": "2026-11-15T15:30:41+00:00",
+  "actualizado": "2026-11-15T21:39:45+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1602,
     "follows_count": 177,
-    "media_count": 24,
+    "media_count": 29,
     "username": "neogestlab"
   },
   "posts": [
     {
+      "id": "18447781513182472",
+      "caption": "Precio de amigo. La Jupillo lo arregla; el Jambo no tanto. Humor de oficina de ficción.\n¿Cuánto te han pedido de «descuento de amigo»? Cuéntalo en comentarios.\nMándaselo a quien le pasa esto.\n#humor #trabajo #oficina #clientes #pymes #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: biblioteca libre de derechos de Pixabay\n\nVoz generada por IA",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfxrgEQktvJ/",
+      "timestamp": "2026-11-15T20:51:13+0000",
+      "metricas": {
+        "reach": 32,
+        "views": 61,
+        "saved": 0,
+        "shares": 1,
+        "comments": 0,
+        "likes": 1,
+        "total_interactions": 3,
+        "ig_reels_avg_watch_time": 10465,
+        "ig_reels_video_view_total_time": 313960
+      }
+    },
+    {
+      "id": "18232114597326273",
+      "caption": "¿Y si el móvil leyera tus recetas? 📷\nAlgo que casi ninguna aplicación hace: con MEDICATOR enfocas la caja del medicamento con la cámara y salen sus datos oficiales (CIMA, de la Agencia Española de Medicamentos). Haces una foto a un volante o una receta y te propone apuntar la cita; tú lo revisas antes de guardar y la foto no sale de tu móvil.\nSi una medicina choca con tus alergias, salta un aviso rojo (orientativo: pregunta siempre a tu médico o farmacéutico). Y con el modo Muy fácil: letra enorme, voz y un botón grande para llamar a tu familia.\nPensada para personas mayores y para quien les cuida. Pruébala gratis. Enlace en el perfil.\n¿A quién de tu familia le vendría bien? Mándaselo.\nEscenas con datos ficticios · Voz generada por IA · By Neogest Lab\n\n#medicamentos #mayores #salud #cuidadores #recetas #tecnologia #neogestlab",
+      "comments_count": 0,
+      "like_count": 2,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/Dfxl8zAgB9q/",
+      "timestamp": "2026-11-15T20:02:41+0000",
+      "metricas": {
+        "reach": 12,
+        "views": 23,
+        "saved": 0,
+        "shares": 2,
+        "comments": 0,
+        "likes": 2,
+        "total_interactions": 6,
+        "ig_reels_avg_watch_time": 8235,
+        "ig_reels_video_view_total_time": 123527
+      }
+    },
+    {
+      "id": "17967147447247693",
+      "caption": "Becario con experiencia. La Jupillo lo arregla; el Jambo no tanto. Humor de oficina de ficción.\n¿La oferta de empleo más absurda que has visto? Cuéntalo en comentarios.\nMándaselo a quien le pasa esto.\n#humor #trabajo #oficina #empleo #pymes #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: biblioteca libre de derechos de Pixabay\n\nVoz generada por IA",
+      "comments_count": 0,
+      "like_count": 2,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfxfC-MicFW/",
+      "timestamp": "2026-11-15T19:02:23+0000",
+      "metricas": {
+        "reach": 68,
+        "views": 81,
+        "saved": 0,
+        "shares": 1,
+        "comments": 0,
+        "likes": 2,
+        "total_interactions": 5,
+        "ig_reels_avg_watch_time": 4212,
+        "ig_reels_video_view_total_time": 299084
+      }
+    },
+    {
+      "id": "18147955576610780",
+      "caption": "Vacaciones en agosto. La Jupillo lo arregla; el Jambo no tanto. Humor de oficina de ficción.\nDato: el Estatuto de los Trabajadores (art. 38) fija vacaciones mínimas de 30 días naturales al año y el derecho a conocer las fechas al menos dos meses antes (BOE, Real Decreto Legislativo 2/2015). No es asesoramiento legal.\n¿Te dejan coger agosto o te toca noviembre? Cuéntalo en comentarios.\nMándaselo a quien le pasa esto.\n#humor #trabajo #oficina #vacaciones #pymes #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: biblioteca libre de derechos de Pixabay\n\nVoz generada por IA",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfxRMdqjUSm/",
+      "timestamp": "2026-11-15T17:01:25+0000",
+      "metricas": {
+        "reach": 44,
+        "views": 56,
+        "saved": 0,
+        "shares": 1,
+        "comments": 0,
+        "likes": 1,
+        "total_interactions": 2,
+        "ig_reels_avg_watch_time": 5027,
+        "ig_reels_video_view_total_time": 236273
+      }
+    },
+    {
+      "id": "18351563068269971",
+      "caption": "Parte 2: le diste el bar entero a la IA y el Jambo sigue sin café.\nLa Jupillo atiende, cocina y cobra; el Jambo pide más. Humor negro de ficción.\n¿Quién carga con todo en tu bar? Cuéntalo en comentarios.\nMándaselo a quien carga con todo.\nParte 3 mañana en @neogestlab\n#humornegro #hosteleria #ia #trabajo #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0\n\nVoz generada por IA",
+      "comments_count": 0,
+      "like_count": 4,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfxIaOwgS-i/",
+      "timestamp": "2026-11-15T15:44:36+0000",
+      "metricas": {
+        "reach": 356,
+        "views": 429,
+        "saved": 0,
+        "shares": 0,
+        "comments": 0,
+        "likes": 4,
+        "total_interactions": 5,
+        "ig_reels_avg_watch_time": 12915,
+        "ig_reels_video_view_total_time": 4623779
+      }
+    },
+    {
       "id": "18131001040641936",
       "caption": "¿Un GPS con indicaciones en andaluz?\nEscribes tu destino y el mapa se centra en el lugar. Tocas una categoría, como farmacias, y ves los sitios cercanos. Pulsas Iniciar y cada maniobra sale con su frase en andaluz.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n¿Qué frase te gustaría que te dijera tu GPS? Cuéntalo en comentarios.\nVoz generada por IA\n\n#gpsandaluz #andalucia #humor #apps #gps #neogestlab",
       "comments_count": 0,
-      "like_count": 0,
+      "like_count": 1,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DfxDZy6kTrX/",
       "timestamp": "2026-11-15T15:00:50+0000",
       "metricas": {
-        "reach": 0,
-        "views": 0,
+        "reach": 44,
+        "views": 51,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 0,
-        "total_interactions": 0,
-        "ig_reels_avg_watch_time": 0,
-        "ig_reels_video_view_total_time": 0
+        "likes": 1,
+        "total_interactions": 2,
+        "ig_reels_avg_watch_time": 4151,
+        "ig_reels_video_view_total_time": 190955
       }
     },
     {
       "id": "18095798099667990",
       "caption": "Según mi último correo. La Jupillo lo arregla; el Jambo no tanto. Humor de oficina de ficción.\n¿Cuál es tu frase para no explotar en un correo? Cuéntalo en comentarios.\nMándaselo a quien le pasa esto.\n#humor #trabajo #oficina #correo #pymes #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0\n\nVoz generada por IA",
       "comments_count": 0,
-      "like_count": 1,
+      "like_count": 2,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/Dfw_9U7Dqo2/",
       "timestamp": "2026-11-15T14:30:44+0000",
       "metricas": {
-        "reach": 71,
-        "views": 136,
+        "reach": 215,
+        "views": 242,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 1,
-        "total_interactions": 1,
-        "ig_reels_avg_watch_time": 9291,
-        "ig_reels_video_view_total_time": 631815
+        "likes": 2,
+        "total_interactions": 2,
+        "ig_reels_avg_watch_time": 8724,
+        "ig_reels_video_view_total_time": 1867056
       }
     },
     {
       "id": "18135931396778326",
       "caption": "¿Se te olvidan las pastillas?\nMEDICATOR te dice qué pastilla te toca y, con un botón grande, apuntas que ya te la has tomado. Tus citas, en un calendario con letra grande, y una lista para la farmacia que cuenta las pastillas que te quedan.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nMEDICATOR organiza; no sustituye a tu médico.\n¿Quién se encarga de recordar las pastillas en tu casa? Cuéntalo en comentarios.\nVoz generada por IA\n\n#mayores #cuidadores #salud #pastillas #citasmedicas #neogestlab",
       "comments_count": 0,
-      "like_count": 0,
+      "like_count": 1,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/Dfw69APnFCc/",
       "timestamp": "2026-11-15T13:47:07+0000",
       "metricas": {
-        "reach": 7,
-        "views": 8,
+        "reach": 25,
+        "views": 35,
         "saved": 0,
-        "shares": 0,
+        "shares": 1,
         "comments": 0,
-        "likes": 0,
-        "total_interactions": 0,
-        "ig_reels_avg_watch_time": 1189,
-        "ig_reels_video_view_total_time": 8325
+        "likes": 1,
+        "total_interactions": 2,
+        "ig_reels_avg_watch_time": 3968,
+        "ig_reels_video_view_total_time": 123024
       }
     },
     {
       "id": "18120693568797368",
       "caption": "¿Tu programa de facturas cumple Verifactu?\nEscribes el importe, eliges la retención de IRPF y el total a pagar sale solo. Cada factura sale con su QR tributario y la leyenda Verifactu, y con un toque verificas que cada factura va encadenada a la anterior.\nPruébala gratis: 2 facturas al mes, sin permanencia. Enlace en el perfil.\n¿Qué programa usas ahora para facturar? Cuéntalo en comentarios.\nVoz generada por IA\n\n#verifactu #autonomos #facturacion #pymes #irpf #neogestlab",
       "comments_count": 0,
-      "like_count": 0,
+      "like_count": 1,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DfwyL6UDOd_/",
       "timestamp": "2026-11-15T12:30:23+0000",
       "metricas": {
-        "reach": 5,
-        "views": 9,
+        "reach": 11,
+        "views": 15,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 0,
-        "total_interactions": 0,
-        "ig_reels_avg_watch_time": 1712,
-        "ig_reels_video_view_total_time": 8563
+        "likes": 1,
+        "total_interactions": 2,
+        "ig_reels_avg_watch_time": 4645,
+        "ig_reels_video_view_total_time": 46458
       }
     },
     {
       "id": "18016656134972446",
       "caption": "Parte 2: «solo un momentito»… a las 23:00. La Jupillo lo hace todo; el Jambo se pone pálido. Humor negro de ficción.\nDato: 2,5 millones de horas extra a la semana sin pagar, 42 % de las horas extra (EPA, INE, 1.er trim. 2026, según El Español 26/05/2026).\n¿Cuántos «momentitos» te han hecho este año? Cuéntalo en comentarios.\nMándaselo a quien carga con todo.\nParte 3 mañana en @neogestlab\n#humornegro #trabajo #horasextra #ia #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0\n\nVoz generada por IA",
       "comments_count": 0,
-      "like_count": 0,
+      "like_count": 1,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DfwtAyJjq_n/",
       "timestamp": "2026-11-15T11:45:09+0000",
       "metricas": {
-        "reach": 114,
-        "views": 140,
+        "reach": 116,
+        "views": 145,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 0,
-        "total_interactions": 0,
-        "ig_reels_avg_watch_time": 9239,
-        "ig_reels_video_view_total_time": 1081060
+        "likes": 1,
+        "total_interactions": 2,
+        "ig_reels_avg_watch_time": 9334,
+        "ig_reels_video_view_total_time": 1110809
       }
     },
     {
       "id": "18117862073045199",
       "caption": "¿Tu cliente te paga a 90 días?\nHaces el presupuesto en la visita con IVA y margen, lo conviertes en pedido con un clic, sale el albarán (y se descuenta el stock) y emites la factura con las mismas líneas. Y le mandas un enlace de pago: tarjeta, Bizum si lo activas o transferencia.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n¿Cuánto tardan en pagarte tus clientes? Cuéntalo en comentarios.\nVoz generada por IA\n\n#autonomos #pymes #facturacion #presupuestos #gestion #neogestlab",
       "comments_count": 0,
-      "like_count": 0,
+      "like_count": 1,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DfwoHBzk9fg/",
       "timestamp": "2026-11-15T11:02:22+0000",
       "metricas": {
-        "reach": 11,
-        "views": 13,
+        "reach": 16,
+        "views": 19,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 0,
-        "total_interactions": 0,
-        "ig_reels_avg_watch_time": 2031,
-        "ig_reels_video_view_total_time": 24379
+        "likes": 1,
+        "total_interactions": 2,
+        "ig_reels_avg_watch_time": 3589,
+        "ig_reels_video_view_total_time": 61021
       }
     },
     {
@@ -144,15 +249,15 @@
       "permalink": "https://www.instagram.com/reel/DfvVjptSgT9/",
       "timestamp": "2026-11-14T23:00:49+0000",
       "metricas": {
-        "reach": 25,
-        "views": 37,
+        "reach": 47,
+        "views": 62,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 5268,
-        "ig_reels_video_view_total_time": 152796
+        "ig_reels_avg_watch_time": 3876,
+        "ig_reels_video_view_total_time": 197681
       }
     },
     {
@@ -165,15 +270,15 @@
       "permalink": "https://www.instagram.com/reel/DfvANFTAMf-/",
       "timestamp": "2026-11-14T19:54:23+0000",
       "metricas": {
-        "reach": 135,
-        "views": 161,
+        "reach": 138,
+        "views": 164,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 3,
         "total_interactions": 4,
-        "ig_reels_avg_watch_time": 23732,
-        "ig_reels_video_view_total_time": 3346224
+        "ig_reels_avg_watch_time": 23275,
+        "ig_reels_video_view_total_time": 3351685
       }
     },
     {
@@ -186,15 +291,15 @@
       "permalink": "https://www.instagram.com/reel/DfuyeXhiKCb/",
       "timestamp": "2026-11-14T17:54:26+0000",
       "metricas": {
-        "reach": 213,
-        "views": 235,
+        "reach": 216,
+        "views": 238,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 3,
         "total_interactions": 4,
-        "ig_reels_avg_watch_time": 9425,
-        "ig_reels_video_view_total_time": 1988747
+        "ig_reels_avg_watch_time": 9334,
+        "ig_reels_video_view_total_time": 1997676
       }
     },
     {
@@ -266,8 +371,8 @@
       "permalink": "https://www.instagram.com/p/DfsDJzrDUOS/",
       "timestamp": "2026-11-13T16:22:06+0000",
       "metricas": {
-        "reach": 4,
-        "views": 20,
+        "reach": 5,
+        "views": 22,
         "saved": 0,
         "shares": 0,
         "total_interactions": 2
@@ -464,8 +569,8 @@
       "permalink": "https://www.instagram.com/p/DfhG07DFzQm/",
       "timestamp": "2026-11-09T10:22:43+0000",
       "metricas": {
-        "reach": 10,
-        "views": 25,
+        "reach": 11,
+        "views": 26,
         "saved": 0,
         "shares": 0,
         "total_interactions": 4
@@ -503,78 +608,6 @@
         "saved": 0,
         "shares": 3,
         "total_interactions": 9
-      }
-    },
-    {
-      "id": "18230867386335197",
-      "caption": "De la ruta del día a la factura cobrada 🚗\nGestión Integral 7D ordena tus visitas, lleva tus clientes por ranking ABC y pasa del presupuesto al pedido, al albarán y a la factura con enlace de pago.\nCapturas reales de la demo. Pide la tuya en el enlace del perfil o escríbeme IDEA por privado.\n\n#comerciales #pymes #ventas #facturacion #apps #neogestlab",
-      "comments_count": 0,
-      "like_count": 1,
-      "media_product_type": "REELS",
-      "media_type": "VIDEO",
-      "permalink": "https://www.instagram.com/reel/DffUzH3ALoA/",
-      "timestamp": "2026-11-08T17:46:49+0000",
-      "metricas": {
-        "reach": 6,
-        "views": 12,
-        "saved": 0,
-        "shares": 0,
-        "comments": 0,
-        "likes": 1,
-        "total_interactions": 2,
-        "ig_reels_avg_watch_time": 10572,
-        "ig_reels_video_view_total_time": 116300
-      }
-    },
-    {
-      "id": "17892903792456559",
-      "caption": "5 tareas pesadas que ChatGPT, Claude o Gemini hacen por ti (prompts incluidos).\nMenú de cenas de la semana y lista de la compra por secciones.\nResumir la circular del cole o de la comunidad y decirte qué hacer y para cuándo, sin pegar datos personales.\nResponder un mensaje difícil con educación.\nPasar a texto la foto de una receta o un tíquet.\nRepartir las tareas de la semana según tus horas libres.\nGuárdalo para el domingo 🗓️ ¿Y una app hecha para tu casa? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #organizacion #hogar #productividad #neogestlab",
-      "comments_count": 0,
-      "like_count": 1,
-      "media_product_type": "FEED",
-      "media_type": "CAROUSEL_ALBUM",
-      "permalink": "https://www.instagram.com/p/DffQZfmE7I6/",
-      "timestamp": "2026-11-08T17:07:54+0000",
-      "metricas": {
-        "reach": 21,
-        "views": 52,
-        "saved": 0,
-        "shares": 1,
-        "total_interactions": 3
-      }
-    },
-    {
-      "id": "17915734986471387",
-      "caption": "¿Pasas los presupuestos al Excel por la noche?\nSi trabajas en reformas o instalaciones, conoces el bucle: libreta, Excel y factura a mano.\nGestión Integral 7D, nuestra app, une presupuesto, pedido, albarán y factura, y cada paso hereda líneas, IVA y retención.\nPresupuestos y facturas en PDF con tus datos fiscales y los del cliente.\nCada factura puede llevar su enlace de pago: tarjeta, TPV Redsys (con Bizum si está activo) o transferencia.\nPide la demo en el enlace del perfil. ¿Lo quieres para tu negocio? Escríbeme IDEA por privado 🛠️\n\n#autonomos #reformas #facturacion #pymes #apps #neogestlab",
-      "comments_count": 0,
-      "like_count": 1,
-      "media_product_type": "FEED",
-      "media_type": "CAROUSEL_ALBUM",
-      "permalink": "https://www.instagram.com/p/Dfe8Sb1n_cY/",
-      "timestamp": "2026-11-08T14:12:01+0000",
-      "metricas": {
-        "reach": 27,
-        "views": 56,
-        "saved": 0,
-        "shares": 1,
-        "total_interactions": 3
-      }
-    },
-    {
-      "id": "18032685833879685",
-      "caption": "Deja de pedirle así las cosas a la IA.\nSi ChatGPT, Claude o Gemini te contestan regular, casi siempre es por el mensaje:\n1. Dale contexto: para quién es, qué pasa y qué tono quieres.\n2. Dile el formato: tabla, 3 puntos o menos de 100 palabras.\n3. No te quedes con la primera respuesta: pide «más corto» o «3 versiones».\n4. Pídele que te haga preguntas antes de responder.\n5. Comprueba datos, fechas y cifras, porque puede equivocarse.\nGuárdalo para tu próximo prompt 📌 Y si quieres una app para tu negocio, escríbeme IDEA por privado.\n\n#inteligenciaartificial #ia #prompts #productividad #neogestlab",
-      "comments_count": 0,
-      "like_count": 1,
-      "media_product_type": "FEED",
-      "media_type": "CAROUSEL_ALBUM",
-      "permalink": "https://www.instagram.com/p/Dfe8MyWjzSv/",
-      "timestamp": "2026-11-08T14:11:13+0000",
-      "metricas": {
-        "reach": 28,
-        "views": 53,
-        "saved": 0,
-        "shares": 1,
-        "total_interactions": 3
       }
     }
   ],
@@ -717,6 +750,10 @@
     },
     {
       "fecha": "2026-11-15T15:30+00:00",
+      "seguidores": 1602
+    },
+    {
+      "fecha": "2026-11-15T21:39+00:00",
       "seguidores": 1602
     }
   ]

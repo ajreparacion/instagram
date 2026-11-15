@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 20.2,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['pregunta', 'si'], sobran ['preguntas', 'y'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Mi tienda en internet está en mi cabeza. ¿Cómo me encuentran? Bola. Los tiburones no necesitan web. Te encuentran, seguro, preguntando por la calle. Sin web, el cliente debe presentar instancia en persona. Catálogo listo. Primer pedido, tu madre. Preguntas y sigues vivo. ¿Tu negocio sale en internet?",
+  "guion": "¿Mi tienda en internet? ¡Está en mi cabeza! ¿Cómo me encuentran, Bola? ¡Los tiburones no necesitan web! Te encuentran. Seguro. Preguntando por la calle. Sin web, el cliente debe presentar instancia. En persona. Catálogo listo. Primer pedido: tu madre. Pregunta si sigues vivo. ¿Tu negocio sale en internet?"
+}

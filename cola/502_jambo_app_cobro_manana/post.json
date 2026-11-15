@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "«Te pago mañana» lleva ya tres semanas siendo mañana. La Jupillo manda un enlace y cobra en un minuto. Humor negro de ficción.\n¿Cuánto llevas esperando un cobro? Cuéntalo en comentarios.\nEn Gestión Integral 7D la factura en PDF lleva enlace de pago: tarjeta, Bizum (si está activo) o transferencia.\nMándaselo a quien cobra a base de insistir.\n#humornegro #autonomos #pymes #cobros #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "«Te pago mañana» lleva ya tres semanas siendo mañana. La Jupillo manda un enlace y cobra en un minuto. Humor negro de ficción.\n¿Cuánto llevas esperando un cobro? Cuéntalo en comentarios.\nEn Gestión Integral 7D la factura en PDF lleva enlace de pago: tarjeta, Bizum (si está activo) o transferencia.\nMándaselo a quien cobra a base de insistir.\n#humornegro #autonomos #pymes #cobros #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-22T16:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -21,10 +21,18 @@
     "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
   "musica": {
-    "titulo": "Monkeys Spinning Monkeys",
+    "titulo": "Sneaky Snitch",
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Monkeys_Spinning_Monkeys.mp3"
+    "archivo": "Sneaky_Snitch.mp3",
+    "bpm": 87.6
+  },
+  "_control_audio_fallo": {
+    "fecha": "2026-11-15T21:33:14+00:00",
+    "bloqueos": [
+      "voz distinta del guion: faltan [], sobran ['a'] (rehacer esas frases)"
+    ],
+    "guion_md5": "5852931e3da11fd6eb42c8f96c783ecc"
   }
 }

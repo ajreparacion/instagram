@@ -1,0 +1,75 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 1.833,
+  "texto": "Hace un ruido raro. ¡Así!",
+  "enfasis": [
+   3
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 1.833,
+  "duracion": 2.2,
+  "texto": "Explícaselo tú al taller, Pelota.",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 4.033,
+  "duracion": 2.667,
+  "texto": "Es el motor. O la rueda. Seguro.",
+  "enfasis": [
+   6
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 6.7,
+  "duracion": 3.733,
+  "texto": "Describa el ruido en el impreso. Sin onomatopeyas.",
+  "enfasis": [
+   7
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 10.433,
+  "duracion": 2.233,
+  "texto": "Hace ñiic, pum, ñiic, pum.",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 12.667,
+  "duracion": 4.067,
+  "texto": "Ya está enviado, con fotos. Y el ruido era tu teléfono vibrando.",
+  "enfasis": [
+   10
+  ]
+ },
+ {
+  "escena": 6,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 16.733,
+  "duracion": 2.5,
+  "texto": "¿Tú explicas las averías con ruiditos?",
+  "enfasis": []
+ }
+]

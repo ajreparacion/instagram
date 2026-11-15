@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Trescientos mensajes sin leer y nadie sabe quién viene el sábado. La Jupillo hace la lista. Humor negro de ficción.\n¿Tu club se organiza por WhatsApp? Cuéntalo en comentarios.\nMándaselo a quien organiza el club.\n#humornegro #club #pymes #webs #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "Trescientos mensajes sin leer y nadie sabe quién viene el sábado. La Jupillo hace la lista. Humor negro de ficción.\n¿Tu club se organiza por WhatsApp? Cuéntalo en comentarios.\nMándaselo a quien organiza el club.\n#humornegro #club #pymes #webs #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-24T13:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -21,10 +21,18 @@
     "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
   "musica": {
-    "titulo": "Monkeys Spinning Monkeys",
+    "titulo": "Investigations",
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Monkeys_Spinning_Monkeys.mp3"
+    "archivo": "Investigations.mp3",
+    "bpm": 95.7
+  },
+  "_control_audio_fallo": {
+    "fecha": "2026-11-15T21:36:57+00:00",
+    "bloqueos": [
+      "voz distinta del guion: faltan ['haz'], sobran ['hace'] (rehacer esas frases)"
+    ],
+    "guion_md5": "fe3df2f458b55fb6e8943b55b4260937"
   }
 }

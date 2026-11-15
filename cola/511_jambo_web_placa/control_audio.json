@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 21.83,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['bola', 'leen', 'placas'], sobran ['hola', 'le', 'emplacas'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "El número de serie, debajo, creo, ayúdame a buscarlo, hola Los tiburones le emplacas a ciegas Detrás, o al lado, o en otro aparato, seguro Sin número de serie no hay garantía, sin garantía, no hay consuelo Estaba delante, con letras grandes, y tú, con la linterna, detrás ¿Dónde buscas tú el número de serie?",
+  "guion": "¿El número de serie? ¡Debajo, creo! Ayúdame a buscarlo, Bola. ¡Los tiburones leen placas a ciegas! Detrás. O al lado. O en otro aparato. Seguro. Sin número de serie no hay garantía. Sin garantía, no hay consuelo. Estaba delante, con letras grandes. Y tú, con la linterna, detrás. ¿Dónde buscas tú el número de serie?"
+}

@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 21.33,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['haz'], sobran ['hace'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "300 mensajes. ¿Quién viene el sábado? Hace el recuento, pelota. Vienen todos, seguro, o ninguno. Confirme su asistencia por escrito. Y cuente los pulgares. Un pulgares un sí, un melón, un quizá. Lista hecha. Confirmados, once. Y la mitad de los mensajes eran tus audios. Tu club se organiza por WhatsApp.",
+  "guion": "Trescientos mensajes. ¿Quién viene el sábado? Haz el recuento, Pelota. Vienen todos. Seguro. O ninguno. Confirme su asistencia por escrito. Y cuente los pulgares. ¡Un pulgar es un sí! ¡Un melón, un quizá! Lista hecha. Confirmados, once. Y la mitad de los mensajes eran tus audios. ¿Tu club se organiza por WhatsApp?"
+}

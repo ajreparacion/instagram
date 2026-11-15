@@ -1,61 +1,3 @@
-2026-11-14 11:41  Voz: silencios recortados por frase (s): [0.7, 0.62, 0.71, 0.83, 0.71, 0.73]
-2026-11-14 11:41  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(-2.9), np.float64(-2.3), np.float64(0.1), np.float64(-1.3), np.float64(-1.7), np.float64(-0.3)]
-2026-11-14 11:41  Voz: alineación palabra a palabra (small, 11.1 s): 6/6 frases
-2026-11-14 11:42  Mezcla: voz -15.1 LUFS, música -15.4 LUFS (con ducking -15.9), la música baja 5.54 dB (p90) bajo la voz, ratio 2.0; máster -14.46 -> -14.0 LUFS, pico -1.5 dBFS; huecos de voz: [[6.1, 8.55]]
-2026-11-14 11:42  512_jambo_web_club: renderizado con voz y subido a la release 'cola'
-2026-11-14 11:42  Voz con MeloTTS (ES/ES, 44100 Hz, velocidad 1.1): 6 frases en 17 s
-2026-11-14 11:42  Voz: timbre de personaje aplicado a 3 frases (['bola', 'jupillo'])
-2026-11-14 11:42  Voz: silencios recortados por frase (s): [0.69, 0.67, 0.71, 0.77, 0.73, 0.77]
-2026-11-14 11:42  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(-0.7), np.float64(2.7), np.float64(0.1), np.float64(-1.1), np.float64(-1.1), np.float64(-1.0)]
-2026-11-14 11:42  Voz: alineación palabra a palabra (small, 11.3 s): 6/6 frases
-2026-11-14 11:43  Mezcla: voz -15.3 LUFS, música -15.3 LUFS (con ducking -15.7), la música baja 5.55 dB (p90) bajo la voz, ratio 2.0; máster -14.57 -> -14.0 LUFS, pico -1.5 dBFS; huecos de voz: [[4.65, 7.1]]
-2026-11-14 11:43  513_jambo_web_tienda: renderizado con voz y subido a la release 'cola'
-2026-11-14 11:55  Voz con MeloTTS (ES/ES, 44100 Hz, velocidad 1.1): 6 frases en 16 s
-2026-11-14 11:55  Voz: timbre de personaje aplicado a 3 frases (['jupillo', 'tramites'])
-2026-11-14 11:55  Voz: silencios recortados por frase (s): [0.69, 0.73, 0.71, 0.85, 0.68, 0.76]
-2026-11-14 11:55  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(-1.1), np.float64(1.2), np.float64(0.1), np.float64(0.1), np.float64(-0.7), np.float64(-1.1)]
-2026-11-14 11:55  Voz: alineación palabra a palabra (small, 10.8 s): 6/6 frases
-2026-11-14 11:55  Mezcla: voz -15.4 LUFS, música -15.3 LUFS (con ducking -15.7), la música baja 5.73 dB (p90) bajo la voz, ratio 2.0; máster -14.65 -> -14.1 LUFS, pico -1.3 dBFS; huecos de voz: [[4.15, 6.8]]
-2026-11-14 11:55  514_jambo_web_oficio: renderizado con voz y subido a la release 'cola'
-2026-11-14 11:56  Voz con MeloTTS (ES/ES, 44100 Hz, velocidad 1.1): 6 frases en 16 s
-2026-11-14 11:56  Voz: timbre de personaje aplicado a 3 frases (['jupillo', 'pelota'])
-2026-11-14 11:56  Voz: silencios recortados por frase (s): [0.72, 0.62, 0.71, 0.78, 0.7, 0.81]
-2026-11-14 11:56  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(-1.2), np.float64(-0.5), np.float64(0.1), np.float64(-1.1), np.float64(-1.7), np.float64(-0.7)]
-2026-11-14 11:56  Voz: alineación palabra a palabra (small, 10.8 s): 6/6 frases
-2026-11-14 11:56  Mezcla: voz -14.8 LUFS, música -15.3 LUFS (con ducking -15.8), la música baja 5.47 dB (p90) bajo la voz, ratio 2.0; máster -14.32 -> -14.1 LUFS, pico -1.2 dBFS; huecos de voz: [[5.3, 7.7]]
-2026-11-14 11:56  515_jambo_web_empresa: renderizado con voz y subido a la release 'cola'
-2026-11-14 16:22  Estadísticas actualizadas (19 posts, 1601 seguidores)
-2026-11-14 17:23  104_ia_negocio: publicando…
-2026-11-14 17:23  imagen de prueba https://cdn.jsdelivr.net/gh/ajreparacion/instagram@d0ce81af4c964bd63b3e3357daecb7756e017685/cola/104_ia_negocio/slides/01.jpg -> 200 image/jpeg 151635 bytes
-2026-11-14 17:25  104_ia_negocio: Facebook publicado https://www.facebook.com/1437632859434095_122109885909536765
-2026-11-14 17:25  104_ia_negocio: publicado https://www.instagram.com/p/DfuoO4yFy8-/
-2026-11-14 18:53  306_jambo_ep6_devolucion: publicando…
-2026-11-14 18:53  Música elegida antes de publicar: Good Vibes · Giulio Cercato (búsqueda «upbeat», puesto 2, humor comedia)
-2026-11-14 18:54  reel de prueba: fallo al subir/procesar ({"debug_info":{"retriable":false,"type":"ProcessingFailedError","message":"Request processing failed"}} (código None, subcódigo None)); se publica como reel normal
-2026-11-14 18:54  306_jambo_ep6_devolucion: YouTube publicado https://youtube.com/shorts/21vdcuKmgkU
-2026-11-14 18:54  306_jambo_ep6_devolucion: Facebook publicado https://www.facebook.com/reel/1771962900575423
-2026-11-14 18:54  306_jambo_ep6_devolucion: publicado https://www.instagram.com/reel/DfuyeXhiKCb/
-2026-11-14 20:53  307_jambo_ep7_clase: publicando…
-2026-11-14 20:53  Música elegida antes de publicar: Happy Days · Giulio Cercato (búsqueda «funny», puesto 2, humor comedia)
-2026-11-14 20:54  307_jambo_ep7_clase: YouTube publicado https://youtube.com/shorts/3Zpd2jcYbks
-2026-11-14 20:54  307_jambo_ep7_clase: Facebook publicado https://www.facebook.com/reel/1656587395966579
-2026-11-14 20:54  307_jambo_ep7_clase: publicado https://www.instagram.com/reel/DfvANFTAMf-/
-2026-11-14 21:40  Voz con edge-tts: 8 frases en 13 s
-2026-11-14 21:40  Voz: silencios recortados por frase (s): [0.12, 0.12, 0.12, 0.14, 0.14, 0.12, 0.12, 0.14]
-2026-11-14 21:40  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.5), np.float64(1.9), np.float64(3.3), np.float64(2.4), np.float64(5.1), np.float64(3.3), np.float64(3.9), np.float64(3.6)]
-2026-11-14 21:41  Voz: alineación palabra a palabra (small, 21.6 s): 8/8 frases
-2026-11-14 21:41  Mezcla: voz -17.2 LUFS, música -22.5 LUFS (con ducking -24.5), la música baja 6.0 dB (p90) bajo la voz, ratio 2.457; máster -17.13 -> -14.0 LUFS, pico -1.5 dBFS; huecos de voz: []
-2026-11-14 21:41  Control de audio: FALLA voz distinta del guion: faltan ['18', '55'], sobran ['seis', 'cincuenta', 'y', 'cinco', 'y'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[5.65, 6.26, 0.6]]; duración 23.43 s
-2026-11-14 21:41  318_jambo_ep1_parte2_momentito: NO se publica, control de audio: voz distinta del guion: faltan ['18', '55'], sobran ['seis', 'cincuenta', 'y', 'cinco', 'y'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[5.65, 6.26, 0.6]]
-2026-11-14 21:42  Voz con edge-tts: 8 frases en 13 s
-2026-11-14 21:42  Voz: silencios recortados por frase (s): [0.13, 0.13, 0.13, 0.13, 0.12, 0.12, 0.13, 0.12]
-2026-11-14 21:42  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(2.9), np.float64(3.7), np.float64(4.3), np.float64(1.7), np.float64(3.2), np.float64(3.0), np.float64(4.9), np.float64(2.8)]
-2026-11-14 21:42  Voz: alineación palabra a palabra (small, 23.0 s): 8/8 frases
-2026-11-14 21:43  Mezcla: voz -17.0 LUFS, música -22.5 LUFS (con ducking -25.2), la música baja 6.0 dB (p90) bajo la voz, ratio 2.304; máster -16.95 -> -14.0 LUFS, pico -1.5 dBFS; huecos de voz: []
-2026-11-14 21:43  Control de audio: FALLA voz distinta del guion: faltan ['siete', 'ia', 'siete', 'ocho'], sobran ['7', 'i', 'a', '7', '8'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[6.12, 6.72, 0.6]]; duración 26.4 s
-2026-11-14 21:43  317_jambo_ep5_parte2_bar: NO se publica, control de audio: voz distinta del guion: faltan ['siete', 'ia', 'siete', 'ocho'], sobran ['7', 'i', 'a', '7', '8'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[6.12, 6.72, 0.6]]
-2026-11-14 22:25  Estadísticas actualizadas (22 posts, 1602 seguidores)
-2026-11-14 22:55  Voz con edge-tts: 8 frases en 6 s
 2026-11-14 22:55  Voz: silencios recortados por frase (s): [0.13, 0.14, 0.13, 0.13, 0.12, 0.12, 0.13, 0.13]
 2026-11-14 22:55  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(1.7), np.float64(5.0), np.float64(2.4), np.float64(5.0), np.float64(2.0), np.float64(3.8), np.float64(2.7), np.float64(3.5)]
 2026-11-14 22:55  Voz: alineación palabra a palabra (small, 13.9 s): 7/8 frases
@@ -598,3 +540,61 @@
 2026-11-15 22:18  Mezcla: voz -16.7 LUFS, música -22.2 LUFS (con ducking -25.2), la música baja 6.0 dB (p90) bajo la voz, ratio 2.44; máster -16.47 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
 2026-11-15 22:18  Control de audio: OK; duración 18.9 s
 2026-11-15 22:18  508_jambo_app_gastos_fijos: renderizado con voz y subido a la release 'cola'
+2026-11-15 22:32  Voz con edge-tts: 7 frases en 10 s
+2026-11-15 22:32  Voz: silencios recortados por frase (s): [0.13, 0.14, 0.13, 0.13, 0.12, 0.14, 0.13]
+2026-11-15 22:32  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(1.2), np.float64(1.8), np.float64(3.5), np.float64(2.6), np.float64(3.7), np.float64(4.7), np.float64(3.6)]
+2026-11-15 22:32  Voz: alineación palabra a palabra (small, 9.2 s): 7/7 frases
+2026-11-15 22:33  Mezcla: voz -16.5 LUFS, música -22.4 LUFS (con ducking -25.1), la música baja 6.0 dB (p90) bajo la voz, ratio 2.44; máster -16.17 -> -13.9 LUFS, pico -1.5 dBFS; huecos de voz: []
+2026-11-15 22:33  Control de audio: FALLA voz distinta del guion: faltan [], sobran ['a'] (rehacer esas frases); duración 19.77 s
+2026-11-15 22:33  502_jambo_app_cobro_manana: NO se publica, control de audio: voz distinta del guion: faltan [], sobran ['a'] (rehacer esas frases)
+2026-11-15 22:33  Voz con edge-tts: 7 frases en 8 s
+2026-11-15 22:33  Voz: silencios recortados por frase (s): [0.13, 0.13, 0.14, 0.13, 0.12, 0.13, 0.14]
+2026-11-15 22:33  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(0.5), np.float64(1.6), np.float64(3.2), np.float64(4.2), np.float64(1.2), np.float64(4.7), np.float64(4.0)]
+2026-11-15 22:33  Voz: alineación palabra a palabra (small, 9.2 s): 7/7 frases
+2026-11-15 22:33  Mezcla: voz -16.4 LUFS, música -22.0 LUFS (con ducking -24.6), la música baja 6.0 dB (p90) bajo la voz, ratio 2.169; máster -16.13 -> -13.9 LUFS, pico -1.4 dBFS; huecos de voz: []
+2026-11-15 22:33  Control de audio: FALLA voz distinta del guion: faltan ['sin', 'onomatopeyas', 'niic', 'niic'], sobran ['si', 'no', 'no', 'mato', 'pelas', 'yik', 'yik'] (rehacer esas frases); duración 19.23 s
+2026-11-15 22:33  510_jambo_web_pre_entrada: NO se publica, control de audio: voz distinta del guion: faltan ['sin', 'onomatopeyas', 'niic', 'niic'], sobran ['si', 'no', 'no', 'mato', 'pelas', 'yik', 'yik'] (rehacer esas frases)
+2026-11-15 22:34  Voz con edge-tts: 7 frases en 12 s
+2026-11-15 22:34  Voz: silencios recortados por frase (s): [0.12, 0.13, 0.12, 0.14, 0.11, 0.13, 0.12]
+2026-11-15 22:34  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(2.6), np.float64(1.2), np.float64(3.7), np.float64(3.6), np.float64(2.8), np.float64(4.1), np.float64(4.3)]
+2026-11-15 22:34  Voz: alineación palabra a palabra (small, 9.4 s): 7/7 frases
+2026-11-15 22:34  Mezcla: voz -16.8 LUFS, música -22.2 LUFS (con ducking -25.0), la música baja 5.72 dB (p90) bajo la voz, ratio 2.5; máster -16.28 -> -13.9 LUFS, pico -1.3 dBFS; huecos de voz: []
+2026-11-15 22:34  Control de audio: FALLA voz distinta del guion: faltan ['bola', 'leen', 'placas'], sobran ['hola', 'le', 'emplacas'] (rehacer esas frases); duración 21.83 s
+2026-11-15 22:34  511_jambo_web_placa: NO se publica, control de audio: voz distinta del guion: faltan ['bola', 'leen', 'placas'], sobran ['hola', 'le', 'emplacas'] (rehacer esas frases)
+2026-11-15 22:35  Grabación de pantalla: OK /tmp/render_406_peluqueria_web_asistente_reel/grabacion.mp4 (696 fotogramas, 23.2 s, total 40.9 s)
+2026-11-15 22:35  Voz con edge-tts: 5 frases en 5 s
+2026-11-15 22:35  Voz: silencios recortados por frase (s): [0.12, 0.12, 0.14, 0.14, 0.13]
+2026-11-15 22:35  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.0), np.float64(4.4), np.float64(3.3), np.float64(3.8), np.float64(4.5)]
+2026-11-15 22:35  Voz: alineación palabra a palabra (small, 7.1 s): 5/5 frases
+2026-11-15 22:36  Mezcla: voz -16.1 LUFS, música -23.0 LUFS (con ducking -26.1), la música baja 6.0 dB (p90) bajo la voz, ratio 2.39; máster -16.0 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
+2026-11-15 22:36  Control de audio: FALLA silencios > 0.6 s entre frases (pista de voz): [[9.57, 10.36, 0.79]]; duración 17.97 s
+2026-11-15 22:36  406_peluqueria_web_asistente_reel: NO se publica, control de audio: silencios > 0.6 s entre frases (pista de voz): [[9.57, 10.36, 0.79]]
+2026-11-15 22:36  Voz con edge-tts: 7 frases en 8 s
+2026-11-15 22:36  Voz: silencios recortados por frase (s): [0.13, 0.14, 0.13, 0.13, 0.14, 0.14, 0.13]
+2026-11-15 22:36  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(2.9), np.float64(1.4), np.float64(3.3), np.float64(4.1), np.float64(3.2), np.float64(4.7), np.float64(4.2)]
+2026-11-15 22:36  Voz: alineación palabra a palabra (small, 9.3 s): 7/7 frases
+2026-11-15 22:36  Mezcla: voz -16.2 LUFS, música -22.3 LUFS (con ducking -25.1), la música baja 6.0 dB (p90) bajo la voz, ratio 2.343; máster -16.05 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
+2026-11-15 22:36  Control de audio: FALLA voz distinta del guion: faltan ['haz'], sobran ['hace'] (rehacer esas frases); duración 21.33 s
+2026-11-15 22:36  512_jambo_web_club: NO se publica, control de audio: voz distinta del guion: faltan ['haz'], sobran ['hace'] (rehacer esas frases)
+2026-11-15 22:37  Voz con edge-tts: 7 frases en 9 s
+2026-11-15 22:37  Voz: silencios recortados por frase (s): [0.13, 0.13, 0.13, 0.12, 0.11, 0.15, 0.04]
+2026-11-15 22:37  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(1.6), np.float64(5.0), np.float64(3.8), np.float64(3.4), np.float64(3.2), np.float64(5.0), np.float64(3.9)]
+2026-11-15 22:37  Voz: alineación palabra a palabra (small, 9.2 s): 7/7 frases
+2026-11-15 22:37  Mezcla: voz -16.4 LUFS, música -22.1 LUFS (con ducking -25.2), la música baja 6.0 dB (p90) bajo la voz, ratio 2.417; máster -16.05 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
+2026-11-15 22:37  Control de audio: FALLA voz distinta del guion: faltan ['pregunta', 'si'], sobran ['preguntas', 'y'] (rehacer esas frases); duración 20.2 s
+2026-11-15 22:37  513_jambo_web_tienda: NO se publica, control de audio: voz distinta del guion: faltan ['pregunta', 'si'], sobran ['preguntas', 'y'] (rehacer esas frases)
+2026-11-15 22:37  Voz con edge-tts: 7 frases en 9 s
+2026-11-15 22:37  Voz: silencios recortados por frase (s): [0.12, 0.13, 0.14, 0.13, 0.13, 0.14, 0.11]
+2026-11-15 22:37  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(2.8), np.float64(1.8), np.float64(3.7), np.float64(3.6), np.float64(3.0), np.float64(4.9), np.float64(4.4)]
+2026-11-15 22:38  Voz: alineación palabra a palabra (small, 9.5 s): 7/7 frases
+2026-11-15 22:38  Mezcla: voz -16.3 LUFS, música -22.2 LUFS (con ducking -25.1), la música baja 6.0 dB (p90) bajo la voz, ratio 2.369; máster -16.06 -> -14.0 LUFS, pico -0.9 dBFS; huecos de voz: []
+2026-11-15 22:38  Control de audio: OK; duración 20.63 s
+2026-11-15 22:38  514_jambo_web_oficio: renderizado con voz y subido a la release 'cola'
+2026-11-15 22:38  Voz con edge-tts: 7 frases en 9 s
+2026-11-15 22:38  Voz: silencios recortados por frase (s): [0.12, 0.13, 0.11, 0.14, 0.12, 0.13, 0.12]
+2026-11-15 22:38  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(0.8), np.float64(3.4), np.float64(3.6), np.float64(3.2), np.float64(3.6), np.float64(4.7), np.float64(4.0)]
+2026-11-15 22:39  Voz: alineación palabra a palabra (small, 13.2 s): 7/7 frases
+2026-11-15 22:39  Mezcla: voz -16.3 LUFS, música -22.2 LUFS (con ducking -24.9), la música baja 6.0 dB (p90) bajo la voz, ratio 2.338; máster -16.09 -> -14.0 LUFS, pico -1.3 dBFS; huecos de voz: []
+2026-11-15 22:39  Control de audio: OK; duración 20.6 s
+2026-11-15 22:39  515_jambo_web_empresa: renderizado con voz y subido a la release 'cola'
+2026-11-15 22:39  Estadísticas actualizadas (30 posts, 1602 seguidores)

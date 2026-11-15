@@ -1,0 +1,76 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.567,
+  "texto": "¿La factura? ¡Se la reenvío! ¡Otra vez!",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 2.567,
+  "duracion": 1.433,
+  "texto": "Búscala tú, Pelota.",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 4.0,
+  "duracion": 2.833,
+  "texto": "Está en el correo. De dos mil diecinueve.",
+  "enfasis": [
+   7
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 6.833,
+  "duracion": 4.033,
+  "texto": "Reenviar facturas exige tres firmas. Y nostalgia.",
+  "enfasis": [
+   6
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 10.867,
+  "duracion": 2.933,
+  "texto": "¡Reenviar es conectar! ¡Cuarenta veces, mejor!",
+  "enfasis": [
+   2
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 13.8,
+  "duracion": 4.333,
+  "texto": "Portal listo. Se bajaron todo. Y vieron que cobraste una dos veces.",
+  "enfasis": [
+   10,
+   11
+  ]
+ },
+ {
+  "escena": 6,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 18.133,
+  "duracion": 2.467,
+  "texto": "¿Cuántas veces reenvías la misma factura?",
+  "enfasis": []
+ }
+]

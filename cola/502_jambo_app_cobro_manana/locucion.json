@@ -1,0 +1,73 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.433,
+  "texto": "¡Ha dicho «te pago mañana»! ¡Genial!",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 2.433,
+  "duracion": 1.933,
+  "texto": "Hoy cobro, ¿verdad, Pelota?",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 4.367,
+  "duracion": 2.5,
+  "texto": "Ese cliente paga siempre. Seguro.",
+  "enfasis": [
+   4
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 6.867,
+  "duracion": 2.7,
+  "texto": "¡Lo dijo hace tres semanas! ¡Constancia!",
+  "enfasis": []
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 9.567,
+  "duracion": 3.5,
+  "texto": "Mañana hoy no es. Reclame mañana, mañana.",
+  "enfasis": [
+   6
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 13.067,
+  "duracion": 4.5,
+  "texto": "Enlace de pago enviado. Pagó en un minuto. Esperaba que se lo pidieras.",
+  "enfasis": [
+   12
+  ]
+ },
+ {
+  "escena": 6,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 17.567,
+  "duracion": 2.2,
+  "texto": "¿Cuánto llevas esperando un cobro?",
+  "enfasis": []
+ }
+]

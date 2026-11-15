@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 17.97,
+  "bloqueos": [
+    "silencios > 0.6 s entre frases (pista de voz): [[9.57, 10.36, 0.79]]"
+  ],
+  "avisos": [],
+  "transcripcion": "Las 11 de la noche, preguntan el precio y nadie contesta. En esta web de ejemplo, le pregunto por el tinte. Y el asistente responde solo con lo que pone la web. Nadie cogió el teléfono. La web sí contestó, pide tu prueba gratuita, sin tarjeta, sin datos bancarios y sin compromiso.",
+  "guion": "Las once de la noche. Preguntan el precio y nadie contesta. En esta web de ejemplo, le pregunto por el tinte. Y el asistente responde solo con lo que pone la web. Nadie cogió el teléfono. La web sí contestó. Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso."
+}

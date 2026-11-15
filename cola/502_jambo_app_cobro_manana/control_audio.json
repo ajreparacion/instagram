@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 19.77,
+  "bloqueos": [
+    "voz distinta del guion: faltan [], sobran ['a'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Ha dicho, te pago mañana. Genial. ¿Hoy cobro? ¿Verdad, pelota? Ese cliente paga siempre. Seguro. Lo dijo hace tres semanas. Constancia. Mañana hoy no es. Reclame mañana a mañana. Enlace de pago enviado. Pagó en un minuto. Esperaba que se lo pidieras. ¿Cuánto llevas esperando un cobro?",
+  "guion": "¡Ha dicho «te pago mañana»! ¡Genial! Hoy cobro, ¿verdad, Pelota? Ese cliente paga siempre. Seguro. ¡Lo dijo hace tres semanas! ¡Constancia! Mañana hoy no es. Reclame mañana, mañana. Enlace de pago enviado. Pagó en un minuto. Esperaba que se lo pidieras. ¿Cuánto llevas esperando un cobro?"
+}
