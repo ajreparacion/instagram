@@ -1,0 +1,13 @@
+{
+  "nota": 90,
+  "aprobado": true,
+  "motivos": [
+    "Control de audio OK en Actions (whisper = guion, sin silencios > 0,6 s); silencedetect local sin huecos",
+    "25,3 s (≤ 30), −14,0 LUFS, pico −1,4 dBFS, 1080x1920",
+    "Situación reconocible en el segundo 0 («Cuando tienes que contestar un correo…»), escalada Pelota/Bola/Trámites, giro de la Jupillo con sello PAGADO, pregunta final",
+    "Sin cifras ni funciones de app; logo no aparece; cierre de prueba gratuita y atribución MacLeod CC BY en el post"
+  ],
+  "fecha": "2026-11-15T10:02:34+00:00",
+  "revisor": "Calidad (tarea programada)",
+  "render": "2026-11-15T09:58:46+00:00"
+}

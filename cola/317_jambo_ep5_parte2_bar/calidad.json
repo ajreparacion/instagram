@@ -1,0 +1,14 @@
+{
+  "nota": 90,
+  "aprobado": true,
+  "motivos": [
+    "Control de audio OK en Actions (whisper = guion, sin silencios > 0,6 s); silencedetect −45 dB/0,6 s local sin huecos",
+    "25,7 s (≤ 30), −14,0 LUFS, pico −1,4 dBFS, 1080x1920",
+    "Texto en el segundo 0 (POV ≤ 8 palabras) con personaje; escalada en 3 golpes, giro «cerrado con llave», pregunta final y Parte 3",
+    "Sin datos ni funciones de app; atribución MacLeod CC BY en el post",
+    "Arreglado: añadido el cierre de prueba gratuita que faltaba en el texto del post"
+  ],
+  "fecha": "2026-11-15T10:02:34+00:00",
+  "revisor": "Calidad (tarea programada)",
+  "render": "2026-11-15T10:00:15+00:00"
+}
