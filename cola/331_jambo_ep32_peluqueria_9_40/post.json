@@ -1,0 +1,21 @@
+{
+ "tipo": "reel",
+ "texto": "La de las nueve llega a las diez menos veinte. Siempre. ¿Cuánto esperas tú?\nEpisodio nuevo cada día en @neogestlab\n#peluqueria #humornegro #ia\nVoz y personajes generados por IA",
+ "cuando": "2026-11-16T18:40:00+01:00",
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "formato": "Serie El Jambo",
+ "publico": "peluquería",
+ "formula": "humor con personaje (v8 B2)",
+ "_fuentes": [],
+ "motor_voz": "edge",
+ "_nota_creador": "15/11/2026: episodio del calendario_16-22nov.md (hora movida de 18:45 a 18:40/16:40 para respetar ≥ 2 h con las demás piezas del día). Sin cifras con fuente: humor de ficción. Falta render y Calidad (≥ 90).",
+ "comentario_fijado": "¿Cuánto esperas a quien llega tarde? Una cifra. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
+ "avance_siguiente": "Más tarde: la mesa de doce que no vino.",
+ "portada_ms": 0,
+ "monetizacion": {
+  "objetivo": "visita_perfil",
+  "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
+  "paso_embudo": "alcance → visita al perfil"
+ }
+}

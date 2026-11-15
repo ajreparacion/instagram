@@ -1,0 +1,21 @@
+{
+ "tipo": "reel",
+ "texto": "Setenta por ciento de descuento. Cien por cien de pérdidas. ¿Haces Black Friday?\nEpisodio nuevo cada día en @neogestlab\n#blackfriday #tiendaonline #humornegro\nVoz y personajes generados por IA",
+ "cuando": "2026-11-20T18:40:00+01:00",
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "formato": "Serie El Jambo",
+ "publico": "comercio online",
+ "formula": "humor con personaje (v8 B2)",
+ "_fuentes": [],
+ "motor_voz": "edge",
+ "_nota_creador": "15/11/2026: episodio del calendario_16-22nov.md (hora movida de 18:45 a 18:40/16:40 para respetar ≥ 2 h con las demás piezas del día). Sin cifras con fuente: humor de ficción. Falta render y Calidad (≥ 90).",
+ "comentario_fijado": "¿Haces Black Friday? Sí o no. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
+ "avance_siguiente": "Más tarde: la décima visita al mismo piso.",
+ "portada_ms": 0,
+ "monetizacion": {
+  "objetivo": "visita_perfil",
+  "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
+  "paso_embudo": "alcance → visita al perfil"
+ }
+}

@@ -14,3 +14,6 @@ Conteo al 15/11 (episodios El Jambo/día): 15→5, 16→3, 17→3, 18→3, 19→
 | 327_jambo_ep31_papeles_cajon | 22/11 20:40 | POV: los papeles del año, en un cajón | — |
 
 Fórmula: gancho en 0-2 s → 3 golpes de las IAs (Trámites/Pelota/Bola) → «Que lo haga la Jupillo» → remate con sello → frase del Jambo → cierre con pregunta de una palabra o número. Guiones completos en cola/<carpeta>/guion.json.
+
+## Calendario 16-22/11 (coordinación, 15/11): episodios 32-38, carpetas cola/331-337
+Hora movida de 18:45 a 18:40 (16, 17, 19-22/11) y 16:40 (18/11) para mantener ≥ 2 h con las demás piezas. Temas: peluquería, mesa para doce, mensaje 23:47, gimnasio, Black Friday, décima visita, cena de empresa. Ahora hay 4 episodios/día del 16 al 22/11 (3 el 15/11 + los de la mañana).
