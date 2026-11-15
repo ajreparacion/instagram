@@ -1,0 +1,30 @@
+{
+ "tipo": "reel",
+ "texto": "70 % de descuento. 100 % de pérdidas. Humor negro de ficción.\n¿Haces Black Friday?\n#blackfriday #tiendaonline #humornegro #ia\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Life of Riley\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+ "cuando": "2026-11-20T18:45:00+01:00",
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "formato": "Serie El Jambo",
+ "publico": "tienda",
+ "formula": "humor con personaje (v8 B2)",
+ "_fuentes": [],
+ "_comprobado": "Sin cifras de estudio: solo cifras del guion de ficción; no se afirma ningún dato real.",
+ "_nota_creador": "15/11/2026 Creador, calendario_16-22nov.md. Falta render (edge-tts) y Calidad ≥ 90; sin calidad.json aprobado no se publica.",
+ "motor_voz": "edge",
+ "comentario_fijado": "¿Haces Black Friday? Palabra clave WEB o APP si quieres tu maqueta gratis.",
+ "avance_siguiente": "Parte 2 mañana: la décima visita.",
+ "portada_ms": 0,
+ "monetizacion": {
+  "objetivo": "visita_perfil",
+  "oferta": "prueba gratuita en /solicitar (texto del post)",
+  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+ },
+ "musica": {
+  "titulo": "Life of Riley",
+  "autor": "Kevin MacLeod",
+  "licencia": "CC BY 4.0",
+  "url": "https://incompetech.com/music/royalty-free/",
+  "archivo": "Life_of_Riley.mp3",
+  "bpm": 120.0
+ }
+}

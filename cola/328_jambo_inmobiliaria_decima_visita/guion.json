@@ -1,0 +1,122 @@
+{
+ "titulo": "El Jambo que sabe y las IAs · Cuando es la décima visita al mismo piso con la misma pareja",
+ "semilla": 3328,
+ "modo": "sketch",
+ "serie": "El Jambo que sabe y las IAs",
+ "episodio": 30,
+ "negocio": "inmobiliaria",
+ "portada_texto": "Cuando es la décima visita al mismo piso con la misma pareja",
+ "musica": true,
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "hablante": "jambo",
+   "voz": "Décima visita al mismo piso. La misma pareja.",
+   "texto": "Visita 10",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "bola",
+   "voz": "Es que... nos lo *pensamos*.",
+   "texto": "Nos lo pensamos",
+   "dibujo": {
+    "personajes": [
+     "bola",
+     "jambo"
+    ],
+    "acciones": {
+     "bola": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Las fotos del piso salen con mi dedo en el objetivo.",
+   "texto": "Mi dedo",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "pelota",
+   "voz": "¡Una visita más es una venta más cerca!",
+   "texto": "Una más",
+   "dibujo": {
+    "personajes": [
+     "pelota",
+     "jambo"
+    ],
+    "acciones": {
+     "pelota": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "jupillo",
+   "voz": "Tour virtual hecho. Curiosos filtrados. Solo vienen los que van en serio.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "remata"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "¿Y la visita *once*?",
+   "texto": "¿Y la visita once?",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "cierre",
+   "hablante": null,
+   "voz": "¿Cuántas visitas aguantas?",
+   "texto": "¿Cuántas visitas aguantas?",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
+  }
+ ],
+ "dibujo": {
+  "personajes": [
+   "jambo",
+   "jupillo",
+   "pelota",
+   "bola",
+   "tramites"
+  ]
+ },
+ "_guion": "15/11/2026 Creador, calendario 16-22/11 y fórmula 14/11: situación 0-2 s, planteamiento, 3 golpes, giro, cierre con pregunta. Voces edge-tts (Álvaro Jambo, Ximena Jupillo, Elvira resto). Falta render y Calidad (≥ 90, ≤ 20 s)."
+}

@@ -1,0 +1,124 @@
+{
+ "titulo": "El Jambo que sabe y las IAs · Cuando tienes 300 socios y la sala está vacía",
+ "semilla": 3326,
+ "modo": "sketch",
+ "serie": "El Jambo que sabe y las IAs",
+ "episodio": 28,
+ "negocio": "gimnasio",
+ "portada_texto": "Cuando tienes 300 socios y la sala está vacía",
+ "musica": true,
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "hablante": "bola",
+   "voz": "¡No pain, no gain! ¡Que se oiga!",
+   "texto": "Sala vacía",
+   "dibujo": {
+    "personajes": [
+     "bola",
+     "jambo"
+    ],
+    "acciones": {
+     "bola": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Trescientos socios. Vienen doce.",
+   "texto": "300 socios",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "bola",
+   "voz": "¡Mandemos audios de ocho minutos de motivación!",
+   "texto": "Audios de 8 min",
+   "dibujo": {
+    "personajes": [
+     "bola",
+     "jambo"
+    ],
+    "acciones": {
+     "bola": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Nadie escucha ocho minutos. Ni yo.",
+   "texto": "Nadie escucha",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "jupillo",
+   "voz": "Mensaje corto y personal a cada uno. Han vuelto cuarenta.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "remata"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "bola",
+   "voz": "¡Gracias a mi motivación!",
+   "texto": "El Bola",
+   "dibujo": {
+    "personajes": [
+     "bola",
+     "jambo"
+    ],
+    "acciones": {
+     "bola": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "cierre",
+   "hablante": null,
+   "voz": "¿Cuántos meses pagaste sin ir?",
+   "texto": "¿Cuántos meses pagaste sin ir?",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
+  }
+ ],
+ "dibujo": {
+  "personajes": [
+   "jambo",
+   "jupillo",
+   "pelota",
+   "bola",
+   "tramites"
+  ]
+ },
+ "_guion": "15/11/2026 Creador, calendario 16-22/11 y fórmula 14/11: situación 0-2 s, planteamiento, 3 golpes, giro, cierre con pregunta. Voces edge-tts (Álvaro Jambo, Ximena Jupillo, Elvira resto). Falta render y Calidad (≥ 90, ≤ 20 s)."
+}

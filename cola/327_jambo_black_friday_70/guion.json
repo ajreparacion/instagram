@@ -1,0 +1,124 @@
+{
+ "titulo": "El Jambo que sabe y las IAs · Cuando haces un 70 % en todo... y pierdes dinero en cada venta",
+ "semilla": 3327,
+ "modo": "sketch",
+ "serie": "El Jambo que sabe y las IAs",
+ "episodio": 29,
+ "negocio": "tienda",
+ "portada_texto": "Cuando haces un 70 % en todo... y pierdes dinero en cada venta",
+ "musica": true,
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "hablante": "jambo",
+   "voz": "¡Setenta por ciento en todo!",
+   "texto": "70 % en todo",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "tramites",
+   "voz": "La calculadora dice que pierde dinero en cada venta.",
+   "texto": "Pierdes dinero",
+   "dibujo": {
+    "personajes": [
+     "tramites",
+     "jambo"
+    ],
+    "acciones": {
+     "tramites": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "pelota",
+   "voz": "¡Más ventas es más éxito!",
+   "texto": "Más ventas",
+   "dibujo": {
+    "personajes": [
+     "pelota",
+     "jambo"
+    ],
+    "acciones": {
+     "pelota": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "tramites",
+   "voz": "Y aquí están las devoluciones del año pasado.",
+   "texto": "Devoluciones",
+   "dibujo": {
+    "personajes": [
+     "tramites",
+     "jambo"
+    ],
+    "acciones": {
+     "tramites": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "jupillo",
+   "voz": "Precios recalculados en tres segundos. Ahora se gana en cada venta.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "remata"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Que lo haga la *Jupillo*.",
+   "texto": "Que lo haga la Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "cierre",
+   "hablante": null,
+   "voz": "¿Haces Black Friday?",
+   "texto": "¿Haces Black Friday?",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
+  }
+ ],
+ "dibujo": {
+  "personajes": [
+   "jambo",
+   "jupillo",
+   "pelota",
+   "bola",
+   "tramites"
+  ]
+ },
+ "_guion": "15/11/2026 Creador, calendario 16-22/11 y fórmula 14/11: situación 0-2 s, planteamiento, 3 golpes, giro, cierre con pregunta. Voces edge-tts (Álvaro Jambo, Ximena Jupillo, Elvira resto). Falta render y Calidad (≥ 90, ≤ 20 s)."
+}

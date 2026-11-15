@@ -1,0 +1,122 @@
+{
+ "titulo": "El Jambo que sabe y las IAs · Cuando la clienta de las 9 llega a las 9:40",
+ "semilla": 3323,
+ "modo": "sketch",
+ "serie": "El Jambo que sabe y las IAs",
+ "episodio": 25,
+ "negocio": "peluqueria",
+ "portada_texto": "Cuando la clienta de las 9 llega a las 9:40",
+ "musica": true,
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "hablante": "jambo",
+   "voz": "La de las nueve llega... a las *nueve cuarenta*.",
+   "texto": "Cuando la de las 9 llega a las 9:40",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "pelota",
+   "voz": "¡Llegar tarde es tendencia!",
+   "texto": "Tendencia",
+   "dibujo": {
+    "personajes": [
+     "pelota",
+     "jambo"
+    ],
+    "acciones": {
+     "pelota": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "tramites",
+   "voz": "Rellene el formulario de reprogramación. Por triplicado.",
+   "texto": "Por triplicado",
+   "dibujo": {
+    "personajes": [
+     "tramites",
+     "jambo"
+    ],
+    "acciones": {
+     "tramites": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Y la de las diez ya está en la puerta, y la de las diez y media...",
+   "texto": "Cola en la puerta",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "jupillo",
+   "voz": "Cita recordada ayer, hueco reasignado, y ya le estoy cobrando a la de las nueve.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "remata"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Que lo haga la *Jupillo*.",
+   "texto": "Que lo haga la Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "cierre",
+   "hablante": null,
+   "voz": "¿Cuánto esperas tú?",
+   "texto": "¿Cuánto esperas tú?",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
+  }
+ ],
+ "dibujo": {
+  "personajes": [
+   "jambo",
+   "jupillo",
+   "pelota",
+   "bola",
+   "tramites"
+  ]
+ },
+ "_guion": "15/11/2026 Creador, calendario 16-22/11 y fórmula 14/11: situación 0-2 s, planteamiento, 3 golpes, giro, cierre con pregunta. Voces edge-tts (Álvaro Jambo, Ximena Jupillo, Elvira resto). Falta render y Calidad (≥ 90, ≤ 20 s)."
+}

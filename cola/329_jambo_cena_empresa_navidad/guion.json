@@ -1,0 +1,122 @@
+{
+ "titulo": "El Jambo que sabe y las IAs · Cuando te toca organizar la cena de empresa de Navidad",
+ "semilla": 3329,
+ "modo": "sketch",
+ "serie": "El Jambo que sabe y las IAs",
+ "episodio": 31,
+ "negocio": "empresa",
+ "portada_texto": "Cuando te toca organizar la cena de empresa de Navidad",
+ "musica": true,
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "hablante": "jambo",
+   "voz": "Este año la cena de Navidad la organiza... la *Jupillo*.",
+   "texto": "Cena de empresa",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "tramites",
+   "voz": "Para elegir restaurante hacen falta cuatro firmas.",
+   "texto": "4 firmas",
+   "dibujo": {
+    "personajes": [
+     "tramites",
+     "jambo"
+    ],
+    "acciones": {
+     "tramites": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "bola",
+   "voz": "¡Team building en la montaña, con nieve!",
+   "texto": "Montaña",
+   "dibujo": {
+    "personajes": [
+     "bola",
+     "jambo"
+    ],
+    "acciones": {
+     "bola": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Somos doce y la mitad tiene alergias.",
+   "texto": "12 personas",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "jupillo",
+   "voz": "Restaurante elegido, mesa reservada, menús sin alergias. ¿Me invitáis?",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "remata"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Mmm.",
+   "texto": "Silencio",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "cierre",
+   "hablante": null,
+   "voz": "¿Quién la organiza en la tuya?",
+   "texto": "¿Quién la organiza en la tuya?",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
+  }
+ ],
+ "dibujo": {
+  "personajes": [
+   "jambo",
+   "jupillo",
+   "pelota",
+   "bola",
+   "tramites"
+  ]
+ },
+ "_guion": "15/11/2026 Creador, calendario 16-22/11 y fórmula 14/11: situación 0-2 s, planteamiento, 3 golpes, giro, cierre con pregunta. Voces edge-tts (Álvaro Jambo, Ximena Jupillo, Elvira resto). Falta render y Calidad (≥ 90, ≤ 20 s)."
+}

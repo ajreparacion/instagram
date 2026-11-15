@@ -1,0 +1,120 @@
+{
+ "titulo": "El Jambo que sabe y las IAs · Cuando el cliente te escribe a las 23:47: «una cosita rápida»",
+ "semilla": 3325,
+ "modo": "sketch",
+ "serie": "El Jambo que sabe y las IAs",
+ "episodio": 27,
+ "negocio": "autonomos",
+ "portada_texto": "Cuando el cliente te escribe a las 23:47: «una cosita rápida»",
+ "musica": true,
+ "escenas": [
+  {
+   "estilo": "gancho",
+   "hablante": "jambo",
+   "voz": "Son las once cuarenta y siete. «¿Estás despierto? Es una cosita rápida.»",
+   "texto": "23:47",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "La cosita: un presupuesto. Ahora también una factura.",
+   "texto": "Presupuesto + factura",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "pelota",
+   "voz": "¡Contesta! ¡Eso es cercanía!",
+   "texto": "Cercanía",
+   "dibujo": {
+    "personajes": [
+     "pelota",
+     "jambo"
+    ],
+    "acciones": {
+     "pelota": "habla",
+     "jambo": "desespera"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Y ahora quiere una devolución. Con descuento.",
+   "texto": "Devolución",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "remate",
+   "hablante": "jupillo",
+   "voz": "Presupuesto enviado. Factura emitida. Y yo también tengo horario.",
+   "texto": "La Jupillo",
+   "dibujo": {
+    "personajes": [
+     "jupillo",
+     "jambo"
+    ],
+    "acciones": {
+     "jupillo": "habla",
+     "jambo": "remata"
+    }
+   }
+  },
+  {
+   "estilo": "gag",
+   "hablante": "jambo",
+   "voz": "Tú no, eres IA.",
+   "texto": "El Jambo",
+   "dibujo": {
+    "personajes": [
+     "jambo"
+    ],
+    "acciones": {
+     "jambo": "habla"
+    }
+   }
+  },
+  {
+   "estilo": "cierre",
+   "hablante": null,
+   "voz": "¿A qué hora te escriben a ti?",
+   "texto": "¿A qué hora te escriben a ti?",
+   "dibujo": {
+    "personajes": [],
+    "accion": "serio"
+   }
+  }
+ ],
+ "dibujo": {
+  "personajes": [
+   "jambo",
+   "jupillo",
+   "pelota",
+   "bola",
+   "tramites"
+  ]
+ },
+ "_guion": "15/11/2026 Creador, calendario 16-22/11 y fórmula 14/11: situación 0-2 s, planteamiento, 3 golpes, giro, cierre con pregunta. Voces edge-tts (Álvaro Jambo, Ximena Jupillo, Elvira resto). Falta render y Calidad (≥ 90, ≤ 20 s)."
+}

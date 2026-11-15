@@ -1,0 +1,30 @@
+{
+ "tipo": "reel",
+ "texto": "Las 23:47. «Es una cosita rápida». Humor negro de ficción.\n¿A qué hora te escriben a ti?\n#autonomos #clientes #humornegro #ia\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+ "cuando": "2026-11-18T18:45:00+01:00",
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "formato": "Serie El Jambo",
+ "publico": "autonomos",
+ "formula": "humor con personaje (v8 B2)",
+ "_fuentes": [],
+ "_comprobado": "Sin cifras de estudio: solo cifras del guion de ficción; no se afirma ningún dato real.",
+ "_nota_creador": "15/11/2026 Creador, calendario_16-22nov.md. Falta render (edge-tts) y Calidad ≥ 90; sin calidad.json aprobado no se publica.",
+ "motor_voz": "edge",
+ "comentario_fijado": "¿A qué hora te escriben a ti? Palabra clave WEB o APP si quieres tu maqueta gratis.",
+ "avance_siguiente": "Parte 2 mañana: el gimnasio vacío.",
+ "portada_ms": 0,
+ "monetizacion": {
+  "objetivo": "visita_perfil",
+  "oferta": "prueba gratuita en /solicitar (texto del post)",
+  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+ },
+ "musica": {
+  "titulo": "Investigations",
+  "autor": "Kevin MacLeod",
+  "licencia": "CC BY 4.0",
+  "url": "https://incompetech.com/music/royalty-free/",
+  "archivo": "Investigations.mp3",
+  "bpm": 110.0
+ }
+}
