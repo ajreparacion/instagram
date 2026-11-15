@@ -22,11 +22,12 @@
     "autor": "Pixabay",
     "licencia": "Licencia de contenido de Pixabay"
   },
-  "renderizado": false,
+  "renderizado": "2026-11-15T16:15:48+00:00",
   "control_audio": {
     "aprobado": true,
     "duracion_s": 24.37
   },
-  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/8dbb33ac8_jambo-333-precio-de-amigo.mp4",
-  "motor": "neogest-studio (personajes animados, decorados y planos; apertura con clip real Flow/Gemini; voz edge-tts; música Pixabay de la biblioteca del estudio)"
+  "motor": "neogest-studio (personajes animados, decorados y planos; apertura con clip real Flow/Gemini; voz edge-tts; música Pixabay de la biblioteca del estudio)",
+  "asset": "333_jambo_precio_de_amigo.mp4",
+  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/8dbb33ac8_jambo-333-precio-de-amigo.mp4"
 }

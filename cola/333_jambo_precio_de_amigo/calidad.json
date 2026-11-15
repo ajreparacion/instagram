@@ -1,6 +1,6 @@
 {
   "nota": 90,
-  "aprobado": true,
+  "aprobado": false,
   "motivos": [
     "Control de audio OK en Actions tras reescribir las frases (whisper = guion); silencedetect local sin huecos; 24,4 s; −14,0 LUFS, pico −1,5 dBFS",
     "Situación en el segundo 0 («precio de amigo»), escalada rebaja de diez → veinte → gratis, giro de la Jupillo con sello EL DOBLE, pregunta final",
@@ -9,5 +9,9 @@
   ],
   "fecha": "2026-11-15T13:42:47+00:00",
   "revisor": "Calidad (tarea programada)",
-  "render": "2026-11-15T11:54:12+00:00"
+  "render": "2026-11-15T11:54:12+00:00",
+  "aprobado_anterior": true,
+  "nota_anterior": 90,
+  "caducado": "2026-11-15T16:15:48+00:00",
+  "motivo_caducidad": "vídeo externo subido 2026-11-15T16:15:48+00:00"
 }
