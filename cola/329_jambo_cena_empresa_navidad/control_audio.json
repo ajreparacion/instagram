@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "duracion_s": 20.7,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['team', 'building', 'doce'], sobran ['te', 'han', 'wielding', '12'] (rehacer esas frases)",
+    "silencios > 0.6 s entre frases (pista de voz): [[17.44, 18.62, 1.18]]"
+  ],
+  "avisos": [],
+  "transcripcion": "Este año la cena de Navidad la organiza, la jupillo. Para elegir restaurante hacen falta cuatro firmas. Te han wielding en la montaña con nieve. Somos 12 y la mitad tiene alergias. Restaurante elegido, mesa reservada, menús sin alergias. ¿Me invitáis? MMM ¿Quién la organiza en la tuya?",
+  "guion": "Este año la cena de Navidad la organiza... la Jupillo. Para elegir restaurante hacen falta cuatro firmas. ¡Team building en la montaña, con nieve! Somos doce y la mitad tiene alergias. Restaurante elegido, mesa reservada, menús sin alergias. ¿Me invitáis? Mmm. ¿Quién la organiza en la tuya?"
+}

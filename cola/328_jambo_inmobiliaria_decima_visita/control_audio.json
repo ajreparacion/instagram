@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "duracion_s": 19.87,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['tour', 'virtual', 'once'], sobran ['turvirtual', '11'] (rehacer esas frases)",
+    "silencios > 0.6 s entre frases (pista de voz): [[10.59, 11.19, 0.6], [16.88, 17.79, 0.91]]"
+  ],
+  "avisos": [],
+  "transcripcion": "Décima visita al mismo piso, la misma pareja. ¿Es que nos lo pensamos? Las fotos del piso salen con mi dedo en el objetivo. Una visita más es una venta más cerca. Turvirtual hecho, curiosos filtrados, sólo vienen los que van en serio. ¿Y la visita 11? ¿Cuántas visitas aguantas?",
+  "guion": "Décima visita al mismo piso. La misma pareja. Es que... nos lo pensamos. Las fotos del piso salen con mi dedo en el objetivo. ¡Una visita más es una venta más cerca! Tour virtual hecho. Curiosos filtrados. Solo vienen los que van en serio. ¿Y la visita once? ¿Cuántas visitas aguantas?"
+}

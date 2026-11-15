@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "duracion_s": 18.73,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['setenta', 'por', 'ciento', 'que'], sobran ['70', 'te'] (rehacer esas frases)",
+    "silencios > 0.6 s entre frases (pista de voz): [[15.82, 16.65, 0.83]]"
+  ],
+  "avisos": [],
+  "transcripcion": "70 % en todo. La calculadora dice que pierde dinero en cada venta. Más ventas es más éxito. Y aquí están las devoluciones del año pasado. Precios recalculados en 3 segundos. Ahora se gana en cada venta. Te lo haga la jupillo. Haces Black Friday?",
+  "guion": "¡Setenta por ciento en todo! La calculadora dice que pierde dinero en cada venta. ¡Más ventas es más éxito! Y aquí están las devoluciones del año pasado. Precios recalculados en tres segundos. Ahora se gana en cada venta. Que lo haga la Jupillo. ¿Haces Black Friday?"
+}
