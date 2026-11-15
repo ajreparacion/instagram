@@ -27,12 +27,5 @@
     "archivo": "Life_of_Riley.mp3",
     "bpm": 101.3
   },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-15T09:00:56+00:00",
-    "bloqueos": [
-      "silencios > 0.6 s entre frases (pista de voz): [[4.9, 5.52, 0.62], [18.09, 18.92, 0.83]]"
-    ],
-    "guion_md5": "dccf6f0ecccc1b854993bd5b9bd7f406"
-  },
   "renderizado": false
 }

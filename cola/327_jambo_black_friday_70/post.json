@@ -27,13 +27,5 @@
     "archivo": "Investigations.mp3",
     "bpm": 95.7
   },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-15T09:03:39+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['setenta', 'por', 'ciento', 'que'], sobran ['70', 'te'] (rehacer esas frases)",
-      "silencios > 0.6 s entre frases (pista de voz): [[15.82, 16.65, 0.83]]"
-    ],
-    "guion_md5": "345b1d333dbc8ba71782800a2c26ae37"
-  },
   "renderizado": false
 }

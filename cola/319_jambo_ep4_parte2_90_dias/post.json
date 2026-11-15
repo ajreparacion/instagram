@@ -26,12 +26,5 @@
     "archivo": "Investigations.mp3",
     "bpm": 95.7
   },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-14T21:57:28+00:00",
-    "bloqueos": [
-      "silencios > 0.6 s entre frases (pista de voz): [[15.63, 17.15, 1.53], [17.56, 18.95, 1.4]]"
-    ],
-    "guion_md5": "792bdf2f8c905ab763bbbcd488ea9322"
-  },
   "renderizado": false
 }

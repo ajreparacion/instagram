@@ -29,13 +29,5 @@
   },
   "_intentos_render": 1,
   "_error_render": "Ningún motor de voz funcionó (['edge']): edge-tts falló: edge-tts falló para «Son cuarenta alumnos. Seguro que aprueban.»: No audio was received. Please verify that your parameters are correct.",
-  "_control_audio_fallo": {
-    "fecha": "2026-11-15T08:29:37+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['cuarenta'], sobran ['40'] (rehacer esas frases)",
-      "silencios > 0.6 s entre frases (pista de voz): [[14.82, 15.42, 0.6]]"
-    ],
-    "guion_md5": "b3c3237af785d9670e0782f40c2b06d5"
-  },
   "renderizado": false
 }

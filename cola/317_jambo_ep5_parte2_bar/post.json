@@ -27,13 +27,5 @@
     "archivo": "Sneaky_Snitch.mp3",
     "bpm": 87.6
   },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-14T20:43:30+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['siete', 'ia', 'siete', 'ocho'], sobran ['7', 'i', 'a', '7', '8'] (rehacer esas frases)",
-      "silencios > 0.6 s entre frases (pista de voz): [[6.12, 6.72, 0.6]]"
-    ],
-    "guion_md5": "65c39dfba26ce39a63d09f7dcf29882f"
-  },
   "renderizado": false
 }

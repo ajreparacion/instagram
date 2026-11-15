@@ -26,13 +26,5 @@
     "archivo": "Fluffing_a_Duck.mp3",
     "bpm": 123.0
   },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-14T21:58:37+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['dos', 'mil', 'veintiocho'], sobran ['2028'] (rehacer esas frases)",
-      "silencios > 0.6 s entre frases (pista de voz): [[2.25, 2.85, 0.6], [19.85, 20.45, 0.6]]"
-    ],
-    "guion_md5": "6987f9348d4f16e4a78121307b188c61"
-  },
   "renderizado": false
 }

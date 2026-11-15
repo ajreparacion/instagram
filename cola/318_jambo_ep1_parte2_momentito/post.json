@@ -26,13 +26,5 @@
     "archivo": "Monkeys_Spinning_Monkeys.mp3",
     "bpm": 143.6
   },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-14T21:56:26+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['once', 'doce'], sobran ['11', '12'] (rehacer esas frases)",
-      "silencios > 0.6 s entre frases (pista de voz): [[17.09, 17.69, 0.6], [18.78, 19.49, 0.71]]"
-    ],
-    "guion_md5": "55f690e588012ee4b5176292cb1e9a85"
-  },
   "renderizado": false
 }
