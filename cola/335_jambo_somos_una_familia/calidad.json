@@ -1,6 +1,6 @@
 {
   "nota": 90,
-  "aprobado": true,
+  "aprobado": false,
   "motivos": [
     "Control de audio OK en Actions (whisper = guion); silencedetect local sin huecos; 20,9 s; −14,0 LUFS, pico −1,5 dBFS",
     "Situación en el segundo 0 («no hace falta fichar»), escalada horas/no se cobran, giro con sello REGISTRADO y «Que lo haga la Jupillo» como remate",
@@ -8,5 +8,9 @@
   ],
   "fecha": "2026-11-15T11:43:14+00:00",
   "revisor": "Calidad (tarea programada)",
-  "render": "2026-11-15T10:38:12+00:00"
+  "render": "2026-11-15T10:38:12+00:00",
+  "aprobado_anterior": true,
+  "nota_anterior": 90,
+  "caducado": "2026-11-15T16:30:47+00:00",
+  "motivo_caducidad": "vídeo externo subido 2026-11-15T16:30:47+00:00"
 }
