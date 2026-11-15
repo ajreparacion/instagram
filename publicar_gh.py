@@ -1339,7 +1339,9 @@ def renderizar(cfg, carpeta, post):
             m = leer_json(mj) or {}
             post["musica"] = {k: m.get(k) for k in ("titulo", "autor", "licencia", "url", "archivo", "bpm")}
             if m.get("atribucion") and m["atribucion"] not in post.get("texto", ""):
-                post["texto"] = post.get("texto", "").rstrip() + "\n\n" + m["atribucion"]
+                # 15/11/2026: fuera la atribución de un render anterior (otra pista): solo la de la música que suena
+                limpio = "\n".join(l for l in post.get("texto", "").split("\n") if not l.startswith('Música: "'))
+                post["texto"] = limpio.rstrip() + "\n\n" + m["atribucion"]
     else:
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=1200, cwd=HERR_REEL)
         if r.returncode != 0 or not os.path.exists(video):

@@ -1,0 +1,8 @@
+{
+  "aprobado": true,
+  "nota": 91,
+  "fecha": "2026-11-15T09:50:49+00:00",
+  "revisor": "Calidad (sesión de coordinación, orden del dueño 15/11)",
+  "comprobado": "Control de audio OK (whisper = guion, sin silencios > 0,6 s), < 30 s, subtítulos palabra a palabra legibles, 5 tiempos. Escalada clara 300→12→40, giro de la Jupillo, pregunta final; 18,8 s.",
+  "arreglado": "quitada la atribución musical duplicada del post (se deja la de la pista usada: Investigations)"
+}
