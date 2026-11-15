@@ -1,0 +1,103 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.033,
+  "texto": "Pelota, contesta al cliente. Con educación.",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 3.033,
+  "duracion": 3.933,
+  "texto": "Querido cliente, qué idea tan brillante pedir el presupuesto por quinta vez.",
+  "enfasis": [
+   10
+  ]
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 6.967,
+  "duracion": 1.2,
+  "texto": "¡Menos pelota!",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 8.167,
+  "duracion": 2.533,
+  "texto": "Si no pagas, es que no crees en ti mismo.",
+  "enfasis": [
+   8,
+   9
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 10.7,
+  "duracion": 1.067,
+  "texto": "¡Menos gurú!",
+  "enfasis": []
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "tramites",
+  "inicio": 11.767,
+  "duracion": 3.533,
+  "texto": "Rellene la instancia sellada para recibir respuesta.",
+  "enfasis": [
+   6
+  ]
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 15.3,
+  "duracion": 1.433,
+  "texto": "Que lo haga la Jupillo.",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 16.733,
+  "duracion": 3.6,
+  "texto": "Enviado. Según mi último correo. Ya ha pagado.",
+  "enfasis": [
+   7
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 20.333,
+  "duracion": 1.3,
+  "texto": "Cuatro palabras.",
+  "enfasis": []
+ },
+ {
+  "escena": 9,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 21.633,
+  "duracion": 3.633,
+  "texto": "¿Cuál es tu frase para no explotar en un correo? Comenta.",
+  "enfasis": []
+ }
+]

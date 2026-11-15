@@ -5,7 +5,7 @@
   "hablante": "jambo",
   "inicio": 0.0,
   "duracion": 3.5,
-  "texto": "¿Otra vez la mesa siete? ¡Si le di a la IA el bar entero!",
+  "texto": "¿Otra vez la mesa siete? ¡Si le di el bar entero a la máquina!",
   "enfasis": [
    7
   ]
@@ -15,7 +15,7 @@
   "estilo": "gag",
   "hablante": "jambo",
   "inicio": 3.5,
-  "duracion": 3.1,
+  "duracion": 3.0,
   "texto": "Quiero que atienda, cocine, cobre y sonría.",
   "enfasis": [
    6
@@ -25,8 +25,8 @@
   "escena": 2,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 6.6,
-  "duracion": 2.6,
+  "inicio": 6.5,
+  "duracion": 2.5,
   "texto": "Hecho. Mesa siete, servida.",
   "enfasis": []
  },
@@ -34,8 +34,8 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 9.2,
-  "duracion": 3.933,
+  "inicio": 9.0,
+  "duracion": 3.833,
   "texto": "¿Y la mesa ocho? ¿Y la terraza? ¡Que también sonría la terraza!",
   "enfasis": [
    9
@@ -45,8 +45,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 13.133,
-  "duracion": 2.733,
+  "inicio": 12.833,
+  "duracion": 2.633,
   "texto": "Terraza, barra y cocina. Hecho.",
   "enfasis": []
  },
@@ -54,8 +54,8 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 15.867,
-  "duracion": 3.567,
+  "inicio": 15.467,
+  "duracion": 3.467,
   "texto": "¿Y el cierre de caja? ¿Y el pedido de mañana? ¿Y mi café?",
   "enfasis": [
    12
@@ -65,8 +65,8 @@
   "escena": 6,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 19.433,
-  "duracion": 3.333,
+  "inicio": 18.933,
+  "duracion": 3.233,
   "texto": "Café, no. Tú lo llevas cerrado… con llave.",
   "enfasis": [
    5
@@ -76,8 +76,8 @@
   "escena": 7,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 22.767,
-  "duracion": 3.633,
+  "inicio": 22.167,
+  "duracion": 3.533,
   "texto": "¿Quién carga con todo en tu bar? Parte 3, mañana.",
   "enfasis": []
  }
