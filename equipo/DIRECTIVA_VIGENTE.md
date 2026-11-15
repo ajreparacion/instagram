@@ -11,7 +11,7 @@ Versión limpia del 15/11/2026 (orden del dueño). Sustituye a todo lo anterior;
 | Rol | Cuándo | Modelo | Archivo |
 |---|---|---|---|
 | Creador | 09:51, 13:51 y 17:51 a diario | Sonnet | roles/creador.md |
-| Calidad | cada 2 h al minuto 41 (pasada única) | Sonnet | roles/calidad.md |
+| Calidad | cada 2 h de 08:41 a 22:41 (8 pasadas, tarea única) | Sonnet | roles/calidad.md |
 | Supervisor | 12:27 y 18:27 | Haiku | roles/supervisor.md |
 | Cazador de virales | lunes, miércoles y viernes 08:23 | Sonnet | roles/cazador.md |
 | Remasterizador | 09:00 a diario | Sonnet | roles/remasterizador.md |
@@ -128,3 +128,4 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 
 ## 13. Registro de cambios (una línea por cambio)
 - 2026-11-15 · Coordinación (orden del dueño) · directiva y roles reescritos en limpio; deroga lo apilado hasta hoy (ver archivo/).
+- 2026-11-15 · Coordinación · Calidad pasa a una sola tarea cada 2 h de 08:41 a 22:41; Analista de monetización fusionado en Analista; Ventas en pausa.
