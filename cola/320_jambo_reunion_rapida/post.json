@@ -8,7 +8,7 @@
   "publico": "oficina",
   "formula": "humor con personaje (v8 B2)",
   "_fuentes": [],
-  "_nota_creador": "14/11/2026 Creador, directiva de vídeo 14/11: fórmula 0-2 s situación, planteamiento, escalada en 3 golpes, giro y cierre de serie; dato en el post. Voces edge-tts (Álvaro Jambo, Ximena Jupillo); falta render y Calidad.",
+  "_nota_creador": "14/11/2026 Creador, directiva de vídeo 14/11: fórmula 0-2 s situación, planteamiento, escalada en 3 golpes, giro y cierre de serie; dato en el post. Voces edge-tts (Álvaro Jambo, Ximena Jupillo); falta render y Calidad. 15/11: arreglado el control de audio (Whisper escribe 2028 en cifras: el control lo expande a «dos mil veintiocho») y el respiro entre frases bajado a 0,30 s (huecos de 0,6 s); la voz del guion ya lleva «dos mil veintiocho» con letras.",
   "motor_voz": "edge",
   "comentario_fijado": "Etiqueta al que convoca estas reuniones",
   "avance_siguiente": "Parte 2 si funciona.",
@@ -25,13 +25,5 @@
     "url": "https://incompetech.com/music/royalty-free/",
     "archivo": "Fluffing_a_Duck.mp3",
     "bpm": 123.0
-  },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-14T21:58:37+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['dos', 'mil', 'veintiocho'], sobran ['2028'] (rehacer esas frases)",
-      "silencios > 0.6 s entre frases (pista de voz): [[2.25, 2.85, 0.6], [19.85, 20.45, 0.6]]"
-    ],
-    "guion_md5": "6987f9348d4f16e4a78121307b188c61"
   }
 }

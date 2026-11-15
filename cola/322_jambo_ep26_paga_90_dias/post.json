@@ -1,0 +1,23 @@
+{
+ "tipo": "reel",
+ "texto": "Entre empresas el pago es a treinta días, y por pacto nunca más de sesenta días naturales (Ley 3/2004, artículo 4). Información general, no asesoramiento.\nFuente: BOE, Ley 3/2004.\n¿A cuántos días te pagan a ti? Una cifra.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #trabajo #pymes #autonomos #ia\nVoz y personajes generados por IA",
+ "cuando": "2026-11-20T16:40:00+01:00",
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "formato": "Serie El Jambo",
+ "publico": "pyme / servicios",
+ "formula": "humor con personaje (v8 B2)",
+ "_fuentes": [
+  "BOE, Ley 3/2004, artículo 4"
+ ],
+ "motor_voz": "edge",
+ "_nota_creador": "15/11/2026: episodio nuevo por orden del dueño (mínimo 3 de El Jambo cada día). Sin enlace ni venta en el texto. Falta render y Calidad (≥ 90); sin calidad.json aprobado no se publica.",
+ "comentario_fijado": "¿A cuántos días te pagan a ti? Una cifra. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
+ "avance_siguiente": "Más tarde: contraté a una IA para no contratar a nadie.",
+ "portada_ms": 0,
+ "monetizacion": {
+  "objetivo": "visita_perfil",
+  "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
+  "paso_embudo": "alcance → visita al perfil"
+ }
+}

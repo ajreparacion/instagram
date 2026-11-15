@@ -1,0 +1,21 @@
+{
+ "tipo": "reel",
+ "texto": "Cuatrocientas camisetas, según la Pelota. Doce, según la Jupillo. Humor negro de ficción; las camisetas son inventadas.\n¿Cuánto stock tienes de verdad? Un número.\nEpisodio nuevo cada día en @neogestlab\n#humornegro #trabajo #pymes #autonomos #ia\nVoz y personajes generados por IA",
+ "cuando": "2026-11-21T16:40:00+01:00",
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "formato": "Serie El Jambo",
+ "publico": "tienda",
+ "formula": "humor con personaje (v8 B2)",
+ "_fuentes": [],
+ "motor_voz": "edge",
+ "_nota_creador": "15/11/2026: episodio nuevo por orden del dueño (mínimo 3 de El Jambo cada día). Sin enlace ni venta en el texto. Falta render y Calidad (≥ 90); sin calidad.json aprobado no se publica.",
+ "comentario_fijado": "¿Cuánto stock tienes de verdad? Un número. Episodio nuevo cada día en @neogestlab ¿Quieres tu app a medida? Comenta APP y te preparo una maqueta gratis, sin compromiso.",
+ "avance_siguiente": "Más tarde: el cambio pequeñito.",
+ "portada_ms": 0,
+ "monetizacion": {
+  "objetivo": "visita_perfil",
+  "oferta": "seguir el perfil: episodio nuevo cada día (sin producto en la pieza)",
+  "paso_embudo": "alcance → visita al perfil"
+ }
+}

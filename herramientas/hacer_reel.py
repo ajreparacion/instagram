@@ -2577,7 +2577,7 @@ def main():
         voz = parsear_enfasis(e.get("voz") or "")[0]
         if voz:  # duracion minima para que el narrador termine
             if i in tiempos and tiempos[i] > 0.2:
-                need = tiempos[i] + 0.45   # voz real + 120 ms de retardo de mezcla + respiro
+                need = tiempos[i] + 0.30   # voz real + 120 ms de retardo de mezcla + respiro (15/11: 0,45 dejaba huecos de 0,6 s entre frases)
                 e["_voz_dur"] = tiempos[i]
                 if i in palabras_voz: e["_voz_palabras"] = palabras_voz[i]
                 if i in env_voz: e["_voz_env"] = env_voz[i]
