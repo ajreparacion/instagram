@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "duracion_s": 24.2,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['cuarenta'], sobran ['40'] (rehacer esas frases)",
+    "silencios > 0.6 s entre frases (pista de voz): [[14.82, 15.42, 0.6]]"
+  ],
+  "avisos": [],
+  "transcripcion": "¡Examen hoy, si ni he corregido el de ayer! ¡Son 40 alumnos, seguro que aprueban! ¡Y mañana la evaluación, y pasado las notas! ¡Tranquilo, la nota media la ponemos nosotros! ¡Una alumna dice que su examen no es suyo! ¡Examen corregido, nota media! ¡El jambo, suspenso por copiar mi clase! ¿A qué hora preparas tú las clases? Parte 3 mañana.",
+  "guion": "¡¿Examen hoy?! ¡Si ni he corregido el de ayer! Son cuarenta alumnos. Seguro que aprueban. ¡Y mañana la evaluación, y pasado las notas! Tranquilo, la nota media la ponemos nosotros. ¡Una alumna dice que su examen no es suyo! Examen corregido, nota media: el Jambo, suspenso por copiar mi clase. ¿A qué hora preparas tú las clases? Parte tres, mañana."
+}

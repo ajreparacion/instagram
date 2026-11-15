@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "Parte 2: hoy hay examen y el Jambo ni ha corregido el de ayer.\nLa Pelota aplaude, la Jupillo corrige. Humor negro de ficción.\n¿A qué hora preparas tú las clases? Cuéntalo en comentarios.\nMándaselo a quien da clase.\nParte 3 mañana en @neogestlab\n#humornegro #profesores #educacion #ia #trabajo\nVoz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "Parte 2: hoy hay examen y el Jambo ni ha corregido el de ayer.\nLa Pelota aplaude, la Jupillo corrige. Humor negro de ficción.\n¿A qué hora preparas tú las clases? Cuéntalo en comentarios.\nMándaselo a quien da clase.\nParte 3 mañana en @neogestlab\n#humornegro #profesores #educacion #ia #trabajo\nVoz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0\n\nMúsica: \"Life of Riley\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-16T19:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -20,12 +20,21 @@
     "paso_embudo": "alcance → visita al perfil"
   },
   "musica": {
-    "titulo": "Monkeys Spinning Monkeys",
+    "titulo": "Life of Riley",
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Monkeys_Spinning_Monkeys.mp3"
+    "archivo": "Life_of_Riley.mp3",
+    "bpm": 101.3
   },
   "_intentos_render": 1,
-  "_error_render": "Ningún motor de voz funcionó (['edge']): edge-tts falló: edge-tts falló para «Son cuarenta alumnos. Seguro que aprueban.»: No audio was received. Please verify that your parameters are correct."
+  "_error_render": "Ningún motor de voz funcionó (['edge']): edge-tts falló: edge-tts falló para «Son cuarenta alumnos. Seguro que aprueban.»: No audio was received. Please verify that your parameters are correct.",
+  "_control_audio_fallo": {
+    "fecha": "2026-11-15T08:29:37+00:00",
+    "bloqueos": [
+      "voz distinta del guion: faltan ['cuarenta'], sobran ['40'] (rehacer esas frases)",
+      "silencios > 0.6 s entre frases (pista de voz): [[14.82, 15.42, 0.6]]"
+    ],
+    "guion_md5": "b3c3237af785d9670e0782f40c2b06d5"
+  }
 }
