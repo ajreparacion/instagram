@@ -1,0 +1,95 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 2.433,
+  "texto": "Bola, escribe la oferta de empleo.",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 2.433,
+  "duracion": 4.3,
+  "texto": "Buscamos becario. Diez años de experiencia. Cuatro idiomas.",
+  "enfasis": [
+   7
+  ]
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 6.733,
+  "duracion": 1.067,
+  "texto": "¿Y el sueldo?",
+  "enfasis": []
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 7.8,
+  "duracion": 1.433,
+  "texto": "Sueldo emocional.",
+  "enfasis": [
+   1
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "pelota",
+  "inicio": 9.233,
+  "duracion": 2.767,
+  "texto": "¡Y fruta los viernes! Qué generosos.",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 12.0,
+  "duracion": 3.033,
+  "texto": "Me he presentado yo. Y he pedido tu sueldo.",
+  "enfasis": [
+   7
+  ]
+ },
+ {
+  "escena": 6,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 15.033,
+  "duracion": 1.133,
+  "texto": "¿Y te lo han dado?",
+  "enfasis": []
+ },
+ {
+  "escena": 7,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 16.167,
+  "duracion": 2.2,
+  "texto": "No. Me han dado tu puesto.",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 18.367,
+  "duracion": 3.7,
+  "texto": "¿La oferta de empleo más absurda que has visto? Comenta.",
+  "enfasis": []
+ }
+]

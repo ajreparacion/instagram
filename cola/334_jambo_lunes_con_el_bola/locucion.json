@@ -1,0 +1,99 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": "jambo",
+  "inicio": 0.0,
+  "duracion": 3.333,
+  "texto": "Bola, motívame. Tengo cuarenta y siete correos.",
+  "enfasis": [
+   6
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 3.333,
+  "duracion": 2.633,
+  "texto": "Los correos no existen si no los miras.",
+  "enfasis": [
+   7
+  ]
+ },
+ {
+  "escena": 2,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 5.967,
+  "duracion": 1.167,
+  "texto": "¡Ahora noventa!",
+  "enfasis": [
+   1
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 7.133,
+  "duracion": 2.633,
+  "texto": "Eso no es trabajo. Es abundancia.",
+  "enfasis": [
+   5
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "gag",
+  "hablante": "jambo",
+  "inicio": 9.767,
+  "duracion": 1.133,
+  "texto": "¡Ciento veinte!",
+  "enfasis": [
+   1
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 10.9,
+  "duracion": 2.933,
+  "texto": "Levántate a las cinco y léelos en una ducha fría.",
+  "enfasis": [
+   9
+  ]
+ },
+ {
+  "escena": 6,
+  "estilo": "remate",
+  "hablante": "jupillo",
+  "inicio": 13.833,
+  "duracion": 4.133,
+  "texto": "Contestados los ciento veinte. Y he quitado al Bola de tu calendario.",
+  "enfasis": [
+   11
+  ]
+ },
+ {
+  "escena": 7,
+  "estilo": "gag",
+  "hablante": "bola",
+  "inicio": 17.967,
+  "duracion": 1.6,
+  "texto": "Eso es muy tóxico.",
+  "enfasis": [
+   3
+  ]
+ },
+ {
+  "escena": 8,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 19.567,
+  "duracion": 3.933,
+  "texto": "¿Cuántos correos tienes sin leer ahora mismo? Di el número.",
+  "enfasis": []
+ }
+]

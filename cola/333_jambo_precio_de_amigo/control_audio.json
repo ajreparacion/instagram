@@ -1,0 +1,10 @@
+{
+  "aprobado": false,
+  "duracion_s": 24.8,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['pelota', 'haz', 'por', 'ciento', 'por', 'ciento'], sobran ['te', 'lota', 'hace'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "¿Me lo dejas más barato? Somos amigos. ¿Te lota? Hace el presupuesto con cariño. 10 % menos, por lo guapo que es. ¿Y si te hago publicidad en mi perfil? 20 % Tengo 12 seguidores. Gratis. Presupuesto corregido. Precio de amigo, el doble. A los amigos se les dice la verdad. ¿Cuánto te han pedido de descuento de amigo? Comenta.",
+  "guion": "¿Me lo dejas más barato? Somos amigos. Pelota, haz el presupuesto con cariño. Diez por ciento menos. Por lo guapo que es. ¿Y si te hago publicidad en mi perfil? ¡Veinte por ciento! Tengo doce seguidores. ¡Gratis! Presupuesto corregido. Precio de amigo: el doble. A los amigos se les dice la verdad. ¿Cuánto te han pedido de descuento de amigo? Comenta."
+}

@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "duracion_s": 22.87,
+  "bloqueos": [
+    "falta el giro (escena «remate»)",
+    "voz distinta del guion: faltan ['calcula', 'pruebala'], sobran ['calcule', 'prueba', 'la'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "El 303 todavía en una hoja de cálculo. Con gestoría 7 de tus ingresos y gastos van a tus libros, y el 303 sale calculado desde ellos. La app te ordena los plazos y te lleva al modelo con un botón. Para particulares autónomos, sociedades y gestorías. Calcule y prepara, tú presentas. Prueba la gratis sin tarjeta. Enlace en el perfil.",
+  "guion": "¿El trescientos tres todavía en una hoja de cálculo? Con Gestoría siete de, tus ingresos y gastos van a tus libros, y el trescientos tres sale calculado desde ellos. La app te ordena los plazos y te lleva al modelo con un botón. Para particulares, autónomos, sociedades y gestorías. Calcula y prepara: tú presentas. Pruébala gratis, sin tarjeta. Enlace en el perfil."
+}

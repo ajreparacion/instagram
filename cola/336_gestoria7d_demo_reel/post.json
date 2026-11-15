@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "¿Todavía haces el 303 con una hoja de cálculo? 📊\nGestoría7D es tu gestoría en una app: libros de ingresos y gastos, modelos 303, 130, 111 y 115 calculados desde tus libros, calendario fiscal con «Qué tienes que hacer», Renta para particulares y modo multicliente para gestorías.\nImportante: calcula y prepara; los modelos los presentas tú en la Sede Electrónica de la AEAT. No sustituye el asesoramiento de un gestor.\nPlan Gratis para probar, sin tarjeta. Planes desde 3,90 €/mes + IVA. Enlace en el perfil.\n¿Quién te lleva hoy los impuestos: tú, un gestor o nadie? Cuéntalo en comentarios.\nVoz generada por IA · By Neogest Lab\n\n#autonomos #impuestos #modelo303 #gestoria #pymes #renta #neogestlab\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "¿Todavía haces el 303 con una hoja de cálculo? 📊\nGestoría7D es tu gestoría en una app: libros de ingresos y gastos, modelos 303, 130, 111 y 115 calculados desde tus libros, calendario fiscal con «Qué tienes que hacer», Renta para particulares y modo multicliente para gestorías.\nImportante: calcula y prepara; los modelos los presentas tú en la Sede Electrónica de la AEAT. No sustituye el asesoramiento de un gestor.\nPlan Gratis para probar, sin tarjeta. Planes desde 3,90 €/mes + IVA. Enlace en el perfil.\n¿Quién te lleva hoy los impuestos: tú, un gestor o nadie? Cuéntalo en comentarios.\nVoz generada por IA · By Neogest Lab\n\n#autonomos #impuestos #modelo303 #gestoria #pymes #renta #neogestlab\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-15T19:20:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -17,17 +17,25 @@
     "paso_embudo": "visita_perfil -> clic_enlace"
   },
   "musica": {
-    "titulo": "Investigations",
+    "titulo": "Fluffing a Duck",
     "autor": "Kevin MacLeod",
     "licencia": "CC BY 4.0",
     "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Investigations.mp3",
-    "bpm": 95.7
+    "archivo": "Fluffing_a_Duck.mp3",
+    "bpm": 123.0
   },
   "_fuentes": [
     "https://gestoria7-d-1e795a2d.base44.app",
     "claude/apps/gestoria7d.md"
   ],
   "_comprobado": "15/11/2026: textos tomados de la web pública (Plan Gratis sin tarjeta, desde 3,90 €/mes + IVA, 303/130/111/115 desde libros, «Qué tienes que hacer», aviso de que presenta el usuario). Prohibido: presentar ante AEAT, asesorar, Google Play, móvil, tarjeta.",
-  "renderizado": false
+  "renderizado": false,
+  "_control_audio_fallo": {
+    "fecha": "2026-11-15T10:31:57+00:00",
+    "bloqueos": [
+      "falta el giro (escena «remate»)",
+      "voz distinta del guion: faltan ['calcula', 'pruebala'], sobran ['calcule', 'prueba', 'la'] (rehacer esas frases)"
+    ],
+    "guion_md5": "a61d1358b44e6e4a19df757fa158406f"
+  }
 }
