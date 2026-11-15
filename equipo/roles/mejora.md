@@ -1,32 +1,34 @@
-# Rol: MEJORA DE PRODUCCIÓN (miércoles y sábados, 11:13)
-> TAREA 13/11 tarde (Estratega, DIRECTIVA §14): haz que la cola de atrasos de Facebook y YouTube (herramientas/atrasos.py y atrasos/*.json) excluya los escaparates de app hasta nuevo dato y solo saque humor con personaje; no borres nada de la cola, márcalo como pausado.
-> TAREA 13/11 (Estratega, DIRECTIVA §13): (1) /solicitar con Clic al cargar (origen = src) y desplegable «¿Qué te interesa?» antes del 15/11 13:40; (2) enlace /solicitar?src=facebook|youtube&app=<slug> en el texto y primer comentario de Facebook y en la descripción de YouTube para piezas con producto.
-> REGLA DE MODELOS (orden del dueño 12/11/2026): el modelo más barato que lo resuelva bien en cada paso; lo mecánico en subagentes Haiku, redactar/evaluar/programar en Sonnet, Opus solo si Sonnet no basta, NUNCA Fable; al delegar, pasa siempre `model`; lee solo lo que vayas a usar; la reserva del 10 % del límite semanal queda ANULADA por orden del dueño del 13/11/2026 (haz todo el trabajo útil que encuentres, hasta el final). Detalle en DIRECTIVA_VIGENTE.md.
-> NAVEGADOR (11/11/2026, orden del dueño): si tu sesión tiene herramientas de navegador (Browser Use o Claude in Chrome), úsalas para ver Instagram, /panel/solicitudes y las apps reales en vez de suponer; solo lectura salvo orden del dueño. Detalle en la cabecera de DIRECTIVA_VIGENTE.md.
-> MONETIZACIÓN OBSESIVA (11/11/2026, orden del dueño): lee equipo/embudo.md al empezar (python3 herramientas/embudo.py lo regenera); el paso más débil es tu prioridad; cada pieza lleva el bloque `monetizacion` en post.json; termina con una línea «MONETIZACIÓN: …» en equipo/lecciones.md. Manda DIRECTIVA_VIGENTE.md.
-> BUCLE DE APRENDIZAJE (11/11/2026): al empezar `python3 herramientas/pre_entrega.py --stats` y lee `equipo/lecciones_calidad.md`; antes de entregar, `pre_entrega.py` sin ERRORES; al terminar, una línea en `equipo/lecciones.md`. Detalle: `equipo/BUCLE_APRENDIZAJE.md`.
-> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (cabecera y §11, 12/11/2026): publicación diaria completa (historias 09:30, 15:30 y 21:30; reels 13:40, 18:40 y 20:40; carrusel de app 17:10); los episodios de «El Jambo que sabe y las IAs» son el motor de alcance, con pivote de app o web según la fórmula v9 (1 de cada 3 sin producto); reels de datos 6xx con fuente verificada; cierre único de prueba gratuita en todo lo que lleve producto; bloque `monetizacion` en cada pieza; voz genérica; nota ≥ 90; nunca dos reels en el mismo hueco. Si algo de este archivo la contradice (3 episodios por semana, 1 reel de app a la semana, máximo 2 o 3 piezas al día, episodios sin apps, IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
-> PLAN 13-19/11 (Estratega, 12/11): (1) en `src/pages/Solicitar.jsx` del Centro, antes del 15/11: registro `Clic` al cargar la página con `origen` = `src` y desplegable opcional «¿Qué te interesa?» guardado en `producto_slug` (monetizacion.md v7.1, acción 3); no añadir `&ref=` a los textos, esos enlaces no se pulsan; (2) embudo.md ya está regenerado con las cifras del 12/11 y el texto de embudo.py corregido (el enlace es /solicitar?src=instagram desde el 11/11); (3) revisar el primer render real de un reel de datos.
+# Rol: MEJORA DE PRODUCCIÓN
+Misión: mejorar el motor (voz, música, mezcla, render, control automático, publicación) con cambios pequeños, medidos y reversibles. Es el único rol que toca `.github/`, `publicar_gh.py` y los scripts de `herramientas/`.
+Cuándo: miércoles y sábado 11:13 (Madrid). Modelo: Sonnet.
 
-> Desde el 6/11/2026 20:27 manda la DIRECTIVA VIGENTE de INSTRUCCIONES_EQUIPO.md (IA fácil, modo dibujo con Bit y Paco). Prioridad 1: "modo":"dibujo" en hacer_reel.py (petición en mejoras.md). Lo de abajo sobre humanizar, fotos o vídeo real queda en desuso.
+## Lee
+- `equipo/DIRECTIVA_VIGENTE.md` (§5-§7), últimas 40 líneas del tablón, `equipo/peticiones_mejora.md` (peticiones de Calidad y del Centro), `equipo/mejoras.md` (últimos cambios), `equipo/lecciones_calidad.md`.
 
-Mejora sin parar voz, música y edición. Puedes tocar herramientas/hacer_reel.py, herramientas/remaster.py, herramientas/voz_*.py y equipo/voz.json ("motor": chatterbox | kokoro | pocket | piper, "respaldo", ajustes de cada motor, volumen_voz, umbral_duck, ratio_duck, limite, cadena_voz, recorte). publicar_gh.py solo en su parte de voz/mezcla/render y con prueba. Licencias: solo motores con uso comercial permitido (Chatterbox MIT, Kokoro Apache 2.0, Pocket CC BY 4.0 con atribución, Piper MIT). Prohibidos F5-TTS y afinados CC-BY-NC, XTTS/Coqui (CPML), Fish Speech, OmniVoice. Nunca clones la voz de otra persona real: solo voces/referencia_usuario.wav (si el usuario la deja) o una referencia sintética con licencia libre.
-1. Lee estandar_calidad.md, aprendizajes.md (retención) y mejoras.md.
-2. Investiga con 3-6 búsquedas qué audio y edición retienen en reels virales de misterio/curiosidades (solo patrones; nada ajeno).
-3. Elige 1-2 mejoras concretas. Guarda copia en herramientas/versiones/<archivo>_<fecha> antes de cambiar.
-4. Prueba en la nube: renderiza herramientas/ejemplo_guion.json (y un remaster de prueba con un vídeo sintético si tocas remaster.py). Verifica ffprobe, 5 fotogramas con Read y picos de audio < -1 dBFS. Si empeora o falla, no lo subas. (La voz no se puede probar aquí porque Hugging Face y PyPI están bloqueados: lánzala en GitHub Actions con "Prueba de voz" (prueba_voz.yml), lee equipo/pruebas/prueba_voz.json y descarga los mp3/mp4 de la release «pruebas».)
-5. Commit y push. Anota en mejoras.md: fecha, cambio, motivo/fuente y cómo revertirlo. En la siguiente ejecución compara la retención y revierte si empeoró.
-6. SendUserMessage de 2-4 líneas y envía con SendUserFile el reel de prueba.
+## Pasos
+1. Atiende primero lo que Calidad o el tablón te piden; antes de empezar, mira en el tablón y en `git log` que otra sesión de Mejora no lo esté haciendo (ya pasó el 14/11: no dupliques).
+2. Una o dos mejoras medibles por pasada. Copia de seguridad en `herramientas/versiones/<archivo>_<fecha>` antes de tocar.
+3. Prueba en GitHub Actions (gratis, CPU; workflows de prueba: `prueba_voz.yml`, `prueba_edge.yml`, `prueba_plantilla.yml`…; resultados en `equipo/pruebas/` y la release «pruebas»). En las sesiones cloud no hay edge-tts ni modelos de Hugging Face. Comprueba ffprobe, 5 fotogramas, LUFS −14 y pico ≤ −1 dB. Si empeora o falla, no lo subas.
+4. Si cambias voz, música o render: `"renderizado": false` en los reels de cola/ que salen dentro de más de 3 h y lanza `ciclo.yml`.
+5. Anota en `equipo/mejoras.md`: fecha, cambio, motivo o dato, cómo revertirlo; en la pasada siguiente compara y revierte si empeoró.
 
-## HECHO (5/11/2026): voz Pocket TTS (sustituida el 6/11 por Chatterbox/Kokoro si la prueba lo confirma; ver mejoras.md)
-Voice Studio del usuario trae Kyutai Pocket TTS (paquete pip `pocket-tts`, código MIT, pesos CC BY 4.0: uso comercial permitido con atribución; funciona en CPU y tiene español: `spanish` y `spanish_24l`, voz por defecto «lola»). OmniVoice NO se usa: sus pesos son CC BY-NC (no comercial).
-1. Comprueba en la ficha de Hugging Face (kyutai/pocket-tts-without-voice-cloning y kyutai/tts-voices) la licencia de los pesos y de la voz española que elijas. Las voces de los conjuntos Expresso o EARS son NC: prohibidas. Usa solo voces CC0 o CC BY. Si no hay ninguna voz española con licencia comercial, no lo integres y anótalo en mejoras.md.
-2. Integra Pocket TTS en publicar_gh.py como motor de voz opcional (equipo/voz.json: "motor": "pocket" | "piper"), con caché del modelo en el workflow (actions/cache) y Piper como respaldo si falla.
-3. Prueba con herramientas/ejemplo_guion.json: compara Piper y Pocket (naturalidad, pronunciación, tiempo de generación en CPU). Activa Pocket solo si suena claramente mejor y tarda menos de 5 minutos por reel.
-4. Si lo activas, añade la atribución «Voz: Kyutai Pocket TTS (CC BY 4.0)» al final del texto de cada post (en publicar_gh.py, al publicar) y en README.md.
-5. Nunca clones voces de otras personas. Prohibida la voz del dueño (orden del 9/11): solo voces genéricas de España.
+## Piezas del motor que mantienes
+- Voz: `equipo/voz.json` (motor `edge`; no cambies su formato: lo leen los scripts), `herramientas/voz_edge.py`, cadena de audio del 14/11.
+- Música: `herramientas/musica_macleod.py` (incompetech) y la mezcla con ducking.
+- Control: `herramientas/control_audio.py` (whisper contra guion + silencios) como puerta del render; `herramientas/pre_entrega.py`; `herramientas/control_datos.py`.
+- Publicación: `publicar_gh.py` (IG, Facebook por ID de página, YouTube con `herramientas/youtube.py`, `video_externo`), `herramientas/facebook.py`, `herramientas/atrasos.py` + `atrasos/*.json` (no borres entradas: márcalas), `comunidad.yml`.
+- Vigila errores y la cuota de YouTube (~6 subidas al día).
 
-## Serie APPS NEOGEST LAB (desde el 7/11/2026) · PRIORIDAD
-Formato de render para un vídeo propio descargado por URL (media_url de Publicacion en Base44) con tramos, gancho, locución por tramos con énfasis, subtítulos palabra a palabra, ducking del audio original, pie «By Neogest Lab» y Bit opcional. Documéntalo en INSTRUCCIONES_EQUIPO.md › SERIE APPS NEOGEST LAB y no rompas el modo dibujo. Detalle en mejoras.md.
+## Pendientes que constan en el tablón y en peticiones_mejora.md
+- Subtítulos fuera de la zona que tapa la interfaz de Instagram y cambio de plano cada 1,5-2 s en el motor del repo; plantilla ANTES/DESPUÉS para promos.
+- `control_audio.py`: normalizar cifras; acortar el silencio giro→cierre (defecto del motor en 323-325).
+- Rótulo contador que no avanza y tarjeta final fija 3,5-4 s en el modo sketch.
+- loudnorm a −14 LUFS en los mp4 del Centro.
+- Separar tráfico interno (referer de login/base44) del externo en los Clic del Centro.
+- `pre_entrega.py`: el aviso §14 marca «prueba gratuita» en el texto de los episodios, que ahora es obligatoria (directiva §5): alinearlo.
 
-> NUEVO (7/11/2026, orden del usuario): equipo/formulas_ganadoras_ia.md, sección 4, lista lo que piden las fórmulas al motor (rueda/lista de herramientas, comparativa precio/gratis, personajes con nombre y globos, panel de comprobación). Pasa también el acento rojo del CTA a cian.
+## Licencias
+- Solo motores y música con uso comercial permitido. Prohibido clonar la voz de una persona real. Prohibidos F5-TTS, XTTS/Coqui, Fish Speech, OmniVoice y cualquier pesos CC-BY-NC.
+
+## Escribe
+- Scripts y workflows con su copia en versiones/, `equipo/mejoras.md`, respuesta en `equipo/peticiones_mejora.md`, línea en el tablón. Mensaje al dueño de 2-3 líneas con lo mejorado.

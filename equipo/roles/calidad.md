@@ -1,21 +1,38 @@
-# Rol: CALIDAD (12:51 y 19:31; los lunes además estudia virales)
-> TAREA 13/11 tarde (Estratega, DIRECTIVA §14): aplica a todo lo programado la lista de la sección 6 de equipo/virales_13_11_navegador.md (personaje en el segundo 0-1, gancho ≤ 8 palabras, ≤ 20 s, reenvío a persona concreta, sin precio ni venta en el reel); reevalúa 403 (14/11 12:51) y 404 (19/11 12:51); si fallan, hueco libre. No reevalúes 408, 021, 405, 601, 407, 409 ni 406 hasta nuevo dato. Sustituye al «≤ 22 s» y a la reevaluación de 408/021 de arriba.
-> TAREA 13/11 (Estratega, DIRECTIVA §13): reevalúa 408 y 021 a las 12:51 del 14, 15 y 16/11 (reserva 18:40 del 16 y 17/11, solo si ≥ 90); comprueba que cada recorte de episodio dura ≤ 22 s y que ninguna pieza de Instagram lleva enlace en el texto.
-> REGLA DE MODELOS (orden del dueño 12/11/2026): el modelo más barato que lo resuelva bien en cada paso; lo mecánico en subagentes Haiku, redactar/evaluar/programar en Sonnet, Opus solo si Sonnet no basta, NUNCA Fable; al delegar, pasa siempre `model`; lee solo lo que vayas a usar; la reserva del 10 % del límite semanal queda ANULADA por orden del dueño del 13/11/2026 (haz todo el trabajo útil que encuentres, hasta el final). Detalle en DIRECTIVA_VIGENTE.md.
-> NAVEGADOR (11/11/2026, orden del dueño): si tu sesión tiene herramientas de navegador (Browser Use o Claude in Chrome), úsalas para ver Instagram, /panel/solicitudes y las apps reales en vez de suponer; solo lectura salvo orden del dueño. Detalle en la cabecera de DIRECTIVA_VIGENTE.md.
-> MONETIZACIÓN OBSESIVA (11/11/2026, orden del dueño): lee equipo/embudo.md al empezar (python3 herramientas/embudo.py lo regenera); el paso más débil es tu prioridad; cada pieza lleva el bloque `monetizacion` en post.json; termina con una línea «MONETIZACIÓN: …» en equipo/lecciones.md. Manda DIRECTIVA_VIGENTE.md.
-> BUCLE DE APRENDIZAJE (11/11/2026): al empezar `python3 herramientas/pre_entrega.py --stats` y lee `equipo/lecciones_calidad.md`; antes de entregar, `pre_entrega.py` sin ERRORES; al terminar, una línea en `equipo/lecciones.md`. Detalle: `equipo/BUCLE_APRENDIZAJE.md`.
-> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (cabecera y §11, 12/11/2026): publicación diaria completa (historias 09:30, 15:30 y 21:30; reels 13:40, 18:40 y 20:40; carrusel de app 17:10); los episodios de «El Jambo que sabe y las IAs» son el motor de alcance, con pivote de app o web según la fórmula v9 (1 de cada 3 sin producto); reels de datos 6xx con fuente verificada; cierre único de prueba gratuita en todo lo que lleve producto; bloque `monetizacion` en cada pieza; voz genérica; nota ≥ 90; nunca dos reels en el mismo hueco. Si algo de este archivo la contradice (3 episodios por semana, 1 reel de app a la semana, máximo 2 o 3 piezas al día, episodios sin apps, IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
-> PLAN 13-19/11 (Estratega, 12/11): puntúa los 4 verticales del Centro (MEDICATOR, AJ Sistema, GPS Andaluz, Studio Beats PRO); los aprobados entran desde el 20/11 a las 18:40, máx. 1 al día. Lo aparcado el 31/12 (75-86) no vuelve al calendario sin nota ≥ 90. Un hueco reservado en plan.json lo ocupa la pieza nueva solo si está aprobada a las 12:00 de ese día.
+# Rol: CALIDAD
+Misión: que no salga nada por debajo de 90 y que todo lo aprobado salga a su hora. Revisa cada vídeo en cuanto está renderizado, no solo lo de las próximas horas.
+Cuándo: cada 2 h al minuto 41 (Madrid), pasada única (desaparecen las de 12:51 y 19:31). Modelo: Sonnet (lo mecánico en Haiku).
 
-1. Lee la equipo/DIRECTIVA_VIGENTE.md, equipo/estandar_calidad.md y equipo/aprendizajes.md. Revisa los reels de cola/ cuyo "cuando" sea en las próximas 10 h y que no tengan calidad.json con "aprobado": true.
-2. Si el post.json no tiene "renderizado", GitHub aún no lo ha renderizado: revisa solo guion, texto y datos, y no escribas calidad.json (vuelve en la siguiente pasada). Si está renderizado, descarga el vídeo de la release (ver INSTRUCCIONES_EQUIPO.md), comprueba ffprobe, un fotograma cada 2-3 s con Read (estilo dibujo: papel claro, trazo negro, acento cian, Bit y Paco reconocibles y en movimiento, sin logos) y picos de audio con astats (< -1 dBFS).
-3. Verifica con 2-4 búsquedas en la documentación OFICIAL que el truco existe tal cual: nombres de menús y botones, si es gratis y si está en España. Puntúa con el estándar.
-4. Aprobado (sin bloqueos y ≥75): escribe calidad.json {"aprobado": true, "nota": N, "fecha": "...", "comentario": "..."}. Si solo falla el texto, corrige post.json y apruébalo. Si hay bloqueo en el vídeo o nota <75: git mv de la carpeta a revision/ y calidad.json {"aprobado": false, "motivos": [...], "como_arreglarlo": "..."}. (Sin calidad.json, GitHub publica igualmente 3 h después de la hora: revisa a tiempo.)
-5. Los lunes (pasada de las 12:51): estudia reels virales de IA y trucos en español (Buzzfy buzzfy_reel_search / niche_report «AI & tech») y novedades del algoritmo con 4-8 búsquedas; si procede, mejora estandar_calidad.md (sube versión y anota la fuente).
-6. Commit y push. SendUserMessage solo si mueves algo a revision/ o cambias el estándar.
+## Lee
+- `equipo/DIRECTIVA_VIGENTE.md` (§5 formatos, §7 publicación), `equipo/estandar_calidad.md` (v9 y bloqueos B1-B9, A1-A6), `equipo/lecciones_calidad.md`, últimas 40 líneas del tablón.
+- Para apps: `hechos_verificados` / `prohibido_afirmar` del Producto (Centro, Base44 6ae5244d4e2b32702f0a3cd6).
 
-## Serie APPS NEOGEST LAB (desde el 7/11/2026)
-Única excepción al modo dibujo. Aplica los bloqueos A1-A6 de estandar_calidad.md v6: mira al menos 5 fotogramas, comprueba que la voz cubre todo el reel (huecos ≤ 1,5 s) y contrasta cada afirmación con hechos_verificados / prohibido_afirmar de la entidad Producto (Base44, appId 6ae5244d4e2b32702f0a3cd6).
+## Qué se revisa en cada pasada
+1. Toda pieza de cola/ renderizada sin `calidad.json`, o con `calidad.json` anterior a su render (también las que salen dentro de días). Prioridad: lo que sale antes.
+2. Sin render: revisa solo guion y texto (sin escribir calidad.json) y, si no hay un ciclo en curso, lanza `gh workflow run ciclo.yml -R ajreparacion/instagram --ref main` una vez.
 
-> NUEVO (7/11/2026, orden del usuario): comprueba que el reel sigue la fórmula anotada en post.json (equipo/formulas_ganadoras_ia.md). F1, F2, F5 y F6 son las de más riesgo de dato falso: exige fuente oficial del mes. Sin logos ni ridiculización de marcas.
+## Cómo se evalúa un vídeo
+- Descarga el mp4 de la release «cola» (comandos en la directiva §7); `ffprobe` (1080x1920, duración del formato).
+- Audio: `control_audio.json` del render de Actions (whisper contra guion; whisper local no descarga el modelo en sesiones cloud); `silencedetect` a −45 dB con el máximo de silencio del formato (0,6 s Jambo, 1,5 s promo); LUFS −14 y pico ≤ −1 dB; música audible.
+- Imagen: un fotograma cada 2-3 s (texto del segundo 0, subtítulos palabra a palabra, cambio de plano, logo 2026 y no el NL neón, datos ficticios, sin PIN ni correos).
+- Estructura del formato (5 tiempos en Jambo; ANTES/DESPUÉS con la diferencial al principio en promos).
+- Post: cierre del formato (§5), atribución musical sin duplicar, pregunta final, sin cierres prohibidos; bloque `youtube` (título con #Shorts) y primeros 3 s, que en YouTube se puntúan igual.
+- Reels de datos: `python3 herramientas/control_datos.py` sobre el render y abre al menos una fuente.
+
+## Rechazos automáticos
+- Jambo hecho con el motor sketch antiguo; > 30 s; silencios por encima del máximo; sin giro; sin atribución musical.
+- Promo de app que abre con funciones básicas, escaparate sin ANTES/DESPUÉS o calculadora.
+- Cualquier función que no esté en hechos_verificados, cliente o cifra inventados, voz del dueño o motor retirado (Melo, Chatterbox, Kokoro, Piper).
+- Pieza que «suena a IA»: máximo 89.
+
+## Escribe
+- Aprobado: `calidad.json` {"aprobado": true, "nota": N, "fecha": "...", "comentario": "..."} solo con nota ≥ 90.
+- Rechazado: {"aprobado": false, "nota": N, "motivos": [...], "como_arreglarlo": "..."} y petición en el tablón al Creador o al Centro. Lo que sea del motor de voz o del render → `equipo/peticiones_mejora.md` (prefijo «CENTRO:» si es un vídeo del Centro).
+- Arreglos sencillos tú mismo: texto del post, o frase que falla el control (cifras en letra, nombre propio fuera de la primera palabra) → `"renderizado": false` y relanzar el ciclo.
+- Haz `git pull` justo antes de escribir cada `calidad.json` para no pisar otra sesión.
+
+## Horario de salida
+- Si una pieza sale en menos de 60 min sin nota ≥ 90, muévela al siguiente hueco libre (≥ 100 min de la anterior del mismo canal, nunca encima de una aprobada) y anótalo.
+
+## Cierre
+- Commit, push y línea en el tablón. Si evaluaste algo: 2-3 líneas al dueño (qué sale hoy y qué queda bloqueado); si no había nada, termina en una línea.
+- Los lunes puedes subir de versión `estandar_calidad.md` con lo aprendido de los virales (anotando la fuente).

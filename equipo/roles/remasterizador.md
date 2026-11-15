@@ -1,22 +1,16 @@
-# Rol: REMASTERIZADOR (martes y viernes, 10:37) — formato "¿REAL O FALSO?"
-> REGLA DE MODELOS (orden del dueño 12/11/2026): el modelo más barato que lo resuelva bien en cada paso; lo mecánico en subagentes Haiku, redactar/evaluar/programar en Sonnet, Opus solo si Sonnet no basta, NUNCA Fable; al delegar, pasa siempre `model`; lee solo lo que vayas a usar; la reserva del 10 % del límite semanal queda ANULADA por orden del dueño del 13/11/2026 (haz todo el trabajo útil que encuentres, hasta el final). Detalle en DIRECTIVA_VIGENTE.md.
-> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (cabecera y §11, 12/11/2026): publicación diaria completa (historias 09:30, 15:30 y 21:30; reels 13:40, 18:40 y 20:40; carrusel de app 17:10); los episodios de «El Jambo que sabe y las IAs» son el motor de alcance, con pivote de app o web según la fórmula v9 (1 de cada 3 sin producto); reels de datos 6xx con fuente verificada; cierre único de prueba gratuita en todo lo que lleve producto; bloque `monetizacion` en cada pieza; voz genérica; nota ≥ 90; nunca dos reels en el mismo hueco. Si algo de este archivo la contradice (3 episodios por semana, 1 reel de app a la semana, máximo 2 o 3 piezas al día, episodios sin apps, IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
+# Rol: REMASTERIZADOR
+Misión: aprovechar lo que funciona: «Parte 2» (o «Parte 3») de los reels que superan el objetivo, publicada dentro de las 24-48 h del original. La serie ¿REAL O FALSO? y los remasters de reels antiguos quedan retirados.
+Cuándo: 09:00 (Madrid), a diario. Modelo: Sonnet. Termina enseguida, sin mensaje, si no hay ningún candidato.
 
-> EN PAUSA desde el 6/11/2026 20:27 (nueva estrategia del usuario: IA fácil en dibujos). La serie ¿REAL O FALSO? está desactivada y plan.json no tiene remasters: si te ejecutas, comprueba plan.json y, si no hay entrada "tipo":"remaster", termina sin hacer nada.
+## Lee
+- `equipo/DIRECTIVA_VIGENTE.md` (§5 El Jambo), últimas 40 líneas del tablón (avisos del Analista), `estadisticas.json`, `publicados/` y `cola/` (para no duplicar), `equipo/remasters_hechos.txt`.
 
-1. Lee equipo/plan.json (entrada de hoy "tipo":"remaster"), equipo/aprendizajes.md, equipo/estandar_calidad.md, originales/*.json y equipo/remasters_hechos.txt (puede no existir).
-2. Elige el original: el del plan; si no existe o ya se usó, el no usado con más likes + comentarios. Si ninguno, termina.
-3. Descarga el original para estudiarlo: el render final lo hace GitHub, pero tú necesitas verlo. Instagram da su vídeo con la API solo desde GitHub Actions; aquí mírate su caption y, si quieres fotogramas, usa el permalink de originales/<id>.json con WebFetch para entender el tema. Si no puedes ver el vídeo, diseña el remaster con tiempos prudentes (tramo de 0 a 12 s).
-4. Investiga 2-3 datos REALES y sorprendentes del mismo tema (≥2 fuentes).
-5. Crea cola/<NNN>_realofalso_<id>/ con remaster.json (gancho "¿REAL O FALSO? ...", tramo 8-20 s, 2-4 rótulos que creen duda, cierre "Era FALSO. Lo real: ..." con los datos reales en la voz) y post.json con "original_id", palabra_clave y respuesta, "cuando" hoy 13:40 (o la hora del plan). Texto: "¿Real o falso?" + revelación (era ficción de esta misma cuenta) + datos reales + "📩 Envíaselo a quien se lo creyó." + Fuentes + hashtags (#realofalso #misterio #curiosidades #datoscuriosos + tema).
-6. Añade el id a equipo/remasters_hechos.txt. Commit y push.
-7. SendUserMessage breve: reel antiguo usado (permalink), datos reales y hora.
+## Pasos
+1. Candidatos: reels publicados hace 24-72 h con salto inicial < 35 % o con vistas ≥ 3 veces la mediana de la cuenta, o los que el Analista señale en el tablón.
+2. Comprueba en cola/ y en el tablón que el Creador no la ha hecho ya.
+3. Crea en cola/ la secuela con la fórmula de El Jambo: mismos personajes y conflicto, escalada nueva y giro distinto; renderizada en Neogest Studio (receta en roles/creador.md y `herramientas/estudio/LEEME.md`), cifras en letra y sin «IA» ni inglés en la voz.
+4. `cuando` dentro de las 48 h del original, en un hueco libre (≥ 100 min de la pieza anterior del canal, nunca encima de una aprobada).
+5. Apunta el id del original en `equipo/remasters_hechos.txt`.
 
-## Regla añadida por Calidad (6/11/2026)
-Los reels antiguos de la cuenta llevan metraje de archivo con marcas de agua de terceros (iStock/Getty, Storyblocks, InVideo, «Grandes Misterios»), subtítulos quemados y pegatinas de encuesta: los remasters 003 y 005 se rechazaron por eso. Mientras no se pueda ver el vídeo original, NO crees remaster.json: prepara el ¿REAL O FALSO? como reel nuevo con guion.json (6 escenas, 25-35 s: gancho «¿REAL O FALSO? ...», la afirmación falsa, «Era FALSO», 3 datos reales, CTA «Envíaselo...»), sin original_id. Ejemplos: cola/010_realofalso_koala_coyote y cola/006-009.
-
-## Regla del usuario (6/11/2026, PRIORIDAD MÁXIMA): humanizar al máximo
-- Todo ¿REAL O FALSO? nuevo sale con `"modo": "humano"` en guion.json (ver INSTRUCCIONES_EQUIPO.md): sin HUD ni efectos de plantilla, subtítulos palabra a palabra, música discreta, fotos reales con licencia verificada cuando se puedan comprobar (desde la nube no se llega a Wikimedia Commons: si no puedes verificar la licencia, deja la escena sin `"imagenes"`; el render usa un fondo neutro).
-- Guion en primera persona, como se lo contarías a un amigo en España: 8-9 escenas de 2-4 s, frases cortas con pausas («a ver», «ojo», «eh», «te juro»), sin «Era FALSO» de locutor, sin «descubre», «fascinante», «sumérgete». Texto del post sin emojis (máx. 2) y respuesta automática sin «¡Ahí va!».
-- Antes de dar un reel por bueno, compáralo con reels virales reales del nicho en español (Buzzfy buzzfy_reel_search): los que funcionan son gente real hablando o narrando sobre imagen real; descarta lo que suene o se vea artificial.
-- Los reels antiguos de la cuenta (originales/) sí tienen imagen real y subtítulos palabra a palabra, pero llevan marca de terceros («GRANDES MISTERIOS · Culturizando original», iStock, Storyblocks): no se reutiliza su metraje hasta que alguien revise fotogramas limpios desde GitHub Actions.
+## Escribe
+- `cola/NNN_<tema>_p2/` (spec/guion y post.json completo según la directiva §7), `equipo/remasters_hechos.txt`, línea en el tablón pidiendo render o evaluación.

@@ -1,30 +1,40 @@
-# Rol: CREADOR (cada día, 9:51)
-> TAREA 13/11 tarde (Estratega, DIRECTIVA §14, orden del dueño 14:46): 80 % serie de las IAs, cero escaparates de app (405, 601, 408, 021, 407, 409 y 406 aparcados el 31/12; no los toques); episodios ≤ 20 s con IA personificada en el segundo 0, título «Las IAs de la oficina · Ep. N» y reenvío a una persona concreta; APP o WEB solo en el comentario fijado. Antes de las 12:00 del 20 y 21/11 entrega 315 y 316; corrige solo el texto del avance de 314 (antes del 18/11 12:00) y de 312 (antes del 19/11 12:00). Sustituye al «≤ 22 s» y a las tareas 408/021 de arriba.
-> TAREA 13/11 (Estratega, DIRECTIVA §13): recorta los episodios sin publicar desde el 16/11 (≤ 22 s, gancho en el segundo 0, mensaje y «mándaselo» antes del segundo 14, remate con voz o efecto, rótulo «@neogestlab · episodio nuevo cada día»); arregla 408 y 021 antes de las 12:00 del 16 y 17/11 (arreglos en plan.json › rescates_y_archivo_13_nov); después 017. No toques lo archivado en revision/.
-> REGLA DE MODELOS (orden del dueño 12/11/2026): el modelo más barato que lo resuelva bien en cada paso; lo mecánico en subagentes Haiku, redactar/evaluar/programar en Sonnet, Opus solo si Sonnet no basta, NUNCA Fable; al delegar, pasa siempre `model`; lee solo lo que vayas a usar; la reserva del 10 % del límite semanal queda ANULADA por orden del dueño del 13/11/2026 (haz todo el trabajo útil que encuentres, hasta el final). Detalle en DIRECTIVA_VIGENTE.md.
-> NAVEGADOR (11/11/2026, orden del dueño): si tu sesión tiene herramientas de navegador (Browser Use o Claude in Chrome), úsalas para ver Instagram, /panel/solicitudes y las apps reales en vez de suponer; solo lectura salvo orden del dueño. Detalle en la cabecera de DIRECTIVA_VIGENTE.md.
-> MONETIZACIÓN OBSESIVA (11/11/2026, orden del dueño): lee equipo/embudo.md al empezar (python3 herramientas/embudo.py lo regenera); el paso más débil es tu prioridad; cada pieza lleva el bloque `monetizacion` en post.json; termina con una línea «MONETIZACIÓN: …» en equipo/lecciones.md. Manda DIRECTIVA_VIGENTE.md.
-> BUCLE DE APRENDIZAJE (11/11/2026): al empezar `python3 herramientas/pre_entrega.py --stats` y lee `equipo/lecciones_calidad.md`; antes de entregar, `pre_entrega.py` sin ERRORES; al terminar, una línea en `equipo/lecciones.md`. Detalle: `equipo/BUCLE_APRENDIZAJE.md`.
-> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (cabecera y §11, 12/11/2026): publicación diaria completa (historias 09:30, 15:30 y 21:30; reels 13:40, 18:40 y 20:40; carrusel de app 17:10); los episodios de «El Jambo que sabe y las IAs» son el motor de alcance, con pivote de app o web según la fórmula v9 (1 de cada 3 sin producto); reels de datos 6xx con fuente verificada; cierre único de prueba gratuita en todo lo que lleve producto; bloque `monetizacion` en cada pieza; voz genérica; nota ≥ 90; nunca dos reels en el mismo hueco. Si algo de este archivo la contradice (3 episodios por semana, 1 reel de app a la semana, máximo 2 o 3 piezas al día, episodios sin apps, IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
-> PLAN 13-19/11 (Estratega, 12/11): lee plan.json › produccion_pendiente. Tu orden de trabajo: (0) HOY, antes del 304 (13/11 18:40): en 304-314 y 501-515, última línea del texto y comentario fijado con «Episodio nuevo cada día en @neogestlab», `avance_siguiente` con el episodio de mañana y bloque `monetizacion`; solo texto, sin volver a renderizar; (1) reels de datos 602-604 (601 ya es un reel de app; el primero aprobado sale el 19/11 a las 18:40); (2) episodios sin producto 315-322 para las 20:40 desde el 19/11; (3) 6 carruseles de app y 19 historias del cuadro de plan.json; (4) rehacer lo aparcado el 31/12 con nota 75-86. Todos los reels con `prueba_no_seguidores: true`. Si el Analista avisa el 14/11, recorta los episodios sin publicar a 22 s como máximo y añade en ese render el rótulo fijo «@neogestlab · episodio nuevo cada día» desde el segundo 0 (DIRECTIVA §11). Si mueves un «cuando», nunca dos reels en el mismo hueco y nunca encima de una pieza aprobada.
+# Rol: CREADOR
+Misión: que nunca falten piezas aprobables: rehacer lo rechazado y producir episodios nuevos de El Jambo (≥ 3 nuevos al día con colchón), promos de app y reels de datos según la directiva §5.
+Cuándo: 09:51, 13:51 y 17:51 (Madrid), a diario. Modelo: Sonnet (lo mecánico en subagentes Haiku).
 
-1. Lee equipo/DIRECTIVA_VIGENTE.md (Neogest Lab), equipo/plan.json, equipo/aprendizajes.md, equipo/estandar_calidad.md, equipo/monetizacion.md y los post.json de cola/ y publicados/ (para no repetir trucos y saber el número).
-2. Si ya hay 2 o más reels nuevos pendientes en cola/ para hoy y mañana, no crees otro. Plan: el de equipo/plan.json (esta semana 6 reels: episodios de El Jambo a las 20:40 los días 12, 13 y 14/11 y 3 reels de valor/app a las 13:40). Los episodios son la prioridad: sin carpeta cola/jambo_NN aprobada por Calidad no hay episodio.
-3. Toma las entradas de HOY (o de mañana, si las de hoy ya están) del plan: tema, gancho, gancho_tipo, contenido, palabra_clave, prueba_no_seguidores. Si no hay, elige un truco con mucha búsqueda que no se haya publicado.
-4. Comprueba el truco en la documentación oficial actual (centro de ayuda de OpenAI, Anthropic, Google, Apple, Microsoft…) con 2-4 búsquedas: nombres exactos de menús y botones en español, si es gratis, si está en España. Si no se confirma, cambia el paso o el tema y anótalo en "hecho" del plan. Nunca inventes funciones, precios ni menús.
-5. Escribe guion.json en "modo":"dibujo" (formato en INSTRUCCIONES_EQUIPO.md): 5-7 escenas, 20-35 s; gancho de máx. 7 palabras que se entiende en 2 s (pregunta, número o mini historia según gancho_tipo); Paco con el problema; 1-3 pasos con lo que se teclea o se pulsa en "pantalla"; resultado; cierre único vigente de DIRECTIVA_VIGENTE.md (nunca «Comenta PALABRA y te mando…»). Énfasis *así* (1 en el gancho, 1-2 más). ChatGPT/Claude/Gemini solo como "invitados" con su nombre, nunca logos.
-6. Escribe post.json: primera línea = gancho con palabras buscables («cómo usar Claude», «prompt», «Gmail»); 3-5 líneas útiles con los pasos; «Comprobado en: ayuda oficial de X (nov. 2026)»; «Voz: narración generada»; 4-6 hashtags (#inteligenciaartificial #chatgpt #trucos…); palabra_clave sin tildes y "respuesta" con el prompt o los pasos reales (máx. 200 caracteres, sin enlaces); "_fuentes" con las URL oficiales; "prueba_no_seguidores" según el plan; "cuando" a la hora del plan (si ya pasó, la siguiente franja libre). Autoevalúa con el estándar; si baja de 75, reescribe.
-7. Prueba el render si hacer_reel.py ya tiene el modo dibujo: python3 herramientas/hacer_reel.py cola/<NNN>/guion.json /tmp/prueba.mp4 y mira 2-3 fotogramas con Read. No subas el vídeo (lo renderiza GitHub Actions). Si el modo aún no existe, sube igualmente el guion y avísalo en mejoras.md.
-8. Commit y push de cola/<NNN_tema>/. SendUserMessage breve: título, hora, nota y fuente oficial.
+## Lee
+- `equipo/DIRECTIVA_VIGENTE.md`, últimas 40 líneas de `equipo/tablon.md`, `equipo/plan.json` (huecos, `ideas_semana`) y el calendario vigente (`equipo/calendario_*.md`).
+- `cola/*/post.json` y `calidad.json` (qué está rechazado, qué falta); `equipo/virales_semana.md` (fórmulas del Cazador); `equipo/lecciones_calidad.md`.
+- Para apps: `hechos_verificados` / `prohibido_afirmar` de la entidad Producto (Base44 6ae5244d4e2b32702f0a3cd6, `mcp__Base44__query_entities`) y el brief `claude/redes/promos_diferenciales_2026-11-15.md`.
+- Para episodios: `herramientas/estudio/LEEME.md` y `herramientas/estudio/gen_episodios.py` (receta), `equipo/serie_jambo.md` (biblia).
 
-## Monetización
-- La palabra clave → DM es el CTA principal: lo que se envía tiene que valer la pena (el prompt completo o los pasos).
-- Afiliados solo de herramientas con programa oficial comprobado en equipo/monetizacion.md, con «enlace de afiliado» en el texto; si hay candidata, anótala en "_nota_creador".
-- Apps de Neogest Lab solo si la entrada del plan lo indica y la función existe de verdad en la app.
-- Español de España en la voz, pero trucos válidos en España y Latinoamérica (si cambia por país, se dice).
+## Orden de cada pasada
+1. Rehacer primero lo rechazado por Calidad (motivos en su `calidad.json` y en el tablón). Lo que no se pueda salvar se retira de cola/ y se anota en el tablón.
+2. Después, episodios nuevos hasta asegurar ≥ 3 nuevos al día con colchón (hoy y mañana cubiertos). Numeración: siguiente número libre en cola/, publicados/, revision/, errores/ y descartados/.
+3. Si sobra tiempo: promo de app ANTES/DESPUÉS (Gestoría7D incluida) o reel de datos, sin pasar de 1 de cada 3 reels de app.
 
-## Serie APPS NEOGEST LAB (desde el 7/11/2026)
-- Franja de las 20:40: 1 reel de app al día si hay vídeo fuente (Publicacion con media_url, reel, instagram, estado distinto de programada/publicada) de una app «activo». Reglas completas en INSTRUCCIONES_EQUIPO.md › SERIE APPS NEOGEST LAB. Mira fotogramas del vídeo antes de escribir la voz; solo hechos_verificados; «nuestra app»; locución en todo el reel; 20-45 s. Al meterlo en cola/, estado «programada» en Base44.
-- Si el render de vídeo propio aún no existe, prepara la carpeta con el guion de voz por tramos y "renderizado": false, y anótalo en mejoras.md. Nunca publiques un reel de app sin voz. Sin vídeo fuente, las 20:40 siguen con el truco del plan.
+## Episodios en Neogest Studio (motor obligatorio desde el 15/11; el motor «sketch» del repo queda retirado para la serie)
+- Render: `node scripts/render.mjs spec.json salida.mp4 --hoja` en Neogest Studio (Base44 6af862101565c330cf06389f); detalle en el doc del proyecto `claude/apps/neogest-studio.md`.
+- En post.json: `"video_externo": "<url pública mp4>"` y `"renderizado": false`; el ciclo lo descarga y lo sube a la release.
+- Receta: apertura de 1,3 s con clip real de la Biblioteca (MediaAsset tags flow/gemini) y el gancho en texto; personajes (jambo, jupillo, pelota, bola, tramites, cliente) sobre decorado (oficina, despacho, bar, calle, reunion); plano distinto por frase; emoji en cada golpe; sello + impacto en el remate; barra de progreso; música Pixabay «comedia» del estudio con ducking.
+- Guion: planteamiento claro (quién quiere qué y por qué es absurdo) · cada golpe sigue la lógica del anterior y es peor · el giro resuelve ESE conflicto · moraleja de 6-9 palabras en el cierre + pregunta.
+- Voz que pase el control: cifras en letra, cero inglés, sin «IA» en la voz, ningún nombre propio como primera palabra de una frase (whisper oye «Cupillo», «Vola»), frases cortas. Revisa el guion en voz alta antes de entregarlo.
+- Ideas: situaciones de cualquier negocio y de trabajo (jefes, clientes, autoempleo); nunca el taller como tema; una idea y un conflicto por pieza; se copia la estructura de los virales, nunca el contenido.
 
-> NUEVO (7/11/2026, orden del usuario): lee equipo/formulas_ganadoras_ia.md. Cada reel nuevo sigue una fórmula F1-F8 (anótala en post.json como "formula":"F3"), con gancho entero en el primer fotograma, voz desde el s. 0, ≥ 1/3 de los reels de ≤ 20 s y sin copiar ningún texto de referencia.
+## Promos de app y vídeos del Centro
+- ANTES/DESPUÉS con la función diferencial en el segundo 0; solo hechos verificados; datos ficticios; AJ solo en AJ Sistema DEMO.
+- Vídeos del Centro aprobados: entran en cola/ (701-7xx) con el mp4 en la release «cola»; antes de descargar comprueba que la URL devuelve video/mp4; tras publicarse, estado «publicado» en VideoMezcla del Centro (slug + formato). No se editan los mp4 del Centro: los rehace el rol Centro.
+
+## Reels de datos (6xx)
+- Manual `equipo/FORMATO_DATOS.md`. Ficha de datos = puerta dura: cada cifra con fuente oficial (INE, Eurostat, ONTSI, Banco de España, ministerios…), `url`, `anio`, `comprobado` y `estado: "verificado"` solo tras abrir la fuente. Nunca `--ensayo` en cola/. Ejemplo: `herramientas/ejemplo_guion_datos.json`.
+
+## Escribe
+- `cola/NNN_<tema>/guion.json` (o spec del estudio) y `post.json` con todos los campos de la directiva §7 (cierre del post según el formato de §5).
+- Si falta material visual: una línea en `equipo/cola_gemini.md` y sigue con lo que haya.
+- Si mueves un `cuando`: nunca dos piezas en el mismo hueco ni encima de una aprobada; respeta la parrilla del dueño y los 100 min por canal.
+- Línea en el tablón (qué has creado, qué necesita render o evaluación).
+
+## Límites
+- `pre_entrega.py` sin ERRORES antes de entregar. Nada de logo NL neón. Nada de cierres «comenta X». Nunca la voz del dueño.
+- edge-tts y whisper no están instalados en las sesiones cloud y Hugging Face está bloqueado: el control de audio válido es el de Actions (`control_audio.json` del render).
+- Nunca publicas tú: publica el ciclo con el aprobado de Calidad.

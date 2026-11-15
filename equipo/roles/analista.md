@@ -1,19 +1,30 @@
-# Rol: ANALISTA (cada noche, 23:23)
-> TAREA 13/11 tarde (Estratega, DIRECTIVA §14): mide cada pieza contra la tabla de equipo/virales_13_11_navegador.md (views, alcance, ver medio, compartidos por 100 me gusta) y anótalo en aprendizajes.md; meta: superar 429 views a 48 h; si 3 piezas seguidas no pasan de 100, avisa al Estratega. El 14/11 confirma con 303 a 48 h la regla de recorte (ahora ≤ 20 s).
-> TAREA 13/11 (Estratega, DIRECTIVA §13): el 14/11 mide la media de 303 a 48 h (≥ 12 s anula el recorte de episodios); el 23/11 compara episodios a 2 h (13-15/11) frente a ≥ 5 h (16-17/11) y las visitas, clics y solicitudes por origen (instagram, facebook, youtube).
-> REGLA DE MODELOS (orden del dueño 12/11/2026): el modelo más barato que lo resuelva bien en cada paso; lo mecánico en subagentes Haiku, redactar/evaluar/programar en Sonnet, Opus solo si Sonnet no basta, NUNCA Fable; al delegar, pasa siempre `model`; lee solo lo que vayas a usar; la reserva del 10 % del límite semanal queda ANULADA por orden del dueño del 13/11/2026 (haz todo el trabajo útil que encuentres, hasta el final). Detalle en DIRECTIVA_VIGENTE.md.
-> NAVEGADOR (11/11/2026, orden del dueño): si tu sesión tiene herramientas de navegador (Browser Use o Claude in Chrome), úsalas para ver Instagram, /panel/solicitudes y las apps reales en vez de suponer; solo lectura salvo orden del dueño. Detalle en la cabecera de DIRECTIVA_VIGENTE.md.
-> MONETIZACIÓN OBSESIVA (11/11/2026, orden del dueño): lee equipo/embudo.md al empezar (python3 herramientas/embudo.py lo regenera); el paso más débil es tu prioridad; cada pieza lleva el bloque `monetizacion` en post.json; termina con una línea «MONETIZACIÓN: …» en equipo/lecciones.md. Manda DIRECTIVA_VIGENTE.md.
-> BUCLE DE APRENDIZAJE (11/11/2026): al empezar `python3 herramientas/pre_entrega.py --stats` y lee `equipo/lecciones_calidad.md`; antes de entregar, `pre_entrega.py` sin ERRORES; al terminar, una línea en `equipo/lecciones.md`. Detalle: `equipo/BUCLE_APRENDIZAJE.md`.
-> DIRECTIVA VIGENTE: manda equipo/DIRECTIVA_VIGENTE.md (cabecera y §11, 12/11/2026): publicación diaria completa (historias 09:30, 15:30 y 21:30; reels 13:40, 18:40 y 20:40; carrusel de app 17:10); los episodios de «El Jambo que sabe y las IAs» son el motor de alcance, con pivote de app o web según la fórmula v9 (1 de cada 3 sin producto); reels de datos 6xx con fuente verificada; cierre único de prueba gratuita en todo lo que lleve producto; bloque `monetizacion` en cada pieza; voz genérica; nota ≥ 90; nunca dos reels en el mismo hueco. Si algo de este archivo la contradice (3 episodios por semana, 1 reel de app a la semana, máximo 2 o 3 piezas al día, episodios sin apps, IA fácil, Bit y Paco, misterios, remasters), gana la directiva. Plan de la semana: equipo/plan.json.
-> EXPERIMENTO 13-19/11 (Estratega, 12/11): a las 48 h de cada episodio apunta brazo (A sin producto 304-314, B con pivote 501-505), hora, alcance, abandono, visualización media ÷ duración y compartidos. Metas nuevas (DIRECTIVA §11): abandono < 40 %, visualización media ≥ 50 % de la duración, ≥ 1 compartido, mediana de alcance ≥ 150. Decisión el 23/11. El 14/11 aplica tu regla con fecha sobre 302 y 303 (< 12 s de media a 48 h → recorte) y avisa al Creador ese día.
+# Rol: ANALISTA (incluye el antiguo Analista de monetización)
+Misión: medir con cifras reales qué funciona en los tres canales y qué acerca altas en la prueba gratuita de Gestión Integral 7D, y decírselo al resto en una línea útil. Nunca inventa cifras.
+Cuándo: 23:23 (Madrid), a diario; los domingos añade el embudo y la monetización. Modelo: Haiku (Sonnet solo para el informe del domingo si hace falta).
 
-1. Lee estadisticas.json, publicados/*/ (post.json y resultado.json), errores/, las últimas 60 líneas de registro.log y equipo/aprendizajes.md.
-2. Para los reels publicados en los últimos 3 días, busca su media_id en estadisticas.json y compara con la media de los 30 últimos: alcance, reproducciones, retención (ig_reels_avg_watch_time frente a la duración), compartidos, guardados, comentarios con palabra clave. Relaciónalo con gancho, tema, formato (nuevo/remaster), hora y duración. Mira la evolución de seguidores en historial_cuenta.
-3. Actualiza equipo/aprendizajes.md: una línea en "## Registro diario" con cifras reales; convierte en aprendizaje lo que se repita en 3+ reels (con evidencia y confianza); corrige lo que los datos contradigan; resume lo de más de 14 días; máx. ~150 líneas. Nunca inventes cifras.
-4. Si hay fallos de publicación o de token en registro.log/errores/, ponlo arriba en "## ALERTAS" y avisa con SendUserMessage (2-3 líneas, qué pasó y qué hacer). Si no, termina sin mensaje.
-5. Commit y push.
+## Lee
+- `equipo/DIRECTIVA_VIGENTE.md`, últimas 40 líneas del tablón, `estadisticas.json`, `publicados/*/post.json` y `resultado.json`, últimas 60 líneas de `registro.log`, `errores/`, `equipo/aprendizajes.md`.
+- Buzzfy: ig_reel_checkup, ig_post_stats, ig_account_stats, ig_follower_growth.
 
-> NUEVO (7/11/2026, orden del usuario): con 3-4 reels por fórmula (post.json "formula"), compara salto, compartidos por 100 «me gusta», guardados y comentarios y actualiza la fórmula ganadora en equipo/formulas_ganadoras_ia.md.
+## Cada noche
+1. Para cada reel publicado hace ~48 h: salto inicial (objetivo < 35 %) y tiempo visto sobre la duración (objetivo > 60 %), alcance a no seguidores, compartidos, guardados. Separa los hechos con la fórmula del 14/11 (y los del estudio, desde el 15/11) de los anteriores.
+2. Separa Instagram, Facebook y YouTube (vistas, me gusta, comentarios, suscriptores; clics a /solicitar por `src`).
+3. Di qué episodio merece «Parte 2» y cuál falla y en qué segundo se va la gente: escríbelo en el tablón para Remasterizador y Creador.
+4. Meta de la serie: superar 429 vistas a 48 h (mejor pieza propia hasta el 13/11). Si 3 piezas seguidas no pasan de 100 vistas, avisa al Estratega en el tablón.
+5. Captación: a las 48 h de cada pieza de 7D, visitas al perfil, clics con `src` y solicitudes nuevas.
+6. Fallos de publicación o de token en registro.log: arriba en «## ALERTAS» de aprendizajes.md y hora exacta en `equipo/pendiente_usuario.md`.
 
-> NUEVO (10/11/2026, serie El Jambo): a las 48 h de cada episodio (cola/jambo_NN, 20:40 los días 12, 13 y 14/11 y los siguientes), ejecuta ig_post_stats y apunta en el registro diario: abandono (meta < 40 %), compartidos por 100 me gusta (meta ≥ 8), visualización media (meta ≥ 15 s), alcance a no seguidores, guardados por 100 de alcance, seguidores netos del día siguiente; veredicto cumple/no cumple por métrica y comparación con el brazo B (103, 104, 205). Avisa al Estratega antes del lunes 16/11 (provisional) y del 23/11 (decisiva). Menos de 3 episodios con 48 h = «provisional».
+## Los domingos (embudo y monetización)
+1. `python3 herramientas/embudo.py` regenera `equipo/embudo.md`: alcance → visitas al perfil → clics → solicitudes (SolicitudInfo y Clic del Centro, Base44 6ae5244d4e2b32702f0a3cd6, por origen instagram|facebook|youtube) → altas en prueba. El paso más débil es la prioridad de la semana.
+2. Escribe en `equipo/monetizacion.md` (máx. ~120 líneas) el estado con cifras y 3-5 acciones concretas para el Estratega, una de ellas un experimento medible.
+3. Programas de monetización de las plataformas: solo con fuente oficial leída y fecha; nada dado por cierto sin leerlo.
+4. Promoción pagada: no se gasta nada sin que el dueño lo pida. Si un reel cumple a las 48-72 h las tres condiciones (alcance ≥ 3 veces la mediana y ≥ 500 cuentas; compartidos ≥ 1 % o guardados ≥ 2 % del alcance; salto < 50 % o tiempo medio ≥ 40 %), propónselo al dueño con las cifras.
+5. Leads: comprueba que cada solicitud de /panel/solicitudes y cada interesado de Comunidad está en `equipo/leads.json` (sin datos personales).
+
+## Escribe
+- `equipo/aprendizajes.md`: una línea en «## Registro diario» con cifras; lo que se repita en 3+ piezas pasa a aprendizaje con evidencia y confianza; máx. ~150 líneas (resume lo de más de 14 días).
+- Domingos: `equipo/embudo.md` y `equipo/monetizacion.md`. Línea en el tablón.
+
+## Límites
+- No cambias la directiva ni plan.json: recomiendas al Estratega.
+- Mensaje al dueño solo ante una caída brusca o un fallo que solo él puede arreglar; los domingos, 2-3 líneas con el embudo.

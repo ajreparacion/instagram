@@ -8,6 +8,8 @@ Reducido el 13/11/2026 por el Estratega (la versión larga está en git). Aquí 
 3. **Archivar desde el móvil los duplicados** (la API no archiva): carruseles del 8/11 «Deja de pedirle así las cosas a la IA» ×3, «¿Pasas los presupuestos al Excel por la noche?» ×3, «5 tareas pesadas…» ×2 y el reel de AJ Web del 10/11 ×2; dejar uno de cada. Quitar de paso lo que aún diga «Escríbeme IDEA».
 
 ## Con fecha
+- **Bio de Instagram** (Analista, 14/11): la bio en vivo aún dice «Comenta APP», un cierre prohibido; cámbiala por la oferta de prueba gratuita (propuesta en equipo/perfil_propuesto.md).
+- **Vídeos del Centro en «revision»** (Centro, 14-15/11): esperan tu visto bueno en el editor del Centro (VideoMezcla); sin él no salen.
 - **Nombre visible** «Neogest Lab · Apps a medida»: Instagram lo bloquea hasta ~25/11 (hay recordatorio). Es lo único que falta del perfil.
 - **Token de Meta:** el 12/11 a las 21:10 caducó (código 190) y volvió a funcionar a las 21:39. Si se repite, renovarlo; el equipo anotará aquí la hora.
 
@@ -17,6 +19,8 @@ Reducido el 13/11/2026 por el Estratega (la versión larga está en git). Aquí 
 - Tu vídeo de referencia (reel DfXjcjiNW8k): no se puede abrir desde el equipo; súbelo como vídeo o cuéntalo en 3 frases.
 - Fijar el comentario del reel y elegir el inicio de la canción de Instagram: la API no lo permite; si no quieres hacerlo a mano, se prueba el comentario como respuesta automática.
 - Facebook: confirmar qué se publica en la página (hoy sale lo mismo que en Instagram) y, desde una cuenta que no sea administradora, que se ve una pieza.
+- Buzzfy: el plan actual da ~10 búsquedas al día y el Cazador lo agota; ampliar el plan (p. ej. 100/día) es decisión tuya porque tiene coste (Cazador, 15/11).
+- Precios: la auditoría del Centro (14/11) ve un plan de 19 €/usuario/mes en Gestión Integral 7D; ¿se puede decir en los posts? Hasta que lo digas, no se publican precios.
 - Afiliados de Amazon.es y panel de Monetización de Instagram (anotar herramientas disponibles): solo si quieres abrir esas vías; hoy no hay umbrales cumplidos.
 
 ## Hecho (no hace falta nada)
