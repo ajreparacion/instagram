@@ -1,17 +1,8 @@
 {
+  "aprobado": true,
   "nota": 90,
-  "aprobado": false,
-  "motivos": [
-    "Control de audio OK en Actions tras mover «Bola» al final de la frase (whisper = guion); silencedetect local sin huecos; 22,0 s; −14,0 LUFS, pico −1,4 dBFS",
-    "Gancho POV «becario con 5 años de experiencia» ahora coherente con la voz («cinco»); escalada idiomas → sueldo emocional → fruta los viernes; giro de la Jupillo («me han dado tu puesto»); pregunta final",
-    "Sin datos de app; prueba gratuita y atribución MacLeod CC BY presentes",
-    "Aviso Mejora: tarjeta final fija ~4 s"
-  ],
-  "fecha": "2026-11-15T15:42:36+00:00",
-  "revisor": "Calidad (tarea programada)",
-  "render": "2026-11-15T13:49:12+00:00",
-  "aprobado_anterior": true,
-  "nota_anterior": 90,
-  "caducado": "2026-11-15T16:04:46+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-15T16:04:46+00:00"
+  "fecha": "2026-11-15T16:14:36+00:00",
+  "aprobado_por": "dueño",
+  "decision_dueno": "15/11/2026 17:14: visto bueno del dueño en la conversación a los 5 episodios rehechos en Neogest Studio («Sí, que salgan los 5») tras ver el 331.",
+  "observaciones": "Render Neogest Studio ≤ 30 s, 1080x1920; voz edge-tts con el texto del guion ya aprobado por Calidad. Calidad puede revisarlo después, pero no lo retira."
 }
