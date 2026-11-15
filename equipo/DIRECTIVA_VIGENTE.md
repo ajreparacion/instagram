@@ -32,7 +32,7 @@ Fuera del repo (no leen este archivo, se citan para el mapa):
 - «Gemini: procesar cola» (cada 2 h, solo con el PC del dueño encendido): sirve `equipo/cola_gemini.md` y sube el resultado a la Biblioteca de Neogest Studio.
 
 ## 3. Protocolo de cada pasada
-0. Mira el mapa (§2): si tu tarea está fusionada, en pausa o se ha disparado fuera del día u hora de tu rol, termina en una línea sin hacer nada. Excepción temporal: PRUEBA DEL CICLO ordenada por el dueño; toda tarea activa que arranque el 15/11/2026 entre las 20:40 y las 23:59 (hora de Madrid) hace su pasada normal aunque no sea su día ni su hora.
+0. Mira el mapa (§2): si tu tarea está fusionada, en pausa o se ha disparado fuera del día u hora de tu rol, termina en una línea sin hacer nada.
 1. Repo: las tareas son de tipo Claude Code con `ajreparacion/instagram` conectado. Nada de add_repo ni clonar de nuevo: `git checkout main && git pull --rebase origin main`.
 2. Lee esta directiva, tu rol y las últimas 40 líneas de `equipo/tablon.md`; atiende o responde lo que otro rol te pida allí.
 3. Trabaja. Lee solo lo que vayas a usar. Toca solo tus archivos: otros roles escriben a la vez en main.
@@ -138,3 +138,4 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - 2026-11-15 · Coordinación · las tareas creadas por el dueño no se pueden editar desde un agente: sus prompts antiguos quedan derogados por §1, las duplicadas se anulan por §2 y el Creador trabaja en una pasada hasta que el dueño amplíe su horario.
 - 2026-11-15 · Coordinación · hecho en claude.ai: prompts de las tareas reducidos a «lee la directiva y tu rol»; Creador a 3 pasadas; Cazador lunes, miércoles y viernes; en pausa Calidad 12:51, Calidad noche, Analista de monetización y Ventas.
 - 2026-11-15 · Coordinación · el visto bueno del dueño en una pieza manda sobre la nota de Calidad (§7).
+- 2026-11-15 · Coordinación · prueba del ciclo hecha (20:37-21:10): Creador, Calidad, Supervisor, Analista, Remasterizador, Mejora y Comunidad completaron su pasada con los prompts nuevos; retirada la excepción temporal de horario.
