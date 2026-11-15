@@ -14,5 +14,9 @@
   },
   "revisor": "Calidad (directiva de vídeo 14/11)",
   "observaciones": "Reevaluado con la directiva de vídeo 14/11: no cumple la fórmula de 5 tiempos. Guion antiguo: «Que lo haga la Jupillo» como muletilla a mitad (no es el remate), escena de sello en silencio >0,6 s (silencedetect −45 dB), sin atribución de música MacLeod en post.json y, en 501-515, dato estadístico/mensaje de marca pegado al final del vídeo (debe ir en el texto del post con su fuente).  5 silencios de 0,62-0,87 s.",
-  "rehacer": "Creador: guion nuevo con la fórmula (planteamiento en 1 frase, escalada en 3 golpes, giro propio, cierre con pregunta o Parte 2), sin silencios >0,6 s, dato con fuente solo en el post, música MacLeod con atribución; luego renderizado:false."
+  "rehacer": "Creador: guion nuevo con la fórmula (planteamiento en 1 frase, escalada en 3 golpes, giro propio, cierre con pregunta o Parte 2), sin silencios >0,6 s, dato con fuente solo en el post, música MacLeod con atribución; luego renderizado:false.",
+  "aprobado_anterior": false,
+  "nota_anterior": 78,
+  "caducado": "2026-11-15T20:48:51+00:00",
+  "motivo_caducidad": "re-render del ciclo 2026-11-15T20:48:51+00:00"
 }

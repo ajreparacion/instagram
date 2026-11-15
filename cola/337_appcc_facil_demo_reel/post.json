@@ -28,6 +28,11 @@
     "https://appcc-facil-9436934f.base44.app"
   ],
   "_comprobado": "15/11/2026: textos de la web pública desplegada hoy (precios aprobados por el dueño). Prohibido: oficial, sustituye al plan APPCC, IA, avisos automáticos, pago en la app, Google Play, integración con 7D.",
-  "renderizado": false,
-  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad (ANTES/DESPUÉS, giro, sin precios ni venta en la voz); renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render y mirar control/*.jpg (los tiempos de los clips se han reajustado sin poder abrir la grabación desde aquí)."
+  "renderizado": "2026-11-15T20:50:44+00:00",
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad (ANTES/DESPUÉS, giro, sin precios ni venta en la voz); renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render y mirar control/*.jpg (los tiempos de los clips se han reajustado sin poder abrir la grabación desde aquí).",
+  "asset": "337_appcc_facil_demo_reel.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 21.37
+  }
 }

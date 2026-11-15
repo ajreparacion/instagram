@@ -1,0 +1,67 @@
+[
+ {
+  "escena": 0,
+  "estilo": "gancho",
+  "hablante": null,
+  "inicio": 0.0,
+  "duracion": 3.6,
+  "texto": "¿Sigues apuntando las temperaturas en un papel pegado a la nevera?",
+  "enfasis": [
+   10
+  ]
+ },
+ {
+  "escena": 1,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 3.6,
+  "duracion": 3.333,
+  "texto": "Aquí apuntas cámaras, limpieza y aceite desde el móvil.",
+  "enfasis": []
+ },
+ {
+  "escena": 2,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 6.933,
+  "duracion": 3.5,
+  "texto": "Y si un valor sale de rango, te pide la acción correctora.",
+  "enfasis": [
+   10,
+   11
+  ]
+ },
+ {
+  "escena": 3,
+  "estilo": "tramo",
+  "hablante": null,
+  "inicio": 10.433,
+  "duracion": 2.933,
+  "texto": "Eliges las fechas y sacas el informe para Sanidad.",
+  "enfasis": [
+   8
+  ]
+ },
+ {
+  "escena": 4,
+  "estilo": "remate",
+  "hablante": null,
+  "inicio": 13.367,
+  "duracion": 5.0,
+  "texto": "Adiós al papel arrugado. Ahora sale un informe que imprimes o guardas en PDF.",
+  "enfasis": [
+   7
+  ]
+ },
+ {
+  "escena": 5,
+  "estilo": "cierre",
+  "hablante": null,
+  "inicio": 18.367,
+  "duracion": 3.0,
+  "texto": "Empieza gratis. Enlace en el perfil.",
+  "enfasis": [
+   1
+  ]
+ }
+]
