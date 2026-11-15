@@ -25,12 +25,5 @@
     "archivo": "Investigations.mp3",
     "bpm": 95.7
   },
-  "renderizado": false,
-  "_control_audio_fallo": {
-    "fecha": "2026-11-15T10:35:01+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['pelota', 'haz', 'por', 'ciento', 'por', 'ciento'], sobran ['te', 'lota', 'hace'] (rehacer esas frases)"
-    ],
-    "guion_md5": "940f16830e24101b60d42492c7e93bd3"
-  }
+  "renderizado": false
 }

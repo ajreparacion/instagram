@@ -1,0 +1,14 @@
+{
+  "nota": 90,
+  "aprobado": true,
+  "motivos": [
+    "Control de audio OK en Actions (whisper = guion, sin silencios > 0,6 s); silencedetect local sin huecos; 18,9 s; −14,0 LUFS, pico −1,3 dBFS",
+    "Situación en el segundo 0 («te pago a 90 días»), escalada y giro «¿Esto quién lo ha hecho? Yo/Ella», pregunta final",
+    "Dato Ley 3/2004 art. 4 (60 días naturales entre empresas) correcto con fuente BOE; prueba gratuita presente",
+    "Arreglado: quitada la atribución duplicada de «Sneaky Snitch»; la pista usada es «Investigations»",
+    "Aviso Mejora: tarjeta final fija ~4 s"
+  ],
+  "fecha": "2026-11-15T11:43:14+00:00",
+  "revisor": "Calidad (tarea programada)",
+  "render": "2026-11-15T10:47:51+00:00"
+}
