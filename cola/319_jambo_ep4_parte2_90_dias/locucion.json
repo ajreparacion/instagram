@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": "pelota",
   "inicio": 0.0,
-  "duracion": 2.6,
+  "duracion": 2.4,
   "texto": "Te pago a noventa días, como siempre.",
   "enfasis": [
    3
@@ -14,8 +14,8 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 2.6,
-  "duracion": 2.2,
+  "inicio": 2.4,
+  "duracion": 2.1,
   "texto": "Claro, claro, noventa.",
   "enfasis": []
  },
@@ -23,8 +23,8 @@
   "escena": 2,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 4.8,
-  "duracion": 2.433,
+  "inicio": 4.5,
+  "duracion": 2.333,
   "texto": "La ley dice sesenta como máximo.",
   "enfasis": [
    3
@@ -34,8 +34,8 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 7.233,
-  "duracion": 2.533,
+  "inicio": 6.833,
+  "duracion": 2.333,
   "texto": "Pues a sesenta… del año que viene.",
   "enfasis": []
  },
@@ -43,8 +43,8 @@
   "escena": 4,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 9.767,
-  "duracion": 3.667,
+  "inicio": 9.167,
+  "duracion": 3.567,
   "texto": "Factura enviada. Y el recargo por demora, también.",
   "enfasis": [
    7
@@ -54,8 +54,8 @@
   "escena": 5,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 13.433,
-  "duracion": 1.8,
+  "inicio": 12.733,
+  "duracion": 1.633,
   "texto": "¿Esto quién lo ha hecho?",
   "enfasis": []
  },
@@ -63,8 +63,8 @@
   "escena": 6,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 15.233,
-  "duracion": 1.8,
+  "inicio": 14.367,
+  "duracion": 0.767,
   "texto": "Yo.",
   "enfasis": []
  },
@@ -72,8 +72,8 @@
   "escena": 7,
   "estilo": "gag",
   "hablante": "jupillo",
-  "inicio": 17.033,
-  "duracion": 1.8,
+  "inicio": 15.133,
+  "duracion": 0.867,
   "texto": "Ella.",
   "enfasis": []
  },
@@ -81,8 +81,8 @@
   "escena": 8,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 18.833,
-  "duracion": 3.0,
+  "inicio": 16.0,
+  "duracion": 2.9,
   "texto": "¿A cuántos días te pagan a ti? Comenta.",
   "enfasis": []
  }

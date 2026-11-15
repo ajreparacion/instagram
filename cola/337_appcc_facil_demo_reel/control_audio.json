@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "duracion_s": 24.17,
+  "bloqueos": [
+    "falta el giro (escena «remate»)",
+    "voz distinta del guion: faltan ['appcc', 'con'], sobran ['app'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "¿Sigues apuntando las temperaturas en un papel pegado en la nevera? Con app fácil apuntas cámaras, limpieza y aceite desde el móvil. Y si un valor sale de rango, te pide la acción correctora. Eliges las fechas y sacas el informe para sanidad. Empiezas gratis sin permanencia. Y el plan local desde 9 ,90 al mes en pago anual. Prueba el plan local 7 días gratis. Enlace en el perfil.",
+  "guion": "¿Sigues apuntando las temperaturas en un papel pegado en la nevera? Con APPCC Fácil apuntas cámaras, limpieza y aceite desde el móvil. Y si un valor sale de rango, te pide la acción correctora. Eliges las fechas y sacas el informe para Sanidad. Empiezas gratis, sin permanencia. Y el plan Local, desde nueve con noventa al mes en pago anual. Prueba el plan Local siete días gratis. Enlace en el perfil."
+}

@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 3.133,
+  "duracion": 3.033,
   "texto": "¿Otra vez el cliente del ticket? ¡Ahora trae la caja!",
   "enfasis": [
    9
@@ -14,8 +14,8 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "tramites",
-  "inicio": 3.133,
-  "duracion": 3.233,
+  "inicio": 3.033,
+  "duracion": 3.333,
   "texto": "Devolver la caja exige impreso veintisiete-C.",
   "enfasis": []
  },
@@ -24,7 +24,7 @@
   "estilo": "gag",
   "hablante": "jambo",
   "inicio": 6.367,
-  "duracion": 2.333,
+  "duracion": 2.233,
   "texto": "¡Y el tique de la caja también lo perdió!",
   "enfasis": []
  },
@@ -32,8 +32,8 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "tramites",
-  "inicio": 8.7,
-  "duracion": 3.333,
+  "inicio": 8.6,
+  "duracion": 3.467,
   "texto": "Entonces, impreso veintisiete-D. En triplicado.",
   "enfasis": []
  },
@@ -41,8 +41,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 12.033,
-  "duracion": 2.767,
+  "inicio": 12.067,
+  "duracion": 2.667,
   "texto": "¡Trae el producto, la caja y a su cuñado!",
   "enfasis": [
    8
@@ -52,8 +52,8 @@
   "escena": 5,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 14.8,
-  "duracion": 4.367,
+  "inicio": 14.733,
+  "duracion": 4.267,
   "texto": "Devuelto, reembolsado… y el cuñado, fichado como cliente.",
   "enfasis": []
  },
@@ -61,8 +61,8 @@
   "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 19.167,
-  "duracion": 3.8,
+  "inicio": 19.0,
+  "duracion": 3.7,
   "texto": "¿Cuál fue tu devolución más rara? Parte tres, mañana.",
   "enfasis": []
  }
