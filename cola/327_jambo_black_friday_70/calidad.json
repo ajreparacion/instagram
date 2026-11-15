@@ -1,0 +1,7 @@
+{
+ "aprobado": false,
+ "nota": 80,
+ "comentario": "Rechazado. (1) Motor sketch antiguo: orden del dueño 15/11 16:30, los Jambos nuevos van en Neogest Studio (dibujos con boca sincronizada, apertura con clip Flow/Gemini, moraleja). (2) control_audio.json con aprobado=false: whisper no coincide con el guion («por ciento» vs «%»; revisar). (3) El post lleva DOS atribuciones musicales («Life of Riley» e «Investigations»), solo vale la de la pista usada. (4) Remate «Que lo haga la Jupillo» y cierre sin moraleja. Duración 18 s y 5 tiempos correctos.",
+ "fecha": "2026-11-15T18:32Z",
+ "revisado_por": "agente de CALIDAD (pasada de la tarde, 15/11)"
+}
