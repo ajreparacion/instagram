@@ -8,5 +8,9 @@
   "como_arreglarlo": "Creador: rehacer el episodio en Neogest Studio según herramientas/estudio/LEEME.md (video_externo + motor neogest-studio + renderizado false) con la fórmula de 5 tiempos y moraleja; después lo evalúa Calidad.",
   "fecha": "2026-11-15T19:43:18+00:00",
   "revisor": "Calidad (pasada cada 2 h)",
-  "render": "2026-11-15T19:18:38+00:00"
+  "render": "2026-11-15T19:18:38+00:00",
+  "aprobado_anterior": false,
+  "nota_anterior": 85,
+  "caducado": "2026-11-15T19:46:49+00:00",
+  "motivo_caducidad": "vídeo externo subido 2026-11-15T19:46:49+00:00"
 }

@@ -27,12 +27,12 @@
     "archivo": "Monkeys_Spinning_Monkeys.mp3",
     "bpm": 143.6
   },
-  "renderizado": false,
+  "renderizado": "2026-11-15T19:46:49+00:00",
   "asset": "323_jambo_peluqueria_9_40.mp4",
   "control_audio": {
     "aprobado": true,
     "duracion_s": 16.67
   },
-  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/f815f5e9d_323_jambo_peluqueria.mp4",
-  "motor": "neogest-studio"
+  "motor": "neogest-studio",
+  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/f815f5e9d_323_jambo_peluqueria.mp4"
 }

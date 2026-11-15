@@ -10,7 +10,7 @@
   "_fuentes": [],
   "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
   "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
-  "renderizado": false,
+  "renderizado": "2026-11-15T19:46:47+00:00",
   "motor_voz": "edge",
   "comentario_fijado": "¿Te han cerrado alguna vez un presupuesto abierto? Episodio nuevo cada día en @neogestlab",
   "avance_siguiente": "Mañana: tu ruta de visitas está en papel",
@@ -28,6 +28,7 @@
     "archivo": "Monkeys_Spinning_Monkeys.mp3",
     "bpm": 143.6
   },
-  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/9fe9bb394_308_jambo_presupuesto.mp4",
-  "motor": "neogest-studio"
+  "motor": "neogest-studio",
+  "asset": "308_jambo_ep8_presupuesto.mp4",
+  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/9fe9bb394_308_jambo_presupuesto.mp4"
 }
