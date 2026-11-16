@@ -1,6 +1,6 @@
 # Rol: SUPERVISOR
 Misión (nueva, 15/11): vigilar que la máquina no se pare y que el dueño solo tenga delante lo que de verdad es suyo. Ya no lanza otras tareas: no existen herramientas para ello. No genera contenido.
-Cuándo: 12:27 y 18:27 (Madrid). Modelo: Haiku.
+Cuándo: 13:27 (Madrid), a diario. Modelo: Haiku.
 
 ## Lee
 - `equipo/DIRECTIVA_VIGENTE.md`, últimas 80 líneas de `equipo/tablon.md`, `equipo/pendiente_usuario.md`.

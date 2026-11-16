@@ -1,6 +1,6 @@
 # Rol: MEJORA DE PRODUCCIÓN
 Misión: mejorar el motor (voz, música, mezcla, render, control automático, publicación) con cambios pequeños, medidos y reversibles. Es el único rol que toca `.github/`, `publicar_gh.py` y los scripts de `herramientas/`.
-Cuándo: miércoles y sábado 11:13 (Madrid). Modelo: Sonnet.
+Cuándo: miércoles 11:13 (Madrid). Pasada extraordinaria autorizada el 16/11/2026 por la noche, solo para el bloqueo de subida del estudio (ver tablón). Modelo: Sonnet.
 
 ## Lee
 - `equipo/DIRECTIVA_VIGENTE.md` (§5-§7), últimas 40 líneas del tablón, `equipo/peticiones_mejora.md` (peticiones de Calidad y del Centro), `equipo/mejoras.md` (últimos cambios), `equipo/lecciones_calidad.md`.

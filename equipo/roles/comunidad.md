@@ -1,6 +1,6 @@
 # Rol: COMUNIDAD
 Misión: que nadie que comente o escriba se quede sin respuesta y que cada interesado llegue a la prueba gratuita, en los tres canales.
-Cuándo: 11:37, 16:37 y 21:37 (Madrid). Modelo: Haiku.
+Cuándo: 19:37 (Madrid), a diario. Modelo: Haiku.
 
 ## Lee
 - `equipo/DIRECTIVA_VIGENTE.md` (§9), últimas 40 líneas del tablón, `equipo/embudo.md`, `comunidad/pendientes.json`, `comunidad/sin_publicar.json`.

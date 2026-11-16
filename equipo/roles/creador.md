@@ -1,6 +1,6 @@
 # Rol: CREADOR
 Misión: que nunca falten piezas aprobables: rehacer lo rechazado y producir episodios nuevos de El Jambo (≥ 3 nuevos al día con colchón), promos de app y reels de datos según la directiva §5.
-Cuándo: 09:51, 13:51 y 17:51 (Madrid), a diario. Modelo: Sonnet (lo mecánico en subagentes Haiku).
+Cuándo: 09:51 y 15:51 (Madrid), a diario. En cada pasada deja hecho lo del día (rehacer lo rechazado y al menos 2 episodios nuevos); si la producción está bloqueada (mira el tablón), termina en una línea. Modelo: Sonnet (lo mecánico en subagentes Haiku).
 
 ## Lee
 - `equipo/DIRECTIVA_VIGENTE.md`, últimas 40 líneas de `equipo/tablon.md`, `equipo/plan.json` (huecos, `ideas_semana`) y el calendario vigente (`equipo/calendario_*.md`).
