@@ -122,6 +122,7 @@ def _llamar_api(rol_md, contexto):
         model=MODELO,
         max_tokens=1200,
         system=sistema,
+        thinking={"type": "disabled"},
         messages=[{"role": "user", "content": mensaje}],
     )
     textos = [b.text for b in resp.content if getattr(b, "type", None) == "text"]
