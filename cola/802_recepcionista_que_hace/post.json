@@ -1,0 +1,42 @@
+{
+  "tipo": "reel",
+  "texto": "¿Cuántas llamadas se quedan sin coger mientras trabajas?\nLlamada real al asistente telefónico de un negocio: resuelve dudas al momento, toma el recado y lo pasa al equipo para que alguien devuelva la llamada. Después de cada llamada llega un correo con el resumen.\nNosotros lo configuramos y lo mantenemos. Desde 150 € al mes, sin permanencia.\n¿Cuántas llamadas pierdes al día? Dilo con un número.\nMándaselo a quien no da abasto con el teléfono.\nSolicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=instagram\nLa voz que se oye es la de un asistente virtual (generada por IA). Llamada real; se han quitado los datos del negocio.",
+  "cuando": "2026-11-19T09:40:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Promo de app · llamada real",
+  "app": "Recepcionista 24h",
+  "app_slug": "recepcionista-24h",
+  "gancho": "Le pregunté qué sabe hacer",
+  "_fuentes": [
+    "Ficha Producto del Centro, slug recepcionista-24h (hechos verificados 16/11/2026)",
+    "Grabación propia del dueño, 16/11/2026"
+  ],
+  "_comprobado": "Texto y audio contrastados con la ficha y con la transcripción de la llamada; sin nombre del negocio, web, teléfonos ni nombres de personas; no suena la voz del dueño.",
+  "_nota_creador": "16/11/2026 Coordinación: vídeo ya terminado (llamada real al asistente del dueño, montada fuera del ciclo). SIN MÚSICA: no había pistas con licencia accesibles desde la sesión; si Calidad lo exige, el Remasterizador añade música del estudio por debajo de la voz. Encargo: equipo/encargos/recepcionista_24h.md.",
+  "renderizado": false,
+  "video_externo": "https://raw.githubusercontent.com/ajreparacion/instagram/entrada-videos/802_recepcionista_que_hace.mp4",
+  "motor": "externo",
+  "comentario_fijado": "¿Cuántas llamadas pierdes al día? Dilo con un número. Más en @neogestlab",
+  "avance_siguiente": "Mañana: le preguntamos el horario",
+  "portada_ms": 0,
+  "monetizacion": {
+    "objetivo": "solicitud_informacion",
+    "oferta": "Recepcionista 24h: información gratuita en /solicitar",
+    "paso_embudo": "alcance → visita al perfil → solicitud de información"
+  },
+  "youtube": {
+    "titulo": "Le pregunté a un asistente telefónico qué sabe hacer #Shorts",
+    "descripcion": "¿Cuántas llamadas se quedan sin coger mientras trabajas? Llamada real al asistente telefónico de un negocio: resuelve dudas al momento, toma el recado y lo pasa al equipo para que alguien devuelva la llamada. Después de cada llamada llega un correo con el resumen. Solicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=youtube · By Neogest Lab",
+    "etiquetas": [
+      "asistente telefónico",
+      "recepcionista virtual",
+      "autónomos",
+      "pymes",
+      "negocios"
+    ]
+  },
+  "facebook": {
+    "texto": "¿Cuántas llamadas se quedan sin coger mientras trabajas?\nLlamada real al asistente telefónico de un negocio: resuelve dudas al momento, toma el recado y lo pasa al equipo para que alguien devuelva la llamada. Después de cada llamada llega un correo con el resumen.\nSolicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=facebook"
+  }
+}
