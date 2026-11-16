@@ -1,7 +1,3 @@
-2026-11-14 22:57  Control de audio: FALLA silencios > 0.6 s entre frases (pista de voz): [[15.63, 17.15, 1.53], [17.56, 18.95, 1.4]]; duración 21.83 s
-2026-11-14 22:57  319_jambo_ep4_parte2_90_dias: NO se publica, control de audio: silencios > 0.6 s entre frases (pista de voz): [[15.63, 17.15, 1.53], [17.56, 18.95, 1.4]]
-2026-11-14 22:57  Voz con edge-tts: 7 frases en 9 s
-2026-11-14 22:57  Voz: silencios recortados por frase (s): [0.13, 0.12, 0.13, 0.13, 0.12, 0.14, 0.12]
 2026-11-14 22:57  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(1.7), np.float64(3.6), np.float64(4.1), np.float64(4.0), np.float64(5.0), np.float64(2.1), np.float64(4.7)]
 2026-11-14 22:57  Voz: alineación palabra a palabra (small, 13.0 s): 7/7 frases
 2026-11-14 22:58  Mezcla: voz -16.0 LUFS, música -22.3 LUFS (con ducking -25.0), la música baja 6.01 dB (p90) bajo la voz, ratio 2.25; máster -15.89 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
@@ -598,3 +594,7 @@
 2026-11-15 23:33  335_jambo_somos_una_familia: publicado https://www.instagram.com/reel/Dfx3JIngV80/
 2026-11-16 04:49  Estadísticas actualizadas (30 posts, 1602 seguidores)
 2026-11-16 10:50  Estadísticas actualizadas (30 posts, 1602 seguidores)
+2026-11-16 12:52  319_jambo_ep4_parte2_90_dias: publicando…
+2026-11-16 12:52  319_jambo_ep4_parte2_90_dias: YouTube publicado https://youtube.com/shorts/tClV8gdz_VY
+2026-11-16 12:53  319_jambo_ep4_parte2_90_dias: Facebook publicado https://www.facebook.com/reel/1841942683798258
+2026-11-16 12:53  319_jambo_ep4_parte2_90_dias: publicado https://www.instagram.com/reel/DfzSqdiD9jZ/
