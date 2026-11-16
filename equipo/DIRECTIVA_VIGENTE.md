@@ -42,7 +42,7 @@ Fuera del repo (no leen este archivo, se citan para el mapa):
 7. Mensaje al dueño solo si tu rol lo prevé o algo bloquea; si no había nada que hacer, termina en una línea.
 
 ## 4. Marca y cuentas
-- Cuentas: Instagram @neogestlab · YouTube NeogestLab (@neogestlab, ID UCEDMuvCre43IhS0sR6aNEew) · página de Facebook Neogestlab (ID 1437632859434095) · TikTok @neogestlab (cuenta de empresa, alta el 16/11/2026; pendiente de que el dueño la cree y conecte Buffer). @iafacil.trucos y @nosabesloquehasvisto son nombres antiguos de la misma cuenta.
+- Cuentas: Instagram @neogestlab · YouTube NeogestLab (@neogestlab, ID UCEDMuvCre43IhS0sR6aNEew) · página de Facebook Neogestlab (ID 1437632859434095) · TikTok @neogestlab (cuenta de empresa, alta el 16/11/2026; pendiente de que el dueño la cree y conecte Buffer) · página de LinkedIn y ficha de Google Business Profile de Neogest Lab (pendientes de que el dueño las cree y conecte en Buffer). @iafacil.trucos y @nosabesloquehasvisto son nombres antiguos de la misma cuenta.
 - Logo 2026: isotipo «N» de circuitos + «NEOGEST LAB». Kit oficial (solo estos archivos, nunca redibujar): https://flashy-seven-flow-pro.base44.app/marca-2026/ (negativo para fondo oscuro, color para fondo claro, transparente, isotipos, iconos, intro v3). URL permanente: https://media.base44.com/images/public/6ae5244d4e2b32702f0a3cd6/711454aae_neogestlab-logo-2026.webp
 - PROHIBIDO el logo «NL» neón (c25965060_neogest-lab-logo.webp) y su paleta azul/magenta/coral: donde aparezca, se sustituye.
 - Paleta 2026: #13305A, #12B8C8, #8DC63F, #404040, fondo negativo #071226. Tipografía Montserrat. Firma exacta «By Neogest Lab». Cada app conserva su nombre; la empresa es siempre Neogest Lab.
@@ -103,7 +103,7 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - Mínimo 3 episodios NUEVOS de El Jambo al día (orden 15/11), con colchón en cola.
 - Máximo 6 publicaciones al día por canal, con al menos 100 min entre piezas del mismo canal, salvo parrilla expresa del dueño (manda la suya ese día).
 - Facebook y YouTube publican además todo el material existente aprobado (colas de `atrasos/`, `atrasos/politica.json`), lo mejor primero, dentro de esos límites y de la cuota de YouTube (~6 subidas al día).
-- TikTok: 2 piezas al día (13:30 y 20:30), 2 de El Jambo por 1 de app, solo reels ya aprobados y publicados en Instagram con render desde el 14/11; sin producción propia. Lo programa `tiktok.yml` con Buffer gratis (manual: `equipo/tiktok/LEEME.md`); el Estratega ajusta huecos y orden en `equipo/tiktok/config.json` y el Supervisor vigila `ultimo_error` de `equipo/tiktok/estado.json`. Se sube a 3 al día cuando el tiempo visto medio pase del 60 % dos semanas seguidas.
+- Redes vía Buffer gratis (workflow `redes_buffer.yml`, `herramientas/redes_buffer.py`; solo reels ya aprobados y publicados en Instagram con render desde el 14/11; sin producción propia; cada canal queda en espera hasta que el dueño lo conecte): **TikTok** 2 al día (13:30 y 20:30), 2 de El Jambo por 1 de app · **LinkedIn** (página de empresa) 1 al día de lunes a viernes (08:45), 1 de app por 1 de El Jambo, con el enlace /solicitar en el texto · **Google Business Profile** lunes, miércoles y viernes (10:15), solo promos de apps, como imagen con botón al formulario. Manuales y configuración en `equipo/tiktok/`, `equipo/linkedin/` y `equipo/google/`; el Estratega ajusta huecos y orden en cada `config.json` y el Supervisor vigila `ultimo_error` de cada `estado.json`. TikTok sube a 3 al día cuando el tiempo visto medio pase del 60 % dos semanas seguidas.
 - Secuela («Parte 2») de cada reel que supere el objetivo, en 24-48 h. Objetivo a 48 h: salto < 35 % y tiempo visto > 60 % de la duración.
 
 ## 9. Apps y promoción
@@ -113,7 +113,7 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - Gestoría7D SE PROMOCIONA YA (orden del dueño 15/11 19:45).
 - Planes gratis vigentes: Factura7D 2 facturas al mes; APPCC Fácil 2 puntos e informe de 1 día.
 - MEDICATOR: «consulta la base de datos oficial de la AEMPS» (nunca «avalada»), sin consejos médicos; su lectura de papeles es OCR local + reglas: no decir «IA».
-- Métrica que manda: altas en prueba gratuita de Gestión Integral 7D (por encima de seguidores y vistas). Enlace con `src` del canal: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=<slug>&src=instagram|facebook|youtube|tiktok
+- Métrica que manda: altas en prueba gratuita de Gestión Integral 7D (por encima de seguidores y vistas). Enlace con `src` del canal: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=<slug>&src=instagram|facebook|youtube|tiktok|linkedin|google
 - Cierres prohibidos en todo (vídeo, post, DM, automatizaciones): «comenta X y te envío» y «palabra clave → DM».
 - Nunca se escribe a negocios ni personas que no lo hayan pedido (LSSI art. 21). Sin publicidad de pago salvo que el dueño lo pida.
 
@@ -141,3 +141,4 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - 2026-11-15 · Coordinación · el visto bueno del dueño en una pieza manda sobre la nota de Calidad (§7).
 - 2026-11-15 · Coordinación · prueba del ciclo hecha (20:37-21:10): Creador, Calidad, Supervisor, Analista, Remasterizador, Mejora y Comunidad completaron su pasada con los prompts nuevos; retirada la excepción temporal de horario.
 - 2026-11-16 · Coordinación (orden del dueño) · TikTok @neogestlab entra como cuarto canal: republica lo aprobado vía Buffer gratis (§4, §8, §9; equipo/tiktok/).
+- 2026-11-16 · Coordinación (orden del dueño) · LinkedIn y Google Business Profile entran por el mismo flujo de Buffer que TikTok (§4, §8, §9); TikTok se envía con la etiqueta oficial de IA.

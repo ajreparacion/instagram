@@ -1,0 +1,39 @@
+name: Redes vía Buffer · TikTok, LinkedIn y Google
+
+# Dos veces al día rellena en Buffer (plan gratis) las colas de TikTok, LinkedIn y Google Business Profile con reels
+# ya aprobados y publicados en Instagram. Sin BUFFER_API_KEY, o sin el canal conectado en Buffer, ese canal queda en espera.
+# Manuales: equipo/tiktok/LEEME.md, equipo/linkedin/LEEME.md, equipo/google/LEEME.md
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 6 * * *"
+    - cron: "23 15 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: redes-buffer
+  cancel-in-progress: false
+
+jobs:
+  redes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Programar
+        env:
+          BUFFER_API_KEY: ${{ secrets.BUFFER_API_KEY }}
+          PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          for canal in tiktok linkedin google; do python3 herramientas/redes_buffer.py "$canal" || true; done
+      - name: Guardar estado
+        run: |
+          git config user.name "equipo-redes"
+          git config user.email "actions@users.noreply.github.com"
+          git add equipo/tiktok/estado.json equipo/linkedin/estado.json equipo/google/estado.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Redes Buffer: colas programadas"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done

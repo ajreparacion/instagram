@@ -1,0 +1,45 @@
+{
+  "_nota": "Configuración de la página de LinkedIn de Neogest Lab (herramientas/redes_buffer.py linkedin). La edita el Estratega.",
+  "servicio": "linkedin",
+  "medio": "video",
+  "huecos": [
+    "08:45"
+  ],
+  "dias": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "max_pendientes": 8,
+  "render_desde": "2026-11-14",
+  "mezcla": [
+    1,
+    1
+  ],
+  "enlace_en_texto": true,
+  "max_caracteres": 2900,
+  "orden_inicial": [
+    "701_gestion_integral_7d_corto_reel",
+    "330_jambo_ultimo_correo",
+    "702_factura7d_verifactu_corto_reel",
+    "333_jambo_precio_de_amigo",
+    "338_medicator_diferencial_reel",
+    "335_jambo_somos_una_familia",
+    "703_medicator_corto_reel",
+    "331_jambo_vacaciones_agosto",
+    "704_gps_andaluz_corto_reel",
+    "332_jambo_becario_experiencia",
+    "334_jambo_lunes_con_el_bola"
+  ],
+  "incluir_antiguos": [],
+  "excluir": [],
+  "etiquetas": {
+    "jambo": "#autonomos #pymes #humordeoficina",
+    "app": "#autonomos #pymes #digitalizacion"
+  },
+  "cierres": {
+    "factura7d-verifactu": "Pruébala gratis: 2 facturas al mes, sin permanencia"
+  }
+}

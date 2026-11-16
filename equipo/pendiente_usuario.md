@@ -12,6 +12,11 @@ Reducido el 13/11/2026 por el Estratega (la versión larga está en git). Aquí 
 2. **Buffer gratis** en https://buffer.com (botón de registro, plan Free, sin tarjeta) → Channels → Connect → TikTok → autorizar @neogestlab.
 3. **Clave de Buffer**: sigue la guía oficial https://support.buffer.com/en-us/articles/how-to-create-your-buffer-api-key-ShIgYVwM6j , copia la clave → pegarla como secreto `BUFFER_API_KEY` en https://github.com/ajreparacion/instagram/settings/secrets/actions/new . Ese mismo día salen programadas las 8 primeras piezas.
 
+## LinkedIn y Google (16/11/2026): cuando tengas el portátil; la clave de Buffer es la misma de TikTok
+1. **LinkedIn:** con tu perfil personal abierto, crea la página en https://www.linkedin.com/company/setup/new/ → «Empresa» → nombre «Neogest Lab», URL `neogestlab`, sector «Desarrollo de software», tamaño 1-10. Logo y textos: doc «Estrategia LinkedIn y Google». Luego en Buffer: Channels → Connect → LinkedIn → elegir la **página** (no tu perfil).
+2. **Google:** crea la ficha en https://business.google.com/create → nombre «Neogest Lab», categoría «Empresa de software», sin tienda física (zona de servicio: España), web y teléfono. **Verifícala** como te pida Google (suele ser un vídeo corto o un código). Cuando salga «Verificada», en Buffer: Channels → Connect → Google Business Profile.
+No hay que tocar GitHub: en la siguiente pasada (07:23 o 16:23) el sistema detecta cada canal nuevo y empieza a programar.
+
 ## Con fecha
 - **Bio de Instagram** (Analista, 14/11): la bio en vivo aún dice «Comenta APP», un cierre prohibido; cámbiala por la oferta de prueba gratuita (propuesta en equipo/perfil_propuesto.md). Analista (15/11): confirmar si quitar «Comenta APP» de la bio fue voluntario.
 - **Vídeos del Centro en «revision»** (Centro, 14-15/11): esperan tu visto bueno en el editor del Centro (VideoMezcla); sin él no salen.

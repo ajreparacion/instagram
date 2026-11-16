@@ -1,19 +1,19 @@
 #!/usr/bin/env python3
-"""TikTok @neogestlab · programa en Buffer (plan gratis) los reels ya aprobados y publicados en Instagram.
+"""Redes vía Buffer (plan gratis): TikTok, LinkedIn y Google Business Profile de Neogest Lab.
 
-Qué hace en cada pasada (workflow tiktok.yml, una vez al día):
-  1. Elige las siguientes piezas de publicados/ (reel, calidad aprobada, render desde el 14/11/2026, sin cierres
-     prohibidos, no enviadas aún), en el orden de equipo/tiktok/config.json y alternando 2 de El Jambo por 1 de app.
-  2. Descarga el vídeo de Instagram (media_url de la API), lo sube a la release pública «tiktok» y crea el post en
-     Buffer con el texto adaptado a TikTok, en el siguiente hueco libre (config.json: «huecos», hora de Madrid).
-  3. Mantiene como mucho «max_pendientes» posts programados (el plan gratis de Buffer admite 10 por canal).
-  4. Anota lo enviado en equipo/tiktok/estado.json (lo confirma el workflow).
+Uso: python3 herramientas/redes_buffer.py <canal> [--simular]      canal = tiktok | linkedin | google
 
-Secretos (GitHub Actions): BUFFER_API_KEY (obligatorio), PAGE_TOKEN (ya existe), BUFFER_TIKTOK_CHANNEL_ID (opcional).
-Sin BUFFER_API_KEY no hace nada y termina bien: TikTok queda en espera hasta que el dueño conecte Buffer.
+En cada pasada (workflow redes_buffer.yml) y para ese canal:
+  1. Elige las siguientes piezas de publicados/ (reel, calidad aprobada, render desde «render_desde», sin cierres
+     prohibidos, sin «Parte 2», no enviadas aún), según equipo/<canal>/config.json (orden, mezcla Jambo/app, solo_apps).
+  2. Descarga el vídeo de Instagram (media_url). Si el canal publica vídeo lo sube tal cual a la release pública
+     «redes»; si publica imagen (Google no admite vídeo) saca el primer fotograma en 1080x1080 con ffmpeg.
+  3. Crea el post en Buffer con el texto adaptado al canal, en el siguiente hueco libre (hora de Madrid).
+  4. Mantiene como mucho «max_pendientes» posts programados (Buffer gratis admite 10 por canal) y anota lo enviado
+     en equipo/<canal>/estado.json (lo confirma el workflow).
 
-Uso: python3 herramientas/tiktok_buffer.py            (pasada real)
-     python3 herramientas/tiktok_buffer.py --simular  (enseña qué enviaría y con qué texto; no llama a nada)
+Secretos: BUFFER_API_KEY (obligatorio), PAGE_TOKEN (ya existe). Sin BUFFER_API_KEY, o si Buffer aún no tiene ese
+canal conectado, no hace nada y termina bien: el canal queda en espera. --simular enseña qué enviaría, sin llamar a nada.
 """
 import glob
 import json
@@ -27,13 +27,13 @@ from datetime import datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DIR = os.path.join(RAIZ, "equipo", "tiktok")
 MADRID = ZoneInfo("Europe/Madrid")
-RELEASE = "tiktok"
+RELEASE = "redes"
 REPO = os.environ.get("GITHUB_REPOSITORY", "ajreparacion/instagram")
 BUFFER = "https://api.buffer.com"
 PROHIBIDO = re.compile(r"Escr[ií]beme|[Cc]omenta [A-ZÁÉÍÓÚ]{3,}\b|te (lo )?env[ií]o|palabra clave", re.U)
-CIERRE = "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil."
+CIERRE = "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso"
+SOLICITAR = "https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar"
 
 
 def leer(ruta, defecto):
@@ -54,8 +54,14 @@ def es_jambo(nombre, post):
     return "jambo" in nombre or "jambo" in str(post.get("formato", "")).lower()
 
 
-def texto_tiktok(nombre, post, cfg):
-    """Mismo texto ya verificado del post de Instagram, con el cierre único y etiquetas de TikTok."""
+def enlace(post, canal):
+    q = {"app": post["app_slug"]} if post.get("app_slug") else {}
+    q["src"] = canal
+    return SOLICITAR + "?" + urllib.parse.urlencode(q)
+
+
+def texto_canal(nombre, post, cfg, canal):
+    """Mismo texto ya verificado del post de Instagram, con el cierre único y lo propio de cada canal."""
     lineas, tiene_ia = [], False
     for linea in str(post.get("texto", "")).split("\n"):
         l = linea.strip()
@@ -63,18 +69,32 @@ def texto_tiktok(nombre, post, cfg):
             continue                                   # fuera las etiquetas de Instagram
         if l.lower().startswith("pide tu prueba gratuita") or l.lower().startswith("pruébala gratis"):
             continue                                   # el cierre se pone una sola vez, abajo
+        if canal == "google" and re.search(r"m[aá]ndaselo|cu[eé]ntalo en comentarios\.?$", l, re.I):
+            continue                                   # en la ficha de Google no hay comentarios ni reenvíos
         l = re.sub(r"\s*(→\s*)?enlace /solicitar del perfil.*$", "", l, flags=re.I)
+        l = re.sub(r"\s*Enlace en el perfil\.?$", "", l, flags=re.I)
         if "generad" in l.lower() and "ia" in l.lower():
             tiene_ia = True
-        lineas.append(l)
+            if canal == "google":
+                continue                               # en Google va una imagen fija, sin voz
+        if l:
+            lineas.append(l)
     cierre = cfg.get("cierres", {}).get(post.get("app_slug", ""), CIERRE)
-    etiquetas = cfg["etiquetas"]["jambo" if es_jambo(nombre, post) else "app"]
-    if post.get("app_slug"):
-        etiquetas = etiquetas + " #" + re.sub(r"[^a-z0-9]", "", post["app_slug"].lower())
+    if cfg.get("enlace_en_texto"):
+        cierre += ": " + enlace(post, canal)
+    elif canal == "google":
+        cierre += ". Pulsa el botón."
+    else:
+        cierre += ". Enlace en el perfil."
     cuerpo = lineas + [cierre]
-    if not tiene_ia:
+    if not tiene_ia and cfg["medio"] == "video":
         cuerpo.append("Voz generada por IA")
-    return "\n".join(cuerpo + [etiquetas])[:2100]
+    etiquetas = cfg.get("etiquetas", {}).get("jambo" if es_jambo(nombre, post) else "app", "")
+    if etiquetas and post.get("app_slug") and canal == "tiktok":
+        etiquetas += " #" + re.sub(r"[^a-z0-9]", "", post["app_slug"].lower())
+    if etiquetas:
+        cuerpo.append(etiquetas)
+    return "\n".join(cuerpo)[:cfg.get("max_caracteres", 2100)]
 
 
 def candidatos(cfg, estado):
@@ -96,23 +116,26 @@ def candidatos(cfg, estado):
         if re.search(r"parte\s*2|_parte2", nombre + " " + str(post.get("texto", ""))[:40], re.I) \
                 and nombre not in cfg.get("incluir_antiguos", []):
             continue                                   # una «Parte 2» sin su parte 1 en TikTok no se entiende
+        if cfg.get("solo_apps") and (es_jambo(nombre, post) or not post.get("app_slug")):
+            continue
         piezas[nombre] = (post, res)
     orden = [n for n in cfg.get("orden_inicial", []) if n in piezas] + \
             [n for n in sorted(piezas) if n not in cfg.get("orden_inicial", [])]
     jambo = [n for n in orden if es_jambo(n, piezas[n][0])]
     apps = [n for n in orden if not es_jambo(n, piezas[n][0])]
     mezcla = []
-    while jambo or apps:                               # 2 de El Jambo por 1 de app
-        mezcla += jambo[:2]; jambo = jambo[2:]
-        mezcla += apps[:1]; apps = apps[1:]
+    nj, na = cfg.get("mezcla", [2, 1])                 # p. ej. 2 de El Jambo por 1 de app
+    while jambo or apps:
+        mezcla += jambo[:nj]; jambo = jambo[nj:]
+        mezcla += apps[:na]; apps = apps[na:]
     return [(n, *piezas[n]) for n in mezcla]
 
 
 def huecos_libres(cfg, estado, ahora):
     ocupados = {v.get("dueAt") for v in estado.get("enviados", {}).values()}
     dia = ahora.astimezone(MADRID).date()
-    for _ in range(30):
-        for hhmm in cfg["huecos"]:
+    for _ in range(60):
+        for hhmm in (cfg["huecos"] if dia.isoweekday() in cfg.get("dias", [1, 2, 3, 4, 5, 6, 7]) else []):
             h, m = map(int, hhmm.split(":"))
             t = datetime(dia.year, dia.month, dia.day, h, m, tzinfo=MADRID).astimezone(timezone.utc)
             iso = t.strftime("%Y-%m-%dT%H:%M:%S.000Z")
@@ -131,16 +154,14 @@ def buffer(consulta):
     return datos["data"]
 
 
-def canal_tiktok():
-    fijo = os.environ.get("BUFFER_TIKTOK_CHANNEL_ID", "").strip()
-    if fijo:
-        return fijo
+def canal_buffer(cfg):
+    """Id del canal en Buffer por nombre de servicio; None si el dueño aún no lo ha conectado."""
     for org in buffer("query { account { organizations { id name } } }")["account"]["organizations"]:
         canales = buffer('query { channels(input: {organizationId: %s}) { id name service } }' % json.dumps(org["id"]))
         for c in canales["channels"]:
-            if str(c.get("service", "")).lower() == "tiktok":
+            if cfg["servicio"] in str(c.get("service", "")).lower():
                 return c["id"]
-    raise RuntimeError("Buffer no tiene ningún canal de TikTok conectado")
+    return None
 
 
 def gh(*args, check=True):
@@ -150,30 +171,46 @@ def gh(*args, check=True):
     return r
 
 
-def video_publico(nombre, media_id):
-    """Instagram -> release «tiktok» (URL pública y estable para que Buffer la descargue)."""
-    cfg = leer(os.path.join(RAIZ, "equipo", "config_publico.json"), {})
-    url = "https://graph.facebook.com/%s/%s?%s" % (cfg.get("version", "v27.0"), media_id, urllib.parse.urlencode(
+def medio_publico(nombre, media_id, canal, cfg):
+    """Instagram -> release «redes» (URL pública y estable para que Buffer la descargue). Vídeo o primer fotograma."""
+    pub = leer(os.path.join(RAIZ, "equipo", "config_publico.json"), {})
+    url = "https://graph.facebook.com/%s/%s?%s" % (pub.get("version", "v27.0"), media_id, urllib.parse.urlencode(
         {"fields": "media_url", "access_token": os.environ["PAGE_TOKEN"]}))
     with urllib.request.urlopen(url, timeout=60) as r:
         media = json.load(r).get("media_url")
     if not media:
         raise RuntimeError("Instagram no da media_url")
-    fichero = "/tmp/%s.mp4" % nombre
+    fichero = "/tmp/%s_%s.mp4" % (canal, nombre)
     urllib.request.urlretrieve(media, fichero)
     if os.path.getsize(fichero) < 200_000:
         raise RuntimeError("vídeo descargado demasiado pequeño")
+    if cfg["medio"] == "imagen":
+        jpg = fichero[:-4] + ".jpg"
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(cfg.get("fotograma_s", 0.6)), "-i", fichero,
+                        "-frames:v", "1", "-vf", "scale=-2:1080,pad=1080:1080:(ow-iw)/2:0:color=0x071226",
+                        "-q:v", "3", jpg], check=True)
+        fichero = jpg
     if gh("release", "view", RELEASE, check=False).returncode != 0:
-        gh("release", "create", RELEASE, "--title", "Vídeos para TikTok", "--notes", "Copias temporales para Buffer.")
+        gh("release", "create", RELEASE, "--title", "Medios para Buffer", "--notes", "Copias temporales para Buffer.")
     gh("release", "upload", RELEASE, fichero, "--clobber")
-    return "https://github.com/%s/releases/download/%s/%s.mp4" % (REPO, RELEASE, nombre)
+    return "https://github.com/%s/releases/download/%s/%s" % (REPO, RELEASE, os.path.basename(fichero))
 
 
-def crear_post(canal, texto, url, cuando):
+def crear_post(id_canal, texto, url, cuando, post, canal, cfg):
+    if cfg["medio"] == "imagen":
+        medio = "{image: {url: %s}}" % json.dumps(url)
+    else:
+        medio = "{video: {url: %s, metadata: {thumbnailOffset: 0}}}" % json.dumps(url)
+    meta = ""
+    if canal == "tiktok":
+        meta = ", metadata: {tiktok: {isAiGenerated: true}}"   # voz sintética: etiqueta oficial de IA de TikTok
+    elif canal == "google":
+        meta = ", metadata: {google: {type: whats_new, detailsWhatsNew: {button: signup, link: %s}}}" % json.dumps(
+            enlace(post, canal))
     q = """mutation { createPost(input: {text: %s, channelId: %s, schedulingType: automatic, mode: customScheduled,
-      dueAt: %s, assets: [{video: {url: %s, metadata: {thumbnailOffset: 0}}}]}) {
+      dueAt: %s, assets: [%s]%s}) {
       ... on PostActionSuccess { post { id } } ... on MutationError { message } } }""" % (
-        json.dumps(texto, ensure_ascii=False), json.dumps(canal), json.dumps(cuando), json.dumps(url))
+        json.dumps(texto, ensure_ascii=False), json.dumps(id_canal), json.dumps(cuando), medio, meta)
     r = buffer(q)["createPost"]
     if not r.get("post"):
         raise RuntimeError("Buffer rechazó el post: " + str(r.get("message")))
@@ -184,45 +221,53 @@ def limpiar_release(estado, ahora):
     limite = (ahora - timedelta(days=3)).strftime("%Y-%m-%dT%H:%M:%S.000Z")
     for nombre, v in estado.get("enviados", {}).items():
         if v.get("dueAt", "9") < limite and not v.get("limpio"):
-            gh("release", "delete-asset", RELEASE, nombre + ".mp4", "-y", check=False)
+            gh("release", "delete-asset", RELEASE, v.get("fichero", ""), "-y", check=False)
             v["limpio"] = True
 
 
 def main():
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    canal = args[0] if args else ""
+    if canal not in ("tiktok", "linkedin", "google"):
+        raise SystemExit("Uso: redes_buffer.py tiktok|linkedin|google [--simular]")
     simular = "--simular" in sys.argv
-    cfg = leer(os.path.join(DIR, "config.json"), {})
-    ruta_estado = os.path.join(DIR, "estado.json")
+    carpeta = os.path.join(RAIZ, "equipo", canal)
+    cfg = leer(os.path.join(carpeta, "config.json"), {})
+    ruta_estado = os.path.join(carpeta, "estado.json")
     estado = leer(ruta_estado, {"enviados": {}, "ultimo_error": ""})
     ahora = datetime.now(timezone.utc)
     ahora_iso = ahora.strftime("%Y-%m-%dT%H:%M:%S.000Z")
     pendientes = sum(1 for v in estado["enviados"].values() if v.get("dueAt", "") > ahora_iso)
     cupo = max(0, cfg["max_pendientes"] - pendientes)
     lista = candidatos(cfg, estado)
-    print(f"TikTok: {pendientes} programados, cupo {cupo}, {len(lista)} piezas disponibles")
+    print(f"{canal}: {pendientes} programados, cupo {cupo}, {len(lista)} piezas disponibles")
     if simular:
         for (nombre, post, _), cuando in zip(lista, huecos_libres(cfg, estado, ahora)):
-            print(f"\n=== {nombre} · {cuando}\n{texto_tiktok(nombre, post, cfg)}")
+            print(f"\n=== {nombre} · {cuando}\n{texto_canal(nombre, post, cfg, canal)}")
         return
     if not os.environ.get("BUFFER_API_KEY"):
-        print("TikTok en espera: falta el secreto BUFFER_API_KEY (ver equipo/tiktok/LEEME.md).")
+        print(f"{canal} en espera: falta el secreto BUFFER_API_KEY (ver equipo/{canal}/LEEME.md).")
         return
-    if not cupo or not lista:
-        limpiar_release(estado, ahora); escribir(ruta_estado, estado)
-        return
+    antes = json.dumps(estado, sort_keys=True)
     try:
-        canal = canal_tiktok()
+        id_canal = canal_buffer(cfg)
+        if not id_canal:
+            print(f"{canal} en espera: Buffer no tiene ese canal conectado todavía.")
+            return
         for (nombre, post, res), cuando in zip(lista[:cupo], huecos_libres(cfg, estado, ahora)):
-            url = video_publico(nombre, res["media_id"])
-            pid = crear_post(canal, texto_tiktok(nombre, post, cfg), url, cuando)
-            estado["enviados"][nombre] = {"dueAt": cuando, "buffer_id": pid, "enviado": ahora_iso}
+            url = medio_publico(nombre, res["media_id"], canal, cfg)
+            pid = crear_post(id_canal, texto_canal(nombre, post, cfg, canal), url, cuando, post, canal, cfg)
+            estado["enviados"][nombre] = {"dueAt": cuando, "buffer_id": pid, "enviado": ahora_iso,
+                                          "fichero": os.path.basename(url)}
             estado["ultimo_error"] = ""
             escribir(ruta_estado, estado)
-            print(f"{nombre}: programado en TikTok para {cuando}")
+            print(f"{nombre}: programado en {canal} para {cuando}")
     except Exception as e:                             # no tumba el workflow: queda anotado para el Supervisor
         estado["ultimo_error"] = f"{ahora_iso} · {e}"[:500]
-        print("ERROR TikTok:", estado["ultimo_error"])
+        print(f"ERROR {canal}:", estado["ultimo_error"])
     limpiar_release(estado, ahora)
-    escribir(ruta_estado, estado)
+    if json.dumps(estado, sort_keys=True) != antes:
+        escribir(ruta_estado, estado)
 
 
 if __name__ == "__main__":

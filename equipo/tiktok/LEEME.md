@@ -3,7 +3,7 @@
 Creado el 16/11/2026 por Coordinación (orden del dueño). Manda `equipo/DIRECTIVA_VIGENTE.md`; esto es el manual operativo.
 
 ## Qué hace
-`herramientas/tiktok_buffer.py` (workflow `tiktok.yml`, 07:23 y 16:23 hora de Madrid) coge los reels de `publicados/` con calidad aprobada y render desde el 14/11/2026, descarga el vídeo de Instagram, lo deja en la release pública «tiktok» y lo programa en Buffer (plan gratis) para TikTok. No hay producción aparte: TikTok vive de lo que Calidad ya aprobó.
+`herramientas/redes_buffer.py tiktok` (workflow `redes_buffer.yml`, 07:23 y 16:23 hora de Madrid) coge los reels de `publicados/` con calidad aprobada y render desde el 14/11/2026, descarga el vídeo de Instagram, lo deja en la release pública «redes» y lo programa en Buffer (plan gratis) para TikTok. No hay producción aparte: TikTok vive de lo que Calidad ya aprobó.
 
 - Huecos: 13:30 y 20:30 (Madrid), 2 piezas al día. Se cambian en `equipo/tiktok/config.json` (`huecos`).
 - Mezcla: 2 de El Jambo por 1 de app. Orden de arranque en `orden_inicial`; después, por número de pieza.
@@ -16,7 +16,7 @@ Creado el 16/11/2026 por Coordinación (orden del dueño). Manda `equipo/DIRECTI
 Cuenta de TikTok de empresa, cuenta gratis de Buffer con ese TikTok conectado y el secreto `BUFFER_API_KEY` en GitHub. Pasos en `equipo/pendiente_usuario.md`. Sin el secreto el workflow termina sin hacer nada.
 
 ## Límites conocidos
-- Buffer no marca por API la etiqueta «Contenido generado por IA» de TikTok: el texto lleva siempre «Voz (y personajes) generados por IA». Si TikTok avisa en alguna pieza, se activa la etiqueta a mano en esa pieza y se anota en el tablón.
+- Etiqueta de IA: cada vídeo se envía con `isAiGenerated: true` (la etiqueta oficial «Generado por IA» de TikTok), y el texto lleva además «Voz (y personajes) generados por IA».
 - La música va incrustada en el vídeo (MacLeod CC BY 4.0 o Pixabay, con atribución). Si TikTok silencia una pieza por música, se anota y esa pista deja de usarse.
 - El enlace de la bio es `/solicitar?src=tiktok`; las altas con origen `tiktok` se ven en /panel/solicitudes del Centro.
-- Probar sin enviar nada: `python3 herramientas/tiktok_buffer.py --simular`.
+- Probar sin enviar nada: `python3 herramientas/redes_buffer.py tiktok --simular`.

@@ -1,6 +1,9 @@
 {
-  "_nota": "Configuración de TikTok @neogestlab (herramientas/tiktok_buffer.py). La edita el Estratega.",
-  "huecos": ["13:30", "20:30"],
+  "_nota": "Configuración de TikTok @neogestlab (herramientas/redes_buffer.py tiktok). La edita el Estratega.",
+  "huecos": [
+    "13:30",
+    "20:30"
+  ],
   "max_pendientes": 8,
   "render_desde": "2026-11-14",
   "orden_inicial": [
@@ -24,5 +27,13 @@
   },
   "cierres": {
     "factura7d-verifactu": "Pruébala gratis: 2 facturas al mes, sin permanencia. Enlace en el perfil."
-  }
+  },
+  "servicio": "tiktok",
+  "medio": "video",
+  "mezcla": [
+    2,
+    1
+  ],
+  "enlace_en_texto": false,
+  "max_caracteres": 2100
 }
