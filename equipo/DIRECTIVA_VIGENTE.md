@@ -71,7 +71,7 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 | Estructura | ANTES/DESPUÉS: problema real en 2 s → la app lo resuelve en pantalla con datos ficticios → resultado. Abre con lo que no hacen las demás (IA, cámara, lectura de documentos…; brief del proyecto `claude/redes/promos_diferenciales_2026-11-15.md`); «la única» solo con prueba de competencia anotada. Nada de escaparate de funciones básicas ni cifras intermedias sin explicar; calculadoras congeladas hasta rehacerlas así |
 | Silencios máx. | 1,5 s |
 | Volumen | −14 LUFS |
-| Voz | edge-tts (narración es-ES-ElviraNeural) |
+| Voz | ElevenLabs Johnny en la versión final (se produce en el estudio de vídeo del Centro, como los cortos 7xx); ensayos y respaldo con edge-tts (es-ES-ElviraNeural) si el presupuesto del mes está agotado |
 | Música | en primer plano (§6) |
 | Cierre en vídeo | estático ≤ 3 s con el logo 2026 y «By Neogest Lab»; «Enlace en el perfil», nunca la URL base44 en pantalla |
 | Cierre en el post | cierre único de prueba gratuita con el enlace /solicitar?app=<slug>&src=<canal>; excepción documentada: Factura7D «Pruébala gratis: 2 facturas al mes, sin permanencia» |
@@ -83,7 +83,7 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 ## 6. Voz y música
 - Redes (El Jambo y reels): edge-tts. El Jambo es-ES-AlvaroNeural +6 % / −3 Hz · La Jupillo es-ES-XimenaNeural · otras IAs y narración es-ES-ElviraNeural (con el tono propio de Pelota, Bola y Trámites que fijan `equipo/voz.json` y `herramientas/estudio/LEEME.md`).
 - Cadena de audio del 14/11: una frase por archivo, silenceremove a −45 dB, aresample 48 kHz, highpass 70 Hz, compresor 2,5:1 a −20 dB (ataque 8 ms, suelta 120 ms), +2 dB en 3,5 kHz, sin reverb ni paso bajo; música 0,6 con ducking 2,5:1; máster −14 LUFS, pico real −1 dB.
-- Vídeos de presentación del Centro: ElevenLabs voz Johnny solo para la versión final; tope total 20.000 caracteres; es la única herramienta de pago autorizada.
+- ElevenLabs voz Johnny (única herramienta de pago autorizada; plan Starter, 39.756 caracteres al mes): solo en la versión final de los vídeos de presentación del Centro, las promos de app y los reels de datos. Presupuesto: 30.000 caracteres al mes entre todo (unas 55 piezas de ~500 caracteres); el resto del saldo es reserva y nunca se compra saldo extra. Antes de gastar se suma el registro de `claude/redes/rehacer_videos_centro_elevenlabs.md` y `gasto.log`; agotado el presupuesto, edge-tts. El Jambo NO usa ElevenLabs: a 3 episodios al día gastaría unos 43.000 caracteres al mes, más que el plan entero.
 - PROHIBIDA la voz del dueño (voz_dueno/*, referencias, clones). Retirados Chatterbox, MeloTTS, Kokoro y Piper.
 - Pronunciación: «AJ» = «Ajota» de corrido; «Excel» = «Éxcel». Cifras en letra, sin palabras en inglés ni «IA» en la voz, y nunca un nombre propio como primera palabra (whisper falla).
 - Música en primer plano, que resalte (con voz baja como mucho 6 dB y se oye clara entre frases). Fuentes: Kevin MacLeod (incompetech.com, CC BY 4.0; en el post: «Música: "<título>" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0») o la biblioteca Pixabay de Neogest Studio. Nada con licencia dudosa.
@@ -142,3 +142,4 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - 2026-11-15 · Coordinación · prueba del ciclo hecha (20:37-21:10): Creador, Calidad, Supervisor, Analista, Remasterizador, Mejora y Comunidad completaron su pasada con los prompts nuevos; retirada la excepción temporal de horario.
 - 2026-11-16 · Coordinación (orden del dueño) · TikTok @neogestlab entra como cuarto canal: republica lo aprobado vía Buffer gratis (§4, §8, §9; equipo/tiktok/).
 - 2026-11-16 · Coordinación (orden del dueño) · LinkedIn y Google Business Profile entran por el mismo flujo de Buffer que TikTok (§4, §8, §9); TikTok se envía con la etiqueta oficial de IA.
+- 2026-11-16 · Coordinación (orden del dueño: «si bastan los créditos, sí») · ElevenLabs Johnny pasa a ser la voz final de promos de app y reels de datos, con presupuesto de 30.000 caracteres al mes; El Jambo sigue con edge-tts porque los créditos no alcanzan (§5, §6).

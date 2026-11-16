@@ -1,6 +1,6 @@
 # Campaña agresiva a coste cero (orden del dueño, 16/11/2026)
 
-Única regla de gasto: 0 €. Solo Claude y ElevenLabs (este con su tope de 20.000 caracteres y solo para los vídeos de presentación del Centro, §6 de la directiva). Manda `equipo/DIRECTIVA_VIGENTE.md`; esto es el encargo de campaña para el Estratega, el Creador y el Remasterizador. Dura 30 días (hasta el 16/12/2026) y se mide en solicitudes por origen (`src`), no en vistas.
+Única regla de gasto: 0 €. Solo Claude y ElevenLabs (voz Johnny en promos de app, reels de datos y vídeos del Centro, con 30.000 caracteres al mes, §6 de la directiva; El Jambo sigue con voz gratuita). Manda `equipo/DIRECTIVA_VIGENTE.md`; esto es el encargo de campaña para el Estratega, el Creador y el Remasterizador. Dura 30 días (hasta el 16/12/2026) y se mide en solicitudes por origen (`src`), no en vistas.
 
 ## Por qué
 Semana 8-15/11: 1.770 cuentas alcanzadas → 8 visitas al perfil (0,5 %; meta 3 %) → 3 clics → 1 solicitud → 0 €. El humor da las vistas y las promos no llegan a nadie: hay que meter el producto dentro del humor y multiplicar los sitios donde sale.
