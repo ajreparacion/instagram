@@ -7,6 +7,11 @@ Reducido el 13/11/2026 por el Estratega (la versión larga está en git). Aquí 
 2. **En /panel/solicitudes, marcar la solicitud del 8/11** como contactada o descartada (o decir que fue una prueba) **y decir si alguna app tiene plan de pago o precio**. Sin eso el embudo no puede medir euros.
 3. **Archivar desde el móvil los duplicados** (la API no archiva): carruseles del 8/11 «Deja de pedirle así las cosas a la IA» ×3, «¿Pasas los presupuestos al Excel por la noche?» ×3, «5 tareas pesadas…» ×2 y el reel de AJ Web del 10/11 ×2; dejar uno de cada. Quitar de paso lo que aún diga «Escríbeme IDEA».
 
+## TikTok (16/11/2026): 3 pasos tuyos, unos 15 minutos; después todo es automático
+1. **Crear la cuenta** en https://www.tiktok.com/signup con el correo de la empresa. Usuario `neogestlab`, nombre «Neogest Lab». Luego, en el móvil: Perfil → menú ☰ → Ajustes y privacidad → Cuenta → **Cambiar a cuenta de empresa** (categoría «Software» o «Servicios de TI»). Foto, bio y enlace: copiar de equipo/tiktok/LEEME.md y del doc «Estrategia TikTok».
+2. **Buffer gratis** en https://buffer.com/signup (sin tarjeta) → Channels → Connect → TikTok → autorizar @neogestlab.
+3. **Clave de Buffer**: https://publish.buffer.com/settings/api → crear clave → copiarla → pegarla como secreto `BUFFER_API_KEY` en https://github.com/ajreparacion/instagram/settings/secrets/actions/new . Ese mismo día salen programadas las 8 primeras piezas.
+
 ## Con fecha
 - **Bio de Instagram** (Analista, 14/11): la bio en vivo aún dice «Comenta APP», un cierre prohibido; cámbiala por la oferta de prueba gratuita (propuesta en equipo/perfil_propuesto.md). Analista (15/11): confirmar si quitar «Comenta APP» de la bio fue voluntario.
 - **Vídeos del Centro en «revision»** (Centro, 14-15/11): esperan tu visto bueno en el editor del Centro (VideoMezcla); sin él no salen.
