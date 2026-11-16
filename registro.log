@@ -1,4 +1,3 @@
-2026-11-15 09:14  321_jambo_ep6_parte2_devolucion: NO se publica, control de audio: voz distinta del guion: faltan ['veintisiete', 'c', 'tique', 'veintisiete', 'd'], sobran ['27c', 'ticket', '27d'] (rehacer esas frases)
 2026-11-15 09:14  322_jambo_ep7_parte2_clase: error al renderizar (1/3): Ningún motor de voz funcionó (['edge']): edge-tts falló: edge-tts falló para «Son cuarenta alumnos. Seguro que aprueban.»: No audio was received. Please verify that your parameters are correct.
 2026-11-15 09:28  Voz con edge-tts: 7 frases en 15 s
 2026-11-15 09:28  Voz: silencios recortados por frase (s): [0.12, 0.13, 0.1, 0.12, 0.13, 0.14, 0.13]
@@ -598,3 +597,4 @@
 2026-11-16 21:12  322_jambo_ep7_parte2_clase: YouTube publicado https://youtube.com/shorts/o8rAItgyf_Q
 2026-11-16 21:12  322_jambo_ep7_parte2_clase: Facebook publicado https://www.facebook.com/reel/1501694306352745
 2026-11-16 21:12  322_jambo_ep7_parte2_clase: publicado https://www.instagram.com/reel/Df0LzI6CtCK/
+2026-11-16 22:54  Estadísticas actualizadas (30 posts, 1601 seguidores)
