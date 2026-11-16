@@ -119,30 +119,25 @@
   "_nota_cadena_2": "10/11/2026 (pasada urgente): sin alimiter por frase (un solo limitador, el del máster, limite 0,89 + loudnorm TP -1,5). El pico de cada frase se normaliza a -6 dBFS antes de la cadena (normalizar_pico_db), así el compresor trabaja siempre al mismo nivel con makeup 3 (lineal, ≈ +9,5 dB; antes 3,2 + alimiter 0,62 que recortaba picos). Cada frase con fundido de entrada 15 ms y de salida 40 ms (fundidos_frase). Piper desactivado (permitir_piper false): si falla Chatterbox y Kokoro, el render falla y no se publica. Revertir: herramientas/versiones/voz.json_2026-11-10c.",
   "edge": {
     "voces": {
-      "jambo": {
-        "voz": "es-ES-AlvaroNeural",
-        "rate": "+6%",
-        "pitch": "-3Hz"
+      "rosa": {
+        "voz": "es-ES-ElviraNeural",
+        "rate": "+0%",
+        "pitch": "-4Hz"
       },
-      "jupillo": {
+      "felipe": {
+        "voz": "es-ES-AlvaroNeural",
+        "rate": "-4%",
+        "pitch": "-2Hz"
+      },
+      "sindy": {
         "voz": "es-ES-XimenaNeural",
+        "rate": "+8%",
+        "pitch": "+4Hz"
+      },
+      "neo": {
+        "voz": "es-ES-AlvaroNeural",
         "rate": "+0%",
         "pitch": "+0Hz"
-      },
-      "pelota": {
-        "voz": "es-ES-ElviraNeural",
-        "rate": "+6%",
-        "pitch": "+8Hz"
-      },
-      "bola": {
-        "voz": "es-ES-ElviraNeural",
-        "rate": "+10%",
-        "pitch": "-10Hz"
-      },
-      "tramites": {
-        "voz": "es-ES-ElviraNeural",
-        "rate": "-8%",
-        "pitch": "-4Hz"
       }
     },
     "defecto": {
@@ -152,7 +147,8 @@
     },
     "max_s": 600,
     "_nota": "14/11/2026 DIRECTIVA DE VÍDEO del dueño: edge-tts (Microsoft Edge neural, es-ES) por personaje; sustituye a Melo/Kokoro/Chatterbox (nunca la voz del dueño). Revertir: cp herramientas/versiones/voz.json_2026-11-14e equipo/voz.json (vuelve a Melo).",
-    "_nota_15_11": "15/11/2026: Pelota, Bola y Trámites con ElviraNeural y pitch/rate distintos para distinguirlos (doc jambo_episodios_2026-11-15.md). Revertir: borrar esas tres entradas."
+    "_nota_15_11": "15/11/2026: Pelota, Bola y Trámites con ElviraNeural y pitch/rate distintos para distinguirlos (doc jambo_episodios_2026-11-15.md). Retirados el 16/11 (ver nota siguiente).",
+    "_nota_16_11": "16/11/2026, orden del dueño: reparto nuevo de El Jambo que sabe (Rosa Melano, Felipe Lotas, Sindy Entes, Neo); retirados Jambo, Jupillo, Pelota, Bola y Trámites. Doc: claude/redes/jambo_reparto_nuevo_2026-11-16.md y equipo/serie_jambo.md (biblia v3)."
   },
   "sr_voz": 48000,
   "control_audio": {

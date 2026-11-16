@@ -1,12 +1,12 @@
-# El Jambo en Neogest Studio (formato de dibujos de calidad) · 15/11/2026
+# El Jambo en Neogest Studio (formato de dibujos de calidad) · 16/11/2026
 
-Orden del dueño (15/11): «El Jambo continúa con el nuevo formato de dibujos de calidad»; «los guiones tienen que tener más sentido, efectos de retención y que se entienda el mensaje».
+Orden del dueño (15/11): «El Jambo continúa con el nuevo formato de dibujos de calidad»; «los guiones tienen que tener más sentido, efectos de retención y que se entienda el mensaje». Orden del dueño (16/11): reparto nuevo — ver `equipo/serie_jambo.md` (biblia v3) y `claude/redes/jambo_reparto_nuevo_2026-11-16.md`.
 El motor «sketch» de este repo queda SUSTITUIDO para la serie. Cada episodio se renderiza en Neogest Studio (Base44 6af862101565c330cf06389f, `node scripts/render.mjs spec.json salida.mp4 --hoja`) y se pone en `post.json` como `"video_externo": "<url pública mp4>"` con `"renderizado": false`; el ciclo lo descarga y lo sube a la release (su calidad.json caduca y Calidad lo evalúa).
 
 ## Cómo se monta un episodio (ver la receta en gen_episodios.py)
 - Apertura de 1,3 s con un clip real de la Biblioteca (MediaAsset tags flow/gemini) y el gancho en texto con «whoosh».
-- Personajes del estudio (jambo, jupillo, pelota, bola, tramites, cliente) sobre decorado (oficina, despacho, bar, calle, reunion), boca sincronizada; plano distinto en cada frase; primer plano + destello + sello con «impacto» en el remate.
-- Voz edge-tts por personaje con marcas de palabra (subtítulos exactos): Jambo AlvaroNeural +6 %/−3 Hz, Jupillo XimenaNeural, Pelota ElviraNeural +8 Hz, Bola ElviraNeural −10 Hz, Trámites ElviraNeural −4 Hz, cliente AlvaroNeural −10 Hz.
+- Personajes del estudio (rosa, felipe, sindy, neo, cliente) sobre decorado (oficina, despacho, bar, calle, reunion), boca sincronizada; plano distinto en cada frase; primer plano + destello + sello con «impacto» en el remate. **Pendiente de dibujar en `src/studio/characters.js` de Neogest Studio** (hasta entonces usan el aspecto que tuvieran asignado los slugs retirados): Rosa Melano (jefa, traje chaqueta, gesto cortante), Felipe Lotas (empleado, cara de empanado, reacciona siempre tarde), Sindy Entes (empleada, le faltan todos los dientes salvo 3, mucho carácter), Neo (IA que resuelve, diseño sintético/robótico sobrio).
+- Voz edge-tts por personaje con marcas de palabra (subtítulos exactos): Rosa ElviraNeural −4 Hz, Felipe AlvaroNeural −4 %/−2 Hz, Sindy XimenaNeural +8 %/+4 Hz, Neo AlvaroNeural (pitch 0, distinto de Felipe por el rate/pitch), cliente AlvaroNeural −10 Hz.
 - Emoji en cada golpe de la escalada, barra de progreso, música Pixabay «comedia» de la biblioteca del estudio con ducking.
 - Cierre: MORALEJA en una línea (el mensaje que tiene que quedar) + pregunta para comentar + cierre de marca. Duración ≤ 30 s (escenas con "duration" 0,4 para que mande la voz).
 
@@ -14,7 +14,7 @@ El motor «sketch» de este repo queda SUSTITUIDO para la serie. Cada episodio s
 1. Planteamiento claro en la primera frase: quién quiere qué y por qué es absurdo.
 2. Cada golpe de la escalada sigue la lógica del anterior y es peor; nada de frases sueltas.
 3. El giro resuelve el conflicto planteado (no otro) y se entiende sin contexto.
-4. Moraleja explícita en el cierre, en 6-9 palabras («Tu trabajo vale lo mismo para todos»).
+4. Moraleja explícita en el cierre, en 6-9 palabras («Quien más controla tu tiempo suele controlar peor el suyo»). La dice Neo o aparece en pantalla, nunca Rosa.
 5. Cifras en letra y cero palabras en inglés en la voz.
 
 ## Pasos en una sesión en la nube (todo por el MCP de Base44, app 6af862101565c330cf06389f)

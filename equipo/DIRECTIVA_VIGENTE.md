@@ -51,7 +51,7 @@ Fuera del repo (no leen este archivo, se citan para el mapa):
 ## 5. Formatos
 Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 
-**El Jambo que sabe (serie de humor; personajes: El Jambo, la Jupillo, la Pelota, el Bola, la Trámites)**
+**El Jambo que sabe (serie de humor; personajes desde el 16/11: Rosa Melano —jefa tirana—, Felipe Lotas y Sindy Entes —empleados que lo sufren—, Neo —la IA que resuelve—; biblia v3 en `equipo/serie_jambo.md`)**
 | Campo | Regla |
 |---|---|
 | Duración | 15-25 s, nunca más de 30 |
@@ -61,7 +61,7 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 | Volumen | −14 LUFS, pico real −1 dB |
 | Voz | edge-tts por personaje (§6) |
 | Música | en primer plano (§6), con atribución si es MacLeod |
-| Cierre en vídeo | seguir para la parte 2 o pregunta; moraleja en una línea cuando la receta del estudio la pide |
+| Cierre en vídeo | giro de Neo + moraleja en una línea (siempre, orden del dueño 16/11) + seguir para la parte 2 o pregunta |
 | Cierre en el post | dato con fuente · «Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso» con el enlace /solicitar · «Mándaselo a…» · atribución musical · una pregunta concreta (una palabra o un número) · «Voz y personajes generados por IA» |
 
 **Promo de app**
@@ -81,7 +81,7 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 **Reels de datos (6xx)**: manual `equipo/FORMATO_DATOS.md`; cada cifra con fuente oficial abierta y `estado: "verificado"`; misma voz, música y volumen que la promo.
 
 ## 6. Voz y música
-- Redes (El Jambo y reels): edge-tts. El Jambo es-ES-AlvaroNeural +6 % / −3 Hz · La Jupillo es-ES-XimenaNeural · otras IAs y narración es-ES-ElviraNeural (con el tono propio de Pelota, Bola y Trámites que fijan `equipo/voz.json` y `herramientas/estudio/LEEME.md`).
+- Redes (El Jambo y reels): edge-tts. Rosa es-ES-ElviraNeural −4 Hz · Felipe es-ES-AlvaroNeural −4 % / −2 Hz · Sindy es-ES-XimenaNeural +8 % / +4 Hz · Neo es-ES-AlvaroNeural (pitch 0); detalle en `equipo/voz.json` y `herramientas/estudio/LEEME.md`.
 - Cadena de audio del 14/11: una frase por archivo, silenceremove a −45 dB, aresample 48 kHz, highpass 70 Hz, compresor 2,5:1 a −20 dB (ataque 8 ms, suelta 120 ms), +2 dB en 3,5 kHz, sin reverb ni paso bajo; música 0,6 con ducking 2,5:1; máster −14 LUFS, pico real −1 dB.
 - ElevenLabs voz Johnny (única herramienta de pago autorizada; plan Starter, 39.756 caracteres al mes): solo en la versión final de los vídeos de presentación del Centro, las promos de app y los reels de datos. Presupuesto: 30.000 caracteres al mes entre todo (unas 55 piezas de ~500 caracteres); el resto del saldo es reserva y nunca se compra saldo extra. Antes de gastar se suma el registro de `claude/redes/rehacer_videos_centro_elevenlabs.md` y `gasto.log`; agotado el presupuesto, edge-tts. El Jambo NO usa ElevenLabs: a 3 episodios al día gastaría unos 43.000 caracteres al mes, más que el plan entero.
 - Audios guardados y reutilizados SIEMPRE (orden del dueño 16/11): ningún audio de ElevenLabs se genera dos veces. Cada frase se guarda fuera del sandbox (release «voces» del repo o Biblioteca de Neogest Studio) con nombre `eleven_<voz>_<hash del texto>.mp3` y un índice `equipo/voces_indice.json` (texto, voz, fichero, caracteres, fecha); antes de gastar se busca ahí y solo se genera lo que falte. Las frases fijas (cierre de prueba gratuita, «Enlace en el perfil», nombres de apps) se generan una vez y se reutilizan en todas las piezas. Lo mismo para música, efectos, clips de Flow/Gemini, capturas de demo y renders: se reutiliza lo que ya existe antes de producir nada nuevo. `/tmp` no vale como almacén (se borra al reiniciar el sandbox).
@@ -147,3 +147,4 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - 2026-11-16 · Coordinación (orden del dueño: «si bastan los créditos, sí») · ElevenLabs Johnny pasa a ser la voz final de promos de app y reels de datos, con presupuesto de 30.000 caracteres al mes; El Jambo sigue con edge-tts porque los créditos no alcanzan (§5, §6).
 - 2026-11-16 · Coordinación (orden del dueño) · los audios se guardan y se reutilizan siempre; índice en equipo/voces_indice.json (§6).
 - 2026-11-16 · Coordinación (orden del dueño) · servicio nuevo Recepcionista 24h en promoción (§9; equipo/encargos/recepcionista_24h.md).
+- 2026-11-16 · Coordinación (orden del dueño) · reparto nuevo de El Jambo que sabe: Rosa Melano, Felipe Lotas, Sindy Entes y Neo sustituyen a Jambo, Jupillo, Pelota, Bola y Trámites; moraleja de cierre obligatoria en todo episodio nuevo (§5, §6; equipo/serie_jambo.md biblia v3; voces en equipo/voz.json).
