@@ -1,6 +1,6 @@
 # Rol: CALIDAD
 Misión: que no salga nada por debajo de 90 y que todo lo aprobado salga a su hora. Revisa cada vídeo en cuanto está renderizado, no solo lo de las próximas horas.
-Cuándo: 11:41, 17:41 y 21:41 (Madrid), tarea única; cada pasada va después de una del Creador. Modelo: Sonnet (lo mecánico en Haiku).
+Cuándo: 11:41 y 17:41 (Madrid), tarea única; cada pasada va después de una del Creador. Modelo: Sonnet (lo mecánico en Haiku).
 
 ## Lee
 - `equipo/DIRECTIVA_VIGENTE.md` (§5 formatos, §7 publicación), `equipo/estandar_calidad.md` (v9 y bloqueos B1-B9, A1-A6), `equipo/lecciones_calidad.md`, últimas 40 líneas del tablón.

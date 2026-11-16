@@ -12,7 +12,7 @@ Versión limpia del 15/11/2026 (orden del dueño). Sustituye a todo lo anterior;
 | Rol | Cuándo | Modelo | Archivo |
 |---|---|---|---|
 | Creador | 09:51 y 15:51 a diario | Sonnet | roles/creador.md |
-| Calidad | 11:41, 17:41 y 21:41 (tarea única «Calidad»; después de cada pasada del Creador) | Sonnet | roles/calidad.md |
+| Calidad | 11:41 y 17:41 (tarea única «Calidad»; después de cada pasada del Creador) | Sonnet | roles/calidad.md |
 | Supervisor | 13:27 a diario | Haiku | roles/supervisor.md |
 | Cazador de virales | lunes 08:23 | Sonnet | roles/cazador.md |
 | Remasterizador | lunes, miércoles y viernes 09:00 | Sonnet | roles/remasterizador.md |
@@ -28,8 +28,8 @@ Tareas en pausa desde el 15/11 (si alguna se dispara, NO trabaja: termina en una
 - «Ventas · Prospección (repo)»: en pausa.
 Fuera del repo (no leen este archivo, se citan para el mapa):
 - «Lote diario de comentarios» (08:21): prepara comentarios para que el dueño los publique a mano; doc del proyecto `claude/redes/comentarios_diarios.md`.
-- «Laboratorio de ideas» (martes): propuestas de apps nuevas en el doc del proyecto `claude/ideas/propuestas-apps.md`.
-- «Gemini: procesar cola» (10:48, 15:48 y 20:48, solo con el PC del dueño encendido): sirve `equipo/cola_gemini.md` y sube el resultado a la Biblioteca de Neogest Studio.
+- «Laboratorio de ideas» (sábados): propuestas de apps nuevas en el doc del proyecto `claude/ideas/propuestas-apps.md`.
+- «Gemini: procesar cola» (15:48, solo con el PC del dueño encendido): sirve `equipo/cola_gemini.md` y sube el resultado a la Biblioteca de Neogest Studio.
 
 ## 3. Protocolo de cada pasada
 0. Mira el mapa (§2): si tu tarea está fusionada, en pausa o se ha disparado fuera del día u hora de tu rol, termina en una línea sin hacer nada.
@@ -91,7 +91,7 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - Recursos que hay que usar de verdad (orden 15/11): Neogest Studio (Base44 6af862101565c330cf06389f: render vertical, personajes con boca sincronizada, decorados, música y SFX, cierre con logo 2026), su Biblioteca de clips Flow/Gemini (entidad MediaAsset, tags flow/gemini + categoría) y la música Pixabay del estudio. Lo que falte se pide en `equipo/cola_gemini.md` (fecha · rol · imagen/vídeo · 9:16/16:9 · descripción · para qué pieza) y no bloquea. Sin caras reconocibles, marcas ni texto en esas imágenes.
 
 ## 7. Control de calidad y publicación
-- Calidad revisa cada vídeo en cuanto está renderizado (no solo lo que sale pronto), en su pasada siguiente (11:41, 17:41 o 21:41). Aprobado solo con nota ≥ 90 según `equipo/estandar_calidad.md` (v9: «parece hecho por humanos»; si suena a IA, máximo 89).
+- Calidad revisa cada vídeo en cuanto está renderizado (no solo lo que sale pronto), en su pasada siguiente (11:41 o 17:41). Aprobado solo con nota ≥ 90 según `equipo/estandar_calidad.md` (v9: «parece hecho por humanos»; si suena a IA, máximo 89).
 - Los reels de redes se publican solo con `calidad.json` aprobado; el ciclo no publica sin él. Una pieza con visto bueno expreso del dueño (`"aprobado_por": "dueño"` en su calidad.json) no se reevalúa, no se rechaza ni se mueve: sale a su hora; Calidad solo añade sus observaciones en `nota_calidad`. Solo los vídeos de presentación del Centro esperan además el aprobado del dueño en el editor del Centro (VideoMezcla).
 - Todo lo programado debe salir a su hora: si una pieza no tiene nota ≥ 90 a 60 min de su hora, se mueve al siguiente hueco libre; nunca dos piezas en el mismo hueco ni encima de una aprobada.
 - Publicación: GitHub Actions (`ciclo.yml`, relanzado por `reloj.yml` cada 15 min) renderiza, publica en Instagram, Facebook (por ID de página, `/video_reels` para reels) y YouTube (Short con `herramientas/youtube.py`; `"youtube": {"omitir": true}` para no subir uno), y actualiza estadisticas.json y registro.log. Las llamadas a las API de Facebook y YouTube solo funcionan dentro de Actions.
@@ -148,4 +148,4 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - 2026-11-16 · Coordinación (orden del dueño) · los audios se guardan y se reutilizan siempre; índice en equipo/voces_indice.json (§6).
 - 2026-11-16 · Coordinación (orden del dueño) · servicio nuevo Recepcionista 24h en promoción (§9; equipo/encargos/recepcionista_24h.md).
 - 2026-11-16 · Coordinación (orden del dueño) · reparto nuevo de El Jambo que sabe: Rosa Melano, Felipe Lotas, Sindy Entes y Neo sustituyen a Jambo, Jupillo, Pelota, Bola y Trámites; moraleja de cierre obligatoria en todo episodio nuevo (§5, §6; equipo/serie_jambo.md biblia v3; voces en equipo/voz.json).
-- 2026-11-16 · Coordinación (orden del dueño: bajar pasadas para ahorrar) · Creador 2 al día, Calidad 3, Supervisor 1, Comunidad 1, Remasterizador y Analista 3 por semana, Cazador y Mejora 1 por semana, Gemini 3 al día. El 16/11 hubo 4 pasadas de Calidad y 2 de Comunidad sin nada que hacer.
+- 2026-11-16 · Coordinación (orden del dueño: bajar pasadas para ahorrar) · Creador 2 al día, Calidad 2, Supervisor 1, Comunidad 1, Remasterizador y Analista 3 por semana, Cazador y Mejora 1 por semana, Gemini 1 al día, Laboratorio de ideas pasa al sábado (el 16/11 la cuenta iba por el 78 % del límite semanal). El 16/11 hubo 4 pasadas de Calidad y 2 de Comunidad sin nada que hacer.
