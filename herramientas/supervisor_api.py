@@ -120,11 +120,14 @@ def _llamar_api(rol_md, contexto):
     )
     resp = cliente.messages.create(
         model=MODELO,
-        max_tokens=400,
+        max_tokens=1200,
         system=sistema,
         messages=[{"role": "user", "content": mensaje}],
     )
     textos = [b.text for b in resp.content if getattr(b, "type", None) == "text"]
+    if not textos:
+        tipos = [getattr(b, "type", "?") for b in resp.content]
+        print(f"Sin bloque de texto; stop_reason={resp.stop_reason} tipos={tipos}", file=sys.stderr)
     return "\n".join(textos).strip()
 
 
