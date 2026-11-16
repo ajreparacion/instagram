@@ -124,7 +124,8 @@ def _llamar_api(rol_md, contexto):
         system=sistema,
         messages=[{"role": "user", "content": mensaje}],
     )
-    return resp.content[0].text.strip()
+    textos = [b.text for b in resp.content if getattr(b, "type", None) == "text"]
+    return "\n".join(textos).strip()
 
 
 def main():
