@@ -1,4 +1,3 @@
-2026-11-15 09:13  Voz: silencios recortados por frase (s): [0.11, 0.11, 0.13, 0.13, 0.12, 0.12, 0.14]
 2026-11-15 09:13  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(1.1), np.float64(3.8), np.float64(1.4), np.float64(4.2), np.float64(2.2), np.float64(5.3), np.float64(3.4)]
 2026-11-15 09:13  Voz: alineación palabra a palabra (small, 14.2 s): 7/7 frases
 2026-11-15 09:14  Mezcla: voz -17.5 LUFS, música -22.5 LUFS (con ducking -25.3), la música baja 5.62 dB (p90) bajo la voz, ratio 2.5; máster -17.38 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
@@ -598,3 +597,4 @@
 2026-11-16 16:53  Estadísticas actualizadas (30 posts, 1601 seguidores)
 2026-11-16 19:53  803_recepcionista_cerrado: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
 2026-11-16 19:53  802_recepcionista_que_hace: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
+2026-11-16 19:58  801_recepcionista_horario: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
