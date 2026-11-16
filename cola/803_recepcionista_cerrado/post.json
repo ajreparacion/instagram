@@ -14,8 +14,7 @@
   ],
   "_comprobado": "Texto y audio contrastados con la ficha y con la transcripción de la llamada; sin nombre del negocio, web, teléfonos ni nombres de personas; no suena la voz del dueño.",
   "_nota_creador": "16/11/2026 Coordinación: vídeo ya terminado (llamada real al asistente del dueño, montada fuera del ciclo). SIN MÚSICA: no había pistas con licencia accesibles desde la sesión; si Calidad lo exige, el Remasterizador añade música del estudio por debajo de la voz. Encargo: equipo/encargos/recepcionista_24h.md.",
-  "renderizado": false,
-  "video_externo": "https://raw.githubusercontent.com/ajreparacion/instagram/entrada-videos/803_recepcionista_cerrado.mp4",
+  "renderizado": "2026-11-16T18:53:37+00:00",
   "motor": "externo",
   "comentario_fijado": "¿A qué hora te llaman más cuando ya has cerrado? Dilo con una hora. Más en @neogestlab",
   "avance_siguiente": "Mañana: le preguntamos qué sabe hacer",
@@ -38,5 +37,7 @@
   },
   "facebook": {
     "texto": "¿Tu teléfono sabe que a las seis ya has cerrado?\nLlamada real al asistente telefónico de un negocio: le dicen que pasarán a las seis, y contesta que ese día cierran a las tres y propone el día siguiente a las nueve. Atiende las 24 horas y tú conservas tu número.\nSolicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=facebook"
-  }
+  },
+  "asset": "803_recepcionista_cerrado.mp4",
+  "_video_externo_usado": "https://raw.githubusercontent.com/ajreparacion/instagram/entrada-videos/803_recepcionista_cerrado.mp4"
 }
