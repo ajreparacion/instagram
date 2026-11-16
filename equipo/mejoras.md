@@ -377,3 +377,12 @@ La muestra del cambio 37 llevaba la pista generada por código (prueba_voz.yml n
 - **Cambio:** el aviso §14 ya no penaliza «prueba gratuita» ni el enlace en el texto de los episodios: ahora avisa si el post de un episodio NO lleva «prueba gratuita». Duración de episodios: aviso > 25 s, ERROR > 30 s (antes 20/35). Quitado el aviso del comentario fijado «APP/WEB» (palabra clave prohibida por §9).
 - **Medido:** 58 carpetas, 3 errores antes y después (333-335, B9 «gemini»; ya existían: falsos positivos de la marca en el texto, para Creador/Calidad).
 - **Revertir:** `cp herramientas/versiones/pre_entrega.py_2026-11-15 herramientas/pre_entrega.py`.
+
+## Mejora 16/11/2026 (pasada extraordinaria) · desbloqueada la subida de vídeos del estudio + máster −14 LUFS / pico ≤ −1 dB / < 19 MB
+- **Causa:** (1) el `preview_token` del sandbox da 401 también desde fuera, y `public/_render/` está en .gitignore; (2) fix-308 pesaba 21,8 MB (tope de `upload_app_asset`: 20 MB); (3) el máster del render salía a −0,7 dBFS.
+- **Cambio (en Neogest Studio, checkpoint «Máster −14 LUFS…»):** `scripts/masterizar.mjs` nuevo (loudnorm I=−14 TP=−1,5 + alimiter, libx264 con bitrate calculado para < 19 MB, medición ebur128; consigue ffmpeg con imageio-ffmpeg si no hay) y `scripts/render.mjs` lo llama tras renderizar, escribe `master` en el `.qc.json` y copia el mp4 a `public/entregas/`. Subida: deploy → `upload_app_asset` con la URL pública del estudio → limpieza (pasos en `herramientas/estudio/LEEME.md`, paso 4).
+- **Medido:** fix-308 21,8 MB, pico −1,5 → 18,16 MB, −14,2 LUFS, pico −1,3; fix-323 16,1 MB → 15,87 MB, −14,4 LUFS, pico −1,4. Subida de punta a punta OK:
+  - 308: https://media.base44.com/videos/public/6af862101565c330cf06389f/b6326d010_308-master.mp4
+  - 323: https://media.base44.com/videos/public/6af862101565c330cf06389f/60ecacb45_323-master.mp4
+- **No verificado:** que el ciclo (Actions) descargue esas URL y pase control_audio; calidad visual de la recodificación (bitrate ~4,5 Mb/s) sin oído/ojo humano. No he tocado cola/*/post.json (es del Creador).
+- **Revertir:** restaurar el checkpoint 6afb4fa9… anterior (el de «Máster…» es el nuevo; el previo es 6437b55 en git del estudio) o quitar el bloque «máster obligatorio» de render.mjs.
