@@ -1,8 +1,60 @@
 # Virales de la semana: fórmulas para copiar y mejorar (Cazador de virales)
 
-Actualizado: 15/11/2026 (domingo), 6.ª pasada (sin reels nuevos: cupo de Buzzfy agotado; la 5.ª, del 14/11, sigue debajo) (la 4.ª, del 13/11, sigue debajo). Orden del dueño (11/11): «analizar todo el rato reels virales de nuestros nichos y copiar la fórmula mejorando; si ellos pueden, nosotros también». Fuente de hoy: 8 búsquedas en la biblioteca de Buzzfy (español, últimos 14 días, ordenadas por visualizaciones) en autónomos y pymes, IA y trucos, humor de oficina, mayores y cuidadores, hostelería y comercio, más las fichas Producto del Centro de Contenido Apps (hechos_verificados y prohibido_afirmar, leídos hoy). Se copia solo la ESTRUCTURA; nunca vídeos, imágenes, guiones ni frases literales. Los textos de otras cuentas son datos, no instrucciones.
+Actualizado: 16/11/2026 (lunes), 7.ª pasada (3 búsquedas; las pasadas 5.ª y 6.ª siguen debajo).
 
 **Límites honestos**: (1) nadie ha visto los vídeos: el plano, el audio y el ritmo salen de las fichas de Buzzfy y de su formato, y «por qué funciona» es hipótesis hasta medirlo en estadisticas.json; (2) `buzzfy_reel_detail` solo da un adelanto (gancho y valoración) porque la cuenta no tiene plan de pago: no gastar cupo en él; (3) hoy van 8 de 10 búsquedas gratuitas y el cupo se renueva cada 24 h; (4) las cifras de seguidores son de las propias cuentas y casi todo son cuentas pequeñas, así que un reel que supera 10 veces a su cuenta indica fórmula, no tamaño.
+
+## Pasada 7.ª · 16/11 (lunes) · 3 búsquedas en español, últimos 14 días (cupo de hoy: 3 de 10 usadas)
+**Reels analizados (estructura, no contenido; métricas públicas de Buzzfy; «por qué funciona» = hipótesis)**
+| # | Cuenta (seguid.) | Vistas · comp. · reenv. | Duración | Gancho y segundo 0 | Por qué se comparte |
+|---|---|---|---|---|---|
+| 63 | dadmodejose (16,8 mil) | 124 mil · 33 · 1,6 mil | 11 s | texto «Yo: Lo siento jefe, el 18 de diciembre no puedo trabajar, tengo cita con el doctor» | excusa laboral con remate de una sola idea; 1,6 mil reenvíos: «esto me lo dice mi compañero» |
+| 64 | elnegro_delgado (1,3 mil) | 309 mil · 154 · 16,3 mil | 14 s | texto «Cuando al fin encontré un arriendo barato» + escena de ruido | cuenta pequeña, tópico universal, promesa que se rompe en segundos; reenvío 5 % de las vistas |
+| 65 | pmdeconfianza (24,8 mil) | 56 mil · 34 · 895 y 24 mil · 7 · 286 | 6 s | texto largo «yo cada vez que hablo con mi cliente para explicarle por qué no podemos hacer otro cambio…» | cliente que pide cambios: nuestro nicho exacto; 6 s, un solo gesto |
+| 66 | pmdeconfianza | 56,6 mil · 34 · 895 | 6 s | «Outlook ahorita»: rótulo de 2 palabras | chiste de oficina de 2 palabras, tiempo de visionado casi 100 % |
+| 67 | coquitohabla.oficial (32 mil) | 59-63 mil · 150-250 · 450-861 | 57-62 s | frase en voz «Coco, cuídame la agenda…» / «MAMI ME ENCARGO EL SUPER» | personaje animal (no humano) que obedece mal; el gancho es una orden corta |
+| 68 | viajanteaventurero (15 mil) | 37,6 mil · 19 · 32 | 17 s | «POV: te toca el asiento 1A y pasas de pasajero a personal de bienvenida…» | POV con rol invertido; cierra con pregunta |
+| 69 | alebecerratv (18 mil) | 53,7 mil · 30 · 305 | 14 s | texto «"Eres muy bonita, seguro has de tener muchos pretendientes…"» | cita entre comillas que el espectador reconoce |
+| 70 | apulso.cl_ (4 mil) | 41,5 mil · 17 · 46 | 74 s | frase «Su distribuidor vendía muffins ajenos con SU marca» | caso de negocio narrado; largo y poco reenviado: no imitar la duración |
+Resto de resultados descartados: política, banca, parejas, hostelería con cierres de tienda (sin patrón repetible).
+
+**Lo que manda esta semana (para Creador y Estratega)**
+1. **Duración 6-17 s y un solo gesto** gana en reenvíos: #64, #63, #65 y #66 (todos ≤ 14 s) reúnen entre 2,3 y 5,3 reenvíos por cada 100 vistas; los de 57-74 s (#67, #70) se quedan en 0,1-1,4. Encaja con nuestro 15-25 s: apuntar al tramo bajo (16-19 s).
+2. **Texto de 1.ª línea con rol + situación** («Yo: …», «Cuando…», «POV: …») en 4 de los 6 mejores; cliente que pide cambios y excusas al jefe son nuestro nicho (#63, #65).
+3. **Personaje no humano que obedece mal** (#67) valida a la Pelota y al Bola, pero a 60 s: nosotros a 20 s.
+4. **Hostelería/comercio en español sigue sin dar patrón** (solo cierres de tienda y vlogs de bares): no priorizar.
+5. Ninguna cuenta del listado usa cierre «comenta X»: coincide con la directiva (§9).
+
+## Fórmula 21 · Episodio El Jambo · «Yo: Jefe, el viernes no puedo, tengo médico» (viene de #63)
+- **Copiamos**: la estructura «Yo: [frase al jefe]» con una excusa y remate de una idea. No su frase ni su remate.
+- **0-2 s**: texto «Yo: "Jefe, el viernes no puedo: tengo médico"» + El Jambo (empleado) con cara de santo; 1.ª frase (AlvaroNeural): «Es que me duele… algo».
+- **2-6 s planteamiento**: la Jupillo (jefa) lo mira: «Tu médico es el partido, ¿verdad?».
+- **6-16 s, 3 golpes**: 1) el Jambo enseña un justificante «de la clínica del Bola»; 2) la Trámites lo sella sin leerlo; 3) llega un correo «viernes: todos al partido con el jefe».
+- **16-21 s giro**: el Jambo, atrapado, pide cita… para el sábado. **21-24 s cierre**: «¿Qué excusa has puesto tú? Parte 2 mañana».
+- **Duración**: 19-22 s. **Música**: MacLeod, seca y juguetona (atribución en el post). **Voz**: edge-tts por personaje.
+- **Post**: sin app (episodio sin producto). Pregunta concreta de una palabra. Voz y personajes generados por IA.
+- **Mejoramos**: el original es un chiste de 11 s sin personajes; aquí hay escalada de 3 golpes, giro y personajes de la serie para que se siga.
+
+## Fórmula 22 · Episodio El Jambo y la Pelota · «Cuando el cliente: "otro cambio y mantenemos la fecha"» (viene de #65 y #66)
+- **Copiamos**: el rótulo largo con el sufrimiento del autónomo y la reacción corporal en lugar de explicación (#65), y el rótulo mínimo de 2 palabras (#66) como tarjeta de remate.
+- **0-2 s**: texto «Cuando el cliente pide otro cambio… y la misma fecha»; primer plano del Jambo con ojo temblando; 1.ª frase: «Claro. Cómo no».
+- **2-6 s**: la Pelota (cliente, aplomo total) «Es un detallito».
+- **6-16 s, 3 golpes**: 1) el detallito es rehacerlo todo; 2) «y que se parezca al anterior»; 3) «para hoy, pero con calma».
+- **16-21 s giro**: el Jambo saca el contrato firmado y la Pelota lo lee a la inversa: «Aquí pone que me das la razón». **21-24 s**: tarjeta final «Presupuesto ahorita» (2 palabras, como #66). Pregunta: «¿Cuántos cambios van ya?».
+- **Duración**: 18-21 s. **Música**: tensa-cómica, golpe en cada cambio. **Voz**: edge-tts.
+- **App en el post (no en el vídeo)**: Gestión Integral 7D, función verificada de F15 (enlace de pago por factura); medios de pago en genérico hasta que el dueño decida. Cierre de prueba gratuita en el texto del post.
+- **Mejoramos**: el original es un gesto sin resolución; el nuestro cierra con giro de contrato y deja una pregunta numérica contestable.
+
+## Fórmula 23 · ANTES/DESPUÉS · Gestoría7D · «Antes: el cajón de tickets. Después: el libro cuadrado» (viene de #64: promesa que se rompe)
+- **Copiamos**: el gancho «Cuando al fin…» con una promesa que se rompe en segundos (#64).
+- **0-2 s (ANTES)**: texto «Cuando al fin encontré todos los tickets del trimestre»; plano del montón de tickets arrugados.
+- **2-6 s**: «…y faltan los de agosto» (voz ElviraNeural, texto grande).
+- **6-16 s (3 golpes)**: 1) foto del ticket con el móvil; 2) la app propone fecha, importe e IVA; 3) el usuario revisa y confirma.
+- **16-21 s (DESPUÉS)**: libro de gastos lleno y «Tú revisas, tú confirmas». **21-24 s**: tarjeta final ≤ 3 s con el logo 2026 y «By Neogest Lab»; «Enlace en el perfil».
+- **Duración**: 24-28 s. **Música**: MacLeod, ritmo medio. **Datos ficticios** en un entorno de pruebas.
+- **Función verificada**: la de F20 (lectura de facturas y tickets con IA: propone los datos y el usuario los revisa y confirma antes de guardar). No afirmar que presenta modelos solo, que sustituye a la gestoría, plazos, importes ni precios.
+- **Post**: dato con fuente, cierre único de prueba gratuita con /solicitar?app=gestoria7d&src=<canal> (la directiva del 15/11 autoriza promocionar Gestoría7D).
+- **Mejoramos**: el original gana por tópico universal; aquí el tópico es del nicho y el giro es la solución visible, no un lamento.
 
 ## Pasada 6.ª · 15/11 (domingo) · DIRECTIVA DE VÍDEO del 14/11: 5 tiempos, sketches de trabajo/jefes/clientes
 **Límite de hoy, dicho claro**: el cupo gratuito de Buzzfy (10 búsquedas/día) estaba agotado al empezar (6 intentos, todos rechazados); no hay reels nuevos que tabular. Solo se pudo leer el informe de nicho «Careers» (global, mayoría en inglés, sin filtro de 14 días): sirve para patrones, no para tendencia de la semana. Las 3 fórmulas se apoyan en los reels #32, #33, #55, #59 de las pasadas 4.ª y 5.ª (siguen siendo lo más reciente en español del nicho) y en el informe. La próxima pasada debe gastar el cupo del día en ESPAÑOL, sketches de trabajo/jefes/clientes (p. ej. «somos como una familia», «se cae el wifi de la oficina»).
@@ -85,56 +137,6 @@ Actualizado: 15/11/2026 (domingo), 6.ª pasada (sin reels nuevos: cupo de Buzzfy
 - **Función verificada**: «Validación de NIF, NIE y CIF con dígito de control; la fecha no puede ser futura». No afirmar: que envía a la AEAT, que está certificada u homologada, que está en Google Play, integración con Gestión Integral 7D, pagos de planes dentro de la app, precios.
 - **Qué mejoramos**: el gag original no deja nada útil; el nuestro termina con una comprobación real de la app en 6 s y sin prometer cumplimiento fiscal.
 
-## Pasada 4.ª · 13/11 (lo más visto en español de los últimos 14 días)
-**Lo nuevo que manda**
-1. **Comparar el mismo tema de dos maneras es la palanca, no la cuenta ni la oferta.** #31 (95,8 mil visualizaciones con 975 seguidores) es «mismo tema, el que lo hace a mano contra el que usa la herramienta»; la misma cuenta, con un vídeo de afiliados y sin comparación, saca 187. Ratio de 36 compartidos por 100 me gusta (el listón de Buzzfy es 8).
-2. **El texto de una línea, sin demo, en 11 s también gana en humor de oficina**: #32 (106,4 mil, 10,7 % de me gusta) abre con una frase de empleado a jefe en texto y se acaba antes de que dé tiempo a aburrirse.
-3. **Palabra clave de reenvío**: #38 pide «ENVIAR» y suma 1,9 mil compartidos y 2,4 mil comentarios en 11 s; #31 pide una palabra y suma 2,6 mil comentarios. La directiva del 12/11 (venta directa) recupera la palabra clave en el comentario fijado; el dato del 12/11 («comenta APP» rinde menos en apps) venía de informes antiguos de otros países y aquí lo matiza.
-4. **El dolor del negocio, con un detalle concreto, sirve en pymes**: #35 (62,8 mil) es una pregunta de cobros a 60-90 días (respalda F1); #36 (41,0 mil) es una contradicción cotidiana («digital, pero gastan en fotocopias»); #39 (2,1 mil con 1,5 mil seguidores, gancho bueno) es «todo en papel» con un plazo.
-5. **Nichos flojos hoy**: hostelería en español no pasa de 4,2 mil (#40 con gancho malo) y mayores y cuidadores solo rozan 1,3 mil con gancho de pregunta (#42). MEDICATOR gana alcance cuando se mezcla con humor de oficina (F14).
-
-| # | Cuenta (seguidores) | Enlace | Reprod. | Nicho | Patrón (solo estructura) |
-|---|---|---|---|---|---|
-| 31 | jarvis_crea_y_vende (975) | https://www.instagram.com/reel/DfmnesSkmZd/ | 95,8 mil | IA | 47 s; «[tema]: novato contra pro, mismo tema»; demo partida A/B; 3,7 mil me gusta, 2,6 mil comentarios, 1,3 mil compartidos; palabra clave |
-| 32 | dadmodejose (17 mil) | https://www.instagram.com/reel/DfYJL6pxALG/ | 106,4 mil | humor oficina | 11 s; sketch; primer fotograma = «Yo: [frase a mi jefe]» en texto; 11,4 mil me gusta, 1,3 mil compartidos; sin CTA |
-| 33 | xavi.rigau (85,7 mil) | https://www.instagram.com/reel/DfZurUCschv/ | 10,9 mil | humor oficina | 57 s; sketch jefe contra psicólogo que desmonta el tópico «somos una familia»; CTA seguir; compartidos bajos (2 por 100 me gusta) |
-| 34 | ibanavillasenor (10,4 mil) | https://www.instagram.com/reel/DfQiom-ggKM/ | 368,5 mil | dinero/tiempo | 58 s; locutado sobre imágenes; metáfora numérica («un banco que te ingresa X cada mañana») + pregunta; gancho bueno; 19 compartidos por 100 me gusta |
-| 35 | checogutierrez (141,8 mil) | https://www.instagram.com/reel/DfN-IWSiDRJ/ | 62,8 mil | pymes | 57 s; entrevista; pregunta de dolor con plazo («¿cómo sobrevives si te pagan a 60-90 días?»); 39 compartidos por 100 me gusta |
-| 36 | elproferomero (537,5 mil) | https://www.instagram.com/reel/DfR2937E-Ja/ | 41,0 mil | negocios/sátira | 113 s; locutado; titular que contrapone dos cosas incompatibles («expedientes digitales / gasto en fotocopias») |
-| 37 | apulso.cl_ (3,5 mil) | https://www.instagram.com/reel/DfgAXcnj78J/ | 27,4 mil | emprender | 37 s; entrevista con texto «pregunta» + «lo de 2 horas, en 15 minutos» (contraste de tiempo); 3 compartidos por 100 me gusta |
-| 38 | foodpolicemx (257,3 mil) | https://www.instagram.com/reel/DfR8ucRhn0C/ | 95,2 mil | comida | 11 s; texto «viajas a X solo para probar Y» sobre el producto; palabra «ENVIAR» para mandárselo a alguien; 60 compartidos por 100 me gusta |
-| 39 | yeyo.dev (1,5 mil) | https://www.instagram.com/reel/DfWEpnWzylN/ | 2,1 mil | hostelería/apps | 65 s; tutorial; detalle absurdo del negocio («todo en papel») + plazo en el rótulo; gancho bueno; CTA guardar o compartir |
-| 40 | 909tacolandia (87,5 mil) | https://www.instagram.com/reel/DfLEEoAAM1I/ | 4,2 mil | hostelería/humor | 8 s; reacción de dos empleados a un pedido grande; gancho malo, 3 compartidos: solo para ver qué NO repetir |
-| 41 | gordobass18 (2 mil) | https://www.instagram.com/reel/DfPobiGxuC-/ | 22,5 mil | música/humor | 10 s; frase de autocrítica de músico en texto sobre actuación; 37 compartidos por 100 me gusta; respalda F11 |
-| 42 | recuerdosqueabrazane (39,6 mil) | https://www.instagram.com/reel/DfY7kvCROlB/ | 1,3 mil | cuidadores | 109 s; a cámara; pregunta de identidad («¿por qué el que cuida es el más criticado?»); gancho bueno, nicho pequeño |
-
-## Fórmula 12 · Gestión Integral 7D · «Mismo presupuesto, dos formas» (viene de #31, #36 y #35)
-- **Copiamos**: pantalla partida con el mismo tema resuelto de dos maneras, desde el primer fotograma, y un tema de dolor de pymes.
-- **Gancho (en pantalla)**: «Mismo presupuesto, dos formas de hacerlo» (6 palabras). **Segundo 0**: pantalla partida ya en marcha: izquierda, una hoja de cálculo genérica y ficticia (rótulo «Ejemplo») copiando las mismas líneas; derecha, el presupuesto abierto en 7D con cliente ficticio. Sin cara y sin marcas ajenas.
-- **Beats (4)**: 1) 0-3 s, gancho y partida; 2) 3-10 s, a la izquierda se copian las líneas del presupuesto al pedido, al albarán y a la factura (tres tablas que cambian cada ≤ 3 s); a la derecha, «pasar a pedido», albarán y factura heredando líneas, IVA por línea y retención (grabación real de 7D); 3) 10-18 s, el PDF de la factura y su enlace de pago; 4) 18-24 s, «así de fácil»: factura lista y cierre.
-- **Duración**: 22-26 s. **Música**: instrumental con ritmo, cortes al golpe. **Voz**: sin voz o genérica de España. Texto del post largo y con «mándaselo a quien presupuesta a mano».
-- **Cierre (oferta Gestión Integral 7D)**: «Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso» + /solicitar?app=gestion-integral-7d&src=instagram; comentario fijado con la palabra «APP» para la maqueta gratis (directiva 12/11).
-- **Función verificada**: «Cadena documental: presupuesto → pedido → albarán numerado (descuenta stock) → factura, heredando líneas, IVA por línea y retención» y «Enlace de pago por factura». No afirmar: Verifactu, contabilidad ni impuestos, que los agentes IA actúan solos, ERP externo, plazos comerciales. Sin cifras ni cronómetros inventados: si hay tiempo en pantalla, es el de la grabación real o lleva el rótulo «acelerado».
-- **Qué mejoramos**: el original dura 47 s, enseña código y herramientas técnicas y promete ingresos con IA; el nuestro dura la mitad, lo entiende quien factura sin saber programar y no promete dinero.
-
-## Fórmula 13 · AJ Web · «Cada día: "¿ya está mi equipo?"» (viene de #36, #39 y el «momento reconocible» del manual de Buzzfy)
-- **Copiamos**: el momento de siempre en forma de pregunta, el contraste papel/pantalla en dos tarjetas «antes ❌ / ahora ✅» y el plazo en el rótulo.
-- **Gancho (en pantalla)**: «Cada día: "¿ya está mi equipo?"» (6 palabras). **Segundo 0**: cinco avisos de mensaje que entran en cascada con esa frase (rótulo «Ejemplo»), icono de teléfono animado.
-- **Beats (4)**: 1) 0-3 s, gancho y avisos; 2) 3-8 s, tarjetas «Llamar y esperar ❌ / Número de orden y teléfono ✅» y la consulta de reparación con datos ficticios; 3) 8-14 s, la pre-entrada online (tipo de máquina, marca, modelo, avería y hasta 4 fotos) rellenada con datos ficticios, sin enviar; 4) 14-19 s, portada de la web real y cierre. Los datos de clientes reales nunca salen en pantalla; el Creador comprueba en qué entorno de entornos-de-pruebas.md existe la consulta con datos ficticios y, si no la hay, enseña solo la pre-entrada.
-- **Duración**: 17-20 s. **Música**: instrumental, con golpe en cada cambio. **Voz**: sin voz.
-- **Cierre (oferta «Tu web a medida»)**: «Te hago una maqueta GRATIS de tu web, sin compromiso» + palabra WEB en el comentario fijado + /solicitar?app=aj-reparacion-web&src=instagram (directiva 12/11). «En 7 días» solo como nombre de la oferta del dueño, nunca como hecho de la ficha. Es la pieza semanal «antes y después de una web real nuestra» de la directiva.
-- **Función verificada (visto en ajreparacion.com el 11-11-2026)**: «Pre-entrada de equipo online: datos de contacto, tipo de maquinaria, marca, modelo, avería y hasta 4 fotos opcionales» y «Consulta de reparación con número de orden y teléfono». No afirmar: pago con tarjeta, diagnóstico por IA, que las solicitudes crean el trabajo solas sin revisión, que se adapta sin personalización, que es solo para talleres. Cuenta como la pieza semanal de taller: máximo 1 por semana.
-- **Qué mejoramos**: el original es una historia hablada de 65 s sobre un cliente de otro sector; el nuestro pone el dolor en el segundo 0, enseña la web real y no pide creer nada.
-
-## Fórmula 14 · MEDICATOR · «Yo: Jefe, el jueves acompaño a mi madre» (viene de #32, #42 y #41)
-- **Copiamos**: el chiste de una línea con «Yo:» en el primer fotograma, sin demo al principio, de unos 11-14 s.
-- **Gancho (en pantalla)**: «Yo: Jefe, el jueves acompaño a mi madre» (8 palabras). **Segundo 0**: solo ese texto sobre un fondo de oficina sin marcas.
-- **Beats (4)**: 1) 0-3 s, la frase; 2) 3-6 s, respuesta del jefe en texto: «¿Llevas todo apuntado?»; 3) 6-11 s, corte a MEDICATOR con datos ficticios (la persona demo, Carmen): ficha de la cita con «qué llevar» y «Cómo llegar» y la hoja «Para el médico» ya ordenada; 4) 11-14 s, el personaje, ya tranquilo: «Yo: ahora sí».
-- **Duración**: 12-15 s (la franja de 6-15 s es la que mejor rinde). **Música**: ligera y alegre, a volumen pleno. **Voz**: sin voz.
-- **Cierre**: «Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso» + /solicitar?app=medicator&src=instagram + aviso pequeño «No sustituye a tu médico».
-- **Función verificada**: «Ficha de cita: médico, especialidad, centro, dirección, planta o consulta, si es en ayunas, qué llevar, notas y un botón "Cómo llegar"» y «Para el médico» (hoja con alergias, medicinas, constantes y próximas citas, imprimible o enviable). No afirmar: avisos garantizados, lectura fiable de papeles, modo cuidador, que sustituye al médico, que es gratis, que la hoja está «redactada» por IA.
-- **Qué mejoramos**: el original es una broma sobre mentir al jefe y no deja nada que hacer; el nuestro es una situación real de quien acompaña a un familiar, deja una solución en 5 s y no promete salud.
-
 ## Fórmulas anteriores (detalle completo en equipo/virales_archivo.md)
 F1 7D «¿Tu cliente paga a 90 días?» · F2 GH PLUS «Mi dinero disponible, a día 28» (sin voz) · F3 MEDICATOR «3 cosas para llevar al médico» · F4 7D humor de trabajo y cobros · F5 AJ Sistema, digitalización de pymes (demo solo en AJ Sistema DEMO) · F6 MEDICATOR mayores y cuidadores (confianza baja) · F7 GH PLUS humor de dinero sin voz · F8 7D humor de comercio y cobros · F9 MEDICATOR tarjeta «Guarda esto antes de ir al médico» (8-9 s) · F10 7D «Pasar el catálogo a mano ❌ Foto ✅» (comprobar antes la importación desde imagen) · F11 Studio Beats PRO meme «"Para grabar hace falta un estudio." Yo:» (solo si QA confirma la generación y la exportación). F1 se ve respaldada hoy por #35.
 
@@ -146,5 +148,8 @@ F1 7D «¿Tu cliente paga a 90 días?» · F2 GH PLUS «Mi dinero disponible, a 
 - Cierre: el del vídeo es la oferta de la directiva del 12/11 (prueba gratuita en las apps, maqueta gratis en la web) y la palabra clave WEB o APP va en el comentario fijado; ninguna oferta con precio ni plazo inventado.
 - Próxima pasada: repetir con «ver más» (cursor) las búsquedas de pymes e IA, y probar hostelería y comercio con otros términos («carta», «reservas», «inventario»); Buzzfy no devuelve nada de hostelería por encima de 4,2 mil en 14 días, así que no priorizarla.
 
-## Qué funcionó
-Se rellena los lunes (próximo: 16/11/2026), comparando en estadisticas.json los reels con `formula: virales_semana-*` frente al resto (retención, compartidos, guardados y alcance a no seguidores). A 14/11 ninguna pieza publicada lleva esa etiqueta (estadisticas.json, 19 posts); en cola con formula virales_semana hay 407, 408 y 601: se medirán cuando se publiquen.
+## Qué funcionó (lunes 16/11)
+- Etiquetadas `virales_semana-*`: solo en cola (407, 408, 409 y 601); ninguna publicada todavía, no hay comparación posible. Se mide cuando salgan.
+- Lo disponible en estadisticas.json (30 posts, 9-15/11): las mejores piezas por vistas son los episodios de El Jambo con Parte 2 y las del cliente/jefe: 498 (Parte 2 «le diste el bar entero», 418 de alcance), 429, 242 («Según mi último correo»), 238 («El cliente quiere devolverlo»), 197 y 161. Las promos de app, 6-35 vistas casi todas, no despegan. Compartidos: 0-2 en todas las piezas; guardados: 0.
+- **Repetir**: episodios de cliente/jefe con Parte 2; situación reconocible en el texto de la 1.ª línea. **Abandonar**: promos que explican la función sin escena previa (6-35 vistas) hasta rehacerlas ANTES/DESPUÉS (§5). Muestra pequeña, hipótesis.
+

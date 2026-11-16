@@ -156,3 +156,56 @@ Reels del 11/11 (patrón en una línea): checogutierrez (#2 de hoy); xavi.rigau 
 
 ## Qué funcionó
 Se rellena los lunes (próximo: 16/11/2026), comparando en estadisticas.json los reels con `formula: virales_semana-*` frente al resto (retención, compartidos, guardados y alcance a no seguidores). A fecha de hoy no hay ninguna pieza con esa etiqueta: sin datos.
+
+
+# Archivado 16/11/2026
+## Pasada 4.ª · 13/11 (lo más visto en español de los últimos 14 días)
+**Lo nuevo que manda**
+1. **Comparar el mismo tema de dos maneras es la palanca, no la cuenta ni la oferta.** #31 (95,8 mil visualizaciones con 975 seguidores) es «mismo tema, el que lo hace a mano contra el que usa la herramienta»; la misma cuenta, con un vídeo de afiliados y sin comparación, saca 187. Ratio de 36 compartidos por 100 me gusta (el listón de Buzzfy es 8).
+2. **El texto de una línea, sin demo, en 11 s también gana en humor de oficina**: #32 (106,4 mil, 10,7 % de me gusta) abre con una frase de empleado a jefe en texto y se acaba antes de que dé tiempo a aburrirse.
+3. **Palabra clave de reenvío**: #38 pide «ENVIAR» y suma 1,9 mil compartidos y 2,4 mil comentarios en 11 s; #31 pide una palabra y suma 2,6 mil comentarios. La directiva del 12/11 (venta directa) recupera la palabra clave en el comentario fijado; el dato del 12/11 («comenta APP» rinde menos en apps) venía de informes antiguos de otros países y aquí lo matiza.
+4. **El dolor del negocio, con un detalle concreto, sirve en pymes**: #35 (62,8 mil) es una pregunta de cobros a 60-90 días (respalda F1); #36 (41,0 mil) es una contradicción cotidiana («digital, pero gastan en fotocopias»); #39 (2,1 mil con 1,5 mil seguidores, gancho bueno) es «todo en papel» con un plazo.
+5. **Nichos flojos hoy**: hostelería en español no pasa de 4,2 mil (#40 con gancho malo) y mayores y cuidadores solo rozan 1,3 mil con gancho de pregunta (#42). MEDICATOR gana alcance cuando se mezcla con humor de oficina (F14).
+
+| # | Cuenta (seguidores) | Enlace | Reprod. | Nicho | Patrón (solo estructura) |
+|---|---|---|---|---|---|
+| 31 | jarvis_crea_y_vende (975) | https://www.instagram.com/reel/DfmnesSkmZd/ | 95,8 mil | IA | 47 s; «[tema]: novato contra pro, mismo tema»; demo partida A/B; 3,7 mil me gusta, 2,6 mil comentarios, 1,3 mil compartidos; palabra clave |
+| 32 | dadmodejose (17 mil) | https://www.instagram.com/reel/DfYJL6pxALG/ | 106,4 mil | humor oficina | 11 s; sketch; primer fotograma = «Yo: [frase a mi jefe]» en texto; 11,4 mil me gusta, 1,3 mil compartidos; sin CTA |
+| 33 | xavi.rigau (85,7 mil) | https://www.instagram.com/reel/DfZurUCschv/ | 10,9 mil | humor oficina | 57 s; sketch jefe contra psicólogo que desmonta el tópico «somos una familia»; CTA seguir; compartidos bajos (2 por 100 me gusta) |
+| 34 | ibanavillasenor (10,4 mil) | https://www.instagram.com/reel/DfQiom-ggKM/ | 368,5 mil | dinero/tiempo | 58 s; locutado sobre imágenes; metáfora numérica («un banco que te ingresa X cada mañana») + pregunta; gancho bueno; 19 compartidos por 100 me gusta |
+| 35 | checogutierrez (141,8 mil) | https://www.instagram.com/reel/DfN-IWSiDRJ/ | 62,8 mil | pymes | 57 s; entrevista; pregunta de dolor con plazo («¿cómo sobrevives si te pagan a 60-90 días?»); 39 compartidos por 100 me gusta |
+| 36 | elproferomero (537,5 mil) | https://www.instagram.com/reel/DfR2937E-Ja/ | 41,0 mil | negocios/sátira | 113 s; locutado; titular que contrapone dos cosas incompatibles («expedientes digitales / gasto en fotocopias») |
+| 37 | apulso.cl_ (3,5 mil) | https://www.instagram.com/reel/DfgAXcnj78J/ | 27,4 mil | emprender | 37 s; entrevista con texto «pregunta» + «lo de 2 horas, en 15 minutos» (contraste de tiempo); 3 compartidos por 100 me gusta |
+| 38 | foodpolicemx (257,3 mil) | https://www.instagram.com/reel/DfR8ucRhn0C/ | 95,2 mil | comida | 11 s; texto «viajas a X solo para probar Y» sobre el producto; palabra «ENVIAR» para mandárselo a alguien; 60 compartidos por 100 me gusta |
+| 39 | yeyo.dev (1,5 mil) | https://www.instagram.com/reel/DfWEpnWzylN/ | 2,1 mil | hostelería/apps | 65 s; tutorial; detalle absurdo del negocio («todo en papel») + plazo en el rótulo; gancho bueno; CTA guardar o compartir |
+| 40 | 909tacolandia (87,5 mil) | https://www.instagram.com/reel/DfLEEoAAM1I/ | 4,2 mil | hostelería/humor | 8 s; reacción de dos empleados a un pedido grande; gancho malo, 3 compartidos: solo para ver qué NO repetir |
+| 41 | gordobass18 (2 mil) | https://www.instagram.com/reel/DfPobiGxuC-/ | 22,5 mil | música/humor | 10 s; frase de autocrítica de músico en texto sobre actuación; 37 compartidos por 100 me gusta; respalda F11 |
+| 42 | recuerdosqueabrazane (39,6 mil) | https://www.instagram.com/reel/DfY7kvCROlB/ | 1,3 mil | cuidadores | 109 s; a cámara; pregunta de identidad («¿por qué el que cuida es el más criticado?»); gancho bueno, nicho pequeño |
+
+## Fórmula 12 · Gestión Integral 7D · «Mismo presupuesto, dos formas» (viene de #31, #36 y #35)
+- **Copiamos**: pantalla partida con el mismo tema resuelto de dos maneras, desde el primer fotograma, y un tema de dolor de pymes.
+- **Gancho (en pantalla)**: «Mismo presupuesto, dos formas de hacerlo» (6 palabras). **Segundo 0**: pantalla partida ya en marcha: izquierda, una hoja de cálculo genérica y ficticia (rótulo «Ejemplo») copiando las mismas líneas; derecha, el presupuesto abierto en 7D con cliente ficticio. Sin cara y sin marcas ajenas.
+- **Beats (4)**: 1) 0-3 s, gancho y partida; 2) 3-10 s, a la izquierda se copian las líneas del presupuesto al pedido, al albarán y a la factura (tres tablas que cambian cada ≤ 3 s); a la derecha, «pasar a pedido», albarán y factura heredando líneas, IVA por línea y retención (grabación real de 7D); 3) 10-18 s, el PDF de la factura y su enlace de pago; 4) 18-24 s, «así de fácil»: factura lista y cierre.
+- **Duración**: 22-26 s. **Música**: instrumental con ritmo, cortes al golpe. **Voz**: sin voz o genérica de España. Texto del post largo y con «mándaselo a quien presupuesta a mano».
+- **Cierre (oferta Gestión Integral 7D)**: «Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso» + /solicitar?app=gestion-integral-7d&src=instagram; comentario fijado con la palabra «APP» para la maqueta gratis (directiva 12/11).
+- **Función verificada**: «Cadena documental: presupuesto → pedido → albarán numerado (descuenta stock) → factura, heredando líneas, IVA por línea y retención» y «Enlace de pago por factura». No afirmar: Verifactu, contabilidad ni impuestos, que los agentes IA actúan solos, ERP externo, plazos comerciales. Sin cifras ni cronómetros inventados: si hay tiempo en pantalla, es el de la grabación real o lleva el rótulo «acelerado».
+- **Qué mejoramos**: el original dura 47 s, enseña código y herramientas técnicas y promete ingresos con IA; el nuestro dura la mitad, lo entiende quien factura sin saber programar y no promete dinero.
+
+## Fórmula 13 · AJ Web · «Cada día: "¿ya está mi equipo?"» (viene de #36, #39 y el «momento reconocible» del manual de Buzzfy)
+- **Copiamos**: el momento de siempre en forma de pregunta, el contraste papel/pantalla en dos tarjetas «antes ❌ / ahora ✅» y el plazo en el rótulo.
+- **Gancho (en pantalla)**: «Cada día: "¿ya está mi equipo?"» (6 palabras). **Segundo 0**: cinco avisos de mensaje que entran en cascada con esa frase (rótulo «Ejemplo»), icono de teléfono animado.
+- **Beats (4)**: 1) 0-3 s, gancho y avisos; 2) 3-8 s, tarjetas «Llamar y esperar ❌ / Número de orden y teléfono ✅» y la consulta de reparación con datos ficticios; 3) 8-14 s, la pre-entrada online (tipo de máquina, marca, modelo, avería y hasta 4 fotos) rellenada con datos ficticios, sin enviar; 4) 14-19 s, portada de la web real y cierre. Los datos de clientes reales nunca salen en pantalla; el Creador comprueba en qué entorno de entornos-de-pruebas.md existe la consulta con datos ficticios y, si no la hay, enseña solo la pre-entrada.
+- **Duración**: 17-20 s. **Música**: instrumental, con golpe en cada cambio. **Voz**: sin voz.
+- **Cierre (oferta «Tu web a medida»)**: «Te hago una maqueta GRATIS de tu web, sin compromiso» + palabra WEB en el comentario fijado + /solicitar?app=aj-reparacion-web&src=instagram (directiva 12/11). «En 7 días» solo como nombre de la oferta del dueño, nunca como hecho de la ficha. Es la pieza semanal «antes y después de una web real nuestra» de la directiva.
+- **Función verificada (visto en ajreparacion.com el 11-11-2026)**: «Pre-entrada de equipo online: datos de contacto, tipo de maquinaria, marca, modelo, avería y hasta 4 fotos opcionales» y «Consulta de reparación con número de orden y teléfono». No afirmar: pago con tarjeta, diagnóstico por IA, que las solicitudes crean el trabajo solas sin revisión, que se adapta sin personalización, que es solo para talleres. Cuenta como la pieza semanal de taller: máximo 1 por semana.
+- **Qué mejoramos**: el original es una historia hablada de 65 s sobre un cliente de otro sector; el nuestro pone el dolor en el segundo 0, enseña la web real y no pide creer nada.
+
+## Fórmula 14 · MEDICATOR · «Yo: Jefe, el jueves acompaño a mi madre» (viene de #32, #42 y #41)
+- **Copiamos**: el chiste de una línea con «Yo:» en el primer fotograma, sin demo al principio, de unos 11-14 s.
+- **Gancho (en pantalla)**: «Yo: Jefe, el jueves acompaño a mi madre» (8 palabras). **Segundo 0**: solo ese texto sobre un fondo de oficina sin marcas.
+- **Beats (4)**: 1) 0-3 s, la frase; 2) 3-6 s, respuesta del jefe en texto: «¿Llevas todo apuntado?»; 3) 6-11 s, corte a MEDICATOR con datos ficticios (la persona demo, Carmen): ficha de la cita con «qué llevar» y «Cómo llegar» y la hoja «Para el médico» ya ordenada; 4) 11-14 s, el personaje, ya tranquilo: «Yo: ahora sí».
+- **Duración**: 12-15 s (la franja de 6-15 s es la que mejor rinde). **Música**: ligera y alegre, a volumen pleno. **Voz**: sin voz.
+- **Cierre**: «Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso» + /solicitar?app=medicator&src=instagram + aviso pequeño «No sustituye a tu médico».
+- **Función verificada**: «Ficha de cita: médico, especialidad, centro, dirección, planta o consulta, si es en ayunas, qué llevar, notas y un botón "Cómo llegar"» y «Para el médico» (hoja con alergias, medicinas, constantes y próximas citas, imprimible o enviable). No afirmar: avisos garantizados, lectura fiable de papeles, modo cuidador, que sustituye al médico, que es gratis, que la hoja está «redactada» por IA.
+- **Qué mejoramos**: el original es una broma sobre mentir al jefe y no deja nada que hacer; el nuestro es una situación real de quien acompaña a un familiar, deja una solución en 5 s y no promete salud.
+
