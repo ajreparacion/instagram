@@ -1,13 +1,55 @@
 {
-  "actualizado": "2026-11-16T09:50:55+00:00",
+  "actualizado": "2026-11-16T15:53:41+00:00",
   "cuenta": {
     "id": "17841400403112257",
-    "followers_count": 1602,
+    "followers_count": 1601,
     "follows_count": 177,
-    "media_count": 31,
+    "media_count": 33,
     "username": "neogestlab"
   },
   "posts": [
+    {
+      "id": "18096925859172256",
+      "caption": "Parte 2: el cliente sin ticket vuelve, ahora con la caja y su cuñado.\nLa Trámites pide impreso tras impreso. Humor negro de ficción.\n¿Cuál fue tu devolución más rara? Cuéntala en comentarios.\nMándaselo a quien atiende al público.\nParte 3 mañana en @neogestlab\n#humornegro #tienda #comercio #ia #trabajo\nVoz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0\n\nVoz generada por IA",
+      "comments_count": 0,
+      "like_count": 1,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfzgZ61iZxT/",
+      "timestamp": "2026-11-16T13:52:44+0000",
+      "metricas": {
+        "reach": 142,
+        "views": 174,
+        "saved": 0,
+        "shares": 0,
+        "comments": 0,
+        "likes": 1,
+        "total_interactions": 1,
+        "ig_reels_avg_watch_time": 9289,
+        "ig_reels_video_view_total_time": 1300496
+      }
+    },
+    {
+      "id": "17918506854521511",
+      "caption": "Parte 2: el cliente que paga a 90 días. La ley dice 60. Humor negro de ficción.\nDato: la Ley 3/2004, de medidas contra la morosidad en las operaciones comerciales, art. 4, fija un máximo de 60 días naturales para pagar entre empresas (BOE). Esto no es asesoramiento legal.\n¿A cuántos días te pagan a ti? Comenta.\nMándaselo a quien cobra tarde.\n#humornegro #morosidad #autonomos #ia #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0\n\nVoz generada por IA",
+      "comments_count": 0,
+      "like_count": 2,
+      "media_product_type": "REELS",
+      "media_type": "VIDEO",
+      "permalink": "https://www.instagram.com/reel/DfzSqdiD9jZ/",
+      "timestamp": "2026-11-16T11:52:41+0000",
+      "metricas": {
+        "reach": 186,
+        "views": 241,
+        "saved": 0,
+        "shares": 0,
+        "comments": 0,
+        "likes": 2,
+        "total_interactions": 2,
+        "ig_reels_avg_watch_time": 11864,
+        "ig_reels_video_view_total_time": 2206756
+      }
+    },
     {
       "id": "18099657041112270",
       "caption": "Aquí somos una familia. La Jupillo lo arregla; el Jambo no tanto. Humor de oficina de ficción.\nDato: el registro diario de jornada es obligatorio para todas las empresas desde el 12/05/2019 (art. 34.9 del Estatuto de los Trabajadores, Real Decreto-ley 8/2019, BOE). No es asesoramiento legal.\n¿En tu trabajo también sois «una familia»? Cuéntalo en comentarios.\nMándaselo a quien le pasa esto.\n#humor #trabajo #oficina #fichaje #pymes #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: biblioteca libre de derechos de Pixabay\n\nVoz generada por IA",
@@ -18,7 +60,7 @@
       "permalink": "https://www.instagram.com/reel/Dfx3JIngV80/",
       "timestamp": "2026-11-15T22:33:00+0000",
       "metricas": {
-        "reach": 104,
+        "reach": 105,
         "views": 116,
         "saved": 0,
         "shares": 0,
@@ -60,15 +102,15 @@
       "permalink": "https://www.instagram.com/reel/DfxrgEQktvJ/",
       "timestamp": "2026-11-15T20:51:13+0000",
       "metricas": {
-        "reach": 135,
-        "views": 149,
+        "reach": 136,
+        "views": 151,
         "saved": 0,
         "shares": 1,
         "comments": 0,
         "likes": 1,
         "total_interactions": 3,
-        "ig_reels_avg_watch_time": 9054,
-        "ig_reels_video_view_total_time": 1258582
+        "ig_reels_avg_watch_time": 9205,
+        "ig_reels_video_view_total_time": 1288714
       }
     },
     {
@@ -81,15 +123,15 @@
       "permalink": "https://www.instagram.com/reel/Dfxl8zAgB9q/",
       "timestamp": "2026-11-15T20:02:41+0000",
       "metricas": {
-        "reach": 23,
-        "views": 37,
+        "reach": 31,
+        "views": 46,
         "saved": 0,
         "shares": 2,
         "comments": 0,
         "likes": 2,
         "total_interactions": 6,
-        "ig_reels_avg_watch_time": 6012,
-        "ig_reels_video_view_total_time": 186398
+        "ig_reels_avg_watch_time": 4970,
+        "ig_reels_video_view_total_time": 193864
       }
     },
     {
@@ -102,15 +144,15 @@
       "permalink": "https://www.instagram.com/reel/DfxfC-MicFW/",
       "timestamp": "2026-11-15T19:02:23+0000",
       "metricas": {
-        "reach": 90,
-        "views": 110,
+        "reach": 101,
+        "views": 128,
         "saved": 0,
         "shares": 1,
         "comments": 0,
         "likes": 2,
         "total_interactions": 5,
-        "ig_reels_avg_watch_time": 4517,
-        "ig_reels_video_view_total_time": 438224
+        "ig_reels_avg_watch_time": 36715,
+        "ig_reels_video_view_total_time": 4002008
       }
     },
     {
@@ -123,15 +165,15 @@
       "permalink": "https://www.instagram.com/reel/DfxRMdqjUSm/",
       "timestamp": "2026-11-15T17:01:25+0000",
       "metricas": {
-        "reach": 58,
-        "views": 75,
+        "reach": 69,
+        "views": 89,
         "saved": 0,
         "shares": 1,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 4851,
-        "ig_reels_video_view_total_time": 325076
+        "ig_reels_avg_watch_time": 5271,
+        "ig_reels_video_view_total_time": 411199
       }
     },
     {
@@ -144,15 +186,15 @@
       "permalink": "https://www.instagram.com/reel/DfxIaOwgS-i/",
       "timestamp": "2026-11-15T15:44:36+0000",
       "metricas": {
-        "reach": 507,
-        "views": 622,
+        "reach": 585,
+        "views": 704,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 5,
         "total_interactions": 7,
-        "ig_reels_avg_watch_time": 12957,
-        "ig_reels_video_view_total_time": 6595234
+        "ig_reels_avg_watch_time": 13177,
+        "ig_reels_video_view_total_time": 7695869
       }
     },
     {
@@ -186,15 +228,15 @@
       "permalink": "https://www.instagram.com/reel/Dfw_9U7Dqo2/",
       "timestamp": "2026-11-15T14:30:44+0000",
       "metricas": {
-        "reach": 215,
-        "views": 242,
+        "reach": 217,
+        "views": 244,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 2,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 8702,
-        "ig_reels_video_view_total_time": 1879645
+        "ig_reels_avg_watch_time": 8681,
+        "ig_reels_video_view_total_time": 1892549
       }
     },
     {
@@ -214,8 +256,8 @@
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 4160,
-        "ig_reels_video_view_total_time": 158114
+        "ig_reels_avg_watch_time": 4101,
+        "ig_reels_video_view_total_time": 159961
       }
     },
     {
@@ -228,15 +270,15 @@
       "permalink": "https://www.instagram.com/reel/DfwyL6UDOd_/",
       "timestamp": "2026-11-15T12:30:23+0000",
       "metricas": {
-        "reach": 17,
-        "views": 22,
+        "reach": 18,
+        "views": 23,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 3761,
-        "ig_reels_video_view_total_time": 63937
+        "ig_reels_avg_watch_time": 3608,
+        "ig_reels_video_view_total_time": 64950
       }
     },
     {
@@ -333,15 +375,15 @@
       "permalink": "https://www.instagram.com/reel/DfuyeXhiKCb/",
       "timestamp": "2026-11-14T17:54:26+0000",
       "metricas": {
-        "reach": 216,
-        "views": 238,
+        "reach": 217,
+        "views": 239,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 3,
         "total_interactions": 4,
-        "ig_reels_avg_watch_time": 9334,
-        "ig_reels_video_view_total_time": 1997676
+        "ig_reels_avg_watch_time": 9297,
+        "ig_reels_video_view_total_time": 1999064
       }
     },
     {
@@ -451,15 +493,15 @@
       "permalink": "https://www.instagram.com/reel/Dfp74hakXc2/",
       "timestamp": "2026-11-12T20:40:34+0000",
       "metricas": {
-        "reach": 105,
-        "views": 123,
+        "reach": 106,
+        "views": 125,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 7335,
-        "ig_reels_video_view_total_time": 806916
+        "ig_reels_avg_watch_time": 7355,
+        "ig_reels_video_view_total_time": 816446
       }
     },
     {
@@ -578,44 +620,6 @@
         "total_interactions": 3,
         "ig_reels_avg_watch_time": 16494,
         "ig_reels_video_view_total_time": 395878
-      }
-    },
-    {
-      "id": "17865814698695210",
-      "caption": "Pastillas y citas, con letra grande 💊\nMEDICATOR enseña la pastilla que toca ahora, guarda las citas en un calendario y prepara la hoja para el médico y la lista para la farmacia.\nCapturas de la demo con datos de ejemplo. Organiza; no sustituye a tu médico.\nPide la demo en el enlace del perfil o escríbeme IDEA por privado.\n\n#mayores #cuidadores #organizacion #apps #neogestlab",
-      "comments_count": 0,
-      "like_count": 3,
-      "media_product_type": "REELS",
-      "media_type": "VIDEO",
-      "permalink": "https://www.instagram.com/reel/DfhX2RRgesw/",
-      "timestamp": "2026-11-09T12:51:39+0000",
-      "metricas": {
-        "reach": 8,
-        "views": 10,
-        "saved": 0,
-        "shares": 1,
-        "comments": 0,
-        "likes": 3,
-        "total_interactions": 7,
-        "ig_reels_avg_watch_time": 6402,
-        "ig_reels_video_view_total_time": 70429
-      }
-    },
-    {
-      "id": "17975553504173968",
-      "caption": "Con esta fórmula la IA por fin te entiende.\nUn buen prompt tiene 4 piezas, en este orden:\nRol: «Actúa como asesor de marketing para pequeños negocios».\nContexto: quién eres, qué pasa y para quién es.\nTarea: un verbo claro y una sola cosa cada vez.\nFormato: tabla, lista, email o número de líneas.\nGuárdalo: el ejemplo completo está en la diapositiva 6, listo para cambiar los datos ✍️ ¿Tienes una idea para tu negocio? Escríbeme IDEA por privado.\n\n#inteligenciaartificial #prompts #ia #pymes #neogestlab",
-      "comments_count": 0,
-      "like_count": 2,
-      "media_product_type": "FEED",
-      "media_type": "CAROUSEL_ALBUM",
-      "permalink": "https://www.instagram.com/p/DfhG07DFzQm/",
-      "timestamp": "2026-11-09T10:22:43+0000",
-      "metricas": {
-        "reach": 11,
-        "views": 26,
-        "saved": 0,
-        "shares": 0,
-        "total_interactions": 4
       }
     }
   ],
@@ -771,6 +775,10 @@
     {
       "fecha": "2026-11-16T09:50+00:00",
       "seguidores": 1602
+    },
+    {
+      "fecha": "2026-11-16T15:53+00:00",
+      "seguidores": 1601
     }
   ]
 }
