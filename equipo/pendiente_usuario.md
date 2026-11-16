@@ -12,6 +12,9 @@ Reducido el 13/11/2026 por el Estratega (la versión larga está en git). Aquí 
 2. **Buffer gratis** en https://buffer.com (botón de registro, plan Free, sin tarjeta) → Channels → Connect → TikTok → autorizar @neogestlab.
 3. **Clave de Buffer**: sigue la guía oficial https://support.buffer.com/en-us/articles/how-to-create-your-buffer-api-key-ShIgYVwM6j , copia la clave → pegarla como secreto `BUFFER_API_KEY` en https://github.com/ajreparacion/instagram/settings/secrets/actions/new . Ese mismo día salen programadas las 8 primeras piezas.
 
+## Recepcionista 24h (16/11/2026): grabar 3 llamadas reales con el móvil, unos 5 minutos
+En el móvil: activa la grabación de pantalla CON micrófono, abre tu web, pulsa «Llamar», pon el altavoz y haz una pregunta por llamada: (1) «¿Qué horario tenéis?» · (2) «Quería pedir cita para esta semana» · (3) «¿Me puedes pasar con una persona?». Sin dar nombres ni teléfonos de nadie. Sube los 3 vídeos a la Biblioteca de Neogest Studio o adjúntalos en el chat.
+
 ## LinkedIn y Google (16/11/2026): cuando tengas el portátil; la clave de Buffer es la misma de TikTok
 1. **LinkedIn:** con tu perfil personal abierto, crea la página en https://www.linkedin.com/company/setup/new/ → «Empresa» → nombre «Neogest Lab», URL `neogestlab`, sector «Desarrollo de software», tamaño 1-10. Logo y textos: doc «Estrategia LinkedIn y Google». Luego en Buffer: Channels → Connect → LinkedIn → elegir la **página** (no tu perfil).
 2. **Google:** crea la ficha en https://business.google.com/create → nombre «Neogest Lab», categoría «Empresa de software», sin tienda física (zona de servicio: España), web y teléfono. **Verifícala** como te pida Google (suele ser un vídeo corto o un código). Cuando salga «Verificada», en Buffer: Channels → Connect → Google Business Profile.

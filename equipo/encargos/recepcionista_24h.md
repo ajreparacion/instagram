@@ -20,7 +20,8 @@ Que es una persona o que «no se nota»; «ilimitado» sin precisar el plan; el 
 
 ## Formato
 Promo de app (directiva §5): 25-45 s, ANTES/DESPUÉS, voz final ElevenLabs Johnny (presupuesto §6), música en primer plano, cierre ≤ 3 s con logo 2026.
-- La llamada se RECREA con voces sintéticas (narración + voz del asistente) y lleva en pantalla «Recreación» durante toda la escena. No se usa ninguna grabación de llamadas reales ni el asistente del taller.
+- LLAMADA REAL (orden del dueño 16/11, preferente): el dueño graba con su móvil llamadas al asistente de su propio negocio pulsando el botón «Llamar» de su web, y las sube a la Biblioteca de Neogest Studio (tag `llamada-real`). Esas grabaciones son el centro de la pieza: se rotulan «Llamada real a un asistente en funcionamiento», se subtitulan palabra a palabra y solo se recortan silencios; no se altera lo que dice el asistente. Solo valen llamadas hechas por el dueño: nunca llamadas de clientes ni datos de personas reales. El número directo del asistente no se escribe en este repo (es público) ni sale en pantalla.
+- RECREACIÓN (respaldo, mientras no haya grabaciones): voces sintéticas (narración + voz del asistente) con «Recreación» en pantalla durante toda la escena. Nunca se presenta una recreación como llamada real.
 - En la voz: «asistente telefónico» o «recepcionista virtual», nunca las siglas; cifras en letra; nunca un nombre propio como primera palabra.
 - Cierre del post: «Solicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso» + `/solicitar?app=recepcionista-24h&src=<canal>`. Es un servicio a medida: NO se usa «Pide tu prueba gratuita».
 
@@ -41,4 +42,4 @@ DESPUÉS: tres pasos en pantalla: «Tu mismo número» · «Tu voz y tu trato, d
 CIERRE: «Solicita información gratuita. Enlace en el perfil.»
 
 ## Reparto
-Creador: guion.json y post.json de R1-R3 (piezas 8xx) con `app_slug: "recepcionista-24h"`. Centro: voz final y render. Calidad: comprobar «Recreación» en pantalla y que no aparece el proveedor. Estratega: 1 pieza de este servicio cada 3 días hasta tener datos.
+Creador: guion.json y post.json de R1-R3 (piezas 8xx) con `app_slug: "recepcionista-24h"`. Centro: voz final y render. Calidad: comprobar el rótulo correcto («Llamada real…» o «Recreación») y que no aparecen el proveedor ni datos de personas. Estratega: 1 pieza de este servicio cada 3 días hasta tener datos.
