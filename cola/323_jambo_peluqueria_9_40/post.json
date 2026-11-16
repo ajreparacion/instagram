@@ -34,5 +34,16 @@
     "duracion_s": 16.67
   },
   "motor": "neogest-studio",
-  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/f815f5e9d_323_jambo_peluqueria.mp4"
+  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/f815f5e9d_323_jambo_peluqueria.mp4",
+  "youtube": {
+    "titulo": "Peluquería: cita a las 9:40 y la agenda en papel #Shorts",
+    "descripcion": "Peluquería: cita a las 9:40 y la agenda en papel. El Jambo, serie de humor de ficción.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube\nBy Neogest Lab",
+    "etiquetas": [
+      "Shorts",
+      "humor",
+      "autonomos",
+      "neogestlab",
+      "peluqueria"
+    ]
+  }
 }
