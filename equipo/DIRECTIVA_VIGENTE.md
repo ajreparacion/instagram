@@ -13,7 +13,7 @@ Versión limpia del 15/11/2026 (orden del dueño). Sustituye a todo lo anterior;
 |---|---|---|---|
 | Creador | 09:51 y 15:51 a diario | Sonnet | roles/creador.md |
 | Calidad | 11:41 y 17:41 (tarea única «Calidad»; después de cada pasada del Creador) | Sonnet | roles/calidad.md |
-| Supervisor | 13:27 a diario | Haiku | roles/supervisor.md |
+| Supervisor | 12:27 y 18:27 a diario | Haiku, **API directa (no Claude Code)** | roles/supervisor.md + `herramientas/supervisor_api.py` |
 | Cazador de virales | lunes 08:23 | Sonnet | roles/cazador.md |
 | Remasterizador | lunes, miércoles y viernes 09:00 | Sonnet | roles/remasterizador.md |
 | Analista (+ monetización los domingos) | martes, jueves y domingo 23:23 | Haiku | roles/analista.md |
@@ -22,6 +22,7 @@ Versión limpia del 15/11/2026 (orden del dueño). Sustituye a todo lo anterior;
 | Comunidad | 19:37 a diario | Haiku | roles/comunidad.md |
 | Centro (vídeos y demos del Centro) | lunes y jueves 11:17 | Sonnet | roles/centro.md |
 | Ventas · prospección | L-V 09:43, EN PAUSA (ver su rol) | Sonnet | roles/ventas.md |
+Aviso (16/11, comprobado por Coordinación): la tarea programada llamada «IG nube · Supervisor (repo)» (13:27 a diario) NO ejecuta el checklist de `roles/supervisor.md` — su prompt real es «cerrar la cola de Gemini» (marcar `equipo/cola_gemini.md` con los assets ya subidos a Base44), tarea distinta y necesaria porque la tarea de Gemini no puede hacer push. El checklist real del Supervisor no tenía ninguna tarea programada propia desde el 15/11 (solo una prueba manual); desde el 16/11 corre por `.github/workflows/supervisor_api.yml` (ver fila de arriba). No tocar ni renombrar esa tarea de Claude Code sin avisar: sigue cerrando la cola de Gemini.
 Tareas en pausa desde el 15/11 (si alguna se dispara, NO trabaja: termina en una línea, sin tablón ni commit):
 - «IG nube · Calidad (repo)» de las 12:51 y «IG nube · Calidad (noche) (repo)» de las 19:31: fusionadas en la Calidad de cada 2 h.
 - «IG nube · Analista de monetización (repo)» (domingos 18:17): fusionada en el Analista.
@@ -149,3 +150,4 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - 2026-11-16 · Coordinación (orden del dueño) · servicio nuevo Recepcionista 24h en promoción (§9; equipo/encargos/recepcionista_24h.md).
 - 2026-11-16 · Coordinación (orden del dueño) · reparto nuevo de El Jambo que sabe: Rosa Melano, Felipe Lotas, Sindy Entes y Neo sustituyen a Jambo, Jupillo, Pelota, Bola y Trámites; moraleja de cierre obligatoria en todo episodio nuevo (§5, §6; equipo/serie_jambo.md biblia v3; voces en equipo/voz.json).
 - 2026-11-16 · Coordinación (orden del dueño: bajar pasadas para ahorrar) · Creador 2 al día, Calidad 2, Supervisor 1, Comunidad 1, Remasterizador y Analista 3 por semana, Cazador y Mejora 1 por semana, Gemini 1 al día, Laboratorio de ideas pasa al sábado (el 16/11 la cuenta iba por el 78 % del límite semanal). El 16/11 hubo 4 pasadas de Calidad y 2 de Comunidad sin nada que hacer.
+- 2026-11-16 · Coordinación (orden del dueño: «usa los 100 $ de créditos de la API para lo que sea más conveniente» / «todo lo que se pueda usar con la API y no gastar tokens, se hace») · Supervisor sale de Claude Code y pasa a API directa de Anthropic (Haiku) vía GitHub Actions, pagada con esos créditos y no con el límite semanal del plan Max: `.github/workflows/supervisor_api.yml` + `herramientas/supervisor_api.py`, 12:27 y 18:27 Madrid, probado con workflow_dispatch. v1 solo diagnostica en el tablón (no edita pendiente_usuario.md ni lanza ciclo.yml todavía). Comunidad y Analista NO se han podido pasar igual: dependen de los conectores Buzzfy/Base44/Meta-Business, que solo existen dentro de una sesión de Claude Code — moverlos exigiría una integración directa nueva (tokens propios de Instagram/Facebook/Base44) en vez de un cambio simple; queda pendiente de que el dueño decida si se construye.
