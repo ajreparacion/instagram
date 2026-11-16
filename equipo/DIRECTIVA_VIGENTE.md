@@ -112,6 +112,7 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - Ninguna app se presenta para un solo sector. Demos y capturas solo con datos ficticios (entornos de pruebas).
 - AjReparacion Gestión original (698ebd645b1870b1a0a9be3b) y la web del taller son intocables; demos en AJ Sistema DEMO (6ae702b32d473b8561ad5afb).
 - Gestoría7D SE PROMOCIONA YA (orden del dueño 15/11 19:45).
+- Recepcionista 24h (servicio nuevo, orden del dueño 16/11): asistente telefónico con inteligencia artificial que Neogest Lab configura y mantiene; slug `recepcionista-24h`. Se promociona con las reglas de `equipo/encargos/recepcionista_24h.md`: llamadas siempre recreadas y rotuladas «Recreación», sin nombrar al proveedor, en posts solo «desde 150 € al mes», cierre «Solicita información gratuita».
 - Planes gratis vigentes: Factura7D 2 facturas al mes; APPCC Fácil 2 puntos e informe de 1 día.
 - MEDICATOR: «consulta la base de datos oficial de la AEMPS» (nunca «avalada»), sin consejos médicos; su lectura de papeles es OCR local + reglas: no decir «IA».
 - Métrica que manda: altas en prueba gratuita de Gestión Integral 7D (por encima de seguidores y vistas). Enlace con `src` del canal: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=<slug>&src=instagram|facebook|youtube|tiktok|linkedin|google
@@ -145,3 +146,4 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - 2026-11-16 · Coordinación (orden del dueño) · LinkedIn y Google Business Profile entran por el mismo flujo de Buffer que TikTok (§4, §8, §9); TikTok se envía con la etiqueta oficial de IA.
 - 2026-11-16 · Coordinación (orden del dueño: «si bastan los créditos, sí») · ElevenLabs Johnny pasa a ser la voz final de promos de app y reels de datos, con presupuesto de 30.000 caracteres al mes; El Jambo sigue con edge-tts porque los créditos no alcanzan (§5, §6).
 - 2026-11-16 · Coordinación (orden del dueño) · los audios se guardan y se reutilizan siempre; índice en equipo/voces_indice.json (§6).
+- 2026-11-16 · Coordinación (orden del dueño) · servicio nuevo Recepcionista 24h en promoción (§9; equipo/encargos/recepcionista_24h.md).
