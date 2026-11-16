@@ -42,3 +42,6 @@ La tarea no puede leer workana.com ni ajreparacion.com (ENOTFOUND: fuera de los 
 
 ## Requiere PC
 - 14/11/2026: por orden del dueño nada se ejecuta en su ordenador. Los agentes anotan aquí lo que solo se pueda hacer en él (no se hace solo).
+
+## Facebook · invitaciones
+- 2026-11-16 · Comunidad: sin lista de candidatos para invitar (no hay en el repo a quién invitar hoy; la API no permite invitar). Si quieres invitar, usa el botón «Invitar» de la página con quienes ya comentan o reaccionan en los reels de Neogest Lab.
