@@ -1,7 +1,7 @@
 {
   "tipo": "reel",
   "texto": "El presupuesto «cerrado» de la reforma salió por el doble. La Jupillo lee la letra pequeña.\n¿Te han cerrado alguna vez un presupuesto abierto? Cuéntalo en comentarios.\nMándaselo a quien firma presupuestos sin leer la letra pequeña.\n#humornegro #reformas #presupuesto #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
-  "cuando": "2026-11-16T16:40:00+01:00",
+  "cuando": "2026-11-17T15:20:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
   "formato": "Serie El Jambo",
@@ -41,5 +41,6 @@
       "neogestlab",
       "presupuesto"
     ]
-  }
+  },
+  "_movido_calidad": "16/11 14:44 UTC: de 16/11 16:40 a 17/11 15:20 (nota 88; máster corregido en el estudio sin subir: el sandbox da 401 y la subida directa a la release está bloqueada en las sesiones)"
 }

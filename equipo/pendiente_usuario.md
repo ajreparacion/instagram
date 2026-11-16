@@ -45,3 +45,4 @@ La tarea no puede leer workana.com ni ajreparacion.com (ENOTFOUND: fuera de los 
 
 ## Facebook · invitaciones
 - 2026-11-16 · Comunidad: sin lista de candidatos para invitar (no hay en el repo a quién invitar hoy; la API no permite invitar). Si quieres invitar, usa el botón «Invitar» de la página con quienes ya comentan o reaccionan en los reels de Neogest Lab.
+- 2026-11-16 · Calidad · Subir vídeos corregidos a la release «cola»: desde las sesiones en la nube no se puede (subida binaria bloqueada) y el sandbox del estudio da 401. 308 y 323 tienen el máster corregido en Neogest Studio (public/_render/fix-308.mp4 y fix-323.mp4) pero no pueden publicarse. Hace falta que Mejora habilite una vía en Actions (p. ej. que el ciclo descargue un video_externo con URL pública de media.base44.com) o que el dueño dé permiso de subida.
