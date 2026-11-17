@@ -10,7 +10,7 @@
   "_fuentes": [],
   "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
   "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
-  "renderizado": false,
+  "renderizado": "2026-11-17T08:58:14+00:00",
   "motor_voz": "edge",
   "comentario_fijado": "¿Te han cerrado alguna vez un presupuesto abierto? Episodio nuevo cada día en @neogestlab",
   "avance_siguiente": "Mañana: tu ruta de visitas está en papel",
@@ -30,7 +30,7 @@
   },
   "motor": "neogest-studio",
   "asset": "308_jambo_ep8_presupuesto.mp4",
-  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/9fe9bb394_308_jambo_presupuesto.mp4",
+  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/b6326d010_308-master.mp4",
   "youtube": {
     "titulo": "Presupuesto «cerrado» que sale por el doble #Shorts",
     "descripcion": "Presupuesto «cerrado» que sale por el doble. El Jambo, serie de humor de ficción.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube\nBy Neogest Lab",
@@ -42,6 +42,5 @@
       "presupuesto"
     ]
   },
-  "_movido_calidad": "16/11 14:44 UTC: de 16/11 16:40 a 17/11 15:20 (nota 88; máster corregido en el estudio sin subir: el sandbox da 401 y la subida directa a la release está bloqueada en las sesiones)",
-  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/b6326d010_308-master.mp4"
+  "_movido_calidad": "16/11 14:44 UTC: de 16/11 16:40 a 17/11 15:20 (nota 88; máster corregido en el estudio sin subir: el sandbox da 401 y la subida directa a la release está bloqueada en las sesiones)"
 }
