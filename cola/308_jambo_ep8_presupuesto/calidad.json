@@ -1,19 +1,8 @@
 {
-  "aprobado": false,
-  "nota": 88,
-  "motivos": [
-    "Neogest Studio, buena imagen y 5 tiempos (28,5 s, ≤ 30)",
-    "Pico −0,7 dBFS (> −1 dB) y −15,0 LUFS (objetivo −14)",
-    "Sin control_audio sobre este render (el control_audio.json es del render anterior): whisper sin contrastar",
-    "Gancho del segundo 0 sobre el clip real con texto semitransparente, poco legible",
-    "post.json sin bloque youtube ni avance_siguiente; atribución MacLeod posiblemente heredada del render sketch (el estudio usa música Pixabay): comprobar"
-  ],
-  "como_arreglarlo": "Neogest Studio: máster con pico real ≤ −1 dB y −14 LUFS; que el ciclo pase control_audio sobre el render nuevo; Creador: añadir bloque youtube (#Shorts, /solicitar?…&src=youtube) y avance_siguiente, atribuir la música que suena de verdad (Pixabay del estudio o MacLeod) y gancho del segundo 0 con contraste pleno; después vuelve a Calidad.",
-  "fecha": "2026-11-15T21:44:09+00:00",
-  "revisor": "Calidad (pasada cada 2 h)",
-  "render": "2026-11-15T19:46:47+00:00",
-  "aprobado_anterior": false,
-  "nota_anterior": 88,
-  "caducado": "2026-11-17T08:58:14+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-17T08:58:14+00:00"
+  "aprobado": true,
+  "nota": 90,
+  "fecha": "2026-11-17T10:43:42+00:00",
+  "revisor": "Calidad (pasada 11:41)",
+  "render": "2026-11-17T08:58:14+00:00",
+  "comentario": "Neogest Studio con máster corregido (−14,2/−14,4 LUFS, pico −1,3/−1,4 dBFS), 1080x1920, ≤ 30 s, sin silencios > 0,6 s; gancho legible desde 0,5 s, 5 tiempos con giro y moraleja, cierre con logo 2026; bloques youtube y avance_siguiente presentes. Arreglado: la atribución decía MacLeod (heredada del render sketch) y el estudio usa música Pixabay. Pendiente de Mejora: el ciclo no pasa control_audio (whisper) sobre video_externo; la voz es edge-tts con marcas de palabra del estudio."
 }

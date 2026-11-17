@@ -1,7 +1,7 @@
 {
   "tipo": "reel",
-  "texto": "La de las 9 llega a las 9:40. Siempre. La Jupillo ha encontrado el truco. Humor negro de ficción.\n¿Cuánto esperas tú a quien llega tarde? Cuéntalo en comentarios.\nMándaselo a quien siempre espera a la clienta que llega tarde.\n#peluqueria #humornegro #agenda #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Monkeys Spinning Monkeys\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
-  "cuando": "2026-11-17T09:40:00+01:00",
+  "texto": "La de las 9 llega a las 9:40. Siempre. La Jupillo ha encontrado el truco. Humor negro de ficción.\n¿Cuánto esperas tú a quien llega tarde? Cuéntalo en comentarios.\nMándaselo a quien siempre espera a la clienta que llega tarde.\n#peluqueria #humornegro #agenda #autonomos #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: biblioteca Pixabay de Neogest Studio (licencia de contenido de Pixabay)",
+  "cuando": "2026-11-17T18:00:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
   "formato": "Serie El Jambo",
@@ -20,12 +20,10 @@
     "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
   "musica": {
-    "titulo": "Monkeys Spinning Monkeys",
-    "autor": "Kevin MacLeod",
-    "licencia": "CC BY 4.0",
-    "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Monkeys_Spinning_Monkeys.mp3",
-    "bpm": 143.6
+    "titulo": "comedia (biblioteca del estudio)",
+    "autor": "Pixabay",
+    "licencia": "Licencia de contenido de Pixabay",
+    "fuente": "Neogest Studio, herramientas/estudio/LEEME.md"
   },
   "renderizado": "2026-11-17T08:58:10+00:00",
   "asset": "323_jambo_peluqueria_9_40.mp4",
@@ -46,5 +44,5 @@
       "peluqueria"
     ]
   },
-  "_movido_calidad": "16/11 15:44 UTC: de 16/11 18:45 a 17/11 09:40 (nota 88; máster corregido en el estudio sin subir)"
+  "_movido_calidad": "16/11 15:44 UTC: de 16/11 18:45 a 17/11 09:40 (nota 88; máster corregido en el estudio sin subir) · 17/11 10:45 UTC: 09:40 ya vencida sin nota; aprobado y movido a 18:00"
 }
