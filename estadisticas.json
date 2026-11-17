@@ -1,9 +1,9 @@
 {
-  "actualizado": "2026-11-16T21:54:46+00:00",
+  "actualizado": "2026-11-17T03:56:16+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1601,
-    "follows_count": 177,
+    "follows_count": 176,
     "media_count": 34,
     "username": "neogestlab"
   },
@@ -18,15 +18,15 @@
       "permalink": "https://www.instagram.com/reel/Df0LzI6CtCK/",
       "timestamp": "2026-11-16T20:11:57+0000",
       "metricas": {
-        "reach": 120,
-        "views": 147,
+        "reach": 131,
+        "views": 160,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 10709,
-        "ig_reels_video_view_total_time": 1285132
+        "ig_reels_avg_watch_time": 10200,
+        "ig_reels_video_view_total_time": 1336314
       }
     },
     {
@@ -39,36 +39,36 @@
       "permalink": "https://www.instagram.com/reel/DfzgZ61iZxT/",
       "timestamp": "2026-11-16T13:52:44+0000",
       "metricas": {
-        "reach": 144,
-        "views": 174,
+        "reach": 145,
+        "views": 175,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 1,
-        "ig_reels_avg_watch_time": 9216,
-        "ig_reels_video_view_total_time": 1308681
+        "ig_reels_avg_watch_time": 9156,
+        "ig_reels_video_view_total_time": 1309424
       }
     },
     {
       "id": "17918506854521511",
       "caption": "Parte 2: el cliente que paga a 90 días. La ley dice 60. Humor negro de ficción.\nDato: la Ley 3/2004, de medidas contra la morosidad en las operaciones comerciales, art. 4, fija un máximo de 60 días naturales para pagar entre empresas (BOE). Esto no es asesoramiento legal.\n¿A cuántos días te pagan a ti? Comenta.\nMándaselo a quien cobra tarde.\n#humornegro #morosidad #autonomos #ia #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0\n\nVoz generada por IA",
       "comments_count": 0,
-      "like_count": 4,
+      "like_count": 5,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DfzSqdiD9jZ/",
       "timestamp": "2026-11-16T11:52:41+0000",
       "metricas": {
-        "reach": 397,
-        "views": 513,
+        "reach": 630,
+        "views": 821,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 4,
-        "total_interactions": 4,
-        "ig_reels_avg_watch_time": 11039,
-        "ig_reels_video_view_total_time": 4349439
+        "likes": 5,
+        "total_interactions": 5,
+        "ig_reels_avg_watch_time": 10747,
+        "ig_reels_video_view_total_time": 6685244
       }
     },
     {
@@ -334,14 +334,14 @@
       "timestamp": "2026-11-15T11:02:22+0000",
       "metricas": {
         "reach": 25,
-        "views": 28,
+        "views": 29,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 3219,
-        "ig_reels_video_view_total_time": 83701
+        "ig_reels_avg_watch_time": 3142,
+        "ig_reels_video_view_total_time": 84842
       }
     },
     {
@@ -434,15 +434,15 @@
       "permalink": "https://www.instagram.com/reel/Dfsar7fDHsL/",
       "timestamp": "2026-11-13T19:48:14+0000",
       "metricas": {
-        "reach": 146,
-        "views": 198,
+        "reach": 147,
+        "views": 199,
         "saved": 0,
         "shares": 1,
         "comments": 0,
         "likes": 2,
         "total_interactions": 4,
-        "ig_reels_avg_watch_time": 12486,
-        "ig_reels_video_view_total_time": 1922901
+        "ig_reels_avg_watch_time": 12430,
+        "ig_reels_video_view_total_time": 1926751
       }
     },
     {
@@ -552,15 +552,15 @@
       "permalink": "https://www.instagram.com/reel/DfpGZLZlGH3/",
       "timestamp": "2026-11-12T12:53:03+0000",
       "metricas": {
-        "reach": 6,
+        "reach": 7,
         "views": 9,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 7842,
-        "ig_reels_video_view_total_time": 70586
+        "ig_reels_avg_watch_time": 7244,
+        "ig_reels_video_view_total_time": 72443
       }
     },
     {
@@ -782,6 +782,10 @@
     },
     {
       "fecha": "2026-11-16T21:54+00:00",
+      "seguidores": 1601
+    },
+    {
+      "fecha": "2026-11-17T03:56+00:00",
       "seguidores": 1601
     }
   ]
