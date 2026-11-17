@@ -20,6 +20,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.error
 import urllib.request
 
@@ -162,7 +163,7 @@ def _llamar_un_modelo(modelo, api_key, body):
         headers={"Content-Type": "application/json"},
         method="POST",
     )
-    with urllib.request.urlopen(req, timeout=90) as resp:
+    with urllib.request.urlopen(req, timeout=25) as resp:
         return json.loads(resp.read().decode("utf-8"))
 
 
@@ -181,19 +182,30 @@ def _llamar_gemini(prompt):
 
     data = None
     for modelo in MODELOS:
-        try:
-            data = _llamar_un_modelo(modelo, api_key, body)
-            print(f"Modelo usado: {modelo}")
+        # "Alta demanda" (503) suele ser cosa de segundos: 2 intentos cortos con espera antes
+        # de pasar al siguiente modelo de la lista, en vez de darlo por perdido a la primera.
+        for intento in range(2):
+            try:
+                data = _llamar_un_modelo(modelo, api_key, body)
+                print(f"Modelo usado: {modelo}")
+                break
+            except urllib.error.HTTPError as e:
+                detalle = e.read().decode("utf-8", "ignore")[:300]
+                print(f"{modelo} (intento {intento + 1}) -> HTTP {e.code}: {detalle}")
+                if e.code == 503 and intento == 0:
+                    time.sleep(8)
+                    continue
+                if e.code in (404, 503, 429):
+                    break  # retirado/renombrado o sigue saturado/límite: probar el siguiente modelo
+                return None  # otro error (clave inválida, prompt rechazado...) no se arregla cambiando de modelo
+            except Exception as e:  # red, timeout...
+                print(f"{modelo} (intento {intento + 1}) -> fallo de red: {e}")
+                if intento == 0:
+                    time.sleep(5)
+                    continue
+                break
+        if data is not None:
             break
-        except urllib.error.HTTPError as e:
-            detalle = e.read().decode("utf-8", "ignore")[:500]
-            print(f"{modelo} -> HTTP {e.code}: {detalle}")
-            if e.code in (404, 503, 429):
-                continue  # retirado/renombrado (404) o saturado/límite (503, 429): probar el siguiente
-            return None  # otro error (clave inválida, prompt rechazado...) no se arregla cambiando de modelo
-        except Exception as e:  # red, timeout...
-            print(f"{modelo} -> fallo de red: {e}")
-            continue
 
     if data is None:
         print(f"Ningún modelo de {MODELOS} respondió.")
