@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-17T03:56:16+00:00",
+  "actualizado": "2026-11-17T09:58:58+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1601,
@@ -39,36 +39,36 @@
       "permalink": "https://www.instagram.com/reel/DfzgZ61iZxT/",
       "timestamp": "2026-11-16T13:52:44+0000",
       "metricas": {
-        "reach": 145,
-        "views": 175,
+        "reach": 146,
+        "views": 176,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 1,
-        "ig_reels_avg_watch_time": 9156,
-        "ig_reels_video_view_total_time": 1309424
+        "ig_reels_avg_watch_time": 9096,
+        "ig_reels_video_view_total_time": 1309865
       }
     },
     {
       "id": "17918506854521511",
       "caption": "Parte 2: el cliente que paga a 90 días. La ley dice 60. Humor negro de ficción.\nDato: la Ley 3/2004, de medidas contra la morosidad en las operaciones comerciales, art. 4, fija un máximo de 60 días naturales para pagar entre empresas (BOE). Esto no es asesoramiento legal.\n¿A cuántos días te pagan a ti? Comenta.\nMándaselo a quien cobra tarde.\n#humornegro #morosidad #autonomos #ia #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0\n\nVoz generada por IA",
       "comments_count": 0,
-      "like_count": 5,
+      "like_count": 12,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/DfzSqdiD9jZ/",
       "timestamp": "2026-11-16T11:52:41+0000",
       "metricas": {
-        "reach": 630,
-        "views": 821,
+        "reach": 1080,
+        "views": 1359,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 5,
-        "total_interactions": 5,
-        "ig_reels_avg_watch_time": 10747,
-        "ig_reels_video_view_total_time": 6685244
+        "likes": 12,
+        "total_interactions": 12,
+        "ig_reels_avg_watch_time": 11668,
+        "ig_reels_video_view_total_time": 12414874
       }
     },
     {
@@ -103,14 +103,14 @@
       "timestamp": "2026-11-15T22:03:23+0000",
       "metricas": {
         "reach": 143,
-        "views": 165,
+        "views": 169,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 3185,
-        "ig_reels_video_view_total_time": 468302
+        "ig_reels_avg_watch_time": 3288,
+        "ig_reels_video_view_total_time": 486641
       }
     },
     {
@@ -573,15 +573,15 @@
       "permalink": "https://www.instagram.com/reel/DfnC1dAk27o/",
       "timestamp": "2026-11-11T17:43:30+0000",
       "metricas": {
-        "reach": 350,
-        "views": 429,
+        "reach": 352,
+        "views": 430,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 3,
         "total_interactions": 4,
-        "ig_reels_avg_watch_time": 10820,
-        "ig_reels_video_view_total_time": 3852054
+        "ig_reels_avg_watch_time": 10794,
+        "ig_reels_video_view_total_time": 3853736
       }
     },
     {
@@ -786,6 +786,10 @@
     },
     {
       "fecha": "2026-11-17T03:56+00:00",
+      "seguidores": 1601
+    },
+    {
+      "fecha": "2026-11-17T09:58+00:00",
       "seguidores": 1601
     }
   ]
