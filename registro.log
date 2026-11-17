@@ -1,4 +1,3 @@
-2026-11-15 09:29  Mezcla: voz -17.2 LUFS, música -22.3 LUFS (con ducking -24.9), la música baja 5.65 dB (p90) bajo la voz, ratio 2.5; máster -17.16 -> -14.0 LUFS, pico -1.5 dBFS; huecos de voz: []
 2026-11-15 09:29  Control de audio: FALLA voz distinta del guion: faltan ['cuarenta'], sobran ['40'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[14.82, 15.42, 0.6]]; duración 24.2 s
 2026-11-15 09:29  322_jambo_ep7_parte2_clase: NO se publica, control de audio: voz distinta del guion: faltan ['cuarenta'], sobran ['40'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[14.82, 15.42, 0.6]]
 2026-11-15 09:58  Voz con edge-tts: 7 frases en 12 s
@@ -598,3 +597,4 @@
 2026-11-17 09:27  706_aj_web_corto_reel: caducado, movido a errores/
 2026-11-17 09:58  323_jambo_peluqueria_9_40: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
 2026-11-17 09:58  308_jambo_ep8_presupuesto: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
+2026-11-17 10:28  707_studio_beats_pro_corto_reel: caducado, movido a errores/
