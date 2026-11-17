@@ -27,7 +27,7 @@
     "archivo": "Monkeys_Spinning_Monkeys.mp3",
     "bpm": 143.6
   },
-  "renderizado": "2026-11-15T19:46:49+00:00",
+  "renderizado": false,
   "asset": "323_jambo_peluqueria_9_40.mp4",
   "control_audio": {
     "aprobado": true,
@@ -46,5 +46,6 @@
       "peluqueria"
     ]
   },
-  "_movido_calidad": "16/11 15:44 UTC: de 16/11 18:45 a 17/11 09:40 (nota 88; máster corregido en el estudio sin subir)"
+  "_movido_calidad": "16/11 15:44 UTC: de 16/11 18:45 a 17/11 09:40 (nota 88; máster corregido en el estudio sin subir)",
+  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/60ecacb45_323-master.mp4"
 }
