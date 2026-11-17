@@ -1,0 +1,40 @@
+{
+  "slug": "horas-extra-gratis",
+  "set": "oficina",
+  "hora": "20",
+  "moraleja": "Se trabajan 2,5 millones de horas sin cobrar.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Hacer horas extra por amor al proyecto."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Llevo tres noches durmiendo en la oficina por amor al arte."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "El amor no se paga, se demuestra con más compromiso."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Mi hipoteca no se paga con amor, que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He facturado el exceso de horas a la empresa y abonado vuestras nóminas."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "Se trabajan 2,5 millones de horas sin cobrar."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-17T18:31:17Z"
+}

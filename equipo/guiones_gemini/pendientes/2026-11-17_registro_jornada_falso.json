@@ -1,0 +1,40 @@
+{
+  "slug": "registro-jornada-falso",
+  "set": "oficina",
+  "hora": "19",
+  "moraleja": "Registro de jornada obligatorio desde el 2019.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Ficha ahora, pero sigue trabajando después."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Si ficho ahora, el sistema marca el fin de mi jornada."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Ignora el sistema, yo te digo cuándo terminas realmente."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Yo prefiero la ley, que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He registrado la salida real y notificado las horas extra ante inspección."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "Registro de jornada obligatorio desde el 2019."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-17T18:31:17Z"
+}

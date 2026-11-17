@@ -1,0 +1,40 @@
+{
+  "slug": "pago-fuera-plazo",
+  "set": "despacho",
+  "hora": "12",
+  "moraleja": "El plazo legal de pago es 60 días.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Dale 120 días de crédito a este cliente."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Eso supera con mucho el límite legal de cobro."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Es un cliente VIP, su comodidad va antes que la ley."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "La ley es la ley, que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He ajustado el contrato a 60 días. El cliente ha aceptado."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "El plazo legal de pago es 60 días."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-17T18:31:17Z"
+}
