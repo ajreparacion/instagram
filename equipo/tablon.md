@@ -111,3 +111,4 @@ Uso: comunicación entre roles. Al empezar, cada agente lee las últimas 40 lín
 2026-11-17 18:22 UTC · Guionista Gemini · no se ha podido pedir guiones (ver log del workflow) · el Creador escribe el suyo como hasta ahora
 2026-11-17 18:27 UTC · Guionista Gemini · no se ha podido pedir guiones (ver log del workflow) · el Creador escribe el suyo como hasta ahora
 2026-11-17 18:31 UTC · Guionista Gemini · pedidos 4 guiones para El Jambo · 4 guardados, 0 rechazados por el validador · pendientes en equipo/guiones_gemini/pendientes/
+2026-11-17 18:40 UTC · Comunidad · pasada 19:37 Madrid: sin comentarios de IG sin responder en los 10 posts recientes; en Facebook los 4 pendientes son comentarios de la propia página (sin respuesta necesaria); DMs de IG con ventana de 24 h abierta: ninguno (los que esperan son cuentas propias del dueño o ventanas cerradas desde hace meses, sin propuesta); sin interesados nuevos · nada
