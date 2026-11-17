@@ -176,9 +176,9 @@ def _llamar_gemini(prompt):
         except urllib.error.HTTPError as e:
             detalle = e.read().decode("utf-8", "ignore")[:500]
             print(f"{modelo} -> HTTP {e.code}: {detalle}")
-            if e.code == 404:
-                continue  # modelo retirado/renombrado: probar el siguiente de la lista
-            return None  # otro error (clave inválida, cuota...) no se arregla cambiando de modelo
+            if e.code in (404, 503, 429):
+                continue  # retirado/renombrado (404) o saturado/límite (503, 429): probar el siguiente
+            return None  # otro error (clave inválida, prompt rechazado...) no se arregla cambiando de modelo
         except Exception as e:  # red, timeout...
             print(f"{modelo} -> fallo de red: {e}")
             continue
