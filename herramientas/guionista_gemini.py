@@ -32,9 +32,21 @@ COLA = os.path.join(RAIZ, "cola")
 PENDIENTES = os.path.join(RAIZ, "equipo", "guiones_gemini", "pendientes")
 
 # Lista de modelos a probar en orden (el primero que responda gana). gemini-2.0-flash dejó
-# de estar disponible el 17/11/2026 ("use models/gemini-3.8-flash"); se deja más de uno para
-# no volver a romperse en el primer cambio de catálogo de Google.
-MODELOS = ["gemini-3.8-flash", "gemini-flash-latest", "gemini-2.5-flash"]
+# de estar disponible el 17/11/2026; comprobado ese día con herramientas/gemini_modelos.py
+# qué acepta generateContent la clave real. gemini-3.8-flash y gemini-flash-latest dieron 503
+# (saturados) y gemini-2.5-flash/gemini-2.5-flash-lite dieron 404 "no disponible para cuentas
+# nuevas" con esta clave: se dejan de últimos por si cambia. Lista larga a propósito para
+# aguantar baches de saturación sin dejar de producir guiones.
+MODELOS = [
+    "gemini-3.7-flash",
+    "gemini-3.8-flash",
+    "gemini-3.6-flash",
+    "gemini-flash-latest",
+    "gemini-3.1-flash-lite",
+    "gemini-flash-lite-latest",
+    "gemini-3.5-flash",
+    "gemini-2.5-flash",
+]
 N_POR_DEFECTO = 4
 PERSONAJES_VALIDOS = {"rosa", "felipe", "sindy", "neo", "cliente"}
 ESTILOS_VALIDOS = {"gancho", "gag", "remate", "cierre"}
