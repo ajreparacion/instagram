@@ -1,7 +1,3 @@
-2026-11-15 09:59  Voz: alineación palabra a palabra (small, 16.2 s): 7/7 frases
-2026-11-15 09:59  Mezcla: voz -17.1 LUFS, música -22.6 LUFS (con ducking -25.5), la música baja 5.8 dB (p90) bajo la voz, ratio 2.5; máster -16.83 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
-2026-11-15 09:59  Control de audio: FALLA silencios > 0.6 s entre frases (pista de voz): [[18.26, 19.09, 0.83]]; duración 21.17 s
-2026-11-15 09:59  323_jambo_peluqueria_9_40: NO se publica, control de audio: silencios > 0.6 s entre frases (pista de voz): [[18.26, 19.09, 0.83]]
 2026-11-15 09:59  Voz con edge-tts: 7 frases en 6 s
 2026-11-15 09:59  Voz: silencios recortados por frase (s): [0.14, 0.13, 0.12, 0.13, 0.13, 0.13, 0.12]
 2026-11-15 09:59  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(2.4), np.float64(5.1), np.float64(3.3), np.float64(3.0), np.float64(4.9), np.float64(2.4), np.float64(4.2)]
@@ -598,3 +594,7 @@
 2026-11-17 11:43  320_jambo_reunion_rapida: YouTube publicado https://youtube.com/shorts/Om19Vv9KZPM
 2026-11-17 11:43  320_jambo_reunion_rapida: Facebook publicado https://www.facebook.com/reel/1173847708315889
 2026-11-17 11:43  320_jambo_reunion_rapida: publicado https://www.instagram.com/reel/Df1vigSiceR/
+2026-11-17 15:29  308_jambo_ep8_presupuesto: publicando…
+2026-11-17 15:30  308_jambo_ep8_presupuesto: YouTube publicado https://youtube.com/shorts/T_P9UFudir8
+2026-11-17 15:30  308_jambo_ep8_presupuesto: Facebook publicado https://www.facebook.com/reel/1448057086846336
+2026-11-17 15:30  308_jambo_ep8_presupuesto: publicado https://www.instagram.com/reel/Df2JdUtjMi0/
