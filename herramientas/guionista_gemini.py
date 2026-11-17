@@ -31,7 +31,10 @@ TABLON = os.path.join(RAIZ, "equipo", "tablon.md")
 COLA = os.path.join(RAIZ, "cola")
 PENDIENTES = os.path.join(RAIZ, "equipo", "guiones_gemini", "pendientes")
 
-MODELO = "gemini-2.0-flash"
+# Lista de modelos a probar en orden (el primero que responda gana). gemini-2.0-flash dejó
+# de estar disponible el 17/11/2026 ("use models/gemini-3.8-flash"); se deja más de uno para
+# no volver a romperse en el primer cambio de catálogo de Google.
+MODELOS = ["gemini-3.8-flash", "gemini-flash-latest", "gemini-2.5-flash"]
 N_POR_DEFECTO = 4
 PERSONAJES_VALIDOS = {"rosa", "felipe", "sindy", "neo", "cliente"}
 ESTILOS_VALIDOS = {"gancho", "gag", "remate", "cierre"}
@@ -136,15 +139,26 @@ remate, cierre):
 """
 
 
+def _llamar_un_modelo(modelo, api_key, body):
+    url = (
+        f"https://generativelanguage.googleapis.com/v1beta/models/{modelo}:generateContent"
+        f"?key={api_key}"
+    )
+    req = urllib.request.Request(
+        url,
+        data=json.dumps(body).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=90) as resp:
+        return json.loads(resp.read().decode("utf-8"))
+
+
 def _llamar_gemini(prompt):
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         print("GEMINI_API_KEY no está en el entorno: no se puede pedir guiones a Gemini.")
         return None
-    url = (
-        f"https://generativelanguage.googleapis.com/v1beta/models/{MODELO}:generateContent"
-        f"?key={api_key}"
-    )
     body = {
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
@@ -152,20 +166,25 @@ def _llamar_gemini(prompt):
             "responseMimeType": "application/json",
         },
     }
-    req = urllib.request.Request(
-        url,
-        data=json.dumps(body).encode("utf-8"),
-        headers={"Content-Type": "application/json"},
-        method="POST",
-    )
-    try:
-        with urllib.request.urlopen(req, timeout=90) as resp:
-            data = json.loads(resp.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        print(f"Gemini devolvió error HTTP {e.code}: {e.read().decode('utf-8', 'ignore')[:500]}")
-        return None
-    except Exception as e:  # red, timeout, json roto...
-        print(f"Fallo llamando a Gemini: {e}")
+
+    data = None
+    for modelo in MODELOS:
+        try:
+            data = _llamar_un_modelo(modelo, api_key, body)
+            print(f"Modelo usado: {modelo}")
+            break
+        except urllib.error.HTTPError as e:
+            detalle = e.read().decode("utf-8", "ignore")[:500]
+            print(f"{modelo} -> HTTP {e.code}: {detalle}")
+            if e.code == 404:
+                continue  # modelo retirado/renombrado: probar el siguiente de la lista
+            return None  # otro error (clave inválida, cuota...) no se arregla cambiando de modelo
+        except Exception as e:  # red, timeout...
+            print(f"{modelo} -> fallo de red: {e}")
+            continue
+
+    if data is None:
+        print(f"Ningún modelo de {MODELOS} respondió.")
         return None
 
     try:
