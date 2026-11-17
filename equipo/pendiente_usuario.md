@@ -7,6 +7,12 @@ Reducido el 13/11/2026 por el Estratega (la versión larga está en git). Aquí 
 2. **En /panel/solicitudes, marcar la solicitud del 8/11** como contactada o descartada (o decir que fue una prueba) **y decir si alguna app tiene plan de pago o precio**. Sin eso el embudo no puede medir euros.
 3. **Archivar desde el móvil los duplicados** (la API no archiva): carruseles del 8/11 «Deja de pedirle así las cosas a la IA» ×3, «¿Pasas los presupuestos al Excel por la noche?» ×3, «5 tareas pesadas…» ×2 y el reel de AJ Web del 10/11 ×2; dejar uno de cada. Quitar de paso lo que aún diga «Escríbeme IDEA».
 
+## Guionista Gemini (17/11/2026): 1 paso tuyo, 2 minutos; después todo es automático
+Pediste automatizar que los guiones de El Jambo se pidan a Gemini porque no engachaban; ya está montado (`.github/workflows/guionista_gemini.yml` + `herramientas/guionista_gemini.py`), pero necesita una clave que solo tú puedes crear:
+1. Entra en https://aistudio.google.com/app/apikey con la cuenta de Google **darbish** (la misma que usas para Flow/Gemini) y pulsa «Create API key» (capa gratis, sin tarjeta).
+2. Copia la clave y pégala como secreto `GEMINI_API_KEY` en https://github.com/ajreparacion/instagram/settings/secrets/actions/new .
+En cuanto esté el secreto, el workflow empieza a dejar borradores de guion en `equipo/guiones_gemini/pendientes/` antes de cada pasada del Creador (09:51 y 15:51); si tarda en llegar, lánzalo tú con «Run workflow» en la pestaña Actions del repo para probarlo antes.
+
 ## TikTok (16/11/2026): 3 pasos tuyos, unos 15 minutos; después todo es automático
 1. **Crear la cuenta** en https://www.tiktok.com/signup con el correo de la empresa. Usuario `neogestlab`, nombre «Neogest Lab». Luego, en el móvil: Perfil → menú ☰ → Ajustes y privacidad → Cuenta → **Cambiar a cuenta de empresa** (categoría «Software» o «Servicios de TI»). Foto, bio y enlace: copiar de equipo/tiktok/LEEME.md y del doc «Estrategia TikTok».
 2. **Buffer gratis** en https://buffer.com (botón de registro, plan Free, sin tarjeta) → Channels → Connect → TikTok → autorizar @neogestlab.

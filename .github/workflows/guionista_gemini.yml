@@ -1,0 +1,52 @@
+name: Guionista · El Jambo vía Gemini (API, 17/11/2026)
+
+# Pide los guiones de los próximos episodios de El Jambo a Gemini (API directa, gratis,
+# cuenta darbish) ANTES de cada pasada del Creador, porque el dueño ha visto lo publicado y
+# los guiones no engachan. Deja borradores en equipo/guiones_gemini/pendientes/; el Creador
+# (09:51 y 15:51 Madrid) los lee, elige, ajusta y pone en cola/. No sustituye al Creador ni
+# bloquea su pasada si falla: ver herramientas/guionista_gemini.py y equipo/tablon.md
+# (17/11/2026).
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 8 * * *"  # 09:15 Madrid (UTC+1), 36 min antes del Creador
+    - cron: "15 14 * * *" # 15:15 Madrid (UTC+1), 36 min antes del Creador
+
+permissions:
+  contents: write
+
+concurrency:
+  group: guionista-gemini
+  cancel-in-progress: false
+
+jobs:
+  guionista:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Pedir guiones a Gemini
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 herramientas/guionista_gemini.py 4
+
+      - name: Guardar y subir
+        run: |
+          git config user.name "expedientes-bot"
+          git config user.email "expedientes-bot@users.noreply.github.com"
+          git add equipo/guiones_gemini/ equipo/tablon.md
+          if git diff --cached --quiet; then
+            echo "Sin cambios que commitear"
+            exit 0
+          fi
+          git commit -m "Guionista Gemini: borradores de episodios"
+          for i in 1 2 3; do
+            git push origin main && break
+            git pull --rebase origin main
+          done

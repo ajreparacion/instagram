@@ -6,11 +6,17 @@ Cuándo: 09:51 y 15:51 (Madrid), a diario. En cada pasada deja hecho lo del día
 - `equipo/DIRECTIVA_VIGENTE.md`, últimas 40 líneas de `equipo/tablon.md`, `equipo/plan.json` (huecos, `ideas_semana`) y el calendario vigente (`equipo/calendario_*.md`).
 - `cola/*/post.json` y `calidad.json` (qué está rechazado, qué falta); `equipo/virales_semana.md` (fórmulas del Cazador); `equipo/lecciones_calidad.md`.
 - Para apps: `hechos_verificados` / `prohibido_afirmar` de la entidad Producto (Base44 6ae5244d4e2b32702f0a3cd6, `mcp__Base44__query_entities`) y el brief `claude/redes/promos_diferenciales_2026-11-15.md`.
-- Para episodios: `herramientas/estudio/LEEME.md` y `herramientas/estudio/gen_episodios.py` (receta), `equipo/serie_jambo.md` (biblia v3, reparto Rosa/Felipe/Sindy/Neo desde el 16/11).
+- Para episodios: `herramientas/estudio/LEEME.md` y `herramientas/estudio/gen_episodios.py` (receta), `equipo/serie_jambo.md` (biblia v3, reparto Rosa/Felipe/Sindy/Neo desde el 16/11), **`equipo/guiones_gemini/pendientes/*.json`** (ver siguiente punto).
+
+## Episodios nuevos: primero los guiones de Gemini (orden del dueño, 17/11/2026)
+Antes de escribir un guion desde cero, mira `equipo/guiones_gemini/pendientes/`: un workflow aparte (`guionista_gemini.yml`, 36 min antes de cada pasada) ya le ha pedido guiones a Gemini con la biblia, los motivos de rechazo de Calidad y los patrones virales, porque el dueño ha visto lo publicado y «los guiones no engachan». Para cada episodio nuevo que vayas a producir:
+1. Si hay un JSON en `pendientes/` que encaje con el hueco de hoy, úsalo: decide el `flow` (clip real de la Biblioteca), revisa en voz alta que la voz pase el control (cifras en letra, sin nombre propio al inicio de frase, catchphrase solo una vez) y ajústalo si algo no cuadra con la biblia o con un rechazo reciente. Muévelo a `usados/` al convertirlo en pieza de `cola/`.
+2. Si no hay ninguno que valga (vacío, repite tema reciente o no pasa tu propio criterio), descártalo con el motivo en el tablón y escribe el guion tú mismo como hasta ahora: este paso ayuda, nunca bloquea.
+3. No conviertas un guion de Gemini en pieza sin pasar tu propio criterio de episodio (lógica de la escalada, remate, moraleja) — Gemini escribe un borrador, tú sigues siendo quien lo aprueba para producción.
 
 ## Orden de cada pasada
 1. Rehacer primero lo rechazado por Calidad (motivos en su `calidad.json` y en el tablón). Lo que no se pueda salvar se retira de cola/ y se anota en el tablón.
-2. Después, episodios nuevos hasta asegurar ≥ 3 nuevos al día con colchón (hoy y mañana cubiertos). Numeración: siguiente número libre en cola/, publicados/, revision/, errores/ y descartados/.
+2. Después, episodios nuevos hasta asegurar ≥ 3 nuevos al día con colchón (hoy y mañana cubiertos), siguiendo el punto anterior (primero `guiones_gemini/pendientes/`). Numeración: siguiente número libre en cola/, publicados/, revision/, errores/ y descartados/.
 3. Si sobra tiempo: promo de app ANTES/DESPUÉS (Gestoría7D incluida) o reel de datos, sin pasar de 1 de cada 3 reels de app.
 
 ## Episodios en Neogest Studio (motor obligatorio desde el 15/11; el motor «sketch» del repo queda retirado para la serie)

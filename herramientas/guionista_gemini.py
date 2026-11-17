@@ -1,0 +1,269 @@
+#!/usr/bin/env python3
+"""Guionista de El Jambo que sabe vía API de Gemini (orden del dueño, 17/11/2026).
+
+Motivo: el dueño ha visto lo publicado y los guiones no engachan ("no tiene sentido").
+Hasta ahora el Creador escribía el guion él mismo (Sonnet) dentro de su pasada. Este script
+pide los guiones a Gemini como un paso aparte, ANTES de cada pasada del Creador (09:51 y
+15:51 Madrid), apoyándose en la biblia de la serie, los motivos de rechazo de Calidad y los
+patrones de reels virales ya estudiados, para que lleguen con más gancho y lógica.
+
+No sustituye al Creador: deja borradores en equipo/guiones_gemini/pendientes/ y es el
+Creador quien elige, ajusta (decorado, hora, clip de la Biblioteca) y pone en cola/. Si
+Gemini falla o no hay clave, no rompe nada: el Creador sigue pudiendo escribir el guion él
+mismo como hasta ahora.
+
+Variable de entorno: GEMINI_API_KEY (secreto del repo; cuenta darbish, capa gratis de
+Google AI Studio). Uso: python3 herramientas/guionista_gemini.py [n_guiones]
+"""
+import datetime
+import json
+import os
+import re
+import sys
+import urllib.error
+import urllib.request
+
+RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BIBLIA = os.path.join(RAIZ, "equipo", "serie_jambo.md")
+LECCIONES = os.path.join(RAIZ, "equipo", "lecciones_calidad.md")
+VIRALES = os.path.join(RAIZ, "equipo", "virales_semana.md")
+TABLON = os.path.join(RAIZ, "equipo", "tablon.md")
+COLA = os.path.join(RAIZ, "cola")
+PENDIENTES = os.path.join(RAIZ, "equipo", "guiones_gemini", "pendientes")
+
+MODELO = "gemini-2.0-flash"
+N_POR_DEFECTO = 4
+PERSONAJES_VALIDOS = {"rosa", "felipe", "sindy", "neo", "cliente"}
+ESTILOS_VALIDOS = {"gancho", "gag", "remate", "cierre"}
+
+
+def _leer(ruta, lineas=None):
+    if not os.path.exists(ruta):
+        return ""
+    with open(ruta, encoding="utf-8") as f:
+        txt = f.read()
+    if lineas:
+        return "\n".join(txt.splitlines()[-lineas:])
+    return txt
+
+
+def _temas_recientes():
+    """Slugs/temas ya en cola o publicados recientemente, para que Gemini no repita
+    situación (ahorra una ronda de rechazo por duplicado)."""
+    temas = []
+    for carpeta in ("cola", "publicados", "revision"):
+        ruta = os.path.join(RAIZ, carpeta)
+        if os.path.isdir(ruta):
+            temas.extend(sorted(os.listdir(ruta))[-15:])
+    return temas
+
+
+def _prompt(n):
+    biblia = _leer(BIBLIA)
+    lecciones = _leer(LECCIONES, lineas=25)
+    virales = _leer(VIRALES, lineas=60)
+    temas = ", ".join(_temas_recientes()) or "(ninguno todavía)"
+
+    esquema = {
+        "slug": "texto-corto-sin-espacios, 2-4 palabras, nueva situación",
+        "set": "oficina | despacho | bar | calle | reunion",
+        "hora": "entero 0-23 (hora del día de la escena)",
+        "moraleja": "6-9 palabras, tono serio, el mensaje que se queda; si hay una cifra de la tabla de la biblia que encaje, inclúyela",
+        "escenas": [
+            {
+                "e": "gancho",
+                "h": "rosa",
+                "t": "texto exacto que dice o el texto en pantalla, máx 8 palabras, situación reconocible desde el fotograma 0",
+            },
+            {"e": "gag", "h": "felipe|sindy", "t": "frase del golpe 1 de la escalada"},
+            {"e": "gag", "h": "rosa", "t": "frase del golpe 2, peor que el 1"},
+            {"e": "gag", "h": "felipe|sindy", "t": "frase del golpe 3, peor que el 2, remata con 'Que lo resuelva el Neo'"},
+            {"e": "remate", "h": "neo", "t": "frase del giro: Neo resuelve ESE conflicto y deja a Rosa en evidencia"},
+            {"e": "cierre", "h": "neo", "t": "texto en pantalla, debe coincidir o repetir la moraleja"},
+        ],
+    }
+
+    return f"""Eres el guionista de la serie de humor "El Jambo que sabe" (Instagram @neogestlab,
+Neogest Lab). Español de España, humor negro y satírico contra la cultura del trabajo y la
+burocracia, NUNCA contra personas reales, colectivos ni marcas. Escribe {n} guiones de
+episodio NUEVOS, cada uno con un conflicto y una situación distintos entre sí y distintos de
+los temas ya usados: {temas}.
+
+BIBLIA DE LA SERIE (personajes, tono, estructura, cifras verificadas que puedes citar si
+encajan de verdad; no inventes cifras nuevas):
+---
+{biblia}
+---
+
+MOTIVOS DE RECHAZO MÁS REPETIDOS por el equipo de Calidad en las últimas piezas (evítalos
+todos; son la razón por la que el dueño ha pedido este cambio, dice que "los guiones no
+engachan, no tiene sentido"):
+---
+{lecciones}
+---
+
+PATRONES DE REELS VIRALES ya estudiados en el nicho (cópialos en estructura, nunca en
+contenido ni frases literales):
+---
+{virales}
+---
+
+Reglas duras (si no las cumples, el episodio se rechaza):
+1. Gancho en pantalla desde el fotograma 0, máximo 8 palabras, una situación reconocible
+   (no una explicación). Debe leerse y entenderse sin sonido.
+2. Escalada de exactamente 3 golpes, cada uno con MÁS lógica y PEOR consecuencia que el
+   anterior; nunca una frase suelta sin relación con el golpe de antes.
+3. El giro lo resuelve Neo y responde exactamente al conflicto planteado, no a otro; deja a
+   Rosa en evidencia sin alterarse.
+4. Moraleja obligatoria de 6-9 palabras, tono serio, que se entienda sola si alguien la lee
+   guardada sin ver el vídeo.
+5. Nunca Rosa dice la moraleja ni "Que lo resuelva el Neo" (eso lo dicen Felipe o Sindy,
+   justo antes del giro, solo una vez).
+6. Cifras siempre en letra, cero palabras en inglés, ningún nombre propio como primera
+   palabra de una frase.
+7. Prohibido: suicidio, autolesión, enfermedades o muertes reales, víctimas, política de
+   partido, colectivos, marcas o empresas reales, consejos médicos/legales/financieros,
+   cualquier app de Neogest Lab en el vídeo.
+8. Duración implícita del conjunto de frases: episodio corto, 15-25 s hablado, nunca una
+   escena de relleno.
+
+Devuelve SOLO un array JSON (sin texto fuera del JSON, sin ``` ) con {n} objetos, cada uno
+con este esquema exacto (valores de ejemplo, escríbelos tú con contenido real distinto en
+cada guion; "h" solo puede ser rosa, felipe, sindy, neo o cliente; "e" solo puede ser
+gancho, gag, remate o cierre; usa entre 5 y 7 escenas, con el patrón gancho, 3x gag,
+remate, cierre):
+{json.dumps(esquema, ensure_ascii=False, indent=2)}
+"""
+
+
+def _llamar_gemini(prompt):
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        print("GEMINI_API_KEY no está en el entorno: no se puede pedir guiones a Gemini.")
+        return None
+    url = (
+        f"https://generativelanguage.googleapis.com/v1beta/models/{MODELO}:generateContent"
+        f"?key={api_key}"
+    )
+    body = {
+        "contents": [{"parts": [{"text": prompt}]}],
+        "generationConfig": {
+            "temperature": 0.9,
+            "responseMimeType": "application/json",
+        },
+    }
+    req = urllib.request.Request(
+        url,
+        data=json.dumps(body).encode("utf-8"),
+        headers={"Content-Type": "application/json"},
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=90) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+    except urllib.error.HTTPError as e:
+        print(f"Gemini devolvió error HTTP {e.code}: {e.read().decode('utf-8', 'ignore')[:500]}")
+        return None
+    except Exception as e:  # red, timeout, json roto...
+        print(f"Fallo llamando a Gemini: {e}")
+        return None
+
+    try:
+        texto = data["candidates"][0]["content"]["parts"][0]["text"]
+    except (KeyError, IndexError):
+        print(f"Respuesta de Gemini sin el formato esperado: {json.dumps(data)[:500]}")
+        return None
+
+    texto = re.sub(r"^```(json)?|```$", "", texto.strip(), flags=re.MULTILINE).strip()
+    try:
+        return json.loads(texto)
+    except json.JSONDecodeError as e:
+        print(f"Gemini no devolvió JSON válido: {e}\n{texto[:500]}")
+        return None
+
+
+def _validar(ep):
+    """Rechazo mecánico de lo que ya sabemos que Calidad tumba; no sustituye su revisión."""
+    motivos = []
+    if not isinstance(ep.get("slug"), str) or not ep["slug"].strip():
+        motivos.append("sin slug")
+    if ep.get("set") not in {"oficina", "despacho", "bar", "calle", "reunion"}:
+        motivos.append(f"set inválido: {ep.get('set')!r}")
+    moraleja_palabras = len(str(ep.get("moraleja", "")).split())
+    if not (6 <= moraleja_palabras <= 9):
+        motivos.append(f"moraleja con {moraleja_palabras} palabras (debe ser 6-9)")
+    escenas = ep.get("escenas") or []
+    if len(escenas) < 5:
+        motivos.append(f"solo {len(escenas)} escenas (mínimo 5: gancho + 3 golpes + remate)")
+    estilos = [e.get("e") for e in escenas]
+    if estilos[:1] != ["gancho"]:
+        motivos.append("la primera escena no es el gancho")
+    if "remate" not in estilos:
+        motivos.append("falta el remate (giro de Neo)")
+    gags = [e for e in escenas if e.get("e") == "gag"]
+    if len(gags) != 3:
+        motivos.append(f"{len(gags)} golpes de escalada (deben ser exactamente 3)")
+    if escenas and escenas[0].get("h") and len(str(escenas[0].get("t", "")).split()) > 8:
+        motivos.append("el gancho supera las 8 palabras")
+    for e in escenas:
+        if e.get("e") not in ESTILOS_VALIDOS:
+            motivos.append(f"estilo de escena inválido: {e.get('e')!r}")
+        if e.get("h") and e["h"] not in PERSONAJES_VALIDOS:
+            motivos.append(f"personaje inválido: {e['h']!r}")
+    remate = next((e for e in escenas if e.get("e") == "remate"), None)
+    if remate and remate.get("h") != "neo":
+        motivos.append("el remate no lo dice Neo")
+    return motivos
+
+
+def main():
+    n = int(sys.argv[1]) if len(sys.argv) > 1 else N_POR_DEFECTO
+    os.makedirs(PENDIENTES, exist_ok=True)
+
+    guiones = _llamar_gemini(_prompt(n))
+    hoy = datetime.date.today().isoformat()
+
+    if guiones is None:
+        linea = f"{datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M} UTC · Guionista Gemini · no se ha podido pedir guiones (ver log del workflow) · el Creador escribe el suyo como hasta ahora"
+        with open(TABLON, "a", encoding="utf-8") as f:
+            f.write(linea + "\n")
+        print(linea)
+        return 0  # no bloquea: es un paso opcional, el Creador sigue sin él
+
+    if not isinstance(guiones, list):
+        guiones = [guiones]
+
+    guardados, rechazados = [], []
+    for i, ep in enumerate(guiones):
+        if not isinstance(ep, dict):
+            rechazados.append((f"#{i}", ["no es un objeto JSON"]))
+            continue
+        motivos = _validar(ep)
+        if motivos:
+            rechazados.append((ep.get("slug", f"#{i}"), motivos))
+            continue
+        slug = re.sub(r"[^a-z0-9_]+", "_", str(ep["slug"]).lower()).strip("_") or f"ep{i}"
+        nombre = f"{hoy}_{slug}.json"
+        ruta = os.path.join(PENDIENTES, nombre)
+        ep["fuente"] = "gemini"
+        ep["generado"] = datetime.datetime.now(datetime.timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        with open(ruta, "w", encoding="utf-8") as f:
+            json.dump(ep, f, ensure_ascii=False, indent=2)
+        guardados.append(nombre)
+
+    resumen = f"{len(guardados)} guardados, {len(rechazados)} rechazados por el validador"
+    if rechazados:
+        detalle = "; ".join(f"{slug}: {', '.join(m)}" for slug, m in rechazados[:3])
+        resumen += f" ({detalle})"
+    linea = (
+        f"{datetime.datetime.now(datetime.timezone.utc):%Y-%m-%d %H:%M} UTC · Guionista Gemini · pedidos {n} "
+        f"guiones para El Jambo · {resumen} · pendientes en equipo/guiones_gemini/pendientes/"
+    )
+    with open(TABLON, "a", encoding="utf-8") as f:
+        f.write(linea + "\n")
+    print(linea)
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
