@@ -1,4 +1,3 @@
-2026-11-15 10:00  324_jambo_restaurante_reserva_12: NO se publica, control de audio: silencios > 0.6 s entre frases (pista de voz): [[4.9, 5.52, 0.62], [18.09, 18.92, 0.83]]
 2026-11-15 10:01  Voz con edge-tts: 7 frases en 18 s
 2026-11-15 10:01  Voz: silencios recortados por frase (s): [0.12, 0.12, 0.14, 0.13, 0.12, 0.12, 0.13]
 2026-11-15 10:01  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(1.7), np.float64(1.6), np.float64(3.1), np.float64(3.9), np.float64(4.0), np.float64(4.3), np.float64(3.1)]
@@ -598,3 +597,4 @@
 2026-11-17 18:01  323_jambo_peluqueria_9_40: Facebook publicado https://www.facebook.com/reel/28538446452501233
 2026-11-17 18:01  323_jambo_peluqueria_9_40: publicado https://www.instagram.com/reel/Df2at7GCaAX/
 2026-11-17 23:02  Estadísticas actualizadas (30 posts, 1600 seguidores)
+2026-11-18 05:04  Estadísticas actualizadas (30 posts, 1600 seguidores)

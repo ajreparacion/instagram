@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-17T22:02:02+00:00",
+  "actualizado": "2026-11-18T04:04:00+00:00",
   "cuenta": {
     "id": "17841400403112257",
     "followers_count": 1600,
@@ -18,15 +18,15 @@
       "permalink": "https://www.instagram.com/reel/Df2at7GCaAX/",
       "timestamp": "2026-11-17T17:00:47+0000",
       "metricas": {
-        "reach": 71,
-        "views": 91,
+        "reach": 83,
+        "views": 105,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 7681,
-        "ig_reels_video_view_total_time": 576134
+        "ig_reels_avg_watch_time": 6739,
+        "ig_reels_video_view_total_time": 599820
       }
     },
     {
@@ -39,15 +39,15 @@
       "permalink": "https://www.instagram.com/reel/Df2JdUtjMi0/",
       "timestamp": "2026-11-17T14:29:56+0000",
       "metricas": {
-        "reach": 63,
-        "views": 75,
+        "reach": 77,
+        "views": 99,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 4367,
-        "ig_reels_video_view_total_time": 275174
+        "ig_reels_avg_watch_time": 5244,
+        "ig_reels_video_view_total_time": 424810
       }
     },
     {
@@ -60,15 +60,15 @@
       "permalink": "https://www.instagram.com/reel/Df1vigSiceR/",
       "timestamp": "2026-11-17T10:43:28+0000",
       "metricas": {
-        "reach": 116,
-        "views": 133,
+        "reach": 119,
+        "views": 137,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 4,
         "total_interactions": 6,
-        "ig_reels_avg_watch_time": 10104,
-        "ig_reels_video_view_total_time": 1192300
+        "ig_reels_avg_watch_time": 9921,
+        "ig_reels_video_view_total_time": 1210453
       }
     },
     {
@@ -123,15 +123,15 @@
       "permalink": "https://www.instagram.com/reel/DfzSqdiD9jZ/",
       "timestamp": "2026-11-16T11:52:41+0000",
       "metricas": {
-        "reach": 1090,
-        "views": 1374,
+        "reach": 1093,
+        "views": 1382,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 13,
         "total_interactions": 14,
-        "ig_reels_avg_watch_time": 11621,
-        "ig_reels_video_view_total_time": 12481921
+        "ig_reels_avg_watch_time": 11595,
+        "ig_reels_video_view_total_time": 12499540
       }
     },
     {
@@ -802,6 +802,10 @@
     },
     {
       "fecha": "2026-11-17T22:02+00:00",
+      "seguidores": 1600
+    },
+    {
+      "fecha": "2026-11-18T04:04+00:00",
       "seguidores": 1600
     }
   ]
