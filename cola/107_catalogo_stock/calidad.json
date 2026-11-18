@@ -1,7 +1,13 @@
 {
- "aprobado": true,
- "nota": 90,
- "fecha": "2026-11-12T15:10Z",
- "revisado_por": "agente de CALIDAD (12/11, pasada de las 15:40)",
- "comentario": "Carrusel de Gestión Integral 7D (7 diapositivas) revisado con las diapositivas del 10/11 18:49: cierre único en la última y en el pie, «nuestra app» (A6), sin «comenta X». Lo afirmado (importar catálogo con extracción por IA y aviso de revisar, albarán numerado que descuenta stock, factura que hereda líneas, IVA y retención en PDF) es lo que la revisión anterior de Calidad ya dio por bueno frente a hechos_verificados (hoy no se ha vuelto a abrir el Centro). «Excel» aparece como formato de archivo (no está en marcas_prohibidas.json; mejor «hoja de cálculo» la próxima vez). Se recupera la nota previa (90)."
+  "aprobado": false,
+  "nota": 70,
+  "motivos": [
+    "No hay asset de vídeo ni video_externo en post.json (\"formato\": null): inspeccionar_video no puede descargar nada. El calidad.json anterior indica que esta pieza era en realidad un carrusel de 7 diapositivas, no un vídeo; no se puede confirmar qué render/material corresponde a esta pasada.",
+    "A3/v9-H6: _fuentes y _comprobado están a null en este post.json. Las afirmaciones sobre la app (importar catálogo desde Excel/CSV/PDF/imagen con extracción por IA, albarán numerado que descuenta stock, factura que hereda líneas/IVA/retención en PDF) no tienen ninguna fuente citada en este post para contrastar en este piloto; se tratan como no verificadas.",
+    "Bloqueo 9 (aprobación caducada): el calidad.json previo (90, 12/11) corresponde a una revisión de diapositivas de otra fecha; no se puede reutilizar sin volver a verificar el material actual."
+  ],
+  "como_arreglarlo": "Adjuntar en post.json el asset real (vídeo mp4 de la release «cola» o video_externo) o, si sigue siendo un carrusel de imágenes, indicarlo explícitamente en el campo formato y aportar las diapositivas para revisión de imagen/texto (no de vídeo). Citar en _fuentes/_comprobado la documentación o ficha de producto de Gestión Integral 7D que respalda: importación con extracción por IA (y el aviso de revisar lo importado), generación de albarán numerado con descuento de stock, y herencia de líneas/IVA/retención en la factura PDF. Una vez con fuente y material verificables, relanzar revisión completa (incluye control_audio si lleva voz, y control_datos.py si aplica).",
+  "fecha": "2026-11-18T19:03:44Z",
+  "revisor": "Calidad (API)",
+  "render": "no aplica (carrusel)"
 }

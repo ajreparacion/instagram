@@ -1,19 +1,15 @@
 {
   "aprobado": false,
-  "nota": 82,
-  "fecha": "2026-11-17T10:43:42+00:00",
-  "revisor": "Calidad (pasada 11:41)",
-  "render": "2026-11-16T18:53:37+00:00",
+  "nota": 70,
   "motivos": [
-    "Promo sin música (§5 y §6: música en primer plano)",
-    "Silencio de 3,5-6 s al final (máximo de la promo 1,5 s); cierre estático > 3 s",
-    "Duración 21-25 s (formato de promo 25-45 s)",
-    "Bien: llamada real convincente, gancho legible en el segundo 0, logo 2026, −14 LUFS, pico ≤ −1,4 dBFS, sin datos del negocio ni voz del dueño",
-    "Observación: el post da precio («desde 150 € al mes»); confirmar que está en la ficha del Producto (§9, nada de precios inventados)"
+    "No se pudo ejecutar inspeccionar_video en esta sesión (ffprobe no disponible): sin ffprobe, sin silencedetect, sin fotogramas ni confirmación de duración/resolución/logo. No se aprueba una pieza sin esa inspección.",
+    "control_audio.json de Actions marca explícitamente 'pico real > -1 dB': incumple la regla de formato (pico ≤ -1 dBFS). Bloqueo objetivo ya confirmado con los datos disponibles.",
+    "Sin guion.json no se pudo comparar voz-guion por whisper (aviso propio de control_audio.json).",
+    "El precio '150 € al mes' sigue sin verificarse contra la ficha del Producto; _comprobado lo marca como pendiente desde la observación de Calidad del 17/11. Según A3, una cifra fuera de hechos_verificados no se da por buena hasta confirmarla.",
+    "Es una versión nueva (video_externo subido 18/11 18:08) que caducó el calidad.json anterior (82, rechazado por falta de música, silencio final 3,5-6 s y duración corta 21-25 s); no hay forma de confirmar en esta sesión si esos tres problemas se resolvieron."
   ],
-  "como_arreglarlo": "Remasterizador/Centro: añadir música Pixabay del estudio por debajo de la voz (con voz baja como mucho 6 dB), recortar el silencio final y dejar el cierre en ≤ 3 s; si queda por debajo de 25 s, se acepta como excepción de llamada real solo con música y sin silencios. Volver a Calidad.",
-  "aprobado_anterior": false,
-  "nota_anterior": 82,
-  "caducado": "2026-11-18T18:08:07+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-18T18:08:07+00:00"
+  "como_arreglarlo": "1) Re-ejecutar la revisión de Calidad en un entorno con ffprobe/ffmpeg disponibles para confirmar duración, silencios, fotogramas y logo. 2) Bajar el pico real a ≤ -1 dBFS (normalizar pico, no solo LUFS). 3) Confirmar contra la ficha del Producto (Base44, slug recepcionista-24h) que '150 €/mes sin permanencia' es el precio vigente citado en hechos_verificados; si no está, quitarlo del texto y del post de YouTube hasta tenerlo. 4) Verificar que la nueva subida ya trae música de fondo audible, silencio final ≤1,5 s y duración dentro de 25-45 s (o la excepción de llamada real sin silencios si queda por debajo). Volver a Calidad con control_audio.json actualizado y acceso a inspeccionar_video funcional.",
+  "fecha": "2026-11-18T19:04:17Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-18T18:08:07+00:00"
 }
