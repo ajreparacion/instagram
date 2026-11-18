@@ -14,8 +14,7 @@
   ],
   "_comprobado": "Texto y audio contrastados con la ficha y con la transcripción de la llamada; sin nombre del negocio, web, teléfonos ni nombres de personas; no suena la voz del dueño. Pendiente: confirmar el precio «150 €/mes» contra la ficha del Producto (observación de Calidad del 17/11, no verificado en este arreglo).",
   "_nota_creador": "18/11/2026 Remasterizador: añadida música de Kevin MacLeod (\"Fluffing a Duck\", CC BY 4.0, de musica/pistas.json de este repo — no se encontró la biblioteca Pixabay de Neogest Studio desde esta sesión) con ducking bajo la voz (sidechaincompress), y recortado el silencio final de 6 s a 0 (el cierre pasa de >6 s a ~3 s, ya con música, dentro del límite de silencio de la promo). Duración final 19,6 s: por debajo del rango de promo (25-45 s) pero dentro de la excepción que el propio calidad.json del 17/11 ya contemplaba para llamada real sin silencios. Vídeo nuevo subido a la rama entrada-videos; pendiente de que el ciclo lo suba a la release y Calidad lo reevalúe de cero (no toco calidad.json: eso es su criterio).",
-  "renderizado": false,
-  "video_externo": "https://raw.githubusercontent.com/ajreparacion/instagram/entrada-videos/803_recepcionista_cerrado.mp4",
+  "renderizado": "2026-11-18T18:08:07+00:00",
   "motor": "externo",
   "musica": {
     "titulo": "Fluffing a Duck",

@@ -11,5 +11,9 @@
     "Bien: llamada real convincente, gancho legible en el segundo 0, logo 2026, −14 LUFS, pico ≤ −1,4 dBFS, sin datos del negocio ni voz del dueño",
     "Observación: el post da precio («desde 150 € al mes»); confirmar que está en la ficha del Producto (§9, nada de precios inventados)"
   ],
-  "como_arreglarlo": "Remasterizador/Centro: añadir música Pixabay del estudio por debajo de la voz (con voz baja como mucho 6 dB), recortar el silencio final y dejar el cierre en ≤ 3 s; si queda por debajo de 25 s, se acepta como excepción de llamada real solo con música y sin silencios. Volver a Calidad."
+  "como_arreglarlo": "Remasterizador/Centro: añadir música Pixabay del estudio por debajo de la voz (con voz baja como mucho 6 dB), recortar el silencio final y dejar el cierre en ≤ 3 s; si queda por debajo de 25 s, se acepta como excepción de llamada real solo con música y sin silencios. Volver a Calidad.",
+  "aprobado_anterior": false,
+  "nota_anterior": 82,
+  "caducado": "2026-11-18T18:08:07+00:00",
+  "motivo_caducidad": "vídeo externo subido 2026-11-18T18:08:07+00:00"
 }
