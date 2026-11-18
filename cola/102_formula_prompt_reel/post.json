@@ -1,0 +1,34 @@
+{
+ "tipo": "reel",
+ "texto": "Con esta fórmula la IA por fin te entiende.\nUn buen prompt tiene 4 piezas, en este orden:\nRol: «Actúa como asesor de marketing para pequeños negocios».\nContexto: quién eres, qué pasa y para quién es.\nTarea: un verbo claro y una sola cosa cada vez.\nFormato: tabla, lista, email o número de líneas.\nGuárdalo: el ejemplo completo sale al final del vídeo, listo para cambiar los datos ✍️ ¿Tienes una idea para tu negocio? Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\n\n#inteligenciaartificial #prompts #ia #pymes #neogestlab\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+ "cuando": "2026-11-12T16:10:00+01:00",
+ "renderizado": "2026-11-18T21:57:15+00:00",
+ "asset": "102_formula_prompt_reel.mp4",
+ "portada_ms": 1500,
+ "compartir_en_feed": true,
+ "duracion_s": 27.3,
+ "formato": "versión reel del carrusel (diapositivas animadas, música en primer plano y efectos; sin voz)",
+ "app": null,
+ "publico": "Público general y pequeños negocios que empiezan con la IA",
+ "fuentes": [
+  "Diapositivas del carrusel 102_formula_prompt (aprobado por Calidad); mismo contenido.",
+  "Técnicas de redacción de prompts recogidas en las guías públicas de OpenAI (Prompt engineering), Anthropic (Prompt engineering overview) y Google (guía de prompts de Gemini): dar contexto, indicar formato, iterar y comprobar las respuestas. No se citan menús, botones ni precios."
+ ],
+ "carrusel": "102_formula_prompt",
+ "musica": {
+  "titulo": "Sneaky Snitch",
+  "autor": "Kevin MacLeod",
+  "licencia": "CC BY 4.0",
+  "url": "https://incompetech.com/music/royalty-free/",
+  "archivo": "Sneaky_Snitch.mp3",
+  "bpm": 87.6,
+  "origen": "pista sin derechos de la biblioteca musica/ (licencia en musica/pistas.json)"
+ },
+ "audio": {
+  "lufs_integrados": -14.2,
+  "pico_real_dbtp": -0.8,
+  "lra_lu": 1.9,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
+ "origen": "herramientas/demo_app.py"
+}
