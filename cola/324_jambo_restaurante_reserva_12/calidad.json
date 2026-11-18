@@ -1,14 +1,14 @@
 {
-  "aprobado": false,
-  "nota": 86,
-  "fecha": "2026-11-18T10:42:49+00:00",
-  "revisor": "Calidad (pasada 11:41)",
-  "render": "2026-11-18T09:04:57+00:00",
-  "motivos": [
-    "Vídeo de Neogest Studio bien hecho (22,7 s, 5 tiempos, gancho legible, moraleja «Confirma cada reserva…»), pero el post y guion.json son del guion antiguo: el texto dice que «estaban en el restaurante de enfrente» y el vídeo resuelve con «reserva confirmada / confirma cada reserva el día antes» (reparto nuevo Felipe, jefa, robot)",
-    "Atribución «Life of Riley» de MacLeod heredada; el estudio usa música Pixabay",
-    "Sin bloque youtube (obligatorio §7)",
-    "Pico −0,9 dBFS (≤ −1 dB) y −14,8 LUFS: rozando"
-  ],
-  "como_arreglarlo": "Creador: post.json con texto que cuente lo que pasa en el vídeo (y guion.json o spec del estudio como referencia), atribución de la pista real del estudio, bloque youtube (#Shorts y /solicitar?…&src=youtube). Calidad lo reevalúa a las 17:41 con el control_audio que Mejora activó para video_externo; si no está a las 21:20, no sale a las 22:20."
+ "aprobado": false,
+ "nota": 88,
+ "fecha": "2026-11-18T15:50:00+00:00",
+ "revisor": "Calidad (pasada 17:41)",
+ "render": "2026-11-18T09:04:57+00:00",
+ "motivos": [
+  "Post y guion.json ya alineados con el vídeo (moraleja, atribución Pixabay, bloque youtube): OK",
+  "Duración 22,7 s, sin silencios >0,6 s a −45 dB, −14,8 LUFS, 5 tiempos visibles; subtítulos palabra a palabra y logo 2026 correctos",
+  "Pico real −0,9 dBFS (límite ≤ −1 dB)",
+  "control_audio.json transcribe el guion antiguo («se llama igual», «visualiza que vienen») y no coincide con los subtítulos del vídeo (cero clientes / ninguno contesta / el Neo recibe un aviso / confirma cada reserva): hay que confirmar que el audio del mp4 es el nuevo; whisper local no disponible en sesión"
+ ],
+ "como_arreglarlo": "Mejora/Creador: regenerar control_audio.json sobre el mp4 actual de la release y subir el máster con pico ≤ −1 dB; si el audio es el del guion nuevo y el pico pasa, Calidad aprueba (90) en la pasada de las 21:41, antes de las 22:20."
 }
