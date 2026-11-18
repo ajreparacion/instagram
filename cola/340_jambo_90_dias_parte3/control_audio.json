@@ -1,0 +1,13 @@
+{
+  "aprobado": false,
+  "duracion_s": 26.4,
+  "bloqueos": [
+    "falta el giro (escena «remate»)",
+    "voz distinta del guion: faltan [], sobran ['parte', 'tres', 'el', 'cliente', 'quiere', 'pagar', 'a', 'ciento', 'veinte', 'dias', 'con', 'ciento', 'veinte', 'me', 'pagan', 'el', 'sueldo', 'en', 'primavera', 'es', 'cliente', 'de', 'toda', 'la', 'vida', 'le', 'hacemos', 'descuento', 'pues', 'lo', 'pagas', 'tu', 'jefa', 'que', 'lo', 'resuelva', 'neo', 'contrato', 'corregido', 'a', 'sesenta', 'dias', 'ya', 'ha', 'pagado', 'hoy', 'sesenta', 'dias', 'como', 'maximo', 'pagar', 'tarde', 'no', 'es', 'de', 'amigos'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Parte 3, el cliente quiere pagar a 120 días. Con 120 me pagan el sueldo en primavera. Es cliente de toda la vida. Le hacemos descuento. Pues lo pagas tú, jefa. Que lo resuelva Neo. Contrato corregido a 60 días. Ya ha pagado hoy. 60 días como máximo. Pagar tarde no es de amigos.",
+  "guion": "",
+  "lufs": -14.3,
+  "pico_dbfs": -1.4
+}

@@ -14,7 +14,7 @@
   "_nota_remasterizador": "18/11/2026 Remasterizador: Parte 3 de 319 (1.374 reproducciones, 10,3x normal). Mismo conflicto (plazo de pago), escalada nueva (120 días) y giro distinto (Neo corrige el contrato). Reparto nuevo biblia v3. Falta render en Neogest Studio (spec.json, formato gen_episodios.py) y Calidad. La ventana de 48 h (hasta 13:52 Madrid del 18/11) no se alcanza por falta de render y de hueco libre; sale en el primer hueco libre.",
   "motor_voz": "edge",
   "motor": "neogest-studio",
-  "renderizado": false,
+  "renderizado": "2026-11-18T15:53:15+00:00",
   "comentario_fijado": "¿A cuántos días te pagan? Una cifra en comentarios",
   "avance_siguiente": "Parte 4 si funciona.",
   "portada_ms": 0,
@@ -34,6 +34,7 @@
       "neogestlab"
     ]
   },
-  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/087815469_340-master.mp4",
-  "_nota_creador": "18/11 Creador: renderizado en Neogest Studio (26,4 s, -14,3 LUFS, pico -1,4); guion acortado para no pasar de 30 s; clip de apertura gemini-13-tienda-online; movido al hueco 19/11 22:20 porque 324 ocupa hoy 22:20."
+  "_nota_creador": "18/11 Creador: renderizado en Neogest Studio (26,4 s, -14,3 LUFS, pico -1,4); guion acortado para no pasar de 30 s; clip de apertura gemini-13-tienda-online; movido al hueco 19/11 22:20 porque 324 ocupa hoy 22:20.",
+  "asset": "340_jambo_90_dias_parte3.mp4",
+  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/087815469_340-master.mp4"
 }
