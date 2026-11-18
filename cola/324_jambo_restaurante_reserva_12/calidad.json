@@ -1,16 +1,14 @@
 {
   "aprobado": false,
-  "nota": 85,
+  "nota": 86,
+  "fecha": "2026-11-18T10:42:49+00:00",
+  "revisor": "Calidad (pasada 11:41)",
+  "render": "2026-11-18T09:04:57+00:00",
   "motivos": [
-    "Re-render del 2026-11-15T19:34 con el motor «sketch» del repo, retirado para la serie desde el 15/11 (herramientas/estudio/LEEME.md, roles/creador.md): rechazo automático según roles/calidad.md",
-    "El control de audio de Actions pasa (duración 20.63 s), pero el formato exige dibujos de calidad de Neogest Studio"
+    "Vídeo de Neogest Studio bien hecho (22,7 s, 5 tiempos, gancho legible, moraleja «Confirma cada reserva…»), pero el post y guion.json son del guion antiguo: el texto dice que «estaban en el restaurante de enfrente» y el vídeo resuelve con «reserva confirmada / confirma cada reserva el día antes» (reparto nuevo Felipe, jefa, robot)",
+    "Atribución «Life of Riley» de MacLeod heredada; el estudio usa música Pixabay",
+    "Sin bloque youtube (obligatorio §7)",
+    "Pico −0,9 dBFS (≤ −1 dB) y −14,8 LUFS: rozando"
   ],
-  "como_arreglarlo": "Creador: rehacer el episodio en Neogest Studio según herramientas/estudio/LEEME.md (video_externo + motor neogest-studio + renderizado false) con la fórmula de 5 tiempos y moraleja; después lo evalúa Calidad.",
-  "fecha": "2026-11-15T19:43:18+00:00",
-  "revisor": "Calidad (pasada cada 2 h)",
-  "render": "2026-11-15T19:34:18+00:00",
-  "aprobado_anterior": false,
-  "nota_anterior": 85,
-  "caducado": "2026-11-18T09:04:57+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-18T09:04:57+00:00"
+  "como_arreglarlo": "Creador: post.json con texto que cuente lo que pasa en el vídeo (y guion.json o spec del estudio como referencia), atribución de la pista real del estudio, bloque youtube (#Shorts y /solicitar?…&src=youtube). Calidad lo reevalúa a las 17:41 con el control_audio que Mejora activó para video_externo; si no está a las 21:20, no sale a las 22:20."
 }
