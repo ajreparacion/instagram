@@ -7,9 +7,11 @@ name: Calidad · API directa (piloto créditos API, 18/11/2026)
 # sigue el cambio de hora oficial, así que se fija en hora de invierno (UTC+1) como
 # supervisor_api.yml. Ver equipo/tablon.md (18/11/2026) y la PR de esta migración.
 #
-# Necesita `gh` (release "cola") y `ffmpeg`/`ffprobe` (ya en ubuntu-latest) para descargar el
-# mp4 e inspeccionarlo; usa el GITHUB_TOKEN por defecto de Actions, de solo lectura salvo el
-# push final del propio workflow.
+# Necesita `gh` (release "cola") y `ffmpeg`/`ffprobe` para descargar el mp4 e inspeccionarlo;
+# usa el GITHUB_TOKEN por defecto de Actions, de solo lectura salvo el push final del propio
+# workflow. 18/11/2026: la primera ejecución real confirmó que ffprobe NO está disponible por
+# defecto en este runner (Calidad rechazó piezas por "ffprobe no disponible"); se instala aquí
+# explícitamente en vez de asumirlo.
 
 on:
   workflow_dispatch:
@@ -36,6 +38,13 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Instalar ffmpeg
+        run: |
+          if ! command -v ffprobe >/dev/null 2>&1; then
+            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+          fi
+          ffprobe -version | head -1
 
       - name: Instalar dependencias
         run: pip install --quiet anthropic
