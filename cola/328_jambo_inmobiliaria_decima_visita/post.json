@@ -1,15 +1,15 @@
 {
   "tipo": "reel",
-  "texto": "Décima visita al mismo piso con la misma pareja. «Nos lo pensamos». La Jupillo descubre por qué. Humor negro de ficción.\n¿Cuántas visitas aguantas tú? Cuéntalo en comentarios.\nMándaselo a quien vende pisos y enseña el mismo diez veces.\n#inmobiliaria #humornegro #pisos #ventas #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "Décima visita al mismo piso con la misma pareja. «Nos lo pensamos». Rosa, Felipe y Neo, humor negro de ficción.\nMoraleja: comprueba quién vive ya en el piso antes de la décima visita.\n¿Cuántas visitas aguantas tú? Cuéntalo en comentarios.\nMándaselo a quien vende pisos y enseña el mismo diez veces.\n#inmobiliaria #humornegro #pisos #ventas #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: biblioteca Pixabay de Neogest Studio (licencia de contenido de Pixabay)",
   "cuando": "2026-11-21T19:00:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
   "formato": "Serie El Jambo",
   "publico": "inmobiliaria",
-  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
+  "formula": "El Jambo que sabe v3 (reparto Rosa/Felipe/Sindy/Neo, Neogest Studio)",
   "_fuentes": [],
   "_comprobado": "Sin cifras de estudio: solo cifras del guion de ficción; no se afirma ningún dato real.",
-  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.\n18/11/2026 Creador: pieza rehecha de cero en Neogest Studio (motor sketch retirado, calidad.json del 15/11 nota 82) conservando el chiste original (décima visita, misma pareja, llevan noches viviendo ya en el piso) con el reparto nuevo Rosa/Felipe/Neo y el clip Flow/Gemini reservado gemini-12-inmobiliaria.mp4. Máster -14,2 LUFS / pico -1,2 dBFS (fix manual del bug de aresample/ffmpeg del sandbox). video_externo + renderizado:false para que el ciclo lo recoja. Calidad: evaluar de cero.",
   "motor_voz": "edge",
   "comentario_fijado": "¿Cuántas visitas aguantas tú? Episodio nuevo cada día en @neogestlab",
   "avance_siguiente": "Mañana: vendes a 12 € y te quedan 4,52 €",
@@ -20,19 +20,17 @@
     "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
   "musica": {
-    "titulo": "Fluffing a Duck",
-    "autor": "Kevin MacLeod",
-    "licencia": "CC BY 4.0",
-    "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Fluffing_a_Duck.mp3",
-    "bpm": 123.0
+    "titulo": "Biblioteca Pixabay de Neogest Studio",
+    "autor": "Pixabay",
+    "licencia": "Licencia de contenido de Pixabay",
+    "archivo": "estudio"
   },
+  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/9a73c74b7_328_jambo_inmobiliaria_decima_visita.mp4",
   "renderizado": false,
-  "_control_audio_fallo": {
-    "fecha": "2026-11-15T21:03:30+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['tiburones'], sobran ['tigurones'] (rehacer esas frases)"
-    ],
-    "guion_md5": "71be8cfad9188454be658fbc96189bdc"
+  "motor": "neogest-studio",
+  "youtube": {
+    "titulo": "Décima visita al mismo piso #Shorts",
+    "descripcion": "Humor negro de ficción: la pareja que lleva diez visitas diciendo que se lo piensa, hasta que Neo descubre que ya viven ahí. Pide tu prueba gratuita: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube\nBy Neogest Lab",
+    "etiquetas": ["humornegro", "inmobiliaria", "pisos", "ventas", "neogestlab"]
   }
 }
