@@ -1,4 +1,3 @@
-2026-11-15 10:01  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(1.7), np.float64(1.6), np.float64(3.1), np.float64(3.9), np.float64(4.0), np.float64(4.3), np.float64(3.1)]
 2026-11-15 10:01  Voz: alineación palabra a palabra (small, 15.6 s): 7/7 frases
 2026-11-15 10:02  Mezcla: voz -17.9 LUFS, música -23.0 LUFS (con ducking -25.4), la música baja 5.49 dB (p90) bajo la voz, ratio 2.5; máster -17.79 -> -13.9 LUFS, pico -1.4 dBFS; huecos de voz: []
 2026-11-15 10:02  Control de audio: FALLA voz distinta del guion: faltan ['once', 'cuarenta', 'y', 'siete'], sobran ['11', '47'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[19.39, 20.09, 0.7]]; duración 22.17 s
@@ -598,3 +597,4 @@
 2026-11-18 05:04  Estadísticas actualizadas (30 posts, 1600 seguidores)
 2026-11-18 09:04  340_jambo_90_dias_parte3_p2: error al renderizar (1/3): Falta guion.json o remaster.json
 2026-11-18 09:19  340_jambo_90_dias_parte3_p2: error al renderizar (2/3): Falta guion.json o remaster.json
+2026-11-18 09:35  340_jambo_90_dias_parte3_p2: error al renderizar (3/3): Falta guion.json o remaster.json
