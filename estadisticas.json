@@ -1,8 +1,8 @@
 {
-  "actualizado": "2026-11-18T10:06:05+00:00",
+  "actualizado": "2026-11-18T16:07:35+00:00",
   "cuenta": {
     "id": "17841400403112257",
-    "followers_count": 1600,
+    "followers_count": 1599,
     "follows_count": 177,
     "media_count": 37,
     "username": "neogestlab"
@@ -18,15 +18,15 @@
       "permalink": "https://www.instagram.com/reel/Df2at7GCaAX/",
       "timestamp": "2026-11-17T17:00:47+0000",
       "metricas": {
-        "reach": 92,
-        "views": 114,
+        "reach": 96,
+        "views": 119,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 6462,
-        "ig_reels_video_view_total_time": 633373
+        "ig_reels_avg_watch_time": 6677,
+        "ig_reels_video_view_total_time": 681067
       }
     },
     {
@@ -39,15 +39,15 @@
       "permalink": "https://www.instagram.com/reel/Df2JdUtjMi0/",
       "timestamp": "2026-11-17T14:29:56+0000",
       "metricas": {
-        "reach": 83,
-        "views": 105,
+        "reach": 92,
+        "views": 115,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 5027,
-        "ig_reels_video_view_total_time": 437356
+        "ig_reels_avg_watch_time": 5439,
+        "ig_reels_video_view_total_time": 522229
       }
     },
     {
@@ -61,14 +61,14 @@
       "timestamp": "2026-11-17T10:43:28+0000",
       "metricas": {
         "reach": 120,
-        "views": 138,
+        "views": 139,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 4,
         "total_interactions": 6,
-        "ig_reels_avg_watch_time": 9945,
-        "ig_reels_video_view_total_time": 1223271
+        "ig_reels_avg_watch_time": 9886,
+        "ig_reels_video_view_total_time": 1225938
       }
     },
     {
@@ -187,14 +187,14 @@
       "timestamp": "2026-11-15T20:51:13+0000",
       "metricas": {
         "reach": 140,
-        "views": 155,
+        "views": 157,
         "saved": 0,
         "shares": 1,
         "comments": 0,
         "likes": 1,
         "total_interactions": 3,
-        "ig_reels_avg_watch_time": 8971,
-        "ig_reels_video_view_total_time": 1291841
+        "ig_reels_avg_watch_time": 8925,
+        "ig_reels_video_view_total_time": 1294157
       }
     },
     {
@@ -811,6 +811,10 @@
     {
       "fecha": "2026-11-18T10:06+00:00",
       "seguidores": 1600
+    },
+    {
+      "fecha": "2026-11-18T16:07+00:00",
+      "seguidores": 1599
     }
   ]
 }
