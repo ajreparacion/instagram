@@ -2,12 +2,12 @@
   "aprobado": false,
   "nota": 70,
   "motivos": [
-    "No hay asset de vídeo ni video_externo en post.json (\"formato\": null): inspeccionar_video confirma el error 'no tiene asset ni video_externo: nada que descargar'. No se puede revisar ni imagen ni audio porque no existe material adjunto en esta pasada.",
-    "A3/v9-H6: _fuentes y _comprobado siguen a null. Las afirmaciones sobre Gestión Integral 7D (importar catálogo desde Excel/CSV/PDF/imagen con extracción por IA, albarán numerado que descuenta stock, factura que hereda líneas/IVA/retención en PDF) no tienen ninguna fuente citada en el post para contrastar; se tratan como no verificadas y no pasan el estándar v9/A3.",
-    "Bloqueo 9 (aprobación caducada): sigue sin resolverse la discrepancia de la pasada anterior. El calidad.json de 90 (12/11) correspondía a un carrusel de diapositivas de otra fecha/material; no sirve como aprobación de esta pieza sin volver a verificar el contenido actual."
+    "No hay asset de vídeo ni video_externo en post.json (\"formato\": null): inspeccionar_video confirma de nuevo el error 'no tiene asset ni video_externo: nada que descargar'. Sin material no se puede revisar imagen, audio, silencios, LUFS ni estructura del formato.",
+    "A3/v9-H6: _fuentes y _comprobado siguen a null. Las afirmaciones sobre Gestión Integral 7D (importar catálogo desde Excel/CSV/PDF/imagen con extracción por IA, albarán numerado que descuenta stock, factura que hereda líneas/IVA/retención en PDF) siguen sin ninguna fuente citada en el post; se tratan como no verificadas y no pasan el estándar v9/A3.",
+    "Bloqueo 9 (aprobación caducada): persiste sin resolver; no hay ningún calidad.json previo que corresponda a esta pieza con material verificable, y el actual sigue sin render ni imágenes que revisar."
   ],
-  "como_arreglarlo": "Adjuntar en post.json el asset real (mp4 de la release «cola» o video_externo) o, si es un carrusel de imágenes, marcarlo explícitamente en el campo 'formato' y aportar las diapositivas para revisión de imagen/texto. Citar en _fuentes/_comprobado la documentación o ficha de producto de Gestión Integral 7D que respalde: importación con extracción por IA (con el aviso de revisar lo importado), generación de albarán numerado con descuento de stock, y herencia de líneas/IVA/retención en la factura PDF. Con material y fuentes ya disponibles, relanzar una revisión completa (incluyendo control_audio si lleva voz y control_datos.py si aplica a cifras).",
-  "fecha": "2026-11-18T19:11:05Z",
+  "como_arreglarlo": "Adjuntar en post.json el asset real (mp4 de la release «cola» o video_externo) para poder descargarlo e inspeccionarlo (ffprobe, silencedetect, LUFS/pico y fotogramas). Citar en _fuentes/_comprobado la documentación o ficha de producto de Gestión Integral 7D que respalde: importación con extracción por IA (con el aviso de revisar lo importado), generación de albarán numerado con descuento de stock, y herencia de líneas/IVA/retención en la factura PDF. Con material y fuentes disponibles, relanzar una revisión completa (incluyendo control_audio si lleva voz y control_datos.py si aplica a cifras). Mientras no exista asset, esta pieza no puede moverse de \"no aplica\" a aprobada.",
+  "fecha": "2026-11-18T19:25:28Z",
   "revisor": "Calidad (API)",
   "render": "no aplica (carrusel)"
 }
