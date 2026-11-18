@@ -1,51 +1,6 @@
 {
-  "_nota": "Rehecho 18/11/2026 en Neogest Studio (orden del dueño 15/11: motor sketch retirado). El vídeo real está en video_externo; se conserva el chiste original (décima visita, misma pareja, llevan noches viviendo ya en el piso) con el reparto nuevo Rosa/Felipe/Sindy/Neo.",
-  "slug": "328_jambo_inmobiliaria_decima_visita",
-  "set": "despacho",
-  "hora": 17,
-  "flow": "https://base44.app/api/apps/6af862101565c330cf06389f/files/mp/public/6af862101565c330cf06389f/59a75a6f4_gemini-12-inmobiliaria.mp4",
-  "moraleja": "Comprueba quién vive ya en el piso antes de la décima visita.",
-  "escenas": [
-    {
-      "e": "gancho",
-      "h": "felipe",
-      "v": "Décima visita al mismo piso. Otra vez dicen que se lo piensan.",
-      "t": "Décima visita y siguen pensándoselo.",
-      "p": ["felipe", "rosa"],
-      "a": {"felipe": "cansado", "rosa": "habla"}
-    },
-    {
-      "e": "gag",
-      "h": "felipe",
-      "v": "Ya me saben el nombre del portero.",
-      "t": "Felipe",
-      "p": ["felipe", "rosa"],
-      "a": {"felipe": "desespera", "rosa": "habla"}
-    },
-    {
-      "e": "gag",
-      "h": "rosa",
-      "v": "Una compra así no se decide en un día, que lo resuelva el Neo.",
-      "t": "Rosa",
-      "p": ["rosa", "felipe"],
-      "a": {"rosa": "presume", "felipe": "habla"}
-    },
-    {
-      "e": "remate",
-      "h": "neo",
-      "v": "Según el consumo de agua, llevan diez noches viviendo ahí. Ya se han mudado, Rosa.",
-      "t": "Neo",
-      "p": ["neo", "rosa"],
-      "a": {"neo": "presume", "rosa": "habla"},
-      "sello": "YA VIVEN AHÍ"
-    },
-    {
-      "e": "cierre",
-      "h": "neo",
-      "v": "Comprueba quién vive ya en el piso antes de la décima visita.",
-      "t": "¿Cuántas visitas aguantas tú?",
-      "p": ["neo", "felipe"],
-      "a": {}
-    }
-  ]
+  "_nota": "Rehecho 18/11/2026 en Neogest Studio (motor sketch retirado); el vídeo es video_externo. Se conserva el chiste original (décima visita, misma pareja, llevan noches viviendo ya en el piso) con el reparto nuevo Rosa/Felipe/Neo.",
+  "motor": "neogest-studio",
+  "episodio": "328_jambo_inmobiliaria_decima_visita",
+  "moraleja": "Comprueba quién vive ya en el piso antes de la décima visita."
 }
