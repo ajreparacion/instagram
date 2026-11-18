@@ -25,8 +25,7 @@
     "licencia": "Licencia de contenido de Pixabay",
     "archivo": "estudio"
   },
-  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/fe569de21_343_jambo_registro_jornada_falso.mp4",
-  "renderizado": false,
+  "renderizado": "2026-11-18T20:55:29+00:00",
   "motor": "neogest-studio",
   "youtube": {
     "titulo": "Fichar y seguir trabajando después #Shorts",
@@ -38,5 +37,7 @@
       "oficina",
       "neogestlab"
     ]
-  }
+  },
+  "asset": "343_jambo_registro_jornada_falso.mp4",
+  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/fe569de21_343_jambo_registro_jornada_falso.mp4"
 }
