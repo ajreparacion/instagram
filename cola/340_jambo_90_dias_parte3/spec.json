@@ -1,0 +1,93 @@
+[
+ {
+  "slug": "340_jambo_90_dias_parte3",
+  "set": "despacho",
+  "hora": "12",
+  "moraleja": "El plazo legal de pago entre empresas es 60 días.",
+  "escenas": [
+   {
+    "e": "gancho",
+    "h": "rosa",
+    "v": "Parte tres: el cliente quiere pagar a *ciento veinte* días.",
+    "t": "Parte 3: ahora paga a 120 días",
+    "p": [
+     "rosa",
+     "felipe"
+    ],
+    "a": {
+     "rosa": "habla",
+     "felipe": "desespera"
+    }
+   },
+   {
+    "e": "gag",
+    "h": "felipe",
+    "v": "Con ciento veinte me pagan el sueldo en primavera.",
+    "t": "Felipe Lotas",
+    "p": [
+     "felipe",
+     "rosa"
+    ],
+    "a": {
+     "felipe": "habla",
+     "rosa": "presume"
+    }
+   },
+   {
+    "e": "gag",
+    "h": "rosa",
+    "v": "Es cliente de toda la vida. Le hacemos descuento.",
+    "t": "Rosa Melano",
+    "p": [
+     "rosa",
+     "felipe"
+    ],
+    "a": {
+     "rosa": "presume",
+     "felipe": "desespera"
+    }
+   },
+   {
+    "e": "gag",
+    "h": "sindy",
+    "v": "Pues lo pagas tú, jefa. Que lo resuelva Neo.",
+    "t": "Sindy Entes",
+    "p": [
+     "sindy",
+     "rosa"
+    ],
+    "a": {
+     "sindy": "habla",
+     "rosa": "delega"
+    }
+   },
+   {
+    "e": "remate",
+    "h": "neo",
+    "v": "Contrato corregido a sesenta días. Ya ha pagado hoy.",
+    "t": "Neo",
+    "p": [
+     "neo",
+     "rosa"
+    ],
+    "a": {
+     "neo": "habla",
+     "rosa": "delega"
+    }
+   },
+   {
+    "e": "cierre",
+    "h": "neo",
+    "v": "Sesenta días como máximo. Pagar tarde no es de amigos.",
+    "t": "¿A cuántos días te pagan? Una cifra en comentarios",
+    "p": [
+     "neo",
+     "felipe"
+    ],
+    "a": {
+     "neo": "habla"
+    }
+   }
+  ]
+ }
+]
