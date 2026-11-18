@@ -1,17 +1,17 @@
 {
   "tipo": "reel",
-  "texto": "Reserva para 12. Vinieron 0: estaban en el restaurante de enfrente. Humor negro de ficción.\n¿Te han dejado alguna vez la mesa vacía? Cuéntalo en comentarios.\nMándaselo a quien tiene un restaurante y reservas fantasma.\n#hosteleria #restaurante #humornegro #reservas #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Life of Riley\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "texto": "Cuando reservan mesa para 12 y no aparece nadie. Felipe, Rosa y Neo, con humor negro de ficción.\nMoraleja: confirma cada reserva el día antes.\n¿Cuántas reservas fantasma tienes a la semana? Una cifra en comentarios.\nMándaselo a quien tiene un restaurante y reservas fantasma.\n#hosteleria #restaurante #humornegro #reservas #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: biblioteca Pixabay de Neogest Studio (licencia de contenido de Pixabay)",
   "cuando": "2026-11-18T22:20:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
   "formato": "Serie El Jambo",
   "publico": "restaurante",
-  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
+  "formula": "El Jambo que sabe v3 (reparto Rosa/Felipe/Sindy/Neo, rehecho 17/11)",
   "_fuentes": [],
   "_comprobado": "Sin cifras de estudio: solo cifras del guion de ficción; no se afirma ningún dato real.",
-  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "_nota_creador": "18/11/2026 Creador: texto, atribución y youtube alineados con el vídeo del estudio (reserva confirmada · moraleja «confirma cada reserva el día antes»); sin cambios de vídeo. Calidad: reevaluar.",
   "motor_voz": "edge",
-  "comentario_fijado": "¿Te han dejado alguna vez la mesa vacía? Episodio nuevo cada día en @neogestlab",
+  "comentario_fijado": "¿Cuántas reservas fantasma tienes a la semana? Una cifra en comentarios",
   "avance_siguiente": "Mañana: faltan cuarenta euros en la caja",
   "portada_ms": 0,
   "monetizacion": {
@@ -20,15 +20,24 @@
     "paso_embudo": "alcance → visita al perfil → prueba gratuita"
   },
   "musica": {
-    "titulo": "Life of Riley",
-    "autor": "Kevin MacLeod",
-    "licencia": "CC BY 4.0",
-    "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Life_of_Riley.mp3",
-    "bpm": 101.3
+    "titulo": "Biblioteca Pixabay de Neogest Studio",
+    "autor": "Pixabay",
+    "licencia": "Licencia de contenido de Pixabay",
+    "archivo": "estudio"
   },
   "renderizado": "2026-11-18T09:04:57+00:00",
   "motor": "neogest-studio",
   "asset": "324_jambo_restaurante_reserva_12.mp4",
-  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/30805aa52_324-master.mp4"
+  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/30805aa52_324-master.mp4",
+  "youtube": {
+    "titulo": "Reserva para 12 y no viene nadie #Shorts",
+    "descripcion": "Humor negro de ficción: la reserva fantasma que deja la mesa vacía y la moraleja: confirma cada reserva el día antes. Pide tu prueba gratuita: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube\nBy Neogest Lab",
+    "etiquetas": [
+      "humornegro",
+      "restaurante",
+      "reservas",
+      "hosteleria",
+      "neogestlab"
+    ]
+  }
 }
