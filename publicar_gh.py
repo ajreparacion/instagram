@@ -1633,7 +1633,10 @@ def aprobado(carpeta, cuando, ahora):
         nota = float(cal.get("nota", 0))
     except (TypeError, ValueError):
         nota = 0
-    return bool(cal.get("aprobado")) and nota >= NOTA_MINIMA
+    # 18/11/2026: antes era bool(cal.get("aprobado")), que un "aprobado": "false" (string, no
+    # booleano) en un calidad.json escrito a mano o por un cliente de API distinto habría leído
+    # como True (cualquier string no vacío es verdadero en Python). Exigir "is True" cierra ese hueco.
+    return cal.get("aprobado") is True and nota >= NOTA_MINIMA
 
 
 def publicar_carrusel(cfg, carpeta, post):
