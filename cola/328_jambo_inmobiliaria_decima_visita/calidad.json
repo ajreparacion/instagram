@@ -1,7 +1,11 @@
 {
- "aprobado": false,
- "nota": 82,
- "comentario": "Rechazado: motor sketch antiguo (orden del dueño 15/11 16:30: Jambos nuevos solo con Neogest Studio, con clip de apertura, efectos de retención y moraleja). 19,2 s, edge-tts y atribución «Fluffing a Duck» correctas, pero sin el formato nuevo no sale. No he podido repetir whisper/LUFS sobre el MP4 (el asset está en la release, no en el repo).",
- "fecha": "2026-11-15T18:32Z",
- "revisado_por": "agente de CALIDAD (pasada de la tarde, 15/11)"
+  "aprobado": false,
+  "nota": 82,
+  "comentario": "Rechazado: motor sketch antiguo (orden del dueño 15/11 16:30: Jambos nuevos solo con Neogest Studio, con clip de apertura, efectos de retención y moraleja). 19,2 s, edge-tts y atribución «Fluffing a Duck» correctas, pero sin el formato nuevo no sale. No he podido repetir whisper/LUFS sobre el MP4 (el asset está en la release, no en el repo).",
+  "fecha": "2026-11-15T18:32Z",
+  "revisado_por": "agente de CALIDAD (pasada de la tarde, 15/11)",
+  "aprobado_anterior": false,
+  "nota_anterior": 82,
+  "caducado": "2026-11-18T20:38:58+00:00",
+  "motivo_caducidad": "vídeo externo subido 2026-11-18T20:38:58+00:00"
 }

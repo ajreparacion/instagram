@@ -1,0 +1,15 @@
+{
+  "aprobado": false,
+  "duracion_s": 32.21,
+  "bloqueos": [
+    "dura 32.2 s (máximo 30)"
+  ],
+  "avisos": [
+    "sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion",
+    "pico real > -1 dB"
+  ],
+  "transcripcion": "Decima visita al mismo piso con la misma pareja. Otra vez dicen que se lo piensan. Ya me saben el nombre del portero y la contraseña del wifi. Es normal tomarse tiempo, una compra así no se decide en un día. 10 visitas no es tiempo, es otra cosa, que lo resuelva el neo. Según el consumo de agua y luz, llevan 10 noches viviendo ahí. Rosa, no se lo están pensando, ya se han mudado. Comprueba quien vive ya en el piso antes de la décima visita.",
+  "guion": "",
+  "lufs": -14.6,
+  "pico_dbfs": -0.8
+}
