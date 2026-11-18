@@ -1,0 +1,6 @@
+{
+  "_nota": "Referencia 18/11 (Remasterizador): el vídeo real se renderiza en Neogest Studio con spec.json (reparto v3). Cuando exista el mp4 masterizado, poner su URL en post.json como video_externo (renderizado:false) y mover la carpeta a cola/. Resumen: Rosa acepta que el cliente pague a 120 días, Felipe y Sindy lo sufren, Neo corrige el contrato a 60 días; moraleja «El plazo legal de pago entre empresas es 60 días».",
+  "motor": "neogest-studio",
+  "episodio": "340",
+  "moraleja": "El plazo legal de pago entre empresas es 60 días."
+}
