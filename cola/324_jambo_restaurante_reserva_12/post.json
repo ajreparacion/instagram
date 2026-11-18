@@ -1,7 +1,7 @@
 {
   "tipo": "reel",
   "texto": "Reserva para 12. Vinieron 0: estaban en el restaurante de enfrente. Humor negro de ficción.\n¿Te han dejado alguna vez la mesa vacía? Cuéntalo en comentarios.\nMándaselo a quien tiene un restaurante y reservas fantasma.\n#hosteleria #restaurante #humornegro #reservas #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Life of Riley\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
-  "cuando": "2026-11-17T18:45:00+01:00",
+  "cuando": "2026-11-18T22:20:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
   "formato": "Serie El Jambo",
@@ -27,10 +27,7 @@
     "archivo": "Life_of_Riley.mp3",
     "bpm": 101.3
   },
-  "renderizado": "2026-11-15T19:34:18+00:00",
-  "asset": "324_jambo_restaurante_reserva_12.mp4",
-  "control_audio": {
-    "aprobado": true,
-    "duracion_s": 20.63
-  }
+  "renderizado": false,
+  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/30805aa52_324-master.mp4",
+  "motor": "neogest-studio"
 }
