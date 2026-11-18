@@ -1300,6 +1300,32 @@ def renderizar(cfg, carpeta, post):
     if externo.startswith("https://"):
         # vídeo ya terminado fuera del ciclo (p. ej. Neogest Studio): se descarga, se sube a la release y Calidad lo revisa
         descargar(externo, video)
+        # 18/11/2026 (Mejora, petición de Calidad 15/11): control de audio también sobre el mp4 externo. Informativo: no bloquea
+        # la subida; deja control_audio.json en la carpeta con transcripción, silencios, pico y LUFS para que Calidad lo lea.
+        try:
+            guion_ext = os.path.join(carpeta, "guion.json")
+            if os.path.exists(guion_ext):
+                controlar_audio(video, [], [], {}, trabajo, guion=guion_ext)
+                res_ext = dict(CONTROL_AUDIO)
+            else:
+                res_ext = {"aprobado": None, "avisos": ["sin guion.json: no se compara la voz con el guion"]}
+            try:
+                r = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", video, "-af", "ebur128=peak=true", "-f", "null", "-"],
+                                   capture_output=True, text=True, timeout=180).stderr
+                m_l = re.findall(r"I:\s+(-?[\d.]+) LUFS", r)
+                m_p = re.findall(r"Peak:\s+(-?[\d.]+) dBFS", r)
+                if m_l: res_ext["lufs"] = float(m_l[-1])
+                if m_p: res_ext["pico_dbfs"] = float(m_p[-1])
+                if res_ext.get("lufs") is not None and not (-15.5 <= res_ext["lufs"] <= -12.5):
+                    res_ext.setdefault("avisos", []).append("LUFS fuera de -14 ±1,5")
+                if res_ext.get("pico_dbfs") is not None and res_ext["pico_dbfs"] > -1.0:
+                    res_ext.setdefault("avisos", []).append("pico real > -1 dB")
+            except Exception as e:
+                res_ext.setdefault("avisos", []).append("medición de LUFS no disponible: " + str(e)[-80:])
+            escribir_json(os.path.join(carpeta, "control_audio.json"), res_ext)
+            log(f"{nombre}: control de audio del vídeo externo: aprobado={res_ext.get('aprobado')} LUFS={res_ext.get('lufs')} pico={res_ext.get('pico_dbfs')}")
+        except Exception as e:
+            log(f"{nombre}: control de audio del vídeo externo no disponible ({str(e)[-120:]}); no se bloquea")
         asset = os.path.join(trabajo, f"{nombre}.mp4")
         os.replace(video, asset)
         asegurar_release()

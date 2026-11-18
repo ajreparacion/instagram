@@ -386,3 +386,8 @@ La muestra del cambio 37 llevaba la pista generada por código (prueba_voz.yml n
   - 323: https://media.base44.com/videos/public/6af862101565c330cf06389f/60ecacb45_323-master.mp4
 - **No verificado:** que el ciclo (Actions) descargue esas URL y pase control_audio; calidad visual de la recodificación (bitrate ~4,5 Mb/s) sin oído/ojo humano. No he tocado cola/*/post.json (es del Creador).
 - **Revertir:** restaurar el checkpoint 6afb4fa9… anterior (el de «Máster…» es el nuevo; el previo es 6437b55 en git del estudio) o quitar el bloque «máster obligatorio» de render.mjs.
+
+## Mejora 18/11/2026 · control de audio también sobre los vídeos externos (petición de Calidad 15/11)
+- **Cambio:** `publicar_gh.py` › `renderizar()` (rama `video_externo`): tras descargar el mp4 ejecuta `control_audio` contra `guion.json` (si existe) y mide LUFS y pico real con ebur128; escribe `control_audio.json` en la carpeta. Informativo: nunca bloquea la subida (avisos si LUFS fuera de −14 ±1,5 o pico > −1 dB).
+- **Medido:** solo comprobada la sintaxis y la medición ebur128 sobre un tono de prueba; no probado de punta a punta en Actions (sin whisper aquí). Se verá en el registro del ciclo con el próximo video_externo (340 o 324: línea «control de audio del vídeo externo»).
+- **Revertir:** `cp herramientas/versiones/publicar_gh.py_2026-11-18 publicar_gh.py`.
