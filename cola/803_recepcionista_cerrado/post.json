@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "¿Tu teléfono sabe que a las seis ya has cerrado?\nLlamada real al asistente telefónico de un negocio: le dicen que pasarán a las seis, y contesta que ese día cierran a las tres y propone el día siguiente a las nueve. Atiende las 24 horas y tú conservas tu número.\nNosotros lo configuramos y lo mantenemos. Desde 150 € al mes, sin permanencia.\n¿A qué hora te llaman más cuando ya has cerrado? Dilo con una hora.\nMándaselo a quien no da abasto con el teléfono.\nSolicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=instagram\nLa voz que se oye es la de un asistente virtual (generada por IA). Llamada real; se han quitado los datos del negocio.",
+  "texto": "¿Tu teléfono sabe que a las seis ya has cerrado?\nLlamada real al asistente telefónico de un negocio: le dicen que pasarán a las seis, y contesta que ese día cierran a las tres y propone el día siguiente a las nueve. Atiende las 24 horas y tú conservas tu número.\nNosotros lo configuramos y lo mantenemos. Desde 150 € al mes, sin permanencia.\n¿A qué hora te llaman más cuando ya has cerrado? Dilo con una hora.\nMándaselo a quien no da abasto con el teléfono.\nSolicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=instagram\nLa voz que se oye es la de un asistente virtual (generada por IA). Llamada real; se han quitado los datos del negocio.\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
   "cuando": "2026-11-18T09:40:00+01:00",
   "compartir_en_feed": true,
   "prueba_no_seguidores": true,
@@ -12,10 +12,18 @@
     "Ficha Producto del Centro, slug recepcionista-24h (hechos verificados 16/11/2026)",
     "Grabación propia del dueño, 16/11/2026"
   ],
-  "_comprobado": "Texto y audio contrastados con la ficha y con la transcripción de la llamada; sin nombre del negocio, web, teléfonos ni nombres de personas; no suena la voz del dueño.",
-  "_nota_creador": "16/11/2026 Coordinación: vídeo ya terminado (llamada real al asistente del dueño, montada fuera del ciclo). SIN MÚSICA: no había pistas con licencia accesibles desde la sesión; si Calidad lo exige, el Remasterizador añade música del estudio por debajo de la voz. Encargo: equipo/encargos/recepcionista_24h.md.",
-  "renderizado": "2026-11-16T18:53:37+00:00",
+  "_comprobado": "Texto y audio contrastados con la ficha y con la transcripción de la llamada; sin nombre del negocio, web, teléfonos ni nombres de personas; no suena la voz del dueño. Pendiente: confirmar el precio «150 €/mes» contra la ficha del Producto (observación de Calidad del 17/11, no verificado en este arreglo).",
+  "_nota_creador": "18/11/2026 Remasterizador: añadida música de Kevin MacLeod (\"Fluffing a Duck\", CC BY 4.0, de musica/pistas.json de este repo — no se encontró la biblioteca Pixabay de Neogest Studio desde esta sesión) con ducking bajo la voz (sidechaincompress), y recortado el silencio final de 6 s a 0 (el cierre pasa de >6 s a ~3 s, ya con música, dentro del límite de silencio de la promo). Duración final 19,6 s: por debajo del rango de promo (25-45 s) pero dentro de la excepción que el propio calidad.json del 17/11 ya contemplaba para llamada real sin silencios. Vídeo nuevo subido a la rama entrada-videos; pendiente de que el ciclo lo suba a la release y Calidad lo reevalúe de cero (no toco calidad.json: eso es su criterio).",
+  "renderizado": false,
+  "video_externo": "https://raw.githubusercontent.com/ajreparacion/instagram/entrada-videos/803_recepcionista_cerrado.mp4",
   "motor": "externo",
+  "musica": {
+    "titulo": "Fluffing a Duck",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "musica/pistas.json (biblioteca del repo)"
+  },
   "comentario_fijado": "¿A qué hora te llaman más cuando ya has cerrado? Dilo con una hora. Más en @neogestlab",
   "avance_siguiente": "Mañana: le preguntamos qué sabe hacer",
   "portada_ms": 0,
