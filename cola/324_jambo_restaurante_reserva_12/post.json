@@ -9,7 +9,7 @@
   "formula": "El Jambo que sabe v3 (reparto Rosa/Felipe/Sindy/Neo, rehecho 17/11)",
   "_fuentes": [],
   "_comprobado": "Sin cifras de estudio: solo cifras del guion de ficción; no se afirma ningún dato real.",
-  "_nota_creador": "18/11/2026 Creador: texto, atribución y youtube alineados con el vídeo del estudio (reserva confirmada · moraleja «confirma cada reserva el día antes»); sin cambios de vídeo. Calidad: reevaluar.",
+  "_nota_creador": "18/11/2026 Creador: texto, atribución y youtube alineados con el vídeo del estudio (reserva confirmada · moraleja «confirma cada reserva el día antes»); sin cambios de vídeo. Calidad: reevaluar.\n18/11/2026 Remasterizador: pico real estaba en -0,9 dBFS (incumple el límite <= -1 dB) y el control_audio.json previo tenía la transcripción del guion sketch antiguo (Jambo/Bola), que no corresponde al vídeo actual. Remasterizado el mp4 (fix de aresample/ffmpeg del sandbox) a -14,2 LUFS / pico -1,3 dBFS y subido de nuevo; video_externo actualizado y renderizado:false para que el ciclo lo recoja y regenere control_audio con la transcripción real. guion.json ya estaba correcto (coincide con el vídeo actual), no se ha tocado.",
   "motor_voz": "edge",
   "comentario_fijado": "¿Cuántas reservas fantasma tienes a la semana? Una cifra en comentarios",
   "avance_siguiente": "Mañana: faltan cuarenta euros en la caja",
@@ -25,10 +25,9 @@
     "licencia": "Licencia de contenido de Pixabay",
     "archivo": "estudio"
   },
-  "renderizado": "2026-11-18T09:04:57+00:00",
+  "renderizado": false,
   "motor": "neogest-studio",
-  "asset": "324_jambo_restaurante_reserva_12.mp4",
-  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/30805aa52_324-master.mp4",
+  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/0079adf0c_324_jambo_restaurante_reserva_12_remaster.mp4",
   "youtube": {
     "titulo": "Reserva para 12 y no viene nadie #Shorts",
     "descripcion": "Humor negro de ficción: la reserva fantasma que deja la mesa vacía y la moraleja: confirma cada reserva el día antes. Pide tu prueba gratuita: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube\nBy Neogest Lab",
