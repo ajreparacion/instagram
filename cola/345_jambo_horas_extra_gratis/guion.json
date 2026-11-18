@@ -1,0 +1,92 @@
+{
+  "_nota": "Spec generado con herramientas/estudio/gen_episodios.py a partir de equipo/guiones_gemini/pendientes/; el vídeo real está en video_externo (motor neogest-studio).",
+  "slug": "345_jambo_horas_extra_gratis",
+  "set": "oficina",
+  "hora": 19,
+  "flow": "https://base44.app/api/apps/6af862101565c330cf06389f/files/mp/public/6af862101565c330cf06389f/c52cba367_gemini-10-reparto.mp4",
+  "moraleja": "2,5 millones de horas extra no se cobran.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "v": "Un momentito antes de irte, Felipe",
+      "t": "Un momentito antes de irte, Felipe",
+      "p": [
+        "rosa",
+        "felipe"
+      ],
+      "a": {
+        "rosa": "presume",
+        "felipe": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "v": "Son las siete y media, ¿qué necesitas?",
+      "t": "Felipe",
+      "p": [
+        "felipe",
+        "rosa"
+      ],
+      "a": {
+        "felipe": "desespera",
+        "rosa": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "v": "Solo digitalizar estos trescientos folios a mano",
+      "t": "Rosa",
+      "p": [
+        "rosa",
+        "felipe"
+      ],
+      "a": {
+        "rosa": "presume",
+        "felipe": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "v": "Es una locura, que lo resuelva el Neo",
+      "t": "Sindy",
+      "p": [
+        "sindy",
+        "rosa"
+      ],
+      "a": {
+        "sindy": "delega",
+        "rosa": "habla"
+      }
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "v": "He digitalizado todo en segundos. Rosa, no inventes trabajo",
+      "t": "Neo",
+      "p": [
+        "neo",
+        "rosa"
+      ],
+      "a": {
+        "neo": "presume",
+        "rosa": "habla"
+      },
+      "sello": "SIN HORAS GRATIS"
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "v": "2,5 millones de horas extra no se cobran.",
+      "t": "¿Haces horas que no te pagan?",
+      "p": [
+        "neo",
+        "felipe"
+      ],
+      "a": {}
+    }
+  ]
+}

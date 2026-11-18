@@ -1,0 +1,92 @@
+{
+  "_nota": "Spec generado con herramientas/estudio/gen_episodios.py a partir de equipo/guiones_gemini/pendientes/; el vídeo real está en video_externo (motor neogest-studio).",
+  "slug": "341_jambo_horas_extra_gratis",
+  "set": "oficina",
+  "hora": 20,
+  "flow": "https://base44.app/api/apps/6af862101565c330cf06389f/files/mp/public/6af862101565c330cf06389f/4afe96f56_gemini-6-movil-noche.mp4",
+  "moraleja": "Se trabajan 2,5 millones de horas sin cobrar.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "v": "Hacer horas extra por amor al proyecto.",
+      "t": "Hacer horas extra por amor al proyecto.",
+      "p": [
+        "rosa",
+        "felipe"
+      ],
+      "a": {
+        "rosa": "presume",
+        "felipe": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "v": "Llevo tres noches durmiendo en la oficina por amor al arte.",
+      "t": "Felipe",
+      "p": [
+        "felipe",
+        "rosa"
+      ],
+      "a": {
+        "felipe": "desespera",
+        "rosa": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "v": "El amor no se paga, se demuestra con más compromiso.",
+      "t": "Rosa",
+      "p": [
+        "rosa",
+        "felipe"
+      ],
+      "a": {
+        "rosa": "presume",
+        "felipe": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "v": "Mi hipoteca no se paga con amor, que lo resuelva el Neo.",
+      "t": "Sindy",
+      "p": [
+        "sindy",
+        "rosa"
+      ],
+      "a": {
+        "sindy": "delega",
+        "rosa": "habla"
+      }
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "v": "He facturado el exceso de horas a la empresa y abonado vuestras nóminas.",
+      "t": "Neo",
+      "p": [
+        "neo",
+        "rosa"
+      ],
+      "a": {
+        "neo": "presume",
+        "rosa": "habla"
+      },
+      "sello": "HORAS PAGADAS"
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "v": "Se trabajan 2,5 millones de horas sin cobrar.",
+      "t": "¿Haces horas que no te pagan?",
+      "p": [
+        "neo",
+        "felipe"
+      ],
+      "a": {}
+    }
+  ]
+}

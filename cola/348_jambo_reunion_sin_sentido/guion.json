@@ -1,0 +1,92 @@
+{
+  "_nota": "Spec generado con herramientas/estudio/gen_episodios.py a partir de equipo/guiones_gemini/pendientes/; el vídeo real está en video_externo (motor neogest-studio).",
+  "slug": "348_jambo_reunion_sin_sentido",
+  "set": "reunion",
+  "hora": 10,
+  "flow": "https://base44.app/api/apps/6af862101565c330cf06389f/files/mp/public/6af862101565c330cf06389f/d30fe9b73_flow-gps-comprimido.mp4",
+  "moraleja": "El 55 % de las pymes pierde tiempo administrativo.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "v": "Reunión urgente para decidir qué almorzar hoy",
+      "t": "Reunión urgente para decidir qué almorzar hoy",
+      "p": [
+        "rosa",
+        "felipe"
+      ],
+      "a": {
+        "rosa": "presume",
+        "felipe": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "v": "Rosa, llevamos dos horas debatiendo la marca de café",
+      "t": "Felipe",
+      "p": [
+        "felipe",
+        "rosa"
+      ],
+      "a": {
+        "felipe": "desespera",
+        "rosa": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "v": "Es vital consensuar la marca antes de pedir",
+      "t": "Rosa",
+      "p": [
+        "rosa",
+        "felipe"
+      ],
+      "a": {
+        "rosa": "presume",
+        "felipe": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "v": "El hambre nos está matando, que lo resuelva el Neo",
+      "t": "Sindy",
+      "p": [
+        "sindy",
+        "rosa"
+      ],
+      "a": {
+        "sindy": "delega",
+        "rosa": "habla"
+      }
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "v": "He pedido menú cerrado. Rosa, no has trabajado nada hoy",
+      "t": "Neo",
+      "p": [
+        "neo",
+        "rosa"
+      ],
+      "a": {
+        "neo": "presume",
+        "rosa": "habla"
+      },
+      "sello": "MENÚ CERRADO"
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "v": "El 55 % de las pymes pierde tiempo administrativo.",
+      "t": "¿Cuántas reuniones así sufres?",
+      "p": [
+        "neo",
+        "felipe"
+      ],
+      "a": {}
+    }
+  ]
+}

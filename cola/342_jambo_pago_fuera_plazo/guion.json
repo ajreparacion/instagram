@@ -1,0 +1,92 @@
+{
+  "_nota": "Spec generado con herramientas/estudio/gen_episodios.py a partir de equipo/guiones_gemini/pendientes/; el vídeo real está en video_externo (motor neogest-studio).",
+  "slug": "342_jambo_pago_fuera_plazo",
+  "set": "despacho",
+  "hora": 12,
+  "flow": "https://base44.app/api/apps/6af862101565c330cf06389f/files/mp/public/6af862101565c330cf06389f/1384ee646_gemini-13-tienda-online.mp4",
+  "moraleja": "El plazo legal de pago es 60 días.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "v": "Dale 120 días de crédito a este cliente.",
+      "t": "Dale 120 días de crédito a este cliente.",
+      "p": [
+        "rosa",
+        "felipe"
+      ],
+      "a": {
+        "rosa": "presume",
+        "felipe": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "v": "Eso supera con mucho el límite legal de cobro.",
+      "t": "Felipe",
+      "p": [
+        "felipe",
+        "rosa"
+      ],
+      "a": {
+        "felipe": "desespera",
+        "rosa": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "v": "Es un cliente VIP, su comodidad va antes que la ley.",
+      "t": "Rosa",
+      "p": [
+        "rosa",
+        "felipe"
+      ],
+      "a": {
+        "rosa": "presume",
+        "felipe": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "v": "La ley es la ley, que lo resuelva el Neo.",
+      "t": "Sindy",
+      "p": [
+        "sindy",
+        "rosa"
+      ],
+      "a": {
+        "sindy": "delega",
+        "rosa": "habla"
+      }
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "v": "He ajustado el contrato a 60 días. El cliente ha aceptado.",
+      "t": "Neo",
+      "p": [
+        "neo",
+        "rosa"
+      ],
+      "a": {
+        "neo": "presume",
+        "rosa": "habla"
+      },
+      "sello": "60 DÍAS"
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "v": "El plazo legal de pago es 60 días.",
+      "t": "¿Te pagan tarde a ti también?",
+      "p": [
+        "neo",
+        "felipe"
+      ],
+      "a": {}
+    }
+  ]
+}

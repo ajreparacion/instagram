@@ -1,0 +1,92 @@
+{
+  "_nota": "Spec generado con herramientas/estudio/gen_episodios.py a partir de equipo/guiones_gemini/pendientes/; el vídeo real está en video_externo (motor neogest-studio).",
+  "slug": "346_jambo_pago_fuera_plazo",
+  "set": "despacho",
+  "hora": 12,
+  "flow": "https://base44.app/api/apps/6af862101565c330cf06389f/files/mp/public/6af862101565c330cf06389f/c3c6804c8_gemini-9-restaurante.mp4",
+  "moraleja": "El plazo máximo legal de pago es sesenta días.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "v": "Acepta pagar a noventa días, es nuestro amigo",
+      "t": "Acepta pagar a noventa días, es nuestro amigo",
+      "p": [
+        "rosa",
+        "felipe"
+      ],
+      "a": {
+        "rosa": "presume",
+        "felipe": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "v": "Tres meses sin cobrar no es de amigos",
+      "t": "Sindy",
+      "p": [
+        "sindy",
+        "rosa"
+      ],
+      "a": {
+        "sindy": "desespera",
+        "rosa": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "v": "El beneficio no importa, solo la buena relación",
+      "t": "Rosa",
+      "p": [
+        "rosa",
+        "sindy"
+      ],
+      "a": {
+        "rosa": "presume",
+        "sindy": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "v": "Nos arruinamos, que lo resuelva el Neo",
+      "t": "Felipe",
+      "p": [
+        "felipe",
+        "rosa"
+      ],
+      "a": {
+        "felipe": "delega",
+        "rosa": "habla"
+      }
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "v": "Contrato ajustado a sesenta días. Rosa, deja de perder dinero",
+      "t": "Neo",
+      "p": [
+        "neo",
+        "rosa"
+      ],
+      "a": {
+        "neo": "presume",
+        "rosa": "habla"
+      },
+      "sello": "60 DÍAS"
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "v": "El plazo máximo legal de pago es sesenta días.",
+      "t": "¿Te pagan tarde a ti también?",
+      "p": [
+        "neo",
+        "felipe"
+      ],
+      "a": {}
+    }
+  ]
+}
