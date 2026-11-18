@@ -1,6 +1,6 @@
 {
  "tema": "baile_1518",
- "fecha": "2026-11-06T17:57:58Z",
+ "fecha": "2026-11-18T19:13:08Z",
  "hoja": "release pruebas: imagenes_baile_1518.jpg",
  "candidatas": [
   {
@@ -99,8 +99,8 @@
    "url_original": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
    "pagina": "https://commons.wikimedia.org/wiki/File:Die_Wallfahrt_der_Fallsuechtigen_nach_Meulebeeck.jpg",
    "licencia": "Public domain",
-   "autor": "Pieter Brueghel the Elder",
-   "credito": "Pieter Brueghel the Elder · Public domain · Wikimedia Commons",
+   "autor": "Pieter Bruegel the Elder",
+   "credito": "Pieter Bruegel the Elder · Public domain · Wikimedia Commons",
    "descripcion": "Kupferstich von Hendrik Hondius (1573 - 1649) nach einer Zeichnung Pieter Bruegels des Älteren aus dem Jahre 1564: Die Wallfahrt der Fallsüchtigen nach Meulebeeck (einem Ort in der Nähe von Brüssel). Es wird vermutet, dass Breugel Augenzeuge dieser Ereignisse war. Es dürfte sich hier um eine spätes ",
    "fecha": "1564",
    "ancho": 1660,
@@ -199,21 +199,6 @@
    "n": 13
   },
   {
-   "titulo": "File:Saverne NotreDameNativité 115b.JPG",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b6/Saverne_NotreDameNativit%C3%A9_115b.JPG/1280px-Saverne_NotreDameNativit%C3%A9_115b.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "url_original": "https://upload.wikimedia.org/wikipedia/commons/b/b6/Saverne_NotreDameNativit%C3%A9_115b.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-   "pagina": "https://commons.wikimedia.org/wiki/File:Saverne_NotreDameNativit%C3%A9_115b.JPG",
-   "licencia": "Public domain",
-   "autor": "© Ralph Hammann - Wikimedia Commons",
-   "credito": "© Ralph Hammann - Wikimedia Commons · Public domain · Wikimedia Commons",
-   "descripcion": "",
-   "fecha": "2016-09-29",
-   "ancho": 3717,
-   "alto": 3384,
-   "consulta": "Saverne church",
-   "n": 14
-  },
-  {
    "titulo": "File:Saverne NotreDameNativité 115a.JPG",
    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/be/Saverne_NotreDameNativit%C3%A9_115a.JPG/1280px-Saverne_NotreDameNativit%C3%A9_115a.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "url_original": "https://upload.wikimedia.org/wikipedia/commons/b/be/Saverne_NotreDameNativit%C3%A9_115a.JPG?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -226,7 +211,7 @@
    "ancho": 3406,
    "alto": 4688,
    "consulta": "Saverne church",
-   "n": 15
+   "n": 14
   },
   {
    "titulo": "File:Netherlandish 16th Century or Attributed to Cornelis Cort after Albrecht Dürer - Joachim Patinir.jpg",
@@ -241,7 +226,7 @@
    "ancho": 2838,
    "alto": 3000,
    "consulta": "Strasbourg 16th century engraving",
-   "n": 16
+   "n": 15
   },
   {
    "titulo": "File:Print, Designs for Two Knife Handles, 16th century (CH 18651409).jpg",
@@ -256,7 +241,7 @@
    "ancho": 2767,
    "alto": 4096,
    "consulta": "Strasbourg 16th century engraving",
-   "n": 17
+   "n": 16
   },
   {
    "titulo": "File:Adolph Occo III. Line engraving by T. de Bry after A. de Hel Wellcome V0004347.jpg",
@@ -271,7 +256,7 @@
    "ancho": 2242,
    "alto": 3157,
    "consulta": "Strasbourg 16th century engraving",
-   "n": 18
+   "n": 17
   },
   {
    "titulo": "File:Wolf-Dietrich-Klebeband Städtebilder G 026 III.jpg",
@@ -286,7 +271,7 @@
    "ancho": 2000,
    "alto": 931,
    "consulta": "Strasbourg 16th century engraving",
-   "n": 19
+   "n": 18
   },
   {
    "titulo": "File:Aleksandrovskja-sloboda v 16 century.jpg",
@@ -300,6 +285,21 @@
    "fecha": "before 1598 date QS:P,+1598-00-00T00:00:",
    "ancho": 1000,
    "alto": 742,
+   "consulta": "Strasbourg 16th century engraving",
+   "n": 19
+  },
+  {
+   "titulo": "File:'Saint Jerome in his Study', engraving by Albrecht Dürer, Honolulu Museum of Art.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/%27Saint_Jerome_in_his_Study%27%2C_engraving_by_Albrecht_D%C3%BCrer%2C_Honolulu_Museum_of_Art.jpg/1280px-%27Saint_Jerome_in_his_Study%27%2C_engraving_by_Albrecht_D%C3%BCrer%2C_Honolulu_Museum_of_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "url_original": "https://upload.wikimedia.org/wikipedia/commons/e/e5/%27Saint_Jerome_in_his_Study%27%2C_engraving_by_Albrecht_D%C3%BCrer%2C_Honolulu_Museum_of_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "pagina": "https://commons.wikimedia.org/wiki/File:%27Saint_Jerome_in_his_Study%27,_engraving_by_Albrecht_D%C3%BCrer,_Honolulu_Museum_of_Art.jpg",
+   "licencia": "CC0",
+   "autor": "Albrecht Dürer",
+   "credito": "Albrecht Dürer · CC0 · Wikimedia Commons",
+   "descripcion": "",
+   "fecha": "1514 date QS:P571,+1514-00-00T00:00:00Z/",
+   "ancho": 2468,
+   "alto": 3168,
    "consulta": "Strasbourg 16th century engraving",
    "n": 20
   },
@@ -319,21 +319,6 @@
    "n": 21
   },
   {
-   "titulo": "File:'Saint Jerome in his Study', engraving by Albrecht Dürer, Honolulu Museum of Art.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/%27Saint_Jerome_in_his_Study%27%2C_engraving_by_Albrecht_D%C3%BCrer%2C_Honolulu_Museum_of_Art.jpg/1280px-%27Saint_Jerome_in_his_Study%27%2C_engraving_by_Albrecht_D%C3%BCrer%2C_Honolulu_Museum_of_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "url_original": "https://upload.wikimedia.org/wikipedia/commons/e/e5/%27Saint_Jerome_in_his_Study%27%2C_engraving_by_Albrecht_D%C3%BCrer%2C_Honolulu_Museum_of_Art.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-   "pagina": "https://commons.wikimedia.org/wiki/File:%27Saint_Jerome_in_his_Study%27,_engraving_by_Albrecht_D%C3%BCrer,_Honolulu_Museum_of_Art.jpg",
-   "licencia": "CC0",
-   "autor": "Albrecht Dürer",
-   "credito": "Albrecht Dürer · CC0 · Wikimedia Commons",
-   "descripcion": "",
-   "fecha": "1514 date QS:P571,+1514-00-00T00:00:00Z/",
-   "ancho": 2468,
-   "alto": 3168,
-   "consulta": "Strasbourg 16th century engraving",
-   "n": 22
-  },
-  {
    "titulo": "File:Heinrich Vogtherr-Nouveau Testament (BNUS) (2).jpg",
    "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/92/Heinrich_Vogtherr-Nouveau_Testament_%28BNUS%29_%282%29.jpg/1280px-Heinrich_Vogtherr-Nouveau_Testament_%28BNUS%29_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
    "url_original": "https://upload.wikimedia.org/wikipedia/commons/9/92/Heinrich_Vogtherr-Nouveau_Testament_%28BNUS%29_%282%29.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -346,7 +331,7 @@
    "ancho": 3129,
    "alto": 4380,
    "consulta": "Strasbourg 16th century engraving",
-   "n": 23
+   "n": 22
   },
   {
    "titulo": "File:Lycosthenes, Éruption d'un volcan.jpg",
@@ -361,7 +346,7 @@
    "ancho": 1080,
    "alto": 1213,
    "consulta": "Strasbourg 16th century engraving",
-   "n": 24
+   "n": 23
   },
   {
    "titulo": "File:Heinrich Vogtherr-Nouveau Testament (BNUS) (1).jpg",
@@ -376,7 +361,7 @@
    "ancho": 3524,
    "alto": 4934,
    "consulta": "Strasbourg 16th century engraving",
-   "n": 25
+   "n": 24
   },
   {
    "titulo": "File:Medaillon met de buste van Kapitein van Wijsheid, Theodor de Bry, ca. 1577 - ca. 1578.jpg",
@@ -391,7 +376,7 @@
    "ancho": 2016,
    "alto": 1969,
    "consulta": "Strasbourg 16th century engraving",
-   "n": 26
+   "n": 25
   },
   {
    "titulo": "File:DSP16-1365 colophon (6719263619).jpg",
@@ -406,7 +391,7 @@
    "ancho": 1573,
    "alto": 2210,
    "consulta": "Strasbourg 16th century engraving",
-   "n": 27
+   "n": 26
   },
   {
    "titulo": "File:Medaillon met buste van de Kapitein van Dwaasheid, Theodor de Bry, ca. 1577 - ca. 1578.jpg",
@@ -421,7 +406,7 @@
    "ancho": 2232,
    "alto": 2247,
    "consulta": "Strasbourg 16th century engraving",
-   "n": 28
+   "n": 27
   },
   {
    "titulo": "File:Stimmer, Tobias - Hidden Portrait of the Pope (1577).jpg",
@@ -435,6 +420,21 @@
    "fecha": "1577 date QS:P571,+1577-00-00T00:00:00Z/",
    "ancho": 1867,
    "alto": 2548,
+   "consulta": "Strasbourg 16th century engraving",
+   "n": 28
+  },
+  {
+   "titulo": "File:1852 Levasseur Map of the Department Du Bas Rhin, France (Strasbourg, Alsace Wine Region) - Geographicus - BasRhin-levasseur-1852.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/1852_Levasseur_Map_of_the_Department_Du_Bas_Rhin%2C_France_%28Strasbourg%2C_Alsace_Wine_Region%29_-_Geographicus_-_BasRhin-levasseur-1852.jpg/1280px-1852_Levasseur_Map_of_the_Department_Du_Bas_Rhin%2C_France_%28Strasbourg%2C_Alsace_Wine_Region%29_-_Geographicus_-_BasRhin-levasseur-1852.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "url_original": "https://upload.wikimedia.org/wikipedia/commons/3/32/1852_Levasseur_Map_of_the_Department_Du_Bas_Rhin%2C_France_%28Strasbourg%2C_Alsace_Wine_Region%29_-_Geographicus_-_BasRhin-levasseur-1852.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "pagina": "https://commons.wikimedia.org/wiki/File:1852_Levasseur_Map_of_the_Department_Du_Bas_Rhin,_France_(Strasbourg,_Alsace_Wine_Region)_-_Geographicus_-_BasRhin-levasseur-1852.jpg",
+   "licencia": "Public domain",
+   "autor": "Victor Jules Levasseur / Frédéric-Guillaume Laguillermie",
+   "credito": "Victor Jules Levasseur / Frédéric-Guillaume Laguillermie · Public domain · Wikimedia Commons",
+   "descripcion": "This is a fascinating 1852 map of the French department of Bas-Rhin, France. Part of the Alsace wine region surrounding Strasbourg. This mountainous area on the west bank of the Rhine River is known for producing Munster cheese. The map proper is surrounded by elaborate decorative engravings designe",
+   "fecha": "1852 (undated)",
+   "ancho": 3500,
+   "alto": 2472,
    "consulta": "Strasbourg 16th century engraving",
    "n": 29
   },
@@ -454,21 +454,6 @@
    "n": 30
   },
   {
-   "titulo": "File:1852 Levasseur Map of the Department Du Bas Rhin, France (Strasbourg, Alsace Wine Region) - Geographicus - BasRhin-levasseur-1852.jpg",
-   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/32/1852_Levasseur_Map_of_the_Department_Du_Bas_Rhin%2C_France_%28Strasbourg%2C_Alsace_Wine_Region%29_-_Geographicus_-_BasRhin-levasseur-1852.jpg/1280px-1852_Levasseur_Map_of_the_Department_Du_Bas_Rhin%2C_France_%28Strasbourg%2C_Alsace_Wine_Region%29_-_Geographicus_-_BasRhin-levasseur-1852.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
-   "url_original": "https://upload.wikimedia.org/wikipedia/commons/3/32/1852_Levasseur_Map_of_the_Department_Du_Bas_Rhin%2C_France_%28Strasbourg%2C_Alsace_Wine_Region%29_-_Geographicus_-_BasRhin-levasseur-1852.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
-   "pagina": "https://commons.wikimedia.org/wiki/File:1852_Levasseur_Map_of_the_Department_Du_Bas_Rhin,_France_(Strasbourg,_Alsace_Wine_Region)_-_Geographicus_-_BasRhin-levasseur-1852.jpg",
-   "licencia": "Public domain",
-   "autor": "Victor Jules Levasseur / Frédéric-Guillaume Laguillermie",
-   "credito": "Victor Jules Levasseur / Frédéric-Guillaume Laguillermie · Public domain · Wikimedia Commons",
-   "descripcion": "This is a fascinating 1852 map of the French department of Bas-Rhin, France. Part of the Alsace wine region surrounding Strasbourg. This mountainous area on the west bank of the Rhine River is known for producing Munster cheese. The map proper is surrounded by elaborate decorative engravings designe",
-   "fecha": "1852 (undated)",
-   "ancho": 3500,
-   "alto": 2472,
-   "consulta": "Strasbourg 16th century engraving",
-   "n": 31
-  },
-  {
    "titulo": "File:Cerco a Igarassu, gravura de Theodor de Bry - Staden, Duas Viagens ao Brasil, 1557.jpg",
    "url": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Cerco_a_Igarassu%2C_gravura_de_Theodor_de_Bry_-_Staden%2C_Duas_Viagens_ao_Brasil%2C_1557.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail_unscaled",
    "url_original": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Cerco_a_Igarassu%2C_gravura_de_Theodor_de_Bry_-_Staden%2C_Duas_Viagens_ao_Brasil%2C_1557.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
@@ -481,7 +466,7 @@
    "ancho": 913,
    "alto": 731,
    "consulta": "Strasbourg 16th century engraving",
-   "n": 32
+   "n": 31
   },
   {
    "titulo": "File:The Crucifixion (Round) MET DP815787.jpg",
@@ -496,7 +481,7 @@
    "ancho": 2836,
    "alto": 2955,
    "consulta": "Strasbourg 16th century engraving",
-   "n": 33
+   "n": 32
   },
   {
    "titulo": "File:Albrecht Dürer (nach).Galoppierender Reiter Kurier.Kupferstich, um 1500.jpg",
@@ -511,7 +496,7 @@
    "ancho": 1152,
    "alto": 1497,
    "consulta": "Strasbourg 16th century engraving",
-   "n": 34
+   "n": 33
   },
   {
    "titulo": "File:Text with placemarkers and rubric; half-page miniature of Joseph driving a wagon (NYPL b12455533-426518).tif",
@@ -526,7 +511,7 @@
    "ancho": 3533,
    "alto": 4433,
    "consulta": "medieval wagon woodcut",
-   "n": 35
+   "n": 34
   },
   {
    "titulo": "File:Nuremberg-Chronicles-1493-Strasburg-Argentina.jpg",
@@ -541,7 +526,7 @@
    "ancho": 2354,
    "alto": 1844,
    "consulta": "Strasbourg 1493 Nuremberg Chronicle",
-   "n": 36
+   "n": 35
   },
   {
    "titulo": "File:Strasbourg Argentina 1493 Schedel.jpg",
@@ -556,7 +541,7 @@
    "ancho": 2400,
    "alto": 1800,
    "consulta": "Strasbourg 1493 Nuremberg Chronicle",
-   "n": 37
+   "n": 36
   },
   {
    "titulo": "File:Strasbourg, woodcut from Schedel's Weltchronik (1493), compressed.jpg",
@@ -571,7 +556,7 @@
    "ancho": 2510,
    "alto": 1571,
    "consulta": "Strasbourg 1493 Nuremberg Chronicle",
-   "n": 38
+   "n": 37
   },
   {
    "titulo": "File:Strasbourg, woodcut from Schedel's Weltchronik (1493).png",
@@ -586,7 +571,7 @@
    "ancho": 5019,
    "alto": 3142,
    "consulta": "Strasbourg 1493 Nuremberg Chronicle",
-   "n": 39
+   "n": 38
   },
   {
    "titulo": "File:Nuremberg chronicles - ARGENTINA.png",
@@ -600,6 +585,21 @@
    "fecha": "1493",
    "ancho": 1927,
    "alto": 1297,
+   "consulta": "Strasbourg 1493 Nuremberg Chronicle",
+   "n": 39
+  },
+  {
+   "titulo": "File:Argentina Straſʒburg 1493.jpg",
+   "url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0b/Argentina_Stra%C5%BF%CA%92burg_1493.jpg/1280px-Argentina_Stra%C5%BF%CA%92burg_1493.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+   "url_original": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Argentina_Stra%C5%BF%CA%92burg_1493.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+   "pagina": "https://commons.wikimedia.org/wiki/File:Argentina_Stra%C5%BF%CA%92burg_1493.jpg",
+   "licencia": "Public domain",
+   "autor": "Artist not known by name, included in Schedel’s work. Scanned by Aristeas",
+   "credito": "Artist not known by name, included in Schedel’s work. Scanned by Aristeas · Public domain · Wikimedia Commons",
+   "descripcion": "View of the city of Strasbourg in Alsace , around 1490.",
+   "fecha": "Drawn around 1490, published in 1493.",
+   "ancho": 2504,
+   "alto": 1600,
    "consulta": "Strasbourg 1493 Nuremberg Chronicle",
    "n": 40
   }
