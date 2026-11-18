@@ -1,0 +1,29 @@
+{
+  "tipo": "reel",
+  "texto": "Parte 3: el cliente que ahora quiere pagar a 120 días. Humor negro de ficción.\nDato: la Ley 3/2004, de medidas contra la morosidad en las operaciones comerciales, art. 4, fija un máximo de 60 días naturales para pagar entre empresas (BOE). Esto no es asesoramiento legal.\n¿A cuántos días te pagan a ti? Una cifra en comentarios.\nMándaselo a quien cobra tarde.\n#humornegro #morosidad #pymes #ia #jefes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nVoz y personajes generados por IA\n\nMúsica: biblioteca Pixabay de Neogest Studio (licencia de contenido de Pixabay)",
+  "cuando": "2026-11-18T22:20:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo",
+  "publico": "oficina",
+  "formula": "secuela de 319 (Parte 3)",
+  "gancho_tipo": "Parte 3",
+  "_fuentes": ["BOE Ley 3/2004 art. 4"],
+  "_nota_remasterizador": "18/11/2026 Remasterizador: Parte 3 de 319 (1.374 reproducciones, 10,3x normal). Mismo conflicto (plazo de pago), escalada nueva (120 días) y giro distinto (Neo corrige el contrato). Reparto nuevo biblia v3. Falta render en Neogest Studio (spec.json, formato gen_episodios.py) y Calidad. La ventana de 48 h (hasta 13:52 Madrid del 18/11) no se alcanza por falta de render y de hueco libre; sale en el primer hueco libre.",
+  "motor_voz": "edge",
+  "motor": "neogest-studio",
+  "renderizado": false,
+  "comentario_fijado": "¿A cuántos días te pagan? Una cifra en comentarios",
+  "avance_siguiente": "Parte 4 si funciona.",
+  "portada_ms": 0,
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+  },
+  "youtube": {
+    "titulo": "Parte 3: el cliente que quiere pagar a 120 días #Shorts",
+    "descripcion": "Humor negro de ficción. El plazo máximo legal de pago entre empresas es de 60 días naturales (Ley 3/2004, art. 4). Pide tu prueba gratuita: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube\nBy Neogest Lab",
+    "etiquetas": ["humornegro", "morosidad", "pymes", "jefes", "neogestlab"]
+  }
+}
