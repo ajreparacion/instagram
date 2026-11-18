@@ -1,0 +1,40 @@
+{
+  "slug": "horas-extra-gratis",
+  "set": "oficina",
+  "hora": 19,
+  "moraleja": "2,5 millones de horas extra no se cobran.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Un momentito antes de irte, Felipe"
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Son las siete y media, ¿qué necesitas?"
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Solo digitalizar estos trescientos folios a mano"
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Es una locura, que lo resuelva el Neo"
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He digitalizado todo en segundos. Rosa, no inventes trabajo"
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "2,5 millones de horas extra no se cobran."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-18T17:17:54Z"
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "registro-jornada-sabado",
+  "set": "oficina",
+  "hora": 9,
+  "moraleja": "Registro de jornada obligatorio desde el año 2019.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Venid el sábado, aquí somos una familia"
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "En mi familia los sábados se descansan"
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "El trabajo es voluntario, pero obligatorio si queréis cobrar"
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Esto es ilegal, que lo resuelva el Neo"
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "Registro de jornada activado. Rosa, la ley no es opcional"
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "Registro de jornada obligatorio desde el año 2019."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-18T17:17:54Z"
+}
