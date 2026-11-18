@@ -27,7 +27,8 @@
     "archivo": "Life_of_Riley.mp3",
     "bpm": 101.3
   },
-  "renderizado": false,
-  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/30805aa52_324-master.mp4",
-  "motor": "neogest-studio"
+  "renderizado": "2026-11-18T09:04:57+00:00",
+  "motor": "neogest-studio",
+  "asset": "324_jambo_restaurante_reserva_12.mp4",
+  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/30805aa52_324-master.mp4"
 }
