@@ -1,11 +1,11 @@
 {
-  "aprobado": false,
+  "aprobado": true,
   "duracion_s": 26.4,
-  "bloqueos": [
-    "falta el giro (escena «remate»)",
-    "voz distinta del guion: faltan [], sobran ['parte', 'tres', 'el', 'cliente', 'quiere', 'pagar', 'a', 'ciento', 'veinte', 'dias', 'con', 'ciento', 'veinte', 'me', 'pagan', 'el', 'sueldo', 'en', 'primavera', 'es', 'cliente', 'de', 'toda', 'la', 'vida', 'le', 'hacemos', 'descuento', 'pues', 'lo', 'pagas', 'tu', 'jefa', 'que', 'lo', 'resuelva', 'neo', 'contrato', 'corregido', 'a', 'sesenta', 'dias', 'ya', 'ha', 'pagado', 'hoy', 'sesenta', 'dias', 'como', 'maximo', 'pagar', 'tarde', 'no', 'es', 'de', 'amigos'] (rehacer esas frases)"
+  "bloqueos": [],
+  "avisos": [
+    "sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion",
+    "recalculado 18/11/2026 tras corregir herramientas/control_audio.py: el bloqueo anterior (falta el giro / voz distinta del guion) era un falso positivo de comparar la transcripción contra un guion vacío, porque este guion.json no tiene 'escenas' (es un vídeo externo de Neogest Studio)"
   ],
-  "avisos": [],
   "transcripcion": "Parte 3, el cliente quiere pagar a 120 días. Con 120 me pagan el sueldo en primavera. Es cliente de toda la vida. Le hacemos descuento. Pues lo pagas tú, jefa. Que lo resuelva Neo. Contrato corregido a 60 días. Ya ha pagado hoy. 60 días como máximo. Pagar tarde no es de amigos.",
   "guion": "",
   "lufs": -14.3,

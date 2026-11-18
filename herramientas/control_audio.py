@@ -231,16 +231,23 @@ def control(video, guion, post=None, tramos=None, wavs=None):
     d = dur(video)
     if d > DUR_MAX: bloqueos.append(f"dura {d:.1f} s (máximo {DUR_MAX:.0f})")
     esc = g.get("escenas", [])
-    if not any(e.get("estilo") == "remate" for e in esc): bloqueos.append("falta el giro (escena «remate»)")
     guion_txt = " ".join(re.sub(r"\*", "", e.get("voz", "")) for e in esc if e.get("voz"))
     pal = transcribir(video)
     texto = texto_de(pal)
-    faltan, sobran = verificar(guion_txt, texto)
-    malas = [w for w in sobran if w in ("ehm", "eh", "em", "mm", "hmm")]
-    if malas: bloqueos.append(f"muletillas «ehm» en la voz: {malas}")
-    if faltan or sobran:
-        tasa = (len(faltan) + len(sobran)) / max(1, len(norm(guion_txt)))
-        (bloqueos if tasa > 0.0 else avisos).append(f"voz distinta del guion: faltan {faltan}, sobran {sobran} (rehacer esas frases)")
+    if esc:
+        # Hay escenas (reel generado por el motor de dibujo): se exige el giro y se compara la voz con el guion palabra a palabra.
+        if not any(e.get("estilo") == "remate" for e in esc): bloqueos.append("falta el giro (escena «remate»)")
+        faltan, sobran = verificar(guion_txt, texto)
+        malas = [w for w in sobran if w in ("ehm", "eh", "em", "mm", "hmm")]
+        if malas: bloqueos.append(f"muletillas «ehm» en la voz: {malas}")
+        if faltan or sobran:
+            tasa = (len(faltan) + len(sobran)) / max(1, len(norm(guion_txt)))
+            (bloqueos if tasa > 0.0 else avisos).append(f"voz distinta del guion: faltan {faltan}, sobran {sobran} (rehacer esas frases)")
+    else:
+        # Sin escenas (vídeo externo, p. ej. Neogest Studio): no hay guion con el que comparar la voz ni escenas con estilo
+        # «remate», así que exigir el giro o comparar la transcripción contra un guion vacío solo daba falsos bloqueos
+        # (toda la transcripción salía como «sobrante»). Se avisa, sin bloquear, y se deja la transcripción para Calidad.
+        avisos.append("sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion")
     t0 = pal[0][1] if pal else 0.0; t1 = pal[-1][2] if pal else d
     for a, b, s in silencios(video):
         if a >= t0 - 0.05 and b <= t1 + 0.05 and s > SIL_S and a > 0.3 and b < d - 0.3:
