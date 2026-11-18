@@ -1,18 +1,8 @@
 {
-  "aprobado": false,
-  "nota": 88,
-  "fecha": "2026-11-18T15:50:00+00:00",
-  "revisor": "Calidad (pasada 17:41)",
-  "render": "2026-11-18T09:04:57+00:00",
-  "motivos": [
-    "Post y guion.json ya alineados con el vídeo (moraleja, atribución Pixabay, bloque youtube): OK",
-    "Duración 22,7 s, sin silencios >0,6 s a −45 dB, −14,8 LUFS, 5 tiempos visibles; subtítulos palabra a palabra y logo 2026 correctos",
-    "Pico real −0,9 dBFS (límite ≤ −1 dB)",
-    "control_audio.json transcribe el guion antiguo («se llama igual», «visualiza que vienen») y no coincide con los subtítulos del vídeo (cero clientes / ninguno contesta / el Neo recibe un aviso / confirma cada reserva): hay que confirmar que el audio del mp4 es el nuevo; whisper local no disponible en sesión"
-  ],
-  "como_arreglarlo": "Mejora/Creador: regenerar control_audio.json sobre el mp4 actual de la release y subir el máster con pico ≤ −1 dB; si el audio es el del guion nuevo y el pico pasa, Calidad aprueba (90) en la pasada de las 21:41, antes de las 22:20.",
-  "aprobado_anterior": false,
-  "nota_anterior": 88,
-  "caducado": "2026-11-18T20:24:32+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-18T20:24:32+00:00"
+  "aprobado": true,
+  "nota": 90,
+  "comentario": "Pendientes de la pasada 17:41 resueltos: control_audio.json ahora transcribe el audio real del mp4 (coincide con subtítulos: \"cero clientes\", \"que lo resuelva el Neo\", \"confirma cada reserva y no cocines para nadie\") y el pico real medido es −1,3 dBFS (dentro del límite ≤ −1 dB; loudnorm independiente confirma −1,3 dB y −14,57 LUFS). Duración 22,67 s, sin silencios >0,6 s a −45 dB, 5 tiempos visibles, logo 2026 correcto, estilo dibujo consistente. Post con moraleja, pregunta final fácil de contestar (cifra en comentarios), frase de envío a dueños de restaurante, atribución Pixabay sin duplicar, bloque youtube con #Shorts coherente. H1-H6 (v9): hay conflicto real (reserva fantasma, tensión Felipe/Rosa, resolución del Neo), ritmo con cambios de plano, imagen de dibujo real en todo momento, voz sin errores ni huecos, una sola idea por pieza. Sin marcas ajenas ni datos reales. No suena a IA.",
+  "fecha": "2026-11-18T21:52:08Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-18T20:24:32+00:00"
 }

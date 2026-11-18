@@ -1,11 +1,13 @@
 {
   "aprobado": false,
-  "nota": 82,
-  "comentario": "Rechazado: motor sketch antiguo (orden del dueño 15/11 16:30: Jambos nuevos solo con Neogest Studio, con clip de apertura, efectos de retención y moraleja). 19,2 s, edge-tts y atribución «Fluffing a Duck» correctas, pero sin el formato nuevo no sale. No he podido repetir whisper/LUFS sobre el MP4 (el asset está en la release, no en el repo).",
-  "fecha": "2026-11-15T18:32Z",
-  "revisado_por": "agente de CALIDAD (pasada de la tarde, 15/11)",
-  "aprobado_anterior": false,
-  "nota_anterior": 82,
-  "caducado": "2026-11-18T20:38:58+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-18T20:38:58+00:00"
+  "nota": 75,
+  "motivos": [
+    "Duración 32,2 s: supera el máximo de 30 s del formato Jambo y, sobre todo, los 20 s fijados por la orden del dueño del 13/11 14:46 (DIRECTIVA §14a y lista §6) para un episodio suelto (35 s es solo para doble episodio); mismo motivo repetido en 502-515 de lecciones_calidad.md.",
+    "Pico real de audio medido en -0,82 dBFS, por encima del límite de -1 dB (regla de formato del estándar).",
+    "LUFS -14,75 correcto y transcripción de whisper coincide razonablemente con el guion/chiste; esto no es lo que bloquea la pieza."
+  ],
+  "como_arreglarlo": "Recortar el episodio a ≤20 s (quitar una repetición de línea o acortar la escena intermedia del dinero/reloj) y volver a renderizar; corregir el pico de audio a ≤ -1 dB en el masterizado de Neogest Studio. Con duración y pico corregidos, el resto (moraleja, giro, atribución musical, comentario fijado, avance, CTA, bloque youtube) está en orden para pasar a revisión de contenido.",
+  "fecha": "2026-11-18T21:52:22Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-18T20:38:58+00:00"
 }
