@@ -1,0 +1,12 @@
+{
+  "aprobado": true,
+  "duracion_s": 24.4,
+  "bloqueos": [],
+  "avisos": [
+    "sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion"
+  ],
+  "transcripcion": "Reunión urgente para decidir qué almorzar hoy. Rosa, llevamos dos horas debatiendo la marca de café. Es vital consensuar la marca antes de pedir. El hambre nos está matando, que lo resuelva el neo. He pedido menú cerrado. Rosa, no has trabajado nada hoy. El 55% de las pymes pierde tiempo administrativo.",
+  "guion": "",
+  "lufs": -14.8,
+  "pico_dbfs": -1.0
+}
