@@ -1,0 +1,9 @@
+{
+  "aprobado": null,
+  "avisos": [
+    "sin guion.json: no se compara la voz con el guion",
+    "pico real > -1 dB"
+  ],
+  "lufs": -14.4,
+  "pico_dbfs": -0.9
+}
