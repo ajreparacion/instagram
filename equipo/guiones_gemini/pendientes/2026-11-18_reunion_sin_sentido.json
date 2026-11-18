@@ -1,0 +1,40 @@
+{
+  "slug": "reunion-sin-sentido",
+  "set": "reunion",
+  "hora": 10,
+  "moraleja": "El 55 % de las pymes pierde tiempo administrativo.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Reunión urgente para decidir qué almorzar hoy"
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Rosa, llevamos dos horas debatiendo la marca de café"
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Es vital consensuar la marca antes de pedir"
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "El hambre nos está matando, que lo resuelva el Neo"
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He pedido menú cerrado. Rosa, no has trabajado nada hoy"
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "El 55 % de las pymes pierde tiempo administrativo."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-18T17:17:54Z"
+}

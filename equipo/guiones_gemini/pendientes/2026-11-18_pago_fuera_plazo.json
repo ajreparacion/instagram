@@ -1,0 +1,40 @@
+{
+  "slug": "pago-fuera-plazo",
+  "set": "despacho",
+  "hora": 12,
+  "moraleja": "El plazo máximo legal de pago es sesenta días.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Acepta pagar a noventa días, es nuestro amigo"
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Tres meses sin cobrar no es de amigos"
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "El beneficio no importa, solo la buena relación"
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Nos arruinamos, que lo resuelva el Neo"
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "Contrato ajustado a sesenta días. Rosa, deja de perder dinero"
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "El plazo máximo legal de pago es sesenta días."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-18T17:17:54Z"
+}
