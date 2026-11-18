@@ -1,0 +1,40 @@
+{
+  "slug": "jambo-café-cronometrado",
+  "set": "oficina",
+  "hora": 10,
+  "moraleja": "El control excesivo destruye la productividad real.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Tu café de cinco minutos es ineficiente."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Solo he tardado tres minutos, jefa."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Cada segundo fuera de tu silla resta beneficios."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Si sigo aquí, me deshidrato. Que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He calculado tu pérdida de tiempo dictando pausas absurdas."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "El control excesivo destruye la productividad real."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-18T22:01:34Z"
+}

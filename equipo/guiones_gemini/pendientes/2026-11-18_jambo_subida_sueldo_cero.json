@@ -1,0 +1,40 @@
+{
+  "slug": "jambo-subida-sueldo-cero",
+  "set": "despacho",
+  "hora": 12,
+  "moraleja": "Una subida de sueldo simbólica es insultante.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Te subo el sueldo un cero por ciento."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Eso no es una subida, es nada."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Es un incentivo emocional por ser familia."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "La familia no paga mis facturas. Que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "Ajusto tu salario con el ahorro de tu mala gestión."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "Una subida de sueldo simbólica es insultante."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-18T22:01:34Z"
+}

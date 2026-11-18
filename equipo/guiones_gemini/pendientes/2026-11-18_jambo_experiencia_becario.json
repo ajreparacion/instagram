@@ -1,0 +1,40 @@
+{
+  "slug": "jambo-experiencia-becario",
+  "set": "oficina",
+  "hora": 9,
+  "moraleja": "Exigir diez años de experiencia a becarios falla.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Busco becario con diez años de experiencia."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Eso es imposible, tendrían que haber empezado niños."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Quiero alguien formado que no cobre nada."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Eso se llama explotación. Que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He publicado la oferta real con sueldo digno."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "Exigir diez años de experiencia a becarios falla."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-18T22:01:34Z"
+}

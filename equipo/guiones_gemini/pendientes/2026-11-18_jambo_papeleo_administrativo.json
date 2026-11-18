@@ -1,0 +1,40 @@
+{
+  "slug": "jambo-papeleo-administrativo",
+  "set": "oficina",
+  "hora": 16,
+  "moraleja": "El 55 % de las pymes pierde tiempo administrativo.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Rellena estos cien formularios para hoy."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Son datos que ya tenemos repetidos tres veces."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "El papeleo da sensación de empresa seria."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "El papeleo solo nos hace perder dinero. Que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "Elimino la burocracia innecesaria según informe de Qonto."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "El 55 % de las pymes pierde tiempo administrativo."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-18T22:01:34Z"
+}
