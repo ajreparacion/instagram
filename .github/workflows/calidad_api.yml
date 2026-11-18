@@ -1,0 +1,61 @@
+name: Calidad · API directa (piloto créditos API, 18/11/2026)
+
+# Sustituye, SOLO para el rol Calidad, la tarea programada de Claude Code por una llamada
+# directa a la API de Anthropic con tool use (herramientas/calidad_api.py), pagada con los
+# créditos de la API y no con el límite semanal del plan Max. Mismo horario que
+# equipo/roles/calidad.md (11:41 y 17:41 hora de Madrid); el cron de GitHub es en UTC y no
+# sigue el cambio de hora oficial, así que se fija en hora de invierno (UTC+1) como
+# supervisor_api.yml. Ver equipo/tablon.md (18/11/2026) y la PR de esta migración.
+#
+# Necesita `gh` (release "cola") y `ffmpeg`/`ffprobe` (ya en ubuntu-latest) para descargar el
+# mp4 e inspeccionarlo; usa el GITHUB_TOKEN por defecto de Actions, de solo lectura salvo el
+# push final del propio workflow.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 10 * * *"  # 11:41 Madrid (UTC+1)
+    - cron: "41 16 * * *"  # 17:41 Madrid (UTC+1)
+
+permissions:
+  contents: write
+
+concurrency:
+  group: calidad-api
+  cancel-in-progress: false
+
+jobs:
+  calidad:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install --quiet anthropic
+
+      - name: Calidad (Sonnet vía API, tool use)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 herramientas/calidad_api.py
+
+      - name: Guardar y subir
+        run: |
+          git config user.name "expedientes-bot"
+          git config user.email "expedientes-bot@users.noreply.github.com"
+          git add equipo/tablon.md cola/
+          if git diff --cached --quiet; then
+            echo "Sin cambios que commitear"
+            exit 0
+          fi
+          git commit -m "Calidad (API): pasada automática"
+          for i in 1 2 3; do
+            git push origin main && break
+            git pull --rebase origin main
+          done

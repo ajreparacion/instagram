@@ -1,0 +1,54 @@
+name: Creador · API directa, piloto texto (18/11/2026)
+
+# SOLO la parte mecánica del rol Creador que es viable por API directa sin el MCP de Base44
+# (herramientas/creador_api.py): arregla el texto/metadata de post.json de piezas ya
+# rechazadas por Calidad, nunca el vídeo. El resto del rol (escribir guiones, renderizar en
+# Neogest Studio) sigue en Claude Code: ver la cabecera del script y equipo/tablon.md
+# (18/11/2026) para el porqué.
+#
+# A propósito SOLO workflow_dispatch (sin cron): es un piloto sin probar en vivo todavía;
+# el dueño lo activa a mano o le añade un cron cuando decida que el resultado le sirve.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: creador-api-texto
+  cancel-in-progress: false
+
+jobs:
+  creador_texto:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: pip install --quiet anthropic
+
+      - name: Creador · arreglo de texto (Sonnet vía API)
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python3 herramientas/creador_api.py
+
+      - name: Guardar y subir
+        run: |
+          git config user.name "expedientes-bot"
+          git config user.email "expedientes-bot@users.noreply.github.com"
+          git add equipo/tablon.md cola/
+          if git diff --cached --quiet; then
+            echo "Sin cambios que commitear"
+            exit 0
+          fi
+          git commit -m "Creador (API, piloto texto): pasada manual"
+          for i in 1 2 3; do
+            git push origin main && break
+            git pull --rebase origin main
+          done
