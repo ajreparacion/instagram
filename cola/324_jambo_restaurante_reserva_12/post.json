@@ -25,9 +25,8 @@
     "licencia": "Licencia de contenido de Pixabay",
     "archivo": "estudio"
   },
-  "renderizado": false,
+  "renderizado": "2026-11-18T20:24:32+00:00",
   "motor": "neogest-studio",
-  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/0079adf0c_324_jambo_restaurante_reserva_12_remaster.mp4",
   "youtube": {
     "titulo": "Reserva para 12 y no viene nadie #Shorts",
     "descripcion": "Humor negro de ficción: la reserva fantasma que deja la mesa vacía y la moraleja: confirma cada reserva el día antes. Pide tu prueba gratuita: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube\nBy Neogest Lab",
@@ -38,5 +37,7 @@
       "hosteleria",
       "neogestlab"
     ]
-  }
+  },
+  "asset": "324_jambo_restaurante_reserva_12.mp4",
+  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/0079adf0c_324_jambo_restaurante_reserva_12_remaster.mp4"
 }
