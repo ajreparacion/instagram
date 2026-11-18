@@ -29,10 +29,24 @@
   ],
   "_comprobado": "15/11/2026: textos de la web pública desplegada hoy (precios aprobados por el dueño). Prohibido: oficial, sustituye al plan APPCC, IA, avisos automáticos, pago en la app, Google Play, integración con 7D.",
   "renderizado": "2026-11-15T20:50:44+00:00",
-  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad (ANTES/DESPUÉS, giro, sin precios ni venta en la voz); renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render y mirar control/*.jpg (los tiempos de los clips se han reajustado sin poder abrir la grabación desde aquí).",
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad (ANTES/DESPUÉS, giro, sin precios ni venta en la voz); renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render y mirar control/*.jpg (los tiempos de los clips se han reajustado sin poder abrir la grabación desde aquí).\n2026-11-18T19:14:50Z Creador (API): Arreglado en texto/metadata (lo que no requiere tocar vídeo):\n- Añadido bloque `youtube` (faltaba por completo): título ≤100 car. con #Shorts, descripción con /solicitar?app=appcc-facil&src=youtube y «By Neogest Lab», etiquetas.\n- Añadido `avance_siguiente` (faltaba).\n- Revisado el cierre del post: ya tenía el enlace único «Enlace en el perfil», atribución musical correcta (MacLeod, CC BY 4.0), «Voz generada por IA · By Neogest Lab» y una pregunta concreta (número de cámaras) — no he tocado esa parte porque ya cumplía §5.\n\nSIGUE PENDIENTE DE RENDER REAL (no soluble por texto):\n1. Duración 21,37 s, fuera del rango 25-45 s de «Promo de app» — hay que rehacer el vídeo para alargarlo.\n2. Estructura: es un recorrido de funciones con el ANTES/DESPUÉS solo en la frase de remate; el formato exige abrir con el problema real en 2 s (papel en la nevera) y resolverlo en pantalla con datos ficticios, no enumerar funciones. Esto exige regrabar/remontar en Neogest Studio, no es arreglable en post.json.\n\nAmbos puntos requieren al Creador con acceso al MCP de Base44 / Neogest Studio para rehacer el spec y volver a renderizar; esta pasada (API, solo texto/metadata) no puede producir ese render.",
   "asset": "337_appcc_facil_demo_reel.mp4",
   "control_audio": {
     "aprobado": true,
     "duracion_s": 21.37
-  }
+  },
+  "youtube": {
+    "titulo": "Adiós al papel en la nevera: autocontrol APPCC en el móvil #Shorts",
+    "descripcion": "¿Temperaturas apuntadas en papel? APPCC Fácil lleva los registros de autocontrol de tu bar, restaurante u obrador en el móvil: cámaras, vitrinas, limpieza, aceite de fritura y recepción de mercancía, con aviso de acción correctora si un valor sale de rango e informe en PDF listo para imprimir.\n\nPrueba gratis: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=appcc-facil&src=youtube\n\nAPPCC Fácil es una herramienta de ayuda: no sustituye a tu plan APPCC ni es un servicio oficial.\n\nBy Neogest Lab",
+    "etiquetas": [
+      "appcc",
+      "hosteleria",
+      "restaurantes",
+      "bares",
+      "seguridadalimentaria",
+      "obrador",
+      "neogestlab"
+    ]
+  },
+  "avance_siguiente": "Próximo episodio: cómo APPCC Fácil genera el informe de autocontrol en PDF listo para una inspección."
 }

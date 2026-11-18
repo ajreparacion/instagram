@@ -1,6 +1,6 @@
 {
   "tipo": "reel",
-  "texto": "¿Las citas de los abuelos y de la familia, apuntadas en un papel? Esta agenda la ha hecho una IA con un mensaje: apuntas quién tiene cita y qué día, se ordena sola por fecha y marca la que es mañana.\nEs una demo con datos ficticios, grabada funcionando; no es una agenda médica ni sustituye a la de tu centro de salud. En Neogest Lab hacemos apps así, a medida.\nMándaselo a quien lleva las citas de los abuelos.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nVoz generada por IA\n\n#familia #cuidadores #mayores #apps #neogestlab",
+  "texto": "¿Las citas de los abuelos y de la familia, apuntadas en un papel? Esta agenda la ha hecho una IA con un mensaje: apuntas quién tiene cita y qué día, se ordena sola por fecha y marca la que es mañana, sin que tengas que revisar el papel cada vez.\nEs una demo con datos ficticios, grabada funcionando; no es una agenda médica ni sustituye a la de tu centro de salud. En Neogest Lab hacemos apps así, a medida.\nMándaselo a quien lleva las citas de los abuelos.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\nVoz generada por IA\n\n#familia #cuidadores #mayores #apps #neogestlab",
   "cuando": "2026-12-07T13:40:00+01:00",
   "compartir_en_feed": true,
   "portada_ms": 300,
@@ -10,7 +10,7 @@
   "publico": "Mayores y quien los cuida",
   "_fuentes": [],
   "_comprobado": "8/11/2026: la herramienta grabada es una página HTML real (herramientas/casos/citas.html) grabada funcionando con Playwright (herramientas/grabar_caso.py), con comprobaciones automáticas de las cifras que salen en pantalla. No se afirma nada sobre apps publicadas ni sobre funciones de terceros. Datos de ejemplo, sin clientes ni marcas.",
-  "_nota_creador": "Directiva 7/11: las apps reales de Neogest Lab (*.base44.app) no se pueden abrir desde la sesión del Creador (el proxy de salida devuelve 403, comprobado 8/11), así que no se pueden grabar funcionando. Alternativa de la directiva: prototipo construido con IA y grabado de verdad, dentro de «¿Y si tu idea fuera una app?». Sin precios ni plazos. El prompt que se ve en pantalla es el de la demo y va en la respuesta por DM junto a la invitación a contar la idea.",
+  "_nota_creador": "Directiva 7/11: las apps reales de Neogest Lab (*.base44.app) no se pueden abrir desde la sesión del Creador (el proxy de salida devuelve 403, comprobado 8/11), así que no se pueden grabar funcionando. Alternativa de la directiva: prototipo construido con IA y grabado de verdad, dentro de «¿Y si tu idea fuera una app?». Sin precios ni plazos. El prompt que se ve en pantalla es el de la demo y va en la respuesta por DM junto a la invitación a contar la idea.\n2026-11-18T19:15:06Z Creador (API): Arreglado en texto/metadata (sin tocar vídeo): añadido comentario_fijado y bloque monetizacion, que faltaban. Reforzado el texto del post con el resultado funcional que ya hace la demo (ordena sola y marca la cita de mañana), sin inventar ninguna cifra que no esté verificada en _comprobado.\n\nSigue pendiente de render real (no soluble por texto): (1) el fotograma del gancho se queda quieto 2,6 s, necesita regrabarse con herramientas/grabar_caso.py con corte de plano antes; (2) la demo muestra «Hoy: 11 de noviembre» y citas del 12/15/18 de noviembre en pantalla — si se publica antes del 18/11 no urge, pero para que la pieza aguante más allá de esa fecha hay que regrabar el caso sin la línea «Hoy: …» ni meses visibles, usando «hoy / mañana / el jueves» como pide el how-to de Calidad. El resultado numérico de peso («3 citas, 0 olvidos» o similar) tiene que aparecer en el propio vídeo/gancho, que no puedo generar desde aquí. renderizado ya está en false según nota_mejora anterior del 10/11, pendiente de que el ciclo lo regenere con el nuevo grabado.",
   "_autoevaluacion": {
     "gancho": 20,
     "claridad_retencion": 21,
@@ -31,5 +31,11 @@
     "mood": "app"
   },
   "motor_voz": "chatterbox",
-  "asset": "023_citas_familia.mp4"
+  "asset": "023_citas_familia.mp4",
+  "comentario_fijado": "¿Tienes que llevar tú las citas de la familia? Cuéntanos cómo lo organizas ahora 👇",
+  "monetizacion": {
+    "objetivo": "prueba_gratuita",
+    "oferta": "Prueba gratuita de app a medida para gestionar citas familiares",
+    "paso_embudo": "comentario_a_DM_enlace_perfil"
+  }
 }
