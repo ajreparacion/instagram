@@ -1,0 +1,40 @@
+{
+  "slug": "horas-extra-gratis",
+  "set": "oficina",
+  "hora": "19",
+  "moraleja": "Cada semana se trabajan 2,5 millones horas extra.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Un momentito antes de irte, por favor."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Son las siete y mi jornada terminó hace tiempo."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Solo es revisar este informe de cien páginas."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Esto no es un momento. Que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He registrado la hora de salida y el exceso trabajado."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "Cada semana se trabajan 2,5 millones horas extra."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-19T17:25:26Z"
+}

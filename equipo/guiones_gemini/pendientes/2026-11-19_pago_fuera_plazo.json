@@ -1,0 +1,40 @@
+{
+  "slug": "pago-fuera-plazo",
+  "set": "despacho",
+  "hora": "10",
+  "moraleja": "El plazo máximo legal de pago es 60 días.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Cliente paga a noventa días, tú verás."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Eso incumple la ley y me deja sin cobrar."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Es un amigo, el dinero ya llegará cuando pueda."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "No puedo vivir de promesas. Que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He ajustado el vencimiento a sesenta días según ley."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "El plazo máximo legal de pago es 60 días."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-19T17:25:26Z"
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "reunion-sin-fin",
+  "set": "reunion",
+  "hora": "14",
+  "moraleja": "El 55 % de pymes pierde tiempo administrativo innecesario.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Reunión para decidir si hace falta reunirse."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Llevamos cuarenta minutos discutiendo la agenda inicial."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Necesito otra reunión para aprobar esta agenda."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Esto es un bucle absurdo. Que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He enviado el acuerdo por correo y eliminado la sesión."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "El 55 % de pymes pierde tiempo administrativo innecesario."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-19T17:25:26Z"
+}

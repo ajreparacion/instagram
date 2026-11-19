@@ -1,0 +1,40 @@
+{
+  "slug": "sabado-en-familia",
+  "set": "oficina",
+  "hora": "11",
+  "moraleja": "Registro de jornada obligatorio desde el año 2019.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Ven el sábado porque somos una familia."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "En mi familia los sábados se cobran aparte."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "El compromiso familiar no debería tener precio alguno."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Mi hipoteca no entiende de afectos. Que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He dado de alta las horas extra en el registro oficial."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "Registro de jornada obligatorio desde el año 2019."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-19T17:25:26Z"
+}
