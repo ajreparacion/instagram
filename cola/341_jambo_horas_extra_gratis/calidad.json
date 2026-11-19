@@ -1,17 +1,13 @@
 {
   "aprobado": false,
-  "nota": 88,
-  "fecha": "2026-11-19T10:43:50+00:00",
-  "revisor": "Calidad (pasada 11:41)",
-  "render": "2026-11-18T20:24:42+00:00",
+  "nota": 87,
   "motivos": [
-    "Vídeo bien (23,2 s, −14,1 LUFS, pico −1,5 dBFS, gancho legible, giro de Neo, cierre con logo 2026)",
-    "Sin control_audio de este render: whisper sin contrastar (no hay transcripción en la carpeta)",
-    "Arreglado por Calidad: el post daba la moraleja como cifra sin fuente; ahora lleva el dato EPA con fuente"
+    "Vídeo técnicamente correcto: 1080x1920, 23,2 s, -14,39 LUFS, pico -1,45 dBFS, sin silencios >0,6s, logo NEOGESTLAB 2026 correcto, estilo doodle, gancho legible en fotograma 0, giro claro (Neo factura y cobra las horas), cierre con moraleja+pregunta+personaje, control_audio.json aprobado y transcripción coincide con el guion.",
+    "Cifra no verificada con fuente primaria: el propio post.json lo admite en '_comprobado' ('sin documento primario citado en esta pasada... Calidad: confirmar fuente o suavizar antes de publicar'). La pieza presenta en pantalla y en voz '2,5 millones de horas extra a la semana sin pagar, el 42%' como dato firme citando EPA/INE vía El Español, pero sin verificación directa del documento primario. Según el estándar (A3/B4), una afirmación de dato concreto sin fuente confirmada no pasa el listón de publicación.",
+    "No es un fallo técnico del render sino de verificación editorial: no corresponde inventar ni dar por buena la cifra sin comprobarla."
   ],
-  "como_arreglarlo": "Mejora/Creador: que el ciclo genere control_audio.json de 341 (relanzar con renderizado:false o recalcular) y Calidad lo aprueba si la transcripción coincide.",
-  "aprobado_anterior": false,
-  "nota_anterior": 88,
-  "caducado": "2026-11-19T16:44:30+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-19T16:44:30+00:00"
+  "como_arreglarlo": "Dos opciones rápidas, sin rehacer el render: (1) Creador/Centro localiza y cita el documento primario de la EPA-INE 1T2026 (tabla oficial del INE, no solo el artículo de El Español) y se añade a '_fuentes' con enlace directo antes de la siguiente pasada; si la cifra se confirma tal cual, Calidad puede aprobar sin reeditar vídeo. (2) Si no se puede confirmar a tiempo, suavizar el texto del post (quitar la cifra exacta y el 42%, dejar algo genérico tipo 'muchas horas extra no se cobran') — eso sí se puede arreglar como ajuste de texto del post sin relanzar render. La voz/vídeo en sí no hace falta tocarla si se opta por (1).",
+  "fecha": "2026-11-19T19:10:52Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-19T16:44:30+00:00"
 }

@@ -7,7 +7,7 @@
     "Bloqueo 9 (aprobación caducada): persiste sin resolver; no hay ningún calidad.json previo que corresponda a esta pieza con material verificable, y el actual sigue sin render ni imágenes que revisar."
   ],
   "como_arreglarlo": "Adjuntar en post.json el asset real (mp4 de la release «cola» o video_externo, o si es carrusel las imágenes correspondientes) para poder inspeccionarlo. Citar en _fuentes/_comprobado la documentación o ficha de producto de Gestión Integral 7D que respalde: importación con extracción por IA (con el aviso de revisar lo importado), generación de albarán numerado con descuento de stock, y herencia de líneas/IVA/retención en la factura PDF. Con material y fuentes disponibles, relanzar una revisión completa. Mientras no exista asset, esta pieza no puede pasar de \"no aplica\" a aprobada.",
-  "fecha": "2026-11-18T21:51:33Z",
+  "fecha": "2026-11-19T19:10:11Z",
   "revisor": "Calidad (API)",
   "render": "no aplica (carrusel)"
 }
