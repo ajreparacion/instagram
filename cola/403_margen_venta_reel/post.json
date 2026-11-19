@@ -1,36 +1,37 @@
 {
- "tipo": "reel",
- "texto": "Vendes a 12 € con IVA y, con estos datos inventados, te quedan 4,52 €. La Jupillo hace la cuenta. Humor negro de ficción.\n¿Sabes cuánto te queda de verdad de cada venta? Cuéntalo en comentarios.\nCuenta con datos inventados: 12 € con IVA al 21 % son 9,92 € sin IVA; menos 5,40 € de coste, quedan 4,52 €. Si subes a 14 €, quedan 6,17 €: 1,65 € más. El IVA que te toca a ti puede ser otro: consúltalo con tu gestor.\nMándaselo a quien vende y no sabe lo que gana.\n#humornegro #tiendaonline #emprendedores #margen #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
- "cuando": "2026-11-22T11:40:00+01:00",
- "compartir_en_feed": true,
- "portada_ms": 0,
- "prueba_no_seguidores": true,
- "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
- "formato": "Serie El Jambo",
- "publico": "tienda online / emprendedor",
- "app": null,
- "comentario_fijado": "¿Sabes cuánto te queda de cada venta? Episodio nuevo cada día en @neogestlab",
- "avance_siguiente": "Mañana: buscas el número de serie con linterna",
- "_fuentes": [],
- "_comprobado": "Herramienta HTML real (cola/403_margen_venta_reel/herramienta.html) grabada funcionando con herramientas/grabar_pantalla.py. Cálculos verificados con Playwright: 12/1,21=9,9174; −5,40=4,5174 (45,55 %→45,6). 14/1,21=11,5702; −5,40=6,1702; dif 1,6528. Con coste 4,5: 7,0702 (comprobado con Playwright). Datos de ejemplo rotulados en pantalla («EJEMPLO · datos inventados»); sin cifras de terceros ni estadísticas. No se afirma nada de ninguna app publicada de Neogest Lab.",
- "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
- "motor_voz": "edge",
- "monetizacion": {
-  "objetivo": "visita_perfil",
-  "oferta": "prueba gratuita en /solicitar (texto del post)",
-  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
- },
- "musica": {
-  "titulo": "Fluffing a Duck",
-  "autor": "Kevin MacLeod",
-  "licencia": "CC BY 4.0",
-  "url": "https://incompetech.com/music/royalty-free/",
-  "archivo": "Fluffing_a_Duck.mp3",
-  "bpm": 123.0
- },
- "asset": "403_margen_venta_reel.mp4",
- "control_audio": {
-  "aprobado": true,
-  "duracion_s": 20.0
- }
+  "tipo": "reel",
+  "texto": "Vendes a 12 € con IVA y, con estos datos inventados, te quedan 4,52 €. La Jupillo hace la cuenta. Humor negro de ficción.\n¿Sabes cuánto te queda de verdad de cada venta? Cuéntalo en comentarios.\nCuenta con datos inventados: 12 € con IVA al 21 % son 9,92 € sin IVA; menos 5,40 € de coste, quedan 4,52 €. Si subes a 14 €, quedan 6,17 €: 1,65 € más. El IVA que te toca a ti puede ser otro: consúltalo con tu gestor.\nMándaselo a quien vende y no sabe lo que gana.\n#humornegro #tiendaonline #emprendedores #margen #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-22T11:40:00+01:00",
+  "compartir_en_feed": true,
+  "portada_ms": 0,
+  "prueba_no_seguidores": true,
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
+  "formato": "Serie El Jambo",
+  "publico": "tienda online / emprendedor",
+  "app": null,
+  "comentario_fijado": "¿Sabes cuánto te queda de cada venta? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: buscas el número de serie con linterna",
+  "_fuentes": [],
+  "_comprobado": "Herramienta HTML real (cola/403_margen_venta_reel/herramienta.html) grabada funcionando con herramientas/grabar_pantalla.py. Cálculos verificados con Playwright: 12/1,21=9,9174; −5,40=4,5174 (45,55 %→45,6). 14/1,21=11,5702; −5,40=6,1702; dif 1,6528. Con coste 4,5: 7,0702 (comprobado con Playwright). Datos de ejemplo rotulados en pantalla («EJEMPLO · datos inventados»); sin cifras de terceros ni estadísticas. No se afirma nada de ninguna app publicada de Neogest Lab.",
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "motor_voz": "edge",
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+  },
+  "musica": {
+    "titulo": "Fluffing a Duck",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Fluffing_a_Duck.mp3",
+    "bpm": 123.0
+  },
+  "asset": "403_margen_venta_reel.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 20.13
+  },
+  "renderizado": "2026-11-19T23:48:07+00:00"
 }
