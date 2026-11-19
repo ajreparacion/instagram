@@ -2,7 +2,7 @@
 
 Lo mantiene el agente de CALIDAD (lo revisa cada lunes estudiando reels virales de IA y trucos). Creador lee esto antes de producir. Ningún reel se publica si no pasa este estándar.
 
-Versión 9 (15/11/2026, «parece hecho por humanos», ver sección v9). Versión 8 (10/11/2026, retención y envíos; ver sección v8). Versión 6 (7/11/2026, serie de apps). Versión 5 (6/11/2026 20:35, Estratega, por la NUEVA ESTRATEGIA del usuario: IA fácil en dibujos animados doodle). Sustituye a la v4 (misterios reales con fotos y vídeo real). Base: algoritmo de Instagram 2026 (compartidos por mensaje, guardados y retención pesan más que los likes; contenido original) e informe Buzzfy «AI & tech» de 6/11 (en cuentas pequeñas funcionan los ganchos de pregunta, número o mini historia / antes-después en los primeros 2 s).
+Versión 10 (19/11/2026, bloqueo del logo antiguo y pie con el isotipo 2026). Versión 9 (15/11/2026, «parece hecho por humanos», ver sección v9). Versión 8 (10/11/2026, retención y envíos; ver sección v8). Versión 6 (7/11/2026, serie de apps). Versión 5 (6/11/2026 20:35, Estratega, por la NUEVA ESTRATEGIA del usuario: IA fácil en dibujos animados doodle). Sustituye a la v4 (misterios reales con fotos y vídeo real). Base: algoritmo de Instagram 2026 (compartidos por mensaje, guardados y retención pesan más que los likes; contenido original) e informe Buzzfy «AI & tech» de 6/11 (en cuentas pequeñas funcionan los ganchos de pregunta, número o mini historia / antes-después en los primeros 2 s).
 
 ## v9 (15/11/2026 00:55): «PARECE HECHO POR HUMANOS» (NUEVA ERA NEOGEST LAB, orden del dueño 15/11 00:39; se SUMA a v8 y a las series, no baja ningún criterio; nota mínima de publicación sigue en 90)
 Bloqueos H (si falla uno, nota máxima 89 = no sale):
@@ -39,6 +39,8 @@ Régimen transitorio: las piezas con «cuando» hasta el 11/11 23:59 conservan s
 7. Promete algo que el vídeo no da (cebo), la "respuesta" por DM no lleva lo prometido, o hay enlace de afiliado sin «enlace de afiliado» en el texto.
 8. Suena a anuncio o a IA: muletillas («sumérgete», «descubre», «en este vídeo», «revoluciona», «increíble»), voz de locutor plana, más de 2 emojis en el post. Debe sonar a alguien de España explicándoselo a un amigo.
 9. Aprobación caducada: un calidad.json aprobado vale solo para el render revisado; si cambian guion o vídeo, se revisa de nuevo.
+10. **Logo antiguo NL neón visible = no se publica.** Comprueba todos los fotogramas, incluido el cierre.
+11. **Pie de marca obligatorio:** el cierre del vídeo lleva el isotipo nuevo «N» de circuitos del kit 2026; no se acepta el cuadrado «NL» ni un pie sin isotipo.
 
 ## Puntuación (100 puntos; mínimo 75 para publicar)
 **Gancho, primeros 2 s (25)**
@@ -83,6 +85,7 @@ El resto de la puntuación (100 puntos, mínimo 75) se aplica igual, cambiando �
 - Números escritos con letra en la voz.
 
 ## Registro de cambios
+- v10, 19/11/2026: bloqueo del logo antiguo NL neón y exigencia del isotipo 2026 en el pie.
 - v9, 15/11/2026 00:55: criterios H1-H6 «parece hecho por humanos» (orden del dueño 15/11 00:39). No baja ningún criterio anterior.
 - v8.1, 11/11/2026 00:00: B7 (primer fotograma) y B8 (interacción: comentario fijado, avance del siguiente, frase de envío); música de Instagram verificada por audio_ig. Orden del dueño.
 - v8, 10/11/2026 20:50: bloqueos B1-B6 (gancho descriptivo, sin espina, sin motivo para enviar, cifras inventadas, ritmo, pie), nueva puntuación y seguimiento a las 48 h. Fuente: datos propios Buzzfy + Viral Reels Playbook 2026 + reels en español de cuentas pequeñas (equipo/tecnicas_virales.md).
