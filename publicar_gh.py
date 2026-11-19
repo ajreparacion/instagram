@@ -1623,19 +1623,19 @@ def publicar_reel(cfg, video, post):
     return {"media_id": mid, "enlace": enlace, "prueba_no_seguidores": bool(prueba), **_nota_cancion(post, params)}
 
 
-def aprobado(carpeta, cuando, ahora):
-    # 7/11/2026 (orden del dueño: «hay que pasar todo por calidad, subir mucho más el listón»):
-    # nada sale sin el visto bueno explícito de Calidad y con nota mínima. Se acabó la gracia de 3 h.
+def puede_publicar(carpeta):
+    """Solo permite publicar con Calidad aprobada y nota mínima, o con aprobación expresa del dueño."""
     cal = leer_json(os.path.join(carpeta, "calidad.json"))
-    if cal is None or cal.get("caducado"):   # caducado = la pieza se re-renderizó después de la revisión de Calidad
+    if not isinstance(cal, dict):
+        return False
+    if cal.get("aprobado_por") == "dueño":
+        return True
+    if cal.get("caducado"):   # caducado = la pieza se re-renderizó después de la revisión de Calidad
         return False
     try:
         nota = float(cal.get("nota", 0))
     except (TypeError, ValueError):
         nota = 0
-    # 18/11/2026: antes era bool(cal.get("aprobado")), que un "aprobado": "false" (string, no
-    # booleano) en un calidad.json escrito a mano o por un cliente de API distinto habría leído
-    # como True (cualquier string no vacío es verdadero en Python). Exigir "is True" cierra ese hueco.
     return cal.get("aprobado") is True and nota >= NOTA_MINIMA
 
 
@@ -1854,7 +1854,7 @@ def publicar_pendientes(cfg):
             mover(carpeta, ERRORES, {"error": "Caducado: más de 36 h después de su hora"})
             log(f"{nombre}: caducado, movido a errores/")
             continue
-        if not aprobado(carpeta, cuando, ahora):
+        if not puede_publicar(carpeta):
             continue
         if sin_cdn and post.get("tipo") in ("carrusel", "imagen", "historia"):
             continue
