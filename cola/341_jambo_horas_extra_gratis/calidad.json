@@ -9,5 +9,9 @@
     "Sin control_audio de este render: whisper sin contrastar (no hay transcripción en la carpeta)",
     "Arreglado por Calidad: el post daba la moraleja como cifra sin fuente; ahora lleva el dato EPA con fuente"
   ],
-  "como_arreglarlo": "Mejora/Creador: que el ciclo genere control_audio.json de 341 (relanzar con renderizado:false o recalcular) y Calidad lo aprueba si la transcripción coincide."
+  "como_arreglarlo": "Mejora/Creador: que el ciclo genere control_audio.json de 341 (relanzar con renderizado:false o recalcular) y Calidad lo aprueba si la transcripción coincide.",
+  "aprobado_anterior": false,
+  "nota_anterior": 88,
+  "caducado": "2026-11-19T16:44:30+00:00",
+  "motivo_caducidad": "vídeo externo subido 2026-11-19T16:44:30+00:00"
 }
