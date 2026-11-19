@@ -1,7 +1,3 @@
-2026-11-15 10:58  Control de audio: OK; duración 25.27 s
-2026-11-15 10:58  330_jambo_ultimo_correo: renderizado con voz y subido a la release 'cola'
-2026-11-15 10:58  Voz con edge-tts: 8 frases en 9 s
-2026-11-15 10:58  Voz: silencios recortados por frase (s): [0.13, 0.13, 0.13, 0.12, 0.12, 0.12, 0.13, 0.12]
 2026-11-15 10:58  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(2.6), np.float64(3.7), np.float64(4.3), np.float64(1.7), np.float64(3.2), np.float64(3.0), np.float64(4.9), np.float64(2.8)]
 2026-11-15 10:59  Voz: alineación palabra a palabra (small, 22.1 s): 8/8 frases
 2026-11-15 11:00  Mezcla: voz -17.0 LUFS, música -22.5 LUFS (con ducking -25.2), la música baja 6.0 dB (p90) bajo la voz, ratio 2.328; máster -16.91 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
@@ -598,3 +594,7 @@
 2026-11-19 17:44  Control de audio: OK; duración 23.2 s; avisos: ['sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion']
 2026-11-19 17:44  341_jambo_horas_extra_gratis: control de audio del vídeo externo: aprobado=True LUFS=-14.1 pico=-1.5
 2026-11-19 17:44  341_jambo_horas_extra_gratis: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
+2026-11-19 18:59  326_jambo_gimnasio_socios: publicando…
+2026-11-19 19:00  326_jambo_gimnasio_socios: YouTube publicado https://youtube.com/shorts/7NMNjh66ZTI
+2026-11-19 19:00  326_jambo_gimnasio_socios: Facebook publicado https://www.facebook.com/reel/1450202407223473
+2026-11-19 19:00  326_jambo_gimnasio_socios: publicado https://www.instagram.com/reel/Df7rHNOFEMW/
