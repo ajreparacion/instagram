@@ -10,5 +10,9 @@
     "Pico −4,0 dBFS: bien; control_audio compara con el guion antiguo (no aplica)",
     "Post: atribución «Fluffing a Duck» de MacLeod sin comprobar que sea la pista que suena; «cuando» del 18/11 ya vencido"
   ],
-  "como_arreglarlo": "Centro: grabar la app real (entorno de pruebas) en el DESPUÉS, cierre «Enlace en el perfil», atribución de la pista real y nueva fecha; volver a Calidad."
+  "como_arreglarlo": "Centro: grabar la app real (entorno de pruebas) en el DESPUÉS, cierre «Enlace en el perfil», atribución de la pista real y nueva fecha; volver a Calidad.",
+  "aprobado_anterior": false,
+  "nota_anterior": 82,
+  "caducado": "2026-11-19T22:48:34+00:00",
+  "motivo_caducidad": "re-render del ciclo 2026-11-19T22:48:34+00:00"
 }

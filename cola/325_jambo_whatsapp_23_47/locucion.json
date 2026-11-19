@@ -24,7 +24,7 @@
   "estilo": "gag",
   "hablante": "pelota",
   "inicio": 4.2,
-  "duracion": 2.2,
+  "duracion": 2.3,
   "texto": "¡Contesta! ¡Eso es cercanía!",
   "enfasis": [
    3
@@ -34,7 +34,7 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 6.4,
+  "inicio": 6.5,
   "duracion": 3.067,
   "texto": "La cosita: un presupuesto. Y ahora una factura.",
   "enfasis": [
@@ -45,8 +45,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "tramites",
-  "inicio": 9.467,
-  "duracion": 4.2,
+  "inicio": 9.567,
+  "duracion": 3.9,
   "texto": "Y una devolución. Con descuento. A las doce de la noche.",
   "enfasis": [
    10
@@ -56,7 +56,7 @@
   "escena": 5,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 13.667,
+  "inicio": 13.467,
   "duracion": 3.233,
   "texto": "Todo enviado. El cliente se había equivocado de chat.",
   "enfasis": [
@@ -69,7 +69,7 @@
   "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 16.9,
+  "inicio": 16.7,
   "duracion": 2.2,
   "texto": "¿A qué hora te escriben a ti?",
   "enfasis": []
