@@ -34,7 +34,6 @@ No hay que tocar GitHub: en la siguiente pasada (07:23 o 16:23) el sistema detec
 
 ## Decisiones tuyas (cuando puedas, no bloquean nada)
 - Medios de pago en las piezas de Gestión Integral 7D: ¿nombrar Stripe, Redsys y Bizum o decir «tarjeta», «TPV» y «transferencia»? Mientras no digas nada va en genérico.
-- Cuándo quieres apps en los episodios (hoy el pivote de app va en 1 de cada 3 por la fórmula v9).
 - Tu vídeo de referencia (reel DfXjcjiNW8k): no se puede abrir desde el equipo; súbelo como vídeo o cuéntalo en 3 frases.
 - Fijar el comentario del reel y elegir el inicio de la canción de Instagram: la API no lo permite; si no quieres hacerlo a mano, se prueba el comentario como respuesta automática.
 - Facebook: confirmar qué se publica en la página (hoy sale lo mismo que en Instagram) y, desde una cuenta que no sea administradora, que se ve una pieza.
@@ -43,6 +42,7 @@ No hay que tocar GitHub: en la siguiente pasada (07:23 o 16:23) el sistema detec
 - Afiliados de Amazon.es y panel de Monetización de Instagram (anotar herramientas disponibles): solo si quieres abrir esas vías; hoy no hay umbrales cumplidos.
 
 ## Hecho (no hace falta nada)
+- Cadencia y mezcla de contenidos (orden del dueño, 19/11): resuelta; 2 reels al día, 70 % de presupuestos y facturas para autónomos y pymes y 30 % trucos de IA. No requiere otra acción del dueño.
 - Bio nueva y enlace /solicitar?src=instagram (verificado con Buzzfy 11/11); categoría puesta (dicho por el dueño); usuario @neogestlab.
 - Voz del dueño retirada: voz genérica de España (9/11). Voz clonada y prototipos 017-024: ya no dependen de validar θ/seseo.
 - Token PAGE_TOKEN renovado (8/11); ice breakers del chat configuradas y verificadas (7/11); repositorio público y reels por release.
