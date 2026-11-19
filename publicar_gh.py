@@ -81,6 +81,17 @@ def log(msg):
         f.write(linea + "\n")
 
 
+def log_no_publicado(nombre):
+    """Registra como máximo un aviso de bloqueo por reel y día (hora de Madrid)."""
+    hoy = datetime.now(timezone.utc).astimezone(timezone(timedelta(hours=1))).strftime("%Y-%m-%d")
+    marcador = f"  {nombre}: NO publicado,"
+    if os.path.exists(REGISTRO):
+        with open(REGISTRO, encoding="utf-8") as f:
+            if any(linea.startswith(hoy + " ") and marcador in linea for linea in f):
+                return
+    log(f"{nombre}: NO publicado, sin aprobación de Calidad (nota >= {NOTA_MINIMA}) ni del dueño")
+
+
 def recortar_registro(max_lineas=600):
     try:
         with open(REGISTRO, encoding="utf-8") as f:
@@ -1864,7 +1875,7 @@ def publicar_pendientes(cfg):
             log(f"{nombre}: caducado, movido a errores/")
             continue
         if not puede_publicar(carpeta):
-            log(f"{nombre}: NO publicado, sin aprobación de Calidad (nota >= {NOTA_MINIMA}) ni del dueño")
+            log_no_publicado(nombre)
             continue
         if sin_cdn and post.get("tipo") in ("carrusel", "imagen", "historia"):
             continue
