@@ -1,43 +1,42 @@
 {
-  "tipo": "reel",
-  "texto": "¿Cuántas veces al día te llaman solo para preguntar el horario?\nLlamada real al asistente telefónico de un negocio: saluda, da el horario y pregunta si te viene bien pasar. Se configura con la información de tu negocio, con la voz y el trato que elijas.\nNosotros lo configuramos y lo mantenemos. Desde 150 € al mes, sin permanencia.\n¿Qué te preguntan más por teléfono? Dilo en una palabra.\nMándaselo a quien no da abasto con el teléfono.\nSolicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=instagram\nLa voz que se oye es la de un asistente virtual (generada por IA). Llamada real; se han quitado los datos del negocio.",
-  "cuando": "2026-11-20T09:40:00+01:00",
-  "compartir_en_feed": true,
-  "prueba_no_seguidores": true,
-  "formato": "Promo de app · llamada real",
-  "app": "Recepcionista 24h",
-  "app_slug": "recepcionista-24h",
-  "gancho": "¿Y si tu teléfono se cogiera solo?",
-  "_fuentes": [
-    "Ficha Producto del Centro, slug recepcionista-24h (hechos verificados 16/11/2026)",
-    "Grabación propia del dueño, 16/11/2026"
-  ],
-  "_comprobado": "Texto y audio contrastados con la ficha y con la transcripción de la llamada; sin nombre del negocio, web, teléfonos ni nombres de personas; no suena la voz del dueño.",
-  "_nota_creador": "16/11/2026 Coordinación: vídeo ya terminado (llamada real al asistente del dueño, montada fuera del ciclo). SIN MÚSICA: no había pistas con licencia accesibles desde la sesión; si Calidad lo exige, el Remasterizador añade música del estudio por debajo de la voz. Encargo: equipo/encargos/recepcionista_24h.md.",
-  "renderizado": "2026-11-16T18:58:14+00:00",
-  "motor": "externo",
-  "comentario_fijado": "¿Qué te preguntan más por teléfono? Dilo en una palabra. Más en @neogestlab",
-  "avance_siguiente": "Parte 2 si este vídeo os sirve",
-  "portada_ms": 0,
-  "monetizacion": {
-    "objetivo": "solicitud_informacion",
-    "oferta": "Recepcionista 24h: información gratuita en /solicitar",
-    "paso_embudo": "alcance → visita al perfil → solicitud de información"
-  },
-  "youtube": {
-    "titulo": "¿Y si tu teléfono se cogiera solo? Llamada real a un asistente #Shorts",
-    "descripcion": "¿Cuántas veces al día te llaman solo para preguntar el horario? Llamada real al asistente telefónico de un negocio: saluda, da el horario y pregunta si te viene bien pasar. Se configura con la información de tu negocio, con la voz y el trato que elijas. Solicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=youtube · By Neogest Lab",
-    "etiquetas": [
-      "asistente telefónico",
-      "recepcionista virtual",
-      "autónomos",
-      "pymes",
-      "negocios"
-    ]
-  },
-  "facebook": {
-    "texto": "¿Cuántas veces al día te llaman solo para preguntar el horario?\nLlamada real al asistente telefónico de un negocio: saluda, da el horario y pregunta si te viene bien pasar. Se configura con la información de tu negocio, con la voz y el trato que elijas.\nSolicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=facebook"
-  },
-  "asset": "801_recepcionista_horario.mp4",
-  "_video_externo_usado": "https://raw.githubusercontent.com/ajreparacion/instagram/entrada-videos/801_recepcionista_horario.mp4"
+ "tipo": "reel",
+ "texto": "¿Cuántas veces al día te llaman solo para preguntar el horario?\nLlamada real al asistente telefónico de un negocio: saluda, da el horario y pregunta si te viene bien pasar. Se configura con la información de tu negocio, con la voz y el trato que elijas.\nNosotros lo configuramos y lo mantenemos. Desde 150 € al mes, sin permanencia.\n¿Qué te preguntan más por teléfono? Dilo en una palabra.\nMándaselo a quien no da abasto con el teléfono.\nSolicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=instagram\nLa voz que se oye es la de un asistente virtual (generada por IA). Llamada real; se han quitado los datos del negocio.",
+ "cuando": "2026-11-20T09:40:00+01:00",
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "formato": "Promo de app · llamada real",
+ "app": "Recepcionista 24h",
+ "app_slug": "recepcionista-24h",
+ "gancho": "¿Y si tu teléfono se cogiera solo?",
+ "_fuentes": [
+  "Ficha Producto del Centro, slug recepcionista-24h (hechos verificados 16/11/2026)",
+  "Grabación propia del dueño, 16/11/2026"
+ ],
+ "_comprobado": "Texto y audio contrastados con la ficha y con la transcripción de la llamada; sin nombre del negocio, web, teléfonos ni nombres de personas; no suena la voz del dueño.",
+ "_nota_creador": "16/11/2026 Coordinación: vídeo ya terminado (llamada real al asistente del dueño, montada fuera del ciclo). SIN MÚSICA: no había pistas con licencia accesibles desde la sesión; si Calidad lo exige, el Remasterizador añade música del estudio por debajo de la voz. Encargo: equipo/encargos/recepcionista_24h.md.",
+ "motor": "externo",
+ "comentario_fijado": "¿Qué te preguntan más por teléfono? Dilo en una palabra. Más en @neogestlab",
+ "avance_siguiente": "Parte 2 si este vídeo os sirve",
+ "portada_ms": 0,
+ "monetizacion": {
+  "objetivo": "solicitud_informacion",
+  "oferta": "Recepcionista 24h: información gratuita en /solicitar",
+  "paso_embudo": "alcance → visita al perfil → solicitud de información"
+ },
+ "youtube": {
+  "titulo": "¿Y si tu teléfono se cogiera solo? Llamada real a un asistente #Shorts",
+  "descripcion": "¿Cuántas veces al día te llaman solo para preguntar el horario? Llamada real al asistente telefónico de un negocio: saluda, da el horario y pregunta si te viene bien pasar. Se configura con la información de tu negocio, con la voz y el trato que elijas. Solicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=youtube · By Neogest Lab",
+  "etiquetas": [
+   "asistente telefónico",
+   "recepcionista virtual",
+   "autónomos",
+   "pymes",
+   "negocios"
+  ]
+ },
+ "facebook": {
+  "texto": "¿Cuántas veces al día te llaman solo para preguntar el horario?\nLlamada real al asistente telefónico de un negocio: saluda, da el horario y pregunta si te viene bien pasar. Se configura con la información de tu negocio, con la voz y el trato que elijas.\nSolicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=facebook"
+ },
+ "asset": "801_recepcionista_horario.mp4",
+ "_video_externo_usado": "https://raw.githubusercontent.com/ajreparacion/instagram/entrada-videos/801_recepcionista_horario.mp4"
 }

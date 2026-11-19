@@ -1,38 +1,37 @@
 {
-  "tipo": "reel",
-  "texto": "Faltan cuarenta euros en la caja. Estaban en su bolsillo, con el tique del bocadillo. Los euros son inventados.\n¿Cuánto fue tu mayor descuadre? Cuéntalo en comentarios.\nMándaselo a quien cuadra la caja de memoria.\n#humornegro #tienda #caja #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
-  "cuando": "2026-11-18T13:40:00+01:00",
-  "compartir_en_feed": true,
-  "prueba_no_seguidores": true,
-  "formato": "Serie El Jambo",
-  "publico": "mercadillo / tienda",
-  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
-  "_fuentes": [],
-  "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
-  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
-  "renderizado": false,
-  "motor_voz": "edge",
-  "comentario_fijado": "¿Cuánto fue tu mayor descuadre? Episodio nuevo cada día en @neogestlab",
-  "avance_siguiente": "Mañana: tecleas dos veces lo mismo",
-  "portada_ms": 0,
-  "monetizacion": {
-    "objetivo": "visita_perfil",
-    "oferta": "prueba gratuita en /solicitar (texto del post)",
-    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
-  },
-  "musica": {
-    "titulo": "Investigations",
-    "autor": "Kevin MacLeod",
-    "licencia": "CC BY 4.0",
-    "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Investigations.mp3",
-    "bpm": 95.7
-  },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-15T20:06:52+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['faltan', 'caja'], sobran ['falta', 'en', 'taja'] (rehacer esas frases)"
-    ],
-    "guion_md5": "66aebfc2c8cba75263a9a2193aad8fac"
-  }
+ "tipo": "reel",
+ "texto": "Faltan cuarenta euros en la caja. Estaban en su bolsillo, con el tique del bocadillo. Los euros son inventados.\n¿Cuánto fue tu mayor descuadre? Cuéntalo en comentarios.\nMándaselo a quien cuadra la caja de memoria.\n#humornegro #tienda #caja #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+ "cuando": "2026-11-18T13:40:00+01:00",
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "formato": "Serie El Jambo",
+ "publico": "mercadillo / tienda",
+ "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
+ "_fuentes": [],
+ "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
+ "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+ "motor_voz": "edge",
+ "comentario_fijado": "¿Cuánto fue tu mayor descuadre? Episodio nuevo cada día en @neogestlab",
+ "avance_siguiente": "Mañana: tecleas dos veces lo mismo",
+ "portada_ms": 0,
+ "monetizacion": {
+  "objetivo": "visita_perfil",
+  "oferta": "prueba gratuita en /solicitar (texto del post)",
+  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+ },
+ "musica": {
+  "titulo": "Investigations",
+  "autor": "Kevin MacLeod",
+  "licencia": "CC BY 4.0",
+  "url": "https://incompetech.com/music/royalty-free/",
+  "archivo": "Investigations.mp3",
+  "bpm": 95.7
+ },
+ "_control_audio_fallo": {
+  "fecha": "2026-11-15T20:06:52+00:00",
+  "bloqueos": [
+   "voz distinta del guion: faltan ['faltan', 'caja'], sobran ['falta', 'en', 'taja'] (rehacer esas frases)"
+  ],
+  "guion_md5": "66aebfc2c8cba75263a9a2193aad8fac"
+ }
 }

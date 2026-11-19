@@ -1,6 +1,6 @@
 {
- "semana": "2026-11-16 a 2026-11-22",
- "creado_por": "Estratega, lunes 16/11/2026 (pasada programada). Sustituye al plan 13-19/11 (desfasado: la directiva limpia del 15/11 cambió formato, motor y cadencia). No cambia ninguna orden del dueño.",
+ "semana": "2026-11-20 a 2026-11-26",
+ "creado_por": "Coordinación, 19/11/2026 (orden del dueño): dos reels al día; 70 % presupuestos y facturas para autónomos y pymes, 30 % trucos de IA. El calendario anterior se conserva como dias_plan_anterior_16_22_nov.",
  "objetivo": "Primera alta en prueba gratuita de Gestión Integral 7D. Paso más débil del embudo: alcance a no seguidores → visita al perfil (7 visitas sobre 2.411 no seguidores en 7 días = 0,3 %; referencia ≥ 3 %).",
  "punto_de_partida": {
   "fuente": "Buzzfy 16/11 10:14 CET (ig_account_stats 7 días, ig_follower_growth 14 días, ig_post_stats de los 12 reels del 15/11, provisionales < 48 h)",
@@ -8,14 +8,15 @@
   "seguidores": "1.602; 2-13/11: 4 altas y 7 bajas (−3 netos); 14 y 15/11 pendientes",
   "reels_15_nov": "Mejor: Parte 2 del bar (alcance 494, media 12,9 s, abandono 22 %: único que cumple salto < 35 % y probablemente > 60 % visto). Siguen Parte 2 de horas extra (116 de alcance, 9,3 s, 40 %), «Según mi último correo» (215, 8,7 s, 42 %) y «Precio de amigo» (135, 9,1 s, 60 %). Flojos: los episodios nuevos de oficina de la noche (90-141 de alcance, 3-5 s, abandono 78-84 %) y todas las promos de app (17-115 de alcance, abandono 59-85 %); MEDICATOR diferencial 23 de alcance con 8,7 % de compartidos y 26 % de interacción sobre alcance (n = 23, no concluyente). Casi todos con < 48 h: lectura definitiva en el 17/11."
  },
- "decision_reparto": "El cuello de botella de la semana no es el hueco sino la pieza: solo 7 piezas de los huecos del 16-22/11 están aprobadas (319, 321, 322, 320, 326, 329 y el carrusel 108). Los demás huecos quedan libres si no llegan a 90: no se rellenan con piezas flojas. Prioridad de producción por fecha: 308 y 323 (16/11), 324 y 313 (17/11), 325 y 314 (18/11). Al menos 1 de cada 2 piezas Jambo nuevas debe abrir con situación de cliente o jefe y llevar Parte 2 (la secuela retiene mejor que el episodio nuevo). Reels de app como mucho 1 de cada 3 y solo ANTES/DESPUÉS.",
+ "decision_reparto": "Orden del dueño (19/11): planificar 2 reels diarios durante los próximos 7 días, con una mezcla semanal aproximada del 70 % de contenido para autónomos y pymes sobre presupuestos y facturas (10 de 14 reels) y el 30 % de trucos de IA (4 de 14). Las ideas de este plan no son publicaciones aprobadas: solo se publica con Calidad ≥ 90; si una pieza no está aprobada, el hueco queda libre.",
  "reglas_de_cadencia": {
-  "minimo_jambo": "≥ 3 episodios nuevos al día (directiva §8): hoy NO se cumple por falta de piezas aprobadas; se anota, no se compensa con piezas flojas",
+  "reels_diarios": "2 reels al día, orden del dueño del 19/11/2026",
+  "mezcla_contenido": "70 % presupuestos y facturas para autónomos y pymes; 30 % trucos de IA (10 y 4 reels en un plan de 14)",
   "maximo": "6 piezas por canal y día, ≥ 100 min entre piezas del mismo canal",
-  "un_reel_por_hueco": "pre_entrega.py 16/11: 0 errores y 0 choques «reels a la misma hora»",
+  "un_reel_por_hueco": "Dos huecos separados al menos 100 min; una pieza por hueco",
   "huecos_libres": "cualquier hueco sin pieza aprobada a 60 min de su hora queda libre"
  },
- "mezcla_semana": {
+ "mezcla_plan_anterior_16_22_nov": {
   "piezas_en_cola_16_22_nov": 35,
   "aprobadas": 7,
   "jambo_nuevo_o_secuela": 32,
@@ -23,14 +24,197 @@
   "valor": 2,
   "carruseles": 1
  },
- "experimento": {
+ "mezcla_semana": {
+  "reels_planificados": 14,
+  "presupuestos_facturas_autonomos_pymes": 10,
+  "trucos_IA": 4,
+  "reparto_objetivo": "70/30; redondeado a 10/14 y 4/14"
+ },
+ "experimento_anterior_16_22_nov": {
   "nombre": "Secuela (Parte 2) frente a episodio nuevo en retención",
   "como": "Grupo S: reels Jambo con «Parte 2» (319, 321, 322 y los que salgan). Grupo N: episodios Jambo nuevos (308, 323, 324, 325, 326…). Lectura a 48 h de cada pieza con ig_post_stats: abandono (skip_rate_pct) y visualización media ÷ duración. Se mira el 23/11 con las piezas publicadas hasta el 21/11.",
   "hipotesis": "La secuela retiene más que el episodio nuevo.",
   "regla_de_decision": "Fijada antes del dato: con ≥ 3 piezas por grupo, si la mediana de abandono de S ≤ 45 % y la de N ≥ 60 %, desde el 24/11 al menos 2 de cada 5 piezas Jambo son secuelas de un reel que supere 3× la mediana. Si no (o si hay < 3 por grupo), no cambia el reparto y se repite la semana siguiente.",
   "origen": "Datos del 15/11: Parte 2 del bar 22 % de abandono frente a 78-84 % de episodios nuevos de la noche (provisional)."
  },
+ "experimento": {
+  "nombre": "Presupuestos y facturas frente a trucos de IA",
+  "como": "Medir cada reel a las 48 h con ig_post_stats y Buzzfy: alcance de no seguidores, guardados, compartidos, visitas al perfil y clics/solicitudes atribuidos por src. Comparar por categoria_contenido, sin alterar el reparto 70/30 durante esta semana.",
+  "hipotesis": "Los reels prácticos de presupuestos y facturas para autónomos y pymes generan más visitas al perfil y acciones de prueba que los trucos generales de IA.",
+  "regla_de_decision": "Evaluar solo si hay al menos 3 reels publicados y medibles en cada grupo; si no, no cambiar el reparto. Aunque se cumpla, proponer un cambio de mezcla solo con resultados consistentes en dos semanas.",
+  "origen": "Orden del dueño del 19/11/2026; mezcla fijada antes de observar los resultados."
+ },
  "dias": [
+  {
+   "fecha": "2026-11-20",
+   "hora": "12:40",
+   "formato": "reel",
+   "serie": "Presupuestos y facturas",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "presupuestos_facturas",
+   "tema": "Desglosar un presupuesto en partidas claras antes de enviarlo",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea planificada; falta producir y aprobar. Si no llega a Calidad ≥ 90, el hueco queda libre."
+  },
+  {
+   "fecha": "2026-11-20",
+   "hora": "18:45",
+   "formato": "reel",
+   "serie": "Presupuestos y facturas",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "presupuestos_facturas",
+   "tema": "Del presupuesto aceptado a la factura sin volver a teclear las líneas",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea planificada; verificar cualquier función de app antes de afirmarla. Sin aprobación ≥ 90, hueco libre."
+  },
+  {
+   "fecha": "2026-11-21",
+   "hora": "12:40",
+   "formato": "reel",
+   "serie": "Presupuestos y facturas",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "presupuestos_facturas",
+   "tema": "Lista de comprobación para revisar conceptos, unidades y total de un presupuesto",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea educativa planificada; no es asesoramiento fiscal. Sin aprobación ≥ 90, hueco libre."
+  },
+  {
+   "fecha": "2026-11-21",
+   "hora": "18:45",
+   "formato": "reel",
+   "serie": "Trucos de IA",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "trucos_IA",
+   "tema": "Usar un prompt para convertir una petición de cliente en preguntas para preparar un presupuesto, sin pegar datos personales",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea planificada; probar el prompt y advertir que hay que revisar el resultado. Sin aprobación ≥ 90, hueco libre."
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora": "12:40",
+   "formato": "reel",
+   "serie": "Presupuestos y facturas",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "presupuestos_facturas",
+   "tema": "Qué datos conviene tener a mano para preparar una factura sin errores de transcripción",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea educativa planificada; comprobar requisitos con una fuente oficial. Sin aprobación ≥ 90, hueco libre."
+  },
+  {
+   "fecha": "2026-11-22",
+   "hora": "18:45",
+   "formato": "reel",
+   "serie": "Presupuestos y facturas",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "presupuestos_facturas",
+   "tema": "Separar facturas pendientes, cobradas y vencidas en un seguimiento sencillo",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea planificada; describir solo funciones verificadas. Sin aprobación ≥ 90, hueco libre."
+  },
+  {
+   "fecha": "2026-11-23",
+   "hora": "12:40",
+   "formato": "reel",
+   "serie": "Presupuestos y facturas",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "presupuestos_facturas",
+   "tema": "Cómo dejar claros los cambios entre una versión de presupuesto y la siguiente",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea planificada; usar un ejemplo ficticio y no inventar resultados. Sin aprobación ≥ 90, hueco libre."
+  },
+  {
+   "fecha": "2026-11-23",
+   "hora": "18:45",
+   "formato": "reel",
+   "serie": "Trucos de IA",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "trucos_IA",
+   "tema": "Pedir a la IA que convierta la descripción de un trabajo en partidas legibles sin cambiar importes",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea planificada; revisar que la IA no inventa cantidades ni precios. Sin aprobación ≥ 90, hueco libre."
+  },
+  {
+   "fecha": "2026-11-24",
+   "hora": "12:40",
+   "formato": "reel",
+   "serie": "Presupuestos y facturas",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "presupuestos_facturas",
+   "tema": "Evitar que una factura se quede sin seguimiento tras enviarla",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea planificada; mantenerlo como consejo de organización, sin prometer cobros. Sin aprobación ≥ 90, hueco libre."
+  },
+  {
+   "fecha": "2026-11-24",
+   "hora": "18:45",
+   "formato": "reel",
+   "serie": "Presupuestos y facturas",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "presupuestos_facturas",
+   "tema": "Presupuestar por separado materiales y mano de obra con un ejemplo ficticio",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea planificada; no presentar importes de ejemplo como tarifas reales. Sin aprobación ≥ 90, hueco libre."
+  },
+  {
+   "fecha": "2026-11-25",
+   "hora": "12:40",
+   "formato": "reel",
+   "serie": "Presupuestos y facturas",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "presupuestos_facturas",
+   "tema": "Relacionar el presupuesto, la factura enviada y el estado del cobro en un proceso claro",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea planificada; verificar cualquier función de app antes de afirmarla. Sin aprobación ≥ 90, hueco libre."
+  },
+  {
+   "fecha": "2026-11-25",
+   "hora": "18:45",
+   "formato": "reel",
+   "serie": "Trucos de IA",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "trucos_IA",
+   "tema": "Pedir a la IA un borrador cordial para recordar una factura, usando solo importe y fecha ficticios",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea planificada; revisar el texto y no compartir datos personales. Sin aprobación ≥ 90, hueco libre."
+  },
+  {
+   "fecha": "2026-11-26",
+   "hora": "12:40",
+   "formato": "reel",
+   "serie": "Presupuestos y facturas",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "presupuestos_facturas",
+   "tema": "Preparar las preguntas necesarias antes de cerrar un presupuesto de un trabajo",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea planificada; usar un caso ficticio. Sin aprobación ≥ 90, hueco libre."
+  },
+  {
+   "fecha": "2026-11-26",
+   "hora": "18:45",
+   "formato": "reel",
+   "serie": "Trucos de IA",
+   "publico": "Autónomos y pymes",
+   "tipo_contenido": "trucos_IA",
+   "tema": "Convertir una petición larga en una lista de tareas y comprobarla antes de enviar el presupuesto",
+   "cola": null,
+   "aprobado_calidad": false,
+   "nota": "Idea planificada; no pegar datos de clientes y revisar el resultado. Sin aprobación ≥ 90, hueco libre."
+  }
+ ],
+ "dias_plan_anterior_16_22_nov": [
   {
    "fecha": "2026-11-16",
    "hora": "12:40",
@@ -490,42 +674,42 @@
  "ideas_semana": [
   {
    "prioridad": 1,
-   "idea": "F21 «Yo: Jefe, el viernes no puedo, tengo médico» (viral #63, 124 mil vistas, 11 s)",
-   "mejora": "escalada de 3 golpes, giro y personajes de la serie; 19-22 s; cierra con «Parte 2 mañana»",
-   "hueco": "primer hueco libre Jambo con aprobación, tarde",
-   "motivo": "cliente/jefe es lo que mejor retiene en nuestras cifras"
+   "idea": "Presupuesto de una reforma: separar materiales, mano de obra y cambios pedidos",
+   "mejora": "caso ficticio claro, antes/después visual y sin cifras presentadas como tarifas",
+   "hueco": "primer hueco libre del grupo presupuestos y facturas",
+   "motivo": "encaja con autónomos y pymes y se puede guardar como referencia"
   },
   {
    "prioridad": 2,
-   "idea": "F22 «Cuando el cliente pide otro cambio y la misma fecha» (virales #65-66)",
-   "mejora": "tarjeta de remate de 2 palabras y reacción corporal; 16-19 s",
-   "hueco": "18:45 del día siguiente a F21",
-   "motivo": "es nuestro nicho exacto (autónomo y cliente)"
+   "idea": "De presupuesto aceptado a factura",
+   "mejora": "mostrar cómo evitar volver a transcribir líneas, con una función verificada y datos ficticios",
+   "hueco": "segundo hueco libre de presupuestos y facturas",
+   "motivo": "conecta presupuesto y facturación en un problema cotidiano"
   },
   {
    "prioridad": 3,
-   "idea": "Parte 2 de «Según mi último correo» (215 de alcance, 42 % de abandono)",
-   "mejora": "misma situación escalada, gancho en el fotograma 0",
-   "hueco": "Remasterizador, dentro de 48 h",
-   "motivo": "cumple el umbral de secuela (≥ 3× mediana) y retiene"
+   "idea": "Prompt para convertir la petición de un cliente en una lista de preguntas",
+   "mejora": "sin datos personales; indicar a la IA que no invente importes ni cantidades y revisar la respuesta",
+   "hueco": "uno de los cuatro huecos semanales de trucos de IA",
+   "motivo": "aporta una técnica reutilizable al público objetivo"
   },
   {
    "prioridad": 4,
-   "idea": "F23 antes/después de Gestoría7D (Cazador, pasada 7.ª)",
-   "mejora": "una sola función en pantalla con datos ficticios y cierre /solicitar?app=gestoria7d&src=instagram",
-   "hueco": "1 de cada 3 reels como mucho, no antes de 24 h del anterior de app",
-   "motivo": "único brazo de conversión; sin cifra aún que lo respalde (hipótesis)"
+   "idea": "Seguimiento de facturas enviadas y pendientes",
+   "mejora": "resolver un caso concreto sin prometer que una app garantice el cobro",
+   "hueco": "hueco libre de presupuestos y facturas",
+   "motivo": "problema directamente relevante para autónomos y pymes"
   },
   {
    "prioridad": 5,
-   "idea": "Rehacer a 16-19 s los episodios nuevos de la noche (oficina) con situación en el fotograma 0",
-   "mejora": "abandono 78-84 % → objetivo < 45 %; primer corte < 2 s y pregunta de una palabra",
-   "hueco": "los huecos libres de 20:40",
-   "motivo": "3-5 s de media: se pierden en el gancho"
+   "idea": "Borrador de recordatorio cordial de una factura con IA",
+   "mejora": "trabajar con fecha e importe ficticios y revisar el tono antes de enviar",
+   "hueco": "uno de los cuatro huecos semanales de trucos de IA",
+   "motivo": "demuestra un uso práctico sin introducir datos de clientes"
   }
  ],
  "produccion_pendiente": {
-  "Creador": "En Neogest Studio y por fecha: 308 y 323 (máster ≤ −1 dB y control_audio del render nuevo), 324, 313, 325, 314; después F21 y F22.",
+  "Creador": "Preparar los temas de los próximos 7 días en el reparto 10/4; cualquier función de app se verifica antes de guionizar. No crear ni publicar posts sin su render y aprobación de Calidad ≥ 90.",
   "Mejora": "Normalizar el máster del estudio a ≤ −1 dB; reel de prueba que falla al procesar (334).",
   "Calidad": "Evaluar en cuanto haya render; mover al siguiente hueco libre lo que no llegue a 90 a 60 min.",
   "Remasterizador": "Parte 2 de «Según mi último correo» (idea 3)."
@@ -536,7 +720,7 @@
  ],
  "kpi_semana": {
   "principal": "Primera alta en prueba gratuita de 7D (o solicitud nueva real) y visitas al perfil ≥ 3 por cada 100 no seguidores",
-  "segundo": "Mediana de abandono de los reels Jambo < 45 % y visualización media > 60 % de la duración",
+  "segundo": "Comparación a 48 h por tema: visitas al perfil, guardados, compartidos y clics/solicitudes atribuidos por src",
   "tercero": "Seguidores netos ≥ 0, ≥ 1 compartido por episodio y 0 choques de hora"
  },
  "pendientes_dueño": [

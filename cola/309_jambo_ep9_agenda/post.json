@@ -1,38 +1,37 @@
 {
-  "tipo": "reel",
-  "texto": "Tres citas a las cinco y una agenda que «lo apunta todo». La Jupillo descubre quién es quién.\n¿Te han doblado alguna vez una cita? ¿A quién culpas?\nMándaselo a quien carga con la agenda de todos.\n#humornegro #peluqueria #agenda #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
-  "cuando": "2026-11-17T16:40:00+01:00",
-  "compartir_en_feed": true,
-  "prueba_no_seguidores": true,
-  "formato": "Serie El Jambo",
-  "publico": "peluquería / estética",
-  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
-  "_fuentes": [],
-  "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
-  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
-  "renderizado": false,
-  "motor_voz": "edge",
-  "comentario_fijado": "¿Te han doblado alguna vez una cita? Episodio nuevo cada día en @neogestlab",
-  "avance_siguiente": "Mañana: faltan cuarenta euros en la caja",
-  "portada_ms": 0,
-  "monetizacion": {
-    "objetivo": "visita_perfil",
-    "oferta": "prueba gratuita en /solicitar (texto del post)",
-    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
-  },
-  "musica": {
-    "titulo": "Sneaky Snitch",
-    "autor": "Kevin MacLeod",
-    "licencia": "CC BY 4.0",
-    "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Sneaky_Snitch.mp3",
-    "bpm": 87.6
-  },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-15T19:32:57+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan [], sobran ['a'] (rehacer esas frases)"
-    ],
-    "guion_md5": "c7899c139c9af2ff11d50cde74d17963"
-  }
+ "tipo": "reel",
+ "texto": "Tres citas a las cinco y una agenda que «lo apunta todo». La Jupillo descubre quién es quién.\n¿Te han doblado alguna vez una cita? ¿A quién culpas?\nMándaselo a quien carga con la agenda de todos.\n#humornegro #peluqueria #agenda #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+ "cuando": "2026-11-17T16:40:00+01:00",
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "formato": "Serie El Jambo",
+ "publico": "peluquería / estética",
+ "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
+ "_fuentes": [],
+ "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
+ "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+ "motor_voz": "edge",
+ "comentario_fijado": "¿Te han doblado alguna vez una cita? Episodio nuevo cada día en @neogestlab",
+ "avance_siguiente": "Mañana: faltan cuarenta euros en la caja",
+ "portada_ms": 0,
+ "monetizacion": {
+  "objetivo": "visita_perfil",
+  "oferta": "prueba gratuita en /solicitar (texto del post)",
+  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+ },
+ "musica": {
+  "titulo": "Sneaky Snitch",
+  "autor": "Kevin MacLeod",
+  "licencia": "CC BY 4.0",
+  "url": "https://incompetech.com/music/royalty-free/",
+  "archivo": "Sneaky_Snitch.mp3",
+  "bpm": 87.6
+ },
+ "_control_audio_fallo": {
+  "fecha": "2026-11-15T19:32:57+00:00",
+  "bloqueos": [
+   "voz distinta del guion: faltan [], sobran ['a'] (rehacer esas frases)"
+  ],
+  "guion_md5": "c7899c139c9af2ff11d50cde74d17963"
+ }
 }

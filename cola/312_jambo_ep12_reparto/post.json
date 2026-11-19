@@ -1,38 +1,37 @@
 {
-  "tipo": "reel",
-  "texto": "El paquete llegó… a la puerta equivocada. «Seguro», dijo la Pelota. La Jupillo lo localiza.\n¿Cuál fue tu entrega más absurda? Cuéntalo en comentarios.\nMándaselo a quien reparte y se guía por el mapa de la Pelota.\n#humornegro #reparto #transporte #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
-  "cuando": "2026-11-19T20:40:00+01:00",
-  "compartir_en_feed": true,
-  "prueba_no_seguidores": true,
-  "formato": "Serie El Jambo",
-  "publico": "reparto / transporte",
-  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
-  "_fuentes": [],
-  "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
-  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
-  "renderizado": false,
-  "motor_voz": "edge",
-  "comentario_fijado": "¿Cuál fue tu entrega más absurda? Episodio nuevo cada día en @neogestlab",
-  "avance_siguiente": "Mañana: «un cambio pequeñito» por decimocuarta vez",
-  "portada_ms": 0,
-  "monetizacion": {
-    "objetivo": "visita_perfil",
-    "oferta": "prueba gratuita en /solicitar (texto del post)",
-    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
-  },
-  "musica": {
-    "titulo": "Fluffing a Duck",
-    "autor": "Kevin MacLeod",
-    "licencia": "CC BY 4.0",
-    "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Fluffing_a_Duck.mp3",
-    "bpm": 123.0
-  },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-15T20:34:26+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['giro'], sobran ['quiro', 'a'] (rehacer esas frases)"
-    ],
-    "guion_md5": "2a2807d3ff362d7d7cdf9f6017ba5456"
-  }
+ "tipo": "reel",
+ "texto": "El paquete llegó… a la puerta equivocada. «Seguro», dijo la Pelota. La Jupillo lo localiza.\n¿Cuál fue tu entrega más absurda? Cuéntalo en comentarios.\nMándaselo a quien reparte y se guía por el mapa de la Pelota.\n#humornegro #reparto #transporte #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+ "cuando": "2026-11-19T20:40:00+01:00",
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "formato": "Serie El Jambo",
+ "publico": "reparto / transporte",
+ "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
+ "_fuentes": [],
+ "_comprobado": "Sin cifra: el mensaje final es una reflexión sin dato. Cualquier cifra futura necesita fuente primaria (B4).",
+ "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+ "motor_voz": "edge",
+ "comentario_fijado": "¿Cuál fue tu entrega más absurda? Episodio nuevo cada día en @neogestlab",
+ "avance_siguiente": "Mañana: «un cambio pequeñito» por decimocuarta vez",
+ "portada_ms": 0,
+ "monetizacion": {
+  "objetivo": "visita_perfil",
+  "oferta": "prueba gratuita en /solicitar (texto del post)",
+  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+ },
+ "musica": {
+  "titulo": "Fluffing a Duck",
+  "autor": "Kevin MacLeod",
+  "licencia": "CC BY 4.0",
+  "url": "https://incompetech.com/music/royalty-free/",
+  "archivo": "Fluffing_a_Duck.mp3",
+  "bpm": 123.0
+ },
+ "_control_audio_fallo": {
+  "fecha": "2026-11-15T20:34:26+00:00",
+  "bloqueos": [
+   "voz distinta del guion: faltan ['giro'], sobran ['quiro', 'a'] (rehacer esas frases)"
+  ],
+  "guion_md5": "2a2807d3ff362d7d7cdf9f6017ba5456"
+ }
 }
