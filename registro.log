@@ -1,4 +1,3 @@
-2026-11-15 10:58  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(2.6), np.float64(3.7), np.float64(4.3), np.float64(1.7), np.float64(3.2), np.float64(3.0), np.float64(4.9), np.float64(2.8)]
 2026-11-15 10:59  Voz: alineación palabra a palabra (small, 22.1 s): 8/8 frases
 2026-11-15 11:00  Mezcla: voz -17.0 LUFS, música -22.5 LUFS (con ducking -25.2), la música baja 6.0 dB (p90) bajo la voz, ratio 2.328; máster -16.91 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
 2026-11-15 11:00  Control de audio: OK; duración 25.7 s
@@ -598,3 +597,4 @@
 2026-11-19 19:00  326_jambo_gimnasio_socios: YouTube publicado https://youtube.com/shorts/7NMNjh66ZTI
 2026-11-19 19:00  326_jambo_gimnasio_socios: Facebook publicado https://www.facebook.com/reel/1450202407223473
 2026-11-19 19:00  326_jambo_gimnasio_socios: publicado https://www.instagram.com/reel/Df7rHNOFEMW/
+2026-11-19 20:30  Estadísticas actualizadas (30 posts, 1599 seguidores)
