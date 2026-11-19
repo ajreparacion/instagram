@@ -1855,6 +1855,7 @@ def publicar_pendientes(cfg):
             log(f"{nombre}: caducado, movido a errores/")
             continue
         if not puede_publicar(carpeta):
+            log(f"{nombre}: NO publicado, sin aprobación de Calidad (nota >= {NOTA_MINIMA}) ni del dueño")
             continue
         if sin_cdn and post.get("tipo") in ("carrusel", "imagen", "historia"):
             continue
