@@ -1,16 +1,11 @@
 {
-  "fecha": "2026-11-15T20:50:35+00:00",
+  "fecha": "2026-11-19T23:19:04+00:00",
   "avisos": [],
   "ajustes_ducking": [
     {
       "ratio": 2.5,
-      "bajada_p90_db": 6.33,
-      "ratio_nuevo": 2.319
-    },
-    {
-      "ratio": 2.319,
-      "bajada_p90_db": 6.01,
-      "ratio_nuevo": 2.314
+      "bajada_p90_db": 6.32,
+      "ratio_nuevo": 2.324
     }
   ],
   "duracion_s": 21.35,
@@ -21,15 +16,15 @@
   "musica_entre_frases_db": -30.9,
   "musica_en_voz_db": -35.2,
   "huecos_voz": [],
-  "ratio_duck_usado": 2.314,
+  "ratio_duck_usado": 2.324,
   "voz_lufs": -16.1,
   "musica_lufs": -23.1,
   "musica_con_ducking_lufs": -25.9,
   "master": {
     "objetivo_lufs": -14.0,
-    "antes_lufs": -15.81,
+    "antes_lufs": -15.85,
     "antes_pico_dbtp": -1.99,
     "despues_lufs": -14.0,
-    "despues_pico_dbfs": -1.3
+    "despues_pico_dbfs": -1.4
   }
 }

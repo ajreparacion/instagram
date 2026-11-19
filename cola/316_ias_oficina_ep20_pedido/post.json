@@ -1,35 +1,36 @@
 {
- "tipo": "reel",
- "compartir_en_feed": true,
- "prueba_no_seguidores": true,
- "portada_ms": 0,
- "texto": "El cliente pregunta por su pedido. La Trámites lo tiene «en tramitación»; la Jupillo lo encuentra en el coche.\n¿Cuántas veces has dicho «ya sale» sin que saliera? Cuéntalo.\nMándaselo a ese compañero que siempre contesta «ya sale».\n#humornegro #reparto #logistica #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Life of Riley\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
- "cuando": "2026-11-21T20:45:00+01:00",
- "formato": "Serie El Jambo",
- "publico": "reparto y transporte",
- "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
- "_fuentes": [],
- "_comprobado": "Sin cifras ni funciones de producto: humor de ficción.",
- "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
- "comentario_fijado": "¿Cuántas veces has dicho «ya sale» sin que saliera? Episodio nuevo cada día en @neogestlab",
- "avance_siguiente": "Mañana: vendes a 12 € y te quedan 4,52 €",
- "monetizacion": {
-  "objetivo": "visita_perfil",
-  "oferta": "prueba gratuita en /solicitar (texto del post)",
-  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
- },
- "motor_voz": "edge",
- "musica": {
-  "titulo": "Life of Riley",
-  "autor": "Kevin MacLeod",
-  "licencia": "CC BY 4.0",
-  "url": "https://incompetech.com/music/royalty-free/",
-  "archivo": "Life_of_Riley.mp3",
-  "bpm": 101.3
- },
- "asset": "316_ias_oficina_ep20_pedido.mp4",
- "control_audio": {
-  "aprobado": true,
-  "duracion_s": 18.23
- }
+  "tipo": "reel",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "portada_ms": 0,
+  "texto": "El cliente pregunta por su pedido. La Trámites lo tiene «en tramitación»; la Jupillo lo encuentra en el coche.\n¿Cuántas veces has dicho «ya sale» sin que saliera? Cuéntalo.\nMándaselo a ese compañero que siempre contesta «ya sale».\n#humornegro #reparto #logistica #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Life of Riley\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-21T20:45:00+01:00",
+  "formato": "Serie El Jambo",
+  "publico": "reparto y transporte",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
+  "_fuentes": [],
+  "_comprobado": "Sin cifras ni funciones de producto: humor de ficción.",
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "comentario_fijado": "¿Cuántas veces has dicho «ya sale» sin que saliera? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: vendes a 12 € y te quedan 4,52 €",
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+  },
+  "motor_voz": "edge",
+  "musica": {
+    "titulo": "Life of Riley",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Life_of_Riley.mp3",
+    "bpm": 101.3
+  },
+  "asset": "316_ias_oficina_ep20_pedido.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 18.2
+  },
+  "renderizado": "2026-11-19T23:20:19+00:00"
 }

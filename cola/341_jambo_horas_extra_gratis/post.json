@@ -41,6 +41,6 @@
   },
   "asset": "341_jambo_horas_extra_gratis.mp4",
   "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/95d28a26c_341_jambo_horas_extra_gratis.mp4",
-  "_intentos_render": 1,
-  "_error_render": "El generador falló: Traceback (most recent call last):\n  File \"/home/runner/work/instagram/instagram/herramientas/hacer_reel.py\", line 2684, in <module>\n    main()\n  File \"/home/runner/work/instagram/instagram/herramientas/hacer_reel.py\", line 2550, in main\n    esc = g[\"escenas\"]\n          ~^^^^^^^^^^^\nKeyError: 'escenas'\n"
+  "_intentos_render": 2,
+  "_error_render": "El generador falló: Traceback (most recent call last):\n  File \"/home/runner/work/instagram/instagram/herramientas/hacer_reel.py\", line 2702, in <module>\n    main()\n  File \"/home/runner/work/instagram/instagram/herramientas/hacer_reel.py\", line 2568, in main\n    esc = g[\"escenas\"]\n          ~^^^^^^^^^^^\nKeyError: 'escenas'\n"
 }

@@ -39,6 +39,6 @@
   },
   "asset": "802_recepcionista_que_hace.mp4",
   "_video_externo_usado": "https://raw.githubusercontent.com/ajreparacion/instagram/entrada-videos/802_recepcionista_que_hace.mp4",
-  "_intentos_render": 1,
+  "_intentos_render": 2,
   "_error_render": "Falta guion.json o remaster.json"
 }

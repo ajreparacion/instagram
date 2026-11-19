@@ -24,7 +24,7 @@
   "estilo": "gag",
   "hablante": "tramites",
   "inicio": 3.7,
-  "duracion": 3.767,
+  "duracion": 3.5,
   "texto": "Está en tramitación. La tramitación está en revisión.",
   "enfasis": [
    7
@@ -34,8 +34,8 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 7.467,
-  "duracion": 2.7,
+  "inicio": 7.2,
+  "duracion": 2.8,
   "texto": "Sale hoy. Y llega ayer. Seguro.",
   "enfasis": [
    5
@@ -45,8 +45,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 10.167,
-  "duracion": 1.533,
+  "inicio": 10.0,
+  "duracion": 1.667,
   "texto": "¡Lo bueno se hace esperar!",
   "enfasis": [
    4
@@ -56,7 +56,7 @@
   "escena": 5,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 11.7,
+  "inicio": 11.667,
   "duracion": 3.633,
   "texto": "Lo localicé. Estaba en tu coche. Desde el lunes.",
   "enfasis": [
@@ -67,7 +67,7 @@
   "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 15.333,
+  "inicio": 15.3,
   "duracion": 2.9,
   "texto": "¿Cuántas veces has dicho «ya sale» sin que saliera?",
   "enfasis": []
