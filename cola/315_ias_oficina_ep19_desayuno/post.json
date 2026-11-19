@@ -1,36 +1,35 @@
 {
-  "tipo": "reel",
-  "compartir_en_feed": true,
-  "prueba_no_seguidores": true,
-  "portada_ms": 0,
-  "texto": "Por quinta vez, un huésped pregunta la hora del desayuno. La Pelota cambia la respuesta cada vez.\n¿Qué te preguntan mil veces en el trabajo? Cuéntalo en comentarios.\nMándaselo a ese compañero de recepción que ya no sabe qué contestar.\n#humornegro #hotel #recepcion #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
-  "cuando": "2026-11-20T20:40:00+01:00",
-  "formato": "Serie El Jambo",
-  "publico": "hotel pequeño",
-  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
-  "_fuentes": [],
-  "_comprobado": "Sin cifras ni funciones de producto: humor de ficción.",
-  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
-  "comentario_fijado": "¿Qué te preguntan mil veces en el trabajo? Episodio nuevo cada día en @neogestlab",
-  "avance_siguiente": "Mañana: cobras la nómina y no sabes adónde va",
-  "monetizacion": {
-    "objetivo": "visita_perfil",
-    "oferta": "prueba gratuita en /solicitar (texto del post)",
-    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
-  },
-  "motor_voz": "edge",
-  "musica": {
-    "titulo": "Sneaky Snitch",
-    "autor": "Kevin MacLeod",
-    "licencia": "CC BY 4.0",
-    "url": "https://incompetech.com/music/royalty-free/",
-    "archivo": "Sneaky_Snitch.mp3",
-    "bpm": 87.6
-  },
-  "asset": "315_ias_oficina_ep19_desayuno.mp4",
-  "control_audio": {
-    "aprobado": true,
-    "duracion_s": 18.7
-  },
-  "renderizado": "2026-11-19T23:04:42+00:00"
+ "tipo": "reel",
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "portada_ms": 0,
+ "texto": "Por quinta vez, un huésped pregunta la hora del desayuno. La Pelota cambia la respuesta cada vez.\n¿Qué te preguntan mil veces en el trabajo? Cuéntalo en comentarios.\nMándaselo a ese compañero de recepción que ya no sabe qué contestar.\n#humornegro #hotel #recepcion #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+ "cuando": "2026-11-20T20:40:00+01:00",
+ "formato": "Serie El Jambo",
+ "publico": "hotel pequeño",
+ "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
+ "_fuentes": [],
+ "_comprobado": "Sin cifras ni funciones de producto: humor de ficción.",
+ "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+ "comentario_fijado": "¿Qué te preguntan mil veces en el trabajo? Episodio nuevo cada día en @neogestlab",
+ "avance_siguiente": "Mañana: cobras la nómina y no sabes adónde va",
+ "monetizacion": {
+  "objetivo": "visita_perfil",
+  "oferta": "prueba gratuita en /solicitar (texto del post)",
+  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+ },
+ "motor_voz": "edge",
+ "musica": {
+  "titulo": "Sneaky Snitch",
+  "autor": "Kevin MacLeod",
+  "licencia": "CC BY 4.0",
+  "url": "https://incompetech.com/music/royalty-free/",
+  "archivo": "Sneaky_Snitch.mp3",
+  "bpm": 87.6
+ },
+ "asset": "315_ias_oficina_ep19_desayuno.mp4",
+ "control_audio": {
+  "aprobado": true,
+  "duracion_s": 18.7
+ }
 }
