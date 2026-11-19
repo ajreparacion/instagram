@@ -51,6 +51,15 @@ MODELOS = [
 N_POR_DEFECTO = 4
 PERSONAJES_VALIDOS = {"rosa", "felipe", "sindy", "neo", "cliente"}
 ESTILOS_VALIDOS = {"gancho", "gag", "remate", "cierre"}
+# 19/11/2026: rechazo mecánico de lo que más se parece a "declaración de postura" en vez de
+# una frase hablada con golpe cómico (el fallo real que el dueño señaló). No es perfecto
+# (no distingue una frase larga pero graciosa), pero descarta el patrón más repetido.
+PATRON_ARGUMENTO = re.compile(
+    r"\b(no debería|debería|no tiene por qué|no tendría que|tendría que|no debe|"
+    r"es (un|una) (derecho|obligación|falta de respeto)|eso (no )?es justo)\b",
+    re.IGNORECASE,
+)
+MAX_PALABRAS_GAG = 14
 
 
 def _leer(ruta, lineas=None):
@@ -124,13 +133,39 @@ contenido ni frases literales):
 {virales}
 ---
 
+AVISO DE CALIDAD REAL (esto es lo que el dueño está señalando ahora mismo, 19/11: "tienen
+que ser de gran calidad"): el validador automático solo comprueba la FORMA (número de
+escenas, personajes válidos, longitud de la moraleja); nunca ha comprobado si el chiste
+funciona, así que no te confíes de que "pasa" signifique que es bueno. El fallo que más se
+repite en los borradores recientes es que cada "gag" es una DECLARACIÓN DE POSTURA (alguien
+defendiendo una opinión, tipo debate o panfleto: "el compromiso familiar no debería tener
+precio alguno") en vez de una REACCIÓN HABLADA natural con timing cómico. Eso no hace reír.
+  MAL (declaración, prohibido): "El compromiso familiar no debería tener precio alguno."
+  BIEN (reacción con golpe): "Ya puestos, tráete también a mi suegra, que así hacemos piña."
+Cada gag debe sonar a algo que alguien realmente suelta en voz alta al oír la frase
+anterior (ironía, sarcasmo, la consecuencia absurda llevada un paso más lejos), nunca a un
+argumento razonado. Si al leerlo en voz alta suena a artículo de opinión, está mal escrito:
+reescríbelo como lo diría una persona enfadada o resignada en ese momento.
+Dato real de rendimiento (virales_semana.md, visto el 16/11): lo que mejor ha funcionado en
+la cuenta hasta ahora son los episodios de cliente/jefe con una situación reconocible desde
+la primera línea y, sobre todo, los que tienen "Parte 2" (continuidad: alguien pregunta
+"¿y qué pasó con...?" y el episodio responde). Los temas de oficina genéricos sin ese gancho
+reconocible son los que menos vistas sacan. Cuando puedas, prefiere una situación que un
+espectador reconozca de inmediato por haberla vivido, y considera si el conflicto de hoy
+podría tener una "Parte 2" natural para otro episodio (dilo en el slug con "_parte2" si es
+la continuación de un tema ya usado: {temas}).
+
 Reglas duras (si no las cumples, el episodio se rechaza):
 1. Gancho en pantalla desde el fotograma 0, máximo 8 palabras, una situación reconocible
    (no una explicación). Debe leerse y entenderse sin sonido.
 2. Escalada de exactamente 3 golpes, cada uno con MÁS lógica y PEOR consecuencia que el
-   anterior; nunca una frase suelta sin relación con el golpe de antes.
+   anterior; nunca una frase suelta sin relación con el golpe de antes; y nunca una frase
+   que suene a declaración de postura o argumento razonado (ver AVISO DE CALIDAD arriba):
+   cada golpe es algo que se dice en caliente, con ironía o sarcasmo, no un alegato.
 3. El giro lo resuelve Neo y responde exactamente al conflicto planteado, no a otro; deja a
-   Rosa en evidencia sin alterarse.
+   Rosa en evidencia sin alterarse. La frase de Neo también debe sonar hablada, no un
+   comunicado: evita el patrón repetitivo "He [verbo] el/la [trámite]" en todos los
+   episodios de la misma tanda; varía cómo lo cuenta Neo.
 4. Moraleja obligatoria de 6-9 palabras, tono serio, que se entienda sola si alguien la lee
    guardada sin ver el vídeo.
 5. Nunca Rosa dice la moraleja ni "Que lo resuelva el Neo" (eso lo dicen Felipe o Sindy,
@@ -246,6 +281,12 @@ def _validar(ep):
     gags = [e for e in escenas if e.get("e") == "gag"]
     if len(gags) != 3:
         motivos.append(f"{len(gags)} golpes de escalada (deben ser exactamente 3)")
+    for i, g in enumerate(gags, 1):
+        texto = str(g.get("t", ""))
+        if PATRON_ARGUMENTO.search(texto):
+            motivos.append(f"gag {i} suena a declaración de postura, no a frase hablada: {texto!r}")
+        if len(texto.split()) > MAX_PALABRAS_GAG:
+            motivos.append(f"gag {i} tiene {len(texto.split())} palabras (máx {MAX_PALABRAS_GAG}; si es tan largo, probablemente es un argumento, no un golpe)")
     if escenas and escenas[0].get("h") and len(str(escenas[0].get("t", "")).split()) > 8:
         motivos.append("el gancho supera las 8 palabras")
     for e in escenas:
