@@ -24,7 +24,7 @@
   "estilo": "gag",
   "hablante": "pelota",
   "inicio": 4.5,
-  "duracion": 3.133,
+  "duracion": 3.233,
   "texto": "Aprobado seguro. Con un cinco. O un diez.",
   "enfasis": [
    7
@@ -34,8 +34,8 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "tramites",
-  "inicio": 7.633,
-  "duracion": 4.733,
+  "inicio": 7.733,
+  "duracion": 4.4,
   "texto": "El final vale la mitad. El parcial, treinta. Las prácticas, veinte.",
   "enfasis": [
    10
@@ -45,8 +45,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 12.367,
-  "duracion": 2.767,
+  "inicio": 12.133,
+  "duracion": 3.033,
   "texto": "¡Con mentalidad de campeón, apruebas sin estudiar!",
   "enfasis": [
    5,
@@ -57,7 +57,7 @@
   "escena": 5,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 15.133,
+  "inicio": 15.167,
   "duracion": 5.133,
   "texto": "Con un ocho en prácticas, bastaría un cuatro con veintiocho. Y presentarte, claro.",
   "enfasis": [
@@ -68,7 +68,7 @@
   "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 20.267,
+  "inicio": 20.3,
   "duracion": 2.2,
   "texto": "¿Qué nota necesitas tú en el final?",
   "enfasis": []

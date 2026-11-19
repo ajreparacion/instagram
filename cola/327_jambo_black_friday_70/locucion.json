@@ -24,7 +24,7 @@
   "estilo": "gag",
   "hablante": "tramites",
   "inicio": 3.833,
-  "duracion": 2.933,
+  "duracion": 2.733,
   "texto": "La calculadora dice que perdemos en cada venta.",
   "enfasis": [
    6,
@@ -35,8 +35,8 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 6.767,
-  "duracion": 1.733,
+  "inicio": 6.567,
+  "duracion": 1.833,
   "texto": "¡Más ventas es más éxito!",
   "enfasis": [
    4
@@ -46,8 +46,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 8.5,
-  "duracion": 1.6,
+  "inicio": 8.4,
+  "duracion": 1.733,
   "texto": "¡Perder dinero es invertir!",
   "enfasis": [
    3
@@ -57,7 +57,7 @@
   "escena": 5,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 10.1,
+  "inicio": 10.133,
   "duracion": 5.833,
   "texto": "Solucionado. Primero subo los precios. Luego pongo el descuento. Se llama viernes negro.",
   "enfasis": [
@@ -69,7 +69,7 @@
   "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 15.933,
+  "inicio": 15.967,
   "duracion": 2.2,
   "texto": "¿Tú también rebajas de locura?",
   "enfasis": []
