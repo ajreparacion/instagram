@@ -1,25 +1,3 @@
-2026-11-15 12:45  318_jambo_ep1_parte2_momentito: Facebook publicado https://www.facebook.com/reel/2395197071221323
-2026-11-15 12:45  318_jambo_ep1_parte2_momentito: publicado https://www.instagram.com/reel/DfwtAyJjq_n/
-2026-11-15 12:51  Voz con edge-tts: 9 frases en 4 s
-2026-11-15 12:51  Voz: silencios recortados por frase (s): [0.12, 0.14, 0.13, 0.13, 0.13, 0.13, 0.14, 0.12, 0.13]
-2026-11-15 12:51  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(2.5), np.float64(3.3), np.float64(3.7), np.float64(4.4), np.float64(3.8), np.float64(4.9), np.float64(2.4), np.float64(5.2), np.float64(4.2)]
-2026-11-15 12:52  Voz: alineación palabra a palabra (small, 23.5 s): 9/9 frases
-2026-11-15 12:52  Mezcla: voz -15.8 LUFS, música -22.1 LUFS (con ducking -24.7), la música baja 6.0 dB (p90) bajo la voz, ratio 2.04; máster -15.83 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
-2026-11-15 12:52  Control de audio: FALLA voz distinta del guion: faltan ['bola'], sobran ['vola'] (rehacer esas frases); duración 22.07 s
-2026-11-15 12:52  332_jambo_becario_experiencia: NO se publica, control de audio: voz distinta del guion: faltan ['bola'], sobran ['vola'] (rehacer esas frases)
-2026-11-15 12:52  Voz con edge-tts: 9 frases en 4 s
-2026-11-15 12:52  Voz: silencios recortados por frase (s): [0.13, 0.14, 0.14, 0.11, 0.13, 0.12, 0.14, 0.13, 0.13]
-2026-11-15 12:52  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(4.0), np.float64(1.0), np.float64(4.2), np.float64(4.1), np.float64(3.6), np.float64(4.8), np.float64(3.1), np.float64(3.8), np.float64(4.2)]
-2026-11-15 12:53  Voz: alineación palabra a palabra (small, 23.4 s): 9/9 frases
-2026-11-15 12:54  Mezcla: voz -16.2 LUFS, música -22.5 LUFS (con ducking -24.7), la música baja 6.0 dB (p90) bajo la voz, ratio 2.263; máster -16.15 -> -14.0 LUFS, pico -1.5 dBFS; huecos de voz: []
-2026-11-15 12:54  Control de audio: OK; duración 24.37 s
-2026-11-15 12:54  333_jambo_precio_de_amigo: renderizado con voz y subido a la release 'cola'
-2026-11-15 12:54  Voz con edge-tts: 9 frases en 4 s
-2026-11-15 12:54  Voz: silencios recortados por frase (s): [0.13, 0.12, 0.13, 0.12, 0.14, 0.13, 0.13, 0.14, 0.14]
-2026-11-15 12:54  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.7), np.float64(4.0), np.float64(2.9), np.float64(4.0), np.float64(5.5), np.float64(4.2), np.float64(4.5), np.float64(4.0), np.float64(4.1)]
-2026-11-15 12:54  Voz: alineación palabra a palabra (small, 35.7 s): 9/9 frases
-2026-11-15 12:55  Mezcla: voz -15.5 LUFS, música -22.6 LUFS (con ducking -24.9), la música baja 6.0 dB (p90) bajo la voz, ratio 2.132; máster -15.52 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
-2026-11-15 12:55  Control de audio: FALLA voz distinta del guion: faltan ['leelos'], sobran ['lee', 'los'] (rehacer esas frases); duración 23.43 s
 2026-11-15 12:55  334_jambo_lunes_con_el_bola: NO se publica, control de audio: voz distinta del guion: faltan ['leelos'], sobran ['lee', 'los'] (rehacer esas frases)
 2026-11-15 12:55  Voz con edge-tts: 7 frases en 3 s
 2026-11-15 12:55  Voz: silencios recortados por frase (s): [0.12, 0.12, 0.13, 0.11, 0.13, 0.13, 0.12]
@@ -598,3 +576,25 @@ KeyError: 'escenas'
 2026-11-20 00:20  Mezcla: voz -15.9 LUFS, música -21.9 LUFS (con ducking -24.7), la música baja 6.0 dB (p90) bajo la voz, ratio 2.192; máster -15.72 -> -13.9 LUFS, pico -1.4 dBFS; huecos de voz: []
 2026-11-20 00:20  Control de audio: OK; duración 18.2 s
 2026-11-20 00:20  316_ias_oficina_ep20_pedido: renderizado con voz y subido a la release 'cola'
+2026-11-20 00:31  Voz con edge-tts: 7 frases en 4 s
+2026-11-20 00:31  Voz: silencios recortados por frase (s): [0.14, 0.14, 0.07, 0.12, 0.12, 0.14, 0.14]
+2026-11-20 00:31  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.2), np.float64(2.9), np.float64(3.4), np.float64(3.0), np.float64(3.3), np.float64(4.4), np.float64(4.1)]
+2026-11-20 00:31  Voz: alineación palabra a palabra (small, 14.9 s): 7/7 frases
+2026-11-20 00:31  Mezcla: voz -16.6 LUFS, música -22.6 LUFS (con ducking -25.5), la música baja 5.79 dB (p90) bajo la voz, ratio 2.5; máster -16.17 -> -14.0 LUFS, pico -0.6 dBFS; huecos de voz: []
+2026-11-20 00:31  Control de audio: FALLA voz distinta del guion: faltan ['apruebas'], sobran ['aprueba'] (rehacer esas frases); duración 22.53 s
+2026-11-20 00:31  404_nota_examen_reel: NO se publica, control de audio: voz distinta del guion: faltan ['apruebas'], sobran ['aprueba'] (rehacer esas frases)
+2026-11-20 00:31  Voz con edge-tts: 7 frases en 3 s
+2026-11-20 00:31  Voz: silencios recortados por frase (s): [0.12, 0.12, 0.13, 0.13, 0.09, 0.13, 0.13]
+2026-11-20 00:31  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(2.8), np.float64(1.8), np.float64(3.6), np.float64(3.7), np.float64(3.0), np.float64(4.3), np.float64(2.7)]
+2026-11-20 00:32  Voz: alineación palabra a palabra (small, 8.2 s): 7/7 frases
+2026-11-20 00:32  Mezcla: voz -16.3 LUFS, música -22.0 LUFS (con ducking -25.1), la música baja 6.0 dB (p90) bajo la voz, ratio 2.314; máster -16.18 -> -14.0 LUFS, pico -1.5 dBFS; huecos de voz: []
+2026-11-20 00:32  Control de audio: OK; duración 18.17 s
+2026-11-20 00:32  327_jambo_black_friday_70: renderizado con voz y subido a la release 'cola'
+2026-11-20 00:32  Voz con edge-tts: 7 frases en 3 s
+2026-11-20 00:32  Voz: silencios recortados por frase (s): [0.12, 0.14, 0.13, 0.13, 0.13, 0.13, 0.14]
+2026-11-20 00:32  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(2.9), np.float64(0.6), np.float64(3.3), np.float64(4.7), np.float64(4.4), np.float64(4.6), np.float64(3.5)]
+2026-11-20 00:32  Voz: alineación palabra a palabra (small, 8.5 s): 7/7 frases
+2026-11-20 00:33  Mezcla: voz -16.3 LUFS, música -22.4 LUFS (con ducking -25.1), la música baja 6.0 dB (p90) bajo la voz, ratio 2.328; máster -16.1 -> -14.0 LUFS, pico -1.5 dBFS; huecos de voz: []
+2026-11-20 00:33  Control de audio: OK; duración 18.7 s
+2026-11-20 00:33  315_ias_oficina_ep19_desayuno: re-renderizado; su aprobación de Calidad anterior queda caducada (Calidad debe reevaluarlo)
+2026-11-20 00:33  315_ias_oficina_ep19_desayuno: renderizado con voz y subido a la release 'cola'

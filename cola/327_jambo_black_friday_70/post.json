@@ -1,35 +1,36 @@
 {
- "tipo": "reel",
- "texto": "70 % de descuento. 100 % de pérdidas. La Jupillo sabe cómo se hace de verdad. Humor negro de ficción.\n¿Haces Black Friday? ¿Rebajas de verdad o de las otras?\nMándaselo a quien monta rebajas sin hacer las cuentas.\n#blackfriday #tiendaonline #humornegro #rebajas #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
- "cuando": "2026-11-20T18:45:00+01:00",
- "compartir_en_feed": true,
- "prueba_no_seguidores": true,
- "formato": "Serie El Jambo",
- "publico": "tienda",
- "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
- "_fuentes": [],
- "_comprobado": "Sin cifras de estudio: solo cifras del guion de ficción; no se afirma ningún dato real.",
- "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
- "motor_voz": "edge",
- "comentario_fijado": "¿Tú también rebajas de locura? Episodio nuevo cada día en @neogestlab",
- "avance_siguiente": "Mañana: cobras la nómina y no sabes adónde va",
- "portada_ms": 0,
- "monetizacion": {
-  "objetivo": "visita_perfil",
-  "oferta": "prueba gratuita en /solicitar (texto del post)",
-  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
- },
- "musica": {
-  "titulo": "Investigations",
-  "autor": "Kevin MacLeod",
-  "licencia": "CC BY 4.0",
-  "url": "https://incompetech.com/music/royalty-free/",
-  "archivo": "Investigations.mp3",
-  "bpm": 95.7
- },
- "asset": "327_jambo_black_friday_70.mp4",
- "control_audio": {
-  "aprobado": true,
-  "duracion_s": 18.17
- }
+  "tipo": "reel",
+  "texto": "70 % de descuento. 100 % de pérdidas. La Jupillo sabe cómo se hace de verdad. Humor negro de ficción.\n¿Haces Black Friday? ¿Rebajas de verdad o de las otras?\nMándaselo a quien monta rebajas sin hacer las cuentas.\n#blackfriday #tiendaonline #humornegro #rebajas #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Investigations\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-20T18:45:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo",
+  "publico": "tienda",
+  "formula": "fórmula vídeos 14/11 (rehecho 15/11)",
+  "_fuentes": [],
+  "_comprobado": "Sin cifras de estudio: solo cifras del guion de ficción; no se afirma ningún dato real.",
+  "_nota_creador": "15/11/2026 Creador (pasada extra, orden del dueño): guion rehecho con la fórmula vigente tras el rechazo de Calidad; renderizado:false para que el ciclo lo renderice de nuevo. Calidad: reevaluar tras el render.",
+  "motor_voz": "edge",
+  "comentario_fijado": "¿Tú también rebajas de locura? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: cobras la nómina y no sabes adónde va",
+  "portada_ms": 0,
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+  },
+  "musica": {
+    "titulo": "Investigations",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Investigations.mp3",
+    "bpm": 95.7
+  },
+  "asset": "327_jambo_black_friday_70.mp4",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 18.17
+  },
+  "renderizado": "2026-11-19T23:32:33+00:00"
 }

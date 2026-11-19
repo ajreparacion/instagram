@@ -1,8 +1,12 @@
 {
-  "aprobado": true,
+  "aprobado": false,
   "nota": 92,
   "comentario": "18.7s, 1080x1920, sin silencios >0.6s, LUFS -14.18/pico -1.42 dB (dentro de estándar). Whisper coincide con guion. Fórmula de 5 tiempos completa: gancho POV, planteamiento, escalada en tres golpes (Pelota/Bola/Trámites), giro visual con sello \"DETRÁS\" en Jupillo, cierre con pregunta concreta y fácil de contestar. Conflicto real de oficina (huésped pesado), sin muletillas de IA, ritmo de cambio cada 1.5-2s. Motor sketch vigente (no el antiguo retirado). Post con atribución musical correcta, aviso de ficción/IA, comentario fijado y avance del siguiente episodio, sin cifras inventadas (serie de humor sin datos de producto).",
   "fecha": "2026-11-19T23:14:17Z",
   "revisor": "Calidad (API)",
-  "render": "2026-11-19T23:04:42+00:00"
+  "render": "2026-11-19T23:04:42+00:00",
+  "aprobado_anterior": true,
+  "nota_anterior": 92,
+  "caducado": "2026-11-19T23:33:12+00:00",
+  "motivo_caducidad": "re-render del ciclo 2026-11-19T23:33:12+00:00"
 }

@@ -1,10 +1,10 @@
 {
   "aprobado": false,
-  "duracion_s": 22.5,
+  "duracion_s": 22.53,
   "bloqueos": [
-    "voz distinta del guion: faltan ['apruebas'], sobran ['a', 'prueba'] (rehacer esas frases)"
+    "voz distinta del guion: faltan ['apruebas'], sobran ['aprueba'] (rehacer esas frases)"
   ],
   "avisos": [],
-  "transcripcion": "Necesito un 4 con 88 en el final. ¿Cómo se calcula eso, pelota? Aprobado seguro, con un 5 o un 10. El final vale la mitad, el parcial 30, las prácticas 20, con mentalidad de campeón, a prueba sin estudiar. Con un 8 en prácticas, bastaría un 4 con 28. Y presentarte, claro. ¿Que nota necesitas tú en el final?",
-  "guion": "Necesito un cuatro con ochenta y ocho en el final. ¿Cómo se calcula eso, Pelota? Aprobado seguro. Con un cinco. O un diez. El final vale la mitad. El parcial, treinta. Las prácticas, veinte. ¡Con mentalidad de campeón, apruebas sin estudiar! Con un ocho en prácticas, bastaría un cuatro con veintiocho. Y presentarte, claro. ¿Qué nota necesitas tú en el final?"
+  "transcripcion": "Necesito un 4 con 88 en el final. ¿Cómo se calcula eso, pelota? Aprobado seguro, con un 5 o un 10. El final vale la mitad, el parcial 30, las prácticas 20, con mentalidad de campeón, tu aprueba sin estudiar. Con un 8 en prácticas, bastaría un 4 con 28. Y presentarte, claro. ¿Que nota necesitas tú en el final?",
+  "guion": "Necesito un cuatro con ochenta y ocho en el final. ¿Cómo se calcula eso, Pelota? Aprobado seguro. Con un cinco. O un diez. El final vale la mitad. El parcial, treinta. Las prácticas, veinte. ¡Con mentalidad de campeón, tú apruebas sin estudiar! Con un ocho en prácticas, bastaría un cuatro con veintiocho. Y presentarte, claro. ¿Qué nota necesitas tú en el final?"
 }
