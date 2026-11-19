@@ -1,0 +1,12 @@
+{
+  "aprobado": false,
+  "nota": 86,
+  "fecha": "2026-11-19T10:43:50+00:00",
+  "revisor": "Calidad (pasada 11:41)",
+  "render": "2026-11-18T21:39:14+00:00",
+  "motivos": [
+    "Pico −0,7 dBFS y −15,2 LUFS (máster sin aplicar)",
+    "Error de voz: whisper oye «Vení del sábado» por «Venid el sábado» (H5)"
+  ],
+  "como_arreglarlo": "Rehacer la primera frase sin el imperativo «Venid» (p. ej. «El sábado se viene a trabajar…») y repetir el máster; volver a Calidad."
+}

@@ -1,0 +1,13 @@
+{
+  "aprobado": false,
+  "nota": 88,
+  "fecha": "2026-11-19T10:43:50+00:00",
+  "revisor": "Calidad (pasada 11:41)",
+  "render": "2026-11-18T20:24:42+00:00",
+  "motivos": [
+    "Vídeo bien (23,2 s, −14,1 LUFS, pico −1,5 dBFS, gancho legible, giro de Neo, cierre con logo 2026)",
+    "Sin control_audio de este render: whisper sin contrastar (no hay transcripción en la carpeta)",
+    "Arreglado por Calidad: el post daba la moraleja como cifra sin fuente; ahora lleva el dato EPA con fuente"
+  ],
+  "como_arreglarlo": "Mejora/Creador: que el ciclo genere control_audio.json de 341 (relanzar con renderizado:false o recalcular) y Calidad lo aprueba si la transcripción coincide."
+}

@@ -1,17 +1,14 @@
 {
   "aprobado": false,
-  "nota": 80,
+  "nota": 82,
+  "fecha": "2026-11-19T10:43:50+00:00",
+  "revisor": "Calidad (pasada 11:41)",
+  "render": "2026-11-18T20:09:07+00:00",
   "motivos": [
-    "Promo: el móvil muestra la web con texto ilegible (no la app resolviendo un problema en pantalla); recorrido de funciones con «antes/ahora» solo rotulado al final: no es ANTES/DESPUÉS",
-    "Pico −0,8 dBFS (> −1 dB)",
-    "Post: precio «desde 3,90 €/mes + IVA» (§12: no se publican precios mientras el dueño no decida), cierre no literal de prueba gratuita con /solicitar?app=gestoria7d&src=…, sin youtube ni avance_siguiente"
+    "Nuevo render del Centro: ANTES/DESPUÉS ya presente, pero son rótulos estáticos y una tarjeta simulada, no la app real en pantalla; planos fijos de más de 2,5 s",
+    "«Link en la bio» en el vídeo (anglicismo; el formato pide «Enlace en el perfil»)",
+    "Pico −4,0 dBFS: bien; control_audio compara con el guion antiguo (no aplica)",
+    "Post: atribución «Fluffing a Duck» de MacLeod sin comprobar que sea la pista que suena; «cuando» del 18/11 ya vencido"
   ],
-  "como_arreglarlo": "Centro/Creador: grabar la app (entorno de pruebas, datos ficticios) haciendo UNA cosa: libros → 303 calculado, con texto legible a pantalla completa, ANTES (hoja de cálculo) / DESPUÉS (un botón), 25-45 s; quitar el precio; cierre único de prueba gratuita; bloques youtube y avance_siguiente.",
-  "fecha": "2026-11-15T21:44:09+00:00",
-  "revisor": "Calidad (pasada cada 2 h)",
-  "render": "2026-11-15T20:05:39+00:00",
-  "aprobado_anterior": false,
-  "nota_anterior": 80,
-  "caducado": "2026-11-18T20:09:07+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-18T20:09:07+00:00"
+  "como_arreglarlo": "Centro: grabar la app real (entorno de pruebas) en el DESPUÉS, cierre «Enlace en el perfil», atribución de la pista real y nueva fecha; volver a Calidad."
 }

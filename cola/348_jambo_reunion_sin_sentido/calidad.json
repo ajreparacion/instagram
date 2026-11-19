@@ -1,0 +1,12 @@
+{
+  "aprobado": false,
+  "nota": 80,
+  "fecha": "2026-11-19T10:43:50+00:00",
+  "revisor": "Calidad (pasada 11:41)",
+  "render": "2026-11-18T21:39:22+00:00",
+  "motivos": [
+    "Cifra sin fuente en voz y pantalla: «el 55 % de las pymes pierde tiempo administrativo» (B4: cifra inventada o sin fuente primaria = rechazo)",
+    "344 y 348 son casi el mismo episodio (reunión absurda + misma moraleja): uno sobra"
+  ],
+  "como_arreglarlo": "Quitar la cifra del vídeo (moraleja sin número) o poner una con fuente primaria abierta y verificada; diferenciar o retirar uno de los dos; re-render y vuelve a Calidad."
+}

@@ -1,0 +1,13 @@
+{
+  "aprobado": false,
+  "nota": 88,
+  "fecha": "2026-11-19T10:43:50+00:00",
+  "revisor": "Calidad (pasada 11:41)",
+  "render": "2026-11-18T21:24:09+00:00",
+  "motivos": [
+    "Pico real por encima de −1 dB (342 −0,7; 343 −0,6; 345 −0,3; 346 −0,5 dBFS) y volumen −14,8/−15,1 LUFS: el máster del estudio no se aplicó",
+    "Control de audio OK",
+    "Tema repetido en la semana (342/346 = plazo de pago, como 319/340; 345 = horas extra, como 341): espaciarlos"
+  ],
+  "como_arreglarlo": "Repetir el máster del estudio (render.mjs) con limitador a pico real ≤ −1 dB y −14 LUFS, volver a subirlo y poner el nuevo video_externo; luego vuelve a Calidad."
+}
