@@ -1,12 +1,8 @@
 {
-  "aprobado": false,
-  "duracion_s": 26.2,
-  "bloqueos": [
-    "voz distinta del guion: faltan ['el', 'trescientos', 'tres', 'otra', 'vez', 'en', 'aqui', 'tus', 'ingresos', 'gastos', 'van', 'libros', 'el', 'sale', 'calculado', 'desde', 'ellos', 'los', 'plazos', 'ordenados', 'y', 'un', 'boton', 'te', 'lleva', 'al', 'modelo', 'sirve', 'particulares', 'autonomos', 'sociedades', 'y', 'gestorias', 'lo', 'dejas', 'preparado', 'y', 'presentas', 'antes', 'formulas', 'pestanas', 'ahora', 'un', 'boton', 'empieza', 'con', 'el', 'plan', 'gratis', 'sin', 'tarjeta', 'enlace', 'el', 'perfil'], sobran ['antes', 'factura', 'sueltas', 'que', 'nunca', 'cuadra', 'ni', 'idea', 'de', 'cuanto', 'le', 'debes', 'hacienda', 'con', 'gestoria', 'siete', 'd', 'metes', 'facturas', 'ella', 'sola', 'calcula', 'tu', 'modelo', 'quinientos', 'veinticinco', 'euros', 'ingresar', 'ya', 'sabes', 'gestoria', 'siete', 'd', 'iva', 'tu', 'rps', 'calculados', 'solos', 'prueba', 'gratuita', 'link', 'la', 'bio'] (rehacer esas frases)"
-  ],
+  "aprobado": true,
+  "duracion_s": 25.93,
+  "bloqueos": [],
   "avisos": [],
-  "transcripcion": "Antes, factura sueltas, una hoja de cálculo que nunca cuadra, y ni idea de cuánto le debes a hacienda. Con Gestoría7D metes tus facturas, y ella sola calcula tu modelo 303. 525 euros a ingresar. Ya lo sabes. Gestoría7D, tu IVA y tu RPS, calculados solos. Prueba gratuita, link en la bio.",
-  "guion": "¿El trescientos tres otra vez en una hoja de cálculo? Aquí tus ingresos y gastos van a tus libros. Y el trescientos tres sale calculado desde ellos. Los plazos, ordenados. Y un botón te lleva al modelo. Sirve a particulares, autónomos, sociedades y gestorías. Lo dejas preparado y lo presentas tú. Antes, fórmulas y pestañas. Ahora, un botón. Empieza con el plan gratis, sin tarjeta. Enlace en el perfil.",
-  "lufs": -14.5,
-  "pico_dbfs": -4.0
+  "transcripcion": "El 303 otra vez en una hoja de cálculo. Aquí tus ingresos y gastos van a tus libros. Y el 303 sale calculado desde ellos. Los plazos ordenados. Y un botón te lleva al modelo. Sirve a particulares autónomos, sociedades y gestorías. Lo dejas preparado y lo presentas tú. Antes, fórmulas y pestañas. Ahora un botón. Empieza con el plan gratis sin tarjeta. Enlace en el perfil.",
+  "guion": "¿El trescientos tres otra vez en una hoja de cálculo? Aquí tus ingresos y gastos van a tus libros. Y el trescientos tres sale calculado desde ellos. Los plazos, ordenados. Y un botón te lleva al modelo. Sirve a particulares, autónomos, sociedades y gestorías. Lo dejas preparado y lo presentas tú. Antes, fórmulas y pestañas. Ahora, un botón. Empieza con el plan gratis, sin tarjeta. Enlace en el perfil."
 }

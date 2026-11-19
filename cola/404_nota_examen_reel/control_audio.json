@@ -1,8 +1,10 @@
 {
-  "aprobado": true,
-  "duracion_s": 22.47,
-  "bloqueos": [],
+  "aprobado": false,
+  "duracion_s": 22.5,
+  "bloqueos": [
+    "voz distinta del guion: faltan ['apruebas'], sobran ['a', 'prueba'] (rehacer esas frases)"
+  ],
   "avisos": [],
-  "transcripcion": "Necesito un 4,88 en el final. ¿Cómo se calcula eso, pelota? Aprobado seguro, con un 5 o un 10. El final vale la mitad, el parcial 30, las prácticas 20, con mentalidad de campeón, a pruebas sin estudiar. Con un 8 en prácticas, bastaría un 4,28 y presentarte, claro. ¿Qué nota necesitas tú en el final?",
+  "transcripcion": "Necesito un 4 con 88 en el final. ¿Cómo se calcula eso, pelota? Aprobado seguro, con un 5 o un 10. El final vale la mitad, el parcial 30, las prácticas 20, con mentalidad de campeón, a prueba sin estudiar. Con un 8 en prácticas, bastaría un 4 con 28. Y presentarte, claro. ¿Que nota necesitas tú en el final?",
   "guion": "Necesito un cuatro con ochenta y ocho en el final. ¿Cómo se calcula eso, Pelota? Aprobado seguro. Con un cinco. O un diez. El final vale la mitad. El parcial, treinta. Las prácticas, veinte. ¡Con mentalidad de campeón, apruebas sin estudiar! Con un ocho en prácticas, bastaría un cuatro con veintiocho. Y presentarte, claro. ¿Qué nota necesitas tú en el final?"
 }

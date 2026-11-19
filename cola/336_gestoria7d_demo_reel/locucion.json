@@ -28,7 +28,7 @@
   "estilo": "tramo",
   "hablante": null,
   "inicio": 8.967,
-  "duracion": 3.733,
+  "duracion": 3.767,
   "texto": "Los plazos, ordenados. Y un botón te lleva al modelo.",
   "enfasis": [
    9
@@ -38,7 +38,7 @@
   "escena": 3,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 12.7,
+  "inicio": 12.733,
   "duracion": 5.933,
   "texto": "Sirve a particulares, autónomos, sociedades y gestorías. Lo dejas preparado y lo presentas tú.",
   "enfasis": [
@@ -49,7 +49,7 @@
   "escena": 4,
   "estilo": "remate",
   "hablante": null,
-  "inicio": 18.633,
+  "inicio": 18.667,
   "duracion": 3.367,
   "texto": "Antes, fórmulas y pestañas. Ahora, un botón.",
   "enfasis": [
@@ -61,7 +61,7 @@
   "escena": 5,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 22.0,
+  "inicio": 22.033,
   "duracion": 3.9,
   "texto": "Empieza con el plan gratis, sin tarjeta. Enlace en el perfil.",
   "enfasis": [

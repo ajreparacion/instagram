@@ -24,7 +24,7 @@
   "estilo": "gag",
   "hablante": "pelota",
   "inicio": 3.8,
-  "duracion": 2.8,
+  "duracion": 2.9,
   "texto": "A las ocho. O a las nueve. Seguro.",
   "enfasis": [
    7
@@ -34,8 +34,8 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 6.6,
-  "duracion": 2.233,
+  "inicio": 6.7,
+  "duracion": 2.433,
   "texto": "¡El desayuno empieza cuando tú decides!",
   "enfasis": [
    5
@@ -45,8 +45,8 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "tramites",
-  "inicio": 8.833,
-  "duracion": 3.7,
+  "inicio": 9.133,
+  "duracion": 3.433,
   "texto": "El desayuno se solicita con veinticuatro horas de antelación.",
   "enfasis": [
    8
@@ -56,7 +56,7 @@
   "escena": 5,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 12.533,
+  "inicio": 12.567,
   "duracion": 3.833,
   "texto": "De siete a diez. Lo pone el cartel. El que tienes detrás.",
   "enfasis": [
@@ -67,7 +67,7 @@
   "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 16.367,
+  "inicio": 16.4,
   "duracion": 2.3,
   "texto": "¿Qué te preguntan mil veces en el trabajo?",
   "enfasis": []

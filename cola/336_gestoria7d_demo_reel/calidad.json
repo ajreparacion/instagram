@@ -13,6 +13,6 @@
   "como_arreglarlo": "Centro: grabar la app real (entorno de pruebas) en el DESPUÉS, cierre «Enlace en el perfil», atribución de la pista real y nueva fecha; volver a Calidad.",
   "aprobado_anterior": false,
   "nota_anterior": 82,
-  "caducado": "2026-11-19T22:55:12+00:00",
-  "motivo_caducidad": "19/11/2026: rehecho con grabación de pantalla real (Claude Code)"
+  "caducado": "2026-11-19T22:48:34+00:00",
+  "motivo_caducidad": "re-render del ciclo (grabación de pantalla real, control de audio aprobado sin bloqueos) 2026-11-19T22:48:34+00:00"
 }

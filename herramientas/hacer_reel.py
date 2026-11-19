@@ -1582,9 +1582,27 @@ def banda_oscura():
         _app_cache["banda"] = Image.fromarray(arr, "RGBA")
     return _app_cache["banda"]
 
-def pie_neogest(d, vertical):
-    """Pie «By Neogest Lab» (firma de la marca) dentro de la zona segura, abajo a la derecha."""
-    f = font(DJV + "DejaVuSans-Bold.ttf", 30); fs = font(DJV + "DejaVuSans-Bold.ttf", 22)
+_ISOTIPOS = {}
+
+def isotipo_marca(vertical, lado=44):
+    """Isotipo N de la marca 2026 (herramientas/recursos). Nunca el NL antiguo; si falta el PNG, no se dibuja nada."""
+    import os
+    from PIL import Image
+    nombre = "nl2026-isotipo-negativo.png" if vertical else "nl2026-isotipo-color.png"
+    if (nombre, lado) not in _ISOTIPOS:
+        ruta = os.path.join(os.path.dirname(os.path.abspath(__file__)), "recursos", nombre)
+        try:
+            im = Image.open(ruta).convert("RGBA")
+            im.thumbnail((lado, lado), Image.LANCZOS)
+            _ISOTIPOS[(nombre, lado)] = im
+        except OSError:
+            print("AVISO: falta " + ruta + ": el pie sale solo con texto")
+            _ISOTIPOS[(nombre, lado)] = None
+    return _ISOTIPOS[(nombre, lado)]
+
+def pie_neogest(d, vertical, img=None):
+    """Pie «By Neogest Lab» con el isotipo N de la marca 2026, dentro de la zona segura, abajo a la derecha."""
+    f = font(DJV + "DejaVuSans-Bold.ttf", 30)
     txt = "By Neogest Lab"
     tw = d.textlength(txt, font=f); y = 1548; x1 = W - SAFE_R
     x0 = x1 - tw
@@ -1592,9 +1610,9 @@ def pie_neogest(d, vertical):
         d.text((x0, y), txt, font=f, fill=(255, 255, 255, 255), stroke_width=3, stroke_fill=(0, 0, 0, 220))
     else:
         d.text((x0, y), txt, font=f, fill=TINTA + (255,))
-    bx = x0 - 52
-    d.rounded_rectangle([bx, y - 2, bx + 40, y + 38], 9, fill=CIAN + (255,))
-    d.text((bx + 20, y + 18), "NL", font=fs, fill=(255, 255, 255, 255), anchor="mm")
+    ico = isotipo_marca(vertical)
+    if ico is not None and img is not None:
+        img.paste(ico, (int(x0 - ico.width - 12), y + 18 - ico.height // 2), ico)
 
 def enmarcar_apaisado(fr, seed, rng):
     """Video apaisado sobre papel con marco dibujado a mano y sombra."""
@@ -1798,7 +1816,7 @@ def render_frame_app(fi, sc, noise, rg, seed):
         if cp:
             timg, ty = cp
             img.paste(timg, (0, ty), timg)
-    pie_neogest(d, sobre_video and not plant)
+    pie_neogest(d, sobre_video and not plant, img)
     a = np.asarray(img, dtype=np.int16).copy()
     a += noise[fi % 8] // 8
     if lf < 3 and sc.start > 0: a += int(10 * (3 - lf))   # parpadeo minimo en el corte (no al empezar: el fotograma 0 es ya el gancho, B7)
