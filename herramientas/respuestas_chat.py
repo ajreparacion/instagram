@@ -33,8 +33,11 @@ BASE = f"https://graph.facebook.com/{VERSION}"
 VENTANA_H = 23  # Instagram solo permite responder dentro de las 24 h siguientes al mensaje
 MAX_PALABRAS = 20
 
-CENTRO = "https://centro-de-contenido-apps-2f0a3cd6.base44.app/?src=instagram"
-PRUEBA_7D = "https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=instagram"
+CENTRO = ("https://centro-de-contenido-apps-2f0a3cd6.base44.app/?src=instagram"
+          "&utm_source=instagram&utm_medium=dm&utm_campaign=respuestas_chat")
+PRUEBA_7D = ("https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar"
+             "?app=gestion-integral-7d&src=instagram&utm_source=instagram"
+             "&utm_medium=dm&utm_campaign=respuestas_chat")
 CIERRE = "sin tarjeta, sin datos bancarios y sin compromiso"
 
 TEXTOS = {

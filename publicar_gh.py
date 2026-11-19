@@ -1914,6 +1914,26 @@ def publicar_pendientes(cfg):
         break  # como máximo un reel por pasada
 
 
+def añadir_utm_a_enlaces(texto, medio, campaña):
+    def etiquetar(match):
+        url = match.group()
+        sufijo = ""
+        while url and url[-1] in ".,;:!?)]}":
+            sufijo = url[-1] + sufijo
+            url = url[:-1]
+        partes = urllib.parse.urlsplit(url)
+        if partes.scheme not in ("http", "https") or not partes.netloc:
+            return match.group()
+        utm = {"utm_source": "instagram", "utm_medium": medio, "utm_campaign": campaña}
+        query = [(k, v) for k, v in urllib.parse.parse_qsl(partes.query, keep_blank_values=True)
+                 if k not in utm]
+        query.extend(utm.items())
+        url = urllib.parse.urlunsplit(partes._replace(query=urllib.parse.urlencode(query)))
+        return url + sufijo
+
+    return re.sub(r"https?://[^\s<>\"']+", etiquetar, texto or "")
+
+
 # ---------------------------------------------------------------- comentarios
 def responder_comentarios(cfg, maximo=15):
     hechos = set(leer_json(RESPONDIDOS, []) or [])
@@ -1951,7 +1971,9 @@ def responder_comentarios(cfg, maximo=15):
             if clave not in (c.get("text") or "").lower():
                 continue
             try:
-                api(cfg, f"{c['id']}/replies", "POST", message=f"@{c.get('username', '')} {respuesta}".strip())
+                respuesta_utm = añadir_utm_a_enlaces(respuesta, "comment_reply", os.path.basename(carpeta))
+                api(cfg, f"{c['id']}/replies", "POST",
+                    message=f"@{c.get('username', '')} {respuesta_utm}".strip())
                 hechos.add(c["id"])
                 enviados += 1
                 time.sleep(3)

@@ -35,6 +35,19 @@ class PuedePublicarTests(unittest.TestCase):
             self.escribir_calidad(carpeta, {"aprobado": "true", "nota": 100})
             self.assertFalse(publicar_gh.puede_publicar(carpeta))
 
+    def test_reply_links_get_utm_without_losing_existing_parameters(self):
+        texto = "Pruébalo: https://example.com/solicitar?app=demo&src=instagram."
+        resultado = publicar_gh.añadir_utm_a_enlaces(texto, "comment_reply", "reel-407")
+        self.assertIn("app=demo", resultado)
+        self.assertIn("src=instagram", resultado)
+        self.assertIn("utm_source=instagram", resultado)
+        self.assertIn("utm_medium=comment_reply", resultado)
+        self.assertIn("utm_campaign=reel-407.", resultado)
+
+    def test_reply_without_links_is_unchanged(self):
+        texto = "¡Gracias por comentar!"
+        self.assertEqual(publicar_gh.añadir_utm_a_enlaces(texto, "comment_reply", "reel-407"), texto)
+
 
 if __name__ == "__main__":
     unittest.main()
