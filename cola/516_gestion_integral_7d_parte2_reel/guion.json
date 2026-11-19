@@ -74,7 +74,7 @@
     {
       "t": "25-30 s",
       "estilo": "cierre",
-      "pantalla": "Logo NL neón, firma «By Neogest Lab», franja de prueba gratuita",
+      "pantalla": "Cierre estático ≤ 3 s: logo oficial 2026 descargado del kit /marca-2026/ (versión negativa para fondo oscuro; no redibujar), firma «By Neogest Lab» y franja de prueba gratuita",
       "texto_pantalla": "Prueba gratuita · sin tarjeta · sin compromiso",
       "voz": "Pide tu *prueba gratuita*: sin tarjeta, sin datos bancarios y sin compromiso."
     }
