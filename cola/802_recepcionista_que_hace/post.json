@@ -38,7 +38,5 @@
     "texto": "¿Cuántas llamadas se quedan sin coger mientras trabajas?\nLlamada real al asistente telefónico de un negocio: resuelve dudas al momento, toma el recado y lo pasa al equipo para que alguien devuelva la llamada. Después de cada llamada llega un correo con el resumen.\nSolicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=facebook"
   },
   "asset": "802_recepcionista_que_hace.mp4",
-  "_video_externo_usado": "https://raw.githubusercontent.com/ajreparacion/instagram/entrada-videos/802_recepcionista_que_hace.mp4",
-  "_intentos_render": 2,
-  "_error_render": "Falta guion.json o remaster.json"
+  "_video_externo_usado": "https://raw.githubusercontent.com/ajreparacion/instagram/entrada-videos/802_recepcionista_que_hace.mp4"
 }

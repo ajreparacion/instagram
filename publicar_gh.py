@@ -1447,6 +1447,15 @@ def renderizar_pendientes(cfg):
         if isinstance(bloq, dict) and bloq.get("guion_md5") and os.path.exists(gj) and \
                 hashlib.md5(open(gj, "rb").read()).hexdigest() == bloq["guion_md5"]:
             continue   # falló el control de audio con este mismo guion: no se vuelve a renderizar hasta que cambie
+        # 20/11/2026 (bug real, Claude Code): piezas de un motor externo (Neogest Studio, agente telefónico…) que
+        # TODAVÍA no tienen su vídeo (post.json sin "video_externo") no se intentan renderizar aquí: ni tienen
+        # remaster.json, ni un guion.json con "escenas" (hacer_reel.py). Antes se gastaban los 3 intentos contra
+        # un KeyError/"Falta guion.json" y la pieza acababa en errores/ sin que el motor externo hubiera podido
+        # terminarla; ahora se espera sin consumir intentos ni ensuciar el registro.
+        if not str(post.get("video_externo") or "").strip() and not os.path.exists(os.path.join(carpeta, "remaster.json")):
+            g_ext = leer_json(gj, None) if os.path.exists(gj) else None
+            if not os.path.exists(gj) or not (isinstance(g_ext, dict) and g_ext.get("escenas")):
+                continue   # a la espera de que el motor externo (post.json "motor"/guion.json "motor") suba video_externo
         try:
             renderizar(cfg, carpeta, post)
             hechos += 1

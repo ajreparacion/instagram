@@ -32,12 +32,5 @@
   "control_audio": {
     "aprobado": true,
     "duracion_s": 22.47
-  },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-19T23:02:27+00:00",
-    "bloqueos": [
-      "voz distinta del guion: faltan ['apruebas'], sobran ['a', 'prueba'] (rehacer esas frases)"
-    ],
-    "guion_md5": "8874ce5138bf8199fdca177aac036f60"
   }
 }
