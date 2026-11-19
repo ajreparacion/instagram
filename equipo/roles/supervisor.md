@@ -7,7 +7,7 @@ Cuándo: 13:27 (Madrid), a diario. Modelo: Haiku.
 - `cola/*/post.json` (`cuando`, `renderizado`, `video_externo`) y `calidad.json` (`aprobado`, `nota`, fecha), y las últimas 30 líneas de `registro.log`.
 
 ## Comprueba
-1. Huecos de las próximas 12 h sin pieza aprobada (por canal), contando el mínimo de 3 Jambo nuevos al día.
+1. Huecos de las próximas 12 h sin pieza aprobada (por canal), contrastando el objetivo de 2 reels diarios y la mezcla semanal 70/30 de la directiva.
 2. Piezas con `cuando` ya pasado y sin publicar (aprobadas o no).
 3. Piezas rechazadas hace más de 12 h que nadie ha rehecho.
 4. Peticiones del tablón a un rol sin respuesta en más de 24 h.

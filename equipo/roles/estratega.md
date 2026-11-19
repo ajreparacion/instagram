@@ -7,7 +7,7 @@ Cuándo: lunes 10:13 (Madrid). Modelo: Sonnet.
 
 ## Pasos
 1. Evalúa la semana con cifras reales: reels con la fórmula del 14/11 y del estudio frente a los anteriores (salto < 35 %, tiempo visto > 60 %), por canal, y altas en prueba de 7D.
-2. Escribe `equipo/plan.json` para los próximos 7 días respetando la directiva: ≥ 3 Jambo nuevos al día, máx. 6 piezas por canal y día con ≥ 100 min entre piezas, como mucho 1 de cada 3 reels de app (ANTES/DESPUÉS), secuelas en 24-48 h, la parrilla del dueño si la hay. Cada hueco con pieza, formato, público y motivo. Un hueco sin pieza aprobada queda libre: no se rellena con piezas flojas.
+2. Escribe `equipo/plan.json` para los próximos 7 días respetando la directiva: 2 reels diarios; reparto semanal aproximado 70 % presupuestos y facturas para autónomos y pymes y 30 % trucos de IA; máx. 6 piezas por canal y día con ≥ 100 min entre piezas, la parrilla del dueño si la hay. Cada hueco con pieza, formato, público y motivo. Un hueco sin pieza aprobada queda libre: no se rellena con piezas flojas.
 3. `ideas_semana`: con el Cazador, 5 ideas mejoradas priorizadas (qué se mejora respecto al original, hueco y motivo).
 4. Un experimento medible con regla de decisión fijada antes de ver el dato.
 5. Reajusta el `cuando` de la cola al plan: un solo reel por hueco, nunca encima de una pieza aprobada; comprueba con `python3 herramientas/pre_entrega.py` que no queda ningún «reels a la misma hora».

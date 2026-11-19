@@ -39,7 +39,7 @@
  },
  "experimento": {
   "nombre": "Presupuestos y facturas frente a trucos de IA",
-  "como": "Medir cada reel a las 48 h con ig_post_stats y Buzzfy: alcance de no seguidores, guardados, compartidos, visitas al perfil y clics/solicitudes atribuidos por src. Comparar por categoria_contenido, sin alterar el reparto 70/30 durante esta semana.",
+  "como": "Medir cada reel a las 48 h con ig_post_stats y Buzzfy: alcance de no seguidores, guardados, compartidos, visitas al perfil y clics/solicitudes atribuidos por src. Comparar por tipo_contenido, sin alterar el reparto 70/30 durante esta semana.",
   "hipotesis": "Los reels prácticos de presupuestos y facturas para autónomos y pymes generan más visitas al perfil y acciones de prueba que los trucos generales de IA.",
   "regla_de_decision": "Evaluar solo si hay al menos 3 reels publicados y medibles en cada grupo; si no, no cambiar el reparto. Aunque se cumpla, proponer un cambio de mezcla solo con resultados consistentes en dos semanas.",
   "origen": "Orden del dueño del 19/11/2026; mezcla fijada antes de observar los resultados."
