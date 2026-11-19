@@ -4,10 +4,10 @@
   "motivos": [
     "Sin material que revisar: post.json sigue con \"formato\": null, sin asset ni video_externo. inspeccionar_video repite el error 'no tiene asset ni video_externo: nada que descargar'. No se puede evaluar imagen, audio, silencios, LUFS ni estructura del formato.",
     "A3/v9-H6: _fuentes y _comprobado siguen a null. Las afirmaciones sobre Gestión Integral 7D (importar catálogo desde Excel/CSV/PDF/imagen con extracción por IA, albarán numerado que descuenta stock, factura que hereda líneas/IVA/retención en PDF) no tienen ninguna fuente citada en el post; se tratan como no verificadas y no pasan el estándar v9/A3.",
-    "Bloqueo 9 (aprobación caducada / sin material verificable): persiste igual que en la revisión del 19/11; no ha habido cambios desde entonces ni en la de hoy."
+    "Bloqueo 9 (aprobación caducada / sin material verificable): persiste igual que en las revisiones del 19/11 y posteriores; no ha habido cambios desde entonces."
   ],
   "como_arreglarlo": "Adjuntar en post.json el asset real (mp4 de la release «cola» o video_externo, o las imágenes si es carrusel) para poder inspeccionarlo. Citar en _fuentes/_comprobado la documentación o ficha de producto de Gestión Integral 7D que respalde: importación con extracción por IA (con aviso de revisar lo importado), generación de albarán numerado con descuento de stock, y herencia de líneas/IVA/retención en la factura PDF. Con material y fuentes disponibles, relanzar una revisión completa. Esta pieza no puede aprobarse mientras no exista asset ni fuentes citadas.",
-  "fecha": "2026-11-19T22:19:23Z",
+  "fecha": "2026-11-19T22:22:09Z",
   "revisor": "Calidad (API)",
   "render": "no aplica (carrusel)"
 }
