@@ -1,15 +1,13 @@
 {
   "aprobado": false,
-  "nota": 78,
+  "nota": 75,
   "motivos": [
-    "Re-render de hoy con el motor «sketch» del repo, retirado para la serie desde el 15/11: rechazo automático (roles/calidad.md)"
+    "Rechazo automático (roles/calidad.md): la pieza sigue hecha con el motor «sketch», retirado para la serie El Jambo desde el 15/11. El guion.json declara \"modo\": \"sketch\" y los 3 fotogramas lo confirman: fondo plano de color sólido (amarillo/negro) y personajes tipo sticker vectorial, no el estilo doodle obligatorio del bloqueo 6 del estándar (papel claro, trazo negro grueso, un solo acento cian).",
+    "Mismo motivo exacto que el calidad.json anterior (15/11, nota 78): no se ha corregido el motor de render pese al re-render del 19/11.",
+    "Técnicamente la pieza está bien (18.17s, 1080x1920, LUFS -14.14, pico -1.32dB, sin silencios, whisper coincide con el guion), pero el bloqueo de estilo es automático e independiente de la nota técnica."
   ],
-  "como_arreglarlo": "Creador: rehacer en Neogest Studio (herramientas/estudio/LEEME.md) con la fórmula de 5 tiempos y moraleja.",
-  "fecha": "2026-11-15T21:44:09+00:00",
-  "revisor": "Calidad (pasada cada 2 h)",
-  "render": "2026-11-15T20:38:22+00:00",
-  "aprobado_anterior": false,
-  "nota_anterior": 78,
-  "caducado": "2026-11-19T23:03:35+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-19T23:03:35+00:00"
+  "como_arreglarlo": "Creador: re-renderizar en Neogest Studio (herramientas/estudio/LEEME.md) con el motor doodle vigente (papel claro, trazo negro grueso, acento cian, Bit/Paco u otros personajes de la serie en ese estilo), manteniendo el guion de 5 tiempos ya aprobado (gancho→gag→gag→gag→remate→cierre con pregunta), que en sí mismo cumple la fórmula narrativa y el límite de duración. No cambiar el texto del post ni la música, solo el render visual.",
+  "fecha": "2026-11-19T23:15:01Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-19T23:03:35+00:00"
 }

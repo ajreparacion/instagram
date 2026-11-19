@@ -1,15 +1,8 @@
 {
-  "aprobado": false,
-  "nota": 78,
-  "motivos": [
-    "Re-render de hoy con el motor «sketch» del repo, retirado para la serie desde el 15/11: rechazo automático (roles/calidad.md)"
-  ],
-  "como_arreglarlo": "Creador: rehacer en Neogest Studio (herramientas/estudio/LEEME.md) con la fórmula de 5 tiempos y moraleja.",
-  "fecha": "2026-11-15T21:44:09+00:00",
-  "revisor": "Calidad (pasada cada 2 h)",
-  "render": "2026-11-15T20:48:51+00:00",
-  "aprobado_anterior": false,
-  "nota_anterior": 78,
-  "caducado": "2026-11-19T23:04:42+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-19T23:04:42+00:00"
+  "aprobado": true,
+  "nota": 92,
+  "comentario": "18.7s, 1080x1920, sin silencios >0.6s, LUFS -14.18/pico -1.42 dB (dentro de estándar). Whisper coincide con guion. Fórmula de 5 tiempos completa: gancho POV, planteamiento, escalada en tres golpes (Pelota/Bola/Trámites), giro visual con sello \"DETRÁS\" en Jupillo, cierre con pregunta concreta y fácil de contestar. Conflicto real de oficina (huésped pesado), sin muletillas de IA, ritmo de cambio cada 1.5-2s. Motor sketch vigente (no el antiguo retirado). Post con atribución musical correcta, aviso de ficción/IA, comentario fijado y avance del siguiente episodio, sin cifras inventadas (serie de humor sin datos de producto).",
+  "fecha": "2026-11-19T23:14:17Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-19T23:04:42+00:00"
 }
