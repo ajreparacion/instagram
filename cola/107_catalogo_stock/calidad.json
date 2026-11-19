@@ -7,7 +7,7 @@
     "Bloqueo 9 (aprobación caducada / sin material verificable): persiste igual que en las revisiones anteriores (19/11 y siguientes); no ha habido cambios desde entonces."
   ],
   "como_arreglarlo": "Adjuntar en post.json el asset real (mp4 de la release «cola» o video_externo, o las imágenes si es carrusel) para poder inspeccionarlo. Citar en _fuentes/_comprobado la documentación o ficha de producto de Gestión Integral 7D que respalde: importación con extracción por IA (con aviso de revisar lo importado), generación de albarán numerado con descuento de stock, y herencia de líneas/IVA/retención en la factura PDF. Con material y fuentes disponibles, relanzar una revisión completa. Esta pieza no puede aprobarse mientras no exista asset ni fuentes citadas.",
-  "fecha": "2026-11-19T22:25:37Z",
+  "fecha": "2026-11-19T22:27:36Z",
   "revisor": "Calidad (API)",
   "render": "no aplica (carrusel)"
 }
