@@ -38,7 +38,5 @@
     "texto": "¿Cuántas veces al día te llaman solo para preguntar el horario?\nLlamada real al asistente telefónico de un negocio: saluda, da el horario y pregunta si te viene bien pasar. Se configura con la información de tu negocio, con la voz y el trato que elijas.\nSolicita información gratuita: sin tarjeta, sin datos bancarios y sin compromiso → https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=recepcionista-24h&src=facebook"
   },
   "asset": "801_recepcionista_horario.mp4",
-  "_video_externo_usado": "https://raw.githubusercontent.com/ajreparacion/instagram/entrada-videos/801_recepcionista_horario.mp4",
-  "_intentos_render": 2,
-  "_error_render": "Falta guion.json o remaster.json"
+  "_video_externo_usado": "https://raw.githubusercontent.com/ajreparacion/instagram/entrada-videos/801_recepcionista_horario.mp4"
 }
