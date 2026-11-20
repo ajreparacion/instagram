@@ -1,15 +1,15 @@
 {
  "tipo": "reel",
- "texto": "2,5 millones de horas extra sin cobrar cada semana (EPA, 1T 2026). Rosa dice «voluntario». La ley dice horas extra. Felipe dice que sí. Sindy dice que no. Concha dice que luego.\nGuarda este vídeo para la próxima vez que te digan que es «un favor».\n#humornegro #trabajo #ia #jefes #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
+ "texto": "2,5 millones de horas extra sin cobrar cada semana (EPA, 1T 2026). Felipe se casa el sábado y Rosa se lo descuenta del sueldo. Concha lleva un mes sin cobrar. Sindy resuelve llorando gratis.\nGuarda este vídeo para la próxima vez que te digan que es «un favor».\n#humornegro #trabajo #ia #jefes #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
  "cuando": null,
  "compartir_en_feed": true,
  "prueba_no_seguidores": true,
  "formato": "Serie El Jambo",
  "publico": "oficina",
- "formula": "El Jambo que sabe v5 (biblia nueva: barrio humilde, registro de habla con réplica inteligente, bucle de casa, 45-70 s, Rosa/Felipe/Sindy/Concha Quetón/Neo)",
+ "formula": "El Jambo que sabe v5.1 (barrio humilde, registro de habla con réplica inteligente, humor negro frío, bucle «Cosas de Casa» idéntico en apertura y cierre, personajes que se llaman por su nombre, risas de sitcom, 45-70 s, Rosa/Felipe/Sindy/Concha Quetón/Neo)",
  "_fuentes": ["El Español, 26/05/2026, citando la EPA del INE"],
- "_comprobado": "Cifra tomada del guion (equipo/guiones_gemini/pendientes/2026-11-20_jambo_piloto_barrio.json), con fuente citada por el guionista. No reverificada por Claude en esta pasada.",
- "_nota_creador": "20/11/2026 noche: PILOTO de la biblia v5, orden directa del dueño (\"lanzalo\"). NO programado (cuando: null) a propósito: pendiente de que el dueño vea el vídeo y apruebe el formato nuevo antes de publicarlo o de que entre en la cadencia normal de 1/día. Primer episodio con etiqueta de nombre y apellido al entrar cada personaje y con Concha Quetón en el reparto.",
+ "_comprobado": "Cifra tomada del guion (equipo/guiones_gemini/usados/2026-11-20_jambo_piloto_barrio.json), con fuente citada por el guionista. No reverificada por Claude en esta pasada.",
+ "_nota_creador": "20/11/2026 noche: PILOTO v2 de la biblia v5, tras feedback del dueño sobre el v1 (etiquetas de nombre invisibles por el zoom, bucle no idéntico, humor sin negrura real, voces planas, personajes sin nombrarse entre ellos, sin risas de sitcom). Corregido: etiqueta de nombre y apellido movida fuera del zoom de cámara (bug real, ya no se recorta), bucle «Cosas de Casa» con el MISMO objeto de escena en apertura y cierre (antes el cierre pasaba también por drawOutro y mostraba el logo encima, ahora es la tarjeta idéntica), diálogo reescrito con humor negro real (la boda de Felipe tratada como incidencia de nómina, «el frío nos iguala a todos» de Concha, «robo legal» de Neo) y personajes llamándose por su nombre, voces con más rango de velocidad/tono por emoción (edge-tts, no hay forma de medir «expresividad» de oído desde aquí, pero el rango se amplió bastante), risas tipo sitcom (sfx risas) en los 3 golpes fuertes. NO programado (cuando: null): pendiente de que el dueño vea este v2 y apruebe. PENDIENTE no resuelto: la intro «Cosas de Casa» sigue siendo vectorial, no vídeo real con zoom tipo serie americana — eso necesita una pieza de b-roll real (Google Flow/Gemini o stock) que aún no existe; en cuanto el dueño la apruebe o la suba, se sustituye sin tocar el resto.",
  "motor_voz": "edge",
  "comentario_fijado": "Episodio nuevo cada día en @neogestlab",
  "avance_siguiente": null,
@@ -27,13 +27,14 @@
  },
  "motor": "neogest-studio",
  "asset": "999_jambo_piloto_barrio.mp4",
- "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/61db245cc_jambo-piloto-barrio.mp4",
+ "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/31a9a6af0_jambo-piloto-barrio-v2.mp4",
+ "_video_externo_v1_descartado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/61db245cc_jambo-piloto-barrio.mp4",
  "_render": {
-  "duracion_s": 37.2,
+  "duracion_s": 43.2,
   "lufs": -14.1,
-  "pico_dbfs": -1.5,
-  "peso_mb": 17.88,
-  "voces": "edge-tts (borrador/gratis, sin ElevenLabs)",
-  "checkpoints_base44": ["piloto-jambo-barrio-render-para-entrega", "limpieza-entregas-tras-subir-piloto-jambo"]
+  "pico_dbfs": -1.4,
+  "peso_mb": 17.54,
+  "voces": "edge-tts (borrador/gratis, sin ElevenLabs), rango de velocidad/tono por emoción ampliado",
+  "checkpoints_base44": ["piloto-v2-nombres-bucle-humor-negro-para-entrega", "entregas-listas-piloto-v2", "limpieza-tras-subir-piloto-v2"]
  }
 }

@@ -1,53 +1,22 @@
 {
-  "slug": "jambo-piloto-barrio",
+  "slug": "jambo-piloto-barrio-v2",
   "set": "oficina",
   "hora": 9,
-  "flow": null,
   "moraleja": "Millones de horas extra sin cobrar, cada semana.",
-  "recuerdo": null,
-  "bucle_visual": "el móvil de Rosa en la puerta de casa",
   "escenas": [
-    {
-      "e": "gancho",
-      "h": "rosa",
-      "t": "Este finde trabajáis todos... voluntariamente."
-    },
-    {
-      "e": "gag",
-      "h": "felipe",
-      "t": "Jefa, el finde lo tengo cogío pa enamorarme, no pa currar gratis."
-    },
-    {
-      "e": "gag",
-      "h": "rosa",
-      "t": "Yo este finde me doy un homenaje, que para eso curráis vosotros gratis."
-    },
-    {
-      "e": "gag",
-      "h": "conchaqueton",
-      "t": "¿Y mi factura pa cuándo, maja? Qué frío hace aquí... bueno, eso lo arreglamos la semana que viene."
-    },
-    {
-      "e": "gag",
-      "h": "sindy",
-      "t": "Si curro gratis el sábado, el domingo curro gratis pa mí: en la cama. Que lo resuelva el Neo."
-    },
-    {
-      "e": "remate",
-      "h": "neo",
-      "t": "Trabajo voluntario sin pagar es horas extra sin cobrar. Ya está registrado y reclamado."
-    },
-    {
-      "e": "cierre",
-      "h": "neo",
-      "t": "Millones de horas extra sin cobrar, cada semana."
-    }
+    {"e": "gancho", "h": "rosa", "t": "Sindy, Felipe... el finde curráis todos. Voluntariamente, que quede claro.", "p": ["rosa", "felipe"], "a": {"rosa": "presume"}},
+    {"e": "gag", "h": "felipe", "t": "Rosa, el sábado me caso. ¿La luna de miel la cuento de horas extra o de falta injustificada?", "p": ["felipe", "rosa"], "a": {"felipe": "desespera"}, "risas": true},
+    {"e": "gag", "h": "rosa", "t": "Pues descuéntate medio día, Felipe, y así quedamos en paz.", "p": ["rosa", "sindy"], "a": {"rosa": "fria"}},
+    {"e": "gag", "h": "conchaqueton", "t": "Rosa, marzo lo sigo sin cobrar. Pero tranquila, que aquí el frío nos iguala a todos.", "p": ["conchaqueton", "rosa"], "a": {"conchaqueton": "delega"}, "risas": true},
+    {"e": "gag", "h": "sindy", "t": "Felipe, cásate el sábado tranquilo. El domingo, si eso, lloras gratis: que llorar tampoco cuenta como hora extra.", "p": ["sindy", "felipe"], "a": {"sindy": "habla"}, "risas": true},
+    {"e": "remate", "h": "neo", "t": "Rosa, trabajo sin pagar tiene nombre: es un robo legal. Ya está registrado y reclamado.", "p": ["neo", "rosa"], "a": {"neo": "habla"}},
+    {"e": "cierre", "h": "neo", "t": "Millones de horas extra sin cobrar, cada semana."}
   ],
-  "fuente": "claude (piloto, orden directa del dueño 20/11 noche)",
-  "generado": "2026-11-20T20:17:00Z",
+  "fuente": "claude (piloto v2, corrección de humor negro / bucle / etiquetas pedida por el dueño 20/11 noche)",
+  "generado": "2026-11-20T21:14:00Z",
   "post": {
     "linea1": "2,5 millones de horas extra sin cobrar cada semana (EPA, 1T 2026).",
-    "contexto": "Rosa dice «voluntario». La ley dice horas extra. Felipe dice que sí. Sindy dice que no. Concha dice que luego.",
+    "contexto": "Felipe se casa y Rosa se lo descuenta del sueldo. Concha lleva un mes sin cobrar y lo compensa con humor. Sindy resuelve llorando gratis. Neo pone la cifra real encima de la mesa.",
     "pedido": "Guarda este vídeo para la próxima vez que te digan que es «un favor».",
     "fuente_cifra": "El Español, 26/05/2026, citando la EPA del INE.",
     "hashtags": "#humornegro #trabajo #ia #jefes #pymes"

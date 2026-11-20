@@ -91,23 +91,21 @@ def _prompt(n):
 
     esquema = {
         "slug": "texto-corto-sin-espacios, 2-4 palabras, nueva situación",
-        "set": "oficina | despacho | bar | calle | reunion (el set de las escenas de diálogo; el plano de casa de apertura/cierre lo pone el código, no va aquí)",
+        "set": "oficina | despacho | bar | calle | reunion (el set de las escenas de diálogo; la apertura/cierre es SIEMPRE la tarjeta fija 'Cosas de Casa' que pone el código, igual en todos los episodios — no va aquí, no hace falta flow ni bucle_visual desde la corrección del 20/11 noche)",
         "hora": "entero 0-23 (hora del día de la escena)",
-        "flow": "null (de momento sin vídeo real; si algún día hay un clip de b-roll de fachada de barrio ya generado, aquí va su URL; si es null se usa el set vectorial 'casa' para el plano de apertura/cierre)",
         "moraleja": "6-9 palabras, tono serio, el mensaje que se queda; si hay una cifra de la tabla de la biblia que encaje, inclúyela",
         "recuerdo": "6-12 palabras, una línea que conecta con un episodio anterior ya publicado (de los temas ya usados) — un personaje menciona o reacciona a algo que pasó en otro capítulo; null si no hay ninguno con el que conectar todavía",
-        "bucle_visual": "en 4-8 palabras, qué elemento o encuadre del gancho se repite tal cual en el cierre (misma pose, mismo plano o mismo objeto) para que el vídeo pueda volver a verse en bucle sin notar el corte",
         "escenas": [
             {
                 "e": "gancho",
                 "h": "rosa",
-                "t": "texto exacto que dice o el texto en pantalla, máx 8 palabras, situación reconocible desde el fotograma 0 (visible en los primeros 0,5 s, antes incluso de que se lea el texto entero)",
+                "t": "texto exacto que dice o el texto en pantalla, máx 8 palabras, situación reconocible desde el fotograma 0 (visible en los primeros 0,5 s, antes incluso de que se lea el texto entero); dirígete a otro personaje por su nombre si tiene sentido",
             },
-            {"e": "gag", "h": "felipe|sindy", "t": "frase del golpe 1 de la escalada, registro de barrio con réplica inteligente"},
-            {"e": "gag", "h": "rosa", "t": "frase del golpe 2, peor que el 1"},
+            {"e": "gag", "h": "felipe|sindy", "t": "frase del golpe 1 de la escalada, registro de barrio con réplica inteligente, nombrando a quien se dirige o a quien menciona", "risas": "true solo si este golpe es de verdad el más fuerte del episodio, si no omite el campo"},
+            {"e": "gag", "h": "rosa", "t": "frase del golpe 2, peor que el 1, nombrando a alguien"},
             {"e": "gag", "h": "felipe|sindy", "t": "frase del golpe 3, peor que el 2, remata con 'Que lo resuelva el Neo'"},
-            {"e": "remate", "h": "neo", "t": "frase del giro: Neo resuelve ESE conflicto y deja a Rosa en evidencia"},
-            {"e": "cierre", "h": "neo", "t": "texto en pantalla, debe coincidir o repetir la moraleja, y su último fotograma debe poder encadenar con el gancho (ver bucle_visual) para que al repetirse el vídeo no se note la costura"},
+            {"e": "remate", "h": "neo", "t": "frase del giro: Neo resuelve ESE conflicto y deja a Rosa en evidencia, nombrándola"},
+            {"e": "cierre", "h": "neo", "t": "texto en pantalla, debe coincidir o repetir la moraleja (el bucle con la tarjeta 'Cosas de Casa' ya lo resuelve el código, no hace falta pensarlo aquí)"},
         ],
     }
 
@@ -171,6 +169,16 @@ Pista rápida para saber si un gag es de verdad humor negro: léelo en voz alta 
 póker, sin ánimo de queja. Si solo funciona gritado o indignado, es sarcasmo (válido, pero
 no es lo que se pide ahora); si funciona dicho en plano, con total indiferencia, es humor
 negro. Al menos uno de los tres golpes de cada episodio debe ser de este segundo tipo.
+REFUERZO (el dueño vio un episodio ya escrito con esta guía y dijo que seguía sin ver nada
+negro, "demasiado blanco"): dos trucos que SÍ dan humor negro real, úsalos como plantilla:
+(1) coger un evento personal importante de un personaje (una boda, un entierro, un hijo con
+problemas de salud sin nombrar cuál) y tratarlo con la misma frialdad administrativa que una
+incidencia de nómina — "Rosa, el sábado me caso. ¿La luna de miel la cuento de horas extra o
+de falta injustificada?"; (2) convertir una injusticia real (no cobrar, pasar frío, un abuso)
+en una broma que la acepta como normal en vez de protestar por ella — "Marzo lo sigo sin
+cobrar. Pero tranquila, que aquí el frío nos iguala a todos." Prueba final antes de dar un
+golpe por bueno: quítale la gracia mentalmente — si lo que queda incomoda de verdad, es humor
+negro; si lo que queda es solo una queja normal, es sarcasmo blanco y hay que subirlo de tono.
 Dato real de rendimiento (virales_semana.md, visto el 16/11): lo que mejor ha funcionado en
 la cuenta hasta ahora son los episodios de cliente/jefe con una situación reconocible desde
 la primera línea y, sobre todo, los que tienen "Parte 2" (continuidad: alguien pregunta
@@ -261,6 +269,10 @@ Tres cambios nuevos sobre todo lo de arriba (que sigue mandando):
    ligón — intenta ligar o colar una excusa de corazón y siempre le sale mal. Concha Quetón
    siempre tiene frío — se queja del frío en casi cualquier línea suya. Usa estos rasgos para
    dar color a sus frases cuando encajen, sin forzarlos en todas.
+1ter. SE LLAMAN POR SU NOMBRE (orden del dueño, 20/11 noche, tras ver el piloto): cada réplica,
+   cuando tenga sentido, nombra a quien se dirige o a quien menciona ("Rosa, marzo lo sigo sin
+   cobrar", "Felipe, cásate el sábado tranquilo") — ayuda a que se note quién es quién y refuerza
+   el barrio como comunidad. No hace falta en todas las líneas, pero sí en la mayoría.
 2. DURACIÓN Y CADENCIA: episodios de 45-70 s hablados (no 15-25 s), con espacio para que los
    3 golpes de la escalada respiren un poco más que antes; 1 episodio NUEVO al día (no varios
    cortos). Usa entre 6 y 9 escenas (antes 5-7) para llenar ese tiempo sin relleno: puedes
@@ -271,9 +283,10 @@ Tres cambios nuevos sobre todo lo de arriba (que sigue mandando):
    natural, añade una línea breve en el cierre donde un personaje lo menciona o reacciona a
    ello (p. ej. Sindy: "Como lo del jueves, pero peor"). Si no encaja ninguno todavía, deja el
    campo "recuerdo" en null — nunca inventes una referencia a un episodio que no existe.
-El plano de casa de apertura y cierre (el "estilo comedia americana" con el mismo encuadre
-para el bucle) lo añade el código a partir del campo "set"/"flow" del episodio, no hace falta
-escribirlo como escena.
+El plano de apertura y cierre ("Cosas de Casa", estilo cabecera de comedia americana, igual
+en todos los episodios para el bucle) lo pone el código siempre, no hace falta escribirlo
+como escena ni pensar en "set"/"flow" para eso (corregido 20/11 noche: antes variaba por
+episodio y el bucle no quedaba idéntico; ahora es una tarjeta fija compartida).
 
 Devuelve SOLO un array JSON (sin texto fuera del JSON, sin ``` ) con {n} objetos, cada uno
 con este esquema exacto (valores de ejemplo, escríbelos tú con contenido real distinto en
