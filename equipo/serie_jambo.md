@@ -13,10 +13,11 @@ Sustituye a la biblia v3 (16/11/2026). Mismo espíritu (humor negro y satírico 
 Catchphrase de El Jambo (sin cambios): **«Que lo resuelva el Neo»** — la dice Felipe o Sindy justo antes del giro.
 Formas y colores distintos por personaje; nombre en texto cuando hablan.
 
-## Tono y límites del humor negro (sin cambios respecto a v2)
+## Tono y límites del humor negro (corregido 20/11: lo que se ha publicado hasta ahora es sátira/ironía de oficina, no humor negro real; orden del dueño)
 - Negro y satírico contra el sistema, la cultura del trabajo y la burocracia, no contra personas reales ni grupos. Rosa es la que se castiga con ironía en el giro; Felipe y Sindy cargan con el abuso hasta que llega Neo.
 - Prohibido: suicidio, autolesión, enfermedades o muertes reales, víctimas, política de partido, colectivos, marcas ni empresas reales, consejos médicos, legales o financieros.
 - Todo es ficción de personajes; la moraleja es el único tramo en serio.
+- **Qué es de verdad humor negro aquí (no es solo sarcasmo con gracia):** la diferencia es de tono, no de tema. El sarcasmo se queja de lo injusto con ingenio (indignación disfrazada de chiste) — eso es lo que se ha escrito hasta ahora. El humor negro trata lo injusto o lo cruel con la misma frialdad y naturalidad con que se trataría algo trivial, sin indignarse ni dramatizar: el fatalismo y la resignación sin drama, no el tema tocado, son lo que lo hace negro. Ejemplo de sarcasmo (lo habitual hasta ahora, válido pero no es esto): «Ya puestos, tráete también a mi suegra, que así hacemos piña.» Ejemplo de humor negro real (frialdad total, sin indignación, como un hecho ya asumido): «Si me despiden mañana, lo único que cambia es que dejo de fingir que me importa.» Al menos uno de los tres golpes de cada episodio debe ser de este segundo tipo. Detalle técnico en `herramientas/guionista_gemini.py`.
 
 ## Estructura de episodio (15-25 s)
 Bucle de retención de 4 pasos (orden del dueño 20/11, igual que el bucle de dopamina del casino): **apuestas** (algo que Felipe o Sindy pierden de verdad si Rosa se sale con la suya) → **pregunta** (el espectador se queda con la duda de qué va a pasar, no solo con el planteamiento) → **giro** (una sorpresa real, no lo que el espectador ya veía venir) → **reenganche** (el cierre abre el siguiente bucle antes de que el anterior se sienta resuelto del todo). Si un episodio no deja clara esa apuesta o esa pregunta, el gancho está mal escrito aunque cumpla el límite de palabras.

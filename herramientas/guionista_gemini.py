@@ -147,6 +147,28 @@ Cada gag debe sonar a algo que alguien realmente suelta en voz alta al oír la f
 anterior (ironía, sarcasmo, la consecuencia absurda llevada un paso más lejos), nunca a un
 argumento razonado. Si al leerlo en voz alta suena a artículo de opinión, está mal escrito:
 reescríbelo como lo diría una persona enfadada o resignada en ese momento.
+
+QUÉ ES REALMENTE HUMOR NEGRO (orden del dueño, 20/11: "no lo he visto en ningún momento";
+tiene razón, lo que se ha escrito hasta ahora es ironía y sarcasmo de oficina, no humor
+negro). La diferencia no es de TEMA, es de TONO: el sarcasmo se queja de lo injusto con
+gracia (indignación disfrazada de chiste); el humor negro trata lo injusto o lo cruel con
+la misma frialdad y naturalidad con que se trataría algo trivial, sin indignarse ni
+suavizarlo — la gracia está en esa distancia fría, no en la queja. Las líneas rojas de la
+biblia siguen mandando (nunca suicidio, autolesión, enfermedad o muerte real, ni contra
+personas o colectivos reales): el humor negro aquí no viene de tocar esos temas, viene del
+FATALISMO, la resignación sin drama y la crueldad del sistema contada como lo más normal
+del mundo.
+  MAL (esto es sarcasmo, no humor negro — es lo que lleva saliendo hasta ahora): "Ya puestos,
+  tráete también a mi suegra, que así hacemos piña." (el personaje se indigna con gracia;
+  sigue siendo una queja, solo que ingeniosa).
+  BIEN (humor negro real: frialdad total ante algo injusto, dicho sin ninguna sorpresa ni
+  indignación, como un hecho ya asumido): "Si me despiden mañana, lo único que cambia es que
+  dejo de fingir que me importa." / "Lo normal es que esto salga mal. Lleva así tres años, no
+  es nada nuevo."
+Pista rápida para saber si un gag es de verdad humor negro: léelo en voz alta con cara de
+póker, sin ánimo de queja. Si solo funciona gritado o indignado, es sarcasmo (válido, pero
+no es lo que se pide ahora); si funciona dicho en plano, con total indiferencia, es humor
+negro. Al menos uno de los tres golpes de cada episodio debe ser de este segundo tipo.
 Dato real de rendimiento (virales_semana.md, visto el 16/11): lo que mejor ha funcionado en
 la cuenta hasta ahora son los episodios de cliente/jefe con una situación reconocible desde
 la primera línea y, sobre todo, los que tienen "Parte 2" (continuidad: alguien pregunta
