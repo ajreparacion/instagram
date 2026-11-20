@@ -15,11 +15,12 @@ Formas y colores distintos por personaje; nombre en texto cuando hablan.
 - Todo es ficción de personajes; la moraleja es el único tramo en serio.
 
 ## Estructura de episodio (15-25 s)
-1. Gancho ≤ 8 palabras en pantalla desde el fotograma 0 («Cuando tu jefa te pide algo "para ayer"»).
-2. Planteamiento en una frase: Rosa pide algo absurdo a Felipe o Sindy.
-3. Escalada en 3 golpes, cada uno peor que el anterior; sin silencios > 0,6 s.
-4. Giro: entra Neo y resuelve ESE conflicto, dejando a Rosa en evidencia. «Que lo resuelva el Neo» solo si es el remate, no una muletilla.
-5. **Moraleja (obligatoria, 6-9 palabras, tono serio, fotograma guardable) + pregunta o gancho de serie.** Cuando exista una cifra real verificada que encaje, va en pantalla pequeña con su fuente.
+Bucle de retención de 4 pasos (orden del dueño 20/11, igual que el bucle de dopamina del casino): **apuestas** (algo que Felipe o Sindy pierden de verdad si Rosa se sale con la suya) → **pregunta** (el espectador se queda con la duda de qué va a pasar, no solo con el planteamiento) → **giro** (una sorpresa real, no lo que el espectador ya veía venir) → **reenganche** (el cierre abre el siguiente bucle antes de que el anterior se sienta resuelto del todo). Si un episodio no deja clara esa apuesta o esa pregunta, el gancho está mal escrito aunque cumpla el límite de palabras.
+1. Gancho ≤ 8 palabras en pantalla desde el fotograma 0 («Cuando tu jefa te pide algo "para ayer"»). Debe dejar clara la apuesta: qué pierde Felipe o Sindy si esto sale mal.
+2. Planteamiento en una frase que añade la pregunta: Rosa pide algo absurdo a Felipe o Sindy, de forma que el espectador se pregunte qué va a hacer para salir de esta (no solo "qué pide Rosa", sino "y ahora qué").
+3. Escalada en 3 golpes, cada uno peor que el anterior; sin silencios > 0,6 s. Cada golpe mantiene la pregunta abierta y la hace más urgente.
+4. Giro: entra Neo y resuelve ESE conflicto con un desenlace que sorprenda (no el que ya se veía venir), dejando a Rosa en evidencia. «Que lo resuelva el Neo» solo si es el remate, no una muletilla.
+5. **Moraleja (obligatoria, 6-9 palabras, tono serio, fotograma guardable) + reenganche: pregunta o gancho de la parte 2, de forma que el bucle no se cierre del todo.** Cuando exista una cifra real verificada que encaje, va en pantalla pequeña con su fuente.
 Pie del post: línea 1 con cifra o POV; 2-4 contexto; línea 5 un único pedido (enviar o guardar); fuente de la cifra si la hay; 1-5 hashtags (#humornegro #trabajo #ia #jefes #pymes). Sin enlace ni «prueba gratuita» durante la fase sin apps.
 
 ## Datos reales para moralejas con cifra (heredados de la biblia v2, ya verificados; confirmar la fuente primaria antes de reutilizar cada cifra)

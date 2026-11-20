@@ -58,7 +58,7 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 | Campo | Regla |
 |---|---|
 | Duración | 15-25 s, nunca más de 30 |
-| Estructura | 0-2 s situación reconocible (texto + 1.ª frase: «Cuando…», «POV:» o pregunta) · 2-6 s planteamiento en una frase · 6-16 s escalada en 3 golpes, cada uno peor · 16-21 s giro que resuelve el conflicto · 21-24 s cierre. Un conflicto por episodio. «Que lo haga la Jupillo» solo si es el remate |
+| Estructura | 0-2 s situación reconocible (texto + 1.ª frase: «Cuando…», «POV:» o pregunta) · 2-6 s planteamiento que deja una pregunta abierta en la cabeza del espectador (qué va a pasar, no solo qué pasa) · 6-16 s escalada en 3 golpes, cada uno peor · 16-21 s giro que resuelve el conflicto rompiendo lo que el espectador esperaba · 21-24 s cierre, que abre el siguiente bucle (parte 2 o pregunta) antes de que el anterior se sienta del todo cerrado. Un conflicto por episodio. «Que lo haga la Jupillo» solo si es el remate. Bucle de retención (orden del dueño 20/11, inspirado en el bucle de dopamina de casino): apuestas (algo que Felipe o Sindy pueden perder de verdad) → pregunta (curiosidad explícita, no solo planteamiento) → giro (sorpresa real, no previsible) → reenganche (el cierre ya abre el siguiente bucle, nunca deja la tensión en reposo) |
 | Imagen | Dibujos de calidad de Neogest Studio (ver §6); subtítulos palabra a palabra; cambio de plano cada 1,5-2 s |
 | Silencios máx. | 0,6 s |
 | Volumen | −14 LUFS, pico real −1 dB |
@@ -71,7 +71,7 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 | Campo | Regla |
 |---|---|
 | Duración | 25-45 s |
-| Estructura | ANTES/DESPUÉS: problema real en 2 s → la app lo resuelve en pantalla con datos ficticios → resultado. Abre con lo que no hacen las demás (IA, cámara, lectura de documentos…; brief del proyecto `claude/redes/promos_diferenciales_2026-11-15.md`); «la única» solo con prueba de competencia anotada. Nada de escaparate de funciones básicas ni cifras intermedias sin explicar; calculadoras congeladas hasta rehacerlas así |
+| Estructura | ANTES/DESPUÉS con bucle de retención: apuestas (problema real que duele, 2 s) → pregunta (qué pasa si la app lo resuelve, antes de enseñarlo) → giro (la app lo resuelve en pantalla con datos ficticios, de forma más rápida o distinta de lo esperado) → resultado. Abre con lo que no hacen las demás (IA, cámara, lectura de documentos…; brief del proyecto `claude/redes/promos_diferenciales_2026-11-15.md`); «la única» solo con prueba de competencia anotada. Nada de escaparate de funciones básicas ni cifras intermedias sin explicar; calculadoras congeladas hasta rehacerlas así |
 | Silencios máx. | 1,5 s |
 | Volumen | −14 LUFS |
 | Voz | ElevenLabs Johnny en la versión final (se produce en el estudio de vídeo del Centro, como los cortos 7xx); ensayos y respaldo con edge-tts (es-ES-ElviraNeural) si el presupuesto del mes está agotado |
@@ -139,6 +139,7 @@ Las cifras de 20, 22 o 35 s de textos antiguos quedan derogadas.
 - Medios de pago que se nombran en las piezas de 7D (Stripe/Redsys/Bizum o genérico): va en genérico hasta que el dueño diga.
 
 ## 13. Registro de cambios (una línea por cambio)
+- 2026-11-20 · Coordinación (orden del dueño) · bucle de retención de 4 pasos (apuestas → pregunta → giro → reenganche, por el bucle de dopamina de casino) aplicado a los formatos de El Jambo y promo de app (§5); biblia (`equipo/serie_jambo.md`) y prompt del Guionista Gemini (`herramientas/guionista_gemini.py`) alineados en el mismo cambio.
 - 2026-11-15 · Coordinación (orden del dueño) · directiva y roles reescritos en limpio; deroga lo apilado hasta hoy (ver archivo/).
 - 2026-11-15 · Coordinación · Calidad pasa a una sola tarea cada 2 h de 08:41 a 22:41; Analista de monetización fusionado en Analista; Ventas en pausa.
 - 2026-11-15 · Coordinación · las tareas creadas por el dueño no se pueden editar desde un agente: sus prompts antiguos quedan derogados por §1, las duplicadas se anulan por §2 y el Creador trabaja en una pasada hasta que el dueño amplíe su horario.

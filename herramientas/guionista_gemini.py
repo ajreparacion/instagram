@@ -155,19 +155,39 @@ espectador reconozca de inmediato por haberla vivido, y considera si el conflict
 podría tener una "Parte 2" natural para otro episodio (dilo en el slug con "_parte2" si es
 la continuación de un tema ya usado: {temas}).
 
+BUCLE DE RETENCIÓN (orden del dueño, 20/11: el mismo bucle de dopamina que usan los casinos
+para que no puedas dejar de mirar la mesa). Cada episodio tiene que montarse sobre estos 4
+pasos, no solo cumplir el recuento de escenas:
+1. APUESTAS: el gancho tiene que dejar claro qué pierde Felipe o Sindy si esto sale mal.
+   Sin algo en juego que duela de verdad, no hay tensión y el episodio no engancha aunque
+   la forma esté bien.
+2. PREGUNTA: el planteamiento y el primer golpe tienen que dejar al espectador con una duda
+   activa ("¿y ahora cómo sale de esto?"), no solo informarle de la situación. Si al leerlo
+   se entiende todo de golpe sin ninguna curiosidad pendiente, está mal escrito.
+3. GIRO: Neo tiene que resolver con algo que sorprenda, no con el desenlace que ya se veía
+   venir desde el golpe 2. Si el giro es previsible, el episodio no vale aunque pase el
+   validador.
+4. REENGANCHE: el cierre no puede dejar la tensión completamente en reposo. La moraleja y la
+   pregunta final de la pieza son ese reenganche: dejan una curiosidad abierta (la parte 2,
+   u otra pregunta) antes de que el espectador suelte del todo el episodio anterior.
+
 Reglas duras (si no las cumples, el episodio se rechaza):
 1. Gancho en pantalla desde el fotograma 0, máximo 8 palabras, una situación reconocible
-   (no una explicación). Debe leerse y entenderse sin sonido.
+   (no una explicación) que deje clara la apuesta (paso 1 del bucle). Debe leerse y
+   entenderse sin sonido.
 2. Escalada de exactamente 3 golpes, cada uno con MÁS lógica y PEOR consecuencia que el
-   anterior; nunca una frase suelta sin relación con el golpe de antes; y nunca una frase
-   que suene a declaración de postura o argumento razonado (ver AVISO DE CALIDAD arriba):
-   cada golpe es algo que se dice en caliente, con ironía o sarcasmo, no un alegato.
-3. El giro lo resuelve Neo y responde exactamente al conflicto planteado, no a otro; deja a
-   Rosa en evidencia sin alterarse. La frase de Neo también debe sonar hablada, no un
-   comunicado: evita el patrón repetitivo "He [verbo] el/la [trámite]" en todos los
-   episodios de la misma tanda; varía cómo lo cuenta Neo.
+   anterior, manteniendo viva la pregunta del paso 2 del bucle; nunca una frase suelta sin
+   relación con el golpe de antes; y nunca una frase que suene a declaración de postura o
+   argumento razonado (ver AVISO DE CALIDAD arriba): cada golpe es algo que se dice en
+   caliente, con ironía o sarcasmo, no un alegato.
+3. El giro lo resuelve Neo y responde exactamente al conflicto planteado, no a otro, con un
+   desenlace que sorprenda (paso 3 del bucle: nunca el final más obvio); deja a Rosa en
+   evidencia sin alterarse. La frase de Neo también debe sonar hablada, no un comunicado:
+   evita el patrón repetitivo "He [verbo] el/la [trámite]" en todos los episodios de la
+   misma tanda; varía cómo lo cuenta Neo.
 4. Moraleja obligatoria de 6-9 palabras, tono serio, que se entienda sola si alguien la lee
-   guardada sin ver el vídeo.
+   guardada sin ver el vídeo, y que funcione como reenganche (paso 4 del bucle): no cierra
+   la curiosidad del todo, apunta a la parte 2 o deja una pregunta.
 5. Nunca Rosa dice la moraleja ni "Que lo resuelva el Neo" (eso lo dicen Felipe o Sindy,
    justo antes del giro, solo una vez).
 6. Cifras siempre en letra, cero palabras en inglés, ningún nombre propio como primera
