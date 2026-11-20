@@ -1,0 +1,13 @@
+{
+  "aprobado": false,
+  "nota": 55,
+  "motivos": [
+    "Bloqueo 10/11 (v10): el cierre (fotograma 07/07, t≈22s) muestra el logo antiguo «NL» en neón degradado, no el isotipo nuevo «N» de circuitos del kit 2026. Esto solo basta para no publicar, nota máxima muy por debajo de 90.",
+    "A3/post.json: '_fuentes' y '_comprobado' están a null. Las afirmaciones sobre extracción de catálogo por IA (Excel/CSV/PDF/imagen), creación de albarán numerado que descuenta stock, y herencia automática de líneas+IVA+retención en la factura no tienen ninguna fuente citada en el post; se tratan como no verificadas.",
+    "Formato reel-de-carrusel sin voz: correcto según A1 (v7) siempre que la música esté en primer plano, lo cual se cumple (LUFS -14.19, pico -0.7 dB, dentro de norma)."
+  ],
+  "como_arreglarlo": "1) Re-renderizar el cierre (diapositiva 07/07) con el isotipo nuevo «N» de circuitos del kit 2026 en vez del cuadrado «NL» neón; revisar que ningún otro fotograma del carrusel lleve el logo antiguo. 2) Añadir a post.json el campo '_fuentes' con el enlace a la documentación/ficha de Gestión Integral 7D que respalde: extracción de catálogo por IA desde Excel/CSV/PDF/imagen, numeración de albarán con descuento de stock automático, y herencia de IVA/retención en la factura. Si alguna de estas funciones no está en hechos_verificados del Producto, suavizar el texto (quitar la afirmación o marcarla como ejemplo) antes de relanzar el render.",
+  "fecha": "2026-11-20T18:50:43Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-18T21:57:52+00:00"
+}

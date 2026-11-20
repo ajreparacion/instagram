@@ -1,18 +1,13 @@
 {
   "aprobado": false,
-  "nota": 82,
-  "fecha": "2026-11-19T10:43:50+00:00",
-  "revisor": "Calidad (pasada 11:41)",
-  "render": "2026-11-18T20:09:07+00:00",
+  "nota": 70,
   "motivos": [
-    "Nuevo render del Centro: ANTES/DESPUÉS ya presente, pero son rótulos estáticos y una tarjeta simulada, no la app real en pantalla; planos fijos de más de 2,5 s",
-    "«Link en la bio» en el vídeo (anglicismo; el formato pide «Enlace en el perfil»)",
-    "Pico −4,0 dBFS: bien; control_audio compara con el guion antiguo (no aplica)",
-    "Post: atribución «Fluffing a Duck» de MacLeod sin comprobar que sea la pista que suena; «cuando» del 18/11 ya vencido"
+    "Bloqueo v10: logo antiguo «NL» (cuadrado neón) visible en el pie «By Neogest Lab» tanto en el fotograma inicial (demo app, t=2s) como en el cierre final (t=23s, con Bit). El estándar exige el isotipo nuevo «N» de circuitos del kit 2026; el cuadrado NL no se acepta aunque vaya acompañado del texto correcto.",
+    "El cierre con Bit (t=23s) es una escena de dibujo genérica que no coincide con el resto de la pieza (demo real de la app); revisar coherencia de estilo del cierre.",
+    "Pico de audio -1.44 dB: al límite del máximo permitido (-1 dB); conviene bajar un poco más de margen en el siguiente render."
   ],
-  "como_arreglarlo": "Centro: grabar la app real (entorno de pruebas) en el DESPUÉS, cierre «Enlace en el perfil», atribución de la pista real y nueva fecha; volver a Calidad.",
-  "aprobado_anterior": false,
-  "nota_anterior": 82,
-  "caducado": "2026-11-19T22:48:34+00:00",
-  "motivo_caducidad": "re-render del ciclo (grabación de pantalla real, control de audio aprobado sin bloqueos) 2026-11-19T22:48:34+00:00"
+  "como_arreglarlo": "Centro: re-renderizar con el pie de marca actualizado al isotipo nuevo «N» de circuitos del kit 2026 en todos los fotogramas donde aparezca «By Neogest Lab» (inicio, intermedios y cierre). Verificar que el cierre con Bit use el logo nuevo también. Ajustar pico de audio para dejar algo más de margen bajo -1 dB. Volver a Calidad con el nuevo render.",
+  "fecha": "2026-11-20T18:51:15Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-19T22:48:34+00:00"
 }

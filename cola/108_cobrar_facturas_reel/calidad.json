@@ -1,0 +1,13 @@
+{
+  "aprobado": false,
+  "nota": 40,
+  "motivos": [
+    "BLOQUEO 10/11 (v10): logo antiguo «NL» neón visible en el fotograma de cierre (07/07, t≈25.98s). El estándar exige el isotipo nuevo «N» de circuitos del kit 2026 y prohíbe expresamente el cuadrado/círculo «NL» neón. Esto por sí solo impide la publicación.",
+    "Afirmaciones sin fuente citada: el post.json tiene _fuentes:null y _comprobado:null, pero el vídeo afirma integraciones concretas con marcas de terceros (Stripe, Redsys TPV, Bizum) y la posibilidad de facturas con IBAN/PDF fiscal. Sin hechos_verificados ni _fuentes citadas en el post, estas afirmaciones se tratan como no verificadas (Bloqueo 1 del estándar / A3 serie apps).",
+    "Marca de terceros en pantalla (Stripe, Redsys, Bizum) sin aclarar si son marcas registradas de proveedores externos integradas o solo ejemplos; roza B9 (marca de producto ajena) si no está confirmado que sea una integración real y autorizada."
+  ],
+  "como_arreglarlo": "1) Re-renderizar el cierre (fotograma 07/07) con el isotipo nuevo «N» de circuitos del kit 2026, eliminando el círculo «NL» neón antiguo. 2) Añadir a post.json un campo _fuentes con el enlace a la documentación/ficha de Gestión Integral 7D que confirme las integraciones de pago citadas (Stripe, Redsys, Bizum, IBAN, PDF fiscal) o retirar las que no estén confirmadas en hechos_verificados del Producto. 3) Confirmar que el uso de los nombres Stripe/Redsys/Bizum está autorizado como integración real (no solo mención genérica) antes de volver a presentar la pieza.",
+  "fecha": "2026-11-20T18:51:02Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-18T21:59:11+00:00"
+}

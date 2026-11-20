@@ -1,17 +1,13 @@
 {
   "aprobado": false,
-  "nota": 80,
+  "nota": 70,
   "motivos": [
-    "Promo de 21,4 s (formato 25-45 s)",
-    "Recorrido de funciones; el «antes/después» solo en la frase de remate",
-    "Revisar cierre literal de prueba gratuita con /solicitar?app=appcc&src=…, bloques youtube y avance_siguiente"
+    "Bloqueo A3: en el fotograma ~t=10.7s la propia web grabada muestra el texto «Se integra con Gestión Integral 7D»; el _comprobado del post.json prohíbe explícitamente afirmar «integración con 7D» para APPCC Fácil. No se puede publicar un reel que capture en pantalla justo lo que la ficha del producto marca como no verificado/prohibido.",
+    "Estructura: sigue siendo un recorrido de funciones (gancho papel→cámaras/limpieza/aceite→acción correctora→informe) con el contraste antes/después solo en la frase de remate, en vez de un ANTES/DESPUÉS real con la diferencial al principio (motivo ya señalado en el ciclo anterior y no resuelto).",
+    "Revisar también que el resto de pantallas de la web (precios, 'Hecho a tu medida', etc.) no muestren más menciones a integraciones o textos fuera de lo citado en _fuentes/_comprobado."
   ],
-  "como_arreglarlo": "Centro/Creador: rehacer en ANTES/DESPUÉS (papel en la nevera → la app pide la acción correctora y saca el informe), 25-45 s, cierre único y bloques youtube/avance_siguiente.",
-  "fecha": "2026-11-15T21:44:09+00:00",
-  "revisor": "Calidad (pasada cada 2 h)",
-  "render": "2026-11-15T20:50:44+00:00",
-  "aprobado_anterior": false,
-  "nota_anterior": 80,
-  "caducado": "2026-11-19T23:19:17+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-19T23:19:17+00:00"
+  "como_arreglarlo": "Centro/Creador: volver a grabar el recorrido de la web evitando encuadrar o recortando el bloque de texto «Se integra con Gestión Integral 7D» (zoom, crop o cambiar el punto de scroll de esa pantalla). Aprovechar el re-render para reestructurar en ANTES/DESPUÉS real (papel en la nevera vs. app con acción correctora + informe) con la diferencial en los primeros 2-3 s, manteniendo duración y cierre con isotipo nuevo. Revisar fotograma a fotograma que no quede ninguna mención a 7D, \"oficial\" o IA en la captura de pantalla.",
+  "fecha": "2026-11-20T18:51:34Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-19T23:19:17+00:00"
 }
