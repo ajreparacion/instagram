@@ -20,6 +20,11 @@ los personajes se llaman por su nombre entre ellos (registro de barrio con répl
 """
 import json, asyncio, random, sys, edge_tts
 EPS = json.load(open(sys.argv[1])); OUT = sys.argv[2]
+# Vídeo real para "Cosas de Casa" (pedido en equipo/cola_gemini.md el 20/11: Gemini/Flow o,
+# a mano, ChatGPT/Sora). En cuanto exista la URL pública, ponla aquí UNA vez y todos los
+# episodios (presentes y futuros) pasan a usarla automáticamente; hasta entonces None = set
+# vectorial "casa". No repetir el pedido por episodio.
+COSAS_DE_CASA_VIDEO = None
 # voz base por personaje: (voz, rate% base, pitch Hz base)
 VOZ = {"rosa": ("es-ES-ElviraNeural", 0, -4), "felipe": ("es-ES-AlvaroNeural", -4, -2), "sindy": ("es-ES-XimenaNeural", 8, 4),
        "neo": ("es-ES-AlvaroNeural", 0, 0), "cliente": ("es-ES-AlvaroNeural", -4, -10),
@@ -43,8 +48,8 @@ async def tts(text, who, path, emo="habla"):
 
 def bookend():
     # "Cosas de Casa": misma tarjeta, EXACTA, en apertura y cierre de todos los episodios (bucle imperceptible).
-    return {"id": uid(), "duration": 1.6, "transition": "none", "voice": None,
-            "background": {"type": "set", "set": "casa", "hour": 19, "night": False},
+    bg = {"type": "video", "url": COSAS_DE_CASA_VIDEO, "start": 0.0} if COSAS_DE_CASA_VIDEO else {"type": "set", "set": "casa", "hour": 19, "night": False}
+    return {"id": uid(), "duration": 1.6, "transition": "none", "voice": None, "background": bg,
             "texts": [{"id": uid(), "text": "COSAS DE CASA", "style": "hook", "anim": "pop", "y": 0.42, "sfx": "whoosh"}]}
 
 async def main():
