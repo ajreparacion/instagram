@@ -1,0 +1,52 @@
+{
+ "tipo": "reel",
+ "texto": "Factura enviada. ¿Y el cobro?\nSi tienes una pyme o eres autónomo de servicios, cobrar no debería ser otro trabajo.\nEn Gestión Integral 7D, nuestra app, cada factura puede llevar su enlace de pago: tarjeta, TPV o transferencia con IBAN.\nLas facturas salen en PDF con tus datos fiscales y los del cliente.\nY los agentes IA solo proponen acciones: tú las apruebas o las rechazas.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil. 💶\nMándaselo a ese autónomo que persigue cobros por WhatsApp.\n\n#autonomos #pymes #facturacion #cobros #neogestlab\n\nMúsica: \"Fluffing a Duck\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+ "cuando": "2026-11-21T17:10:00+01:00",
+ "renderizado": "2026-11-18T21:59:11+00:00",
+ "asset": "108_cobrar_facturas_reel.mp4",
+ "portada_ms": 1500,
+ "compartir_en_feed": true,
+ "duracion_s": 28.9,
+ "formato": "versión reel del carrusel (diapositivas animadas, música en primer plano y efectos; sin voz)",
+ "app": "Gestión Integral 7D",
+ "publico": "Pymes y autónomos de servicios que facturan a otras empresas",
+ "fuentes": [
+  "Diapositivas del carrusel 108_cobrar_facturas (aprobado por Calidad); mismo contenido.",
+  "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Gestión Integral 7D» (estado activo, actualizada 8/11/2026): hechos_verificados (enlace de pago por factura con Stripe, TPV Redsys con Bizum si está activo o transferencia con IBAN; PDF con datos fiscales; herencia de líneas, IVA y retención; agentes IA que solo proponen) y eslogan."
+ ],
+ "carrusel": "108_cobrar_facturas",
+ "musica": {
+  "titulo": "Fluffing a Duck",
+  "autor": "Kevin MacLeod",
+  "licencia": "CC BY 4.0",
+  "url": "https://incompetech.com/music/royalty-free/",
+  "archivo": "Fluffing_a_Duck.mp3",
+  "bpm": 123.0,
+  "origen": "pista sin derechos de la biblioteca musica/ (licencia en musica/pistas.json)"
+ },
+ "audio": {
+  "lufs_integrados": -14.0,
+  "pico_real_dbtp": -0.8,
+  "lra_lu": 1.8,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
+ "origen": "herramientas/demo_app.py",
+ "comentario_fijado": "Factura enviada. ¿Y el cobro?",
+ "avance_siguiente": "Mañana: el catálogo que se importa solo desde un PDF",
+ "prueba_no_seguidores": true,
+ "monetizacion": {
+  "objetivo": "clic_enlace",
+  "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
+  "paso_embudo": "visita_perfil -> clic_enlace"
+ },
+ "youtube": {
+  "titulo": "Factura enviada. ¿Y el cobro? #Shorts",
+  "descripcion": "Factura enviada. ¿Y el cobro? Prueba gratuita de Gestión Integral 7D: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube — By Neogest Lab",
+  "etiquetas": [
+   "pymes",
+   "autonomos",
+   "facturacion",
+   "neogestlab"
+  ]
+ }
+}
