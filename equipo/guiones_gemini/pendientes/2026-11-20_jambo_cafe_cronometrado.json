@@ -1,0 +1,40 @@
+{
+  "slug": "jambo_cafe_cronometrado",
+  "set": "oficina",
+  "hora": "10",
+  "moraleja": "El tiempo de pausa es derecho, no privilegio.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Tu café de la mañana dura demasiado tiempo."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Solo han sido tres minutos para un cortado."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Tres minutos son seis correos que no has enviado."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Pues mira cómo los envías tú sola. Que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He descontado los tres minutos de tu sueldo, Rosa."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "El tiempo de pausa es derecho, no privilegio."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-20T17:00:13Z"
+}

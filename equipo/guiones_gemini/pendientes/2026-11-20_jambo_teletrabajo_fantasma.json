@@ -1,0 +1,40 @@
+{
+  "slug": "jambo_teletrabajo_fantasma",
+  "set": "oficina",
+  "hora": "16",
+  "moraleja": "La confianza no debería exigir cámaras siempre encendidas.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Si trabajas desde casa, enciende la cámara."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "La conexión se corta cada vez que hablo."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Entonces muévete a la oficina, que aquí hay fibra."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Para ver tu cara, prefiero el lag. Que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He desactivado la cámara de todos para ahorrar ancho de banda."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "La confianza no debería exigir cámaras siempre encendidas."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-20T17:00:13Z"
+}

@@ -1,0 +1,40 @@
+{
+  "slug": "jambo_promocion_zero",
+  "set": "oficina",
+  "hora": "11",
+  "moraleja": "Un aumento simbólico sigue siendo cero euros netos.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Te doy un puesto de alta responsabilidad."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Eso suena a más carga sin subir sueldo."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Es una oportunidad única para tu crecimiento interno."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "El crecimiento no llena la nevera. Que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "He calculado que el puesto cuesta más de lo que genera."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "Un aumento simbólico sigue siendo cero euros netos."
+    }
+  ],
+  "fuente": "gemini",
+  "generado": "2026-11-20T17:00:13Z"
+}
