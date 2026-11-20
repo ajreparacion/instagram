@@ -1,16 +1,12 @@
 {
   "aprobado": false,
-  "nota": 78,
+  "nota": 82,
   "motivos": [
-    "Re-render de hoy con el motor «sketch» del repo, retirado para la serie desde el 15/11: rechazo automático (roles/calidad.md)",
-    "Reel de cálculo: calculadoras congeladas hasta rehacerlas en ANTES/DESPUÉS"
+    "Bloqueo 11 / v10: el cierre (t=18.12s) es solo texto blanco sobre fondo negro con la pregunta final, sin isotipo de marca alguno (ni el NL antiguo ni el nuevo «N» de circuitos del kit 2026). El estándar exige que el cierre lleve el isotipo nuevo; un cierre sin isotipo no se acepta.",
+    "No se observa en los fotogramas revisados el rótulo «EJEMPLO · datos inventados» que el post.json dice llevar en pantalla para los datos ficticios; solo se ve la cifra del sello (4,52 €) sin esa etiqueta visible en los 3 fotogramas capturados, lo que no permite confirmar el cumplimiento de B4 por imagen (aunque el cálculo en sí está verificado con Playwright según _comprobado)."
   ],
-  "como_arreglarlo": "Creador: rehacer en Neogest Studio (herramientas/estudio/LEEME.md) con la fórmula de 5 tiempos y moraleja.",
-  "fecha": "2026-11-15T21:44:09+00:00",
-  "revisor": "Calidad (pasada cada 2 h)",
-  "render": "2026-11-15T21:18:00+00:00",
-  "aprobado_anterior": false,
-  "nota_anterior": 78,
-  "caducado": "2026-11-19T23:48:07+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-19T23:48:07+00:00"
+  "como_arreglarlo": "Creador: añadir al fotograma de cierre el isotipo nuevo «N» de circuitos (kit 2026) antes de la pregunta final o superpuesto con ella, y confirmar en un fotograma intermedio que el rótulo «EJEMPLO · datos inventados» es legible junto a la cifra del sello. Re-renderizar y volver a pasar por calidad (no reutilizar este calidad.json, aprobación caducada al tocar el render).",
+  "fecha": "2026-11-20T22:49:30Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-19T23:48:07+00:00"
 }
