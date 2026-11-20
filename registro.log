@@ -1,6 +1,3 @@
-2026-11-15 20:46  308_jambo_ep8_presupuesto: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
-2026-11-15 20:46  323_jambo_peluqueria_9_40: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
-2026-11-15 21:01  338_medicator_diferencial_reel: publicando…
 2026-11-15 21:02  reel de prueba: fallo al subir/procesar ({"debug_info":{"retriable":false,"type":"ProcessingFailedError","message":"Request processing failed"}} (código None, subcódigo None)); se publica como reel normal
 2026-11-15 21:02  338_medicator_diferencial_reel: YouTube publicado https://youtube.com/shorts/nQT3r615jF8
 2026-11-15 21:02  338_medicator_diferencial_reel: Facebook publicado https://www.facebook.com/reel/1111823851689383
@@ -598,3 +595,6 @@ KeyError: 'escenas'
 2026-11-21 00:38  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
 2026-11-21 00:38  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
 2026-11-21 00:38  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 00:53  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 00:53  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 00:53  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
