@@ -1,8 +1,8 @@
 {
-  "actualizado": "2026-11-20T10:05:22+00:00",
+  "actualizado": "2026-11-20T16:07:06+00:00",
   "cuenta": {
     "id": "17841400403112257",
-    "followers_count": 1599,
+    "followers_count": 1600,
     "follows_count": 177,
     "media_count": 41,
     "username": "neogestlab"
@@ -18,15 +18,15 @@
       "permalink": "https://www.instagram.com/reel/Df8PU1GCNCp/",
       "timestamp": "2026-11-19T23:16:41+0000",
       "metricas": {
-        "reach": 106,
-        "views": 130,
+        "reach": 107,
+        "views": 134,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 2,
         "total_interactions": 3,
-        "ig_reels_avg_watch_time": 7943,
-        "ig_reels_video_view_total_time": 841971
+        "ig_reels_avg_watch_time": 8414,
+        "ig_reels_video_view_total_time": 900400
       }
     },
     {
@@ -39,15 +39,15 @@
       "permalink": "https://www.instagram.com/reel/Df8DPyYiGUT/",
       "timestamp": "2026-11-19T21:31:08+0000",
       "metricas": {
-        "reach": 29,
-        "views": 31,
+        "reach": 38,
+        "views": 45,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 2,
         "total_interactions": 3,
-        "ig_reels_avg_watch_time": 3952,
-        "ig_reels_video_view_total_time": 114616
+        "ig_reels_avg_watch_time": 6282,
+        "ig_reels_video_view_total_time": 238748
       }
     },
     {
@@ -61,14 +61,14 @@
       "timestamp": "2026-11-19T18:00:13+0000",
       "metricas": {
         "reach": 116,
-        "views": 150,
+        "views": 151,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 9272,
-        "ig_reels_video_view_total_time": 1066329
+        "ig_reels_avg_watch_time": 9576,
+        "ig_reels_video_view_total_time": 1120420
       }
     },
     {
@@ -851,6 +851,10 @@
     {
       "fecha": "2026-11-20T10:05+00:00",
       "seguidores": 1599
+    },
+    {
+      "fecha": "2026-11-20T16:07+00:00",
+      "seguidores": 1600
     }
   ]
 }
