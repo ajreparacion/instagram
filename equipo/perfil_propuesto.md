@@ -1,57 +1,95 @@
-# Perfil propuesto de @nosabesloquehasvisto (Estratega, 6/11/2026 20:35)
+# Perfil de @neogestlab (Instagram, Facebook, YouTube) — reescrito 20/11/2026
 
-## ESTADO REAL Y LO QUE FALTA (Estratega, 12/11/2026; comprobado en Buzzfy a las 15:42; manda sobre todo lo de abajo)
-- Usuario: @neogestlab. **Hecho.**
-- Biografía (134 caracteres de 150), **ya puesta** el 11/11: «Apps para tu negocio y tu día a día 📲 / El Jambo que sabe y las IAs, cada día 😈 / Prueba gratuita: sin tarjeta ni compromiso / Pídela aquí 👇». No se toca esta semana: promete lo mismo que enseñan los episodios y la oferta.
-- Enlace, **ya puesto** el 11/11 a las 21:12: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?src=instagram
-- Nombre visible: sigue «IA Fácil · Trucos que no sabes». **Falta** cambiarlo a «Neogest Lab · Apps a medida» (27 caracteres); Instagram no lo permite hasta ~25/11 y solo se hace desde el móvil.
-- Rejilla: **falta** archivar las 6 publicaciones repetidas del 8-10/11 (lista con enlaces en pendiente_usuario.md); hoy quien llega al perfil ve la misma pieza dos y tres veces.
-- Título del enlace: se queda en «Prueba gratuita» esta semana. Si el 18/11 visita → clic sigue por debajo del 25 %, el experimento de la semana del 23/11 es probar «Cuéntanos tu idea: te decimos cómo sería tu app» (monetizacion.md, acción 4 del 11/11).
-- Lo de abajo (Bit y Paco, «IA Fácil», @nosabesloquehasvisto) es histórico y no se aplica.
+Sustituye a `equipo/archivo/perfil_hasta_2026-11-20.md` y `perfil_propuesto_hasta_2026-11-20.md`,
+que mezclaban tres pivotes históricos distintos («Expedientes Imposibles», «IA Fácil · Trucos»,
+primeras versiones de «El Jambo») con datos y personajes que ya no existen (la Jupillo, Bit y Paco
+en doodle, el nombre «@nosabesloquehasvisto»). Hoy hay UNA sola cuenta activa de Neogest Lab
+(@neogestlab en Instagram, YouTube y Facebook — DIRECTIVA_VIGENTE §4) con UN solo reparto vigente
+(biblia v4, `equipo/serie_jambo.md`: Rosa Melano, Felipe Lotas, Sindy Entes, Neo, Concha Quetón,
+Bit — este último NO sale en El Jambo, vive en los vídeos de trucos). Este documento da el texto
+exacto a pegar en cada red, ya corregido con: catchphrase real («Que lo resuelva el Neo», no
+«Que lo haga la Jupillo», que es de un reparto anterior), la distinción humor negro/sátira
+corregida el 20/11 (ver DIRECTIVA §13), el cierre obligatorio de prueba gratuita (regla 5 del
+proyecto) y la marca 2026 (logo «N» de circuitos, nunca el «NL» neón).
 
-Por la NUEVA ESTRATEGIA del usuario (6/11/2026 20:27): IA y automatizaciones fáciles para gente normal, en dibujos animados doodle con Bit y Paco. Sustituye a la propuesta de «Expedientes · Misterios Reales». El usuario @nosabesloquehasvisto se mantiene. Lo que solo puede cambiar el dueño (nombre, bio, enlace, foto, destacadas) se copia también en equipo/pendiente_usuario.md.
+## Lo que no puede tocar el equipo
+Ni Buzzfy ni la API de empresa de Meta permiten escribir nombre, biografía, enlace, foto de
+perfil ni historias destacadas (solo lectura). Todo lo de abajo lo pega el dueño a mano; son
+2-3 minutos por red.
 
-## 1. Nombre visible
-**IA Fácil · Trucos que no sabías**
-- Es el campo que indexa la búsqueda: lleva «IA» y «Trucos», lo que teclea el público.
-- Ojo: tiene 31 caracteres y Instagram admite 30 en el nombre. Si la app no lo deja, usar **IA Fácil · Trucos que no sabes** (30) o **IA Fácil·Trucos que no sabías** (29).
+## 1. Instagram @neogestlab
 
-## 2. Biografía (125 caracteres de 150)
+**Nombre visible** (31 de 30-64 car. según la versión de la app; si no cabe, usar la alternativa):
 ```
-Trucos de IA fáciles para gente normal 🤖
-Claude, ChatGPT y Gemini sin líos
-Un truco nuevo cada día
-Sígueme y ahórrate horas 👇
+El Jambo que sabe · Neogest Lab
 ```
-- Línea 1: propuesta (qué es y para quién). Línea 2: palabras de búsqueda. Línea 3: frecuencia. Línea 4: llamada a seguir, justo encima del enlace.
-- Máximo 2 emojis, sin hashtags.
+Alternativa si Instagram lo recorta: `El Jambo que sabe y las IAs` (27).
 
-## 3. Enlace
-El hub de Neogest Lab (https://expedientes-imposibles-bdf431bd.base44.app) se reconvierte en «IA Fácil · Guías y prompts»: arriba las guías y prompts de los reels (lo que se envía por DM), debajo herramientas con enlace de afiliado oficial (con el aviso «enlace de afiliado») y «Apps de Neogest Lab» (son nuestras). Título del enlace en Instagram: «Guías y prompts gratis». Nunca TikTok. Lo monta Mejora.
+**Biografía** (147 de 150 caracteres):
+```
+El Jambo que sabe
+Humor negro contra la oficina
+Que lo resuelva el Neo
+Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso
+```
+Motivo de cada línea: (1) nombre de la serie, lo que la gente busca y reconoce; (2) qué tono
+tiene el contenido, ya corregido (antes decía solo «humor negro sobre el trabajo» sin que el
+contenido lo fuera de verdad; con la corrección del 20/11 esta línea por fin es cierta); (3)
+la frase que la gente repite en comentarios, hace de sello de la serie; (4) el cierre exacto
+que pide la regla 5 del proyecto — nunca «comenta X y te envío», siempre esta frase tal cual,
+porque la métrica que manda es altas en prueba gratuita de Gestión Integral 7D, no seguidores.
+Sin hashtags ni «⬇️»: Instagram ya muestra el botón de enlace debajo de la bio.
 
-## 4. Foto de perfil
-La cara de Bit: círculo blanco, pantalla-cara cian con dos ojos y una sonrisa, trazo negro grueso, fondo papel claro. Se reconoce a 40 px y es la misma mascota de los reels. Sin logos de ChatGPT, Claude ni Gemini.
+**Enlace**: el que ya está puesto (Centro de Contenido Apps, `?src=instagram`) — sin cambios,
+sigue llevando a la prueba gratuita.
 
-## 5. Destacadas (portadas iguales: papel claro, icono doodle negro, acento cian, sin texto en la portada)
-| Nombre | Contenido | Para qué sirve |
-|---|---|---|
-| EMPIEZA | Quiénes son Bit y Paco, qué se publica (un truco al día, 13:40 y 20:40) y cómo pedir la guía comentando la palabra clave. | Convertir visita en seguidor |
-| PROMPTS | Los prompts de los reels, uno por story, listos para hacer captura. | Guardados y vueltas al perfil |
-| CORREO | Trucos de Gmail/Outlook y automatizaciones del correo. | Tema de más búsqueda |
-| MÓVIL | Lens, atajos y automatizaciones gratis del móvil. | Público general |
-| GRATIS | Qué se puede hacer gratis con ChatGPT, Claude y Gemini (según sus páginas oficiales, con fecha). | Búsqueda «IA gratis» |
-| APPS | Apps de Neogest Lab que encajen, diciendo que son nuestras. | Tráfico a apps propias |
+**Foto de perfil**: isotipo 2026 («N» de circuitos) sobre el fondo negativo oficial
+(`#071226`), 1080×1080 px, PNG, descargado del kit (https://flashy-seven-flow-pro.base44.app/marca-2026/
+— nunca redibujado). Sustituye cualquier «NL» neón que quede puesto.
 
-## 6. Rejilla
-- Los reels de las 20:40 se comparten en el feed para que la rejilla muestre ya la temática nueva; portada con el gancho en grande y Bit o Paco en el mismo sitio.
-- Los reels antiguos (misterios, podcast 2024) se pueden archivar, no borrar, cuando haya 9 reels nuevos publicados (decisión del Estratega el lunes 16/11 con datos).
-- Fijar arriba los 3 mejores trucos de la semana.
+**Historias destacadas** (6, portadas iguales: fondo `#071226`, isotipo blanco pequeño en
+una esquina, sin texto):
+| Nombre | Contenido |
+|---|---|
+| EMPIEZA | Quién es El Jambo, el reparto (Rosa, Felipe, Sindy, Neo), cuándo se publica. |
+| EPISODIOS | Un fragmento de 10-15 s de los episodios con mejor dato (visitas/retención). |
+| LAS APPS | Una historia por app activa del catálogo (§ en DIRECTIVA_VIGENTE), con «pide tu prueba gratuita». |
+| CONCHA Y BIT | Presentación de los dos personajes nuevos (20/11): Concha Quetón (clienta morosa) y Bit (trucos). |
+| FUNCIONA DE VERDAD | Capturas de funciones reales confirmadas en las apps (nunca inventadas). |
+| PRUEBA GRATIS | Cómo pedirla, sin tarjeta ni compromiso, paso a paso. |
 
-## 7. Categoría
-Creador digital (si el dueño no lo ha cambiado aún, sigue valiendo lo propuesto el 6/11: es reversible y no afecta a estadísticas ni a la API).
+## 2. Facebook — página Neogestlab (ID 1437632859434095)
 
-## ACTUALIZACIÓN 10/11/2026 (Estratega, serie «El Jambo que sabe y las IAs»)
-Solo el dueño puede cambiarlo. Hoy: nombre «IA Fácil · Trucos que no sabes» y bio con el cierre «Escríbeme IDEA…» (prohibido desde el 10/11 00:00).
-- Bio propuesta (138 de 150): «El Jambo que sabe y las IAs 🖤 / Humor negro sobre el trabajo, 3 episodios por semana / Que lo haga la Jupillo / Apps de Neogest Lab en el enlace»
-- Nombre visible: «El Jambo que sabe · Neogest Lab» (31; si no cabe, «El Jambo que sabe y las IAs», 24).
-- Enlace sin cambios (Centro de Contenido Apps). Dejarlo así no choca con la fase sin apps: los episodios no lo mencionan.
+La sección «Información»/«Acerca de» de Facebook admite más texto que Instagram (hasta 255 en
+la descripción corta, más en la pestaña «Información general»). Texto para la descripción corta:
+```
+El Jambo que sabe y las IAs — humor negro contra la cultura del trabajo, con un reparto fijo
+(Rosa, Felipe, Sindy y Neo). Que lo resuelva el Neo. Apps de Neogest Lab con prueba gratuita:
+sin tarjeta, sin datos bancarios y sin compromiso.
+```
+Categoría de página: mantener la que ya esté puesta (empresa de software/tecnología); no afecta
+a esta reescritura. Foto de perfil y portada: mismo isotipo 2026 que Instagram, nunca el «NL»
+antiguo. Enlace en la pestaña «Sitio web»: el mismo del hub de Instagram.
+
+## 3. YouTube — NeogestLab (@neogestlab, ID UCEDMuvCre43IhS0sR6aNEew)
+
+La descripción del canal (hasta 1000 caracteres) es donde más espacio hay para palabras de
+búsqueda. Texto propuesto:
+```
+Neogest Lab desarrolla y publica sus propias apps — y las cuenta con humor negro en la serie
+«El Jambo que sabe y las IAs»: Rosa (la jefa que pide lo imposible), Felipe y Sindy (los que
+cargan con ello) y Neo (la IA que siempre acaba resolviéndolo). «Que lo resuelva el Neo.»
+
+Cada vídeo muestra una función real de una app de Neogest Lab, nunca inventada: gestión de
+negocio, facturación, citas, hogar y más. Pide tu prueba gratuita en cualquiera de ellas: sin
+tarjeta, sin datos bancarios y sin compromiso.
+```
+Palabras clave del canal (campo separado, no visible al público): neogest lab, el jambo que
+sabe, apps para negocios, gestión integral 7d, ia para pymes, automatización pequeños negocios.
+Imagen de banner y miniatura de canal: isotipo 2026, misma regla que arriba.
+
+## Comprobación
+Cuando el dueño pegue estos textos, se confirma por lectura directa del perfil (Buzzfy
+`ig_account_stats` para Instagram; el panel de Facebook/YouTube para las otras dos) en la
+siguiente pasada, y se compara a 7 días: visitas al perfil, toques del enlace y, sobre todo,
+altas nuevas en la prueba gratuita de Gestión Integral 7D frente a la semana anterior.
