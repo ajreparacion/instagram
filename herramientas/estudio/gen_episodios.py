@@ -24,7 +24,7 @@ EPS = json.load(open(sys.argv[1])); OUT = sys.argv[2]
 # a mano, ChatGPT/Sora). En cuanto exista la URL pública, ponla aquí UNA vez y todos los
 # episodios (presentes y futuros) pasan a usarla automáticamente; hasta entonces None = set
 # vectorial "casa". No repetir el pedido por episodio.
-COSAS_DE_CASA_VIDEO = None
+COSAS_DE_CASA_VIDEO = "https://media.base44.com/videos/public/6af862101565c330cf06389f/4ae3afde4_cosas-de-casa-intro.mp4"
 # voz base por personaje: (voz, rate% base, pitch Hz base)
 VOZ = {"rosa": ("es-ES-ElviraNeural", 0, -4), "felipe": ("es-ES-AlvaroNeural", -4, -2), "sindy": ("es-ES-XimenaNeural", 8, 4),
        "neo": ("es-ES-AlvaroNeural", 0, 0), "cliente": ("es-ES-AlvaroNeural", -4, -10),
