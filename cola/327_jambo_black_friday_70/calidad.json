@@ -2,16 +2,12 @@
   "aprobado": false,
   "nota": 75,
   "motivos": [
-    "Rechazo automático (roles/calidad.md): la pieza sigue hecha con el motor «sketch», retirado para la serie El Jambo desde el 15/11. El guion.json declara \"modo\": \"sketch\" y los 3 fotogramas lo confirman: fondo plano de color sólido (amarillo/negro) y personajes tipo sticker vectorial, no el estilo doodle obligatorio del bloqueo 6 del estándar (papel claro, trazo negro grueso, un solo acento cian).",
-    "Mismo motivo exacto que el calidad.json anterior (15/11, nota 78): no se ha corregido el motor de render pese al re-render del 19/11.",
-    "Técnicamente la pieza está bien (18.17s, 1080x1920, LUFS -14.14, pico -1.32dB, sin silencios, whisper coincide con el guion), pero el bloqueo de estilo es automático e independiente de la nota técnica."
+    "Rechazo automático (bloqueo 6 del estándar): la pieza sigue hecha con el motor «sketch», retirado para la serie El Jambo desde el 15/11. El guion.json declara \"modo\": \"sketch\" y los 3 fotogramas lo confirman: fondo plano de color sólido (amarillo en gancho/gags, negro liso en el cierre) y personajes tipo sticker vectorial de contorno, no el estilo doodle obligatorio (papel claro, trazo negro grueso, un solo acento cian, Bit/Paco u otros personajes de la serie en ese estilo).",
+    "Tercera vez consecutiva con el mismo motivo exacto (calidad.json del 15/11 nota 78, del 19/11 nota 75, y ahora 20/11): el re-render no ha cambiado el motor de dibujo, solo ha vuelto a renderizar en sketch.",
+    "Técnicamente la pieza está bien: 18.17 s, 1080x1920, LUFS -14.14, pico -1.48 dB, sin silencios por encima del máximo, whisper coincide con el guion (control_audio aprobado). El bloqueo de estilo es automático e independiente de la nota técnica, así que no puede aprobarse aunque el resto cumpla."
   ],
-  "como_arreglarlo": "Creador: re-renderizar en Neogest Studio (herramientas/estudio/LEEME.md) con el motor doodle vigente (papel claro, trazo negro grueso, acento cian, Bit/Paco u otros personajes de la serie en ese estilo), manteniendo el guion de 5 tiempos ya aprobado (gancho→gag→gag→gag→remate→cierre con pregunta), que en sí mismo cumple la fórmula narrativa y el límite de duración. No cambiar el texto del post ni la música, solo el render visual.",
-  "fecha": "2026-11-19T23:15:01Z",
+  "como_arreglarlo": "Creador: re-renderizar en Neogest Studio (herramientas/estudio/LEEME.md) forzando el motor doodle vigente (papel claro, trazo negro grueso, acento cian), corrigiendo el campo \"modo\" del guion.json de \"sketch\" a \"dibujo\" antes de lanzar el render. Mantener el guion de 5 tiempos ya aprobado (gancho→gag→gag→gag→remate→cierre con pregunta), que cumple la fórmula narrativa y el límite de duración; no tocar texto del post ni música, solo el render visual. Si el motor sketch sigue apareciendo tras forzar el modo, escalar como petición a equipo/peticiones_mejora.md (prefijo no aplica, es render propio) porque puede ser un fallo del pipeline de render que ignora el campo \"modo\".",
+  "fecha": "2026-11-20T16:52:46Z",
   "revisor": "Calidad (API)",
-  "render": "2026-11-19T23:03:35+00:00",
-  "aprobado_anterior": false,
-  "nota_anterior": 75,
-  "caducado": "2026-11-19T23:32:33+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-19T23:32:33+00:00"
+  "render": "2026-11-19T23:32:33+00:00"
 }

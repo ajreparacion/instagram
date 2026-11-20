@@ -1,12 +1,8 @@
 {
-  "aprobado": false,
+  "aprobado": true,
   "nota": 92,
-  "comentario": "18.7s, 1080x1920, sin silencios >0.6s, LUFS -14.18/pico -1.42 dB (dentro de estándar). Whisper coincide con guion. Fórmula de 5 tiempos completa: gancho POV, planteamiento, escalada en tres golpes (Pelota/Bola/Trámites), giro visual con sello \"DETRÁS\" en Jupillo, cierre con pregunta concreta y fácil de contestar. Conflicto real de oficina (huésped pesado), sin muletillas de IA, ritmo de cambio cada 1.5-2s. Motor sketch vigente (no el antiguo retirado). Post con atribución musical correcta, aviso de ficción/IA, comentario fijado y avance del siguiente episodio, sin cifras inventadas (serie de humor sin datos de producto).",
-  "fecha": "2026-11-19T23:14:17Z",
+  "comentario": "18.7s, 1080x1920, sin silencios >0.6s, LUFS -14.18/pico -1.49 dB (dentro de estándar). Whisper coincide exactamente con el guion. Fórmula de 5 tiempos completa: gancho POV (huésped pregunta hora del desayuno), planteamiento, escalada en tres golpes (Pelota/Bola/Trámites), giro visual con sello \"DETRÁS\" en Jupillo, cierre con pregunta concreta y fácil de contestar (\"¿Qué te preguntan mil veces en el trabajo?\"). Conflicto real de oficina/hotel, sin muletillas de IA, ritmo de cambio de plano cada 1.5-2s, personajes y estilo doodle consistentes (fondo amarillo, trazo negro, acento cian en el cierre). No se detecta logo antiguo NL en los tres fotogramas inspeccionados. Post con atribución musical correcta (Kevin MacLeod, CC BY 4.0), aviso de ficción/IA, comentario fijado y avance del siguiente episodio, sin cifras ni afirmaciones de producto (serie de humor, _comprobado lo confirma explícitamente). Mismo contenido/duración/audio que la revisión previa ya aprobada.",
+  "fecha": "2026-11-20T16:52:11Z",
   "revisor": "Calidad (API)",
-  "render": "2026-11-19T23:04:42+00:00",
-  "aprobado_anterior": true,
-  "nota_anterior": 92,
-  "caducado": "2026-11-19T23:33:12+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-19T23:33:12+00:00"
+  "render": "2026-11-19T23:33:12+00:00"
 }

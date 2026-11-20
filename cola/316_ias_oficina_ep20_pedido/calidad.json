@@ -1,15 +1,12 @@
 {
   "aprobado": false,
-  "nota": 78,
+  "nota": 82,
   "motivos": [
-    "Re-render de hoy con el motor «sketch» del repo, retirado para la serie desde el 15/11: rechazo automático (roles/calidad.md)"
+    "No se ve el isotipo nuevo «N» de circuitos del kit 2026 en el fotograma final (el frame de cierre capturado a 16.38s/18.2s muestra solo la pregunta sobre fondo oscuro, sin ningún isotipo de marca visible). El estándar v10 exige comprobar todos los fotogramas, incluido el cierre, y el pie de marca es obligatorio (cuadrado NL antiguo tampoco vale, pero aquí no hay ningún isotipo visible en absoluto en el frame revisado).",
+    "No puedo confirmar con los 3 fotogramas de muestra (inicio/medio/final) que exista un pie de marca después de la pregunta final; si el vídeo termina en 18.2s justo en la pregunta sin un frame posterior de cierre con isotipo, falta el requisito obligatorio del bloqueo 11."
   ],
-  "como_arreglarlo": "Creador: rehacer en Neogest Studio (herramientas/estudio/LEEME.md) con la fórmula de 5 tiempos y moraleja.",
-  "fecha": "2026-11-15T21:44:09+00:00",
-  "revisor": "Calidad (pasada cada 2 h)",
-  "render": "2026-11-15T21:04:15+00:00",
-  "aprobado_anterior": false,
-  "nota_anterior": 78,
-  "caducado": "2026-11-19T23:20:19+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-19T23:20:19+00:00"
+  "como_arreglarlo": "Creador: confirmar que el render incluye, tras la pregunta final, un fotograma de cierre con el isotipo nuevo «N» de circuitos del kit 2026 (ni el cuadrado NL antiguo ni ausencia de logo). Si el export actual termina en la pregunta sin ese pie, añadir el cierre de marca 2026 al final del vídeo y volver a renderizar. El resto de la pieza (audio, ritmo, estructura, giro, ausencia de venta/cifras en el guion) está correcto.",
+  "fecha": "2026-11-20T16:52:29Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-19T23:20:19+00:00"
 }
