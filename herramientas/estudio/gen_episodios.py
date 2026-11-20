@@ -1,8 +1,14 @@
-"""Genera los spec.json de Neogest Studio para episodios de El Jambo que sabe (reparto Rosa/Felipe/Sindy/Neo, 16/11/2026).
+"""Genera los spec.json de Neogest Studio para episodios de El Jambo que sabe (reparto Rosa/Felipe/Sindy/Neo, 16/11/2026;
+bucle de casa con mezcla real/imagen añadido 20/11/2026, orden del dueño).
 Uso (en el sandbox de Neogest Studio, Base44 6af862101565c330cf06389f):
   pip install edge-tts; python3 gen_episodios.py eps.json /tmp/jb
   node scripts/render.mjs /tmp/jb/<n>.json /tmp/jb/<n>.mp4 --hoja
 eps.json: [{"slug","set","hora","flow","moraleja","escenas":[{"e":gancho|gag|remate|cierre,"h":personaje,"v":voz,"t":texto,"p":[personajes],"a":{personaje:accion},"sello"}]}]
+"flow" (apertura/cierre, bucle de casa): URL de un vídeo real corto (b-roll de fachada de barrio sin
+personas identificables, p. ej. generado con Google Flow) para abrir y cerrar el episodio con el mismo
+plano, como pide la biblia v5 (serie_jambo.md). Si no hay "flow" todavía, se usa el set vectorial
+"casa" ya montado en Neogest Studio (src/studio/characters.js) — nunca se bloquea un episodio por
+falta de vídeo real.
 """
 import json, asyncio, random, sys, edge_tts
 EPS = json.load(open(sys.argv[1])); OUT = sys.argv[2]
@@ -24,6 +30,8 @@ async def tts(text, who, path):
 async def main():
     for ep in EPS:
         n = ep["slug"][:3]; bg = {"type": "set", "set": ep["set"], "hour": ep["hora"], "night": ep["hora"] >= 21}; scenes = []
+        flow = ep.get("flow")
+        bg_casa = {"type": "video", "url": flow, "start": 1.0} if flow else {"type": "set", "set": "casa", "hour": ep["hora"], "night": ep["hora"] >= 21}
         for i, e in enumerate(ep["escenas"]):
             path = f"{OUT}/{n}_{i}.mp3"; words = await tts(e["v"], e["h"], path); dur = (words[-1]["e"] if words else 1.0) + 0.05
             voice = {"text": e["v"], "provider": "edge", "speaker": e["h"] or "narrador", "url": path, "duration": dur, "words": words, "offset": 0.05, "tail": 0.12}
@@ -45,8 +53,9 @@ async def main():
             if e["e"] == "remate": sc["shot"] = "primerplano"; sc["transition"] = "flash"
             if e.get("sello"): sc["texts"].append({"id": uid(), "text": e["sello"], "style": "badge", "anim": "pop", "start": 0.4, "y": 0.3, "sfx": "impacto"})
             scenes.append(sc)
-        scenes.insert(0, {"id": uid(), "duration": 1.3, "transition": "none", "background": {"type": "video", "url": ep["flow"], "start": 1.0}, "texts": [{"id": uid(), "text": ep["escenas"][0]["t"], "style": "hook", "anim": "pop", "y": 0.45, "sfx": "whoosh"}], "voice": None})
-        scenes.append({"id": uid(), "kind": "outro", "duration": 1.7, "transition": "zoom", "texts": [{"id": uid(), "text": "Síguenos para el próximo episodio", "style": "badge", "anim": "pop", "start": 0.6, "y": 0.72}]})
+        scenes.insert(0, {"id": uid(), "duration": 1.3, "transition": "none", "background": bg_casa, "texts": [{"id": uid(), "text": ep["escenas"][0]["t"], "style": "hook", "anim": "pop", "y": 0.45, "sfx": "whoosh"}], "voice": None})
+        # Cierre: mismo plano de casa que la apertura (bucle, biblia v5) con la llamada a seguir encima.
+        scenes.append({"id": uid(), "kind": "outro", "duration": 1.7, "transition": "zoom", "background": bg_casa, "texts": [{"id": uid(), "text": "Síguenos para el próximo episodio", "style": "badge", "anim": "pop", "start": 0.6, "y": 0.72}]})
         spec = {"version": 1, "format": "9:16", "fps": 30, "music": {"track": "comedia:1", "volume": 0.16, "duck": True, "duckLevel": 0.3}, "subtitles": {"enabled": True, "words": 3, "style": "amarillo", "emojis": True, "size": 0.07},
                 "brand": {"watermark": True, "watermarkPos": "right", "progress": True}, "sfx": {"enabled": True, "volume": 0.6}, "scenes": scenes}
         json.dump(spec, open(f"{OUT}/{n}.json", "w"), ensure_ascii=False); print(n, len(scenes), "escenas")

@@ -91,9 +91,11 @@ def _prompt(n):
 
     esquema = {
         "slug": "texto-corto-sin-espacios, 2-4 palabras, nueva situación",
-        "set": "oficina | despacho | bar | calle | reunion",
+        "set": "oficina | despacho | bar | calle | reunion (el set de las escenas de diálogo; el plano de casa de apertura/cierre lo pone el código, no va aquí)",
         "hora": "entero 0-23 (hora del día de la escena)",
+        "flow": "null (de momento sin vídeo real; si algún día hay un clip de b-roll de fachada de barrio ya generado, aquí va su URL; si es null se usa el set vectorial 'casa' para el plano de apertura/cierre)",
         "moraleja": "6-9 palabras, tono serio, el mensaje que se queda; si hay una cifra de la tabla de la biblia que encaje, inclúyela",
+        "recuerdo": "6-12 palabras, una línea que conecta con un episodio anterior ya publicado (de los temas ya usados) — un personaje menciona o reacciona a algo que pasó en otro capítulo; null si no hay ninguno con el que conectar todavía",
         "bucle_visual": "en 4-8 palabras, qué elemento o encuadre del gancho se repite tal cual en el cierre (misma pose, mismo plano o mismo objeto) para que el vídeo pueda volver a verse en bucle sin notar el corte",
         "escenas": [
             {
@@ -101,7 +103,7 @@ def _prompt(n):
                 "h": "rosa",
                 "t": "texto exacto que dice o el texto en pantalla, máx 8 palabras, situación reconocible desde el fotograma 0 (visible en los primeros 0,5 s, antes incluso de que se lea el texto entero)",
             },
-            {"e": "gag", "h": "felipe|sindy", "t": "frase del golpe 1 de la escalada"},
+            {"e": "gag", "h": "felipe|sindy", "t": "frase del golpe 1 de la escalada, registro de barrio con réplica inteligente"},
             {"e": "gag", "h": "rosa", "t": "frase del golpe 2, peor que el 1"},
             {"e": "gag", "h": "felipe|sindy", "t": "frase del golpe 3, peor que el 2, remata con 'Que lo resuelva el Neo'"},
             {"e": "remate", "h": "neo", "t": "frase del giro: Neo resuelve ESE conflicto y deja a Rosa en evidencia"},
@@ -228,18 +230,49 @@ Reglas duras (si no las cumples, el episodio se rechaza):
 7. Prohibido: suicidio, autolesión, enfermedades o muertes reales, víctimas, política de
    partido, colectivos, marcas o empresas reales, consejos médicos/legales/financieros,
    cualquier app de Neogest Lab en el vídeo.
-8. Duración implícita del conjunto de frases: episodio corto, 15-25 s hablado, nunca una
-   escena de relleno.
+8. Duración implícita del conjunto de frases: episodio de 45-70 s hablado (biblia v5, orden
+   del dueño 20/11 tarde: "1 al día pero de más duración"), nunca una escena de relleno.
+9. Registro de habla de barrio con réplica inteligente (ver BIBLIA v5 más abajo) en Rosa,
+   Felipe, Sindy y Concha Quetón; Neo siempre correcto y neutro.
 
 NUEVO PERSONAJE (orden del dueño 20/11): "conchaqueton" (Concha Quetón, clienta morosa,
 coletilla «Eso lo arreglamos la semana que viene») es una alternativa a "cliente" para dar
 variedad y continuidad cuando el conflicto lo trae un cliente — úsala en el gancho/gag en vez
 de "cliente" cuando encaje, nunca en el remate (eso sigue siendo solo de Neo).
 
+BIBLIA v5 (orden del dueño, 20/11 tarde, en sus palabras): "humor negro y la ironía con
+mensaje final, tiene que impactar, remover, hacer reír en plan bestia... personajes con poca
+cultura al hablar pero a la vez inteligentes, que choque la diferencia, un barrio marginal,
+gente de pocos recursos, estilo comedia americana... 1 episodio al día pero de más duración".
+Tres cambios nuevos sobre todo lo de arriba (que sigue mandando):
+1. REGISTRO DE HABLA: Rosa, Felipe, Sindy y Concha Quetón hablan en castellano popular y de
+   barrio — modismos, gramática relajada, sin tecnicismos — pero lo que DICEN es agudo e
+   inteligente. El choque entre cómo hablan y lo listos que son es el gancho de personalidad;
+   la pobreza es el escenario (viven en un barrio humilde), nunca el chiste — el chiste va
+   siempre contra el sistema o contra la propia resignación del personaje, jamás contra cómo
+   habla la gente de barrio en la vida real. Neo sigue hablando correcto y neutro: ese
+   contraste con el resto es parte del gag.
+   MAL (registro bajo sin inteligencia, solo vulgar): "Esto es una mierda y ya está."
+   BIEN (registro bajo + réplica inteligente, lo que se pide): "A mí que me paguen las horas,
+   que lo de 'formar parte de la familia' ya lo cobro en cariño, y de eso no come nadie."
+2. DURACIÓN Y CADENCIA: episodios de 45-70 s hablados (no 15-25 s), con espacio para que los
+   3 golpes de la escalada respiren un poco más que antes; 1 episodio NUEVO al día (no varios
+   cortos). Usa entre 6 y 9 escenas (antes 5-7) para llenar ese tiempo sin relleno: puedes
+   añadir un golpe extra a la escalada (4 en vez de 3) si el conflicto lo pide, pero el remate
+   y el cierre siguen siendo solo de Neo.
+3. RECUERDO/CONTINUIDAD (orden del dueño: "llevar un orden de recuerdo en los personajes por
+   situaciones anteriores"): si alguno de los temas ya usados ({temas}) encaja de forma
+   natural, añade una línea breve en el cierre donde un personaje lo menciona o reacciona a
+   ello (p. ej. Sindy: "Como lo del jueves, pero peor"). Si no encaja ninguno todavía, deja el
+   campo "recuerdo" en null — nunca inventes una referencia a un episodio que no existe.
+El plano de casa de apertura y cierre (el "estilo comedia americana" con el mismo encuadre
+para el bucle) lo añade el código a partir del campo "set"/"flow" del episodio, no hace falta
+escribirlo como escena.
+
 Devuelve SOLO un array JSON (sin texto fuera del JSON, sin ``` ) con {n} objetos, cada uno
 con este esquema exacto (valores de ejemplo, escríbelos tú con contenido real distinto en
 cada guion; "h" solo puede ser rosa, felipe, sindy, neo, cliente o conchaqueton; "e" solo puede ser
-gancho, gag, remate o cierre; usa entre 5 y 7 escenas, con el patrón gancho, 3x gag,
+gancho, gag, remate o cierre; usa entre 6 y 9 escenas, con el patrón gancho, 3-4x gag,
 remate, cierre):
 {json.dumps(esquema, ensure_ascii=False, indent=2)}
 """
