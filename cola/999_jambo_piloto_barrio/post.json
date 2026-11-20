@@ -1,0 +1,39 @@
+{
+ "tipo": "reel",
+ "texto": "2,5 millones de horas extra sin cobrar cada semana (EPA, 1T 2026). Rosa dice «voluntario». La ley dice horas extra. Felipe dice que sí. Sindy dice que no. Concha dice que luego.\nGuarda este vídeo para la próxima vez que te digan que es «un favor».\n#humornegro #trabajo #ia #jefes #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
+ "cuando": null,
+ "compartir_en_feed": true,
+ "prueba_no_seguidores": true,
+ "formato": "Serie El Jambo",
+ "publico": "oficina",
+ "formula": "El Jambo que sabe v5 (biblia nueva: barrio humilde, registro de habla con réplica inteligente, bucle de casa, 45-70 s, Rosa/Felipe/Sindy/Concha Quetón/Neo)",
+ "_fuentes": ["El Español, 26/05/2026, citando la EPA del INE"],
+ "_comprobado": "Cifra tomada del guion (equipo/guiones_gemini/pendientes/2026-11-20_jambo_piloto_barrio.json), con fuente citada por el guionista. No reverificada por Claude en esta pasada.",
+ "_nota_creador": "20/11/2026 noche: PILOTO de la biblia v5, orden directa del dueño (\"lanzalo\"). NO programado (cuando: null) a propósito: pendiente de que el dueño vea el vídeo y apruebe el formato nuevo antes de publicarlo o de que entre en la cadencia normal de 1/día. Primer episodio con etiqueta de nombre y apellido al entrar cada personaje y con Concha Quetón en el reparto.",
+ "motor_voz": "edge",
+ "comentario_fijado": "Episodio nuevo cada día en @neogestlab",
+ "avance_siguiente": null,
+ "portada_ms": 0,
+ "monetizacion": {
+  "objetivo": "visita_perfil",
+  "oferta": "prueba gratuita en /solicitar (texto del post)",
+  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+ },
+ "musica": {
+  "titulo": "Biblioteca Pixabay de Neogest Studio",
+  "autor": "Pixabay",
+  "licencia": "Licencia de contenido de Pixabay",
+  "archivo": "estudio"
+ },
+ "motor": "neogest-studio",
+ "asset": "999_jambo_piloto_barrio.mp4",
+ "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/61db245cc_jambo-piloto-barrio.mp4",
+ "_render": {
+  "duracion_s": 37.2,
+  "lufs": -14.1,
+  "pico_dbfs": -1.5,
+  "peso_mb": 17.88,
+  "voces": "edge-tts (borrador/gratis, sin ElevenLabs)",
+  "checkpoints_base44": ["piloto-jambo-barrio-render-para-entrega", "limpieza-entregas-tras-subir-piloto-jambo"]
+ }
+}

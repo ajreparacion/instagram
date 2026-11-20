@@ -1,0 +1,55 @@
+{
+  "slug": "jambo-piloto-barrio",
+  "set": "oficina",
+  "hora": 9,
+  "flow": null,
+  "moraleja": "Millones de horas extra sin cobrar, cada semana.",
+  "recuerdo": null,
+  "bucle_visual": "el móvil de Rosa en la puerta de casa",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Este finde trabajáis todos... voluntariamente."
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Jefa, el finde lo tengo cogío pa enamorarme, no pa currar gratis."
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Yo este finde me doy un homenaje, que para eso curráis vosotros gratis."
+    },
+    {
+      "e": "gag",
+      "h": "conchaqueton",
+      "t": "¿Y mi factura pa cuándo, maja? Qué frío hace aquí... bueno, eso lo arreglamos la semana que viene."
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Si curro gratis el sábado, el domingo curro gratis pa mí: en la cama. Que lo resuelva el Neo."
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "Trabajo voluntario sin pagar es horas extra sin cobrar. Ya está registrado y reclamado."
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "Millones de horas extra sin cobrar, cada semana."
+    }
+  ],
+  "fuente": "claude (piloto, orden directa del dueño 20/11 noche)",
+  "generado": "2026-11-20T20:17:00Z",
+  "post": {
+    "linea1": "2,5 millones de horas extra sin cobrar cada semana (EPA, 1T 2026).",
+    "contexto": "Rosa dice «voluntario». La ley dice horas extra. Felipe dice que sí. Sindy dice que no. Concha dice que luego.",
+    "pedido": "Guarda este vídeo para la próxima vez que te digan que es «un favor».",
+    "fuente_cifra": "El Español, 26/05/2026, citando la EPA del INE.",
+    "hashtags": "#humornegro #trabajo #ia #jefes #pymes"
+  }
+}
