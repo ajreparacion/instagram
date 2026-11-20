@@ -1,6 +1,3 @@
-2026-11-15 20:17  308_jambo_ep8_presupuesto: NO se publica, control de audio: voz distinta del guion: faltan ['mi'], sobran ['ni'] (rehacer esas frases)
-2026-11-15 20:17  Voz con edge-tts: 7 frases en 5 s
-2026-11-15 20:17  Voz: silencios recortados por frase (s): [0.12, 0.14, 0.13, 0.13, 0.12, 0.13, 0.13]
 2026-11-15 20:17  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(1.9), np.float64(1.9), np.float64(2.8), np.float64(3.8), np.float64(3.5), np.float64(4.9), np.float64(4.2)]
 2026-11-15 20:18  Voz: alineación palabra a palabra (small, 13.8 s): 7/7 frases
 2026-11-15 20:18  Mezcla: voz -16.0 LUFS, música -22.2 LUFS (con ducking -25.1), la música baja 6.0 dB (p90) bajo la voz, ratio 2.192; máster -15.57 -> -13.9 LUFS, pico -1.3 dBFS; huecos de voz: []
@@ -598,3 +595,6 @@ KeyError: 'escenas'
 2026-11-20 20:53  315_ias_oficina_ep19_desayuno: YouTube publicado https://youtube.com/shorts/gkhKvyqkcVo
 2026-11-20 20:53  315_ias_oficina_ep19_desayuno: Facebook publicado https://www.facebook.com/reel/1688270386276849
 2026-11-20 20:53  315_ias_oficina_ep19_desayuno: publicado https://www.instagram.com/reel/Df-czNBlMRB/
+2026-11-20 22:07  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-20 22:07  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-20 22:07  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
