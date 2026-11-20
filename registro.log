@@ -1,4 +1,3 @@
-2026-11-15 20:16  Voz: silencios recortados por frase (s): [0.13, 0.12, 0.13, 0.12, 0.14, 0.12, 0.12]
 2026-11-15 20:16  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(2.5), np.float64(1.5), np.float64(3.2), np.float64(3.4), np.float64(4.2), np.float64(5.0), np.float64(4.1)]
 2026-11-15 20:17  Voz: alineación palabra a palabra (small, 14.2 s): 7/7 frases
 2026-11-15 20:17  Mezcla: voz -16.3 LUFS, música -22.4 LUFS (con ducking -25.2), la música baja 6.0 dB (p90) bajo la voz, ratio 2.237; máster -16.09 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
@@ -598,3 +597,4 @@ KeyError: 'escenas'
 2026-11-20 11:05  Estadísticas actualizadas (30 posts, 1599 seguidores)
 2026-11-20 17:07  Estadísticas actualizadas (30 posts, 1600 seguidores)
 2026-11-20 18:52  327_jambo_black_friday_70: NO publicado, sin aprobación de Calidad (nota >= 90) ni del dueño
+2026-11-20 20:22  336_gestoria7d_demo_reel: NO publicado, sin aprobación de Calidad (nota >= 90) ni del dueño
