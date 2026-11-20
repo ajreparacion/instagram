@@ -94,17 +94,18 @@ def _prompt(n):
         "set": "oficina | despacho | bar | calle | reunion",
         "hora": "entero 0-23 (hora del día de la escena)",
         "moraleja": "6-9 palabras, tono serio, el mensaje que se queda; si hay una cifra de la tabla de la biblia que encaje, inclúyela",
+        "bucle_visual": "en 4-8 palabras, qué elemento o encuadre del gancho se repite tal cual en el cierre (misma pose, mismo plano o mismo objeto) para que el vídeo pueda volver a verse en bucle sin notar el corte",
         "escenas": [
             {
                 "e": "gancho",
                 "h": "rosa",
-                "t": "texto exacto que dice o el texto en pantalla, máx 8 palabras, situación reconocible desde el fotograma 0",
+                "t": "texto exacto que dice o el texto en pantalla, máx 8 palabras, situación reconocible desde el fotograma 0 (visible en los primeros 0,5 s, antes incluso de que se lea el texto entero)",
             },
             {"e": "gag", "h": "felipe|sindy", "t": "frase del golpe 1 de la escalada"},
             {"e": "gag", "h": "rosa", "t": "frase del golpe 2, peor que el 1"},
             {"e": "gag", "h": "felipe|sindy", "t": "frase del golpe 3, peor que el 2, remata con 'Que lo resuelva el Neo'"},
             {"e": "remate", "h": "neo", "t": "frase del giro: Neo resuelve ESE conflicto y deja a Rosa en evidencia"},
-            {"e": "cierre", "h": "neo", "t": "texto en pantalla, debe coincidir o repetir la moraleja"},
+            {"e": "cierre", "h": "neo", "t": "texto en pantalla, debe coincidir o repetir la moraleja, y su último fotograma debe poder encadenar con el gancho (ver bucle_visual) para que al repetirse el vídeo no se note la costura"},
         ],
     }
 
@@ -154,6 +155,16 @@ reconocible son los que menos vistas sacan. Cuando puedas, prefiere una situaci�
 espectador reconozca de inmediato por haberla vivido, y considera si el conflicto de hoy
 podría tener una "Parte 2" natural para otro episodio (dilo en el slug con "_parte2" si es
 la continuación de un tema ya usado: {temas}).
+
+GANCHO DE MEDIO SEGUNDO Y VÍDEO EN BUCLE (orden del dueño, 20/11, "vídeos completamente
+adictivos"): no basta con que el gancho tenga ≤ 8 palabras, tiene que entenderse la situación
+SOLO con la imagen en los primeros 0,5 s, antes de que el espectador llegue a leer el texto
+completo o a procesar el audio — el texto confirma lo que la imagen ya contaba. Además, el
+episodio tiene que poder reproducirse en bucle sin que se note el corte entre el cierre y el
+siguiente visionado: el último fotograma (cierre/moraleja) debe volver a la misma pose, plano
+o elemento visual del gancho (campo "bucle_visual" del esquema), para que quien lo ve una vez
+no se canse al verlo dos o tres veces seguidas — eso es lo que más sube el tiempo visto medio
+(objetivo > 60 % de la duración, aprendizajes.md).
 
 BUCLE DE RETENCIÓN (orden del dueño, 20/11: el mismo bucle de dopamina que usan los casinos
 para que no puedas dejar de mirar la mesa). Cada episodio tiene que montarse sobre estos 4
@@ -290,6 +301,8 @@ def _validar(ep):
     moraleja_palabras = len(str(ep.get("moraleja", "")).split())
     if not (6 <= moraleja_palabras <= 9):
         motivos.append(f"moraleja con {moraleja_palabras} palabras (debe ser 6-9)")
+    if not isinstance(ep.get("bucle_visual"), str) or not ep["bucle_visual"].strip():
+        motivos.append("falta bucle_visual (qué elemento del gancho se repite en el cierre para que se vea en bucle sin notar el corte)")
     escenas = ep.get("escenas") or []
     if len(escenas) < 5:
         motivos.append(f"solo {len(escenas)} escenas (mínimo 5: gancho + 3 golpes + remate)")

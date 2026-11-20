@@ -6,11 +6,18 @@ name: Creador · API directa, piloto texto (18/11/2026)
 # Neogest Studio) sigue en Claude Code: ver la cabecera del script y equipo/tablon.md
 # (18/11/2026) para el porqué.
 #
-# A propósito SOLO workflow_dispatch (sin cron): es un piloto sin probar en vivo todavía;
-# el dueño lo activa a mano o le añade un cron cuando decida que el resultado le sirve.
+# 20/11/2026 (orden del dueño, revisión de agentes): pasado el piloto manual, se le añade cron
+# propio para que recoja en automático el texto/metadata que el Creador (Claude Code, límite
+# semanal) no llegue a arreglar en su pasada de las 09:51/15:51. Vía API directa: no gasta el
+# límite semanal del plan Max. Si vuelve a generar ruido en el tablón sin avanzar (como pasó
+# hoy con 020/337/023/024, reevaluando el mismo motivo varias veces), el dueño puede quitarle
+# el cron y dejarlo solo en workflow_dispatch otra vez.
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "51 9 * * *"   # 10:51 Madrid (UTC+1), 1 h después del Creador (Claude Code)
+    - cron: "51 15 * * *"  # 16:51 Madrid (UTC+1)
 
 permissions:
   contents: write

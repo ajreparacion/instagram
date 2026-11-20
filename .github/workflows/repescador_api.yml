@@ -1,0 +1,65 @@
+name: Repescador · API directa (20/11/2026)
+
+# Nuevo rol (orden del dueño, 20/11/2026, revisión de agentes: "ningún cuello de botella").
+# Encuentra piezas de cola/ atascadas sin asset ni video_externo cuyo render real ya existe en
+# revision/ o errores/ (caso descubierto hoy: 107_catalogo_stock y 108_cobrar_facturas, 10+
+# pasadas de Calidad rechazadas por falta de material mientras el reel ya estaba hecho desde el
+# 18/11 en errores/, caducado sin que nadie lo recolocara). Solo copia post.json ya existentes
+# en el propio repo, nunca genera vídeo ni imagen. Ver herramientas/repescador_api.py y
+# equipo/tablon.md (20/11/2026).
+#
+# Vía API directa de Anthropic (no gasta el límite semanal del plan Max), como calidad_api.yml
+# y supervisor_api.yml. Corre poco antes de cada pasada de Calidad para que llegue con material
+# fresco a evaluar.
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Cada 2 h de 08:33 a 20:33 Madrid (UTC+1): barato (sin llamadas al modelo salvo que haya
+    # más de un caso), así que más frecuencia no cuesta casi nada y destraba piezas antes de
+    # que Calidad las reevalúe en vano (orden del dueño 20/11: "si hace falta más frecuencia
+    # para que todo mejore, se pone", siempre que sea vía API y no gaste el límite semanal).
+    - cron: "33 7 * * *"   # 08:33 Madrid
+    - cron: "33 9 * * *"   # 10:33 Madrid
+    - cron: "33 10 * * *"  # 11:33 Madrid, 8 min antes de Calidad
+    - cron: "33 12 * * *"  # 13:33 Madrid
+    - cron: "33 14 * * *"  # 15:33 Madrid
+    - cron: "33 16 * * *"  # 17:33 Madrid, 8 min antes de Calidad
+    - cron: "33 18 * * *"  # 19:33 Madrid
+    - cron: "33 19 * * *"  # 20:33 Madrid
+
+permissions:
+  contents: write
+
+concurrency:
+  group: repescador-api
+  cancel-in-progress: false
+
+jobs:
+  repescador:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Repescar piezas con material ya existente
+        run: python3 herramientas/repescador_api.py
+
+      - name: Guardar y subir
+        run: |
+          git config user.name "expedientes-bot"
+          git config user.email "expedientes-bot@users.noreply.github.com"
+          git add equipo/tablon.md equipo/repescador.md cola/
+          if git diff --cached --quiet; then
+            echo "Sin cambios que commitear"
+            exit 0
+          fi
+          git commit -m "Repescador (API): piezas recolocadas con material ya existente"
+          for i in 1 2 3; do
+            git push origin main && break
+            git pull --rebase origin main
+          done

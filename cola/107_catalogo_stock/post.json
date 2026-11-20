@@ -1,16 +1,34 @@
 {
- "tipo": "carrusel",
- "texto": "¿Tu catálogo sigue en un PDF eterno?\nPara tiendas, almacenes y mayoristas que trabajan con cientos de referencias.\nGestión Integral 7D, nuestra app, importa el catálogo desde Excel, CSV, PDF o una imagen con extracción por IA (revisa siempre lo importado).\nAl servir un pedido se crea un albarán numerado que descuenta el stock.\nDespués, la factura hereda las líneas, el IVA y la retención, y sale en PDF con tus datos fiscales y los del cliente.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil. 📦\n\n#comercio #mayoristas #stock #pymes #neogestlab",
+ "tipo": "reel",
+ "texto": "¿Tu catálogo sigue en un PDF eterno?\nPara tiendas, almacenes y mayoristas que trabajan con cientos de referencias.\nGestión Integral 7D, nuestra app, importa el catálogo desde Excel, CSV, PDF o una imagen con extracción por IA (revisa siempre lo importado).\nAl servir un pedido se crea un albarán numerado que descuenta el stock.\nDespués, la factura hereda las líneas, el IVA y la retención, y sale en PDF con tus datos fiscales y los del cliente.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil. 📦\n\n#comercio #mayoristas #stock #pymes #neogestlab\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
  "cuando": "2026-11-23T17:10:00+01:00",
- "publico": "Tiendas, almacenes y mayoristas con catálogo y stock",
+ "renderizado": "2026-11-18T21:57:52+00:00",
+ "asset": "107_catalogo_stock_reel.mp4",
+ "portada_ms": 1500,
+ "compartir_en_feed": true,
+ "duracion_s": 24.5,
+ "formato": "versión reel del carrusel (diapositivas animadas, música en primer plano y efectos; sin voz)",
  "app": "Gestión Integral 7D",
+ "publico": "Tiendas, almacenes y mayoristas con catálogo y stock",
  "fuentes": [
+  "Diapositivas del carrusel 107_catalogo_stock (aprobado por Calidad); mismo contenido.",
   "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Gestión Integral 7D» (estado activo, actualizada 8/11/2026): hechos_verificados (importación de catálogo desde Excel, CSV, PDF o imagen con extracción por IA; albarán numerado que descuenta stock; factura que hereda líneas, IVA por línea y retención; PDF con datos fiscales de empresa y cliente) y eslogan."
  ],
- "monetizacion": {
-  "objetivo": "clic_enlace",
-  "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
-  "paso_embudo": "visita_perfil -> clic_enlace"
+ "carrusel": "107_catalogo_stock",
+ "musica": {
+  "titulo": "Sneaky Snitch",
+  "autor": "Kevin MacLeod",
+  "licencia": "CC BY 4.0",
+  "url": "https://incompetech.com/music/royalty-free/",
+  "archivo": "Sneaky_Snitch.mp3",
+  "bpm": 87.6,
+  "origen": "pista sin derechos de la biblioteca musica/ (licencia en musica/pistas.json)"
  },
- "_nota_calidad": "12/11 Calidad: aprobado 90 con las diapositivas regeneradas el 10/11 18:49 (cierre único)."
+ "audio": {
+  "lufs_integrados": -14.1,
+  "pico_real_dbtp": -0.7,
+  "lra_lu": 1.9,
+  "medido_con": "ffmpeg ebur128=peak=true"
+ },
+ "origen": "herramientas/demo_app.py"
 }
