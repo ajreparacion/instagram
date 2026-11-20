@@ -1,0 +1,41 @@
+name: Redes vía Metricool · segunda vía TikTok
+
+# Segunda vía de publicación en TikTok, independiente de Buffer (orden del dueño 20/11: no
+# depender de una sola herramienta). Nunca repite lo que Buffer ya mandó a la misma cuenta.
+# Sin los 3 secretos de Metricool, o sin el canal conectado, termina bien sin hacer nada.
+# Manual: equipo/metricool/LEEME.md
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "7 9 * * *"
+    - cron: "7 16 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: redes-metricool
+  cancel-in-progress: false
+
+jobs:
+  redes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Programar (borrador en Metricool)
+        env:
+          METRICOOL_TOKEN: ${{ secrets.METRICOOL_TOKEN }}
+          METRICOOL_USER_ID: ${{ secrets.METRICOOL_USER_ID }}
+          METRICOOL_BLOG_ID: ${{ secrets.METRICOOL_BLOG_ID }}
+          PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+        run: python3 herramientas/redes_metricool.py tiktok
+      - name: Guardar estado
+        run: |
+          git config user.name "equipo-redes"
+          git config user.email "actions@users.noreply.github.com"
+          git add equipo/metricool/estado.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Redes Metricool: borradores programados"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
