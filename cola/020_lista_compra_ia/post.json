@@ -1,40 +1,48 @@
 {
- "tipo": "reel",
- "texto": "¿Tu lista de la compra es un caos? 10 cosas sueltas → 5 secciones del súper: esta mini web la ha hecho una IA con un solo mensaje, agrupando la lista por secciones del súper con casillas para ir tachando.\\nEs una demo con datos de ejemplo, grabada funcionando. El resultado puede variar según la IA: revisa las secciones. En Neogest Lab hacemos apps así, a medida.\\nMándaselo a quien hace la compra en casa.\\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\\nVoz generada por IA\\n\\n#hogar #familia #compra #apps #neogestlab",
- "cuando": "2026-12-04T13:40:00+01:00",
- "compartir_en_feed": true,
- "portada_ms": 300,
- "prueba_no_seguidores": false,
- "formula": "F5",
- "_fuentes": [],
- "_comprobado": "7/11/2026: la herramienta de la grabación es una página HTML real (herramientas/casos/compra.html) y se grabó funcionando con Playwright (herramientas/grabar_caso.py), con comprobaciones automáticas de los importes que salen en pantalla. No se afirma nada sobre menús ni funciones de ninguna IA ni de ninguna app de terceros.",
- "_nota_creador": "Directiva 7/11 13:49: caso real grabado funcionando. Las apps de Neogest Lab (base44.app) no se pueden abrir desde la sesión del Creador (el proxy las bloquea), así que el caso es una mini web construida por el Creador con IA y grabada de verdad. El mensaje que se ve en pantalla es la «respuesta» que se manda por DM. Datos de ejemplo, sin marcas ni clientes. Calidad: el pie «By Neogest Lab» lo pone el modo app; revisar si encaja (no es una app publicada de Neogest Lab) y que el vídeo no lleva audio propio.\n2026-11-18T19:14:37Z Creador (API): Arreglado solo lo mecánico de post.json: (3) añadido comentario_fijado y bloque monetizacion; (4) renderizado puesto a false para que el ciclo rehaga el vídeo; también he metido el número «10 cosas sueltas → 5 secciones del súper» en la primera línea del texto del pie, tal como pedía el punto (2) para el pie.\n\nPendiente de vídeo real, no arreglable por texto/metadata: el punto (1) (acortar la VOZ del gancho a ≤9 sílabas, ej. «¿Tu lista es un caos?») y la parte del punto (2) que pide meter el número también en el GANCHO hablado/en pantalla requieren tocar guion.json y volver a renderizar el audio y los subtítulos — eso le corresponde al Creador con el motor de vídeo (Neogest Studio), no a esta pasada de solo texto. También sigue pendiente que el resultado (lista agrupada) aparezca antes de los 14 s, que es un cambio de montaje/timing del vídeo, no de post.json.\n2026-11-18T19:23:05Z Creador (API): Arreglado lo mecánico que quedaba en post.json: `renderizado` seguía con la fecha antigua (2026-11-10) en vez de `false`, lo he puesto a `false` para que el ciclo descargue y procese de nuevo el vídeo una vez se corrija el guion. `comentario_fijado`, `monetizacion` y el número en la primera línea del pie («10 cosas sueltas → 5 secciones del súper») ya estaban puestos de una pasada anterior.\n\nPendiente de vídeo real, NO arreglable por texto/metadata (confirmo lo que ya señaló la nota anterior):\n1. El gancho HABLADO dura 3,43 s (límite 3 s) y la voz en pantalla debe acortarse a ≤9 sílabas (ej. «¿Tu lista es un caos?»): esto exige reescribir guion.json y volver a renderizar el audio.\n2. El número («10 cosas sueltas → 5 secciones del súper») debe aparecer también en el GANCHO hablado/subtítulo, no solo en el texto del pie: mismo problema, requiere regrabar.\n3. El resultado (lista agrupada por secciones) debe llegar antes de los 14 s: es un cambio de montaje/timing del vídeo.\n\nEstos tres puntos los tiene que resolver el Creador con el motor de Neogest Studio (guion.json + render), no esta pasada de solo texto.",
- "_autoevaluacion": {
-  "gancho": 21,
-  "truco_valor": 18,
-  "retencion": 18,
-  "estilo": 14,
-  "cta_monetizacion": 9,
-  "total": 80
- },
- "publico": "Hogar y familias",
- "formato": "Una idea, una app",
- "_nota_calidad": "10/11 Calidad: cierre cambiado al de la directiva (prueba gratuita) en guion y post, quitada la automatización IDEA; renderizado:false para que el ciclo lo rehaga.",
- "nota_mejora": "10/11/2026 (2.ª ejecución): rendido con Piper por error de instalación; se rehace con «Chatterbox España» (es-es sin referencia de persona real). Sin voz del dueño.",
- "audio_ig": {
-  "audio_id": "1174983090781223",
-  "titulo": "Float In The Waves (Instrumental) · Company Money",
-  "origen": "biblioteca de Instagram (colección libre de derechos)",
-  "audio_volume": 0.5,
-  "video_volume": 1.0,
-  "mood": "app"
- },
- "motor_voz": "chatterbox",
- "asset": "020_lista_compra_ia.mp4",
- "comentario_fijado": "La IA agrupa tu lista de la compra por secciones del súper en segundos. Prueba gratis el enlace del perfil.",
- "monetizacion": {
-  "objetivo": "altas en prueba gratuita",
-  "oferta": "prueba gratuita Gestión Integral 7D",
-  "paso_embudo": "reel -> enlace en perfil -> /solicitar"
- }
+  "tipo": "reel",
+  "texto": "¿Tu lista de la compra es un caos? 10 cosas sueltas → 5 secciones del súper: esta mini web la ha hecho una IA con un solo mensaje, agrupando la lista por secciones del súper con casillas para ir tachando.\\nEs una demo con datos de ejemplo, grabada funcionando. El resultado puede variar según la IA: revisa las secciones. En Neogest Lab hacemos apps así, a medida.\\nMándaselo a quien hace la compra en casa.\\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil.\\nVoz generada por IA\\n\\n#hogar #familia #compra #apps #neogestlab\n\nMúsica: \"Life of Riley\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-12-04T13:40:00+01:00",
+  "compartir_en_feed": true,
+  "portada_ms": 300,
+  "prueba_no_seguidores": false,
+  "formula": "F5",
+  "_fuentes": [],
+  "_comprobado": "7/11/2026: la herramienta de la grabación es una página HTML real (herramientas/casos/compra.html) y se grabó funcionando con Playwright (herramientas/grabar_caso.py), con comprobaciones automáticas de los importes que salen en pantalla. No se afirma nada sobre menús ni funciones de ninguna IA ni de ninguna app de terceros.",
+  "_nota_creador": "Directiva 7/11 13:49: caso real grabado funcionando. Las apps de Neogest Lab (base44.app) no se pueden abrir desde la sesión del Creador (el proxy las bloquea), así que el caso es una mini web construida por el Creador con IA y grabada de verdad. El mensaje que se ve en pantalla es la «respuesta» que se manda por DM. Datos de ejemplo, sin marcas ni clientes. Calidad: el pie «By Neogest Lab» lo pone el modo app; revisar si encaja (no es una app publicada de Neogest Lab) y que el vídeo no lleva audio propio.\n2026-11-18T19:14:37Z Creador (API): Arreglado solo lo mecánico de post.json: (3) añadido comentario_fijado y bloque monetizacion; (4) renderizado puesto a false para que el ciclo rehaga el vídeo; también he metido el número «10 cosas sueltas → 5 secciones del súper» en la primera línea del texto del pie, tal como pedía el punto (2) para el pie.\n\nPendiente de vídeo real, no arreglable por texto/metadata: el punto (1) (acortar la VOZ del gancho a ≤9 sílabas, ej. «¿Tu lista es un caos?») y la parte del punto (2) que pide meter el número también en el GANCHO hablado/en pantalla requieren tocar guion.json y volver a renderizar el audio y los subtítulos — eso le corresponde al Creador con el motor de vídeo (Neogest Studio), no a esta pasada de solo texto. También sigue pendiente que el resultado (lista agrupada) aparezca antes de los 14 s, que es un cambio de montaje/timing del vídeo, no de post.json.\n2026-11-18T19:23:05Z Creador (API): Arreglado lo mecánico que quedaba en post.json: `renderizado` seguía con la fecha antigua (2026-11-10) en vez de `false`, lo he puesto a `false` para que el ciclo descargue y procese de nuevo el vídeo una vez se corrija el guion. `comentario_fijado`, `monetizacion` y el número en la primera línea del pie («10 cosas sueltas → 5 secciones del súper») ya estaban puestos de una pasada anterior.\n\nPendiente de vídeo real, NO arreglable por texto/metadata (confirmo lo que ya señaló la nota anterior):\n1. El gancho HABLADO dura 3,43 s (límite 3 s) y la voz en pantalla debe acortarse a ≤9 sílabas (ej. «¿Tu lista es un caos?»): esto exige reescribir guion.json y volver a renderizar el audio.\n2. El número («10 cosas sueltas → 5 secciones del súper») debe aparecer también en el GANCHO hablado/subtítulo, no solo en el texto del pie: mismo problema, requiere regrabar.\n3. El resultado (lista agrupada por secciones) debe llegar antes de los 14 s: es un cambio de montaje/timing del vídeo.\n\nEstos tres puntos los tiene que resolver el Creador con el motor de Neogest Studio (guion.json + render), no esta pasada de solo texto.",
+  "_autoevaluacion": {
+    "gancho": 21,
+    "truco_valor": 18,
+    "retencion": 18,
+    "estilo": 14,
+    "cta_monetizacion": 9,
+    "total": 80
+  },
+  "publico": "Hogar y familias",
+  "formato": "Una idea, una app",
+  "_nota_calidad": "10/11 Calidad: cierre cambiado al de la directiva (prueba gratuita) en guion y post, quitada la automatización IDEA; renderizado:false para que el ciclo lo rehaga.",
+  "nota_mejora": "10/11/2026 (2.ª ejecución): rendido con Piper por error de instalación; se rehace con «Chatterbox España» (es-es sin referencia de persona real). Sin voz del dueño.",
+  "motor_voz": "edge",
+  "asset": "020_lista_compra_ia.mp4",
+  "comentario_fijado": "La IA agrupa tu lista de la compra por secciones del súper en segundos. Prueba gratis el enlace del perfil.",
+  "monetizacion": {
+    "objetivo": "altas en prueba gratuita",
+    "oferta": "prueba gratuita Gestión Integral 7D",
+    "paso_embudo": "reel -> enlace en perfil -> /solicitar"
+  },
+  "musica": {
+    "titulo": "Life of Riley",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Life_of_Riley.mp3",
+    "bpm": 101.3
+  },
+  "_control_audio_fallo": {
+    "fecha": "2026-11-20T00:24:15+00:00",
+    "bloqueos": [
+      "falta el giro (escena «remate»)",
+      "voz distinta del guion: faltan ['pego'], sobran ['fego'] (rehacer esas frases)"
+    ],
+    "guion_md5": "732adea9c57c9777d9f3ece7b0ca813e"
+  }
 }

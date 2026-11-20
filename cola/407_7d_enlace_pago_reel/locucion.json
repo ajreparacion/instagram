@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": null,
   "inicio": 0.0,
-  "duracion": 2.533,
+  "duracion": 2.2,
   "texto": "Mi cliente: te pago esta semana.",
   "enfasis": [
    4,
@@ -15,8 +15,8 @@
   "escena": 1,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 2.533,
-  "duracion": 2.633,
+  "inicio": 2.2,
+  "duracion": 2.167,
   "texto": "Emites la factura desde el albarán.",
   "enfasis": [
    2
@@ -26,8 +26,8 @@
   "escena": 2,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 5.167,
-  "duracion": 3.2,
+  "inicio": 4.367,
+  "duracion": 2.3,
   "texto": "Cada factura trae su enlace de pago.",
   "enfasis": [
    4,
@@ -39,8 +39,8 @@
   "escena": 3,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 8.367,
-  "duracion": 2.2,
+  "inicio": 6.667,
+  "duracion": 1.6,
   "texto": "Lo pulsas y se abre.",
   "enfasis": [
    3,
@@ -51,8 +51,8 @@
   "escena": 4,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 10.567,
-  "duracion": 3.2,
+  "inicio": 8.267,
+  "duracion": 2.233,
   "texto": "Lo copias o lo envías por correo.",
   "enfasis": [
    6
@@ -62,8 +62,8 @@
   "escena": 5,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 13.767,
-  "duracion": 2.533,
+  "inicio": 10.5,
+  "duracion": 2.133,
   "texto": "Mándaselo a quien tenga que cobrar.",
   "enfasis": [
    5
@@ -73,8 +73,8 @@
   "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 16.3,
-  "duracion": 5.8,
+  "inicio": 12.633,
+  "duracion": 4.6,
   "texto": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
   "enfasis": [
    2,

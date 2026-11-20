@@ -1,61 +1,3 @@
-2026-11-15 13:29  702_factura7d_verifactu_corto_reel: publicando…
-2026-11-15 13:30  702_factura7d_verifactu_corto_reel: YouTube publicado https://youtube.com/shorts/xRIahQVswBQ
-2026-11-15 13:30  702_factura7d_verifactu_corto_reel: Facebook publicado https://www.facebook.com/reel/29554228817522703
-2026-11-15 13:30  702_factura7d_verifactu_corto_reel: publicado https://www.instagram.com/reel/DfwyL6UDOd_/
-2026-11-15 14:44  703_medicator_corto_reel: publicando…
-2026-11-15 14:45  reel de prueba: fallo al subir/procesar ({"debug_info":{"retriable":false,"type":"ProcessingFailedError","message":"Request processing failed"}} (código None, subcódigo None)); se publica como reel normal
-2026-11-15 14:45  subida directa fallida (:{"retriable":false,"type":"ProcessingFailedError","message":"Request processing failed"}} (código None, subcódigo None)); se reintenta con video_url desde la release
-2026-11-15 14:47  703_medicator_corto_reel: YouTube publicado https://youtube.com/shorts/OFxmwjrm1dY
-2026-11-15 14:47  703_medicator_corto_reel: Facebook publicado https://www.facebook.com/reel/1611073030767254
-2026-11-15 14:47  703_medicator_corto_reel: publicado https://www.instagram.com/reel/Dfw69APnFCc/
-2026-11-15 14:47  Voz con edge-tts: 9 frases en 6 s
-2026-11-15 14:47  Voz: silencios recortados por frase (s): [0.14, 0.14, 0.13, 0.13, 0.13, 0.13, 0.14, 0.12, 0.13]
-2026-11-15 14:47  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(2.5), np.float64(3.3), np.float64(3.7), np.float64(4.4), np.float64(3.8), np.float64(4.9), np.float64(2.4), np.float64(5.2), np.float64(4.2)]
-2026-11-15 14:48  Voz: alineación palabra a palabra (small, 24.0 s): 9/9 frases
-2026-11-15 14:49  Mezcla: voz -15.7 LUFS, música -22.1 LUFS (con ducking -24.7), la música baja 6.0 dB (p90) bajo la voz, ratio 2.025; máster -15.78 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
-2026-11-15 14:49  Control de audio: OK; duración 22.03 s
-2026-11-15 14:49  332_jambo_becario_experiencia: renderizado con voz y subido a la release 'cola'
-2026-11-15 14:49  Voz con edge-tts: 9 frases en 6 s
-2026-11-15 14:49  Voz: silencios recortados por frase (s): [0.13, 0.12, 0.13, 0.12, 0.14, 0.12, 0.13, 0.14, 0.14]
-2026-11-15 14:49  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.7), np.float64(4.0), np.float64(2.9), np.float64(4.0), np.float64(5.5), np.float64(4.0), np.float64(4.5), np.float64(4.0), np.float64(4.1)]
-2026-11-15 14:49  Voz: alineación palabra a palabra (small, 29.3 s): 9/9 frases
-2026-11-15 14:50  Mezcla: voz -15.4 LUFS, música -22.6 LUFS (con ducking -25.2), la música baja 6.0 dB (p90) bajo la voz, ratio 2.062; máster -15.44 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
-2026-11-15 14:50  Control de audio: FALLA voz distinta del guion: faltan ['sin'], sobran ['y'] (rehacer esas frases); duración 23.7 s
-2026-11-15 14:50  334_jambo_lunes_con_el_bola: NO se publica, control de audio: voz distinta del guion: faltan ['sin'], sobran ['y'] (rehacer esas frases)
-2026-11-15 15:30  330_jambo_ultimo_correo: publicando…
-2026-11-15 15:30  330_jambo_ultimo_correo: YouTube publicado https://youtube.com/shorts/ao0TEpTeO2s
-2026-11-15 15:30  330_jambo_ultimo_correo: Facebook publicado https://www.facebook.com/reel/1446838497663597
-2026-11-15 15:30  330_jambo_ultimo_correo: publicado https://www.instagram.com/reel/Dfw_9U7Dqo2/
-2026-11-15 16:00  704_gps_andaluz_corto_reel: publicando…
-2026-11-15 16:00  704_gps_andaluz_corto_reel: YouTube publicado https://youtube.com/shorts/VO_mF4uiGbs
-2026-11-15 16:01  704_gps_andaluz_corto_reel: Facebook publicado https://www.facebook.com/reel/3093616507652864
-2026-11-15 16:01  704_gps_andaluz_corto_reel: publicado https://www.instagram.com/reel/DfxDZy6kTrX/
-2026-11-15 16:30  Estadísticas actualizadas (29 posts, 1602 seguidores)
-2026-11-15 16:44  317_jambo_ep5_parte2_bar: publicando…
-2026-11-15 16:44  317_jambo_ep5_parte2_bar: YouTube publicado https://youtube.com/shorts/tphNebYxSp0
-2026-11-15 16:44  317_jambo_ep5_parte2_bar: Facebook publicado https://www.facebook.com/reel/2184995362377382
-2026-11-15 16:44  317_jambo_ep5_parte2_bar: publicado https://www.instagram.com/reel/DfxIaOwgS-i/
-2026-11-15 16:45  Voz con edge-tts: 9 frases en 5 s
-2026-11-15 16:45  Voz: silencios recortados por frase (s): [0.13, 0.12, 0.13, 0.12, 0.14, 0.12, 0.13, 0.14, 0.14]
-2026-11-15 16:45  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.7), np.float64(4.0), np.float64(2.9), np.float64(4.0), np.float64(5.5), np.float64(4.0), np.float64(4.5), np.float64(4.0), np.float64(3.8)]
-2026-11-15 16:45  Voz: alineación palabra a palabra (small, 41.6 s): 9/9 frases
-2026-11-15 16:46  Mezcla: voz -15.7 LUFS, música -22.6 LUFS (con ducking -25.2), la música baja 6.0 dB (p90) bajo la voz, ratio 2.143; máster -15.67 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
-2026-11-15 16:46  Control de audio: OK; duración 23.73 s
-2026-11-15 16:46  334_jambo_lunes_con_el_bola: renderizado con voz y subido a la release 'cola'
-2026-11-15 17:04  331_jambo_vacaciones_agosto: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
-2026-11-15 17:04  332_jambo_becario_experiencia: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
-2026-11-15 17:15  333_jambo_precio_de_amigo: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
-2026-11-15 17:15  334_jambo_lunes_con_el_bola: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
-2026-11-15 17:22  333_jambo_precio_de_amigo: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
-2026-11-15 17:22  334_jambo_lunes_con_el_bola: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
-2026-11-15 17:30  335_jambo_somos_una_familia: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
-2026-11-15 17:49  338_medicator_diferencial_reel: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
-2026-11-15 18:00  331_jambo_vacaciones_agosto: publicando…
-2026-11-15 18:01  331_jambo_vacaciones_agosto: YouTube publicado https://youtube.com/shorts/ay3ZCCykHSM
-2026-11-15 18:01  331_jambo_vacaciones_agosto: Facebook publicado https://www.facebook.com/reel/2490185341758375
-2026-11-15 18:01  331_jambo_vacaciones_agosto: publicado https://www.instagram.com/reel/DfxRMdqjUSm/
-2026-11-15 20:01  332_jambo_becario_experiencia: publicando…
-2026-11-15 20:01  reel de prueba: fallo al subir/procesar ({"debug_info":{"retriable":false,"type":"ProcessingFailedError","message":"Request processing failed"}} (código None, subcódigo None)); se publica como reel normal
 2026-11-15 20:02  332_jambo_becario_experiencia: YouTube publicado https://youtube.com/shorts/TD3YjogBek4
 2026-11-15 20:02  332_jambo_becario_experiencia: Facebook publicado https://www.facebook.com/reel/1436518741474028
 2026-11-15 20:02  332_jambo_becario_experiencia: publicado https://www.instagram.com/reel/DfxfC-MicFW/
@@ -598,3 +540,61 @@ KeyError: 'escenas'
 2026-11-20 00:49  Control de audio: OK; duración 18.7 s
 2026-11-20 00:49  329_jambo_cena_empresa_navidad: re-renderizado; su aprobación de Calidad anterior queda caducada (Calidad debe reevaluarlo)
 2026-11-20 00:49  329_jambo_cena_empresa_navidad: renderizado con voz y subido a la release 'cola'
+2026-11-20 01:23  Voz con edge-tts: 5 frases en 3 s
+2026-11-20 01:23  Voz: silencios recortados por frase (s): [0.12, 0.12, 0.13, 0.11, 0.13]
+2026-11-20 01:23  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.6), np.float64(4.0), np.float64(1.7), np.float64(3.5), np.float64(4.5)]
+2026-11-20 01:23  Voz: alineación palabra a palabra (small, 13.5 s): 5/5 frases
+2026-11-20 01:24  Mezcla: voz -15.8 LUFS, música -22.5 LUFS (con ducking -25.4), la música baja 6.0 dB (p90) bajo la voz, ratio 2.18; máster -15.67 -> -14.1 LUFS, pico -1.4 dBFS; huecos de voz: []
+2026-11-20 01:24  Control de audio: FALLA falta el giro (escena «remate»); voz distinta del guion: faltan ['pego'], sobran ['fego'] (rehacer esas frases); duración 19.7 s
+2026-11-20 01:24  020_lista_compra_ia: NO se publica, control de audio: falta el giro (escena «remate»); voz distinta del guion: faltan ['pego'], sobran ['fego'] (rehacer esas frases)
+2026-11-20 01:24  Voz con edge-tts: 5 frases en 3 s
+2026-11-20 01:24  Voz: silencios recortados por frase (s): [0.13, 0.13, 0.13, 0.13, 0.13]
+2026-11-20 01:24  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.7), np.float64(3.6), np.float64(4.1), np.float64(4.5), np.float64(4.5)]
+2026-11-20 01:24  Voz: alineación palabra a palabra (small, 9.7 s): 5/5 frases
+2026-11-20 01:24  Mezcla: voz -15.1 LUFS, música -22.7 LUFS (con ducking -25.5), la música baja 6.0 dB (p90) bajo la voz, ratio 2.055; máster -15.39 -> -14.0 LUFS, pico -1.3 dBFS; huecos de voz: []
+2026-11-20 01:24  Control de audio: FALLA falta el giro (escena «remate»); voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[5.46, 6.12, 0.66], [9.68, 10.85, 1.17]]; duración 17.7 s
+2026-11-20 01:24  023_citas_familia: NO se publica, control de audio: falta el giro (escena «remate»); voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[5.46, 6.12, 0.66], [9.68, 10.85, 1.17]]
+2026-11-20 01:24  Voz con edge-tts: 5 frases en 2 s
+2026-11-20 01:24  Voz: silencios recortados por frase (s): [0.11, 0.11, 0.1, 0.12, 0.13]
+2026-11-20 01:24  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.4), np.float64(3.8), np.float64(3.4), np.float64(3.6), np.float64(4.5)]
+2026-11-20 01:25  Voz: alineación palabra a palabra (small, 9.6 s): 5/5 frases
+2026-11-20 01:25  Mezcla: voz -15.5 LUFS, música -22.7 LUFS (con ducking -25.3), la música baja 6.0 dB (p90) bajo la voz, ratio 2.091; máster -15.69 -> -14.0 LUFS, pico -1.3 dBFS; huecos de voz: []
+2026-11-20 01:25  Control de audio: FALLA falta el giro (escena «remate»); voz distinta del guion: faltan ['publicas'], sobran ['publica'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[5.11, 6.02, 0.91], [8.44, 9.36, 0.92], [12.29, 13.42, 1.13]]; duración 17.9 s
+2026-11-20 01:25  024_semana_contenido: NO se publica, control de audio: falta el giro (escena «remate»); voz distinta del guion: faltan ['publicas'], sobran ['publica'] (rehacer esas frases); silencios > 0.6 s entre frases (pista de voz): [[5.11, 6.02, 0.91], [8.44, 9.36, 0.92], [12.29, 13.42, 1.13]]
+2026-11-20 01:25  Voz con edge-tts: 6 frases en 3 s
+2026-11-20 01:25  Voz: silencios recortados por frase (s): [0.12, 0.13, 0.13, 0.12, 0.13, 0.13]
+2026-11-20 01:25  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.8), np.float64(3.4), np.float64(2.7), np.float64(3.7), np.float64(4.4), np.float64(4.5)]
+2026-11-20 01:25  Voz: alineación palabra a palabra (small, 10.9 s): 6/6 frases
+2026-11-20 01:26  Mezcla: voz -15.3 LUFS, música -22.5 LUFS (con ducking -25.3), la música baja 6.0 dB (p90) bajo la voz, ratio 1.992; máster -15.32 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
+2026-11-20 01:26  Control de audio: FALLA falta el giro (escena «remate»); duración 14.4 s
+2026-11-20 01:26  408_medicator_pastilla_reel: NO se publica, control de audio: falta el giro (escena «remate»)
+2026-11-20 01:26  Grabación de pantalla: OK /tmp/render_405_gh_plus_demo_reel/grabacion.mp4 (623 fotogramas, 20.8 s, total 40.8 s)
+2026-11-20 01:26  Voz con edge-tts: 6 frases en 4 s
+2026-11-20 01:26  Voz: silencios recortados por frase (s): [0.13, 0.13, 0.13, 0.12, 0.11, 0.13]
+2026-11-20 01:26  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.6), np.float64(4.5), np.float64(3.0), np.float64(3.9), np.float64(4.3), np.float64(4.5)]
+2026-11-20 01:27  Voz: alineación palabra a palabra (small, 11.3 s): 6/6 frases
+2026-11-20 01:27  Mezcla: voz -15.1 LUFS, música -22.7 LUFS (con ducking -25.7), la música baja 6.0 dB (p90) bajo la voz, ratio 2.003; máster -15.19 -> -14.0 LUFS, pico -1.2 dBFS; huecos de voz: []
+2026-11-20 01:27  Control de audio: FALLA falta el giro (escena «remate»); voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases); duración 18.87 s
+2026-11-20 01:27  405_gh_plus_demo_reel: NO se publica, control de audio: falta el giro (escena «remate»); voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases)
+2026-11-20 01:28  Grabación de pantalla: OK /tmp/render_601_bar_pedido_web_reel/grabacion.mp4 (444 fotogramas, 14.8 s, total 28.4 s)
+2026-11-20 01:28  Voz con edge-tts: 7 frases en 3 s
+2026-11-20 01:28  Voz: silencios recortados por frase (s): [0.11, 0.13, 0.11, 0.13, 0.13, 0.11, 0.13]
+2026-11-20 01:28  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.8), np.float64(3.5), np.float64(4.1), np.float64(4.1), np.float64(3.3), np.float64(4.2), np.float64(4.5)]
+2026-11-20 01:28  Voz: alineación palabra a palabra (small, 12.6 s): 7/7 frases
+2026-11-20 01:28  Mezcla: voz -15.1 LUFS, música -22.7 LUFS (con ducking -25.8), la música baja 6.0 dB (p90) bajo la voz, ratio 2.032; máster -15.17 -> -14.0 LUFS, pico -1.5 dBFS; huecos de voz: []
+2026-11-20 01:29  Control de audio: FALLA falta el giro (escena «remate»); voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases); duración 16.53 s
+2026-11-20 01:29  601_bar_pedido_web_reel: NO se publica, control de audio: falta el giro (escena «remate»); voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases)
+2026-11-20 01:29  Voz con edge-tts: 7 frases en 3 s
+2026-11-20 01:29  Voz: silencios recortados por frase (s): [0.13, 0.12, 0.13, 0.12, 0.13, 0.12, 0.13]
+2026-11-20 01:29  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.5), np.float64(4.1), np.float64(3.8), np.float64(4.2), np.float64(3.9), np.float64(4.2), np.float64(4.5)]
+2026-11-20 01:29  Voz: alineación palabra a palabra (small, 12.6 s): 7/7 frases
+2026-11-20 01:29  Mezcla: voz -15.1 LUFS, música -22.4 LUFS (con ducking -25.6), la música baja 5.99 dB (p90) bajo la voz, ratio 2.097; máster -15.09 -> -14.0 LUFS, pico -1.5 dBFS; huecos de voz: []
+2026-11-20 01:29  Control de audio: FALLA falta el giro (escena «remate»); voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases); duración 17.23 s
+2026-11-20 01:29  407_7d_enlace_pago_reel: NO se publica, control de audio: falta el giro (escena «remate»); voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases)
+2026-11-20 01:29  Voz con edge-tts: 7 frases en 4 s
+2026-11-20 01:29  Voz: silencios recortados por frase (s): [0.12, 0.14, 0.03, 0.13, 0.13, 0.12, 0.13]
+2026-11-20 01:29  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.5), np.float64(4.6), np.float64(3.2), np.float64(3.4), np.float64(3.2), np.float64(2.9), np.float64(4.5)]
+2026-11-20 01:29  Voz: alineación palabra a palabra (small, 12.5 s): 7/7 frases
+2026-11-20 01:30  Mezcla: voz -14.9 LUFS, música -22.5 LUFS (con ducking -25.1), la música baja 6.0 dB (p90) bajo la voz, ratio 1.957; máster -15.09 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
+2026-11-20 01:30  Control de audio: FALLA falta el giro (escena «remate»); voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases); duración 17.7 s
+2026-11-20 01:30  409_studio_beats_cancion_reel: NO se publica, control de audio: falta el giro (escena «remate»); voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases)

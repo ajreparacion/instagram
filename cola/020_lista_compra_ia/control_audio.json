@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "duracion_s": 19.7,
+  "bloqueos": [
+    "falta el giro (escena «remate»)",
+    "voz distinta del guion: faltan ['pego'], sobran ['fego'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "¿Tu lista de la compra es un caos? Se lo pedí a una IA con un solo mensaje, que es este que ves. Fego la lista tal cual toda desordenada, y le doy a ordenar por secciones. Así de fácil, sale agrupada por secciones y voy tachando lo que meto en el carro. Pide tu prueba gratuita, sin tarjeta, sin datos bancarios y sin compromiso.",
+  "guion": "¿Tu lista de la compra es un caos? Se lo pedí a una IA con un solo mensaje, que es este que ves. Pego la lista tal cual, toda desordenada, y le doy a ordenar por secciones. Así de fácil. Sale agrupada por secciones, y voy tachando lo que meto en el carro. Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso."
+}

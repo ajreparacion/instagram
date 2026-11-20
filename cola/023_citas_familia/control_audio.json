@@ -1,0 +1,12 @@
+{
+  "aprobado": false,
+  "duracion_s": 17.7,
+  "bloqueos": [
+    "falta el giro (escena «remate»)",
+    "voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases)",
+    "silencios > 0.6 s entre frases (pista de voz): [[5.46, 6.12, 0.66], [9.68, 10.85, 1.17]]"
+  ],
+  "avisos": [],
+  "transcripcion": "Las citas de los abuelos en un papel, le pedí a una IA esta agenda, con un solo mensaje. Apunto quién tiene cita y qué día sin ordenarlas tal como me vienen. Se ordena sola y me marca la de mañana. Pide tu prueba gratuita, sin tarjetas, sin datos bancarios y sin compromiso.",
+  "guion": "¿Las citas de los abuelos, en un papel? Le pedí a una IA esta agenda, con un solo mensaje. Apunto quién tiene cita y qué día, sin ordenarlas, tal como me vienen. Se ordena sola y me marca la de mañana. Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso."
+}

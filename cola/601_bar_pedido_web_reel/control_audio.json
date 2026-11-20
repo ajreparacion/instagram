@@ -1,0 +1,11 @@
+{
+  "aprobado": false,
+  "duracion_s": 16.53,
+  "bloqueos": [
+    "falta el giro (escena «remate»)",
+    "voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases)"
+  ],
+  "avisos": [],
+  "transcripcion": "Pides para llevar sin llamar Esta es la web de un bar de ejemplo Eliges los platos con un toque Y el carrito te suma el total solo Y le das a enviar pedido Mándaselo a quien tenga un bar Pide tu prueba gratuita Sin tarjetas, sin datos bancarios y sin compromiso",
+  "guion": "Pides para llevar sin llamar. Esta es la web de un bar de ejemplo. Eliges los platos con un toque. Y el carrito te suma el total solo. Y le das a enviar pedido. Mándaselo a quien tenga un bar. Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso."
+}

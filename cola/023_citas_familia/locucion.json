@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": null,
   "inicio": 0.0,
-  "duracion": 2.967,
+  "duracion": 2.3,
   "texto": "¿Las citas de los abuelos, en un papel?",
   "enfasis": [
    5,
@@ -16,8 +16,8 @@
   "escena": 1,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 2.967,
-  "duracion": 4.4,
+  "inicio": 2.3,
+  "duracion": 3.7,
   "texto": "Le pedí a una IA esta agenda, con un solo mensaje.",
   "enfasis": [
    8,
@@ -29,7 +29,7 @@
   "escena": 2,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 7.367,
+  "inicio": 6.0,
   "duracion": 4.733,
   "texto": "Apunto quién tiene cita y qué día, sin ordenarlas, tal como me vienen.",
   "enfasis": [
@@ -41,8 +41,8 @@
   "escena": 3,
   "estilo": "tramo",
   "hablante": null,
-  "inicio": 12.1,
-  "duracion": 2.833,
+  "inicio": 10.733,
+  "duracion": 2.367,
   "texto": "Se ordena sola y me marca la de mañana.",
   "enfasis": [
    8
@@ -52,8 +52,8 @@
   "escena": 4,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 14.933,
-  "duracion": 5.167,
+  "inicio": 13.1,
+  "duracion": 4.6,
   "texto": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
   "enfasis": [
    2,
