@@ -12,5 +12,6 @@
   "nota": 92,
   "fecha": "2026-11-10T11:55Z"
  },
- "comentario": "Render del 10/11 19:43Z sin cambios desde la revisión v8 del 10/11 (post.json y vídeo intactos, solo cambió el plan): el rechazo sigue vigente. Se actualiza la fecha para que la pasada no lo vuelva a marcar como pendiente."
+ "comentario": "Render del 10/11 19:43Z sin cambios desde la revisión v8 del 10/11 (post.json y vídeo intactos, solo cambió el plan): el rechazo sigue vigente. Se actualiza la fecha para que la pasada no lo vuelva a marcar como pendiente.",
+ "decision_dueno": "20/11/2026 22:10: el dueño revisó el vídeo y señala dos fallos técnicos del render (además del motivo de guion de Calidad): falla el logo final y falla la voz narrada. No se publica hasta corregir el logo final y la voz narrada, aparte de reescribir la espina del sketch."
 }
