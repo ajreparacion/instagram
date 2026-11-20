@@ -32,11 +32,15 @@ async def main():
         n = ep["slug"][:3]; bg = {"type": "set", "set": ep["set"], "hour": ep["hora"], "night": ep["hora"] >= 21}; scenes = []
         flow = ep.get("flow")
         bg_casa = {"type": "video", "url": flow, "start": 1.0} if flow else {"type": "set", "set": "casa", "hour": ep["hora"], "night": ep["hora"] >= 21}
+        vistos = set()  # para la etiqueta de nombre y apellido, solo en la primera aparición de cada personaje (orden del dueño 20/11 noche)
         for i, e in enumerate(ep["escenas"]):
             path = f"{OUT}/{n}_{i}.mp3"; words = await tts(e["v"], e["h"], path); dur = (words[-1]["e"] if words else 1.0) + 0.05
             voice = {"text": e["v"], "provider": "edge", "speaker": e["h"] or "narrador", "url": path, "duration": dur, "words": words, "offset": 0.05, "tail": 0.12}
             if e["e"] == "cierre":
-                scenes.append({"id": uid(), "duration": dur + 0.6, "transition": "zoom", "background": bg, "characters": [{"who": "felipe", "x": 0.3, "expr": "cansado"}, {"who": "neo", "x": 0.72, "expr": "feliz"}], "shot": "general", "voice": voice,
+                cierre_cast = [{"who": "felipe", "x": 0.3, "expr": "cansado"}, {"who": "neo", "x": 0.72, "expr": "feliz"}]
+                for cc in cierre_cast:
+                    if cc["who"] not in vistos: cc["intro"] = True; vistos.add(cc["who"])
+                scenes.append({"id": uid(), "duration": dur + 0.6, "transition": "zoom", "background": bg, "characters": cierre_cast, "shot": "general", "voice": voice,
                                "texts": [{"id": uid(), "text": ep["moraleja"], "style": "badge", "anim": "pop", "y": 0.12, "sfx": "impacto"}, {"id": uid(), "text": e["t"], "style": "hook", "anim": "pop", "start": 0.5, "y": 0.26}]}); continue
             p = e["p"] or [e["h"]]; xs = {}
             if "felipe" in p: xs["felipe"] = 0.3
@@ -46,7 +50,9 @@ async def main():
             for w in p[:2]:
                 ex = EXP.get(e["a"].get(w, "habla"), "neutral")
                 if e["e"] == "remate": ex = "chulo" if w == e["h"] else "sorprendido"
-                cast.append({"who": w, "x": xs[w], "expr": ex})
+                entry = {"who": w, "x": xs[w], "expr": ex}
+                if w not in vistos: entry["intro"] = True; vistos.add(w)
+                cast.append(entry)
             sc = {"id": uid(), "duration": 0.4, "transition": "slide" if i else "none", "background": bg, "characters": cast, "voice": voice, "shot": ["auto", "medio", "primerplano", "auto", "general"][i % 5], "texts": []}
             if i >= 1 and e["e"] == "gag" and e["h"] != "neo":
                 sc["overlays"] = [{"id": uid(), "type": "emoji", "text": EMO[i % len(EMO)], "x": 0.82 if xs.get(e["h"], 0.3) < 0.5 else 0.18, "y": 0.32, "start": 0.25, "size": 0.12}]

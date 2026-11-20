@@ -255,6 +255,12 @@ Tres cambios nuevos sobre todo lo de arriba (que sigue mandando):
    MAL (registro bajo sin inteligencia, solo vulgar): "Esto es una mierda y ya está."
    BIEN (registro bajo + réplica inteligente, lo que se pide): "A mí que me paguen las horas,
    que lo de 'formar parte de la familia' ya lo cobro en cariño, y de eso no come nadie."
+1bis. RASGOS NUEVOS (orden del dueño, 20/11 noche; apellido de Felipe corregido a Netra, no
+   "Lotas"): Rosa es un poco liberal/coqueta — se permite lujos y ligereces a sí misma que les
+   niega a Felipe y Sindy, el contraste es el gag, nunca un chiste explícito. Felipe es un
+   ligón — intenta ligar o colar una excusa de corazón y siempre le sale mal. Concha Quetón
+   siempre tiene frío — se queja del frío en casi cualquier línea suya. Usa estos rasgos para
+   dar color a sus frases cuando encajen, sin forzarlos en todas.
 2. DURACIÓN Y CADENCIA: episodios de 45-70 s hablados (no 15-25 s), con espacio para que los
    3 golpes de la escalada respiren un poco más que antes; 1 episodio NUEVO al día (no varios
    cortos). Usa entre 6 y 9 escenas (antes 5-7) para llenar ese tiempo sin relleno: puedes
