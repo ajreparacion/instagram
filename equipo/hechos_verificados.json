@@ -1,0 +1,179 @@
+{
+  "_fuente": "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto. Compilado el 20/11/2026 a partir de equipo/catalogo_apps.md (8/11), equipo/novedades_apps.md (11/11) y equipo/funciones_vistosas.md (12/11), ya verificados por el Creador/Mejora contra Base44. Lo que NO esté aquí no se afirma.",
+  "_mantenimiento": "Mejora y Centro añaden o actualizan una app en cada pasada que verifique algo nuevo en pantalla o en código confirmado; nunca borran una app sin anotar el motivo. Comunidad (API, FB/YouTube) y Creador (API) leen este archivo en vez del MCP de Base44, que no existe fuera de Claude Code.",
+  "_actualizado": "2026-11-20",
+  "apps": {
+    "gestion-integral-7d": {
+      "nombre": "Gestión Integral 7D",
+      "url": "https://flashy-seven-flow-pro.base44.app",
+      "estado": "activo",
+      "publico": "Autónomos y pymes de cualquier sector",
+      "hechos_verificados": [
+        "Presupuesto → pedido → albarán numerado (descuenta stock) → factura con IVA por línea",
+        "PDF con datos fiscales de empresa y cliente",
+        "Enlace de pago por factura: tarjeta con Stripe, TPV Redsys (con Bizum si está activo) o transferencia con IBAN",
+        "Cartera de clientes con ranking ABC",
+        "\"Mi día\" con paradas ordenadas por carretera y hora prevista, aviso y orden en línea recta si falla el servicio de rutas",
+        "Importar catálogo desde Excel, CSV, PDF o imagen con extracción por IA",
+        "Agentes IA que proponen acciones; el usuario aprueba o rechaza, nunca actúan solos"
+      ],
+      "prohibido_afirmar": ["Verifactu", "que los agentes actúan solos", "contabilidad o impuestos", "app nativa", "integraciones ERP", "plazos de cobro garantizados"],
+      "cta": "prueba gratuita sin tarjeta, sin datos bancarios y sin compromiso"
+    },
+    "aj-sistema-demo": {
+      "nombre": "AJ Sistema DEMO (AjReparacion Gestión, copia de demostración)",
+      "url": "https://aj-reparacion-gestion-copy-61ad5afb.base44.app",
+      "estado": "beta · DEMO multisector publicada 8/11, comprobada por el Estratega",
+      "publico": "Cualquier negocio (taller, peluquería, bar, tienda…)",
+      "hechos_verificados": [
+        "Web pública con solicitudes y fotos del cliente",
+        "Consulta del estado de la reparación/pedido por número de orden y teléfono",
+        "Lectura de la placa del equipo con la cámara (marca, modelo, n.º de serie)",
+        "Pedidos de recambios o material",
+        "Gestión interna de órdenes y clientes",
+        "Aviso por WhatsApp al cliente en cambios de estado",
+        "Copia de seguridad",
+        "Pedido web que entra en la gestión como pre-orden (comprobado 8/11, ej. /w/peluqueria-demo, /w/bar-demo)"
+      ],
+      "prohibido_afirmar": ["pago con tarjeta", "app nativa", "que se adapta sin personalizar", "pulsar \"Enviar pedido\" de verdad en la demo"],
+      "cta": "prueba gratuita sin tarjeta, sin datos bancarios y sin compromiso",
+      "nota": "NUNCA usar ni citar la app original del taller (AJ Sistema, intocable, datos reales): solo esta DEMO."
+    },
+    "aj-web": {
+      "nombre": "AJ Web",
+      "url": "https://aj-reparaci-n-web.base44.app",
+      "estado": "beta",
+      "publico": "Cualquier negocio con web",
+      "hechos_verificados": ["Portada y solicitudes online", "Tienda con pago por transferencia o PayPal", "Pedidos", "Portal de clientes"],
+      "prohibido_afirmar": ["Stripe", "diagnóstico por IA"],
+      "cta": "prueba gratuita sin tarjeta, sin datos bancarios y sin compromiso"
+    },
+    "medicator": {
+      "nombre": "MEDICATOR",
+      "url": "https://medicator-6e36ab92.base44.app",
+      "estado": "activo (43 hechos verificados)",
+      "publico": "Personas mayores y quien los cuida",
+      "hechos_verificados": [
+        "Pastilla de ahora en pantalla (nombre, cantidad, hora, indicaciones) con botón grande \"YA ME LA HE TOMADO\" y deshacer si te equivocas",
+        "Aviso en el inicio cuando hay cita médica mañana o hoy",
+        "Escanear la caja del medicamento (CIMA/AEMPS)",
+        "Lectura de parte médico, hoja \"Para el médico\", lista para la farmacia",
+        "Alergias",
+        "Modo \"Muy fácil\" y llamar a un familiar",
+        "Gráfica de constantes de 30 días",
+        "Tres modos de uso"
+      ],
+      "prohibido_afirmar": [
+        "avisos garantizados al móvil/familiares", "modo cuidador como función ya disponible",
+        "interacciones entre medicamentos", "medir con el dedo o por Bluetooth (visto en código, no comprobado en pantalla)",
+        "sustituir al médico", "\"gratis\" sin más", "diagnósticos"
+      ],
+      "cta": "prueba gratuita sin tarjeta, sin datos bancarios y sin compromiso",
+      "nota": "Solo usuario de pruebas (Carmen); siempre \"orientativo, no sustituye a tu médico\"; nunca humor negro con esta app."
+    },
+    "studio-beats-pro": {
+      "nombre": "Studio Beats PRO",
+      "url": "https://melodic-auto-viral-flow.base44.app",
+      "estado": "activo",
+      "publico": "Música y creadores",
+      "hechos_verificados": [
+        "Crea tu canción en 4 pasos",
+        "Beat instantáneo (estilo, tono, modo) con botón \"Otra idea\"",
+        "Grabar voz",
+        "\"Terminar canción\": afinación opcional, mezcla y máster automáticos con medida de LUFS y pico",
+        "Exportación WAV 16/24-bit, FLAC, MP3 320/192 kbps y stems",
+        "Biblioteca \"Sonidos del estudio\" con cajas de ritmo clásicas y batería acústica (licencia confirmada por el dueño 11/11)"
+      ],
+      "prohibido_afirmar": [
+        "beats generados por IA (desactivado)", "\"libres de derechos\"", "uso sin cuenta",
+        "nombres de marcas o máquinas (Roland, TR-808, TR-909, LinnDrum, Yamaha RX5…): decir solo \"cajas de ritmo clásicas\" o \"batería real\""
+      ],
+      "cta": "prueba gratuita sin tarjeta, sin datos bancarios y sin compromiso"
+    },
+    "gh-plus": {
+      "nombre": "GH PLUS · Gestión Hogar",
+      "url": "https://gestion-hogar-c9185d78.base44.app",
+      "estado": "activo (16 hechos verificados, ficha 10-11/11)",
+      "publico": "Cualquier hogar o familia",
+      "hechos_verificados": [
+        "Dinero disponible del mes (saldo menos pendientes)",
+        "Avisos de pagos vencidos (rojo) y próximos (naranja) con botón \"Marcar pagado\"",
+        "Gastos fijos con \"Generar pagos del mes\" sin duplicar",
+        "Presupuestos por categoría con aviso al 80 %",
+        "Nóminas, préstamos (\"me deben\"), embargos",
+        "Leer con la cámara (siempre se revisa antes de guardar)",
+        "Importar extracto CSV/Excel",
+        "Hogar compartido con código",
+        "Exportar a CSV/PDF",
+        "PWA (se puede añadir a la pantalla de inicio)",
+        "Modo demo con datos ficticios (/demo?limpia=1) para probar sin cuenta"
+      ],
+      "prohibido_afirmar": [
+        "confeti, medallas/logros o \"Consejo del día\" en la DEMO (en la demo no se guarda nada, no se ven)",
+        "que está publicada en Google Play (solo preparado)",
+        "asesoría financiera"
+      ],
+      "cta": "prueba gratuita sin tarjeta, sin datos bancarios y sin compromiso",
+      "nota": "Finanzas personales: solo datos inventados, nunca el código real de un hogar en pantalla."
+    },
+    "insultator": {
+      "nombre": "Insultator",
+      "url": null,
+      "estado": "pausado (14 hechos, ficha 10/11)",
+      "publico": "Humor",
+      "hechos_verificados": [
+        "Una pantalla con botón que hace hablar a la máquina",
+        "5 categorías de frases",
+        "Zasca aleatorio",
+        "Ruleta",
+        "Loop Studio con 10 bases"
+      ],
+      "prohibido_afirmar": ["voces grabadas por personas reales", "humor negro duro (solo sarcástico o absurdo)"],
+      "cta": "prueba gratuita sin tarjeta, sin datos bancarios y sin compromiso",
+      "nota": "App pausada: Comunidad puede responder sobre ella si preguntan, pero no se promociona activamente en piezas nuevas."
+    },
+    "gps-andaluz": {
+      "nombre": "GPS Andaluz",
+      "url": "https://ruta-mia-alma.base44.app",
+      "estado": "pausado (v1.2 con rutas pendiente de publicar)",
+      "publico": "Ocio y humor",
+      "hechos_verificados": ["Búsqueda de sitios cercanos", "Rutas", "Voz andaluza (3 acentos)", "Favoritos"],
+      "prohibido_afirmar": ["\"gratis\"/\"sin registro\"", "voces ya publicadas (hasta que salga la v1.2)"],
+      "cta": null,
+      "nota": "NO PROMOCIONAR hasta que el dueño publique la v1.2."
+    },
+    "playmocustoms": {
+      "nombre": "PlaymoCustoms",
+      "url": "https://play-mod-craft.base44.app",
+      "estado": "beta",
+      "publico": "Aficiones",
+      "hechos_verificados": ["Foto → figura o dibujo con IA", "Guía de pintura", "\"Mis Proyectos\""],
+      "prohibido_afirmar": ["exportar STL", "producto oficial", "la palabra \"Playmobil\" (marca ajena): decir \"figuras de juguete personalizadas\""],
+      "cta": "prueba gratuita sin tarjeta, sin datos bancarios y sin compromiso"
+    },
+    "son-nasi-gestion": {
+      "nombre": "Son Nasi Gestión",
+      "url": "https://aj-reparacion-gestion-copy-7d51be38.base44.app",
+      "estado": "beta",
+      "publico": "Obras y reformas con Holded",
+      "hechos_verificados": ["Proyectos de obra", "Partes de horas", "Presupuesto por enlace", "Facturación con Holded", "Remesas SEPA"],
+      "prohibido_afirmar": ["WhatsApp a clientes", "\"para cualquier constructora\""],
+      "cta": "prueba gratuita sin tarjeta, sin datos bancarios y sin compromiso"
+    },
+    "cajasegura-ia": {
+      "nombre": "CajaSegura IA",
+      "url": "https://safe-till-watch.base44.app",
+      "estado": "beta, privada (login de invitado)",
+      "publico": "Comercios",
+      "hechos_verificados": ["Alertas con IA de la zona de caja"],
+      "prohibido_afirmar": [],
+      "cta": null,
+      "nota": "NO PROMOCIONAR hasta que esté abierta al público."
+    }
+  },
+  "sin_ficha_o_pendiente_de_verificar": [
+    "Recepcionista 24h", "Gestoría7D", "APPCC Fácil", "Factura7D Verifactu", "Neogest Studio",
+    "Centro de Contenido Apps (es el hub del perfil, no se promociona como producto aparte)"
+  ],
+  "regla_comunidad": "Si preguntan por una app que no está en 'apps' arriba, responder solo con la frase genérica de la prueba gratuita y el enlace del Centro, sin inventar ninguna función."
+}

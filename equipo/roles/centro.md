@@ -28,3 +28,4 @@ Centro: Base44 appId 6ae5244d4e2b32702f0a3cd6, https://centro-de-contenido-apps-
 ## Escribe
 - Una línea por pasada en el doc del proyecto `claude/mejora-continua-centro.md` («Registro»: fecha, mejora, dato antes/después) si la sesión tiene Projects; si no, en el tablón.
 - Línea en el tablón. Mensaje al dueño de 2-3 líneas; aviso si hay algo que deba ver en el editor.
+- Si comprueba una entidad Producto con una función nueva o un hecho que ya no vale, actualiza `equipo/hechos_verificados.json` (misma app, mismo formato); lo lee Comunidad (API) para responder sin el MCP de Base44.

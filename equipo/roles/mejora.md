@@ -32,3 +32,4 @@ Cuándo: miércoles 11:13 (Madrid). Pasada extraordinaria autorizada el 16/11/20
 
 ## Escribe
 - Scripts y workflows con su copia en versiones/, `equipo/mejoras.md`, respuesta en `equipo/peticiones_mejora.md`, línea en el tablón. Mensaje al dueño de 2-3 líneas con lo mejorado.
+- Si verificas en pantalla o en código confirmado una función nueva (o que una deja de valer) de una app, actualiza `equipo/hechos_verificados.json` (añade a `hechos_verificados`/`prohibido_afirmar` de esa app, o crea la entrada si no existe); lo lee Comunidad (API) para responder sin el MCP de Base44.

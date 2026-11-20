@@ -2,15 +2,21 @@
 Misión: que nadie que comente o escriba se quede sin respuesta y que cada interesado llegue a la prueba gratuita, en los tres canales.
 Cuándo: 19:37 (Madrid), a diario. Modelo: Haiku.
 
+Aviso (20/11/2026, orden del dueño «todo lo que se puede por API, lo hacemos»): los pasos 1-3
+(Facebook y YouTube) ya NO los haces tú — los hace `herramientas/comunidad_api.py` dentro de
+`comunidad.yml`, cada hora, por API directa con `equipo/hechos_verificados.json` en vez del
+MCP de Base44. Tu pasada diaria se queda con los pasos 4-6 (Instagram, leads, invitaciones),
+que necesitan Buzzfy y no existen fuera de Claude Code.
+
 ## Lee
-- `equipo/DIRECTIVA_VIGENTE.md` (§9), últimas 40 líneas del tablón, `equipo/embudo.md`, `comunidad/pendientes.json`, `comunidad/sin_publicar.json`.
+- `equipo/DIRECTIVA_VIGENTE.md` (§9), últimas 40 líneas del tablón, `equipo/embudo.md`, `comunidad/sin_publicar.json`.
 
 ## Pasos
-1. Facebook y YouTube: las API solo se llaman dentro de GitHub Actions (los secretos solo existen ahí). El workflow `comunidad.yml` deja los comentarios nuevos en `comunidad/pendientes.json`; tú escribes las respuestas en `comunidad/respuestas.json` y el push las publica. Objetivo: responder en menos de 1 h desde que llegan.
-2. Respuestas: cortas, cercanas, humanas y distintas entre sí (sin plantillas repetidas); solo funciones de `hechos_verificados` del Producto (Centro, Base44 6ae5244d4e2b32702f0a3cd6); al interesado, la prueba gratuita «sin tarjeta, sin datos bancarios y sin compromiso» con https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=<slug>&src=<facebook|youtube>. Spam u ofensas: marcar para ocultar, no contestar.
+1. *(Automatizado por API — ver aviso arriba. Revisa `comunidad/sin_publicar.json`: si hay algo por falta de permiso, que figure en `pendiente_usuario.md`.)*
+2. *(Automatizado por API.)*
 3. YouTube: responder exige el alcance youtube.force-ssl en el token; lo que falle queda en `comunidad/sin_publicar.json`; revísalo y, si es por permiso, que figure en pendiente_usuario.md.
 4. Instagram: con Buzzfy (ig_comments, ig_inbox) mira comentarios y mensajes sin responder (< 24 h) y deja propuestas en `equipo/respuestas_ig.md`; no se publican solas (Buzzfy exige la confirmación del dueño).
-5. Interesados (piden precio, prueba o una app/web a medida): una línea en `equipo/leads.json` (canal, fecha, app, texto resumido sin datos personales).
+5. Interesados (piden precio, prueba o una app/web a medida): una línea en `equipo/leads.json` (canal, fecha, app, texto resumido sin datos personales). *(Facebook/YouTube ya los añade comunidad_api.py; aquí solo añades los de Instagram.)*
 6. Pasada de las 11:37: en `equipo/pendiente_usuario.md`, sección «Facebook · invitaciones», una línea con a quién conviene invitar hoy desde el botón «Invitar» de la página (la API no permite invitar), y comprueba que las piezas llevan la llamada a seguir la página.
 
 ## Cuentas propias del dueño
