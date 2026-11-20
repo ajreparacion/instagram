@@ -49,7 +49,7 @@ MODELOS = [
     "gemini-2.5-flash",
 ]
 N_POR_DEFECTO = 4
-PERSONAJES_VALIDOS = {"rosa", "felipe", "sindy", "neo", "cliente"}
+PERSONAJES_VALIDOS = {"rosa", "felipe", "sindy", "neo", "cliente", "conchaqueton"}
 ESTILOS_VALIDOS = {"gancho", "gag", "remate", "cierre"}
 # 19/11/2026: rechazo mecánico de lo que más se parece a "declaración de postura" en vez de
 # una frase hablada con golpe cómico (el fallo real que el dueño señaló). No es perfecto
@@ -209,9 +209,14 @@ Reglas duras (si no las cumples, el episodio se rechaza):
 8. Duración implícita del conjunto de frases: episodio corto, 15-25 s hablado, nunca una
    escena de relleno.
 
+NUEVO PERSONAJE (orden del dueño 20/11): "conchaqueton" (Concha Quetón, clienta morosa,
+coletilla «Eso lo arreglamos la semana que viene») es una alternativa a "cliente" para dar
+variedad y continuidad cuando el conflicto lo trae un cliente — úsala en el gancho/gag en vez
+de "cliente" cuando encaje, nunca en el remate (eso sigue siendo solo de Neo).
+
 Devuelve SOLO un array JSON (sin texto fuera del JSON, sin ``` ) con {n} objetos, cada uno
 con este esquema exacto (valores de ejemplo, escríbelos tú con contenido real distinto en
-cada guion; "h" solo puede ser rosa, felipe, sindy, neo o cliente; "e" solo puede ser
+cada guion; "h" solo puede ser rosa, felipe, sindy, neo, cliente o conchaqueton; "e" solo puede ser
 gancho, gag, remate o cierre; usa entre 5 y 7 escenas, con el patrón gancho, 3x gag,
 remate, cierre):
 {json.dumps(esquema, ensure_ascii=False, indent=2)}
