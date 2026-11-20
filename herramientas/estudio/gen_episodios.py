@@ -47,10 +47,11 @@ async def tts(text, who, path, emo="habla"):
     return words
 
 def bookend():
-    # "Cosas de Casa": misma tarjeta, EXACTA, en apertura y cierre de todos los episodios (bucle imperceptible).
+    # Plano de casa (estilo sitcom americano de los 90, "Cosas de Casa"/Full House, era solo referencia de
+    # ESTILO para el dueño, nunca texto en pantalla -> corregido 20/11 noche, 4.ª pasada: sin overlay de texto).
+    # Misma tarjeta EXACTA en apertura y cierre de todos los episodios (bucle imperceptible).
     bg = {"type": "video", "url": COSAS_DE_CASA_VIDEO, "start": 0.0} if COSAS_DE_CASA_VIDEO else {"type": "set", "set": "casa", "hour": 19, "night": False}
-    return {"id": uid(), "duration": 1.6, "transition": "none", "voice": None, "background": bg,
-            "texts": [{"id": uid(), "text": "COSAS DE CASA", "style": "hook", "anim": "pop", "y": 0.42, "sfx": "whoosh"}]}
+    return {"id": uid(), "duration": 1.6, "transition": "none", "voice": None, "background": bg, "texts": []}
 
 async def main():
     for ep in EPS:
@@ -77,7 +78,10 @@ async def main():
                 entry = {"who": w, "x": xs[w], "expr": ex}
                 if w not in vistos: entry["intro"] = True; vistos.add(w)
                 cast.append(entry)
-            sc = {"id": uid(), "duration": 0.4, "transition": "slide" if i else "none", "background": bg, "characters": cast, "voice": voice, "shot": ["auto", "medio", "primerplano", "auto", "general"][i % 5], "texts": []}
+            # BUG corregido 20/11 noche (4.ª pasada): la duración estaba fijada a 0.4s sin importar el audio real,
+            # así que la escena cambiaba antes de que acabara el audio Y antes de que la etiqueta de nombre
+            # (fade de 1.1s en engine.js) llegara a mostrarse. Ahora dura lo que dura el audio + margen.
+            sc = {"id": uid(), "duration": dur + 0.35, "transition": "slide" if i else "none", "background": bg, "characters": cast, "voice": voice, "shot": ["auto", "medio", "primerplano", "auto", "general"][i % 5], "texts": []}
             if i >= 1 and e["e"] == "gag" and e["h"] != "neo":
                 sc["overlays"] = [{"id": uid(), "type": "emoji", "text": EMO[i % len(EMO)], "x": 0.82 if xs.get(e["h"], 0.3) < 0.5 else 0.18, "y": 0.32, "start": 0.25, "size": 0.12}]
             if e["e"] == "remate": sc["shot"] = "primerplano"; sc["transition"] = "flash"
