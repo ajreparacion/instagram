@@ -1,0 +1,8 @@
+{
+  "aprobado": true,
+  "nota": 92,
+  "comentario": "Jambo de 20.03s, 1080x1920, LUFS -13.97, pico -1.4dB, sin silencios >0.6s. Isotipo 2026 correcto en el cierre (sin NL antiguo). Guion de ficción con conflicto claro (trámites, alergias, actividad imposible) y giro (la IA organiza todo y pide que la inviten); humor negro declarado explícitamente en el post, sin afirmaciones reales fuera de hechos_verificados. Pie con pregunta final, atribución musical correcta y CTA de prueba gratuita bien etiquetada. Aviso menor de whisper (mmm/mmn) no es bloqueo, es un falso positivo de transcripción en una interjección.",
+  "fecha": "2026-11-21T13:21:47Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-21T13:13:54+00:00"
+}
