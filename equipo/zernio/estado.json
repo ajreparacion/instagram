@@ -1,4 +1,19 @@
 {
-  "enviados": {},
+  "enviados": {
+    "308_jambo_ep8_presupuesto": {
+      "dueAt": "2026-11-21T11:45:00.000Z",
+      "zernio_id": "6b017955f5237599cae8cd79",
+      "enviado": "2026-11-21T10:58:00.000Z",
+      "fichero": "",
+      "via": "MCP de Zernio (sesión de Claude), vídeo tomado de Instagram"
+    },
+    "315_ias_oficina_ep19_desayuno": {
+      "dueAt": "2026-11-21T18:45:00.000Z",
+      "zernio_id": "6b01795debad8c73f5f41216",
+      "enviado": "2026-11-21T10:58:00.000Z",
+      "fichero": "",
+      "via": "MCP de Zernio (sesión de Claude), vídeo tomado de Instagram"
+    }
+  },
   "ultimo_error": ""
 }
