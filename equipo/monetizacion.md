@@ -4,6 +4,31 @@ Analista (incluye monetización). Versión 9: 15/11/2026 ~19:45 UTC (revisión d
 Regla: lo que no se ha leído en una fuente va como «no consta» o «n/d». Sin gasto ni promociones sin visto bueno del dueño.
 Fuentes de hoy, solo lectura: Buzzfy (`ig_account_stats` y `ig_follower_growth`, 8-15/11) y Base44 del Centro (`SolicitudInfo`). `equipo/embudo.md` regenerado con `herramientas/embudo.py` desde `equipo/kpi_buzzfy.json` y `equipo/leads.json`.
 
+## Pasada 21/11/2026 (Analista, lectura nueva 14-21/11)
+Fuentes leídas hoy, solo lectura: Buzzfy `ig_account_stats` y `ig_follower_growth` (14-21/11) y Base44 del Centro (`SolicitudInfo`, app 6ae5244d4e2b32702f0a3cd6). Ninguna cifra se ha escrito en el repo como dato de palabra clave o DM: no consta.
+
+**Cifras 14-21/11 (7 días, datos de Instagram con hasta 48 h de retraso):**
+- Alcance total 3.954 cuentas; de ellas **no seguidoras 3.913** (99 %). Reels 3.948 del alcance. Visualizaciones 5.320 (no seguidoras 4.976).
+- **Visitas al perfil: 2** (0,05 % del alcance no seguidor; meta ≥ 3 %). **Toques al enlace: 0. Clics al sitio: 1.**
+- Seguidores 1.600 ahora (1.602 el 15/11). Altas 2, bajas 4, neto -2 en 13-17/11 (18 y 19/11 pendientes).
+- Interacciones 105: 65 me gusta, 24 reposts, 8 compartidos, 0 comentarios, 0 guardados, 0 respuestas.
+- **Solicitudes en el Centro: 1 en total** (la del 8/11, origen demo, estado «cerrada»). **Ninguna nueva esta semana.**
+- DMs con intención: n/d (sin permiso de lectura de la bandeja en esta pasada). Pruebas gratuitas: n/d. Ingresos confirmados: 0 €.
+
+**Lectura:**
+- El embudo se ha estrechado en la parte alta: 2 visitas al perfil frente a 8 de la semana anterior. El paso más débil sigue siendo alcance → visita al perfil.
+- Visita → clic (1 de 2) y clic → solicitud (0 de 1) no tienen muestra útil. No conviene sacar conclusiones de ellos todavía.
+- Ojo: el alcance no seguidor de esta semana (3.913) no es comparable con el de la v9 (1.770, otra ventana y otra lectura de la API). Mantener la misma fuente en la próxima pasada.
+- Los seguidores bajan un poco por semana (-2). No es alarma, pero no crecen.
+
+**Acciones para el Estratega (4, dentro de su autoridad en `equipo/estrategia_monetizacion.md`; sin gasto):**
+1. **Visitas al perfil a 48 h por pieza:** que cada reel de la serie o de datos termine con una frase que mande al perfil («Enlace en el perfil») y que el gancho prometa lo que se ve. Medir visitas al perfil por pieza, no vistas.
+2. **Dos piezas por semana con la oferta de prueba gratuita en el último plano** (una con, otra sin), para comparar visitas al perfil y clics. Decidir con 3 piezas por brazo.
+3. **Registrar clics de /solicitar** (la página no registra clics hoy). Sin esa medida, el paso clic → solicitud sigue ciego. Es una mejora de la web del Centro: si toca hacerla, la pide el Creador o el dueño; no se toca sin orden.
+4. **Palabra clave en el cierre de reels de datos:** «Pruébalo gratis» en la bio ya es el único llamado. Probar en un reel una palabra de comentario (p. ej. «APP») con respuesta manual, solo si el dueño lo aprueba: hoy Buzzfy no muestra ninguna palabra activa y el perfil no tiene ninguna.
+
+**Dueño (no es acción del equipo):** confirmar si la solicitud del 8/11 se atendió y si quiere mantener la bio actual.
+
 ## 0. Resumen ejecutivo (8-15/11, 7 días)
 - **Embudo:** 1.770 cuentas no seguidoras alcanzadas → **8 visitas al perfil (0,5 %; meta ≥ 3 %)** → **3 clics al sitio (37,5 %)** → **1 solicitud en el Centro (8/11, origen demo, ya cerrada)** → **0 €**.
 - **El paso más débil sigue siendo alcance → visita al perfil**, y ha bajado de 1,7 % (6-13/11) a 0,5 %. Las visitas son muy pocas para sacar conclusiones, pero la tendencia va a peor.
