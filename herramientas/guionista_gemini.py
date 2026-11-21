@@ -91,7 +91,7 @@ def _prompt(n):
 
     esquema = {
         "slug": "texto-corto-sin-espacios, 2-4 palabras, nueva situación",
-        "set": "oficina | despacho | bar | calle | reunion (el set de las escenas de diálogo; la apertura/cierre es SIEMPRE la tarjeta fija 'Cosas de Casa' que pone el código, igual en todos los episodios — no va aquí, no hace falta flow ni bucle_visual desde la corrección del 20/11 noche)",
+        "set": "salon (por defecto, interior de la casa — orden del dueño 21/11: los episodios nuevos transcurren en el salón de una casa, no en la oficina) | oficina | despacho | bar | calle | reunion (estos últimos solo si la situación concreta de verdad lo pide, p.ej. un cliente en su tienda); la apertura/cierre es SIEMPRE la tarjeta fija 'Cosas de Casa' que pone el código, igual en todos los episodios — no va aquí, no hace falta flow ni bucle_visual desde la corrección del 20/11 noche",
         "hora": "entero 0-23 (hora del día de la escena)",
         "moraleja": "6-9 palabras, tono serio, el mensaje que se queda; si hay una cifra de la tabla de la biblia que encaje, inclúyela",
         "recuerdo": "6-12 palabras, una línea que conecta con un episodio anterior ya publicado (de los temas ya usados) — un personaje menciona o reacciona a algo que pasó en otro capítulo; null si no hay ninguno con el que conectar todavía",
@@ -120,6 +120,27 @@ encajan de verdad; no inventes cifras nuevas):
 ---
 {biblia}
 ---
+
+ORDEN DEL DUEÑO 21/11 MADRUGADA (tras ver el piloto v3, se suma a todo lo de arriba y manda
+sobre cualquier instrucción anterior que lo contradiga):
+1. ESCENARIO: el salón de una casa de barrio, no la oficina. "set" por defecto = "salon".
+2. TODO TIPO DE EMPLEOS: no te centres en contratos, nóminas ni estadísticas de oficina. Cada
+   episodio debe representar un oficio o una situación de vida distinta (fontanero, camarero,
+   repartidor, cuidado de un mayor, una tienda de barrio, un autónomo, una gestión cualquiera
+   del día a día) — la variedad de oficios es tan importante como la variedad de temas.
+3. COTIDIANO Y QUE EMPATICE: la situación tiene que ser algo que cualquiera reconozca de su
+   propio día a día. Apóyate en estadísticas reales de la tabla de la biblia cuando encajen de
+   verdad, y no tengas miedo de tocar temas sociales (no solo laborales) siempre dentro de las
+   líneas rojas de siempre.
+4. APPS DE IA QUE NO SIEMPRE SON BUENA IDEA: de vez en cuando, el conflicto puede nacer de que
+   algún personaje usa o se inventa una aplicación de IA (SIEMPRE genérica y ficticia, nunca un
+   producto real de Neogest Lab ni de terceros, nunca el nombre de una marca real) cuya idea no
+   sale bien — hasta que llega Neo y la resuelve de verdad. Es una fuente más de situaciones,
+   no la única.
+5. REGISTRO MÁS PALETO Y VULGAR: dentro de las líneas rojas de siempre, no suavices el lenguaje
+   de Rosa, Felipe, Sindy y Concha Quetón — pueden soltar tacos comunes del español de España
+   (joder, coño, hostia, cojones, manda huevos) y modismos de barrio reforzados ("illo") cuando
+   encajen con la réplica. Esto es registro de habla, no cambia el fondo del humor negro.
 
 MOTIVOS DE RECHAZO MÁS REPETIDOS por el equipo de Calidad en las últimas piezas (evítalos
 todos; son la razón por la que el dueño ha pedido este cambio, dice que "los guiones no
@@ -237,11 +258,14 @@ Reglas duras (si no las cumples, el episodio se rechaza):
    palabra de una frase.
 7. Prohibido: suicidio, autolesión, enfermedades o muertes reales, víctimas, política de
    partido, colectivos, marcas o empresas reales, consejos médicos/legales/financieros,
-   cualquier app de Neogest Lab en el vídeo.
+   cualquier app real de Neogest Lab o de terceros en el vídeo (una app de IA FICTICIA e
+   inventada, sin nombre de marca real, sí está permitida como fuente de gag — ver orden del
+   dueño 21/11 arriba).
 8. Duración implícita del conjunto de frases: episodio de 45-70 s hablado (biblia v5, orden
    del dueño 20/11 tarde: "1 al día pero de más duración"), nunca una escena de relleno.
-9. Registro de habla de barrio con réplica inteligente (ver BIBLIA v5 más abajo) en Rosa,
-   Felipe, Sindy y Concha Quetón; Neo siempre correcto y neutro.
+9. Registro de habla de barrio con réplica inteligente, más paleto y vulgar (ver BIBLIA v5
+   más abajo y orden del dueño 21/11 arriba) en Rosa, Felipe, Sindy y Concha Quetón; Neo
+   siempre correcto y neutro.
 
 NUEVO PERSONAJE (orden del dueño 20/11): "conchaqueton" (Concha Quetón, clienta morosa,
 coletilla «Eso lo arreglamos la semana que viene») es una alternativa a "cliente" para dar

@@ -1,105 +1,160 @@
 {
- "slug": "jambo-piloto-barrio-v3",
- "set": "salon",
- "hora": 9,
- "moraleja": "Un contrato temporal medio dura ya más que muchos matrimonios.",
- "escenas": [
-  {
-   "e": "gancho",
-   "h": "rosa",
-   "t": "Felipe, Sindy... buenas noticias. Este mes cero despidos. Solo dos renuncias voluntarias, que firmé yo por ellos.",
-   "p": ["rosa", "felipe"],
-   "a": {"rosa": "presume"}
+  "slug": "jambo-piloto-barrio-v3",
+  "set": "salon",
+  "hora": 9,
+  "moraleja": "Un contrato temporal medio dura ya más que muchos matrimonios.",
+  "escenas": [
+    {
+      "e": "gancho",
+      "h": "rosa",
+      "t": "Felipe, Sindy... buenas noticias, illo. Este mes cero despidos. Solo dos renuncias voluntarias, que firmé yo por ellos.",
+      "p": [
+        "rosa",
+        "felipe"
+      ],
+      "a": {
+        "rosa": "presume"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Rosa, joder, llevo tres años de contrato temporal. ¿Al cuarto me haces fijo o me jubiláis de becario, manda huevos?",
+      "p": [
+        "felipe",
+        "rosa"
+      ],
+      "a": {
+        "felipe": "desespera"
+      },
+      "risas": true
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Felipe, cuéntale a Rosa lo del finiquito de ayer, illo. Que era un enlace a una puta encuesta de satisfacción.",
+      "p": [
+        "sindy",
+        "felipe"
+      ],
+      "a": {
+        "sindy": "fria"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Sindy, esa encuesta es importante, cojones. El 98% de los despedidos dice sentirse escuchado. El otro 2% no contestó porque ya le quitamos el correo.",
+      "p": [
+        "rosa",
+        "sindy"
+      ],
+      "a": {
+        "rosa": "delega"
+      },
+      "risas": true
+    },
+    {
+      "e": "gag",
+      "h": "conchaqueton",
+      "t": "Rosa, sigo esperando marzo, hostia. Pero tranquila, que lo que no se paga aquí no desaparece: se archiva.",
+      "p": [
+        "conchaqueton",
+        "rosa"
+      ],
+      "a": {
+        "conchaqueton": "delega"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Concha, el archivo es sagrado, joder. Lo que entra ahí no vuelve. Como las vacaciones de agosto, manda cojones.",
+      "p": [
+        "rosa",
+        "conchaqueton"
+      ],
+      "a": {
+        "rosa": "fria"
+      },
+      "risas": true
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Felipe, cásate el sábado tranquilo, illo. El domingo, si eso, lloras gratis: que llorar tampoco cuenta como hora extra.",
+      "p": [
+        "sindy",
+        "felipe"
+      ],
+      "a": {
+        "sindy": "habla"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "felipe",
+      "t": "Neo, dile a Rosa que lo de prevención de riesgos no es de puto adorno, coño.",
+      "p": [
+        "felipe",
+        "neo"
+      ],
+      "a": {
+        "felipe": "desespera"
+      },
+      "risas": true
+    },
+    {
+      "e": "gag",
+      "h": "rosa",
+      "t": "Felipe, el cartel de prevención está, illo. Lo que no está es el extintor: lo cambiamos por una vela aromática. Huele mejor y asusta menos.",
+      "p": [
+        "rosa",
+        "felipe"
+      ],
+      "a": {
+        "rosa": "chulo"
+      }
+    },
+    {
+      "e": "gag",
+      "h": "sindy",
+      "t": "Rosa, a eso lo llamas tú flexibilidad horaria, illo: curras desde casa y desde la oficina a la vez, manda huevos.",
+      "p": [
+        "sindy",
+        "rosa"
+      ],
+      "a": {
+        "sindy": "fria"
+      },
+      "risas": true
+    },
+    {
+      "e": "remate",
+      "h": "neo",
+      "t": "Rosa, esto no es cultura de empresa, joder. Esto se llama fraude de ley, y ya tengo cita con Inspección de Trabajo.",
+      "p": [
+        "neo",
+        "rosa"
+      ],
+      "a": {
+        "neo": "habla"
+      }
+    },
+    {
+      "e": "cierre",
+      "h": "neo",
+      "t": "Un contrato temporal medio dura ya más que muchos matrimonios, illo."
+    }
+  ],
+  "fuente": "claude (piloto v3, lenguaje más paleto y vulgar + ropa de ir por casa + créditos finales, orden del dueño 21/11 madrugada)",
+  "generado": "2026-11-20T22:10:00Z",
+  "post": {
+    "linea1": "Un contrato temporal medio ya dura más que muchos matrimonios.",
+    "contexto": "Rosa normaliza despidos disfrazados de renuncias, Concha no cobra desde marzo, Felipe lleva 3 años de 'temporal' y Neo pone encima de la mesa lo que esto es de verdad: fraude de ley.",
+    "pedido": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
+    "fuente_cifra": "Encadenamiento de contratos temporales y uso fraudulento de la temporalidad, fenómeno documentado por Inspección de Trabajo e INE (datos públicos, sin cifra puntual inventada en el guion).",
+    "hashtags": "#humornegro #trabajo #ia #jefes #pymes"
   },
-  {
-   "e": "gag",
-   "h": "felipe",
-   "t": "Rosa, llevo tres años de contrato temporal. ¿A los cuatro me haces fijo o me jubiláis de becario?",
-   "p": ["felipe", "rosa"],
-   "a": {"felipe": "desespera"},
-   "risas": true
-  },
-  {
-   "e": "gag",
-   "h": "sindy",
-   "t": "Felipe, cuéntale a Rosa lo del finiquito de ayer. Que era un enlace a una encuesta de satisfacción.",
-   "p": ["sindy", "felipe"],
-   "a": {"sindy": "fria"}
-  },
-  {
-   "e": "gag",
-   "h": "rosa",
-   "t": "Sindy, esa encuesta es importante. El 98% de los despedidos dice sentirse escuchado. El otro 2% no contestó porque ya le quitamos el correo.",
-   "p": ["rosa", "sindy"],
-   "a": {"rosa": "delega"},
-   "risas": true
-  },
-  {
-   "e": "gag",
-   "h": "conchaqueton",
-   "t": "Rosa, sigo esperando marzo. Pero tranquila, que lo que no se paga aquí no desaparece: se archiva.",
-   "p": ["conchaqueton", "rosa"],
-   "a": {"conchaqueton": "delega"}
-  },
-  {
-   "e": "gag",
-   "h": "rosa",
-   "t": "Concha, el archivo es sagrado. Lo que entra ahí ya no vuelve. Como las vacaciones de agosto.",
-   "p": ["rosa", "conchaqueton"],
-   "a": {"rosa": "fria"},
-   "risas": true
-  },
-  {
-   "e": "gag",
-   "h": "sindy",
-   "t": "Felipe, cásate el sábado tranquilo. El domingo, si eso, lloras gratis: llorar tampoco cuenta como hora extra.",
-   "p": ["sindy", "felipe"],
-   "a": {"sindy": "habla"}
-  },
-  {
-   "e": "gag",
-   "h": "felipe",
-   "t": "Neo, dile a Rosa que lo de la prevención de riesgos laborales no es decorativo.",
-   "p": ["felipe", "neo"],
-   "a": {"felipe": "desespera"},
-   "risas": true
-  },
-  {
-   "e": "gag",
-   "h": "rosa",
-   "t": "Felipe, el cartel de prevención está. Lo que no está es el extintor, que lo cambiamos por una vela aromática. Huele mejor y asusta menos.",
-   "p": ["rosa", "felipe"],
-   "a": {"rosa": "chulo"}
-  },
-  {
-   "e": "gag",
-   "h": "sindy",
-   "t": "Rosa, a eso lo llamas tú flexibilidad horaria: trabajar desde casa y desde la oficina a la vez.",
-   "p": ["sindy", "rosa"],
-   "a": {"sindy": "fria"},
-   "risas": true
-  },
-  {
-   "e": "remate",
-   "h": "neo",
-   "t": "Rosa, esto no es cultura de empresa. Esto se llama fraude de ley, y ya tengo cita con Inspección de Trabajo.",
-   "p": ["neo", "rosa"],
-   "a": {"neo": "habla"}
-  },
-  {
-   "e": "cierre",
-   "h": "neo",
-   "t": "Un contrato temporal medio dura ya más que muchos matrimonios."
-  }
- ],
- "fuente": "claude (piloto v3, más duración + humor negro irónico sobre precariedad laboral real, pedido por el dueño 20/11 noche, 4.ª pasada)",
- "generado": "2026-11-20T22:10:00Z",
- "post": {
-  "linea1": "Un contrato temporal medio ya dura más que muchos matrimonios.",
-  "contexto": "Rosa normaliza despidos disfrazados de renuncias, Concha no cobra desde marzo, Felipe lleva 3 años de 'temporal' y Neo pone encima de la mesa lo que esto es de verdad: fraude de ley.",
-  "pedido": "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
-  "fuente_cifra": "Encadenamiento de contratos temporales y uso fraudulento de la temporalidad, fenómeno documentado por Inspección de Trabajo e INE (datos públicos, sin cifra puntual inventada en el guion).",
-  "hashtags": "#humornegro #trabajo #ia #jefes #pymes"
- },
- "tecnica_humor_investigada": "Búsqueda del 20/11 noche (4.ª pasada): el humor negro real sobre precariedad laboral en España (cómics como 'Precariada', 160k+ seguidores; entrevistas a cómicas como Marina Lobo) no exagera la situación ni inventa víctimas: la trata como rutina administrativa, con frialdad, y el gag está en lo normalizado que suena algo objetivamente injusto. Técnica aplicada aquí: (1) cada réplica, sin el envoltorio de chiste, es una frase que describe un abuso laboral real y verificable (contratos temporales encadenados, despido disfrazado de baja voluntaria, finiquito como trámite digital, impago de nóminas, recorte en seguridad laboral); (2) entrega fría/administrativa, nunca cruel con una persona concreta ni sobre tragedia real; (3) remate que nombra la cosa por su nombre legal (fraude de ley) en vez de suavizarla. Nada de enfermedad, muerte, víctimas reales, marcas, partidos ni colectivos."
+  "tecnica_humor_investigada": "Búsqueda del 20/11 noche (4.ª pasada): el humor negro real sobre precariedad laboral en España (cómics como 'Precariada', 160k+ seguidores; entrevistas a cómicas como Marina Lobo) no exagera la situación ni inventa víctimas: la trata como rutina administrativa, con frialdad, y el gag está en lo normalizado que suena algo objetivamente injusto. Técnica aplicada aquí: (1) cada réplica, sin el envoltorio de chiste, es una frase que describe un abuso laboral real y verificable (contratos temporales encadenados, despido disfrazado de baja voluntaria, finiquito como trámite digital, impago de nóminas, recorte en seguridad laboral); (2) entrega fría/administrativa, nunca cruel con una persona concreta ni sobre tragedia real; (3) remate que nombra la cosa por su nombre legal (fraude de ley) en vez de suavizarla. Nada de enfermedad, muerte, víctimas reales, marcas, partidos ni colectivos."
 }

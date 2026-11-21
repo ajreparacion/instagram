@@ -10,6 +10,12 @@ Concha Quetón/Neo). v5.1 (20/11/2026 noche, orden del dueño tras ver el piloto
     base de cada personaje (VOZ).
   - Risas de sitcom: marca "risas: true" en una escena de gag para añadir el sfx "risas" al final de la
     réplica (biblioteca ya incluida en Neogest Studio, src/studio/library.js).
+v5.2 (21/11/2026 madrugada, orden del dueño):
+  - Créditos finales: tras el bucle de cierre, una escena "REPARTO" con el nombre y apellido de cada
+    personaje que ha salido en el episodio (por si la etiqueta al entrar pasa desapercibida).
+  - Ropa de ir por casa para Rosa/Felipe/Sindy (sin corbata ni traje de oficina), acorde al set "salón"
+    — ver src/studio/characters.js en el app de Neogest Studio.
+  - Lenguaje más paleto y vulgar en los diálogos (biblia y guionista_gemini.py actualizados a la vez).
 Uso (en el sandbox de Neogest Studio, Base44 6af862101565c330cf06389f):
   pip install edge-tts; python3 gen_episodios.py eps.json /tmp/jb
   node scripts/render.mjs /tmp/jb/<n>.json /tmp/jb/<n>.mp4 --hoja
@@ -34,6 +40,11 @@ EXPR_MOD = {"habla": (0, 0), "desespera": (18, 10), "delega": (-12, -8), "presum
 EXPR = {"habla": "neutral", "desespera": "enfadado", "delega": "cansado", "presume": "chulo", "fria": "neutral"}
 EMO = ["😤", "🤯", "😱", "💸", "🙄", "😳"]
 uid = lambda: "%08x" % random.getrandbits(32)
+# nombre y apellido completos, para los créditos finales (orden del dueño 21/11 madrugada:
+# además de la etiqueta en pantalla al entrar cada personaje, que a veces pasa desapercibida,
+# el reparto completo se repite siempre al final como créditos de cine).
+NOMBRES = {"rosa": "Rosa Melano", "felipe": "Felipe Lotas", "sindy": "Sindy Entes", "neo": "Neo",
+           "conchaqueton": "Concha Quetón", "bit": "Bit", "cliente": "Cliente"}
 
 async def tts(text, who, path, emo="habla"):
     v, br, bp = VOZ[who]; mr, mp = EXPR_MOD.get(emo, (0, 0))
@@ -58,10 +69,22 @@ def bookend(hook=False):
     texts = [{"id": uid(), "text": HOOK_CASA, "style": "hook", "anim": "pop", "start": 0.1, "y": 0.18}] if hook else []
     return {"id": uid(), "duration": 1.6, "transition": "none", "voice": None, "background": bg, "texts": texts}
 
+def creditos(elenco):
+    # Reparto completo como créditos de cine al final de cada episodio (orden del dueño 21/11
+    # madrugada), sobre el mismo set de salón pero de noche para diferenciarlo de la escena.
+    textos = [{"id": uid(), "text": "REPARTO", "style": "badge", "anim": "pop", "start": 0.0, "y": 0.1, "sfx": "impacto"}]
+    for i, who in enumerate(elenco):
+        textos.append({"id": uid(), "text": NOMBRES.get(who, who), "style": "hook", "anim": "pop", "start": 0.3 + i * 0.35, "y": 0.24 + i * 0.12})
+    fin = 0.3 + len(elenco) * 0.35
+    textos.append({"id": uid(), "text": "By Neogest Lab", "style": "badge", "anim": "pop", "start": fin + 0.2, "y": 0.24 + len(elenco) * 0.12 + 0.14})
+    dur = fin + 1.8
+    bg = {"type": "set", "set": "salon", "hour": 22, "night": True}
+    return {"id": uid(), "duration": dur, "transition": "fade", "voice": None, "background": bg, "characters": [], "texts": textos}
+
 async def main():
     for ep in EPS:
         n = ep["slug"][:3]; bg = {"type": "set", "set": ep["set"], "hour": ep["hora"], "night": ep["hora"] >= 21}; scenes = []
-        vistos = set()  # para la etiqueta de nombre y apellido, solo en la primera aparición de cada personaje
+        vistos = {}  # dict en vez de set para conservar el orden de aparición (créditos finales)
         for i, e in enumerate(ep["escenas"]):
             emo = e["a"].get(e["h"], "habla") if e.get("a") else "habla"
             path = f"{OUT}/{n}_{i}.mp3"; words = await tts(e["v"], e["h"], path, emo); dur = (words[-1]["e"] if words else 1.0) + 0.05
@@ -69,7 +92,7 @@ async def main():
             if e["e"] == "cierre":
                 cierre_cast = [{"who": "felipe", "x": 0.3, "expr": "cansado"}, {"who": "neo", "x": 0.72, "expr": "feliz"}]
                 for cc in cierre_cast:
-                    if cc["who"] not in vistos: cc["intro"] = True; vistos.add(cc["who"])
+                    if cc["who"] not in vistos: cc["intro"] = True; vistos[cc["who"]] = True
                 scenes.append({"id": uid(), "duration": dur + 0.6, "transition": "zoom", "background": bg, "characters": cierre_cast, "shot": "general", "voice": voice,
                                "texts": [{"id": uid(), "text": ep["moraleja"], "style": "badge", "anim": "pop", "y": 0.12, "sfx": "impacto"}, {"id": uid(), "text": e["t"], "style": "hook", "anim": "pop", "start": 0.5, "y": 0.26}]}); continue
             p = e["p"] or [e["h"]]; xs = {}
@@ -81,7 +104,7 @@ async def main():
                 ex = EXPR.get(e["a"].get(w, "habla"), "neutral")
                 if e["e"] == "remate": ex = "chulo" if w == e["h"] else "sorprendido"
                 entry = {"who": w, "x": xs[w], "expr": ex}
-                if w not in vistos: entry["intro"] = True; vistos.add(w)
+                if w not in vistos: entry["intro"] = True; vistos[w] = True
                 cast.append(entry)
             # BUG corregido 20/11 noche (4.ª pasada): la duración estaba fijada a 0.4s sin importar el audio real,
             # así que la escena cambiaba antes de que acabara el audio Y antes de que la etiqueta de nombre
@@ -95,6 +118,7 @@ async def main():
             scenes.append(sc)
         scenes.insert(0, bookend(hook=True))
         scenes.append(bookend())
+        scenes.append(creditos(list(vistos.keys())))
         spec = {"version": 1, "format": "9:16", "fps": 30, "music": {"track": "comedia:1", "volume": 0.16, "duck": True, "duckLevel": 0.3}, "subtitles": {"enabled": True, "words": 3, "style": "amarillo", "emojis": True, "size": 0.07},
                 "brand": {"watermark": True, "watermarkPos": "right", "progress": True}, "sfx": {"enabled": True, "volume": 0.6}, "scenes": scenes}
         json.dump(spec, open(f"{OUT}/{n}.json", "w"), ensure_ascii=False); print(n, len(scenes), "escenas")
