@@ -11,7 +11,7 @@ Reducido el 13/11/2026 por el Estratega (la versión larga está en git). Aquí 
 Conectaste TikTok (@neogest.lab) e Instagram (@neogestlab) en Zernio por MCP. Falta solo la clave para que el robot (workflow automático) también pueda usarla:
 1. Entra en https://zernio.com/dashboard/api-keys (misma cuenta que conectó TikTok/IG) → «Create API key» → cópiala (empieza por `sk_`, no se vuelve a mostrar).
 2. Pégala como secreto `ZERNIO_API_KEY` en https://github.com/ajreparacion/instagram/settings/secrets/actions/new .
-En cuanto esté el secreto, `redes_zernio.yml` empieza a programar en TikTok dos veces al día (ver `equipo/zernio/LEEME.md`), sin depender de que Buffer vuelva.
+En cuanto esté el secreto, `redes_zernio.yml` empieza a programar en TikTok dos veces al día (ver `equipo/zernio/LEEME.md`), sin depender de que Buffer vuelva. Mientras no la pegues, Coordinación puede publicar en TikTok a mano desde una sesión de Claude con MCP de Zernio (ya conectado, sin clave) — hecho hoy (21/11) con 2 reels de producto (Gestión Integral 7D, MEDICATOR) — pero no es automático: solo pasa cuando alguien lo pide expresamente.
 
 ## Fijar publicaciones en el perfil (21/11/2026): solo se puede desde el móvil, 1 minuto
 Comprobado: Instagram **no** deja fijar publicaciones desde el navegador/ordenador, solo desde la app del móvil (los destacados y el resto sí se hicieron ya desde Chrome). Desde tu móvil, con la app de Instagram:
