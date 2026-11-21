@@ -37,12 +37,5 @@
     "archivo": "Life_of_Riley.mp3",
     "bpm": 101.3
   },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-20T00:24:15+00:00",
-    "bloqueos": [
-      "falta el giro (escena «remate»)",
-      "voz distinta del guion: faltan ['pego'], sobran ['fego'] (rehacer esas frases)"
-    ],
-    "guion_md5": "732adea9c57c9777d9f3ece7b0ca813e"
-  }
+  "renderizado": false
 }

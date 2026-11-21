@@ -1311,6 +1311,24 @@ def renderizar(cfg, carpeta, post):
     if externo.startswith("https://"):
         # vídeo ya terminado fuera del ciclo (p. ej. Neogest Studio): se descarga, se sube a la release y Calidad lo revisa
         descargar(externo, video)
+        # 21/11/2026 (Calidad, orden del dueño «sin cuellos de botella»): si el vídeo externo llega fuera de -14 LUFS ±1 o
+        # con pico real > -1 dB, el ciclo lo masteriza aquí (solo audio: loudnorm a -14 LUFS / pico -1,5; vídeo copiado),
+        # porque las sesiones no pueden subir mp4 corregidos a la release y eso dejaba piezas buenas bloqueadas días.
+        try:
+            r = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", video, "-af", "ebur128=peak=true", "-f", "null", "-"],
+                               capture_output=True, text=True, timeout=180).stderr
+            m_l = re.findall(r"I:\s+(-?[\d.]+) LUFS", r); m_p = re.findall(r"Peak:\s+(-?[\d.]+) dBFS", r)
+            lufs0 = float(m_l[-1]) if m_l else None; pico0 = float(m_p[-1]) if m_p else None
+            if (pico0 is not None and pico0 > -1.0) or (lufs0 is not None and not (-15.0 <= lufs0 <= -13.0)):
+                mast = video + ".master.mp4"
+                subprocess.run(["ffmpeg", "-hide_banner", "-y", "-i", video, "-map", "0:v:0", "-map", "0:a:0?", "-c:v", "copy",
+                                "-af", "loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000", "-c:a", "aac", "-b:a", "192k",
+                                "-movflags", "+faststart", mast], check=True, capture_output=True, timeout=600)
+                os.replace(mast, video)
+                post["_master_ciclo"] = f"{datetime.now(timezone.utc).isoformat(timespec='seconds')}: LUFS {lufs0} / pico {pico0} -> loudnorm -14 / -1,5"
+                log(f"{nombre}: vídeo externo masterizado en el ciclo (LUFS {lufs0}, pico {pico0} -> -14 / -1,5)")
+        except Exception as e:
+            log(f"{nombre}: máster del vídeo externo no disponible ({str(e)[-120:]}); se sube tal cual")
         # 18/11/2026 (Mejora, petición de Calidad 15/11): control de audio también sobre el mp4 externo. Informativo: no bloquea
         # la subida; deja control_audio.json en la carpeta con transcripción, silencios, pico y LUFS para que Calidad lo lea.
         try:

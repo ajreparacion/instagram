@@ -25,12 +25,5 @@
     "archivo": "life_of_riley.mp3",
     "bpm": 101.3
   },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-20T00:27:34+00:00",
-    "bloqueos": [
-      "falta el giro (escena «remate»)",
-      "voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases)"
-    ],
-    "guion_md5": "b39ce8e7e8e61088df413fb21b24bbb1"
-  }
+  "renderizado": false
 }

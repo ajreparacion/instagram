@@ -391,3 +391,11 @@ La muestra del cambio 37 llevaba la pista generada por código (prueba_voz.yml n
 - **Cambio:** `publicar_gh.py` › `renderizar()` (rama `video_externo`): tras descargar el mp4 ejecuta `control_audio` contra `guion.json` (si existe) y mide LUFS y pico real con ebur128; escribe `control_audio.json` en la carpeta. Informativo: nunca bloquea la subida (avisos si LUFS fuera de −14 ±1,5 o pico > −1 dB).
 - **Medido:** solo comprobada la sintaxis y la medición ebur128 sobre un tono de prueba; no probado de punta a punta en Actions (sin whisper aquí). Se verá en el registro del ciclo con el próximo video_externo (340 o 324: línea «control de audio del vídeo externo»).
 - **Revertir:** `cp herramientas/versiones/publicar_gh.py_2026-11-18 publicar_gh.py`.
+
+## 2026-11-21 · Calidad (orden del dueño: «arregla los cuellos de botella, permiso para todo»)
+1. Cierre del motor sketch con el isotipo «N» 2026 + «By Neogest Lab» (herramientas/sketch.py, _serio): era el bloqueo 11 de estandar_calidad v10 en 316, 329, 403. Revertir: quitar el bloque marcado «21/11/2026» en _serio.
+2. Cierre con voz real dura su voz + 0,45 s como máximo (herramientas/hacer_reel.py): quitaba el silencio final de 0,6-0,9 s.
+3. control_audio.py: el giro («remate») solo se exige en modo sketch (las promos de app se bloqueaban todas); silencio máximo 1,5 s en promos (DIRECTIVA §5); diferencias de 1-2 letras entre Whisper y el guion pasan a aviso (bloquea si quedan > 3 palabras o > 3 % sin pareja).
+4. publicar_gh.py: el vídeo externo (Neogest Studio) se masteriza en el ciclo si llega fuera de −14 ±1 LUFS o con pico > −1 dB (loudnorm −14 / −1,5, vídeo copiado). Probado en 345: −14,8/−0,3 → −14,2/−1,4. Sustituye a subir mp4 corregidos a mano (bloqueado en las sesiones).
+5. Calidad (API) cada hora desde reloj.yml (origen=reloj, silenciosa si no hay nada): el cron de calidad_api.yml llegaba con 2-6 h de retraso.
+Piezas relanzadas: 316, 329, 403 (render nuevo), 341-348 (vídeo externo recuperado; logo 2026 ya en el vídeo), 020, 023, 024, 404-409, 601 (bloqueos del control antiguo).

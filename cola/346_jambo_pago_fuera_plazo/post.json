@@ -1,42 +1,43 @@
 {
- "tipo": "reel",
- "texto": "«Paga a noventa días, que es nuestro amigo». Rosa, Felipe, Sindy y Neo, humor negro de ficción.\nMoraleja: el plazo legal máximo de pago entre empresas es de 60 días (Ley 15/2010).\n¿Te pagan tarde a ti también? Cuéntalo en comentarios.\nMándaselo a quien confunde amistad con plazo de pago.\n#humornegro #pymes #pagos #facturas #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: biblioteca Pixabay de Neogest Studio (licencia de contenido de Pixabay)",
- "cuando": "2026-11-25T19:40:00+01:00",
- "compartir_en_feed": true,
- "prueba_no_seguidores": true,
- "formato": "Serie El Jambo",
- "publico": "despacho",
- "formula": "El Jambo que sabe v3 (reparto Rosa/Felipe/Sindy/Neo, Neogest Studio)",
- "_fuentes": [],
- "_comprobado": "El plazo legal máximo de pago entre empresas (60 días) es un dato de la Ley 15/2010, de lucha contra la morosidad; sin enlace oficial citado en esta pasada. Calidad: añadir fuente antes de publicar si procede.",
- "_nota_creador": "18/11/2026 Creador: episodio nuevo generado a partir del guion de Gemini en equipo/guiones_gemini/pendientes/, renderizado en Neogest Studio (gen_episodios.py + render.mjs --hoja), máster -14 LUFS / pico <= -1 dB tras corregir manualmente el filtro de audio de render.mjs (bug conocido de aresample con ffmpeg del sandbox). Calidad: evaluar de cero.",
- "motor_voz": "edge",
- "comentario_fijado": "¿Te pagan tarde a ti también? Episodio nuevo cada día en @neogestlab",
- "avance_siguiente": "Mañana: ¿quién ficha de verdad los sábados?",
- "portada_ms": 0,
- "monetizacion": {
-  "objetivo": "visita_perfil",
-  "oferta": "prueba gratuita en /solicitar (texto del post)",
-  "paso_embudo": "alcance → visita al perfil → prueba gratuita"
- },
- "musica": {
-  "titulo": "Biblioteca Pixabay de Neogest Studio",
-  "autor": "Pixabay",
-  "licencia": "Licencia de contenido de Pixabay",
-  "archivo": "estudio"
- },
- "motor": "neogest-studio",
- "youtube": {
-  "titulo": "Pagar a 90 días «porque es nuestro amigo» #Shorts",
-  "descripcion": "Humor negro de ficción: la jefa que da 90 días de crédito a un amigo y Neo que ajusta el contrato a los 60 días legales. Pide tu prueba gratuita: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube\nBy Neogest Lab",
-  "etiquetas": [
-   "humornegro",
-   "pymes",
-   "pagos",
-   "facturas",
-   "neogestlab"
-  ]
- },
- "asset": "346_jambo_pago_fuera_plazo.mp4",
- "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/3d281541d_346_jambo_pago_fuera_plazo.mp4"
+  "tipo": "reel",
+  "texto": "«Paga a noventa días, que es nuestro amigo». Rosa, Felipe, Sindy y Neo, humor negro de ficción.\nMoraleja: el plazo legal máximo de pago entre empresas es de 60 días (Ley 15/2010).\n¿Te pagan tarde a ti también? Cuéntalo en comentarios.\nMándaselo a quien confunde amistad con plazo de pago.\n#humornegro #pymes #pagos #facturas #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: biblioteca Pixabay de Neogest Studio (licencia de contenido de Pixabay)",
+  "cuando": "2026-11-25T19:40:00+01:00",
+  "compartir_en_feed": true,
+  "prueba_no_seguidores": true,
+  "formato": "Serie El Jambo",
+  "publico": "despacho",
+  "formula": "El Jambo que sabe v3 (reparto Rosa/Felipe/Sindy/Neo, Neogest Studio)",
+  "_fuentes": [],
+  "_comprobado": "El plazo legal máximo de pago entre empresas (60 días) es un dato de la Ley 15/2010, de lucha contra la morosidad; sin enlace oficial citado en esta pasada. Calidad: añadir fuente antes de publicar si procede.",
+  "_nota_creador": "18/11/2026 Creador: episodio nuevo generado a partir del guion de Gemini en equipo/guiones_gemini/pendientes/, renderizado en Neogest Studio (gen_episodios.py + render.mjs --hoja), máster -14 LUFS / pico <= -1 dB tras corregir manualmente el filtro de audio de render.mjs (bug conocido de aresample con ffmpeg del sandbox). Calidad: evaluar de cero.",
+  "motor_voz": "edge",
+  "comentario_fijado": "¿Te pagan tarde a ti también? Episodio nuevo cada día en @neogestlab",
+  "avance_siguiente": "Mañana: ¿quién ficha de verdad los sábados?",
+  "portada_ms": 0,
+  "monetizacion": {
+    "objetivo": "visita_perfil",
+    "oferta": "prueba gratuita en /solicitar (texto del post)",
+    "paso_embudo": "alcance → visita al perfil → prueba gratuita"
+  },
+  "musica": {
+    "titulo": "Biblioteca Pixabay de Neogest Studio",
+    "autor": "Pixabay",
+    "licencia": "Licencia de contenido de Pixabay",
+    "archivo": "estudio"
+  },
+  "motor": "neogest-studio",
+  "youtube": {
+    "titulo": "Pagar a 90 días «porque es nuestro amigo» #Shorts",
+    "descripcion": "Humor negro de ficción: la jefa que da 90 días de crédito a un amigo y Neo que ajusta el contrato a los 60 días legales. Pide tu prueba gratuita: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube\nBy Neogest Lab",
+    "etiquetas": [
+      "humornegro",
+      "pymes",
+      "pagos",
+      "facturas",
+      "neogestlab"
+    ]
+  },
+  "asset": "346_jambo_pago_fuera_plazo.mp4",
+  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/3d281541d_346_jambo_pago_fuera_plazo.mp4",
+  "renderizado": false
 }

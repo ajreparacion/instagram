@@ -45,6 +45,16 @@ jobs:
             if [ $(( vuelta % 4 )) = 0 ]; then
               gh workflow run comunidad.yml -R "$REPO" --ref main || echo "no se pudo lanzar comunidad"
             fi
+            # Calidad (API): cada hora, a mitad de hora respecto a comunidad (21/11/2026, orden del dueño «sin cuellos de
+            # botella»): el cron de calidad_api.yml llegaba con horas de retraso y las piezas renderizadas esperaban nota.
+            # Si no hay nada que evaluar, la pasada sale en segundos sin llamar a la API ni escribir en el tablón.
+            if [ $(( vuelta % 4 )) = 2 ]; then
+              activa=$(gh run list -R "$REPO" -w calidad_api.yml -L 3 --json status \
+                --jq '[.[] | select(.status=="in_progress" or .status=="queued" or .status=="pending")] | length' || echo 0)
+              if [ "${activa:-0}" = "0" ]; then
+                gh workflow run calidad_api.yml -R "$REPO" --ref main -f origen=reloj || echo "no se pudo lanzar calidad"
+              fi
+            fi
             vuelta=$(( vuelta + 1 ))
             sleep 900
           done

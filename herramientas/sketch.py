@@ -622,6 +622,13 @@ def _serio(sc, t):
         f2, s2, l2 = hr.wrap_fit("Fuente: " + fuente, hr.F_DIB_C, maxw=hr.W - 220, maxlines=3, smax=31, smin=26)
         for i, ln in enumerate(l2):
             d.text((hr.W // 2, 1420 + i * 40), ln, font=f2, fill=(190, 190, 186, int(210 * k)), anchor="mm")
+    # 21/11/2026 (Calidad, bloqueo 11 de estandar_calidad v10): el fotograma final lleva SIEMPRE el isotipo «N» 2026 del kit
+    # (versión negativa sobre fondo oscuro) y la firma «By Neogest Lab»; sin él, Calidad rechaza la pieza.
+    ico = hr.isotipo_marca(True, lado=150)
+    if ico is not None:
+        img.paste(ico, (hr.W // 2 - ico.width // 2, 280), ico)
+    fb = hr.font(hr.F_DIB_C, 40)
+    d.text((hr.W // 2, 280 + 150 + 36), "By Neogest Lab", font=fb, fill=(244, 242, 236, 235), anchor="mm")
     return img
 
 

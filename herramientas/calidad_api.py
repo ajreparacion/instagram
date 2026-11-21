@@ -393,6 +393,10 @@ def main():
             except Exception as e:
                 resultados.append({"pid": pid, "escrito": False, "resumen": f"error: {e}"})
 
+    if not resultados and os.environ.get("CALIDAD_SILENCIOSA"):
+        # 21/11/2026: las pasadas horarias que lanza el reloj no ensucian el tablón cuando no hay nada que evaluar
+        print(f"Calidad (API): nada pendiente ({len(al_dia)} al día, {len(sin_render)} sin render)")
+        return
     linea = _linea_tablon(resultados, len(sin_render), len(al_dia))
     with open(TABLON, "a", encoding="utf-8") as f:
         f.write(linea + "\n")

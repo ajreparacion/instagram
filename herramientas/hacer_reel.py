@@ -2628,6 +2628,10 @@ def main():
             hay_voz_despues = any((x.get("voz") or "").strip() for x in esc[i + 1:])
             if voz and i in tiempos and tiempos[i] > 0.2 and hay_voz_despues:
                 d = max(need, min(minimo, need)) if "duracion" not in e else max(need, 0.8)
+            elif voz and i in tiempos and tiempos[i] > 0.2 and e.get("estilo") == "cierre":
+                # 21/11/2026 (Calidad): el cierre con voz real dura su voz + 0,45 s como mucho (antes el mínimo de 2,2 s dejaba
+                # 0,6-0,9 s de silencio al final y Calidad lo rechazaba); la tarjeta con el isotipo ya se ve mientras habla.
+                d = max(need, min(minimo, tiempos[i] + 0.45))
             else:
                 d = max(d, minimo)
         bounds.append(bounds[-1] + int(math.ceil(d * FPS - 1e-6)))

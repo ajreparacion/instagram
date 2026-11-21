@@ -29,11 +29,5 @@
     "archivo": "Monkeys_Spinning_Monkeys.mp3",
     "bpm": 143.6
   },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-20T00:26:06+00:00",
-    "bloqueos": [
-      "falta el giro (escena «remate»)"
-    ],
-    "guion_md5": "53bdf877fe0299b76c5dd99e5f6a9ec4"
-  }
+  "renderizado": false
 }

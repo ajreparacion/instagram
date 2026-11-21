@@ -48,13 +48,5 @@
     "archivo": "Sneaky_Snitch.mp3",
     "bpm": 87.6
   },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-20T00:25:30+00:00",
-    "bloqueos": [
-      "falta el giro (escena «remate»)",
-      "voz distinta del guion: faltan ['publicas'], sobran ['publica'] (rehacer esas frases)",
-      "silencios > 0.6 s entre frases (pista de voz): [[5.11, 6.02, 0.91], [8.44, 9.36, 0.92], [12.29, 13.42, 1.13]]"
-    ],
-    "guion_md5": "40f14074f370133c2e55987d73e8dce3"
-  }
+  "renderizado": false
 }

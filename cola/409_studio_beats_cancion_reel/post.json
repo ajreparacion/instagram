@@ -29,12 +29,5 @@
     "archivo": "Monkeys_Spinning_Monkeys.mp3",
     "bpm": 143.6
   },
-  "_control_audio_fallo": {
-    "fecha": "2026-11-20T00:30:25+00:00",
-    "bloqueos": [
-      "falta el giro (escena «remate»)",
-      "voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases)"
-    ],
-    "guion_md5": "e6d984b5393431066bfd9eaacf8ba8a6"
-  }
+  "renderizado": false
 }

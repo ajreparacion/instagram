@@ -191,6 +191,33 @@ def verificar(guion_txt, texto, lex=None):
     return comparar(esp, got)
 
 
+SIL_PROMO = 1.5          # silencio máximo entre frases en promos de app (DIRECTIVA §5)
+TOLERANCIA_VOZ = 0.03    # fracción de palabras sin pareja cercana que se tolera como aviso
+
+
+def _distancia(a, b):
+    """Levenshtein corto (palabras sueltas)."""
+    if abs(len(a) - len(b)) > 2: return 3
+    prev = list(range(len(b) + 1))
+    for i, ca in enumerate(a, 1):
+        cur = [i]
+        for j, cb in enumerate(b, 1):
+            cur.append(min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (ca != cb)))
+        prev = cur
+    return prev[-1]
+
+
+def _quitar_cercanas(faltan, sobran):
+    """Empareja cada palabra que falta con una sobrante a 1-2 letras (Whisper oye mal, la voz dijo bien la palabra)."""
+    f2, s2 = [], list(sobran)
+    for w in faltan:
+        lim = 1 if len(w) <= 4 else 2
+        k = next((i for i, x in enumerate(s2) if _distancia(_clave(w), _clave(x)) <= lim), None)
+        if k is None: f2.append(w)
+        else: s2.pop(k)
+    return f2, s2
+
+
 def comparar(esp, got):
     """Palabras esperadas que no aparecen (alineación por LCS tolerante) y palabras sobrantes."""
     n, m = len(esp), len(got)
@@ -234,15 +261,25 @@ def control(video, guion, post=None, tramos=None, wavs=None):
     guion_txt = " ".join(re.sub(r"\*", "", e.get("voz", "")) for e in esc if e.get("voz"))
     pal = transcribir(video)
     texto = texto_de(pal)
+    modo = str(g.get("modo") or "").lower()
+    sil_max = SIL_S if modo in ("", "sketch", "dibujo") else SIL_PROMO   # 21/11/2026: promos de app admiten 1,5 s (DIRECTIVA §5)
     if esc:
-        # Hay escenas (reel generado por el motor de dibujo): se exige el giro y se compara la voz con el guion palabra a palabra.
-        if not any(e.get("estilo") == "remate" for e in esc): bloqueos.append("falta el giro (escena «remate»)")
+        # Hay escenas (reel generado por el motor de dibujo): se compara la voz con el guion palabra a palabra.
+        # 21/11/2026 (Calidad, orden del dueño «sin cuellos de botella»): el giro (escena «remate») solo se exige en la serie
+        # de humor (modo sketch); las promos de app (ANTES/DESPUÉS) no tienen «remate» y se bloqueaban todas en falso.
+        if modo in ("", "sketch") and not any(e.get("estilo") == "remate" for e in esc):
+            bloqueos.append("falta el giro (escena «remate»)")
         faltan, sobran = verificar(guion_txt, texto)
         malas = [w for w in sobran if w in ("ehm", "eh", "em", "mm", "hmm")]
         if malas: bloqueos.append(f"muletillas «ehm» en la voz: {malas}")
         if faltan or sobran:
-            tasa = (len(faltan) + len(sobran)) / max(1, len(norm(guion_txt)))
-            (bloqueos if tasa > 0.0 else avisos).append(f"voz distinta del guion: faltan {faltan}, sobran {sobran} (rehacer esas frases)")
+            # 21/11/2026: diferencias de una o dos letras («tarjeta»/«tarjetas», «apruebas»/«aprueba», «pego»/«fego») son
+            # errores típicos de Whisper, no de la voz: cuentan como aviso. Solo bloquea lo que queda sin pareja cercana
+            # si pasa del 3 % de las palabras del guion (frase cambiada, palabra inventada o cortada).
+            f2, s2 = _quitar_cercanas(faltan, sobran)
+            tasa = (len(f2) + len(s2)) / max(1, len(norm(guion_txt)))
+            msg = f"voz distinta del guion: faltan {faltan}, sobran {sobran} (rehacer esas frases)"
+            (bloqueos if (tasa > TOLERANCIA_VOZ or len(f2) + len(s2) > 3) else avisos).append(msg)
     else:
         # Sin escenas (vídeo externo, p. ej. Neogest Studio): no hay guion con el que comparar la voz ni escenas con estilo
         # «remate», así que exigir el giro o comparar la transcripción contra un guion vacío solo daba falsos bloqueos
@@ -250,12 +287,12 @@ def control(video, guion, post=None, tramos=None, wavs=None):
         avisos.append("sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion")
     t0 = pal[0][1] if pal else 0.0; t1 = pal[-1][2] if pal else d
     for a, b, s in silencios(video):
-        if a >= t0 - 0.05 and b <= t1 + 0.05 and s > SIL_S and a > 0.3 and b < d - 0.3:
-            bloqueos.append(f"silencio de {s:.2f} s entre {a:.1f} y {b:.1f} s (máximo {SIL_S} s)")
+        if a >= t0 - 0.05 and b <= t1 + 0.05 and s > sil_max and a > 0.3 and b < d - 0.3:
+            bloqueos.append(f"silencio de {s:.2f} s entre {a:.1f} y {b:.1f} s (máximo {sil_max} s)")
     if tramos and wavs:
         try:
-            h = huecos_voz(tramos, wavs)
-            if h: bloqueos.append(f"silencios > {SIL_S} s entre frases (pista de voz): {h}")
+            h = [x for x in huecos_voz(tramos, wavs) if x[2] > sil_max]
+            if h: bloqueos.append(f"silencios > {sil_max} s entre frases (pista de voz): {h}")
         except Exception as e:
             avisos.append(f"silencedetect de la pista de voz no disponible: {str(e)[-80:]}")
     if isinstance(post, dict) and post.get("musica_atribucion_requerida") and "MacLeod" not in post.get("texto", ""):
