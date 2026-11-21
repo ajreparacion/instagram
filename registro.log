@@ -1,7 +1,3 @@
-2026-11-15 22:04  Control de audio: OK; duración 18.23 s
-2026-11-15 22:04  316_ias_oficina_ep20_pedido: renderizado con voz y subido a la release 'cola'
-2026-11-15 22:17  Voz con edge-tts: 7 frases en 7 s
-2026-11-15 22:17  Voz: silencios recortados por frase (s): [0.12, 0.13, 0.13, 0.13, 0.13, 0.14, 0.1]
 2026-11-15 22:17  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(4.2), np.float64(4.1), np.float64(3.5), np.float64(2.3), np.float64(4.7), np.float64(5.2), np.float64(4.1)]
 2026-11-15 22:17  Voz: alineación palabra a palabra (small, 13.4 s): 7/7 frases
 2026-11-15 22:17  Mezcla: voz -15.6 LUFS, música -22.3 LUFS (con ducking -25.2), la música baja 6.0 dB (p90) bajo la voz, ratio 2.034; máster -15.43 -> -14.0 LUFS, pico -1.5 dBFS; huecos de voz: []
@@ -598,3 +594,7 @@ KeyError: 'escenas'
 2026-11-21 11:26  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
 2026-11-21 11:26  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
 2026-11-21 11:26  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 11:41  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 11:41  337_appcc_facil_demo_reel: NO publicado, sin aprobación de Calidad (nota >= 90) ni del dueño
+2026-11-21 11:41  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 11:41  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
