@@ -1,13 +1,3 @@
-2026-11-16 21:11  322_jambo_ep7_parte2_clase: publicando…
-2026-11-16 21:12  322_jambo_ep7_parte2_clase: YouTube publicado https://youtube.com/shorts/o8rAItgyf_Q
-2026-11-16 21:12  322_jambo_ep7_parte2_clase: Facebook publicado https://www.facebook.com/reel/1501694306352745
-2026-11-16 21:12  322_jambo_ep7_parte2_clase: publicado https://www.instagram.com/reel/Df0LzI6CtCK/
-2026-11-16 22:54  Estadísticas actualizadas (30 posts, 1601 seguidores)
-2026-11-17 04:56  Estadísticas actualizadas (30 posts, 1601 seguidores)
-2026-11-17 05:26  705_aj_sistema_corto_reel: caducado, movido a errores/
-2026-11-17 09:27  706_aj_web_corto_reel: caducado, movido a errores/
-2026-11-17 09:58  323_jambo_peluqueria_9_40: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
-2026-11-17 09:58  308_jambo_ep8_presupuesto: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
 2026-11-17 10:28  707_studio_beats_pro_corto_reel: caducado, movido a errores/
 2026-11-17 10:58  Estadísticas actualizadas (30 posts, 1601 seguidores)
 2026-11-17 11:43  320_jambo_reunion_rapida: publicando…
@@ -598,3 +588,13 @@ KeyError: 'escenas'
 2026-11-21 14:57  348_jambo_reunion_sin_sentido: control de audio del vídeo externo: aprobado=True LUFS=-14.8 pico=-1.0
 2026-11-21 14:57  348_jambo_reunion_sin_sentido: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
 2026-11-21 14:57  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 15:12  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 15:12  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 15:12  Control de audio: OK; duración 23.2 s; avisos: ['sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion']
+2026-11-21 15:12  341_jambo_horas_extra_gratis: control de audio del vídeo externo: aprobado=True LUFS=-14.1 pico=-1.5
+2026-11-21 15:12  341_jambo_horas_extra_gratis: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
+2026-11-21 15:12  342_jambo_pago_fuera_plazo: vídeo externo masterizado en el ciclo (LUFS -14.8, pico -0.7 -> -14 / -1,5)
+2026-11-21 15:13  Control de audio: OK; duración 22.8 s; avisos: ['sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion']
+2026-11-21 15:13  342_jambo_pago_fuera_plazo: control de audio del vídeo externo: aprobado=True LUFS=-14.0 pico=-1.4
+2026-11-21 15:13  342_jambo_pago_fuera_plazo: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
+2026-11-21 15:13  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')

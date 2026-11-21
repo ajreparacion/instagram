@@ -9,5 +9,9 @@
   "como_arreglarlo": "Dos opciones rápidas, sin rehacer el render: (1) Creador/Centro localiza y cita el documento primario de la EPA-INE 1T2026 (tabla oficial del INE, no solo el artículo de El Español) y se añade a '_fuentes' con enlace directo antes de la siguiente pasada; si la cifra se confirma tal cual, Calidad puede aprobar sin reeditar vídeo. (2) Si no se puede confirmar a tiempo, suavizar el texto del post (quitar la cifra exacta y el 42%, dejar algo genérico tipo 'muchas horas extra no se cobran') — eso sí se puede arreglar como ajuste de texto del post sin relanzar render. La voz/vídeo en sí no hace falta tocarla si se opta por (1).",
   "fecha": "2026-11-19T19:10:52Z",
   "revisor": "Calidad (API)",
-  "render": "2026-11-19T16:44:30+00:00"
+  "render": "2026-11-19T16:44:30+00:00",
+  "aprobado_anterior": false,
+  "nota_anterior": 87,
+  "caducado": "2026-11-21T14:12:56+00:00",
+  "motivo_caducidad": "vídeo externo subido 2026-11-21T14:12:56+00:00"
 }

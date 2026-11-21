@@ -3,11 +3,10 @@
   "duracion_s": 22.8,
   "bloqueos": [],
   "avisos": [
-    "sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion",
-    "pico real > -1 dB"
+    "sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion"
   ],
   "transcripcion": "Dale 120 días de crédito a este cliente Eso supera con mucho el límite legal de cobro Es un cliente VIP, su comodidad va antes que la ley La ley es la ley, que lo resuelva el NEO He ajustado el contrato a 60 días El cliente ha aceptado El plazo legal de pago es 60 días",
   "guion": "",
-  "lufs": -14.8,
-  "pico_dbfs": -0.7
+  "lufs": -14.0,
+  "pico_dbfs": -1.4
 }
