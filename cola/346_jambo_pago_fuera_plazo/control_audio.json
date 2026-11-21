@@ -1,13 +1,12 @@
 {
   "aprobado": true,
-  "duracion_s": 23.04,
+  "duracion_s": 23.1,
   "bloqueos": [],
   "avisos": [
-    "sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion",
-    "pico real > -1 dB"
+    "sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion"
   ],
-  "transcripcion": "Acepta pagar a 90 días es nuestro amigo. Tres meses sin cobrar no es de amigos. El beneficio no importa, solo la buena relación. Nos arruinamos, que lo resuelva el neo. Contrato ajustado a 60 días. Rosa, deja de perder dinero. El plazo máximo legal de pago es 60 días.",
+  "transcripcion": "¡Acepta pagar a 90 días es nuestro amigo! Tres meses sin cobrar no es de amigos. El beneficio no importa, sólo la buena relación. Nos arruinamos, que lo resuelva el neo. Contrato ajustado a 60 días. Rosa, deja de perder dinero. El plazo máximo legal de pago es 60 días.",
   "guion": "",
-  "lufs": -15.1,
-  "pico_dbfs": -0.5
+  "lufs": -14.1,
+  "pico_dbfs": -1.3
 }

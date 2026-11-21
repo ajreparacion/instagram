@@ -38,6 +38,7 @@
     ]
   },
   "asset": "346_jambo_pago_fuera_plazo.mp4",
-  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/3d281541d_346_jambo_pago_fuera_plazo.mp4",
-  "renderizado": false
+  "renderizado": "2026-11-21T13:42:57+00:00",
+  "_master_ciclo": "2026-11-21T13:42:48+00:00: LUFS -15.1 / pico -0.5 -> loudnorm -14 / -1,5",
+  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/3d281541d_346_jambo_pago_fuera_plazo.mp4"
 }

@@ -1,13 +1,12 @@
 {
   "aprobado": true,
-  "duracion_s": 22.23,
+  "duracion_s": 22.3,
   "bloqueos": [],
   "avisos": [
-    "sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion",
-    "pico real > -1 dB"
+    "sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion"
   ],
   "transcripcion": "Un momentito antes de irte, Felipe. ¿Son las 7 y media que necesitas? Sólo digitalizar estos 300 folios a mano. Es una locura que lo resuelva el neo. He digitalizado todo en segundos. Rosa, no inventes trabajo. 2,5 millones de horas extra no se cobran.",
   "guion": "",
-  "lufs": -14.8,
-  "pico_dbfs": -0.3
+  "lufs": -14.2,
+  "pico_dbfs": -1.4
 }
