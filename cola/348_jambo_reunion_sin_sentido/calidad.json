@@ -1,17 +1,12 @@
 {
-    "aprobado": false,
-    "nota": 80,
-    "fecha": "2026-11-19T10:43:50+00:00",
-    "revisor": "Calidad (pasada 11:41)",
-    "render": "2026-11-18T21:39:22+00:00",
-    "motivos": [
-          "Cifra sin fuente en voz y pantalla: el 55 por ciento de las pymes pierde tiempo administrativo (B4: cifra inventada o sin fuente primaria = rechazo)",
-          "344 y 348 son casi el mismo episodio (reunion absurda + misma moraleja): uno sobra",
-          "Dueño (21/11): falta la intro nueva de la casa, en modo bucle de entrada y salida"
-    ],
-    "como_arreglarlo": "Quitar la cifra del video (moraleja sin numero) o poner una con fuente primaria abierta y verificada; diferenciar o retirar uno de los dos; re-render y vuelve a Calidad. Además: añadir al principio y al final del episodio la intro nueva de la casa en modo bucle de entrada y salida, como en el resto de la serie del formato de barrio.",
-    "aprobado_anterior": false,
-    "nota_anterior": 80,
-    "caducado": "2026-11-21T13:57:55+00:00",
-    "motivo_caducidad": "video externo subido 2026-11-21T13:57:55+00:00"
+  "aprobado": false,
+  "nota": 78,
+  "motivos": [
+    "B4 (cifra inventada o sin fuente primaria): la voz y la pantalla afirman 'El 55% de las pymes pierde tiempo administrativo' sin ninguna fuente citada; post.json trae _fuentes vacío y el propio campo _comprobado reconoce que es 'referencia pública conocida, sin documento primario citado' y pide a Calidad 'confirmar fuente o suavizar antes de publicar'. Este es el mismo motivo ya señalado en el calidad.json del 19/11 (nota 80) y sigue sin resolverse en este render.",
+    "Técnico: audio e imagen correctos (LUFS -14.98, pico -0.97 dB, sin silencios, 1080x1920, 24.4 s dentro de margen), y el cierre ya lleva el isotipo nuevo 'N' de circuitos del kit 2026 (se resolvió el problema de intro/logo antiguo de la nota anterior)."
+  ],
+  "como_arreglarlo": "Creador: quitar la cifra del guion y del render (dejar la moraleja sin número, p.ej. 'muchas pymes pierden horas en reuniones que no llevan a nada') o sustituirla por una cifra con fuente primaria abierta citada en post.json._fuentes y en el texto 'Comprobado en: ...'. Como es vídeo externo de Neogest Studio, esto exige nuevo render (no basta con editar el post.json) porque la cifra está hablada y escrita en pantalla a los 18-20s. Tras el cambio, vuelve a Calidad. No hace falta tocar nada técnico (audio e isotipo del cierre ya están bien).",
+  "fecha": "2026-11-21T18:29:28Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-21T13:57:55+00:00"
 }

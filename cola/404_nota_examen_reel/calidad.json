@@ -1,16 +1,12 @@
 {
   "aprobado": false,
-  "nota": 78,
+  "nota": 84,
   "motivos": [
-    "Re-render de hoy con el motor «sketch» del repo, retirado para la serie desde el 15/11: rechazo automático (roles/calidad.md)",
-    "Reel de cálculo: calculadoras congeladas hasta rehacerlas en ANTES/DESPUÉS"
+    "Pico de audio real medido en 0.2 dB (por encima de 0 dBFS, clipping); regla de formato exige pico ≤ -1 dBFS. Esto afecta también a otras piezas recientes (ver equipo/atascos.md / lecciones_calidad): parece fallo del motor de máster, no solo de esta pieza.",
+    "Whisper detecta error de voz frente al guion: dice 'tu aprueba sin estudiar' en vez de 'tú apruebas sin estudiar' (discordancia audible, H5 'voz con errores')."
   ],
-  "como_arreglarlo": "Creador: rehacer en Neogest Studio (herramientas/estudio/LEEME.md) con la fórmula de 5 tiempos y moraleja.",
-  "fecha": "2026-11-15T21:44:09+00:00",
-  "revisor": "Calidad (pasada cada 2 h)",
-  "render": "2026-11-15T20:33:25+00:00",
-  "aprobado_anterior": false,
-  "nota_anterior": 78,
-  "caducado": "2026-11-21T14:28:58+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-21T14:28:58+00:00"
+  "como_arreglarlo": "Dos arreglos distintos: (1) CENTRO/motor: el pico de 0.2 dB es un fallo de masterización del render (debería normalizar a ≤ -1 dB); repórtese como URGENTE en equipo/peticiones_mejora.md si se repite en más piezas (ya se ha visto en otras según lecciones_calidad.md) en vez de rechazar una a una. (2) Creador: re-render de la escena de 'tramites'/'bola' para que la voz diga correctamente 'tú apruebas' en vez de 'tu aprueba' (TTS pronunció mal la concordancia verbal); basta con ajustar esa frase del guion y relanzar el render, no hace falta cambiar nada más de la pieza (estructura, giro, cierre e isotipo 2026 ya están bien).",
+  "fecha": "2026-11-21T18:29:48Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-21T14:28:58+00:00"
 }
