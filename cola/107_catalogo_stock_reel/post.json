@@ -1,52 +1,58 @@
 {
- "tipo": "reel",
- "texto": "¿Tu catálogo sigue en un PDF eterno?\nPara tiendas, almacenes y mayoristas que trabajan con cientos de referencias.\nGestión Integral 7D, nuestra app, importa el catálogo desde Excel, CSV, PDF o una imagen con extracción por IA (revisa siempre lo importado).\nAl servir un pedido se crea un albarán numerado que descuenta el stock.\nDespués, la factura hereda las líneas, el IVA y la retención, y sale en PDF con tus datos fiscales y los del cliente.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil. 📦\nMándaselo a ese mayorista que todavía copia el stock a mano.\n\n#comercio #mayoristas #stock #pymes #neogestlab\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
- "cuando": "2026-11-23T17:10:00+01:00",
- "renderizado": "2026-11-18T21:57:52+00:00",
- "asset": "107_catalogo_stock_reel.mp4",
- "portada_ms": 1500,
- "compartir_en_feed": true,
- "duracion_s": 24.5,
- "formato": "versión reel del carrusel (diapositivas animadas, música en primer plano y efectos; sin voz)",
- "app": "Gestión Integral 7D",
- "publico": "Tiendas, almacenes y mayoristas con catálogo y stock",
- "fuentes": [
-  "Diapositivas del carrusel 107_catalogo_stock (aprobado por Calidad); mismo contenido.",
-  "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Gestión Integral 7D» (estado activo, actualizada 8/11/2026): hechos_verificados (importación de catálogo desde Excel, CSV, PDF o imagen con extracción por IA; albarán numerado que descuenta stock; factura que hereda líneas, IVA por línea y retención; PDF con datos fiscales de empresa y cliente) y eslogan."
- ],
- "carrusel": "107_catalogo_stock",
- "musica": {
-  "titulo": "Sneaky Snitch",
-  "autor": "Kevin MacLeod",
-  "licencia": "CC BY 4.0",
-  "url": "https://incompetech.com/music/royalty-free/",
-  "archivo": "Sneaky_Snitch.mp3",
-  "bpm": 87.6,
-  "origen": "pista sin derechos de la biblioteca musica/ (licencia en musica/pistas.json)"
- },
- "audio": {
-  "lufs_integrados": -14.1,
-  "pico_real_dbtp": -0.7,
-  "lra_lu": 1.9,
-  "medido_con": "ffmpeg ebur128=peak=true"
- },
- "origen": "herramientas/demo_app.py",
- "comentario_fijado": "¿Tu catálogo sigue en un PDF eterno?",
- "avance_siguiente": "Mañana: cobrar la factura sin perseguir al cliente",
- "prueba_no_seguidores": true,
- "monetizacion": {
-  "objetivo": "clic_enlace",
-  "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
-  "paso_embudo": "visita_perfil -> clic_enlace"
- },
- "youtube": {
-  "titulo": "¿Tu catálogo sigue en un PDF eterno? #Shorts",
-  "descripcion": "¿Tu catálogo sigue en un PDF eterno? Prueba gratuita de Gestión Integral 7D: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube — By Neogest Lab",
-  "etiquetas": [
-   "pymes",
-   "autonomos",
-   "facturacion",
-   "neogestlab"
-  ]
- }
+  "tipo": "reel",
+  "texto": "¿Tu catálogo sigue en un PDF eterno?\nPara tiendas, almacenes y mayoristas que trabajan con cientos de referencias.\nGestión Integral 7D, nuestra app, importa el catálogo desde Excel, CSV, PDF o una imagen con extracción por IA (revisa siempre lo importado).\nAl servir un pedido se crea un albarán numerado que descuenta el stock.\nDespués, la factura hereda las líneas, el IVA y la retención, y sale en PDF con tus datos fiscales y los del cliente.\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso. Enlace en el perfil. 📦\nMándaselo a ese mayorista que todavía copia el stock a mano.\n\n#comercio #mayoristas #stock #pymes #neogestlab\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0",
+  "cuando": "2026-11-23T17:10:00+01:00",
+  "renderizado": false,
+  "asset": "107_catalogo_stock_reel.mp4",
+  "portada_ms": 1500,
+  "compartir_en_feed": true,
+  "duracion_s": 24.5,
+  "formato": "versión reel del carrusel (diapositivas animadas, música en primer plano y efectos; sin voz)",
+  "app": "Gestión Integral 7D",
+  "publico": "Tiendas, almacenes y mayoristas con catálogo y stock",
+  "fuentes": [
+    "Diapositivas del carrusel 107_catalogo_stock (aprobado por Calidad); mismo contenido.",
+    "Centro de Contenido Apps (Base44, appId 6ae5244d4e2b32702f0a3cd6), entidad Producto «Gestión Integral 7D» (estado activo, actualizada 8/11/2026): hechos_verificados (importación de catálogo desde Excel, CSV, PDF o imagen con extracción por IA; albarán numerado que descuenta stock; factura que hereda líneas, IVA por línea y retención; PDF con datos fiscales de empresa y cliente) y eslogan."
+  ],
+  "carrusel": "107_catalogo_stock",
+  "musica": {
+    "titulo": "Sneaky Snitch",
+    "autor": "Kevin MacLeod",
+    "licencia": "CC BY 4.0",
+    "url": "https://incompetech.com/music/royalty-free/",
+    "archivo": "Sneaky_Snitch.mp3",
+    "bpm": 87.6,
+    "origen": "pista sin derechos de la biblioteca musica/ (licencia en musica/pistas.json)"
+  },
+  "audio": {
+    "lufs_integrados": -14.1,
+    "pico_real_dbtp": -0.7,
+    "lra_lu": 1.9,
+    "medido_con": "ffmpeg ebur128=peak=true"
+  },
+  "origen": "herramientas/demo_app.py",
+  "comentario_fijado": "¿Tu catálogo sigue en un PDF eterno?",
+  "avance_siguiente": "Mañana: cobrar la factura sin perseguir al cliente",
+  "prueba_no_seguidores": true,
+  "monetizacion": {
+    "objetivo": "clic_enlace",
+    "oferta": "prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
+    "paso_embudo": "visita_perfil -> clic_enlace"
+  },
+  "youtube": {
+    "titulo": "¿Tu catálogo sigue en un PDF eterno? #Shorts",
+    "descripcion": "¿Tu catálogo sigue en un PDF eterno? Prueba gratuita de Gestión Integral 7D: https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?app=gestion-integral-7d&src=youtube — By Neogest Lab",
+    "etiquetas": [
+      "pymes",
+      "autonomos",
+      "facturacion",
+      "neogestlab"
+    ]
+  },
+  "_fuentes": [
+    "equipo/hechos_verificados.json#gestion-integral-7d",
+    "claude/apps/gestion-integral-7d.md"
+  ],
+  "_comprobado": "Cada afirmación sale de hechos_verificados de Gestión Integral 7D: importación de catálogo desde Excel/CSV/PDF/imagen con extracción por IA (se avisa de revisar lo importado), albarán numerado que descuenta stock, factura que hereda líneas, IVA y retención, PDF con datos fiscales. Datos de la demo ficticios.",
+  "_nota_creador": "21/11/2026 Creador: re-render para isotipo 2026 en el cierre (motor corregido el 21/11) y fuentes citadas tras rechazo de Calidad."
 }
