@@ -1,6 +1,3 @@
-2026-11-15 21:07  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(3.5), np.float64(3.6), np.float64(3.3), np.float64(2.9), np.float64(1.6), np.float64(3.2), np.float64(3.6)]
-2026-11-15 21:07  Voz: alineación palabra a palabra (small, 19.3 s): 7/7 frases
-2026-11-15 21:07  Mezcla: voz -16.8 LUFS, música -22.1 LUFS (con ducking -24.6), la música baja 5.7 dB (p90) bajo la voz, ratio 2.5; máster -16.45 -> -14.0 LUFS, pico -1.4 dBFS; huecos de voz: []
 2026-11-15 21:08  Control de audio: FALLA voz distinta del guion: faltan ['be'], sobran ['lin'] (rehacer esas frases); duración 19.6 s
 2026-11-15 21:08  311_jambo_ep11_reserva: NO se publica, control de audio: voz distinta del guion: faltan ['be'], sobran ['lin'] (rehacer esas frases)
 2026-11-15 21:08  Voz con edge-tts: 7 frases en 8 s
@@ -598,3 +595,6 @@ KeyError: 'escenas'
 2026-11-21 02:09  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
 2026-11-21 02:09  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
 2026-11-21 02:09  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 02:24  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 02:24  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 02:24  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
