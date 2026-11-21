@@ -1,8 +1,10 @@
 {
   "aprobado": true,
-  "duracion_s": 18.7,
+  "duracion_s": 20.03,
   "bloqueos": [],
-  "avisos": [],
-  "transcripcion": "Este año la cena de Navidad la organiza, la Jupillo Para elegir restaurante hacen falta cuatro firmas Actividad de equipo en la montaña con nieve Somos 12 y la mitad tiene alergias Restaurante elegido, mesa reservada, menús sin alergias ¿Me invitáis? MMM ¿Quién la organiza en la tuya?",
+  "avisos": [
+    "voz distinta del guion: faltan ['mmm'], sobran ['mmn'] (rehacer esas frases)"
+  ],
+  "transcripcion": "Este año la cena de Navidad la organiza, la Jupillo. Para elegir restaurante hacen falta cuatro firmas. Actividad de equipo en la montaña con nieve. Somos 12 y la mitad tiene alergias. Restaurante elegido, mesa reservada, menús sin alergias. ¿Me invitáis? MMN. ¿Quién la organiza en la tuya?",
   "guion": "Este año la cena de Navidad la organiza... la Jupillo. Para elegir restaurante hacen falta cuatro firmas. ¡Actividad de equipo en la montaña, con nieve! Somos doce y la mitad tiene alergias. Restaurante elegido, mesa reservada, menús sin alergias. ¿Me invitáis? Mmm. ¿Quién la organiza en la tuya?"
 }

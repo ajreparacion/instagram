@@ -1,23 +1,23 @@
 {
-  "fecha": "2026-11-19T23:48:59+00:00",
+  "fecha": "2026-11-21T13:13:43+00:00",
   "avisos": [],
-  "duracion_s": 18.7,
-  "voz_activa_pct": 92.5,
-  "bajada_musica_p90_db": 5.63,
-  "bajada_musica_mediana_db": 3.82,
-  "voz_sobre_musica_db": 10.47,
-  "musica_entre_frases_db": -25.4,
+  "duracion_s": 20.0,
+  "voz_activa_pct": 94.2,
+  "bajada_musica_p90_db": 5.71,
+  "bajada_musica_mediana_db": 3.81,
+  "voz_sobre_musica_db": 10.57,
+  "musica_entre_frases_db": -27.1,
   "musica_en_voz_db": -32.3,
   "huecos_voz": [],
   "ratio_duck_usado": 2.5,
   "voz_lufs": -17.4,
-  "musica_lufs": -22.6,
-  "musica_con_ducking_lufs": -25.4,
+  "musica_lufs": -22.9,
+  "musica_con_ducking_lufs": -25.9,
   "master": {
     "objetivo_lufs": -14.0,
-    "antes_lufs": -17.04,
-    "antes_pico_dbtp": -1.83,
+    "antes_lufs": -16.98,
+    "antes_pico_dbtp": -3.23,
     "despues_lufs": -14.0,
-    "despues_pico_dbfs": -1.5
+    "despues_pico_dbfs": -1.4
   }
 }

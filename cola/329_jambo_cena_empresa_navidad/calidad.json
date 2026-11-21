@@ -8,5 +8,9 @@
   "como_arreglarlo": "Añadir el isotipo nuevo 'N' de circuitos del kit 2026 en el fotograma de cierre (donde está la pregunta final sobre fondo oscuro), igual que en el resto de piezas de la serie Jambo. Si se retoca el render, ajustar también el corte final para que el silencio tras la última frase no supere 0.6 s. El resto de la pieza (audio, LUFS -14.06, pico -1.47 dB, estructura de 5 tiempos, guion de ficción sin afirmaciones de producto, ritmo y ganchos) está correcto y no hace falta rehacerlo.",
   "fecha": "2026-11-20T16:53:03Z",
   "revisor": "Calidad (API)",
-  "render": "2026-11-19T23:49:11+00:00"
+  "render": "2026-11-19T23:49:11+00:00",
+  "aprobado_anterior": false,
+  "nota_anterior": 82,
+  "caducado": "2026-11-21T13:13:54+00:00",
+  "motivo_caducidad": "re-render del ciclo 2026-11-21T13:13:54+00:00"
 }

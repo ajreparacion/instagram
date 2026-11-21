@@ -1,8 +1,8 @@
 # Atascos de la cola (generado por herramientas/atascos.py; no editar a mano)
-Actualizado: 2026-11-21 13:08 UTC · 28 piezas paradas.
+Actualizado: 2026-11-21 13:15 UTC · 28 piezas paradas.
 Regla (DIRECTIVA §7 bis): cada rol empieza su pasada por SUS filas de aquí, de arriba abajo.
 
-Por rol: Creador 9, Mejora 1, Supervisor 18
+Por rol: Calidad 2, Creador 9, Mejora 1, Supervisor 16
 
 | Urgencia | Pieza | Sale | Tipo | Rol | Motivo | Arreglo |
 |---|---|---|---|---|---|---|
@@ -11,9 +11,9 @@ Por rol: Creador 9, Mejora 1, Supervisor 18
 | sale en < 24 h | 328_jambo_inmobiliaria_decima_visita | 2026-11-21T19:00:00+01:00 | render_fallido | Mejora | KeyError: 'escenas' | si el guion no tiene escenas es un episodio del estudio: poner video_externo; si no, arreglar el generador |
 | sale en < 24 h | 403_margen_venta_reel | 2026-11-22T11:40:00+01:00 | rechazada | Creador | Isotipo nuevo «N» de circuitos del kit 2026 confirmado en el cierre (t=18.96s) junto con "By Neogest Lab": el bloqueo anterior (B11/v10) queda resuelto.; B4 / _comprobado: el post.json y el campo _comprobado afirman que los datos de ejemplo están "rotulados en | Creador: confirmar en qué segundo exacto aparece el rótulo "EJEMPLO · datos inventados" (o similar) junto al sello de la cifra 4,52€/6,17€, y si no está en pantalla, añadirlo de forma legible (no tapado, dentro de y=500-1450) en el fotograma del sello. Re-rend |
 | sale en < 24 h | 516_gestion_integral_7d_parte2_reel |  | sin_post | Creador | carpeta sin post.json | completar post.json o retirar la carpeta |
-| sale en < 72 h | 329_jambo_cena_empresa_navidad | 2026-11-22T18:45:00+01:00 | sin_render | Supervisor | pendiente de render del ciclo | si pasa de 1 h, lanzar ciclo.yml |
+| sale en < 72 h | 329_jambo_cena_empresa_navidad | 2026-11-22T18:45:00+01:00 | sin_nota | Calidad | renderizada hace 0.0 h sin calidad.json vigente | la Calidad (API) corre cada hora desde reloj.yml; si pasa de 2 h, lanzar calidad_api.yml a mano |
 | sale en < 72 h | 107_catalogo_stock_reel | 2026-11-23T17:10:00+01:00 | rechazada | Creador | Bloqueo 10/11 (v10): el cierre (fotograma 07/07, t≈22s) muestra el logo antiguo «NL» en neón degradado, no el isotipo nuevo «N» de circuitos del kit 2026. Esto solo basta para no publicar, nota máxima muy por debajo de 90.; A3/post.json: '_fuentes' y '_comprob | 1) Re-renderizar el cierre (diapositiva 07/07) con el isotipo nuevo «N» de circuitos del kit 2026 en vez del cuadrado «NL» neón; revisar que ningún otro fotograma del carrusel lleve el logo antiguo. 2) Añadir a post.json el campo '_fuentes' con el enlace a la  |
-| sale en < 72 h | 406_peluqueria_web_asistente_reel | 2026-11-23T20:40:00+01:00 | sin_render | Supervisor | pendiente de render del ciclo | si pasa de 1 h, lanzar ciclo.yml |
+| sale en < 72 h | 406_peluqueria_web_asistente_reel | 2026-11-23T20:40:00+01:00 | sin_nota | Calidad | renderizada hace 0.0 h sin calidad.json vigente | la Calidad (API) corre cada hora desde reloj.yml; si pasa de 2 h, lanzar calidad_api.yml a mano |
 | sale en < 72 h | 343_jambo_registro_jornada_falso | 2026-11-24T12:40:00+01:00 | sin_render | Supervisor | esperando al ciclo (descarga del vídeo externo) | si pasa de 1 h, lanzar ciclo.yml |
 | más adelante | 344_jambo_reunion_sin_fin | 2026-11-24T19:40:00+01:00 | sin_render | Supervisor | esperando al ciclo (descarga del vídeo externo) | si pasa de 1 h, lanzar ciclo.yml |
 | más adelante | 345_jambo_horas_extra_gratis | 2026-11-25T12:40:00+01:00 | sin_render | Supervisor | esperando al ciclo (descarga del vídeo externo) | si pasa de 1 h, lanzar ciclo.yml |

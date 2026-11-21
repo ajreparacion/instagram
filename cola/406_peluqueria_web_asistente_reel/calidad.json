@@ -1,7 +1,11 @@
 {
- "aprobado": false,
- "nota": 80,
- "comentario": "Sigue rechazado tras el re-render del 13/11: voz MeloTTS (la directiva exige edge-tts), música de la biblioteca de IG en vez de Kevin MacLeod con atribución, y promo de app sin formato ANTES/DESPUÉS ni arranque con la función diferencial (brief promos_diferenciales 15/11). Rehacer con la receta del Centro.",
- "fecha": "2026-11-15T18:32Z",
- "revisado_por": "agente de CALIDAD (pasada de la tarde, 15/11)"
+  "aprobado": false,
+  "nota": 80,
+  "comentario": "Sigue rechazado tras el re-render del 13/11: voz MeloTTS (la directiva exige edge-tts), música de la biblioteca de IG en vez de Kevin MacLeod con atribución, y promo de app sin formato ANTES/DESPUÉS ni arranque con la función diferencial (brief promos_diferenciales 15/11). Rehacer con la receta del Centro.",
+  "fecha": "2026-11-15T18:32Z",
+  "revisado_por": "agente de CALIDAD (pasada de la tarde, 15/11)",
+  "aprobado_anterior": false,
+  "nota_anterior": 80,
+  "caducado": "2026-11-21T13:15:25+00:00",
+  "motivo_caducidad": "re-render del ciclo 2026-11-21T13:15:25+00:00"
 }
