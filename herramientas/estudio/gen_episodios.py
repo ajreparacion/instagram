@@ -46,12 +46,17 @@ async def tts(text, who, path, emo="habla"):
                 s = ch["offset"] / 1e7; words.append({"w": ch["text"].strip(".,;:¡!¿?"), "s": round(s, 3), "e": round(s + ch["duration"] / 1e7, 3)})
     return words
 
-def bookend():
-    # Plano de casa (estilo sitcom americano de los 90, "Cosas de Casa"/Full House, era solo referencia de
-    # ESTILO para el dueño, nunca texto en pantalla -> corregido 20/11 noche, 4.ª pasada: sin overlay de texto).
-    # Misma tarjeta EXACTA en apertura y cierre de todos los episodios (bucle imperceptible).
+# Gancho de enganche sobre el plano de la casa (orden del dueño 21/11: SÍ overlay de texto en la
+# apertura, pensado para la retención en los primeros 2s; sustituye la decisión anterior del 20/11
+# noche de "nunca texto en pantalla". Solo en la apertura, nunca en el cierre, para no repetirlo).
+HOOK_CASA = "Esta casa del barrio tiene truco 👀"
+
+def bookend(hook=False):
+    # Misma tarjeta EXACTA en apertura y cierre de todos los episodios (bucle imperceptible); solo
+    # cambia el overlay de texto, que va únicamente en la apertura (hook=True).
     bg = {"type": "video", "url": COSAS_DE_CASA_VIDEO, "start": 0.0} if COSAS_DE_CASA_VIDEO else {"type": "set", "set": "casa", "hour": 19, "night": False}
-    return {"id": uid(), "duration": 1.6, "transition": "none", "voice": None, "background": bg, "texts": []}
+    texts = [{"id": uid(), "text": HOOK_CASA, "style": "hook", "anim": "pop", "start": 0.1, "y": 0.18}] if hook else []
+    return {"id": uid(), "duration": 1.6, "transition": "none", "voice": None, "background": bg, "texts": texts}
 
 async def main():
     for ep in EPS:
@@ -88,7 +93,7 @@ async def main():
             if e.get("sello"): sc["texts"].append({"id": uid(), "text": e["sello"], "style": "badge", "anim": "pop", "start": 0.4, "y": 0.3, "sfx": "impacto"})
             if e.get("risas"): sc["texts"].append({"id": uid(), "text": "😂", "style": "badge", "anim": "pop", "start": max(0.1, dur * 0.55), "y": 0.08, "sfx": "risas"})
             scenes.append(sc)
-        scenes.insert(0, bookend())
+        scenes.insert(0, bookend(hook=True))
         scenes.append(bookend())
         spec = {"version": 1, "format": "9:16", "fps": 30, "music": {"track": "comedia:1", "volume": 0.16, "duck": True, "duckLevel": 0.3}, "subtitles": {"enabled": True, "words": 3, "style": "amarillo", "emojis": True, "size": 0.07},
                 "brand": {"watermark": True, "watermarkPos": "right", "progress": True}, "sfx": {"enabled": True, "volume": 0.6}, "scenes": scenes}
