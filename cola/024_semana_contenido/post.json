@@ -48,5 +48,9 @@
     "archivo": "Sneaky_Snitch.mp3",
     "bpm": 87.6
   },
-  "renderizado": false
+  "renderizado": "2026-11-21T14:43:46+00:00",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 17.87
+  }
 }

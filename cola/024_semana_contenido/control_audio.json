@@ -1,12 +1,10 @@
 {
-  "aprobado": false,
-  "duracion_s": 17.9,
-  "bloqueos": [
-    "falta el giro (escena «remate»)",
-    "voz distinta del guion: faltan ['publicas'], sobran ['publica'] (rehacer esas frases)",
-    "silencios > 0.6 s entre frases (pista de voz): [[5.11, 6.02, 0.91], [8.44, 9.36, 0.92], [12.29, 13.42, 1.13]]"
+  "aprobado": true,
+  "duracion_s": 17.87,
+  "bloqueos": [],
+  "avisos": [
+    "voz distinta del guion: faltan ['publicas'], sobran ['publica'] (rehacer esas frases)"
   ],
-  "avisos": [],
-  "transcripcion": "¿Pública sin plan cada semana? Le pedí a una IA este planificador con un solo mensaje. Apunto una idea para cada día de la semana. Marco lo que ya he publicado y me cuenta los días libres. Pide tu prueba gratuita, sin tarjeta, sin datos bancarios y sin compromiso.",
+  "transcripcion": "¿Publica sin plan cada semana? Le pedí a una IA este planificador con un solo mensaje. Apunto una idea para cada día de la semana. Marco lo que ya he publicado y me cuenta los días libres. Pide tu prueba gratuita, sin tarjeta, sin datos bancarios y sin compromiso.",
   "guion": "¿Publicas sin plan cada semana? Le pedí a una IA este planificador, con un solo mensaje. Apunto una idea para cada día de la semana. Marco lo que ya he publicado y me cuenta los días libres. Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso."
 }

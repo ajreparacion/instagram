@@ -50,5 +50,9 @@
     "archivo": "Monkeys_Spinning_Monkeys.mp3",
     "bpm": 143.6
   },
-  "renderizado": false
+  "renderizado": "2026-11-21T14:43:14+00:00",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 17.7
+  }
 }
