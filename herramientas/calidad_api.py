@@ -184,7 +184,10 @@ def _fotogramas(video, duracion):
     if not duracion or duracion <= 0:
         instantes = [0.5]
     else:
-        instantes = [round(duracion * f, 2) for f in (0.08, 0.5, 0.9)]
+        # 21/11/2026 (cuellos de botella): 6 fotogramas y SIEMPRE el último; con 3 (8 %, 50 %, 90 %) nunca se veía la
+        # tarjeta de cierre y el bloqueo 11 (isotipo 2026) se rechazaba «sin poder verificar» (329).
+        instantes = sorted({round(min(0.3, duracion / 10), 2)} | {round(duracion * f, 2) for f in (0.25, 0.5, 0.75)}
+                           | {round(max(0.0, duracion - 1.2), 2), round(max(0.0, duracion - 0.25), 2)})
     with tempfile.TemporaryDirectory() as tmp:
         for i, t in enumerate(instantes):
             jpg = os.path.join(tmp, f"f{i}.jpg")
@@ -226,7 +229,7 @@ HERRAMIENTAS = [
         "description": ("Descarga el mp4 de la pieza indicada (asset de la release «cola» o "
                          "video_externo de su post.json), y devuelve ffprobe (resolución, "
                          "duración), silencedetect a -45 dB, una medida de LUFS/pico real "
-                         "(loudnorm) y 3 fotogramas (inicio, mitad, final) como imágenes. "
+                         "(loudnorm) y 6 fotogramas (segundo 0, 25 %, 50 %, 75 % y los dos últimos, con la tarjeta de cierre) como imágenes. "
                          "Úsala una vez por pieza; no hace falta más de una llamada."),
         "input_schema": {"type": "object", "properties": {}, "required": []},
     },
@@ -340,7 +343,7 @@ def _sistema():
         "Eres el rol CALIDAD del equipo de redes de Neogest Lab, ejecutado vía API directa "
         "(piloto de créditos, ver cabecera de herramientas/calidad_api.py). Sigue el criterio "
         "de los archivos de abajo. Evalúas UNA pieza por turno de usuario: usa la herramienta "
-        "`inspeccionar_video` para ver el vídeo (ffprobe, silencios, LUFS/pico y 3 fotogramas) "
+        "`inspeccionar_video` para ver el vídeo (ffprobe, silencios, LUFS/pico y 6 fotogramas, el último es el cierre) "
         "y después `escribir_calidad` con tu veredicto final (aprobado solo con nota >= 90). "
         "No tienes acceso a hechos_verificados/prohibido_afirmar de Base44 en este piloto: para "
         "reels de apps, contrasta solo con las fuentes que el propio post.json ya cita "
