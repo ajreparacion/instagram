@@ -1,16 +1,8 @@
 {
-  "aprobado": false,
-  "nota": 82,
-  "motivos": [
-    "No se ve el isotipo nuevo «N» de circuitos del kit 2026 en el fotograma final (el frame de cierre capturado a 16.38s/18.2s muestra solo la pregunta sobre fondo oscuro, sin ningún isotipo de marca visible). El estándar v10 exige comprobar todos los fotogramas, incluido el cierre, y el pie de marca es obligatorio (cuadrado NL antiguo tampoco vale, pero aquí no hay ningún isotipo visible en absoluto en el frame revisado).",
-    "No puedo confirmar con los 3 fotogramas de muestra (inicio/medio/final) que exista un pie de marca después de la pregunta final; si el vídeo termina en 18.2s justo en la pregunta sin un frame posterior de cierre con isotipo, falta el requisito obligatorio del bloqueo 11."
-  ],
-  "como_arreglarlo": "Creador: confirmar que el render incluye, tras la pregunta final, un fotograma de cierre con el isotipo nuevo «N» de circuitos del kit 2026 (ni el cuadrado NL antiguo ni ausencia de logo). Si el export actual termina en la pregunta sin ese pie, añadir el cierre de marca 2026 al final del vídeo y volver a renderizar. El resto de la pieza (audio, ritmo, estructura, giro, ausencia de venta/cifras en el guion) está correcto.",
-  "fecha": "2026-11-20T16:52:29Z",
+  "aprobado": true,
+  "nota": 93,
+  "comentario": "Resuelto el bloqueo anterior: el fotograma de cierre (t≈17s) muestra el isotipo nuevo «N» de circuitos del kit 2026 con «By Neogest Lab», claramente legible sobre fondo oscuro. Formato correcto (1080x1920, 18.93s), audio limpio (LUFS -14.14, pico -1.34 dB, sin silencios, whisper coincide con el guion). Estructura de 5 tiempos con escalada de 3 golpes y giro propio (Jupillo/coche desde el lunes), cierre con pregunta concreta y fácil de contestar. Cumple H1-H6: conflicto real, sin muletillas de IA, ritmo de cambio de plano cada 1.5-2s, imagen de dibujo consistente, sin errores de voz, una sola idea. Pie del post con estructura correcta, atribución musical sin duplicar, aviso de ficción/IA. Sin marcas ajenas ni datos sensibles.",
+  "fecha": "2026-11-21T13:05:33Z",
   "revisor": "Calidad (API)",
-  "render": "2026-11-19T23:20:19+00:00",
-  "aprobado_anterior": false,
-  "nota_anterior": 82,
-  "caducado": "2026-11-21T13:03:04+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-21T13:03:04+00:00"
+  "render": "2026-11-21T13:03:04+00:00"
 }
