@@ -1,6 +1,3 @@
-2026-11-15 21:05  Mezcla: voz -16.4 LUFS, música -22.7 LUFS (con ducking -25.4), la música baja 6.0 dB (p90) bajo la voz, ratio 2.488; máster -15.98 -> -14.0 LUFS, pico -0.8 dBFS; huecos de voz: []
-2026-11-15 21:05  Control de audio: OK; duración 25.93 s
-2026-11-15 21:05  336_gestoria7d_demo_reel: renderizado con voz y subido a la release 'cola'
 2026-11-15 21:05  Voz con edge-tts: 7 frases en 7 s
 2026-11-15 21:05  Voz: silencios recortados por frase (s): [0.13, 0.14, 0.13, 0.12, 0.13, 0.12, 0.12]
 2026-11-15 21:05  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(2.5), np.float64(2.5), np.float64(2.9), np.float64(3.5), np.float64(3.8), np.float64(4.6), np.float64(4.9)]
@@ -598,3 +595,6 @@ KeyError: 'escenas'
 2026-11-21 01:39  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
 2026-11-21 01:39  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
 2026-11-21 01:39  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 01:41  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 01:41  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 01:41  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
