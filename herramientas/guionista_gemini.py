@@ -49,7 +49,9 @@ MODELOS = [
     "gemini-2.5-flash",
 ]
 N_POR_DEFECTO = 4
-PERSONAJES_VALIDOS = {"rosa", "felipe", "sindy", "neo", "cliente", "conchaqueton"}
+# 21/11/2026 (orden del dueño): Jambo Reseco vuelve al reparto del formato de barrio/salon
+# (tio chungo, de poca confianza, mal hablado) - ver equipo/serie_jambo.md.
+PERSONAJES_VALIDOS = {"rosa", "felipe", "sindy", "neo", "cliente", "conchaqueton", "jambo"}
 ESTILOS_VALIDOS = {"gancho", "gag", "remate", "cierre"}
 # 19/11/2026: rechazo mecánico de lo que más se parece a "declaración de postura" en vez de
 # una frase hablada con golpe cómico (el fallo real que el dueño señaló). No es perfecto
@@ -270,6 +272,12 @@ Reglas duras (si no las cumples, el episodio se rechaza):
    más abajo y orden del dueño 21/11 arriba) en Rosa, Felipe, Sindy y Concha Quetón; Neo
    siempre correcto y neutro.
 
+PERSONAJE QUE VUELVE (orden del dueño 21/11 mediodía): "jambo" (Jambo Reseco) vuelve al
+reparto del barrio — un tío chungo, de poca confianza, mal hablado (más tacos y más fuertes
+que el resto, siempre entre exclamaciones). Úsalo cuando el conflicto lo pida un vecino poco
+fiable que la lía, pide favores imposibles o mete a los demás en un lío — nunca dice la
+moraleja ni "Que lo resuelva el Neo", y el remate sigue siendo solo de Neo.
+
 NUEVO PERSONAJE (orden del dueño 20/11): "conchaqueton" (Concha Quetón, clienta morosa,
 coletilla «Eso lo arreglamos la semana que viene») es una alternativa a "cliente" para dar
 variedad y continuidad cuando el conflicto lo trae un cliente — úsala en el gancho/gag en vez
@@ -317,7 +325,7 @@ episodio y el bucle no quedaba idéntico; ahora es una tarjeta fija compartida).
 
 Devuelve SOLO un array JSON (sin texto fuera del JSON, sin ``` ) con {n} objetos, cada uno
 con este esquema exacto (valores de ejemplo, escríbelos tú con contenido real distinto en
-cada guion; "h" solo puede ser rosa, felipe, sindy, neo, cliente o conchaqueton; "e" solo puede ser
+cada guion; "h" solo puede ser rosa, felipe, sindy, neo, cliente, conchaqueton o jambo; "e" solo puede ser
 gancho, gag, remate o cierre; usa entre 6 y 9 escenas, con el patrón gancho, 3-4x gag,
 remate, cierre):
 {json.dumps(esquema, ensure_ascii=False, indent=2)}
@@ -402,7 +410,10 @@ def _validar(ep):
     motivos = []
     if not isinstance(ep.get("slug"), str) or not ep["slug"].strip():
         motivos.append("sin slug")
-    if ep.get("set") not in {"oficina", "despacho", "bar", "calle", "reunion"}:
+    # 21/11/2026 (hallazgo real en auditoria de agentes, orden del dueno): "salon" faltaba
+    # aqui pese a ser el set por defecto que el propio prompt pide desde el cambio de formato
+    # de esa madrugada - todo guion nuevo se estaba rechazando por "set invalido: 'salon'".
+    if ep.get("set") not in {"salon", "oficina", "despacho", "bar", "calle", "reunion"}:
         motivos.append(f"set inválido: {ep.get('set')!r}")
     moraleja_palabras = len(str(ep.get("moraleja", "")).split())
     if not (6 <= moraleja_palabras <= 9):

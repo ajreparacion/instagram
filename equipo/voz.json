@@ -143,6 +143,11 @@
         "voz": "es-ES-ElviraNeural",
         "rate": "-6%",
         "pitch": "+2Hz"
+      },
+      "jambo": {
+        "voz": "es-ES-AlvaroNeural",
+        "rate": "-18%",
+        "pitch": "-12Hz"
       }
     },
     "defecto": {
@@ -154,7 +159,8 @@
     "_nota": "14/11/2026 DIRECTIVA DE VÍDEO del dueño: edge-tts (Microsoft Edge neural, es-ES) por personaje; sustituye a Melo/Kokoro/Chatterbox (nunca la voz del dueño). Revertir: cp herramientas/versiones/voz.json_2026-11-14e equipo/voz.json (vuelve a Melo).",
     "_nota_15_11": "15/11/2026: Pelota, Bola y Trámites con ElviraNeural y pitch/rate distintos para distinguirlos (doc jambo_episodios_2026-11-15.md). Retirados el 16/11 (ver nota siguiente).",
     "_nota_16_11": "16/11/2026, orden del dueño: reparto nuevo de El Jambo que sabe (Rosa Melano, Felipe Lotas, Sindy Entes, Neo); retirados Jambo, Jupillo, Pelota, Bola y Trámites. Doc: claude/redes/jambo_reparto_nuevo_2026-11-16.md y equipo/serie_jambo.md (biblia v3).",
-    "_nota_21_11": "21/11/2026 (hallazgo en auditoria de agentes, orden del dueno de revisar automatizaciones): faltaba 'conchaqueton' en edge.voces pese a estar en la biblia v4/v5.2 (es-ES-ElviraNeural, rate -6%, pitch +2Hz) desde el 20/11 - sin esta entrada el render caia al tono 'defecto' en vez de la voz de Concha Queton. Anadida ahora. Bit no va aqui: su voz final (unica frase fija por ElevenLabs Johnny + resto edge-tts es-ES-AlvaroNeural rate +6%) pertenece al pipeline de videos de trucos/apps, no al de El Jambo que usa este archivo."
+    "_nota_21_11": "21/11/2026 (hallazgo en auditoria de agentes, orden del dueno de revisar automatizaciones): faltaba 'conchaqueton' en edge.voces pese a estar en la biblia v4/v5.2 (es-ES-ElviraNeural, rate -6%, pitch +2Hz) desde el 20/11 - sin esta entrada el render caia al tono 'defecto' en vez de la voz de Concha Queton. Anadida ahora. Bit no va aqui: su voz final (unica frase fija por ElevenLabs Johnny + resto edge-tts es-ES-AlvaroNeural rate +6%) pertenece al pipeline de videos de trucos/apps, no al de El Jambo que usa este archivo.",
+    "_nota_21_11_jambo": "21/11/2026 (orden del dueno, mediodia): Jambo Reseco vuelve al reparto del barrio (tio chungo, de poca confianza, mal hablado). Voz: unico hombre disponible en edge-tts es-ES ademas de Felipe/Neo es AlvaroNeural, asi que se diferencia con rate/pitch extremos (-18%/-12Hz) para una voz mas rasgada y grave. Limite real del motor ya asumido con Felipe/Neo: si no suena lo bastante rasgado, es cosa de ElevenLabs en el definitivo, no de edge-tts."
   },
   "sr_voz": 48000,
   "control_audio": {
