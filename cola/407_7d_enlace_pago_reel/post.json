@@ -29,5 +29,9 @@
     "archivo": "Life_of_Riley.mp3",
     "bpm": 101.3
   },
-  "renderizado": false
+  "renderizado": "2026-11-21T15:15:38+00:00",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 17.1
+  }
 }

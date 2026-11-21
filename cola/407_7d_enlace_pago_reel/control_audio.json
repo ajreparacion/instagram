@@ -1,11 +1,10 @@
 {
-  "aprobado": false,
-  "duracion_s": 17.23,
-  "bloqueos": [
-    "falta el giro (escena «remate»)",
+  "aprobado": true,
+  "duracion_s": 17.1,
+  "bloqueos": [],
+  "avisos": [
     "voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases)"
   ],
-  "avisos": [],
   "transcripcion": "Mi cliente te pago esta semana, emites la factura desde el albarán, cada factura trae su enlace de pago, lo pulsas y se abre, lo copias o lo envías por correo, mandaselo a quien tenga que cobrar, pide tu prueba gratuita, sin tarjetas, sin datos bancarios y sin compromiso.",
   "guion": "Mi cliente: te pago esta semana. Emites la factura desde el albarán. Cada factura trae su enlace de pago. Lo pulsas y se abre. Lo copias o lo envías por correo. Mándaselo a quien tenga que cobrar. Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso."
 }
