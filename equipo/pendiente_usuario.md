@@ -7,6 +7,21 @@ Reducido el 13/11/2026 por el Estratega (la versión larga está en git). Aquí 
 2. **En /panel/solicitudes, marcar la solicitud del 8/11** como contactada o descartada (o decir que fue una prueba) **y decir si alguna app tiene plan de pago o precio**. Sin eso el embudo no puede medir euros.
 3. **Archivar desde el móvil los duplicados** (la API no archiva): carruseles del 8/11 «Deja de pedirle así las cosas a la IA» ×3, «¿Pasas los presupuestos al Excel por la noche?» ×3, «5 tareas pesadas…» ×2 y el reel de AJ Web del 10/11 ×2; dejar uno de cada. Quitar de paso lo que aún diga «Escríbeme IDEA».
 
+## Zernio (21/11/2026): 1 paso tuyo, 2 minutos — tercera vía de TikTok, ya publica de verdad
+Conectaste TikTok (@neogest.lab) e Instagram (@neogestlab) en Zernio por MCP. Falta solo la clave para que el robot (workflow automático) también pueda usarla:
+1. Entra en https://zernio.com/dashboard/api-keys (misma cuenta que conectó TikTok/IG) → «Create API key» → cópiala (empieza por `sk_`, no se vuelve a mostrar).
+2. Pégala como secreto `ZERNIO_API_KEY` en https://github.com/ajreparacion/instagram/settings/secrets/actions/new .
+En cuanto esté el secreto, `redes_zernio.yml` empieza a programar en TikTok dos veces al día (ver `equipo/zernio/LEEME.md`), sin depender de que Buffer vuelva.
+
+## Fijar publicaciones en el perfil (21/11/2026): solo se puede desde el móvil, 1 minuto
+Comprobado: Instagram **no** deja fijar publicaciones desde el navegador/ordenador, solo desde la app del móvil (los destacados y el resto sí se hicieron ya desde Chrome). Desde tu móvil, con la app de Instagram:
+1. Abre https://www.instagram.com/p/DfwoHBzk9fg/ (reel «¿Tu cliente te paga a 90 días?», el mejor reel corto de Gestión Integral 7D) → ⋮ (arriba a la derecha) → **Fijar en el perfil**.
+2. Cuando apruebes y se publique el piloto de El Jambo, fíjalo también (es el más viral).
+Detalle completo en `equipo/destacadas_propuestas.md`.
+
+## Historias destacadas (21/11/2026): hechas 3 de 6, faltan 4 historias nuevas
+Ya están en el perfil: **Neogest Lab**, **MEDICATOR** y **Gestión 7D**. Para las 4 que faltan (GH PLUS, AjReparacion DEMO, El Jambo, Centro de Contenido Apps) hace falta publicar antes una Historia de cada uno — Instagram solo deja crear destacadas a partir de Historias ya archivadas, no se puede subir vídeo nuevo directamente. Comunidad las irá publicando; no hace falta que hagas nada salvo si quieres subir tú alguna Historia para acelerarlo.
+
 ## Guionista Gemini (17/11/2026): 1 paso tuyo, 2 minutos; después todo es automático
 Pediste automatizar que los guiones de El Jambo se pidan a Gemini porque no engachaban; ya está montado (`.github/workflows/guionista_gemini.yml` + `herramientas/guionista_gemini.py`), pero necesita una clave que solo tú puedes crear:
 1. Entra en https://aistudio.google.com/app/apikey con la cuenta de Google **darbish** (la misma que usas para Flow/Gemini) y pulsa «Create API key» (capa gratis, sin tarjeta).
@@ -16,7 +31,7 @@ En cuanto esté el secreto, el workflow empieza a dejar borradores de guion en `
 ## TikTok (21/11/2026): cuenta creada y conectada — solo falta que Buffer vuelva (su caída, no tuya)
 Pasos 1 y 2 ya hechos (cuenta de empresa @neogestlab creada y conectada). Buffer está caído ahora mismo (caída del propio servicio, no de la cuenta): en cuanto vuelva, confirma que @neogestlab sigue apareciendo en Buffer → Channels y pega la clave de API:
 - **Clave de Buffer**: https://support.buffer.com/en-us/articles/how-to-create-your-buffer-api-key-ShIgYVwM6j , copia la clave → pégala como secreto `BUFFER_API_KEY` en https://github.com/ajreparacion/instagram/settings/secrets/actions/new . Ese mismo día salen programadas las 8 primeras piezas.
-- Mientras Buffer esté caído, la vía de reserva es **Metricool** (ya montada en `redes_metricool.yml`, no depende de Buffer): conecta tu TikTok en Metricool y añade los 3 secretos (`METRICOOL_TOKEN`, `METRICOOL_USER_ID`, `METRICOOL_BLOG_ID`) según `equipo/metricool/LEEME.md`. Por ahora deja los posts en BORRADOR (no autopublica) hasta confirmar los campos exactos que pide TikTok.
+- Mientras Buffer esté caído, hay dos vías de reserva que no dependen de él: **Zernio** (ver sección propia arriba, publica de verdad) y **Metricool** (`redes_metricool.yml`, solo deja los posts en BORRADOR hasta confirmar los campos exactos que pide TikTok) — los 3 secretos son `METRICOOL_TOKEN`, `METRICOOL_USER_ID`, `METRICOOL_BLOG_ID`, según `equipo/metricool/LEEME.md`.
 
 ## Recepcionista 24h (16/11/2026): grabar 3 llamadas reales con el móvil, unos 5 minutos
 Llama desde el móvil al número directo del asistente (contesta al momento; el fijo de la web tarda 5 tonos y en horario de taller puede cogerlo una persona), pon el altavoz y graba el sonido (grabadora de voz o grabación de pantalla con micrófono). Una pregunta por llamada: (1) «¿Qué horario tenéis?» · (2) «Quería pedir cita para esta semana» · (3) «¿Me puedes pasar con una persona?». Sin dar nombres ni teléfonos de nadie. Sube los 3 vídeos a la Biblioteca de Neogest Studio o adjúntalos en el chat.

@@ -27,5 +27,21 @@ Ya redactada en `equipo/perfil_propuesto.md`. Revisar que sigue vigente (reparto
 ## Facebook / YouTube
 Mismo criterio: fijar el vídeo o publicación que mejor explique Gestión Integral 7D en la cabecera/sección fijada de cada red, cuando el conector o el dueño pueda hacerlo (Comunidad ya gestiona Facebook/YouTube por API directa, pero fijar publicaciones tampoco está en esa API — confirmar si el conector de Meta Business lo permite antes de asumir que hace falta a mano).
 
+## Estado (21/11/2026, pasada con Chrome)
+
+### Destacadas — 3 de 6 hechas
+- ✅ **Gestión 7D** — creada desde la historia «dice "te pago a 90 días"».
+- ✅ **MEDICATOR** — creada desde la historia «¿Y si el móvil leyera tus recetas?».
+- ✅ **Neogest Lab** (genérica) — solo quedaba 1 historia más en el archivo (un vídeo de ambiente, sin texto que la identifique con un producto concreto), así que se usó para una destacada general de marca en vez de forzarla en «El Jambo».
+- ⏳ **GH PLUS, AjReparacion Gestión (DEMO), El Jambo que sabe, Centro de Contenido Apps** — bloqueadas: Instagram solo deja construir una destacada a partir de **Historias ya archivadas**, no se puede subir un vídeo nuevo directamente al crearla. No quedan historias sin usar. Para completarlas hace falta publicar antes una Historia de cada uno de esos productos (Comunidad puede encargarse en próximas pasadas) y luego convertirla en destacada.
+
+### Publicaciones fijadas — bloqueado, es cosa del dueño (1 minuto desde el móvil)
+Comprobado en vivo: **"Fijar en el perfil" no existe en Instagram para navegador/escritorio, solo en la app móvil** (confirmado también por fuentes externas). No es un fallo del agente ni de Chrome: Instagram no ofrece esa opción fuera de la app.
+
+Pasos para el dueño, desde el móvil, app de Instagram:
+1. Abrir https://www.instagram.com/p/DfwoHBzk9fg/ (reel «¿Tu cliente te paga a 90 días?», el mejor reel corto de Gestión Integral 7D) → ⋮ → **Fijar en el perfil**.
+2. En cuanto el dueño apruebe y se publique el piloto de El Jambo (`cola/999_jambo_piloto_barrio`, pendiente de su visto bueno), fijarlo también → es el contenido más viral.
+3. Tercera: un reel resumen del Centro de Contenido Apps (pendiente de identificar cuál, o grabar uno nuevo específico para esto).
+
 ## Siguiente paso
-En cuanto haya una pasada con Chrome/computer use disponible (o el dueño lo haga desde el móvil), ejecutar esta lista tal cual. Marcar aquí cada punto como hecho según se vaya completando.
+Cuando Comunidad publique nuevas Historias de los 4 productos pendientes, pasarlas a destacadas con este mismo procedimiento (⋯ → Nuevo contenido destacado). El fijado de publicaciones queda anotado en `equipo/pendiente_usuario.md` como tarea del dueño (no delegable a un agente, por la limitación de Instagram Web).
