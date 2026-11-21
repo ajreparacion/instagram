@@ -1,16 +1,12 @@
 {
   "aprobado": false,
-  "nota": 86,
-  "fecha": "2026-11-12T15:10Z",
-  "revisado_por": "agente de CALIDAD (12/11, pasada de las 15:40)",
+  "nota": 87,
   "motivos": [
-    "B5: el gancho dura 3,43 s (primer corte a los 3,43 s; límite 3 s).",
-    "Sin el bloqueo se queda en 86-88: no hay ninguna cifra ni resultado medible en el gancho ni en el pie (solo «un caos»), y el resultado (lista agrupada por secciones) llega a los 14 s."
+    "H5/A1 (voz con errores): en el segundo tramo la voz dice «Fego la lista tal cual...» en vez de «Pego la lista tal cual...» (confirmado por control_audio.json: transcripción whisper trae 'fego' donde el guion dice 'pego'; no es variación de 1-2 letras, es una palabra inexistente en español y se nota como fallo de pronunciación real, no solo una errata de reconocimiento). Esto hace que suene a voz de síntesis defectuosa (máximo 89 por 'suena a IA').",
+    "Aviso secundario de control_audio: 'tarjeta' sale como 'tarjetas' en el cierre; más leve, pero refuerza el mismo patrón de imprecisión de la voz en esta toma."
   ],
-  "como_arreglarlo": "CREADOR, solo guion.json y post.json, sin regrabar: (1) voz del gancho ≤ 9 sílabas, p. ej. «¿Tu lista es un *caos*?» (el texto en pantalla puede seguir igual); (2) mete el resultado con número en el gancho y en la primera línea del pie, p. ej. «10 cosas sueltas → 5 secciones del súper» (en el vídeo salen 10 productos y 5 secciones); (3) añade comentario_fijado y monetizacion; (4) renderizado:false. El cierre y los huecos de voz ya están bien.",
-  "comentario": "Render del 10/11 medido entero: 1080x1920 H.264+AAC, -14,0 a -14,2 LUFS, pico -1,4 dBFS, 0 muestras recortadas. El MP4 lleva solo la voz (la música la pone audio_ig al publicar): huecos de voz ≤ 1,3 s (A1 ok). Voz Chatterbox es-es sin voz del dueño: misma voz en todas las escenas (tono 122-153 Hz, nivel ±1,5 dB entre escenas), entonación viva (desviación ≈ 4 semitonos, no plana), 1,8-3,2 palabras/s. El seseo/θ NO se puede comprobar de oído desde la nube ni con reconocedor (descarga del modelo bloqueada): queda como límite de esta revisión. 12 fotogramas + fotograma 0 y final revisados; importes de pantalla recalculados a mano y correctos; cierre único en voz y pantalla; sin «comenta X»; sin marcas.",
-  "aprobado_anterior": false,
-  "nota_anterior": 86,
-  "caducado": "2026-11-21T14:29:55+00:00",
-  "motivo_caducidad": "re-render del ciclo 2026-11-21T14:29:55+00:00"
+  "como_arreglarlo": "CENTRO/motor de voz: regenerar solo el audio de la escena 2 (texto 'Pego la lista tal cual, toda desordenada...') y revisar la pronunciación de 'tarjeta' en el cierre; no hace falta tocar guion.json ni post.json (el texto ya es correcto, es un fallo de síntesis de voz). Marcar renderizado:false y relanzar el ciclo para que regenere audio+vídeo. Si este patrón de consonante inicial mal pronunciada ('p'→'f') se repite en otras piezas del mismo motor, pedirlo como URGENTE en equipo/peticiones_mejora.md en vez de ir pieza a pieza.",
+  "fecha": "2026-11-21T17:28:23Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-21T14:29:55+00:00"
 }

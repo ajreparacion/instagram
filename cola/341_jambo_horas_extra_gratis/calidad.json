@@ -2,16 +2,12 @@
   "aprobado": false,
   "nota": 87,
   "motivos": [
-    "Vídeo técnicamente correcto: 1080x1920, 23,2 s, -14,39 LUFS, pico -1,45 dBFS, sin silencios >0,6s, logo NEOGESTLAB 2026 correcto, estilo doodle, gancho legible en fotograma 0, giro claro (Neo factura y cobra las horas), cierre con moraleja+pregunta+personaje, control_audio.json aprobado y transcripción coincide con el guion.",
-    "Cifra no verificada con fuente primaria: el propio post.json lo admite en '_comprobado' ('sin documento primario citado en esta pasada... Calidad: confirmar fuente o suavizar antes de publicar'). La pieza presenta en pantalla y en voz '2,5 millones de horas extra a la semana sin pagar, el 42%' como dato firme citando EPA/INE vía El Español, pero sin verificación directa del documento primario. Según el estándar (A3/B4), una afirmación de dato concreto sin fuente confirmada no pasa el listón de publicación.",
-    "No es un fallo técnico del render sino de verificación editorial: no corresponde inventar ni dar por buena la cifra sin comprobarla."
+    "Técnicamente correcto: 1080x1920, 23,2 s, -14,39 LUFS, pico -1,45 dBFS, sin silencios >0,6s, logo NEOGESTLAB 2026 (isotipo nuevo) correcto en todos los fotogramas incluido el cierre, estilo doodle, gancho legible en fotograma 0, giro claro (Neo factura y cobra las horas), cierre con moraleja+pregunta+personaje, control_audio.json aprobado y transcripción coincide con la voz.",
+    "Sigue sin resolverse el motivo del rechazo anterior (19/11): la pieza afirma en voz y en pantalla una cifra concreta y firme ('2,5 millones de horas extra a la semana sin pagar, el 42 %') citando EPA/INE, pero post.json solo referencia el artículo de El Español (26/05/2026) y el propio campo '_comprobado' admite textualmente que no hay documento primario citado en esta pasada y pide a Calidad 'confirmar fuente o suavizar antes de publicar'. No se ha añadido fuente primaria ni se ha suavizado el texto desde entonces.",
+    "Según el estándar (A3/B4), una afirmación de dato concreto sin fuente primaria verificada no pasa el listón de publicación aunque el render sea impecable; esto es un asunto editorial, no un fallo técnico del motor."
   ],
-  "como_arreglarlo": "Dos opciones rápidas, sin rehacer el render: (1) Creador/Centro localiza y cita el documento primario de la EPA-INE 1T2026 (tabla oficial del INE, no solo el artículo de El Español) y se añade a '_fuentes' con enlace directo antes de la siguiente pasada; si la cifra se confirma tal cual, Calidad puede aprobar sin reeditar vídeo. (2) Si no se puede confirmar a tiempo, suavizar el texto del post (quitar la cifra exacta y el 42%, dejar algo genérico tipo 'muchas horas extra no se cobran') — eso sí se puede arreglar como ajuste de texto del post sin relanzar render. La voz/vídeo en sí no hace falta tocarla si se opta por (1).",
-  "fecha": "2026-11-19T19:10:52Z",
+  "como_arreglarlo": "Dos vías, ninguna exige re-render: (1) Creador/Centro localiza la tabla oficial de la EPA-INE 1T2026 (no solo el artículo de El Español) y la añade a '_fuentes' con enlace directo; si la cifra se confirma tal cual, Calidad puede aprobar en la siguiente pasada sin tocar el vídeo. (2) Si no se puede confirmar a tiempo, suavizar el texto del post (quitar la cifra exacta y el 42 %, dejar algo genérico tipo 'muchas horas extra no se cobran nunca') — esto sí es un ajuste de texto del post, lo puede hacer Calidad o el Creador sin relanzar render. La voz y el vídeo no necesitan cambios si se opta por (1).",
+  "fecha": "2026-11-21T17:29:27Z",
   "revisor": "Calidad (API)",
-  "render": "2026-11-19T16:44:30+00:00",
-  "aprobado_anterior": false,
-  "nota_anterior": 87,
-  "caducado": "2026-11-21T14:12:56+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-21T14:12:56+00:00"
+  "render": "2026-11-21T14:12:56+00:00"
 }
