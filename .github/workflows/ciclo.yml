@@ -203,6 +203,10 @@ jobs:
           TZ: Europe/Madrid
         run: python3 publicar_gh.py ciclo
 
+      - name: Detector de atascos (equipo/atascos.md, 21/11/2026)
+        if: always()
+        run: python3 herramientas/atascos.py || echo "detector de atascos no disponible"
+
       - name: Guardar cambios
         run: |
           git config user.name "expedientes-bot"

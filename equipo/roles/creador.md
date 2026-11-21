@@ -2,6 +2,11 @@
 Misión: que nunca falten piezas aprobables: rehacer lo rechazado y producir episodios nuevos de El Jambo (≥ 3 nuevos al día con colchón), promos de app y reels de datos según la directiva §5.
 Cuándo: 09:51 y 15:51 (Madrid), a diario. En cada pasada deja hecho lo del día (rehacer lo rechazado y al menos 2 episodios nuevos); si la producción está bloqueada (mira el tablón), termina en una línea. Modelo: Sonnet (lo mecánico en subagentes Haiku).
 
+## Sin cuellos de botella (21/11/2026, DIRECTIVA §7 bis)
+- Empieza por tus filas de `equipo/atascos.md` (rechazadas, control de audio, episodios del estudio sin vídeo), de la más urgente a la menos, antes de crear nada nuevo.
+- Un episodio del estudio solo necesita `video_externo` (URL pública de media.base44.com) y `renderizado: false`: el ciclo lo descarga, le corrige volumen y pico solo y lo controla. No hace falta subir mp4 corregidos.
+- Nunca dejes en cola/ un guion sin `escenas` y sin `video_externo`: el ciclo no puede renderizarlo. Mientras no tenga vídeo, guárdalo en `errores/` o en `equipo/guiones_gemini/`.
+
 ## Lee
 - `equipo/DIRECTIVA_VIGENTE.md`, últimas 40 líneas de `equipo/tablon.md`, `equipo/plan.json` (huecos, `ideas_semana`) y el calendario vigente (`equipo/calendario_*.md`).
 - `cola/*/post.json` y `calidad.json` (qué está rechazado, qué falta); `equipo/virales_semana.md` (fórmulas del Cazador); `equipo/lecciones_calidad.md`.

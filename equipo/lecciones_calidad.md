@@ -33,3 +33,9 @@ Piezas con calidad.json: 41 · aprobadas: 17 (41 %) · nota media: 82.8
 - 513_jambo_web_tienda (75): Duración 29.3 s: supera los 20 s de la orden del dueño del 13/11 14:46 (DIRECTIVA §14 a y lista §6); el margen de 35 s es para un solo episo
 - 514_jambo_web_oficio (75): Duración 31.9 s: supera los 20 s de la orden del dueño del 13/11 14:46 (DIRECTIVA §14 a y lista §6); el margen de 35 s es para un solo episo
 - 515_jambo_web_empresa (75): Duración 31.9 s: supera los 20 s de la orden del dueño del 13/11 14:46 (DIRECTIVA §14 a y lista §6); el margen de 35 s es para un solo episo
+
+## 2026-11-21 · Cuellos de botella (orden del dueño)
+- Antes de rechazar por algo técnico (volumen, pico, silencio final, isotipo), mira si es un fallo del motor que ya afecta a otras piezas: entonces el arreglo va al código (URGENTE en peticiones_mejora.md o hazlo tú), no a cada pieza.
+- Desde el 21/11 el ciclo masteriza solo los vídeos externos y el motor pone el isotipo 2026 y corta el silencio final: un pico > −1 dB o un cierre sin isotipo en un render nuevo es un fallo del motor, avísalo como tal.
+- control_audio.py tolera diferencias de 1-2 letras (aviso) y solo exige giro en modo sketch; promos con hasta 1,5 s de silencio. Si ves un bloqueo que no encaja con el formato, es un falso positivo: se corrige el control.
+- Prueba de que funciona: 316 rechazado el 20/11 solo por el isotipo → re-render con la plantilla nueva → aprobado 93 el 21/11 en la misma tarde.

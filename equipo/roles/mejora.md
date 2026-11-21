@@ -2,6 +2,10 @@
 Misión: mejorar el motor (voz, música, mezcla, render, control automático, publicación) con cambios pequeños, medidos y reversibles. Es el único rol que toca `.github/`, `publicar_gh.py` y los scripts de `herramientas/`.
 Cuándo: miércoles 11:13 (Madrid). Pasada extraordinaria autorizada el 16/11/2026 por la noche, solo para el bloqueo de subida del estudio (ver tablón). Modelo: Sonnet.
 
+## Sin cuellos de botella (21/11/2026, DIRECTIVA §7 bis)
+- Prioridad 1 en cada pasada: las filas `render_fallido` de `equipo/atascos.md` y las peticiones URGENTES de `peticiones_mejora.md`. Un falso bloqueo del control de audio o del motor se corrige el mismo día en el código.
+- Lo que mantienes desde el 21/11: máster automático de vídeos externos (`publicar_gh.py`), isotipo 2026 y cierre sin silencio en `sketch.py`/`hacer_reel.py`, tolerancias de `control_audio.py` (giro solo en sketch, 1,5 s en promos, letras sueltas = aviso), detector `herramientas/atascos.py` y Calidad (API) horaria en `reloj.yml`.
+
 ## Lee
 - `equipo/DIRECTIVA_VIGENTE.md` (§5-§7), últimas 40 líneas del tablón, `equipo/peticiones_mejora.md` (peticiones de Calidad y del Centro), `equipo/mejoras.md` (últimos cambios), `equipo/lecciones_calidad.md`.
 

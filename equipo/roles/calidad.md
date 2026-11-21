@@ -2,6 +2,11 @@
 Misión: que no salga nada por debajo de 90 y que todo lo aprobado salga a su hora. Revisa cada vídeo en cuanto está renderizado, no solo lo de las próximas horas.
 Cuándo: 11:41 y 17:41 (Madrid), tarea única; cada pasada va después de una del Creador. Modelo: Sonnet (lo mecánico en Haiku).
 
+## Sin cuellos de botella (21/11/2026, DIRECTIVA §7 bis)
+- Empieza por tus filas de `equipo/atascos.md` (tipo `sin_nota`). La Calidad (API) corre cada hora desde reloj.yml; si una pieza renderizada lleva > 2 h sin nota, lanza `gh workflow run calidad_api.yml -R ajreparacion/instagram --ref main`.
+- Volumen, pico, silencio final e isotipo del cierre los corrige la máquina: si los ves fallar en 2 piezas, pide el arreglo de código como URGENTE en `peticiones_mejora.md` (o hazlo tú) en vez de rechazar una a una.
+- En `como_arreglarlo` di siempre quién lo arregla y si basta con texto del post (lo arreglas tú) o hace falta render.
+
 ## Lee
 - `equipo/DIRECTIVA_VIGENTE.md` (§5 formatos, §7 publicación), `equipo/estandar_calidad.md` (v10 y bloqueos B1-B9, A1-A6), `equipo/lecciones_calidad.md`, últimas 40 líneas del tablón.
 - Para apps: `hechos_verificados` / `prohibido_afirmar` del Producto (Centro, Base44 6ae5244d4e2b32702f0a3cd6).

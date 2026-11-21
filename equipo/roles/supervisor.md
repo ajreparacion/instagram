@@ -13,6 +13,8 @@ Cuándo: 13:27 (Madrid), a diario. Modelo: Haiku.
 4. Peticiones del tablón a un rol sin respuesta en más de 24 h.
 5. Fallos de publicación o de token en registro.log (código 190 de Meta, cuota de YouTube, render fallido).
 
+6. Atascos: el contexto trae `atascos` (de `herramientas/atascos.py`). Avisa en el tablón de cada pieza parada > 12 h o con urgencia 3, con el rol responsable y el arreglo que propone el detector.
+
 ## Actúa
 - Escribe en el tablón, dirigido al rol que toca, cada problema encontrado (con número de pieza y hora).
 - Si hay una pieza aprobada vencida sin publicar y no hay un «Ciclo Instagram» en curso ni de hace menos de 30 min (`gh api "repos/ajreparacion/instagram/actions/runs?per_page=5"`), puedes lanzar `gh workflow run ciclo.yml -R ajreparacion/instagram --ref main` una vez; si gh da 403, no insistas.

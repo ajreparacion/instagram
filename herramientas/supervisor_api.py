@@ -84,7 +84,18 @@ def _contexto():
         "pendiente_usuario": _leer(PENDIENTE),
         "piezas_cola": _piezas_cola(),
         "registro_log_ultimas_30": _leer(LOG, 30),
+        "atascos": _atascos(),
     }
+
+
+def _atascos():
+    """21/11/2026: diagnóstico de herramientas/atascos.py (qué pieza está parada, por qué y de qué rol es)."""
+    try:
+        sys.path.insert(0, os.path.join(RAIZ, "herramientas"))
+        import atascos
+        return atascos.diagnosticar()[:40]
+    except Exception as e:
+        return [{"error": str(e)[:200]}]
 
 
 def _llamar_api(rol_md, contexto):
@@ -110,7 +121,7 @@ def _llamar_api(rol_md, contexto):
         'necesitas y de qué rol (o «nada»)"\n'
         "Usa la hora `ahora_utc` del contexto (en UTC, sin convertir). No escribas nada más: "
         "ni explicaciones, ni markdown, ni comillas envolventes. Si no hay ningún problema de "
-        "los 5 puntos de «Comprueba», responde con una sola línea que diga que todo va bien y "
+        "los 6 puntos de «Comprueba», responde con una sola línea que diga que todo va bien y "
         "termina en «nada».\n\n--- ARCHIVO DE ROL (equipo/roles/supervisor.md) ---\n" + rol_md
     )
     mensaje = (
