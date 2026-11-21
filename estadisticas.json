@@ -1,8 +1,8 @@
 {
-  "actualizado": "2026-11-20T22:09:05+00:00",
+  "actualizado": "2026-11-21T04:10:35+00:00",
   "cuenta": {
     "id": "17841400403112257",
-    "followers_count": 1600,
+    "followers_count": 1599,
     "follows_count": 177,
     "media_count": 42,
     "username": "neogestlab"
@@ -12,21 +12,21 @@
       "id": "18355755817267966",
       "caption": "Por quinta vez, un huésped pregunta la hora del desayuno. La Pelota cambia la respuesta cada vez.\n¿Qué te preguntan mil veces en el trabajo? Cuéntalo en comentarios.\nMándaselo a ese compañero de recepción que ya no sabe qué contestar.\n#humornegro #hotel #recepcion #trabajo #neogestlab\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso → enlace /solicitar del perfil (Neogest Lab).\nHumor negro de ficción; los personajes son inventados. Voz y personajes generados por IA\n\nMúsica: \"Sneaky Snitch\" de Kevin MacLeod (incompetech.com), licencia CC BY 4.0\n\nVoz generada por IA",
       "comments_count": 0,
-      "like_count": 2,
+      "like_count": 3,
       "media_product_type": "REELS",
       "media_type": "VIDEO",
       "permalink": "https://www.instagram.com/reel/Df-czNBlMRB/",
       "timestamp": "2026-11-20T19:53:01+0000",
       "metricas": {
-        "reach": 110,
-        "views": 151,
+        "reach": 122,
+        "views": 158,
         "saved": 0,
         "shares": 0,
         "comments": 0,
-        "likes": 2,
-        "total_interactions": 3,
-        "ig_reels_avg_watch_time": 9653,
-        "ig_reels_video_view_total_time": 1042542
+        "likes": 3,
+        "total_interactions": 5,
+        "ig_reels_avg_watch_time": 9367,
+        "ig_reels_video_view_total_time": 1133464
       }
     },
     {
@@ -67,8 +67,8 @@
         "comments": 0,
         "likes": 2,
         "total_interactions": 3,
-        "ig_reels_avg_watch_time": 14968,
-        "ig_reels_video_view_total_time": 658630
+        "ig_reels_avg_watch_time": 15058,
+        "ig_reels_video_view_total_time": 677629
       }
     },
     {
@@ -81,15 +81,15 @@
       "permalink": "https://www.instagram.com/reel/Df7rHNOFEMW/",
       "timestamp": "2026-11-19T18:00:13+0000",
       "metricas": {
-        "reach": 116,
-        "views": 152,
+        "reach": 117,
+        "views": 153,
         "saved": 0,
         "shares": 0,
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 9501,
-        "ig_reels_video_view_total_time": 1121150
+        "ig_reels_avg_watch_time": 9435,
+        "ig_reels_video_view_total_time": 1122864
       }
     },
     {
@@ -102,7 +102,7 @@
       "permalink": "https://www.instagram.com/reel/Df5iZcYkdFT/",
       "timestamp": "2026-11-18T22:05:31+0000",
       "metricas": {
-        "reach": 112,
+        "reach": 113,
         "views": 143,
         "saved": 0,
         "shares": 1,
@@ -361,8 +361,8 @@
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 4399,
-        "ig_reels_video_view_total_time": 426716
+        "ig_reels_avg_watch_time": 4492,
+        "ig_reels_video_view_total_time": 440225
       }
     },
     {
@@ -466,8 +466,8 @@
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 3488,
-        "ig_reels_video_view_total_time": 66279
+        "ig_reels_avg_watch_time": 3753,
+        "ig_reels_video_view_total_time": 75077
       }
     },
     {
@@ -508,8 +508,8 @@
         "comments": 0,
         "likes": 1,
         "total_interactions": 2,
-        "ig_reels_avg_watch_time": 3173,
-        "ig_reels_video_view_total_time": 88870
+        "ig_reels_avg_watch_time": 13202,
+        "ig_reels_video_view_total_time": 382879
       }
     },
     {
@@ -863,6 +863,10 @@
     {
       "fecha": "2026-11-20T22:09+00:00",
       "seguidores": 1600
+    },
+    {
+      "fecha": "2026-11-21T04:10+00:00",
+      "seguidores": 1599
     }
   ]
 }
