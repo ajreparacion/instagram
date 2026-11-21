@@ -1,6 +1,3 @@
-    esc = g["escenas"]
-          ~^^^^^^^^^^^
-KeyError: 'escenas'
 
 2026-11-20 00:02  Voz primero no disponible (  File "/home/runner/work/instagram/instagram/herramientas/hacer_reel.py", line 2550, in main
     esc = g["escenas"]
@@ -598,3 +595,6 @@ KeyError: 'escenas'
 2026-11-21 19:13  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
 2026-11-21 19:13  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
 2026-11-21 19:13  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 19:28  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 19:28  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 19:28  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
