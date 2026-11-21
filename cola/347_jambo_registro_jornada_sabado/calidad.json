@@ -1,16 +1,17 @@
 {
-  "aprobado": false,
-  "nota": 86,
-  "fecha": "2026-11-19T10:43:50+00:00",
-  "revisor": "Calidad (pasada 11:41)",
-  "render": "2026-11-18T21:39:14+00:00",
-  "motivos": [
-    "Pico −0,7 dBFS y −15,2 LUFS (máster sin aplicar)",
-    "Error de voz: whisper oye «Vení del sábado» por «Venid el sábado» (H5)"
-  ],
-  "como_arreglarlo": "Rehacer la primera frase sin el imperativo «Venid» (p. ej. «El sábado se viene a trabajar…») y repetir el máster; volver a Calidad.",
-  "aprobado_anterior": false,
-  "nota_anterior": 86,
-  "caducado": "2026-11-21T13:57:44+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-21T13:57:44+00:00"
+    "aprobado": false,
+    "nota": 86,
+    "fecha": "2026-11-19T10:43:50+00:00",
+    "revisor": "Calidad (pasada 11:41)",
+    "render": "2026-11-18T21:39:14+00:00",
+    "motivos": [
+          "Pico -0,7 dBFS y -15,2 LUFS (master sin aplicar)",
+          "Error de voz: whisper oye Vení del sábado por Venid el sábado (H5)",
+          "Dueño (21/11): vocabulario más vulgar sin perder el mensaje; solo Neo es culto y habla con respeto, el resto de personajes (incluido el nuevo Jambo) no"
+    ],
+    "como_arreglarlo": "Rehacer la primera frase sin el imperativo Venid (p.ej. El sábado se viene a trabajar) y repetir el master; volver a Calidad. Además: reescribir los diálogos de Rosa, Felipe, Sindy y Jambo con vocabulario más vulgar y mal hablado sin perder la moraleja (solo Neo mantiene un habla culta y respetuosa); incluir al personaje Jambo en este episodio.",
+    "aprobado_anterior": false,
+    "nota_anterior": 86,
+    "caducado": "2026-11-21T13:57:44+00:00",
+    "motivo_caducidad": "video externo subido 2026-11-21T13:57:44+00:00"
 }
