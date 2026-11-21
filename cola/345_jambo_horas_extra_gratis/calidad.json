@@ -1,12 +1,13 @@
 {
-  "aprobado": false,
-  "nota": 88,
-  "motivos": [
-    "Cifra central de la moraleja («2,5 millones de horas extra no se cobran») sin fuente citada: post.json trae _fuentes vacío y el propio _comprobado dice explícitamente «sin documento primario citado... confirmar fuente o suavizar antes de publicar». Sin cita verificable esto es B4 (inventar/inflar un dato) y falla el criterio de exactitud y confianza del estándar; no se puede aprobar una cifra pública no verificada en esta pasada.",
-    "Audio y técnica OK (LUFS -14.47, pico real -1.38 dB, sin silencios, isotipo 2026 correcto en el cierre, sin logo NL neón): no es un problema del motor, es de contenido/fuentes."
-  ],
-  "como_arreglarlo": "No requiere re-render: es un arreglo de texto/guion. El Creador debe o (a) añadir en post.json un _fuentes con un enlace concreto y reciente a una encuesta/estadística oficial (EPA, Adecco, UGT/CCOO, etc.) que respalde «2,5 millones de horas extra no cobradas», y actualizar _comprobado con esa cita, o (b) suavizar la frase en el guion/voz a algo no cuantificado verificable («se trabajan muchísimas horas extra sin cobrar en España», sin cifra exacta) y volver a renderizar solo esa frase. Si se opta por (b) hace falta nuevo render porque cambia el audio; si se opta por (a) y la cifra es correcta y verificable, basta con editar el post.json (texto y _fuentes) sin tocar el vídeo, y pasar de nuevo por Calidad.",
-  "fecha": "2026-11-21T17:47:41Z",
-  "revisor": "Calidad (API)",
-  "render": "2026-11-21T13:42:45+00:00"
+    "aprobado": false,
+    "nota": 88,
+    "motivos": [
+          "Cifra central de la moraleja (2,5 millones de horas extra no se cobran) sin fuente citada: post.json trae _fuentes vacio y el propio _comprobado dice explicitamente sin documento primario citado... confirmar fuente o suavizar antes de publicar. Sin cita verificable esto es B4 (inventar/inflar un dato) y falla el criterio de exactitud y confianza del estandar; no se puede aprobar una cifra publica no verificada en esta pasada.",
+          "Audio y tecnica OK (LUFS -14.47, pico real -1.38 dB, sin silencios, isotipo 2026 correcto en el cierre, sin logo NL neon): no es un problema del motor, es de contenido/fuentes.",
+          "Dueño (21/11): falta humor negro y vocabulario choni; falta el personaje Jambo y la imagen de la casa"
+    ],
+    "como_arreglarlo": "No requiere re-render: es un arreglo de texto/guion. El Creador debe o (a) añadir en post.json un _fuentes con un enlace concreto y reciente a una encuesta/estadistica oficial (EPA, Adecco, UGT/CCOO, etc.) que respalde 2,5 millones de horas extra no cobradas, y actualizar _comprobado con esa cita, o (b) suavizar la frase en el guion/voz a algo no cuantificado verificable (se trabajan muchisimas horas extra sin cobrar en España, sin cifra exacta) y volver a renderizar solo esa frase. Si se opta por (b) hace falta nuevo render porque cambia el audio; si se opta por (a) y la cifra es correcta y verificable, basta con editar el post.json (texto y _fuentes) sin tocar el video, y pasar de nuevo por Calidad. Además: reescribir el guion con mas humor negro y vocabulario choni/vulgar (salvo Neo, que sigue culto y respetuoso); incluir al personaje Jambo y la imagen/escena de la casa (intro del formato de barrio).",
+    "fecha": "2026-11-21T17:47:41Z",
+    "revisor": "Calidad (API)",
+    "render": "2026-11-21T13:42:45+00:00"
 }
