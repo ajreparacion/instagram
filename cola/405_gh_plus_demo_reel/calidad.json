@@ -1,7 +1,11 @@
 {
-  "aprobado": true,
+  "aprobado": false,
   "nota": 90,
   "fecha": "2026-11-12T11:45Z",
   "revisado_por": "agente de CALIDAD (12/11, pasada de las 12:30)",
-  "comentario": "Re-render del 11/11 21:07 revisado: ya no aparece «CaixaBank» (la tarjeta dice solo «Saldo · Cuenta nómina», B9 resuelto) y el fotograma 0 abre sobre el aviso rojo del seguro (B7 resuelto). 23,6 s, 1080x1920, -14,0 LUFS, pico -1,4 dBFS, sin silencios > 0,8 s, primer cambio visual a 3,0 s (límite). Voz = guion; afirmaciones (rojo/naranja, «Marcar pagado», dinero disponible = saldo menos pendientes) dentro de hechos_verificados de GH PLUS; post con «nuestra app», frase para enviar y cierre único. Descuentos: en el tramo «Dinero disponible» el borde izquierdo de la pantalla corta «Saldo» e «Ingresos» (≈4 s, texto secundario) y el primer corte llega justo a 3,0 s. Aviso a Mejora: encuadrar ese tramo sin recortar el borde."
+  "comentario": "Re-render del 11/11 21:07 revisado: ya no aparece «CaixaBank» (la tarjeta dice solo «Saldo · Cuenta nómina», B9 resuelto) y el fotograma 0 abre sobre el aviso rojo del seguro (B7 resuelto). 23,6 s, 1080x1920, -14,0 LUFS, pico -1,4 dBFS, sin silencios > 0,8 s, primer cambio visual a 3,0 s (límite). Voz = guion; afirmaciones (rojo/naranja, «Marcar pagado», dinero disponible = saldo menos pendientes) dentro de hechos_verificados de GH PLUS; post con «nuestra app», frase para enviar y cierre único. Descuentos: en el tramo «Dinero disponible» el borde izquierdo de la pantalla corta «Saldo» e «Ingresos» (≈4 s, texto secundario) y el primer corte llega justo a 3,0 s. Aviso a Mejora: encuadrar ese tramo sin recortar el borde.",
+  "aprobado_anterior": true,
+  "nota_anterior": 90,
+  "caducado": "2026-11-21T15:00:15+00:00",
+  "motivo_caducidad": "re-render del ciclo 2026-11-21T15:00:15+00:00"
 }

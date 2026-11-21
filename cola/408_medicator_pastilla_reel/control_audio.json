@@ -1,10 +1,8 @@
 {
-  "aprobado": false,
+  "aprobado": true,
   "duracion_s": 14.4,
-  "bloqueos": [
-    "falta el giro (escena «remate»)"
-  ],
+  "bloqueos": [],
   "avisos": [],
-  "transcripcion": "Ya me tomé la pastilla? Aquí ves la que toca ahora. Y sale, todo en orden. Y mañana, la cita con el médico. Mándaselo a quien cuide de mamá. Pide tu prueba gratuita, sin tarjeta, sin datos bancarios y sin compromiso.",
+  "transcripcion": "¿Ya me tomé la pastilla? Aquí ves la que toca ahora. Y sale, todo en orden. Y mañana, la cita con el médico. Mándaselo a quien cuide de mamá. Pide tu prueba gratuita, sin tarjeta, sin datos bancarios y sin compromiso.",
   "guion": "¿Ya me tomé la pastilla? Aquí ves la que toca ahora. Y sale: todo en orden. Y mañana, la cita con el médico. Mándaselo a quien cuide de mamá. Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso."
 }

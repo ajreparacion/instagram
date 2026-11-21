@@ -25,5 +25,9 @@
     "archivo": "life_of_riley.mp3",
     "bpm": 101.3
   },
-  "renderizado": false
+  "renderizado": "2026-11-21T15:00:15+00:00",
+  "control_audio": {
+    "aprobado": true,
+    "duracion_s": 18.87
+  }
 }

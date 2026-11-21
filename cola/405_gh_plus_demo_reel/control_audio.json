@@ -1,11 +1,8 @@
 {
-  "aprobado": false,
+  "aprobado": true,
   "duracion_s": 18.87,
-  "bloqueos": [
-    "falta el giro (escena «remate»)",
-    "voz distinta del guion: faltan ['tarjeta'], sobran ['tarjetas'] (rehacer esas frases)"
-  ],
+  "bloqueos": [],
   "avisos": [],
-  "transcripcion": "Se te pasó pagar el seguro, lo vencido sale en rojo y lo que viene en naranja. Cada aviso trae su botón, marcar pagado, y arriba tu dinero disponible, el saldo menos lo pendiente del mes. Mándaselo a quien se olvida de pagar, pide tu prueba gratuita, sin tarjetas, sin datos bancarios y sin compromiso.",
+  "transcripcion": "Se te pasó pagar el seguro, lo vencido sale en rojo y lo que viene en naranja. Cada aviso trae su botón, marcar pagado, y arriba tu dinero disponible, el saldo menos lo pendiente del mes. Mándaselo a quien se olvida de pagar, pide tu prueba gratuita, sin tarjeta, sin datos bancarios y sin compromiso.",
   "guion": "Se te pasó pagar el seguro. Lo vencido sale en rojo, y lo que viene, en naranja. Cada aviso trae su botón: Marcar pagado. Y arriba, tu dinero disponible: el saldo menos lo pendiente del mes. Mándaselo a quien se olvida de pagar. Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso."
 }
