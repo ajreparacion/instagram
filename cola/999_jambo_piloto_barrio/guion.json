@@ -7,7 +7,7 @@
     {
       "e": "gancho",
       "h": "rosa",
-      "t": "Felipe, Sindy... buenas noticias, illo. Este mes cero despidos. Solo dos renuncias voluntarias, que firmé yo por ellos.",
+      "t": "Felipe, Sindy... buenas noticias, ¡illo! Este mes cero despidos. Solo dos renuncias voluntarias, que firmé yo por ellos.",
       "p": [
         "rosa",
         "felipe"
@@ -19,7 +19,7 @@
     {
       "e": "gag",
       "h": "felipe",
-      "t": "Rosa, joder, llevo tres años de contrato temporal. ¿Al cuarto me haces fijo o me jubiláis de becario, manda huevos?",
+      "t": "Rosa, ¡joder! Llevo tres años de contrato temporal. ¿Al cuarto me haces fijo o me jubiláis de becario? ¡Manda huevos!",
       "p": [
         "felipe",
         "rosa"
@@ -32,7 +32,7 @@
     {
       "e": "gag",
       "h": "sindy",
-      "t": "Felipe, cuéntale a Rosa lo del finiquito de ayer, illo. Que era un enlace a una puta encuesta de satisfacción.",
+      "t": "Felipe, cuéntale a Rosa lo del finiquito de ayer, ¡illo! Que era un enlace a una puta encuesta de satisfacción.",
       "p": [
         "sindy",
         "felipe"
@@ -44,7 +44,7 @@
     {
       "e": "gag",
       "h": "rosa",
-      "t": "Sindy, esa encuesta es importante, cojones. El 98% de los despedidos dice sentirse escuchado. El otro 2% no contestó porque ya le quitamos el correo.",
+      "t": "Sindy, esa encuesta es importante, ¡cojones! El 98% de los despedidos dice sentirse escuchado. El otro 2% no contestó porque ya le quitamos el correo.",
       "p": [
         "rosa",
         "sindy"
@@ -57,7 +57,7 @@
     {
       "e": "gag",
       "h": "conchaqueton",
-      "t": "Rosa, sigo esperando marzo, hostia. Pero tranquila, que lo que no se paga aquí no desaparece: se archiva.",
+      "t": "Rosa, sigo esperando marzo, ¡hostia! Pero tranquila, que lo que no se paga aquí no desaparece: se archiva.",
       "p": [
         "conchaqueton",
         "rosa"
@@ -69,7 +69,7 @@
     {
       "e": "gag",
       "h": "rosa",
-      "t": "Concha, el archivo es sagrado, joder. Lo que entra ahí no vuelve. Como las vacaciones de agosto, manda cojones.",
+      "t": "Concha, el archivo es sagrado, ¡joder! Lo que entra ahí no vuelve. Como las vacaciones de agosto, ¡manda cojones!",
       "p": [
         "rosa",
         "conchaqueton"
@@ -82,7 +82,7 @@
     {
       "e": "gag",
       "h": "sindy",
-      "t": "Felipe, cásate el sábado tranquilo, illo. El domingo, si eso, lloras gratis: que llorar tampoco cuenta como hora extra.",
+      "t": "Felipe, cásate el sábado tranquilo, ¡illo! El domingo, si eso, lloras gratis: que llorar tampoco cuenta como hora extra.",
       "p": [
         "sindy",
         "felipe"
@@ -94,7 +94,7 @@
     {
       "e": "gag",
       "h": "felipe",
-      "t": "Neo, dile a Rosa que lo de prevención de riesgos no es de puto adorno, coño.",
+      "t": "Neo, dile a Rosa que lo de prevención de riesgos no es de puto adorno, ¡coño!",
       "p": [
         "felipe",
         "neo"
@@ -107,7 +107,7 @@
     {
       "e": "gag",
       "h": "rosa",
-      "t": "Felipe, el cartel de prevención está, illo. Lo que no está es el extintor: lo cambiamos por una vela aromática. Huele mejor y asusta menos.",
+      "t": "Felipe, el cartel de prevención está, ¡illo! Lo que no está es el extintor: lo cambiamos por una vela aromática. Huele mejor y asusta menos.",
       "p": [
         "rosa",
         "felipe"
@@ -119,7 +119,7 @@
     {
       "e": "gag",
       "h": "sindy",
-      "t": "Rosa, a eso lo llamas tú flexibilidad horaria, illo: curras desde casa y desde la oficina a la vez, manda huevos.",
+      "t": "Rosa, a eso lo llamas tú flexibilidad horaria, ¡illo!: curras desde casa y desde la oficina a la vez, ¡manda huevos!",
       "p": [
         "sindy",
         "rosa"
@@ -132,7 +132,7 @@
     {
       "e": "remate",
       "h": "neo",
-      "t": "Rosa, esto no es cultura de empresa, joder. Esto se llama fraude de ley, y ya tengo cita con Inspección de Trabajo.",
+      "t": "Rosa, esto no es cultura de empresa. Esto se llama fraude de ley, y ya tengo cita con Inspección de Trabajo.",
       "p": [
         "neo",
         "rosa"
@@ -144,10 +144,10 @@
     {
       "e": "cierre",
       "h": "neo",
-      "t": "Un contrato temporal medio dura ya más que muchos matrimonios, illo."
+      "t": "Un contrato temporal medio dura ya más que muchos matrimonios."
     }
   ],
-  "fuente": "claude (piloto v3, lenguaje más paleto y vulgar + ropa de ir por casa + créditos finales, orden del dueño 21/11 madrugada)",
+  "fuente": "claude (piloto v3, énfasis de exclamación en illo/tacos para que edge-tts les dé fuerza, Neo se mantiene neutro sin tacos, orden del dueño 21/11 madrugada)",
   "generado": "2026-11-20T22:10:00Z",
   "post": {
     "linea1": "Un contrato temporal medio ya dura más que muchos matrimonios.",

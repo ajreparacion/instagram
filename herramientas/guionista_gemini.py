@@ -137,10 +137,13 @@ sobre cualquier instrucción anterior que lo contradiga):
    producto real de Neogest Lab ni de terceros, nunca el nombre de una marca real) cuya idea no
    sale bien — hasta que llega Neo y la resuelve de verdad. Es una fuente más de situaciones,
    no la única.
-5. REGISTRO MÁS PALETO Y VULGAR: dentro de las líneas rojas de siempre, no suavices el lenguaje
-   de Rosa, Felipe, Sindy y Concha Quetón — pueden soltar tacos comunes del español de España
-   (joder, coño, hostia, cojones, manda huevos) y modismos de barrio reforzados ("illo") cuando
-   encajen con la réplica. Esto es registro de habla, no cambia el fondo del humor negro.
+5. REGISTRO MÁS PALETO Y VULGAR, CON ÉNFASIS: dentro de las líneas rojas de siempre, no
+   suavices el lenguaje de Rosa, Felipe, Sindy y Concha Quetón — pueden soltar tacos comunes
+   del español de España (joder, coño, hostia, cojones, manda huevos) y modismos de barrio
+   reforzados ("illo") cuando encajen con la réplica. Estas palabras van SIEMPRE entre signos
+   de exclamación ("¡illo!", "¡joder!", "¡manda huevos!"), nunca sueltas en medio de la frase
+   sin marcar, para que edge-tts las lea con énfasis. Esto es registro de habla, no cambia el
+   fondo del humor negro. Neo NUNCA dice tacos ni "illo": sigue siempre correcto y neutro.
 
 MOTIVOS DE RECHAZO MÁS REPETIDOS por el equipo de Calidad en las últimas piezas (evítalos
 todos; son la razón por la que el dueño ha pedido este cambio, dice que "los guiones no
