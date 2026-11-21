@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 2.2,
+  "duracion": 2.7,
   "texto": "¡Vendo a doce euros! ¡Soy rico!",
   "enfasis": [
    5
@@ -14,8 +14,8 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 2.2,
-  "duracion": 2.0,
+  "inicio": 2.7,
+  "duracion": 2.433,
   "texto": "¿Cuánto me queda por venta, Pelota?",
   "enfasis": []
  },
@@ -23,7 +23,7 @@
   "escena": 2,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 4.2,
+  "inicio": 5.133,
   "duracion": 3.167,
   "texto": "Doce euros. Todos para ti. Seguro.",
   "enfasis": [
@@ -34,7 +34,7 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "tramites",
-  "inicio": 7.367,
+  "inicio": 8.3,
   "duracion": 3.033,
   "texto": "Al precio hay que restarle el IVA. Y el coste.",
   "enfasis": [
@@ -45,7 +45,7 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 10.4,
+  "inicio": 11.333,
   "duracion": 2.633,
   "texto": "¡Los tiburones no restan! ¡Suman!",
   "enfasis": []
@@ -54,7 +54,7 @@
   "escena": 5,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 13.033,
+  "inicio": 13.967,
   "duracion": 4.9,
   "texto": "Sin IVA, nueve con noventa y dos. Menos el coste: cuatro con cincuenta y dos.",
   "enfasis": [
@@ -69,7 +69,7 @@
   "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 17.933,
+  "inicio": 18.867,
   "duracion": 2.2,
   "texto": "¿Sabes cuánto te queda de cada venta?",
   "enfasis": []

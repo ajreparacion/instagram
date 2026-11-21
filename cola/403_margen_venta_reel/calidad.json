@@ -8,5 +8,9 @@
   "como_arreglarlo": "Creador: añadir al fotograma de cierre el isotipo nuevo «N» de circuitos (kit 2026) antes de la pregunta final o superpuesto con ella, y confirmar en un fotograma intermedio que el rótulo «EJEMPLO · datos inventados» es legible junto a la cifra del sello. Re-renderizar y volver a pasar por calidad (no reutilizar este calidad.json, aprobación caducada al tocar el render).",
   "fecha": "2026-11-20T22:49:30Z",
   "revisor": "Calidad (API)",
-  "render": "2026-11-19T23:48:07+00:00"
+  "render": "2026-11-19T23:48:07+00:00",
+  "aprobado_anterior": false,
+  "nota_anterior": 82,
+  "caducado": "2026-11-21T13:04:00+00:00",
+  "motivo_caducidad": "re-render del ciclo 2026-11-21T13:04:00+00:00"
 }

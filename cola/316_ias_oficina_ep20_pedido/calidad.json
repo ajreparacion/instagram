@@ -8,5 +8,9 @@
   "como_arreglarlo": "Creador: confirmar que el render incluye, tras la pregunta final, un fotograma de cierre con el isotipo nuevo «N» de circuitos del kit 2026 (ni el cuadrado NL antiguo ni ausencia de logo). Si el export actual termina en la pregunta sin ese pie, añadir el cierre de marca 2026 al final del vídeo y volver a renderizar. El resto de la pieza (audio, ritmo, estructura, giro, ausencia de venta/cifras en el guion) está correcto.",
   "fecha": "2026-11-20T16:52:29Z",
   "revisor": "Calidad (API)",
-  "render": "2026-11-19T23:20:19+00:00"
+  "render": "2026-11-19T23:20:19+00:00",
+  "aprobado_anterior": false,
+  "nota_anterior": 82,
+  "caducado": "2026-11-21T13:03:04+00:00",
+  "motivo_caducidad": "re-render del ciclo 2026-11-21T13:03:04+00:00"
 }

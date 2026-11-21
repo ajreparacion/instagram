@@ -4,7 +4,7 @@
   "estilo": "gancho",
   "hablante": "jambo",
   "inicio": 0.0,
-  "duracion": 1.6,
+  "duracion": 1.933,
   "texto": "¿Mi pedido? ¡Ya sale!",
   "enfasis": [
    3
@@ -14,8 +14,8 @@
   "escena": 1,
   "estilo": "gag",
   "hablante": "jambo",
-  "inicio": 1.6,
-  "duracion": 2.1,
+  "inicio": 1.933,
+  "duracion": 2.533,
   "texto": "¿Dónde está su pedido, Trámites?",
   "enfasis": []
  },
@@ -23,7 +23,7 @@
   "escena": 2,
   "estilo": "gag",
   "hablante": "tramites",
-  "inicio": 3.7,
+  "inicio": 4.467,
   "duracion": 3.5,
   "texto": "Está en tramitación. La tramitación está en revisión.",
   "enfasis": [
@@ -34,7 +34,7 @@
   "escena": 3,
   "estilo": "gag",
   "hablante": "pelota",
-  "inicio": 7.2,
+  "inicio": 7.967,
   "duracion": 2.8,
   "texto": "Sale hoy. Y llega ayer. Seguro.",
   "enfasis": [
@@ -45,7 +45,7 @@
   "escena": 4,
   "estilo": "gag",
   "hablante": "bola",
-  "inicio": 10.0,
+  "inicio": 10.767,
   "duracion": 1.667,
   "texto": "¡Lo bueno se hace esperar!",
   "enfasis": [
@@ -56,8 +56,8 @@
   "escena": 5,
   "estilo": "remate",
   "hablante": "jupillo",
-  "inicio": 11.667,
-  "duracion": 3.633,
+  "inicio": 12.433,
+  "duracion": 3.6,
   "texto": "Lo localicé. Estaba en tu coche. Desde el lunes.",
   "enfasis": [
    8
@@ -67,7 +67,7 @@
   "escena": 6,
   "estilo": "cierre",
   "hablante": null,
-  "inicio": 15.3,
+  "inicio": 16.033,
   "duracion": 2.9,
   "texto": "¿Cuántas veces has dicho «ya sale» sin que saliera?",
   "enfasis": []
