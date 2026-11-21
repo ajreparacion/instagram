@@ -1,20 +1,20 @@
 {
  "_nota": "Cifras que solo da Buzzfy/Instagram, copiadas a mano por el Analista (herramientas de solo lectura). Las actualiza el Analista cada noche. Si una cifra no se ha leído, dejarla en null.",
- "fecha": "2026-11-15 20:45 CET",
+ "fecha": "2026-11-21 01:26 UTC",
  "dias": 7,
- "alcance_total": 1828,
- "alcance_no_seguidores_total": 1770,
- "alcance_seguidores_total": 63,
- "visualizaciones_no_seguidores": 2202,
- "clics_enlace": 3,
- "visitas_perfil": 8,
- "seguidores_netos_dia": -0.1,
- "_seguidores_detalle": "ig_follower_growth 8-15/11: 0 altas, 1 baja (11/11), net -1. 13 y 14/11 pendientes en Instagram. Seguidores ahora: 1.602.",
+ "alcance_total": 3954,
+ "alcance_no_seguidores_total": 3913,
+ "alcance_seguidores_total": 47,
+ "visualizaciones_no_seguidores": 4976,
+ "clics_enlace": 1,
+ "visitas_perfil": 2,
+ "seguidores_netos_dia": -0.3,
+ "_seguidores_detalle": "ig_follower_growth 13-17/11 final: 2 altas, 4 bajas, net -2. 18 y 19/11 pendientes. Seguidores ahora: 1.600.",
  "no_seguidores_por_reel": {},
  "toques_enlace": 0,
- "interacciones": 92,
+ "interacciones": 105,
  "guardados": 0,
- "compartidos": 9,
+ "compartidos": 8,
  "comentarios": 0,
  "perfil": {
   "nombre_visible": null,
@@ -22,7 +22,7 @@
   "enlace": "https://centro-de-contenido-apps-2f0a3cd6.base44.app/solicitar?src=instagram",
   "bio_actual": "Sistemas Digitales, Automatización e IA a Medida ⚡ Apps y webs a medida para cualquier negocio. Pruébalo gratis 👇",
   "bio_con_IDEA": false,
-  "_aviso_15_11": "Buzzfy (15/11) ya no devuelve «Comenta APP» en la bio. Sigue siendo lectura, no confirmación: si el dueño lo cambió, bien; si no, confirmar que la bio no vuelve a llevarlo (cierre prohibido en el DIRECTIVA §9)."
+  "_aviso_15_11": "Sin «Comenta APP» en la bio el 21/11 (Buzzfy). Lectura, no confirmación."
  },
  "linea_base_antes_del_enlace": {
   "ventana": "4-11/11 (7 días)",
@@ -31,17 +31,17 @@
   "conv_visita_a_clic_pct": 21.4,
   "alcance_no_seguidores": 565
  },
- "_leido_por": "Analista, domingo 15/11/2026 (pasada de la prueba del ciclo): ig_account_stats 7 días, ig_follower_growth 7 días, SolicitudInfo del Centro (Base44 6ae5244d4e2b32702f0a3cd6)",
+ "_leido_por": "Analista de monetización, 21/11/2026 (ig_account_stats 7 días, ig_follower_growth 7 días, ig_inbox, ig_comments sin respuesta, SolicitudInfo del Centro)",
  "embudo_centro": {
   "solicitudes_totales": 1,
-  "solicitudes_nuevas_7d": 1,
-  "_nota_nuevas": "La única solicitud (8/11 21:40 CET, origen demo) cae dentro de la ventana; estado «cerrada» desde el 14/11 22:08. Sin datos de personas en el repo.",
+  "solicitudes_nuevas_7d": 0,
+  "_nota_nuevas": "Ninguna solicitud nueva en 14-21/11. La única del Centro (8/11, origen demo, app a medida) queda fuera de la ventana; estado «cerrada» desde el 14/11 22:08. Sin datos de personas en el repo.",
   "clics_bio_centro_7d": null,
   "clics_solicitar_registrados": null,
   "_nota": "/solicitar no registra clics: la conversión clic → solicitud no se mide hasta que Mejora lo añada"
  },
- "_ventana": "8-15/11/2026 (UTC), ig_account_stats 7 días leído el 15/11 a las 19:40 UTC",
- "visualizaciones_total": 2779,
- "me_gusta": 50,
+ "_ventana": "14-21/11/2026 (UTC), ig_account_stats 7 días leído el 21/11 a las 01:26 UTC",
+ "visualizaciones_total": 5320,
+ "me_gusta": 65,
  "reposts": 24
 }
