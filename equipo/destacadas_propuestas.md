@@ -24,8 +24,19 @@ Orden sugerido en el perfil: Gestión Integral 7D primero (es la métrica que ma
 ### Bio sugerida (coherente con `equipo/perfil_propuesto.md` del 20/11, pendiente de pegar también)
 Ya redactada en `equipo/perfil_propuesto.md`. Revisar que sigue vigente (reparto de El Jambo, catchphrase «Que lo resuelva el Neo») antes de pegarla.
 
-## Facebook / YouTube
-Mismo criterio: fijar el vídeo o publicación que mejor explique Gestión Integral 7D en la cabecera/sección fijada de cada red, cuando el conector o el dueño pueda hacerlo (Comunidad ya gestiona Facebook/YouTube por API directa, pero fijar publicaciones tampoco está en esa API — confirmar si el conector de Meta Business lo permite antes de asumir que hace falta a mano).
+## Facebook / YouTube — HECHO (21/11/2026, pasada con Chrome)
+
+### YouTube (NeogestLab) — 4 de 4 productos con Short propio, completados
+Pestaña Inicio → sección por producto (tipo «Una lista de reproducción»), publicada:
+- ✅ **Gestión Integral 7D**
+- ✅ **MEDICATOR** (2 Shorts)
+- ✅ **GPS Andaluz**
+- ✅ **Factura7D Verifactu**
+
+Resto del catálogo (GH PLUS, AJ Sistema DEMO, Insultator, Expedientes Imposibles, Centro de Contenido Apps, Gestoría7D, APPCC Fácil...) revisado por título en el canal: **no tienen Short propio todavía**. En cuanto Creador/Remasterizador generen uno, repetir el mismo patrón (crear lista → añadir el Short → sección en Pestaña Inicio).
+
+### Facebook (Neogestlab) — corrección importante
+A diferencia de Instagram, **Facebook SÍ permite fijar una publicación desde la web**, en el menú ⋯ de cada post → «Fijar publicación» (confirmado en vivo con Chrome, no hace falta API ni conector ni el móvil del dueño). Fijado ya el post de la serie morosidad/pagos a 120 días (incluye el CTA de prueba gratuita). Pendiente: sustituirlo por un post específico de Gestión Integral 7D en cuanto Comunidad publique uno que lo sea directamente (el fijado ahora es temático, no de producto).
 
 ## Estado (21/11/2026, pasada con Chrome)
 
