@@ -1,13 +1,3 @@
-2026-11-15 22:38  Voz con edge-tts: 7 frases en 9 s
-2026-11-15 22:38  Voz: silencios recortados por frase (s): [0.12, 0.13, 0.11, 0.14, 0.12, 0.13, 0.12]
-2026-11-15 22:38  Voz: pico de cada frase normalizado a -6 dBFS (ganancia aplicada, dB): [np.float64(0.8), np.float64(3.4), np.float64(3.6), np.float64(3.2), np.float64(3.6), np.float64(4.7), np.float64(4.0)]
-2026-11-15 22:39  Voz: alineación palabra a palabra (small, 13.2 s): 7/7 frases
-2026-11-15 22:39  Mezcla: voz -16.3 LUFS, música -22.2 LUFS (con ducking -24.9), la música baja 6.0 dB (p90) bajo la voz, ratio 2.338; máster -16.09 -> -14.0 LUFS, pico -1.3 dBFS; huecos de voz: []
-2026-11-15 22:39  Control de audio: OK; duración 20.6 s
-2026-11-15 22:39  515_jambo_web_empresa: renderizado con voz y subido a la release 'cola'
-2026-11-15 22:39  Estadísticas actualizadas (30 posts, 1602 seguidores)
-2026-11-15 23:02  334_jambo_lunes_con_el_bola: publicando…
-2026-11-15 23:02  reel de prueba: fallo al subir/procesar ({"debug_info":{"retriable":false,"type":"ProcessingFailedError","message":"Request processing failed"}} (código None, subcódigo None)); se publica como reel normal
 2026-11-15 23:03  334_jambo_lunes_con_el_bola: YouTube publicado https://youtube.com/shorts/FFnGXOb04-I
 2026-11-15 23:03  334_jambo_lunes_con_el_bola: Facebook publicado https://www.facebook.com/reel/1607765197817987
 2026-11-15 23:03  334_jambo_lunes_con_el_bola: publicado https://www.instagram.com/reel/DfxzwmgiP1v/
@@ -598,3 +588,13 @@ KeyError: 'escenas'
 2026-11-21 14:15  Control de audio: OK; duración 17.97 s
 2026-11-21 14:15  406_peluqueria_web_asistente_reel: renderizado con voz y subido a la release 'cola'
 2026-11-21 14:15  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 14:27  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 14:27  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')
+2026-11-21 14:27  343_jambo_registro_jornada_falso: vídeo externo masterizado en el ciclo (LUFS -15.0, pico -0.6 -> -14 / -1,5)
+2026-11-21 14:27  Control de audio: OK; duración 23.6 s; avisos: ['sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion']
+2026-11-21 14:27  343_jambo_registro_jornada_falso: control de audio del vídeo externo: aprobado=True LUFS=-13.9 pico=-1.4
+2026-11-21 14:27  343_jambo_registro_jornada_falso: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
+2026-11-21 14:27  Control de audio: OK; duración 25.83 s; avisos: ['sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion']
+2026-11-21 14:27  344_jambo_reunion_sin_fin: control de audio del vídeo externo: aprobado=True LUFS=-14.5 pico=-1.0
+2026-11-21 14:27  344_jambo_reunion_sin_fin: vídeo externo subido a la release 'cola' (Calidad debe evaluarlo)
+2026-11-21 14:27  999_jambo_piloto_barrio: post.json sin 'cuando' válido ('NoneType' object has no attribute 'strip')

@@ -9,5 +9,9 @@
     "Control de audio OK",
     "Tema repetido en la semana (342/346 = plazo de pago, como 319/340; 345 = horas extra, como 341): espaciarlos"
   ],
-  "como_arreglarlo": "Repetir el máster del estudio (render.mjs) con limitador a pico real ≤ −1 dB y −14 LUFS, volver a subirlo y poner el nuevo video_externo; luego vuelve a Calidad."
+  "como_arreglarlo": "Repetir el máster del estudio (render.mjs) con limitador a pico real ≤ −1 dB y −14 LUFS, volver a subirlo y poner el nuevo video_externo; luego vuelve a Calidad.",
+  "aprobado_anterior": false,
+  "nota_anterior": 88,
+  "caducado": "2026-11-21T13:27:39+00:00",
+  "motivo_caducidad": "vídeo externo subido 2026-11-21T13:27:39+00:00"
 }
