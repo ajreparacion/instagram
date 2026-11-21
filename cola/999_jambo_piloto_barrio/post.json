@@ -1,15 +1,15 @@
 {
  "tipo": "reel",
- "texto": "2,5 millones de horas extra sin cobrar cada semana (EPA, 1T 2026). Felipe se casa el sábado y Rosa se lo descuenta del sueldo. Concha lleva un mes sin cobrar. Sindy resuelve llorando gratis.\nGuarda este vídeo para la próxima vez que te digan que es «un favor».\n#humornegro #trabajo #ia #jefes #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
+ "texto": "Esta casa del barrio tiene truco 👀\nUn contrato temporal medio ya dura más que muchos matrimonios. Rosa normaliza despidos disfrazados de renuncias, Concha no cobra desde marzo y Felipe lleva 3 años de «temporal». Hasta que llega Neo.\nGuarda este vídeo para la próxima vez que te digan que es «un favor».\n#humornegro #trabajo #ia #jefes #pymes\nPide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso",
  "cuando": null,
  "compartir_en_feed": true,
  "prueba_no_seguidores": true,
  "formato": "Serie El Jambo",
  "publico": "oficina",
- "formula": "El Jambo que sabe v5.1 (barrio humilde, registro de habla con réplica inteligente, humor negro frío, bucle «Cosas de Casa» idéntico en apertura y cierre, personajes que se llaman por su nombre, risas de sitcom, 45-70 s, Rosa/Felipe/Sindy/Concha Quetón/Neo)",
+ "formula": "El Jambo que sabe v5.2 (salón de casa, registro paleto y vulgar con réplica inteligente, humor negro frío, bucle «Cosas de Casa» con gancho de texto en la apertura, ropa de ir por casa, créditos finales con reparto completo, personajes que se llaman por su nombre, risas de sitcom, 45-110 s, Rosa Melano/Felipe Lotas/Sindy Entes/Concha Quetón/Neo)",
  "_fuentes": ["El Español, 26/05/2026, citando la EPA del INE"],
  "_comprobado": "Cifra tomada del guion (equipo/guiones_gemini/usados/2026-11-20_jambo_piloto_barrio.json), con fuente citada por el guionista. No reverificada por Claude en esta pasada.",
- "_nota_creador": "20/11/2026 noche: PILOTO v2 de la biblia v5, tras feedback del dueño sobre el v1 (etiquetas de nombre invisibles por el zoom, bucle no idéntico, humor sin negrura real, voces planas, personajes sin nombrarse entre ellos, sin risas de sitcom). Corregido: etiqueta de nombre y apellido movida fuera del zoom de cámara (bug real, ya no se recorta), bucle «Cosas de Casa» con el MISMO objeto de escena en apertura y cierre (antes el cierre pasaba también por drawOutro y mostraba el logo encima, ahora es la tarjeta idéntica), diálogo reescrito con humor negro real (la boda de Felipe tratada como incidencia de nómina, «el frío nos iguala a todos» de Concha, «robo legal» de Neo) y personajes llamándose por su nombre, voces con más rango de velocidad/tono por emoción (edge-tts, no hay forma de medir «expresividad» de oído desde aquí, pero el rango se amplió bastante), risas tipo sitcom (sfx risas) en los 3 golpes fuertes. NO programado (cuando: null): pendiente de que el dueño vea este v2 y apruebe. PENDIENTE no resuelto: la intro «Cosas de Casa» sigue siendo vectorial, no vídeo real con zoom tipo serie americana — eso necesita una pieza de b-roll real (Google Flow/Gemini o stock) que aún no existe; en cuanto el dueño la apruebe o la suba, se sustituye sin tocar el resto.",
+ "_nota_creador": "21/11/2026 madrugada: PILOTO v3 final, tras feedback del dueño sobre v1/v2 (etiqueta de nombre apenas visible, apellido de Felipe mal como «Netra», quería créditos finales, ropa de oficina en vez de ir por casa, lenguaje demasiado fino, pidió trasladar la serie a un hogar con todo tipo de empleos en vez de solo oficina/contratos, estadísticas reales y temas sociales para empatizar, y un hueco para que los personajes usen apps de IA que no siempre son buena idea hasta que llega Neo). Corregido en esta pasada: intro real de casa (vídeo IA) ya en bucle con interior de salón (no oficina) en las escenas de diálogo, apellido de Felipe corregido a Lotas, ropa de ir por casa (sin corbata) para Rosa/Felipe/Sindy, créditos finales con el reparto completo, lenguaje más paleto y vulgar, gancho de texto «Esta casa del barrio tiene truco» en la apertura. Dirección de hogar/todo-tipo-de-empleos/apps de IA ficticias queda como biblia v5.2 (`equipo/serie_jambo.md`) para los PRÓXIMOS episodios — este piloto concreto mantiene el tema de contratos temporales porque ya estaba aprobado en la ronda anterior y re-rodarlo entero esta noche habría retrasado la entrega. NO programado (cuando: null): pendiente de que el dueño vea este v3 final y dé el visto bueno para publicar.",
  "motor_voz": "edge",
  "comentario_fijado": "Episodio nuevo cada día en @neogestlab",
  "avance_siguiente": null,
@@ -27,14 +27,20 @@
  },
  "motor": "neogest-studio",
  "asset": "999_jambo_piloto_barrio.mp4",
- "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/31a9a6af0_jambo-piloto-barrio-v2.mp4",
- "_video_externo_v1_descartado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/61db245cc_jambo-piloto-barrio.mp4",
+ "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/1f1586f7b_jambo-piloto-barrio-v3-final-creditos-vulgar-casa.mp4",
+ "_video_externo_anteriores_descartados": [
+  "https://media.base44.com/videos/public/6af862101565c330cf06389f/61db245cc_jambo-piloto-barrio.mp4",
+  "https://media.base44.com/videos/public/6af862101565c330cf06389f/31a9a6af0_jambo-piloto-barrio-v2.mp4",
+  "https://media.base44.com/videos/public/6af862101565c330cf06389f/07f2650f4_jambo-piloto-barrio-v3-final.mp4",
+  "https://media.base44.com/videos/public/6af862101565c330cf06389f/a51570341_jambo-piloto-barrio-v3-nombres-visibles.mp4",
+  "https://media.base44.com/videos/public/6af862101565c330cf06389f/bb90ec1bb_jambo-piloto-barrio-v3-final-gancho-apellidos.mp4"
+ ],
  "_render": {
-  "duracion_s": 43.2,
-  "lufs": -14.1,
+  "duracion_s": 106.0,
+  "lufs": -14.0,
   "pico_dbfs": -1.4,
-  "peso_mb": 17.54,
+  "peso_mb": 18.07,
   "voces": "edge-tts (borrador/gratis, sin ElevenLabs), rango de velocidad/tono por emoción ampliado",
-  "checkpoints_base44": ["piloto-v2-nombres-bucle-humor-negro-para-entrega", "entregas-listas-piloto-v2", "limpieza-tras-subir-piloto-v2"]
+  "checkpoints_base44": ["jam-v8-vulgar-ropa-casa-creditos", "limpieza-final-jam-v8-subido"]
  }
 }
