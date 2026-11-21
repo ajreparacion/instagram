@@ -45,13 +45,13 @@
       "voz": "Lo pulsas y *se abre*."
     },
     {
-      "estilo": "tramo",
+      "estilo": "remate",
       "clip": {
         "inicio": 12.2,
         "fin": 15.5
       },
       "texto": "Copiar o enviar por correo",
-      "voz": "Lo copias o lo envías por *correo*."
+      "voz": "Dijo esta semana. Se lo mandas *hoy*."
     },
     {
       "estilo": "tramo",

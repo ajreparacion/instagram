@@ -48,6 +48,9 @@ BUENOS = [
     ("ordinal 3.º", "Vive en el tercero.", "Vive en el 3.º."),
     ("grados", "Hace veintisiete grados.", "Hace 27 °C."),
     ("un/uno/una", "Un momentito. Veintiún días.", "Uno momentito. 21 días."),
+    ("405/407/409 «tarjeta, sin» -> «tarjetas sin» (s ante s)", "Pide tu prueba gratuita: sin tarjeta, sin datos bancarios y sin compromiso.",
+     "Pide tu prueba gratuita, sin tarjetas, sin datos bancarios y sin compromiso."),
+    ("404 «apruebas sin» -> «aprueba sin» (s ante s)", "¡Con mentalidad de campeón, tú apruebas sin estudiar!", "Con mentalidad de campeón, tu aprueba sin estudiar."),
 ]
 
 # deben FALLAR (errores reales de voz: palabra distinta, cortada, inventada u omitida)
@@ -61,6 +64,8 @@ MALOS = [
     ("336 calcula -> calcule (otra forma verbal)", "Calcula y prepara: tú presentas.", "Calcule y prepara, tú presentas.", ["calcula"]),
     ("la frase final falta entera", "Que lo haga la Jupillo. ¿Cuánto esperas tú?", "Que lo haga la Jupillo.", None),
     ("«sin» omitido sin ser «y leer»", "Tienes sin leer cuarenta correos.", "Tienes leer cuarenta correos.", ["sin"]),
+    ("plural distinto sin «s» detrás (tarjeta -> tarjetas de)", "Sin tarjeta de crédito.", "Sin tarjetas de crédito.", ["tarjeta"]),
+    ("verbo distinto sin «s» detrás (apruebas -> aprueba el)", "Tú apruebas el examen.", "Tú aprueba el examen.", ["apruebas"]),
 ]
 
 

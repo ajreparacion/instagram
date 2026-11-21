@@ -45,13 +45,13 @@
       "voz": "Terminar canción: mezcla y máster *automáticos*."
     },
     {
-      "estilo": "tramo",
+      "estilo": "remate",
       "clip": {
         "inicio": 12.3,
         "fin": 15.3
       },
       "texto": "Y la descargas en MP3",
-      "voz": "Y la descargas en *MP3*."
+      "voz": "Empezaste sin nada. Te llevas un *MP3*."
     },
     {
       "estilo": "tramo",

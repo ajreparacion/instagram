@@ -27,13 +27,13 @@
       "voz": "Aquí ves la que toca *ahora*."
     },
     {
-      "estilo": "tramo",
+      "estilo": "remate",
       "clip": {
         "inicio": 5.8,
         "fin": 9.0
       },
       "texto": "Todo en orden",
-      "voz": "Y sale: *todo en orden*."
+      "voz": "Ya no pregunta: sale *todo en orden*."
     },
     {
       "estilo": "tramo",

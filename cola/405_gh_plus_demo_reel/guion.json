@@ -35,13 +35,13 @@
       "voz": "Cada aviso trae su botón: *Marcar pagado*."
     },
     {
-      "estilo": "tramo",
+      "estilo": "remate",
       "clip": {
         "inicio": 8.8,
         "fin": 13.6
       },
       "texto": "Dinero disponible",
-      "voz": "Y arriba, tu *dinero disponible*: el saldo menos lo pendiente del mes."
+      "voz": "Antes, se te pasaba. Ahora ves tu *dinero disponible*: el saldo menos lo pendiente."
     },
     {
       "estilo": "tramo",

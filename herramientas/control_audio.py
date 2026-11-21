@@ -194,13 +194,24 @@ def verificar(guion_txt, texto, lex=None):
 def comparar(esp, got):
     """Palabras esperadas que no aparecen (alineación por LCS tolerante) y palabras sobrantes."""
     n, m = len(esp), len(got)
+
+    def eq(i, j):
+        # «s» final ante palabra que empieza por «s» («sin tarjeta, sin datos» / «tú apruebas sin estudiar»): las dos eses
+        # suenan como una y Whisper pone o quita la primera al azar («tarjetas sin», «aprueba sin»). Solo se perdona esa «s»,
+        # y solo si la palabra siguiente del guion empieza por «s» y también coincide; en cualquier otro sitio sigue fallando.
+        if igual(esp[i], got[j]): return True
+        if i + 1 < n and j + 1 < m and esp[i + 1].startswith("s") and igual(esp[i + 1], got[j + 1]):
+            a, b = _clave(esp[i]), _clave(got[j])
+            return a + "s" == b or b + "s" == a
+        return False
+
     L = [[0] * (m + 1) for _ in range(n + 1)]
     for i in range(n - 1, -1, -1):
         for j in range(m - 1, -1, -1):
-            L[i][j] = L[i + 1][j + 1] + 1 if igual(esp[i], got[j]) else max(L[i + 1][j], L[i][j + 1])
+            L[i][j] = L[i + 1][j + 1] + 1 if eq(i, j) else max(L[i + 1][j], L[i][j + 1])
     i = j = 0; faltan = []; sobran = []
     while i < n and j < m:
-        if igual(esp[i], got[j]): i += 1; j += 1
+        if eq(i, j): i += 1; j += 1
         elif L[i + 1][j] >= L[i][j + 1]: faltan.append(esp[i]); i += 1
         else: sobran.append(got[j]); j += 1
     return faltan + esp[i:], sobran + got[j:]
