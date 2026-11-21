@@ -8,5 +8,9 @@
     "Pico −0,7 dBFS y −15,2 LUFS (máster sin aplicar)",
     "Error de voz: whisper oye «Vení del sábado» por «Venid el sábado» (H5)"
   ],
-  "como_arreglarlo": "Rehacer la primera frase sin el imperativo «Venid» (p. ej. «El sábado se viene a trabajar…») y repetir el máster; volver a Calidad."
+  "como_arreglarlo": "Rehacer la primera frase sin el imperativo «Venid» (p. ej. «El sábado se viene a trabajar…») y repetir el máster; volver a Calidad.",
+  "aprobado_anterior": false,
+  "nota_anterior": 86,
+  "caducado": "2026-11-21T13:57:44+00:00",
+  "motivo_caducidad": "vídeo externo subido 2026-11-21T13:57:44+00:00"
 }

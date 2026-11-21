@@ -8,5 +8,9 @@
     "Cifra sin fuente en voz y pantalla: «el 55 % de las pymes pierde tiempo administrativo» (B4: cifra inventada o sin fuente primaria = rechazo)",
     "344 y 348 son casi el mismo episodio (reunión absurda + misma moraleja): uno sobra"
   ],
-  "como_arreglarlo": "Quitar la cifra del vídeo (moraleja sin número) o poner una con fuente primaria abierta y verificada; diferenciar o retirar uno de los dos; re-render y vuelve a Calidad."
+  "como_arreglarlo": "Quitar la cifra del vídeo (moraleja sin número) o poner una con fuente primaria abierta y verificada; diferenciar o retirar uno de los dos; re-render y vuelve a Calidad.",
+  "aprobado_anterior": false,
+  "nota_anterior": 80,
+  "caducado": "2026-11-21T13:57:55+00:00",
+  "motivo_caducidad": "vídeo externo subido 2026-11-21T13:57:55+00:00"
 }

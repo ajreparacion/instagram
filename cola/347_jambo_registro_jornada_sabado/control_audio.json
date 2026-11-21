@@ -1,13 +1,12 @@
 {
   "aprobado": true,
-  "duracion_s": 23.53,
+  "duracion_s": 23.6,
   "bloqueos": [],
   "avisos": [
-    "sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion",
-    "pico real > -1 dB"
+    "sin escenas en el guion (vídeo externo): no se exige giro ni se compara la voz con un guion"
   ],
-  "transcripcion": "Vení del sábado, aquí somos una familia. En mi familia los sábados se descansan. El trabajo es voluntario, pero obligatorio si queréis cobrar. Esto es ilegal, que lo resuelva el NEO. Registro de jornada activado. Rosa, la ley no es opcional. Registro de jornada obligatorio desde el año 2019.",
+  "transcripcion": "Venid el sábado, aquí somos una familia. En mi familia los sábados se descansan. El trabajo es voluntario, pero obligatorio si queréis cobrar. Esto es ilegal, que lo resuelva el NEO. Registro de jornada activado. Rosa, la ley no es opcional. Registro de jornada obligatorio desde el año 2019.",
   "guion": "",
-  "lufs": -15.2,
-  "pico_dbfs": -0.7
+  "lufs": -13.9,
+  "pico_dbfs": -1.4
 }

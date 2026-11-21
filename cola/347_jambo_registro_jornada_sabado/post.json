@@ -38,6 +38,7 @@
     ]
   },
   "asset": "347_jambo_registro_jornada_sabado.mp4",
-  "video_externo": "https://media.base44.com/videos/public/6af862101565c330cf06389f/2d38b0aa8_347_jambo_registro_jornada_sabado.mp4",
-  "renderizado": false
+  "renderizado": "2026-11-21T13:57:44+00:00",
+  "_master_ciclo": "2026-11-21T13:57:30+00:00: LUFS -15.2 / pico -0.7 -> loudnorm -14 / -1,5",
+  "_video_externo_usado": "https://media.base44.com/videos/public/6af862101565c330cf06389f/2d38b0aa8_347_jambo_registro_jornada_sabado.mp4"
 }
