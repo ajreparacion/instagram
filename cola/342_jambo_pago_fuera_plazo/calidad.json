@@ -1,17 +1,13 @@
 {
   "aprobado": false,
   "nota": 88,
-  "fecha": "2026-11-19T10:43:50+00:00",
-  "revisor": "Calidad (pasada 11:41)",
-  "render": "2026-11-18T20:39:08+00:00",
   "motivos": [
-    "Pico real por encima de −1 dB (342 −0,7; 343 −0,6; 345 −0,3; 346 −0,5 dBFS) y volumen −14,8/−15,1 LUFS: el máster del estudio no se aplicó",
-    "Control de audio OK",
-    "Tema repetido en la semana (342/346 = plazo de pago, como 319/340; 345 = horas extra, como 341): espaciarlos"
+    "Bloqueo 1: la moraleja afirma como hecho legal que el plazo máximo de pago entre empresas es 60 días (Ley 15/2010), pero post.json tiene _fuentes vacío y el propio _comprobado dice 'sin enlace oficial citado en esta pasada'. Sin fuente oficial citada no se puede dar por verificada una cifra legal, aunque sea plausible.",
+    "Audio y técnica ya corregidos respecto a la versión anterior: LUFS -14,29 y pico real -1,38 dB (dentro de norma), sin silencios largos, isotipo 2026 correcto en todos los fotogramas y cierre. Esto no bloquea.",
+    "Aviso de programación (no bloquea nota): tema de plazo de pago repetido en la semana (como 319/340); espaciar en el calendario."
   ],
-  "como_arreglarlo": "Repetir el máster del estudio (render.mjs) con limitador a pico real ≤ −1 dB y −14 LUFS, volver a subirlo y poner el nuevo video_externo; luego vuelve a Calidad.",
-  "aprobado_anterior": false,
-  "nota_anterior": 88,
-  "caducado": "2026-11-21T14:13:11+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-21T14:13:11+00:00"
+  "como_arreglarlo": "Esto lo arregla el Creador con texto, sin re-render: añadir en post.json un _fuentes con el enlace oficial (BOE Ley 15/2010 de modificación de la Ley 3/2004, de medidas contra la morosidad, art. 4, plazo máximo 60 días) y actualizar _comprobado con el enlace y la fecha de verificación. No hace falta tocar el vídeo ni el audio. Tras añadir la fuente, vuelve a Calidad.",
+  "fecha": "2026-11-21T17:46:42Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-21T14:13:11+00:00"
 }

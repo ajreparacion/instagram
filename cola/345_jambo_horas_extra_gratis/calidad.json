@@ -1,17 +1,12 @@
 {
   "aprobado": false,
   "nota": 88,
-  "fecha": "2026-11-19T10:43:50+00:00",
-  "revisor": "Calidad (pasada 11:41)",
-  "render": "2026-11-18T21:24:09+00:00",
   "motivos": [
-    "Pico real por encima de −1 dB (342 −0,7; 343 −0,6; 345 −0,3; 346 −0,5 dBFS) y volumen −14,8/−15,1 LUFS: el máster del estudio no se aplicó",
-    "Control de audio OK",
-    "Tema repetido en la semana (342/346 = plazo de pago, como 319/340; 345 = horas extra, como 341): espaciarlos"
+    "Cifra central de la moraleja («2,5 millones de horas extra no se cobran») sin fuente citada: post.json trae _fuentes vacío y el propio _comprobado dice explícitamente «sin documento primario citado... confirmar fuente o suavizar antes de publicar». Sin cita verificable esto es B4 (inventar/inflar un dato) y falla el criterio de exactitud y confianza del estándar; no se puede aprobar una cifra pública no verificada en esta pasada.",
+    "Audio y técnica OK (LUFS -14.47, pico real -1.38 dB, sin silencios, isotipo 2026 correcto en el cierre, sin logo NL neón): no es un problema del motor, es de contenido/fuentes."
   ],
-  "como_arreglarlo": "Repetir el máster del estudio (render.mjs) con limitador a pico real ≤ −1 dB y −14 LUFS, volver a subirlo y poner el nuevo video_externo; luego vuelve a Calidad.",
-  "aprobado_anterior": false,
-  "nota_anterior": 88,
-  "caducado": "2026-11-21T13:42:45+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-21T13:42:45+00:00"
+  "como_arreglarlo": "No requiere re-render: es un arreglo de texto/guion. El Creador debe o (a) añadir en post.json un _fuentes con un enlace concreto y reciente a una encuesta/estadística oficial (EPA, Adecco, UGT/CCOO, etc.) que respalde «2,5 millones de horas extra no cobradas», y actualizar _comprobado con esa cita, o (b) suavizar la frase en el guion/voz a algo no cuantificado verificable («se trabajan muchísimas horas extra sin cobrar en España», sin cifra exacta) y volver a renderizar solo esa frase. Si se opta por (b) hace falta nuevo render porque cambia el audio; si se opta por (a) y la cifra es correcta y verificable, basta con editar el post.json (texto y _fuentes) sin tocar el vídeo, y pasar de nuevo por Calidad.",
+  "fecha": "2026-11-21T17:47:41Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-21T13:42:45+00:00"
 }

@@ -1,16 +1,13 @@
 {
   "aprobado": false,
-  "nota": 80,
-  "fecha": "2026-11-19T10:43:50+00:00",
-  "revisor": "Calidad (pasada 11:41)",
-  "render": "2026-11-18T20:55:40+00:00",
+  "nota": 70,
   "motivos": [
-    "Cifra sin fuente en voz y pantalla: «el 55 % de las pymes pierde tiempo administrativo» (B4: cifra inventada o sin fuente primaria = rechazo)",
-    "344 y 348 son casi el mismo episodio (reunión absurda + misma moraleja): uno sobra"
+    "Cifra sin fuente primaria: «el 55% de las pymes pierde tiempo administrativo» en voz y pantalla; post.json trae _fuentes vacío y _comprobado dice explícitamente «sin documento primario citado... confirmar fuente o suavizar antes de publicar». No resuelto desde el rechazo del 19/11 (B4: cifra sin fuente = rechazo).",
+    "Logo antiguo visible: el badge cuadrado oscuro «NEOGESTLAB» aparece en los fotogramas t=0.3s, t=6.46s, t=12.92s y t=19.38s (esquina superior derecha durante todo el episodio), no el isotipo nuevo «N» de circuitos del kit 2026. Solo el cierre (t=24.6-25.6s) lleva el isotipo correcto.",
+    "Fotograma inicial (t=0.3s) es un clip de stock/real de personas en una cafetería, no modo dibujo (papel claro, trazo negro, Bit/Paco): incoherente con el estilo de la Serie El Jambo; el resto del vídeo sí es doodle con Rosa/Felipe/Neo. Revisar si ese primer plano es un intro mal insertado."
   ],
-  "como_arreglarlo": "Quitar la cifra del vídeo (moraleja sin número) o poner una con fuente primaria abierta y verificada; diferenciar o retirar uno de los dos; re-render y vuelve a Calidad.",
-  "aprobado_anterior": false,
-  "nota_anterior": 80,
-  "caducado": "2026-11-21T13:27:49+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-21T13:27:49+00:00"
+  "como_arreglarlo": "Dos cosas distintas: (1) Guion/post — esto lo arregla el Creador con texto: quitar la cifra del 55% de la voz y de pantalla (moraleja sin número) o sustituirla por una con fuente primaria abierta citada en _fuentes; no requiere re-render si se regenera solo el guion antes del render. (2) Render — el badge antiguo en los primeros ~20s y el clip real de cafetería al inicio son un fallo de render/montaje: hace falta nuevo render con la plantilla 2026 aplicada a TODO el vídeo (no solo al cierre) y sin el inserto de vídeo real ajeno al modo dibujo. Si este logo antiguo aparece en más piezas recientes, avisar como URGENTE en peticiones_mejora.md (fallo del motor, no solo de esta pieza).",
+  "fecha": "2026-11-21T17:47:19Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-21T13:27:49+00:00"
 }

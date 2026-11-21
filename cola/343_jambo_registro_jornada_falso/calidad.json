@@ -1,17 +1,13 @@
 {
   "aprobado": false,
-  "nota": 88,
-  "fecha": "2026-11-19T10:43:50+00:00",
-  "revisor": "Calidad (pasada 11:41)",
-  "render": "2026-11-18T20:55:29+00:00",
+  "nota": 70,
   "motivos": [
-    "Pico real por encima de −1 dB (342 −0,7; 343 −0,6; 345 −0,3; 346 −0,5 dBFS) y volumen −14,8/−15,1 LUFS: el máster del estudio no se aplicó",
-    "Control de audio OK",
-    "Tema repetido en la semana (342/346 = plazo de pago, como 319/340; 345 = horas extra, como 341): espaciarlos"
+    "Logo antiguo «NL» en cuadrado visible en el pecho del personaje a t≈5,9s (parche/chip con texto «NL»): bloqueo directo del estándar v10 (§10-11, no se acepta el cuadrado NL aunque el cierre ya lleve el isotipo nuevo correcto).",
+    "Afirmación legal («registro de jornada obligatorio desde 2019, RDL 8/2019») sin fuente citada verificable: post.json trae _fuentes vacío y _comprobado dice explícitamente 'sin enlace oficial citado en esta pasada... añadir fuente antes de publicar si procede'. No se puede dar por buena sin cita.",
+    "Audio y duración correctos (LUFS -14.1, pico -1.4 dB, 23.6s, sin silencios): no es el problema esta vez."
   ],
-  "como_arreglarlo": "Repetir el máster del estudio (render.mjs) con limitador a pico real ≤ −1 dB y −14 LUFS, volver a subirlo y poner el nuevo video_externo; luego vuelve a Calidad.",
-  "aprobado_anterior": false,
-  "nota_anterior": 88,
-  "caducado": "2026-11-21T13:27:39+00:00",
-  "motivo_caducidad": "vídeo externo subido 2026-11-21T13:27:39+00:00"
+  "como_arreglarlo": "Dos arreglos distintos: 1) RENDER: quitar/sustituir el parche «NL» que aparece pegado en el pecho del personaje en la escena de oficina (~t=5.9s); es un activo del kit antiguo que el motor sigue insertando, repórtalo como URGENTE en peticiones_mejora.md porque puede estar en otras piezas de la serie Jambo (revisar en bloque antes de rechazar una a una). 2) TEXTO (lo arreglo yo o el Creador sin render): añadir a _fuentes/_comprobado el enlace oficial (BOE RDL 8/2019 o guía oficial de Trabajo sobre registro de jornada) antes de publicar; si no se encuentra cita verificable a tiempo, mover «cuando» a otro hueco (no lo toco en esta pasada) hasta tener fuente.",
+  "fecha": "2026-11-21T17:47:01Z",
+  "revisor": "Calidad (API)",
+  "render": "2026-11-21T13:27:39+00:00"
 }
