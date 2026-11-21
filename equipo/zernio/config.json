@@ -1,0 +1,29 @@
+{
+  "_nota": "Configuración de TikTok @neogest.lab vía Zernio (herramientas/redes_zernio.py tiktok). Tercera vía, independiente de Buffer y Metricool. La edita el Estratega.",
+  "usuario": "neogest.lab",
+  "account_id": "6b00b30e062d3d918320d801",
+  "huecos": [
+    "12:45",
+    "19:45"
+  ],
+  "max_pendientes": 8,
+  "render_desde": "2026-11-14",
+  "orden_inicial": [],
+  "incluir_antiguos": [],
+  "excluir": [],
+  "etiquetas": {
+    "jambo": "#humor #oficina #trabajo #autonomos #pymes",
+    "app": "#autonomos #pymes #negocios #apps"
+  },
+  "cierres": {
+    "factura7d-verifactu": "Pruébala gratis: 2 facturas al mes, sin permanencia. Enlace en el perfil."
+  },
+  "servicio": "tiktok",
+  "medio": "video",
+  "mezcla": [
+    2,
+    1
+  ],
+  "enlace_en_texto": false,
+  "max_caracteres": 2200
+}

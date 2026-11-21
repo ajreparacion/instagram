@@ -1,0 +1,40 @@
+name: Redes vía Zernio · tercera vía TikTok
+
+# Tercera vía de publicación en TikTok, independiente de Buffer (su propia incidencia, 21/11) y de
+# Metricool (solo borrador). Cuenta conectada en Zernio por el dueño vía MCP el 21/11/2026. Nunca
+# repite lo que Buffer o Metricool ya mandaron a la misma cuenta.
+# Sin el secreto ZERNIO_API_KEY, o sin el canal conectado, termina bien sin hacer nada.
+# Manual: equipo/zernio/LEEME.md
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "51 11 * * *"
+    - cron: "51 18 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: redes-zernio
+  cancel-in-progress: false
+
+jobs:
+  redes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - name: Programar en Zernio
+        env:
+          ZERNIO_API_KEY: ${{ secrets.ZERNIO_API_KEY }}
+          PAGE_TOKEN: ${{ secrets.PAGE_TOKEN }}
+          GH_TOKEN: ${{ github.token }}
+        run: python3 herramientas/redes_zernio.py tiktok
+      - name: Guardar estado
+        run: |
+          git config user.name "equipo-redes"
+          git config user.email "actions@users.noreply.github.com"
+          git add equipo/zernio/estado.json
+          git diff --cached --quiet && exit 0
+          git commit -m "Redes Zernio: cola de TikTok programada"
+          for i in 1 2 3; do git pull --rebase origin main && git push origin HEAD:main && break; sleep 5; done
